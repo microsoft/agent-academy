@@ -1,0 +1,2214 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/recruit/09-add-an-agent-flow/">
+      
+      
+        <link rel="prev" href="../08-add-adaptive-card/">
+      
+      
+        <link rel="next" href="../10-add-event-triggers/">
+      
+      
+      <link rel="icon" href="../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Add Agent Flow - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-09-add-an-agent-flow-to-your-topic-for-automation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Add Agent Flow
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Recruit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-course-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Course Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction-to-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-copilot-studio-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Copilot Studio Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-create-a-declarative-agent-for-M365Copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Declarative Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-creating-a-solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Solution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-using-prebuilt-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use Prebuilt Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-create-agent-from-conversation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Agent from Conversation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-add-new-topic-with-trigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add New Topic with Trigger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-add-adaptive-card/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add Adaptive Card
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Add Agent Flow
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add Agent Flow
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-automation-powerhouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAME: OPERATION AUTOMATION POWERHOUSE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Mission Brief
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-agent-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 What is an agent flow?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yes-but-how-is-it-different-to-power-automate-cloud-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      🙋🏽 Yes, but how is it different to Power Automate cloud flows?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-agent-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      👍🏻 Why use agent flows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-agent-flows-enhance-your-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏄🏻‍♂️ How do agent flows enhance your agent?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features-that-make-agent-flows-powerful" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 Key features that make agent flows powerful
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-they-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ How they work
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-create-an-agent-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧶 How to create an agent flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-agent-flow-designer" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 What is the agent flow designer?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#you-mentioned-expressions-what-are-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔤 You mentioned expressions - what are expressions?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⭐ Best practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-09-add-an-agent-flow-for-automation-and-enhance-topic-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 09 - Add an agent flow for automation and enhance topic capabilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Mission Complete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactical-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Tactical Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-add-event-triggers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add Event Triggers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-publish-your-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Publish Your Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-understanding-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Understanding Licensing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-automation-powerhouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAME: OPERATION AUTOMATION POWERHOUSE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Mission Brief
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-agent-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 What is an agent flow?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yes-but-how-is-it-different-to-power-automate-cloud-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      🙋🏽 Yes, but how is it different to Power Automate cloud flows?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-agent-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      👍🏻 Why use agent flows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-agent-flows-enhance-your-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏄🏻‍♂️ How do agent flows enhance your agent?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features-that-make-agent-flows-powerful" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 Key features that make agent flows powerful
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-they-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ How they work
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-create-an-agent-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧶 How to create an agent flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-agent-flow-designer" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 What is the agent flow designer?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#you-mentioned-expressions-what-are-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔤 You mentioned expressions - what are expressions?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⭐ Best practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-09-add-an-agent-flow-for-automation-and-enhance-topic-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 09 - Add an agent flow for automation and enhance topic capabilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Mission Complete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactical-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Tactical Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="mission-09-add-an-agent-flow-to-your-topic-for-automation">🚨 Mission 09: Add an agent flow to your Topic for automation<a class="headerlink" href="#mission-09-add-an-agent-flow-to-your-topic-for-automation" title="Permanent link">&para;</a></h1>
+<h2 id="codename-operation-automation-powerhouse">🕵️‍♂️ CODENAME: <code>OPERATION AUTOMATION POWERHOUSE</code><a class="headerlink" href="#codename-operation-automation-powerhouse" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operation Time Window:</strong> <code>~30 minutes</code>  </p>
+</blockquote>
+<h2 id="mission-brief">🎯 Mission Brief<a class="headerlink" href="#mission-brief" title="Permanent link">&para;</a></h2>
+<p>Your agent can now converse with users and provide information, but true operational excellence requires your agent to take action. This mission will transform your conversational agent into an automation powerhouse by equipping it with agent flows.</p>
+<p>By mission's end, you'll have created an end-to-end device request automation that captures user input through an adaptive card, retrieves data from SharePoint, sends notifications to managers via email, and provides seamless user feedback - all orchestrated by your agent through intelligent workflow automation.</p>
+<h2 id="objectives">🔎 Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
+<p>In this mission, you’ll learn:</p>
+<ol>
+<li>Understanding what agent flows are and how they differ from Power Automate cloud flows for automation</li>
+<li>Learning the key features that make agent flows powerful including AI actions and natural language authoring</li>
+<li>Exploring the agent flow designer and how to use expressions for dynamic data handling</li>
+<li>Creating a complete device request automation that integrates SharePoint data and email notifications</li>
+</ol>
+<h2 id="what-is-an-agent-flow">🤔 What is an agent flow?<a class="headerlink" href="#what-is-an-agent-flow" title="Permanent link">&para;</a></h2>
+<p>Agent flows are a powerful way to automate repetitive tasks and integrate your apps and services. Think of them as structured, step-by-step workflows that your agent can execute to automate tasks or connect with other applications and services. You can think of them as mini workflows that help your agent do things like send notifications, update records, or respond to events.</p>
+<p>Unlike autonomous agents that use AI to make decisions on the fly, agent flows are <strong>deterministic workflows</strong> - meaning they follow the same path every time, ensuring consistent and reliable results.</p>
+<p>In simple terms:</p>
+<ul>
+<li>They help your agent <em>do things</em>, not just <em>say things</em> to users.</li>
+<li>They're reusable across topics and agents, and can be triggered by user messages, events, or other applications and services.</li>
+</ul>
+<h2 id="yes-but-how-is-it-different-to-power-automate-cloud-flows">🙋🏽 Yes, but how is it different to Power Automate cloud flows?<a class="headerlink" href="#yes-but-how-is-it-different-to-power-automate-cloud-flows" title="Permanent link">&para;</a></h2>
+<p>Both agent flows and Power Automate cloud flows help automate tasks. They're designed for different purposes and work in different ways.</p>
+<h3 id="agent-flows-in-copilot-studio">🤖 Agent flows in Copilot Studio<a class="headerlink" href="#agent-flows-in-copilot-studio" title="Permanent link">&para;</a></h3>
+<p><strong>What they're for:</strong></p>
+<ul>
+<li>Built for conversational and autonomous agents (via agent instructions) in Copilot Studio.</li>
+<li>Focused on smart, AI-driven automation that interacts with business systems.</li>
+</ul>
+<p><strong>Why they're useful:</strong></p>
+<ul>
+<li>Easy to build and manage directly in Copilot Studio.</li>
+<li>Great for automating tasks that happen <em>during the conversation</em> with users such as submitting a leave request.</li>
+<li>You don't need a separate Power Automate license as billing is based on usage inside Copilot Studio. This can save time and cost for enterprise teams.</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>You can't share them, copy them, or assign co-owners.</li>
+<li>They're only visible and usable within Copilot Studio.</li>
+</ul>
+<h3 id="power-automate-cloud-flows">☁️ Power Automate cloud flows<a class="headerlink" href="#power-automate-cloud-flows" title="Permanent link">&para;</a></h3>
+<p><strong>What they're for:</strong></p>
+<ul>
+<li>Designed for general-purpose automation across many apps and services.</li>
+<li>Can run independently or work alongside agent flows.</li>
+</ul>
+<p><strong>Why they're useful:</strong></p>
+<ul>
+<li>Offers a wide range of connectors.</li>
+<li>Ideal for automating processes outside of agents.</li>
+<li>Can be shared, reused, and managed across teams.</li>
+</ul>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>You need a Power Automate license to use them.</li>
+</ul>
+<h3 id="summary">📗 Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Use this</th>
+<th style="text-align: left;">When you want to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Agent flows</td>
+<td style="text-align: left;">Automate tasks inside an agent, use AI, and keep everything in Copilot Studio</td>
+</tr>
+<tr>
+<td style="text-align: left;">Power Automate cloud flows</td>
+<td style="text-align: left;">Automate across apps and services, or build workflows outside of chatbots</td>
+</tr>
+</tbody>
+</table>
+<h2 id="why-use-agent-flows">👍🏻 Why use agent flows<a class="headerlink" href="#why-use-agent-flows" title="Permanent link">&para;</a></h2>
+<p>Agent flows always follow a fixed path - they do the same thing every time when given the same input.</p>
+<p>This makes them:</p>
+<ul>
+<li><strong>Reliable</strong> - you can trust that they'll behave the same way every time.</li>
+<li><strong>Predictable</strong> - you know what result to expect when the flow runs.</li>
+<li><strong>Rule based</strong> - they follow steps that you define.</li>
+</ul>
+<p>Other benefits are:</p>
+<ul>
+<li><strong>Automation</strong> - enables your agent to handle repetitive tasks such as submitting forms or sending notifications.</li>
+<li><strong>Connected</strong> - connect with 1400+ connectors like ServiceNow, SharePoint, Salesforce. Otherwise you can build your own custom connector.</li>
+<li><strong>Tightly integrated</strong> - agent flows are part of the agent's logic, they're triggered directly by user messages or actions in the conversation.</li>
+<li><strong>Scalability</strong> - reuse flows across multiple agents or scenarios.</li>
+<li><strong>No-code or low-code</strong> - you can build flows using natural language or a visual designer.</li>
+<li><strong>All-in-one-platform</strong> - you can design, test and deploy flows in one place - Copilot Studio. No need to switch between tools.</li>
+</ul>
+<h2 id="how-do-agent-flows-enhance-your-agent">🏄🏻‍♂️ How do agent flows enhance your agent?<a class="headerlink" href="#how-do-agent-flows-enhance-your-agent" title="Permanent link">&para;</a></h2>
+<p>Agent flows expand what your agent can do beyond "chatting" with users. They allow it to take action and interact with systems.</p>
+<p>Let's say you're working in a finance department and you receive a lot of invoices from vendors. Normally, someone has to read each invoice, pull out the important details - the amount, date, who it's from, and check if everything matches your records. Then send it to the right person for approval. This takes time and effort.</p>
+<p>With agent flows in Copilot Studio, you can automate this process. As soon as the invoice comes in, the agent:</p>
+<ol>
+<li>Read the document using intelligent document processing to find the key information.</li>
+<li>Check the details against your enterprise data to make sure everything looks correct.</li>
+<li>Route it for approval to the right person(s).</li>
+</ol>
+<p>This saves time, reduces mistakes and makes the whole process much smoother.</p>
+<h3 id="think-of-it-this-way">Think of it this way<a class="headerlink" href="#think-of-it-this-way" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Agents</strong>: the smart decision-makers</li>
+<li><strong>Agent flows</strong>: the reliable executors</li>
+</ul>
+<h3 id="why-it-matters">Why it matters<a class="headerlink" href="#why-it-matters" title="Permanent link">&para;</a></h3>
+<ul>
+<li>You get the best of both worlds: reliable automation and flexible AI.</li>
+<li>It's easy to build and update flows as your business needs change.</li>
+<li>You can scale automation across teams.</li>
+</ul>
+<h2 id="key-features-that-make-agent-flows-powerful">🔌 Key features that make agent flows powerful<a class="headerlink" href="#key-features-that-make-agent-flows-powerful" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Natural language authoring</strong></p>
+<ul>
+<li>You can describe what you want the flow to do in plain English.</li>
+<li>Copilot understands your intent and builds the flow for you.</li>
+<li>No need to write code - explain your idea.</li>
+</ul>
+</li>
+<li>
+<p><strong>AI actions</strong></p>
+<p>Use AI to:</p>
+<ul>
+<li>Read and understand documents or images.</li>
+<li>Summarize long content into short, useful answers.</li>
+<li>Make smart recommendations or decisions.</li>
+</ul>
+</li>
+<li>
+<p><strong>Generative actions</strong></p>
+<ul>
+<li>These let the flow adapt in real time.</li>
+<li>The agent can plan and adjust steps based on changing information.</li>
+</ul>
+</li>
+<li>
+<p><strong>Integration actions</strong></p>
+<ul>
+<li>Connect your flow to other tools like Outlook, Microsoft Teams, ServiceNow, SharePoint and other applications and services, through from +1400 built-in connectors or from your own custom connector.</li>
+<li>This helps your agent work with the apps your team already uses.</li>
+</ul>
+</li>
+<li>
+<p><strong>Human in the loop</strong></p>
+<ul>
+<li>Add approval steps where a person needs to review or confirm something.</li>
+<li><a href="https://learn.microsoft.com/microsoft-copilot-studio/flows-advanced-approvals?WT.mc_id=power-172621-ebenitez">Advanced approvals</a> supports reminders, delegation, and multi-stage approvals.</li>
+</ul>
+</li>
+</ol>
+<h2 id="how-they-work">⚙️ How they work<a class="headerlink" href="#how-they-work" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Trigger</strong></p>
+<p>An event starts the flow - such as a user asking a question, invoking the flow from a topic, a scheduled time, or an event happening in another system.</p>
+</li>
+<li>
+<p><strong>Actions</strong></p>
+<p>These are steps that the agent follows next - send an email, call an API, update a ticket in ServiceNow.</p>
+</li>
+</ol>
+<h2 id="how-to-create-an-agent-flow">🧶 How to create an agent flow<a class="headerlink" href="#how-to-create-an-agent-flow" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Natural language</strong>: describe what you want the agent to do, and Copilot builds it for you.</li>
+<li><strong>Designer canvas</strong>: drag and drop actions, conditions, and loops in the agent flow designer to build your agent flow.</li>
+</ol>
+<h2 id="what-is-the-agent-flow-designer">🎨 What is the agent flow designer?<a class="headerlink" href="#what-is-the-agent-flow-designer" title="Permanent link">&para;</a></h2>
+<p>It's a visual tool in Copilot Studio that helps you build, edit, and manage agent flows that provide step-by-step instructions your agent follows to complete tasks. It's designed to be straightforward to use, even if you're new to agent flows.</p>
+<h3 id="key-features-of-the-agent-flow-designer">Key features of the agent flow designer<a class="headerlink" href="#key-features-of-the-agent-flow-designer" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Visual canvas</strong></p>
+<ul>
+<li>You can see your entire flow laid out like a diagram.</li>
+<li>Easily zoom in/out, fit the view or use a minimap to navigate large flows.</li>
+</ul>
+</li>
+<li>
+<p><strong>Add and remove actions</strong></p>
+<ul>
+<li>Click the <em>plus (+)</em> button to add a new action such as sending a message or updating an item in a SharePoint list.</li>
+<li>You can search for actions from connectors, and configure them through its settings.</li>
+<li>To remove an action, click the <em>three dots (⋮)</em> and select <em>Delete</em>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Check parameters</strong></p>
+<ul>
+<li>Click on any action to view or edit its settings called <em>parameters</em>.</li>
+<li>You can enter values manually or use <em>expressions</em> to make them dynamic.</li>
+</ul>
+</li>
+<li>
+<p><strong>Version history</strong></p>
+<ul>
+<li>Every time you save your flow, a version is recorded.</li>
+<li>You can go back and view or restore previous version if needed.</li>
+</ul>
+</li>
+<li>
+<p><strong>Error checking</strong></p>
+<ul>
+<li>The <em>Flow Checker</em> highlights any errors.</li>
+<li>All errors will need to be resolved prior to publishing your flow.</li>
+</ul>
+</li>
+<li>
+<p><strong>Publish and test</strong></p>
+<ul>
+<li>Once your flow is error-free, publish to make it live.</li>
+<li>Use the <em>Test</em> feature to run your flow manually or automatically, and check if it works as expected.</li>
+</ul>
+</li>
+</ol>
+<h3 id="why-use-the-agent-flow-designer">Why use the agent flow designer?<a class="headerlink" href="#why-use-the-agent-flow-designer" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Visual and intuitive</strong> - you can build flows by dragging and clicking.</li>
+<li><strong>Safe to experiment</strong> - version history lets you undo changes.</li>
+<li><strong>Built-in testing</strong> - helps you make sure everything works before going live.</li>
+</ul>
+<h2 id="you-mentioned-expressions-what-are-expressions">🔤 You mentioned <em>expressions</em> - what are expressions?<a class="headerlink" href="#you-mentioned-expressions-what-are-expressions" title="Permanent link">&para;</a></h2>
+<p>Expressions are small formulas or commands that help your agent flow work with data. You use them to calculate values, format text, make decisions, or pull specific information from inputs.</p>
+<h3 id="why-use-expressions">Why use expressions?<a class="headerlink" href="#why-use-expressions" title="Permanent link">&para;</a></h3>
+<p>Expressions let you:</p>
+<ul>
+<li><strong>Customize how data is handled</strong> - combine names, format dates.</li>
+<li><strong>Make decisions</strong> - if a value is greater than 10, do something.</li>
+<li><strong>Transform data</strong> - change text to lowercase, extract part of a string.</li>
+<li><strong>Automate logic</strong> - without writing full code</li>
+</ul>
+<h3 id="what-do-expressions-look-like">What do expressions look like?<a class="headerlink" href="#what-do-expressions-look-like" title="Permanent link">&para;</a></h3>
+<p>Expressions use functions. I'm going to borrow an explanation of what functions are from former Microsoft MVP, Jerry Weinstock.</p>
+<blockquote>
+<p>"Functions are built-in logic to transform your data either through simple or complex operations in your expression."</p>
+</blockquote>
+<p>Functions enable you to build expressions without you needing to write any code.</p>
+<p>The way I like to describe it, is that a function in agent flows is similar to Excel functions. You can perform an operation on data to transform it into a desired output. When building your formula in Excel you select your input value from the cells in a table or a range, and then apply functions to manipulate the data output. An example is using the <code>COUNT</code> function to work out the number of cells that contain numbers from a range.</p>
+<p>In agent flows, instead of referencing data from cells in a table, you're referencing data outputs from the trigger or actions when building your expressions. Continuing with the previous example, use the function <em>length</em> to retrieve the number of items returned from the <em>Get items</em> SharePoint connector action.</p>
+<h3 id="why-do-functions-matter">Why do functions matter?<a class="headerlink" href="#why-do-functions-matter" title="Permanent link">&para;</a></h3>
+<p>Using functions makes your agent flows:</p>
+<ul>
+<li><strong>Smarter</strong> - they can react to different inputs or conditions.</li>
+<li><strong>Flexible</strong> - you can customize how data is handled.</li>
+<li><strong>Efficient</strong> - you avoid manual steps by automating logic.</li>
+</ul>
+<h3 id="most-useful-functions">Most useful functions<a class="headerlink" href="#most-useful-functions" title="Permanent link">&para;</a></h3>
+<p>The following are common functions used in agent flows. For the full list of functions, head to the <a href="https://learn.microsoft.com/azure/logic-apps/workflow-definition-language-functions-reference?WT.mc_id=power-172621-ebenitez">reference guide</a>.</p>
+<h4 id="text">🔡 Text<a class="headerlink" href="#text" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>concat()</code> - Joins two or more pieces of text together.</li>
+<li>
+<p>Example: <code>concat('Hello ', firstName)</code> → “Hello John”</p>
+</li>
+<li>
+<p><code>toLower()</code> / <code>toUpper()</code> - Changes text to lowercase or uppercase.</p>
+</li>
+<li>
+<p>Useful for standardizing input.</p>
+</li>
+<li>
+<p><code>substring()</code> - Extracts part of a string.</p>
+</li>
+<li>
+<p>Example: Get the first 3 letters of a name.</p>
+</li>
+<li>
+<p><code>trim()</code> - Removes spaces from the beginning and end of text.</p>
+</li>
+</ul>
+<h4 id="math-and-number">🔢 Math and number<a class="headerlink" href="#math-and-number" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>add()</code>, <code>sub()</code>, <code>mul()</code>, <code>div()</code> - Basic math operations.</li>
+<li>Example: <code>add(5, 3)</code> - the output is 8</li>
+</ul>
+<h4 id="date-and-time">📅 Date and time<a class="headerlink" href="#date-and-time" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>utcNow()</code> - Gets the current date and time in UTC.</li>
+<li>
+<p>Great for timestamps.</p>
+</li>
+<li>
+<p><code>addDays()</code>, <code>addHours()</code> - Adds time to a date.</p>
+</li>
+<li>
+<p>Example: <code>addDays(utcNow(), 7)</code> output is 7 days from now.</p>
+</li>
+<li>
+<p><code>formatDateTime()</code> - Formats a date into a readable string.</p>
+</li>
+<li>Example: Monday, July 7, 2025</li>
+</ul>
+<h4 id="logical">✅ Logical<a class="headerlink" href="#logical" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>if()</code> - Runs one value if true, another if false.</li>
+<li>
+<p>Example: <code>if(score &gt; 50, 'Pass', 'Fail')</code></p>
+</li>
+<li>
+<p><code>equals()</code> - Checks if two values are the same.</p>
+</li>
+<li>
+<p><code>and()</code>, <code>or()</code>, <code>not()</code> - Combine multiple conditions.</p>
+</li>
+</ul>
+<h4 id="other-handy-functions">🪣 Other handy functions<a class="headerlink" href="#other-handy-functions" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>coalesce()</code> - Returns the first non-empty value.</li>
+<li>
+<p>Useful for fallback/default values.</p>
+</li>
+<li>
+<p><code>guid()</code> - Generates a unique ID.</p>
+</li>
+<li>
+<p>Useful for tracking or logging.</p>
+</li>
+<li>
+<p><code>length()</code> - Counts how many characters or items are in a string or array.</p>
+</li>
+</ul>
+<h2 id="best-practices">⭐ Best practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<p>Here are some best practices for building agent flows in Copilot Studio.</p>
+<ol>
+<li>
+<p><strong>Start simple and build gradually</strong></p>
+<ul>
+<li>Begin with a small, clear task such as sending a message.</li>
+<li>Add more steps after testing the basics of your automation.</li>
+</ul>
+</li>
+<li>
+<p><strong>Use clear and descriptive action names</strong></p>
+<ul>
+<li>Label each step clearly so you know and your team understands what it does.</li>
+<li>Example: instead of the default name of "Update item" for the SharePoint connector action, rename it to what it's updating, such as "Update device status."</li>
+</ul>
+</li>
+<li>
+<p><strong>Check for errors before publishing</strong></p>
+<ul>
+<li>Use the <strong>flow checker</strong> to find and fix any issues.</li>
+<li>You can't publish flows if there are errors, so try to resolve them when they occur.</li>
+</ul>
+</li>
+<li>
+<p><strong>Test your flow thoroughly</strong></p>
+<ul>
+<li>Just because it saves and publishes, doesn't mean it works as expected.</li>
+<li>Use the <em>Test</em> feature to run your flow manually or automatically, and check the results.</li>
+</ul>
+</li>
+<li>
+<p><strong>Use Version History</strong></p>
+<ul>
+<li>Save your flow often so you can go back to earlier versions if needed.</li>
+<li>You can view and restore previous versions using the <em>Version History</em> panel.</li>
+</ul>
+</li>
+<li>
+<p><strong>Use parameters and expressions wisely</strong></p>
+<ul>
+<li>When configuring actions, use parameters to make your flow dynamic.</li>
+<li>You can enter values manually or use expressions to calculate them, or combine it with values from actions upstream by using the <em>dynamic content</em> picker.</li>
+</ul>
+</li>
+<li>
+<p><strong>Delete unused actions</strong></p>
+<ul>
+<li>If you add an action and later decide you don't need it, remove it to keep your flow clean.</li>
+</ul>
+</li>
+</ol>
+<h2 id="lab-09-add-an-agent-flow-for-automation-and-enhance-topic-capabilities">🧪 Lab 09 - Add an agent flow for automation and enhance topic capabilities<a class="headerlink" href="#lab-09-add-an-agent-flow-for-automation-and-enhance-topic-capabilities" title="Permanent link">&para;</a></h2>
+<p>We're now going to learn how to enhance our topic with adaptive cards and using advanced functionality of topics and nodes.</p>
+<ul>
+<li><a href="#91-create-an-agent-flow">9.1 Create an agent flow</a></li>
+<li><a href="#92-add-agent-flow-to-topic">9.2 Add agent flow to topic</a></li>
+<li><a href="#93-update-request-device-topic-with-several-nodes-for-a-better-user-experience">9.3 Update Request device topic with several nodes for a better user experience</a></li>
+<li><a href="#94-test-agent-using-several-scenarios">9.4 Test agent using several scenarios</a></li>
+</ul>
+<h3 id="use-case">✨ Use case<a class="headerlink" href="#use-case" title="Permanent link">&para;</a></h3>
+<p><strong>As a</strong> manager of an employee</p>
+<p><strong>I want to</strong> receive device requests</p>
+<p><strong>So that I</strong> can review the device requested by the employee.</p>
+<p>Let's begin!</p>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>SharePoint list</strong></p>
+<p>We'll be using the <strong>Devices</strong> SharePoint list from <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Lesson 00 - Course Setup - Step 3: Create new SharePoint site</a>.</p>
+<p>If you have not set up the <strong>Devices</strong> SharePoint list, please head back to <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Lesson 00 - Course Setup - Step 3: Create new SharePoint site</a>.</p>
+</li>
+<li>
+<p><strong>Contoso Helpdesk Copilot</strong></p>
+<p>We're going to use the same agent created previously in <a href="../06-create-agent-from-conversation/">Lesson 06 - Create a custom agent using natural language with Copilot and grounding it with your data</a>.</p>
+</li>
+</ol>
+<h3 id="91-create-an-agent-flow">9.1 Create an agent flow<a class="headerlink" href="#91-create-an-agent-flow" title="Permanent link">&para;</a></h3>
+<p>In this exercise, we'll create an agent flow that retrieves the SharePoint item of the selected device and send an email to a manager with the device details.</p>
+<ol>
+<li>
+<p>In the <strong>Request device</strong> topic, scroll down to the <strong>Ask with adaptive card</strong> node and add a new node. Select <strong>Add a tool</strong> and in the <strong>Basic tools</strong> tab of the fly out pane, select <strong>New Agent flow</strong>.</p>
+<p><img alt="Add new Agent flow" src="assets/9.1_01_AddNewAgentFlow.png" /></p>
+</li>
+<li>
+<p>The Agent flows <strong>Designer</strong> will load with a trigger and action.</p>
+<ul>
+<li>
+<p><strong>Trigger</strong> - When an agent calls the flow</p>
+<ul>
+<li>This will trigger a flow from a Copilot Studio agent.</li>
+</ul>
+</li>
+<li>
+<p><strong>Action</strong> - Respond to the agent</p>
+<ul>
+<li>This send a response that can contain output values back to the Copilot Studio agent.</li>
+</ul>
+</li>
+</ul>
+<p>Select the trigger.</p>
+<p><img alt="Select the trigger" src="assets/9.1_02_SelectTrigger.png" /></p>
+</li>
+<li>
+<p>Next, we're going to add several inputs for the agent flow.</p>
+<ul>
+<li>
+<p><code>DeviceSharePointId</code> - this will store the value, ID, of the SharePoint item. This ID value is an output from the Ask with adaptive card node where the user selected the device.</p>
+</li>
+<li>
+<p><code>User</code> - this will be the name of the user which will be from a system variable of the agent.</p>
+</li>
+<li>
+<p><code>AdditionalComments</code> - this will be the the comment entered by the user, which is an output from the Ask with adaptive card node.</p>
+</li>
+</ul>
+<p>We'll first add the <code>DeviceSharePointId</code> as an input for our trigger. Select <strong>+ Add an input</strong>.</p>
+<p><img alt="Add an input" src="assets/9.1_03_AddInput.png" /></p>
+</li>
+<li>
+<p>For the type of user input, select <strong>Text</strong>.</p>
+<p><img alt="Select Text" src="assets/9.1_04_SelectText.png" /></p>
+</li>
+<li>
+<p>For the name of the input, enter the following.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>DeviceSharePointId
+</span></code></pre></div>
+<p><img alt="DeviceSharePointId input" src="assets/9.1_05_DeviceSharePointIdInput.png" /></p>
+</li>
+<li>
+<p>We'll now add the second input, <code>User</code>. Repeat the same steps, select <strong>+ Add an input</strong> and select <strong>Text</strong>.</p>
+<p><img alt="Add an input" src="assets/9.1_06_AddInput.png" /></p>
+</li>
+<li>
+<p>For the name of the input, enter the following.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>User
+</span></code></pre></div>
+<p><img alt="User input" src="assets/9.1_07_UserInput.png" /></p>
+</li>
+<li>
+<p>We'll now add the third input, <code>AdditionalComments</code>. Repeat the same steps, select <strong>+ Add an input</strong> and select <strong>Text</strong>.</p>
+<p><img alt="Add an input" src="assets/9.1_08_AddInput.png" /></p>
+</li>
+<li>
+<p>For the name of the input, enter the following.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>AdditionalComments
+</span></code></pre></div>
+<p><img alt="AdditionalComments input" src="assets/9.1_09_AdditionalComments.png" /></p>
+</li>
+<li>
+<p>For the <code>AdditionalComments</code> input, we'll update it to make it optional. Select the <strong>ellipsis (...) icon</strong> and select <strong>Make the field optional</strong>.</p>
+<p><img alt="Make the field optional" src="assets/9.1_10_Optional.png" /></p>
+</li>
+<li>
+<p>Great work! The trigger has now been configured, let's continue. Select the <strong>Collapse icon</strong> to collapse the trigger.</p>
+<p><img alt="Collapse trigger" src="assets/9.1_11_CollapseTrigger.png" /></p>
+</li>
+<li>
+<p>Select the <strong>plus + icon</strong> under the trigger to insert a new action.</p>
+<p><img alt="Add action" src="assets/9.1_12_AddAction.png" /></p>
+</li>
+<li>
+<p>The <strong>Actions pane</strong> will appear where you can view actions from 1400+ built-in connectors to Microsoft and third-party services.</p>
+<p><img alt="Actions pane" src="assets/9.1_13_AddAnActionPane.png" /></p>
+</li>
+<li>
+<p>In the <strong>search field</strong> enter the following,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Get item
+</span></code></pre></div>
+<p>A list of actions will display in the search results. Select the <strong>Get item</strong> action from the <strong>SharePoint connector</strong>.</p>
+<p><img alt="Get item action" src="assets/9.1_14_GetItemAction.png" /></p>
+</li>
+<li>
+<p>We can now begin configuring the <strong>Get item</strong> action. Rename the action to,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Get Device
+</span></code></pre></div>
+<p><img alt="Rename action" src="assets/9.1_15_RenameAction.png" /></p>
+</li>
+<li>
+<p>In the <strong>Site Address</strong> field, select the <strong>Site address</strong> of the Contoso IT SharePoint site created in <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Lesson 00 - Course Setup - Step 3: Create new SharePoint site</a>.</p>
+<p><img alt="Select SharePoint site address" src="assets/9.1_16_SelectSharePointSiteAddress.png" /></p>
+</li>
+<li>
+<p>In the <strong>List Name</strong> field, select the <strong>Devices</strong> SharePoint list.</p>
+<p><img alt="Devices SharePoint list" src="assets/9.1_17_SelectDevicesList.png" /></p>
+</li>
+<li>
+<p>In the <strong>Id</strong> field, select the <strong>lightning bolt icon</strong> or <strong>fx icon</strong> to the right.</p>
+<p><img alt="Dynamic content picker" src="assets/9.1_18_InsertExpression.png" /></p>
+</li>
+<li>
+<p>In the <strong>Dynamic content</strong> tab of the flyout pane, enter the following,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sharepoint
+</span></code></pre></div>
+<p>The search results will show input parameters that match the value searched. Select the <strong>DeviceSharePointId</strong> parameter from the trigger.</p>
+<p><img alt="Select DeviceSharePointId input" src="assets/9.1_19_DeviceSharePointId.png" /></p>
+</li>
+<li>
+<p>Select <strong>Add</strong> to add the dynamic content input into the <strong>Id</strong> parameter of the action.</p>
+<p><img alt="Select add" src="assets/9.1_20_AddDynamicContent.png" /></p>
+</li>
+<li>
+<p>The dynamic content input from the trigger is now referenced in the <strong>Id</strong> parameter of the action. Select the <strong>Collapse icon</strong> to collapse the trigger.</p>
+<p><img alt="Collapse Get item action" src="assets/9.1_21_CollapseGetItemAction.png" /></p>
+</li>
+<li>
+<p>Select the <strong>plus + icon</strong> under the <em>Get Device</em> action to insert a new action.</p>
+<p><img alt="Add new action" src="assets/9.1_22_AddAnAction.png" /></p>
+</li>
+<li>
+<p>In the search field enter the following,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>send
+</span></code></pre></div>
+<p>A list of actions will display in the search results. Select the <strong>Send an email (V2)</strong> action from the <strong>Office 365 Outlook connector</strong>.</p>
+<p><img alt="Send an email action" src="assets/9.1_23_SendAnEmailAction.png" /></p>
+</li>
+<li>
+<p>We next need to create a connection for the connector action. Select <strong>Sign in</strong>.</p>
+<p><img alt="Create connection" src="assets/9.1_24_CreateConnection.png" /></p>
+</li>
+<li>
+<p>Select your signed in user account.</p>
+<p><img alt="Select user account" src="assets/9.1_25_SelectUserAccount.png" /></p>
+</li>
+<li>
+<p>Select <strong>Allow access</strong>.</p>
+<p><img alt="Select allow access" src="assets/9.1_26_AllowAccess.png" /></p>
+</li>
+<li>
+<p>Rename the action to the following,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Send an email to manager
+</span></code></pre></div>
+<p><img alt="Add an input" src="assets/9.1_27_RenameAction.png" /></p>
+</li>
+<li>
+<p>Let's now define our action.</p>
+<p>For the <strong>To</strong> input parameter, select yourself. Normally this would be your manager or we'd use another action that pulls through your manager based on your Entra ID profile but for the purpose of this lesson, select yourself.</p>
+<p>For the <strong>Subject</strong> input parameter, enter the following,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Request type: new device
+</span></code></pre></div>
+<p>For the <strong>Body</strong> input parameter, enter the following,</p>
+<p><img alt="Add an input" src="assets/9.1_28_ConfigureInputParameters.png" /></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Hi,
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>New device requested from
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Manufacturer:
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>Model:
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>Link to item in SharePoint
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>Additional comments from:
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>This is an automated email from Contoso Helpdesk Copilot
+</span></code></pre></div>
+</li>
+<li>
+<p>Next, we're going to update the <strong>Body</strong> input parameter with references to dynamic content input from the <strong>trigger</strong> or <strong>Get item</strong> action. Enter a space after the second line as we'll insert the name of the user from the trigger input, <strong>User</strong>.</p>
+<p>Select the <strong>lightning bolt icon</strong> or <strong>fx icon</strong> to the right.</p>
+<p><img alt="Add User input as dynamic content" src="assets/9.1_29_AddUserInput.png" /></p>
+</li>
+<li>
+<p>In the <strong>Dynamic content</strong> tab of the flyout pane, select the <strong>User</strong> input from the trigger.</p>
+<p><img alt="Select User input" src="assets/9.1_30_SelectUserInput.png" /></p>
+</li>
+<li>
+<p>Select <strong>Add</strong> to add the dynamic content <strong>User</strong> input into the <strong>Body</strong> parameter of the action.</p>
+<p><img alt="Add User input" src="assets/9.1_31_AddUserInput.png" /></p>
+</li>
+<li>
+<p>The dynamic content input from the trigger is now referenced in the <strong>Body</strong> parameter of the action. We'll repeat the same for the remaining lines in the email message body.</p>
+<p><img alt="User input added" src="assets/9.1_32_UserInputAdded.png" /></p>
+</li>
+<li>
+<p>Click into the space beside <code>Manufacturer:</code>. Select the <strong>lightning bolt icon</strong> or <strong>fx icon</strong> to the right.</p>
+<p>In the <strong>Dynamic content</strong> tab of the flyout pane, enter the following in the search field,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>manufacturer
+</span></code></pre></div>
+<p>Select the <strong>Manufacturer value</strong> input from the trigger and select <strong>Add</strong>.</p>
+<p><img alt="Add Manufacturer value input as dynamic content" src="assets/9.1_33_AddManufacturerValueInput.png" /></p>
+</li>
+<li>
+<p>Click into the space beside <code>Model:</code>. Select the <strong>lightning bolt icon</strong> or <strong>fx icon</strong> to the right.</p>
+<p>In the <strong>Dynamic content</strong> tab of the flyout pane, enter the following in the search field,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>model
+</span></code></pre></div>
+<p>Select the <strong>Model</strong> input from the <strong>Get item</strong> action and select <strong>Add</strong>.</p>
+<p><img alt="Add Model input as dynamic content" src="assets/9.1_34_AddModelInput.png" /></p>
+</li>
+<li>
+<p>For the <code>Link to item in SharePoint</code> text, we'll update this to be a hyperlink in the email message body. We need to switch to the HTML editor by selecting the <strong>&lt;/&gt;</strong>
+ icon.</p>
+<p><img alt="Add User input" src="assets/9.1_35_SwitchToHTMLEditor.png" /></p>
+</li>
+<li>
+<p>The HTML editor is now enabled. Click before the <code>Link to item in SharePoint</code> text, add an HTML anchor tag to create a hyperlink</p>
+<p><img alt="HTML tag" src="assets/9.1_36_HTMLTag.png" /></p>
+</li>
+<li>
+<p>Click after the HTML anchor tag and select the <strong>lightning bolt icon</strong> or <strong>fx icon</strong> to the right.</p>
+<p>In the <strong>Dynamic content</strong> tab of the flyout pane, enter the following in the search field,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>link to item
+</span></code></pre></div>
+<p>Select the <strong>Link to item</strong> input from the <strong>Get item</strong> action and select <strong>Add</strong>.</p>
+<p><img alt="Add Model input as dynamic content" src="assets/9.1_37_AddLinkToItemInput.png" /></p>
+</li>
+<li>
+<p>The dynamic content input of <strong>Link to item</strong> is now referenced in the <strong>Body</strong> parameter. Click after the <strong>Link to item</strong> input, copy and paste the following.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>&quot;&gt;
+</span></code></pre></div>
+<p><img alt="HTML tag" src="assets/9.1_38_HTMLTag.png" /></p>
+</li>
+<li>
+<p>Click after the <code>Link to item in SharePoint</code> text, close the html anchor tag</p>
+<p><img alt="HTML tag" src="assets/9.1_39_HTMLTag.png" /></p>
+</li>
+<li>
+<p>We're now done adding a hyperlink to our email message body 😎 Select the <strong>&lt;/&gt;</strong>
+ icon to disable the HTML editor.</p>
+<p><img alt="Switch back to WYSIWYG editor" src="assets/9.1_40_SwitchBackToBasicEditor.png" /></p>
+</li>
+<li>
+<p>Click after the <code>Additional comments from</code> text before the colon character.</p>
+<p>In the <strong>Dynamic content</strong> tab of the flyout pane, enter the following in the search field,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>user
+</span></code></pre></div>
+<p>Select the <strong>User</strong> input from the trigger and select <strong>Add</strong>.</p>
+<p><img alt="Add Model input as dynamic content" src="assets/9.1_41_AddUserInput.png" /></p>
+</li>
+<li>
+<p>We're now going to insert an expression that will display the value of Additional Comments if provided by the user in the <strong>Ask an adaptive card</strong> node, otherwise display "None" if the user does not provide any comments.</p>
+<p>Click after the colon and select the <strong>lightning bolt icon</strong> or <strong>fx icon</strong> to the right.</p>
+<p>In the <strong>Function</strong> tab of the flyout pane and in the expression field above, enter the following,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>if(empty())
+</span></code></pre></div>
+<p>This expression uses the <code>if</code> function for an if-else statement.</p>
+<p>The next function used is <code>empty</code> which checks whether a value exists or not in a string parameter. The string parameter to be referenced is the <code>AdditionalComments</code> input from the trigger.</p>
+<p><img alt="If empty" src="assets/9.1_42_IfExpression.png" /></p>
+</li>
+<li>
+<p>Next, click <strong>inside of the brackets</strong> after the <code>empty</code> function. We're going to insert the <code>AdditionalComments</code> input parameter from the trigger.</p>
+<p>Select the <strong>Dynamic content</strong> tab. Enter the following in the search field,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>comment
+</span></code></pre></div>
+<p>Scroll down the pane and select <strong>AdditionalComments</strong> input from the trigger. The input will now be added as a string parameter in the expression.</p>
+<p><img alt="Add Model input as dynamic content" src="assets/9.1_43_AdditionalCommentsInput.png" /></p>
+</li>
+<li>
+<p>Next we'll define the <strong><em>true</em></strong> logic, where if the <code>AdditionalComments</code> string parameter is empty, then we want to display a string (text) of <code>None</code>.</p>
+<p>After the bracket that encloses the string parameter, enter the following,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>, &#39;None&#39;,
+</span></code></pre></div>
+<p><img alt="True logic" src="assets/9.1_44_None.png" /></p>
+</li>
+<li>
+<p>Finally we'll define the <strong><em>false</em></strong> logic, where if the <code>AdditionalComments</code> string parameter is not empty, then we want to display the value of the <strong>AdditionalComments</strong> input from our trigger.</p>
+<blockquote>
+<p>A reminder this value will be from the Additional Comments field of the adaptive card in the <strong>Ask with adaptive card</strong> node in the <strong>Request device</strong> topic.</p>
+</blockquote>
+<p><img alt="False logic" src="assets/9.1_45_AdditionalCommentsInput.png" /></p>
+</li>
+<li>
+<p>Excellent, our expression is complete! Let's now add it our <strong>Body</strong> parameter by selecting <strong>Add</strong>.</p>
+<p><img alt="Add expression" src="assets/9.1_46_AddExpression.png" /></p>
+</li>
+<li>
+<p>The expression has now been added to the <strong>Body</strong> parameter. Lastly, format the last line in Italics.</p>
+<p><img alt="Italics" src="assets/9.1_47_Italics.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Collapse icon</strong> to collapse the action.</p>
+<p><img alt="Collapse action" src="assets/9.1_48_CollapseAction.png" /></p>
+</li>
+<li>
+<p>We're now going to update the <strong>Respond to the agent</strong> action to send the value of the <strong>Model value</strong> parameter from the <strong>Get item</strong> action back to the agent.</p>
+<p>Select the <strong>Respond to the agent</strong> action.</p>
+<p><img alt="Select Respond to the agent action" src="assets/9.1_49_RespondToAgent.png" /></p>
+</li>
+<li>
+<p>In the pane, select <strong>+ Add an output</strong>.</p>
+<p><img alt="Add an output" src="assets/9.1_50_AddAnOutput.png" /></p>
+</li>
+<li>
+<p>For the type of output, select <strong>Text</strong>.</p>
+<p><img alt="Select Text output" src="assets/9.1_51_SelectText.png" /></p>
+</li>
+<li>
+<p>Enter the following as the name of the output.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>ModelValue
+</span></code></pre></div>
+<p><img alt="ModelValue output" src="assets/9.1_52_ModelValueOutput.png" /></p>
+</li>
+<li>
+<p>Select the value field and select the <strong>lightning bolt icon</strong> or <strong>fx icon</strong> to the right.</p>
+<p><img alt="Insert expression" src="assets/9.1_53_InsertExpression.png" /></p>
+</li>
+<li>
+<p>In the <strong>Dynamic content</strong> tab of the flyout pane, enter the following in the search field,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>model
+</span></code></pre></div>
+<p>Select the <strong>Model</strong> input from the <strong>Get item</strong> action and select <strong>Add</strong>.</p>
+<p><img alt="Add Model input as dynamic content" src="assets/9.1_54_AddModelInput.png" /></p>
+</li>
+<li>
+<p>We've now completed our agent flow 👏🏻 Let's make one more update to our agent flow before publishing.</p>
+<p>Select the <strong>Collapse icon</strong> to collapse the action.</p>
+<p><img alt="Collapse action" src="assets/9.1_55_CollapseAction.png" /></p>
+</li>
+<li>
+<p>Select <strong>Save draft</strong> to save our agent flow.</p>
+<p><img alt="Select save draft" src="assets/9.1_56_SaveDraft.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Overview</strong> tab and select <strong>Edit</strong>.</p>
+<p><img alt="Select Edit" src="assets/9.1_57_Edit.png" /></p>
+</li>
+<li>
+<p>For the <strong>Flow name</strong>, copy and paste the following.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Send device request email
+</span></code></pre></div>
+<p>For the <strong>Description</strong>, select the <strong>refresh icon</strong> to use AI to automatically generate a description for you based on the trigger and actions in the agent flow.</p>
+<p><img alt="Details pane" src="assets/9.1_58_RenameAndDescription.png" /></p>
+</li>
+<li>
+<p>Select <strong>Save</strong> to save the updated name and description of the agent flow.</p>
+<p><img alt="Save details" src="assets/9.1_59_Save.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Designer</strong> tab and select <strong>Publish</strong> to publish the agent flow so that it can be added as a node in the <strong>Request device</strong> topic.</p>
+<p><img alt="Publish" src="assets/9.1_60_Publish.png" /></p>
+</li>
+<li>
+<p>A confirmation message will appear shortly to confirm the agent flow is published.</p>
+<p><img alt="Confirmation message" src="assets/9.1_61_Confirmation.png" /></p>
+</li>
+</ol>
+<h3 id="92-add-agent-flow-to-topic">9.2 Add agent flow to topic<a class="headerlink" href="#92-add-agent-flow-to-topic" title="Permanent link">&para;</a></h3>
+<p>Let's now add the agent flow to the <strong>Request device</strong> topic.</p>
+<ol>
+<li>
+<p>Select <strong>Agents</strong> in the left-hand side menu and select the <strong>Contoso Helpdesk Agent</strong>.</p>
+<p><img alt="Select Agents" src="assets/9.2_01_01_SelectAgent.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Topics</strong> tab and select the <strong>Request device</strong> topic.</p>
+<p><img alt="Select Request device topic" src="assets/9.2_01_02_SelectTopics.png" /></p>
+</li>
+<li>
+<p>Scroll down to the <strong>Ask with adaptive card</strong> node and add a new node.</p>
+<p>Select <strong>Add a tool</strong> and in the <strong>Basic tools</strong> tab of the fly out pane, select the <strong>Send device request email</strong> agent flow we recently created and published.</p>
+<p><img alt="Select agent flow" src="assets/9.2_02_SelectAgentFlow.png" /></p>
+</li>
+<li>
+<p>For the trigger inputs of our agent flow, we need to select the variable outputs from the <strong>Ask with adaptive card</strong> node.</p>
+<p>Select the <strong>ellipsis (...) icon</strong> for the <strong>DeviceSharePointId</strong> input.</p>
+<p><img alt="Select variable" src="assets/9.2_03_SelectVariable.png" /></p>
+</li>
+<li>
+<p>Select the <strong>deviceSelectionId</strong> variable which is one of the outputs defined in <strong>Ask with adaptive card</strong> node.</p>
+<p><img alt="Select deviceSelectionId" src="assets/9.2_04_SelectDeviceSelectionId.png" /></p>
+</li>
+<li>
+<p>Next, select the <strong>ellipsis (...) icon</strong> for the <strong>User</strong> input.</p>
+<p><img alt="Select Variable" src="assets/9.2_05_SelectVariable.png" /></p>
+</li>
+<li>
+<p>Select the <strong>System</strong> tab in the flyout variable pane and select <strong>User.DisplayName</strong>. This variable stores the display name of the internal user interacting with the agent.</p>
+<p><img alt="Select User.DisplayName system variable" src="assets/9.2_06_SelectUser.DisplayName.png" /></p>
+</li>
+<li>
+<p>Next, select the <strong>greater than icon</strong> for <strong>Advanced inputs</strong> to see the <strong>AdditionalComments</strong> input.</p>
+<p><img alt="Expand advanced inputs" src="assets/9.2_07_ExpandAdvancedInputs.png" /></p>
+</li>
+<li>
+<p>Select the <strong>ellipsis (...) icon</strong> for the AdditionalComments input.</p>
+<p><img alt="Expand advanced inputs" src="assets/9.2_08_SelectVariable.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Formula</strong> tab in the flyout variable pane as we'll use a Power Fx expression, similar to the expression in the agent flow that does a conditional check using the <em>if</em> function, but this time</p>
+<ul>
+<li>using Power Fx functions,</li>
+<li>and inserting either no value, or the value of the <code>commentsId</code> output variable from the <strong>Ask with adaptive card</strong> node.</li>
+</ul>
+<p>Enter the following functions in the Power Fx field,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>If(IsBlank())
+</span></code></pre></div>
+<p>This expression uses the <code>if</code> function for an if-else statement.</p>
+<p>The next function used is <code>IsBlank</code> which checks whether a value exists or not in a string parameter. The string parameter to be referenced is the <code>commentsId</code> output variable from the <strong>Ask with adaptive card</strong> node.</p>
+<p><img alt="If empty" src="assets/9.2_10_IfIsBlank.png" /></p>
+</li>
+<li>
+<p>Next, click <strong>inside of the brackets</strong> after the <code>IsBlank</code> function. We're going to insert the <code>commentsId</code> output variable from the <strong>Ask with adaptive card</strong> node.</p>
+<p>Enter the following inside the brackets,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Topic.commentsId
+</span></code></pre></div>
+<p>And add a comma after the bracket.</p>
+<p><img alt="Reference commentsId output" src="assets/9.2_11_Topic.commentsId.png" /></p>
+</li>
+<li>
+<p>Next we'll define the logic</p>
+<ul>
+<li>when <strong><em>true</em></strong> - if the <code>Topic.commentsId</code> string parameter is empty, then we want to insert no value.</li>
+<li>when <strong><em>false</em></strong> - if the <code>Topic.commentsId</code> string parameter is not empty, then insert the value of commentsId variable.</li>
+</ul>
+<p>After the bracket that encloses the string parameter, enter the following,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>&quot;&quot;, Topic.commentsId)
+</span></code></pre></div>
+<p>The Power Fx expression should be the following,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>If(IsBlank(Topic.commentsId), &quot;&quot;, Topic.commentsId)
+</span></code></pre></div>
+<p><img alt="Power Fx expression" src="assets/9.2_12_PowerFxExpression.png" /></p>
+</li>
+<li>
+<p>Great work, our expression is complete! Now select <strong>Insert</strong> to set the input parameter of the agent flow to the Power Fx expression.</p>
+<p><img alt="Insert Power Fx expression" src="assets/9.2_13_InsertPowerFxExpression.png" /></p>
+</li>
+<li>
+<p><strong>Save</strong> the topic.</p>
+<p><img alt="Save" src="assets/9.2_14_SaveTopic.png" /></p>
+</li>
+</ol>
+<h3 id="93-update-request-device-topic-with-several-nodes-for-a-better-user-experience">9.3 Update Request device topic with several nodes for a better user experience<a class="headerlink" href="#93-update-request-device-topic-with-several-nodes-for-a-better-user-experience" title="Permanent link">&para;</a></h3>
+<p>We'll next add two more nodes:</p>
+<ul>
+<li>
+<p><strong>Send a message</strong> - this will act as a confirmation message that references the selected device and that their request has been submitted.</p>
+</li>
+<li>
+<p><strong>Topic management</strong> - to close the conversation, we'll redirect to the <strong>End of conversation</strong> node.</p>
+</li>
+</ul>
+<p>Let's begin!</p>
+<ol>
+<li>
+<p>Select the <strong>plus + icon</strong> below the agent flow node and select <strong>Send a message</strong> node.</p>
+<p><img alt="Add send a message node" src="assets/9.3_01_AddSendAMessageNode.png" /></p>
+</li>
+<li>
+<p>Enter the following below in the message field,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Thanks
+</span></code></pre></div>
+<p>Then select the <strong>Insert variable</strong> as we'll reference the user's name.</p>
+<p><img alt="Insert variable" src="assets/9.3_02_InsertVariable.png" /></p>
+</li>
+<li>
+<p>Select the <strong>System</strong> tab and search for <code>User</code> in the search field. Select the <strong>User.DisplayName</strong> variable.</p>
+<p><img alt="Select system variable" src="assets/9.3_03_SelectSystemVariable.png" /></p>
+</li>
+<li>
+<p>Enter the following below in the message field,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>. Your selected device,
+</span></code></pre></div>
+<p>Then select <strong>Insert variable</strong> and this time in the <strong>Custom</strong> tab, select the <strong>ModelValue</strong> variable.</p>
+<p>Then enter the following below to complete the message.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>, has been submitted and will be reviewed by your manager.
+</span></code></pre></div>
+<p>The message should look like the following.</p>
+<p><img alt="Send message" src="assets/9.3_04_SendAMessage.png" /></p>
+</li>
+<li>
+<p>Lastly, select the <strong>plus + icon</strong> below the <strong>Send a message</strong> node and select <strong>Topic management</strong>, followed by <strong>Go to another topic</strong> and select <strong>End of Conversation</strong>.</p>
+<p><img alt="Topic management" src="assets/9.3_05_EndOfConversationNode.png" /></p>
+</li>
+<li>
+<p><strong>Save</strong> the topic.</p>
+<p><img alt="Save" src="assets/9.3_06_SaveTopic.png" /></p>
+</li>
+</ol>
+<h3 id="94-test-agent-using-several-scenarios">9.4 Test agent using several scenarios<a class="headerlink" href="#94-test-agent-using-several-scenarios" title="Permanent link">&para;</a></h3>
+<p>Great work!!! We can now test our agent.</p>
+<h4 id="941-request-a-device-and-enter-a-comment-in-adaptive-card">9.4.1 Request a device and enter a comment in adaptive card<a class="headerlink" href="#941-request-a-device-and-enter-a-comment-in-adaptive-card" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Refresh</strong> the test pane, select the <strong>activity map</strong> icon and enter the following as a message to the agent.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>I need a laptop
+</span></code></pre></div>
+<p><img alt="Test agent" src="assets/9.4_01_TestAgent_RequestDevice_Yes.png" /></p>
+</li>
+<li>
+<p>The agent triggers the <strong>Available devices</strong> and responds with the list of available devices. We'll enter the following as the answer to the question of whether we'd like to request a device.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>yes please
+</span></code></pre></div>
+<p><img alt="Yes" src="assets/9.4_02_RequestDevice_Yes.png" /></p>
+</li>
+<li>
+<p>Notice how the agent invoked the <strong>Request device</strong> as per the agent instructions and that the adaptive card is now being displayed in the agent message.</p>
+<p>Select the <strong>Surface Laptop 15</strong> device and add the following as a comment.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>I need 16GB of RAM please
+</span></code></pre></div>
+<p><img alt="Select device and enter comment" src="assets/9.4_03_SelectDeviceAndEnterComment.png" /></p>
+</li>
+<li>
+<p>Scroll down until you see the <strong>Submit Request</strong> button and select it to submit the adaptive card to the agent.</p>
+<p><img alt="Submit request" src="assets/9.4_04_SubmitRequest.png" /></p>
+</li>
+<li>
+<p>The agent will then display the confirmation message, followed by redirecting to the <strong>End of Conversation</strong> topic 🙌🏻</p>
+<p><img alt="End of Conversation topic" src="assets/9.4_05_RequestSubmitted.png" /></p>
+</li>
+<li>
+<p>Check your Inbox of your email account to review the email sent to the manager by the agent flow.</p>
+<p><img alt="Email sent" src="assets/9.4_06_EmailWithAdditionalComments.png" /></p>
+</li>
+</ol>
+<h4 id="942-request-a-device-and-do-not-enter-a-comment-in-adaptive-card">9.4.2 Request a device and do not enter a comment in adaptive card<a class="headerlink" href="#942-request-a-device-and-do-not-enter-a-comment-in-adaptive-card" title="Permanent link">&para;</a></h4>
+<p>Let's now test the scenario when a comment is not entered.</p>
+<ol>
+<li>
+<p>Repeat the same steps of</p>
+<ul>
+<li><strong>Refresh</strong> the test pane and select the <strong>activity map</strong> icon</li>
+<li>Enter the message, <code>I need a laptop</code></li>
+<li>Respond with <code>Yes please</code> to the question of requesting a device</li>
+</ul>
+<p><img alt="Request device" src="assets/9.4_08_RequestDevice_Yes.png" /></p>
+</li>
+<li>
+<p>This time select <strong>Surface Laptop 13</strong> as the device and do not enter a comment. <strong>Submit</strong> the request by selecting the <strong>Submit Request</strong> button.</p>
+<p><img alt="Select device" src="assets/9.4_09_SelectDevice.png" /></p>
+</li>
+<li>
+<p>This time the email received in your Inbox will display <strong>None</strong> as the comment.</p>
+<p><img alt="Email sent" src="assets/9.4_11_EmailMessage.png" /></p>
+</li>
+</ol>
+<h4 id="943-do-not-request-for-a-device">9.4.3 Do not request for a device<a class="headerlink" href="#943-do-not-request-for-a-device" title="Permanent link">&para;</a></h4>
+<p>Let's test the final scenario which is to not request a device, and the <strong>Goodbye</strong> topic should be invoked as per the agent instructions.</p>
+<ol>
+<li>
+<p>Repeat the same steps of</p>
+<ul>
+<li><strong>Refresh</strong> the test pane and select the <strong>activity map</strong> icon</li>
+<li>Enter the message, <code>I need a laptop</code></li>
+<li>This time respond with <code>no</code> to the question of requesting a device</li>
+</ul>
+<p><img alt="Test agent" src="assets/9.4_12_TestAgent_RequestDevice_No.png" /></p>
+</li>
+<li>
+<p>The agent invoked the <strong>Goodbye</strong> topic and the question as defined in the topic is asked.</p>
+<p><img alt="Goodbye topic invoked" src="assets/9.4_13_Goodbye.png" /></p>
+</li>
+</ol>
+<h2 id="mission-complete">✅ Mission Complete<a class="headerlink" href="#mission-complete" title="Permanent link">&para;</a></h2>
+<p>Congratulations! 👏🏻 You've learnt how to build your agent flow and add it to our existing <strong>Request device</strong> topic, and how to redirect the agent to another topic.</p>
+<p>This is the end of <strong>Lab 09 - Add an agent flow for automation and enhance topic capabilities</strong>, select the link below to move to the next lesson. We'll expand on the use case in this lab in the following lesson's lab.</p>
+<p>⏭️ <a href="../10-add-event-triggers/">Move to <strong>Add Event Triggers - Enable autonomous agent capabilities</strong> lesson</a></p>
+<h2 id="tactical-resources">📚 Tactical Resources<a class="headerlink" href="#tactical-resources" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://www.microsoft.com/microsoft-copilot/blog/copilot-studio/introducing-agent-flows-transforming-automation-with-ai-first-workflows/">Introducing agent flows: Transforming automation with AI-first workflows</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/flows-overview?WT.mc_id=power-172621-ebenitez">Agent flows overview</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow?WT.mc_id=power-172621-ebenitez">Use agent flows with your agent</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/azure/logic-apps/workflow-definition-language-functions-reference?WT.mc_id=power-172621-ebenitez">List of functions in the reference guide</a></p>
+<p>📺 <a href="https://www.youtube.com/watch?v=VJTKyk3Pr7s">Agent Flows in Copilot Studio</a></p>
+<!-- markdownlint-disable-next-line MD033 -->
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/09-add-an-agent-flow" alt="Analytics" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../08-add-adaptive-card/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Add Adaptive Card">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Add Adaptive Card
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../10-add-event-triggers/" class="md-footer__link md-footer__link--next" aria-label="Next: Add Event Triggers">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Add Event Triggers
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>

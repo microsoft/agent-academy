@@ -1,0 +1,1555 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/recruit/10-add-event-triggers/">
+      
+      
+        <link rel="prev" href="../09-add-an-agent-flow/">
+      
+      
+        <link rel="next" href="../11-publish-your-agent/">
+      
+      
+      <link rel="icon" href="../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Add Event Triggers - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-10-add-event-triggers-enable-autonomous-agent-capabilities" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Add Event Triggers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Recruit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-course-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Course Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction-to-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-copilot-studio-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Copilot Studio Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-create-a-declarative-agent-for-M365Copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Declarative Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-creating-a-solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Solution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-using-prebuilt-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use Prebuilt Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-create-agent-from-conversation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Agent from Conversation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-add-new-topic-with-trigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add New Topic with Trigger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-add-adaptive-card/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add Adaptive Card
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-add-an-agent-flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add Agent Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Add Event Triggers
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add Event Triggers
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-ghost-routine" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAME: OPERATION GHOST ROUTINE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Mission Brief
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-event-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 What is an Event Trigger?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-event-triggers-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ How do Event Triggers work?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-trigger-payloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Understanding trigger payloads
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-event-trigger-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Common Event Trigger scenarios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing-and-authentication-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Publishing and authentication considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Troubleshooting and limitations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-10-add-event-triggers-for-autonomous-agent-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 10 - Add Event Triggers for autonomous agent behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Mission Complete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactical-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Tactical Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-publish-your-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Publish Your Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-understanding-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Understanding Licensing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-ghost-routine" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAME: OPERATION GHOST ROUTINE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Mission Brief
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-event-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 What is an Event Trigger?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-event-triggers-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ How do Event Triggers work?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-trigger-payloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Understanding trigger payloads
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-event-trigger-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Common Event Trigger scenarios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing-and-authentication-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Publishing and authentication considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Troubleshooting and limitations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-10-add-event-triggers-for-autonomous-agent-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 10 - Add Event Triggers for autonomous agent behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Mission Complete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactical-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Tactical Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="mission-10-add-event-triggers-enable-autonomous-agent-capabilities">🚨 Mission 10: Add Event Triggers - Enable autonomous agent capabilities<a class="headerlink" href="#mission-10-add-event-triggers-enable-autonomous-agent-capabilities" title="Permanent link">&para;</a></h1>
+<h2 id="codename-operation-ghost-routine">🕵️‍♂️ CODENAME: <code>OPERATION GHOST ROUTINE</code><a class="headerlink" href="#codename-operation-ghost-routine" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operation Time Window:</strong> <code>~45 minutes</code></p>
+</blockquote>
+<h2 id="mission-brief">🎯 Mission Brief<a class="headerlink" href="#mission-brief" title="Permanent link">&para;</a></h2>
+<p>It's time to elevate your agent from conversational assistant to autonomous operative. Your mission is to enable your agent to act without being summoned - responding to signals from across your digital domain with precision and speed.</p>
+<p>With Event Triggers, you'll train your agent to monitor external systems like SharePoint, Teams, and Outlook, and execute intelligent actions the moment a signal is received. This operation transforms your agent into a fully operational field asset - silent, swift, and always watching.</p>
+<p>Success means building agents that initiate value - not just respond to it.</p>
+<h2 id="objectives">🔎 Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
+<p>📖 This lesson will cover:</p>
+<ul>
+<li>Understanding Event Triggers and how they enable autonomous agent behavior</li>
+<li>Learning the difference between event triggers and topic triggers, including trigger workflows and payloads</li>
+<li>Exploring common Event Trigger scenarios</li>
+<li>Understanding authentication, security, and publishing considerations for event-driven agents</li>
+<li>Building an autonomous IT Help Desk agent that responds to SharePoint events and sends email acknowledgments</li>
+</ul>
+<h2 id="what-is-an-event-trigger">🤔 What is an Event Trigger?<a class="headerlink" href="#what-is-an-event-trigger" title="Permanent link">&para;</a></h2>
+<p>An <strong>Event Trigger</strong> is a mechanism that allows your agent to act autonomously in response to external events, without requiring direct user input. Think of it as making your agent "watch" for specific events and automatically take action when those events occur.</p>
+<p>Unlike topic triggers, which require users to type something to activate a conversation, event triggers activate based on things happening in your connected systems. E.g.:</p>
+<ul>
+<li>When a new file is created in SharePoint or OneDrive for Business</li>
+<li>When a record is created in Dataverse</li>
+<li>When a task is completed in Planner</li>
+<li>When a new Microsoft Form response is submitted</li>
+<li>When a new Microsoft Teams message is added</li>
+<li>Based on a recurring schedule (like daily reminders)<br />
+<img alt="Add Trigger" src="assets/10_AddTriggerDialog.png" /></li>
+</ul>
+<h3 id="why-event-triggers-matter-in-autonomous-agents">Why Event Triggers matter in autonomous agents<a class="headerlink" href="#why-event-triggers-matter-in-autonomous-agents" title="Permanent link">&para;</a></h3>
+<p>Event triggers transform your agent from a reactive assistant into a proactive, autonomous helper:</p>
+<ol>
+<li>
+<p><strong>Autonomous operation</strong> - your agent can work 24/7 without human intervention, responding to events as they happen.</p>
+<ul>
+<li><em>Example:</em> Automatically welcome new team members when they're added to a team.</li>
+</ul>
+</li>
+<li>
+<p><strong>Real-time responsiveness</strong> - instead of waiting for users to ask questions, your agent responds immediately to relevant events.</p>
+<ul>
+<li><em>Example</em>: Alert the IT team when a SharePoint document is modified.</li>
+</ul>
+</li>
+<li>
+<p><strong>Workflow automation</strong> - chain together multiple actions based on a single trigger event.</p>
+<ul>
+<li><em>Example:</em> When a new support ticket is created, create a task, notify the manager, and update the tracking dashboard.</li>
+</ul>
+</li>
+<li>
+<p><strong>Consistent processes</strong> - ensure important steps never get missed by automating responses to key events.</p>
+<ul>
+<li><em>Example:</em> Every new employee automatically gets onboarding materials and access requests.</li>
+</ul>
+</li>
+<li>
+<p><strong>Data-driven actions</strong> - use information from the triggering event to make smart decisions and take appropriate actions.</p>
+<ul>
+<li><em>Example:</em> Route urgent tickets to senior staff based on priority level in the trigger payload.</li>
+</ul>
+</li>
+</ol>
+<h2 id="how-do-event-triggers-work">⚙️ How do Event Triggers work?<a class="headerlink" href="#how-do-event-triggers-work" title="Permanent link">&para;</a></h2>
+<p>Event triggers operate through a three-step workflow that enables your agent to respond autonomously to external events:</p>
+<h3 id="the-trigger-workflow">The trigger workflow<a class="headerlink" href="#the-trigger-workflow" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Event Detection</strong> - A specific event occurs in a connected system (SharePoint, Teams, Outlook, etc.)</li>
+<li><strong>Trigger Activation</strong> - The event trigger detects this event and sends a payload to your agent via a Power Automate Cloud Flow.</li>
+<li><strong>Agent Response</strong> - Your agent receives the payload and executes the instructions you've defined</li>
+</ol>
+<h3 id="event-vs-topic-triggers">Event vs Topic triggers<a class="headerlink" href="#event-vs-topic-triggers" title="Permanent link">&para;</a></h3>
+<p>Understanding the difference between these two trigger types is crucial:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Event Triggers</strong></th>
+<th><strong>Topic Triggers</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Activated by external system events</td>
+<td>Activated by user input/phrases</td>
+</tr>
+<tr>
+<td>Enable autonomous agent behavior</td>
+<td>Enable conversational responses</td>
+</tr>
+<tr>
+<td>Use maker's authentication</td>
+<td>Option for user's authentication</td>
+</tr>
+<tr>
+<td>Run without user interaction</td>
+<td>Require user to start conversation</td>
+</tr>
+<tr>
+<td>Examples: File created, email received</td>
+<td>Example: "What's the weather?"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="understanding-trigger-payloads">📦 Understanding trigger payloads<a class="headerlink" href="#understanding-trigger-payloads" title="Permanent link">&para;</a></h2>
+<p>When an event occurs, the trigger sends a <strong>payload</strong> to your agent containing information about the event and instructions on how to respond.</p>
+<h3 id="default-vs-custom-payloads">Default vs custom payloads<a class="headerlink" href="#default-vs-custom-payloads" title="Permanent link">&para;</a></h3>
+<p>Every trigger type comes with a default payload structure, but you can customize it:</p>
+<p><strong>Default payload</strong> - Uses the standard format like <code>Use content from {Body}</code></p>
+<ul>
+<li>Contains basic event information</li>
+<li>Uses generic processing instructions</li>
+<li>Good for simple scenarios</li>
+</ul>
+<p><strong>Custom payload</strong> - Add specific instructions and data formatting</p>
+<ul>
+<li>Include detailed directions for your agent</li>
+<li>Specify exactly what data to use and how</li>
+<li>Better for complex workflows</li>
+</ul>
+<h3 id="agent-instructions-vs-custom-payload-instructions">Agent instructions vs custom payload instructions<a class="headerlink" href="#agent-instructions-vs-custom-payload-instructions" title="Permanent link">&para;</a></h3>
+<p>You have two places to guide your agent's behavior with event triggers:</p>
+<p><strong>Agent Instructions</strong> (Global)</p>
+<ul>
+<li>Broad guidance that applies to all triggers</li>
+<li>Example: "When processing tickets, always check for duplicates first"</li>
+<li>Best for general behavior patterns</li>
+</ul>
+<p><strong>Payload Instructions</strong> (Trigger-specific)</p>
+<ul>
+<li>Specific directions for individual trigger types  </li>
+<li>Example: "For this SharePoint update, send a summary to the project channel"</li>
+<li>Best for complex agents with multiple triggers</li>
+</ul>
+<p>💡 <strong>Pro tip</strong>: Avoid conflicting instructions between these two levels, as this can cause unexpected behavior.</p>
+<h2 id="common-event-trigger-scenarios">🎯 Common Event Trigger scenarios<a class="headerlink" href="#common-event-trigger-scenarios" title="Permanent link">&para;</a></h2>
+<p>Here are practical examples of how event triggers can enhance your agent:</p>
+<h3 id="it-help-desk-agent">IT Help Desk Agent<a class="headerlink" href="#it-help-desk-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Trigger</strong>: New SharePoint list item (support ticket)</li>
+<li><strong>Action</strong>: Automatically categorize, assign priority, and notify appropriate team members</li>
+</ul>
+<h3 id="employee-onboarding-agent">Employee Onboarding Agent<a class="headerlink" href="#employee-onboarding-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Trigger</strong>: New user added to Dataverse</li>
+<li><strong>Action</strong>: Send welcome message, create onboarding tasks, and provision access</li>
+</ul>
+<h3 id="project-management-agent">Project Management Agent<a class="headerlink" href="#project-management-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Trigger</strong>: Task completed in Planner</li>
+<li><strong>Action</strong>: Update project dashboard, notify stakeholders, and check for blockers</li>
+</ul>
+<h3 id="document-management-agent">Document Management Agent<a class="headerlink" href="#document-management-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Trigger</strong>: File uploaded to specific SharePoint folder</li>
+<li><strong>Action</strong>: Extract metadata, apply tags, and notify document owners</li>
+</ul>
+<h3 id="meeting-assistant-agent">Meeting Assistant Agent<a class="headerlink" href="#meeting-assistant-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Trigger</strong>: Calendar event created</li>
+<li><strong>Action</strong>: Send pre-meeting reminders and agenda, book resources</li>
+</ul>
+<h2 id="publishing-and-authentication-considerations">⚠️ Publishing and authentication considerations<a class="headerlink" href="#publishing-and-authentication-considerations" title="Permanent link">&para;</a></h2>
+<p>Before your agent can use event triggers in production, you need to understand authentication and security implications.</p>
+<h3 id="maker-authentication">Maker authentication<a class="headerlink" href="#maker-authentication" title="Permanent link">&para;</a></h3>
+<p>Event triggers use the <strong>agent creator's credentials</strong> for all authentication:</p>
+<ul>
+<li>Your agent accesses systems using your permissions</li>
+<li>Users can potentially access data through your credentials</li>
+<li>All actions are performed "as you" even when users interact with the agent</li>
+</ul>
+<h3 id="data-protection-best-practices">Data protection best practices<a class="headerlink" href="#data-protection-best-practices" title="Permanent link">&para;</a></h3>
+<p>To maintain security when publishing agents with event triggers:</p>
+<ol>
+<li><strong>Evaluate data access</strong> - Review what systems and data your triggers can access</li>
+<li><strong>Test thoroughly</strong> - Understand what information triggers include in payloads</li>
+<li><strong>Narrow trigger scope</strong> - Use specific parameters to limit what events activate triggers</li>
+<li><strong>Review payload data</strong> - Ensure triggers don't expose sensitive information</li>
+<li><strong>Monitor usage</strong> - Track trigger activity and resource consumption</li>
+</ol>
+<h2 id="troubleshooting-and-limitations">⚠️ Troubleshooting and limitations<a class="headerlink" href="#troubleshooting-and-limitations" title="Permanent link">&para;</a></h2>
+<p>Keep these important considerations in mind when working with event triggers:</p>
+<h3 id="quota-and-billing-impacts">Quota and billing impacts<a class="headerlink" href="#quota-and-billing-impacts" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Each trigger activation counts toward your message consumption</li>
+<li>Frequent triggers (like every-minute recurrence) can quickly consume quota</li>
+<li>Monitor usage to avoid throttling</li>
+</ul>
+<h3 id="technical-requirements">Technical requirements<a class="headerlink" href="#technical-requirements" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Only available for agents with generative orchestration enabled</li>
+<li>Requires solution-aware cloud flow sharing to be enabled in your environment</li>
+</ul>
+<h3 id="data-loss-prevention-dlp">Data Loss Prevention (DLP)<a class="headerlink" href="#data-loss-prevention-dlp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Your organization's DLP policies determine which triggers are available</li>
+<li>Administrators can block event triggers entirely</li>
+<li>Contact your admin if expected triggers aren't available</li>
+</ul>
+<h2 id="lab-10-add-event-triggers-for-autonomous-agent-behavior">🧪 Lab 10 - Add Event Triggers for autonomous agent behavior<a class="headerlink" href="#lab-10-add-event-triggers-for-autonomous-agent-behavior" title="Permanent link">&para;</a></h2>
+<h3 id="use-case">🎯 Use case<a class="headerlink" href="#use-case" title="Permanent link">&para;</a></h3>
+<p>You'll enhance your IT Help Desk agent to automatically respond to new support requests. When someone creates a new item in your SharePoint support tickets list, your agent will:</p>
+<ol>
+<li>Trigger autonomously when the SharePoint ticket is created</li>
+<li>Provide the ticket details and instructions on the steps that you want it to perform</li>
+<li>Automatically acknowledge the ticket to the submitter via an AI generated email</li>
+</ol>
+<p>This lab demonstrates how event triggers enable truly autonomous agent behavior.</p>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<p>Before starting this lab, ensure you have:</p>
+<ul>
+<li>✅ Completed previous labs (especially Lab 6-8 for the IT Help Desk agent)</li>
+<li>✅ Access to the SharePoint site with the IT support tickets list</li>
+<li>✅ Copilot Studio environment with event triggers enabled</li>
+<li>✅ Your agent has generative orchestration enabled</li>
+<li>✅ Appropriate permissions in SharePoint and your Copilot Studio environment</li>
+</ul>
+<h3 id="101-enable-generative-ai-and-create-a-sharepoint-item-creation-trigger">10.1 Enable Generative AI and create a SharePoint item creation trigger<a class="headerlink" href="#101-enable-generative-ai-and-create-a-sharepoint-item-creation-trigger" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Open your <strong>IT Help Desk agent</strong> in <strong>Copilot Studio</strong></p>
+</li>
+<li>
+<p>First, ensure <strong>Generative AI</strong> is enabled for your agent:</p>
+</li>
+<li>Navigate to the <strong>Overview</strong> tab</li>
+<li>
+<p>Under the Orchestration section, Toggle <strong>Generative orchestration</strong> to <strong>On</strong> if it's not already enabled<br />
+<img alt="Enable Generative AI" src="assets/10_EnableGenerativeAI.png" /></p>
+</li>
+<li>
+<p>Navigate to the <strong>Overview</strong> tab and locate the <strong>Triggers</strong> section</p>
+</li>
+<li>
+<p>Click <strong>+ Add trigger</strong> to open the trigger library<br />
+<img alt="Navigate to Triggers" src="assets/10_NavigateToTrigger.png" /></p>
+</li>
+<li>
+<p>Search for and select <strong>When an item is created</strong> (SharePoint)<br />
+<img alt="Select SharePoint Trigger" src="assets/10_SelectSharePointTrigger.png" /></p>
+</li>
+<li>
+<p>Configure the trigger name and connections:</p>
+</li>
+<li>
+<p><strong>Trigger name:</strong> New Support Ticket Created in SharePoint</p>
+</li>
+<li>
+<p>Wait for the connections to configure, and select <strong>Next</strong> to proceed.<br />
+<img alt="Configure trigger name and connections" src="assets/10_ConfigureTriggerNameAndConnections.png" /></p>
+</li>
+<li>
+<p>Configure the trigger parameters:</p>
+</li>
+<li>
+<p><strong>Site Address</strong>: Select your "Contoso IT" SharePoint site</p>
+</li>
+<li>
+<p><strong>List Name</strong>: Choose your "Tickets" list</p>
+</li>
+<li>
+<p><strong>Additional instructions to the agent when it's invoked by the trigger:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>New Support Ticket Created in SharePoint: {Body}
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Use the &#39;Acknowledge SharePoint Ticket&#39; tool to generate the email body automatically and respond.
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>IMPORTANT: Do not wait for any user input. Work completely autonomously.
+</span></code></pre></div>
+<p><img alt="Configure trigger parameters" src="assets/10_ConfigureTriggerParams.png" /></p>
+</li>
+<li>
+<p>Select <strong>Create trigger</strong> to complete the trigger creation. A Power Automate Cloud Flow is automatically created to trigger the agent autonomously.</p>
+</li>
+<li>
+<p>Select <strong>Close</strong>.</p>
+</li>
+</ol>
+<h3 id="102-edit-the-trigger">10.2 Edit the Trigger<a class="headerlink" href="#102-edit-the-trigger" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Inside the <strong>Triggers</strong> section of the <strong>Overview</strong> tab, Select the <strong>...</strong> menu on the <strong>New Support Ticket Created in SharePoint</strong> trigger</p>
+</li>
+<li>
+<p>Select <strong>Edit in Power Automate</strong><br />
+<img alt="Edit trigger in Power Automate" src="assets/10_EditTriggerInPowerAutomate.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Sends a prompt to the specified copilot for processing</strong> node</p>
+</li>
+<li>
+<p>In the <strong>Body/message</strong> field, remove the Body content, <strong>press the forward slash key</strong> (/) and select <strong>Insert Expression</strong><br />
+<img alt="Insert expression for trigger" src="assets/10_InsertExpressionForTrigger.png" /></p>
+</li>
+<li>
+<p>Enter the following expression to provide the agent with specific details about the ticket:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>concat(&#39;Submitted By Name: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Author/DisplayName&#39;], &#39;\nSubmitted By Email: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Author/Email&#39;], &#39;\nTitle: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Title&#39;], &#39;\nIssue Description: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Description&#39;], &#39;\nPriority: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Priority/Value&#39;],&#39;\nTicket ID : &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;ID&#39;])
+</span></code></pre></div>
+</li>
+<li>
+<p>Select <strong>Add</strong><br />
+<img alt="Trigger output expression" src="assets/10_TriggerOutputExpression.png" /></p>
+</li>
+<li>
+<p>Select <strong>Publish</strong> on the top right toolbar.</p>
+</li>
+</ol>
+<h3 id="103-create-a-tool-for-email-acknowledgment">10.3 Create a tool for email acknowledgment<a class="headerlink" href="#103-create-a-tool-for-email-acknowledgment" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Return</strong> to your Agent in Copilot Studio</p>
+</li>
+<li>
+<p>Navigate to the <strong>Tools</strong> tab in your agent</p>
+</li>
+<li>
+<p>Click <strong>+ Add a tool</strong> and select <strong>Connector</strong></p>
+</li>
+<li>
+<p>Search for and select <strong>Send an email (V2)</strong> connector<br />
+<img alt="Select Outlook Connector" src="assets/10_SelectOutlookConnector.png" /></p>
+</li>
+<li>
+<p>Wait for the connection to configure, and then select <strong>Add and configure</strong></p>
+</li>
+<li>
+<p>Configure the tool settings:</p>
+</li>
+<li>
+<p><strong>Name</strong>: Acknowledge SharePoint ticket</p>
+</li>
+<li>
+<p><strong>Description</strong>: This tool sends an email acknowledgement that a ticket has been received.</p>
+</li>
+<li>
+<p>Select <strong>Customize</strong> next to the input parameters and configure as follows:</p>
+<p><strong>To</strong>:</p>
+<ul>
+<li><strong>Description</strong>: The email address of the person submitting the SharePoint Ticket</li>
+<li><strong>Identify as</strong>: Email</li>
+</ul>
+<p><strong>Body</strong>:</p>
+<ul>
+<li><strong>Description</strong>: An acknowledgement that the Ticket was received, and we aim to respond within 3 working days.</li>
+</ul>
+<p><img alt="Configure Input Parameters" src="assets/10_ConfigureInputParameters.png" /></p>
+</li>
+<li>
+<p>Select <strong>Save</strong></p>
+</li>
+</ol>
+<h3 id="104-test-the-trigger">10.4 Test the trigger<a class="headerlink" href="#104-test-the-trigger" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Inside your <strong>Help Desk Agent</strong>, select the <strong>Overview</strong> tab</li>
+<li>Click <strong>Test Trigger</strong> icon next to the <strong>New Support Ticket Created in SharePoint</strong> trigger. This will load the <strong>Test your trigger</strong> window.</li>
+<li>Open a new browser tab and navigate to your <strong>SharePoint IT Support Tickets list</strong></li>
+<li>Click <strong>+ Add new item</strong> to create a test ticket:</li>
+<li><strong>Title</strong>: "Unable to connect to VPN"</li>
+<li><strong>Description</strong>: "Unable to connect to corporate WIFI network after recent update"</li>
+<li>
+<p><strong>Priority</strong>: "Normal"</p>
+</li>
+<li>
+<p><strong>Save</strong> the SharePoint item<br />
+<img alt="Create Test Ticket" src="assets/10_CreateTestTicket.png" /></p>
+</li>
+<li>Return to <strong>Copilot Studio</strong> and monitor the <strong>Test your trigger</strong> panel for the trigger activation. Use the <strong>Refresh</strong> icon to load the trigger event, this may take a few minutes.<br />
+<img alt="Monitor Trigger Test" src="assets/10_MonitorTriggerTest.png" /></li>
+<li>Once the trigger appears, select <strong>Start testing</strong></li>
+<li>Select the <strong>Activity Map icon</strong> at the top of the <strong>Test your agent</strong> panel</li>
+<li>Verify that your agent:</li>
+<li>Received the trigger payload</li>
+<li>Called the "Acknowledge SharePoint ticket" tool<br />
+<img alt="Test trigger" src="assets/10_TestTrigger.png" /></li>
+<li>Check the email inbox of the submitter to confirm the acknowledgment email was sent<br />
+<img alt="Test email sent" src="assets/10_TestEmailSent.png" /></li>
+<li>Review the <strong>Activity</strong> tab in Copilot Studio to see the complete trigger and tool execution</li>
+</ol>
+<h2 id="mission-complete">✅ Mission Complete<a class="headerlink" href="#mission-complete" title="Permanent link">&para;</a></h2>
+<p>🎉 <strong>Congratulations!</strong> You've successfully implemented event triggers with connector tools that enable your agent to operate autonomously, automatically sending email acknowledgments and processing support tickets without user intervention. Once your agent is published, it will act autonomously on your behalf.</p>
+<p>🚀 <strong>Next up</strong>: In our next lesson, you'll learn how to <a href="../11-publish-your-agent/">publish your agent</a> to Microsoft Teams and Microsoft 365 Copilot, making it available to your entire organization!</p>
+<p>⏭️ <a href="../11-publish-your-agent/">Move to <strong>Publish your agent</strong> lesson</a></p>
+<h2 id="tactical-resources">📚 Tactical Resources<a class="headerlink" href="#tactical-resources" title="Permanent link">&para;</a></h2>
+<p>Ready to dive deeper into event triggers and autonomous agents? Check out these resources:</p>
+<ul>
+<li><strong>Microsoft Learn</strong>: <a href="https://learn.microsoft.com/en-us/training/modules/autonomous-agents-online-workshop/?WT.mc_id=power-177340-scottdurow">Make your agent autonomous in Copilot Studio</a></li>
+<li><strong>Documentation</strong>: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-trigger-event?WT.mc_id=power-177340-scottdurow">Add an event trigger</a></li>
+<li><strong>Best Practices</strong>: <a href="https://learn.microsoft.com/en-us/power-automate/triggers-introduction?WT.mc_id=power-177340-scottdurow">Power Automate triggers introduction</a></li>
+<li><strong>Advanced Scenarios</strong>: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-flow-create?WT.mc_id=power-177340-scottdurow">Using Power Automate flows with agents</a></li>
+<li><strong>Security</strong>: <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-data-loss-prevention?WT.mc_id=power-177340-scottdurow">Data loss prevention for Copilot Studio</a></li>
+</ul>
+<!-- markdownlint-disable-next-line MD033 -->
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/10-add-event-triggers" alt="Analytics" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../09-add-an-agent-flow/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Add Agent Flow">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Add Agent Flow
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../11-publish-your-agent/" class="md-footer__link md-footer__link--next" aria-label="Next: Publish Your Agent">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Publish Your Agent
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>

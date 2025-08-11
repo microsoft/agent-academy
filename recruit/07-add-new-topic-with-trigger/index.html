@@ -1,0 +1,1921 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/recruit/07-add-new-topic-with-trigger/">
+      
+      
+        <link rel="prev" href="../06-create-agent-from-conversation/">
+      
+      
+        <link rel="next" href="../08-add-adaptive-card/">
+      
+      
+      <link rel="icon" href="../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Add New Topic with Trigger - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-07-add-new-topic-with-trigger-and-nodes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Add New Topic with Trigger
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Recruit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-course-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Course Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction-to-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-copilot-studio-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Copilot Studio Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-create-a-declarative-agent-for-M365Copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Declarative Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-creating-a-solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Solution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-using-prebuilt-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use Prebuilt Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-create-agent-from-conversation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Agent from Conversation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Add New Topic with Trigger
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add New Topic with Trigger
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-stay-on-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAME: OPERATION STAY ON TOPIC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Mission Brief
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 What is a Topic?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-are-topics-useful" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐦 Why are topics useful?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪺 Types of topics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anatomy-of-a-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧬 Anatomy of a topic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-power-fx-in-your-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏋🏻‍♀️ Using Power Fx in your nodes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-create-and-edit-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏗️ How do I create and edit topics?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ok-how-do-i-design-topics-for-my-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      👩🏻‍🎨 OK, how do I design topics for my agent?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-07-add-a-new-topic-with-conversation-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 07 - Add a new topic with conversation nodes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Mission Complete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactical-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Tactical Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-add-adaptive-card/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add Adaptive Card
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-add-an-agent-flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add Agent Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-add-event-triggers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add Event Triggers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-publish-your-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Publish Your Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-understanding-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Understanding Licensing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-stay-on-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAME: OPERATION STAY ON TOPIC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Mission Brief
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 What is a Topic?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-are-topics-useful" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐦 Why are topics useful?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪺 Types of topics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anatomy-of-a-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧬 Anatomy of a topic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-power-fx-in-your-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏋🏻‍♀️ Using Power Fx in your nodes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-create-and-edit-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏗️ How do I create and edit topics?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ok-how-do-i-design-topics-for-my-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      👩🏻‍🎨 OK, how do I design topics for my agent?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-07-add-a-new-topic-with-conversation-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 07 - Add a new topic with conversation nodes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Mission Complete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactical-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Tactical Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="mission-07-add-new-topic-with-trigger-and-nodes">🚨 Mission 07: Add new topic with trigger and nodes<a class="headerlink" href="#mission-07-add-new-topic-with-trigger-and-nodes" title="Permanent link">&para;</a></h1>
+<h2 id="codename-operation-stay-on-topic">🕵️‍♂️ CODENAME: <code>OPERATION STAY ON TOPIC</code><a class="headerlink" href="#codename-operation-stay-on-topic" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operation Time Window:</strong> <code>~60 minutes</code></p>
+</blockquote>
+<h2 id="mission-brief">🎯  Mission Brief<a class="headerlink" href="#mission-brief" title="Permanent link">&para;</a></h2>
+<p>You’ve built an agent. It listens, learns, and answers questions - but now it’s time to get more tactical. In this mission, you’ll go deep under the hood and teach your agent how to respond to specific prompts with precision.</p>
+<p>With Topics and Triggers, your agent can:</p>
+<ul>
+<li>
+<p>Recognize intent</p>
+</li>
+<li>
+<p>Route conversations with logic</p>
+</li>
+<li>
+<p>Gather and store variables</p>
+</li>
+<li>
+<p>Trigger flows and take action</p>
+</li>
+</ul>
+<p>You’re not just building dialogue, you’re wiring up its decision making cortex. Welcome to the Neural Nexus.</p>
+<h2 id="objectives">🔎 Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
+<p>In this mission, you’ll learn:</p>
+<ol>
+<li>Understanding what topics are and their role in creating structured conversations for your agent</li>
+<li>Learning the anatomy of topics including trigger phrases and conversation nodes</li>
+<li>Exploring different types of conversation nodes and how to use Power Fx for dynamic logic</li>
+<li>Creating custom topics from scratch to handle specific user requests and tasks</li>
+<li>Building a functional topic that connects to SharePoint data using connectors and tools</li>
+</ol>
+<h2 id="what-is-a-topic">🤔 What is a Topic?<a class="headerlink" href="#what-is-a-topic" title="Permanent link">&para;</a></h2>
+<p>A topic is a structured conversation that helps your agent respond to specific user questions or tasks. Think of a topic as a mini-conversation or task that your agent can handle. Each topic is designed to respond to a specific user question or request.</p>
+<h3 id="purpose-of-a-topic">🌌 Purpose of a topic<a class="headerlink" href="#purpose-of-a-topic" title="Permanent link">&para;</a></h3>
+<p>There are three common purposes for topics based on what users need:</p>
+<p><strong>Informational</strong> - answers questions such as the following:</p>
+<ul>
+<li><code>What is …?</code></li>
+<li><code>When will …?</code></li>
+<li><code>Why …?</code></li>
+<li><code>Can you tell me …?</code></li>
+</ul>
+<p><strong>Task completion</strong> - helps users <em>do</em> something:</p>
+<ul>
+<li><code>"I want to …"</code></li>
+<li><code>"How do I …?"</code></li>
+<li><code>"I need …?"</code></li>
+</ul>
+<p><strong>Troubleshooting</strong> - solves problems:</p>
+<ul>
+<li><code>Something isn’t working …</code></li>
+<li><code>I'm encountering an error message …</code></li>
+<li><code>I’m seeing something unexpected …?</code></li>
+</ul>
+<p>You can also create topics for ambiguous questions like <code>I need help</code>, which ask users for more details before continuing.</p>
+<h2 id="why-are-topics-useful">🐦 Why are topics useful?<a class="headerlink" href="#why-are-topics-useful" title="Permanent link">&para;</a></h2>
+<p>Topics help you,</p>
+<ul>
+<li>
+<p>Organize your agent's knowledge.</p>
+</li>
+<li>
+<p>Make conversations feel natural.</p>
+</li>
+<li>
+<p>Solve user problems effectively.</p>
+</li>
+</ul>
+<h2 id="types-of-topics">🪺 Types of topics<a class="headerlink" href="#types-of-topics" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>System topics</strong> - these are built-in and handle common events such as:</p>
+<ul>
+<li>Starting a conversation</li>
+<li>Ending a conversation</li>
+<li>Handling errors</li>
+<li>Asking users to sign in</li>
+<li>Escalating to a human agent</li>
+</ul>
+</li>
+<li>
+<p><strong>Custom topics</strong> - you create these to handle specific tasks or questions such as:</p>
+<ul>
+<li>Employee leave request</li>
+<li>Request new or replacement device</li>
+</ul>
+</li>
+</ol>
+<p><img alt="Types of topics" src="assets/7.0_01_Topics.png" /></p>
+<h2 id="anatomy-of-a-topic">🧬 Anatomy of a topic<a class="headerlink" href="#anatomy-of-a-topic" title="Permanent link">&para;</a></h2>
+<p>Each topic usually contains the following.</p>
+<h3 id="trigger-phrases">🗣️ Trigger phrases<a class="headerlink" href="#trigger-phrases" title="Permanent link">&para;</a></h3>
+<p>These are words or sentences users might say to start the topic.</p>
+<p><strong>Examples:</strong></p>
+<p>For a leave request topic, trigger phrases could be</p>
+<ul>
+<li><code>I want to take vacation leave</code></li>
+<li><code>Request vacation</code></li>
+<li><code>Apply for time off</code></li>
+<li><code>How do I submit a leave request?</code></li>
+</ul>
+<p>For a request device topic, trigger phrases could be</p>
+<ul>
+<li><code>I need a new device</code></li>
+<li><code>Can I request a device?</code></li>
+<li><code>Can you help me with a device request</code></li>
+</ul>
+<h3 id="conversation-nodes">💬 Conversation nodes<a class="headerlink" href="#conversation-nodes" title="Permanent link">&para;</a></h3>
+<p>A topic is made up of nodes which are steps the agent follows once the topic is triggered. You connect these steps to build a conversation flow that your agent follows when interacting with users.</p>
+<p>Think of these as instructions or actions such as the following:</p>
+<ul>
+<li>Asking the user questions</li>
+<li>Sending messages</li>
+<li>Calling an external service such as leave management system</li>
+<li>Setting or checking variables</li>
+<li>Using conditions to branch the conversation</li>
+<li>Directing to another topic</li>
+</ul>
+<p><img alt="Conversation nodes" src="assets/7.0_03_ConversationNodes.png" /></p>
+<p>The following are the main types of nodes you can add to an agent:</p>
+<ol>
+<li>
+<p><strong>Send a message</strong></p>
+<ul>
+<li><strong>Purpose</strong> - sends a message to the user.</li>
+<li><strong>Example</strong> - <code>Thanks for your request! I'll help you with that.</code></li>
+</ul>
+<p>This node lets your agent send messages to users, which can be simple text or rich content like images, videos, cards, quick replies and adaptive cards.</p>
+<p>You can personalize messages using variables, add multiple message variations for variety, and even customize speech output for voice-enabled channels.</p>
+<blockquote>
+<p>Think of it as a "say something" block that helps your agent communicate clearly and interactively with users.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Ask a question</strong></p>
+<ul>
+<li><strong>Purpose</strong> - asks the user a question and waits for their answer.</li>
+<li><strong>Example</strong> - <code>What are your vacation dates?</code></li>
+</ul>
+<p>This node is used to ask users for specific information during a conversation and store their responses in variables for later use.</p>
+<p>You can customize the type of question like text input or use entities for a defined list of values a user selects from, and define how the agent should behave if the user gives an invalid answer or skips the question.</p>
+<p>It also supports rich content like images and quick replies, and lets you fine-tune validation, reprompting, and interruption settings to make the conversation flow smoothly.</p>
+<blockquote>
+<p>Think of it as an "ask and listen" block that helps your agent interact with users in a structured way that you define.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Ask with adaptive card</strong></p>
+<ul>
+<li><strong>Purpose</strong> - send a rich, interactive card using JSON.</li>
+<li><strong>Example</strong> - a card that displays a calendar date picker for a user to select a date.</li>
+</ul>
+<p>This node shows rich, interactive cards that users can fill out and submit such as forms with text boxes, buttons, and images. It captures the user's input and stores it in variables, which your agent can use later in the conversation.</p>
+<blockquote>
+<p>Think of it as a customizable "form builder" block that makes your agent more engaging and capable of collecting detailed information from users.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Add a condition</strong></p>
+<ul>
+<li><strong>Purpose</strong> - add logic to the conversation. It checks something and decides what to do next.</li>
+<li><strong>Example</strong> - if the user says <code>Yes</code>, go to the next step. If <code>No</code>, end the conversation.</li>
+</ul>
+<p>This node creates decision points in your agent's conversation flow by checking if a variable meets certain criteria. Based on whether the condition is true or false, the agent follows different paths.</p>
+<blockquote>
+<p>Think of it as an "if-else" block that helps your agent make decisions depending on user input or stored data in variables.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Variable management</strong></p>
+<ul>
+<li><strong>Purpose</strong> - stores or clears information (called variables) during the conversation.</li>
+<li><strong>Example</strong> - saves the date the user selected in the Ask a question node that displays an adaptive card.</li>
+</ul>
+<p>This node lets you store and manage information during a conversation, it could be a user's name, answer, or preferences. You can use different types of variables such as text, numbers, or dates, and they can be scoped to a single topic, shared across topics (global), or even pulled from the system or environment.</p>
+<blockquote>
+<p>Think of it as a "memory box" that helps your agent remember information and use them as the conversation continues with the user.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Topic management</strong></p>
+<ul>
+<li><strong>Purpose</strong> - moves the conversation to another topic or step within the topic, transfer the conversation, or end the topic or conversation.</li>
+<li><strong>Example</strong> - redirect to a "Leave Policy" topic.</li>
+</ul>
+<p>This node allows your agent to jump from one topic to another without restarting the conversation, end the topic, transfer or end the conversation, or go to a different step within the same topic. It helps guide users through different parts of the conversation flow by smoothly transitioning between topics, and you can pass variables between them to keep context.</p>
+<blockquote>
+<p>Think of it as a "go to another section/step" block that helps your agent be flexible in chatting with users.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Add a tool</strong></p>
+<ul>
+<li><strong>Purpose</strong> - connects to external tools such as Power Automate, Excel, ServiceNow.</li>
+<li><strong>Example</strong> - Power Automate cloud flow executed after user submits their vacation leave request.</li>
+</ul>
+<p>This node gives your agent capabilities to interact with external systems or perform specific tasks, such as sending emails, checking weather, or accessing databases. You can add tools using built-in connectors, custom APIs, agent flows, prompts, or connect to Model Context Protocol (MCP) servers, and even <em>graphical user interface</em> automation for desktop apps through the computer use tool.</p>
+<blockquote>
+<p>Think of tools as "action blocks" that give your agent superpowers to do things beyond <em>chatting</em>, such as calling an API, running a process, or collecting user input automatically.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Generative answers node</strong></p>
+<ul>
+<li><strong>Purpose</strong> - uses a large language model to generate natural, human-like responses based on the user's question and any connected data.</li>
+<li><strong>Example</strong> - uses the connected knowledge source that contains information on vacation leave entitlements to answer user questions regarding vacation requests.</li>
+</ul>
+<p>This node enables your agent to respond to user questions using information from various knowledge sources, like websites, documents, SharePoint, or custom data. It can be used as a fallback when no matching topic is found, or within a topic to provide more detailed, dynamic answers based on specific sources you've configured your agent to use.</p>
+<blockquote>
+<p>Think of it as a "smart answer block" that helps your agent give helpful, accurate responses by searching trusted content you define.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>HTTP request node</strong></p>
+<ul>
+<li><strong>Purpose</strong> - connect your agent to external systems by sending API calls (for example <code>GET</code> or <code>POST</code>) to fetch or update data.</li>
+<li><strong>Example</strong> - when a user asks for their vacation days balance, the agent performs a <code>GET</code> request to the leave management system and extracts the <code>remainingLeaveDays</code> from the API response and replies to the user with the value.</li>
+</ul>
+<p>This node lets your agent connect to external systems by sending REST API calls, like <code>GET</code> or <code>POST</code> requests. You can customize the request with headers, body content, and even use Power Fx to include dynamic data, then store the response in variables for use later in the conversation.</p>
+<blockquote>
+<p>Think of it as a "reach out and get information" block that helps your agent talk to other services such as retrieving user details or sending data to another system.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Send an event</strong></p>
+<ul>
+<li><strong>Purpose</strong> - lets your agent send non-message actions, such as system updates or tool triggers - to the client or channel, helping it perform tasks.</li>
+<li><strong>Example</strong> - reacting to a user joining a chat by displaying a welcome a message.</li>
+</ul>
+<p>This node lets your agent send non-message actions to external systems or channels, which can then decide how to respond. You give each event a name and attach a value, which can be a simple number or text, a variable, or a Power Fx formula, and it gets sent as a JSON object.</p>
+<blockquote>
+<p>Think of it as a "silent trigger" block that helps your agent do things behind the scenes or communicate with external tools without needing a user to say anything.</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="using-power-fx-in-your-nodes">🏋🏻‍♀️ Using Power Fx in your nodes<a class="headerlink" href="#using-power-fx-in-your-nodes" title="Permanent link">&para;</a></h2>
+<p>In Copilot Studio, Power Fx is a low-code programming language used to add logic and dynamic behavior to your agent. It's the same language used in Microsoft Power Apps, and it's designed to be simple and Excel-like, making it easy for developers and non-developers.</p>
+<p><img alt="Power Fx expression" src="assets/7.3_13_EnterFormula.png" /></p>
+<h3 id="what-power-fx-can-do-in-topics">What Power Fx can do in topics<a class="headerlink" href="#what-power-fx-can-do-in-topics" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Set and manipulate variables</li>
+<li>Example: <code>Set(userName, "Adele Vance")</code></li>
+<li>Create conditions</li>
+<li>Example: <code>If(score &gt; 80, "Pass", "Fail")</code></li>
+<li>Format and transform data</li>
+<li>Example: <code>Text(DateValue, "dd/mm/yyyy")</code></li>
+</ul>
+<h3 id="why-use-power-fx">Why use Power Fx?<a class="headerlink" href="#why-use-power-fx" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Flexible:</strong> you can build logic without writing full lines of code.</p>
+</li>
+<li>
+<p><strong>Familiar:</strong> if you’ve used Excel formulas, it feels very similar.</p>
+</li>
+<li>
+<p><strong>Powerful:</strong> it lets you personalize conversations, validate input, and control how your agent behaves based on user data.</p>
+</li>
+</ul>
+<h2 id="how-do-i-create-and-edit-topics">🏗️ How do I create and edit topics?<a class="headerlink" href="#how-do-i-create-and-edit-topics" title="Permanent link">&para;</a></h2>
+<p>There are two ways you can create and edit topics for your agents.</p>
+<h3 id="1-create-from-blank">1. Create from blank<a class="headerlink" href="#1-create-from-blank" title="Permanent link">&para;</a></h3>
+<p>This allows you to build custom conversation flows from scratch, and you can add or remove nodes as needed when editing your topic.</p>
+<p><img alt="Add a topic" src="assets/7.0_04_AddATopic.png" /></p>
+<h4 id="why-this-is-useful">Why this is useful<a class="headerlink" href="#why-this-is-useful" title="Permanent link">&para;</a></h4>
+<ul>
+<li>It gives you full control over how your agent responds.</li>
+<li>You can customize logic using variables, Power Fx, and conditions.</li>
+<li>It’s perfect for building tailored experiences for specific business needs.</li>
+</ul>
+<h3 id="2-create-with-copilot">2. Create with Copilot<a class="headerlink" href="#2-create-with-copilot" title="Permanent link">&para;</a></h3>
+<p>This allows you to describe what you want using natural language, and Copilot will build the conversation for you. Same applies when editing your topic, use natural language and Copilot will review and modify the topic for you.</p>
+<h4 id="what-copilot-supports">What Copilot supports<a class="headerlink" href="#what-copilot-supports" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Can create and edit:</li>
+<li>Message nodes</li>
+<li>Question nodes</li>
+<li>Condition nodes</li>
+<li>Doesn’t support advanced settings such as how to reprompt the user if they don’t respond or how to manage interruptions during a question. You can still adjust those settings manually if needed.</li>
+</ul>
+<h4 id="why-this-is-useful_1">Why this is useful<a class="headerlink" href="#why-this-is-useful_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Speeds up development with AI assistance.</li>
+<li>Lets you focus on logic and user experience instead of repetitive setup.</li>
+<li>Makes it easier to iterate and improve conversation flows with minimal effort.</li>
+</ul>
+<h4 id="example-prompts">✨ Example prompts<a class="headerlink" href="#example-prompts" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Create a topic</strong></p>
+<ul>
+<li><code>Accept a user's name, age and date of birth and then repeat their responses back to them</code></li>
+<li><code>Collect a user's street address, state and zip code. The user should be able to retry each question up to 4 times</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Edit a topic</strong></p>
+<ul>
+<li><code>Add a question asking for the user’s date of birth</code></li>
+<li><code>Summarize collected info in an Adaptive Card.</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="ok-how-do-i-design-topics-for-my-agent">👩🏻‍🎨 OK, how do I design topics for my agent?<a class="headerlink" href="#ok-how-do-i-design-topics-for-my-agent" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-understand-what-users-need">🧙🏻‍♂️ Step 1 - understand what users need<a class="headerlink" href="#step-1-understand-what-users-need" title="Permanent link">&para;</a></h3>
+<p>Start by identifying common questions or tasks users will ask your agent. These could be:</p>
+<ul>
+<li>Questions that users ask often such as, <code>what's my entitlement for sick days?</code></li>
+<li>Common tasks users want to complete such as submitting a form</li>
+<li>Problems users often face such as login issues</li>
+</ul>
+<h3 id="step-2-group-the-scenarios">📦 Step 2 - Group the scenarios<a class="headerlink" href="#step-2-group-the-scenarios" title="Permanent link">&para;</a></h3>
+<p>Organize the user needs into three categories based on what we learnt earlier - the purpose of a topic:</p>
+<ul>
+<li>Informational - the user wants to know something</li>
+<li>Task completion - the user wants to do something</li>
+<li>Troubleshooting - the user needs help with resolving an issue</li>
+</ul>
+<h3 id="step-3-map-out-the-conversation">🗺️ Step 3 - Map out the conversation<a class="headerlink" href="#step-3-map-out-the-conversation" title="Permanent link">&para;</a></h3>
+<p>Sketch a simple conversation flow of how the agent should respond</p>
+<ul>
+<li>Start with a greeting or confirmation</li>
+<li>Ask follow-up questions to get details</li>
+<li>Provide answers or perform actions</li>
+</ul>
+<blockquote>
+<p>Tip: keep the conversation short and focused. Only ask what's necessary.</p>
+</blockquote>
+<h3 id="step-4-handle-different-conversation-types">🔀 Step 4 - Handle different conversation types<a class="headerlink" href="#step-4-handle-different-conversation-types" title="Permanent link">&para;</a></h3>
+<p>Design for both:</p>
+<ul>
+<li>
+<p><strong>Single-turn</strong> - one question, one answer</p>
+</li>
+<li>
+<p><strong>Multi-turn</strong> - a back and forth conversation with follow-up questions</p>
+</li>
+</ul>
+<p>Example:</p>
+<ul>
+<li>
+<p>User: <code>I want to apply for vacation leave.</code></p>
+</li>
+<li>
+<p>Agent: <code>Sure! What date would you like your leave to start?</code></p>
+</li>
+<li>
+<p>User: <code>July 15th</code></p>
+</li>
+<li>
+<p>Agent: <code>Got it. And when will your leave end?</code></p>
+</li>
+<li>
+<p>User: <code>July 22nd.</code></p>
+</li>
+<li>
+<p>Agent: <code>Thanks! What’s the reason for your leave?</code></p>
+</li>
+<li>
+<p>User: <code>Family vacation.</code></p>
+</li>
+<li>
+<p>Agent: <code>Thanks for the details. I’ve submitted your leave request from July 15th to July 22nd for a family vacation. You’ll get a confirmation soon.</code></p>
+</li>
+</ul>
+<h3 id="step-5-use-ai-for-unexpected-questions">🤖 Step 5 - Use AI for unexpected questions<a class="headerlink" href="#step-5-use-ai-for-unexpected-questions" title="Permanent link">&para;</a></h3>
+<p>Even if you've designed a topic for leave requests, users might ask questions that aren't directly covered. This is where AI features like the <em>Conversational boosting</em> system topic come in handy.</p>
+<p>This topic includes a generative answers node, which lets your agent start using connected knowledge sources right away. Any knowledge sources added at the agent level are automatically included in the generative answers node within the <em>Conversational boosting</em> system topic.</p>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
+<ul>
+<li>User: <code>Can I carry over unused vacation days to next year?</code></li>
+</ul>
+<p>This question might not be part of your predefined topic flow, especially if your topic only handles submitting leave requests.</p>
+<h4 id="how-ai-helps">How AI helps<a class="headerlink" href="#how-ai-helps" title="Permanent link">&para;</a></h4>
+<p>If your agent is connected to your company's HR policy documents or internal website, AI can:</p>
+<ul>
+<li>Search for the relevant leave policy</li>
+<li>Understand and summarize the rules</li>
+<li>Agent responds with: <code>According to the HR policy, you can carry over unused vacation days to the next calendar year. For more details, check the leave policy section on the HR portal.</code></li>
+</ul>
+<h4 id="why-this-is-useful_2">Why this is useful<a class="headerlink" href="#why-this-is-useful_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>You don't need to manually create a topic for every policy-related question.</li>
+<li>AI can pull accurate answers from trusted knowledge sources.</li>
+<li>It improves user experience by making the agent feel smarter and more responsive.</li>
+</ul>
+<h3 id="step-6-test-the-topic-the-conversation-flow">🔬 Step 6 - Test the topic, the conversation flow<a class="headerlink" href="#step-6-test-the-topic-the-conversation-flow" title="Permanent link">&para;</a></h3>
+<p>Before publishing your topic:</p>
+<ul>
+<li>Test using real questions or real sample inputs.</li>
+<li>Make sure it sounds natural and helpful.</li>
+</ul>
+<blockquote>
+<p>Tip: Apply improvements to your topic accordingly as you test, such as adding more nodes or removing nodes in-place of redirecting to another topic</p>
+</blockquote>
+<h3 id="step-7-avoid-duplicating-website-content">⚠️ Step 7 - Avoid duplicating website content<a class="headerlink" href="#step-7-avoid-duplicating-website-content" title="Permanent link">&para;</a></h3>
+<p>Don't copy what's already on your website.</p>
+<ul>
+<li>Focus on topics that users ask about often.</li>
+<li>Add new topics based on chat history or support requests.</li>
+</ul>
+<h3 id="example-of-conversation-flow">✨ Example of conversation flow<a class="headerlink" href="#example-of-conversation-flow" title="Permanent link">&para;</a></h3>
+<p>Below is an example of a topic that handles leave requests.</p>
+<h4 id="step-1-trigger-phrase">Step 1: Trigger phrase<a class="headerlink" href="#step-1-trigger-phrase" title="Permanent link">&para;</a></h4>
+<p>User types,</p>
+<p><code>I want to request vacation leave</code></p>
+<h4 id="step-2-agent-asks-for-details-using-an-adaptive-card">Step 2: Agent asks for details using an Adaptive card<a class="headerlink" href="#step-2-agent-asks-for-details-using-an-adaptive-card" title="Permanent link">&para;</a></h4>
+<p>Agent asks,</p>
+<p><code>Sure! What dates would you like to take off?</code></p>
+<p>Adaptive card has a start date and end date calendar picker control.</p>
+<h4 id="step-3-user-provides-dates">Step 3: User provides dates<a class="headerlink" href="#step-3-user-provides-dates" title="Permanent link">&para;</a></h4>
+<p>User selects start date as August 5 2025 and end date August 10 2025, and submits card. Date values are stored in the output of the adaptive card as variables.</p>
+<h4 id="step-4-cloud-flow-executed">Step 4: Cloud flow executed<a class="headerlink" href="#step-4-cloud-flow-executed" title="Permanent link">&para;</a></h4>
+<p>A Power Automate cloud flow has been executed which creates a new request in leave management system and sends an email to notify manager of leave request.</p>
+<h4 id="step-5-send-a-confirmation-message-to-the-user">Step 5: Send a confirmation message to the user<a class="headerlink" href="#step-5-send-a-confirmation-message-to-the-user" title="Permanent link">&para;</a></h4>
+<p>Agent responds with,</p>
+<p><code>Your vacation leave request from August 5 to August 10 has been submitted. Your manager will review and get back to you shortly.</code></p>
+<h2 id="lab-07-add-a-new-topic-with-conversation-nodes">🧪 Lab 07 - Add a new topic with conversation nodes<a class="headerlink" href="#lab-07-add-a-new-topic-with-conversation-nodes" title="Permanent link">&para;</a></h2>
+<p>We're now going to learn how to add a new topic with a trigger and tools. This lab will cover creating a topic from blank so that you understand how to customize topics to your needs.</p>
+<h3 id="use-case">✨ Use case<a class="headerlink" href="#use-case" title="Permanent link">&para;</a></h3>
+<p><strong>As an</strong> employee</p>
+<p><strong>I want to</strong> know what devices are available</p>
+<p><strong>So that I</strong> have a list of available devices</p>
+<p>Let's begin!</p>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>SharePoint list</strong></p>
+<p>We'll be using the <strong>Devices</strong> SharePoint list from <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Lesson 00 - Course Setup - Step 3: Create new SharePoint site</a>.</p>
+<p>If you have not set up the <strong>Devices</strong> SharePoint list, please head back to <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Lesson 00 - Course Setup - Step 3: Create new SharePoint site</a>.</p>
+</li>
+<li>
+<p><strong>Contoso Helpdesk Agent</strong></p>
+<p>We're going to use the same agent created previously in <a href="../06-create-agent-from-conversation/">Lesson 06 - Create a custom agent using natural language with Copilot and grounding it with your data</a>.</p>
+</li>
+</ol>
+<h3 id="71-add-a-new-topic-from-blank">7.1 Add a new topic from blank<a class="headerlink" href="#71-add-a-new-topic-from-blank" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Select the <strong>Topics tab</strong> near the name of the agent. If you don't see it visible, select <strong>+6</strong> and you'll see <strong>Topics</strong> listed.</p>
+<p><img alt="Select Topics" src="assets/7.1_01_Topics.png" /></p>
+</li>
+<li>
+<p>The <strong>Topics</strong> tab will load and by default the <em>Custom</em> topics will be displayed. You can filter topics by All, Custom and System. The custom and system topics you currently see were created automatically when the agent was provisioned.</p>
+<p>Select <strong>+ Add a topic</strong> and select <strong>From blank</strong>.</p>
+<p><img alt="Create topic from scratch" src="assets/7.1_02_FromBlank.png" /></p>
+</li>
+<li>
+<p>Enter a name for the topic. Copy and paste the following.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Available devices
+</span></code></pre></div>
+<p><img alt="Name the topic" src="assets/7.1_03_TopicName.png" /></p>
+</li>
+<li>
+<p>Enter a trigger description that outlines what the topic does. Copy and paste the following.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>This topic helps users find devices that are available from our SharePoint Devices list. User can ask to see available devices and it will return a list of devices that are available which can include laptops, smartphones, accessories and more.
+</span></code></pre></div>
+<p><img alt="Enter a name and description for trigger" src="assets/7.1_04_TriggerDescription.png" /></p>
+</li>
+</ol>
+<h3 id="72-define-the-trigger-inputs-and-outputs">7.2 Define the trigger inputs and outputs<a class="headerlink" href="#72-define-the-trigger-inputs-and-outputs" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Next, we're going to add a new input variable that generative AI will use in its orchestration to extract the value of the device type from a user's message. Select the <strong>More ellipsis (...)</strong> in the topic and select <strong>Details</strong> to view the topic details pane.</p>
+<p><img alt="Select Topic Details" src="assets/7.2_01_SelectTopicDetails.png" /></p>
+</li>
+<li>
+<p>The <strong>Topic details</strong> pane has now loaded. Select the <strong>Input</strong> tab.</p>
+<p><img alt="Input tab" src="assets/7.2_02_SelectInputTab.png" /></p>
+</li>
+<li>
+<p>Select <strong>Create a new variable</strong>.</p>
+<p><img alt="Create new input variable" src="assets/7.2_03_CreateANewVariable.png" /></p>
+</li>
+<li>
+<p>Enter a name for the variable. Copy and paste the following.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>VarDeviceType
+</span></code></pre></div>
+<p><img alt="Input variable name" src="assets/7.2_04_InputVariableName.png" /></p>
+</li>
+<li>
+<p>We now need to define our input and output variables. The following are properties that can be defined for topic inputs and outputs.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>How will the agent fill this input?</td>
+<td style="text-align: left;">Determines how the agent fills this variable with a value before running the topic. By default it's set to <em>Dynamically fill with the best option</em>. Otherwise you can override an input with a value instead of asking the user</td>
+</tr>
+<tr>
+<td>Variable data type</td>
+<td style="text-align: left;">The data type of the variable. Supported data types are <code>String</code>, <code>Boolean</code>, <code>Number</code>, <code>Date</code>, <code>DateTime</code>, <code>DateTimeNoTimeZone</code>, <code>Time</code>, <code>Record</code>, <code>Table</code>, <code>Unspecified</code>, <code>From sample data</code></td>
+</tr>
+<tr>
+<td>Display name</td>
+<td style="text-align: left;">Name of variable</td>
+</tr>
+<tr>
+<td>Identify as</td>
+<td style="text-align: left;">Entity type for the agent to capture the correct value type</td>
+</tr>
+<tr>
+<td>Description</td>
+<td style="text-align: left;">The description helps the agent automatically fill inputs before running the topic or generate questions to ask for the values</td>
+</tr>
+</tbody>
+</table>
+<p>The <em>How will the agent fill this input?</em>, <em>variable data type</em> and <em>Display name</em> can remain as-is. Update the <strong>Identify as</strong> property to <strong>User's entire response</strong>.</p>
+<p><img alt="Update Identify as" src="assets/7.2_05_IdentifyAs.png" /></p>
+</li>
+<li>
+<p>Copy and paste the following as the description.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>List of possible values: Laptop, Desktop, Smartphone
+</span></code></pre></div>
+<p><img alt="Description" src="assets/7.2_06_InputDescription.png" /></p>
+</li>
+<li>
+<p>Next, let's define our output for the topic. Select the <strong>Output</strong> tab.</p>
+<p><img alt="Select Output tab" src="assets/7.2_07_SelectOutputTab.png" /></p>
+</li>
+<li>
+<p>Select <strong>Create a new variable</strong>.</p>
+<p><img alt="Create new output variable" src="assets/7.2_08_CreateANewVariable.png" /></p>
+</li>
+<li>
+<p>Update the following properties.</p>
+<p><strong>Variable name</strong> - Copy and paste the following.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>VarAvailableDevices
+</span></code></pre></div>
+<p><strong>Variable data type</strong> - Select <strong>Table</strong> as the data type.</p>
+<p><strong>Variable description</strong> - Copy and paste the following.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>List of available devices by device type
+</span></code></pre></div>
+<p><img alt="Output properties" src="assets/7.2_09_OutputVariable.png" /></p>
+</li>
+<li>
+<p>We've now completed defining the inputs and outputs of the topic. Select the <strong>X icon</strong> to exit from the <strong>Topic details</strong> pane.</p>
+<p><img alt="Exit from topic details pane." src="assets/7.2_10_ExitTopicDetailsPane.png" /></p>
+</li>
+</ol>
+<h3 id="73-add-a-tool-using-a-connector">7.3 Add a tool using a connector<a class="headerlink" href="#73-add-a-tool-using-a-connector" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Let's next add a node that enables the agent to retrieve the list of devices from the <strong>Devices</strong> SharePoint list. Select the <strong>+ icon</strong> below the trigger and select the <strong>Add a tool</strong> node. Select the <strong>Connector</strong> tab.</p>
+<p><img alt="Add a tool" src="assets/7.3_01_AddNode.png" /></p>
+</li>
+<li>
+<p>Search for <code>Get items</code> and select the <strong>Get items</strong> SharePoint connector action.</p>
+<p><img alt="Select get items" src="assets/7.3_02_GetItems.png" /></p>
+</li>
+<li>
+<p>A new connection needs to be created for the connector. Select the <strong>chevron</strong> icon and select <strong>Create new connection</strong>.</p>
+<p><img alt="Add a tool" src="assets/7.3_03_CreateNewConnection.png" /></p>
+</li>
+<li>
+<p>Two options will be displayed that allows you to connect directly to SharePoint Online or to an on-premises SharePoint. By default the <strong>Connect directly (cloud-services)</strong> option will be selected, which is what we'll use for our connection.</p>
+<p>Select <strong>Create</strong>.</p>
+<p><img alt="Select Create" src="assets/7.3_04_SelectCreate.png" /></p>
+</li>
+<li>
+<p>Select your signed in user account.</p>
+<p><img alt="Select signed in user account" src="assets/7.3_05_SelectSignedInUserAccount.png" /></p>
+</li>
+<li>
+<p>Next, you need to confirm your user account can be used for the connection to the SharePoint connector. Select <strong>Allow access</strong>.</p>
+<p><img alt="Select allow access" src="assets/7.3_06_AllowAccess.png" /></p>
+</li>
+<li>
+<p>Select <strong>Submit</strong> for the <strong>Get items</strong> SharePoint connector action to be added as a node to the topic.</p>
+<p><img alt="Submit" src="assets/7.3_07_ConnectedSelectSubmit.png" /></p>
+</li>
+<li>
+<p>The <strong>Get items</strong> SharePoint connector action is now added to the topic. We can now begin configuring the inputs of the action. Select the <strong>ellipsis (...) icon</strong> and select <strong>Properties</strong>.</p>
+<p><img alt="Select Properties" src="assets/7.3_08_GetItemsProperties.png" /></p>
+</li>
+<li>
+<p>The <strong>Get items</strong> configuration pane will appear and by default, you'll see the <strong>Inputs</strong> tab. Select the <strong>Initiation</strong> tab and enter a description in the <strong>Usage Description</strong> field. Copy and paste the following.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Retrieves devices from SharePoint list
+</span></code></pre></div>
+<blockquote>
+<p>This will come in handy when we view the <em>Manage your connections</em> page of our agent. We'll return to this shortly.</p>
+</blockquote>
+<p><img alt="Get items description" src="assets/7.3_09_UpdateDescription.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Inputs</strong> tab and select the <strong>Contoso IT</strong> site and the <strong>Devices</strong> list that you setup in <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Lesson 00 - Course Setup - Step 3: Create new SharePoint site</a>.</p>
+<p><img alt="Configure Get items inputs" src="assets/7.3_10_GetItemsInputs.png" /></p>
+</li>
+<li>
+<p>Now, to only display devices from the SharePoint list based on</p>
+<ul>
+<li>the selected value,</li>
+<li>and only devices where the status equals <em>Available</em>,</li>
+</ul>
+<p>we need to apply a filter. This is achieved by entering a filter query with the help of Power Fx. Select the <strong>ellipsis (...) icon</strong>.</p>
+<p><img alt="Select ellipsis icon" src="assets/7.3_11_SelectVariable.png" /></p>
+</li>
+<li>
+<p>By default, you'll be in the <strong>Custom</strong> tab. Select the <strong>Formula</strong> tab.</p>
+<p><img alt="Select Formula tab" src="assets/7.3_12_SelectFormula.png" /></p>
+</li>
+<li>
+<p>Select the <strong>expand</strong> icon to enlarge the <strong>Formula</strong> field. Copy and paste the following Power Fx expression.</p>
+<p>We are using the <code>Concatenate</code> function to create an expression that will filter
+- the SharePoint column of <strong>Status</strong> equals <em>Available</em>
+- and the SharePoint column of <strong>Asset type</strong> equals <em>the selected device from the question node</em>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Concatenate(&quot;Status eq &#39;Available&#39; and AssetType eq &#39;&quot;, Topic.VarDeviceType, &quot;&#39;&quot;)
+</span></code></pre></div>
+<p>Select <strong>Insert</strong>.</p>
+<p><img alt="Enter Power Fx expression and select insert" src="assets/7.3_13_EnterFormula.png" /></p>
+</li>
+<li>
+<p>The Power Fx expression will now be applied in the Filter Query input parameter of the <strong>Get items</strong> action. Next, select the <strong>All items</strong> view in the <strong>Limit Columns by View</strong>. This will only retrieve the columns in the list based on the selected view.</p>
+<p><img alt="List Columns by View" src="assets/7.3_14_LimitColumnsByView.png" /></p>
+</li>
+<li>
+<p>Next, we'll update the name of the variable for the output. Select the <strong>Outputs</strong> tab and select the <code>GetItems</code> variable.</p>
+<p><img alt="Update variable" src="assets/7.3_15_ConfigureOutputs.png" /></p>
+</li>
+<li>
+<p>Update the name to the following.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>VarDevices
+</span></code></pre></div>
+<p><img alt="Update variable name" src="assets/7.3_16_RenameVariable.png" /></p>
+</li>
+<li>
+<p>Scroll down and in the <strong>Usage</strong> section, select <strong>Global</strong>. This will make the variable accessible by any topic.</p>
+<p><img alt="Update to Global variable" src="assets/7.3_17_UpdateToGlobalVariable.png" /></p>
+</li>
+<li>
+<p><strong>Save</strong> the topic.</p>
+<p><img alt="Save the topic" src="assets/7.3_18_SaveTopic.png" /></p>
+</li>
+<li>
+<p>Select the <strong>plus +</strong> icon to insert a new node, select <strong>Variable management</strong> followed by selecting <strong>Set a variable value</strong>.</p>
+<p><img alt="Add Set a variable value node" src="assets/7.3_19_AddSetAVariableValueNode.png" /></p>
+</li>
+<li>
+<p>Select the <strong>greater than</strong> icon for the <strong>Set variable</strong> input parameter.</p>
+<p><img alt="Set variable" src="assets/7.3_20_SelectAVariable.png" /></p>
+</li>
+<li>
+<p>Select the Topic output created earlier as the variable, <strong>VarAvailableDevices</strong>.</p>
+<p><img alt="Save topic" src="assets/7.3_21_SelectVarAvailableDevicesOutput.png" /></p>
+</li>
+<li>
+<p>Next, select the <strong>ellipsis (...) icon</strong> to define the value of the variable.</p>
+<p><img alt="Select variable value" src="assets/7.3_22_SelectVariable.png" /></p>
+</li>
+<li>
+<p>We'll now use a PowerFx expression to set the variable value as the <code>value</code> property returned in the <strong>Get items</strong> response, and make the <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-power-fx?WT.mc_id=power-172618-ebenitez">scope of the variable</a> global by adding the prefix of <code>Global</code>.</p>
+<p><strong>Save</strong> the topic.</p>
+<p><img alt="Power Fx formula for variable value" src="assets/7.3_23_PowerFxFormula.png" /></p>
+</li>
+<li>
+<p>Next we need to update the agent instructions. Select the <strong>Overview</strong> tab and select <strong>Edit</strong>.</p>
+<p><img alt="Edit instructions" src="assets/7.3_24_EditInstructions.png" /></p>
+</li>
+<li>
+<p>Add the a new line in the instructions, copy and paste the following.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>- Help find available devices and give full details using [Available devices]. Always extract the VarDeviceType from the inputs. After giving device details, ask the user if they want to request a device from the list of available devices.
+</span></code></pre></div>
+<p>This instruction will guide generative AI to invoke the <strong>Available devices</strong> trigger to display the list of available devices from the <strong>Devices</strong> Sharepoint list. Select the entire topic placeholder in square brackets.</p>
+<p><img alt="Add instructions" src="assets/7.3_25_AddInstructions.png" /></p>
+</li>
+<li>
+<p>Type in the forward slash character <code>/</code> and the list of topics will appear. Select the <strong>Available devices</strong> topic.</p>
+<p><img alt="Reference trigger" src="assets/7.3_26_SelectAvailableDevicesTopic.png" /></p>
+</li>
+<li>
+<p><strong>Save</strong> the updated instructions.</p>
+<p><img alt="Save instructions" src="assets/7.3_27_SaveUpdatedInstructions.png" /></p>
+</li>
+<li>
+<p>We're now going to test our updated agent. Select <strong>Test</strong> on the upper right to display the test pane and <strong>refresh</strong> the test pane. Enter the following message to the agent.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>I need a laptop
+</span></code></pre></div>
+<p><img alt="Test" src="assets/7.3_28_Test.png" /></p>
+</li>
+<li>
+<p>Before the agent can proceed, the user needs to verify their connection through the <em>Manage your connections</em> page of the agent. Select <strong>Open connection manager</strong>.</p>
+<p><img alt="Open connection manager" src="assets/7.3_29_SelectOpenConnectionManager.png" /></p>
+</li>
+<li>
+<p>Before we select <strong>Connect</strong> to verify the connection, select <strong>1 tool</strong> in the <strong>Used By</strong> column.</p>
+<p><img alt="Used By" src="assets/7.3_30_ViewUsedBy.png" /></p>
+</li>
+<li>
+<p>This is where we can see the details of the Get items action and remember the <em>usage description</em> we entered earlier? This is where we'll see the usage description. Select <strong>Close</strong>.</p>
+<blockquote>
+<p>This lets us know what actions are used and the purpose of it. This keeps our connections organized 📁.</p>
+</blockquote>
+<p><img alt="Usage description" src="assets/7.3_31_UsageDescription.png" /></p>
+</li>
+<li>
+<p>Select <strong>Connect</strong>.</p>
+<p><img alt="Select Connect" src="assets/7.3_32_SelectConnect.png" /></p>
+</li>
+<li>
+<p>A new modal will appear where you can create or select an existing connection.</p>
+<p>Since we created a connection earlier, by default it is using this connection so we'll leave it as-is. Select <strong>Submit</strong>.</p>
+<p><img alt="Select Submit" src="assets/7.3_33_SelectSubmit.png" /></p>
+</li>
+<li>
+<p>Go back to your browser tab with Copilot Studio and in the test pane, select <strong>Retry</strong>.</p>
+<p><img alt="Select Retry" src="assets/7.3_34_SelectRetry.png" /></p>
+</li>
+<li>
+<p>We'll see that the <strong>Available devices</strong> topic has been executed as we see a message returned with a list of available devices. If you see a hyperlink called <strong>More details</strong> or something similar, click it.</p>
+<p><img alt="Message returned" src="assets/7.3_35_MoreDetails.png" /></p>
+</li>
+<li>
+<p>A new browser tab will load the SharePoint item in the SharePoint site. Generative AI was able to retrieve the link to the item and display it as a hyperlink in the message.</p>
+<p><img alt="View SharePoint item" src="assets/7.3_36_SharePointItem.png" /></p>
+</li>
+<li>
+<p>Go back to your browser tab with Copilot Studio and <strong>refresh</strong> the test pane to clear the test.</p>
+<p><img alt="Refresh test pane" src="assets/7.3_37_RefreshTestPane.png" /></p>
+</li>
+</ol>
+<h2 id="mission-complete">✅ Mission Complete<a class="headerlink" href="#mission-complete" title="Permanent link">&para;</a></h2>
+<p>Congratulations! 👏🏻 You've learnt how to add a new topic from scratch, how to add a tool which calls the Get items SharePoint connector action and use Power Fx to filter the response to only return devices where the status equals available and the device type equals laptop. 🙌🏻</p>
+<p>This is the end of <strong>Lab 07 - Add a new topic with conversation nodes</strong>, select the link below to move to the next lesson. We'll expand on the use case in this lab in the following lesson's lab.</p>
+<p>⏭️ <a href="../08-add-adaptive-card/">Move to <strong>Enhance user interactions with Adaptive Cards</strong> lesson</a></p>
+<h2 id="tactical-resources">📚 Tactical Resources<a class="headerlink" href="#tactical-resources" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-system-topics?mc_id=power-172618-ebenitez">Use system topics</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/guidance/topics-overview?WT.mc_id=power-172618-ebenitez">Topics in Microsoft Copilot Studio</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-triggers?WT.mc_id=power-172618-ebenitez">Set topic triggers</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/guidance/defining-chatbot-topics?WT.mc_id=power-172618-ebenitez">Defining agent topics</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-power-fx?WT.mc_id=power-172618-ebenitez">Create expressions using Power Fx</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep6">Author topics using natural language</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep4">Add actions to agents using connectors</a></p>
+<!-- markdownlint-disable-next-line MD033 -->
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/07-add-new-topic-with-trigger" alt="Analytics" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../06-create-agent-from-conversation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Create Agent from Conversation">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Create Agent from Conversation
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../08-add-adaptive-card/" class="md-footer__link md-footer__link--next" aria-label="Next: Add Adaptive Card">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Add Adaptive Card
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>

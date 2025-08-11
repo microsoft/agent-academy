@@ -1,0 +1,1580 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/recruit/08-add-adaptive-card/">
+      
+      
+        <link rel="prev" href="../07-add-new-topic-with-trigger/">
+      
+      
+        <link rel="next" href="../09-add-an-agent-flow/">
+      
+      
+      <link rel="icon" href="../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Add Adaptive Card - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-08-enhance-user-interactions-in-topics-with-adaptive-cards" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Add Adaptive Card
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Recruit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-course-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Course Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction-to-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-copilot-studio-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Copilot Studio Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-create-a-declarative-agent-for-M365Copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Declarative Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-creating-a-solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Solution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-using-prebuilt-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use Prebuilt Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-create-agent-from-conversation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Agent from Conversation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-add-new-topic-with-trigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add New Topic with Trigger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Add Adaptive Card
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add Adaptive Card
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-interface-uplift" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAME: OPERATION INTERFACE UPLIFT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Mission Brief
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-adaptive-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 What is an Adaptive Card?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-json-a-person" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐱 Is JSON a person?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-see-another-option-for-building-an-adaptive-card-using-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      👀 I see another option for building an adaptive card using formula
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-with-the-adaptive-card-designer" class="md-nav__link">
+    <span class="md-ellipsis">
+      👷🏻‍♀️ Building with the Adaptive Card Designer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-adaptive-card-designer" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Understanding the Adaptive Card Designer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌵 Common use cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⭐ Best practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-08-add-adaptive-cards-and-enhance-topic-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 08 - Add adaptive cards and enhance topic capabilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Mission Complete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactical-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Tactical Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-add-an-agent-flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add Agent Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-add-event-triggers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add Event Triggers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-publish-your-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Publish Your Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-understanding-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Understanding Licensing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-interface-uplift" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAME: OPERATION INTERFACE UPLIFT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Mission Brief
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-adaptive-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 What is an Adaptive Card?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-json-a-person" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐱 Is JSON a person?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-see-another-option-for-building-an-adaptive-card-using-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      👀 I see another option for building an adaptive card using formula
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-with-the-adaptive-card-designer" class="md-nav__link">
+    <span class="md-ellipsis">
+      👷🏻‍♀️ Building with the Adaptive Card Designer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-adaptive-card-designer" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Understanding the Adaptive Card Designer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌵 Common use cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⭐ Best practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-08-add-adaptive-cards-and-enhance-topic-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 08 - Add adaptive cards and enhance topic capabilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Mission Complete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactical-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Tactical Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="mission-08-enhance-user-interactions-in-topics-with-adaptive-cards">🚨 Mission 08: Enhance user interactions in Topics with Adaptive Cards<a class="headerlink" href="#mission-08-enhance-user-interactions-in-topics-with-adaptive-cards" title="Permanent link">&para;</a></h1>
+<h2 id="codename-operation-interface-uplift">🕵️‍♂️ CODENAME: <code>OPERATION INTERFACE UPLIFT</code><a class="headerlink" href="#codename-operation-interface-uplift" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operation Time Window:</strong> <code>~45 minutes</code></p>
+</blockquote>
+<h2 id="mission-brief">🎯  Mission Brief<a class="headerlink" href="#mission-brief" title="Permanent link">&para;</a></h2>
+<p>Agents, your mission is to infiltrate the static user experience and replace it with rich, dynamic, and actionable Adaptive Cards. You’ll deploy JSON payloads and Power Fx formulas to transform Copilot Studio conversations from basic Q&amp;A into fully interactive engagements. Your goal is to gather user input, present data beautifully, and direct conversations with precision and style. Fail to adapt, and your users may defect to less intelligent interfaces.</p>
+<h2 id="objectives">🔎 Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
+<p>In this mission, you’ll learn:</p>
+<ol>
+<li>Understanding what Adaptive Cards are and how they enhance user interactions in Copilot Studio</li>
+<li>Learning to build interactive cards using JSON and Power Fx formulas for dynamic content</li>
+<li>Exploring the Adaptive Card Designer and its key components for visual card creation</li>
+<li>Creating rich, interactive forms and data collection experiences within agent topics</li>
+<li>Implementing best practices for designing responsive and user-friendly adaptive cards</li>
+</ol>
+<h2 id="what-is-an-adaptive-card">🤔 What is an Adaptive Card?<a class="headerlink" href="#what-is-an-adaptive-card" title="Permanent link">&para;</a></h2>
+<p>An <strong>Adaptive Card</strong> is way to create interactive, visually rich UI elements that can be embedded in apps like Microsoft Teams, Microsoft Outlook or agents. It is a structured JSON object that defines the layout and content of a card:</p>
+<ul>
+<li>What elements appear on the card - text, images, buttons</li>
+<li>How those elements are arranged</li>
+<li>
+<p>What actions users can take such as submitting a form or opening a link</p>
+<p><img alt="Adaptive Card" src="assets/8.0_01_AdaptiveCard.png" /></p>
+</li>
+</ul>
+<h3 id="why-adaptive-cards-matter-in-copilot-studio">Why Adaptive Cards matter in Copilot Studio<a class="headerlink" href="#why-adaptive-cards-matter-in-copilot-studio" title="Permanent link">&para;</a></h3>
+<p>Imagine you're building an agent that asks users for their name, email, or feedback. If you just use plain text, the conversation can feel boring or hard to follow. That’s where Adaptive Cards come in!</p>
+<ol>
+<li>
+<p><strong>Makes conversations interactive</strong> - instead of sending text as messages to the user, you can show buttons, forms, images and more.</p>
+<ul>
+<li>Example: a card can ask the user to fill in their name and email in a clean form.</li>
+</ul>
+</li>
+<li>
+<p><strong>Look great everywhere</strong> - Adaptive Cards automatically match the style of the app they're in, such as Microsoft 365 Copilot chat or Microsoft Teams. You don't need to worry about dark mode, font, or layouts - it adapts.</p>
+</li>
+<li>
+<p><strong>Easy to build with JSON</strong> - you define the card using JSON code (think <em>recipe</em> for the UI). Copilot Studio helps you preview your card before adding it to the topic.</p>
+</li>
+<li>
+<p><strong>Collect and use data</strong> - you can use the card to ask questions, collect answers, and use that data in the conversation flow.</p>
+<ul>
+<li>Example: Ask for a user's phone number, then show a confirmation card with their phone number.</li>
+</ul>
+</li>
+<li>
+<p><strong>Boost user experience</strong> - cards make your agent feel more interactive. It's a more clean, clickable, and user-friendly type of interface.</p>
+</li>
+</ol>
+<h2 id="is-json-a-person">🐱 Is <em>JSON</em> a person?<a class="headerlink" href="#is-json-a-person" title="Permanent link">&para;</a></h2>
+<p>Pronounced as "Jason," it's not a person 😅</p>
+<p>JSON, otherwise known as <em>JavaScript Object Notation</em> is a lightweight format used to structure data. It's easy to read and write, and looks like a series of key-value pairs inside curly braces {}.</p>
+<p>This is one of the options to use when adding an adaptive card to your topic.</p>
+<p><img alt="Adaptive card node properties" src="assets/8.0_02_AdaptiveCardPropertiesPane.png" /></p>
+<h2 id="i-see-another-option-for-building-an-adaptive-card-using-formula">👀 I see another option for building an adaptive card using <em>formula</em><a class="headerlink" href="#i-see-another-option-for-building-an-adaptive-card-using-formula" title="Permanent link">&para;</a></h2>
+<p>Remember how we learnt about Power Fx in <a href="../07-add-new-topic-with-trigger/#what-power-fx-can-do-in-topics">Mission 07 - Using Power Fx in your nodes</a> The same can be applied in Adaptive Cards within Copilot Studio.</p>
+<p>As a recap,</p>
+<blockquote>
+<p>Power Fx is a low-code programming language used to add logic and dynamic behavior to your agent. It's the same language used in Microsoft Power Apps, and it's designed to be simple and Excel-like, making it easy for developers and non-developers.</p>
+</blockquote>
+<h3 id="how-power-fx-works-in-adaptive-cards">How Power Fx works in Adaptive Cards<a class="headerlink" href="#how-power-fx-works-in-adaptive-cards" title="Permanent link">&para;</a></h3>
+<p>When you design an Adaptive Card in Copilot Studio, you can use Power Fx formulas to:</p>
+<ul>
+<li>Dynamically insert values such as user names, dates or status.</li>
+<li>Format text or numbers such as show currency or round numbers.</li>
+<li>Show or hide elements based on conditions.</li>
+<li>Customize responses based on user input, variables, outputs from conversation nodes.</li>
+</ul>
+<p>For example,</p>
+<p>"<code>Hello</code>" &amp; <code>System.User.DisplayName</code></p>
+<p>This formula combines the word "Hello" with the user's name dynamically.</p>
+<h3 id="why-its-useful">Why it's useful<a class="headerlink" href="#why-its-useful" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Personalization</strong></p>
+<p>You can tailor message to each user, making interactions feel more natural and relevant.</p>
+</li>
+<li>
+<p><strong>Dynamic content</strong></p>
+<p>Cards can display real data from variables and outputs from conversation nodes.</p>
+</li>
+<li>
+<p><strong>Smart logic</strong></p>
+<p>You can control what users see or interact with based on conditions, improving usability and reducing errors.</p>
+</li>
+<li>
+<p><strong>Low-code friendly</strong></p>
+<p>Power Fx is a low-code programming language. As mentioned earlier, it's readable, intuitive and similar to Excel formulas.</p>
+</li>
+</ol>
+<h2 id="building-with-the-adaptive-card-designer">👷🏻‍♀️ Building with the Adaptive Card Designer<a class="headerlink" href="#building-with-the-adaptive-card-designer" title="Permanent link">&para;</a></h2>
+<p>The <strong>Adaptive Card Designer</strong> is a visual tool that lets you build interactive message cards using drag-and-drop elements like text, images, buttons, and inputs. Its purpose is to help you create rich, dynamic messages without writing complex code, making it easier to design user-friendly interfaces.</p>
+<p>The designer tool helps you build the card visually, but behind the scenes, it’s generating the JSON object for you. You can also switch to <em>formula</em> which enables Power Fx expressions to be used in the card to display data from else where.</p>
+<h2 id="understanding-the-adaptive-card-designer">🎨 Understanding the Adaptive Card Designer<a class="headerlink" href="#understanding-the-adaptive-card-designer" title="Permanent link">&para;</a></h2>
+<p><img alt="Adaptive Card Designer" src="assets/8.0_03_AdaptiveCardPropertiesPane.png" /></p>
+<h3 id="a-card-elements">A) Card Elements<a class="headerlink" href="#a-card-elements" title="Permanent link">&para;</a></h3>
+<p>These are the building blocks of your adaptive card. You can drag and drop elements such as the following:</p>
+<ul>
+<li><strong>TextBlock</strong> to display text.</li>
+<li><strong>Image</strong> to show pictures.</li>
+<li><strong>FactSet</strong> for key-value pairs.</li>
+<li><strong>Input fields</strong> to display text boxes, date pickers, toggles.</li>
+<li><strong>Actions</strong> to display buttons such as <em>Submit</em>, <em>Open URL</em>, or <em>Show Card</em>.</li>
+</ul>
+<p>Each element has its own purpose and can be styled or configured.</p>
+<h3 id="b-card-viewer">B) Card Viewer<a class="headerlink" href="#b-card-viewer" title="Permanent link">&para;</a></h3>
+<p>This is the <strong>Preview</strong> area where you see how your card will look like in real time. As you add or edit elements, the viewer updates instantly to reflect changes. This enables you to make iterative updates and see the design output at the same time.</p>
+<h3 id="c-card-structure">C) Card Structure<a class="headerlink" href="#c-card-structure" title="Permanent link">&para;</a></h3>
+<p>This shows the <strong>hierarchy and layout</strong> of your card. For example:</p>
+<ul>
+<li>A card might start with a <strong>TextBlock</strong> for the title.</li>
+<li>Then a <strong>ColumnSet</strong> with an image on one side and text on the other.</li>
+<li>Followed by a <strong>FactSet</strong> and some <strong>Action buttons</strong>.</li>
+</ul>
+<p>It helps you understand how elements are nested and organized.</p>
+<h3 id="d-element-properties">D) Element Properties<a class="headerlink" href="#d-element-properties" title="Permanent link">&para;</a></h3>
+<p>When you click on any element in the card, this panel lets you <strong>customize its settings</strong>:</p>
+<ul>
+<li>Change text size, weight, or color.</li>
+<li>Set image URLs or alt text.</li>
+<li>Configure input options like placeholder text or default values.</li>
+</ul>
+<p>This is where you fine-tune each element.</p>
+<h3 id="e-card-payload-editor">E) Card Payload Editor<a class="headerlink" href="#e-card-payload-editor" title="Permanent link">&para;</a></h3>
+<p>This is the <strong>raw JSON code</strong> behind your card. Advanced users can edit this directly to:</p>
+<ul>
+<li>Use templating features.</li>
+<li>Copy/paste card definitions.</li>
+</ul>
+<p>Even if you're new to the Adaptive Card designer, it's helpful to see how the visual design translates into codes.</p>
+<h2 id="common-use-cases">🌵 Common use cases<a class="headerlink" href="#common-use-cases" title="Permanent link">&para;</a></h2>
+<p>The following are common use cases for Adaptive Cards in Copilot Studio when used in the <strong>Send a message</strong> or <strong>Ask a question</strong> nodes.</p>
+<ol>
+<li>
+<p><strong>Forms and data collection</strong></p>
+<p>Use adaptive cards to collect structured input from users, such as:</p>
+<ul>
+<li>Leave requests</li>
+<li>Feedback forms</li>
+<li>Contact information</li>
+<li>Appointment scheduling</li>
+</ul>
+</li>
+<li>
+<p><strong>Displaying dynamic information</strong></p>
+<p>Shows users personalized or real-time data in a clean, readable format from enterprise sources such as ServiceNow, SAP, Dynamics 365, SharePoint etc.</p>
+<ul>
+<li>Order summaries</li>
+<li>Account balances</li>
+<li>Ticket or case status</li>
+<li>Upcoming events or deadlines</li>
+</ul>
+</li>
+<li>
+<p><strong>Interactive choices</strong></p>
+<p>Let users make selections directly in the conversation:</p>
+<ul>
+<li>Choose from a list of options, for example product categories, support topics.</li>
+<li>Confirm or cancel action.</li>
+<li>Rate a service or experience.</li>
+</ul>
+</li>
+<li>
+<p><strong>Triggering actions</strong></p>
+<p>Include buttons that trigger further steps in the conversation internally or externally.</p>
+<ul>
+<li>"Submit request"</li>
+<li>"View details"</li>
+</ul>
+</li>
+</ol>
+<h2 id="best-practices">⭐ Best practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<p>Here are some best practices for creating Adaptive Cards for agents in Copilot Studio.</p>
+<ol>
+<li>
+<p><strong>Keep it simple and focused</strong></p>
+<ul>
+<li>Design cards with a clear purpose, don’t overload them with too many elements.</li>
+<li>Use concise text and intuitive layouts to guide users through the interaction.</li>
+</ul>
+</li>
+<li>
+<p><strong>Be intentional with inputs</strong></p>
+<ul>
+<li>Include only the necessary input elements such as text, date choices, to avoid overwhelming users.</li>
+<li>Use labels to make inputs easy to understand.</li>
+</ul>
+</li>
+<li>
+<p><strong>Structure for readability</strong></p>
+<ul>
+<li>Use <strong>TextBlocks</strong> for headings and instructions.</li>
+<li>Group related elements using <strong>Containers</strong> or <strong>ColumnSets</strong> to improve visual flow.</li>
+</ul>
+</li>
+<li>
+<p><strong>Make Action elements clear</strong></p>
+<ul>
+<li>Use <strong>Action.Submit</strong> and or <strong>Action.OpenUrl</strong> with clear button titles like "Submit Request" or "View Details"</li>
+<li>Avoid vague labels like "Click here"</li>
+</ul>
+</li>
+<li>
+<p><strong>Design for adaptability</strong></p>
+<ul>
+<li>Assume the card may be viewed on different screen sizes.</li>
+<li>Avoid fixed widths and use flexible layouts like <strong>ColumnSets</strong> for responsiveness.</li>
+</ul>
+</li>
+<li>
+<p><strong>Use dynamic content when possible</strong></p>
+<ul>
+<li>Bind card elements to variables or outputs from nodes using Power Fx to personalize the user experience.</li>
+<li>For example, show the user's name or current status dynamically.</li>
+</ul>
+</li>
+</ol>
+<h2 id="lab-08-add-adaptive-cards-and-enhance-topic-capabilities">🧪 Lab 08 - Add adaptive cards and enhance topic capabilities<a class="headerlink" href="#lab-08-add-adaptive-cards-and-enhance-topic-capabilities" title="Permanent link">&para;</a></h2>
+<p>We're now going to learn how to enhance our topic with adaptive cards and using advanced functionality of topics and nodes.</p>
+<ul>
+<li><a href="#81-create-a-new-topic-with-an-adaptive-card-for-user-to-submit-their-request">8.1 Create a new topic with an adaptive card for user to submit their request</a></li>
+<li><a href="#82-update-agent-instructions-to-invoke-request-device-topic">8.2 Update agent instructions to invoke Request device topic</a></li>
+</ul>
+<h3 id="use-case">✨ Use case<a class="headerlink" href="#use-case" title="Permanent link">&para;</a></h3>
+<p><strong>As an</strong> employee</p>
+<p><strong>I want to</strong> request a device</p>
+<p><strong>So that I</strong> can request a device from the list of available devices</p>
+<p>Let's begin!</p>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>SharePoint list</strong></p>
+<p>We'll be using the <strong>Devices</strong> SharePoint list from <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Lesson 00 - Course Setup - Step 3: Create new SharePoint site</a>.</p>
+<p>If you have not set up the <strong>Devices</strong> SharePoint list, please head back to <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Lesson 00 - Course Setup - Step 3: Create new SharePoint site</a>.</p>
+</li>
+<li>
+<p><strong>Contoso Helpdesk Copilot</strong></p>
+<p>We're going to use the same agent created previously in <a href="../06-create-agent-from-conversation/">Lesson 06 - Create a custom agent using natural language with Copilot and grounding it with your data</a>.</p>
+</li>
+</ol>
+<h3 id="81-create-a-new-topic-with-an-adaptive-card-for-user-to-submit-their-request">8.1 Create a new topic with an adaptive card for user to submit their request<a class="headerlink" href="#81-create-a-new-topic-with-an-adaptive-card-for-user-to-submit-their-request" title="Permanent link">&para;</a></h3>
+<p>We'll create a new topic that will handle a user's device request. This new topic will contain an <strong>Ask with adaptive card</strong> node to enable user interaction with the agent.</p>
+<p>Let's begin!</p>
+<ol>
+<li>
+<p>Select the <strong>Topics</strong> tab, then select <strong>+ Add a topic from blank</strong>.</p>
+<p><img alt="Select Topics tab" src="assets/8.1_01_NewTopic.png" /></p>
+</li>
+<li>
+<p>Name the topic as the following,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Request device
+</span></code></pre></div>
+<p>Enter the following as the description for the trigger.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>This topic helps users request a device when they answer yes to the question that asks the user if they would like to request one of these devices.
+</span></code></pre></div>
+<p><img alt="Topic Name and trigger Description" src="assets/8.1_02_TopicNameAndTriggerDescription.png" /></p>
+</li>
+<li>
+<p>Next, add an <strong>Ask with adaptive card</strong> node. This node will display an interactive card for the user to select which device they would like to request.</p>
+<p><img alt="Select Ask with adaptive card node" src="assets/8.1_03_AddAskWithAdaptiveCard.png" /></p>
+</li>
+<li>
+<p>Select the node and the <strong>Adaptive Card Node properties</strong> pane will appear. We're now going to edit the JSON. Select <strong>Edit adaptive card</strong>. Select <strong>Edit adaptive card</strong>.</p>
+<p><img alt="Edit adaptive card" src="assets/8.1_04_EditAdaptiveCard.png" /></p>
+</li>
+<li>
+<p>This is the <strong>Adaptive Card Designer</strong> where you can design your card and see the card design in-real time.</p>
+<p>Try dragging and dropping the <strong>TextBlock</strong> and <strong>FactSet</strong> card elements to the authoring canvas, the card viewer area. Notice how the card structure and card payload editor updates as the two card elements were added. You can directly update the card payload editor and the element properties pane.</p>
+<p><img alt="Drag and drop card elements" src="assets/8.1_05_DragAndDropCardElements.png" /></p>
+</li>
+<li>
+<p>Select <strong>Preview</strong> to view the card in different widths.</p>
+<p><img alt="Select preview" src="assets/8.1_06_PreviewAdaptiveCard.png" /></p>
+</li>
+<li>
+<p>The preview will load where you'll see different card outputs by width.</p>
+<p><img alt="Preview card at different widths" src="assets/8.1_07_PreviewCardWidths.png" /></p>
+</li>
+<li>
+<p>Exit out of <strong>Preview</strong> by selecting the <strong>x icon</strong> and select <strong>Undo</strong> in the designer to remove the two card elements previously added.</p>
+<p><img alt="Undo" src="assets/8.1_08_Undo.png" /></p>
+</li>
+<li>
+<p>Click into the <strong>Card payload editor</strong> and select all lines using the Windows keyboard shortcut of <em>Ctrl + A</em> or using the Mac keyboard shortcut of <em>Command + A</em>, followed by deleting the lines. <strong>Paste</strong> the JSON from the <a href="assets/8.1_RequestDevice.json">Request devices .JSON file</a>.</p>
+<p><img alt="Clear card payload editor" src="assets/8.1_09_SelectAll.png" /></p>
+</li>
+<li>
+<p>Notice how the <strong>Card Preview</strong> now includes elements that display some text and a list of available devices.</p>
+<p>This JSON is currently a placeholder and preview to what we'll use as the base for our card but in the form of a formula rather than JSON since we're going to reference the <strong>global variable</strong>, <code>Global.VarDevices.value</code>, that stores the response of the <strong>Get items</strong> SharePoint connector action.</p>
+<p>Select <strong>Save</strong> and select <strong>Close</strong> to exit from the Adaptive card designer modal.</p>
+<p><img alt="Select Save" src="assets/8.1_10_DeviceRequestCard.png" /></p>
+</li>
+<li>
+<p>Close the <strong>Adaptive Card Node properties</strong> panel by selecting the <strong>X</strong> icon.</p>
+<p><img alt="Close Adaptive Card Node properties panel" src="assets/8.1_11_ExitAdaptiveCardNodeProperties.png" /></p>
+</li>
+<li>
+<p>In the authoring canvas of the topic, you'll see the adaptive card.</p>
+<p><img alt="Device request adaptive card" src="assets/8.1_12_DeviceRequestCard.png" /></p>
+</li>
+<li>
+<p>Scroll to the bottom of the node and you'll see output variables. The <code>commentsId</code> and the <code>deviceSelectionId</code> were defined in the element properties. These two variables will store values from the card elements the users interact with. These values will be used downstream in the topic, which we'll learn about in the next lesson's lab.</p>
+<p><img alt="Node variable outputs" src="assets/8.1_13_DeviceRequestCardOutputs.png" /></p>
+</li>
+<li>
+<p>Let's next update the card from JSON to formula as we'll use Power Fx again to loop through the items returned in the <strong>Get items</strong> SharePoint connector action, stored in the <strong>global variable</strong>, <code>Global.VarDevices.value</code>, via the <code>value</code> property of the JSON response.</p>
+<blockquote>
+<p>We created this global variable in <a href="../07-add-new-topic-with-trigger/#73-add-a-tool-using-a-connector">Lab 07 - Add a new topic with conversation nodes, 7.3 Add a tool using a connector</a>.</p>
+</blockquote>
+<p>Select the card in the <strong>Ask with Adaptive Card</strong> node, followed by selecting the <strong>chevron</strong> icon and select <strong>Formula</strong>.</p>
+<p><img alt="Change to formula" src="assets/8.1_14_ChangeToFormula.png" /></p>
+</li>
+<li>
+<p>Click on the <strong>expand</strong> icon to enlarge the Formula field and click into the <strong>Card payload editor</strong> and select all lines using the Windows keyboard shortcut of <em>Ctrl + A</em> or using the Mac keyboard shortcut of <em>Command + A</em>, followed by deleting the lines.</p>
+<p><img alt="Select all and delete lines" src="assets/8.1_15_SelectAll.png" /></p>
+<p>Paste the Formula from the <a href="assets/8.1_RequestDeviceFormula.txt">Request Devices formula file</a>.</p>
+</li>
+<li>
+<p>In the formula, we'll loop through each SharePoint list item using the <code>For All</code> function to display the values of <code>Model</code> in the title of the choice option, and the SharePoint item <code>ID</code> is referenced as the value.</p>
+<p><strong>Close</strong> the card modal.</p>
+<p><img alt="Power Fx Formula" src="assets/8.1_16_PowerFxFormula.png" /></p>
+</li>
+<li>
+<p><strong>Close</strong> the <strong>Adaptive Card Node properties</strong> pane.</p>
+</li>
+<li>
+<p><strong>Save</strong> the topic.</p>
+<p><img alt="Save topic" src="assets/8.1_17_SaveTopic.png" /></p>
+</li>
+</ol>
+<h3 id="82-update-agent-instructions-to-invoke-request-device-topic">8.2 Update agent instructions to invoke Request device topic<a class="headerlink" href="#82-update-agent-instructions-to-invoke-request-device-topic" title="Permanent link">&para;</a></h3>
+<p>Now that we created the new topic that handles the device requests, we need to update the <strong>agent instructions</strong> to invoke the topic.</p>
+<ol>
+<li>
+<p>Select the <strong>Overview</strong> tab and in the <strong>agent instructions</strong> select <strong>Edit</strong>.</p>
+<p><img alt="Edit instructions" src="assets/8.2_01_EditInstructions.png" /></p>
+</li>
+<li>
+<p>Add a new line below the previous instruction from <a href="../07-add-new-topic-with-trigger/#73-add-a-tool-using-a-connector">Lab 07 - Add a new topic with conversation nodes, 7.3 Add a tool using a connector</a>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>- If the user answers yes to the question of requesting a device, trigger [Request device]. Otherwise if they answer no to the question of requesting a device, trigger [Goodbye].
+</span></code></pre></div>
+<p>Select the entire topic placeholder in square brackets and delete the placeholder.</p>
+<p><img alt="Request device placeholder" src="assets/8.2_02_ReplaceRequestDevicePlaceholder.png" /></p>
+</li>
+<li>
+<p>Type in <code>/Req</code> and select the <strong>Request devices</strong> topic.</p>
+<p><img alt="Request devices topic" src="assets/8.2_03_ReferenceRequestDeviceTopic.png" /></p>
+</li>
+<li>
+<p>Repeat the same steps for the next topic placeholder, <strong>[Goodbye]</strong>. Select the entire topic placeholder in square brackets and delete the placeholder. Type in <code>/Goodbye</code> and select the <strong>Goodbye</strong> topic.</p>
+<ul>
+<li>
+<p>When the user answers <strong>Yes</strong> to the agent asking if they would like request a device, the agent will redirect from the <strong>Available devices</strong> topic to the <strong>Request devices</strong> topic.</p>
+</li>
+<li>
+<p>Otherwise if the user answers <strong>No</strong>, the agent redirect from the <strong>Available devices</strong> topic to the <strong>Goodbye</strong> topic.</p>
+</li>
+</ul>
+<p><strong>Save</strong> the updated instructions.</p>
+<p><img alt="Redirect to Request device topic" src="assets/8.2_04_ReferenceGoodbyeTopic.png" /></p>
+</li>
+<li>
+<p>Let's now test our the redirection from the <em>Available devices</em> topic to the <em>Request devices</em> topic. Select the <strong>Test</strong> to load the testing pane select <strong>Refresh</strong>.</p>
+<p>Then select the <strong>Activity map</strong> icon in the test pane, followed by enabling <strong>Track between topics</strong>. This will allow us to see the <em>Available devices</em> topic has redirected to the <em>Request devices</em> topic.</p>
+<p>OK, we're good to test! Enter the following in the test pane.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>I need a laptop
+</span></code></pre></div>
+<p><img alt="Test agent" src="assets/8.2_05_TestAgent.png" /></p>
+</li>
+<li>
+<p>The agent will respond with the list of available devices followed by the question of asking the user if they would like to request a device. Copy and paste the following,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>yes please
+</span></code></pre></div>
+<p><img alt="Test Request device" src="assets/8.2_06_TestRequestDeviceTopic.png" /></p>
+</li>
+<li>
+<p>We'll next see that the agent has redirected to the <strong>Request device</strong> topic. The agent invoked this topic as per the instructions we added.</p>
+<p>The adaptive card with the interactive elements will now be displayed as message to the user.</p>
+<p><img alt="Question node" src="assets/8.2_07_AdaptiveCardQuestion.png" /></p>
+</li>
+<li>
+<p>We've now successfully tested 😄 our <em>Available devices</em> topic redirecting to the <em>Request devices</em> topic. We'll be adding more enhancements to this topic in the next lesson's lab.</p>
+<p>Refresh the test pane.</p>
+<p><img alt="Refresh test pane" src="assets/8.2_08_RefreshTestPane.png" /></p>
+</li>
+</ol>
+<h2 id="mission-complete">✅ Mission Complete<a class="headerlink" href="#mission-complete" title="Permanent link">&para;</a></h2>
+<p>Congratulations! 👏🏻 You've learnt how to add adaptive cards using Power Fx formulas to display data from variables, and you also learnt how to redirect from one topic to another. Creating bite sized topics makes your agent more organized, but also helps guide users through different parts of the conversation flow with the agent.</p>
+<p>This is the end of <strong>Lab 08 - Enhance user interactions with Adaptive Cards</strong>, select the link below to move to the next lesson. We'll expand on the use case in this lab in the following lesson's lab.</p>
+<p>⏭️ <a href="../09-add-an-agent-flow/">Move to <strong>Add an agent flow to your Topic for automation</strong> lesson</a></p>
+<h2 id="tactical-resources">📚 Tactical Resources<a class="headerlink" href="#tactical-resources" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/guidance/adaptive-cards-overview?WT.mc_id=power-172619-ebenitez">Using Adaptive Cards in Copilot Studio</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-send-message#add-an-adaptive-card?WT.mc_id=power-172619-ebenitez">Add an adaptive card in Send a message node</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-power-fx?WT.mc_id=power-172619-ebenitez">Create expressions using Power Fx</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep8">Building Adaptive Cards with Power FX</a></p>
+<!-- markdownlint-disable-next-line MD033 -->
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/08-add-adaptive-card" alt="Analytics" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../07-add-new-topic-with-trigger/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Add New Topic with Trigger">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Add New Topic with Trigger
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../09-add-an-agent-flow/" class="md-footer__link md-footer__link--next" aria-label="Next: Add Agent Flow">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Add Agent Flow
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>

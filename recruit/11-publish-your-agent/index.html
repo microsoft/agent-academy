@@ -1,0 +1,1325 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/recruit/11-publish-your-agent/">
+      
+      
+        <link rel="prev" href="../10-add-event-triggers/">
+      
+      
+        <link rel="next" href="../12-understanding-licensing/">
+      
+      
+      <link rel="icon" href="../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Publish Your Agent - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-11-publish-your-agent" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Publish Your Agent
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Recruit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-course-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Course Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction-to-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction to Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-copilot-studio-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Copilot Studio Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-create-a-declarative-agent-for-M365Copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Declarative Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-creating-a-solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Solution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-using-prebuilt-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use Prebuilt Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-create-agent-from-conversation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Agent from Conversation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-add-new-topic-with-trigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add New Topic with Trigger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-add-adaptive-card/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add Adaptive Card
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-add-an-agent-flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add Agent Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-add-event-triggers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add Event Triggers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Publish Your Agent
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Publish Your Agent
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-publish-publish-publish" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAME: OPERATION PUBLISH PUBLISH PUBLISH
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Mission Brief
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publish-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Publish an agent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Configure channels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#channel-experiences" class="md-nav__link">
+    <span class="md-ellipsis">
+      📺 Channel experiences
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-11-publish-your-agent-to-teams-and-microsoft-365-copilot" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 11: Publish your agent to Teams and Microsoft 365 Copilot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Mission Complete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactical-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Tactical Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-understanding-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Understanding Licensing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-publish-publish-publish" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAME: OPERATION PUBLISH PUBLISH PUBLISH
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Mission Brief
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publish-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Publish an agent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Configure channels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#channel-experiences" class="md-nav__link">
+    <span class="md-ellipsis">
+      📺 Channel experiences
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-11-publish-your-agent-to-teams-and-microsoft-365-copilot" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 11: Publish your agent to Teams and Microsoft 365 Copilot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Mission Complete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactical-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Tactical Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="mission-11-publish-your-agent">🚨 Mission 11: Publish Your Agent<a class="headerlink" href="#mission-11-publish-your-agent" title="Permanent link">&para;</a></h1>
+<h2 id="codename-operation-publish-publish-publish">🕵️‍♂️ CODENAME: <code>OPERATION PUBLISH PUBLISH PUBLISH</code><a class="headerlink" href="#codename-operation-publish-publish-publish" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operation Time Window:</strong> <code>~30 minutes</code>  </p>
+</blockquote>
+<h2 id="mission-brief">🎯 Mission Brief<a class="headerlink" href="#mission-brief" title="Permanent link">&para;</a></h2>
+<p>After completing a series of challenging modules, Agent Maker, you're now ready for your most critical step yet: publishing your agent. It’s time to make your creation available to users across Microsoft Teams and Microsoft 365 Copilot.</p>
+<p>Your agent—equipped with a clear mission, powerful tools, and access to key knowledge sources—is ready to serve. Using Microsoft Copilot Studio, you deploy your agent so it can start assisting real users, right where they work.</p>
+<p>Let’s launch your agent into action.</p>
+<h2 id="objectives">🔎 Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
+<p>📖 This lesson covers:</p>
+<ol>
+<li>Why it's important to publish your agent</li>
+<li>What happens when you publish your agent</li>
+<li>How to add a channel (Microsoft Teams &amp; Microsoft 365 Copilot)</li>
+<li>How to add the agent in Microsoft Teams</li>
+<li>How to make the agent available in Microsoft Teams for your whole organization</li>
+</ol>
+<h2 id="publish-an-agent">🚀 Publish an agent<a class="headerlink" href="#publish-an-agent" title="Permanent link">&para;</a></h2>
+<p>Every time you work on an agent in Copilot Studio you might update it by adding knowledge or tools. When you're ready with all the changes, and you tested thoroughly, you're ready to publish it. Publishing ensures that the latest updates are live. When you update your agent with new tools, and you don't hit the publish button, it's not available yet for end users.</p>
+<p>Make sure to always hit the publish button when you want to push the updates to the users of your agent. Your agent might have channels added to it and when you hit publish the updates are available for all the channels you added to the agent.</p>
+<h2 id="configure-channels">⚙️ Configure channels<a class="headerlink" href="#configure-channels" title="Permanent link">&para;</a></h2>
+<p>Channels determine where your users can access and interact with your agent. After you publish your agent, you can make it available in multiple channels. Each channel may display your agent's content differently.</p>
+<p>You can add your agent to the following channels:</p>
+<ul>
+<li><strong>Microsoft Teams and Microsoft 365 Copilot</strong> - Make your agent available in Teams chats and meetings, and within Microsoft 365 Copilot experiences (<a href="https://learn.microsoft.com/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams">Learn more</a>)</li>
+<li><strong>Demo website</strong> - Test your agent on a demo website provided by Copilot Studio (<a href="https://learn.microsoft.com/microsoft-copilot-studio/publication-connect-bot-to-web-channels">Learn more</a>)</li>
+<li><strong>Custom website</strong> - Embed your agent directly into your own website (<a href="https://learn.microsoft.com/microsoft-copilot-studio/publication-connect-bot-to-web-channels">Learn more</a>)</li>
+<li><strong>Mobile app</strong> - Integrate your agent into a custom mobile application (<a href="https://learn.microsoft.com/microsoft-copilot-studio/publication-connect-bot-to-custom-application">Learn more</a>)</li>
+<li><strong>SharePoint</strong> - Add your agent to SharePoint sites for document and site assistance (<a href="https://learn.microsoft.com/microsoft-copilot-studio/publication-add-bot-to-sharepoint">Learn more</a>)</li>
+<li><strong>Facebook Messenger</strong> - Connect with users through Facebook's messaging platform (<a href="https://learn.microsoft.com/microsoft-copilot-studio/publication-add-bot-to-facebook">Learn more</a>)</li>
+<li><strong>Power Pages</strong> - Integrate your agent into Power Pages websites (<a href="https://learn.microsoft.com/microsoft-copilot-studio/publication-add-bot-to-power-pages">Learn more</a>)</li>
+<li><strong>Azure Bot Service channels</strong> - Access additional channels including Slack, Telegram, Twilio SMS, and more (<a href="https://learn.microsoft.com/microsoft-copilot-studio/publication-connect-bot-to-azure-bot-service-channels">Learn more</a>)</li>
+</ul>
+<p>To add a channel, navigate to the <strong>Channels</strong> tab in your agent and select the channel you want to configure. Each channel has specific setup requirements and may require additional authentication or configuration steps.</p>
+<p><img alt="Channels tab in agent" src="assets/channels.png" /></p>
+<h2 id="channel-experiences">📺 Channel experiences<a class="headerlink" href="#channel-experiences" title="Permanent link">&para;</a></h2>
+<p>Different channels have different user experiences. When building an agent for multiple channels, make sure to be aware of the differences per channel. It's always a good strategy to test your agent in multiple channels to see if it really does what you intended.</p>
+<table>
+<thead>
+<tr>
+<th>Experience</th>
+<th>Website</th>
+<th>Teams and Microsoft 365 Copilot</th>
+<th>Facebook</th>
+<th>Dynamics Omnichannel for Customer Service</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-create-edit-topics">Customer satisfaction survey</a></td>
+<td>Adaptive card</td>
+<td>Text-only</td>
+<td>Text-only</td>
+<td>Text-only</td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-create-edit-topics">Multiple-choice options</a></td>
+<td>Supported</td>
+<td><a href="https://learn.microsoft.com/microsoftteams/platform/concepts/cards/cards-reference#hero-card">Supported up to six (as hero card)</a></td>
+<td><a href="https://developers.facebook.com/docs/messenger-platform/send-messages/quick-replies/">Supported up to 13</a></td>
+<td><a href="https://learn.microsoft.com/dynamics365/customer-service/asynchronous-channels#suggested-actions-support">Partially Supported</a></td>
+</tr>
+<tr>
+<td><a href="https://daringfireball.net/projects/markdown/">Markdown</a></td>
+<td>Supported</td>
+<td><a href="https://learn.microsoft.com/microsoftteams/platform/bots/how-to/format-your-bot-messages#text-only-messages">Partially Supported</a></td>
+<td><a href="https://www.facebook.com/help/147348452522644?helpref=related">Partially supported</a></td>
+<td><a href="https://learn.microsoft.com/dynamics365/customer-service/asynchronous-channels#preview-support-for-formatted-messages">Partially Supported</a></td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-create-edit-topics">Welcome message</a></td>
+<td>Supported</td>
+<td>Supported</td>
+<td>Not supported</td>
+<td>Supported for <a href="https://learn.microsoft.com/dynamics365/customer-service/set-up-chat-widget">Chat</a>. Not supported for other channels.</td>
+</tr>
+<tr>
+<td><a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-ai-features">Did-You-Mean</a></td>
+<td>Supported</td>
+<td>Supported</td>
+<td>Supported</td>
+<td>Supported for <a href="https://learn.microsoft.com/dynamics365/customer-service/configure-microsoft-teams">Microsoft Teams</a>, <a href="https://learn.microsoft.com/dynamics365/customer-service/set-up-chat-widget">Chat</a>, Facebook, and text-only channels (short message service (SMS) via <a href="https://learn.microsoft.com/dynamics365/customer-service/configure-sms-channel">TeleSign</a> and <a href="https://learn.microsoft.com/dynamics365/customer-service/configure-sms-channel-twilio">Twilio</a>, <a href="https://learn.microsoft.com/dynamics365/customer-service/configure-whatsapp-channel">WhatsApp</a>, <a href="https://learn.microsoft.com/dynamics365/customer-service/configure-wechat-channel">WeChat</a>, and <a href="https://learn.microsoft.com/dynamics365/customer-service/configure-twitter-channel">Twitter</a>). Suggested actions are presented as a text-only list; users must retype an option to respond.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!NOTE]
+There are some examples of where you can use different logic for different channels. An example of it can be found in the Power Platform Snippets repository:</p>
+<p>Henry Jammes shared an example of how to show a different adaptive card when the channel is Microsoft Teams. (<a href="https://github.com/pnp/powerplatform-snippets/blob/main/copilot-studio/multiple-topics-matched-topic/source/multiple-topics-matched.yaml#L40">Link to example</a>)</p>
+</blockquote>
+<h2 id="lab-11-publish-your-agent-to-teams-and-microsoft-365-copilot">🧪 Lab 11: Publish your agent to Teams and Microsoft 365 Copilot<a class="headerlink" href="#lab-11-publish-your-agent-to-teams-and-microsoft-365-copilot" title="Permanent link">&para;</a></h2>
+<h3 id="use-case">🎯 Use case<a class="headerlink" href="#use-case" title="Permanent link">&para;</a></h3>
+<p>Your Contoso IT Help Desk agent is now fully configured with powerful capabilities—it can access SharePoint knowledge sources, create support tickets, send proactive notifications, and respond intelligently to user queries. However, all these features are currently only available in the development environment where you built them.</p>
+<p><strong>The Challenge:</strong> End users can't benefit from your agent's capabilities until it's properly published and made accessible through the channels where they actually work.</p>
+<p><strong>The Solution:</strong> Publishing your agent ensures that the latest version—with all your recent updates, new topics, enhanced knowledge sources, and configured flows—is available to real users. Without publishing, users would still interact with an older version of your agent that might be missing critical functionality.</p>
+<p>Adding the Teams and Microsoft 365 Copilot channel is equally crucial because:</p>
+<ul>
+<li>
+<p><strong>Teams Integration</strong>: Your organization's employees spend most of their day in Microsoft Teams for collaboration, meetings, and communication. By adding your agent to Teams, users can get IT support without leaving their primary work environment.</p>
+</li>
+<li>
+<p><strong>Microsoft 365 Copilot</strong>: Users can access your specialized IT help desk agent directly within their Microsoft 365 Copilot experience, making it seamlessly integrated into their daily workflow across Office applications.</p>
+</li>
+<li>
+<p><strong>Centralized Access</strong>: Instead of remembering separate websites or applications, users can access IT support through the platforms they're already using, reducing friction and increasing adoption.</p>
+</li>
+</ul>
+<p>This mission transforms your development work into a production-ready solution that delivers real value to your organization's end users.</p>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<p>Before starting this lab, ensure you have:</p>
+<ul>
+<li>✅ Completed previous labs and have a fully configured Contoso Helpdesk Agent</li>
+<li>✅ Your agent has been tested and is ready for production use</li>
+<li>✅ Permissions in your Copilot Studio environment to publish agents</li>
+<li>✅ Access to Microsoft Teams in your organization</li>
+</ul>
+<h3 id="111-publish-your-agent">11.1 Publish your agent<a class="headerlink" href="#111-publish-your-agent" title="Permanent link">&para;</a></h3>
+<p>Now that all our work on the agent is done, we have to make sure all our work is available for the end users that are going to use our agent. To make sure the content is available for all users, we need to publish our agent.</p>
+<ol>
+<li>
+<p>Go to the Contoso Helpdesk Agent in Copilot Studio (via the <a href="https://copilotstudio.microsoft.com">Copilot Studio maker portal</a>)</p>
+<p>In Copilot Studio, it's easy to publish your agent. You can just select the publish button at the top of the agent overview.</p>
+<p><img alt="Publish Agent overview" src="assets/publish.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Publish</strong> button in your agent</p>
+<p>It opens the publish pop-up - to confirm you really want to publish your agent.</p>
+<p><img alt="Publish confirmation" src="assets/publish-popup.png" /></p>
+</li>
+<li>
+<p>Select <strong>Publish</strong> to confirm publishing your agent</p>
+<p>Now a message shows that your agent is publishing. You don't have to keep that popup open. You get notified when the agent is published.</p>
+<p><img alt="Agent is publishing" src="assets/publishing.png" /></p>
+<p>When the agent is done publishing, you see the notification at the top of the agent page.</p>
+<p><img alt="Notification publish done" src="assets/publish-notification.png" /></p>
+</li>
+</ol>
+<p>But - we only published the agent, we didn't add it to a channel yet, so lets fix that now!</p>
+<h3 id="112-add-the-teams-and-microsoft-365-copilot-channel">11.2 Add the Teams and Microsoft 365 Copilot channel<a class="headerlink" href="#112-add-the-teams-and-microsoft-365-copilot-channel" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>To add the Teams and Microsoft 365 Copilot channel to our agent, we need to select <strong>Channel</strong> in the top navigation of the agent</p>
+<p><img alt="Channels tab" src="assets/channels-tab.png" /></p>
+<p>Here we can see all the channels we can add to this agent.</p>
+</li>
+<li>
+<p>Select <strong>Teams and Microsoft 365</strong></p>
+<p><img alt="Select Teams and Microsoft 365" src="assets/teams-m365-copilot.png" /></p>
+</li>
+<li>
+<p>Select <strong>Add channel</strong> to complete the wizard and add the channel to the agent</p>
+<p><img alt="Select add channel" src="assets/add-channel.png" /></p>
+<p>It will take a little while until it's added. After it's added a green notification will appear on the top of the sidebar.</p>
+<p><img alt="Channel added" src="assets/channel-added.png" /></p>
+</li>
+<li>
+<p>Select <strong>See agent in Teams</strong> to open a new tab</p>
+<p><img alt="See agent in Teams" src="assets/see-agent-teams.png" /></p>
+</li>
+<li>
+<p>Select <strong>Add</strong> to add the Contoso Helpdesk Agent to Teams</p>
+<p><img alt="Add agent to Teams" src="assets/add-teams.png" /></p>
+<p>This should take a little while. After it should show the following screen:</p>
+<p><img alt="Agent added successfully" src="assets/teams-added.png" /></p>
+</li>
+<li>
+<p>Select <strong>Open</strong> to open the agent in Teams</p>
+<p>This will open the agent in Teams as a Teams app</p>
+<p><img alt="Agent open in Microsoft Teams" src="assets/agent-teams-open.png" /></p>
+</li>
+</ol>
+<p>Now we have published the agent to work for you in Microsoft Teams, but you might want to make this available for more people.</p>
+<h3 id="113-make-the-agent-available-for-all-users-in-the-tenant">11.3 Make the agent available for all users in the tenant<a class="headerlink" href="#113-make-the-agent-available-for-all-users-in-the-tenant" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Close the browser tab where the Contoso Helpdesk Agent is opened</p>
+<p>This should bring you back to Copilot Studio where the Teams and Microsoft 365 Copilot side panel is still open. We only opened the agent in Teams now, but we can do a lot more here. We can edit the details of the agent, we can deploy the agent to more users and more.</p>
+</li>
+<li>
+<p>Select <strong>Edit details</strong></p>
+<p><img alt="Edit details" src="assets/m365-teams-edit-details.png" /></p>
+<p>This will open a pane where we can change a bunch of details and settings of the agent. We can change basic details like the icon, the background color of the icon and the descriptions. We can also change Teams settings (for instance allowing a user to add the agent to a team, or allowing to use this agent in group and meeting chats) here. When you select <em>more</em>, you can also change developer details like the developer name, the website, the privacy statement and the terms of use.</p>
+<p><img alt="Edit details pane" src="assets/edit-details.png" /></p>
+</li>
+<li>
+<p>Select <strong>Cancel</strong> to close the Edit details pane</p>
+</li>
+<li>
+<p>Select <strong>Availability options</strong></p>
+<p><img alt="Availability options" src="assets/m365-teams-availability-options.png" /></p>
+<p>This will open the availability options pane, where you can copy a link to send to users to use this agent (be aware, you need to share the agent with the user too) and you can download a file to add your agent to the Microsoft Teams or Microsoft 365 store. To show the agent in the store, you have other options too: you can show it to your teammates and shared users (to show in the <em>Built with Power Platform</em> section) or you can show it to everyone in your org (this needs administrator approval).</p>
+</li>
+<li>
+<p>Select <strong>Show to everyone in my org</strong></p>
+<p><img alt="Availability options" src="assets/availability-options.png" /></p>
+</li>
+<li>
+<p>Select <strong>Submit for admin approval</strong></p>
+<p><img alt="Submit for approval" src="assets/submit-for-approval.png" /></p>
+<p>Now, your administrator has to approve your agent submission. They can do that by going to the Teams Admin Center and look up the Contoso Helpdesk Agent in Apps. In the screenshot you can see what the administrator would see in Teams Admin Center.</p>
+<p><img alt="Teams app pending approval" src="assets/pending-approval.png" /></p>
+<p>The administrator has to select the Contoso Helpdesk Agent and select <em>Publish</em> to publish the Contoso Helpdesk Agent to everyone.</p>
+<p><img alt="Teams app publish" src="assets/teams-apps-publish.png" /></p>
+<p>When the administrator has published the agent submission, you will be able to refresh Copilot Studio and you should see the <em>available in app store</em> banner in the availability options.</p>
+<p><img alt="Available in App Store" src="assets/available-in-app-store.png" /></p>
+</li>
+</ol>
+<p>There are even more possibilities here. Your admin can change the global setup policy and auto install the Contoso Helpdesk Agent for everyone in the tenant. On top of that - you are able to pin the Contoso Helpdesk Agent to the left rail so that everyone has easy access to it.</p>
+<h2 id="mission-complete">✅ Mission Complete<a class="headerlink" href="#mission-complete" title="Permanent link">&para;</a></h2>
+<p>🎉 <strong>Congratulations!</strong> You successfully published your agent and added it to Teams and Microsoft 365 Copilot! Next up is the last mission of the course: Understanding licensing.</p>
+<p>⏭️ <a href="../12-understanding-licensing/">Move to <strong>Understanding licensing</strong> lesson</a></p>
+<h2 id="tactical-resources">📚 Tactical Resources<a class="headerlink" href="#tactical-resources" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/publication-fundamentals-publish-channels">Publish channels documentation</a></p>
+<!-- markdownlint-disable-next-line MD033 -->
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/11-publish-your-agent" alt="Analytics" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../10-add-event-triggers/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Add Event Triggers">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Add Event Triggers
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../12-understanding-licensing/" class="md-footer__link md-footer__link--next" aria-label="Next: Understanding Licensing">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Understanding Licensing
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>
