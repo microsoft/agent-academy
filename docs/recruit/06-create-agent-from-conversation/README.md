@@ -253,113 +253,135 @@ If you have not set up the **Contoso Agent** solution, please head back to [Less
     You are an IT help desk agent. Your goal is to assist users with their IT issues. You can access information from our company's knowledge base at https://support.microsoft.com/en-us. Your responses should be polite and helpful. If a user reports a slow computer, ask about the age of the device, current software versions, and if they've recently installed any new programs. If a user is experiencing trouble logging into their email, guide them through password reset procedures. You should be concise and informative, using step-by-step instructions with bullet points when appropriate.
     ```
 
-       ![Enter prompt](./assets/6.1_01_Prompt.png)
+      ![Enter prompt](./assets/6.1_01_Prompt.png)
 
-1. The conversational creation experience with Copilot will next load. You'll see Copilot is in progress of responding to you. The agent pane on the right will update shortly with details and instructions based on the prompt entered.
+1. The conversational creation experience with Copilot will next load. You'll see Copilot is in progress of responding to you.
 
-       ![Copilot conversational creation experience](./assets/6.1_02_CopilotConversationCreationExperience.png)
+      ![Copilot conversational creation experience](./assets/6.1_02_ConversationalCreationExperienceLoads.png)
 
-1. Copilot will update the agent pane with a name, description and instructions based on the prompt entered. Cool right?!
-
-       ![Agent pane displays name, description and instructions](./assets/6.1_03_AgentInstructions.png)
-
-1. Next, we'll ask Copilot to name our agent as,
+1. Copilot confirms the agent has been set up with the instructions provided, and is asking for confirmation on the name of the agent. We'll ask Copilot to name our agent as,
 
        ```text
        Contoso Helpdesk Agent
        ```
 
-      ![Rename the agent](./assets/6.1_04_NameAgent.png)
+      ![Rename the agent](./assets/6.1_03_AgentName.png)
 
-1. Copilot performs the request and we'll see that the name of the agent has been updated in the agent pane. Copilot next asks us to refine the instructions. It's asking how we should respond to particular issues and we'll request that it acknowledges the issue and format the response as bullet points. Copy and paste the following, and submit the request to Copilot.
+1. Copilot performs the request and we'll see that the name of the agent has been updated in the agent pane. Copilot next asks us to refine the instructions. It's asking how we should respond to particular issues and we'll request that it acknowledges the issue, provide examples of topics to answer, and format the response as bullet points.
+
+    Copy and paste the following, and submit the request to Copilot.
 
        ```text
-       Acknowledge the issue with empathy and provide steps or troubleshooting as bullet points.
+       Prioritize urgent requests. Examples of IT issues or scenarios to help with: device problems, network connectivity, log in issues. When troubleshooting, first acknowledge their issue and respond with empathy, then provide step by step guidance using bullet points and ask if they require further assistance.
        ```
 
-      ![Refine agent instructions](./assets/6.1_05_RefineInstructions.png)
+      ![Refine agent instructions](./assets/6.1_04_RefineInstructions.png)
 
-1. The instructions of the agent will be updated after Copilot has received the request. Next, Copilot is asking for public websites to ground the agent's knowledge. Enter the following and submit,
+1. The instructions of the agent will be updated after Copilot has received the request. Notice how on the right hand side pane, that starter prompts have now appeared. These were formed based on our instructions.
+
+    Next, Copilot is asking for public websites to ground the agent's knowledge.
+
+    Copy and paste the following, and submit the request to Copilot.
 
       ```text
       https://support.microsoft.com
       ```
 
-      ![Add publicly accessible website](./assets/6.1_06_PublicWebsite.png)
+      ![Add publicly accessible website](./assets/6.1_05_KnowledgeSource.png)
 
-1. The public website will be added as a knowledge source. If you don't see it in the agent pane, try scrolling down the pane and it'll appear as a knowledge source.
+1. The public website will be added as a knowledge source. Copilot is asking if additional knowledge sources are to be added. We don't need to add additional public websites.
 
-    Lastly, we're going to request that our agent does not answer HR related questions. This lets our agent know that it should not answer HR related questions asked by users. Enter the following and submit,
+    Copy and paste the following, and submit the request to Copilot.
+
+      ```text
+      Proceed with setup
+      ```
+
+      ![Proceed with setup](./assets/6.1_06_ProceedWithSetup.png)
+
+1. Copilot confirms the setup of our Contoso Helpdesk Agent is complete but we'll add one more modification, we're going to request that our agent does not answer HR related questions. This lets our agent know that it should not answer HR related questions asked by users.
+
+    Copy and paste the following, and submit the request to Copilot.
 
        ```text
        Do not provide assistance to questions related to HR, examples are: What is my vacation leave balance? How many sick days do I have? What's the URL to our payroll portal? 
        ```
 
-       ![Do not answer HR related questions](./assets/6.1_07_DoNotTalkAbout.png)
+      ![Do not answer HR related questions](./assets/6.1_07_DoNotTalkAbout.png)
 
-1. The instructions will be updated to not provide assistance with questions related to HR. Copilot is asking again if we'd like to request more modifications. We don't need to make further updates, enter the following and submit,
+1. The instructions will be updated to not provide assistance with questions related to HR. We don't need to make further updates, our agent is ready to be created.
 
-      ```text
-      No more modifications
-      ```
+      ![Agent instructions updated](./assets/6.1_08_AgentInstructionsUpdated.png)
 
-       ![No more modifications](./assets/6.1_08_NoMoreModifications.png)
+1. Before we create our agent, let's do a couple of things.
 
-1. Copilot confirms the agent is ready to be created. Before we create our agent, let's do a couple of things.
+    First, select the **Configure** tab to view the agent details defined from our conversation with Copilot. This is where you'll see the Name, Description, Instructions, Knolwedge and Suggested/Starter prompts.
 
-    For websites, you need to confirm which website(s) your organization owns that Bing will search through Copilot Studio.
+      ![View agent details](./assets/6.1_09_ViewAgentDetails.png)
 
-    For learning purposes, we'll tick the checkbox that confirms ownership of the knowledge source. In reality, this would be _your company website_ that you have ownership of.
-
-      ![Confirm website ownership](./assets/6.1_09_ConfirmOwnershipOfKnowledgeSource.png)
-
-1. Next we'll double check the solution that our agent will be created in, is the solution we created and selected as the preferred solution in [Lesson 04 - Create a new solution](../04-creating-a-solution/README.md#42-create-a-new-solution).
-
-    Select the **ellipsis icon (...)** and select **Edit Advanced Settings**.
-
-      ![Edit Advanced Settings](./assets/6.1_10_EditAdvancedSettings.png)
-
-1. The **Advanced Settings** modal will appear and we can see our solution created from earlier is selected by default. This is due to selecting our solution as the preferred solution in [Lesson 04 - Create a new solution](../04-creating-a-solution/README.md#42-create-a-new-solution).
-
-    Select **Cancel.**
-
-      ![View of Advanced Settings](./assets/6.1_11_Solution.png)
-
-1. Let's now create our custom agent! Select **Create**.
-
-      ![Select Create](./assets/6.1_12_CreateAgent.png)
-
-1. Copilot Studio will begin provisioning our agent.
-
-      ![Setting up agent](./assets/6.1_13_SettingUpAgent.png)
-
-1. Once our agent has been provisioned, we can see the details of the agent reflect what we requested during our Copilot conversational creation experience.
-
-      ![Agent provisioned](./assets/6.1_14_AgentCreated.png)
-
-1. Scroll down and we'll see our instructions and the public website as the knowledge source for the agent.
-
-      ![Instructions and knowledge sources](./assets/6.1_15_InstructionsAndKnowledgeSources.png)
-
-1. Let's now test our newly created agent. Enter the following question in the **Test** pane.
+1. Secondly, let's test our agent. Copy and paste the following, and submit the question to our agent.
 
        ```text
        How can I check the warranty status of my Surface?
        ```
 
-      ![Test newly created agent](./assets/6.1_16_TestNewlyCreatedAgent.png)
+      ![Test agent](./assets/6.1_10_TestAgent.png)
+
+1. The response to the question will then display where the answers are in the format of a step-by-step guide using bullet points. Great, our agent works! 🙌🏻
+
+      ![Agent Response](./assets/6.1_11_AgentResponse.png)
+
+1. Lastly, we'll double check the solution that our agent will be created in, is the solution we created and selected as the preferred solution in [Lesson 04 - Create a new solution](../04-creating-a-solution/README.md#42-create-a-new-solution).
+
+    Select the **ellipsis icon (...)** and select **Update Advanced Settings**.
+
+      ![Update Advanced Settings](./assets/6.1_12_UpdateAdvancedSettings.png)
+
+1. The **Advanced Settings** modal will appear and we can see our solution created from earlier is selected by default. This is due to selecting our solution as the preferred solution in [Lesson 04 - Create a new solution](../04-creating-a-solution/README.md#42-create-a-new-solution).
+
+    Select **Cancel.**
+
+      ![View of Advanced Settings](./assets/6.1_13_AdvancedSettings.png)
+
+1. Let's now create our custom agent! Select **Create**.
+
+      ![Select Create](./assets/6.1_14_CreateAgent.png)
+
+1. Copilot Studio will begin provisioning our agent.
+
+      ![Setting up agent](./assets/6.1_15_SettingUpAgent.png)
+
+1. Once our agent has been provisioned, we can see the details of the agent reflect what we requested during our Copilot conversational creation experience. Scroll down to review the agent where you'll see the name, description, instructions, the knowledge sources and the suggested prompts. The orchestration mode is enabled by default and the default model is used for the response model of the agent.
+
+      ![Agent created](./assets/6.1_16_AgentCreated.png)
+
+      ![Knowledge sources](./assets/6.1_17_KnowledgeSources.png)
+
+      ![Suggested prompts](./assets/6.1_18_SuggestedPrompts.png)
+
+1. Let's now test our newly created agent. In the **Test** pane on the right hand side, select the **Activity Map** icon.
+
+      ![Select Activity Map](./assets/6.1_19_ActivityMap.png)
+
+1. Enter the following question in the **Test** pane.
+
+       ```text
+       How do I find my Windows 11 product key?
+       ```
+
+      ![Test newly created agent](./assets/6.1_20_TestAgent.png)
 
 1. The Activity map will then load which shows us in real-time what path the agent is processing. In this scenario, our agent has understood the question and searches the knowledge sources. Currently we have one source which is the public website we added earlier using Copilot, which is what the agent is reviewing.
 
-      ![Reviewing knowledge sources](./assets/6.1_17_ReviewingKnowledgeSources.png)
+      ![Reviewing knowledge sources](./assets/6.1_21_ReviewingSources.png)
 
-1. Our agent then responds with answers that are outlined as bullet points, as defined in the instructions. The response has references to the web pages that the agent formed its response from. This enables users to verify the source of the answer. If you click on the reference, you'll be directed to the web page where you can review the source of the answer.
+1. Our agent then responds with answers that are outlined as bullet points, as defined in the instructions. The response has references to the web pages that the agent formed its response from. This enables users to verify the source of the answer.
 
-      ![References in response](./assets/6.1_18_References.png)
+      ![References in response](./assets/6.1_22_Response.png)
 
 1. You can also review the response and its sources by scrolling down the **Knowledge modal** in the Activity map.
 
-      ![Referenced sources](./assets/6.1_19_ReferencedSources.png)
+      ![Referenced sources](./assets/6.1_23_ReferencedSources.png)
 
 Congratulations! You've built your first custom agent with Copilot in Copilot Studio 🙌🏻
 
