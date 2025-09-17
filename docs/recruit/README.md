@@ -60,8 +60,8 @@ This academy is broken into progressive lessons—each one designed as a field m
 | `09` | 🔁 [Automate with Agent Flows](./09-add-an-agent-flow/README.md) | Use Adaptive Card input to trigger back-end flows |
 | `10` | 🧭 [Add Event Triggers](./10-add-event-triggers/README.md) | Enable your agent to act autonomously using event-based logic |
 | `11` | 📢 [Publish Your Agent](./11-publish-your-agent/README.md) | Deploy your agent to Microsoft Teams and Microsoft 365 Copilot |
-| `12` | 🪪  [Understanding Licensing](./12-understanding-licensing/README.md) | Learn how licensing and billing works with Copilot Studio |
-
+| `12` | 🪪 [Understanding Licensing](./12-understanding-licensing/README.md) | Learn how licensing and billing works with Copilot Studio |
+| `13` | 🚨 [Securing Your Recruit Badge](./course-completion-badges-recruit/README.md) |  Claim your badge and mark your achievement! |
 !!! note
     ✅ Completing this curriculum earns you the **Recruit** badge.  
     🔓 **Operative** and **Commander** will be unlocked in future phases.
