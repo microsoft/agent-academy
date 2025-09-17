@@ -1,4 +1,4 @@
-# 🚨 Final Mission: Securing Your Recruit Baddge
+# 🚨 Final Mission: Securing Your Recruit Badge
 
 ## 🕵️‍♂️ CODENAME: `OPERATION COURSE COMPLETION`
 
