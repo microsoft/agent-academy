@@ -13,7 +13,6 @@ Let’s make your accomplishment official and get your Recruit badge.
 ## 🔎 Objectives
 
 📖 This mission covers:
- 
 
 1. The exact steps to claim your badge
 1. What to expect after you submit your badge request
@@ -42,7 +41,6 @@ To initiate badge deployment, complete the following steps:
 
 1. 🔐 **Create and Log In to Your Global AI Community Account**  
    [Global AI Community Account Log In](https://globalai.community/auth/login)
-   
 
 ---
 
