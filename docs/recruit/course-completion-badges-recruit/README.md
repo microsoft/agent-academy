@@ -29,18 +29,19 @@ To initiate badge deployment, complete the following steps:
 1. ⭐ **Star the Agent Academy GitHub Repo**  
    [Agent Academy GitHub Repo](https://github.com/microsoft/agent-academy)
 
-2. 📤 **Submit the Recruit Completion Form**  
+1. 📤 **Submit the Recruit Completion Form**  
    [Recruit Completion Form](https://aka.ms/agent-academy-recruit/badge)  
    Include:
    - 📸 Screenshot of your solution file in your environment (showing environment name + file owner)
    - 📸 Screenshot of the Agent Test screen (with environment name visible)
    - 📝 All required fields completed
 
-3. 🧾 **Complete the Badge Validation Form**  
+1. 🧾 **Complete the Badge Validation Form**  
    [Badge Validation Form](https://aka.ms/agent-academy-recruit/form)
 
-4. 🔐 **Create and Log In to Your Global AI Community Account**  
+1. 🔐 **Create and Log In to Your Global AI Community Account**  
    [Global AI Community Account Log In](https://globalai.community/auth/login)
+   
 ---
 
 ## ⏳ Badge Deployment Timeline
