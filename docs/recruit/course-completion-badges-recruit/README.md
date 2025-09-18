@@ -35,7 +35,7 @@ To initiate badge deployment, complete the following steps:
    * 📸 Screenshot of your solution file in your environment (showing environment name + file owner)
    * 📸 Screenshot of the Agent Test screen (with environment name visible)
    * 📝 All required fields completed
-     
+
 1. 🧾 **Complete the Badge Validation Form**  
    [Badge Validation Form](https://aka.ms/agent-academy-recruit/form)
 
@@ -75,7 +75,7 @@ Future paths (Operative, Commander, and side-quests) will also include badge rew
 
 Learn more about Power Platform Advocacy:
 
-- ⚡ [Power Platform Advocacy Hub](https://aka.ms/power-advocates)
+* ⚡ [Power Platform Advocacy Hub](https://aka.ms/power-advocates)
 
 <!-- markdownlint-disable-next-line MD033 -->
 <img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/final-mission" alt="Analytics" />
