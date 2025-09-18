@@ -32,9 +32,9 @@ To initiate badge deployment, complete the following steps:
 1. 📤 **Submit the Recruit Completion Form**  
    [Recruit Completion Form](https://aka.ms/agent-academy-recruit/badge)  
    **Include:**
-   * 📸 Screenshot of your solution file in your environment (showing environment name + file owner)
-   * 📸 Screenshot of the Agent Test screen (with environment name visible)
-   * 📝 All required fields completed
+      * 📸 Screenshot of your solution file in your environment (showing environment name + file owner)
+      * 📸 Screenshot of the Agent Test screen (with environment name visible)
+      * 📝 All required fields completed
 
 1. 🧾 **Complete the Badge Validation Form**  
    [Badge Validation Form](https://aka.ms/agent-academy-recruit/form)
