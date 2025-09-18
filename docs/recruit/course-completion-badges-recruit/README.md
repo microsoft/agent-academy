@@ -41,7 +41,6 @@ To initiate badge deployment, complete the following steps:
 
 4. 🔐 **Create and Log In to Your Global AI Community Account**  
    [Global AI Community Account Log In](https://globalai.community/auth/login)
-
 ---
 
 ## ⏳ Badge Deployment Timeline
