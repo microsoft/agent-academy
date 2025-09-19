@@ -1,0 +1,43 @@
+name: Add comment to all issues
+
+on:
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  add_comments:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add comment to all issues with only 'recruit-completed' label
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const owner = 'microsoft';
+            const repo = 'agent-academy';
+            // Get all open issues with the label 'recruit-completed'
+            const issues = await github.paginate(
+              github.rest.issues.listForRepo,
+              {
+                owner,
+                repo,
+                state: 'open',
+                labels: 'recruit-completed',
+                per_page: 100
+              }
+            );
+            for (const issue of issues) {
+              // Only process if the issue is NOT a PR and has ONLY the 'recruit-completed' label
+              if (
+                !issue.pull_request &&
+                Array.isArray(issue.labels) &&
+                issue.labels.length === 1 &&
+                issue.labels[0].name === 'recruit-completed'
+              ) {
+                await github.rest.issues.createComment({
+                  owner,
+                  repo,
+                  issue_number: issue.number,
+                  body: 'Thank you for filling out the Recruit Completion Form. In order to collect your digital badge, you must submit the following badge validation form: https://aka.ms/agent-academy-recruit/form.'
+                });
+              }
+            }
