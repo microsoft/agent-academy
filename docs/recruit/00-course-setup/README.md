@@ -103,7 +103,7 @@ A new SharePoint site needs to be created  which will be used in [Lesson 06 - Cr
 
     ![Create site](images/0.4_02_CreateSite.png)
 
-1. A dialog will appear to guide you in creating a new SharePoint site. Select **Team site** or **Communication site**.
+1. A dialog will appear to guide you in creating a new SharePoint site. Select **Team site**.
 
     ![Team site](images/0.4_03_SelectTeamOrCommunicationSite.png)
 
