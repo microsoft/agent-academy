@@ -17,10 +17,10 @@ In this mission, you will:
 - **Learn what Copilot Studio is**
 - **Learn when and why to use agents**
 - **Explore the four building blocks of agents**
-  - **Knowledge**
-  - **Tools**
-  - **Topics**
-  - **Instructions**
+      - **Knowledge**
+      - **Tools**
+      - **Topics**
+      - **Instructions**
 - **Understand how these components work together** to create an intelligent, automated agent
 
 ---
