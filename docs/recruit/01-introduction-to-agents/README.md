@@ -67,7 +67,7 @@ With RAG, your agent can call internal company wikis, plugin APIs, or search an 
 
 In the context of Copilot Studio, the term **agent** can refer to multiple flavors of AI assistants. It’s helpful to draw a line between:
 
-1. **Conversational Agents:**  
+**Conversational Agents:**  
    1. Primarily focus on two-way dialogue.  
    1. Persist context across multiple turns of a conversation.  
    1. Usually orchestrated via predefined flows or triggers (e.g., “If user says X, respond with Y”).  
@@ -76,7 +76,7 @@ In the context of Copilot Studio, the term **agent** can refer to multiple flavo
       - A Teams chatbot that answers HR policy questions.  
       - A Power Virtual Agents bot on a SharePoint page to guide users through a form.  
 
-1. **Autonomous Agents:**  
+**Autonomous Agents:**  
    1. Go beyond back-and-forth chat; they can **take actions** on behalf of the user.  
    1. Use LLM reasoning loops (think “plan → act → observe → replan”) to complete tasks.  
    1. Hook into external tools or APIs (e.g., call a Power Automate flow, send calendar invites, manipulate data in Dataverse).  
