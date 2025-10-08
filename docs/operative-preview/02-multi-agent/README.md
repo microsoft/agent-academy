@@ -632,7 +632,7 @@ You've seen how your main agent can coordinate with specialist agents, share con
 **✅ Foundation for autonomy**  
 Your enhanced hiring system is now ready for the advanced features we'll add in upcoming missions: autonomous triggers, content moderation, and deep reasoning.
 
-🚀**Next up:** In your next mission, you'll learn how to configure your agent to autonomously process resumes from emails and perform actions on a schedule!
+🚀**Next up:** In your next mission, you'll learn how to configure your agent to autonomously process resumes from emails!
 
 ⏩[Move to Mission 03: Automate your agent with triggers](../03-automate-triggers/README.md)
 
@@ -649,3 +649,5 @@ Your enhanced hiring system is now ready for the advanced features we'll add in 
 📖 [Create a solution](https://learn.microsoft.com/power-platform/alm/solution-concepts-alm?WT.mc_id=power-182762-scottdurow)
 
 📖 [Power Platform solution ALM guide](https://learn.microsoft.com/power-platform/alm/overview-alm?WT.mc_id=power-182762-scottdurow)
+
+📺 [Agent-to-agent collaboration in Copilot Studio](https://youtu.be/d-oD3pApHAg?si=rwIHKhJTkjSvhTHw)
