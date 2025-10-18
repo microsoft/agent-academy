@@ -49,10 +49,10 @@ jobs:
         #   OPENAI_CHAT_MODEL_ID: ${{ secrets.OPENAI_CHAT_MODEL_ID }}
         #   OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
         run: |
-          # translate -l "es fr de" -y
+          translate -l "es fr de" -y
           # translate -l "fi nl he" -y
-          # translate -l "id ms" -y
-          translate -l "id" -y
+          # translate -l "ms" -y
+          # translate -l "id" -y
 
 
       - name: Authenticate GitHub App
