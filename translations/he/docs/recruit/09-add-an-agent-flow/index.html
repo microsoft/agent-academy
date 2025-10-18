@@ -1,0 +1,1727 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/he/docs/recruit/09-add-an-agent-flow/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#09" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ שם קוד: מבצע כוח אוטומציה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 תיאור המשימה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 מטרות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 מהי זרימת סוכן?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-automate" class="md-nav__link">
+    <span class="md-ellipsis">
+      🙋🏽 כן, אבל איך זה שונה מזרימות ענן של Power Automate?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      👍🏻 למה להשתמש בזרימות סוכן
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏄🏻‍♂️ איך זרימות סוכן משפרות את הסוכן שלך?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 תכונות מרכזיות שהופכות את זרימות הסוכן לעוצמתיות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ איך זה עובד
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧶 איך ליצור זרימת סוכן
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 מהו מעצב זרימת הסוכן?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔤 הזכרת ביטויים - מה הם ביטויים?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⭐ שיטות עבודה מומלצות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#09-" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 מעבדה 09 - הוספת זרימת סוכן לאוטומציה ושיפור יכולות נושא
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ משימה הושלמה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 משאבים טקטיים
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "cc4afa4a5a11c9d03896decfbcbd4060",
+  "translation_date": "2025-10-17T01:25:37+00:00",
+  "source_file": "docs/recruit/09-add-an-agent-flow/README.md",
+  "language_code": "he"
+}
+-->
+<h1 id="09">🚨 משימה 09: הוספת זרימת סוכן לנושא שלך לצורך אוטומציה<a class="headerlink" href="#09" title="Permanent link">&para;</a></h1>
+<h2 id="_1">🕵️‍♂️ שם קוד: <code>מבצע כוח אוטומציה</code><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ חלון זמן למבצע:</strong> <code>~30 דקות</code>  </p>
+</blockquote>
+<p>🎥 <strong>צפו בהדרכה</strong></p>
+<p><a href="https://www.youtube.com/watch?v=vtLZJT3eBXg" title="צפו בהדרכה ביוטיוב"><img alt="תמונה ממוזערת של סרטון זרימת סוכן" src="../../../../../translated_images/video-thumbnail.ede12df9aaebcc8996680c8b6555d309b53bdf33d1b0165cae3b5173a6bcdd73.he.jpg" /></a></p>
+<h2 id="_2">🎯 תיאור המשימה<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>הסוכן שלך יכול כעת לשוחח עם משתמשים ולספק מידע, אך מצוינות תפעולית אמיתית דורשת מהסוכן שלך לנקוט פעולה. משימה זו תהפוך את הסוכן השיחתי שלך למרכז כוח אוטומציה על ידי ציידו בזרימות סוכן.</p>
+<p>בסיום המשימה, תיצור אוטומציה מלאה לבקשת מכשירים שתקלוט נתוני משתמש באמצעות כרטיס אדפטיבי, תשלוף נתונים מ-SharePoint, תשלח התראות למנהלים באמצעות דוא"ל ותספק משוב חלק למשתמשים - הכל מנוהל על ידי הסוכן שלך באמצעות אוטומציה חכמה של זרימת עבודה.</p>
+<h2 id="_3">🔎 מטרות<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>במשימה זו תלמד:</p>
+<ol>
+<li>להבין מהן זרימות סוכן וכיצד הן שונות מזרימות ענן של Power Automate לצורך אוטומציה  </li>
+<li>ללמוד את התכונות המרכזיות שהופכות את זרימות הסוכן לעוצמתיות, כולל פעולות AI וכתיבה בשפה טבעית  </li>
+<li>לחקור את מעצב זרימת הסוכן וכיצד להשתמש בביטויים לטיפול דינמי בנתונים  </li>
+<li>ליצור אוטומציה מלאה לבקשת מכשירים שמשלבת נתוני SharePoint והתראות דוא"ל  </li>
+</ol>
+<h2 id="_4">🤔 מהי זרימת סוכן?<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>זרימות סוכן הן דרך עוצמתית לאוטומציה של משימות חוזרות ולחיבור האפליקציות והשירותים שלך. ניתן לחשוב עליהן כזרימות עבודה מובנות, שלב אחר שלב, שהסוכן שלך יכול לבצע כדי לאוטומט משימות או להתחבר לאפליקציות ושירותים אחרים. ניתן לראות אותן כזרימות קטנות שמסייעות לסוכן שלך לבצע דברים כמו לשלוח התראות, לעדכן רשומות או להגיב לאירועים.</p>
+<p>בניגוד לסוכנים אוטונומיים שמשתמשים ב-AI כדי לקבל החלטות בזמן אמת, זרימות סוכן הן <strong>זרימות עבודה דטרמיניסטיות</strong> - כלומר הן פועלות באותו מסלול בכל פעם, ומבטיחות תוצאות עקביות ואמינות.</p>
+<p>במילים פשוטות:</p>
+<ul>
+<li>הן עוזרות לסוכן שלך <em>לבצע דברים</em>, לא רק <em>לדבר</em> עם משתמשים.  </li>
+<li>הן ניתנות לשימוש חוזר בנושאים וסוכנים שונים, וניתן להפעיל אותן באמצעות הודעות משתמש, אירועים או אפליקציות ושירותים אחרים.  </li>
+</ul>
+<h2 id="power-automate">🙋🏽 כן, אבל איך זה שונה מזרימות ענן של Power Automate?<a class="headerlink" href="#power-automate" title="Permanent link">&para;</a></h2>
+<p>גם זרימות סוכן וגם זרימות ענן של Power Automate מסייעות באוטומציה של משימות. הן מיועדות למטרות שונות ופועלות בדרכים שונות.</p>
+<h3 id="-copilot-studio">🤖 זרימות סוכן ב-Copilot Studio<a class="headerlink" href="#-copilot-studio" title="Permanent link">&para;</a></h3>
+<p><strong>למה הן מיועדות:</strong></p>
+<ul>
+<li>נבנו עבור סוכנים שיחתיים ואוטונומיים (באמצעות הוראות סוכן) ב-Copilot Studio.  </li>
+<li>מתמקדות באוטומציה חכמה מבוססת AI שמתקשרת עם מערכות עסקיות.  </li>
+</ul>
+<p><strong>למה הן שימושיות:</strong></p>
+<ul>
+<li>קלות לבנייה ולניהול ישירות ב-Copilot Studio.  </li>
+<li>מצוינות לאוטומציה של משימות שמתרחשות <em>במהלך השיחה</em> עם משתמשים, כמו הגשת בקשת חופשה.  </li>
+<li>אין צורך ברישיון Power Automate נפרד, החיוב מבוסס על שימוש בתוך Copilot Studio. זה יכול לחסוך זמן ועלויות לצוותים ארגוניים.  </li>
+</ul>
+<p><strong>מגבלות:</strong></p>
+<ul>
+<li>לא ניתן לשתף אותן, להעתיק אותן או להקצות בעלים משותפים.  </li>
+<li>זרימות סוכן נראות וניתנות לשימוש רק בתוך Copilot Studio.  </li>
+<li>נכון לעכשיו, ניתן לערוך טריגרים לאירועים עבור סוכנים בפורטל יוצרי Power Automate.  </li>
+</ul>
+<h3 id="power-automate_1">☁️ זרימות ענן של Power Automate<a class="headerlink" href="#power-automate_1" title="Permanent link">&para;</a></h3>
+<p><strong>למה הן מיועדות:</strong></p>
+<ul>
+<li>מיועדות לאוטומציה כללית בין אפליקציות ושירותים רבים.  </li>
+<li>יכולות לפעול באופן עצמאי או לעבוד לצד זרימות סוכן.  </li>
+</ul>
+<p><strong>למה הן שימושיות:</strong></p>
+<ul>
+<li>מציעות מגוון רחב של מחברים.  </li>
+<li>אידיאליות לאוטומציה של תהליכים מחוץ לסוכנים.  </li>
+<li>ניתן לשתף, להשתמש מחדש ולנהל אותן בין צוותים.  </li>
+</ul>
+<p><strong>דרישות:</strong></p>
+<ul>
+<li>יש צורך ברישיון Power Automate כדי להשתמש בהן.  </li>
+</ul>
+<h3 id="_5">📗 סיכום<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">השתמש בזה</th>
+<th style="text-align: left;">כשאתה רוצה</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">זרימות סוכן</td>
+<td style="text-align: left;">לאוטומט משימות בתוך סוכן, להשתמש ב-AI ולשמור הכל ב-Copilot Studio</td>
+</tr>
+<tr>
+<td style="text-align: left;">זרימות ענן של Power Automate</td>
+<td style="text-align: left;">לאוטומט בין אפליקציות ושירותים, או לבנות זרימות עבודה מחוץ לסוכנים</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_6">👍🏻 למה להשתמש בזרימות סוכן<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>זרימות סוכן תמיד פועלות במסלול קבוע - הן עושות את אותו הדבר בכל פעם שניתן להן אותו קלט.</p>
+<p>זה הופך אותן ל:</p>
+<ul>
+<li><strong>אמינות</strong> - אפשר לסמוך עליהן שיפעלו באותה דרך בכל פעם.  </li>
+<li><strong>צפויות</strong> - אתה יודע איזה תוצאה לצפות כשהזרימה פועלת.  </li>
+<li><strong>מבוססות חוקים</strong> - הן פועלות לפי שלבים שאתה מגדיר.  </li>
+</ul>
+<p>יתרונות נוספים הם:</p>
+<ul>
+<li><strong>אוטומציה</strong> - מאפשרות לסוכן שלך לטפל במשימות חוזרות כמו הגשת טפסים או שליחת התראות.  </li>
+<li><strong>מחוברות</strong> - מתחברות ליותר מ-1400 מחברים כמו ServiceNow, SharePoint, Salesforce. אחרת, ניתן לבנות מחבר מותאם אישית.  </li>
+<li><strong>אינטגרציה הדוקה</strong> - זרימות סוכן הן חלק מהלוגיקה של הסוכן, הן מופעלות ישירות על ידי הודעות משתמש או פעולות בשיחה.  </li>
+<li><strong>יכולת הרחבה</strong> - ניתן להשתמש בזרימות מחדש בין סוכנים או תרחישים שונים.  </li>
+<li><strong>ללא קוד או עם מעט קוד</strong> - ניתן לבנות זרימות באמצעות שפה טבעית או מעצב חזותי.  </li>
+<li><strong>פלטפורמה אחת</strong> - ניתן לעצב, לבדוק ולהפעיל זרימות סוכן במקום אחד - Copilot Studio. אין צורך לעבור בין פלטפורמות.  </li>
+</ul>
+<h2 id="_7">🏄🏻‍♂️ איך זרימות סוכן משפרות את הסוכן שלך?<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>זרימות סוכן מרחיבות את יכולות הסוכן שלך מעבר ל"שיחה" עם משתמשים. הן מאפשרות לו לנקוט פעולה ולהתחבר למערכות.</p>
+<p>נניח שאתה עובד במחלקת כספים ומקבל הרבה חשבוניות מספקים. בדרך כלל, מישהו צריך לקרוא כל חשבונית, לשלוף את הפרטים החשובים - הסכום, התאריך, מי שלח אותה, ולבדוק אם הכל תואם לרשומות שלך. לאחר מכן לשלוח אותה לאדם הנכון לאישור. זה לוקח זמן ומאמץ.</p>
+<p>עם זרימות סוכן ב-Copilot Studio, ניתן לאוטומט את התהליך הזה. ברגע שהחשבונית מגיעה, הסוכן:</p>
+<ol>
+<li>קורא את המסמך באמצעות עיבוד מסמכים חכם כדי למצוא את המידע המרכזי.  </li>
+<li>בודק את הפרטים מול נתוני הארגון שלך כדי לוודא שהכל נראה תקין.  </li>
+<li>שולח אותה לאישור לאדם הנכון.  </li>
+</ol>
+<p>זה חוסך זמן, מפחית טעויות ומקל על התהליך כולו.</p>
+<h3 id="_8">תחשוב על זה כך<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>סוכנים</strong>: מקבלי ההחלטות החכמים  </li>
+<li><strong>זרימות סוכן</strong>: המבצעים האמינים  </li>
+</ul>
+<h3 id="_9">למה זה חשוב<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>אתה מקבל את הטוב משני העולמות: אוטומציה אמינה ו-AI גמיש.  </li>
+<li>קל לבנות ולעדכן זרימות ככל שצרכי העסק שלך משתנים.  </li>
+<li>ניתן להרחיב אוטומציה בין צוותים.  </li>
+</ul>
+<h2 id="_10">🔌 תכונות מרכזיות שהופכות את זרימות הסוכן לעוצמתיות<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>כתיבה בשפה טבעית</strong></p>
+<ul>
+<li>ניתן לתאר מה אתה רוצה שהזרימה תעשה באנגלית פשוטה.  </li>
+<li>Copilot מבין את הכוונה שלך ובונה את הזרימה עבורך.  </li>
+<li>אין צורך לכתוב קוד - פשוט תסביר את הרעיון שלך.  </li>
+</ul>
+</li>
+<li>
+<p><strong>פעולות AI</strong></p>
+<p>השתמש ב-AI כדי:</p>
+<ul>
+<li>לקרוא ולהבין מסמכים או תמונות.  </li>
+<li>לסכם תוכן ארוך לתשובות קצרות ושימושיות.  </li>
+<li>להציע המלצות או החלטות חכמות.  </li>
+</ul>
+</li>
+<li>
+<p><strong>פעולות גנרטיביות</strong></p>
+<ul>
+<li>מאפשרות לזרימה להתאים את עצמה בזמן אמת.  </li>
+<li>הסוכן יכול לתכנן ולהתאים שלבים על סמך מידע משתנה.  </li>
+</ul>
+</li>
+<li>
+<p><strong>פעולות אינטגרציה</strong></p>
+<ul>
+<li>חיבור הזרימה לכלים כמו Outlook, Microsoft Teams, ServiceNow, SharePoint ואפליקציות ושירותים אחרים, דרך יותר מ-1400 מחברים מובנים או מחבר מותאם אישית.  </li>
+<li>זה עוזר לסוכן שלך לעבוד עם האפליקציות שהצוות שלך כבר משתמש בהן.  </li>
+</ul>
+</li>
+<li>
+<p><strong>מעורבות אנושית</strong></p>
+<ul>
+<li>הוסף שלבי אישור שבהם אדם צריך לבדוק או לאשר משהו.  </li>
+<li><a href="https://learn.microsoft.com/microsoft-copilot-studio/flows-advanced-approvals?WT.mc_id=power-172621-ebenitez">אישורים מתקדמים</a> תומכים בתזכורות, האצלת סמכויות ואישורים רב-שלביים.  </li>
+</ul>
+</li>
+</ol>
+<h2 id="_11">⚙️ איך זה עובד<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>טריגר</strong></p>
+<p>אירוע שמתחיל את הזרימה - כמו משתמש ששואל שאלה, הפעלת הזרימה מנושא, זמן מתוזמן או אירוע שמתרחש במערכת אחרת.  </p>
+</li>
+<li>
+<p><strong>פעולות</strong></p>
+<p>אלו הם השלבים שהסוכן מבצע לאחר מכן - שליחת דוא"ל, קריאה ל-API, עדכון כרטיס ב-ServiceNow.  </p>
+</li>
+</ol>
+<h2 id="_12">🧶 איך ליצור זרימת סוכן<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>שפה טבעית</strong>: תאר מה אתה רוצה שהסוכן יעשה, ו-Copilot יבנה את זה עבורך.  </li>
+<li><strong>קנבס מעצב</strong>: גרור ושחרר פעולות, תנאים ולולאות במעצב זרימת הסוכן כדי לבנות את הזרימה שלך.  </li>
+</ol>
+<h2 id="_13">🎨 מהו מעצב זרימת הסוכן?<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p>זהו כלי חזותי ב-Copilot Studio שמסייע לך לבנות, לערוך ולנהל זרימות סוכן שמספקות הוראות שלב אחר שלב שהסוכן שלך מבצע כדי להשלים משימות. הוא תוכנן להיות פשוט לשימוש, גם אם אתה חדש בזרימות סוכן.</p>
+<h3 id="_14">תכונות מרכזיות של מעצב זרימת הסוכן<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>קנבס חזותי</strong></p>
+<ul>
+<li>ניתן לראות את כל הזרימה שלך פרוסה כמו דיאגרמה.  </li>
+<li>קל להתקרב/להתרחק, להתאים את התצוגה או להשתמש במפת מינימפ כדי לנווט בזרימות גדולות.  </li>
+</ul>
+</li>
+<li>
+<p><strong>הוספה והסרה של פעולות</strong></p>
+<ul>
+<li>לחץ על <em>פלוס (+)</em> כדי להוסיף פעולה חדשה כמו שליחת הודעה או עדכון פריט ברשימת SharePoint.  </li>
+<li>ניתן לחפש פעולות ממחברים ולהגדיר אותן דרך ההגדרות שלהן.  </li>
+<li>כדי להסיר פעולה, לחץ על <em>שלוש נקודות (⋮)</em> ובחר <em>מחק</em>.  </li>
+</ul>
+</li>
+<li>
+<p><strong>בדיקת פרמטרים</strong></p>
+<ul>
+<li>לחץ על כל פעולה כדי לצפות או לערוך את ההגדרות שלה שנקראות <em>פרמטרים</em>.  </li>
+<li>ניתן להזין ערכים ידנית או להשתמש ב-<em>ביטויים</em> כדי להפוך אותם לדינמיים.  </li>
+</ul>
+</li>
+<li>
+<p><strong>היסטוריית גרסאות</strong></p>
+<ul>
+<li>בכל פעם שאתה שומר את הזרימה שלך, גרסה נרשמת.  </li>
+<li>ניתן לחזור ולצפות או לשחזר גרסאות קודמות אם יש צורך.  </li>
+</ul>
+</li>
+<li>
+<p><strong>בדיקת שגיאות</strong></p>
+<ul>
+<li><em>בודק הזרימה</em> מדגיש כל שגיאה.  </li>
+<li>כל השגיאות יצטרכו להיפתר לפני פרסום הזרימה שלך.  </li>
+</ul>
+</li>
+<li>
+<p><strong>פרסום ובדיקה</strong></p>
+<ul>
+<li>לאחר שהזרימה שלך נקייה משגיאות, פרסם אותה כדי להפוך אותה לפעילה.  </li>
+<li>השתמש בתכונת <em>בדיקה</em> כדי להפעיל את הזרימה שלך ידנית או אוטומטית ולבדוק אם היא פועלת כמצופה.  </li>
+</ul>
+</li>
+</ol>
+<h3 id="_15">למה להשתמש במעצב זרימת הסוכן?<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>חזותי ואינטואיטיבי</strong> - ניתן לבנות זרימות על ידי גרירה ולחיצה.  </li>
+<li><strong>בטוח להתנסות</strong> - היסטוריית גרסאות מאפשרת לך לבטל שינויים.  </li>
+<li><strong>בדיקות מובנות</strong> - מסייעות לוודא שהכל עובד לפני הפעלה.  </li>
+</ul>
+<h2 id="-">🔤 הזכרת <em>ביטויים</em> - מה הם ביטויים?<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<p>ביטויים הם נוסחאות קטנות או פקודות שמסייעות לזרימת הסוכן לעבוד עם נתונים. משתמשים בהם כדי לחשב ערכים, לעצב טקסט, לקבל החלטות או לשלוף מידע ספציפי מקלטים.</p>
+<h3 id="_16">למה להשתמש בביטויים?<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p>ביטויים מאפשרים לך:</p>
+<ul>
+<li><strong>להתאים אישית את הטיפול בנתונים</strong> - לשלב שמות, לעצב תאריכים.  </li>
+<li><strong>לקבל החלטות</strong> - אם ערך גדול מ-10, לעשות משהו.  </li>
+<li><strong>להמיר נתונים</strong> - לשנות טקסט לאותיות קטנות, לשלוף חלק ממחרוזת.  </li>
+<li><strong>לאוטומט לוגיקה</strong> - בלי לכתוב קוד מלא.  </li>
+</ul>
+<h3 id="_17">איך נראים ביטויים?<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p>ביטויים משתמשים בפונקציות. אני הולך לשאול הסבר על מה הן פונקציות ממיקרוסופט MVP לשעבר, ג'רי וויינסטוק.</p>
+<div class="admonition ציטוט">
+<p class="admonition-title">ציטוט</p>
+<p>פונקציות הן לוגיקה מובנית שממירה את הנתונים שלך דרך פעולות פשוטות או מורכבות בביטוי שלך.</p>
+</div>
+<p>פונקציות מאפשרות לך לבנות ביטויים בלי שתצטרך לכתוב קוד.</p>
+<p>הדרך שבה אני אוהב לתאר את זה היא שפונקציה בזרימות סוכן דומה לפונקציות ב-Excel. ניתן לבצע פעולה על נתונים כדי להמיר אותם לתוצאה הרצויה. כשאתה בונה את הנוסחה שלך ב-Excel אתה בוחר את ערך הקלט מהתאים בטבלה או טווח, ואז מיישם פונקציות כדי לעבד את תוצאת הנתונים. דוגמה היא שימוש בפונקציה <code>COUNT</code> כדי לחשב את מספר התאים שמכילים מספרים מטווח.</p>
+<p>בזרימות סוכן, במקום להתייחס לנתונים מתאים בטבלה, אתה מתייחס לנתוני פלט מהטריגר או פעולות כשאתה בונה את הביטויים שלך. בהמשך לדוגמה הקודמת, השתמש בפונקציה <code>length</code> כדי לשלוף את מספר הפריטים שהוחזרו מפעולת מחבר SharePoint <em>קבל פריטים</em>.</p>
+<h3 id="_18">למה פונקציות חשובות?<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p>שימוש בפונקציות הופך את זרימות הסוכן שלך ל:</p>
+<ul>
+<li><strong>חכמות</strong> - הן יכולות להגיב לקלטים או תנאים שונים.  </li>
+<li><strong>גמישות</strong> - ניתן להתאים אישית את הטיפול בנתונים.  </li>
+<li><strong>יעילות</strong> - אתה נמנע מצעדים ידניים על ידי אוטומציה של לוגיקה.  </li>
+</ul>
+<h3 id="_19">פונקציות שימושיות ביותר<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>הבאות הן פונקציות נפוצות בשימוש בזרימות סוכן. לרשימה המלאה של פונקציות, גש למדריך <a href="https://learn.microsoft.com/azure/logic-apps/workflow-definition-language-functions-reference?WT.mc_id=power-172621-ebenitez">העזר</a>.</p>
+<h4 id="_20">🔡 טקסט<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>concat()</code> - מחבר שני חלקים או יותר של טקסט יחד.  </p>
+<ul>
+<li>דוגמה: <code>concat('שלום ', firstName)</code> → “שלום יוסי”</li>
+</ul>
+</li>
+<li>
+<p><code>toLower()</code> / <code>toUpper()</code> - משנה טקסט לאותיות קטנות או גדולות.  </p>
+<ul>
+<li>שימושי לאחידות קלט.  </li>
+</ul>
+</li>
+<li>
+<p><code>substring()</code> - שולף חלק ממחרוזת.  </p>
+<ul>
+<li>דוגמה: קבל את שלוש האותיות הראשונות של שם.  </li>
+</ul>
+</li>
+<li>
+<p><code>trim()</code> - מסיר רווחים מתחילת וסוף הטקסט.  </p>
+</li>
+</ul>
+<h4 id="_21">🔢 מתמטיקה ומספרים<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>add()</code>, <code>sub()</code>, <code>mul()</code>, <code>div()</code> - פעולות מתמטיות בסיסיות.  <ul>
+<li>דוגמה: <code>add(5, 3)</code> - התוצאה היא 8  </li>
+</ul>
+</li>
+</ul>
+<h4 id="_22">📅 תאריך ושעה<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>utcNow()</code> - מקבל את התאריך והשעה הנוכחיים ב-UTC.  </p>
+<ul>
+<li>מצוין לחותמות זמן.  </li>
+</ul>
+</li>
+<li>
+<p><code>addDays()</code>, <code>addHours()</code> - מוסיף זמן לתאריך.  </p>
+</li>
+<li>
+<p>דוגמה: <code>addDays(utcNow(), 7)</code> הפלט הוא 7 ימים מהיום.</p>
+</li>
+<li>
+<p><code>formatDateTime()</code> - מעצב תאריך למחרוזת קריאה.</p>
+<ul>
+<li>דוגמה: יום שני, 7 ביולי 2025</li>
+</ul>
+</li>
+</ul>
+<h4 id="_23">✅ לוגי<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>if()</code> - מפעיל ערך אחד אם נכון, ערך אחר אם שגוי.</p>
+<ul>
+<li>דוגמה: <code>if(score &gt; 50, 'Pass', 'Fail')</code></li>
+</ul>
+</li>
+<li>
+<p><code>equals()</code> - בודק אם שני ערכים זהים.</p>
+</li>
+<li>
+<p><code>and()</code>, <code>or()</code>, <code>not()</code> - משלב תנאים מרובים.</p>
+</li>
+</ul>
+<h4 id="_24">🪣 פונקציות שימושיות נוספות<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>coalesce()</code> - מחזיר את הערך הראשון שאינו ריק.</p>
+<ul>
+<li>שימושי לערכים חלופיים/ברירת מחדל.</li>
+</ul>
+</li>
+<li>
+<p><code>guid()</code> - יוצר מזהה ייחודי.</p>
+<ul>
+<li>שימושי למעקב או רישום.</li>
+</ul>
+</li>
+<li>
+<p><code>length()</code> - סופר כמה תווים או פריטים יש במחרוזת או מערך.</p>
+</li>
+</ul>
+<h2 id="_25">⭐ שיטות עבודה מומלצות<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h2>
+<p>להלן כמה שיטות עבודה מומלצות לבניית זרימות סוכנים ב-Copilot Studio.</p>
+<ol>
+<li>
+<p><strong>התחילו פשוט ובנו בהדרגה</strong></p>
+<ul>
+<li>התחילו במשימה קטנה וברורה כמו שליחת הודעה.</li>
+<li>הוסיפו שלבים נוספים לאחר בדיקת הבסיס של האוטומציה שלכם.</li>
+</ul>
+</li>
+<li>
+<p><strong>השתמשו בשמות פעולות ברורים ותיאוריים</strong></p>
+<ul>
+<li>תייגו כל שלב בצורה ברורה כך שאתם והצוות שלכם תבינו מה הוא עושה.</li>
+<li>דוגמה: במקום השם ברירת המחדל "עדכון פריט" לפעולת מחבר SharePoint, שנו אותו למה שהוא מעדכן, כמו "עדכון מצב מכשיר".</li>
+</ul>
+</li>
+<li>
+<p><strong>בדקו שגיאות לפני פרסום</strong></p>
+<ul>
+<li>השתמשו ב-<strong>flow checker</strong> כדי למצוא ולתקן בעיות.</li>
+<li>לא ניתן לפרסם זרימות אם יש שגיאות, לכן נסו לפתור אותן כשהן מתרחשות.</li>
+</ul>
+</li>
+<li>
+<p><strong>בדקו את הזרימה שלכם ביסודיות</strong></p>
+<ul>
+<li>רק בגלל שהיא נשמרת ומתפרסמת, לא אומר שהיא עובדת כמצופה.</li>
+<li>השתמשו בתכונת <em>Test</em> כדי להפעיל את הזרימה שלכם ידנית או אוטומטית, ובדקו את התוצאות.</li>
+</ul>
+</li>
+<li>
+<p><strong>השתמשו בהיסטוריית גרסאות</strong></p>
+<ul>
+<li>שמרו את הזרימה שלכם לעיתים קרובות כדי שתוכלו לחזור לגרסאות קודמות אם יש צורך.</li>
+<li>ניתן לצפות ולשחזר גרסאות קודמות באמצעות לוח <em>Version History</em>.</li>
+</ul>
+</li>
+<li>
+<p><strong>השתמשו בפרמטרים ובביטויים בחוכמה</strong></p>
+<ul>
+<li>בעת הגדרת פעולות, השתמשו בפרמטרים כדי להפוך את הזרימה שלכם לדינמית.</li>
+<li>ניתן להזין ערכים ידנית או להשתמש בביטויים כדי לחשב אותם, או לשלב אותם עם ערכים מפעולות קודמות באמצעות בוחר <em>dynamic content</em>.</li>
+</ul>
+</li>
+<li>
+<p><strong>מחקו פעולות שאינן בשימוש</strong></p>
+<ul>
+<li>אם הוספתם פעולה והחלטתם מאוחר יותר שאינכם זקוקים לה, הסירו אותה כדי לשמור על זרימה נקייה.</li>
+</ul>
+</li>
+</ol>
+<h2 id="09-">🧪 מעבדה 09 - הוספת זרימת סוכן לאוטומציה ושיפור יכולות נושא<a class="headerlink" href="#09-" title="Permanent link">&para;</a></h2>
+<p>עכשיו נלמד כיצד לשפר את הנושא שלנו עם כרטיסים אדפטיביים ושימוש בפונקציונליות מתקדמת של נושאים וצמתים.</p>
+<ul>
+<li><a href="../../../../../docs/recruit/09-add-an-agent-flow">9.1 יצירת זרימת סוכן</a></li>
+<li><a href="../../../../../docs/recruit/09-add-an-agent-flow">9.2 הוספת זרימת סוכן לנושא</a></li>
+<li><a href="../../../../../docs/recruit/09-add-an-agent-flow">9.3 עדכון נושא בקשת מכשיר עם מספר צמתים לחוויית משתמש טובה יותר</a></li>
+<li><a href="../../../../../docs/recruit/09-add-an-agent-flow">9.4 בדיקת סוכן באמצעות מספר תרחישים</a></li>
+</ul>
+<h3 id="_26">✨ מקרה שימוש<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<p><strong>כ</strong> מנהל של עובד</p>
+<p><strong>אני רוצה</strong> לקבל בקשות למכשירים</p>
+<p><strong>כדי ש</strong> אוכל לבדוק את המכשיר המבוקש על ידי העובד.</p>
+<p>בואו נתחיל!</p>
+<h3 id="_27">דרישות מוקדמות<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>רשימת SharePoint</strong></p>
+<p>נשתמש ברשימת <strong>Devices</strong> של SharePoint מ-<a href="../00-course-setup/#step-4-create-new-sharepoint-site">שיעור 00 - הגדרת הקורס - שלב 3: יצירת אתר SharePoint חדש</a>.</p>
+<p>אם לא הגדרתם את רשימת <strong>Devices</strong> של SharePoint, חזרו ל-<a href="../00-course-setup/#step-4-create-new-sharepoint-site">שיעור 00 - הגדרת הקורס - שלב 3: יצירת אתר SharePoint חדש</a>.</p>
+</li>
+<li>
+<p><strong>סוכן Helpdesk של Contoso</strong></p>
+<p>נשתמש באותו סוכן שנוצר קודם ב-<a href="../06-create-agent-from-conversation/">שיעור 06 - יצירת סוכן מותאם אישית באמצעות שפה טבעית עם Copilot והצמדתו לנתונים שלכם</a>.</p>
+</li>
+</ol>
+<h3 id="91">9.1 יצירת זרימת סוכן<a class="headerlink" href="#91" title="Permanent link">&para;</a></h3>
+<p>בתרגיל זה, ניצור זרימת סוכן שמחזירה את פריט SharePoint של המכשיר הנבחר ושולחת דוא"ל למנהל עם פרטי המכשיר.</p>
+<ol>
+<li>
+<p>בנושא <strong>בקשת מכשיר</strong>, גללו מטה לצומת <strong>שאל עם כרטיס אדפטיבי</strong> והוסיפו צומת חדש. בחרו <strong>הוספת כלי</strong> ובכרטיסיית <strong>כלים בסיסיים</strong> של חלונית הפופ-אפ, בחרו <strong>זרימת סוכן חדשה</strong>.</p>
+<p><img alt="הוספת זרימת סוכן חדשה" src="../../../../../translated_images/9.1_01_AddNewAgentFlow.2b9078604a054d1f022f9c73adaf10fe430e81875ec8717a7f70ef7b05f11c15.he.png" /></p>
+</li>
+<li>
+<p>מעצב זרימות הסוכן ייטען עם טריגר ופעולה.</p>
+<ul>
+<li>
+<p><strong>טריגר</strong> - כאשר סוכן מפעיל את הזרימה</p>
+<ul>
+<li>זה יפעיל זרימה מסוכן Copilot Studio.</li>
+</ul>
+</li>
+<li>
+<p><strong>פעולה</strong> - תגובה לסוכן</p>
+<ul>
+<li>זה שולח תגובה שיכולה להכיל ערכי פלט חזרה לסוכן Copilot Studio.</li>
+</ul>
+</li>
+</ul>
+<p>בחרו את הטריגר.</p>
+<p><img alt="בחרו את הטריגר" src="../../../../../translated_images/9.1_02_SelectTrigger.92dc20442add764c8aa4b7f737f28416a3223e4471562462ed6dcba2dc7c7936.he.png" /></p>
+</li>
+<li>
+<p>כעת נוסיף מספר קלטים לזרימת הסוכן.</p>
+<ul>
+<li>
+<p><code>DeviceSharePointId</code> - זה ישמור את הערך, מזהה, של פריט SharePoint. ערך מזהה זה הוא פלט מצומת שאל עם כרטיס אדפטיבי שבו המשתמש בחר את המכשיר.</p>
+</li>
+<li>
+<p><code>User</code> - זה יהיה שם המשתמש שיגיע ממשתנה מערכת של הסוכן.</p>
+</li>
+<li>
+<p><code>AdditionalComments</code> - זה יהיה ההערה שהוזנה על ידי המשתמש, שהיא פלט מצומת שאל עם כרטיס אדפטיבי.</p>
+</li>
+</ul>
+<p>קודם נוסיף את <code>DeviceSharePointId</code> כקלט לטריגר שלנו. בחרו <strong>+ הוספת קלט</strong>.</p>
+<p><img alt="הוספת קלט" src="../../../../../translated_images/9.1_03_AddInput.fd1e0a99ecb5e20f3a518cb23fc0d22c6db1435c5ffb2e183fce3b8a056287bb.he.png" /></p>
+</li>
+<li>
+<p>עבור סוג קלט המשתמש, בחרו <strong>טקסט</strong>.</p>
+<p><img alt="בחרו טקסט" src="../../../../../translated_images/9.1_04_SelectText.47ca776822ec5a6c1339c012d51e0eb6eac6bf8315d4ac6f25498b10ada16df9.he.png" /></p>
+</li>
+<li>
+<p>עבור שם הקלט, הזינו את הבא.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>DeviceSharePointId
+</span></code></pre></div>
+<p><img alt="קלט DeviceSharePointId" src="../../../../../translated_images/9.1_05_DeviceSharePointIdInput.caf77f8eb60a1b8649ea8b0abf05dfce9fa4bef9d9c465cd8906395e5b44842e.he.png" /></p>
+</li>
+<li>
+<p>כעת נוסיף את הקלט השני, <code>User</code>. חזרו על אותם שלבים, בחרו <strong>+ הוספת קלט</strong> ובחרו <strong>טקסט</strong>.</p>
+<p><img alt="הוספת קלט" src="../../../../../translated_images/9.1_06_AddInput.3ca4bff9991b6e8a331bd909ff58038387696ce7b6ee7a932a88316aff41bc57.he.png" /></p>
+</li>
+<li>
+<p>עבור שם הקלט, הזינו את הבא.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>User
+</span></code></pre></div>
+<p><img alt="קלט User" src="../../../../../translated_images/9.1_07_UserInput.16b2405f2d5744ea14a6a67b69539ba24719aaf642ddfc2b281e784d74d8c1ea.he.png" /></p>
+</li>
+<li>
+<p>כעת נוסיף את הקלט השלישי, <code>AdditionalComments</code>. חזרו על אותם שלבים, בחרו <strong>+ הוספת קלט</strong> ובחרו <strong>טקסט</strong>.</p>
+<p><img alt="הוספת קלט" src="../../../../../translated_images/9.1_08_AddInput.4685bb77618e6d9cfca7a42a0945d10f59825b1ca42de372dcf07c9170451680.he.png" /></p>
+</li>
+<li>
+<p>עבור שם הקלט, הזינו את הבא.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>AdditionalComments
+</span></code></pre></div>
+<p><img alt="קלט AdditionalComments" src="../../../../../translated_images/9.1_09_AdditionalComments.a4587b59b85450ca0566615c9473132dd6447e6c7513e4926942655aa0e80195.he.png" /></p>
+</li>
+<li>
+<p>עבור קלט <code>AdditionalComments</code>, נעדכן אותו כדי להפוך אותו לאופציונלי. בחרו באייקון <strong>שלוש הנקודות (...)</strong> ובחרו <strong>הפוך את השדה לאופציונלי</strong>.</p>
+<p><img alt="הפוך את השדה לאופציונלי" src="../../../../../translated_images/9.1_10_Optional.753bd03817c2eb37bb44a7bfd7d29314aa7109cde02e3f619c01c42bc9170b71.he.png" /></p>
+</li>
+<li>
+<p>עבודה מצוינת! הטריגר הוגדר כעת, בואו נמשיך. בחרו באייקון <strong>פלוס +</strong> מתחת לטריגר כדי להוסיף פעולה חדשה.</p>
+<p><img alt="הוספת פעולה" src="../../../../../translated_images/9.1_11_AddAction.86c14acd1ce22e99b7244e0001f0039362ff6ac3efafe03956788aaa31e705af.he.png" /></p>
+</li>
+<li>
+<p>תופיע <strong>חלונית הפעולות</strong> שבה תוכלו לצפות בפעולות מ-1400+ מחברים מובנים לשירותי Microsoft וצד שלישי. בשדה <strong>חיפוש</strong> הזינו את הבא,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Get item
+</span></code></pre></div>
+<p>רשימת פעולות תוצג בתוצאות החיפוש. בחרו את הפעולה <strong>קבלת פריט</strong> ממחבר <strong>SharePoint</strong>.</p>
+<p><img alt="פעולת קבלת פריט" src="../../../../../translated_images/9.1_12_AddGetItemAction.434cdcb822e1f72993fc4a0c0ad753e1220456f9dab8fc307d42f5711071d45b.he.png" /></p>
+</li>
+<li>
+<p>כעת נתחיל להגדיר את פעולת <strong>קבלת פריט</strong>.</p>
+<p>בחרו באייקון <strong>שלוש הנקודות (...)</strong> בפעולת <strong>קבלת פריט</strong>.</p>
+<p><img alt="בחרו באייקון שלוש הנקודות" src="../../../../../translated_images/9.1_13_SelectEllipsis.88bf304067f3103825f183f8962634af831460541290533e5670f4c014a97c46.he.png" /></p>
+</li>
+<li>
+<p>בחרו <strong>שנה שם</strong>.</p>
+<p><img alt="בחרו שנה שם" src="../../../../../translated_images/9.1_14_SelectRename.74d99c883418b7dbf58758304976cac1d0f2afd30e4cd1992830f00775a46b18.he.png" /></p>
+</li>
+<li>
+<p>שנו את שם הפעולה ל-</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Get Device
+</span></code></pre></div>
+<p><img alt="שינוי שם הפעולה" src="../../../../../translated_images/9.1_15_RenameAction.ff64b79f6e6603ae89f272f91d84ff4432c04ba103c401a2808a767e3ceb5617.he.png" /></p>
+</li>
+<li>
+<p>בשדה <strong>כתובת האתר</strong>, בחרו את <strong>כתובת האתר</strong> של אתר SharePoint של Contoso IT שנוצר ב-<a href="../00-course-setup/#step-4-create-new-sharepoint-site">שיעור 00 - הגדרת הקורס - שלב 3: יצירת אתר SharePoint חדש</a>.</p>
+<p>בשדה <strong>שם הרשימה</strong>, בחרו את רשימת <strong>Devices</strong> של SharePoint.</p>
+<p><img alt="פרמטרי קלט" src="../../../../../translated_images/9.1_16_SharePointSiteAndListParameters.af6e0b112eb4bfb210f9259da02b459097a06307afa6ca269cb33aa9ecc1c1e4.he.png" /></p>
+</li>
+<li>
+<p>בשדה <strong>מזהה</strong>, בחרו באייקון <strong>ברק</strong> או <strong>fx</strong> בצד ימין.</p>
+<p><img alt="בוחר תוכן דינמי" src="../../../../../translated_images/9.1_17_InsertExpressionIcon.6e250bb84e7b8884de7b2052005f7ff3cd95f2c28671d2da7965001b3f621902.he.png" /></p>
+</li>
+<li>
+<p>בכרטיסיית <strong>תוכן דינמי</strong> של חלונית הפופ-אפ, הזינו את הבא,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sharepoint
+</span></code></pre></div>
+<p>תוצאות החיפוש יציגו פרמטרי קלט התואמים לערך שחיפשתם. בחרו בפרמטר <strong>DeviceSharePointId</strong> מהטריגר.</p>
+<p>לאחר מכן, בחרו <strong>הוסף</strong> כדי להוסיף את קלט התוכן הדינמי לשדה <strong>מזהה</strong> של הפעולה.</p>
+<p><img alt="בחרו קלט DeviceSharePointId" src="../../../../../translated_images/9.1_18_DeviceSharePointId.b9be8e7c3c6b0ab710a8f662e62a0ec0133a530f6877b6cea3c48acc8022fec5.he.png" /></p>
+</li>
+<li>
+<p>קלט התוכן הדינמי מהטריגר כעת מופנה לשדה <strong>מזהה</strong> של הפעולה. נעדכן את אחד הפרמטרים המתקדמים הבא. בחרו <strong>הצג הכל</strong> כדי לצפות בפרמטרים המתקדמים.</p>
+<p><img alt="צפו בפרמטרים מתקדמים" src="../../../../../translated_images/9.1_19_AdvancedParameters.4bb8e0c11e7864625ad6c30ab1b9021d367cd77374c56985df7b3d43845a1883.he.png" /></p>
+</li>
+<li>
+<p>פרמטר <strong>הגבלת עמודות לפי תצוגה</strong> יוצג ובברירת מחדל הוא מוגדר ל-<strong>השתמש בכל העמודות (אל תגבילו)</strong>. נעדכן ערך זה לתצוגה כדי להגביל את העמודות המוחזרות בתגובת הפעולה. בחרו בפרמטר <strong>הגבלת עמודות לפי תצוגה</strong> כדי לצפות ברשימת התצוגות.</p>
+<p><img alt="בחרו בפרמטר" src="../../../../../translated_images/9.1_20_LimitColumnsByView.4d30f532f1e1033323d39df5c9b8e803788ea785ed58de2efca2faa5df4b26fc.he.png" /></p>
+</li>
+<li>
+<p>בחרו בתצוגת <strong>כל הפריטים</strong>.</p>
+<p><img alt="בחרו בתצוגת כל הפריטים" src="../../../../../translated_images/9.1_21_SelectView.d180e83d5e62f5fb6994a7071d5e6ce8f88143d8cc833cb55b208c6fee41bc02.he.png" /></p>
+</li>
+<li>
+<p>בחרו באייקון <strong>פלוס +</strong> מתחת לפעולת <em>קבלת מכשיר</em> כדי להוסיף פעולה חדשה.</p>
+<p><img alt="הוספת פעולה חדשה" src="../../../../../translated_images/9.1_22_AddAnAction.904b79142347fe927168036ade55d842fa088deef53710944272c681421e0e84.he.png" /></p>
+</li>
+<li>
+<p>בשדה החיפוש הזינו את הבא,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>send an email
+</span></code></pre></div>
+<p>רשימת פעולות תוצג בתוצאות החיפוש. בחרו את הפעולה <strong>שלח דוא"ל (V2)</strong> ממחבר <strong>Office 365 Outlook</strong>.</p>
+<p><img alt="פעולת שליחת דוא&quot;ל" src="../../../../../translated_images/9.1_23_SendAnEmail.f1019365131658b0e71b5b58b57d7d8b3f3a0c670ddb3cca0838bf0b4f8cd354.he.png" /></p>
+</li>
+<li>
+<p>לאחר מכן נצטרך ליצור חיבור לפעולת המחבר. בחרו <strong>התחבר</strong>.</p>
+<p><img alt="יצירת חיבור" src="../../../../../translated_images/9.1_24_CreateConnection.9e968ad4de9d13d81e95779c4fa60809fd40de5f65dbd014f1dc39663c935806.he.png" /></p>
+</li>
+<li>
+<p>בחרו את חשבון המשתמש המחובר שלכם.</p>
+<p><img alt="בחרו חשבון משתמש" src="../../../../../translated_images/9.1_25_SelectUserAccount.f3c96ac1a377c4b42a6301ba38c21469eb7bd3f48633f04200f1610902f8bdbe.he.png" /></p>
+</li>
+<li>
+<p>בחרו <strong>אפשר גישה</strong>. חיבור נוצר כעת.</p>
+<p><img alt="בחרו אפשר גישה" src="../../../../../translated_images/9.1_26_AllowAccess.1abcaea31b9846279cafafd7160baea6bec60cdfac8224df7082ceee3ef22a26.he.png" /></p>
+</li>
+<li>
+<p>שנו את שם הפעולה ל-</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Send an email to manager
+</span></code></pre></div>
+<p>לאחר מכן נגדיר את פרמטרי הקלט של הפעולה שלנו.</p>
+<p>עבור פרמטר הקלט <strong>אל</strong>, בחרו את עצמכם. בדרך כלל זה יהיה המנהל שלכם או שנשתמש בפעולה אחרת שמושכת את המנהל שלכם על בסיס פרופיל Entra ID שלכם, אך לצורך השיעור הזה, בחרו את עצמכם.</p>
+<p>עבור פרמטר הקלט <strong>נושא</strong>, הזינו את הבא,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Request type: new device
+</span></code></pre></div>
+<p>עבור פרמטר הקלט <strong>גוף</strong>, הזינו את הבא,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Hi,
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>New device requested from
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Manufacturer:
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>Model:
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>Link to item in SharePoint
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>Additional comments from:
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>This is an automated email from Contoso Helpdesk Copilot
+</span></code></pre></div>
+<p><img alt="שינוי שם הפעולה והגדרת קלטים" src="../../../../../translated_images/9.1_27_RenameAndConfigureParameters.c3d29a3481fb5c0240cca85db4119387e6b750546ed12e2af4a9ac62d7454f89.he.png" /></p>
+</li>
+<li>
+<p>לאחר מכן, נעדכן את פרמטר הקלט <strong>גוף</strong> עם הפניות לקלט תוכן דינמי מה-<strong>טריגר</strong> או פעולת <strong>קבלת פריט</strong>. הזינו רווח לאחר השורה השנייה כדי שנוכל להוסיף את שם המשתמש מקלט הטריגר, <strong>User</strong>.</p>
+<p>בחרו באייקון <strong>ברק</strong> או <strong>fx</strong> בצד ימין.</p>
+<p><img alt="הוספת קלט User כתוכן דינמי" src="../../../../../translated_images/9.1_28_AddUserInput.f38d3df648faef75f1985bdcc23db16e197ccb1ddc015210c43bbb2569fcf654.he.png" /></p>
+</li>
+<li>
+<p>בכרטיסיית <strong>תוכן דינמי</strong> של חלונית הפופ-אפ, בחרו בקלט <strong>User</strong> מהטריגר.</p>
+<p>בחרו <strong>הוסף</strong> כדי להוסיף את קלט התוכן הדינמי <strong>User</strong> לפרמטר <strong>גוף</strong> של הפעולה.</p>
+<p><img alt="בחרו קלט User" src="../../../../../translated_images/9.1_29_SelectUserInput.4efc79f52d74fa7ae13132ea13f7d51b3f4aab6413afc41a8354c5e59852b9fc.he.png" />
+1. תוכן דינמי מהטריגר עכשיו מתייחס לפרמטר <strong>Body</strong> בפעולה. נחזור על אותו תהליך עבור השורות הנותרות בגוף הודעת האימייל.</p>
+<p><img alt="תוכן משתמש נוסף" src="../../../../../translated_images/9.1_30_UserInputAdded.905ec0489e4f1bbe7cc071826050834aa1e5acf53f8a65ad59532ea13b81c607.he.png" /></p>
+</li>
+<li>
+<p>לחצו על החלל ליד <code>Manufacturer:</code>. בחרו את <strong>אייקון הברק</strong> או <strong>אייקון fx</strong> בצד ימין.</p>
+<p>בלשונית <strong>תוכן דינמי</strong> בלוח הצד, הזינו את הטקסט הבא בשדה החיפוש,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>manufacturer
+</span></code></pre></div>
+<p>בחרו את קלט <strong>Manufacturer value</strong> מהטריגר ולחצו על <strong>Add</strong>.</p>
+<p><img alt="הוספת קלט Manufacturer value כתוכן דינמי" src="../../../../../translated_images/9.1_31_ManufacturerValueAdded.db2cf35a35a20590d80d7f0191d771a045bf55e40ce98982d0e099588e260712.he.png" /></p>
+</li>
+<li>
+<p>לחצו על החלל ליד <code>Model:</code>. בחרו את <strong>אייקון הברק</strong> או <strong>אייקון fx</strong> בצד ימין.</p>
+<p>בלשונית <strong>תוכן דינמי</strong> בלוח הצד, הזינו את הטקסט הבא בשדה החיפוש,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>model
+</span></code></pre></div>
+<p>בחרו את קלט <strong>Model</strong> מפעולת <strong>Get item</strong> ולחצו על <strong>Add</strong>.</p>
+<p><img alt="הוספת קלט Model כתוכן דינמי" src="../../../../../translated_images/9.1_32_ModelAdded.ff9d858648ddb85fe70eaaafa6e23d0560500e7327ccb29ee56ecac0d8d36cab.he.png" /></p>
+</li>
+<li>
+<p>עבור הטקסט <code>Link to item in SharePoint</code>, נעדכן אותו כך שיהיה קישור בגוף הודעת האימייל. לחצו בתחילת השורה ובחרו את <strong>אייקון הברק</strong> או <strong>אייקון fx</strong> בצד ימין.</p>
+<p><img alt="הוספת תוכן דינמי" src="../../../../../translated_images/9.1_33_AddDynamicContent.c662d682377af82adc52de18e05baf9b6aa5a972882dcf6274f3979f14641627.he.png" /></p>
+</li>
+<li>
+<p>לחצו אחרי תגית ה-HTML של העוגן ובחרו את <strong>אייקון הברק</strong> או <strong>אייקון fx</strong> בצד ימין.</p>
+<p>בלשונית <strong>תוכן דינמי</strong> בלוח הצד, הזינו את הטקסט הבא בשדה החיפוש,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>link to item
+</span></code></pre></div>
+<p>בחרו את קלט <strong>Link to item</strong> מפעולת <strong>Get item</strong> ולחצו על <strong>Add</strong>.</p>
+<p><img alt="הוספת Link to item כתוכן דינמי" src="../../../../../translated_images/9.1_34_AddLinkToItem.6827bd3bad484f7382d060435bb0ef45e9bb1c3ad4774529559bb4c5f9bbca8c.he.png" /></p>
+</li>
+<li>
+<p>יש לעבור לעורך ה-HTML על ידי בחירת אייקון <strong>&lt;/&gt;</strong>.</p>
+<p><img alt="הוספת קלט משתמש" src="../../../../../translated_images/9.1_35_ToggleCodeView.ae3a9caf213f2c6366487e10092ad1fad3494f110936219258d842c23e7f46d9.he.png" /></p>
+</li>
+<li>
+<p>עורך ה-HTML עכשיו מופעל. לחצו לפני הטקסט <code>Link to item in SharePoint</code>, הוסיפו תגית עוגן HTML ליצירת קישור. העתיקו והדביקו את הטקסט הבא.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>&lt;a href=&quot;
+</span></code></pre></div>
+<p><img alt="תגית HTML" src="../../../../../translated_images/9.1_36_AddHTMLTag.146220ae5c33eaf9915c393c37d62b9d4b258413e9f4dc42a1ab005437669443.he.png" /></p>
+</li>
+<li>
+<p>קלט התוכן הדינמי של <strong>Link to item</strong> עכשיו מתייחס לפרמטר <strong>Body</strong>. לחצו אחרי קלט <strong>Link to item</strong>, העתיקו והדביקו את הטקסט הבא.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>&quot;&gt;
+</span></code></pre></div>
+<p><img alt="תגית HTML" src="../../../../../translated_images/9.1_37_AddHTMLTag.48f73b302f6a84bb6a51e0666fd30baf1f8d9d906947d44dc4095ededed18a2d.he.png" /></p>
+</li>
+<li>
+<p>לחצו אחרי הטקסט <code>Link to item in SharePoint</code>, סגרו את תגית העוגן של ה-HTML. העתיקו והדביקו את הטקסט הבא.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>&lt;/a&gt;
+</span></code></pre></div>
+<p><img alt="תגית HTML" src="../../../../../translated_images/9.1_38_AddHTMLTag.47d2f0521e6aba9d609bfe65d86ebae5786e4ad5465fefb7ae0370db6e924c96.he.png" /></p>
+</li>
+<li>
+<p>בחרו את אייקון <strong>&lt;/&gt;</strong> כדי לעבור לתצוגת קוד.</p>
+<p><img alt="כיבוי תצוגת קוד" src="../../../../../translated_images/9.1_39_ToggleCodeView.88606eb37d702a686904b2dd8943fcf144cec462b37ee781e8ee0415e62bd951.he.png" /></p>
+</li>
+<li>
+<p>לאחר מכן, בחרו שוב את אייקון <strong>&lt;/&gt;</strong> כדי לחזור לתצוגת קוד.</p>
+<p><img alt="חזרה לתצוגת קוד" src="../../../../../translated_images/9.1_40_ToggleCodeViewAgain.32da9b9804adbbfaf8d85bdaa6fa51d2ae5fc1fbb97f75084813972c66d0c4d9.he.png" /></p>
+</li>
+<li>
+<p>שימו לב שיש כמה תווים מיותרים <code>&amp;lt;br&amp;gt;</code>. מחקו את התווים הללו.</p>
+<p><img alt="מחיקת תווים" src="../../../../../translated_images/9.1_41_DeleteCharacters.f1ef3830b186c2cd9974ea05e336c83c0706d72ab1010d06283716dc4e982875.he.png" /></p>
+</li>
+<li>
+<p>סיימנו להוסיף קישור לגוף הודעת האימייל 😎 בחרו את אייקון <strong>&lt;/&gt;</strong> כדי לעבור לתצוגת קוד.</p>
+<p><img alt="תגית HTML מסודרת" src="../../../../../translated_images/9.1_42_HTMLTagTidiedUp.1b27fa2c4dc65c3f1a7151abcf6e388f64cb83745b10cd22769c1f9af3421fc6.he.png" /></p>
+</li>
+<li>
+<p>לחצו אחרי הטקסט <code>Additional comments from</code> לפני תו הנקודתיים ובחרו את <strong>אייקון הברק</strong> או <strong>אייקון fx</strong> בצד ימין.</p>
+<p><img alt="הוספת פרמטר משתמש" src="../../../../../translated_images/9.1_43_AddUserInput.6f0d26739c1b9039383aa37cc46fa1149a269bd4268fb54b897d144afc49c515.he.png" /></p>
+</li>
+<li>
+<p>בלשונית <strong>תוכן דינמי</strong> בלוח הצד, הזינו את הטקסט הבא בשדה החיפוש,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>user
+</span></code></pre></div>
+<p>בחרו את פרמטר <strong>User</strong> מהטריגר ולחצו על <strong>Add</strong>.</p>
+<p><img alt="הוספת פרמטר משתמש כתוכן דינמי" src="../../../../../translated_images/9.1_44_AddUserDynamicContent.bb7c76e92650001207712b3447d3275d584f3ebf739034369869c3facf38eacf.he.png" /></p>
+</li>
+<li>
+<p>עכשיו נוסיף ביטוי שיציג את הערך של Additional Comments אם סופק על ידי המשתמש בצומת <strong>Ask an adaptive card</strong>, אחרת יציג "None" אם המשתמש לא סיפק הערות.</p>
+<p>לחצו אחרי הנקודתיים ובחרו את <strong>אייקון הברק</strong> או <strong>אייקון fx</strong> בצד ימין.</p>
+<p><img alt="הוספת ביטוי" src="../../../../../translated_images/9.1_45_AddExpression.c4c92dc4a56fab75c78ec2c5087682521e562264c1710c8dfaa24134adc3a112.he.png" /></p>
+</li>
+<li>
+<p>בלשונית <strong>Function</strong> בלוח הצד ובשדה הביטוי למעלה, הזינו את הטקסט הבא,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>if(empty())
+</span></code></pre></div>
+<p>ביטוי זה משתמש בפונקציה <code>if</code> עבור משפט if-else.</p>
+<p>הפונקציה הבאה היא <code>empty</code> שבודקת אם ערך קיים או לא בפרמטר מחרוזת. פרמטר המחרוזת שיש להתייחס אליו הוא ערך פרמטר הקלט <code>AdditionalComments</code> מהטריגר.</p>
+<p><img alt="אם ריק" src="../../../../../translated_images/9.1_46_IfEmptyFunctions.95d21ad01f6f7c290cb8d5a57ccbca9c9532df7ce57f800554dea541d503ddc6.he.png" /></p>
+</li>
+<li>
+<p>לאחר מכן, לחצו <strong>בתוך הסוגריים</strong> אחרי הפונקציה <code>empty</code>. נוסיף את פרמטר הקלט <code>AdditionalComments</code> מהטריגר.</p>
+<p>בחרו את לשונית <strong>תוכן דינמי</strong>. הזינו את הטקסט הבא בשדה החיפוש,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Additional
+</span></code></pre></div>
+<p>גללו מטה בלוח הצד ובחרו את קלט <strong>AdditionalComments</strong> מהטריגר. הפרמטר עכשיו יתווסף כפרמטר מחרוזת בביטוי.</p>
+<p><img alt="הוספת AdditionalComments כתוכן דינמי" src="../../../../../translated_images/9.1_47_AdditionalCommentsDynamicContent.f9632f09779888c18a58df8e97ef677ed885b0eaa88c252b13b22c0e4c67495b.he.png" /></p>
+</li>
+<li>
+<p>עכשיו נגדיר את הלוגיקה <strong><em>true</em></strong>, שבה אם פרמטר המחרוזת <code>AdditionalComments</code> ריק, נרצה להציג מחרוזת (טקסט) של <code>None</code>.</p>
+<p>אחרי הסוגריים שמקיפים את פרמטר המחרוזת, הזינו את הטקסט הבא,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>, &#39;None&#39;,
+</span></code></pre></div>
+<p><img alt="לוגיקה נכונה" src="../../../../../translated_images/9.1_48_None.31978299f29e07ef3257eedd5dcee09c8675f8b3f61aea8102900118e0b6ca70.he.png" /></p>
+</li>
+<li>
+<p>לבסוף נגדיר את הלוגיקה <strong><em>false</em></strong>, שבה אם פרמטר המחרוזת <code>AdditionalComments</code> אינו ריק, נרצה להציג את הערך של פרמטר הקלט <strong>AdditionalComments</strong> מהטריגר שלנו.</p>
+<blockquote>
+<p>תזכורת: ערך זה יהיה מהשדה Additional Comments בכרטיס האדפטיבי בצומת <strong>Ask with adaptive card</strong> בנושא <strong>Request device</strong>.</p>
+</blockquote>
+<p>אחרי הפסיק אחרי הלוגיקה <strong><em>true</em></strong>, בחרו את לשונית <strong>תוכן דינמי</strong>. הזינו את הטקסט הבא בשדה החיפוש,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Additional
+</span></code></pre></div>
+<p>גללו מטה בלוח הצד ובחרו את קלט <strong>AdditionalComments</strong> מהטריגר. הפרמטר עכשיו יתווסף כפרמטר מחרוזת בביטוי.</p>
+<p>עכשיו הוסיפו אותו לפרמטר <strong>Body</strong> על ידי בחירת <strong>Add</strong>.</p>
+<p><img alt="לוגיקה שגויה" src="../../../../../translated_images/9.1_49_AdditionalCommentsDynamicContent.d42c7fc29f65d901bb26dcbc13408c387633ea185cdd79c35d6439231b7363d5.he.png" /></p>
+</li>
+<li>
+<p>מצוין, הביטוי שלנו הושלם! הביטוי עכשיו נוסף לפרמטר <strong>Body</strong>. לבסוף, עצבו את השורה האחרונה באיטליק.</p>
+<p><img alt="איטליק" src="../../../../../translated_images/9.1_50_Italics.a0c01aa33ef4e83167e1fbc21c1d833f95addd60c8f531411cf9c58a96a31b02.he.png" /></p>
+</li>
+<li>
+<p>עכשיו נעדכן את פעולת <strong>Respond to the agent</strong> כדי לשלוח את ערך פרמטר <strong>Model value</strong> מפעולת <strong>Get item</strong> חזרה לסוכן.</p>
+<p>לחצו על מקש השמאלי של העכבר והזיזו בתנועה כלפי מעלה בתוך המעצב כדי לצפות בפעולת <strong>Respond to the agent</strong>.</p>
+<p>בחרו את פעולת <strong>Respond to the agent</strong> ובחרו את פלט <strong>Text</strong> כסוג.</p>
+<p><img alt="בחירת פלט טקסט" src="../../../../../translated_images/9.1_51_RespondToTheAgentAction.4c682a440e19a0fcd6d6f51ef9cdbfe76f482a39d635b8905d9b0cbbf33d945f.he.png" /></p>
+</li>
+<li>
+<p>הזינו את הטקסט הבא כשם הפלט.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>ModelValue
+</span></code></pre></div>
+<p><img alt="פלט ModelValue" src="../../../../../translated_images/9.1_52_ModelValueInput.20609429eb323281051607b090319adc5315c0245c7d61158eb119714fe4318f.he.png" /></p>
+</li>
+<li>
+<p>בחרו את שדה הערך ובחרו את <strong>אייקון הברק</strong> או <strong>אייקון fx</strong> בצד ימין.</p>
+<p><img alt="הוספת ביטוי" src="../../../../../translated_images/9.1_53_InsertDynamicContent.108ba565696f9f52d742323e0f4c46c308f322ac4bd67802e3196430155c7443.he.png" /></p>
+</li>
+<li>
+<p>בלשונית <strong>תוכן דינמי</strong> בלוח הצד, הזינו את הטקסט הבא בשדה החיפוש,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>model
+</span></code></pre></div>
+<p>בחרו את פרמטר <strong>Model</strong> מפעולת <strong>Get item</strong> ולחצו על <strong>Add</strong>.</p>
+<p><img alt="הוספת פרמטר Model כתוכן דינמי" src="../../../../../translated_images/9.1_54_ModelParameter.f231fd0ec089ac6b9ac1b7fd2e6a60a35b08484ed10b0098cff6b3ce0c7760cb.he.png" /></p>
+</li>
+<li>
+<p>פרמטר <strong>Model</strong> עכשיו הוא הערך של פלט הטקסט. בחרו <strong>Save draft</strong> כדי לשמור את זרימת הסוכן שלנו.</p>
+<p>סיימנו את זרימת הסוכן שלנו 👏🏻</p>
+<p><img alt="בחירת שמירת טיוטה" src="../../../../../translated_images/9.1_55_SaveDraftAgentFlow.5ab97895a901458362881fc9ee576762bdb0883b37a6cbd7a631ddc2750705af.he.png" /></p>
+</li>
+<li>
+<p>נעשה עדכון נוסף לזרימת הסוכן שלנו לפני הפרסום. בחרו את לשונית <strong>Overview</strong> ובחרו <strong>Edit</strong>.</p>
+<p><img alt="בחירת עריכה" src="../../../../../translated_images/9.1_56_EditAgentFlowDetails.023e8149284b9ae79dd3d95f574ff90bbcc1cc4a9fff4be56664ccbe0698f310.he.png" /></p>
+</li>
+<li>
+<p>עבור <strong>Flow name</strong>, העתיקו והדביקו את הטקסט הבא.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Send device request email
+</span></code></pre></div>
+<p>עבור <strong>Description</strong>, בחרו את <strong>אייקון הרענון</strong> כדי להשתמש ב-AI ליצירת תיאור אוטומטי על בסיס הטריגר והפעולות בזרימת הסוכן.</p>
+<p>בחרו <strong>Save</strong> כדי לשמור את השם והתיאור המעודכנים של זרימת הסוכן.</p>
+<p><img alt="שינוי שם, הוספת תיאור ושמירת פרטים" src="../../../../../translated_images/9.1_57_RenameAndDescription.57a190396550bf998d62c49ca359b66211ae50042ac5f8739b32f8b9bc292607.he.png" /></p>
+</li>
+<li>
+<p>בחרו את לשונית <strong>Designer</strong> ובחרו <strong>Publish</strong> כדי לפרסם את זרימת הסוכן כך שניתן יהיה להוסיף אותה כצומת בנושא <strong>Request device</strong>.</p>
+<p><img alt="פרסום" src="../../../../../translated_images/9.1_58_Publish.8f43271718c662deee7afea6fb283f64005b277b3a62086e6d91cc0c3ac4f79c.he.png" /></p>
+</li>
+<li>
+<p>הודעת אישור תופיע בקרוב כדי לאשר שזרימת הסוכן פורסמה.</p>
+<p><img alt="הודעת אישור" src="../../../../../translated_images/9.1_59_Confirmation.d406bde76c31b27f794d5742c992b8c84283f46b2e54524f1e500d0688a33716.he.png" /></p>
+</li>
+</ol>
+<h3 id="92">9.2 הוספת זרימת סוכן לנושא<a class="headerlink" href="#92" title="Permanent link">&para;</a></h3>
+<p>עכשיו נוסיף את זרימת הסוכן לנושא <strong>Request device</strong>.</p>
+<ol>
+<li>
+<p>בחרו <strong>Agents</strong> בתפריט בצד שמאל ובחרו את <strong>Contoso Helpdesk Agent</strong>.</p>
+<p><img alt="בחירת סוכנים" src="../../../../../translated_images/9.2_01_SelectAgent.b8a6fd3a8970d6b0c8e78bf0a5411257206612d53acdf9b44f78b2c9c2fe91fc.he.png" /></p>
+</li>
+<li>
+<p>בחרו את לשונית <strong>Topics</strong>.</p>
+<p><img alt="בחירת לשונית נושאים" src="../../../../../translated_images/9.2_02_SelectTopics.3e8618aba5f4a1ddf3dee726b6da9a66ed89d04a2e8ca36b52112a6675c2885c.he.png" /></p>
+</li>
+<li>
+<p>בחרו את נושא <strong>Request device</strong>.</p>
+<p><img alt="בחירת נושא Request device" src="../../../../../translated_images/9.2_03_SelectRequestDevice.df10472702258708b3d069e718e695b9fcabc61d42901d524dc302a03b3fa4a9.he.png" /></p>
+</li>
+<li>
+<p>גללו מטה לצומת <strong>Ask with adaptive card</strong> והוסיפו צומת חדש.</p>
+<p>בחרו <strong>Add a tool</strong> ובלשונית <strong>Basic tools</strong> בלוח הצד, בחרו את זרימת הסוכן <strong>Send device request email</strong> שיצרנו ופרסמנו לאחרונה.</p>
+<p><img alt="בחירת זרימת סוכן" src="../../../../../translated_images/9.2_04_SelectAgentFlow.15deca87db95fff1c9d904855d237d22a72c260adf3343d9e78695f07c42a8e0.he.png" /></p>
+</li>
+<li>
+<p>עבור קלטי הטריגר של זרימת הסוכן שלנו, עלינו לבחור את פלטי המשתנים מצומת <strong>Ask with adaptive card</strong>.</p>
+<p>בחרו את <strong>אייקון שלוש הנקודות (...)</strong> עבור קלט <strong>DeviceSharePointId</strong>.</p>
+<p><img alt="בחירת משתנה" src="../../../../../translated_images/9.2_05_SelectVariable.8fe53cbc0f950f732b9e9002b21d8762ddfe74fb601d61c2a5119e32383450a2.he.png" /></p>
+</li>
+<li>
+<p>בחרו את משתנה <strong>deviceSelectionId</strong> שהוא אחד הפלטים שהוגדרו בצומת <strong>Ask with adaptive card</strong>.</p>
+<p><img alt="בחירת משתנה deviceSelectionId" src="../../../../../translated_images/9.2_06_SelectdeviceSelectionIdVariable.67c0091e0de9442d3cffbfe3b2cace8d76be37ea67815ddfc99af03ae4b37391.he.png" /></p>
+</li>
+<li>
+<p>לאחר מכן, בחרו את <strong>אייקון שלוש הנקודות (...)</strong> עבור קלט <strong>User</strong>.</p>
+<p><img alt="בחירת משתנה" src="../../../../../translated_images/9.2_07_SelectVariable.bf851128bec5e0255c6cf361a837ce9701d0afac84ed3d5b89665d111a098386.he.png" /></p>
+</li>
+<li>
+<p>בחרו את לשונית <strong>System</strong> בלוח הצד של המשתנים ובחרו <strong>User.DisplayName</strong>. משתנה זה מאחסן את שם התצוגה של המשתמש הפנימי שמתקשר עם הסוכן.</p>
+<p><img alt="בחירת משתנה מערכת User.DisplayName" src="../../../../../translated_images/9.2_08_SelectUser.DisplayNameVariable.926a2a7560402fbd7b224e2bf0ff11df9e5612803b7ce51e36f58201a09bbfd7.he.png" /></p>
+</li>
+<li>
+<p>לאחר מכן, בחרו את <strong>אייקון גדול יותר</strong> עבור <strong>Advanced inputs</strong> כדי להרחיב ולראות את קלט <strong>AdditionalComments</strong>.</p>
+<p><img alt="הרחבת קלטים מתקדמים" src="../../../../../translated_images/9.2_09_ExpandAdvancedInputs.bded22f83fe4eb21237daa254725e12a81ea75be34bcb0e8ab322037a4e6f418.he.png" /></p>
+</li>
+<li>
+<p>בחרו את <strong>אייקון שלוש הנקודות (...)</strong> עבור קלט AdditionalComments.</p>
+<p><img alt="בחירת משתנה" src="../../../../../translated_images/9.2_10_SelectVariable.86286cc06323e65fb3874b9fd0ea62d140b9e9b9a2b5116d667192a6dca3815f.he.png" /></p>
+</li>
+<li>
+<p>בחרו את לשונית <strong>Formula</strong> ואת אייקון ההרחבה בלוח הצד של המשתנים, מכיוון שנשתמש בביטוי Power Fx.</p>
+<p><img alt="לשונית נוסחה" src="../../../../../translated_images/9.2_11_SelectFormulaAndExpandIcon.3fcd07bfccc4f0779a5d26313b571e60be792da7fd28e937b3e888f8aaeda7e0.he.png" /></p>
+</li>
+<li>
+<p>בדומה לביטוי בזרימת הסוכן שעושה בדיקה מותנית באמצעות פונקציית <em>if</em>, אך הפעם</p>
+<ul>
+<li>באמצעות פונקציות Power Fx,</li>
+<li>והכנסת ערך ריק או ערך של משתנה הפלט <code>commentsId</code> מצומת <strong>Ask with adaptive card</strong>.</li>
+</ul>
+<p>הזינו את הפונקציות הבאות בשדה Power Fx,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>If(IsBlank())
+</span></code></pre></div>
+</li>
+</ol>
+<p>ביטוי זה משתמש בפונקציה <code>If</code> עבור משפט if-else.</p>
+<p>הפונקציה הבאה בשימוש היא <code>IsBlank</code>, אשר בודקת האם ערך קיים או לא קיים בפרמטר מחרוזת. פרמטר המחרוזת שיש להתייחס אליו הוא משתנה הפלט <code>commentsId</code> מהצומת <strong>Ask with adaptive card</strong>.</p>
+<p><img alt="פונקציות If ו-IsBlank" src="../../../../../translated_images/9.2_12_IfIsBlank.07f7516c7e1f7579239a8b3833d64a14eb88dc245cae714b3e07d6298e907d51.he.png" /></p>
+<ol>
+<li>כעת, לחץ <strong>בתוך הסוגריים</strong> אחרי הפונקציה <code>IsBlank</code>. אנחנו הולכים להכניס את משתנה הפלט <code>commentsId</code> מהצומת <strong>Ask with adaptive card</strong>.</li>
+</ol>
+<p>הכנס את הבא בתוך הסוגריים,</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+Topic.commentsId
+```
+</code></pre></div>
+<p>והוסף פסיק אחרי הסוגריים.</p>
+<p><img alt="התייחסות למשתנה הפלט commentsId" src="../../../../../translated_images/9.2_13_Topic.commentsId.1a04dc190dac334ebf6c4dbc1b6df1aad2e4bbdeeb3ef960871e93614381f079.he.png" /></p>
+<ol>
+<li>
+<p>כעת נגדיר את הלוגיקה</p>
+</li>
+<li>
+<p>כאשר <strong><em>true</em></strong> - אם פרמטר המחרוזת <code>Topic.commentsId</code> ריק, אז נרצה להכניס ערך ריק.</p>
+</li>
+<li>כאשר <strong><em>false</em></strong> - אם פרמטר המחרוזת <code>Topic.commentsId</code> אינו ריק, אז נכניס את הערך של משתנה commentsId.</li>
+</ol>
+<p>אחרי הסוגריים שמקיפים את פרמטר המחרוזת, הכנס את הבא,</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+&quot;&quot;, Topic.commentsId)
+```
+</code></pre></div>
+<p>ביטוי Power Fx צריך להיראות כך,</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+If(IsBlank(Topic.commentsId), &quot;&quot;, Topic.commentsId)
+```
+</code></pre></div>
+<p>עבודה מצוינת, הביטוי שלנו הושלם! 🙌🏻 כעת בחר <strong>Insert</strong> כדי להגדיר את פרמטר הקלט של זרימת הסוכן לביטוי Power Fx.</p>
+<p><img alt="ביטוי Power Fx" src="../../../../../translated_images/9.2_14_PowerFxExpression.80e76ea59bdb8f131d26edf2657923f4af9000768d44b06c0947115fd218698e.he.png" /></p>
+<ol>
+<li><strong>שמור</strong> את הנושא.</li>
+</ol>
+<h3 id="93">9.3 עדכון נושא בקשת מכשיר עם מספר צמתים לשיפור חוויית המשתמש<a class="headerlink" href="#93" title="Permanent link">&para;</a></h3>
+<p>כעת נוסיף שני צמתים נוספים:</p>
+<ul>
+<li>
+<p><strong>Send a message</strong> - זה ישמש כהודעת אישור שמתייחסת למכשיר שנבחר ושבקשתם הוגשה.</p>
+</li>
+<li>
+<p><strong>Topic management</strong> - לסיום השיחה, נבצע הפניה לצומת <strong>End of conversation</strong>.</p>
+</li>
+</ul>
+<p>בואו נתחיל!</p>
+<ol>
+<li>בחר את <strong>סמל הפלוס +</strong> מתחת לצומת זרימת הסוכן ובחר בצומת <strong>Send a message</strong>.</li>
+</ol>
+<p><img alt="הוספת צומת שליחת הודעה" src="../../../../../translated_images/9.3_01_AddSendAMessageNode.ac4111729a2602f8301ecffbcb263d692ecb43478aa9da63cae0dd58160f56c8.he.png" /></p>
+<ol>
+<li>
+<p>הכנס את הבא בשדה ההודעה,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>Thanks
+</span></code></pre></div>
+</li>
+</ol>
+<p>לאחר מכן בחר <strong>Insert variable</strong> כדי להתייחס לשם המשתמש.</p>
+<p><img alt="הכנסת משתנה" src="../../../../../translated_images/9.3_02_InsertVariable.c5c9ebce61d1f442413d05f4437f74ee1d9c3a8c2ab696244937c56b5171f310.he.png" /></p>
+<ol>
+<li>בחר בכרטיסיית <strong>System</strong> וחפש את <code>User</code> בשדה החיפוש. בחר במשתנה <strong>User.DisplayName</strong>.</li>
+</ol>
+<p><img alt="בחירת משתנה מערכת" src="../../../../../translated_images/9.3_03_SelectSystemVariable.47cfac2f3a727dbaf32ae960cbafe43ce9ed00f73edf01ac6d48e5b2b167e5fc.he.png" /></p>
+<ol>
+<li>
+<p>הכנס את הבא בשדה ההודעה,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>. Your selected device,
+</span></code></pre></div>
+</li>
+</ol>
+<p>לאחר מכן בחר <strong>Insert variable</strong> והפעם בכרטיסיית <strong>Custom</strong>, בחר במשתנה <strong>ModelValue</strong>.</p>
+<p>לאחר מכן הכנס את הבא כדי להשלים את ההודעה.</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+, has been submitted and will be reviewed by your manager.
+```
+</code></pre></div>
+<p>ההודעה צריכה להיראות כך.</p>
+<p><img alt="שליחת הודעה" src="../../../../../translated_images/9.3_04_SendAMessage.3f6c4b5e53da9c7f9fcf9d0c453a9b65e44e35ea4c1124947fb638d0b682d96d.he.png" /></p>
+<ol>
+<li>לבסוף, בחר את <strong>סמל הפלוס +</strong> מתחת לצומת <strong>Send a message</strong> ובחר <strong>Topic management</strong>, ולאחר מכן <strong>Go to another topic</strong> ובחר <strong>End of Conversation</strong>.</li>
+</ol>
+<p><img alt="ניהול נושא" src="../../../../../translated_images/9.3_05_EndOfConversation.3c6c96d03b29a4d0904dea09d96c62d6ad450fe60dd8d6b2fe9d31681d6cb147.he.png" /></p>
+<ol>
+<li><strong>שמור</strong> את הנושא.</li>
+</ol>
+<p><img alt="שמור" src="../../../../../translated_images/9.3_06_SaveTopic.8c9201fabce9f41af03d9f1beb9ce321e4ee9880a94edabe58b592bffebda80a.he.png" /></p>
+<h3 id="94">9.4 בדיקת הסוכן באמצעות מספר תרחישים<a class="headerlink" href="#94" title="Permanent link">&para;</a></h3>
+<p>עבודה מצוינת!!! 😁 כעת נוכל לבדוק את הסוכן שלנו.</p>
+<h4 id="941">9.4.1 בקשת מכשיר והכנסת הערה בכרטיס אדפטיבי<a class="headerlink" href="#941" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>רענן</strong> את חלונית הבדיקה, בחר את סמל <strong>activity map</strong> והכנס את הבא כהודעה לסוכן.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>I need a laptop
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="בדיקת סוכן" src="../../../../../translated_images/9.4_01_TestAgent_RequestDevice_Yes.e73a5076dcd7179901dc0536624a039e372e405a6aac7ab89a632ce81bacdc2e.he.png" /></p>
+<ol>
+<li>
+<p>הסוכן מפעיל את <strong>Available devices</strong> ומגיב עם רשימת המכשירים הזמינים. נכניס את הבא כתשובה לשאלה האם נרצה לבקש מכשיר.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>Yes
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="כן" src="../../../../../translated_images/9.4_02_RequestDevice_Yes.25c34743bc168fde33f91743316e7bad87ee0e47150c93e9b82c4662404dcaba.he.png" /></p>
+<ol>
+<li>שים לב כיצד הסוכן הפעיל את <strong>Request device</strong> בהתאם להוראות הסוכן וכי הכרטיס האדפטיבי מוצג כעת בהודעת הסוכן.</li>
+</ol>
+<p>בחר במכשיר <strong>Surface Laptop 15</strong> והוסף את הבא כהערה.</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+I need 16GB of RAM please
+```
+</code></pre></div>
+<p><img alt="בחירת מכשיר והכנסת הערה" src="../../../../../translated_images/9.4_03_SelectDeviceAndEnterComment.570ea590309bf97edc40c6f7b53dbdc1174365860d8e8a4c32cfb7f1837621c2.he.png" /></p>
+<ol>
+<li>גלול מטה עד שתראה את כפתור <strong>Submit Request</strong> ובחר בו כדי לשלוח את הכרטיס האדפטיבי לסוכן.</li>
+</ol>
+<p><img alt="שליחת בקשה" src="../../../../../translated_images/9.4_04_SubmitRequest.ce3f4f44b90243a18dbfb401548b9b3cefd3ea17d8293a1bc3377323e3449da9.he.png" /></p>
+<ol>
+<li>בחר <strong>Allow</strong> כדי לאפשר לסוכן להשתמש באישורי החיבור שלך עבור פעולות שני המחברים.</li>
+</ol>
+<p><img alt="אפשר" src="../../../../../translated_images/9.4_05_SelectAllow.f7b5bda068fbaee83dcb1cff03a52c946fb4d879137c55f4e5f9eb3953985e0e.he.png" /></p>
+<ol>
+<li>הסוכן יציג לאחר מכן את הודעת האישור הכוללת את המודל שנבחר, ולאחר מכן יפנה לנושא <strong>End of Conversation</strong>. מגניב!</li>
+</ol>
+<p><img alt="בקשה נשלחה" src="../../../../../translated_images/9.4_06_RequestSubmitted.1d4d2e9afbc222a5ba79a4c254e7b2364d6eafc1a200ad6ac0aa142f9f10642d.he.png" /></p>
+<ol>
+<li>בחר <strong>כן</strong> כדי לאמת את שאר נושא <strong>End of Conversation</strong>.</li>
+</ol>
+<p><img alt="בחר כן" src="../../../../../translated_images/9.4_07_RedirectNode.e7b1390e4eafe8c2c815fc8ce7fdda56617d9fbeccb0d59423ad2899a8e5f897.he.png" /></p>
+<ol>
+<li>לאחר מכן, דרג את החוויה על ידי בחירת אחד הכוכבים בכרטיס סולם הדירוג.</li>
+</ol>
+<p>הסוכן ימשיך לצומת <strong>Question</strong> האחרון בנושא <strong>End of Conversation</strong>. בחר <strong>לא</strong>.</p>
+<p><img alt="נושא סוף שיחה" src="../../../../../translated_images/9.4_08_EndOfConversation.b35507f7f561633c0cb3b6c15dc007ae4197a72d58afd8ae616bea439bd6e148.he.png" /></p>
+<ol>
+<li>הנושא יסתיים לאחר מכן כהודעה סופית תוצג בחלונית הבדיקה.</li>
+</ol>
+<p><img alt="נושא סוף שיחה" src="../../../../../translated_images/9.4_09_EndOfConversation.438891b82e322b8a2648533200fbcd01c660ab049223b0920cdd0fbfcdeeb888.he.png" /></p>
+<ol>
+<li>בדוק את תיבת הדואר הנכנס של חשבון הדוא"ל שלך כדי לעיין בדוא"ל שנשלח למנהל על ידי זרימת הסוכן. תוכל לראות את פרטי המכשיר שנבחר ואת ההערה שהוכנסה בכרטיס האדפטיבי.</li>
+</ol>
+<p><img alt="דוא&quot;ל התקבל" src="../../../../../translated_images/9.4_10_ReviewEmailMessageWithComment.b0138b0bb9d08aacbd8bbb02fdb633a6796b4131cf8d83212adeabaa1ce04a18.he.png" /></p>
+<ol>
+<li>לחץ על הקישור והדפדפן צריך לטעון את פריט SharePoint של המכשיר. מעולה!</li>
+</ol>
+<p><img alt="לחץ על קישור בדוא&quot;ל" src="../../../../../translated_images/9.4_11_SelectLinkInEmail.2179f17165b61ba1e8aee68e8de4c752d64b0780ad86e0fe9054580d9c24e208.he.png" /></p>
+<h4 id="942">9.4.2 בקשת מכשיר ללא הכנסת הערה בכרטיס אדפטיבי<a class="headerlink" href="#942" title="Permanent link">&para;</a></h4>
+<p>כעת נבדוק את התרחיש שבו לא הוכנסה הערה.</p>
+<ol>
+<li>
+<p>חזור על אותם שלבים של</p>
+</li>
+<li>
+<p><strong>רענן</strong> את חלונית הבדיקה ובחר את סמל <strong>activity map</strong></p>
+</li>
+<li>הכנס את ההודעה, <code>I need a laptop</code></li>
+<li>השב עם <code>Yes</code> לשאלה על בקשת מכשיר</li>
+</ol>
+<p><img alt="בקשת מכשיר" src="../../../../../translated_images/9.4_12_RequestDevice_Yes.1e369b8a52547fade4b84a4e36b399ee0692c6edbaa778ba90fe9c15cae75c5c.he.png" /></p>
+<ol>
+<li>הפעם בחר במכשיר <strong>Surface Laptop 13</strong> ולא הכנס הערה.</li>
+</ol>
+<p><img alt="בחירת מכשיר" src="../../../../../translated_images/9.4_13_SelectDevice.d9ad15d17de3f06fd948bd529f116f7c05bedf79c016180d8a1dd7e378322b0e.he.png" /></p>
+<ol>
+<li><strong>שלח</strong> את הבקשה על ידי בחירת כפתור <strong>Submit Request</strong>.</li>
+</ol>
+<p><img alt="שליחת בקשה" src="../../../../../translated_images/9.4_14_SubmitRequest.a783ad8460bfb4485cfd2e97db2c065d9d6bf803279e3bd1569fe3e93548a578.he.png" /></p>
+<ol>
+<li>הפעם הדוא"ל שהתקבל בתיבת הדואר הנכנס שלך יציג <strong>None</strong> כהערה.</li>
+</ol>
+<p><img alt="דוא&quot;ל התקבל" src="../../../../../translated_images/9.4_15_ReviewEmailMessage.137f35152c9da4b4a02bebec5f0cc9e55cfa25679770ace003aa19482ed0f3eb.he.png" /></p>
+<h4 id="943">9.4.3 לא לבקש מכשיר<a class="headerlink" href="#943" title="Permanent link">&para;</a></h4>
+<p>כעת נבדוק את התרחיש האחרון שבו לא מבקשים מכשיר, ונושא <strong>Goodbye</strong> צריך להיות מופעל בהתאם להוראות הסוכן.</p>
+<ol>
+<li>
+<p>חזור על אותם שלבים של</p>
+</li>
+<li>
+<p><strong>רענן</strong> את חלונית הבדיקה ובחר את סמל <strong>activity map</strong></p>
+</li>
+<li>הכנס את ההודעה, <code>I need a laptop</code></li>
+<li>הפעם השב עם <code>No</code> לשאלה על בקשת מכשיר</li>
+</ol>
+<p><img alt="בדיקת סוכן" src="../../../../../translated_images/9.4_16_TestAgent_RequestDevice_No.85f205968f1d4083f20cc890a707748f8e06c01a19536cd299a13bdde2350de7.he.png" /></p>
+<ol>
+<li>הסוכן הפעיל את נושא <strong>Goodbye</strong> והשאלה כפי שהוגדרה בנושא נשאלת.</li>
+</ol>
+<p><img alt="נושא Goodbye הופעל" src="../../../../../translated_images/9.4_17_Goodbye.05ee598a987237e02866647a9699b0efa7ac58d1f448497f956af2ee815cb961.he.png" /></p>
+<h2 id="_28">✅ משימה הושלמה<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h2>
+<p>מזל טוב! 👏🏻 למדת כיצד לבנות את זרימת הסוכן שלך ולהוסיף אותה לנושא <strong>Request device</strong> הקיים שלנו, וכיצד להפנות את הסוכן לנושא אחר.</p>
+<p>זהו סוף <strong>מעבדה 09 - הוספת זרימת סוכן לאוטומציה ושיפור יכולות נושא</strong>, בחר את הקישור למטה כדי לעבור לשיעור הבא. נרחיב על המקרה במעבדה של השיעור הבא.</p>
+<p>⏭️ <a href="../10-add-event-triggers/">עבור לשיעור <strong>Add Event Triggers - Enable autonomous agent capabilities</strong></a></p>
+<h2 id="_29">📚 משאבים טקטיים<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://www.microsoft.com/microsoft-copilot/blog/copilot-studio/introducing-agent-flows-transforming-automation-with-ai-first-workflows/">Introducing agent flows: Transforming automation with AI-first workflows</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/flows-overview?WT.mc_id=power-172621-ebenitez">Agent flows overview</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow?WT.mc_id=power-172621-ebenitez">Use agent flows with your agent</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/azure/logic-apps/workflow-definition-language-functions-reference?WT.mc_id=power-172621-ebenitez">List of functions in the reference guide</a></p>
+<p>📺 <a href="https://www.youtube.com/watch?v=VJTKyk3Pr7s">Agent Flows in Copilot Studio</a></p>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/09-add-an-agent-flow" alt="Analytics" /></p>
+<hr />
+<p><strong>הצהרת אחריות</strong>:<br />
+מסמך זה תורגם באמצעות שירות תרגום AI <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. למרות שאנו שואפים לדיוק, יש להיות מודעים לכך שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי אנושי. איננו אחראים לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

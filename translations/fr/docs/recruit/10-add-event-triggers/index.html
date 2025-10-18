@@ -1,0 +1,1044 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/fr/docs/recruit/10-add-event-triggers/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-10-ajouter-des-declencheurs-devenements-activer-les-capacites-dagents-autonomes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nom-de-code-operation-routine-fantome" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ NOM DE CODE : OPÉRATION ROUTINE FANTÔME
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resume-de-la-mission" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Résumé de la mission
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objectifs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quest-ce-quun-declencheur-devenement" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Qu'est-ce qu'un déclencheur d'événement ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comment-fonctionnent-les-declencheurs-devenements" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Comment fonctionnent les déclencheurs d'événements ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprendre-les-charges-utiles-des-declencheurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Comprendre les charges utiles des déclencheurs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scenarios-courants-de-declencheurs-devenements" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Scénarios courants de déclencheurs d'événements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considerations-sur-la-publication-et-lauthentification" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Considérations sur la publication et l'authentification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depannage-et-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Dépannage et limitations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratoire-10-ajouter-des-declencheurs-devenements-pour-un-comportement-autonome-des-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Laboratoire 10 - Ajouter des déclencheurs d'événements pour un comportement autonome des agents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-accomplie" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Mission accomplie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ressources-tactiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Ressources tactiques
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "cd99a76bcb7372ac2771b6ae178b023d",
+  "translation_date": "2025-10-17T19:15:46+00:00",
+  "source_file": "docs/recruit/10-add-event-triggers/README.md",
+  "language_code": "fr"
+}
+-->
+<h1 id="mission-10-ajouter-des-declencheurs-devenements-activer-les-capacites-dagents-autonomes">🚨 Mission 10 : Ajouter des déclencheurs d'événements - Activer les capacités d'agents autonomes<a class="headerlink" href="#mission-10-ajouter-des-declencheurs-devenements-activer-les-capacites-dagents-autonomes" title="Permanent link">&para;</a></h1>
+<h2 id="nom-de-code-operation-routine-fantome">🕵️‍♂️ NOM DE CODE : <code>OPÉRATION ROUTINE FANTÔME</code><a class="headerlink" href="#nom-de-code-operation-routine-fantome" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Durée de l'opération :</strong> <code>~45 minutes</code></p>
+</blockquote>
+<p>🎥 <strong>Regardez la démonstration</strong></p>
+<p><a href="https://www.youtube.com/watch?v=ZgwHL8PQ1nY" title="Regardez la démonstration sur YouTube"><img alt="Miniature vidéo des déclencheurs d'événements" src="../../../../../translated_images/video-thumbnail.0d5b477d69adfe668fab9aa8ef5b199377b46788948b33b1969bf19c099b6469.fr.jpg" /></a></p>
+<h2 id="resume-de-la-mission">🎯 Résumé de la mission<a class="headerlink" href="#resume-de-la-mission" title="Permanent link">&para;</a></h2>
+<p>Il est temps de transformer votre agent d'un simple assistant conversationnel en un opérateur autonome. Votre mission est de permettre à votre agent d'agir sans être sollicité - en répondant aux signaux provenant de votre domaine numérique avec précision et rapidité.</p>
+<p>Avec les déclencheurs d'événements, vous apprendrez à entraîner votre agent à surveiller des systèmes externes comme SharePoint, Teams et Outlook, et à exécuter des actions intelligentes dès qu'un signal est reçu. Cette opération transforme votre agent en un atout opérationnel complet - silencieux, rapide et toujours vigilant.</p>
+<p>Réussir cette mission signifie créer des agents qui initient de la valeur - et ne se contentent pas de répondre.</p>
+<h2 id="objectifs">🔎 Objectifs<a class="headerlink" href="#objectifs" title="Permanent link">&para;</a></h2>
+<p>📖 Cette leçon couvrira :</p>
+<ul>
+<li>Comprendre les déclencheurs d'événements et comment ils permettent un comportement autonome des agents</li>
+<li>Apprendre la différence entre les déclencheurs d'événements et les déclencheurs de sujets, y compris les workflows de déclenchement et les charges utiles</li>
+<li>Explorer des scénarios courants de déclencheurs d'événements</li>
+<li>Comprendre les considérations d'authentification, de sécurité et de publication pour les agents basés sur des événements</li>
+<li>Construire un agent d'assistance informatique autonome qui répond aux événements SharePoint et envoie des accusés de réception par email</li>
+</ul>
+<h2 id="quest-ce-quun-declencheur-devenement">🤔 Qu'est-ce qu'un déclencheur d'événement ?<a class="headerlink" href="#quest-ce-quun-declencheur-devenement" title="Permanent link">&para;</a></h2>
+<p>Un <strong>déclencheur d'événement</strong> est un mécanisme qui permet à votre agent d'agir de manière autonome en réponse à des événements externes, sans nécessiter d'entrée directe de l'utilisateur. Pensez-y comme si votre agent "surveillait" des événements spécifiques et prenait automatiquement des mesures lorsque ces événements se produisent.</p>
+<p>Contrairement aux déclencheurs de sujets, qui nécessitent que les utilisateurs saisissent quelque chose pour activer une conversation, les déclencheurs d'événements s'activent en fonction des événements se produisant dans vos systèmes connectés. Par exemple :</p>
+<ul>
+<li>Lorsqu'un nouveau fichier est créé dans SharePoint ou OneDrive for Business</li>
+<li>Lorsqu'un enregistrement est créé dans Dataverse</li>
+<li>Lorsqu'une tâche est terminée dans Planner</li>
+<li>Lorsqu'une nouvelle réponse à un formulaire Microsoft est soumise</li>
+<li>Lorsqu'un nouveau message Microsoft Teams est ajouté</li>
+<li>Basé sur un calendrier récurrent (comme des rappels quotidiens)<br />
+<img alt="Ajouter un déclencheur" src="../../../../../translated_images/10_AddTriggerDialog.d665fde7e50d106d693110cd80e6c6b569bdad34ea985eb72fee7e0fccb3ef26.fr.png" /></li>
+</ul>
+<h3 id="pourquoi-les-declencheurs-devenements-sont-importants-pour-les-agents-autonomes">Pourquoi les déclencheurs d'événements sont importants pour les agents autonomes<a class="headerlink" href="#pourquoi-les-declencheurs-devenements-sont-importants-pour-les-agents-autonomes" title="Permanent link">&para;</a></h3>
+<p>Les déclencheurs d'événements transforment votre agent d'un assistant réactif en un assistant proactif et autonome :</p>
+<ol>
+<li>
+<p><strong>Opération autonome</strong> - votre agent peut fonctionner 24h/24 et 7j/7 sans intervention humaine, en répondant aux événements dès qu'ils se produisent.</p>
+<ul>
+<li><em>Exemple :</em> Accueillir automatiquement les nouveaux membres de l'équipe lorsqu'ils sont ajoutés à une équipe.</li>
+</ul>
+</li>
+<li>
+<p><strong>Réactivité en temps réel</strong> - au lieu d'attendre que les utilisateurs posent des questions, votre agent répond immédiatement aux événements pertinents.</p>
+<ul>
+<li><em>Exemple :</em> Alerter l'équipe informatique lorsqu'un document SharePoint est modifié.</li>
+</ul>
+</li>
+<li>
+<p><strong>Automatisation des workflows</strong> - enchaîner plusieurs actions basées sur un seul événement déclencheur.</p>
+<ul>
+<li><em>Exemple :</em> Lorsqu'un nouveau ticket de support est créé, créer une tâche, notifier le responsable et mettre à jour le tableau de suivi.</li>
+</ul>
+</li>
+<li>
+<p><strong>Processus cohérents</strong> - garantir que les étapes importantes ne sont jamais oubliées en automatisant les réponses aux événements clés.</p>
+<ul>
+<li><em>Exemple :</em> Chaque nouvel employé reçoit automatiquement des documents d'intégration et des demandes d'accès.</li>
+</ul>
+</li>
+<li>
+<p><strong>Actions basées sur les données</strong> - utiliser les informations de l'événement déclencheur pour prendre des décisions intelligentes et effectuer des actions appropriées.</p>
+<ul>
+<li><em>Exemple :</em> Rediriger les tickets urgents vers le personnel senior en fonction du niveau de priorité dans la charge utile du déclencheur.</li>
+</ul>
+</li>
+</ol>
+<h2 id="comment-fonctionnent-les-declencheurs-devenements">⚙️ Comment fonctionnent les déclencheurs d'événements ?<a class="headerlink" href="#comment-fonctionnent-les-declencheurs-devenements" title="Permanent link">&para;</a></h2>
+<p>Les déclencheurs d'événements fonctionnent via un workflow en trois étapes qui permet à votre agent de répondre de manière autonome aux événements externes :</p>
+<h3 id="le-workflow-de-declenchement">Le workflow de déclenchement<a class="headerlink" href="#le-workflow-de-declenchement" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Détection d'événement</strong> - Un événement spécifique se produit dans un système connecté (SharePoint, Teams, Outlook, etc.)</li>
+<li><strong>Activation du déclencheur</strong> - Le déclencheur d'événement détecte cet événement et envoie une charge utile à votre agent via un flux cloud Power Automate.</li>
+<li><strong>Réponse de l'agent</strong> - Votre agent reçoit la charge utile et exécute les instructions que vous avez définies.</li>
+</ol>
+<h3 id="declencheurs-devenements-vs-declencheurs-de-sujets">Déclencheurs d'événements vs déclencheurs de sujets<a class="headerlink" href="#declencheurs-devenements-vs-declencheurs-de-sujets" title="Permanent link">&para;</a></h3>
+<p>Comprendre la différence entre ces deux types de déclencheurs est essentiel :</p>
+<table>
+<thead>
+<tr>
+<th><strong>Déclencheurs d'événements</strong></th>
+<th><strong>Déclencheurs de sujets</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Activés par des événements de systèmes externes</td>
+<td>Activés par des entrées ou phrases utilisateur</td>
+</tr>
+<tr>
+<td>Permettent un comportement autonome des agents</td>
+<td>Permettent des réponses conversationnelles</td>
+</tr>
+<tr>
+<td>Utilisent l'authentification du créateur</td>
+<td>Option pour l'authentification de l'utilisateur</td>
+</tr>
+<tr>
+<td>Fonctionnent sans interaction utilisateur</td>
+<td>Nécessitent que l'utilisateur démarre la conversation</td>
+</tr>
+<tr>
+<td>Exemples : Fichier créé, email reçu</td>
+<td>Exemple : "Quel temps fait-il ?"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="comprendre-les-charges-utiles-des-declencheurs">📦 Comprendre les charges utiles des déclencheurs<a class="headerlink" href="#comprendre-les-charges-utiles-des-declencheurs" title="Permanent link">&para;</a></h2>
+<p>Lorsqu'un événement se produit, le déclencheur envoie une <strong>charge utile</strong> à votre agent contenant des informations sur l'événement et des instructions sur la manière de répondre.</p>
+<h3 id="charges-utiles-par-defaut-vs-personnalisees">Charges utiles par défaut vs personnalisées<a class="headerlink" href="#charges-utiles-par-defaut-vs-personnalisees" title="Permanent link">&para;</a></h3>
+<p>Chaque type de déclencheur est accompagné d'une structure de charge utile par défaut, mais vous pouvez la personnaliser :</p>
+<p><strong>Charge utile par défaut</strong> - Utilise le format standard comme <code>Utiliser le contenu de {Body}</code></p>
+<ul>
+<li>Contient des informations de base sur l'événement</li>
+<li>Utilise des instructions de traitement génériques</li>
+<li>Idéal pour des scénarios simples</li>
+</ul>
+<p><strong>Charge utile personnalisée</strong> - Ajoutez des instructions spécifiques et un formatage des données</p>
+<ul>
+<li>Incluez des directives détaillées pour votre agent</li>
+<li>Spécifiez exactement quelles données utiliser et comment</li>
+<li>Mieux adapté aux workflows complexes</li>
+</ul>
+<h3 id="instructions-pour-lagent-vs-instructions-specifiques-a-la-charge-utile">Instructions pour l'agent vs instructions spécifiques à la charge utile<a class="headerlink" href="#instructions-pour-lagent-vs-instructions-specifiques-a-la-charge-utile" title="Permanent link">&para;</a></h3>
+<p>Vous avez deux endroits pour guider le comportement de votre agent avec des déclencheurs d'événements :</p>
+<p><strong>Instructions pour l'agent</strong> (Globales)</p>
+<ul>
+<li>Directives générales qui s'appliquent à tous les déclencheurs</li>
+<li>Exemple : "Lors du traitement des tickets, vérifiez toujours les doublons en premier"</li>
+<li>Idéal pour les modèles de comportement généraux</li>
+</ul>
+<p><strong>Instructions spécifiques à la charge utile</strong> (Spécifiques au déclencheur)</p>
+<ul>
+<li>Directives spécifiques pour des types de déclencheurs individuels  </li>
+<li>Exemple : "Pour cette mise à jour SharePoint, envoyez un résumé au canal du projet"</li>
+<li>Idéal pour les agents complexes avec plusieurs déclencheurs</li>
+</ul>
+<p>💡 <strong>Astuce pro</strong> : Évitez les instructions contradictoires entre ces deux niveaux, car cela peut entraîner des comportements inattendus.</p>
+<h2 id="scenarios-courants-de-declencheurs-devenements">🎯 Scénarios courants de déclencheurs d'événements<a class="headerlink" href="#scenarios-courants-de-declencheurs-devenements" title="Permanent link">&para;</a></h2>
+<p>Voici des exemples pratiques de la manière dont les déclencheurs d'événements peuvent améliorer votre agent :</p>
+<h3 id="agent-dassistance-informatique">Agent d'assistance informatique<a class="headerlink" href="#agent-dassistance-informatique" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Déclencheur</strong> : Nouvel élément de liste SharePoint (ticket de support)</li>
+<li><strong>Action</strong> : Catégoriser automatiquement, attribuer une priorité et notifier les membres de l'équipe appropriés</li>
+</ul>
+<h3 id="agent-dintegration-des-employes">Agent d'intégration des employés<a class="headerlink" href="#agent-dintegration-des-employes" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Déclencheur</strong> : Nouvel utilisateur ajouté à Dataverse</li>
+<li><strong>Action</strong> : Envoyer un message de bienvenue, créer des tâches d'intégration et provisionner l'accès</li>
+</ul>
+<h3 id="agent-de-gestion-de-projet">Agent de gestion de projet<a class="headerlink" href="#agent-de-gestion-de-projet" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Déclencheur</strong> : Tâche terminée dans Planner</li>
+<li><strong>Action</strong> : Mettre à jour le tableau de bord du projet, notifier les parties prenantes et vérifier les obstacles</li>
+</ul>
+<h3 id="agent-de-gestion-des-documents">Agent de gestion des documents<a class="headerlink" href="#agent-de-gestion-des-documents" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Déclencheur</strong> : Fichier téléchargé dans un dossier spécifique de SharePoint</li>
+<li><strong>Action</strong> : Extraire les métadonnées, appliquer des balises et notifier les propriétaires du document</li>
+</ul>
+<h3 id="agent-assistant-de-reunion">Agent assistant de réunion<a class="headerlink" href="#agent-assistant-de-reunion" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Déclencheur</strong> : Événement de calendrier créé</li>
+<li><strong>Action</strong> : Envoyer des rappels et un ordre du jour avant la réunion, réserver des ressources</li>
+</ul>
+<h2 id="considerations-sur-la-publication-et-lauthentification">⚠️ Considérations sur la publication et l'authentification<a class="headerlink" href="#considerations-sur-la-publication-et-lauthentification" title="Permanent link">&para;</a></h2>
+<p>Avant que votre agent puisse utiliser des déclencheurs d'événements en production, vous devez comprendre les implications en matière d'authentification et de sécurité.</p>
+<h3 id="authentification-du-createur">Authentification du créateur<a class="headerlink" href="#authentification-du-createur" title="Permanent link">&para;</a></h3>
+<p>Les déclencheurs d'événements utilisent les <strong>identifiants du créateur de l'agent</strong> pour toute authentification :</p>
+<ul>
+<li>Votre agent accède aux systèmes en utilisant vos permissions</li>
+<li>Les utilisateurs peuvent potentiellement accéder aux données via vos identifiants</li>
+<li>Toutes les actions sont effectuées "en votre nom" même lorsque les utilisateurs interagissent avec l'agent</li>
+</ul>
+<h3 id="bonnes-pratiques-de-protection-des-donnees">Bonnes pratiques de protection des données<a class="headerlink" href="#bonnes-pratiques-de-protection-des-donnees" title="Permanent link">&para;</a></h3>
+<p>Pour maintenir la sécurité lors de la publication d'agents avec des déclencheurs d'événements :</p>
+<ol>
+<li><strong>Évaluer l'accès aux données</strong> - Examinez quels systèmes et données vos déclencheurs peuvent accéder</li>
+<li><strong>Tester minutieusement</strong> - Comprenez quelles informations les déclencheurs incluent dans les charges utiles</li>
+<li><strong>Limiter la portée des déclencheurs</strong> - Utilisez des paramètres spécifiques pour limiter les événements qui activent les déclencheurs</li>
+<li><strong>Examiner les données des charges utiles</strong> - Assurez-vous que les déclencheurs ne divulguent pas d'informations sensibles</li>
+<li><strong>Surveiller l'utilisation</strong> - Suivez l'activité des déclencheurs et la consommation des ressources</li>
+</ol>
+<h2 id="depannage-et-limitations">⚠️ Dépannage et limitations<a class="headerlink" href="#depannage-et-limitations" title="Permanent link">&para;</a></h2>
+<p>Gardez ces considérations importantes à l'esprit lorsque vous travaillez avec des déclencheurs d'événements :</p>
+<h3 id="impacts-sur-les-quotas-et-la-facturation">Impacts sur les quotas et la facturation<a class="headerlink" href="#impacts-sur-les-quotas-et-la-facturation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Chaque activation de déclencheur compte dans votre consommation de messages</li>
+<li>Les déclencheurs fréquents (comme les récurrences toutes les minutes) peuvent rapidement consommer le quota</li>
+<li>Surveillez l'utilisation pour éviter les limitations</li>
+</ul>
+<h3 id="exigences-techniques">Exigences techniques<a class="headerlink" href="#exigences-techniques" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Disponible uniquement pour les agents avec orchestration générative activée</li>
+<li>Nécessite que le partage de flux cloud solution-aware soit activé dans votre environnement</li>
+</ul>
+<h3 id="prevention-des-pertes-de-donnees-dlp">Prévention des pertes de données (DLP)<a class="headerlink" href="#prevention-des-pertes-de-donnees-dlp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Les politiques DLP de votre organisation déterminent quels déclencheurs sont disponibles</li>
+<li>Les administrateurs peuvent bloquer complètement les déclencheurs d'événements</li>
+<li>Contactez votre administrateur si les déclencheurs attendus ne sont pas disponibles</li>
+</ul>
+<h2 id="laboratoire-10-ajouter-des-declencheurs-devenements-pour-un-comportement-autonome-des-agents">🧪 Laboratoire 10 - Ajouter des déclencheurs d'événements pour un comportement autonome des agents<a class="headerlink" href="#laboratoire-10-ajouter-des-declencheurs-devenements-pour-un-comportement-autonome-des-agents" title="Permanent link">&para;</a></h2>
+<h3 id="cas-dutilisation">🎯 Cas d'utilisation<a class="headerlink" href="#cas-dutilisation" title="Permanent link">&para;</a></h3>
+<p>Vous allez améliorer votre agent d'assistance informatique pour qu'il réponde automatiquement aux nouvelles demandes de support. Lorsqu'une personne crée un nouvel élément dans votre liste de tickets de support SharePoint, votre agent :</p>
+<ol>
+<li>Se déclenche automatiquement lorsque le ticket SharePoint est créé</li>
+<li>Fournit les détails du ticket et les instructions sur les étapes que vous souhaitez qu'il exécute</li>
+<li>Accuse automatiquement réception du ticket au soumissionnaire via un email généré par l'IA</li>
+</ol>
+<p>Ce laboratoire démontre comment les déclencheurs d'événements permettent un comportement véritablement autonome des agents.</p>
+<h3 id="prerequis">Prérequis<a class="headerlink" href="#prerequis" title="Permanent link">&para;</a></h3>
+<p>Avant de commencer ce laboratoire, assurez-vous d'avoir :</p>
+<ul>
+<li>✅ Terminé les laboratoires précédents (en particulier les laboratoires 6-8 pour l'agent d'assistance informatique)</li>
+<li>✅ Accès au site SharePoint avec la liste des tickets de support informatique</li>
+<li>✅ Environnement Copilot Studio avec les déclencheurs d'événements activés</li>
+<li>✅ Votre agent a l'orchestration générative activée</li>
+<li>✅ Les permissions appropriées dans SharePoint et votre environnement Copilot Studio</li>
+</ul>
+<h3 id="101-activer-lia-generative-et-creer-un-declencheur-de-creation-delement-sharepoint">10.1 Activer l'IA générative et créer un déclencheur de création d'élément SharePoint<a class="headerlink" href="#101-activer-lia-generative-et-creer-un-declencheur-de-creation-delement-sharepoint" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Ouvrez votre <strong>agent d'assistance informatique</strong> dans <strong>Copilot Studio</strong></p>
+</li>
+<li>
+<p>Tout d'abord, assurez-vous que <strong>l'IA générative</strong> est activée pour votre agent :</p>
+</li>
+<li>Accédez à l'onglet <strong>Aperçu</strong></li>
+<li>
+<p>Sous la section Orchestration, activez <strong>Orchestration générative</strong> sur <strong>Activé</strong> si ce n'est pas déjà fait<br />
+<img alt="Activer l'IA générative" src="../../../../../translated_images/10_EnableGenerativeAI.a58904a7599016a94b89a11d6c1cd59022ae686ef553d17f89ebfb6c275cc900.fr.png" /></p>
+</li>
+<li>
+<p>Accédez à l'onglet <strong>Aperçu</strong> et localisez la section <strong>Déclencheurs</strong></p>
+</li>
+<li>
+<p>Cliquez sur <strong>+ Ajouter un déclencheur</strong> pour ouvrir la bibliothèque de déclencheurs<br />
+<img alt="Naviguer vers les déclencheurs" src="../../../../../translated_images/10_NavigateToTrigger.f5907762b93236a72d2f89cdb7c903608adb61763888ba1d3b4998f46473240c.fr.png" /></p>
+</li>
+<li>
+<p>Recherchez et sélectionnez <strong>Lorsqu'un élément est créé</strong> (SharePoint)<br />
+<img alt="Sélectionner le déclencheur SharePoint" src="../../../../../translated_images/10_SelectSharePointTrigger.d63e7cb0f06cf33e664c0e2316952aeac4adf507d7e0f87254cffebbfa5b3007.fr.png" /></p>
+</li>
+<li>
+<p>Configurez le nom du déclencheur et les connexions :</p>
+</li>
+<li>
+<p><strong>Nom du déclencheur :</strong> Nouveau ticket de support créé dans SharePoint</p>
+</li>
+<li>
+<p>Attendez que les connexions se configurent, puis sélectionnez <strong>Suivant</strong> pour continuer.<br />
+<img alt="Configurer le nom et les connexions du déclencheur" src="../../../../../translated_images/10_ConfigureTriggerNameAndConnections.f526dfc7a9e0dcc31bf791623e6431230f29ae001acb0f5075e175401bebb0f2.fr.png" /></p>
+</li>
+<li>
+<p>Configurez les paramètres du déclencheur :</p>
+</li>
+<li>
+<p><strong>Adresse du site</strong> : Sélectionnez votre site SharePoint "Contoso IT"</p>
+</li>
+<li>
+<p><strong>Nom de la liste</strong> : Choisissez votre liste "Tickets"</p>
+</li>
+<li>
+<p><strong>Instructions supplémentaires à l'agent lorsqu'il est invoqué par le déclencheur :</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>New Support Ticket Created in SharePoint: {Body}
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Use the &#39;Acknowledge SharePoint Ticket&#39; tool to generate the email body automatically and respond.
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>IMPORTANT: Do not wait for any user input. Work completely autonomously.
+</span></code></pre></div>
+<p><img alt="Configurer les paramètres du déclencheur" src="../../../../../translated_images/10_ConfigureTriggerParams.a67406d4a892ba1f59a04641cbb2f7226a329b9813b04676f92bf18c6003fd23.fr.png" /></p>
+</li>
+<li>
+<p>Sélectionnez <strong>Créer un déclencheur</strong> pour terminer la création du déclencheur. Un flux cloud Power Automate est automatiquement créé pour déclencher l'agent de manière autonome.</p>
+</li>
+<li>
+<p>Sélectionnez <strong>Fermer</strong>.</p>
+</li>
+</ol>
+<h3 id="102-modifier-le-declencheur">10.2 Modifier le déclencheur<a class="headerlink" href="#102-modifier-le-declencheur" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Dans la section <strong>Déclencheurs</strong> de l'onglet <strong>Aperçu</strong>, sélectionnez le menu <strong>...</strong> sur le déclencheur <strong>Nouveau ticket de support créé dans SharePoint</strong></p>
+</li>
+<li>
+<p>Sélectionnez <strong>Modifier dans Power Automate</strong><br />
+<img alt="Modifier le déclencheur dans Power Automate" src="../../../../../translated_images/10_EditTriggerInPowerAutomate.d99effb8145d40bd4d655021e0a34abf59ba23ff5e94bcae07e7e6711a52eff0.fr.png" /></p>
+</li>
+<li>
+<p>Sélectionnez le nœud <strong>Envoie une invite au copilot spécifié pour traitement</strong></p>
+</li>
+<li>
+<p>Dans le champ <strong>Corps/message</strong>, supprimez le contenu du corps, <strong>appuyez sur la touche barre oblique</strong> (/) et sélectionnez <strong>Insérer une expression</strong><br />
+<img alt="Insérer une expression pour le déclencheur" src="../../../../../translated_images/10_InsertExpressionForTrigger.adb940d8fa6e0bc50b325cedc3e3c085b5670e5cf2b275bf7b4ada1180d3ba01.fr.png" /></p>
+</li>
+<li>
+<p>Entrez l'expression suivante pour fournir à l'agent des détails spécifiques sur le ticket :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>concat(&#39;Submitted By Name: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Author/DisplayName&#39;], &#39;\nSubmitted By Email: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Author/Email&#39;], &#39;\nTitle: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Title&#39;], &#39;\nIssue Description: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Description&#39;], &#39;\nPriority: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Priority/Value&#39;],&#39;\nTicket ID : &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;ID&#39;])
+</span></code></pre></div>
+</li>
+<li>
+<p>Sélectionnez <strong>Ajouter</strong><br />
+<img alt="Expression de sortie du déclencheur" src="../../../../../translated_images/10_TriggerOutputExpression.3b120eaa26cc9a4cd5451bb2ca658ce1a7192eb7a46c7c2b4d7431d20e982187.fr.png" /></p>
+</li>
+<li>
+<p>Sélectionnez <strong>Publier</strong> dans la barre d'outils en haut à droite.</p>
+</li>
+</ol>
+<h3 id="103-creer-un-outil-pour-laccuse-de-reception-par-email">10.3 Créer un outil pour l'accusé de réception par email<a class="headerlink" href="#103-creer-un-outil-pour-laccuse-de-reception-par-email" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Retournez</strong> à votre agent dans Copilot Studio</p>
+</li>
+<li>
+<p>Accédez à l'onglet <strong>Outils</strong> de votre agent</p>
+</li>
+<li>
+<p>Cliquez sur <strong>+ Ajouter un outil</strong> et sélectionnez <strong>Connecteur</strong></p>
+</li>
+<li>
+<p>Recherchez et sélectionnez le connecteur <strong>Envoyer un email (V2)</strong><br />
+<img alt="Sélectionner le connecteur Outlook" src="../../../../../translated_images/10_SelectOutlookConnector.0bf4270b1d25c691574881514f162fd74e10206bc5efd798e5cb15741b73c063.fr.png" /></p>
+</li>
+<li>
+<p>Attendez que la connexion se configure, puis sélectionnez <strong>Ajouter et configurer</strong></p>
+</li>
+<li>
+<p>Configurez les paramètres de l'outil :</p>
+</li>
+<li>
+<p><strong>Nom</strong> : Accuser réception du ticket SharePoint</p>
+</li>
+<li>
+<p><strong>Description</strong> : Cet outil envoie un email d'accusé de réception indiquant qu'un ticket a été reçu.</p>
+</li>
+<li>
+<p>Sélectionnez <strong>Personnaliser</strong> à côté des paramètres d'entrée et configurez comme suit :</p>
+<p><strong>À</strong> :</p>
+<ul>
+<li><strong>Description</strong> : L'adresse email de la personne soumettant le ticket SharePoint</li>
+<li><strong>Identifier comme</strong> : Email</li>
+</ul>
+<p><strong>Corps</strong> :</p>
+<ul>
+<li><strong>Description</strong> : Un accusé de réception indiquant que le ticket a été reçu, et que nous visons à répondre sous 3 jours ouvrables.</li>
+</ul>
+<p><img alt="Configurer les paramètres d'entrée" src="../../../../../translated_images/10_ConfigureInputParameters.cc8b602c0dc244734cb8eac43f8d7fcf88f4158dcdc7f7ae15658ad93c03beae.fr.png" /></p>
+</li>
+<li>
+<p>Sélectionnez <strong>Enregistrer</strong></p>
+</li>
+</ol>
+<h3 id="104-tester-le-declencheur">10.4 Tester le déclencheur<a class="headerlink" href="#104-tester-le-declencheur" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Dans votre <strong>Agent d'assistance</strong>, sélectionnez l'onglet <strong>Aperçu</strong></li>
+<li>Cliquez sur l'icône <strong>Tester le déclencheur</strong> à côté du déclencheur <strong>Nouveau ticket de support créé dans SharePoint</strong>. Cela ouvrira la fenêtre <strong>Tester votre déclencheur</strong>.</li>
+<li>Ouvrez un nouvel onglet de navigateur et accédez à votre <strong>liste de tickets de support IT SharePoint</strong>.</li>
+<li>Cliquez sur <strong>+ Ajouter un nouvel élément</strong> pour créer un ticket de test :</li>
+<li><strong>Titre</strong> : "Impossible de se connecter au VPN"</li>
+<li><strong>Description</strong> : "Impossible de se connecter au réseau WIFI de l'entreprise après une mise à jour récente"</li>
+<li>
+<p><strong>Priorité</strong> : "Normale"</p>
+</li>
+<li>
+<p><strong>Enregistrez</strong> l'élément SharePoint<br />
+<img alt="Créer un ticket de test" src="../../../../../translated_images/10_CreateTestTicket.137beedc82d337ef0a467c67d3b53249ec469ce1ce91d88a72fb2f8729a14fce.fr.png" /></p>
+</li>
+<li>Retournez à <strong>Copilot Studio</strong> et surveillez le panneau <strong>Tester votre déclencheur</strong> pour l'activation du déclencheur. Utilisez l'icône <strong>Actualiser</strong> pour charger l'événement de déclenchement, cela peut prendre quelques minutes.<br />
+<img alt="Surveiller le test du déclencheur" src="../../../../../translated_images/10_MonitorTriggerTest.f9883de55ba1c9817121c7f801e29715fa74918603f96312dfcb0f16f9af44e0.fr.png" /></li>
+<li>Une fois le déclencheur affiché, sélectionnez <strong>Commencer les tests</strong>.</li>
+<li>Sélectionnez l'<strong>icône Carte d'activité</strong> en haut du panneau <strong>Tester votre agent</strong>.</li>
+<li>Vérifiez que votre agent :</li>
+<li>A reçu la charge utile du déclencheur</li>
+<li>A utilisé l'outil "Accuser réception du ticket SharePoint"<br />
+<img alt="Tester le déclencheur" src="../../../../../translated_images/10_TestTrigger.f68b063d3fa221601f61484aec9bf68aa17761366aa1efe8c3cad554ce3da902.fr.png" /></li>
+<li>Vérifiez la boîte de réception de l'expéditeur pour confirmer que l'email d'accusé de réception a été envoyé<br />
+<img alt="Tester l'envoi de l'email" src="../../../../../translated_images/10_TestEmailSent.1efe77ca636ca8b8c2593216539edfe11555f7e002a6dcb5e2024b36b40e12b3.fr.png" /></li>
+<li>Consultez l'onglet <strong>Activité</strong> dans Copilot Studio pour voir l'exécution complète du déclencheur et de l'outil.</li>
+</ol>
+<h2 id="mission-accomplie">✅ Mission accomplie<a class="headerlink" href="#mission-accomplie" title="Permanent link">&para;</a></h2>
+<p>🎉 <strong>Félicitations !</strong> Vous avez réussi à mettre en œuvre des déclencheurs d'événements avec des outils connecteurs permettant à votre agent de fonctionner de manière autonome, en envoyant automatiquement des accusés de réception par email et en traitant les tickets de support sans intervention utilisateur. Une fois votre agent publié, il agira de manière autonome en votre nom.</p>
+<p>🚀 <strong>Prochaine étape</strong> : Dans notre prochaine leçon, vous apprendrez à <a href="../11-publish-your-agent/">publier votre agent</a> sur Microsoft Teams et Microsoft 365 Copilot, le rendant accessible à toute votre organisation !</p>
+<p>⏭️ <a href="../11-publish-your-agent/">Passer à la leçon <strong>Publier votre agent</strong></a></p>
+<h2 id="ressources-tactiques">📚 Ressources tactiques<a class="headerlink" href="#ressources-tactiques" title="Permanent link">&para;</a></h2>
+<p>Prêt à approfondir les déclencheurs d'événements et les agents autonomes ? Consultez ces ressources :</p>
+<ul>
+<li><strong>Microsoft Learn</strong> : <a href="https://learn.microsoft.com/training/modules/autonomous-agents-online-workshop/?WT.mc_id=power-177340-scottdurow">Rendre votre agent autonome dans Copilot Studio</a></li>
+<li><strong>Documentation</strong> : <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-trigger-event?WT.mc_id=power-177340-scottdurow">Ajouter un déclencheur d'événement</a></li>
+<li><strong>Bonnes pratiques</strong> : <a href="https://learn.microsoft.com/power-automate/triggers-introduction?WT.mc_id=power-177340-scottdurow">Introduction aux déclencheurs Power Automate</a></li>
+<li><strong>Scénarios avancés</strong> : <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow-create?WT.mc_id=power-177340-scottdurow">Utiliser des flux Power Automate avec des agents</a></li>
+<li><strong>Sécurité</strong> : <a href="https://learn.microsoft.com/microsoft-copilot-studio/admin-data-loss-prevention?WT.mc_id=power-177340-scottdurow">Prévention des pertes de données pour Copilot Studio</a></li>
+</ul>
+<!-- markdownlint-disable-next-line MD033 -->
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/10-add-event-triggers" alt="Analytique" /></p>
+<hr />
+<p><strong>Avertissement</strong> :<br />
+Ce document a été traduit à l'aide du service de traduction automatique <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction humaine professionnelle. Nous ne sommes pas responsables des malentendus ou des interprétations erronées résultant de l'utilisation de cette traduction.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

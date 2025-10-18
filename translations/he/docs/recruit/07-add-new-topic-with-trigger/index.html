@@ -1,0 +1,1397 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/he/docs/recruit/07-add-new-topic-with-trigger/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#07" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ שם קוד: מבצע הישארות בנושא
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 תקציר המשימה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 מטרות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 מהו נושא?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐦 למה נושאים שימושיים?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪺 סוגי נושאים
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧬 אנטומיה של נושא
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-power-fx" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏋🏻‍♀️ שימוש ב-Power Fx בצמתים שלכם
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏗️ איך אני יוצר ועורך נושאים?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      👩🏻‍🎨 אוקיי, איך אני מעצב נושאים לסוכן שלי?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#07-" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 מעבדה 07 - הוסף נושא חדש עם צמתים של שיחה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ משימה הושלמה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 משאבים טקטיים
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "c04b3587170139bc23e3b5cfc24c89ac",
+  "translation_date": "2025-10-17T01:20:35+00:00",
+  "source_file": "docs/recruit/07-add-new-topic-with-trigger/README.md",
+  "language_code": "he"
+}
+-->
+<h1 id="07">🚨 משימה 07: הוספת נושא חדש עם טריגר וצמתים<a class="headerlink" href="#07" title="Permanent link">&para;</a></h1>
+<h2 id="_1">🕵️‍♂️ שם קוד: <code>מבצע הישארות בנושא</code><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ חלון זמן למבצע:</strong> <code>~60 דקות</code></p>
+</blockquote>
+<p>🎥 <strong>צפו בהדרכה</strong></p>
+<p><a href="https://www.youtube.com/watch?v=7iPAZaA8nJs" title="צפו בהדרכה ביוטיוב"><img alt="תמונה ממוזערת של סרטון טריגר" src="../../../../../translated_images/video-thumbnail.a84cf7cb473be282861469420c5e2c16adb53bcfd64c7c07fbd579e8d32bf8b2.he.jpg" /></a></p>
+<h2 id="_2">🎯 תקציר המשימה<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>יצרתם סוכן. הוא מקשיב, לומד ועונה על שאלות - אבל עכשיו הגיע הזמן להיות יותר טקטיים. במשימה הזו, תעמיקו ותלמדו את הסוכן שלכם איך להגיב בדיוק רב להנחיות ספציפיות.</p>
+<p>עם נושאים וטריגרים, הסוכן שלכם יכול:</p>
+<ul>
+<li>
+<p>לזהות כוונה</p>
+</li>
+<li>
+<p>לנתב שיחות באמצעות לוגיקה</p>
+</li>
+<li>
+<p>לאסוף ולשמור משתנים</p>
+</li>
+<li>
+<p>להפעיל תהליכים ולנקוט פעולה</p>
+</li>
+</ul>
+<p>אתם לא רק בונים דיאלוג, אלא מחברים את הקורטקס של קבלת ההחלטות שלו. ברוכים הבאים לנקסוס העצבי.</p>
+<h2 id="_3">🔎 מטרות<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>במשימה זו תלמדו:</p>
+<ol>
+<li>להבין מה הם נושאים ומה תפקידם ביצירת שיחות מובנות עבור הסוכן שלכם  </li>
+<li>ללמוד את האנטומיה של נושאים, כולל ביטויי טריגר וצמתים בשיחה  </li>
+<li>לחקור סוגים שונים של צמתים בשיחה וכיצד להשתמש ב-Power Fx ללוגיקה דינמית  </li>
+<li>ליצור נושאים מותאמים אישית מאפס כדי לטפל בבקשות ומשימות ספציפיות של משתמשים  </li>
+<li>לבנות נושא פונקציונלי שמתחבר לנתוני SharePoint באמצעות מחברים וכלים  </li>
+</ol>
+<h2 id="_4">🤔 מהו נושא?<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>נושא הוא שיחה מובנית שעוזרת לסוכן שלכם להגיב לשאלות או משימות ספציפיות של משתמשים. חשבו על נושא כעל שיחה קטנה או משימה שהסוכן שלכם יכול לטפל בה. כל נושא נועד להגיב לשאלה או בקשה ספציפית של משתמש.</p>
+<h3 id="_5">🌌 מטרת הנושא<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>ישנן שלוש מטרות נפוצות לנושאים בהתאם לצרכי המשתמשים:</p>
+<p><strong>מידע</strong> - עונה על שאלות כמו:</p>
+<ul>
+<li><code>מה זה …?</code></li>
+<li><code>מתי יהיה …?</code></li>
+<li><code>למה …?</code></li>
+<li><code>אתה יכול לספר לי …?</code></li>
+</ul>
+<p><strong>השלמת משימה</strong> - עוזר למשתמשים <em>לעשות</em> משהו:</p>
+<ul>
+<li><code>"אני רוצה …"</code></li>
+<li><code>"איך אני …?"</code></li>
+<li><code>"אני צריך …?"</code></li>
+</ul>
+<p><strong>פתרון בעיות</strong> - פותר בעיות:</p>
+<ul>
+<li><code>משהו לא עובד …</code></li>
+<li><code>אני נתקל בהודעת שגיאה …</code></li>
+<li><code>אני רואה משהו לא צפוי …?</code></li>
+</ul>
+<p>ניתן גם ליצור נושאים לשאלות מעורפלות כמו <code>אני צריך עזרה</code>, שמבקשות מהמשתמשים פרטים נוספים לפני שממשיכים.</p>
+<h2 id="_6">🐦 למה נושאים שימושיים?<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>נושאים עוזרים לכם:</p>
+<ul>
+<li>
+<p>לארגן את הידע של הסוכן שלכם.</p>
+</li>
+<li>
+<p>לגרום לשיחות להרגיש טבעיות.</p>
+</li>
+<li>
+<p>לפתור בעיות של משתמשים בצורה יעילה.</p>
+</li>
+</ul>
+<h2 id="_7">🪺 סוגי נושאים<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>נושאי מערכת</strong> - מובנים ומטפלים באירועים נפוצים כמו:</p>
+<ul>
+<li>התחלת שיחה</li>
+<li>סיום שיחה</li>
+<li>טיפול בשגיאות</li>
+<li>בקשת התחברות ממשתמשים</li>
+<li>העברה לסוכן אנושי</li>
+</ul>
+</li>
+<li>
+<p><strong>נושאים מותאמים אישית</strong> - אתם יוצרים אותם כדי לטפל במשימות או שאלות ספציפיות כמו:</p>
+<ul>
+<li>בקשת חופשה לעובד</li>
+<li>בקשת מכשיר חדש או חלופי</li>
+</ul>
+</li>
+</ol>
+<p><img alt="סוגי נושאים" src="../../../../../translated_images/7.0_01_Topics.6e55d2e01c1cc0994b7af05be3c1629b78d46b37cc82f59c7893d4ad90af707e.he.png" /></p>
+<h2 id="_8">🧬 אנטומיה של נושא<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>כל נושא בדרך כלל מכיל את הדברים הבאים.</p>
+<h3 id="_9">🗣️ ביטויי טריגר<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>אלו מילים או משפטים שמשתמשים עשויים לומר כדי להתחיל את הנושא.</p>
+<p><strong>דוגמאות:</strong></p>
+<p>לנושא בקשת חופשה, ביטויי טריגר יכולים להיות:</p>
+<ul>
+<li><code>אני רוצה לקחת חופשה</code></li>
+<li><code>בקשת חופשה</code></li>
+<li><code>להגיש בקשה לחופשה</code></li>
+<li><code>איך אני מגיש בקשת חופשה?</code></li>
+</ul>
+<p>לנושא בקשת מכשיר, ביטויי טריגר יכולים להיות:</p>
+<ul>
+<li><code>אני צריך מכשיר חדש</code></li>
+<li><code>אפשר לבקש מכשיר?</code></li>
+<li><code>אתה יכול לעזור לי עם בקשת מכשיר?</code></li>
+</ul>
+<h3 id="_10">💬 צמתים בשיחה<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>נושא מורכב מצמתים שהם שלבים שהסוכן עוקב אחריהם לאחר שהנושא מופעל. אתם מחברים את השלבים הללו כדי לבנות זרימת שיחה שהסוכן שלכם עוקב אחריה כאשר הוא מתקשר עם משתמשים.</p>
+<p>חשבו עליהם כהוראות או פעולות כמו:</p>
+<ul>
+<li>לשאול את המשתמש שאלות  </li>
+<li>לשלוח הודעות  </li>
+<li>לקרוא לשירות חיצוני כמו מערכת ניהול חופשות  </li>
+<li>להגדיר או לבדוק משתנים  </li>
+<li>להשתמש בתנאים כדי לפצל את השיחה  </li>
+<li>להפנות לנושא אחר  </li>
+</ul>
+<p><img alt="צמתים בשיחה" src="../../../../../translated_images/7.0_03_ConversationNodes.7b1d93b7d4522d544d7f9eed597a5ef30b9f96ee1670efd048528ce13423481a.he.png" /></p>
+<p>הסוגים העיקריים של צמתים שאתם יכולים להוסיף לסוכן הם:</p>
+<h4 id="_11">שליחת הודעה<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>מטרה</strong> - שולח הודעה למשתמש.  </li>
+<li><strong>דוגמה</strong> - <code>תודה על הבקשה שלך! אני אעזור לך עם זה.</code>  </li>
+</ul>
+<p>צומת זה מאפשר לסוכן שלכם לשלוח הודעות למשתמשים, שיכולות להיות טקסט פשוט או תוכן עשיר כמו תמונות, סרטונים, כרטיסים, תשובות מהירות וכרטיסים אדפטיביים.</p>
+<p>ניתן להתאים אישית הודעות באמצעות משתנים, להוסיף מספר גרסאות של הודעות לגיוון, ואפילו להתאים את הפלט הקולי לערוצים עם תמיכה קולית.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>חשבו על זה כעל בלוק "תגיד משהו" שעוזר לסוכן שלכם לתקשר בצורה ברורה ואינטראקטיבית עם משתמשים.</p>
+</div>
+<h4 id="_12">לשאול שאלה<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>מטרה</strong> - שואל את המשתמש שאלה וממתין לתשובתו.  </li>
+<li><strong>דוגמה</strong> - <code>מה תאריכי החופשה שלך?</code>  </li>
+</ul>
+<p>צומת זה משמש לשאול משתמשים מידע ספציפי במהלך השיחה ולשמור את תשובותיהם במשתנים לשימוש מאוחר יותר.</p>
+<p>ניתן להתאים את סוג השאלה כמו קלט טקסט או להשתמש בישויות לרשימת ערכים מוגדרת שהמשתמש בוחר ממנה, ולהגדיר כיצד הסוכן צריך להתנהג אם המשתמש נותן תשובה לא תקינה או מדלג על השאלה.</p>
+<p>הוא גם תומך בתוכן עשיר כמו תמונות ותשובות מהירות, ומאפשר לכם לכוונן את ההגדרות של אימות, שאלה חוזרת והפרעה כדי לגרום לזרימת השיחה להיות חלקה.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>חשבו על זה כעל בלוק "שאל והקשב" שעוזר לסוכן שלכם לתקשר עם משתמשים בצורה מובנית שאתם מגדירים.</p>
+</div>
+<h4 id="_13">לשאול עם כרטיס אדפטיבי<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>מטרה</strong> - שולח כרטיס עשיר ואינטראקטיבי באמצעות JSON.  </li>
+<li><strong>דוגמה</strong> - כרטיס שמציג בוחר תאריך לוח שנה למשתמש כדי לבחור תאריך.  </li>
+</ul>
+<p>צומת זה מציג כרטיסים עשירים ואינטראקטיביים שמשתמשים יכולים למלא ולשלוח כמו טפסים עם תיבות טקסט, כפתורים ותמונות. הוא לוכד את הקלט של המשתמש ושומר אותו במשתנים, שהסוכן שלכם יכול להשתמש בהם מאוחר יותר בשיחה.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>חשבו על זה כעל בלוק "בונה טפסים" מותאם אישית שמאפשר לסוכן שלכם להיות יותר אינטראקטיבי ומסוגל לאסוף מידע מפורט ממשתמשים.</p>
+</div>
+<h4 id="_14">הוספת תנאי<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>מטרה</strong> - מוסיף לוגיקה לשיחה. בודק משהו ומחליט מה לעשות הלאה.  </li>
+<li><strong>דוגמה</strong> - אם המשתמש אומר <code>כן</code>, עבור לשלב הבא. אם <code>לא</code>, סיים את השיחה.  </li>
+</ul>
+<p>צומת זה יוצר נקודות החלטה בזרימת השיחה של הסוכן שלכם על ידי בדיקת האם משתנה עומד בקריטריונים מסוימים. בהתבסס על האם התנאי נכון או שגוי, הסוכן עוקב אחר נתיבים שונים.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>חשבו על זה כעל בלוק "אם-אחרת" שעוזר לסוכן שלכם לקבל החלטות בהתאם לקלט המשתמש או נתונים שמורים במשתנים.</p>
+</div>
+<h4 id="_15">ניהול משתנים<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>מטרה</strong> - שומר או מנקה מידע (נקרא משתנים) במהלך השיחה.  </li>
+<li><strong>דוגמה</strong> - שומר את התאריך שהמשתמש בחר בצומת שאל שאלה שמציג כרטיס אדפטיבי.  </li>
+</ul>
+<p>צומת זה מאפשר לכם לשמור ולנהל מידע במהלך השיחה, זה יכול להיות שם המשתמש, תשובה או העדפות. ניתן להשתמש בסוגים שונים של משתנים כמו טקסט, מספרים או תאריכים, והם יכולים להיות מוגבלים לנושא אחד, משותפים בין נושאים (גלובליים), או אפילו נמשכים מהמערכת או הסביבה.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>חשבו על זה כעל "קופסת זיכרון" שעוזרת לסוכן שלכם לזכור מידע ולהשתמש בו כשהשיחה עם המשתמש ממשיכה.</p>
+</div>
+<h4 id="_16">ניהול נושא<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>מטרה</strong> - מעביר את השיחה לנושא אחר או שלב בתוך הנושא, מעביר את השיחה או מסיים את הנושא או השיחה.  </li>
+<li><strong>דוגמה</strong> - הפניה לנושא "מדיניות חופשה".  </li>
+</ul>
+<p>צומת זה מאפשר לסוכן שלכם לקפוץ מנושא אחד לאחר מבלי להתחיל מחדש את השיחה, לסיים את הנושא, להעביר או לסיים את השיחה, או לעבור לשלב אחר בתוך אותו נושא. זה עוזר להנחות משתמשים דרך חלקים שונים בזרימת השיחה על ידי מעבר חלק בין נושאים, וניתן להעביר משתנים ביניהם כדי לשמור על הקשר.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>חשבו על זה כעל בלוק "עבור לחלק/שלב אחר" שעוזר לסוכן שלכם להיות גמיש בשיחה עם משתמשים.</p>
+</div>
+<h4 id="_17">הוספת כלי<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>מטרה</strong> - מתחבר לכלים כמו מחברים, תהליכי סוכן, הנחיות, חיפוש מותאם אישית, שאילתת חיפוש, מיומנויות, פרוטוקול הקשר מודל.  </li>
+<li><strong>דוגמה</strong> - תהליך סוכן שמבוצע לאחר שהמשתמש מגיש את בקשת החופשה שלו.</li>
+</ul>
+<p>צומת זה נותן לסוכן שלכם יכולות לתקשר עם מערכות חיצוניות או לבצע משימות ספציפיות, כמו שליחת מיילים, בדיקת מזג אוויר או גישה למסדי נתונים. ניתן להוסיף כלים באמצעות מחברים מובנים, APIs מותאמים אישית, תהליכי סוכן, הנחיות, או להתחבר לשרתי פרוטוקול הקשר מודל (MCP), ואפילו אוטומציה של ממשק משתמש גרפי לאפליקציות שולחן עבודה באמצעות כלי שימוש במחשב.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>חשבו על כלים כעל "בלוקי פעולה" שנותנים לסוכן שלכם כוחות-על לעשות דברים מעבר ל_שיחה_, כמו קריאה ל-API, הפעלת תהליך או איסוף קלט משתמש באופן אוטומטי.</p>
+</div>
+<h4 id="_18">צומת תשובות גנרטיביות<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>מטרה</strong> - משתמש במודל שפה גדול כדי ליצור תגובות טבעיות ודמויות אנושיות בהתבסס על שאלת המשתמש וכל נתונים מחוברים.  </li>
+<li><strong>דוגמה</strong> - משתמש במקור הידע המחובר שמכיל מידע על זכויות חופשה כדי לענות על שאלות משתמשים בנוגע לבקשות חופשה.</li>
+</ul>
+<p>צומת זה מאפשר לסוכן שלכם להגיב לשאלות משתמשים באמצעות מידע ממקורות ידע שונים, כמו אתרים, מסמכים, SharePoint או נתונים מותאמים אישית. ניתן להשתמש בו כגיבוי כאשר לא נמצא נושא מתאים, או בתוך נושא כדי לספק תשובות מפורטות ודינמיות בהתבסס על מקורות ספציפיים שהגדרתם לסוכן שלכם להשתמש בהם.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>חשבו על זה כעל "בלוק תשובה חכמה" שעוזר לסוכן שלכם לתת תגובות מועילות ומדויקות על ידי חיפוש תוכן מהימן שאתם מגדירים.</p>
+</div>
+<h4 id="http">צומת בקשת HTTP<a class="headerlink" href="#http" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>מטרה</strong> - מחבר את הסוכן שלכם למערכות חיצוניות על ידי שליחת קריאות API (לדוגמה <code>GET</code> או <code>POST</code>) כדי לאחזר או לעדכן נתונים.  </li>
+<li><strong>דוגמה</strong> - כאשר משתמש מבקש את יתרת ימי החופשה שלו, הסוכן מבצע קריאת <code>GET</code> למערכת ניהול החופשות ומוציא את <code>remainingLeaveDays</code> מתשובת ה-API ומשיב למשתמש עם הערך.</li>
+</ul>
+<p>צומת זה מאפשר לסוכן שלכם להתחבר למערכות חיצוניות על ידי שליחת קריאות REST API, כמו <code>GET</code> או <code>POST</code>. ניתן להתאים את הבקשה עם כותרות, תוכן גוף ואפילו להשתמש ב-Power Fx כדי לכלול נתונים דינמיים, ואז לשמור את התשובה במשתנים לשימוש מאוחר יותר בשיחה.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>חשבו על זה כעל "בלוק להגיע ולקבל מידע" שעוזר לסוכן שלכם לדבר עם שירותים אחרים כמו אחזור פרטי משתמש או שליחת נתונים למערכת אחרת.</p>
+</div>
+<h4 id="_19">שליחת אירוע<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>מטרה</strong> - מאפשר לסוכן שלכם לשלוח פעולות שאינן הודעות, כמו עדכוני מערכת או הפעלת כלים - ללקוח או לערוץ, ולעזור לו לבצע משימות.  </li>
+<li><strong>דוגמה</strong> - תגובה למשתמש שמצטרף לצ'אט על ידי הצגת הודעת ברוך הבא.</li>
+</ul>
+<p>צומת זה מאפשר לסוכן שלכם לשלוח פעולות שאינן הודעות למערכות חיצוניות או ערוצים, שיכולים אז להחליט כיצד להגיב. אתם נותנים לכל אירוע שם ומצמידים לו ערך, שיכול להיות מספר פשוט או טקסט, משתנה או נוסחת Power Fx, והוא נשלח כאובייקט JSON.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>חשבו על זה כעל "בלוק טריגר שקט" שעוזר לסוכן שלכם לעשות דברים מאחורי הקלעים או לתקשר עם כלים חיצוניים מבלי שמשתמש יצטרך לומר משהו.</p>
+</div>
+<h2 id="-power-fx">🏋🏻‍♀️ שימוש ב-Power Fx בצמתים שלכם<a class="headerlink" href="#-power-fx" title="Permanent link">&para;</a></h2>
+<p>ב-Copilot Studio, Power Fx הוא שפת תכנות בקוד נמוך המשמשת להוספת לוגיקה והתנהגות דינמית לסוכן שלכם. זו אותה שפה שמשתמשים בה ב-Microsoft Power Apps, והיא נועדה להיות פשוטה ודומה ל-Excel, מה שהופך אותה לקלה למפתחים ולא-מפתחים.</p>
+<p><img alt="נוסחת Power Fx" src="../../../../../translated_images/7.3_13_EnterFormula.d17cc9f73e01e1cab8e2420a55bcb726ae0a0e55673f81ee3d7fe12d20148b92.he.png" /></p>
+<h3 id="power-fx">מה Power Fx יכול לעשות בנושאים<a class="headerlink" href="#power-fx" title="Permanent link">&para;</a></h3>
+<ul>
+<li>להגדיר ולנהל משתנים  <ul>
+<li>דוגמה: <code>Set(userName, "Adele Vance")</code>  </li>
+</ul>
+</li>
+<li>ליצור תנאים  <ul>
+<li>דוגמה: <code>If(score &gt; 80, "Pass", "Fail")</code>  </li>
+</ul>
+</li>
+<li>לעצב ולהמיר נתונים  <ul>
+<li>דוגמה: <code>Text(DateValue, "dd/mm/yyyy")</code>  </li>
+</ul>
+</li>
+</ul>
+<h3 id="-power-fx_1">למה להשתמש ב-Power Fx?<a class="headerlink" href="#-power-fx_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>גמיש:</strong> ניתן לבנות לוגיקה מבלי לכתוב שורות קוד מלאות.  </p>
+</li>
+<li>
+<p><strong>מוכר:</strong> אם השתמשתם בנוסחאות Excel, זה מרגיש מאוד דומה.  </p>
+</li>
+<li>
+<p><strong>חזק:</strong> מאפשר לכם להתאים אישית שיחות, לאמת קלט ולשלוט כיצד הסוכן שלכם מתנהג בהתבסס על נתוני משתמשים.</p>
+</li>
+</ul>
+<h2 id="_20">🏗️ איך אני יוצר ועורך נושאים?<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<p>יש שתי דרכים שבהן ניתן ליצור ולערוך נושאים עבור הסוכנים שלכם.</p>
+<h3 id="1">1. יצירה מאפס<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>זה מאפשר לכם לבנות זרימות שיחה מותאמות אישית מאפס, וניתן להוסיף או להסיר צמתים לפי הצורך בעת עריכת הנושא.</p>
+<p><img alt="הוספת נושא" src="../../../../../translated_images/7.0_04_AddATopic.111df124a4a7ff8b41e3f577fbef08885ac52d9d6c0c705a82f5968e5ccc384d.he.png" /></p>
+<h4 id="_21">למה זה שימושי<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<ul>
+<li>זה נותן לכם שליטה מלאה על איך הסוכן שלכם מגיב.  </li>
+<li>ניתן להתאים אישית לוגיקה באמצעות משתנים, Power Fx ותנאים.  </li>
+<li>זה מושלם לבניית חוויות מותאמות אישית לצרכים עסקיים ספציפיים.</li>
+</ul>
+<h3 id="2-copilot">2. יצירה עם Copilot<a class="headerlink" href="#2-copilot" title="Permanent link">&para;</a></h3>
+<p>זה מאפשר לך לתאר מה אתה רוצה באמצעות שפה טבעית, וקופיילוט יבנה את השיחה עבורך. אותו דבר חל גם על עריכת הנושא שלך, השתמש בשפה טבעית וקופיילוט יבדוק ויערוך את הנושא עבורך.</p>
+<h4 id="_22">מה קופיילוט תומך בו<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<ul>
+<li>יכול ליצור ולערוך:<ul>
+<li>צמתים של הודעות</li>
+<li>צמתים של שאלות</li>
+<li>צמתים של תנאים</li>
+</ul>
+</li>
+<li>אינו תומך בהגדרות מתקדמות כמו איך לשאול מחדש את המשתמש אם הוא לא מגיב או איך לנהל הפרעות במהלך שאלה. עדיין ניתן להתאים את ההגדרות הללו ידנית אם יש צורך.</li>
+</ul>
+<h4 id="_23">למה זה שימושי<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<ul>
+<li>מאיץ את הפיתוח בעזרת סיוע של AI.</li>
+<li>מאפשר לך להתמקד בלוגיקה ובחוויית המשתמש במקום בהגדרות חוזרות.</li>
+<li>מקל על שיפור זרימות השיחה עם מאמץ מינימלי.</li>
+</ul>
+<h4 id="_24">✨ דוגמאות להנחיות<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>יצירת נושא</strong></p>
+<ul>
+<li><code>קבל את שם המשתמש, גילו ותאריך הלידה שלו ואז חזור על תשובותיו</code></li>
+<li><code>אסוף את כתובת הרחוב של המשתמש, המדינה ומיקוד. המשתמש צריך להיות מסוגל לנסות שוב כל שאלה עד 4 פעמים</code></li>
+</ul>
+</li>
+<li>
+<p><strong>עריכת נושא</strong></p>
+<ul>
+<li><code>הוסף שאלה המבקשת את תאריך הלידה של המשתמש</code></li>
+<li><code>סכם מידע שנאסף בכרטיס אדפטיבי.</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="_25">👩🏻‍🎨 אוקיי, איך אני מעצב נושאים לסוכן שלי?<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h2>
+<h3 id="1-">🧙🏻‍♂️ שלב 1 - הבן מה המשתמשים צריכים<a class="headerlink" href="#1-" title="Permanent link">&para;</a></h3>
+<p>התחל בזיהוי שאלות או משימות נפוצות שהמשתמשים ישאלו את הסוכן שלך. אלו יכולים להיות:</p>
+<ul>
+<li>שאלות שהמשתמשים שואלים לעיתים קרובות כמו, <code>מה הזכאות שלי לימי מחלה?</code></li>
+<li>משימות נפוצות שהמשתמשים רוצים לבצע כמו הגשת טופס</li>
+<li>בעיות שהמשתמשים נתקלים בהן לעיתים קרובות כמו בעיות כניסה</li>
+</ul>
+<h3 id="2-">📦 שלב 2 - קבץ את התרחישים<a class="headerlink" href="#2-" title="Permanent link">&para;</a></h3>
+<p>ארגן את צרכי המשתמש לשלוש קטגוריות בהתבסס על מה שלמדנו קודם - מטרת הנושא:</p>
+<ul>
+<li>מידע - המשתמש רוצה לדעת משהו</li>
+<li>ביצוע משימה - המשתמש רוצה לעשות משהו</li>
+<li>פתרון בעיות - המשתמש זקוק לעזרה בפתרון בעיה</li>
+</ul>
+<h3 id="3-">🗺️ שלב 3 - תכנן את השיחה<a class="headerlink" href="#3-" title="Permanent link">&para;</a></h3>
+<p>שרטט זרימת שיחה פשוטה של איך הסוכן צריך להגיב</p>
+<ul>
+<li>התחל עם ברכה או אישור</li>
+<li>שאל שאלות המשך כדי לקבל פרטים</li>
+<li>ספק תשובות או בצע פעולות</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>שמור על השיחה קצרה וממוקדת. שאל רק את מה שצריך.</p>
+</div>
+<h3 id="4-">🔀 שלב 4 - התמודד עם סוגי שיחות שונים<a class="headerlink" href="#4-" title="Permanent link">&para;</a></h3>
+<p>תכנן עבור:</p>
+<ul>
+<li>
+<p><strong>שיחה חד-פעמית</strong> - שאלה אחת, תשובה אחת</p>
+</li>
+<li>
+<p><strong>שיחה רב-פעמית</strong> - שיחה הלוך ושוב עם שאלות המשך</p>
+</li>
+</ul>
+<p>דוגמה:</p>
+<ul>
+<li>
+<p>משתמש: <code>אני רוצה להגיש בקשה לחופשה.</code></p>
+</li>
+<li>
+<p>סוכן: <code>בטח! מאיזה תאריך תרצה להתחיל את החופשה שלך?</code></p>
+</li>
+<li>
+<p>משתמש: <code>15 ביולי</code></p>
+</li>
+<li>
+<p>סוכן: <code>הבנתי. ומתי תסתיים החופשה שלך?</code></p>
+</li>
+<li>
+<p>משתמש: <code>22 ביולי.</code></p>
+</li>
+<li>
+<p>סוכן: <code>תודה! מה הסיבה לחופשה שלך?</code></p>
+</li>
+<li>
+<p>משתמש: <code>חופשה משפחתית.</code></p>
+</li>
+<li>
+<p>סוכן: <code>תודה על הפרטים. הגשתי את בקשת החופשה שלך מה-15 ביולי עד ה-22 ביולי לחופשה משפחתית. תקבל אישור בקרוב.</code></p>
+</li>
+</ul>
+<h3 id="5-ai">🤖 שלב 5 - השתמש ב-AI לשאלות בלתי צפויות<a class="headerlink" href="#5-ai" title="Permanent link">&para;</a></h3>
+<p>גם אם תכננת נושא לבקשות חופשה, ייתכן שמשתמשים ישאלו שאלות שאינן מכוסות ישירות. כאן נכנסות לתמונה תכונות AI כמו נושא מערכת <em>Conversational boosting</em>.</p>
+<p>נושא זה כולל צומת תשובות גנרטיביות, שמאפשר לסוכן שלך להתחיל להשתמש במקורות ידע מחוברים מיד. כל מקורות הידע שנוספו ברמת הסוכן נכללים אוטומטית בצומת התשובות הגנרטיביות בתוך נושא מערכת <em>Conversational boosting</em>.</p>
+<h4 id="_26">דוגמה<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
+<ul>
+<li>משתמש: <code>האם אני יכול להעביר ימי חופשה שלא נוצלו לשנה הבאה?</code></li>
+</ul>
+<p>שאלה זו עשויה לא להיות חלק מזרימת הנושא שהוגדרה מראש, במיוחד אם הנושא שלך מטפל רק בהגשת בקשות חופשה.</p>
+<h4 id="ai">איך AI עוזר<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h4>
+<p>אם הסוכן שלך מחובר למסמכי מדיניות HR של החברה שלך או לאתר הפנימי, AI יכול:</p>
+<ul>
+<li>לחפש את מדיניות החופשה הרלוונטית</li>
+<li>להבין ולסכם את הכללים</li>
+<li>הסוכן מגיב עם: <code>לפי מדיניות HR, אתה יכול להעביר ימי חופשה שלא נוצלו לשנה הקלנדרית הבאה. לפרטים נוספים, בדוק את סעיף מדיניות החופשה בפורטל HR.</code></li>
+</ul>
+<h4 id="_27">למה זה שימושי<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
+<ul>
+<li>אין צורך ליצור נושא ידני עבור כל שאלה הקשורה למדיניות.</li>
+<li>AI יכול לשלוף תשובות מדויקות ממקורות ידע מהימנים.</li>
+<li>זה משפר את חוויית המשתמש על ידי כך שהסוכן מרגיש חכם ומגיב יותר.</li>
+</ul>
+<h3 id="6-">🔬 שלב 6 - בדוק את הנושא, את זרימת השיחה<a class="headerlink" href="#6-" title="Permanent link">&para;</a></h3>
+<p>לפני פרסום הנושא:</p>
+<ul>
+<li>בדוק באמצעות שאלות אמיתיות או דוגמאות אמיתיות.</li>
+<li>וודא שזה נשמע טבעי ומועיל.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>בצע שיפורים לנושא שלך בהתאם לבדיקה, כמו הוספת צמתים נוספים או הסרת צמתים במקום הפניה לנושא אחר.</p>
+</div>
+<h3 id="7-">⚠️ שלב 7 - הימנע מהעתקת תוכן מהאתר<a class="headerlink" href="#7-" title="Permanent link">&para;</a></h3>
+<p>אל תעתיק את מה שכבר נמצא באתר שלך.</p>
+<ul>
+<li>התמקד בנושאים שמשתמשים שואלים עליהם לעיתים קרובות.</li>
+<li>הוסף נושאים חדשים בהתבסס על היסטוריית הצ'אט או בקשות תמיכה.</li>
+</ul>
+<h3 id="_28">✨ דוגמה לזרימת שיחה<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
+<p>להלן דוגמה לנושא שמטפל בבקשות חופשה.</p>
+<h4 id="1_1">שלב 1: ביטוי מפעיל<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h4>
+<p>המשתמש מקליד,</p>
+<p><code>אני רוצה לבקש חופשה</code></p>
+<h4 id="2">שלב 2: הסוכן מבקש פרטים באמצעות כרטיס אדפטיבי<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
+<p>הסוכן שואל,</p>
+<p><code>בטח! מאיזה תאריכים תרצה לקחת חופש?</code></p>
+<p>בכרטיס האדפטיבי יש בקרי בחירת תאריך התחלה וסיום.</p>
+<h4 id="3">שלב 3: המשתמש מספק תאריכים<a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
+<p>המשתמש בוחר תאריך התחלה כ-5 באוגוסט 2025 ותאריך סיום כ-10 באוגוסט 2025, ושולח את הכרטיס. ערכי התאריכים נשמרים בפלט של הכרטיס האדפטיבי כמשתנים.</p>
+<h4 id="4">שלב 4: זרימת ענן מבוצעת<a class="headerlink" href="#4" title="Permanent link">&para;</a></h4>
+<p>זרימת ענן של Power Automate מבוצעת שיוצרת בקשה חדשה במערכת ניהול החופשות ושולחת דוא"ל להודיע למנהל על בקשת החופשה.</p>
+<h4 id="5">שלב 5: שלח הודעת אישור למשתמש<a class="headerlink" href="#5" title="Permanent link">&para;</a></h4>
+<p>הסוכן מגיב עם,</p>
+<p><code>בקשת החופשה שלך מה-5 באוגוסט עד ה-10 באוגוסט הוגשה. המנהל שלך יבדוק ויחזור אליך בקרוב.</code></p>
+<h2 id="07-">🧪 מעבדה 07 - הוסף נושא חדש עם צמתים של שיחה<a class="headerlink" href="#07-" title="Permanent link">&para;</a></h2>
+<p>עכשיו נלמד איך להוסיף נושא חדש עם מפעיל וכלים. מעבדה זו תכסה יצירת נושא מאפס כדי שתבין איך להתאים נושאים לצרכים שלך.</p>
+<ul>
+<li><a href="../../../../../docs/recruit/07-add-new-topic-with-trigger">7.1 הוסף נושא חדש מאפס</a></li>
+<li><a href="../../../../../docs/recruit/07-add-new-topic-with-trigger">7.2 הגדר את קלטי ופלטי המפעיל</a></li>
+<li><a href="../../../../../docs/recruit/07-add-new-topic-with-trigger">7.3 הוסף כלי באמצעות מחבר</a></li>
+</ul>
+<h3 id="_29">✨ מקרה שימוש<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<p><strong>כ</strong> עובד</p>
+<p><strong>אני רוצה</strong> לדעת אילו מכשירים זמינים</p>
+<p><strong>כדי ש</strong> תהיה לי רשימה של מכשירים זמינים</p>
+<p>בואו נתחיל!</p>
+<h3 id="_30">דרישות מוקדמות<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>רשימת SharePoint</strong></p>
+<p>נשתמש ברשימת <strong>Devices</strong> של SharePoint מ-<a href="../00-course-setup/#step-4-create-new-sharepoint-site">שיעור 00 - הגדרת הקורס - שלב 3: יצירת אתר SharePoint חדש</a>.</p>
+<p>אם לא הגדרת את רשימת <strong>Devices</strong> של SharePoint, חזור ל-<a href="../00-course-setup/#step-4-create-new-sharepoint-site">שיעור 00 - הגדרת הקורס - שלב 3: יצירת אתר SharePoint חדש</a>.</p>
+</li>
+<li>
+<p><strong>סוכן עזרה של Contoso</strong></p>
+<p>נשתמש באותו סוכן שנוצר קודם ב-<a href="../06-create-agent-from-conversation/">שיעור 06 - יצירת סוכן מותאם אישית באמצעות שפה טבעית עם קופיילוט והסתמכות על הנתונים שלך</a>.</p>
+</li>
+</ol>
+<h3 id="71">7.1 הוסף נושא חדש מאפס<a class="headerlink" href="#71" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>בחר את <strong>לשונית הנושאים</strong> ליד שם הסוכן. אם אינך רואה אותה, בחר <strong>+6</strong> ותראה את <strong>נושאים</strong> ברשימה.</p>
+<p><img alt="בחר נושאים" src="../../../../../translated_images/7.1_01_Topics.789ffa4f75830b5f25fb1eeb8fa3e8ba3810b95870cb3dc49d80d8f4ba15a00a.he.png" /></p>
+</li>
+<li>
+<p>לשונית <strong>נושאים</strong> תיטען ובברירת מחדל יוצגו הנושאים <em>מותאמים אישית</em>. ניתן לסנן נושאים לפי הכל, מותאמים אישית ומערכת. הנושאים המותאמים אישית והמערכת שאתה רואה כרגע נוצרו אוטומטית כאשר הסוכן הוקצה.</p>
+<p>בחר <strong>+ הוסף נושא</strong> ובחר <strong>מאפס</strong>.</p>
+<p><img alt="צור נושא מאפס" src="../../../../../translated_images/7.1_02_FromBlank.f3fe83fad24825f8eb498b19af8e472810f657868613b96b3b4e033fa1042e75.he.png" /></p>
+</li>
+<li>
+<p>הזן שם לנושא. העתק והדבק את הבא.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Available devices
+</span></code></pre></div>
+<p><img alt="תן שם לנושא" src="../../../../../translated_images/7.1_03_TopicName.06eb34ebe94516c1d898b5dff183f9586f7526f9316bc122dca641ac29967966.he.png" /></p>
+</li>
+<li>
+<p>הזן תיאור מפעיל שמתאר מה הנושא עושה. העתק והדבק את הבא.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>This topic helps users find devices that are available from our SharePoint Devices list. User can ask to see available devices and it will return a list of devices that are available which can include laptops, smartphones, accessories and more.
+</span></code></pre></div>
+<p><img alt="הזן שם ותיאור למפעיל" src="../../../../../translated_images/7.1_04_TriggerDescription.cb748c0358b3af249fcc0fdb0b262185ffed14d8cf628186b8a65ad4bbf14172.he.png" /></p>
+</li>
+</ol>
+<h3 id="72">7.2 הגדר את קלטי ופלטי המפעיל<a class="headerlink" href="#72" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>עכשיו נוסיף משתנה קלט חדש ש-AI גנרטיבי ישתמש בו בתזמור שלו כדי לחלץ את סוג המכשיר מהודעת המשתמש. בחר את <strong>שלוש הנקודות (...)</strong> בנושא ובחר <strong>פרטים</strong> כדי להציג את חלונית פרטי הנושא.</p>
+<p><img alt="בחר פרטי נושא" src="../../../../../translated_images/7.2_01_SelectTopicDetails.cc1b97a86718e101084c366514cc306fe82243a014a44c579394e0f70ba5ca53.he.png" /></p>
+</li>
+<li>
+<p>חלונית <strong>פרטי הנושא</strong> נטענה כעת. בחר את לשונית <strong>קלט</strong>.</p>
+<p><img alt="לשונית קלט" src="../../../../../translated_images/7.2_02_SelectInputTab.d0b900eb02a8f982324f59e3b7aca34c2cdba78263acdc9301225e1c3e6338b6.he.png" /></p>
+</li>
+<li>
+<p>בחר <strong>צור משתנה חדש</strong>.</p>
+<p><img alt="צור משתנה קלט חדש" src="../../../../../translated_images/7.2_03_CreateANewVariable.0d45780268d9b6250617c45a9ddd557cdaa23945b66539b313ca8d74f2c96cc2.he.png" /></p>
+</li>
+<li>
+<p>הזן שם למשתנה. העתק והדבק את הבא.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>VarDeviceType
+</span></code></pre></div>
+<p><img alt="שם משתנה קלט" src="../../../../../translated_images/7.2_04_VariableName.56555922eab13cad52fa29d846f4e515d82c2e9bf61c86705f080a1ba4f3b1af.he.png" /></p>
+</li>
+<li>
+<p>עכשיו עלינו להגדיר את משתני הקלט והפלט שלנו. אלו הם המאפיינים שניתן להגדיר עבור קלטי ופלטי נושא.</p>
+<table>
+<thead>
+<tr>
+<th>שדה</th>
+<th style="text-align: left;">ערך</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>איך הסוכן ימלא את הקלט הזה?</td>
+<td style="text-align: left;">קובע איך הסוכן ימלא את המשתנה הזה עם ערך לפני הפעלת הנושא. כברירת מחדל זה מוגדר ל_מילוי דינמי עם האפשרות הטובה ביותר_. אחרת ניתן להחליף קלט בערך במקום לשאול את המשתמש</td>
+</tr>
+<tr>
+<td>סוג נתוני משתנה</td>
+<td style="text-align: left;">סוג הנתונים של המשתנה. סוגי נתונים נתמכים הם <code>String</code>, <code>Boolean</code>, <code>Number</code>, <code>Date</code>, <code>DateTime</code>, <code>DateTimeNoTimeZone</code>, <code>Time</code>, <code>Record</code>, <code>Table</code>, <code>Unspecified</code>, <code>From sample data</code></td>
+</tr>
+<tr>
+<td>שם תצוגה</td>
+<td style="text-align: left;">שם המשתנה</td>
+</tr>
+<tr>
+<td>זיהוי כ</td>
+<td style="text-align: left;">סוג ישות עבור הסוכן כדי ללכוד את סוג הערך הנכון</td>
+</tr>
+<tr>
+<td>תיאור</td>
+<td style="text-align: left;">התיאור עוזר לסוכן למלא קלטים אוטומטית לפני הפעלת הנושא או ליצור שאלות לשאול עבור הערכים</td>
+</tr>
+</tbody>
+</table>
+<p>ניתן להשאיר את <em>איך הסוכן ימלא את הקלט הזה?</em>, <em>סוג נתוני משתנה</em> ו_שם תצוגה_ כפי שהם. עדכן את מאפיין <strong>זיהוי כ</strong> ל-<strong>תשובת המשתמש המלאה</strong>.</p>
+<p><img alt="עדכן זיהוי כ" src="../../../../../translated_images/7.2_05_IdentifyAs.a502101e6f60c27ed8c8b1eff049b8ceedd0531845b932f9b7608ad3d8220090.he.png" /></p>
+</li>
+<li>
+<p>העתק והדבק את הבא כתיאור.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>List of possible values: Laptop, Desktop, Smartphone
+</span></code></pre></div>
+<p><img alt="תיאור" src="../../../../../translated_images/7.2_06_InputDescription.844e1776080e595c6c221bcc33d7a269abcc7e4755c8f11b284c3950f42166b5.he.png" /></p>
+</li>
+<li>
+<p>עכשיו, בואו נגדיר את הפלט שלנו עבור הנושא. בחר את לשונית <strong>פלט</strong>.</p>
+<p><img alt="בחר לשונית פלט" src="../../../../../translated_images/7.2_07_SelectOutputTab.ab5aa0a2f385f1492df5a67f8f2cbed752dc0258c1e1ddb9928d204405ec403a.he.png" /></p>
+</li>
+<li>
+<p>בחר <strong>צור משתנה חדש</strong>.</p>
+<p><img alt="צור משתנה פלט חדש" src="../../../../../translated_images/7.2_08_CreateANewVariable.5518205f121014ff4757af062bedfd38ce768c8f38291dd9d6489d67cd5d5dc8.he.png" /></p>
+</li>
+<li>
+<p>עדכן את המאפיינים הבאים.</p>
+<p><strong>שם משתנה</strong> - העתק והדבק את הבא.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>VarAvailableDevices
+</span></code></pre></div>
+<p><strong>סוג נתוני משתנה</strong> - בחר <strong>טבלה</strong> כסוג הנתונים.</p>
+<p><strong>תיאור משתנה</strong> - העתק והדבק את הבא.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>List of available devices by device type
+</span></code></pre></div>
+<p><img alt="מאפייני פלט" src="../../../../../translated_images/7.2_09_OutputVariable.fb0e159fbad5052280040090352c50faf4d91228095c3762e75440b2842e0d29.he.png" /></p>
+</li>
+<li>
+<p>סיימנו להגדיר את קלטי ופלטי הנושא. בחר את <strong>אייקון X</strong> כדי לצאת מחלונית <strong>פרטי הנושא</strong>.</p>
+<p><img alt="צא מחלונית פרטי הנושא." src="../../../../../translated_images/7.2_10_ExitTopicDetailsPane.6e8981434f04049bef7ab93f9545ee433087e1c99cdfe27b355ee9858ddfde99.he.png" /></p>
+</li>
+</ol>
+<h3 id="73">7.3 הוסף כלי באמצעות מחבר<a class="headerlink" href="#73" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>עכשיו נוסיף צומת שמאפשר לסוכן לשלוף את רשימת המכשירים מרשימת <strong>Devices</strong> של SharePoint. בחר את <strong>אייקון +</strong> מתחת למפעיל.</p>
+<p><img alt="הוסף כלי" src="../../../../../translated_images/7.3_01_AddNode.4656328835f7a28bc5f66c440d620a0990bf098e858619ff2c32a9b14fae7c4f.he.png" /></p>
+</li>
+<li>
+<p>בחר את צומת <strong>הוסף כלי</strong>, ואז בחר את לשונית <strong>מחבר</strong>. חפש <code>Get items</code> ובחר את פעולת מחבר SharePoint <strong>Get items</strong>.</p>
+<p><img alt="בחר Get items" src="../../../../../translated_images/7.3_02_GetItems.a6bdfb122449de789e7c58592f4c3e3a0f38b7bdcec2e0e5eab34b2d9d991f97.he.png" /></p>
+</li>
+<li>
+<p>יש ליצור חיבור חדש עבור המחבר. בחר את <strong>אייקון החץ</strong> ובחר <strong>צור חיבור חדש</strong>.</p>
+<p><img alt="הוסף כלי" src="../../../../../translated_images/7.3_03_CreateNewConnection.03f49fab97e5f5f2a298e4b1b2e5081304c9c98c5f3ad5be0302c241c3d83d94.he.png" /></p>
+</li>
+<li>
+<p>יוצגו שתי אפשרויות שמאפשרות לך להתחבר ישירות ל-SharePoint Online או ל-SharePoint מקומי. כברירת מחדל האפשרות <strong>התחבר ישירות (שירותי ענן)</strong> תיבחר, וזה מה שנשתמש בו עבור החיבור שלנו.
+בחרו <strong>צור</strong>.</p>
+</li>
+</ol>
+<p><img alt="בחרו צור" src="../../../../../translated_images/7.3_04_SelectCreate.f2216f1e276ed153e06d5b5d47f170a0f9cc6854aa05f0736623acb3aeee1229.he.png" /></p>
+<ol>
+<li>בחרו את חשבון המשתמש המחובר שלכם.</li>
+</ol>
+<p><img alt="בחרו חשבון משתמש מחובר" src="../../../../../translated_images/7.3_05_SelectSignedInUserAccount.e27a0ada918a1cf4477f3966adcc5f1d033a8998a2589d02d1208f21f5d93938.he.png" /></p>
+<ol>
+<li>כעת, עליכם לאשר שחשבון המשתמש שלכם יכול לשמש לחיבור למחבר SharePoint. בחרו <strong>אפשר גישה</strong>.</li>
+</ol>
+<p><img alt="בחרו אפשר גישה" src="../../../../../translated_images/7.3_06_AllowAccess.69f012dbcedf7ebc1869e648a5eaa661d085b15aa7a2eb69e69c5b63adfa36dd.he.png" /></p>
+<ol>
+<li>בחרו <strong>שלח</strong> כדי להוסיף את פעולת מחבר SharePoint <strong>קבל פריטים</strong> כצומת לנושא.</li>
+</ol>
+<p><img alt="שלח" src="../../../../../translated_images/7.3_07_ConnectedSelectSubmit.16ec31ef062696cabb6e7964879debd177f2b9162f88ef95ae1b4eed85e08a21.he.png" /></p>
+<ol>
+<li>פעולת מחבר SharePoint <strong>קבל פריטים</strong> נוספה כעת לנושא. כעת נוכל להתחיל להגדיר את הקלטים של הפעולה. בחרו את <strong>סמל שלוש הנקודות (...)</strong> ובחרו <strong>מאפיינים</strong>.</li>
+</ol>
+<p><img alt="בחרו מאפיינים" src="../../../../../translated_images/7.3_08_GetItemsProperties.32bdda34a1d73a55eb2893695e4b4cf15cd899806e616d0b0b5015471414c9d7.he.png" /></p>
+<ol>
+<li>
+<p>חלונית ההגדרות של <strong>קבל פריטים</strong> תופיע ובברירת מחדל תראו את לשונית <strong>קלטים</strong>. בחרו בלשונית <strong>התחלה</strong> והכניסו תיאור בשדה <strong>תיאור שימוש</strong>. העתיקו והדביקו את הטקסט הבא.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Retrieves devices from SharePoint list
+</span></code></pre></div>
+</li>
+</ol>
+<blockquote>
+<p>זה יהיה שימושי כאשר נצפה בדף <em>נהל את החיבורים שלך</em> של הסוכן שלנו. נחזור לזה בקרוב.</p>
+</blockquote>
+<p><img alt="תיאור קבל פריטים" src="../../../../../translated_images/7.3_09_UpdateDescription.76a8d2ebddd4c3e4ca423daad7485afa60f31f37c97e16529d94e224f9709d60.he.png" /></p>
+<ol>
+<li>בחרו בלשונית <strong>קלטים</strong> ובחרו באתר <strong>Contoso IT</strong> וברשימת <strong>Devices</strong> שהגדרתם ב-<a href="../00-course-setup/#step-4-create-new-sharepoint-site">שיעור 00 - הגדרת הקורס - שלב 3: יצירת אתר SharePoint חדש</a>.</li>
+</ol>
+<p><img alt="הגדרת קלטים של קבל פריטים" src="../../../../../translated_images/7.3_10_GetItemsInputs.17f8689e660c480dd405ab2ab57db34dcd2b8e697ec09d54c8f8649eb619c58b.he.png" /></p>
+<ol>
+<li>כעת, כדי להציג רק מכשירים מהרשימה של SharePoint בהתבסס על</li>
+<li>הערך שנבחר,</li>
+<li>ורק מכשירים שהסטטוס שלהם הוא <em>זמין</em>,</li>
+</ol>
+<p>עלינו להחיל מסנן. זה מתבצע על ידי הזנת שאילתת מסנן בעזרת Power Fx. בחרו את <strong>סמל שלוש הנקודות (...)</strong>.</p>
+<p><img alt="בחרו סמל שלוש הנקודות" src="../../../../../translated_images/7.3_11_SelectVariable.33bfe876cc230569ea0f6cc5e1efa100432509e44342e9b3d6a9e65ee2bc525f.he.png" /></p>
+<ol>
+<li>כברירת מחדל, תהיו בלשונית <strong>מותאם אישית</strong>. בחרו בלשונית <strong>נוסחה</strong>.</li>
+</ol>
+<p><img alt="בחרו בלשונית נוסחה" src="../../../../../translated_images/7.3_12_SelectFormula.a7aba25c95956d113865da3f30da3f3872e12c7a7a8f3c65098a3e3fac9616a4.he.png" /></p>
+<ol>
+<li>בחרו בסמל <strong>הרחב</strong> כדי להגדיל את שדה <strong>נוסחה</strong>. העתיקו והדביקו את הביטוי הבא של Power Fx.</li>
+</ol>
+<p>אנו משתמשים בפונקציה <code>Concatenate</code> כדי ליצור ביטוי שיסנן
+   - את עמודת SharePoint של <strong>סטטוס</strong> כך שתהיה שווה ל-<em>זמין</em>
+   - ואת עמודת SharePoint של <strong>סוג נכס</strong> כך שתהיה שווה ל-<em>המכשיר שנבחר מצומת השאלה</em>.</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+Concatenate(&quot;Status eq &#39;Available&#39; and AssetType eq &#39;&quot;, Topic.VarDeviceType, &quot;&#39;&quot;)
+```
+</code></pre></div>
+<p>בחרו <strong>הכנס</strong>.</p>
+<p><img alt="הכניסו ביטוי Power Fx ובחרו הכנס" src="../../../../../translated_images/7.3_13_EnterFormula.d17cc9f73e01e1cab8e2420a55bcb726ae0a0e55673f81ee3d7fe12d20148b92.he.png" /></p>
+<ol>
+<li>ביטוי Power Fx יוחל כעת בפרמטר הקלט של שאילתת המסנן בפעולת <strong>קבל פריטים</strong>. לאחר מכן, בחרו בתצוגת <strong>כל הפריטים</strong> ב-<strong>הגבלת עמודות לפי תצוגה</strong>. זה יאפשר רק את שליפת העמודות ברשימה בהתבסס על התצוגה שנבחרה.</li>
+</ol>
+<p><img alt="רשימת עמודות לפי תצוגה" src="../../../../../translated_images/7.3_14_LimitColumnsByView.5537126aaa087bd7f81cc35dfe182aa72cdbec4fe1fb5c2e15823a1275dcaa71.he.png" /></p>
+<ol>
+<li>כעת, נעדכן את שם המשתנה עבור הפלט. בחרו בלשונית <strong>פלטים</strong> ובחרו במשתנה <code>GetItems</code>.</li>
+</ol>
+<p><img alt="עדכון משתנה" src="../../../../../translated_images/7.3_15_ConfigureOutputs.d4cb0c5c8e37d1859ed705bd1582fce2d063e7f4d65cc036127a846d743ff391.he.png" /></p>
+<ol>
+<li>
+<p>עדכנו את השם לטקסט הבא.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>VarDevices
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="עדכון שם משתנה" src="../../../../../translated_images/7.3_16_RenameVariable.55d7adb355808d39fe515bf980af123c60e218fa427354079e86efc412dc0f83.he.png" /></p>
+<ol>
+<li>גללו מטה ובחלק <strong>שימוש</strong>, בחרו <strong>גלובלי</strong>. זה יאפשר למשתנה להיות נגיש מכל נושא.</li>
+</ol>
+<p><img alt="עדכון למשתנה גלובלי" src="../../../../../translated_images/7.3_17_UpdateToGlobalVariable.09bdb05c0938898a04e48b6bcebee1584f17080b63b2577594be74f9f77a5bc3.he.png" /></p>
+<ol>
+<li><strong>סגרו</strong> את חלונית <strong>מאפייני המשתנה</strong>.</li>
+</ol>
+<p><img alt="סגירת חלונית מאפייני משתנה" src="../../../../../translated_images/7.3_18_ExitVariablePropertiesPane.b1a5e76dfe490bdf1274d8e8c78df44f9b3e3542180fa52fb6f903a980ef31ab.he.png" /></p>
+<ol>
+<li>בחרו את <strong>סמל הפלוס +</strong> כדי להוסיף צומת חדשה, בחרו <strong>ניהול משתנים</strong> ולאחר מכן בחרו <strong>הגדרת ערך משתנה</strong>.</li>
+</ol>
+<p><img alt="הוספת צומת הגדרת ערך משתנה" src="../../../../../translated_images/7.3_19_AddSetAVariableValueNode.958d21c21727ef92506fe76cf0458f05ac8508d84d0a4917077d2889410330e2.he.png" /></p>
+<ol>
+<li>בחרו את סמל <strong>גדול מ</strong> עבור פרמטר הקלט של <strong>הגדרת משתנה</strong>.</li>
+</ol>
+<p><img alt="הגדרת משתנה" src="../../../../../translated_images/7.3_20_SelectAVariable.9d3beb144002569b947c90cbec22afcc9cb34f277b21e3f65dcaf69831abc438.he.png" /></p>
+<ol>
+<li>בחרו בפלט הנושא שנוצר קודם כמשתנה, <strong>VarAvailableDevices</strong>.</li>
+</ol>
+<p><img alt="שמור נושא" src="../../../../../translated_images/7.3_21_SelectVarAvailableDevicesOutput.8d7259eb6ce1bc7c89de10b768b62dc3008ad7468c094249282bfe66436d1672.he.png" /></p>
+<ol>
+<li>לאחר מכן, בחרו את <strong>סמל שלוש הנקודות (...)</strong> כדי להגדיר את ערך המשתנה.</li>
+</ol>
+<p><img alt="בחרו ערך משתנה" src="../../../../../translated_images/7.3_22_SelectVariable.f16319e644afc97d24a8cddaf64a7df9fcc52acd7e284b21f20b685a6e53887a.he.png" /></p>
+<ol>
+<li>כעת נשתמש בביטוי PowerFx כדי להגדיר את ערך המשתנה כמאפיין <code>value</code> שהוחזר בתגובה של <strong>קבל פריטים</strong>, ונגדיר את <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-power-fx?WT.mc_id=power-172618-ebenitez">טווח המשתנה</a> כגלובלי על ידי הוספת הקידומת <code>Global</code>.</li>
+</ol>
+<p>בחרו <strong>הכנס</strong> ו<strong>שמרו</strong> את הנושא.</p>
+<p><img alt="נוסחת Power Fx לערך משתנה" src="../../../../../translated_images/7.3_23_PowerFxFormula.f860daa2c8423021926f0697177279ede3d8d443714d471a77e655c3c42edb07.he.png" /></p>
+<ol>
+<li>כעת עלינו לעדכן את הוראות הסוכן. בחרו בלשונית <strong>סקירה כללית</strong> ובחרו <strong>ערוך</strong>.</li>
+</ol>
+<p><img alt="עריכת הוראות" src="../../../../../translated_images/7.3_24_EditInstructions.ce65a6cbcd74792885230af1da432fbb4079fd8b0f5af24ab840453a900b67a8.he.png" /></p>
+<ol>
+<li>
+<p>הוסיפו שורה חדשה בהוראות, העתיקו והדביקו את הטקסט הבא.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>- Help find available devices and give full details using [Available devices]. Always extract the VarDeviceType from the inputs. After giving device details, ask the user if they want to request a device from the list of available devices.
+</span></code></pre></div>
+</li>
+</ol>
+<p>הוראה זו תדריך את הבינה המלאכותית הגנרטיבית להפעיל את הטריגר <strong>מכשירים זמינים</strong> כדי להציג את רשימת המכשירים הזמינים מרשימת SharePoint <strong>Devices</strong>. בחרו את כל הנושא המיועד בסוגריים מרובעים.</p>
+<p><img alt="הוספת הוראות" src="../../../../../translated_images/7.3_25_AddInstructions.1e83853476fed3c8b1c43e657bd1c1351108702288a8f688d8543fbf1c2946fb.he.png" /></p>
+<ol>
+<li>הקלידו את התו <code>/</code> ורשימת הנושאים תופיע. בחרו בנושא <strong>מכשירים זמינים</strong>.</li>
+</ol>
+<p><img alt="התייחסות לטריגר" src="../../../../../translated_images/7.3_26_SelectAvailableDevicesTopic.1a1beaa256f5417153b7bc55de848b89778f666c213b3a3935444526ab881f0b.he.png" /></p>
+<ol>
+<li><strong>שמרו</strong> את ההוראות המעודכנות.</li>
+</ol>
+<p><img alt="שמרו הוראות" src="../../../../../translated_images/7.3_27_SaveUpdatedInstructions.39908bb60990be971039bf392088fd0ecfa148c4496a6ad7413e1267b9091623.he.png" /></p>
+<ol>
+<li>
+<p>כעת נבדוק את הסוכן המעודכן שלנו. בחרו <strong>בדיקה</strong> בפינה העליונה כדי להציג את חלונית הבדיקה ו<strong>רעננו</strong> את חלונית הבדיקה. הכניסו את ההודעה הבאה לסוכן.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>I need a laptop
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="בדיקה" src="../../../../../translated_images/7.3_28_Test.a273496de273bf3bebb9ac1504c1cedd8947c250ccf8454cf38b2effbdf66f71.he.png" /></p>
+<ol>
+<li>לפני שהסוכן יוכל להמשיך, המשתמש צריך לאמת שהחיבור שלו יכול לשמש. בחרו <strong>אפשר</strong>.</li>
+</ol>
+<p><img alt="בחרו אפשר" src="../../../../../translated_images/7.3_29_SelectAllow.9f508c4001270252924d889792ecf0cc2a984954b903bb00f7ce6b2dc43d08e3.he.png" /></p>
+<ol>
+<li>הסוכן יבצע את הכלי של SharePoint שמחזיר רשימה מסוננת של מכשירים שבהם סוג המכשיר הוא "מחשב נייד" והסטטוס הוא "זמין", מתוך ביטוי Power Fx שהשתמשנו בו. תוחזר תגובה בפורמט של נקודות עבור המשתמש לקריאה.</li>
+</ol>
+<p><img alt="תגובה לבדיקה" src="../../../../../translated_images/7.3_30_TestResponse.b60253568edc8b68d737a62960f4a3fa3620d2ba4658b05aa2503ad5fd763383.he.png" /></p>
+<ol>
+<li>דבר אחרון ללמוד עליו הוא צפייה בחיבורים בשימוש על ידי צפייה בדף <em>נהל את החיבורים שלך</em> של הסוכן. בחרו את <strong>סמל שלוש הנקודות (...)</strong> ובחרו <strong>נהל חיבור</strong>.</li>
+</ol>
+<p><img alt="נהל חיבור" src="../../../../../translated_images/7.3_31_ManageConnections.151932ec4f907e020b67c418cf591806da164c74f6b1d9b73c04d7374d9fc505.he.png" /></p>
+<ol>
+<li>זהו הדף שבו נוכל לראות את כל החיבורים שהסוכן משתמש בהם. כרגע, רק חיבור אחד מופיע שמקושר לכלי SharePoint שנוסף לנושא. בחרו <strong>1 כלי</strong> בעמודת <strong>בשימוש על ידי</strong>.</li>
+</ol>
+<p><img alt="בשימוש על ידי" src="../../../../../translated_images/7.3_32_UsedBy.1e5ff032f1e02a565a0dafdde4f9436486ed3f012fcc23b824871a71b6de543e.he.png" /></p>
+<ol>
+<li>כאן נוכל לראות את הפרטים של פעולת קבל פריטים וזוכרים את <em>תיאור השימוש</em> שהכנסנו קודם? כאן נראה את תיאור השימוש. בחרו <strong>סגור</strong>.</li>
+</ol>
+<blockquote>
+<p>זה מאפשר לנו לדעת אילו פעולות בשימוש ומה מטרתן. זה שומר על החיבורים שלנו מאורגנים 📁.</p>
+</blockquote>
+<p><img alt="תיאור שימוש" src="../../../../../translated_images/7.3_33_UsedByInformation.74a42aedb6dc906c678ff8b281a8706e1c0156ee7375111ed20e02d1a1dfd808.he.png" /></p>
+<ol>
+<li>חזרו ללשונית הדפדפן שלכם עם Copilot Studio ו<strong>רעננו</strong> את חלונית הבדיקה כדי לנקות את הבדיקה.</li>
+</ol>
+<h2 id="_31">✅ משימה הושלמה<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h2>
+<p>מזל טוב! 👏🏻 למדתם כיצד להוסיף נושא חדש מאפס, כיצד להוסיף כלי שמפעיל את פעולת מחבר SharePoint <strong>קבל פריטים</strong> ולהשתמש ב-Power Fx כדי לסנן את התגובה כך שתחזיר רק מכשירים שבהם הסטטוס הוא זמין וסוג המכשיר הוא מחשב נייד. 🙌🏻</p>
+<p>זהו סוף <strong>מעבדה 07 - הוספת נושא חדש עם צמתי שיחה</strong>, בחרו בקישור למטה כדי לעבור לשיעור הבא. נרחיב על המקרה במעבדה של השיעור הבא.</p>
+<p>⏭️ <a href="../08-add-adaptive-card/">עברו לשיעור <strong>שיפור אינטראקציות משתמש עם כרטיסי אדפטיב</strong></a></p>
+<h2 id="_32">📚 משאבים טקטיים<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-system-topics?mc_id=power-172618-ebenitez">שימוש בנושאי מערכת</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/guidance/topics-overview?WT.mc_id=power-172618-ebenitez">נושאים ב-Microsoft Copilot Studio</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-triggers?WT.mc_id=power-172618-ebenitez">הגדרת טריגרים לנושאים</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/guidance/defining-chatbot-topics?WT.mc_id=power-172618-ebenitez">הגדרת נושאי סוכן</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-power-fx?WT.mc_id=power-172618-ebenitez">יצירת ביטויים באמצעות Power Fx</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep6">כתיבת נושאים באמצעות שפה טבעית</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep4">הוספת פעולות לסוכנים באמצעות מחברים</a></p>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/07-add-new-topic-with-trigger" alt="Analytics" /></p>
+<hr />
+<p><strong>הצהרת אחריות</strong>:<br />
+מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. למידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי אדם. איננו אחראים לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

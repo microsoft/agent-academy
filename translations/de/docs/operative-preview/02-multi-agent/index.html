@@ -1,0 +1,1513 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/de/docs/operative-preview/02-multi-agent/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-02-verbundene-agenten" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-symphony" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAME: OPERATION SYMPHONY
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missionsbeschreibung" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Missionsbeschreibung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ziele" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Ziele
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#was-sind-verbundene-agenten" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Was sind verbundene Agenten?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#child-agents-vs-connected-agents-der-entscheidende-unterschied" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Child Agents vs Connected Agents: Der entscheidende Unterschied
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#muster-fur-multi-agenten-architekturen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Muster für Multi-Agenten-Architekturen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agentenkommunikation-und-kontextweitergabe" class="md-nav__link">
+    <span class="md-ellipsis">
+      💬Agentenkommunikation und Kontextweitergabe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#child-agent-application-intake-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      ↘️Child Agent: Application Intake Agent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connected-agent-interview-prep-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔀Connected Agent: Interview Prep Agent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-21-hinzufugen-des-application-intake-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪Lab 2.1: Hinzufügen des Application Intake Agent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-22-hinzufugen-des-interview-prep-verbundenen-agenten" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪Lab 2.2: Hinzufügen des Interview Prep verbundenen Agenten
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-abgeschlossen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 Mission abgeschlossen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taktische-ressourcen" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Taktische Ressourcen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "4fb913dfc3bbc71506dd3602c4b8e6ed",
+  "translation_date": "2025-10-17T19:21:21+00:00",
+  "source_file": "docs/operative-preview/02-multi-agent/README.md",
+  "language_code": "de"
+}
+-->
+<h1 id="mission-02-verbundene-agenten">🚨 Mission 02: Verbundene Agenten<a class="headerlink" href="#mission-02-verbundene-agenten" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="codename-operation-symphony">🕵️‍♂️ CODENAME: <code>OPERATION SYMPHONY</code><a class="headerlink" href="#codename-operation-symphony" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Zeitfenster der Operation:</strong> <code>~45 Minuten</code></p>
+</blockquote>
+<h2 id="missionsbeschreibung">🎯 Missionsbeschreibung<a class="headerlink" href="#missionsbeschreibung" title="Permanent link">&para;</a></h2>
+<p>Willkommen zurück, Agent. In Mission 01 haben Sie Ihren Haupt-Hiring-Agent erstellt – eine solide Grundlage für die Verwaltung von Rekrutierungsabläufen. Aber ein einzelner Agent kann nur begrenzt viel leisten.</p>
+<p>Ihre Aufgabe, falls Sie sie annehmen, ist <strong>Operation Symphony</strong> – die Transformation Ihres einzelnen Agenten in ein <strong>Multi-Agenten-System</strong>: ein orchestriertes Team von spezialisierten Agenten, die zusammenarbeiten, um komplexe Herausforderungen im Einstellungsprozess zu bewältigen. Stellen Sie sich das wie ein Upgrade von einem Einzelkämpfer hin zu einem Kommandanten einer spezialisierten Taskforce vor.</p>
+<p>Wie ein Symphonieorchester, bei dem jeder Musiker seinen Teil in perfekter Harmonie spielt, fügen Sie Ihrem bestehenden Hiring-Agent zwei wichtige Spezialisten hinzu: einen Application Intake Agent, der Lebensläufe automatisch verarbeitet, und einen Interview Prep Agent, der umfassende Interviewmaterialien erstellt. Diese Agenten arbeiten nahtlos unter Ihrem Hauptorchestrator zusammen.</p>
+<h2 id="ziele">🔎 Ziele<a class="headerlink" href="#ziele" title="Permanent link">&para;</a></h2>
+<p>In dieser Mission lernen Sie:</p>
+<ol>
+<li>Wann man <strong>Child Agents</strong> gegenüber <strong>Connected Agents</strong> verwendet  </li>
+<li>Wie man <strong>Multi-Agenten-Architekturen</strong> entwirft, die skalierbar sind  </li>
+<li>Erstellung von <strong>Child Agents</strong> für fokussierte Aufgaben  </li>
+<li>Etablierung von <strong>Kommunikationsmustern</strong> zwischen Agenten  </li>
+<li>Aufbau des Application Intake Agent und des Interview Prep Agent  </li>
+</ol>
+<h2 id="was-sind-verbundene-agenten">🧠 Was sind verbundene Agenten?<a class="headerlink" href="#was-sind-verbundene-agenten" title="Permanent link">&para;</a></h2>
+<p>In Copilot Studio sind Sie nicht darauf beschränkt, einzelne, monolithische Agenten zu erstellen. Sie können <strong>Multi-Agenten-Systeme</strong> erstellen – Netzwerke von spezialisierten Agenten, die zusammenarbeiten, um komplexe Arbeitsabläufe zu bewältigen.</p>
+<p>Stellen Sie sich das wie eine reale Organisation vor: Anstatt dass eine Person alles erledigt, gibt es Spezialisten, die in bestimmten Aufgabenbereichen herausragend sind und bei Bedarf zusammenarbeiten.</p>
+<h3 id="warum-multi-agenten-systeme-wichtig-sind">Warum Multi-Agenten-Systeme wichtig sind<a class="headerlink" href="#warum-multi-agenten-systeme-wichtig-sind" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Skalierbarkeit:</strong> Jeder Agent kann unabhängig von verschiedenen Teams entwickelt, getestet und gewartet werden.  </li>
+<li><strong>Spezialisierung:</strong> Agenten können sich auf das konzentrieren, was sie am besten können. Vielleicht einer für Datenverarbeitung, ein anderer für Benutzerinteraktion, ein weiterer für Entscheidungsfindung.  </li>
+<li><strong>Flexibilität:</strong> Sie können Agenten kombinieren, wiederverwenden und Ihr System schrittweise weiterentwickeln.  </li>
+<li><strong>Wartbarkeit:</strong> Änderungen an einem Agenten beeinflussen nicht zwangsläufig andere, was Updates sicherer und einfacher macht.</li>
+</ul>
+<h3 id="beispiel-aus-der-praxis-einstellungsprozess">Beispiel aus der Praxis: Einstellungsprozess<a class="headerlink" href="#beispiel-aus-der-praxis-einstellungsprozess" title="Permanent link">&para;</a></h3>
+<p>Betrachten Sie unseren Einstellungsablauf – mehrere Agenten könnten zusammenarbeiten und folgende Aufgaben übernehmen:</p>
+<ul>
+<li><strong>Lebenslaufannahme</strong> erfordert Fähigkeiten zur Dokumentenverarbeitung und Datenextraktion  </li>
+<li><strong>Bewertung</strong> beinhaltet die Evaluierung von Kandidatenlebensläufen und deren Abgleich mit Stellenanforderungen  </li>
+<li><strong>Interviewvorbereitung</strong> benötigt tiefgehende Überlegungen zur Eignung des Kandidaten  </li>
+<li><strong>Kandidatenkommunikation</strong> erfordert einfühlsame Kommunikationsfähigkeiten  </li>
+</ul>
+<p>Anstatt einen riesigen Agenten zu erstellen, der versucht, all diese unterschiedlichen Fähigkeiten zu bewältigen, können Sie spezialisierte Agenten für jeden Bereich erstellen und sie zusammen orchestrieren.</p>
+<h2 id="child-agents-vs-connected-agents-der-entscheidende-unterschied">🔗 Child Agents vs Connected Agents: Der entscheidende Unterschied<a class="headerlink" href="#child-agents-vs-connected-agents-der-entscheidende-unterschied" title="Permanent link">&para;</a></h2>
+<p>Copilot Studio bietet zwei Möglichkeiten, Multi-Agenten-Systeme zu erstellen, die jeweils unterschiedliche Anwendungsfälle haben:</p>
+<h3 id="child-agents">↘️ Child Agents<a class="headerlink" href="#child-agents" title="Permanent link">&para;</a></h3>
+<p>Child Agents sind <strong>leichte Spezialisten</strong>, die innerhalb Ihres Hauptagenten leben. Denken Sie an sie wie an spezialisierte Teams innerhalb derselben Abteilung.</p>
+<h4 id="wichtige-technische-details">Wichtige technische Details<a class="headerlink" href="#wichtige-technische-details" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Child Agents leben innerhalb des Parent-Agenten und haben eine einzige Konfigurationsseite.  </li>
+<li>Tools und Wissen werden <strong>im Parent-Agent gespeichert</strong>, aber so konfiguriert, dass sie dem Child Agent "zur Verfügung stehen".  </li>
+<li>Child Agents <strong>teilen die Themen</strong> ihres Parent-Agenten. Themen können von den Anweisungen des Child Agent referenziert werden.  </li>
+<li>Child Agents <strong>müssen nicht separat veröffentlicht werden</strong> – sie sind automatisch innerhalb ihres Parent-Agent verfügbar, sobald sie erstellt wurden. Dies erleichtert das Testen, da Änderungen am Parent- und Child-Agent im <strong>selben gemeinsamen Arbeitsbereich</strong> vorgenommen werden können.</li>
+</ul>
+<h4 id="verwenden-sie-child-agents-wenn">Verwenden Sie Child Agents, wenn<a class="headerlink" href="#verwenden-sie-child-agents-wenn" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Ein einziges Team die gesamte Lösung verwaltet  </li>
+<li>Sie Tools und Wissen logisch in Sub-Agenten organisieren möchten  </li>
+<li>Sie keine separate Authentifizierung oder Bereitstellung für jeden Agent benötigen  </li>
+<li>Die Agenten nicht separat veröffentlicht oder unabhängig verwendet werden sollen  </li>
+<li>Sie Agenten nicht über mehrere Lösungen hinweg wiederverwenden müssen  </li>
+</ul>
+<p><strong>Beispiel:</strong> Ein IT-Helpdesk-Agent mit Child Agents für:</p>
+<ul>
+<li>Passwortzurücksetzung  </li>
+<li>Hardware-Fehlerbehebung  </li>
+<li>Software-Installationsanleitungen  </li>
+</ul>
+<h3 id="connected-agents">🔀 Connected Agents<a class="headerlink" href="#connected-agents" title="Permanent link">&para;</a></h3>
+<p>Connected Agents sind <strong>vollwertige, unabhängige Agenten</strong>, mit denen Ihr Hauptagent zusammenarbeiten kann. Denken Sie an sie wie an separate Abteilungen, die gemeinsam an einem Projekt arbeiten.</p>
+<h4 id="wichtige-technische-details_1">Wichtige technische Details<a class="headerlink" href="#wichtige-technische-details_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Connected Agents haben <strong>ihre eigenen Themen</strong> und Gesprächsabläufe. Sie arbeiten unabhängig mit eigenen Einstellungen, Logik und Lebenszyklus.  </li>
+<li>Connected Agents <strong>müssen veröffentlicht werden</strong>, bevor sie anderen Agenten hinzugefügt und von diesen verwendet werden können.  </li>
+<li>Während des Testens müssen Änderungen am Connected Agent veröffentlicht werden, bevor sie vom aufrufenden Agent verwendet werden können.</li>
+</ul>
+<h4 id="verwenden-sie-connected-agents-wenn">Verwenden Sie Connected Agents, wenn<a class="headerlink" href="#verwenden-sie-connected-agents-wenn" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Mehrere Teams verschiedene Agenten unabhängig entwickeln und warten  </li>
+<li>Agenten ihre eigenen Einstellungen, Authentifizierung und Bereitstellungskanäle benötigen  </li>
+<li>Sie Agenten separat veröffentlichen und mit einem unabhängigen Application Lifecycle Management (ALM) für jeden Agent warten möchten  </li>
+<li>Agenten über mehrere Lösungen hinweg wiederverwendet werden sollen  </li>
+</ul>
+<p><strong>Beispiel:</strong> Ein Kundenservicesystem, das sich verbindet mit:</p>
+<ul>
+<li>Einem separaten Abrechnungsagent, der vom Finanzteam verwaltet wird  </li>
+<li>Einem separaten technischen Support-Agent, der vom Produktteam verwaltet wird  </li>
+<li>Einem separaten Rücksendeagent, der vom Betriebsteam verwaltet wird  </li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tipp</p>
+<p>Sie können beide Ansätze kombinieren! Zum Beispiel könnte Ihr Hauptagent externe Agenten von anderen Teams verbinden, während er auch eigene Child Agents für spezialisierte interne Aufgaben hat.</p>
+</div>
+<h2 id="muster-fur-multi-agenten-architekturen">🎯 Muster für Multi-Agenten-Architekturen<a class="headerlink" href="#muster-fur-multi-agenten-architekturen" title="Permanent link">&para;</a></h2>
+<p>Beim Entwerfen von Multi-Agenten-Systemen entstehen verschiedene Muster basierend darauf, wie Agenten interagieren:</p>
+<table>
+<thead>
+<tr>
+<th>Muster</th>
+<th>Beschreibung</th>
+<th>Am besten geeignet für</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hub und Spoke</strong></td>
+<td>Ein Hauptorchestrator-Agent koordiniert mit mehreren spezialisierten Agenten. Der Orchestrator übernimmt die Benutzerinteraktion und delegiert Aufgaben an Child- oder Connected Agents.</td>
+<td>Komplexe Arbeitsabläufe, bei denen ein Agent spezialisierte Aufgaben koordiniert</td>
+</tr>
+<tr>
+<td><strong>Pipeline</strong></td>
+<td>Agenten geben Arbeit nacheinander weiter, wobei jeder Wert hinzufügt, bevor er an die nächste Stufe übergeht.</td>
+<td>Lineare Prozesse wie Bewerbungsbearbeitung (Annahme → Bewertung → Interview → Entscheidung)</td>
+</tr>
+<tr>
+<td><strong>Kollaborativ</strong></td>
+<td>Agenten arbeiten gleichzeitig an verschiedenen Aspekten desselben Problems und teilen Kontext und Ergebnisse.</td>
+<td>Komplexe Analysen, die mehrere Perspektiven oder Fachgebiete erfordern</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tipp</p>
+<p>Sie können sogar eine Kombination aus zwei oder mehr dieser Muster haben.</p>
+</div>
+<h2 id="agentenkommunikation-und-kontextweitergabe">💬Agentenkommunikation und Kontextweitergabe<a class="headerlink" href="#agentenkommunikation-und-kontextweitergabe" title="Permanent link">&para;</a></h2>
+<p>Wenn Agenten zusammenarbeiten, müssen sie Informationen effektiv teilen. So funktioniert das in Copilot Studio:</p>
+<h3 id="gesprachsverlauf">Gesprächsverlauf<a class="headerlink" href="#gesprachsverlauf" title="Permanent link">&para;</a></h3>
+<p>Standardmäßig kann ein Hauptagent beim Aufrufen eines Child- oder Connected-Agenten den <strong>Gesprächsverlauf</strong> weitergeben. Dies gibt dem spezialisierten Agenten den vollständigen Kontext darüber, worüber der Benutzer gesprochen hat.</p>
+<p>Sie können dies aus Sicherheits- oder Leistungsgründen deaktivieren – beispielsweise, wenn der spezialisierte Agent nur eine bestimmte Aufgabe erledigen soll, ohne den vollständigen Gesprächskontext zu benötigen. Dies kann ein guter Schutz gegen <strong>Datenlecks</strong> sein.</p>
+<h3 id="explizite-anweisungen">Explizite Anweisungen<a class="headerlink" href="#explizite-anweisungen" title="Permanent link">&para;</a></h3>
+<p>Ihr Hauptagent kann <strong>spezifische Anweisungen</strong> an Child- oder Connected-Agenten geben. Zum Beispiel: "Verarbeite diesen Lebenslauf und fasse die Fähigkeiten für die Position des Senior Developers zusammen."</p>
+<h3 id="ruckgabewerte">Rückgabewerte<a class="headerlink" href="#ruckgabewerte" title="Permanent link">&para;</a></h3>
+<p>Agenten können strukturierte Informationen an den aufrufenden Agent zurückgeben, sodass der Hauptagent diese Informationen in nachfolgenden Schritten verwenden oder mit anderen Agenten teilen kann.</p>
+<h3 id="dataverse-integration">Dataverse-Integration<a class="headerlink" href="#dataverse-integration" title="Permanent link">&para;</a></h3>
+<p>Für komplexere Szenarien können Agenten Informationen über <strong>Dataverse</strong> oder andere Datenspeicher teilen, wodurch eine persistente Kontextweitergabe über mehrere Interaktionen hinweg ermöglicht wird.</p>
+<h2 id="child-agent-application-intake-agent">↘️Child Agent: Application Intake Agent<a class="headerlink" href="#child-agent-application-intake-agent" title="Permanent link">&para;</a></h2>
+<p>Beginnen wir mit dem Aufbau unseres Multi-Agenten-Einstellungssystems. Unser erster Spezialist wird der <strong>Application Intake Agent</strong> sein – ein Child Agent, der für die Verarbeitung eingehender Lebensläufe und Kandidateninformationen verantwortlich ist.</p>
+<pre class="mermaid"><code>---
+config:
+  layout: elk
+  look: neo
+---
+flowchart TB
+ subgraph People["People"]
+    direction TB
+        HiringManager["Hiring Manager"]
+        Interviewers["Interviewers"]
+  end
+ subgraph Agents["Agents"]
+    direction LR
+        ApplicationIntakeAgent["Application Intake Agent&lt;br&gt;(Child)"]
+        InterviewAgent["Interview Agent&lt;br&gt;(Connected)"]
+        HRAgent["HR Agent"]
+  end
+    HiringManager -- Upload CV --&gt; HRAgent
+    HRAgent -- Upload Resume, Create Candidate, Match to Job Roles --&gt; ApplicationIntakeAgent
+    ApplicationIntakeAgent -- Create Resume, Upsert Candidate, Create Job Application --&gt; Dataverse["Dataverse"]
+    ApplicationIntakeAgent -- Store Resume file in file column --&gt; Dataverse
+    HiringManager -- Ask for summaries --&gt; HRAgent
+    Interviewers -- Request interview pack --&gt; HRAgent
+    HRAgent -- Generate interview pack and summarize data --&gt; InterviewAgent
+    InterviewAgent -- Read all Candidate, Resume, Job Roles, Evaluation Criteria Data --&gt; Dataverse
+     HiringManager:::person
+     Interviewers:::person
+     ApplicationIntakeAgent:::agent
+     InterviewAgent:::agent
+     HRAgent:::agent
+     Dataverse:::data
+    classDef person fill:#e6f0ff,stroke:#3b82f6,color:#0b3660
+    classDef agent fill:#e8f9ef,stroke:#10b981,color:#064e3b
+    classDef data  fill:#f3f4f6,stroke:#6b7280,color:#111827</code></pre>
+<h3 id="verantwortlichkeiten-des-application-intake-agent">🤝Verantwortlichkeiten des Application Intake Agent<a class="headerlink" href="#verantwortlichkeiten-des-application-intake-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Lebenslaufinhalte analysieren</strong> aus PDFs, die über interaktive Chats bereitgestellt werden (In einer zukünftigen Mission lernen Sie, wie Lebensläufe autonom verarbeitet werden).  </li>
+<li><strong>Strukturierte Daten extrahieren</strong> (Name, Fähigkeiten, Erfahrung, Ausbildung)  </li>
+<li><strong>Kandidaten mit offenen Stellen abgleichen</strong> basierend auf Qualifikationen und Anschreiben  </li>
+<li><strong>Kandidateninformationen speichern</strong> in Dataverse für die spätere Verarbeitung  </li>
+<li><strong>Doppelte Bewerbungen vermeiden</strong>, um zu verhindern, dass derselbe Kandidat zweimal erstellt wird, und mit bestehenden Datensätzen anhand der aus dem Lebenslauf extrahierten E-Mail-Adresse abgleichen.</li>
+</ul>
+<h3 id="warum-dies-ein-child-agent-sein-sollte">⭐Warum dies ein Child Agent sein sollte<a class="headerlink" href="#warum-dies-ein-child-agent-sein-sollte" title="Permanent link">&para;</a></h3>
+<p>Der Application Intake Agent passt perfekt als Child Agent, weil:</p>
+<ul>
+<li>Er ist spezialisiert auf Dokumentenverarbeitung und Datenextraktion  </li>
+<li>Er benötigt keine separate Veröffentlichung  </li>
+<li>Er ist Teil unserer gesamten Einstellungslösung, die vom selben Team verwaltet wird  </li>
+<li>Er konzentriert sich auf einen spezifischen Auslöser (neuer Lebenslauf eingegangen) und wird vom Hiring Agent aufgerufen.</li>
+</ul>
+<h2 id="connected-agent-interview-prep-agent">🔀Connected Agent: Interview Prep Agent<a class="headerlink" href="#connected-agent-interview-prep-agent" title="Permanent link">&para;</a></h2>
+<p>Unser zweiter Spezialist wird der <strong>Interview Prep Agent</strong> sein – ein Connected Agent, der hilft, umfassende Interviewmaterialien zu erstellen und Kandidatenantworten zu bewerten.</p>
+<h3 id="verantwortlichkeiten-des-interview-prep-agent">🤝Verantwortlichkeiten des Interview Prep Agent<a class="headerlink" href="#verantwortlichkeiten-des-interview-prep-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Erstellung von Interviewpaketen</strong> mit Unternehmensinformationen, Stellenanforderungen und Bewertungskriterien  </li>
+<li><strong>Generierung von Interviewfragen</strong>, die auf spezifische Rollen und Kandidatenhintergründe zugeschnitten sind  </li>
+<li><strong>Beantwortung allgemeiner Fragen</strong> zu Stellen und Bewerbungen für die Kommunikation mit Stakeholdern  </li>
+</ul>
+<h3 id="warum-dies-ein-connected-agent-sein-sollte">⭐Warum dies ein Connected Agent sein sollte<a class="headerlink" href="#warum-dies-ein-connected-agent-sein-sollte" title="Permanent link">&para;</a></h3>
+<p>Der Interview Prep Agent funktioniert besser als Connected Agent, weil:</p>
+<ul>
+<li>Das Talentakquisitionsteam ihn möglicherweise unabhängig über mehrere Einstellungsprozesse hinweg verwenden möchte  </li>
+<li>Er benötigt eine eigene Wissensbasis mit Interview-Best-Practices und Bewertungskriterien  </li>
+<li>Verschiedene Einstellungsmanager möchten sein Verhalten für ihre Teams anpassen  </li>
+<li>Er könnte für interne Positionen wiederverwendet werden, nicht nur für externe Einstellungen.</li>
+</ul>
+<h2 id="lab-21-hinzufugen-des-application-intake-agent">🧪Lab 2.1: Hinzufügen des Application Intake Agent<a class="headerlink" href="#lab-21-hinzufugen-des-application-intake-agent" title="Permanent link">&para;</a></h2>
+<p>Bereit, Theorie in die Praxis umzusetzen? Lassen Sie uns unseren ersten Child Agent zu Ihrem bestehenden Hiring Agent hinzufügen.</p>
+<h3 id="voraussetzungen-fur-diese-mission">Voraussetzungen für diese Mission<a class="headerlink" href="#voraussetzungen-fur-diese-mission" title="Permanent link">&para;</a></h3>
+<p>Sie benötigen <strong>entweder</strong>:</p>
+<ul>
+<li><strong>Mission 01 abgeschlossen</strong> und Ihren Hiring Agent bereit, <strong>ODER</strong>  </li>
+<li><strong>Importieren Sie die Starterlösung für Mission 02</strong>, wenn Sie neu anfangen oder aufholen müssen. <a href="https://aka.ms/agent-academy">Mission 02 Starterlösung herunterladen</a></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Lösungsimport und Beispieldaten</p>
+<p>Wenn Sie die Starterlösung verwenden, lesen Sie <a href="../01-get-started/">Mission 01</a> für detaillierte Anweisungen zum Importieren von Lösungen und Beispieldaten in Ihre Umgebung.</p>
+</div>
+<h3 id="211-losungseinrichtung">2.1.1 Lösungseinrichtung<a class="headerlink" href="#211-losungseinrichtung" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Wählen Sie in Copilot Studio die Ellipse (...) unter Tools in der linken Navigation.  </li>
+<li>Wählen Sie <strong>Lösungen</strong>.<br />
+<img alt="Lösungen auswählen" src="../../../../../translated_images/2-select-solutions.42b77407cffd37d7c8b3265f2fd8adb88053b9ebda31bdf0b22cd77ec5b7bf88.de.png" />  </li>
+<li>Suchen Sie Ihre Operative-Lösung, wählen Sie die <strong>Ellipse (...)</strong> daneben und wählen Sie <strong>Bevorzugte Lösung festlegen</strong>. Dadurch wird sichergestellt, dass alle Ihre Arbeiten dieser Lösung hinzugefügt werden.<br />
+<img alt="Bevorzugte Lösung festlegen" src="../../../../../translated_images/2-select-preferred-solution.4542e922555429074f49c6480f6e8345f8c8818b2549fe0cd625fa58a45aede9.de.png" />  </li>
+</ol>
+<h3 id="212-konfigurieren-sie-die-anweisungen-ihres-hiring-agent">2.1.2 Konfigurieren Sie die Anweisungen Ihres Hiring Agent<a class="headerlink" href="#212-konfigurieren-sie-die-anweisungen-ihres-hiring-agent" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Navigieren</strong> Sie zu Copilot Studio. Stellen Sie sicher, dass Ihre Umgebung im oberen rechten <strong>Umgebungsauswahlmenü</strong> ausgewählt ist.</p>
+</li>
+<li>
+<p>Öffnen Sie Ihren <strong>Hiring Agent</strong> aus Mission 01.</p>
+</li>
+<li>
+<p>Wählen Sie <strong>Bearbeiten</strong> im Abschnitt <strong>Anweisungen</strong> der Registerkarte <strong>Übersicht</strong> und fügen Sie die folgenden Anweisungen oben hinzu:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are the central orchestrator for the hiring process. You coordinate activities, provide summaries, and delegate work to specialized agents.
+</span></code></pre></div>
+</li>
+<li>
+<p>Wählen Sie <strong>Speichern</strong><br />
+<img alt="Hiring Agent Anweisungen" src="../../../../../translated_images/2-hiring-agent-instructions.dc1fcc2513c88722145e46794f3b3cd8b96d62482090275da62679bbfb6e352a.de.png" />  </p>
+</li>
+<li>
+<p>Wählen Sie <strong>Einstellungen</strong> (oben rechts).  </p>
+</li>
+<li>
+<p>Stellen Sie sicher, dass die folgenden Einstellungen aktiviert sind:</p>
+<table>
+<thead>
+<tr>
+<th>Einstellung</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Generative KI-Orchestrierung für die Antworten des Agenten verwenden</td>
+<td><strong>Ja</strong></td>
+</tr>
+<tr>
+<td>Inhaltsmoderation</td>
+<td><strong>Mäßig</strong></td>
+</tr>
+<tr>
+<td>Allgemeines Wissen verwenden</td>
+<td><strong>Aus</strong></td>
+</tr>
+<tr>
+<td>Informationen aus dem Web verwenden</td>
+<td><strong>Aus</strong></td>
+</tr>
+<tr>
+<td>Dateiuploads</td>
+<td><strong>Ein</strong></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Generative Orchestrierung verwenden" src="../../../../../translated_images/2-gen-orchestration.29e616a2d5721c51953fb6bde452c1ee06f40684911a6eba44e07de41c328726.de.png" /><br />
+<img alt="Moderationseinstellung" src="../../../../../translated_images/2-set-medium-moderation.c6c0c1d6c427abac44441aad97892c84bbc43420b91c2c18e704980f604ec1b2.de.png" /><br />
+<img alt="Einstellungen für Wissen und Web" src="../../../../../translated_images/2-settings-knowledge-web.716090f708dff925ebb0d259f20734da39c831bba4df4f97bd334ce701aa92a9.de.png" />  </p>
+<h3 id="213-fugen-sie-den-application-intake-child-agent-hinzu">2.1.3 Fügen Sie den Application Intake Child Agent hinzu<a class="headerlink" href="#213-fugen-sie-den-application-intake-child-agent-hinzu" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Navigieren</strong> Sie zur Registerkarte <strong>Agenten</strong> innerhalb Ihres Hiring Agent – hier fügen Sie spezialisierte Agenten hinzu.</p>
+</li>
+<li>
+<p>Wählen Sie <strong>+ Hinzufügen</strong> und dann <strong>Agent erstellen</strong>. Beachten Sie, dass dies mit "<em>Erstellen Sie einen leichten Agenten, der innerhalb Ihres aktuellen Agenten lebt und dessen Einstellungen erbt. Ideal, um komplexe Logik aufzuteilen</em>" gekennzeichnet ist.<br />
+<img alt="Child Agent hinzufügen" src="../../../../../translated_images/2-add-child-agent.47e6246572a58b85236c969c69f3bae835fd5099f4d7603abeab6b1ad9ce2a70.de.png" />  </p>
+</li>
+<li>
+<p><strong>Benennen</strong> Sie Ihren Agenten <code>Application Intake Agent</code>.</p>
+</li>
+<li>
+<p>Wählen Sie <strong>Der Agent entscheidet</strong> – Basierend auf der Beschreibung im Dropdown-Menü <strong>Wann wird dies verwendet?</strong>. Diese Optionen sind ähnlich wie die Trigger, die für Themen konfiguriert werden können.</p>
+</li>
+<li>
+<p>Setzen Sie die <strong>Beschreibung</strong> auf:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Processes incoming resumes and stores candidates in the system
+</span></code></pre></div>
+<p><img alt="Beschreibung des Application Intake Agent" src="../../../../../translated_images/2-application-intake-agent-description.c5c0bf8ee632c04b9fb63c774f638de84cb8fa6ddf8c853cf0b651ea0e4964f0.de.png" />  </p>
+</li>
+<li>
+<p>Erweitern Sie <strong>Erweitert</strong> und setzen Sie die Priorität auf <code>10000</code>. Dies stellt sicher, dass später der Interview Agent verwendet wird, um allgemeine Fragen zu beantworten, bevor dieser Agent verwendet wird. Hier könnte auch eine Bedingung festgelegt werden, z. B. dass mindestens ein Anhang vorhanden ist.</p>
+</li>
+<li>
+<p>Stellen Sie sicher, dass der Schalter <strong>Websuche</strong> auf <strong>Deaktiviert</strong> gesetzt ist. Dies liegt daran, dass wir nur Informationen verwenden möchten, die vom Parent-Agent bereitgestellt werden.</p>
+</li>
+<li>
+<p>Wählen Sie <strong>Speichern</strong>.</p>
+</li>
+</ol>
+<h3 id="214-konfigurieren-sie-den-agentenfluss-fur-lebenslauf-uploads">2.1.4 Konfigurieren Sie den Agentenfluss für Lebenslauf-Uploads<a class="headerlink" href="#214-konfigurieren-sie-den-agentenfluss-fur-lebenslauf-uploads" title="Permanent link">&para;</a></h3>
+<p>Agenten können keine Aktionen ausführen, ohne Tools oder Themen zugewiesen zu bekommen.
+Wir verwenden <strong>Agent Flow Tools</strong> anstelle von Topics für den Schritt <em>Lebenslauf hochladen</em>, da dieser mehrstufige Backend-Prozess eine deterministische Ausführung und Integration mit externen Systemen erfordert. Während Topics am besten geeignet sind, um den dialogorientierten Gesprächsfluss zu steuern, bieten Agent Flows die strukturierte Automatisierung, die erforderlich ist, um die Dateiverarbeitung, Datenvalidierung und Datenbank-Upserts (neue Einträge hinzufügen oder bestehende aktualisieren) zuverlässig zu handhaben, ohne auf Benutzerinteraktionen angewiesen zu sein.</p>
+<ol>
+<li>
+<p>Gehen Sie zum Abschnitt <strong>Tools</strong> auf der Seite des Application Intake Agent.
+   <strong>Wichtig:</strong> Dies ist nicht der Tools-Tab des übergeordneten Agenten, sondern befindet sich weiter unten unter den Anweisungen des untergeordneten Agenten.</p>
+</li>
+<li>
+<p>Wählen Sie <strong>+ Add</strong><br />
+<img alt="Tool hinzufügen" src="../../../../../translated_images/2-add-tool.bbf282ab0b7abeb6cad0032db2dba94adf53e4f206ac976c6c7b9b339fb0e996.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie <strong>+ New tool</strong><br />
+<img alt="Neues Tool hinzufügen" src="../../../../../translated_images/2-new-tool-2.6e09c313b1af9d233ecb1c1559fb9f5d92123bfc2af6cc2df5f52e549b6b961c.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie <strong>Agent flow</strong>.<br />
+   Der Agent Flow Designer wird geöffnet, hier fügen wir die Logik für das Hochladen des Lebenslaufs hinzu.<br />
+<img alt="Agent Flow hinzufügen" src="../../../../../translated_images/2-add-agent-flow.e5aecede97ecd79e08aae4be784a6255f354f13edb2621d3d61e961b09a70d53.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie den Knoten <strong>When an agent calls the flow</strong> und fügen Sie <strong>+ Add</strong> eine Eingabe für die folgenden Parameter hinzu. Stellen Sie sicher, dass Sie sowohl den Namen als auch die Beschreibung hinzufügen.</p>
+<table>
+<thead>
+<tr>
+<th>Typ</th>
+<th>Name</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Datei</td>
+<td>Resume</td>
+<td>Die Lebenslauf-PDF-Datei</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>Message</td>
+<td>Extrahieren Sie eine Nachricht im Stil eines Anschreibens aus dem Kontext. Die Nachricht darf maximal 2000 Zeichen lang sein.</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>UserEmail</td>
+<td>Die E-Mail-Adresse, von der der Lebenslauf stammt. Dies ist der Benutzer, der den Lebenslauf im Chat hochlädt, oder die Absenderadresse, wenn er per E-Mail empfangen wurde.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Eingabeparameter konfigurieren" src="../../../../../translated_images/2-upload-resume-trigger.1f3ca963aa3d9d723756d0636d99c1d458e197b16df93f2ac360283cf07f3fb1.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie das <strong>+ Symbol</strong> unter dem Trigger-Knoten, suchen Sie nach <code>Dataverse</code>, wählen Sie <strong>See more</strong> neben Microsoft Dataverse und dann die Aktion <strong>Add a new row</strong> im Abschnitt <strong>Microsoft Dataverse</strong><br />
+<img alt="Neuen Zeilenknoten hinzufügen" src="../../../../../translated_images/2-upload-resume-add-resume.0e5bb197fef951167c9168c827e48e8d45a24c7d619452d387d980336a30d421.de.png" /></p>
+</li>
+<li>
+<p>Benennen Sie den Knoten in <strong>Create Resume</strong>, indem Sie auf die <strong>Ellipsen (...)</strong> klicken und <strong>Rename</strong> auswählen<br />
+<img alt="Knoten umbenennen" src="../../../../../translated_images/2-upload-resume-add-resume-rename.f8ecb680cca6fe7d98cd9590ba4d59d0fe19a742baca4c05f7558ed3fea8c44e.de.png" /></p>
+</li>
+<li>
+<p>Setzen Sie den <strong>Tabellennamen</strong> auf <strong>Resumes</strong> und wählen Sie <strong>Show all</strong>, um alle Parameter anzuzeigen.</p>
+</li>
+<li>
+<p>Setzen Sie die folgenden <strong>Eigenschaften</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wie einstellen</th>
+<th>Details / Ausdruck</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resume Title</strong></td>
+<td>Dynamische Daten (Blitzsymbol)</td>
+<td><strong>When an agent calls the flow</strong> → <strong>Resume name</strong> Wenn Sie den Lebenslaufnamen nicht sehen, stellen Sie sicher, dass Sie den Lebenslaufparameter oben als Datentyp konfiguriert haben.</td>
+</tr>
+<tr>
+<td><strong>Cover letter</strong></td>
+<td>Ausdruck (fx-Symbol)</td>
+<td><code>if(greater(length(triggerBody()?['text']), 2000), substring(triggerBody()?['text'], 0, 2000), triggerBody()?['text'])</code></td>
+</tr>
+<tr>
+<td><strong>Source Email Address</strong></td>
+<td>Dynamische Daten (Blitzsymbol)</td>
+<td><strong>When an agent calls the flow</strong> → <strong>UserEmail</strong></td>
+</tr>
+<tr>
+<td><strong>Upload Date</strong></td>
+<td>Ausdruck (fx-Symbol)</td>
+<td><code>utcNow()</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Eigenschaften bearbeiten" src="../../../../../translated_images/2-upload-resume-add-resume-props.17586d1a9546933fbc66b13e8f36366d5122a90db2f37abb1b459dea97605270.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie das <strong>+ Symbol</strong> unter dem Create Resume-Knoten, suchen Sie nach <code>Dataverse</code>, wählen Sie <strong>See more</strong> neben Microsoft Dataverse und dann die Aktion <strong>Upload a file or an image</strong>.<br />
+<strong>Wichtig:</strong> Wählen Sie nicht die Aktion "Upload a file or an image to the selected environment".</p>
+</li>
+<li>
+<p>Benennen Sie den Knoten in <strong>Upload Resume File</strong>, indem Sie auf die <strong>Ellipsen (...)</strong> klicken und <strong>Rename</strong> auswählen.</p>
+</li>
+<li>
+<p>Setzen Sie die folgenden <strong>Eigenschaften</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wie einstellen</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Content name</strong></td>
+<td>Dynamische Daten (Blitzsymbol)</td>
+<td>When an agent calls the flow → Resume name</td>
+</tr>
+<tr>
+<td><strong>Table name</strong></td>
+<td>Auswählen</td>
+<td>Resumes</td>
+</tr>
+<tr>
+<td><strong>Row ID</strong></td>
+<td>Dynamische Daten (Blitzsymbol)</td>
+<td>Create Resume → See more → Resume</td>
+</tr>
+<tr>
+<td><strong>Column Name</strong></td>
+<td>Auswählen</td>
+<td>Resume PDF</td>
+</tr>
+<tr>
+<td><strong>Content</strong></td>
+<td>Dynamische Daten (Blitzsymbol)</td>
+<td>When an agent calls the flow → Resume contentBytes</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Eigenschaften festlegen" src="../../../../../translated_images/2-upload-resume-upload-resume-file.2250f45ffd06b6c60e91e0517966334acbd9cf6c0f98dc2f3f615431ae03be90.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie den Knoten <strong>Respond to the agent</strong>, und wählen Sie <strong>+ Add an output</strong></p>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wie einstellen</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Auswählen</td>
+<td><code>Text</code></td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>Eingeben</td>
+<td><code>ResumeNumber</code></td>
+</tr>
+<tr>
+<td><strong>Wert</strong></td>
+<td>Dynamische Daten (Blitzsymbol)</td>
+<td>Create Resume → See More → Resume Number</td>
+</tr>
+<tr>
+<td><strong>Beschreibung</strong></td>
+<td>Eingeben</td>
+<td><code>Die [ResumeNumber] des erstellten Lebenslaufs</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Eigenschaften festlegen" src="../../../../../translated_images/2-upload-resume-return.f9beac6547b4f228a4ee6c538ca64e86883ab7b5d85b08c2cd6da26e4cc2e4c8.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie <strong>Save draft</strong> oben rechts<br />
+<img alt="Als Entwurf speichern" src="../../../../../translated_images/2-upload-resume-save-draft.6d5bed32d254815c765c19109b82113fd2520dbb5dce84288a3eb13896958d93.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie den <strong>Overview</strong>-Tab, klicken Sie auf <strong>Edit</strong> im <strong>Details</strong>-Panel</p>
+<ol>
+<li><strong>Flow name</strong>:<code>Resume Upload</code></li>
+<li><strong>Description</strong>:<code>Uploads a Resume when instructed</code></li>
+</ol>
+<p><img alt="Agent Flow umbenennen" src="../../../../../translated_images/2-upload-resume-rename.a26569a2def30b456ed3176c21ce889637c4d1155c56ca479521d278f25a4d5d.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie erneut den <strong>Designer</strong>-Tab und klicken Sie auf <strong>Publish</strong>.<br />
+<img alt="Veröffentlichen" src="../../../../../translated_images/2-upload-resume-publish.36f763ffc4487b32114a47a087fd5282beb7a9bb0272b3ff46046d8cd413e053.de.png" /></p>
+</li>
+</ol>
+<h3 id="215-verbinden-sie-den-flow-mit-ihrem-agenten">2.1.5 Verbinden Sie den Flow mit Ihrem Agenten<a class="headerlink" href="#215-verbinden-sie-den-flow-mit-ihrem-agenten" title="Permanent link">&para;</a></h3>
+<p>Jetzt verbinden Sie den veröffentlichten Flow mit Ihrem Application Intake Agent.</p>
+<ol>
+<li>
+<p>Navigieren Sie zurück zum <strong>Hiring Agent</strong> und wählen Sie den <strong>Agents</strong>-Tab. Öffnen Sie den <strong>Application Intake Agent</strong> und suchen Sie das <strong>Tools</strong>-Panel.<br />
+<img alt="Agent Flow zum Agenten hinzufügen" src="../../../../../translated_images/2-add-agent-flow-to-agent.3c9aadae42fc389e7c6f56ea80505cd067e45ba7e4aa03f201e2cd792e24d1fe.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie <strong>+ Add</strong></p>
+</li>
+<li>
+<p>Wählen Sie den <strong>Flow</strong>-Filter und suchen Sie nach <code>Resume Upload</code>. Wählen Sie den <strong>Resume Upload</strong>-Flow und dann <strong>Add and configure</strong>.</p>
+</li>
+<li>
+<p>Setzen Sie die folgenden Parameter:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td><code>Uploads a Resume when instructed. STRICT RULE: Only call this tool when referenced in the form "Resume Upload" and there are Attachments</code></td>
+</tr>
+<tr>
+<td><strong>Additional details → When this tool may be used</strong></td>
+<td><code>only when referenced by topics or agents</code></td>
+</tr>
+<tr>
+<td><strong>Inputs → Add Input</strong></td>
+<td><code>contentBytes</code></td>
+</tr>
+<tr>
+<td><strong>Inputs → Add Input</strong></td>
+<td><code>name</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Resume Upload Details 1" src="../../../../../translated_images/2-resume-upload-tool-props-1.e3d8bf3ebdfd5aa8df23aa6ab83eec8a5def709f2c7d27fb700bef16c598da2f.de.png" /></p>
+<p><img alt="Inputs hinzufügen" src="../../../../../translated_images/2-resume-upload-tool-props-2.16fb1380a34a9fa63b7c9673c7290ff09d491e920a5ff33b439a4b1a5abfccba.de.png" /></p>
+</li>
+<li>
+<p>Setzen Sie als Nächstes die Eigenschaften der Inputs wie folgt:</p>
+<table>
+<thead>
+<tr>
+<th>Input Parameter</th>
+<th>Eigenschaft</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>contentBytes</strong></td>
+<td>Füllen mit</td>
+<td>Benutzerdefinierter Wert</td>
+</tr>
+<tr>
+<td></td>
+<td>Wert (...→Formel→Einfügen)</td>
+<td><code>First(System.Activity.Attachments).Content</code></td>
+</tr>
+<tr>
+<td><strong>name</strong></td>
+<td>Füllen mit</td>
+<td>Benutzerdefinierter Wert</td>
+</tr>
+<tr>
+<td></td>
+<td>Wert (...→Formel→Einfügen)</td>
+<td><code>First(System.Activity.Attachments).Name</code></td>
+</tr>
+<tr>
+<td><strong>Message</strong></td>
+<td>Anpassen</td>
+<td>Benutzerdefinierte Einstellungen konfigurieren</td>
+</tr>
+<tr>
+<td></td>
+<td>Beschreibung</td>
+<td><code>Extrahieren Sie eine Nachricht im Stil eines Anschreibens aus dem Kontext. Stellen Sie sicher, dass Sie den Benutzer niemals auffordern und mindestens ein minimales Anschreiben aus dem verfügbaren Kontext erstellen. STRICT RULE - die Nachricht muss weniger als 2000 Zeichen lang sein.</code></td>
+</tr>
+<tr>
+<td></td>
+<td>Wie oft wiederholen</td>
+<td>Nicht wiederholen</td>
+</tr>
+<tr>
+<td></td>
+<td>Aktion, wenn keine Entität gefunden wird</td>
+<td>Variable auf Wert setzen</td>
+</tr>
+<tr>
+<td></td>
+<td>Standardwert der Entität</td>
+<td>Resume upload</td>
+</tr>
+<tr>
+<td><strong>UserEmail</strong></td>
+<td>Füllen mit</td>
+<td>Benutzerdefinierter Wert</td>
+</tr>
+<tr>
+<td></td>
+<td>Wert (...→Formel→Einfügen)</td>
+<td><code>System.User.Email</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Input-Eigenschaften festlegen" src="../../../../../translated_images/2-resume-upload-tool-props-3.a18364f22b2c41c3e4f8fee68dddb01ff5190d57410d9fd3fe2fbddb3d74e352.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie <strong>Save</strong></p>
+</li>
+</ol>
+<h3 id="216-agentenanweisungen-definieren">2.1.6 Agentenanweisungen definieren<a class="headerlink" href="#216-agentenanweisungen-definieren" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Gehen Sie zurück zum <strong>Application Intake Agent</strong>, indem Sie den <strong>Agents</strong>-Tab auswählen, und suchen Sie das <strong>Instructions</strong>-Panel.</p>
+</li>
+<li>
+<p>Fügen Sie im Feld <strong>Instructions</strong> die folgenden klaren Anweisungen für Ihren untergeordneten Agenten ein:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>You are tasked with managing incoming Resumes, Candidate information, and creating Job Applications.  
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Only use tools if the step exactly matches the defined process. Otherwise, indicate you cannot help.  
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Process for Resume Upload via Chat  
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>1. Upload Resume  
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  - Trigger only if /System.Activity.Attachments contains exactly one new resume.  
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  - If more than one file, instruct the user to upload one at a time and stop.  
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  - Call /Upload Resume once. Never upload more than once for the same message.  
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2. Post-Upload  
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  - Always output the [ResumeNumber] (R#####).  
+</span></code></pre></div>
+</li>
+<li>
+<p>Wo die Anweisungen einen Schrägstrich (/) enthalten, wählen Sie den Text nach dem / aus und wählen Sie den aufgelösten Namen. Tun Sie dies für:</p>
+<ul>
+<li><code>System.Activity.Attachments</code> (Variable)</li>
+<li><code>Upload Resume</code> (Tool)</li>
+</ul>
+<p><img alt="Anweisungen bearbeiten" src="../../../../../translated_images/2-application-agent-instructions.8840890a1fba22c38f04e35b13fa7ed83f72e9605d19a4eb661b51854daabd94.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie <strong>Save</strong></p>
+</li>
+</ol>
+<h3 id="217-testen-sie-ihren-application-intake-agent">2.1.7 Testen Sie Ihren Application Intake Agent<a class="headerlink" href="#217-testen-sie-ihren-application-intake-agent" title="Permanent link">&para;</a></h3>
+<p>Jetzt überprüfen wir, ob Ihr erster Orchester-Mitglied korrekt funktioniert.</p>
+<ol>
+<li>
+<p><strong>Herunterladen</strong> der <a href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/operative/sample-data/resumes&amp;filename=operative_sampledata">Test-Lebensläufe.</a></p>
+</li>
+<li>
+<p><strong>Öffnen</strong> Sie das Test-Panel, indem Sie <strong>Test</strong> auswählen.</p>
+</li>
+<li>
+<p><strong>Laden</strong> Sie zwei Lebensläufe im Test-Chat hoch und geben Sie die Nachricht <code>Process these resumes</code> ein.</p>
+<ul>
+<li>Der Agent sollte eine Nachricht zurückgeben, die etwa lautet: <em>Es kann jeweils nur ein Lebenslauf hochgeladen werden. Bitte laden Sie einen Lebenslauf hoch, um fortzufahren.</em></li>
+</ul>
+<p><img alt="Mehrfach-Uploads testen" src="../../../../../translated_images/2-test-multi-uploads.eb8866589463dcadb5570aba720531f0670ebfa6464d57e87415a84d9934a973.de.png" /></p>
+</li>
+<li>
+<p>Versuchen Sie, <strong>nur einen Lebenslauf</strong> hochzuladen, mit der Nachricht <code>Process this resume</code>.</p>
+<ul>
+<li>Der Agent sollte dann eine Nachricht zurückgeben, die etwa lautet: <em>Der Lebenslauf für Avery Example wurde erfolgreich hochgeladen. Die Lebenslaufnummer lautet R10026.</em></li>
+</ul>
+</li>
+<li>
+<p>Im <strong>Activity map</strong> sollten Sie sehen, wie der <strong>Application Intake Agent</strong> den Lebenslauf-Upload bearbeitet.<br />
+<img alt="Lebenslauf-Upload-Aktivitätskarte" src="../../../../../translated_images/2-upload-activity-map.dd11a9d3e114f4f0a576408116d7ed89c6b144d8b4ac54a228c5247af036ecef.de.png" /></p>
+</li>
+<li>
+<p>Navigieren Sie zu make.powerapps.com → Stellen Sie sicher, dass Ihre Umgebung oben rechts im Environment Picker ausgewählt ist.</p>
+</li>
+<li>
+<p>Wählen Sie <strong>Apps</strong> → Hiring Hub → Ellipsen (...) Menü → <strong>Play</strong><br />
+<img alt="Model Driven App öffnen" src="../../../../../translated_images/2-open-model-driven-app.550a2b764d513db4836444dd616dd87909adf54f2a930891276943b1a6e0ec77.de.png" /></p>
+<p>Hinweis: Wenn die Schaltfläche "Play" ausgegraut ist, bedeutet dies, dass Sie Ihre Lösung aus Mission 01 nicht veröffentlicht haben. Wählen Sie <strong>Solutions</strong> → <strong>Publish all customizations</strong>.</p>
+</li>
+<li>
+<p>Navigieren Sie zu <strong>Resumes</strong> und überprüfen Sie, ob die Lebenslaufdatei hochgeladen wurde und das Anschreiben entsprechend gesetzt ist.<br />
+<img alt="Lebenslauf in Dataverse hochgeladen" src="../../../../../translated_images/2-resume-uploade.92a046941cd273a2597d47c593b158d158320fa5384c60907143dbe798a56644.de.png" /></p>
+</li>
+</ol>
+<h2 id="lab-22-hinzufugen-des-interview-prep-verbundenen-agenten">🧪Lab 2.2: Hinzufügen des Interview Prep verbundenen Agenten<a class="headerlink" href="#lab-22-hinzufugen-des-interview-prep-verbundenen-agenten" title="Permanent link">&para;</a></h2>
+<p>Jetzt erstellen wir unseren verbundenen Agenten für die Interviewvorbereitung und fügen ihn Ihrem bestehenden Hiring Agent hinzu.</p>
+<h3 id="221-erstellen-des-verbundenen-interview-agenten">2.2.1 Erstellen des verbundenen Interview Agenten<a class="headerlink" href="#221-erstellen-des-verbundenen-interview-agenten" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Navigieren</strong> Sie zu Copilot Studio. Stellen Sie sicher, dass Ihre Umgebung weiterhin oben rechts im Environment Picker ausgewählt ist.</p>
+</li>
+<li>
+<p>Öffnen Sie Ihren <strong>Hiring Agent</strong></p>
+</li>
+<li>
+<p>Navigieren Sie zum Agent-Tab und wählen Sie <strong>+ Add an agent</strong></p>
+</li>
+<li>
+<p>Wählen Sie <strong>Connect an existing agent</strong> → <strong>Copilot Studio</strong></p>
+</li>
+<li>
+<p>Wählen Sie <strong>+ New agent</strong></p>
+</li>
+</ol>
+<h3 id="222-grundlegende-einstellungen-konfigurieren">2.2.2 Grundlegende Einstellungen konfigurieren<a class="headerlink" href="#222-grundlegende-einstellungen-konfigurieren" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Wählen Sie den <strong>Configure</strong>-Tab und geben Sie die folgenden Eigenschaften ein:</p>
+<ul>
+<li><strong>Name</strong>: <code>Interview Agent</code></li>
+<li><strong>Description</strong>: <code>Hilft bei der Vorbereitung des Interviews.</code></li>
+</ul>
+</li>
+<li>
+<p>Anweisungen:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>You are the Interview Agent. You help interviewers and hiring managers prepare for interviews. You never contact candidates. 
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Use Knowledge to help with interview preparation. 
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>The only valid identifiers are:
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  - ResumeNumber (ppa_resumenumber)→ format R#####
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  - CandidateNumber (ppa_candidatenumber)→ format C#####
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  - ApplicationNumber (ppa_applicationnumber)→ format A#####
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>  - JobRoleNumber (ppa_jobrolenumber)→ format J#####
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>Examples you handle
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  - Give me a summary of ...
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>  - Help me prepare to interview candidates for the Power Platform Developer role
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>  - Create interview assistance for the candidates for Power Platform Developer
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>  - Give targeted questions for Candidate Alex Johnson focusing on the criteria for the Job Application
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>How to work:
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    You are expected to ask clarification questions if required information for queries is not provided
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    - If asked for interview help without providing a job role, ask for it
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    - If asking for interview questions, ask for the candidate and job role if not provided.
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>General behavior
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>- Do not invent or guess facts
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>- Be concise, professional, and evidence-based
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>- Map strengths and risks to the highest-weight criteria
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>- If data is missing (e.g., no resume), state what is missing and ask for clarification
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>- Never address or message a candidate
+</span></code></pre></div>
+</li>
+<li>
+<p>Schalten Sie <strong>Web Search</strong> auf <strong>Disabled</strong></p>
+</li>
+<li>
+<p>Wählen Sie <strong>Create</strong><br />
+<img alt="Interview Agent erstellen" src="../../../../../translated_images/2-create-interview-agent.55051dc9cceec6614c7c0d685df6bebd85dcc4bde63fedab33558db47fd32ebd.de.png" /></p>
+</li>
+</ol>
+<h3 id="223-datenzugriff-konfigurieren-und-veroffentlichen">2.2.3 Datenzugriff konfigurieren und veröffentlichen<a class="headerlink" href="#223-datenzugriff-konfigurieren-und-veroffentlichen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Im Abschnitt <strong>Knowledge</strong> wählen Sie <strong>+ Add knowledge</strong><br />
+<img alt="Wissen hinzufügen" src="../../../../../translated_images/2-interview-agent-add-knowledge.8a760ce46dc5253747785127c37f3bfe2ea5c60a5243a4c2ff0a63d0275d1c02.de.png" /></li>
+<li>Wählen Sie <strong>Dataverse</strong><br />
+<img alt="Dataverse auswählen" src="../../../../../translated_images/2-interview-agent-add-knowledge-select-dataverse.1449c08b33f90f35c806071fb430c5e769a9d54d42b146a137404c63dc697d52.de.png" /></li>
+<li>Geben Sie im <strong>Suchfeld</strong> <code>ppa_</code> ein. Dies ist das Präfix für die Tabellen, die Sie zuvor importiert haben.</li>
+<li><strong>Wählen</strong> Sie alle 5 Tabellen (Candidate, Evaluation Criteria, Job Application, Job Role, Resume)</li>
+<li>Wählen Sie <strong>Add to agent</strong><br />
+<img alt="Dataverse-Tabellen auswählen" src="../../../../../translated_images/2-interview-agent-add-knowledge-select-tables.1b8e5f6286f4d58555b4f3e5ee49de7ad559f21d1b6806a1253d7f0c84bf7ab8.de.png" /></li>
+<li>
+<p>Wählen Sie die <strong>Settings</strong> des Interview Agent und setzen Sie die folgenden Einstellungen:</p>
+<ul>
+<li><strong>Let other agents connect to and use this one:</strong> <code>On</code></li>
+<li><strong>Use general knowledge</strong>: <code>Off</code></li>
+<li><strong>File uploads</strong>: <code>Off</code></li>
+<li><strong>Content moderation level:</strong> <code>Medium</code></li>
+<li>Wählen Sie <strong>Save</strong></li>
+<li>Wählen Sie <strong>Publish</strong> und warten Sie, bis die Veröffentlichung abgeschlossen ist.</li>
+</ul>
+</li>
+</ol>
+<h3 id="224-verbinden-sie-den-interview-prep-agent-mit-ihrem-hiring-agent">2.2.4 Verbinden Sie den Interview Prep Agent mit Ihrem Hiring Agent<a class="headerlink" href="#224-verbinden-sie-den-interview-prep-agent-mit-ihrem-hiring-agent" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Navigieren Sie zurück zu Ihrem <strong>Hiring Agent</strong></p>
+</li>
+<li>
+<p>Wählen Sie den <strong>Agents</strong>-Tab</p>
+</li>
+<li>
+<p>Verwenden Sie <strong>+Add an agent</strong> → <strong>Copilot Studio</strong>, um den <strong>Interview Agent</strong> hinzuzufügen. Setzen Sie die Beschreibung auf:
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Assists with the interview process and provides information about Resumes, Candidates, Job Roles, and Evaluation Criteria.
+</span></code></pre></div></p>
+<p><img alt="Details des verbundenen Agenten" src="../../../../../translated_images/2-add-connected-agent.1d8c42eb5dd78891649fef9771473f639eb7015c6bda76ac17e24093c359b6b1.de.png" />
+Beachten Sie, dass die Option "Gesprächsverlauf an diesen Agenten übergeben" aktiviert ist. Dadurch kann der übergeordnete Agent dem verbundenen Agenten den vollständigen Kontext bereitstellen.</p>
+</li>
+<li>
+<p>Wählen Sie <strong>Agent hinzufügen</strong></p>
+</li>
+<li>
+<p>Stellen Sie sicher, dass Sie sowohl den <strong>Application Intake Agent</strong> als auch den <strong>Interview Agent</strong> sehen. Beachten Sie, wie einer ein untergeordneter Agent und der andere ein verbundener Agent ist.<br />
+<img alt="Untergeordneter und verbundener Agent" src="../../../../../translated_images/2-child-and-connected.d888e561872260dfa66c657d5b31f99f2a3e492c2ed62284e124c5b81af54e7b.de.png" /></p>
+</li>
+</ol>
+<h3 id="225-testen-der-zusammenarbeit-mehrerer-agenten">2.2.5 Testen der Zusammenarbeit mehrerer Agenten<a class="headerlink" href="#225-testen-der-zusammenarbeit-mehrerer-agenten" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Öffnen</strong> Sie das Testpanel, indem Sie <strong>Test</strong> auswählen.</p>
+</li>
+<li>
+<p><strong>Laden</strong> Sie einen der Test-Lebensläufe hoch und geben Sie die folgende Beschreibung ein, die dem übergeordneten Agenten mitteilt, was er an den verbundenen Agenten delegieren kann:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Upload this resume, then show me open job roles, each with a description of the evaluation criteria, then use this to match the resume to at least one suitable job role even if not a perfect match.
+</span></code></pre></div>
+<p><img alt="Testen mehrerer Agenten" src="../../../../../translated_images/2-multi-agent-test.1e7c8e9dc283f220983f74a960f49b194d9e1c013c4369e33354c84411fc991c.de.png" /></p>
+</li>
+<li>
+<p>Beachten Sie, wie der Hiring Agent das Hochladen an den untergeordneten Agenten delegiert hat und anschließend den Interview Agent gebeten hat, eine Zusammenfassung und eine Übereinstimmung mit der Jobrolle basierend auf seinem Wissen bereitzustellen.
+   Probieren Sie verschiedene Möglichkeiten aus, Fragen zu Lebensläufen, Jobrollen und Bewertungskriterien zu stellen.
+   <strong>Beispiele:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Give me a summary of active resumes
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Summarize resume R10044
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Which active resumes are suitable for the Power Platform Developer role?
+</span></code></pre></div>
+</li>
+</ol>
+<h2 id="mission-abgeschlossen">🎉 Mission abgeschlossen<a class="headerlink" href="#mission-abgeschlossen" title="Permanent link">&para;</a></h2>
+<p>Hervorragende Arbeit, Agent! <strong>Operation Symphony</strong> ist jetzt abgeschlossen. Sie haben Ihren einzelnen Hiring Agent erfolgreich in ein hochentwickeltes Multi-Agenten-Orchester mit spezialisierten Fähigkeiten verwandelt.</p>
+<p>Das haben Sie in dieser Mission erreicht:</p>
+<p><strong>✅ Beherrschung der Multi-Agenten-Architektur</strong><br />
+Sie verstehen jetzt, wann untergeordnete Agenten im Vergleich zu verbundenen Agenten verwendet werden sollten und wie man skalierbare Systeme entwirft.</p>
+<p><strong>✅ Untergeordneter Agent für die Bewerbungsaufnahme</strong><br />
+Sie haben Ihrem Hiring Agent einen spezialisierten untergeordneten Agenten hinzugefügt, der Lebensläufe verarbeitet, Kandidatendaten extrahiert und Informationen in Dataverse speichert.</p>
+<p><strong>✅ Verbundener Agent für Interviewvorbereitung</strong><br />
+Sie haben einen wiederverwendbaren verbundenen Agenten für die Interviewvorbereitung erstellt und erfolgreich mit Ihrem Hiring Agent verbunden.</p>
+<p><strong>✅ Agentenkommunikation</strong><br />
+Sie haben gesehen, wie Ihr Hauptagent mit spezialisierten Agenten koordiniert, Kontext teilt und komplexe Workflows orchestriert.</p>
+<p><strong>✅ Grundlage für Autonomie</strong><br />
+Ihr erweitertes Einstellungssystem ist jetzt bereit für die fortgeschrittenen Funktionen, die wir in den kommenden Missionen hinzufügen werden: autonome Auslöser, Inhaltsmoderation und tiefgehendes Denken.</p>
+<p>🚀<strong>Als Nächstes:</strong> In Ihrer nächsten Mission lernen Sie, wie Sie Ihren Agenten so konfigurieren, dass er Lebensläufe autonom aus E-Mails verarbeitet!</p>
+<p>⏩<a href="../03-automate-triggers/">Weiter zu Mission 03: Automatisieren Sie Ihren Agenten mit Auslösern</a></p>
+<h2 id="taktische-ressourcen">📚 Taktische Ressourcen<a class="headerlink" href="#taktische-ressourcen" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-add-other-agents?WT.mc_id=power-182762-scottdurow">Andere Agenten hinzufügen (Vorschau)</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-plugin-actions?WT.mc_id=power-182762-scottdurow">Tools zu benutzerdefinierten Agenten hinzufügen</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/knowledge-add-dataverse?WT.mc_id=power-182762-scottdurow">Mit Dataverse in Copilot Studio arbeiten</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/flows-overview?WT.mc_id=power-182762-scottdurow">Übersicht über Agentenflüsse</a></p>
+<p>📖 <a href="https://learn.microsoft.com/power-platform/alm/solution-concepts-alm?WT.mc_id=power-182762-scottdurow">Eine Lösung erstellen</a></p>
+<p>📖 <a href="https://learn.microsoft.com/power-platform/alm/overview-alm?WT.mc_id=power-182762-scottdurow">Power Platform Lösung ALM-Leitfaden</a></p>
+<p>📺 <a href="https://youtu.be/d-oD3pApHAg?si=rwIHKhJTkjSvhTHw">Zusammenarbeit zwischen Agenten in Copilot Studio</a></p>
+<hr />
+<p><strong>Haftungsausschluss</strong>:<br />
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a> übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

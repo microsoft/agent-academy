@@ -1,0 +1,1701 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/id/docs/operative-preview/03-automate-triggers/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#misi-03-tambahkan-pemicu-acara-untuk-bertindak-secara-mandiri" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nama-kode-operasi-titik-sinyal" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ NAMA KODE: OPERASI TITIK SINYAL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ringkasan-misi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Ringkasan Misi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tujuan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Tujuan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apa-itu-pemicu-acara" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Apa itu Pemicu Acara?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agen-interaktif-vs-agen-mandiri-perbandingan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏓 Agen interaktif vs Agen mandiri - perbandingan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-perhatian-untuk-pengembang" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips &amp; perhatian untuk pengembang
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-03-mengotomatisasi-email-aplikasi-kandidat" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 03 - Mengotomatisasi email aplikasi kandidat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misi-selesai" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Misi Selesai
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sumber-daya-taktis" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Sumber Daya Taktis
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "75efaf515d5694d4fd549bfd6518901a",
+  "translation_date": "2025-10-17T17:19:13+00:00",
+  "source_file": "docs/operative-preview/03-automate-triggers/README.md",
+  "language_code": "id"
+}
+-->
+<h1 id="misi-03-tambahkan-pemicu-acara-untuk-bertindak-secara-mandiri">Misi 03: Tambahkan Pemicu Acara untuk bertindak secara mandiri<a class="headerlink" href="#misi-03-tambahkan-pemicu-acara-untuk-bertindak-secara-mandiri" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="nama-kode-operasi-titik-sinyal">🕵️‍♂️ NAMA KODE: <code>OPERASI TITIK SINYAL</code><a class="headerlink" href="#nama-kode-operasi-titik-sinyal" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Waktu Operasi:</strong> <code>~45 menit</code></p>
+</blockquote>
+<h2 id="ringkasan-misi">🎯 Ringkasan Misi<a class="headerlink" href="#ringkasan-misi" title="Permanent link">&para;</a></h2>
+<p>Selamat datang kembali, Agen. Dalam <a href="../02-multi-agent/">Misi 02</a> - Anda telah belajar cara membangun agen anak untuk Penerimaan Aplikasi dan agen terhubung untuk Persiapan Wawancara guna memperluas kemampuan Agen Perekrutan utama Anda.</p>
+<p>Tugas Anda, jika Anda memilih untuk menerimanya, adalah <strong>Operasi Titik Sinyal</strong> - mendalami <strong>pemicu acara</strong> - meningkatkan sistem agen Anda dari reaktif menjadi <strong>operasi mandiri</strong>. Anda akan mengubah agen Anda dari menunggu input manusia menjadi merespons secara proaktif terhadap acara eksternal dan mengambil tindakan cerdas tanpa pengawasan.</p>
+<p>Anggaplah ini sebagai peningkatan dari agen yang <em>menjawab pertanyaan</em> menjadi agen yang <em>mengantisipasi kebutuhan</em> dan <em>bertindak secara mandiri</em>. Melalui pemicu acara dan alur kerja otomatis, Agen Perekrutan Anda akan mendeteksi email resume yang masuk, memproses lampiran secara otomatis, menyimpan data di Dataverse, dan memberi tahu tim rekrutmen HR Anda melalui Microsoft Teams - semuanya sementara Anda fokus pada tugas yang lebih bernilai tinggi.</p>
+<p>Selamat datang di dunia di mana otomatisasi bertemu dengan kecerdasan.</p>
+<h2 id="tujuan">🔎 Tujuan<a class="headerlink" href="#tujuan" title="Permanent link">&para;</a></h2>
+<p>Dalam misi ini, Anda akan belajar:</p>
+<ol>
+<li>Bagaimana pemicu acara memungkinkan perilaku agen mandiri tanpa interaksi pengguna</li>
+<li>Perbedaan antara agen interaktif dan mandiri di Copilot Studio</li>
+<li>Cara membuat pemicu acara yang secara otomatis memproses lampiran email dan mengunggah file ke Dataverse</li>
+<li>Cara membangun alur agen yang memposting kartu adaptif ke saluran Teams untuk pemberitahuan</li>
+<li>Cara meneruskan data antara pemicu acara dan alur agen untuk otomatisasi ujung ke ujung</li>
+</ol>
+<h2 id="apa-itu-pemicu-acara">🤔 Apa itu Pemicu Acara?<a class="headerlink" href="#apa-itu-pemicu-acara" title="Permanent link">&para;</a></h2>
+<p>Sebelumnya dalam <a href="../../recruit/10-add-event-triggers/">Recruit</a>, kita telah belajar tentang pemicu acara. Mari kita lakukan rekap cepat tentang ini jika Anda melewatkannya.</p>
+<p><strong>Pemicu acara</strong> memungkinkan agen <em>bertindak</em> sendiri ketika sesuatu terjadi di sistem lain - tidak diperlukan pesan pengguna. Ketika acara yang dikonfigurasi terjadi - seperti “item baru di SharePoint,” “email baru,” “tugas Planner ditugaskan,” atau bahkan pengulangan berbasis waktu, konektor mengirimkan payload pemicu ke agen Anda. Agen kemudian mengikuti instruksi Anda untuk memutuskan tindakan atau topik mana yang akan dipanggil.</p>
+<h3 id="karakteristik-utama">Karakteristik Utama<a class="headerlink" href="#karakteristik-utama" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Aktivasi mandiri:</strong></p>
+<ul>
+<li>Tidak seperti pemicu topik yang dimulai ketika pengguna mengetik ke agen, pemicu acara terjadi dari acara eksternal, memungkinkan perilaku proaktif.</li>
+</ul>
+</li>
+<li>
+<p><strong>Berbasis payload:</strong></p>
+<ul>
+<li>Setiap acara mengirimkan payload (variabel + instruksi opsional) melalui konektor. Agen menggunakan instruksi yang Anda tentukan dan payload untuk memilih apa yang harus dilakukan selanjutnya.</li>
+<li>Misalnya <em>memanggil topik</em> atau <em>menjalankan tindakan yang ditentukan oleh Tools</em>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Contoh bawaan:</strong></p>
+<ul>
+<li>File atau item SharePoint/OneDrive dibuat</li>
+<li>Tugas Planner selesai/diberikan</li>
+<li>Respons Microsoft Forms dikirimkan</li>
+<li>Pengulangan/jadwal</li>
+</ul>
+<p>Ketersediaan tergantung pada kebijakan data organisasi Anda yang dikonfigurasi di Power Automate.</p>
+</li>
+<li>
+<p><strong>Memerlukan orkestrasi generatif:</strong></p>
+<ul>
+<li>Pemicu acara hanya tersedia ketika orkestrasi generatif diaktifkan untuk agen.</li>
+</ul>
+</li>
+<li>
+<p><strong>Penagihan/penggunaan:</strong></p>
+<ul>
+<li>Setiap pengiriman pemicu dihitung sebagai pesan terhadap kapasitas Copilot Studio.</li>
+<li>Misalnya pengulangan 10 menit mengirimkan pesan setiap 10 menit.</li>
+</ul>
+</li>
+<li>
+<p><strong>Model otentikasi dan pengaturan:</strong></p>
+<ul>
+<li>Anda menambahkan pemicu dalam Ikhtisar agen, di bawah <em>Triggers</em>. Otentikasi untuk konektor pemicu menggunakan akun pembuat agen (“otentikasi penulis agen”).</li>
+<li>Anda dapat mengedit parameter pemicu dan payload di portal pembuat Power Automate.</li>
+</ul>
+</li>
+<li>
+<p><strong>Pengujian &amp; observabilitas:</strong></p>
+<ul>
+<li>Anda dapat menguji pemicu dari panel uji agen dan memeriksa perilaku dengan peta aktivitas sebelum menerbitkan.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">TL;DR untuk pengembang</p>
+<p>Anggaplah pemicu acara sebagai <strong>sinyal mirip webhook</strong> yang mendorong payload terstruktur ke agen Anda, memungkinkan agen <em>memulai</em> pekerjaan dan menghubungkan tindakan di seluruh sistem - tanpa menunggu pengguna untuk bertanya.</p>
+</div>
+<h3 id="pemicu-topik-bagaimana-mereka-berbeda">Pemicu topik - bagaimana mereka berbeda<a class="headerlink" href="#pemicu-topik-bagaimana-mereka-berbeda" title="Permanent link">&para;</a></h3>
+<p>Sebelumnya Anda telah belajar tentang pemicu topik dalam <a href="../../recruit/07-add-new-topic-with-trigger/">Recruit</a>, namun Anda mungkin masih bertanya-tanya bagaimana <em>Pemicu Topik</em> berbeda dari <em>Pemicu Acara</em>, dan mengapa perbedaan itu penting untuk memahami apa yang membuat agen mandiri.</p>
+<p>Pemicu topik mengontrol <em>kapan topik berjalan</em>, biasanya sebagai respons terhadap pesan pengguna.</p>
+<ul>
+<li>Dalam orkestrasi generatif, pemicu default adalah <strong>Oleh agen</strong> - perencana memilih topik yang nama/deskripsinya paling cocok dengan pesan pengguna.</li>
+<li>Dalam orkestrasi klasik, default adalah <strong>Frasa</strong> - perencana memilih topik ketika satu atau beberapa frasa pemicu paling cocok dengan pesan pengguna.</li>
+</ul>
+<p>Jenis pemicu lainnya termasuk <code>Pesan diterima</code>, <code>Acara diterima</code>, <code>Aktivitas diterima</code>, <code>Pembaruan percakapan</code>, <code>Invoke diterima</code>, <code>Pengalihan</code>, <code>Tidak aktif</code>, dan <code>Rencana selesai</code>.</p>
+<div class="admonition info">
+<p class="admonition-title">Perbedaan inti</p>
+<p>Pemicu topik adalah pemula <em>aktivitas percakapan</em> di dalam obrolan.</p>
+<p>Pemicu acara adalah pemula <em>acara sistem</em> yang dikirimkan melalui konektor yang dapat menjalankan agen tanpa percakapan sama sekali.</p>
+</div>
+<h3 id="panduan-cepat-pemicu-topik-vs-pemicu-acara">Panduan cepat Pemicu Topik vs Pemicu Acara<a class="headerlink" href="#panduan-cepat-pemicu-topik-vs-pemicu-acara" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pemicu topik:</strong> Pengguna (atau aktivitas obrolan) mengatakan/melakukan X ➡️ jalankan Topik T.</li>
+<li><strong>Pemicu acara:</strong> SharePoint/Planner/Email/Timer terjadi dengan payload P ➡️ agen mengevaluasi instruksi ➡️ memanggil Tindakan/Topik sesuai.</li>
+</ul>
+<h2 id="agen-interaktif-vs-agen-mandiri-perbandingan">🏓 Agen interaktif vs Agen mandiri - perbandingan<a class="headerlink" href="#agen-interaktif-vs-agen-mandiri-perbandingan" title="Permanent link">&para;</a></h2>
+<p>Sekarang Anda tahu perbedaan antara pemicu acara dan pemicu topik, mari kita pelajari perbedaan antara agen interaktif vs agen mandiri.</p>
+<p>Dalam istilah Copilot Studio, "interaktif" merujuk pada agen yang terutama berinteraksi melalui <strong>topik</strong> dalam obrolan atau saluran. "Mandiri" merujuk pada agen yang juga memanfaatkan <strong>pemicu acara</strong> untuk berjalan tanpa input pengguna.</p>
+<p>Tabel berikut merangkum perbedaan dan kesamaan mereka.</p>
+<table>
+<thead>
+<tr>
+<th>Dimensi</th>
+<th>Agen interaktif</th>
+<th>Agen mandiri</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bagaimana memulai</td>
+<td>Pengguna (atau aktivitas obrolan) memicu topik. Contoh: Oleh agen, Frasa, Pesan diterima.</td>
+<td>Pemicu acara eksternal mengirimkan payload melalui konektor ke agen. Contoh: SharePoint, Planner, email, jadwal, dll.</td>
+</tr>
+<tr>
+<td>Penggunaan utama</td>
+<td>Tanya jawab, alur kerja terpandu, tindakan berbasis permintaan dalam obrolan - Teams, web, dll.</td>
+<td>Operasi proaktif dan otomatisasi latar belakang - bereaksi terhadap perubahan sistem lalu memberi tahu, mengarsipkan, atau mengatur tugas.</td>
+</tr>
+<tr>
+<td>Permukaan pemicu</td>
+<td>Pemicu topik: Oleh agen / Frasa / Pesan diterima / Jenis aktivitas / Invoke / Tidak aktif / Rencana selesai</td>
+<td>Perpustakaan pemicu acara melalui konektor; payload mencakup data acara + instruksi opsional.</td>
+</tr>
+<tr>
+<td>Perencana (orkestrasi generatif)</td>
+<td>Sangat digunakan untuk pemicu Oleh agen dan Rencana selesai untuk memilih/mengurutkan topik.</td>
+<td>Diperlukan untuk pemicu acara; agen menggunakan instruksi + payload untuk memutuskan tindakan/topik mana yang akan dipanggil.</td>
+</tr>
+<tr>
+<td>Contoh khas</td>
+<td>Pengguna bertanya "Apa kebijakan pengembalian dana kita?" → Topik berjalan, kueri pengetahuan, respons.</td>
+<td>Tugas Planner baru ditugaskan → Pemicu acara terjadi → Agen memposting pesan Teams, memperbarui catatan, atau memanggil topik.</td>
+</tr>
+<tr>
+<td>Jalur pengaturan</td>
+<td>Buat topik, tentukan jenis pemicu, buat dialog/tindakan; terbitkan ke saluran.</td>
+<td>Tambahkan pemicu acara (Ikhtisar → Triggers), otentikasi konektor dengan kredensial penulis agen, konfigurasikan payload/instruksi; uji melalui panel uji; terbitkan.</td>
+</tr>
+<tr>
+<td>Otentikasi dan tata kelola</td>
+<td>Berjalan di bawah konteks saluran/otentikasi; pemicu topik merespons aktivitas obrolan di saluran yang diizinkan.</td>
+<td>Ketersediaan pemicu tergantung pada kebijakan data Power Automate; konektor berjalan di bawah akun pembuat agen.</td>
+</tr>
+<tr>
+<td>Observabilitas</td>
+<td>Uji topik dalam Copilot Studio, periksa transkrip percakapan/aktivitas.</td>
+<td>Gunakan Uji pemicu dan peta aktivitas untuk memvalidasi eksekusi sebelum menerbitkan, pantau aktivitas setelah menerbitkan.</td>
+</tr>
+<tr>
+<td>Dampak kapasitas</td>
+<td>Setiap pesan pengguna/respons agen adalah pesan yang mengonsumsi kapasitas.</td>
+<td>Setiap pengiriman acara juga merupakan pesan, ditambah tindakan berikutnya. Contoh: pengulangan 10 menit = 6 pesan/jam</td>
+</tr>
+</tbody>
+</table>
+<h3 id="kapan-menggunakan-yang-mana">Kapan menggunakan yang mana?<a class="headerlink" href="#kapan-menggunakan-yang-mana" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Pilih <strong>pemicu topik (interaktif)</strong> ketika pengguna memulai percakapan agen - FAQ, penerimaan terpandu, atau tugas gaya perintah di dalam obrolan. Pemicu Oleh agen perencana mengurangi kurasi frasa manual.</li>
+<li>Tambahkan <strong>pemicu acara (mandiri)</strong> ketika agen harus memulai percakapan atau mengambil tindakan sendiri - pada pembaruan di SharePoint/Dataverse, email masuk, atau pada jadwal. Ini mengubah Anda dari operasi reaktif menjadi proaktif.</li>
+</ul>
+<h2 id="tips-perhatian-untuk-pengembang">Tips &amp; perhatian untuk pengembang<a class="headerlink" href="#tips-perhatian-untuk-pengembang" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Aktifkan orkestrasi generatif</strong> untuk agen apa pun yang ingin Anda buat mandiri. Pemicu acara tidak akan muncul jika tidak diaktifkan.</p>
+</li>
+<li>
+<p><strong>Model payload lebih awal.</strong> Tentukan bidang minimal apa yang dibutuhkan agen Anda dari pemicu seperti <code>itemId</code>, <code>assignedTo</code>, <code>dueDate</code> dan tambahkan instruksi ringkas yang memberi tahu agen tindakan/topik mana yang harus dipanggil berdasarkan nilai payload.</p>
+</li>
+<li>
+<p><strong>Lingkup otentikasi penting.</strong> Pemicu mengotentikasi menggunakan akun pembuat agen. Pastikan akun tersebut memiliki izin konektor yang tepat dan mematuhi kebijakan data Power Automate.</p>
+</li>
+<li>
+<p><strong>Kontrol biaya dan kebisingan.</strong> Pengulangan frekuensi tinggi atau sumber yang sangat aktif dapat dengan cepat meningkatkan konsumsi pesan - batasi jika memungkinkan atau tambahkan kondisi dalam pemicu untuk menyaring acara.</p>
+</li>
+<li>
+<p><strong>Uji sebelum menerbitkan.</strong> Gunakan <strong>Uji pemicu</strong> dan peta aktivitas untuk melihat rencana dan tindakan yang dipanggil - iterasi pada instruksi/payload hingga perilaku stabil.</p>
+</li>
+</ol>
+<h2 id="lab-03-mengotomatisasi-email-aplikasi-kandidat">🧪 Lab 03 - Mengotomatisasi email aplikasi kandidat<a class="headerlink" href="#lab-03-mengotomatisasi-email-aplikasi-kandidat" title="Permanent link">&para;</a></h2>
+<p>Selanjutnya kita akan menambahkan pemicu acara ke <strong>Agen Perekrutan</strong> dan membangun alur agen di agen anak <strong>Penerimaan Aplikasi</strong> untuk menangani pemrosesan lebih lanjut secara mandiri.</p>
+<h3 id="skenario-penggunaan">✨ Skenario penggunaan<a class="headerlink" href="#skenario-penggunaan" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p><strong>Sebagai</strong> Perekrut HR</p>
+<p><strong>Saya ingin</strong> diberi tahu ketika email dengan resume tiba di Inbox saya yang telah diunggah secara otomatis ke Dataverse</p>
+<p><strong>Sehingga saya dapat</strong> tetap diberi tahu tentang resume yang dikirim melalui email untuk aplikasi yang diunggah secara otomatis ke Dataverse</p>
+</div>
+<p>Kita akan mencapai ini menggunakan dua teknik</p>
+<ol>
+<li>
+<p>Pemicu acara untuk ketika email tiba,</p>
+<ol>
+<li>Periksa <code>contentType</code> file sama dengan <code>PDF</code> sebagai format tipe.</li>
+<li>Ekstrak file dan unggah ke Dataverse menggunakan tindakan melalui konektor Dataverse.</li>
+<li>Kemudian kirimkan prompt ke agen untuk pemrosesan lebih lanjut dengan meneruskan parameter input dari tindakan Dataverse.</li>
+</ol>
+</li>
+<li>
+<p>Alur agen akan ditambahkan ke agen anak <strong>Penerimaan Aplikasi</strong> yang dipanggil oleh prompt dalam pemicu acara.</p>
+<ol>
+<li>Gunakan parameter input yang diteruskan dari prompt pemicu acara dalam kartu adaptif yang diposting ke saluran di Microsoft Teams untuk memberi tahu tim Rekrutmen HR. Kartu adaptif akan memiliki tautan ke baris di Dataverse yang akan dilihat di <strong>Agen Perekrutan</strong>.</li>
+</ol>
+</li>
+</ol>
+<p>Mari kita mulai!</p>
+<h3 id="prasyarat-untuk-menyelesaikan-misi-ini">✨ Prasyarat untuk menyelesaikan misi ini<a class="headerlink" href="#prasyarat-untuk-menyelesaikan-misi-ini" title="Permanent link">&para;</a></h3>
+<p>Anda perlu <strong>salah satu</strong>:</p>
+<ul>
+<li><strong>Telah menyelesaikan Misi 01 dan Misi 02</strong> dan memiliki Agen Perekrutan Anda siap, <strong>ATAU</strong></li>
+<li><strong>Impor solusi awal Misi 03</strong> jika Anda memulai dari awal atau perlu mengejar ketinggalan. <a href="https://aka.ms/agent-academy">Unduh Solusi Awal Misi 03</a></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Impor Solusi dan Data Contoh</p>
+<p>Jika Anda menggunakan solusi awal, lihat <a href="../01-get-started/">Misi 01</a> untuk instruksi rinci tentang cara mengimpor solusi dan data contoh ke lingkungan Anda.</p>
+</div>
+<p>Anda juga memerlukan akses ke <strong>Microsoft Teams</strong> untuk menyelesaikan latihan lab kedua memposting kartu adaptif ke Microsoft Teams.</p>
+<h3 id="lab-31-mengotomatisasi-pengunggahan-resume-ke-dataverse-yang-diterima-melalui-email">Lab 3.1 - Mengotomatisasi pengunggahan resume ke Dataverse yang diterima melalui email<a class="headerlink" href="#lab-31-mengotomatisasi-pengunggahan-resume-ke-dataverse-yang-diterima-melalui-email" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Di Agen Perekrutan, gulir ke bawah di <strong>tab Ikhtisar</strong> dan pilih <strong>+ Tambahkan pemicu</strong>.</p>
+<p><img alt="Tambahkan pemicu ke agen" src="../../../../../translated_images/3.1_01_AddTrigger.4d5f4d13a4a6b19fe9ff89e3a483601199d7643236d6df65ff81dfea76d1d443.id.png" /></p>
+</li>
+<li>
+<p>Daftar pemicu akan muncul. Pilih <strong>Ketika email baru tiba (V3)</strong> dan pilih <strong>Berikutnya</strong>.</p>
+<p><img alt="Pilih pemicu Ketika email baru tiba (V3)" src="../../../../../translated_images/3.1_02_WhenANewEmailArrives.a250875915165d97c1af6eebba70f16fbfc845a37d4d354c9f35a55aa459035e.id.png" /></p>
+</li>
+<li>
+<p>Sekarang kita akan melihat <strong>Nama Pemicu</strong> dan referensi koneksi <strong>Masuk</strong> untuk aplikasi yang terdaftar.</p>
+<p>Ubah nama pemicu menjadi berikut ini,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Ketika email baru tiba dari pelamar
+</span></code></pre></div>
+<p>Pastikan Anda melihat tanda centang hijau di setiap referensi koneksi aplikasi yang terdaftar. Jika Anda tidak melihat tanda centang hijau, masuk melalui elipsis (...) dan pilih <strong>+ Referensi koneksi baru</strong> untuk membuat referensi koneksi baru.</p>
+<p><img alt="Perbarui detail untuk nama pemicu dan periksa referensi koneksi" src="../../../../../translated_images/3.1_03_RenameTriggerName.3eb80b25bea5f874a51aab600ffd333359de3a981e41eed1b4fc7c8f27eef323.id.png" /></p>
+</li>
+<li>
+<p>Langkah terakhir adalah mengatur properti input pemicu. Perbarui properti berikut ke nilai berikut,</p>
+<table>
+<thead>
+<tr>
+<th>Properti</th>
+<th>Cara Mengatur</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sertakan Lampiran (Opsional)</strong></td>
+<td>Dropdown</td>
+<td>Ya</td>
+</tr>
+<tr>
+<td><strong>Filter Subjek (Opsional)</strong></td>
+<td>Ketik/Masukkan dengan keyboard</td>
+<td>Aplikasi</td>
+</tr>
+<tr>
+<td><strong>Hanya dengan Lampiran (Opsional)</strong></td>
+<td>Dropdown</td>
+<td>Ya</td>
+</tr>
+</tbody>
+</table>
+<p>Pilih <strong>Buat pemicu</strong>.</p>
+<p><img alt="Konfigurasikan input pemicu" src="../../../../../translated_images/3.1_04_ConfigureTriggerInputs.2151044f4953b31b40402c2a94fd63fb71fe8eede27a5cbf1d124d4300318446.id.png" /></p>
+</li>
+<li>
+<p>Setelah dibuat, pesan konfirmasi akan muncul bahwa pemicu telah ditambahkan ke agen. Pilih <strong>Tutup</strong> dan pemicu akan terdaftar di bagian <strong>Triggers</strong>.
+Sekarang kita akan memperbarui pemicu acara untuk menambahkan beberapa kemampuan otomatisasi lebih lanjut. Pilih <strong>ellipsis (...)</strong> pada pemicu dan pilih <strong>Edit in Power Automate</strong>.</p>
+</li>
+</ol>
+<p><img alt="Pilih Edit in Power Automate" src="../../../../../translated_images/3.1_05_SelectEditInPowerAutomate.d298b51d7980cf2fd20a9d8193745aef4ce8097a4a2d33341e2dc159b9bfc099.id.png" /></p>
+<ol>
+<li>Pemicu kemudian akan dimuat sebagai alur di portal pembuat Power Automate. Apa yang Anda lihat adalah desainer alur di portal pembuat Power Automate. Di sinilah kita dapat menambahkan logika dan tindakan lebih lanjut untuk otomatisasi tambahan. Pemicu akan muncul di bagian atas, diikuti oleh <strong>Mengirimkan prompt ke copilot yang ditentukan untuk diproses</strong> sebagai tindakan terakhir dalam alur.</li>
+</ol>
+<p><img alt="Desainer alur di portal pembuat Power Automate" src="../../../../../translated_images/3.1_06_EditInPowerAutomate.f8967ace56354224574517f31a2a2ce0a5b5d3ab85bfb9ec6cf70e83ab1b8e6d.id.png" /></p>
+<ol>
+<li>Secara default, pemicu <strong>Ketika email baru tiba</strong> di Power Automate dapat memproses beberapa email sekaligus jika beberapa email tiba bersamaan, menjalankan alur hanya sekali untuk batch tersebut.</li>
+</ol>
+<p>Untuk memastikan alur berjalan secara terpisah untuk setiap email, aktifkan pengaturan <strong>Split On</strong> di pengaturan pemicu dan pilih <code>@triggerOutputs()?['body/value']</code> di bidang array dropdown.</p>
+<p>Dengan <strong>Split On</strong> diaktifkan dan bidang array diatur ke <code>@triggerOutputs()?['body/value']</code>, alur akan berjalan secara individual untuk setiap pesan, bahkan jika banyak pesan tiba secara bersamaan.</p>
+<p><img alt="Aktifkan pengaturan Split On di pemicu" src="../../../../../translated_images/3.1_07_UpdateTriggerSettings.0f363c4f4655276732575fa795bf1ad1568df34d34b703c85073591cc8585609.id.png" /></p>
+<ol>
+<li>Selanjutnya, kita akan menambahkan logika untuk memeriksa jenis file lampiran, kita hanya ingin mengunggah lampiran file .PDF dan bukan gambar (ini bisa berasal dari tanda tangan email). Pilih ikon <strong>+</strong> di bawah pemicu dan pilih <strong>Control</strong> di bagian <strong>Built in tools</strong>.</li>
+</ol>
+<p><img alt="Pilih Control" src="../../../../../translated_images/3.1_08_Control.2fa6987b64ae20d5c8343d1b15937432ab6c893750c4b1427df56067023fd437.id.png" /></p>
+<ol>
+<li>Pilih tindakan <strong>Condition</strong>.</li>
+</ol>
+<p><img alt="Pilih tindakan Condition" src="../../../../../translated_images/3.1_09_AddConditionAction.a7eec0b2a42d4a7c54bd305f0c480b72e3feec155a4e2468e12279082257f21f.id.png" /></p>
+<ol>
+<li>
+<p>Sekarang kita mengonfigurasi kondisi untuk memeriksa apakah jenis file lampiran adalah .PDF. Di bidang <strong>Choose a value</strong>, pilih <strong>ikon petir</strong> atau <strong>ikon fx</strong> di sebelah kanan.</p>
+</li>
+<li>
+<p>Di bidang <strong>Search</strong>, ketik berikut ini,</p>
+</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>content type
+</span></code></pre></div>
+<ol>
+<li>
+<p>Kemudian pilih parameter <strong>Attachments Content-Type</strong> dari pemicu.</p>
+</li>
+<li>
+<p>Selanjutnya, pilih <strong>Add</strong> untuk menambahkan input konten dinamis ke parameter <strong>Id</strong> dari tindakan.</p>
+</li>
+</ol>
+<p><img alt="Konfigurasi tindakan Condition" src="../../../../../translated_images/3.1_10_SetDynamicContentValue_V2.23c3d0438146a5ff0d695077e65a3b1c8b230b54c51ded8a099c6e99a948e9ed.id.png" /></p>
+<ol>
+<li>Mari kita berhenti sejenak di sini, Anda mungkin memperhatikan bahwa tindakan <strong>For each</strong> secara otomatis muncul.</li>
+</ol>
+<p>Pilih tindakan <strong>For each</strong>. Tindakan ini mewakili pengulangan melalui setiap lampiran dalam email, karena parameter <strong>Attachments Content-Type</strong> dari pemicu terikat pada setiap lampiran.</p>
+<p>Di balik layar, ini adalah array dan itulah mengapa tindakan <strong>For each</strong> secara otomatis ditambahkan ketika kita memilih parameter <strong>Attachments Content-Type</strong> di tindakan <strong>Condition</strong>.</p>
+<p>Untuk mempelajari lebih lanjut tentang ini, perluas blok pembelajaran tambahan berikut.</p>
+<details class="info">
+<summary>Pembelajaran Tambahan: Tindakan For each secara otomatis muncul</summary>
+</details>
+<p>🤔 <strong>Mengapa "Apply to each" atau "For each" Muncul Secara Otomatis?</strong></p>
+<p>Ketika Anda memilih parameter (konten dinamis) yang mewakili daftar atau array item - misalnya, daftar lampiran, email, atau baris - Power Automate mengenali bahwa Anda mungkin ingin memproses setiap item secara individual.</p>
+<p>Untuk membantu Anda melakukan ini, Power Automate secara otomatis menambahkan loop <strong>“Apply to each”</strong> (atau <strong>For each</strong>) di sekitar tindakan Anda. Ini memastikan bahwa tindakan Anda akan berjalan sekali untuk setiap item dalam daftar, daripada mencoba memproses seluruh daftar sekaligus (yang dapat menyebabkan kesalahan).</p>
+<p>🦋 <strong>Contoh</strong></p>
+<ul>
+<li>Jika Anda memilih "Attachments" dari tindakan sebelumnya (yang merupakan array), dan mencoba menggunakannya dalam tindakan yang mengharapkan satu file, Power Automate membungkus tindakan Anda dalam loop <strong>"Apply to each"</strong> (atau <strong>For each</strong>). </li>
+<li>Dengan cara ini, tindakan Anda akan berjalan untuk <strong>setiap lampiran</strong> - satu per satu.</li>
+</ul>
+<p>💡 <strong>Poin Penting</strong></p>
+<ul>
+<li><strong>Otomatis:</strong> Loop muncul secara otomatis untuk membantu Anda memproses setiap item dalam koleksi.</li>
+<li><strong>Mencegah kesalahan:</strong> Tanpa loop, tindakan Anda mungkin gagal karena tidak dapat menangani beberapa item sekaligus.</li>
+<li><strong>Petunjuk visual:</strong> Ini adalah cara visual untuk menunjukkan bahwa alur Anda akan mengulangi tindakan untuk setiap item dalam daftar.</li>
+</ul>
+<p><img alt="Penjelasan tindakan For Each" src="../../../../../translated_images/3.1_11_ForEach.82bd7b62b815fdbcd67acff0a633137cf03175940c670361ea8669b0df892927.id.png" /></p>
+<ol>
+<li>Selanjutnya, di bidang <strong>Choose a value</strong> lainnya, ketik berikut ini,</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>application/pdf
+</span></code></pre></div>
+<p>Ini akan memastikan bahwa untuk setiap lampiran file, akan memeriksa format ekstensi file adalah .PDF.</p>
+<p><img alt="EqualToValue" src="../../../../../translated_images/3.1_12_EqualToValue.66c107cb8105c1cd3d166b8a5bf690b8dfc30aa2bd2af83c438a9e44d1b544b0.id.png" /></p>
+<ol>
+<li>Sekarang kita akan mengonfigurasi jalur <strong>True</strong> untuk mengekstrak file dari email dan mengunggahnya ke tabel <strong>Resume</strong> di Dataverse.</li>
+</ol>
+<p>Tambahkan tindakan baru di bawah jalur <strong>True</strong> dan cari <code>html to text</code>. Pilih tindakan <strong>Html to text</strong>.</p>
+<p>Untuk mempelajari lebih lanjut tentang tindakan <strong>Html to text</strong>, perluas blok pembelajaran tambahan berikut.</p>
+<details class="info">
+<summary>Pembelajaran Tambahan: Tindakan Html to text</summary>
+</details>
+<p>🤔 <strong>Apa itu Tindakan "HTML to text"?</strong></p>
+<p>Tindakan <strong>HTML to text</strong> di Power Automate digunakan untuk mengonversi konten yang diformat HTML menjadi teks biasa. Ini sangat berguna ketika Anda menerima data (seperti email, konten web, atau respons API) yang berisi tag HTML, dan Anda ingin mengekstrak hanya teks yang dapat dibaca tanpa format atau kode.</p>
+<p>⚙️ <strong>Bagaimana cara kerjanya?</strong></p>
+<ul>
+<li><strong>Input:</strong> Anda memberikan string konten HTML (misalnya, isi email).</li>
+<li><strong>Output:</strong> Tindakan menghapus semua tag HTML dan hanya mengembalikan teks biasa.</li>
+</ul>
+<p>👍🏻 <strong>Kapan Anda harus menggunakannya?</strong></p>
+<ul>
+<li>Ketika Anda ingin mengekstrak teks yang dapat dibaca dari email, halaman web, atau respons API yang berisi HTML.</li>
+<li>Sebelum mengirimkan konten ke sistem yang tidak mendukung format HTML (seperti SMS, pesan Teams, atau database).</li>
+<li>Untuk membersihkan data untuk pemrosesan atau analisis lebih lanjut.</li>
+</ul>
+<p>🔭 <strong>Di mana menemukannya?</strong></p>
+<ul>
+<li>Di Power Automate untuk Agent Flows, cari tindakan yang disebut <code>HTML to text</code>. Ini berada di bawah konektor <strong>Data Operations</strong>.</li>
+</ul>
+<p>💡 <strong>Poin Penting</strong></p>
+<ul>
+<li>Menghapus semua tag HTML dan hanya menyisakan teks.</li>
+<li>Tidak menafsirkan atau menjalankan skrip/gaya - hanya menghapus tag.</li>
+<li>Berguna untuk membersihkan data dan menyiapkan konten untuk output teks biasa.</li>
+</ul>
+<p><img alt="Tambahkan tindakan HTML to text" src="../../../../../translated_images/3.1_13_AddHTMLToTextAction.2aa9468b87dbeb847c083f24da0fe99438b39f826b13a70982ec255a97c2aa80.id.png" /></p>
+<ol>
+<li>Selanjutnya, kita perlu membuat referensi koneksi baru untuk tindakan <strong>Html to text</strong> dengan memilih <strong>Add new</strong>.</li>
+</ol>
+<p><img alt="Tambahkan referensi koneksi baru" src="../../../../../translated_images/3.1_14_AddNewConnection.4a23546976b62e7f0e882ac1379950e5bfdcaa702070313cb84a1d22b06a79a7.id.png" /></p>
+<ol>
+<li>Tindakan sekarang dapat dikonfigurasi. Mari kita tambahkan parameter <strong>Body</strong> dari pemicu. Di bidang <strong>Content</strong>, pilih <strong>ikon petir</strong> atau <strong>ikon fx</strong> di sebelah kanan.</li>
+</ol>
+<p><img alt="Tambahkan Konten Dinamis" src="../../../../../translated_images/3.1_15_AddDynamicContent.0624a9808f55b993efb6d00bf941a88389655e2ab9970ba2b9a1538272fe9643.id.png" /></p>
+<ol>
+<li>Di tab <strong>Dynamic content</strong>, cari <code>body</code> dan pilih parameter <strong>Body</strong>, lalu pilih <strong>Add</strong>.</li>
+</ol>
+<p><img alt="Tambahkan parameter Body" src="../../../../../translated_images/3.1_16_AddDynamicContent.40b7eccc080c20513eed5663062b2a63d40d6482eaf2d42fe4e29cb94797f098.id.png" /></p>
+<ol>
+<li>Kita telah selesai mengonfigurasi tindakan ini, jadi mari keluar dari tindakan dengan memilih dua tanda sudut («) yang mengarah ke kiri untuk menutup panel.</li>
+</ol>
+<p><img alt="Tutup panel tindakan" src="../../../../../translated_images/3.1_17_CollapseAction.ca2c346efb58f8240372c3d145fa10ba609cab1c2075d7df1a9388c82fab79f5.id.png" /></p>
+<ol>
+<li>Kita akan menambahkan tindakan baru dengan memilih <strong>ikon +</strong> di bawah tindakan <strong>Html to text</strong> yang akan memuat panel untuk menambahkan tindakan. Pilih konektor <strong>Microsoft Dataverse</strong>.</li>
+</ol>
+<p><img alt="Tambahkan tindakan baru" src="../../../../../translated_images/3.1_18_AddDataverseAction.5f4be9eb96e22dac239e5545bab5ad9d08b138c2cbcbc700680f33445e132506.id.png" /></p>
+<ol>
+<li>Pilih tindakan <strong>Add a new row</strong>.</li>
+</ol>
+<p><img alt="Tambahkan tindakan Add a new row" src="../../../../../translated_images/3.1_19_AddANewRow.48e0a3868821e59ed2a299ccb6a521af27b2430082381d48be38087be62c7c15.id.png" /></p>
+<ol>
+<li>Ubah nama tindakan dengan memilih <strong>Ellipsis (...)</strong>, salin dan tempelkan berikut ini sebagai nama,</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Add a new Resume row
+</span></code></pre></div>
+<p>Untuk parameter <strong>Table name</strong>, cari <code>res</code> dan pilih tabel <strong>Resumes</strong>.</p>
+<p><img alt="Ubah nama tindakan dan konfigurasi parameter Table name" src="../../../../../translated_images/3.1_20_RenameAndSelectResumesTable.89f8485653abb7fda1d6eb44210951f05a05ed6f7450a51895079dfd8e72c8bf.id.png" /></p>
+<ol>
+<li>Pilih bidang <strong>Resume Title</strong> berikutnya dan pilih <strong>ikon petir</strong> atau <strong>ikon fx</strong> di sebelah kanan.</li>
+</ol>
+<p><img alt="Konfigurasi parameter Resume Title" src="../../../../../translated_images/3.1_21_AddDynamicContent.9ee1f89420d5a4aa56797944166208f6e9b0ec67116625168fbcefb907850224.id.png" /></p>
+<ol>
+<li>Di tab <strong>Function</strong>, masukkan ekspresi berikut yang menggunakan fungsi <code>item()</code>.</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>item()?[&#39;name&#39;]
+</span></code></pre></div>
+<p>Untuk mempelajari lebih lanjut tentang fungsi <code>item()</code>, perluas blok pembelajaran tambahan berikut.</p>
+<details class="info">
+<summary>Pembelajaran Tambahan: Fungsi <code>item()</code></summary>
+</details>
+<p>🤔 <strong>Apa itu fungsi <code>item()</code>?</strong></p>
+<ul>
+<li>Ketika Anda menggunakan tindakan <strong>Apply to each</strong>, Power Automate akan melalui setiap elemen dalam koleksi (array).</li>
+<li>Ini paling sering digunakan di dalam tindakan seperti <strong>Apply to each</strong> (atau <strong>For each</strong>), <strong>Select</strong>, atau <strong>Filter array</strong>.</li>
+</ul>
+<p>⚙️ <strong>Bagaimana cara kerjanya?</strong></p>
+<ul>
+<li><code>item()</code> adalah fungsi yang mengembalikan item saat ini yang sedang diproses dalam loop atau operasi array.</li>
+<li>Di dalam loop itu, <code>item()</code> merujuk pada <em>elemen saat ini</em> yang sedang diproses.</li>
+</ul>
+<p>📌 <strong>Di mana Anda menggunakannya?</strong></p>
+<ul>
+<li><strong>Apply to each:</strong> untuk mengakses properti dari item saat ini.</li>
+<li><strong>Select:</strong> untuk mengubah setiap item dalam array.</li>
+<li><strong>Filter array:</strong> untuk merujuk item saat ini yang sedang dievaluasi.</li>
+</ul>
+<p>🦋 <strong>Contoh</strong></p>
+<ul>
+<li>Ekspresi di dalam loop:<ul>
+<li><code>item()?['Email']</code></li>
+</ul>
+</li>
+<li>Ini mengambil properti <code>Email</code> dari item saat ini.</li>
+</ul>
+<p>💡 <strong>Poin Penting</strong></p>
+<ul>
+<li><code>item()</code> bersifat <em>konteks-sensitif</em>: selalu merujuk pada item saat ini dalam loop atau operasi array yang Anda gunakan.</li>
+<li>Jika Anda membuat loop bersarang, Anda dapat menggunakan <code>items('LoopName')</code> untuk merujuk pada item dalam loop tertentu.</li>
+</ul>
+<p>Pilih <strong>Add</strong> untuk menambahkan ekspresi ke parameter <strong>Resume Title</strong>.</p>
+<p><img alt="Tambahkan ekspresi untuk parameter Resume Title" src="../../../../../translated_images/3.1_22_ResumeTitleParameter.9e4fa71a5251cb899e7b09bcc3052eeda1e512841f929118eb9e2b1d232ecb07.id.png" /></p>
+<ol>
+<li>Kita masih perlu mengonfigurasi beberapa parameter lagi, pilih <strong>Show all</strong> dan di bidang <strong>Cover Letter</strong>, pilih <strong>ikon petir</strong> atau <strong>ikon fx</strong> di sebelah kanan.</li>
+</ol>
+<p>Di tab <strong>Function</strong>, masukkan ekspresi berikut yang menggunakan ekspresi yang sama dalam <a href="../02-multi-agent/">misi sebelumnya</a>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>if(greater(length(body(&#39;Html_to_text&#39;)), 2000), substring(body(&#39;Html_to_text&#39;), 0, 2000), body(&#39;Html_to_text&#39;))
+</span></code></pre></div>
+<p>Ekspresi ini memeriksa apakah <em>teks</em> dari tindakan <strong>Html to text</strong> lebih panjang dari 2000 karakter, dan jika ya, hanya mengembalikan 2000 karakter pertama; jika tidak, mengembalikan teks penuh.</p>
+<p><img alt="Tambahkan ekspresi untuk parameter Cover Letter" src="../../../../../translated_images/3.1_23_CoverLetterParameter.d2b521d6b37d05ac4760c91de2964b6d062585a333af6989d9ac0794a4139463.id.png" /></p>
+<ol>
+<li>Ekspresi sekarang akan ditambahkan ke bidang <strong>Cover Letter</strong>.</li>
+</ol>
+<p><img alt="Ekspresi ditambahkan ke parameter Cover Letter" src="../../../../../translated_images/3.1_24_ExpressionForCoverLetter.3d18124b10b76bad92db61c529ae395b0bb05f3215e3b783771e76ef7677664e.id.png" /></p>
+<ol>
+<li>Untuk bidang <strong>Source Email Address</strong>, cari <code>from</code> dan pilih parameter <strong>From</strong> dari pemicu karena ini berisi nilai alamat email.</li>
+</ol>
+<p><img alt="Parameter Source Email Address" src="../../../../../translated_images/3.1_25_FromParameter.1ed1be46711f6705fb807996f6f1e873adc22e285186a851272e0cf3855487ef.id.png" /></p>
+<ol>
+<li>Untuk bidang <strong>Upload Date</strong>, pilih <strong>ikon petir</strong> atau <strong>ikon fx</strong> di sebelah kanan. Di tab <strong>Function</strong>, masukkan ekspresi berikut yang menggunakan fungsi <code>utcNow()</code>.</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>utcNow()
+</span></code></pre></div>
+<p>Untuk mempelajari lebih lanjut tentang fungsi <code>utcNow</code>, perluas blok pembelajaran tambahan berikut.</p>
+<details class="info">
+<summary>Pembelajaran Tambahan: Fungsi <code>utcNow</code></summary>
+</details>
+<p>🤔 <strong>Apa itu fungsi <code>utcNow()</code>?</strong></p>
+<ul>
+<li>Fungsi utcnow() di Power Automate mengembalikan tanggal dan waktu saat ini dalam Waktu Universal Terkoordinasi (UTC) dalam format ISO 8601, seperti: <code>2025-09-23T04:32:14Z</code></li>
+</ul>
+<p>🦋 <strong>Contoh</strong></p>
+<ul>
+<li>Ekspresi:<ul>
+<li><code>concat('Laporan dibuat pada ', utcnow())</code></li>
+</ul>
+</li>
+<li>Output adalah:<ul>
+<li>Laporan dibuat pada <code>2025-09-23T04:32:14Z</code></li>
+</ul>
+</li>
+</ul>
+<p>💡 <strong>Poin Penting</strong>
+- <strong>Tidak memerlukan argumen (parameter input):</strong> selalu memberikan stempel waktu UTC saat ini.
+   - <strong>Kasus penggunaan</strong>
+       - Menambahkan stempel waktu ke log atau nama file
+       - Membandingkan waktu saat ini dengan tanggal lainnya
+       - Penjadwalan atau kondisi berbasis waktu</p>
+<p><img alt="Parameter Tanggal Unggah" src="../../../../../translated_images/3.1_26_UploadDateParameter.21b0afc9807bf680c1c432066f1644d4d018cb4988ad0c0788b5186cea285e02.id.png" /></p>
+<ol>
+<li>Kita telah selesai mengonfigurasi aksi <strong>Tambahkan baris Resume baru</strong>, jadi mari keluar dari panel dengan mengecilkannya.</li>
+</ol>
+<p><img alt="Keluar dari panel aksi" src="../../../../../translated_images/3.1_27_CollapseAction.c033a86e4d8501b10fc454ba7f9c5e08d71d6d881fc72f58011152e1c5d7a7bb.id.png" /></p>
+<ol>
+<li>Kita akan menambahkan aksi baru dengan memilih <strong>ikon +</strong> di bawah aksi <strong>Tambahkan baris Resume baru</strong> yang akan memuat panel untuk menambahkan aksi. Pilih konektor <strong>Microsoft Dataverse</strong> lagi.</li>
+</ol>
+<p><img alt="Tambahkan aksi Dataverse" src="../../../../../translated_images/3.1_28_AddDataverseAction.1af4dedc95001bfb56b0a642231e9c82b57459b10c68bf6fc177382339a0a221.id.png" /></p>
+<ol>
+<li>Pilih aksi <strong>Unggah file atau gambar</strong>.</li>
+</ol>
+<p><img alt="Tambahkan aksi Unggah file atau gambar" src="../../../../../translated_images/3.1_29_AddUploadAFileOrAnImage.e40ab21b735e37bd1fdb5020b7433d1a2f01d6e387bc43a437e970c6e20ee779.id.png" /></p>
+<ol>
+<li>Ubah nama aksi dengan memilih <strong>Ellipsis (...)</strong>, salin dan tempel teks berikut sebagai nama,</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Unggah File Resume
+</span></code></pre></div>
+<p><img alt="Ubah nama aksi" src="../../../../../translated_images/3.1_30_RenameAction.c316fdf225f88e5c3ee26649e672472829c3372c804b544a1372b0455937c204.id.png" /></p>
+<ol>
+<li>Pilih bidang <strong>Nama Konten</strong> berikutnya dan pilih <strong>ikon petir</strong> atau <strong>ikon fx</strong> di sebelah kanan.</li>
+</ol>
+<p>Di tab <strong>Fungsi</strong>, masukkan ekspresi berikut yang menggunakan fungsi <code>item ()</code>. Ini mengambil properti <code>name</code> dari item saat ini (file lampiran).</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>item()?[&#39;name&#39;]
+</span></code></pre></div>
+<p><img alt="Konfigurasi parameter Nama Konten" src="../../../../../translated_images/3.1_31_ContentNameParameter.c6606773f1e82dbcea93d7c2f52dff7a2168f9f04d6b865f699f56d62a41d4ec.id.png" /></p>
+<ol>
+<li>Untuk parameter <strong>Nama Tabel</strong>, cari <code>res</code> dan pilih tabel <strong>Resumes</strong>.</li>
+</ol>
+<p><img alt="Konfigurasi parameter Nama Tabel" src="../../../../../translated_images/3.1_32_SelectResumesTable.6a00bf6d585002219003da47f6e1042dc67cbdb3fbaf7d959253550035e27520.id.png" /></p>
+<ol>
+<li>Pilih bidang <strong>ID Baris</strong> berikutnya dan pilih <strong>ikon petir</strong> atau <strong>ikon fx</strong> di sebelah kanan.</li>
+</ol>
+<p>Cari <code>ID</code> dan pilih parameter <strong>Resume</strong> dari aksi <em>Tambahkan baris baru</em> Dataverse karena ini berisi nilai ID dari baris tempat file PDF akan diunggah.</p>
+<p>Pilih <strong>Tambahkan</strong>.</p>
+<p><img alt="Pilih parameter ID Baris" src="../../../../../translated_images/3.1_33_RowIDParameter.9824c6b5ea5edf0ce018140c20431a97c2e750d61bcb787f67da260acb6a3838.id.png" /></p>
+<ol>
+<li>Pilih bidang <strong>Nama Kolom</strong> dan pilih opsi <strong>Resume PDF</strong>.</li>
+</ol>
+<p><img alt="Konfigurasi parameter Nama Kolom" src="../../../../../translated_images/3.1_34_ColumnNameParameter.ef4f770cbd84cae5c15cfe06d1bdbe028d0c6d54a2286dab30769fa01c948b71.id.png" /></p>
+<ol>
+<li>Pilih bidang <strong>Konten</strong> dan pilih <strong>ikon petir</strong> atau <strong>ikon fx</strong> di sebelah kanan.</li>
+</ol>
+<p>Di tab <strong>Fungsi</strong>, masukkan ekspresi berikut yang menggunakan fungsi <code>item ()</code>. Ini mengambil properti <code>contentBytes</code> dari item saat ini (file lampiran). <code>contentBytes</code> mengacu pada data biner mentah dari file atau lampiran, yang dikodekan sebagai string Base64.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>item()?[&#39;contentBytes&#39;]
+</span></code></pre></div>
+<ol>
+<li>Kita telah selesai mengonfigurasi aksi ini, jadi mari keluar dari aksi dengan memilih dua tanda kurung sudut («) yang mengarah ke kiri untuk mengecilkan panel.</li>
+</ol>
+<p><img alt="Kecilkan panel aksi" src="../../../../../translated_images/3.1_36_CollapseAction.1813a7219f0f37b87f80c2cd9f5a9626c3a320858d08a0e62cf14736f97db4c6.id.png" /></p>
+<ol>
+<li>Selanjutnya, pilih <strong>Mengirimkan prompt ke copilot yang ditentukan untuk diproses</strong>, lalu seret dan letakkan aksi ini di bawah aksi <strong>Unggah File Resume</strong> di jalur <em>True</em> dari kondisi.</li>
+</ol>
+<p><img alt="Seret dan letakkan aksi di jalur True" src="../../../../../translated_images/3.1_37_DragAndDropAction.57dc2e9f9d25ed892a4fc072a72c55eca6c38e313ab48fb9db37e9371995440f.id.png" /></p>
+<ol>
+<li>Pilih <strong>Mengirimkan prompt ke copilot yang ditentukan untuk diproses</strong> untuk mengonfigurasinya.</li>
+</ol>
+<p><img alt="Pilih aksi" src="../../../../../translated_images/3.1_38_SelectAction.d125bdf661f66b6397542c75efbc6a78b8c4862e03dce4002776c251f1c48382.id.png" /></p>
+<ol>
+<li>Di bidang <strong>Isi/Pesan</strong>, pilih semua konten bidang dan hapus.</li>
+</ol>
+<p><img alt="Hapus parameter Isi" src="../../../../../translated_images/3.1_39_ClearBodyParameter.6a345b2e5dbe5510184d7bae7cd406b8cec72c714f34bb40e30741e445a491c0.id.png" /></p>
+<ol>
+<li>Salin dan tempel teks berikut ke dalam bidang <strong>Isi/Pesan</strong> dan sorot <code>RESUME ID PLACEHOLDER</code>.</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Kirim [ResumeId (text)] = &quot;RESUME ID PLACEHOLDER&quot; dan [ResumeTitle (text_1)] = &quot;RESUME TITLE PLACEHOLDER&quot; dan [ResumeNumber (text_2)]= &quot;RESUME NUMBER PLACEHOLDER&quot; ke Alat &quot;Notify Teams Applicant channel&quot; di agen anak &quot;Application Intake Agent&quot;
+</span></code></pre></div>
+<p><img alt="Ganti teks Resume ID Placeholder" src="../../../../../translated_images/3.1_40_ReplaceResumeIDPlaceholder.eb61590503cb37d89121aaed6d979a4272aa30c87700206e04db8005e60b294f.id.png" /></p>
+<ol>
+<li>Pilih <strong>ikon petir</strong> atau <strong>ikon fx</strong> di sebelah kanan.</li>
+</ol>
+<p>Cari <code>resume</code> dan pilih parameter <strong>Resume</strong> dari aksi <em>Tambahkan baris baru Dataverse</em> karena ini berisi nilai <code>ID</code> dari baris Resume yang dibuat.</p>
+<p>Pilih <strong>Tambahkan</strong>.</p>
+<p><img alt="Pilih parameter Resume" src="../../../../../translated_images/3.1_41_SelectResumeParameter.61c4457c33e5d1b596169857535bfc560ef677264f8798e9148ceac999eeaeb9.id.png" /></p>
+<ol>
+<li>Sorot <code>RESUME TITLE PLACEHOLDER</code>. Pilih <strong>ikon petir</strong> atau <strong>ikon fx</strong> di sebelah kanan.</li>
+</ol>
+<p>Cari <code>title</code> dan pilih parameter <strong>Resume Title</strong> dari aksi <em>Tambahkan baris baru Dataverse</em> karena ini berisi nilai <code>resume title</code> dari baris Resume yang dibuat.</p>
+<p>Pilih <strong>Tambahkan</strong>.</p>
+<p><img alt="Pilih parameter Resume" src="../../../../../translated_images/3.1_42_SelectResumeTitleParameter.6c887607128f928da15c4cf6c22254d0473bc22514aa883462fd812bf14245e0.id.png" /></p>
+<ol>
+<li>Sorot <code>RESUME NUMBER PLACEHOLDER</code>. Pilih <strong>ikon petir</strong> atau <strong>ikon fx</strong> di sebelah kanan.</li>
+</ol>
+<p>Cari <code>resume number</code> dan pilih parameter <strong>Resume Number</strong> dari aksi <em>Tambahkan baris baru Dataverse</em> karena ini berisi nilai <code>Resume Number</code> dari baris Resume yang dibuat.</p>
+<p>Pilih <strong>Tambahkan</strong>.</p>
+<p><img alt="Pilih parameter Resume" src="../../../../../translated_images/3.1_43_SelectResumeNumberParameter.ca19197525250483a7e94598b621072b47ebdf5deb939e1387c979e807ddc554.id.png" /></p>
+<ol>
+<li>Kita telah selesai mengonfigurasi aksi ini dan alur agen kita 🙌🏻 Kamu hebat! Sekarang mari simpan alur pemicu acara kita dengan memilih <strong>Simpan draf</strong>.</li>
+</ol>
+<p><img alt="Simpan draf" src="../../../../../translated_images/3.1_44_SaveDraft.0c9eee19f0c7cb8483b8d31bc17e1dd54075352d22f0f44603a9d52b52429188.id.png" /></p>
+<ol>
+<li>Sekarang kita perlu mengedit detail alur agen, pilih <strong>Kembali</strong>.</li>
+</ol>
+<p><img alt="Pilih Kembali" src="../../../../../translated_images/3.1_45_Back.3f85535977bdb02231a0fdb8465e0e8b7d86fd5342ff933e4ae8bf9610279989.id.png" /></p>
+<ol>
+<li>Pilih <strong>Edit</strong> di bagian <strong>Detail</strong> dan perbarui <strong>Rencana</strong> ke opsi <strong>Copilot Studio</strong>.</li>
+</ol>
+<p>Pilih <strong>Simpan</strong>.</p>
+<p><img alt="Ubah rencana Copilot Studio" src="../../../../../translated_images/3.1_46_ChangePlanDetails.6ab15f1f8bd9ebe55b2c1576c3495f47d1a29d7435e343d4c590e46647601269.id.png" /></p>
+<ol>
+<li>Sebuah modal akan muncul untuk meminta konfirmasi untuk beralih ke rencana Copilot Studio. Pilih <strong>Konfirmasi</strong>.</li>
+</ol>
+<p><img alt="Konfirmasi perubahan rencana Copilot Studio" src="../../../../../translated_images/3.1_47_ConfirmCopilotStudioPlan.bc6ab52e7c982127154b0fb743f85ff9cc05dcab944dffc9485bdbcbe0811397.id.png" /></p>
+<ol>
+<li>Rencana sekarang diperbarui ke <strong>Copilot Studio</strong>. Pilih <strong>Edit</strong> karena kita perlu mempublikasikan alur pemicu acara untuk agen kita.</li>
+</ol>
+<p><img alt="Edit alur" src="../../../../../translated_images/3.1_48_PlanChangedAndEdit.3c3207766a648817f7a7878c3a6f684cf41cdceea4dca8f6fc43b7315c8dd648.id.png" /></p>
+<ol>
+<li>Pilih <strong>Publikasikan</strong>.</li>
+</ol>
+<p><img alt="Publikasikan" src="../../../../../translated_images/3.1_49_Publish.38ff814cfce6b3be1076cafb0c28e4e344f75d8cd4117fabed13ad361d4fde3f.id.png" /></p>
+<p>Hore! Alur pemicu acara sekarang telah dipublikasikan 😃</p>
+<p><img alt="Dipublikasikan" src="../../../../../translated_images/3.1_50_Published.449e7867f7b027ae8a524c749357a1b931955062828bacc3b5a51e979755ef4a.id.png" /></p>
+<p>Mari lanjutkan membuat alur agen baru yang akan dipanggil oleh agen anak <strong>Intake Application Agent</strong>.</p>
+<h3 id="lab-32-memberi-tahu-saluran-teams-menggunakan-kartu-adaptif">Lab 3.2 - Memberi tahu saluran Teams menggunakan kartu adaptif<a class="headerlink" href="#lab-32-memberi-tahu-saluran-teams-menggunakan-kartu-adaptif" title="Permanent link">&para;</a></h3>
+<p>Sekarang kita akan membuat alur agen baru untuk agen anak <strong>Intake Application Agent</strong> yang menggunakan nilai-nilai yang diteruskan oleh pemicu acara, untuk memposting kartu adaptif ke saluran Teams. Kartu adaptif ini akan memberi tahu tim rekrutmen HR tentang PDF yang diunggah secara otomatis sehingga mereka dapat meninjaunya.</p>
+<p>Mari kita mulai!</p>
+<ol>
+<li>Di <strong>Hiring Agent</strong> pilih tab <strong>Agen</strong> dan pilih <strong>Application Intake Agent</strong>.</li>
+</ol>
+<p><img alt="Pilih Application Intake Agent" src="../../../../../translated_images/3.2_01_SelectApplicationIntakeAgent.0e9dd3da5c52e9f59ab3a4545c01897ad830853b650ec42f7f8424aa530e0409.id.png" /></p>
+<ol>
+<li>Gulir ke bawah ke <strong>Alat</strong> dan pilih <strong>+ Tambahkan</strong>.</li>
+</ol>
+<p><img alt="Tambahkan Alat" src="../../../../../translated_images/3.2_02_AddNewTool.7c62275fd9f28cdc1923ea056a148171048dc568ff78056958fd54862133f90e.id.png" /></p>
+<ol>
+<li>Modal <strong>Tambahkan alat</strong> akan muncul. Pilih <strong>+ Alat baru</strong>.</li>
+</ol>
+<p><img alt="Pilih Alat Baru" src="../../../../../translated_images/3.2_03_SelectNewTool.215e7637a9f065a3799a1ecf248eed1e859f201d2dfdfab71a7c1dc18e454e2d.id.png" /></p>
+<ol>
+<li>Pilih <strong>Alur agen</strong>.</li>
+</ol>
+<p><img alt="Pilih Alur agen" src="../../../../../translated_images/3.2_04_SelectAgentFlow.7bc12b3435efccc0cfee8f563640562f87d173b436b3313a3d1256fe35024907.id.png" /></p>
+<ol>
+<li><strong>Desainer alur agen</strong> akan dimuat berikutnya. Di pemicu <strong>Ketika agen memanggil alur</strong>, pilih <strong>+ Tambahkan input</strong>.</li>
+</ol>
+<p><img alt="Pilih tambahkan input" src="../../../../../translated_images/3.2_05_SelectAddAnInput.f3dc8465f490929baccb0f2dc72b50629b1435ff8a3861f7974885d1d36cdeb1.id.png" /></p>
+<ol>
+<li>Pilih <strong>Teks</strong> sebagai jenis input pengguna.</li>
+</ol>
+<p><img alt="Pilih Teks" src="../../../../../translated_images/3.2_06_SelectText.93585b4af8c4e277c11c2052b638e249508a24a075987026a6ec346e75184217.id.png" /></p>
+<ol>
+<li>Di bidang teks input, salin dan tempel teks berikut untuk nama parameter input.</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ResumeId
+</span></code></pre></div>
+<p><img alt="Input ResumeId" src="../../../../../translated_images/3.2_07_ResumeIdInput.a9e127e343856d6c6d45dd1251cade0503bad9484bc563c02155390951b1faa5.id.png" /></p>
+<ol>
+<li>Ulangi langkah yang sama untuk menambahkan input teks kedua. Salin dan tempel teks berikut untuk nama parameter input.</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>ResumeTitle
+</span></code></pre></div>
+<p><img alt="Input ResumeTitle" src="../../../../../translated_images/3.2_08_ResumeTitleInput.c71ecd364a974a93abb0de876807c2e9bde59fcea6df317babeb20764b636f26.id.png" /></p>
+<ol>
+<li>Ulangi langkah yang sama untuk menambahkan input teks ketiga. Salin dan tempel teks berikut untuk nama parameter input.</li>
+</ol>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>ResumeNumber
+</span></code></pre></div>
+<img alt="Input ResumeNumber" src="../../../../../translated_images/3.2_09_ResumeNumberInput.a6c060000354deab51dffef3c1ad9f13378cfeabdafdb7a33c2a591bfd044709.id.png" /></p>
+<ol>
+<li>Ingat bagaimana di <a href="../../recruit/08-add-adaptive-card/#81-create-a-new-topic-with-an-adaptive-card-for-user-to-submit-their-request">Recruit</a> kita menambahkan kartu adaptif dalam Topik untuk agen kita? Kali ini, kita akan menambahkan kartu adaptif dalam alur agen. Sekarang kita akan menambahkan aksi lain ke alur agen kita yang akan memposting kartu adaptif ke saluran Teams.</li>
+</ol>
+<p>Pilih <strong>ikon +</strong> di bawah pemicu.</p>
+<p><img alt="Tambahkan aksi baru" src="../../../../../translated_images/3.2_10_AddNewAction.4474a2150991cac246d5e4091a74ba91e76e1c5bafa34ad985a8567c09dcdd35.id.png" /></p>
+<ol>
+<li>Pilih aksi <strong>Post card in a chat or channel</strong>.</li>
+</ol>
+<p><img alt="Pilih aksi post card in a chat or channel" src="../../../../../translated_images/3.2_11_SelectPostCardInAChatOrChannel.97de43ed1c883b14d0150ae65efaa90f53f0815bdf57ec10e0e22cbd3e22ce06.id.png" /></p>
+<ol>
+<li>Referensi koneksi ke Microsoft Teams perlu dibuat dengan akun pengguna yang masuk. Pilih <strong>Masuk</strong>.</li>
+</ol>
+<p><img alt="Pilih masuk" src="../../../../../translated_images/3.2_12_SignInToCreateConnectionReference.2297f8b702d71508f1b21a3ed4046df4846dc03b13932a20e5c445403559ac1f.id.png" /></p>
+<ol>
+<li>Pilih akun pengguna Anda dan kemudian pilih <strong>Izinkan akses</strong>.</li>
+</ol>
+<p><img alt="Pilih Izinkan akses" src="../../../../../translated_images/3.2_13_AllowAccess.31cbf82606d75231108bd4f2bfeafffda3cd7e7e760cd46004c2705afe050aaf.id.png" /></p>
+<ol>
+<li>Untuk parameter input berikut,</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Cara Mengatur</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Post as</strong></td>
+<td>Dropdown</td>
+<td>Pilih opsi <code>Flow bot</code></td>
+</tr>
+<tr>
+<td><strong>Post in</strong></td>
+<td>Dropdown</td>
+<td>Pilih opsi <code>Channel</code></td>
+</tr>
+<tr>
+<td><strong>Team</strong></td>
+<td>Dropdown</td>
+<td>Pilih tim yang tersedia di lingkungan Anda yang Anda miliki akses untuk tujuan menyelesaikan latihan lab ini</td>
+</tr>
+<tr>
+<td><strong>Team</strong></td>
+<td>Dropdown</td>
+<td>Pilih saluran yang tersedia di lingkungan Anda yang Anda miliki akses untuk tujuan menyelesaikan latihan lab ini</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Konfigurasi parameter input" src="../../../../../translated_images/3.2_14_ConfigureParameters.8c21924f90db3acaa33d4e35ef43c70556ba4cc37207a195ac654e55a43400a6.id.png" /></p>
+<ol>
+<li>Selanjutnya, kita akan mengonfigurasi bidang <strong>Kartu Adaptif</strong>. Pilih bidang <strong>Kartu Adaptif</strong>.</li>
+</ol>
+<p><img alt="Pilih bidang Kartu Adaptif" src="../../../../../translated_images/3.2_15_SelectAdaptiveCardParameter.65323056be6174d2eed7422650aaa70fc16396148f90b8af1801110d7a30d66f.id.png" /></p>
+<ol>
+<li>Buka <a href="../../../../../docs/operative-preview/03-automate-triggers/assets/3.2_ResumeTableUpdated.json">Resume Table Updated JSON file</a>, salin seluruh isinya, dan tempelkan ke dalam bidang Kartu Adaptif.</li>
+</ol>
+<p><img alt="Salin dan tempel JSON" src="../../../../../translated_images/3.2_16_JSON.f022097fb7139bd12514abb8fdc518309ea940f005cc94a11ba159359cde784b.id.png" /></p>
+<ol>
+<li>Mirip dengan apa yang kita lakukan di <a href="../../recruit/08-add-adaptive-card/#81-create-a-new-topic-with-an-adaptive-card-for-user-to-submit-their-request">Recruit</a>, kita akan mengganti nilai yang ada di payload JSON dengan nilai aktual atau konten dinamis.</li>
+</ol>
+<p>Pertama, mari kita perbarui URL untuk properti <code>url</code> dalam properti <code>selectAction</code>. URL ini akan diganti dengan URL tampilan sistem Resumes di aplikasi model-driven <strong>Hiring Hub</strong>. Ini akan memungkinkan Perekrut untuk memilih aksi dan diarahkan ke tampilan sistem Resumes di aplikasi model-driven.</p>
+<p>Sorot nilai URL saat ini dan hapus.</p>
+<p><img alt="Pilih nilai URL" src="../../../../../translated_images/3.2_17_SystemViewURL.5e51fd894ac916f436107c7b668d66ca87ca8bdfd7affeb7dae1b10fa8ff5afb.id.png" /></p>
+<ol>
+<li>Di aplikasi model-driven <strong>Hiring Hub</strong>, navigasikan ke tampilan sistem <strong>Resumes</strong> menggunakan menu sisi kiri dan salin URL. Kemudian navigasikan kembali ke alur agen, dan tempelkan URL yang disalin ke properti <strong>url</strong> dalam properti <code>selectAction</code>.</li>
+</ol>
+<p><img alt="Salin URL tampilan sistem Resumes" src="../../../../../translated_images/3.2_18_CopyResumesSystemViewURL.14d9f55c7db15977a12dfe2a5df95aab5cf241e646b08f9838cff31aaa27a381.id.png" />
+1. Anda seharusnya melihat hal berikut di mana yang disorot dengan warna kuning adalah detail lingkungan Anda dari aplikasi berbasis model <strong>Hiring Hub</strong>.</p>
+<div class="language-text highlight"><pre><span></span><code> | Parameter | Nilai | Penjelasan |
+ |----------|------------|---------|
+ | **Organization URI** | GUID | URL organisasi lingkungan Dataverse/Dynamics 365 |
+ | **appid** | GUID | Untuk membuka aplikasi berbasis model tertentu, parameter kueri appid atau appname digunakan. Dalam kasus ini, appid digunakan |
+ | **viewid** | GUID | Parameter kueri yang merupakan id dari tampilan |
+
+   ![Tempel URL](../../../../../translated_images/3.2_19_PasteURL.41f3fdd66190c8ba478857f91c90eb05ee9621243bda7b7ad26eb5802b8e970d.id.png)
+</code></pre></div>
+<ol>
+<li>
+<p>Selanjutnya, kita akan menambahkan nilai konten dinamis untuk beberapa properti. Mari kita mulai dengan teks yang akan menampilkan referensi Nomor Resume dari baris yang dibuat oleh pemicu acara secara otomatis.</p>
+<p>Pilih ikon <strong>panel</strong> untuk memuat panel tindakan.</p>
+<p><img alt="Pilih ikon panel" src="../../../../../translated_images/3.2_20_SelectPannelIcon.786a4147ba12e0e62648c66f14fb2b9a7f89b27c3a610f43420e31cb0c9fb5da.id.png" /></p>
+</li>
+<li>
+<p>Gulir ke bawah ke baris di mana Anda melihat properti <code>text</code> untuk <code>RESUME NUMBER PLACEHOLDER</code>. Sorot nilai placeholder dan hapus.</p>
+<p><img alt="Hapus placeholder" src="../../../../../translated_images/3.2_21_DeleteResumeNumberPlaceholder.6ffd7a5a073f9d9a11e0e119c87e827243de237f70ebc3ab37dfdd36de615130.id.png" /></p>
+</li>
+<li>
+<p>Klik di antara tanda kutip ganda dan pilih ikon <strong>petir</strong> atau ikon <strong>fx</strong> di sebelah kanan.</p>
+<p>Di tab <strong>Konten Dinamis</strong>, pilih parameter <strong>ResumeNumber</strong> dan pilih <strong>Tambahkan</strong>.</p>
+<p><img alt="Tambahkan parameter ResumeNumber" src="../../../../../translated_images/3.2_22_SelectResumeNumberParameter.de5a6eecb3ee092441d841ad137dfecd9f8d503a370ff60eb5ccdc0267e37df0.id.png" /></p>
+</li>
+<li>
+<p>Parameter <strong>ResumeNumber</strong> sekarang akan ditambahkan sebagai konten dinamis ke properti <code>text</code>.</p>
+<p><img alt="Konten dinamis ResumeNumber" src="../../../../../translated_images/3.2_23_ResumeNumberDynamicContent.129a566ac6e9d448b268b828da5766a7056779ac167f65b498e2ca21d703b7f0.id.png" /></p>
+</li>
+<li>
+<p>Kita akan mengulangi langkah yang sama untuk <code>RESUME NAME PLACEHOLDER</code>. Gulir ke bawah ke baris di mana Anda melihat properti <code>text</code> untuk <code>RESUME NAME PLACEHOLDER</code>. Sorot nilai placeholder dan hapus.</p>
+<p><img alt="Resume Name Placeholder" src="../../../../../translated_images/3.2_24_ResumeNamePlaceholder.6c879b99ae375892f7e0a511bfedd5fa9e60a8dea71ea2a44c2a7a04c8389f43.id.png" /></p>
+</li>
+<li>
+<p>Klik di antara tanda kutip ganda dan pilih ikon <strong>petir</strong> atau ikon <strong>fx</strong> di sebelah kanan.</p>
+<p>Di tab <strong>Konten Dinamis</strong>, pilih parameter <strong>ResumeTitle</strong> dan pilih <strong>Tambahkan</strong>.</p>
+<p><img alt="Tambahkan parameter ResumeTitle" src="../../../../../translated_images/3.2_25_SelectResumeTitleParameter.18c769bbd2c60e362a56f6055e151ed6287903cb625addcdfbb43044828d7378.id.png" /></p>
+</li>
+<li>
+<p>Parameter <strong>ResumeTitle</strong> sekarang akan ditambahkan sebagai konten dinamis ke properti <code>text</code>.</p>
+<p><img alt="Konten dinamis ResumeTitle" src="../../../../../translated_images/3.2_26_ResumeTitleDynamicContent.7219e078f71fc0d5d4a6bb228ba2d53f0898ba26a27c5eb859df90d12dd52c70.id.png" /></p>
+</li>
+<li>
+<p>Kita akan mengulangi langkah yang sama untuk nilai <strong>Due Date</strong> yang mewakili kapan perekrut harus meninjau resume. Gulir ke bawah ke baris di mana Anda melihat properti <code>text</code> untuk <code>May 21, 2023</code>.</p>
+<p><img alt="Pilih Izinkan akses" src="../../../../../translated_images/3.2_27_DueDatePlaceholder.17c6003cc9ec1141b0aeb5cde203098a7f5534fa11f01a3cbffb66206ed1633a.id.png" /></p>
+</li>
+<li>
+<p>Hapus nilai placeholder tanggal ini dan klik di antara tanda kutip ganda.</p>
+<p><img alt="Hapus" src="../../../../../translated_images/3.2_28_DeleteDueDatePlaceholder.9a3df55fb3c9ed72e61e0a60dc3344335b0444ff537c9fb51036b0442a85d268.id.png" /></p>
+</li>
+<li>
+<p>Pilih ikon <strong>petir</strong> atau ikon <strong>fx</strong> di sebelah kanan dan di tab <strong>Fungsi</strong>, masukkan ekspresi berikut dan pilih <strong>Tambahkan</strong>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>addDays(utcNow(), 3, &#39;MMM dd, yyyy&#39;)
+</span></code></pre></div>
+<p>Ekspresi ini menggunakan dua fungsi.</p>
+<table>
+<thead>
+<tr>
+<th>Fungsi</th>
+<th>Penjelasan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>addDays</strong></td>
+<td>Menambahkan sejumlah hari tertentu ke tanggal yang diberikan dan mengembalikan tanggal hasil dalam format string</td>
+</tr>
+<tr>
+<td><strong>utcNow</strong></td>
+<td>Mengembalikan tanggal dan waktu saat ini dalam format Waktu Universal Terkoordinasi (UTC) sebagai string.</td>
+</tr>
+</tbody>
+</table>
+<p>Untuk nilai utcNow, kami memformat tanggal menjadi bulan dan tanggal, diikuti oleh tahun.</p>
+<p><img alt="Ekspresi Due Date" src="../../../../../translated_images/3.2_29_01_ExpressionDueDate.a4fa31985f5500971f2fc6da0e81e008af12be19d54a30a240764b74a4b2dbcb.id.png" /></p>
+<p>Ekspresi sekarang akan ditambahkan ke properti <code>text</code>.</p>
+<p><img alt="Ekspresi Due Date" src="../../../../../translated_images/3.2_29_02_ExpressionDueDate.6159288450731c7b09628af70f0c9a6d92590ca7c7e39e8a524ae8af7c511f2c.id.png" /></p>
+</li>
+<li>
+<p>Terakhir, kita akan memperbarui URL untuk properti <code>url</code> dalam properti array <code>actions</code> di bagian bawah payload JSON. Placeholder URL saat ini akan diganti dengan URL baris Resume di aplikasi berbasis model <strong>Hiring Hub</strong>. Ini akan memungkinkan Perekrut untuk memilih tindakan <code>Action.OpenURL</code> dari kartu adaptif dan diarahkan ke Resume di aplikasi berbasis model.</p>
+<p><img alt="Hapus placeholder URL View Resume" src="../../../../../translated_images/3.2_30_ViewResumeURLPlaceholder.f27af6cadfb54fb977f0b46ea3ec42ee0638d38ebc5d294eff5da52abf9d4a1b.id.png" /></p>
+</li>
+<li>
+<p>Di aplikasi berbasis model <strong>Hiring Hub</strong>, buka baris di tampilan sistem <strong>Resumes</strong> menggunakan menu sisi kiri. Baris resume akan dimuat sebagai formulir di aplikasi berbasis model.</p>
+<p>Salin URL untuk baris Resume.</p>
+<details class="info">
+<summary>Cara kembali ke aplikasi berbasis model <strong>Hiring Hub</strong> jika Anda keluar/menutupnya</summary>
+<ol>
+<li>Jelajahi ke <a href="https://make.powerapps.com">https://make.powerapps.com</a> dan pastikan Anda berada di lingkungan pengembang yang Anda gunakan untuk latihan lab ini, jika tidak, beralihlah ke sana.</li>
+</ol>
+<p><img alt="Jelajahi ke make.powerapps.com" src="../../../../../translated_images/3.2_31_Note_01_BrowseToURL.a13dfc8b05a0b34f3a4c853f3d3e418864176b52b1b40c069da7712af5562aa5.id.png" /></p>
+<ol>
+<li>Pilih <strong>Apps</strong> di panel menu sisi kiri dan untuk aplikasi berbasis model <strong>Hiring Hub</strong>, pilih ikon <strong>Play</strong> untuk memuatnya di browser Anda.</li>
+</ol>
+<p><img alt="Pilih aplikasi berbasis model Hiring Hub" src="../../../../../translated_images/3.2_31_Note_02_HiringHubApp.a09b6ea28b4fea8932809cb847cb0ea3d8faeb7b7b5604852de1f46ab1e9741b.id.png" /></p>
+</details>
+<p><img alt="Salin URL baris Resume" src="../../../../../translated_images/3.2_31_CopyResumeURL.f6156f8792526129c2613922f0137221b2944fa8ffe7c04766d710521ad8765b.id.png" /></p>
+</li>
+<li>
+<p>Kemudian navigasikan kembali ke alur agen, sorot nilai placeholder URL saat ini dan hapus.</p>
+<p><img alt="Hapus placeholder URL baris Resume" src="../../../../../translated_images/3.2_32_SelectResumeURLPlaceHolder.8db783de292428eaa8937242eba4a54ebb1df7bf4c1bc9391b016ee545fb2b9f.id.png" /></p>
+</li>
+<li>
+<p>Kemudian tempelkan URL yang disalin ke properti <strong>url</strong> dalam properti <code>url</code>.</p>
+<p><img alt="Tempelkan URL baris Resume yang disalin" src="../../../../../translated_images/3.2_33_PasteResumeRowURL.d7ba92493d7597b89f75e2f17f76846ac17a9ba89c2e36729dc6b5dc1599b047.id.png" /></p>
+</li>
+<li>
+<p>Anda seharusnya melihat hal berikut. Hapus nilai id <code>GUID</code> di akhir. Kita akan mengganti konten dinamis ini - parameter <strong>ResumeId</strong>.</p>
+<p><img alt="Hapus placeholder URL View Resume" src="../../../../../translated_images/3.2_34_DeleteViewResumePlaceholderURL.7b26209eaeef6dc0a21b16140d05fe2f0e38de5f714575edd24d21dded58102a.id.png" /></p>
+</li>
+<li>
+<p>Pilih ikon <strong>petir</strong> atau ikon <strong>fx</strong> di sebelah kanan.</p>
+<p>Di tab <strong>Konten Dinamis</strong>, pilih parameter <strong>ResumeId</strong> dan pilih <strong>Tambahkan</strong>.</p>
+<p><img alt="Parameter ResumeId" src="../../../../../translated_images/3.2_35_ResumeIdParameter.3dc710a7f5216944387f4d5f82c0a372eee23ee5259dec04147ad00e9c454d7d.id.png" /></p>
+</li>
+<li>
+<p><strong>ResumeId</strong> akan ditambahkan sebagai konten dinamis. Berikut yang disorot dengan warna kuning adalah detail lingkungan Anda dari aplikasi berbasis model <strong>Hiring Hub</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Nilai</th>
+<th>Penjelasan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Organization URI</strong></td>
+<td>GUID</td>
+<td>URL organisasi lingkungan Dataverse/Dynamics 365</td>
+</tr>
+<tr>
+<td><strong>appid</strong></td>
+<td>GUID</td>
+<td>Untuk membuka aplikasi berbasis model tertentu, parameter kueri appid atau appname digunakan. Dalam kasus ini, appid digunakan</td>
+</tr>
+<tr>
+<td><strong>id</strong></td>
+<td>GUID</td>
+<td>Parameter kueri yang merupakan id dari baris Resume</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Konten dinamis ResumeId" src="../../../../../translated_images/3.2_36_ResumeIdDynamicContent.a1a40dfb4a83b60f1b75b02160890e3fec41c2c7df8adf32e02d652a57c1ee87.id.png" /></p>
+</li>
+<li>
+<p>Kita telah selesai mengonfigurasi tindakan <strong>Post card in a chat or channel</strong> 👏🏻 Keluar dari panel konfigurasi tindakan dengan memilih ikon <strong>x</strong>.</p>
+<p><img alt="Tutup panel" src="../../../../../translated_images/3.2_37_CloseActionPanel.23d07107381411aa9494ef36fb240682a0727a63e6f15082074b34a1defd517b.id.png" /></p>
+</li>
+<li>
+<p>Akhirnya, kita akan mengonfigurasi tindakan terakhir, <strong>Respond to the agent</strong> dengan mengirimkan teks kembali ke agen untuk mengakhiri pemrosesan.</p>
+<p>Di tindakan <strong>Respond to the agent</strong>, pilih <strong>+Tambahkan output</strong>.</p>
+<p><img alt="Pilih Tambahkan output" src="../../../../../translated_images/3.2_38_AddAnOutput.de1a0e49033cb077eb5d2c226152bbb06dc12fb95d0496c69d469eecdb46c0ae.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Text</strong> sebagai jenis output.</p>
+<p><img alt="Pilih teks sebagai jenis output" src="../../../../../translated_images/3.2_39_SelectText.4e1e82c35fe9d1b569b668092d405aa9b0c81fbe67e7de68a660f2083ed3afdd.id.png" /></p>
+</li>
+<li>
+<p>Masukkan hal berikut sebagai nama output.</p>
+<p><img alt="Output Akhiri Percakapan" src="../../../../../translated_images/3.2_40_EndConversationOutput.e392b58847d8439443c89459fccbbd88d4ea5e5fa562749b77407c46b9ff4ca4.id.png" /></p>
+</li>
+<li>
+<p>Masukkan hal berikut sebagai nilai untuk output.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Finished
+</span></code></pre></div>
+<p><img alt="Nilai Output Akhiri Percakapan" src="../../../../../translated_images/3.2_41_EndConversationOutputValue.2cb836900ee9fca802926676e613b077938f1106cc16e77ddd77af64ce92dcc8.id.png" /></p>
+</li>
+<li>
+<p>Kita sekarang telah selesai mengonfigurasi alur agen. Pilih <strong>Save draft</strong> untuk menyimpan alur agen. Pesan konfirmasi akan muncul setelah disimpan.</p>
+<p><img alt="Simpan draft" src="../../../../../translated_images/3.2_42_SaveDraft.1bb26eec40faf5d2c244d93f869344915e90423623e07e02cac2c1f8c73d1a4a.id.png" /></p>
+</li>
+<li>
+<p>Sebelum mempublikasikan alur agen, kita perlu memperbarui detail untuk alur agen. Pilih tab <strong>Overview</strong> dan pilih <strong>Edit</strong>.</p>
+<p>Di bidang nama alur, masukkan hal berikut.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Notify Teams Applicant channel
+</span></code></pre></div>
+<p>Setelah itu, pilih ikon <strong>Refresh</strong> untuk memperbarui deskripsi alur agen menggunakan AI.</p>
+<p>Kemudian pilih <strong>Save</strong> untuk menyimpan detail yang diperbarui untuk alur agen.</p>
+<p><img alt="Edit dan simpan detail" src="../../../../../translated_images/3.2_43_EditDetails.f0c9b53a9c1b29e4aa3c34774680559ae9173f77b3a37817bab2296b77ffcca7.id.png" /></p>
+</li>
+<li>
+<p>Navigasikan kembali ke tab <strong>Designer</strong> dan pilih <strong>Publish</strong> untuk mempublikasikan alur agen. Pesan konfirmasi akan muncul setelah disimpan.</p>
+<p><img alt="Publikasikan alur agen" src="../../../../../translated_images/3.2_44_PublishAgentFlow.3014e6de5e53aa5fc2021bf6e11b901c4990b4fbb4d4cee33cc6d5b6cc641ed8.id.png" /></p>
+</li>
+<li>
+<p>Alur agen sekarang perlu ditambahkan sebagai alat di <strong>Application Intake Agent</strong>. Navigasikan kembali ke <strong>Hiring Agent</strong> dan pilih tab <strong>Agents</strong>, lalu pilih <strong>Application Intake Agent</strong>.</p>
+<p><img alt="Pilih Application Intake Agent" src="../../../../../translated_images/3.2_45_ApplicationIntakeAgent.0446b1762d0f499e880e7984f59669639193566f72539cd4fba5c62cd1fe8726.id.png" /></p>
+</li>
+<li>
+<p>Di bagian <strong>Details</strong> dari agen, kita akan memperbarui bidang <strong>Description</strong>. Salin hal berikut dan tempelkan di akhir teks deskripsi.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>and also notify the Teams Applicant channel
+</span></code></pre></div>
+<p><img alt="Perbarui Deskripsi Agen" src="../../../../../translated_images/3.2_46_UpdateAgentDescription.56344699cd3cc5e417e8f95362ed2288d0c0391f33bd98872e7e008a545175f0.id.png" /></p>
+</li>
+<li>
+<p>Selanjutnya, kita akan menambahkan alur agen sebagai alat. Gulir ke bawah dan pilih <strong>+ Tambahkan</strong>.</p>
+<p><img alt="Pilih Tambahkan" src="../../../../../translated_images/3.2_47_AddTools.c7557e272bd731129dffe9edebba3b04170d27806aaa14fffbe3d66b7b61808b.id.png" /></p>
+</li>
+<li>
+<p>Pilih alur agen yang dibuat sebelumnya, <strong>Notify Teams Applicant Channel</strong>.</p>
+<p><img alt="Pilih alur agen" src="../../../../../translated_images/3.2_48_NotifyTeamsApplicantChannelAgentFlow.5985f570786edef4eac93455f7a07978c0daf54e1371660bfd56a4c16b6aaf79.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Tambahkan dan konfigurasikan</strong> selanjutnya.</p>
+<p><img alt="Pilih Tambahkan dan konfigurasikan" src="../../../../../translated_images/3.2_49_AddAndConfigure.c2d6cccfa9e4bb23ff58b615ad16d0b3ade4ef867b73b9196a45df6990d8072f.id.png" /></p>
+</li>
+<li>
+<p>Di bagian <strong>Inputs</strong> dari alur agen, tiga input yang kita konfigurasi sebelumnya di alur agen terlihat. Secara default, konfigurasi <strong>Fill using</strong> diatur ke <strong>Dynamically fill with AI</strong>. Kita akan mempertahankan pengaturan ini karena prompt dari pemicu acara (di tindakan terakhir, <strong>Mengirimkan prompt ke copilot yang ditentukan untuk diproses</strong> - ini adalah langkah 38-44 dari <strong>Lab 3.1 - Automate uploading resumes to Dataverse received by email</strong>) akan berisi nilai parameter yang akan diekstrak oleh AI.</p>
+<p><img alt="Input alur agen alat" src="../../../../../translated_images/3.2_50_Inputs.9fbb57b83b533d5a60f957505bb1e5430886ec9e6c70c10ed1c641d6b33fcc21.id.png" /></p>
+</li>
+<li>
+<p>Sekarang alat telah ditambahkan ke <strong>Application Intake Agent</strong>, instruksi agen perlu diperbarui. Pilih ikon <strong>panah kembali</strong> untuk kembali ke daftar agen.</p>
+<p><img alt="Pilih ikon panah kembali" src="../../../../../translated_images/3.2_51_SelectBack.6a9a55176d931895777822d3f9276d5d12ffe379a8860dd521e1c895e8188bba.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Application Intake Agent</strong> di tab <strong>Agents</strong> dari <strong>Hiring Agent</strong>.</p>
+<p><img alt="Pilih Application Intake Agent" src="../../../../../translated_images/3.2_52_SelectApplicationIntakeAgent.039140313422e833389fd134b3a70a0eed11ba175ede5dbdc4abcce6004c7d2d.id.png" /></p>
+</li>
+<li>
+<p>Di bidang <strong>Instructions</strong>, masukkan baris baru setelah instruksi <code>2.Post-Upload</code>. Salin dan tempelkan instruksi berikut.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Process for Resume Upload via Email
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>1. When you receive a message, **Send [ResumeId (text)] = &quot;1680265f-5793-f011-b41b-7c1e525be9f7&quot; and [ResumeTitle (text_1)] = &quot;TAYLOR TESTPERSON (FICTITIOUS).pdf&quot; and [ResumeNumber (text_2)]= &quot;R01026&quot; to the Tool &quot;Notify Teams Applicant channel&quot;** in the child agent &quot;Application Intake Agent&quot;, call [AGENT FLOW PLACEHOLDER]
+</span></code></pre></div>
+<p><img alt="Perbarui instruksi Application Intake Agent" src="../../../../../translated_images/3.2_53_PasteCopiedInstructions.f24ed715e907cf023449a54b894354ca1252b198e9be694eec2875f7f647f9c2.id.png" /></p>
+</li>
+<li>
+<p>Sorot teks <code>[AGENT FLOW PLACEHOLDER</code>.</p>
+<p><img alt="Sorot placeholder" src="../../../../../translated_images/3.2_54_HighlightPlaceholder.6c3fcac3c8f4fb6e5cce2dbd6b6548b84652d009e20fa4a01183a9a1b42b24fb.id.png" /></p>
+</li>
+<li>
+<p>Masukkan karakter garis miring, <code>/</code>, dan pilih alat <strong>Notify Teams Applicant Channel</strong>.</p>
+<p><img alt="Pilih alat Notify Teams Applicant Channel" src="../../../../../translated_images/3.2_55_NotifyTeamsApplicatnChannelTool.2e3dd1e9ee9b2dfe10e1f2feb7e3b74b08856ce3afb16dafae1f2c4b73da904f.id.png" />
+1. Alur agen sekarang akan dijalankan oleh <strong>Application Intake Agent</strong> sesuai dengan instruksi, setelah tindakan terakhir (<strong>Mengirimkan prompt ke copilot yang ditentukan untuk diproses</strong>) dalam pemicu acara mengirimkan prompt yang berisi nilai parameter kembali ke agen.</p>
+<p>Pilih <strong>Save</strong> untuk menyimpan instruksi yang diperbarui untuk <strong>Application Intake Agent</strong>.</p>
+<p><img alt="Pilih Save" src="../../../../../translated_images/3.2_56_Save.6abb0131f96b20d3753b5990313eaea6a237bef2bf0e2103a2ee5ba570fd7c04.id.png" /></p>
+</li>
+<li>
+<p>Instruksi sekarang akan diperbarui setelah agen disimpan.</p>
+<p><img alt="Instruksi diperbarui" src="../../../../../translated_images/3.2_57_InstructionsUpdated.5bfbfe2ca1da16284358a9917246bd8676cd6c095839ed1c69361d992cacd2b3.id.png" /></p>
+</li>
+<li>
+<p>Sekarang kita perlu <strong>Publish</strong> <strong>Hiring Agent</strong>. Pilih <strong>Publish</strong> di kanan atas, dan dalam <em>modal Publish this agent</em> yang muncul, pilih <strong>Publish</strong>.</p>
+<p><img alt="Publish Hiring Agent" src="../../../../../translated_images/3.2_58_PublishAgent.e7ec81c81b735de0cd11516aa944c759ea510e2b0bc9acf9f00d42d788896991.id.png" /></p>
+</li>
+<li>
+<p>Setelah dipublikasikan, pesan konfirmasi akan muncul bahwa agen telah dipublikasikan.</p>
+<p><img alt="Pesan konfirmasi" src="../../../../../translated_images/3.2_59_AgentPublished.d15e01232544cf08943260dfbf61c92339dbd187620349e7c5a43add4796ed12.id.png" /></p>
+</li>
+</ol>
+<p>Sekarang kita bisa menguji agen!</p>
+<h3 id="lab-33-uji-pemicu-acara">Lab 3.3 - Uji pemicu acara<a class="headerlink" href="#lab-33-uji-pemicu-acara" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Untuk menjalankan pemicu acara, email perlu dikirim dengan file pdf Resume. Di Outlook, buat pesan email baru.</p>
+<table>
+<thead>
+<tr>
+<th>Komponen Email</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Penerima</strong></td>
+<td>Gunakan akun pengguna yang Anda gunakan untuk masuk sebagai nilai</td>
+</tr>
+<tr>
+<td><strong>Lampiran file</strong></td>
+<td>Unggah file <a href="../../../../../docs/operative-preview/test-data/resumes/TAYLOR%20TESTPERSON%20(FICTITIOUS).pdf">TAYLOR TESTPERSON (FICTITIOUS)</a></td>
+</tr>
+<tr>
+<td><strong>Isi email</strong></td>
+<td>Salin dan tempel teks berikut sebagai isi email</td>
+</tr>
+</tbody>
+</table>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Dear Hiring Manager,
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>Saya menulis untuk menyampaikan minat saya pada posisi Senior Power Platform Engineer di organisasi Anda. Dengan pengalaman lebih dari sembilan tahun dalam memberikan solusi yang aman dan skalabel di platform cloud Microsoft, saya yakin dapat berkontribusi secara efektif pada tim Anda.
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>Dalam peran saya yang terakhir sebagai Lead Power Platform Engineer, saya mengembangkan pipeline penerimaan resume otomatis, mengurangi triase manual dan meningkatkan kemampuan pencarian. Saya telah memberikan aplikasi manajemen kasus HR, memperkenalkan alur yang sadar solusi, dan menerapkan pemeriksaan PR untuk meningkatkan waktu penyebaran. Keahlian saya mencakup Power Apps, Power Automate, Power Pages, Dataverse, dan berbagai layanan Microsoft 365, serta integrasi dengan Graph/REST API dan Azure Functions.
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>Sebelumnya, saya mengembangkan persetujuan Teams dengan kartu adaptif, mempercepat waktu persetujuan hingga hari yang sama, dan menciptakan kerangka kerja penanganan kesalahan yang kuat. Latar belakang saya juga mencakup migrasi alur kerja lama ke Power Automate dan membangun portal layanan mandiri yang diadopsi oleh ratusan karyawan.
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>Saya memiliki gelar B.Sc. dalam Ilmu Komputer dan bersertifikat sebagai Power Platform Developer (PL-400) dan Solution Architect (PL-600). Saya juga memiliki semangat untuk membimbing dan telah menjadi sukarelawan di kelompok pembuat lokal.
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>Mohon temukan CV saya terlampir untuk pertimbangan Anda. Saya akan sangat senang untuk mendiskusikan bagaimana keterampilan dan pengalaman saya sesuai dengan kebutuhan Anda.
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>Terima kasih atas waktu dan perhatian Anda.
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>Salam hangat,  
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>Taylor Testperson
+</span></code></pre></div>
+<p><strong>Kirimkan</strong> email setelah selesai dibuat.</p>
+<p><img alt="Buat email dengan lampiran file PDF" src="../../../../../translated_images/3.3_01_ComposeEmailWithAttachment.eccba1bbcc276b4373277b193a66d8818b712c6ab9468ee12902545522b670f7.id.png" /></p>
+</li>
+<li>
+<p>Di portal pembuat Power Automate untuk alur pemicu acara, pilih ikon <strong>Refresh</strong> untuk melihat alur yang berhasil dijalankan untuk email yang dikirim.</p>
+<p><img alt="Pilih ikon refresh untuk melihat alur" src="../../../../../translated_images/3.3_02_FlowRun.0e99756ebc5fba371dc72719b0619736626934461e58db2dc153535cbabcc1e8.id.png" /></p>
+</li>
+<li>
+<p>Kembali ke Copilot Studio di <strong>Hiring Agent</strong>, pilih tab <strong>Activity</strong>.</p>
+<p><img alt="Pilih tab Activity" src="../../../../../translated_images/3.3_03_SelectActivity.11d78735a8a2a1f64443d285deb47f2bacc5bd53ded039791215f9465dbc3f76.id.png" /></p>
+</li>
+<li>
+<p>Tab <strong>Activity</strong> akan dimuat yang menampilkan semua aktivitas dari <strong>Hiring Agent</strong>. Akan ada aktivitas dengan nama <strong>Automated</strong> yang memiliki status <strong>Complete</strong>. Aktivitas ini mewakili pemicu acara dan alur agen yang dijalankan.</p>
+<p><img alt="Aktivitas selesai" src="../../../../../translated_images/3.3_04_StatusComplete.dbe14ffb9414b0f4d869841426c4ca595d7a664bf13f4b5e2e29a4e251b9064c.id.png" /></p>
+</li>
+<li>
+<p>Pilih aktivitas tersebut, dan pilih pemicu acara di peta aktivitas. Di panel sisi kanan, perhatikan bagaimana parameter input dalam prompt berisi nilai parameter <code>Resume Id</code>, <code>Resume Title</code>, dan <code>Resume Number</code> dari baris <strong>Dataverse</strong> yang dibuat. Ini berasal dari nilai konten dinamis yang dikonfigurasi sebelumnya di langkah 18 - 27 dari <strong>Lab 3.1 - Automate uploading resumes to Dataverse received by email</strong>.</p>
+<p><img alt="Pemicu acara" src="../../../../../translated_images/3.3_05_EventTrigger.cbd73cd43a79e88e782d1e47ac8ddacdbe30d582a4da61a31010f44a9dacdd12.id.png" /></p>
+</li>
+<li>
+<p>Kembali ke aplikasi model-driven <strong>Hiring Hub</strong> dan di tampilan sistem <strong>Resumes</strong>, pilih <strong>Refresh</strong> untuk memperbarui tampilan. Baris baru untuk resume yang dikirim melalui email sekarang akan terdaftar karena dibuat melalui pemicu acara.</p>
+<p><img alt="Baris resume dibuat" src="../../../../../translated_images/3.3_06_ResumeRowCreated.9ab850d8d7c066aad8531409b00a4de5f214b4d8d209d39fa0d493d5c55e041d.id.png" /></p>
+</li>
+<li>
+<p>Kembali ke Copilot Studio dan pilih alur agen <strong>Notify Teams Applicant Channel</strong> dalam <strong>Application Intake Agent</strong> di peta aktivitas. Di panel sisi kanan, perhatikan bagaimana input memiliki nilai dari baris Dataverse. Ini berasal dari prompt yang dikirim oleh tindakan terakhir (<strong>Mengirimkan prompt ke copilot yang ditentukan untuk diproses</strong>) dalam pemicu acara yang berisi nilai parameter dari baris Dataverse yang baru dibuat. Inilah cara kita dapat meneruskan nilai parameter dari pemicu acara ke alur agen.</p>
+<p><img alt="Pilih alur agen" src="../../../../../translated_images/3.3_07_NotifyTeamsApplicantChannel.9b6c4654197efca9c88dde72cfb38812038ef5f6bdce8c309046c02643092bb6.id.png" /></p>
+</li>
+<li>
+<p>Akhirnya, mari kita lihat kartu adaptif yang diposting ke saluran di <strong>Microsoft Teams</strong>. Di saluran tersebut, kita akan melihat kartu adaptif yang menampilkan informasi tentang baris Resume yang baru dibuat di Dataverse. Arahkan kursor ke hyperlink di awal kartu adaptif, perhatikan bagaimana URL adalah URL tampilan sistem Resumes yang kita konfigurasi sebelumnya dalam payload JSON (langkah 15 - 19 dari <strong>Lab 3.2 - Notify a Teams channel using an adaptive card</strong>) kartu adaptif.</p>
+<p><img alt="URL tampilan sistem tabel Resume pada kartu adaptif" src="../../../../../translated_images/3.3_08_AdaptiveCardResumeTableURL.5a59821d60c8698e5c9e4746806b975bbdf3c4400dc0bb02a53f350bdea569e9.id.png" /></p>
+</li>
+<li>
+<p>Pilih hyperlink tersebut, dan Anda akan diarahkan ke tampilan sistem Resumes di aplikasi model-driven <strong>Hiring Hub</strong> di browser Anda.</p>
+<p><img alt="Tampilan sistem Resume di aplikasi model-driven Hiring Hub" src="../../../../../translated_images/3.3_09_ResumeTableSystemView.81f52ab85aadda7d9131ced31d024fb4b411ccf600dd230d9d7e931c476e271c.id.png" /></p>
+</li>
+<li>
+<p>Kembali ke kartu adaptif yang diposting ke saluran di Microsoft Teams. Kali ini, arahkan kursor ke <strong>View Resume</strong> yang merupakan tindakan <code>Action.OpenURL</code> dari kartu adaptif. Perhatikan bagaimana URL adalah baris Resume yang kita konfigurasi sebelumnya dalam payload JSON (langkah 30 - 36 dari <strong>Lab 3.2 - Notify a Teams channel using an adaptive card</strong>) kartu adaptif.</p>
+<p><img alt="URL baris Resume pada kartu adaptif" src="../../../../../translated_images/3.3_10_AdaptiveCardResumeRowURL.2063a075c2d4adec27dfcc2ea4c01a385d791e0c4fc127caba912bde14bf77d6.id.png" /></p>
+</li>
+<li>
+<p>Pilih tindakan tersebut, dan Anda akan diarahkan ke formulir baris Resume di aplikasi model-driven <strong>Hiring Hub</strong> di browser Anda.</p>
+<p><img alt="Baris Resume di aplikasi model-driven Hiring Hub" src="../../../../../translated_images/3.3_11_ResumeRow.6f051ed512d396712a04ee98319d6643516e0bbfbf8a9de07d3df7d264563b9c.id.png" /></p>
+</li>
+</ol>
+<h2 id="misi-selesai">✅ Misi Selesai<a class="headerlink" href="#misi-selesai" title="Permanent link">&para;</a></h2>
+<p>Selamat! 👏🏻 Kerja luar biasa, Operative.</p>
+<p>✅ Pemicu acara: Anda telah membuat pemicu acara yang meneruskan nilai parameter Dataverse ke alur agen.<br />
+✅ Membangun alur agen: menggunakan nilai parameter Dataverse untuk memposting kartu adaptif ke saluran di Microsoft Teams untuk memberi tahu tim rekrutmen HR.<br />
+✅ Memperbarui instruksi agen anak: untuk menjalankan alur setelah pemicu acara selesai.</p>
+<p>Ini memungkinkan <strong>Hiring Agent</strong> bekerja secara otomatis setiap kali resume diterima sebagai lampiran email dan memberi tahu tim rekrutmen HR untuk tinjauan manual.</p>
+<p>Ini adalah akhir dari <strong>Lab 03 - Automating candidate application emails</strong>, pilih tautan di bawah untuk melanjutkan ke pelajaran berikutnya.</p>
+<p>⏭️ <a href="../04-agent-instructions/">Lanjut ke pelajaran <strong>Authoring Agent Instructions</strong></a></p>
+<h2 id="sumber-daya-taktis">📚 Sumber Daya Taktis<a class="headerlink" href="#sumber-daya-taktis" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/training/modules/autonomous-agents-online-workshop/?WT.mc_id=power-188561-ebenitez">Buat agen Anda bekerja secara otomatis di Copilot Studio</a>  </p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-trigger-event?WT.mc_id=power-188561-ebenitez">Tambahkan pemicu acara</a>  </p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow?WT.mc_id=power-188561-ebenitez">Gunakan alur agen dengan agen Anda</a>  </p>
+<p>📖 <a href="https://learn.microsoft.com/power-automate/triggers-introduction?WT.mc_id=power-188561-ebenitez">Pengantar pemicu Power Automate</a>  </p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow-create?WT.mc_id=power-188561-ebenitez">Menggunakan alur Power Automate dengan agen</a>  </p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/admin-data-loss-prevention?WT.mc_id=power-188561-ebenitez">Pencegahan kehilangan data untuk Copilot Studio</a>  </p>
+<hr />
+<p><strong>Penafian</strong>:<br />
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis dapat mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang penting, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau interpretasi yang keliru yang timbul dari penggunaan terjemahan ini.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

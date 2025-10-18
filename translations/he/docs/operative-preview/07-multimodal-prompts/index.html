@@ -1,0 +1,1410 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/he/docs/operative-preview/07-multimodal-prompts/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#07" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#document-resume-recon" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ שם קוד: DOCUMENT RESUME RECON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 תדריך משימה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 מטרות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 הבנת הנחיות מולטימודליות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-ai-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ בחירת מודל ב-AI Builder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 פורמטי פלט: טקסט מול JSON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 מעבדה 7: בניית מערכת לחילוץ קורות חיים
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 משימה הושלמה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 משאבים טקטיים
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "616d142d4fb5f45d2a168fad6c1f9545",
+  "translation_date": "2025-10-17T02:03:00+00:00",
+  "source_file": "docs/operative-preview/07-multimodal-prompts/README.md",
+  "language_code": "he"
+}
+-->
+<h1 id="07">🚨 משימה 07: חילוץ תוכן מקורות חיים עם הנחיות מולטימודליות<a class="headerlink" href="#07" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="document-resume-recon">🕵️‍♂️ שם קוד: <code>DOCUMENT RESUME RECON</code><a class="headerlink" href="#document-resume-recon" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ חלון זמן לביצוע:</strong> <code>~45 דקות</code></p>
+</blockquote>
+<h2 id="_1">🎯 תדריך משימה<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>ברוך הבא, סוכן. המשימות הקודמות שלך ציידו אותך בכישורי תזמור סוכנים עוצמתיים, אך כעת הגיע הזמן לפתוח יכולת משנה משחק: <strong>ניתוח מסמכים מולטימודלי</strong>.</p>
+<p>המשימה שלך, אם תבחר לקבל אותה, היא <strong>Document Resume Recon</strong> - חילוץ נתונים מובנים מכל מסמך בדיוק רב. בעוד שהסוכנים שלך יכולים לעבד טקסט בקלות, העולם האמיתי דורש טיפול בקבצי PDF, תמונות ומסמכים מורכבים מדי יום. קורות חיים נערמים, חשבוניות דורשות עיבוד, וטפסים דורשים דיגיטציה מיידית.</p>
+<p>משימה זו תהפוך אותך מבונה סוכנים מבוססי טקסט בלבד למומחה מולטימודלי. תלמד להגדיר AI שקורא ומבין מסמכים כמו אנליסט אנושי - אך במהירות וביציבות של AI. בסיום המשימה, תבנה מערכת שלמה לחילוץ קורות חיים שמשתלבת עם תהליך הגיוס שלך.</p>
+<p>הטכניקות שתלמד כאן יהיו חיוניות לפעולות עיגון נתונים מתקדמות במשימה הבאה שלך.</p>
+<h2 id="_2">🔎 מטרות<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>במשימה זו תלמד:</p>
+<ol>
+<li>מהן הנחיות מולטימודליות ומתי להשתמש במודלים שונים של AI</li>
+<li>כיצד להגדיר הנחיות עם קלטי תמונה ומסמכים</li>
+<li>כיצד לעצב פלט הנחיות כ-JSON לחילוץ נתונים מובנים</li>
+<li>שיטות עבודה מומלצות להנדסת הנחיות עם ניתוח מסמכים</li>
+<li>כיצד לשלב הנחיות מולטימודליות עם Agent Flows</li>
+</ol>
+<h2 id="_3">🧠 הבנת הנחיות מולטימודליות<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4">מה הופך הנחיה ל"מולטימודלית"?<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>הנחיות מסורתיות פועלות רק עם טקסט. אך הנחיות מולטימודליות יכולות לעבד סוגי תוכן שונים:</p>
+<ul>
+<li><strong>טקסט</strong>: הוראות ותוכן כתוב</li>
+<li><strong>תמונות</strong>: תמונות, צילומי מסך, גרפים ודיאגרמות (.PNG, .JPG, .JPEG)  </li>
+<li><strong>מסמכים</strong>: חשבוניות, קורות חיים, טפסים (.PDF)</li>
+</ul>
+<p>יכולת זו פותחת תרחישים עוצמתיים כמו ניתוח קורות חיים, עיבוד חשבוניות או חילוץ נתונים מטפסים.</p>
+<h3 id="_5">למה מולטימודל חשוב לתהליכי העבודה שלך<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>בכל יום, הארגון שלך מתמודד עם אתגרי עיבוד מסמכים אלו:</p>
+<ul>
+<li><strong>סינון קורות חיים</strong>: קריאה ידנית של מאות קורות חיים גוזלת זמן יקר</li>
+<li><strong>עיבוד חשבוניות</strong>: חילוץ פרטי ספק, סכומים ותאריכים מפורמטים מסמכים שונים</li>
+<li><strong>ניתוח טפסים</strong>: המרת טפסים מנייר לנתונים דיגיטליים</li>
+</ul>
+<p>הנחיות מולטימודליות מבטלות צווארי בקבוק אלו על ידי שילוב הבנת שפה של AI עם יכולות ניתוח חזותי. זה מעניק ל-AI שלך את היכולת לעבד מסמכים באותה יעילות כמו טקסט.</p>
+<h3 id="_6">תרחישים עסקיים נפוצים<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>להלן כמה דוגמאות ליישום הנחיות מולטימודליות:</p>
+<table>
+<thead>
+<tr>
+<th>תרחיש</th>
+<th>משימה</th>
+<th>שדות פלט לדוגמה</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>סינון קורות חיים</strong></td>
+<td>חילוץ שם מועמד, אימייל, טלפון, תפקיד נוכחי, שנות ניסיון ומיומנויות עיקריות.</td>
+<td>שם מועמד, כתובת אימייל, מספר טלפון, תפקיד נוכחי, שנות ניסיון, מיומנויות עיקריות</td>
+</tr>
+<tr>
+<td><strong>עיבוד חשבוניות</strong></td>
+<td>חילוץ פרטי ספק, תאריך חשבונית, סכום כולל ופרטי שורות מהחשבונית.</td>
+<td>שם ספק, תאריך חשבונית, סכום כולל, פרטי שורות חשבונית</td>
+</tr>
+<tr>
+<td><strong>ניתוח טפסים</strong></td>
+<td>ניתוח טופס בקשה זה וחילוץ כל השדות המלאים.</td>
+<td>שם שדה (לדוגמה, שם מבקש), ערך שהוזן (לדוגמה, ג'ון דו), ...</td>
+</tr>
+<tr>
+<td><strong>אימות מסמכי זיהוי</strong></td>
+<td>חילוץ שם, מספר זיהוי, תאריך תפוגה וכתובת ממסמך זיהוי זה. אימות שכל הטקסט קריא ודיווח על כל חלקים לא ברורים.</td>
+<td>שם מלא, מספר זיהוי, תאריך תפוגה, כתובת, דגל חלקים לא ברורים</td>
+</tr>
+</tbody>
+</table>
+<h2 id="-ai-builder">⚙️ בחירת מודל ב-AI Builder<a class="headerlink" href="#-ai-builder" title="Permanent link">&para;</a></h2>
+<p>AI Builder מציע מודלים שונים המותאמים למשימות ספציפיות. הבנת איזה מודל להשתמש בו היא קריטית להצלחה.</p>
+<div class="admonition note">
+<p class="admonition-title">מדויק נכון לספטמבר 2025</p>
+<p>מודלים של AI Builder מתעדכנים באופן קבוע, לכן בדוק את <a href="https://learn.microsoft.com/ai-builder/prompt-modelsettings">תיעוד הגדרות מודלים של AI Builder</a> לקבלת זמינות מודלים עדכנית.</p>
+</div>
+<h3 id="_7">השוואת מודלים<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>כל המודלים הבאים תומכים בראייה ועיבוד מסמכים</p>
+<table>
+<thead>
+<tr>
+<th>מודל</th>
+<th>💰עלות</th>
+<th>⚡מהירות</th>
+<th>✅הכי מתאים ל</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GPT-4.1 mini</strong></td>
+<td>בסיסי (הכי חסכוני)</td>
+<td>מהיר</td>
+<td>עיבוד מסמכים סטנדרטי, סיכום, פרויקטים חסכוניים</td>
+</tr>
+<tr>
+<td><strong>GPT-4.1</strong></td>
+<td>סטנדרטי</td>
+<td>בינוני</td>
+<td>מסמכים מורכבים, יצירת תוכן מתקדמת, צרכים דיוק גבוהים</td>
+</tr>
+<tr>
+<td><strong>o3</strong></td>
+<td>פרימיום</td>
+<td>איטי (מחשבה תחילה)</td>
+<td>ניתוח נתונים, חשיבה ביקורתית, פתרון בעיות מתוחכם</td>
+</tr>
+<tr>
+<td><strong>GPT-5 chat</strong></td>
+<td>סטנדרטי</td>
+<td>משופר</td>
+<td>הבנת מסמכים עדכנית, דיוק תגובה גבוה ביותר</td>
+</tr>
+<tr>
+<td><strong>GPT-5 reasoning</strong></td>
+<td>פרימיום</td>
+<td>איטי (ניתוח מורכב)</td>
+<td>ניתוח מתוחכם ביותר, תכנון, חשיבה מתקדמת</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_8">הסבר על הגדרות טמפרטורה<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>טמפרטורה שולטת עד כמה התגובות של AI יצירתיות או צפויות:</p>
+<ul>
+<li><strong>טמפרטורה 0</strong>: תוצאות צפויות ביותר, עקביות (הכי טוב לחילוץ נתונים)</li>
+<li><strong>טמפרטורה 0.5</strong>: איזון בין יצירתיות לעקביות  </li>
+<li><strong>טמפרטורה 1</strong>: יצירתיות מקסימלית (הכי טוב ליצירת תוכן)</li>
+</ul>
+<p>לניתוח מסמכים, השתמש ב-<strong>טמפרטורה 0</strong> כדי להבטיח חילוץ נתונים עקבי.</p>
+<h2 id="json">📊 פורמטי פלט: טקסט מול JSON<a class="headerlink" href="#json" title="Permanent link">&para;</a></h2>
+<p>בחירת פורמט הפלט הנכון היא קריטית לעיבוד בהמשך.</p>
+<h3 id="_9">מתי להשתמש בפלט טקסט<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>פלט טקסט מתאים ל:</p>
+<ul>
+<li>סיכומים קריאים לאדם</li>
+<li>סיווגים פשוטים</li>
+<li>תוכן שאינו דורש עיבוד מובנה</li>
+</ul>
+<h3 id="json_1">מתי להשתמש בפלט JSON<a class="headerlink" href="#json_1" title="Permanent link">&para;</a></h3>
+<p>פלט JSON חיוני ל:</p>
+<ul>
+<li>חילוץ נתונים מובנים</li>
+<li>שילוב עם מסדי נתונים או מערכות</li>
+<li>עיבוד זרימות Power Automate</li>
+<li>מיפוי שדות עקבי</li>
+</ul>
+<h3 id="-json">שיטות עבודה מומלצות ל-JSON<a class="headerlink" href="#-json" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>הגדר שמות שדות ברורים</strong>: השתמש בשמות תיאוריים ועקביים</li>
+<li><strong>ספק דוגמאות</strong>: כלול פלט ודוגמאות ערכים לכל שדה</li>
+<li><strong>ציין סוגי נתונים</strong>: כלול דוגמאות לתאריכים, מספרים וטקסט</li>
+<li><strong>טפל בנתונים חסרים</strong>: תכנן ערכים null או ריקים</li>
+<li><strong>אמת מבנה</strong>: בדוק עם סוגי מסמכים שונים</li>
+</ol>
+<h3 id="_10">שיקולי איכות מסמכים<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>רזולוציה</strong>: ודא שהתמונות ברורות וקריאות</li>
+<li><strong>כיוון</strong>: סובב מסמכים לכיוון הנכון לפני העיבוד</li>
+<li><strong>תמיכה בפורמט</strong>: בדוק עם סוגי המסמכים הספציפיים שלך (PDF, JPG, PNG)</li>
+<li><strong>מגבלות גודל</strong>: היה מודע למגבלות גודל קובץ בסביבתך</li>
+</ul>
+<h3 id="_11">אופטימיזציה לביצועים<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>בחר מודלים מתאימים</strong>: שדרג מודלים רק כשצריך</li>
+<li><strong>אופטימיזציה להנחיות</strong>: לעיתים קרובות, הוראות קצרות וברורות מבצעות טוב יותר</li>
+<li><strong>טיפול בשגיאות</strong>: תכנן מסמכים שלא ניתן לעבד</li>
+<li><strong>מעקב עלויות</strong>: מודלים שונים צורכים כמויות שונות של קרדיטים AI Builder</li>
+</ul>
+<h2 id="7">🧪 מעבדה 7: בניית מערכת לחילוץ קורות חיים<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<p>הגיע הזמן ליישם את הידע המולטימודלי שלך. תבנה מערכת מקיפה לחילוץ קורות חיים שמנתחת מסמכי מועמדים וממירה אותם לנתונים מובנים עבור תהליך הגיוס שלך.</p>
+<h3 id="_12">דרישות מוקדמות להשלמת המשימה<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>תצטרך <strong>או</strong>:</p>
+<ul>
+<li><strong>להשלים את משימה 06</strong> ולהחזיק מערכת גיוס רב-סוכנים מוכנה, <strong>או</strong></li>
+<li><strong>לייבא את פתרון ההתחלה של משימה 07</strong> אם אתה מתחיל מאפס או צריך להשלים. <a href="https://aka.ms/agent-academy">הורד פתרון התחלה למשימה 07</a></li>
+</ul>
+</li>
+<li>
+<p>מסמכי קורות חיים לדוגמה מ-<a href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/operative/sample-data/resumes&amp;filename=operative_sampledata">Test Resumes</a></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">ייבוא פתרון ונתוני דוגמה</p>
+<p>אם אתה משתמש בפתרון ההתחלה, עיין ב-<a href="../01-get-started/">משימה 01</a> להוראות מפורטות כיצד לייבא פתרונות ונתוני דוגמה לסביבתך.</p>
+</div>
+<h3 id="71">7.1 יצירת הנחיה מולטימודלית<a class="headerlink" href="#71" title="Permanent link">&para;</a></h3>
+<p>המטרה הראשונה שלך: ליצור הנחיה שמסוגלת לנתח מסמכי קורות חיים ולחלץ נתונים מובנים.</p>
+<ol>
+<li>
+<p>היכנס ל-<a href="https://copilotstudio.microsoft.com">Copilot Studio</a> ובחר <strong>Tools</strong> מהניווט השמאלי.</p>
+</li>
+<li>
+<p>בחר <strong>+ New tool</strong>, ואז בחר <strong>Prompt</strong>.<br />
+<img alt="New Prompt" src="../../../../../translated_images/7-new-prompt.8041acd54e3aecfca0c277aba88b9a2a923482a4b45ba65dcadf9296fac7c458.he.png" /></p>
+</li>
+<li>
+<p><strong>שנה שם</strong> להנחיה מהשם המוגדר כברירת מחדל (לדוגמה <em>Custom prompt 09/04/2025, 04:59:11 PM</em>) ל-<code>Summarize Resume</code>.</p>
+</li>
+<li>
+<p>בשדה ההוראות, הוסף את ההנחיה הזו:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are tasked with extracting key candidate information from a resume and cover letter to facilitate matching with open job roles and creating a summary for application review.
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Instructions:
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>1. Extract Candidate Details:
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    - Identify and extract the candidate’s full name.
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    - Extract contact information, specifically the email address.
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2. Create Candidate Summary:
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    - Summarize the candidate’s profile as multiline text (max 2000 characters) with the following sections:
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        - Candidate name
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        - Role(s) applied for if present
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        - Contact and location
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        - One-paragraph summary
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        - Experience snapshot (last 2–3 roles with outcomes)
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        - Key projects (1–3 with metrics)
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        - Education and certifications
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        - Top skills (Top 10)
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        - Availability and work authorization
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>Guidelines:
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>- Extract information only from the provided resume and cover letter documents.
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>- Ensure accuracy in identifying all details such as contact details and skills.
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>- The summary should be concise but informative, suitable for quick application review.
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>Resume: /document
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>CoverLetter: /text
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">השתמש בעזרת Copilot</p>
+<p>תוכל להשתמש ב-"Get started with Copilot" כדי ליצור את ההנחיה שלך באמצעות שפה טבעית. נסה לבקש מ-Copilot ליצור הנחיה לסיכום קורות חיים!</p>
+</div>
+</li>
+<li>
+<p><strong>הגדר</strong> את פרמטרי הקלט:</p>
+<table>
+<thead>
+<tr>
+<th>פרמטר</th>
+<th>סוג</th>
+<th>שם</th>
+<th>נתוני דוגמה</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resume</td>
+<td>תמונה או מסמך</td>
+<td>Resume</td>
+<td>העלה קורות חיים לדוגמה מתיקיית נתוני הבדיקה</td>
+</tr>
+<tr>
+<td>CoverLetter</td>
+<td>טקסט</td>
+<td>CoverLetter</td>
+<td>הנה קורות חיים!</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>בחר <strong>Test</strong> כדי לראות את פלט הטקסט הראשוני מההנחיה שלך.<br />
+<img alt="Set parameters and test" src="../../../../../translated_images/7-prompt-parameters.fe63dae637c278e1c7dd1413749ff72bc1361d382162c5a58ebc9ff721f06821.he.png" /></p>
+</li>
+</ol>
+<h3 id="72-json">7.2 הגדרת פלט JSON<a class="headerlink" href="#72-json" title="Permanent link">&para;</a></h3>
+<p>כעת תמיר את ההנחיה לפלט נתונים מובנים JSON במקום טקסט רגיל.</p>
+<ol>
+<li>
+<p>הוסף את מפרט פורמט JSON הזה לסוף הוראות ההנחיה שלך:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Output Format:
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Provide the output in valid JSON format with the following structure:
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>{
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    &quot;CandidateName&quot;: &quot;string&quot;,
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    &quot;Email&quot;: &quot;string&quot;,
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    &quot;Summary&quot;: &quot;string max 2000 characters&quot;,
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    &quot;Skills&quot;: [ {&quot;item&quot;: &quot;Skill 1&quot;}, {&quot;item&quot;: &quot;Skill 2&quot;}],
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    &quot;Experience&quot;: [ {&quot;item&quot;: &quot;Experience 1&quot;}, {&quot;item&quot;: &quot;Experience 2&quot;}],
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p>שנה את הגדרת <strong>Output</strong> מ-"Text" ל-<strong>JSON</strong>.</p>
+</li>
+<li>
+<p>בחר <strong>Test</strong> שוב כדי לוודא שהפלט מעוצב כעת כ-JSON.<br />
+<img alt="Set prompt to be JSON" src="../../../../../translated_images/7-json-prompt.89afee0b09beedd348dfefcb54ec1aa328abe7f94b72c6c26a363f686652d712.he.png" /></p>
+</li>
+<li>
+<p><strong>אופציונלי:</strong> נסה מודלים שונים של AI כדי לראות כיצד הפלטים משתנים, ואז חזור למודל ברירת המחדל.</p>
+</li>
+<li>
+<p>בחר <strong>Save</strong> כדי ליצור את ההנחיה.</p>
+</li>
+<li>
+<p>בדיאלוג <strong>Configure for use in Agent</strong>, בחר <strong>Cancel</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">למה אנחנו לא מוסיפים את זה ככלי עדיין</p>
+<p>תשתמש בהנחיה הזו ב-Agent Flow במקום ישירות ככלי, מה שייתן לך יותר שליטה על תהליך עיבוד הנתונים.</p>
+</div>
+</li>
+</ol>
+<h3 id="73-agent-flow">7.3 הוספת הנחיה ל-Agent Flow<a class="headerlink" href="#73-agent-flow" title="Permanent link">&para;</a></h3>
+<p>תיצור Agent Flow שמשתמש בהנחיה שלך לעיבוד קורות חיים המאוחסנים ב-Dataverse.</p>
+<div class="admonition tip">
+<p class="admonition-title">ביטויי Agent Flow</p>
+<p>חשוב מאוד שתעקוב אחר ההוראות למתן שמות לצמתים ולהזנת ביטויים בדיוק, מכיוון שהביטויים מתייחסים לצמתים הקודמים באמצעות שמם! עיין ב-<a href="../../recruit/09-add-an-agent-flow/#you-mentioned-expressions-what-are-expressions">משימת Agent Flow ב-Recruit</a> לרענון מהיר!</p>
+</div>
+<ol>
+<li>
+<p>נווט אל <strong>Hiring Agent</strong> בתוך Copilot Studio</p>
+</li>
+<li>
+<p>בחר בכרטיסיית <strong>Agents</strong>, ובחר את <strong>Application Intake Agent</strong> המשני</p>
+</li>
+<li>
+<p>בתוך פאנל <strong>Tools</strong>, בחר <strong>+ Add</strong> → <strong>+ New tool</strong> → <strong>Agent flow</strong></p>
+</li>
+<li>
+<p>בחר בצומת When an agent calls the flow, השתמש ב-<strong>+ Add an input</strong> כדי להוסיף את הפרמטר הבא:</p>
+<table>
+<thead>
+<tr>
+<th>סוג</th>
+<th>שם</th>
+<th>תיאור</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>טקסט</td>
+<td>ResumeNumber</td>
+<td>הקפד להשתמש ב-[ResumeNumber]. זה חייב תמיד להתחיל באות R</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>בחר באייקון <strong>+</strong> Insert action מתחת לצומת הראשון, חפש <strong>Dataverse</strong>, בחר <strong>See more</strong>, ואז מצא את הפעולה <strong>List rows</strong></p>
+</li>
+<li>
+<p>בחר ב-<strong>ellipsis (...)</strong> על צומת List rows, ובחר <strong>Rename</strong> ל-<code>Get Resume Record</code>, ואז הגדר את הפרמטרים הבאים:</p>
+<table>
+<thead>
+<tr>
+<th>נכס</th>
+<th>כיצד להגדיר</th>
+<th>ערך</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Table name</strong></td>
+<td>בחר</td>
+<td>Resumes</td>
+</tr>
+<tr>
+<td><strong>Filter rows</strong></td>
+<td>נתונים דינמיים (אייקון ברק)</td>
+<td><code>ppa_resumenumber eq 'ResumeNumber'</code> החלף <strong>ResumeNumber</strong> ב-<strong>When an agent calls the flow</strong> → <strong>ResumeNumber</strong></td>
+</tr>
+<tr>
+<td><strong>Row count</strong></td>
+<td>הזן</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">אופטימיזציה לשאילתות!</p>
+<p>כשמשתמשים בטכניקה זו בייצור, תמיד כדאי להגביל את העמודות הנבחרות רק לאלו הנדרשות על ידי Agent Flow.</p>
+</div>
+<p><img alt="Get Resume Record" src="../../../../../translated_images/7-summarize-resume-1.4b3b05b2bbab523feaf98c63502e7916c800c61db2d8a2be09b4624e0d83eb71.he.png" /></p>
+</li>
+<li>
+<p>בחר באייקון <strong>+</strong> Insert action מתחת לצומת Get Resume Record, חפש <strong>Dataverse</strong>, בחר <strong>See more</strong>, ואז מצא את הפעולה <strong>Download a file or an image</strong>.</p>
+<div class="admonition tip">
+<p class="admonition-title">בחר את הפעולה הנכונה!</p>
+<p>הקפד לא לבחור את הפעולה שמסתיימת ב-"from selected environment"</p>
+</div>
+</li>
+<li>
+<p>כמו קודם, שנה את שם הפעולה ל-<code>Download Resume</code>, ואז הגדר את הפרמטרים הבאים:</p>
+<table>
+<thead>
+<tr>
+<th>נכס</th>
+<th>כיצד להגדיר</th>
+<th>ערך</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Table name</strong></td>
+<td>בחר</td>
+<td>Resumes</td>
+</tr>
+<tr>
+<td><strong>Row ID</strong></td>
+<td>ביטוי (אייקון fx)</td>
+<td><code>first(body('Get_Resume_Record')?['value'])?['ppa_resumeid']</code></td>
+</tr>
+<tr>
+<td><strong>Column name</strong></td>
+<td>בחר</td>
+<td>Resume PDF</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Download Resume" src="../../../../../translated_images/7-summarize-resume-2.c56d74be42ed30a6f3082ef84b3b81ab5286f014c09d995ce32bbfe9af96df42.he.png" /></p>
+</li>
+<li>
+<p>כעת, בחר באייקון <strong>+</strong> Insert action מתחת ל-Download Resume, תחת <strong>AI capabilities</strong>, בחר <strong>Run a prompt</strong>,</p>
+</li>
+<li>
+<p>שנה את שם הפעולה ל-<code>Summarize Resume</code> והגדר את הפרמטרים הבאים:</p>
+<table>
+<thead>
+<tr>
+<th>נכס</th>
+<th>כיצד להגדיר</th>
+<th>ערך</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>בקשה</strong></td>
+<td>בחר</td>
+<td>סכם קורות חיים</td>
+</tr>
+<tr>
+<td><strong>מכתב מקדים</strong></td>
+<td>ביטוי (fx icon)</td>
+<td><code>first(body('Get_Resume_Record')?['value'])?['ppa_coverletter']</code></td>
+</tr>
+<tr>
+<td><strong>קורות חיים</strong></td>
+<td>נתונים דינמיים (thunderbolt icon)</td>
+<td>הורד קורות חיים → תוכן קובץ או תמונה</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="בקשה לסיכום קורות חיים" src="../../../../../translated_images/7-summarize-resume-3.c1656de643c50805ff6972e2891db16776cbdc433ddb09778819836a60204375.he.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">פרמטרים של הבקשה</p>
+</div>
+<p>שימו לב שהפרמטרים שאתם ממלאים הם אותם פרמטרים שהגדרתם כפרמטרי קלט כשיצרתם את הבקשה.</p>
+<h3 id="74">7.4 יצירת רשומת מועמד<a class="headerlink" href="#74" title="Permanent link">&para;</a></h3>
+<p>כעת, עליכם לקחת את המידע שהבקשה סיפקה וליצור רשומת מועמד חדשה אם היא עדיין לא קיימת.</p>
+<ol>
+<li>
+<p>בחרו באייקון <strong>+</strong> הוספת פעולה מתחת לצומת סיכום קורות חיים, חפשו <strong>Dataverse</strong>, בחרו <strong>ראה עוד</strong>, ואז מצאו את הפעולה <strong>List rows</strong></p>
+</li>
+<li>
+<p>שנו את שם הצומת ל-<code>Get Existing Candidate</code>, ואז הגדירו את הפרמטרים הבאים:</p>
+<table>
+<thead>
+<tr>
+<th>מאפיין</th>
+<th>איך להגדיר</th>
+<th>ערך</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>שם הטבלה</strong></td>
+<td>בחר</td>
+<td>מועמדים</td>
+</tr>
+<tr>
+<td><strong>סינון שורות</strong></td>
+<td>נתונים דינמיים (thunderbolt icon)</td>
+<td><code>ppa_email eq 'Email'</code>  <strong>החלף</strong> <code>Email</code> ב- <strong>Summarize Resume → Email</strong></td>
+</tr>
+<tr>
+<td><strong>מספר שורות</strong></td>
+<td>הזן</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="קבלת מועמד קיים" src="../../../../../translated_images/7-summarize-resume-4.c95d900bad4e6e75ad348f4385f69a9db37f76f3b1bb90813157643814a3f6a8.he.png" /></p>
+</li>
+<li>
+<p>בחרו באייקון <strong>+</strong> הוספת פעולה מתחת לצומת קבלת מועמד קיים, חפשו <strong>Control</strong>, בחרו <strong>ראה עוד</strong>, ואז מצאו את הפעולה <strong>Condition</strong></p>
+</li>
+<li>
+<p>בתכונות התנאי, הגדירו את התנאי הבא:</p>
+<table>
+<thead>
+<tr>
+<th>תנאי</th>
+<th>מפעיל</th>
+<th>ערך</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ביטוי (fx icon): <code>length(outputs('Get_Existing_Candidate')?['body/value'])</code></td>
+<td>שווה ל-</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="תנאי מועמד קיים" src="../../../../../translated_images/7-summarize-resume-5.1a83c05153ac5aa16b8c3fec10989628f64f893fc7c6bfed8b4ec16caf6b7a6b.he.png" /></p>
+</li>
+<li>
+<p>בחרו באייקון <strong>+</strong> הוספת פעולה בענף <strong>True</strong>, חפשו <strong>Dataverse</strong>, בחרו <strong>ראה עוד</strong>, ואז מצאו את הפעולה <strong>Add a new row</strong>.</p>
+</li>
+<li>
+<p>שנו את שם הצומת ל-<code>Add a New Candidate</code>, ואז הגדירו את הפרמטרים הבאים:</p>
+<table>
+<thead>
+<tr>
+<th>מאפיין</th>
+<th>איך להגדיר</th>
+<th>ערך</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>שם הטבלה</strong></td>
+<td>בחר</td>
+<td>מועמדים</td>
+</tr>
+<tr>
+<td><strong>שם מועמד</strong></td>
+<td>נתונים דינמיים (thunderbolt icon)</td>
+<td>Summarize Resume → <code>CandidateName</code></td>
+</tr>
+<tr>
+<td><strong>אימייל</strong></td>
+<td>נתונים דינמיים (thunderbolt icon)</td>
+<td>Summarize Resume → <code>Email</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="הוספת מועמד חדש" src="../../../../../translated_images/7-summarize-resume-6.321bee96056d21981c466a87456aea1bafc394a492cc4b814b97ba2ee6b758fa.he.png" /></p>
+<h3 id="75">7.5 עדכון קורות חיים והגדרת פלטים של הזרימה<a class="headerlink" href="#75" title="Permanent link">&para;</a></h3>
+<p>השלימו את הזרימה על ידי עדכון רשומת קורות החיים והגדרת הנתונים שיוחזרו לסוכן שלכם.</p>
+<ol>
+<li>
+<p>בחרו באייקון <strong>+</strong> הוספת פעולה מתחת לתנאי, חפשו <strong>Dataverse</strong>, בחרו <strong>ראה עוד</strong>, ואז מצאו את הפעולה <strong>Update a row</strong></p>
+</li>
+<li>
+<p>בחרו בכותרת כדי לשנות את שם הצומת ל-<code>Update Resume</code>, בחרו <strong>הצג הכל</strong>, ואז הגדירו את הפרמטרים הבאים:</p>
+<table>
+<thead>
+<tr>
+<th>מאפיין</th>
+<th>איך להגדיר</th>
+<th>ערך</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>שם הטבלה</strong></td>
+<td>בחר</td>
+<td>קורות חיים</td>
+</tr>
+<tr>
+<td><strong>מזהה שורה</strong></td>
+<td>ביטוי (fx icon)</td>
+<td><code>first(body('Get_Resume_Record')?['value'])?['ppa_resumeid']</code></td>
+</tr>
+<tr>
+<td><strong>סיכום</strong></td>
+<td>נתונים דינמיים (thunderbolt icon)</td>
+<td>Summarize Resume → טקסט</td>
+</tr>
+<tr>
+<td><strong>מועמד (מועמדים)</strong></td>
+<td>ביטוי (fx icon)</td>
+<td><code>if(equals(length(outputs('Get_Existing_Candidate')?['body/value']), 1), first(outputs('Get_Existing_Candidate')?['body/value'])?['ppa_candidateid'], outputs('Add_a_New_Candidate')?['body/ppa_candidateid'])</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="עדכון קורות חיים" src="../../../../../translated_images/7-summarize-resume-7.0ef51db1ebbf837bae11c0e0bdd8c6e8296d528d500bc729c43660d09967ce57.he.png" /></p>
+</li>
+<li>
+<p>בחרו בצומת <strong>Respond to the agent</strong> ואז השתמשו ב-<strong>+ Add an output</strong> כדי להגדיר:</p>
+<table>
+<thead>
+<tr>
+<th>סוג</th>
+<th>שם</th>
+<th>איך להגדיר</th>
+<th>ערך</th>
+<th>תיאור</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>טקסט</td>
+<td><code>CandidateName</code></td>
+<td>נתונים דינמיים (thunderbolt icon)</td>
+<td>Summarize Resume → ראה עוד → CandidateName</td>
+<td>[CandidateName] שניתן בקורות החיים</td>
+</tr>
+<tr>
+<td>טקסט</td>
+<td><code>CandidateEmail</code></td>
+<td>נתונים דינמיים (thunderbolt icon)</td>
+<td>Summarize Resume → ראה עוד → Email</td>
+<td>[CandidateEmail] שניתן בקורות החיים</td>
+</tr>
+<tr>
+<td>טקסט</td>
+<td><code>CandidateNumber</code></td>
+<td>ביטוי (fx icon)</td>
+<td><code>concat('ppa_candidates/', if(equals(length(outputs('Get_Existing_Candidate')?['body/value']), 1), first(outputs('Get_Existing_Candidate')?['body/value'])?['ppa_candidateid'], outputs('Add_a_New_Candidate')?['body/ppa_candidateid']) )</code></td>
+<td>[CandidateNumber] של המועמד החדש או הקיים</td>
+</tr>
+<tr>
+<td>טקסט</td>
+<td><code>ResumeSummary</code></td>
+<td>נתונים דינמיים (thunderbolt icon)</td>
+<td>Summarize Resume → ראה עוד → body/responsev2/predictionOutput/structuredOutput</td>
+<td>סיכום קורות החיים ופרטים בפורמט JSON</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="תגובה לסוכן" src="../../../../../translated_images/7-summarize-resume-8.72c4649f7536863657260438088577b04272ab28bd788c65dabbca1473cd6b5e.he.png" /></p>
+</li>
+<li>
+<p>בחרו <strong>שמור טיוטה</strong> בצד ימין למעלה. זרימת הסוכן שלכם צריכה להיראות כך<br />
+<img alt="זרימת סוכן סיכום קורות חיים" src="../../../../../translated_images/7-summarize-resume-9.491c36275650a2adba1acafcb386970a9c379ab7dad9cc129e27cbbc96c73dd3.he.png" /></p>
+</li>
+<li>
+<p>בחרו בכרטיסיית <strong>סקירה כללית</strong>, בחרו <strong>ערוך</strong> בלוח <strong>פרטים</strong></p>
+<ol>
+<li><strong>שם הזרימה</strong>:<code>Summarize Resume</code></li>
+<li>
+<p><strong>תיאור</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Summarize an existing Resume stored in Dataverse using a [ResumeNumber] as input, return the [CandidateNumber], and resume summary JSON
+</span></code></pre></div>
+</li>
+</ol>
+</li>
+<li>
+<p>בחרו <strong>שמור</strong></p>
+</li>
+<li>
+<p>בחרו שוב בכרטיסיית <strong>מעצב</strong>, ובחרו <strong>פרסם</strong>.</p>
+</li>
+</ol>
+<h3 id="76">7.6 חיבור הזרימה לסוכן שלכם<a class="headerlink" href="#76" title="Permanent link">&para;</a></h3>
+<p>כעת תוסיפו את הזרימה ככלי ותגדירו את הסוכן שלכם להשתמש בה.</p>
+<ol>
+<li>
+<p>פתחו את <strong>סוכן הגיוס</strong> בתוך Copilot Studio</p>
+</li>
+<li>
+<p>בחרו בכרטיסיית <strong>סוכנים</strong>, ופתחו את <strong>סוכן קבלת הבקשות</strong></p>
+</li>
+<li>
+<p>בחרו בלוח <strong>כלים</strong>, ובחרו <strong>+ הוסף כלי</strong> -&gt; <strong>זרימה</strong> -&gt; <strong>Summarize Resume</strong> <strong>(Agent Flow)</strong></p>
+</li>
+<li>
+<p>בחרו <strong>הוסף והגדר</strong></p>
+</li>
+<li>
+<p>הגדירו את הגדרות הכלי כדלקמן:</p>
+<table>
+<thead>
+<tr>
+<th>הגדרה</th>
+<th>ערך</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>תיאור</strong></td>
+<td>סכם קורות חיים קיימים המאוחסנים ב-Dataverse באמצעות [ResumeNumber] כקלט, החזר את [CandidateNumber] וסיכום קורות החיים בפורמט JSON</td>
+</tr>
+<tr>
+<td><strong>מתי ניתן להשתמש בכלי זה</strong></td>
+<td>רק כאשר מוזכר על ידי נושאים או סוכנים</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>בחרו <strong>שמור</strong><br />
+<img alt="הגדרת כלי סיכום קורות חיים" src="../../../../../translated_images/7-configure-summarize-resume-tool.f301e328142193d27b0ab8dea68dcd130e783e897bf37c94f952594d9eca8071.he.png" /></p>
+</li>
+<li>
+<p>אם תבחרו כלים בתוך סוכן הגיוס, תראו כעת ששני הכלים שלנו זמינים לשימוש על ידי <strong>סוכן קבלת הבקשות</strong>.<br />
+<img alt="כלי סוכן" src="../../../../../translated_images/7-agent-tools.5ab82b09501386a00351a8ef3149a0f177360bca0aa70a7c05cb273289247c61.he.png" /></p>
+</li>
+<li>
+<p>נווטו להוראות סוכן <strong>Application Intake Child</strong>, ושנו את שלב <strong>Post-Upload</strong> להיות כדלקמן:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2. Post-Upload Processing  
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    - After uploading, be sure to also output the [ResumeNumber] in all messages
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    - Pass [ResumeNumber] to /Summarize Resume  - Be sure to use the correct value that will start with the letter R.
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    - Be sure to also output the [CandidateNumber] in all messages
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    - Use the [ResumeSummary] to output a summary of the processed Resume and candidate
+</span></code></pre></div>
+<p>החליפו <code>/Summarize Resume</code> על ידי הוספת הפניה לזרימת סוכן <strong>Summarize Resume</strong> על ידי הקלדת קו נטוי (<code>/)</code> או בחירת <code>/Summarize</code> כדי להוסיף את ההפניה.<br />
+<img alt="עדכון הוראות" src="../../../../../translated_images/7-summarize-instructions-update.b3620bc94c8de06ee09eb5804de4f9ac7bfce8458f87fe4bee41cb51abe7f48c.he.png" /></p>
+</li>
+<li>
+<p>בחרו <strong>שמור</strong>.</p>
+</li>
+</ol>
+<h3 id="77">7.7 בדיקת הסוכן שלכם<a class="headerlink" href="#77" title="Permanent link">&para;</a></h3>
+<p>בדקו את המערכת המולטימודלית המלאה שלכם כדי לוודא שהכל עובד כראוי.</p>
+<ol>
+<li>
+<p><strong>התחלת בדיקה</strong>:</p>
+<ul>
+<li>בחרו <strong>בדיקה</strong> כדי לפתוח את לוח הבדיקה</li>
+<li>
+<p>הקלידו: <code>Here is a candidate Resume</code></p>
+</li>
+<li>
+<p>העלו אחד מקורות החיים לדוגמה מתוך <a href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/operative/sample-data/resumes&amp;filename=operative_sampledata">Test Resumes</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>אימות התוצאות</strong>:</p>
+<ul>
+<li>לאחר שליחת ההודעה וקורות החיים, בדקו שקיבלתם מספר קורות חיים (פורמט: R#####)</li>
+<li>ודאו שקיבלתם מספר מועמד וסיכום</li>
+<li>השתמשו במפת הפעילות כדי לראות את כלי העלאת קורות החיים וכלי סיכום קורות החיים בפעולה, ופלטי הבקשה מתקבלים על ידי הסוכן:<br />
+<img alt="תוצאות בדיקה" src="../../../../../translated_images/7-test-result.dcbb6c277666ab7d06d303c3facfb5ad838a33ec6b7f0b92b90f9faddb9bb6bc.he.png" /></li>
+</ul>
+</li>
+<li>
+<p><strong>בדיקת שמירת נתונים</strong>:</p>
+<ul>
+<li>נווטו ל-<a href="https://make.powerapps.com">Power Apps</a></li>
+<li>פתחו <strong>Apps</strong> → <strong>Hiring Hub</strong> → <strong>Play</strong></li>
+<li>עברו ל-<strong>Resumes</strong> כדי לוודא שקורות החיים הועלו ועובדו. הם צריכים לכלול מידע סיכום ורשומת מועמד משויכת.</li>
+<li>בדקו <strong>Candidates</strong> כדי לראות את המידע המופק מהמועמד<br />
+<img alt="קורות חיים עם מועמד וסיכום" src="../../../../../translated_images/7-resume-in-dataverse.cbe85a3f889c989f32ef10ac130e6decfed3d7744fd31f48df8a841cebae229b.he.png" /></li>
+<li>כאשר תפעילו את התהליך שוב, הוא אמור להשתמש במועמד הקיים (שזוהה לפי האימייל שהופק מקורות החיים) במקום ליצור חדש.</li>
+</ul>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">פתרון בעיות</p>
+<ul>
+<li><strong>קורות חיים לא מעובדים</strong>: ודאו שהקובץ הוא PDF ובתוך מגבלות הגודל</li>
+<li><strong>לא נוצר מועמד</strong>: בדקו שהאימייל הופק כראוי מקורות החיים</li>
+<li><strong>שגיאות פורמט JSON</strong>: ודאו שהוראות הבקשה כוללות את מבנה ה-JSON המדויק</li>
+<li><strong>שגיאות זרימה</strong>: בדקו שכל החיבורים ל-Dataverse והביטויים מוגדרים כראוי</li>
+</ul>
+</div>
+<h3 id="_13">מוכנות לייצור<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>למרות שזה לא חלק מהמשימה הזו, כדי להפוך את זרימת הסוכן הזו למוכנה לייצור, כדאי לשקול את הדברים הבאים:</p>
+<ol>
+<li><strong>טיפול בשגיאות</strong> - אם מספר קורות החיים לא נמצא, או שהבקשה נכשלה בניתוח המסמך, יש להוסיף טיפול בשגיאות כדי להחזיר שגיאה ברורה לסוכן.</li>
+<li><strong>עדכון מועמדים קיימים</strong> - המועמד נמצא באמצעות האימייל, ואז ניתן לעדכן את השם כך שיתאים לזה שבקורות החיים.</li>
+<li><strong>פיצול סיכום קורות החיים ויצירת המועמד</strong> - ניתן לפצל את הפונקציונליות הזו לזרימות סוכן קטנות יותר כדי להקל על התחזוקה, ואז לתת לסוכן הוראות להשתמש בהן בתורן.</li>
+</ol>
+<h2 id="_14">🎉 משימה הושלמה<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<p>עבודה מצוינת, אופרטיבי! <strong>Document Resume Recon</strong> הושלמה. הצלחתם לשלוט בבקשות מולטימודליות ועכשיו אתם יכולים להפיק נתונים מובנים מכל מסמך בדיוק רב.</p>
+<p>הנה מה שהשגתם במשימה הזו:</p>
+<p><strong>✅ שליטה בבקשות מולטימודליות</strong><br />
+עכשיו אתם מבינים מהן בקשות מולטימודליות ומתי להשתמש במודלים AI שונים לתוצאות מיטביות.</p>
+<p><strong>✅ מומחיות בעיבוד מסמכים</strong><br />
+למדתם להגדיר בקשות עם קלטי תמונה ומסמכים, ולעצב פלטים כ-JSON להפקת נתונים מובנים.</p>
+<p><strong>✅ מערכת הפקת קורות חיים</strong><br />
+בניתם מערכת הפקת קורות חיים מלאה שמעבדת מסמכי מועמדים ומשתלבת עם תהליך הגיוס שלכם.</p>
+<p><strong>✅ יישום שיטות עבודה מומלצות</strong><br />
+יישמתם שיטות עבודה מומלצות להנדסת בקשות עם ניתוח מסמכים ושילוב בקשות מולטימודליות עם זרימות סוכן.</p>
+<p><strong>✅ בסיס לעיבוד מתקדם</strong><br />
+יכולות ניתוח המסמכים המשופרות שלכם מוכנות כעת לתכונות עיגון נתונים מתקדמות שנוסיף במשימות הבאות.</p>
+<p>🚀 <strong>הבא בתור:</strong> במשימה 08, תגלו כיצד לשפר את הבקשות שלכם עם נתונים בזמן אמת מ-Dataverse, וליצור פתרונות AI דינמיים שמתאימים לדרישות עסקיות משתנות.</p>
+<p>⏩ <a href="../08-dataverse-grounding/">עבור למשימה 08: בקשות משופרות עם עיגון נתונים מ-Dataverse</a></p>
+<h2 id="_15">📚 משאבים טקטיים<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/create-a-custom-prompt?WT.mc_id=power-power-182762-scottdurow">יצירת בקשה</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/add-inputs-prompt?WT.mc_id=power-182762-scottdurow">הוספת קלט טקסט, תמונה או מסמך לבקשה</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/process-responses-json-output?WT.mc_id=power-182762-scottdurow">עיבוד תגובות עם פלט JSON</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/prompt-modelsettings?WT.mc_id=power-182762-scottdurow">בחירת מודל והגדרות טמפרטורה</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/use-a-custom-prompt-in-flow?WT.mc_id=power-182762-scottdurow">שימוש בבקשה שלכם ב-Power Automate</a></p>
+<p>📺 <a href="https://www.youtube.com/watch?v=F0fGnWrRY_I">AI Builder: פלטי JSON בבונה הבקשות</a></p>
+<hr />
+<p><strong>הצהרת אחריות</strong>:<br />
+מסמך זה תורגם באמצעות שירות תרגום AI <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי אנושי. אנו לא נושאים באחריות לכל אי הבנות או פרשנויות שגויות הנובעות משימוש בתרגום זה.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

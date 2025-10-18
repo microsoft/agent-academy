@@ -1,0 +1,1397 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/id/docs/recruit/07-add-new-topic-with-trigger/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#misi-07-tambahkan-topik-baru-dengan-pemicu-dan-node" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nama-kode-operasi-tetap-pada-topik" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ NAMA KODE: OPERASI TETAP PADA TOPIK
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#penjelasan-misi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Penjelasan Misi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tujuan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Tujuan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apa-itu-topik" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Apa itu Topik?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mengapa-topik-berguna" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐦 Mengapa topik berguna?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenis-topik" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪺 Jenis topik
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anatomi-topik" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧬 Anatomi topik
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menggunakan-power-fx-dalam-node-anda" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏋🏻‍♀️ Menggunakan Power Fx dalam node Anda
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bagaimana-cara-membuat-dan-mengedit-topik" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏗️ Bagaimana cara membuat dan mengedit topik?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oke-bagaimana-cara-saya-merancang-topik-untuk-agen-saya" class="md-nav__link">
+    <span class="md-ellipsis">
+      👩🏻‍🎨 Oke, bagaimana cara saya merancang topik untuk agen saya?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-07-tambahkan-topik-baru-dengan-node-percakapan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 07 - Tambahkan topik baru dengan node percakapan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misi-selesai" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Misi Selesai
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sumber-daya-taktis" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Sumber Daya Taktis
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "c04b3587170139bc23e3b5cfc24c89ac",
+  "translation_date": "2025-10-17T17:08:56+00:00",
+  "source_file": "docs/recruit/07-add-new-topic-with-trigger/README.md",
+  "language_code": "id"
+}
+-->
+<h1 id="misi-07-tambahkan-topik-baru-dengan-pemicu-dan-node">🚨 Misi 07: Tambahkan topik baru dengan pemicu dan node<a class="headerlink" href="#misi-07-tambahkan-topik-baru-dengan-pemicu-dan-node" title="Permanent link">&para;</a></h1>
+<h2 id="nama-kode-operasi-tetap-pada-topik">🕵️‍♂️ NAMA KODE: <code>OPERASI TETAP PADA TOPIK</code><a class="headerlink" href="#nama-kode-operasi-tetap-pada-topik" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Jangka Waktu Operasi:</strong> <code>~60 menit</code></p>
+</blockquote>
+<p>🎥 <strong>Tonton Panduan</strong></p>
+<p><a href="https://www.youtube.com/watch?v=7iPAZaA8nJs" title="Tonton panduan di YouTube"><img alt="Thumbnail video pemicu" src="../../../../../translated_images/video-thumbnail.a84cf7cb473be282861469420c5e2c16adb53bcfd64c7c07fbd579e8d32bf8b2.id.jpg" /></a></p>
+<h2 id="penjelasan-misi">🎯 Penjelasan Misi<a class="headerlink" href="#penjelasan-misi" title="Permanent link">&para;</a></h2>
+<p>Anda telah membangun agen. Agen tersebut mendengarkan, belajar, dan menjawab pertanyaan - tetapi sekarang saatnya untuk menjadi lebih taktis. Dalam misi ini, Anda akan mendalami cara mengajarkan agen Anda merespons permintaan tertentu dengan presisi.</p>
+<p>Dengan Topik dan Pemicu, agen Anda dapat:</p>
+<ul>
+<li>
+<p>Mengenali maksud</p>
+</li>
+<li>
+<p>Mengarahkan percakapan dengan logika</p>
+</li>
+<li>
+<p>Mengumpulkan dan menyimpan variabel</p>
+</li>
+<li>
+<p>Memicu alur dan mengambil tindakan</p>
+</li>
+</ul>
+<p>Anda tidak hanya membangun dialog, tetapi juga menghubungkan pusat pengambilan keputusan agen Anda. Selamat datang di Neural Nexus.</p>
+<h2 id="tujuan">🔎 Tujuan<a class="headerlink" href="#tujuan" title="Permanent link">&para;</a></h2>
+<p>Dalam misi ini, Anda akan belajar:</p>
+<ol>
+<li>Memahami apa itu topik dan perannya dalam menciptakan percakapan terstruktur untuk agen Anda</li>
+<li>Mempelajari anatomi topik termasuk frasa pemicu dan node percakapan</li>
+<li>Mengeksplorasi berbagai jenis node percakapan dan cara menggunakan Power Fx untuk logika dinamis</li>
+<li>Membuat topik khusus dari awal untuk menangani permintaan dan tugas pengguna tertentu</li>
+<li>Membangun topik fungsional yang terhubung ke data SharePoint menggunakan konektor dan alat</li>
+</ol>
+<h2 id="apa-itu-topik">🤔 Apa itu Topik?<a class="headerlink" href="#apa-itu-topik" title="Permanent link">&para;</a></h2>
+<p>Topik adalah percakapan terstruktur yang membantu agen Anda merespons pertanyaan atau tugas pengguna tertentu. Anggaplah topik sebagai percakapan mini atau tugas yang dapat ditangani oleh agen Anda. Setiap topik dirancang untuk merespons pertanyaan atau permintaan pengguna tertentu.</p>
+<h3 id="tujuan-topik">🌌 Tujuan topik<a class="headerlink" href="#tujuan-topik" title="Permanent link">&para;</a></h3>
+<p>Ada tiga tujuan umum untuk topik berdasarkan kebutuhan pengguna:</p>
+<p><strong>Informasi</strong> - menjawab pertanyaan seperti berikut:</p>
+<ul>
+<li><code>Apa itu …?</code></li>
+<li><code>Kapan …?</code></li>
+<li><code>Mengapa …?</code></li>
+<li><code>Bisakah Anda memberi tahu saya …?</code></li>
+</ul>
+<p><strong>Penyelesaian tugas</strong> - membantu pengguna <em>melakukan</em> sesuatu:</p>
+<ul>
+<li><code>"Saya ingin …"</code></li>
+<li><code>"Bagaimana cara …?"</code></li>
+<li><code>"Saya butuh …?"</code></li>
+</ul>
+<p><strong>Pemecahan masalah</strong> - menyelesaikan masalah:</p>
+<ul>
+<li><code>Ada sesuatu yang tidak berfungsi …</code></li>
+<li><code>Saya mengalami pesan kesalahan …</code></li>
+<li><code>Saya melihat sesuatu yang tidak terduga …?</code></li>
+</ul>
+<p>Anda juga dapat membuat topik untuk pertanyaan ambigu seperti <code>Saya butuh bantuan</code>, yang meminta pengguna memberikan lebih banyak detail sebelum melanjutkan.</p>
+<h2 id="mengapa-topik-berguna">🐦 Mengapa topik berguna?<a class="headerlink" href="#mengapa-topik-berguna" title="Permanent link">&para;</a></h2>
+<p>Topik membantu Anda,</p>
+<ul>
+<li>
+<p>Mengorganisasi pengetahuan agen Anda.</p>
+</li>
+<li>
+<p>Membuat percakapan terasa alami.</p>
+</li>
+<li>
+<p>Menyelesaikan masalah pengguna secara efektif.</p>
+</li>
+</ul>
+<h2 id="jenis-topik">🪺 Jenis topik<a class="headerlink" href="#jenis-topik" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Topik sistem</strong> - ini adalah bawaan dan menangani acara umum seperti:</p>
+<ul>
+<li>Memulai percakapan</li>
+<li>Mengakhiri percakapan</li>
+<li>Menangani kesalahan</li>
+<li>Meminta pengguna untuk masuk</li>
+<li>Meningkatkan ke agen manusia</li>
+</ul>
+</li>
+<li>
+<p><strong>Topik khusus</strong> - Anda membuat ini untuk menangani tugas atau pertanyaan tertentu seperti:</p>
+<ul>
+<li>Permintaan cuti karyawan</li>
+<li>Permintaan perangkat baru atau pengganti</li>
+</ul>
+</li>
+</ol>
+<p><img alt="Jenis topik" src="../../../../../translated_images/7.0_01_Topics.6e55d2e01c1cc0994b7af05be3c1629b78d46b37cc82f59c7893d4ad90af707e.id.png" /></p>
+<h2 id="anatomi-topik">🧬 Anatomi topik<a class="headerlink" href="#anatomi-topik" title="Permanent link">&para;</a></h2>
+<p>Setiap topik biasanya berisi hal berikut.</p>
+<h3 id="frasa-pemicu">🗣️ Frasa pemicu<a class="headerlink" href="#frasa-pemicu" title="Permanent link">&para;</a></h3>
+<p>Ini adalah kata atau kalimat yang mungkin diucapkan pengguna untuk memulai topik.</p>
+<p><strong>Contoh:</strong></p>
+<p>Untuk topik permintaan cuti, frasa pemicu bisa berupa</p>
+<ul>
+<li><code>Saya ingin mengambil cuti</code></li>
+<li><code>Permintaan cuti</code></li>
+<li><code>Ajukan permintaan cuti</code></li>
+<li><code>Bagaimana cara mengajukan permintaan cuti?</code></li>
+</ul>
+<p>Untuk topik permintaan perangkat, frasa pemicu bisa berupa</p>
+<ul>
+<li><code>Saya butuh perangkat baru</code></li>
+<li><code>Bisakah saya meminta perangkat?</code></li>
+<li><code>Bisakah Anda membantu saya dengan permintaan perangkat</code></li>
+</ul>
+<h3 id="node-percakapan">💬 Node percakapan<a class="headerlink" href="#node-percakapan" title="Permanent link">&para;</a></h3>
+<p>Topik terdiri dari node yang merupakan langkah-langkah yang diikuti agen setelah topik dipicu. Anda menghubungkan langkah-langkah ini untuk membangun alur percakapan yang diikuti agen Anda saat berinteraksi dengan pengguna.</p>
+<p>Anggaplah ini sebagai instruksi atau tindakan seperti berikut:</p>
+<ul>
+<li>Menanyakan pertanyaan kepada pengguna</li>
+<li>Mengirim pesan</li>
+<li>Memanggil layanan eksternal seperti sistem manajemen cuti</li>
+<li>Menetapkan atau memeriksa variabel</li>
+<li>Menggunakan kondisi untuk bercabang dalam percakapan</li>
+<li>Mengarahkan ke topik lain</li>
+</ul>
+<p><img alt="Node percakapan" src="../../../../../translated_images/7.0_03_ConversationNodes.7b1d93b7d4522d544d7f9eed597a5ef30b9f96ee1670efd048528ce13423481a.id.png" /></p>
+<p>Berikut adalah jenis utama node yang dapat Anda tambahkan ke agen:</p>
+<h4 id="kirim-pesan">Kirim pesan<a class="headerlink" href="#kirim-pesan" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Tujuan</strong> - mengirim pesan kepada pengguna.</li>
+<li><strong>Contoh</strong> - <code>Terima kasih atas permintaan Anda! Saya akan membantu Anda dengan itu.</code></li>
+</ul>
+<p>Node ini memungkinkan agen Anda mengirim pesan kepada pengguna, yang bisa berupa teks sederhana atau konten kaya seperti gambar, video, kartu, balasan cepat, dan kartu adaptif.</p>
+<p>Anda dapat mempersonalisasi pesan menggunakan variabel, menambahkan beberapa variasi pesan untuk variasi, dan bahkan menyesuaikan output suara untuk saluran yang mendukung suara.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Anggaplah ini sebagai blok "katakan sesuatu" yang membantu agen Anda berkomunikasi dengan jelas dan interaktif dengan pengguna.</p>
+</div>
+<h4 id="ajukan-pertanyaan">Ajukan pertanyaan<a class="headerlink" href="#ajukan-pertanyaan" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Tujuan</strong> - menanyakan pertanyaan kepada pengguna dan menunggu jawabannya.</li>
+<li><strong>Contoh</strong> - <code>Apa tanggal cuti Anda?</code></li>
+</ul>
+<p>Node ini digunakan untuk meminta informasi spesifik dari pengguna selama percakapan dan menyimpan jawabannya dalam variabel untuk digunakan nanti.</p>
+<p>Anda dapat menyesuaikan jenis pertanyaan seperti input teks atau menggunakan entitas untuk daftar nilai yang ditentukan yang dipilih pengguna, serta menentukan bagaimana agen harus berperilaku jika pengguna memberikan jawaban yang tidak valid atau melewatkan pertanyaan.</p>
+<p>Node ini juga mendukung konten kaya seperti gambar dan balasan cepat, serta memungkinkan Anda menyempurnakan pengaturan validasi, pengulangan, dan interupsi untuk membuat alur percakapan berjalan lancar.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Anggaplah ini sebagai blok "tanya dan dengarkan" yang membantu agen Anda berinteraksi dengan pengguna dengan cara yang terstruktur sesuai definisi Anda.</p>
+</div>
+<h4 id="tanya-dengan-kartu-adaptif">Tanya dengan kartu adaptif<a class="headerlink" href="#tanya-dengan-kartu-adaptif" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Tujuan</strong> - mengirim kartu interaktif yang kaya menggunakan JSON.</li>
+<li><strong>Contoh</strong> - kartu yang menampilkan pemilih tanggal kalender untuk pengguna memilih tanggal.</li>
+</ul>
+<p>Node ini menampilkan kartu interaktif yang kaya yang dapat diisi dan dikirimkan oleh pengguna seperti formulir dengan kotak teks, tombol, dan gambar. Node ini menangkap input pengguna dan menyimpannya dalam variabel, yang dapat digunakan agen Anda nanti dalam percakapan.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Anggaplah ini sebagai blok "pembangun formulir" yang dapat disesuaikan yang membuat agen Anda lebih menarik dan mampu mengumpulkan informasi rinci dari pengguna.</p>
+</div>
+<h4 id="tambahkan-kondisi">Tambahkan kondisi<a class="headerlink" href="#tambahkan-kondisi" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Tujuan</strong> - menambahkan logika ke percakapan. Node ini memeriksa sesuatu dan memutuskan apa yang harus dilakukan selanjutnya.</li>
+<li><strong>Contoh</strong> - jika pengguna mengatakan <code>Ya</code>, lanjutkan ke langkah berikutnya. Jika <code>Tidak</code>, akhiri percakapan.</li>
+</ul>
+<p>Node ini menciptakan titik keputusan dalam alur percakapan agen Anda dengan memeriksa apakah variabel memenuhi kriteria tertentu. Berdasarkan apakah kondisi tersebut benar atau salah, agen mengikuti jalur yang berbeda.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Anggaplah ini sebagai blok "jika-else" yang membantu agen Anda membuat keputusan tergantung pada input pengguna atau data yang disimpan dalam variabel.</p>
+</div>
+<h4 id="manajemen-variabel">Manajemen variabel<a class="headerlink" href="#manajemen-variabel" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Tujuan</strong> - menyimpan atau menghapus informasi (disebut variabel) selama percakapan.</li>
+<li><strong>Contoh</strong> - menyimpan tanggal yang dipilih pengguna dalam node Ajukan pertanyaan yang menampilkan kartu adaptif.</li>
+</ul>
+<p>Node ini memungkinkan Anda menyimpan dan mengelola informasi selama percakapan, seperti nama pengguna, jawaban, atau preferensi. Anda dapat menggunakan berbagai jenis variabel seperti teks, angka, atau tanggal, dan variabel tersebut dapat bersifat lokal untuk satu topik, dibagikan di seluruh topik (global), atau bahkan diambil dari sistem atau lingkungan.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Anggaplah ini sebagai "kotak memori" yang membantu agen Anda mengingat informasi dan menggunakannya saat percakapan berlanjut dengan pengguna.</p>
+</div>
+<h4 id="manajemen-topik">Manajemen topik<a class="headerlink" href="#manajemen-topik" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Tujuan</strong> - memindahkan percakapan ke topik lain atau langkah dalam topik, mentransfer percakapan, atau mengakhiri topik atau percakapan.</li>
+<li><strong>Contoh</strong> - mengarahkan ke topik "Kebijakan Cuti".</li>
+</ul>
+<p>Node ini memungkinkan agen Anda melompat dari satu topik ke topik lain tanpa memulai ulang percakapan, mengakhiri topik, mentransfer atau mengakhiri percakapan, atau pergi ke langkah berbeda dalam topik yang sama. Node ini membantu membimbing pengguna melalui berbagai bagian alur percakapan dengan transisi yang lancar antar topik, dan Anda dapat meneruskan variabel di antara mereka untuk menjaga konteks.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Anggaplah ini sebagai blok "pergi ke bagian/langkah lain" yang membantu agen Anda lebih fleksibel dalam berbicara dengan pengguna.</p>
+</div>
+<h4 id="tambahkan-alat">Tambahkan alat<a class="headerlink" href="#tambahkan-alat" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Tujuan</strong> - terhubung ke alat seperti konektor, alur agen, prompt, pencarian khusus, kueri pencarian, keterampilan, protokol konteks model.</li>
+<li><strong>Contoh</strong> - Alur agen dieksekusi setelah pengguna mengirimkan permintaan cuti mereka.</li>
+</ul>
+<p>Node ini memberikan kemampuan kepada agen Anda untuk berinteraksi dengan sistem eksternal atau melakukan tugas tertentu, seperti mengirim email, memeriksa cuaca, atau mengakses basis data. Anda dapat menambahkan alat menggunakan konektor bawaan, API khusus, alur agen, prompt, atau terhubung ke server Protokol Konteks Model (MCP), dan bahkan <em>antarmuka pengguna grafis</em> otomatis untuk aplikasi desktop melalui alat penggunaan komputer.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Anggaplah alat sebagai "blok aksi" yang memberikan kekuatan super kepada agen Anda untuk melakukan hal-hal di luar <em>mengobrol</em>, seperti memanggil API, menjalankan proses, atau mengumpulkan input pengguna secara otomatis.</p>
+</div>
+<h4 id="node-jawaban-generatif">Node jawaban generatif<a class="headerlink" href="#node-jawaban-generatif" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Tujuan</strong> - menggunakan model bahasa besar untuk menghasilkan respons alami seperti manusia berdasarkan pertanyaan pengguna dan data yang terhubung.</li>
+<li><strong>Contoh</strong> - menggunakan sumber pengetahuan yang terhubung yang berisi informasi tentang hak cuti untuk menjawab pertanyaan pengguna mengenai permintaan cuti.</li>
+</ul>
+<p>Node ini memungkinkan agen Anda merespons pertanyaan pengguna menggunakan informasi dari berbagai sumber pengetahuan, seperti situs web, dokumen, SharePoint, atau data khusus. Node ini dapat digunakan sebagai cadangan ketika tidak ada topik yang cocok ditemukan, atau dalam topik untuk memberikan jawaban yang lebih rinci dan dinamis berdasarkan sumber spesifik yang telah Anda konfigurasi untuk digunakan oleh agen Anda.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Anggaplah ini sebagai "blok jawaban pintar" yang membantu agen Anda memberikan respons yang bermanfaat dan akurat dengan mencari konten terpercaya yang Anda tentukan.</p>
+</div>
+<h4 id="node-permintaan-http">Node permintaan HTTP<a class="headerlink" href="#node-permintaan-http" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Tujuan</strong> - menghubungkan agen Anda ke sistem eksternal dengan mengirimkan panggilan API (misalnya <code>GET</code> atau <code>POST</code>) untuk mengambil atau memperbarui data.</li>
+<li><strong>Contoh</strong> - ketika pengguna meminta saldo hari cuti mereka, agen melakukan permintaan <code>GET</code> ke sistem manajemen cuti dan mengekstrak <code>remainingLeaveDays</code> dari respons API dan membalas pengguna dengan nilai tersebut.</li>
+</ul>
+<p>Node ini memungkinkan agen Anda terhubung ke sistem eksternal dengan mengirimkan panggilan REST API, seperti permintaan <code>GET</code> atau <code>POST</code>. Anda dapat menyesuaikan permintaan dengan header, konten body, dan bahkan menggunakan Power Fx untuk menyertakan data dinamis, lalu menyimpan respons dalam variabel untuk digunakan nanti dalam percakapan.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Anggaplah ini sebagai "mengambil informasi" yang membantu agen Anda berbicara dengan layanan lain seperti mengambil detail pengguna atau mengirim data ke sistem lain.</p>
+</div>
+<h4 id="kirim-acara">Kirim acara<a class="headerlink" href="#kirim-acara" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Tujuan</strong> - memungkinkan agen Anda mengirim tindakan non-pesan, seperti pembaruan sistem atau pemicu alat - ke klien atau saluran, membantu agen melakukan tugas.</li>
+<li><strong>Contoh</strong> - bereaksi terhadap pengguna yang bergabung dalam obrolan dengan menampilkan pesan selamat datang.</li>
+</ul>
+<p>Node ini memungkinkan agen Anda mengirim tindakan non-pesan ke sistem eksternal atau saluran, yang kemudian dapat memutuskan bagaimana merespons. Anda memberikan setiap acara nama dan melampirkan nilai, yang bisa berupa angka atau teks sederhana, variabel, atau rumus Power Fx, dan dikirimkan sebagai objek JSON.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Anggaplah ini sebagai "pemicu diam" yang membantu agen Anda melakukan hal-hal di belakang layar atau berkomunikasi dengan alat eksternal tanpa memerlukan pengguna untuk mengatakan apa pun.</p>
+</div>
+<h2 id="menggunakan-power-fx-dalam-node-anda">🏋🏻‍♀️ Menggunakan Power Fx dalam node Anda<a class="headerlink" href="#menggunakan-power-fx-dalam-node-anda" title="Permanent link">&para;</a></h2>
+<p>Di Copilot Studio, Power Fx adalah bahasa pemrograman low-code yang digunakan untuk menambahkan logika dan perilaku dinamis ke agen Anda. Bahasa ini sama dengan yang digunakan di Microsoft Power Apps, dan dirancang agar sederhana dan mirip Excel, sehingga mudah digunakan oleh pengembang maupun non-pengembang.</p>
+<p><img alt="Ekspresi Power Fx" src="../../../../../translated_images/7.3_13_EnterFormula.d17cc9f73e01e1cab8e2420a55bcb726ae0a0e55673f81ee3d7fe12d20148b92.id.png" /></p>
+<h3 id="apa-yang-dapat-dilakukan-power-fx-dalam-topik">Apa yang dapat dilakukan Power Fx dalam topik<a class="headerlink" href="#apa-yang-dapat-dilakukan-power-fx-dalam-topik" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Menetapkan dan memanipulasi variabel<ul>
+<li>Contoh: <code>Set(userName, "Adele Vance")</code></li>
+</ul>
+</li>
+<li>Membuat kondisi<ul>
+<li>Contoh: <code>If(score &gt; 80, "Lulus", "Gagal")</code></li>
+</ul>
+</li>
+<li>Memformat dan mengubah data<ul>
+<li>Contoh: <code>Text(DateValue, "dd/mm/yyyy")</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="mengapa-menggunakan-power-fx">Mengapa menggunakan Power Fx?<a class="headerlink" href="#mengapa-menggunakan-power-fx" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Fleksibel:</strong> Anda dapat membangun logika tanpa menulis baris kode penuh.</p>
+</li>
+<li>
+<p><strong>Mudah dipahami:</strong> jika Anda pernah menggunakan rumus Excel, ini terasa sangat mirip.</p>
+</li>
+<li>
+<p><strong>Kuat:</strong> memungkinkan Anda mempersonalisasi percakapan, memvalidasi input, dan mengontrol bagaimana agen Anda berperilaku berdasarkan data pengguna.</p>
+</li>
+</ul>
+<h2 id="bagaimana-cara-membuat-dan-mengedit-topik">🏗️ Bagaimana cara membuat dan mengedit topik?<a class="headerlink" href="#bagaimana-cara-membuat-dan-mengedit-topik" title="Permanent link">&para;</a></h2>
+<p>Ada dua cara Anda dapat membuat dan mengedit topik untuk agen Anda.</p>
+<h3 id="1-buat-dari-awal">1. Buat dari awal<a class="headerlink" href="#1-buat-dari-awal" title="Permanent link">&para;</a></h3>
+<p>Ini memungkinkan Anda membangun alur percakapan khusus dari awal, dan Anda dapat menambahkan atau menghapus node sesuai kebutuhan saat mengedit topik Anda.</p>
+<p><img alt="Tambahkan topik" src="../../../../../translated_images/7.0_04_AddATopic.111df124a4a7ff8b41e3f577fbef08885ac52d9d6c0c705a82f5968e5ccc384d.id.png" /></p>
+<h4 id="mengapa-ini-berguna">Mengapa ini berguna<a class="headerlink" href="#mengapa-ini-berguna" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Memberikan Anda kendali penuh atas bagaimana agen Anda merespons.</li>
+<li>Anda dapat menyesuaikan logika menggunakan variabel, Power Fx, dan kondisi.</li>
+<li>Sangat cocok untuk membangun pengalaman yang disesuaikan untuk kebutuhan bisnis tertentu.</li>
+</ul>
+<h3 id="2-buat-dengan-copilot">2. Buat dengan Copilot<a class="headerlink" href="#2-buat-dengan-copilot" title="Permanent link">&para;</a></h3>
+<p>Ini memungkinkan Anda untuk menjelaskan apa yang Anda inginkan menggunakan bahasa alami, dan Copilot akan membangun percakapan untuk Anda. Hal yang sama berlaku saat mengedit topik Anda, gunakan bahasa alami dan Copilot akan meninjau serta memodifikasi topik untuk Anda.</p>
+<h4 id="apa-yang-didukung-oleh-copilot">Apa yang didukung oleh Copilot<a class="headerlink" href="#apa-yang-didukung-oleh-copilot" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Dapat membuat dan mengedit:<ul>
+<li>Node pesan</li>
+<li>Node pertanyaan</li>
+<li>Node kondisi</li>
+</ul>
+</li>
+<li>Tidak mendukung pengaturan lanjutan seperti cara mengingatkan ulang pengguna jika mereka tidak merespons atau cara mengelola gangguan selama pertanyaan. Anda masih dapat menyesuaikan pengaturan tersebut secara manual jika diperlukan.</li>
+</ul>
+<h4 id="mengapa-ini-berguna_1">Mengapa ini berguna<a class="headerlink" href="#mengapa-ini-berguna_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Mempercepat pengembangan dengan bantuan AI.</li>
+<li>Membantu Anda fokus pada logika dan pengalaman pengguna daripada pengaturan yang berulang.</li>
+<li>Mempermudah iterasi dan peningkatan alur percakapan dengan usaha minimal.</li>
+</ul>
+<h4 id="contoh-prompt">✨ Contoh prompt<a class="headerlink" href="#contoh-prompt" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Buat topik</strong></p>
+<ul>
+<li><code>Terima nama, usia, dan tanggal lahir pengguna lalu ulangi respons mereka kembali kepada mereka</code></li>
+<li><code>Kumpulkan alamat jalan, negara bagian, dan kode pos pengguna. Pengguna harus dapat mencoba ulang setiap pertanyaan hingga 4 kali</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Edit topik</strong></p>
+<ul>
+<li><code>Tambahkan pertanyaan yang meminta tanggal lahir pengguna</code></li>
+<li><code>Ringkas informasi yang dikumpulkan dalam Adaptive Card.</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="oke-bagaimana-cara-saya-merancang-topik-untuk-agen-saya">👩🏻‍🎨 Oke, bagaimana cara saya merancang topik untuk agen saya?<a class="headerlink" href="#oke-bagaimana-cara-saya-merancang-topik-untuk-agen-saya" title="Permanent link">&para;</a></h2>
+<h3 id="langkah-1-pahami-apa-yang-dibutuhkan-pengguna">🧙🏻‍♂️ Langkah 1 - pahami apa yang dibutuhkan pengguna<a class="headerlink" href="#langkah-1-pahami-apa-yang-dibutuhkan-pengguna" title="Permanent link">&para;</a></h3>
+<p>Mulailah dengan mengidentifikasi pertanyaan umum atau tugas yang akan ditanyakan pengguna kepada agen Anda. Ini bisa berupa:</p>
+<ul>
+<li>Pertanyaan yang sering ditanyakan pengguna seperti, <code>apa hak saya untuk cuti sakit?</code></li>
+<li>Tugas umum yang ingin diselesaikan pengguna seperti mengirimkan formulir</li>
+<li>Masalah yang sering dihadapi pengguna seperti masalah login</li>
+</ul>
+<h3 id="langkah-2-kelompokkan-skenario">📦 Langkah 2 - Kelompokkan skenario<a class="headerlink" href="#langkah-2-kelompokkan-skenario" title="Permanent link">&para;</a></h3>
+<p>Organisasikan kebutuhan pengguna ke dalam tiga kategori berdasarkan apa yang telah kita pelajari sebelumnya - tujuan dari sebuah topik:</p>
+<ul>
+<li>Informasi - pengguna ingin mengetahui sesuatu</li>
+<li>Penyelesaian tugas - pengguna ingin melakukan sesuatu</li>
+<li>Pemecahan masalah - pengguna membutuhkan bantuan untuk menyelesaikan masalah</li>
+</ul>
+<h3 id="langkah-3-petakan-percakapan">🗺️ Langkah 3 - Petakan percakapan<a class="headerlink" href="#langkah-3-petakan-percakapan" title="Permanent link">&para;</a></h3>
+<p>Buat sketsa alur percakapan sederhana tentang bagaimana agen harus merespons</p>
+<ul>
+<li>Mulai dengan sapaan atau konfirmasi</li>
+<li>Ajukan pertanyaan lanjutan untuk mendapatkan detail</li>
+<li>Berikan jawaban atau lakukan tindakan</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Jaga percakapan tetap singkat dan fokus. Hanya tanyakan yang diperlukan.</p>
+</div>
+<h3 id="langkah-4-tangani-berbagai-jenis-percakapan">🔀 Langkah 4 - Tangani berbagai jenis percakapan<a class="headerlink" href="#langkah-4-tangani-berbagai-jenis-percakapan" title="Permanent link">&para;</a></h3>
+<p>Rancang untuk:</p>
+<ul>
+<li>
+<p><strong>Single-turn</strong> - satu pertanyaan, satu jawaban</p>
+</li>
+<li>
+<p><strong>Multi-turn</strong> - percakapan bolak-balik dengan pertanyaan lanjutan</p>
+</li>
+</ul>
+<p>Contoh:</p>
+<ul>
+<li>
+<p>Pengguna: <code>Saya ingin mengajukan cuti liburan.</code></p>
+</li>
+<li>
+<p>Agen: <code>Tentu! Tanggal berapa Anda ingin memulai cuti Anda?</code></p>
+</li>
+<li>
+<p>Pengguna: <code>15 Juli</code></p>
+</li>
+<li>
+<p>Agen: <code>Baik. Dan kapan cuti Anda akan berakhir?</code></p>
+</li>
+<li>
+<p>Pengguna: <code>22 Juli.</code></p>
+</li>
+<li>
+<p>Agen: <code>Terima kasih! Apa alasan cuti Anda?</code></p>
+</li>
+<li>
+<p>Pengguna: <code>Liburan keluarga.</code></p>
+</li>
+<li>
+<p>Agen: <code>Terima kasih atas detailnya. Saya telah mengajukan permintaan cuti Anda dari 15 Juli hingga 22 Juli untuk liburan keluarga. Anda akan segera mendapatkan konfirmasi.</code></p>
+</li>
+</ul>
+<h3 id="langkah-5-gunakan-ai-untuk-pertanyaan-tak-terduga">🤖 Langkah 5 - Gunakan AI untuk pertanyaan tak terduga<a class="headerlink" href="#langkah-5-gunakan-ai-untuk-pertanyaan-tak-terduga" title="Permanent link">&para;</a></h3>
+<p>Meskipun Anda telah merancang topik untuk permintaan cuti, pengguna mungkin mengajukan pertanyaan yang tidak secara langsung tercakup. Di sinilah fitur AI seperti topik sistem <em>Conversational boosting</em> sangat berguna.</p>
+<p>Topik ini mencakup node jawaban generatif, yang memungkinkan agen Anda mulai menggunakan sumber pengetahuan yang terhubung secara langsung. Sumber pengetahuan apa pun yang ditambahkan di tingkat agen secara otomatis disertakan dalam node jawaban generatif dalam topik sistem <em>Conversational boosting</em>.</p>
+<h4 id="contoh">Contoh<a class="headerlink" href="#contoh" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Pengguna: <code>Bisakah saya membawa hari libur yang tidak terpakai ke tahun depan?</code></li>
+</ul>
+<p>Pertanyaan ini mungkin tidak menjadi bagian dari alur topik yang telah Anda tentukan sebelumnya, terutama jika topik Anda hanya menangani pengajuan permintaan cuti.</p>
+<h4 id="bagaimana-ai-membantu">Bagaimana AI membantu<a class="headerlink" href="#bagaimana-ai-membantu" title="Permanent link">&para;</a></h4>
+<p>Jika agen Anda terhubung ke dokumen kebijakan HR perusahaan Anda atau situs internal, AI dapat:</p>
+<ul>
+<li>Mencari kebijakan cuti yang relevan</li>
+<li>Memahami dan merangkum aturan</li>
+<li>Agen merespons dengan: <code>Menurut kebijakan HR, Anda dapat membawa hari libur yang tidak terpakai ke tahun kalender berikutnya. Untuk detail lebih lanjut, periksa bagian kebijakan cuti di portal HR.</code></li>
+</ul>
+<h4 id="mengapa-ini-berguna_2">Mengapa ini berguna<a class="headerlink" href="#mengapa-ini-berguna_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Anda tidak perlu secara manual membuat topik untuk setiap pertanyaan terkait kebijakan.</li>
+<li>AI dapat menarik jawaban yang akurat dari sumber pengetahuan terpercaya.</li>
+<li>Ini meningkatkan pengalaman pengguna dengan membuat agen terasa lebih pintar dan responsif.</li>
+</ul>
+<h3 id="langkah-6-uji-topik-alur-percakapan">🔬 Langkah 6 - Uji topik, alur percakapan<a class="headerlink" href="#langkah-6-uji-topik-alur-percakapan" title="Permanent link">&para;</a></h3>
+<p>Sebelum menerbitkan topik Anda:</p>
+<ul>
+<li>Uji menggunakan pertanyaan nyata atau input sampel nyata.</li>
+<li>Pastikan terdengar alami dan membantu.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Terapkan perbaikan pada topik Anda sesuai dengan pengujian, seperti menambahkan lebih banyak node atau menghapus node untuk mengarahkan ke topik lain.</p>
+</div>
+<h3 id="langkah-7-hindari-menduplikasi-konten-situs-web">⚠️ Langkah 7 - Hindari menduplikasi konten situs web<a class="headerlink" href="#langkah-7-hindari-menduplikasi-konten-situs-web" title="Permanent link">&para;</a></h3>
+<p>Jangan salin apa yang sudah ada di situs web Anda.</p>
+<ul>
+<li>Fokus pada topik yang sering ditanyakan pengguna.</li>
+<li>Tambahkan topik baru berdasarkan riwayat obrolan atau permintaan dukungan.</li>
+</ul>
+<h3 id="contoh-alur-percakapan">✨ Contoh alur percakapan<a class="headerlink" href="#contoh-alur-percakapan" title="Permanent link">&para;</a></h3>
+<p>Berikut adalah contoh topik yang menangani permintaan cuti.</p>
+<h4 id="langkah-1-frasa-pemicu">Langkah 1: Frasa pemicu<a class="headerlink" href="#langkah-1-frasa-pemicu" title="Permanent link">&para;</a></h4>
+<p>Pengguna mengetik,</p>
+<p><code>Saya ingin mengajukan cuti liburan</code></p>
+<h4 id="langkah-2-agen-meminta-detail-menggunakan-adaptive-card">Langkah 2: Agen meminta detail menggunakan Adaptive card<a class="headerlink" href="#langkah-2-agen-meminta-detail-menggunakan-adaptive-card" title="Permanent link">&para;</a></h4>
+<p>Agen bertanya,</p>
+<p><code>Tentu! Tanggal berapa Anda ingin mengambil cuti?</code></p>
+<p>Adaptive card memiliki kontrol pemilih kalender untuk tanggal mulai dan tanggal akhir.</p>
+<h4 id="langkah-3-pengguna-memberikan-tanggal">Langkah 3: Pengguna memberikan tanggal<a class="headerlink" href="#langkah-3-pengguna-memberikan-tanggal" title="Permanent link">&para;</a></h4>
+<p>Pengguna memilih tanggal mulai sebagai 5 Agustus 2025 dan tanggal akhir 10 Agustus 2025, lalu mengirimkan kartu. Nilai tanggal disimpan dalam output dari adaptive card sebagai variabel.</p>
+<h4 id="langkah-4-cloud-flow-dieksekusi">Langkah 4: Cloud flow dieksekusi<a class="headerlink" href="#langkah-4-cloud-flow-dieksekusi" title="Permanent link">&para;</a></h4>
+<p>Cloud flow Power Automate telah dieksekusi yang membuat permintaan baru di sistem manajemen cuti dan mengirim email untuk memberi tahu manajer tentang permintaan cuti.</p>
+<h4 id="langkah-5-kirim-pesan-konfirmasi-kepada-pengguna">Langkah 5: Kirim pesan konfirmasi kepada pengguna<a class="headerlink" href="#langkah-5-kirim-pesan-konfirmasi-kepada-pengguna" title="Permanent link">&para;</a></h4>
+<p>Agen merespons dengan,</p>
+<p><code>Permintaan cuti liburan Anda dari 5 Agustus hingga 10 Agustus telah diajukan. Manajer Anda akan meninjau dan segera menghubungi Anda.</code></p>
+<h2 id="lab-07-tambahkan-topik-baru-dengan-node-percakapan">🧪 Lab 07 - Tambahkan topik baru dengan node percakapan<a class="headerlink" href="#lab-07-tambahkan-topik-baru-dengan-node-percakapan" title="Permanent link">&para;</a></h2>
+<p>Sekarang kita akan belajar cara menambahkan topik baru dengan pemicu dan alat. Lab ini akan mencakup pembuatan topik dari awal sehingga Anda memahami cara menyesuaikan topik sesuai kebutuhan Anda.</p>
+<ul>
+<li><a href="../../../../../docs/recruit/07-add-new-topic-with-trigger">7.1 Tambahkan topik baru dari awal</a></li>
+<li><a href="../../../../../docs/recruit/07-add-new-topic-with-trigger">7.2 Tentukan input dan output pemicu</a></li>
+<li><a href="../../../../../docs/recruit/07-add-new-topic-with-trigger">7.3 Tambahkan alat menggunakan konektor</a></li>
+</ul>
+<h3 id="kasus-penggunaan">✨ Kasus penggunaan<a class="headerlink" href="#kasus-penggunaan" title="Permanent link">&para;</a></h3>
+<p><strong>Sebagai</strong> karyawan</p>
+<p><strong>Saya ingin</strong> mengetahui perangkat apa yang tersedia</p>
+<p><strong>Agar saya</strong> memiliki daftar perangkat yang tersedia</p>
+<p>Mari kita mulai!</p>
+<h3 id="prasyarat">Prasyarat<a class="headerlink" href="#prasyarat" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Daftar SharePoint</strong></p>
+<p>Kita akan menggunakan daftar SharePoint <strong>Devices</strong> dari <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Pelajaran 00 - Penyiapan Kursus - Langkah 3: Buat situs SharePoint baru</a>.</p>
+<p>Jika Anda belum menyiapkan daftar SharePoint <strong>Devices</strong>, silakan kembali ke <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Pelajaran 00 - Penyiapan Kursus - Langkah 3: Buat situs SharePoint baru</a>.</p>
+</li>
+<li>
+<p><strong>Agen Bantuan Contoso</strong></p>
+<p>Kita akan menggunakan agen yang sama yang dibuat sebelumnya di <a href="../06-create-agent-from-conversation/">Pelajaran 06 - Buat agen kustom menggunakan bahasa alami dengan Copilot dan menghubungkannya dengan data Anda</a>.</p>
+</li>
+</ol>
+<h3 id="71-tambahkan-topik-baru-dari-awal">7.1 Tambahkan topik baru dari awal<a class="headerlink" href="#71-tambahkan-topik-baru-dari-awal" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Pilih <strong>Tab Topik</strong> di dekat nama agen. Jika Anda tidak melihatnya, pilih <strong>+6</strong> dan Anda akan melihat <strong>Topik</strong> terdaftar.</p>
+<p><img alt="Pilih Topik" src="../../../../../translated_images/7.1_01_Topics.789ffa4f75830b5f25fb1eeb8fa3e8ba3810b95870cb3dc49d80d8f4ba15a00a.id.png" /></p>
+</li>
+<li>
+<p>Tab <strong>Topik</strong> akan dimuat dan secara default topik <em>Custom</em> akan ditampilkan. Anda dapat memfilter topik berdasarkan Semua, Custom, dan Sistem. Topik custom dan sistem yang saat ini Anda lihat dibuat secara otomatis saat agen disiapkan.</p>
+<p>Pilih <strong>+ Tambahkan topik</strong> dan pilih <strong>Dari awal</strong>.</p>
+<p><img alt="Buat topik dari awal" src="../../../../../translated_images/7.1_02_FromBlank.f3fe83fad24825f8eb498b19af8e472810f657868613b96b3b4e033fa1042e75.id.png" /></p>
+</li>
+<li>
+<p>Masukkan nama untuk topik. Salin dan tempel berikut ini.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Available devices
+</span></code></pre></div>
+<p><img alt="Nama topik" src="../../../../../translated_images/7.1_03_TopicName.06eb34ebe94516c1d898b5dff183f9586f7526f9316bc122dca641ac29967966.id.png" /></p>
+</li>
+<li>
+<p>Masukkan deskripsi pemicu yang menjelaskan apa yang dilakukan topik. Salin dan tempel berikut ini.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>This topic helps users find devices that are available from our SharePoint Devices list. User can ask to see available devices and it will return a list of devices that are available which can include laptops, smartphones, accessories and more.
+</span></code></pre></div>
+<p><img alt="Masukkan nama dan deskripsi untuk pemicu" src="../../../../../translated_images/7.1_04_TriggerDescription.cb748c0358b3af249fcc0fdb0b262185ffed14d8cf628186b8a65ad4bbf14172.id.png" /></p>
+</li>
+</ol>
+<h3 id="72-tentukan-input-dan-output-pemicu">7.2 Tentukan input dan output pemicu<a class="headerlink" href="#72-tentukan-input-dan-output-pemicu" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Selanjutnya, kita akan menambahkan variabel input baru yang akan digunakan AI generatif dalam orkestrasinya untuk mengekstrak jenis perangkat dari pesan pengguna. Pilih <strong>More ellipsis (...)</strong> di topik dan pilih <strong>Details</strong> untuk melihat panel detail topik.</p>
+<p><img alt="Pilih Detail Topik" src="../../../../../translated_images/7.2_01_SelectTopicDetails.cc1b97a86718e101084c366514cc306fe82243a014a44c579394e0f70ba5ca53.id.png" /></p>
+</li>
+<li>
+<p>Panel <strong>Detail Topik</strong> sekarang telah dimuat. Pilih tab <strong>Input</strong>.</p>
+<p><img alt="Tab Input" src="../../../../../translated_images/7.2_02_SelectInputTab.d0b900eb02a8f982324f59e3b7aca34c2cdba78263acdc9301225e1c3e6338b6.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Buat variabel baru</strong>.</p>
+<p><img alt="Buat variabel input baru" src="../../../../../translated_images/7.2_03_CreateANewVariable.0d45780268d9b6250617c45a9ddd557cdaa23945b66539b313ca8d74f2c96cc2.id.png" /></p>
+</li>
+<li>
+<p>Masukkan nama untuk variabel. Salin dan tempel berikut ini.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>VarDeviceType
+</span></code></pre></div>
+<p><img alt="Nama variabel input" src="../../../../../translated_images/7.2_04_VariableName.56555922eab13cad52fa29d846f4e515d82c2e9bf61c86705f080a1ba4f3b1af.id.png" /></p>
+</li>
+<li>
+<p>Kita sekarang perlu menentukan variabel input dan output kita. Berikut adalah properti yang dapat ditentukan untuk input dan output topik.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bagaimana agen akan mengisi input ini?</td>
+<td style="text-align: left;">Menentukan bagaimana agen mengisi variabel ini dengan nilai sebelum menjalankan topik. Secara default diatur ke <em>Dynamically fill with the best option</em>. Anda juga dapat mengganti input dengan nilai daripada bertanya kepada pengguna</td>
+</tr>
+<tr>
+<td>Tipe data variabel</td>
+<td style="text-align: left;">Tipe data variabel. Tipe data yang didukung adalah <code>String</code>, <code>Boolean</code>, <code>Number</code>, <code>Date</code>, <code>DateTime</code>, <code>DateTimeNoTimeZone</code>, <code>Time</code>, <code>Record</code>, <code>Table</code>, <code>Unspecified</code>, <code>From sample data</code></td>
+</tr>
+<tr>
+<td>Nama tampilan</td>
+<td style="text-align: left;">Nama variabel</td>
+</tr>
+<tr>
+<td>Identifikasi sebagai</td>
+<td style="text-align: left;">Tipe entitas untuk agen agar menangkap tipe nilai yang benar</td>
+</tr>
+<tr>
+<td>Deskripsi</td>
+<td style="text-align: left;">Deskripsi membantu agen secara otomatis mengisi input sebelum menjalankan topik atau menghasilkan pertanyaan untuk meminta nilai</td>
+</tr>
+</tbody>
+</table>
+<p>Properti <em>Bagaimana agen akan mengisi input ini?</em>, <em>Tipe data variabel</em>, dan <em>Nama tampilan</em> dapat tetap seperti apa adanya. Perbarui properti <strong>Identifikasi sebagai</strong> menjadi <strong>Respons seluruh pengguna</strong>.</p>
+<p><img alt="Perbarui Identifikasi sebagai" src="../../../../../translated_images/7.2_05_IdentifyAs.a502101e6f60c27ed8c8b1eff049b8ceedd0531845b932f9b7608ad3d8220090.id.png" /></p>
+</li>
+<li>
+<p>Salin dan tempel berikut ini sebagai deskripsi.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>List of possible values: Laptop, Desktop, Smartphone
+</span></code></pre></div>
+<p><img alt="Deskripsi" src="../../../../../translated_images/7.2_06_InputDescription.844e1776080e595c6c221bcc33d7a269abcc7e4755c8f11b284c3950f42166b5.id.png" /></p>
+</li>
+<li>
+<p>Selanjutnya, mari kita tentukan output untuk topik. Pilih tab <strong>Output</strong>.</p>
+<p><img alt="Pilih tab Output" src="../../../../../translated_images/7.2_07_SelectOutputTab.ab5aa0a2f385f1492df5a67f8f2cbed752dc0258c1e1ddb9928d204405ec403a.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Buat variabel baru</strong>.</p>
+<p><img alt="Buat variabel output baru" src="../../../../../translated_images/7.2_08_CreateANewVariable.5518205f121014ff4757af062bedfd38ce768c8f38291dd9d6489d67cd5d5dc8.id.png" /></p>
+</li>
+<li>
+<p>Perbarui properti berikut.</p>
+<p><strong>Nama variabel</strong> - Salin dan tempel berikut ini.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>VarAvailableDevices
+</span></code></pre></div>
+<p><strong>Tipe data variabel</strong> - Pilih <strong>Table</strong> sebagai tipe data.</p>
+<p><strong>Deskripsi variabel</strong> - Salin dan tempel berikut ini.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>List of available devices by device type
+</span></code></pre></div>
+<p><img alt="Properti output" src="../../../../../translated_images/7.2_09_OutputVariable.fb0e159fbad5052280040090352c50faf4d91228095c3762e75440b2842e0d29.id.png" /></p>
+</li>
+<li>
+<p>Kita telah menyelesaikan penentuan input dan output dari topik. Pilih <strong>Ikon X</strong> untuk keluar dari panel <strong>Detail Topik</strong>.</p>
+<p><img alt="Keluar dari panel detail topik." src="../../../../../translated_images/7.2_10_ExitTopicDetailsPane.6e8981434f04049bef7ab93f9545ee433087e1c99cdfe27b355ee9858ddfde99.id.png" /></p>
+</li>
+</ol>
+<h3 id="73-tambahkan-alat-menggunakan-konektor">7.3 Tambahkan alat menggunakan konektor<a class="headerlink" href="#73-tambahkan-alat-menggunakan-konektor" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Selanjutnya, mari tambahkan node yang memungkinkan agen untuk mengambil daftar perangkat dari daftar SharePoint <strong>Devices</strong>. Pilih <strong>Ikon +</strong> di bawah pemicu.</p>
+<p><img alt="Tambahkan alat" src="../../../../../translated_images/7.3_01_AddNode.4656328835f7a28bc5f66c440d620a0990bf098e858619ff2c32a9b14fae7c4f.id.png" /></p>
+</li>
+<li>
+<p>Pilih node <strong>Tambahkan alat</strong>, lalu pilih tab <strong>Konektor</strong>. Cari <code>Get items</code> dan pilih tindakan konektor SharePoint <strong>Get items</strong>.</p>
+<p><img alt="Pilih get items" src="../../../../../translated_images/7.3_02_GetItems.a6bdfb122449de789e7c58592f4c3e3a0f38b7bdcec2e0e5eab34b2d9d991f97.id.png" /></p>
+</li>
+<li>
+<p>Koneksi baru perlu dibuat untuk konektor. Pilih ikon <strong>chevron</strong> dan pilih <strong>Buat koneksi baru</strong>.</p>
+<p><img alt="Tambahkan alat" src="../../../../../translated_images/7.3_03_CreateNewConnection.03f49fab97e5f5f2a298e4b1b2e5081304c9c98c5f3ad5be0302c241c3d83d94.id.png" /></p>
+</li>
+<li>
+<p>Dua opsi akan ditampilkan yang memungkinkan Anda terhubung langsung ke SharePoint Online atau ke SharePoint lokal. Secara default opsi <strong>Connect directly (cloud-services)</strong> akan dipilih, yang akan kita gunakan untuk koneksi kita.
+Pilih <strong>Create</strong>.</p>
+</li>
+</ol>
+<p><img alt="Pilih Create" src="../../../../../translated_images/7.3_04_SelectCreate.f2216f1e276ed153e06d5b5d47f170a0f9cc6854aa05f0736623acb3aeee1229.id.png" /></p>
+<ol>
+<li>Pilih akun pengguna yang sudah masuk.</li>
+</ol>
+<p><img alt="Pilih akun pengguna yang sudah masuk" src="../../../../../translated_images/7.3_05_SelectSignedInUserAccount.e27a0ada918a1cf4477f3966adcc5f1d033a8998a2589d02d1208f21f5d93938.id.png" /></p>
+<ol>
+<li>Selanjutnya, Anda perlu mengonfirmasi bahwa akun pengguna Anda dapat digunakan untuk koneksi ke konektor SharePoint. Pilih <strong>Allow access</strong>.</li>
+</ol>
+<p><img alt="Pilih allow access" src="../../../../../translated_images/7.3_06_AllowAccess.69f012dbcedf7ebc1869e648a5eaa661d085b15aa7a2eb69e69c5b63adfa36dd.id.png" /></p>
+<ol>
+<li>Pilih <strong>Submit</strong> untuk menambahkan tindakan konektor SharePoint <strong>Get items</strong> sebagai node ke topik.</li>
+</ol>
+<p><img alt="Submit" src="../../../../../translated_images/7.3_07_ConnectedSelectSubmit.16ec31ef062696cabb6e7964879debd177f2b9162f88ef95ae1b4eed85e08a21.id.png" /></p>
+<ol>
+<li>Tindakan konektor SharePoint <strong>Get items</strong> sekarang telah ditambahkan ke topik. Kita sekarang dapat mulai mengonfigurasi input dari tindakan tersebut. Pilih <strong>ikon elipsis (...)</strong> dan pilih <strong>Properties</strong>.</li>
+</ol>
+<p><img alt="Pilih Properties" src="../../../../../translated_images/7.3_08_GetItemsProperties.32bdda34a1d73a55eb2893695e4b4cf15cd899806e616d0b0b5015471414c9d7.id.png" /></p>
+<ol>
+<li>
+<p>Panel konfigurasi <strong>Get items</strong> akan muncul dan secara default, Anda akan melihat tab <strong>Inputs</strong>. Pilih tab <strong>Initiation</strong> dan masukkan deskripsi di bidang <strong>Usage Description</strong>. Salin dan tempel berikut ini.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Retrieves devices from SharePoint list
+</span></code></pre></div>
+</li>
+</ol>
+<blockquote>
+<p>Ini akan berguna saat kita melihat halaman <em>Manage your connections</em> dari agen kita. Kita akan kembali ke ini sebentar lagi.</p>
+</blockquote>
+<p><img alt="Deskripsi Get items" src="../../../../../translated_images/7.3_09_UpdateDescription.76a8d2ebddd4c3e4ca423daad7485afa60f31f37c97e16529d94e224f9709d60.id.png" /></p>
+<ol>
+<li>Pilih tab <strong>Inputs</strong> dan pilih situs <strong>Contoso IT</strong> serta daftar <strong>Devices</strong> yang telah Anda siapkan di <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Lesson 00 - Course Setup - Step 3: Create new SharePoint site</a>.</li>
+</ol>
+<p><img alt="Konfigurasi input Get items" src="../../../../../translated_images/7.3_10_GetItemsInputs.17f8689e660c480dd405ab2ab57db34dcd2b8e697ec09d54c8f8649eb619c58b.id.png" /></p>
+<ol>
+<li>Sekarang, untuk hanya menampilkan perangkat dari daftar SharePoint berdasarkan</li>
+<li>nilai yang dipilih,</li>
+<li>dan hanya perangkat dengan status <em>Available</em>,</li>
+</ol>
+<p>kita perlu menerapkan filter. Ini dilakukan dengan memasukkan kueri filter menggunakan Power Fx. Pilih <strong>ikon elipsis (...)</strong>.</p>
+<p><img alt="Pilih ikon elipsis" src="../../../../../translated_images/7.3_11_SelectVariable.33bfe876cc230569ea0f6cc5e1efa100432509e44342e9b3d6a9e65ee2bc525f.id.png" /></p>
+<ol>
+<li>Secara default, Anda akan berada di tab <strong>Custom</strong>. Pilih tab <strong>Formula</strong>.</li>
+</ol>
+<p><img alt="Pilih tab Formula" src="../../../../../translated_images/7.3_12_SelectFormula.a7aba25c95956d113865da3f30da3f3872e12c7a7a8f3c65098a3e3fac9616a4.id.png" /></p>
+<ol>
+<li>Pilih ikon <strong>expand</strong> untuk memperbesar bidang <strong>Formula</strong>. Salin dan tempel ekspresi Power Fx berikut.</li>
+</ol>
+<p>Kita menggunakan fungsi <code>Concatenate</code> untuk membuat ekspresi yang akan memfilter
+   - kolom SharePoint <strong>Status</strong> yang sama dengan <em>Available</em>
+   - dan kolom SharePoint <strong>Asset type</strong> yang sama dengan <em>perangkat yang dipilih dari node pertanyaan</em>.</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+Concatenate(&quot;Status eq &#39;Available&#39; and AssetType eq &#39;&quot;, Topic.VarDeviceType, &quot;&#39;&quot;)
+```
+</code></pre></div>
+<p>Pilih <strong>Insert</strong>.</p>
+<p><img alt="Masukkan ekspresi Power Fx dan pilih insert" src="../../../../../translated_images/7.3_13_EnterFormula.d17cc9f73e01e1cab8e2420a55bcb726ae0a0e55673f81ee3d7fe12d20148b92.id.png" /></p>
+<ol>
+<li>Ekspresi Power Fx sekarang akan diterapkan pada parameter input Filter Query dari tindakan <strong>Get items</strong>. Selanjutnya, pilih tampilan <strong>All items</strong> di <strong>Limit Columns by View</strong>. Ini hanya akan mengambil kolom dalam daftar berdasarkan tampilan yang dipilih.</li>
+</ol>
+<p><img alt="List Columns by View" src="../../../../../translated_images/7.3_14_LimitColumnsByView.5537126aaa087bd7f81cc35dfe182aa72cdbec4fe1fb5c2e15823a1275dcaa71.id.png" /></p>
+<ol>
+<li>Selanjutnya, kita akan memperbarui nama variabel untuk output. Pilih tab <strong>Outputs</strong> dan pilih variabel <code>GetItems</code>.</li>
+</ol>
+<p><img alt="Perbarui variabel" src="../../../../../translated_images/7.3_15_ConfigureOutputs.d4cb0c5c8e37d1859ed705bd1582fce2d063e7f4d65cc036127a846d743ff391.id.png" /></p>
+<ol>
+<li>
+<p>Perbarui nama menjadi berikut ini.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>VarDevices
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="Perbarui nama variabel" src="../../../../../translated_images/7.3_16_RenameVariable.55d7adb355808d39fe515bf980af123c60e218fa427354079e86efc412dc0f83.id.png" /></p>
+<ol>
+<li>Gulir ke bawah dan di bagian <strong>Usage</strong>, pilih <strong>Global</strong>. Ini akan membuat variabel dapat diakses oleh topik mana pun.</li>
+</ol>
+<p><img alt="Perbarui ke variabel Global" src="../../../../../translated_images/7.3_17_UpdateToGlobalVariable.09bdb05c0938898a04e48b6bcebee1584f17080b63b2577594be74f9f77a5bc3.id.png" /></p>
+<ol>
+<li><strong>Tutup</strong> panel <strong>Variable properties</strong>.</li>
+</ol>
+<p><img alt="Tutup panel Variable properties" src="../../../../../translated_images/7.3_18_ExitVariablePropertiesPane.b1a5e76dfe490bdf1274d8e8c78df44f9b3e3542180fa52fb6f903a980ef31ab.id.png" /></p>
+<ol>
+<li>Pilih ikon <strong>plus +</strong> untuk memasukkan node baru, pilih <strong>Variable management</strong> diikuti dengan memilih <strong>Set a variable value</strong>.</li>
+</ol>
+<p><img alt="Tambahkan node Set a variable value" src="../../../../../translated_images/7.3_19_AddSetAVariableValueNode.958d21c21727ef92506fe76cf0458f05ac8508d84d0a4917077d2889410330e2.id.png" /></p>
+<ol>
+<li>Pilih ikon <strong>greater than</strong> untuk parameter input <strong>Set variable</strong>.</li>
+</ol>
+<p><img alt="Set variable" src="../../../../../translated_images/7.3_20_SelectAVariable.9d3beb144002569b947c90cbec22afcc9cb34f277b21e3f65dcaf69831abc438.id.png" /></p>
+<ol>
+<li>Pilih output topik yang dibuat sebelumnya sebagai variabel, <strong>VarAvailableDevices</strong>.</li>
+</ol>
+<p><img alt="Simpan topik" src="../../../../../translated_images/7.3_21_SelectVarAvailableDevicesOutput.8d7259eb6ce1bc7c89de10b768b62dc3008ad7468c094249282bfe66436d1672.id.png" /></p>
+<ol>
+<li>Selanjutnya, pilih <strong>ikon elipsis (...)</strong> untuk mendefinisikan nilai variabel.</li>
+</ol>
+<p><img alt="Pilih nilai variabel" src="../../../../../translated_images/7.3_22_SelectVariable.f16319e644afc97d24a8cddaf64a7df9fcc52acd7e284b21f20b685a6e53887a.id.png" /></p>
+<ol>
+<li>Kita sekarang akan menggunakan ekspresi PowerFx untuk menetapkan nilai variabel sebagai properti <code>value</code> yang dikembalikan dalam respons <strong>Get items</strong>, dan membuat <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-power-fx?WT.mc_id=power-172618-ebenitez">cakupan variabel</a> global dengan menambahkan awalan <code>Global</code>.</li>
+</ol>
+<p>Pilih <strong>Insert</strong> dan <strong>save</strong> topik.</p>
+<p><img alt="Formula Power Fx untuk nilai variabel" src="../../../../../translated_images/7.3_23_PowerFxFormula.f860daa2c8423021926f0697177279ede3d8d443714d471a77e655c3c42edb07.id.png" /></p>
+<ol>
+<li>Selanjutnya kita perlu memperbarui instruksi agen. Pilih tab <strong>Overview</strong> dan pilih <strong>Edit</strong>.</li>
+</ol>
+<p><img alt="Edit instruksi" src="../../../../../translated_images/7.3_24_EditInstructions.ce65a6cbcd74792885230af1da432fbb4079fd8b0f5af24ab840453a900b67a8.id.png" /></p>
+<ol>
+<li>
+<p>Tambahkan baris baru dalam instruksi, salin dan tempel berikut ini.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>- Help find available devices and give full details using [Available devices]. Always extract the VarDeviceType from the inputs. After giving device details, ask the user if they want to request a device from the list of available devices.
+</span></code></pre></div>
+</li>
+</ol>
+<p>Instruksi ini akan memandu AI generatif untuk memicu <strong>Available devices</strong> guna menampilkan daftar perangkat yang tersedia dari daftar <strong>Devices</strong> di SharePoint. Pilih placeholder topik secara keseluruhan dalam tanda kurung siku.</p>
+<p><img alt="Tambahkan instruksi" src="../../../../../translated_images/7.3_25_AddInstructions.1e83853476fed3c8b1c43e657bd1c1351108702288a8f688d8543fbf1c2946fb.id.png" /></p>
+<ol>
+<li>Ketik karakter garis miring <code>/</code> dan daftar topik akan muncul. Pilih topik <strong>Available devices</strong>.</li>
+</ol>
+<p><img alt="Referensi trigger" src="../../../../../translated_images/7.3_26_SelectAvailableDevicesTopic.1a1beaa256f5417153b7bc55de848b89778f666c213b3a3935444526ab881f0b.id.png" /></p>
+<ol>
+<li><strong>Simpan</strong> instruksi yang diperbarui.</li>
+</ol>
+<p><img alt="Simpan instruksi" src="../../../../../translated_images/7.3_27_SaveUpdatedInstructions.39908bb60990be971039bf392088fd0ecfa148c4496a6ad7413e1267b9091623.id.png" /></p>
+<ol>
+<li>
+<p>Sekarang kita akan menguji agen yang telah diperbarui. Pilih <strong>Test</strong> di kanan atas untuk menampilkan panel uji dan <strong>refresh</strong> panel uji. Masukkan pesan berikut ke agen.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>I need a laptop
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="Test" src="../../../../../translated_images/7.3_28_Test.a273496de273bf3bebb9ac1504c1cedd8947c250ccf8454cf38b2effbdf66f71.id.png" /></p>
+<ol>
+<li>Sebelum agen dapat melanjutkan, pengguna perlu memverifikasi bahwa koneksi mereka dapat digunakan. Pilih <strong>Allow</strong>.</li>
+</ol>
+<p><img alt="Pilih allow" src="../../../../../translated_images/7.3_29_SelectAllow.9f508c4001270252924d889792ecf0cc2a984954b903bb00f7ce6b2dc43d08e3.id.png" /></p>
+<ol>
+<li>Agen akan menjalankan alat SharePoint yang mengambil daftar perangkat yang difilter di mana jenis perangkat sama dengan "laptop" dan status sama dengan "available," dari ekspresi Power Fx yang digunakan. Respons yang diformat dalam bentuk poin-poin akan dikembalikan untuk dibaca pengguna.</li>
+</ol>
+<p><img alt="Respons dari tes" src="../../../../../translated_images/7.3_30_TestResponse.b60253568edc8b68d737a62960f4a3fa3620d2ba4658b05aa2503ad5fd763383.id.png" /></p>
+<ol>
+<li>Hal terakhir yang perlu dipelajari adalah melihat koneksi yang digunakan dengan melihat halaman <em>Manage your connections</em> dari agen. Pilih <strong>ikon elipsis (...)</strong> dan pilih <strong>Manage Connection</strong>.</li>
+</ol>
+<p><img alt="Manage connection" src="../../../../../translated_images/7.3_31_ManageConnections.151932ec4f907e020b67c418cf591806da164c74f6b1d9b73c04d7374d9fc505.id.png" /></p>
+<ol>
+<li>Halaman ini adalah tempat kita dapat melihat semua koneksi yang digunakan oleh agen. Saat ini, hanya satu koneksi yang terdaftar yang terkait dengan alat SharePoint yang ditambahkan ke Topik. Pilih <strong>1 tool</strong> di kolom <strong>Used By</strong>.</li>
+</ol>
+<p><img alt="Used By" src="../../../../../translated_images/7.3_32_UsedBy.1e5ff032f1e02a565a0dafdde4f9436486ed3f012fcc23b824871a71b6de543e.id.png" /></p>
+<ol>
+<li>Di sinilah kita dapat melihat detail tindakan Get items dan ingat <em>usage description</em> yang kita masukkan sebelumnya? Di sinilah kita akan melihat deskripsi penggunaan. Pilih <strong>Close</strong>.</li>
+</ol>
+<blockquote>
+<p>Ini memberi tahu kita tindakan apa yang digunakan dan tujuannya. Ini menjaga koneksi kita tetap terorganisir 📁.</p>
+</blockquote>
+<p><img alt="Deskripsi penggunaan" src="../../../../../translated_images/7.3_33_UsedByInformation.74a42aedb6dc906c678ff8b281a8706e1c0156ee7375111ed20e02d1a1dfd808.id.png" /></p>
+<ol>
+<li>Kembali ke tab browser Anda dengan Copilot Studio dan <strong>refresh</strong> panel uji untuk menghapus tes.</li>
+</ol>
+<h2 id="misi-selesai">✅ Misi Selesai<a class="headerlink" href="#misi-selesai" title="Permanent link">&para;</a></h2>
+<p>Selamat! 👏🏻 Anda telah belajar cara menambahkan topik baru dari awal, cara menambahkan alat yang memanggil tindakan konektor SharePoint Get items, dan menggunakan Power Fx untuk memfilter respons agar hanya mengembalikan perangkat dengan status available dan jenis perangkat laptop. 🙌🏻</p>
+<p>Ini adalah akhir dari <strong>Lab 07 - Add a new topic with conversation nodes</strong>, pilih tautan di bawah untuk melanjutkan ke pelajaran berikutnya. Kita akan memperluas kasus penggunaan dalam lab ini di lab pelajaran berikutnya.</p>
+<p>⏭️ <a href="../08-add-adaptive-card/">Lanjut ke pelajaran <strong>Enhance user interactions with Adaptive Cards</strong></a></p>
+<h2 id="sumber-daya-taktis">📚 Sumber Daya Taktis<a class="headerlink" href="#sumber-daya-taktis" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-system-topics?mc_id=power-172618-ebenitez">Gunakan topik sistem</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/guidance/topics-overview?WT.mc_id=power-172618-ebenitez">Topik di Microsoft Copilot Studio</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-triggers?WT.mc_id=power-172618-ebenitez">Set topic triggers</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/guidance/defining-chatbot-topics?WT.mc_id=power-172618-ebenitez">Mendefinisikan topik agen</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-power-fx?WT.mc_id=power-172618-ebenitez">Buat ekspresi menggunakan Power Fx</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep6">Membuat topik menggunakan bahasa alami</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep4">Tambahkan tindakan ke agen menggunakan konektor</a></p>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/07-add-new-topic-with-trigger" alt="Analytics" /></p>
+<hr />
+<p><strong>Penafian</strong>:<br />
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang penting, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau interpretasi yang salah yang timbul dari penggunaan terjemahan ini.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

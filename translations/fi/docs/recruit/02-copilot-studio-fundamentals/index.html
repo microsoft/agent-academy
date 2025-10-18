@@ -1,0 +1,845 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/fi/docs/recruit/02-copilot-studio-fundamentals/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tehtava-02-copilot-studion-perusteet" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#koodinimi-operation-core-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ Koodinimi: OPERATION CORE PROTOCOL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tehtavan-kuvaus" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Tehtävän kuvaus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tavoitteet" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Tavoitteet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mita-agentit-ovat-copilot-studiossa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mitä agentit ovat Copilot Studiossa?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#milloin-ja-miksi-kayttaa-copilot-studiota" class="md-nav__link">
+    <span class="md-ellipsis">
+      Milloin ja miksi käyttää Copilot Studiota
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agentin-nelja-rakennuspalikkaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agentin neljä rakennuspalikkaa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miten-nelja-rakennuspalikkaa-toimivat-yhdessa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Miten neljä rakennuspalikkaa toimivat yhdessä
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tehtava-suoritettu" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 Tehtävä suoritettu
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "90a3c5122f5687bbc8cc819990f175d4",
+  "translation_date": "2025-10-17T01:37:52+00:00",
+  "source_file": "docs/recruit/02-copilot-studio-fundamentals/README.md",
+  "language_code": "fi"
+}
+-->
+<h1 id="tehtava-02-copilot-studion-perusteet">🚨 Tehtävä 02: Copilot Studion perusteet<a class="headerlink" href="#tehtava-02-copilot-studion-perusteet" title="Permanent link">&para;</a></h1>
+<h2 id="koodinimi-operation-core-protocol">🕵️‍♂️ Koodinimi: <code>OPERATION CORE PROTOCOL</code><a class="headerlink" href="#koodinimi-operation-core-protocol" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operaatioaikaikkuna:</strong> <code>~30 minuuttia – vain tiedustelua, ei kenttätyötä</code>  </p>
+</blockquote>
+<p>🎥 <strong>Katso opastusvideo</strong></p>
+<p><a href="https://www.youtube.com/watch?v=x4OCwDRGeLE" title="Katso opastus YouTubessa"><img alt="Copilot Studion perusteet -videon pikkukuva" src="../../../../../translated_images/video-thumbnail.60293a065d12abc483567901321099335595e0b8bd4e42177bdb05db16db335b.fi.jpg" /></a></p>
+<h2 id="tehtavan-kuvaus">🎯 Tehtävän kuvaus<a class="headerlink" href="#tehtavan-kuvaus" title="Permanent link">&para;</a></h2>
+<p>Tervetuloa, rekrytoitu. Tämä tehtävä antaa sinulle perustiedot siitä, miten Copilot Studio toimii ja miten voit rakentaa älykkäitä agentteja, jotka tuottavat todellista liiketoiminta-arvoa.</p>
+<p>Ennen kuin rakennat ensimmäisen agenttisi, sinun tulee ymmärtää neljä keskeistä komponenttia, jotka muodostavat jokaisen räätälöidyn tekoälyagentin: Tieto, Työkalut, Aiheet ja Ohjeet. Opit myös, miten nämä elementit toimivat yhdessä Copilot Studion orkestroijassa.</p>
+<h2 id="tavoitteet">🔎 Tavoitteet<a class="headerlink" href="#tavoitteet" title="Permanent link">&para;</a></h2>
+<p>Tässä tehtävässä opit:</p>
+<ul>
+<li><strong>Mikä Copilot Studio on</strong></li>
+<li><strong>Milloin ja miksi käyttää agentteja</strong></li>
+<li><strong>Tutustut agenttien neljään rakennuspalikkaan</strong><ul>
+<li><strong>Tieto</strong></li>
+<li><strong>Työkalut</strong></li>
+<li><strong>Aiheet</strong></li>
+<li><strong>Ohjeet</strong></li>
+</ul>
+</li>
+<li><strong>Ymmärrät, miten nämä komponentit toimivat yhdessä</strong> luodakseen älykkään, automatisoidun agentin</li>
+</ul>
+<hr />
+<h2 id="mita-agentit-ovat-copilot-studiossa">Mitä agentit ovat Copilot Studiossa?<a class="headerlink" href="#mita-agentit-ovat-copilot-studiossa" title="Permanent link">&para;</a></h2>
+<p><strong>Agentti</strong> on erikoistunut tekoälyavustaja, jonka suunnittelet hoitamaan tiettyjä tehtäviä tai kyselyitä. Toisin kuin yleiskäyttöinen chatbot, agenttisi:</p>
+<ul>
+<li><strong>Tuntee yrityksesi erityistiedot</strong> (käytännöt, dokumentit, tietokannat)  </li>
+<li><strong>Suorittaa todellisia tehtäviä</strong> (lähettää viestejä, luo kalenteritapahtumia, päivittää tietueita)  </li>
+<li><strong>Säilyttää keskustelun kontekstin</strong>, jotta se voi jatkaa aiemmista kysymyksistä  </li>
+</ul>
+<p>Koska Copilot Studio on vähäkoodinen, voit käyttää valmiita komponentteja vetämällä ja pudottamalla – syvällisiä ohjelmointitaitoja ei tarvita. Kun agenttisi on rakennettu, sitä voidaan käyttää Teamsissa, Slackissa tai jopa mukautetulla verkkosivulla vastaamaan kysymyksiin tai käynnistämään työnkulkuja automaattisesti.</p>
+<hr />
+<h2 id="milloin-ja-miksi-kayttaa-copilot-studiota">Milloin ja miksi käyttää Copilot Studiota<a class="headerlink" href="#milloin-ja-miksi-kayttaa-copilot-studiota" title="Permanent link">&para;</a></h2>
+<p>Vaikka Microsoft 365 Copilot tarjoaa yleistä tekoälyapua Office-sovelluksissa, tarvitset räätälöidyn agentin, kun:</p>
+<h3 id="tarvitset-alakohtaista-tietoa">Tarvitset alakohtaista tietoa<a class="headerlink" href="#tarvitset-alakohtaista-tietoa" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Valmiiksi rakennettu Copilot ei välttämättä tunne yrityksesi sisäisiä käytäntöjä tai tietoja. Agentti voi hakea tietoa SharePoint-sivustoista, tietokannoista tai mukautetuista lähteistä antaakseen tarkkoja ja ajantasaisia vastauksia.  </li>
+</ul>
+<h3 id="haluat-automatisoida-monivaiheisia-tyonkulkuja">Haluat automatisoida monivaiheisia työnkulkuja<a class="headerlink" href="#haluat-automatisoida-monivaiheisia-tyonkulkuja" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Esimerkiksi: "Kun joku lähettää kululaskun, lähetä se hyväksyttäväksi, päivitä talousseuranta ja ilmoita esimiehelle." Räätälöity agentti voi hoitaa kaikki vaiheet yhdellä komennolla tai tapahtumalla.  </li>
+</ul>
+<h3 id="tarvitset-kontekstuaalisen-tyokalun-sisaisen-kokemuksen">Tarvitset kontekstuaalisen, työkalun sisäisen kokemuksen<a class="headerlink" href="#tarvitset-kontekstuaalisen-tyokalun-sisaisen-kokemuksen" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Kuvittele Teamsissa toimiva Uuden työntekijän perehdytysagentti, joka opastaa HR-henkilöstöä kaikkien käytäntöjen läpi, lähettää tarvittavat lomakkeet ja aikatauluttaa perehdyttämistapaamiset – suoraan olemassa olevassa yhteistyöalustassasi.  </li>
+</ul>
+<hr />
+<h2 id="agentin-nelja-rakennuspalikkaa">Agentin neljä rakennuspalikkaa<a class="headerlink" href="#agentin-nelja-rakennuspalikkaa" title="Permanent link">&para;</a></h2>
+<p>Jokainen Copilot Studion agentti koostuu neljästä keskeisestä komponentista:</p>
+<ol>
+<li><strong>Tieto</strong>  </li>
+<li><strong>Työkalut (Toiminnot)</strong>  </li>
+<li><strong>Aiheet</strong>  </li>
+<li><strong>Ohjeet</strong></li>
+</ol>
+<p>Alla määrittelemme jokaisen rakennuspalikan ja näytämme, miten ne toimivat yhdessä tehokkaan agentin luomiseksi.</p>
+<h3 id="1-tieto">1. Tieto<a class="headerlink" href="#1-tieto" title="Permanent link">&para;</a></h3>
+<p><strong>Tieto</strong> on data ja konteksti, jota agenttisi käyttää vastatakseen kysymyksiin tarkasti. Se koostuu kahdesta osasta:</p>
+<h4 id="mukautetut-ohjeet-ja-konteksti">Mukautetut ohjeet ja konteksti<a class="headerlink" href="#mukautetut-ohjeet-ja-konteksti" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Kirjoitat lyhyen kuvauksen agentin tarkoituksesta ja sävystä. Esimerkiksi:  </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are an IT support agent. You help employees troubleshoot common software issues, provide troubleshooting steps, and escalate urgent tickets.
+</span></code></pre></div>
+</li>
+<li>
+<p>Keskustelun aikana agentti muistaa aiemmat vuorovaikutukset, jotta se voi viitata jo käsiteltyihin asioihin (esimerkiksi, jos käyttäjä ensin sanoo "Tulostimeni ei toimi" ja myöhemmin kysyy "Tarkistitko musteen?", agentti muistaa tulostimen kontekstin).</p>
+</li>
+</ul>
+<h4 id="tietolahteet-perustiedot">Tietolähteet (Perustiedot)<a class="headerlink" href="#tietolahteet-perustiedot" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Yhdistät agenttisi useisiin tietolähteisiin – SharePoint-kirjastoihin, dokumenttisivustoihin, wikeihin tai muihin tietokantoihin.  </li>
+<li>Kun käyttäjä esittää kysymyksen, agentti hakee asiaankuuluvat otteet näistä lähteistä, jotta vastaukset perustuvat organisaatiosi todellisiin käytäntöihin, tuoteoppaisiin tai muuhun omaan tietoon.  </li>
+<li>Voit jopa määrätä agentin vastaamaan vain näistä lähteistä peräisin olevilla tiedoilla, estäen sitä arvaamasta tai "keksimästä" vastauksia.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>"Käytäntöavustaja"-agentti voisi olla yhdistetty HR:n SharePoint-sivustoon. Jos käyttäjä kysyy: "Mikä on meidän vuosiloman kertymisaste?", agentti hakee tarkan tekstin HR-käytäntöasiakirjasta sen sijaan, että se antaisi yleisen tekoälyvastauksen.</p>
+</div>
+<hr />
+<h3 id="2-tyokalut-toiminnot">2. Työkalut (Toiminnot)<a class="headerlink" href="#2-tyokalut-toiminnot" title="Permanent link">&para;</a></h3>
+<p><strong>Työkalut (Toiminnot)</strong> määrittelevät, mitä agentti voi tehdä pelkän keskustelun lisäksi. Jokainen toiminto on tehtävä, jonka agentti suorittaa ohjelmallisesti, kuten:</p>
+<ul>
+<li>Sähköpostin tai Teams-viestin lähettäminen  </li>
+<li>Kalenteritapahtuman luominen tai päivittäminen  </li>
+<li>Tietueen lisääminen tai muokkaaminen tietokannassa (esim. SharePoint-lista tai Dataverse-taulukko)  </li>
+<li>Power Automate -työnkulun tai REST API:n kutsuminen  </li>
+</ul>
+<h4 id="miten-toiminnot-toimivat">Miten toiminnot toimivat<a class="headerlink" href="#miten-toiminnot-toimivat" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Määritä syötteet ja tulosteet</strong>  </p>
+<ul>
+<li>Esimerkiksi sähköpostin lähettämistoiminto saattaa vaatia:  <ul>
+<li><code>VastaanottajanSähköpostiosoite</code>  </li>
+<li><code>AiheRivi</code>  </li>
+<li><code>SähköpostinSisältö</code>  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Yhdistä toiminnot työnkulkuihin</strong>  </p>
+<ul>
+<li>Usein käyttäjän pyynnön täyttäminen vaatii useita vaiheita.  </li>
+<li>Voit järjestää toiminnot niin, että:<br />
+         1. Agentti hakee tietoja SharePoint-listasta.<br />
+         2. Se luo yhteenvedon LLM:n avulla.<br />
+         3. Se lähettää Teams-viestin yhteenvedolla.  </li>
+</ul>
+</li>
+<li>
+<p><strong>Yhdistä ulkoisiin järjestelmiin</strong>  </p>
+<ul>
+<li>Jos sinun täytyy päivittää CRM tai kutsua sisäinen API, luo mukautettu toiminto hoitamaan se.  </li>
+<li>Copilot Studio voi integroitua Power Platformiin tai mihin tahansa HTTP-pohjaiseen rajapintaan.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Esimerkki "Kulujen käsittely" -agentista:</p>
+<ol>
+<li>Kuuntelee "Lähetä kulu" -pyyntöä.  </li>
+<li>Hakee käyttäjän kulutiedot lomakkeesta.  </li>
+<li>Käyttää "Lisää SharePoint-listaan" -toimintoa tallentaakseen tiedot.  </li>
+<li>Käynnistää "Lähetä sähköposti" -toiminnon ilmoittaakseen hyväksyjälle.  </li>
+</ol>
+</div>
+<hr />
+<h3 id="3-aiheet">3. Aiheet<a class="headerlink" href="#3-aiheet" title="Permanent link">&para;</a></h3>
+<p><strong>Aiheet</strong> määrittelevät keskustelun käynnistimet tai agentin aloituspisteet. Jokainen aihe vastaa tiettyä toiminnallisuutta tai kysymyskategoriaa.</p>
+<h4 id="keskustelun-kaynnistimet">Keskustelun käynnistimet<a class="headerlink" href="#keskustelun-kaynnistimet" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Aihe voi olla "Lähetä IT-tiketti", "Tarkista lomatase" tai "Luo myyntiraportti".  </li>
+<li>Copilot Studio käyttää <strong>generatiivista orkestrointia</strong>: sen sijaan, että se perustuisi tarkkoihin avainsanoihin, tekoäly tulkitsee käyttäjän tarkoituksen ja valitsee oikean aiheen lyhyen kuvauksen perusteella.  </li>
+</ul>
+<h4 id="aihekuvaukset">Aihekuvaukset<a class="headerlink" href="#aihekuvaukset" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Jokaisessa aiheessa kirjoitat selkeän ja tiiviin kuvauksen siitä, mitä aihe kattaa.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Esimerkki aihekuvauksesta</p>
+<p>Tämä aihe auttaa käyttäjiä lähettämään IT-tukipyynnön keräämällä ongelman tiedot, prioriteetin ja yhteystiedot.</p>
+</div>
+<ul>
+<li>Tekoäly käyttää tätä kuvausta päättääkseen, milloin aktivoida tämä aihe, vaikka käyttäjän sanamuoto ei täysin vastaisi.</li>
+</ul>
+<h4 id="aiheiden-ja-toimintojen-yhdistaminen">Aiheiden ja toimintojen yhdistäminen<a class="headerlink" href="#aiheiden-ja-toimintojen-yhdistaminen" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Jokainen aihe on yhdistetty yhteen tai useampaan toimintaan tai tiedonhakuvaiheeseen.  </li>
+<li>Kun tekoäly valitsee aiheen, se ohjaa keskustelua määrittelemäsi sekvenssin mukaisesti (esittää jatkokysymyksiä, kutsuu toimintoja, palauttaa tulokset).</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Jos käyttäjä sanoo: "Tarvitsen apua uuden kannettavan tietokoneen asennuksessa," tekoäly voi yhdistää tämän tarkoituksen "Lähetä IT-tiketti" -aiheeseen. Agentti kysyy sitten kannettavan mallin, käyttäjän tiedot ja lähettää tiketin automaattisesti tukijärjestelmään.</p>
+</div>
+<hr />
+<h3 id="4-ohjeet">4. Ohjeet<a class="headerlink" href="#4-ohjeet" title="Permanent link">&para;</a></h3>
+<p><strong>Ohjeet</strong> (joskus kutsutaan "kehotteiksi" tai "järjestelmäviesteiksi") ohjaavat LLM:n sävyä, tyyliä ja rajoja. Ne muokkaavat sitä, miten agentti vastaa eri tilanteissa.</p>
+<h4 id="rooli-ja-persoona">Rooli ja persoona<a class="headerlink" href="#rooli-ja-persoona" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Kerrot tekoälylle, kuka se on (esim. "Olet Contoso Retailin asiakaspalveluagentti").  </li>
+<li>Tämä määrittää sävyn – ystävällinen, tiivis, muodollinen tai rento – käyttötarkoituksesta riippuen.</li>
+</ul>
+<h4 id="vastausohjeet">Vastausohjeet<a class="headerlink" href="#vastausohjeet" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Määritä säännöt, joita agentin tulee noudattaa, kuten:  <ul>
+<li>"Tiivistä aina käytäntötiedot luettelopisteiksi."  </li>
+<li>"Jos et tiedä vastausta, sano ‘Valitettavasti minulla ei ole tietoa asiasta.’"  </li>
+<li>"Älä koskaan sisällytä luottamuksellisia tietoja kontekstin ulkopuolella."</li>
+</ul>
+</li>
+</ul>
+<h4 id="muisti-ja-kontekstisaannot">Muisti- ja kontekstisäännöt<a class="headerlink" href="#muisti-ja-kontekstisaannot" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Voit ohjeistaa agenttia muistamaan keskustelun yksityiskohtia tietyn määrän vuorovaikutuksia varten.  </li>
+<li>Esimerkiksi: "Muista tämän käyttäjän pyynnön tiedot enintään kolmen jatkokysymyksen ajan."</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Esimerkki "Etuusneuvoja"-agentista:</p>
+<p>"Viittaa aina uusimpaan HR-käsikirjaan vastatessasi kysymyksiin. Jos kysytään ilmoittautumisen määräajoista, anna käytännön mukaiset päivämäärät. Pidä vastaukset alle 150 sanan pituisina."</p>
+</div>
+<hr />
+<h2 id="miten-nelja-rakennuspalikkaa-toimivat-yhdessa">Miten neljä rakennuspalikkaa toimivat yhdessä<a class="headerlink" href="#miten-nelja-rakennuspalikkaa-toimivat-yhdessa" title="Permanent link">&para;</a></h2>
+<p>Kun yhdistät <strong>Tiedon</strong>, <strong>Työkalut</strong>, <strong>Aiheet</strong> ja <strong>Ohjeet</strong>, Copilot Studion tekoälyorkestroija luo agentin, joka:</p>
+<ol>
+<li><strong>Kuuntelee sopivaa aihetta</strong> (ohjautuen aihekuvauksistasi).  </li>
+<li><strong>Soveltaa ohjeita</strong> määrittääkseen sävyn, milloin esittää jatkokysymyksiä ja noudattaa sääntöjä.  </li>
+<li><strong>Hyödyntää tietolähteitä</strong> perustaakseen vastauksensa organisaatiosi tietoihin.  </li>
+<li><strong>Kutsuu työkaluja (toimintoja)</strong> tarpeen mukaan suorittaakseen tehtäviä – lähettää viestejä, päivittää tietueita tai kutsuu API:ita.  </li>
+</ol>
+<p>Taustalla orkestroija käyttää <strong>generatiivista suunnittelua</strong>: se päättää, mitkä vaiheet suoritetaan ja missä järjestyksessä käyttäjän pyynnön täyttämiseksi. Jos toiminto epäonnistuu (esimerkiksi sähköpostia ei voida lähettää), agentti noudattaa virheenkäsittelyohjeitasi (esittää tarkentavan kysymyksen tai raportoi virheen). Koska LLM mukautuu keskustelun kontekstiin, agentti voi säilyttää muistin useiden vuorovaikutusten ajan ja sisällyttää uutta tietoa keskustelun edetessä.</p>
+<p><strong>Visuaalinen kulkuesimerkki:</strong>  </p>
+<!--
+1. **Käyttäjä:** "Näytä minulle lomataseeni."
+1. **AI (Aiheet):** Yhdistää "Tarkista lomatase" -aiheeseen.  
+1. **AI (Ohjeet):** Käyttää ystävällistä ja tiivistä sävyä.  
+1. **Agentti (Tieto):** Kysyy HR:n SharePoint-listalta käyttäjän lomataseen.  
+1. **Agentti (Toiminnot):** Hakee arvon ja lähettää Teams-viestin:  
+   > "Nykyinen lomataseesi on 12 päivää."  
+-->
+
+<pre class="mermaid"><code>sequenceDiagram
+    participant User
+    participant AI
+    participant Agent
+
+    User-&gt;&gt;AI: "Show me my PTO balance."
+    AI-&gt;&gt;AI: Match topic: "Check PTO Balance"
+    Note over AI: Instructions: Apply friendly, concise tone
+    AI-&gt;&gt;Agent: Request user's PTO balance
+    Note right of Agent: Knowledge: Query HR SharePoint list
+    Agent--&gt;&gt;AI: PTO balance = 12 days
+    AI-&gt;&gt;Agent: Send message to user (Teams)
+    Note right of Agent: Action: Deliver notification
+    Agent--&gt;&gt;User: "Your current PTO balance is 12 days."</code></pre>
+<hr />
+<h2 id="tehtava-suoritettu">🎉 Tehtävä suoritettu<a class="headerlink" href="#tehtava-suoritettu" title="Permanent link">&para;</a></h2>
+<p>Olet onnistuneesti suorittanut perusteiden briiffauksen. Olet nyt oppinut Copilot Studion agenttien neljä olennaista rakennuspalikkaa:</p>
+<ol>
+<li><strong>Tieto</strong> – Mistä agentti hakee faktatiedot ja miten se säilyttää keskustelun muistin.  </li>
+<li><strong>Työkalut</strong> – Tehtävät, joita agentti voi suorittaa automaattisesti.  </li>
+<li><strong>Aiheet</strong> – Miten agentti tunnistaa käyttäjän tarkoituksen ja päättää, mitä työnkulkua käyttää.  </li>
+<li><strong>Ohjeet</strong> – Säännöt, sävy ja rajat, jotka ohjaavat jokaista vastausta.</li>
+</ol>
+<p>Näiden komponenttien avulla voit rakentaa yksinkertaisen agentin, joka vastaa kysymyksiin ja toteuttaa yksinkertaisia työnkulkuja. Seuraavassa oppitunnissa käymme läpi vaiheittaisen opastuksen "Palvelupiste"-agentin luomiseksi – alkaen ensimmäisen tietolähteen yhdistämisestä aiheen määrittelyyn ja toiminnon kytkemiseen.</p>
+<p>Seuraavaksi: Rakennat <a href="../03-create-a-declarative-agent-for-M365Copilot/">ensimmäisen deklaratiivisen agenttisi M365 Copilotille</a>.</p>
+<!-- markdownlint-disable-next-line MD033 -->
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/02-copilot-studio-fundamentals" alt="Analytiikka" /></p>
+<hr />
+<p><strong>Vastuuvapauslauseke</strong>:<br />
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi katsoa ensisijaiseksi lähteeksi. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

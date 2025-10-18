@@ -1,0 +1,941 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/nl/docs/recruit/04-creating-a-solution/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#missie-04-een-oplossing-creeren-voor-jouw-agent" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codenaam-operatie-ctrl-alt-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAAM: OPERATIE CTRL-ALT-PACKAGE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missiebriefing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Missiebriefing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doelstellingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Doelstellingen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oplossing-wat-is-dat" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵🏻‍♀️ Oplossing? Wat is dat?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waarom-zou-ik-een-oplossing-moeten-gebruiken-voor-mijn-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Waarom zou ik een oplossing moeten gebruiken voor mijn agent?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#begrip-van-oplossing-uitgevers" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪪 Begrip van oplossing-uitgevers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#levenscyclus-van-power-platform-oplossingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 Levenscyclus van Power Platform-oplossingen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-04-maak-een-nieuwe-oplossing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 04: Maak een nieuwe oplossing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missie-voltooid" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Missie Voltooid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactische-bronnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Tactische Bronnen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "0c51aabca81d6256990caf4c015e6195",
+  "translation_date": "2025-10-17T01:29:51+00:00",
+  "source_file": "docs/recruit/04-creating-a-solution/README.md",
+  "language_code": "nl"
+}
+-->
+<h1 id="missie-04-een-oplossing-creeren-voor-jouw-agent">🚨 Missie 04: Een oplossing creëren voor jouw agent<a class="headerlink" href="#missie-04-een-oplossing-creeren-voor-jouw-agent" title="Permanent link">&para;</a></h1>
+<h2 id="codenaam-operatie-ctrl-alt-package">🕵️‍♂️ CODENAAM: <code>OPERATIE CTRL-ALT-PACKAGE</code><a class="headerlink" href="#codenaam-operatie-ctrl-alt-package" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Tijdvenster voor de operatie:</strong> <code>~45 minuten</code></p>
+</blockquote>
+<p>🎥 <strong>Bekijk de walkthrough</strong></p>
+<p><a href="https://www.youtube.com/watch?v=1iATbkgfcpU" title="Bekijk de walkthrough op YouTube"><img alt="Thumbnail van de video over het maken van een oplossing" src="../../../../../translated_images/video-thumbnail.3d68c6292e459541326e2cadf916f09488731b3cfbcd01de909c4bca9b53b49a.nl.jpg" /></a></p>
+<h2 id="missiebriefing">🎯 Missiebriefing<a class="headerlink" href="#missiebriefing" title="Permanent link">&para;</a></h2>
+<p>Agent Maker, welkom bij je volgende tactische operatie. In deze missie leer je hoe je een oplossing samenstelt - het officiële implementatievoertuig voor jouw IT Helpdesk Agent, gebouwd met Microsoft Copilot Studio. Zie het als het maken van een digitale koffer die jouw agent en zijn artefacten bevat.</p>
+<p>Elke agent heeft een goed gestructureerd thuis nodig. Dat is wat een Power Platform-oplossing biedt - orde, draagbaarheid en gereedheid voor productie.</p>
+<p>Laten we inpakken.</p>
+<h2 id="doelstellingen">🔎 Doelstellingen<a class="headerlink" href="#doelstellingen" title="Permanent link">&para;</a></h2>
+<p>In deze missie leer je:</p>
+<ol>
+<li>Begrijpen wat Power Platform-oplossingen zijn en hun rol in de ontwikkeling van agents</li>
+<li>De voordelen van het gebruik van oplossingen voor het organiseren en implementeren van agents</li>
+<li>Het verkennen van oplossing-uitgevers en hun belang in componentbeheer</li>
+<li>Begrijpen van de levenscyclus van Power Platform-oplossingen van ontwikkeling tot productie</li>
+<li>Het maken van je eigen oplossing-uitgever en aangepaste oplossing voor jouw IT Helpdesk Agent</li>
+</ol>
+<h2 id="oplossing-wat-is-dat">🕵🏻‍♀️ Oplossing? Wat is dat?<a class="headerlink" href="#oplossing-wat-is-dat" title="Permanent link">&para;</a></h2>
+<p>In Microsoft Power Platform zijn oplossingen als containers of pakketten die alle onderdelen van jouw apps of agents bevatten - dit kunnen tabellen, formulieren, flows en aangepaste logica zijn. Oplossingen zijn essentieel voor Application Lifecycle Management (ALM); ze stellen je in staat om je app en agents te beheren van idee tot ontwikkeling, testen, implementatie en updates.</p>
+<p>In Copilot Studio wordt elke agent die je maakt opgeslagen in een Power Platform-oplossing. Standaard worden agents gemaakt in de standaardoplossing, tenzij je een nieuwe aangepaste oplossing maakt om je agent in te creëren. Dit is wat we gaan leren 🤓 in deze les en in het praktijklab.</p>
+<p>Oplossingen werden traditioneel gemaakt in de <strong>Power Apps maker portal</strong> - een webinterface waar je apps kunt bouwen en aanpassen, Dataverse kunt verkennen, flows kunt maken, AI-componenten kunt verkennen en meer.</p>
+<p><img alt="Oplossingen" src="../../../../../translated_images/4.0_01_Solutions.4ab938830cdfc6d1b33fc88a172e2043ab713046e174855f866dc072bbeff4dd.nl.png" /></p>
+<p>In Copilot Studio is er nu de <strong>Solution Explorer</strong>, waar je jouw oplossingen direct kunt beheren. Je hoeft niet meer over te schakelen naar de Power Apps maker portal om je oplossingen te beheren; dit kan nu direct in Copilot Studio 🪄</p>
+<p>Dit betekent dat je de gebruikelijke oplossing-gerelateerde taken kunt uitvoeren:</p>
+<ul>
+<li><strong>Een oplossing maken</strong> - aangepaste oplossingen maken het mogelijk om agents te exporteren en te importeren tussen omgevingen.</li>
+<li><strong>Je voorkeursoplossing instellen</strong> - kies de oplossing waarin agents, apps, enz. standaard worden gemaakt.</li>
+<li><strong>Componenten toevoegen of verwijderen</strong> - jouw agent kan andere componenten zoals omgevingsvariabelen of cloudflows refereren. Daarom moeten deze componenten in de oplossing worden opgenomen.</li>
+<li><strong>Oplossingen exporteren</strong> - om oplossingen naar een andere doelomgeving te verplaatsen.</li>
+<li><strong>Oplossingen importeren</strong> - oplossingen importeren die elders zijn gemaakt, inclusief het upgraden of bijwerken van oplossingen.</li>
+<li><strong>Oplossing-pijplijnen maken en beheren</strong> - de implementatie van oplossingen tussen omgevingen automatiseren.</li>
+<li><strong>Git-integratie</strong> - stelt ontwikkelaars in staat om oplossingen te koppelen aan Git-repositories voor versiebeheer, samenwerking en ALM. Bedoeld om alleen in ontwikkelaarsomgevingen te worden gebruikt.</li>
+</ul>
+<p><img alt="Oplossingen" src="../../../../../translated_images/4.0_02_CopilotStudioSolutionExplorer.042184a894b65fc5b73c91579d9b19a86cd7ca4341c1553c972270dd15852677.nl.png" /></p>
+<p>Er zijn twee soorten oplossingen:</p>
+<ul>
+<li><strong>Onbeheerde oplossingen</strong> - gebruikt tijdens de ontwikkeling. Je kunt vrij bewerken en aanpassen zoals nodig.</li>
+<li><strong>Beheerde oplossingen</strong> - gebruikt wanneer je klaar bent om je app te implementeren in testen of productie. Deze zijn vergrendeld om onbedoelde wijzigingen te voorkomen.</li>
+</ul>
+<h2 id="waarom-zou-ik-een-oplossing-moeten-gebruiken-voor-mijn-agent">🤔 Waarom <em>zou</em> ik een oplossing moeten gebruiken voor mijn agent?<a class="headerlink" href="#waarom-zou-ik-een-oplossing-moeten-gebruiken-voor-mijn-agent" title="Permanent link">&para;</a></h2>
+<p>Denk aan oplossingen als een <em>gereedschapskist</em>. Wanneer je iets (een agent) moet repareren of bouwen op een andere locatie (omgeving), verzamel je alle benodigde gereedschappen (componenten) en stop je ze in je gereedschapskist (oplossing). Vervolgens kun je deze gereedschapskist naar de nieuwe locatie (omgeving) brengen en de gereedschappen (componenten) gebruiken om je werk te voltooien, of nieuwe gereedschappen (componenten) toevoegen om je agent of project aan te passen.</p>
+<div class="admonition quote">
+<p class="admonition-title">Elaiza, jouw vriendelijke cloud-advocaat komt hier even binnen 🙋🏻‍♀️ om wat woorden te delen:</p>
+<p>We hebben een gezegde in Nieuw-Zeeland: "Wees een nette Kiwi!" wat een oproep is aan Nieuw-Zeelanders 🥝 om verantwoordelijkheid te nemen voor hun omgeving door afval op de juiste manier weg te gooien en openbare ruimtes schoon te houden. We kunnen dezelfde context gebruiken voor agents door alles wat met jouw agent te maken heeft georganiseerd en draagbaar te houden, en het zal je helpen een nette omgeving te behouden.</p>
+</div>
+<p>Het is een goede gewoonte om een agent te maken in een toegewijde oplossing in jouw bron (ontwikkelaars)omgeving. Hier is waarom oplossingen waardevol zijn:</p>
+<p>🧩 <strong>Georganiseerde ontwikkeling</strong></p>
+<ul>
+<li>
+<p>Je houdt jouw agent gescheiden van de standaardoplossing die alles in de omgeving bevat. Alle componenten van jouw agent bevinden zich op één plek 🎯</p>
+</li>
+<li>
+<p>Alles wat je nodig hebt voor jouw agent zit in een oplossing, waardoor het gemakkelijker wordt om te exporteren en te importeren naar een doelomgeving 👉🏻 dit is een gezonde gewoonte binnen ALM.</p>
+</li>
+</ul>
+<p>🧩 <strong>Veilige implementatie</strong></p>
+<ul>
+<li>Je kunt jouw app of agent exporteren als een beheerde oplossing en implementeren in andere doelomgevingen (zoals testen of productie) zonder risico op onbedoelde wijzigingen.</li>
+</ul>
+<p>🧩 <strong>Versiebeheer</strong></p>
+<ul>
+<li>
+<p>Je kunt patches (gerichte fixes), updates (een meer uitgebreide wijziging) of upgrades (vervanging van een oplossing - meestal grote wijzigingen en introductie van nieuwe functies) maken.</p>
+</li>
+<li>
+<p>Helpt je wijzigingen gecontroleerd uit te rollen.</p>
+</li>
+</ul>
+<p>🧩 <strong>Afhankelijkheidsbeheer</strong></p>
+<ul>
+<li>Oplossingen houden bij welke onderdelen van elkaar afhankelijk zijn. Dit voorkomt dat je dingen breekt wanneer je wijzigingen aanbrengt.</li>
+</ul>
+<p>🧩 <strong>Team samenwerking</strong></p>
+<ul>
+<li>Ontwikkelaars en makers kunnen samenwerken met onbeheerde oplossingen in ontwikkeling en vervolgens een beheerde oplossing overdragen voor implementatie.</li>
+</ul>
+<h2 id="begrip-van-oplossing-uitgevers">🪪 Begrip van oplossing-uitgevers<a class="headerlink" href="#begrip-van-oplossing-uitgevers" title="Permanent link">&para;</a></h2>
+<p>Een oplossing-uitgever in Power Platform is als een label of merk dat aangeeft wie een oplossing heeft gemaakt of bezit. Het is een klein maar belangrijk onderdeel van het beheren van jouw apps, agents en flow-aanpassingen, vooral bij het werken in teams of tussen verschillende omgevingen.</p>
+<p>Wanneer je een oplossing maakt, moet je een uitgever kiezen. Deze uitgever definieert:</p>
+<ul>
+<li>
+<p>Een prefix die wordt toegevoegd aan alle aangepaste componenten (denk aan tabellen, velden en flows).</p>
+</li>
+<li>
+<p>Een naam en contactgegevens voor de organisatie of persoon die de oplossing bezit.</p>
+</li>
+</ul>
+<h3 id="waarom-is-dit-belangrijk">🤔 Waarom is dit belangrijk?<a class="headerlink" href="#waarom-is-dit-belangrijk" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Gemakkelijke identificatie</strong> - de prefix (bijvoorbeeld <code>new_</code> of <code>abc_</code>) helpt je snel te identificeren welke componenten bij welke oplossing of team horen.</p>
+</li>
+<li>
+<p><strong>Voorkomt conflicten</strong> - als twee teams een kolom genaamd status maken, voorkomen hun prefixes (<code>teamA_status</code>, <code>teamB_status</code>) naamconflicten.</p>
+</li>
+<li>
+<p><strong>Ondersteunt ALM</strong> - bij het verplaatsen van oplossingen tussen omgevingen (Dev → Test → Prod) helpt de uitgever eigendom bij te houden en consistentie te behouden.</p>
+</li>
+</ol>
+<h3 id="voorbeeld">✨ Voorbeeld<a class="headerlink" href="#voorbeeld" title="Permanent link">&para;</a></h3>
+<p>Stel dat je een uitgever maakt genaamd Contoso Solutions met de prefix <code>cts_</code>.</p>
+<p>Als je een aangepaste kolom genaamd <em>Prioriteit</em> toevoegt, wordt deze opgeslagen als <code>cts_Prioriteit</code> in de oplossing.</p>
+<p>Iedereen die de kolom tegenkomt op het niveau van de oplossing, ongeacht in welke omgeving ze zich bevinden, kan gemakkelijk identificeren dat het een kolom is die geassocieerd is met Contoso Solutions.</p>
+<h2 id="levenscyclus-van-power-platform-oplossingen">🧭 Levenscyclus van Power Platform-oplossingen<a class="headerlink" href="#levenscyclus-van-power-platform-oplossingen" title="Permanent link">&para;</a></h2>
+<p>Nu je het doel van een oplossing begrijpt, laten we leren over de levenscyclus.</p>
+<p><strong>1. Maak een oplossing in de ontwikkelomgeving</strong> - begin met het maken van een nieuwe oplossing in jouw ontwikkelomgeving.</p>
+<p><strong>2. Voeg componenten toe</strong> - voeg apps, flows, tabellen en andere elementen toe aan jouw oplossing.</p>
+<p><strong>3. Exporteer als beheerde oplossing</strong> - pak jouw oplossing in voor implementatie door deze te exporteren als een beheerde oplossing.</p>
+<p><strong>4. Importeer naar testomgeving</strong> - test jouw oplossing in een aparte testomgeving om ervoor te zorgen dat alles naar verwachting werkt.</p>
+<p><strong>5. Importeer naar productieomgeving</strong> - implementeer de geteste oplossing in jouw live productieomgeving.</p>
+<p><strong>6. Pas patches, updates of upgrades toe</strong> - voer verbeteringen of fixes uit met patches, updates of upgrades. 🔁 Herhaal de cyclus!</p>
+<h3 id="voorbeeld_1">✨ Voorbeeld<a class="headerlink" href="#voorbeeld_1" title="Permanent link">&para;</a></h3>
+<p>Stel je bouwt een IT-helpdeskagent om medewerkers te helpen met problemen zoals apparaatproblemen, netwerkstoringen, printerinstellingen en meer.</p>
+<ul>
+<li>
+<p>Je begint in een ontwikkelomgeving met een onbeheerde oplossing.</p>
+</li>
+<li>
+<p>Zodra het klaar is, exporteer je het als een beheerde oplossing en importeer je het in een doelomgeving zoals een systeemtest of User Acceptance Testing (UAT) omgeving.</p>
+</li>
+<li>
+<p>Na het testen verplaats je het naar de productieomgeving - allemaal zonder de originele ontwikkelversie aan te raken.</p>
+</li>
+</ul>
+<h2 id="lab-04-maak-een-nieuwe-oplossing">🧪 Lab 04: Maak een nieuwe oplossing<a class="headerlink" href="#lab-04-maak-een-nieuwe-oplossing" title="Permanent link">&para;</a></h2>
+<p>We gaan nu leren:</p>
+<ul>
+<li><a href="../../../../../docs/recruit/04-creating-a-solution">4.1 Hoe maak je een oplossing-uitgever</a></li>
+<li><a href="../../../../../docs/recruit/04-creating-a-solution">4.2 Hoe maak je een oplossing</a></li>
+</ul>
+<p>We blijven bij het eerdere voorbeeld, waar we een oplossing gaan maken in de toegewijde Copilot Studio-omgeving om onze IT-helpdeskagent in te bouwen.</p>
+<p>Laten we beginnen!</p>
+<h3 id="vereisten">Vereisten<a class="headerlink" href="#vereisten" title="Permanent link">&para;</a></h3>
+<h4 id="beveiligingsrol">Beveiligingsrol<a class="headerlink" href="#beveiligingsrol" title="Permanent link">&para;</a></h4>
+<p>In Copilot Studio hangt wat je <em>kunt doen</em> in de Solution Explorer af van jouw gebruikersbeveiligingsrol.
+Als je geen toestemming hebt om oplossingen te beheren in het Power Apps admin center, kun je die taken ook niet uitvoeren in Copilot Studio.</p>
+<p>Om ervoor te zorgen dat alles soepel verloopt, controleer of je de juiste beveiligingsrollen en machtigingen hebt. Of als je geen omgevingen beheert in jouw organisatie, vraag dan jouw IT-beheerder (of het equivalent) team dat jouw tenant/omgevingen beheert.</p>
+<p>De volgende beveiligingsrollen stellen gebruikers in staat om een oplossing te maken in hun omgeving.</p>
+<table>
+<thead>
+<tr>
+<th>Beveiligingsrol</th>
+<th>Beschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Omgevingsmaker</td>
+<td>Biedt de nodige machtigingen om middelen binnen een specifieke omgeving te maken, aan te passen en te beheren, inclusief oplossingen</td>
+</tr>
+<tr>
+<td>Systeemaanpasser</td>
+<td>Breder dan Omgevingsmaker, inclusief de mogelijkheid om de omgeving aan te passen en beveiligingsrollen te beheren</td>
+</tr>
+<tr>
+<td>Systeembeheerder</td>
+<td>Hoogste niveau van machtigingen en kan alle aspecten van de omgeving beheren, inclusief het maken en toewijzen van beveiligingsrollen</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ontwikkelomgeving">Ontwikkelomgeving<a class="headerlink" href="#ontwikkelomgeving" title="Permanent link">&para;</a></h4>
+<p>Zorg ervoor dat je overschakelt naar jouw toegewijde ontwikkelomgeving, zie <a href="../00-course-setup/#step-3-create-new-developer-environment">Les 00 - Cursusinstelling - Stap 3: Maak nieuwe ontwikkelaar</a>.</p>
+<ol>
+<li>
+<p>Selecteer rechtsboven het <strong>Tandwiel</strong>-icoon en schakel over van de standaardomgeving naar jouw omgeving, bijvoorbeeld <strong>Adele Vance's omgeving</strong>.</p>
+<p><img alt="Ontwikkelomgeving" src="../../../../../translated_images/4.0_03_DeveloperEnvironment.07770f8ffb55e0f76dc7f8a5247154e66ac22a5ac3a00c7a025e1b0e1f43f43e.nl.png" /></p>
+</li>
+</ol>
+<h3 id="41-maak-een-oplossing-uitgever">4.1 Maak een oplossing-uitgever<a class="headerlink" href="#41-maak-een-oplossing-uitgever" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Gebruik dezelfde Copilot Studio-omgeving als in de vorige les en selecteer het <strong>ellips-icoon (. . .)</strong> in het menu aan de linkerkant in Copilot Studio. Selecteer <strong>Oplossingen</strong> onder de kop <strong>Verkennen</strong>.</p>
+<p><img alt="Oplossingen" src="../../../../../translated_images/4.1_01_Solutions.1db0ad61bec0859dc3bdd673df996059405a2ab29bed5e4a0f58435d8732fa38.nl.png" /></p>
+</li>
+<li>
+<p>De <strong>Solution Explorer</strong> in Copilot Studio wordt geladen. Selecteer <strong>+ Nieuwe oplossing</strong></p>
+<p><img alt="Oplossingen" src="../../../../../translated_images/4.1_02_NewSolution.a0beb3ae63cbd368567ecac7ca483ce90ab1082fbb7ec4722faf20cb69ec2f59.nl.png" /></p>
+</li>
+<li>
+<p>Het <strong>Nieuwe oplossing</strong>-paneel verschijnt waar we de details van onze oplossing kunnen definiëren. Eerst moeten we een nieuwe uitgever maken. Selecteer <strong>+ Nieuwe uitgever</strong>.</p>
+<p><img alt="Oplossingen" src="../../../../../translated_images/4.1_03_NewPublisher.af7ad3f00b1d01bfa741dec8c9f47ca2d1ddaed5af0b292211916fc9fa24a323.nl.png" />  </p>
+</li>
+<li>
+<p>Het tabblad <strong>Eigenschappen</strong> van het <strong>Nieuwe uitgever</strong>-paneel verschijnt met verplichte en niet-verplichte velden die moeten worden ingevuld in het tabblad <strong>Eigenschappen</strong>. Hier kunnen we de details van de uitgever schetsen, die zal worden gebruikt als het label of merk dat aangeeft wie de oplossing heeft gemaakt of bezit.</p>
+<table>
+<thead>
+<tr>
+<th>Eigenschap</th>
+<th>Beschrijving</th>
+<th style="text-align: center;">Verplicht</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weergavenaam</td>
+<td>Weergavenaam voor de uitgever</td>
+<td style="text-align: center;">Ja</td>
+</tr>
+<tr>
+<td>Naam</td>
+<td>De unieke naam en schemanaam voor de uitgever</td>
+<td style="text-align: center;">Ja</td>
+</tr>
+<tr>
+<td>Beschrijving</td>
+<td>Beschrijft het doel van de oplossing</td>
+<td style="text-align: center;">Nee</td>
+</tr>
+<tr>
+<td>Prefix</td>
+<td>Uitgever-prefix die wordt toegepast op nieuw gemaakte componenten</td>
+<td style="text-align: center;">Ja</td>
+</tr>
+<tr>
+<td>Keuzewaarde-prefix</td>
+<td>Genereert een nummer op basis van de uitgever-prefix. Dit nummer wordt gebruikt wanneer je opties toevoegt aan keuzes en biedt een indicator van welke oplossing is gebruikt om de optie toe te voegen.</td>
+<td style="text-align: center;">Ja</td>
+</tr>
+</tbody>
+</table>
+<p>Kopieer en plak het volgende als de <strong>Weergavenaam</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Contoso Solutions
+</span></code></pre></div>
+<p>Kopieer en plak het volgende als de <strong>Naam</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ContosoSolutions
+</span></code></pre></div>
+<p>Kopieer en plak het volgende als de <strong>Beschrijving</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Copilot Studio Agent Academy
+</span></code></pre></div>
+<p>Kopieer en plak het volgende voor de <strong>Prefix</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cts
+</span></code></pre></div>
+<p>Standaard wordt de <strong>Keuzewaarde</strong>-prefix weergegeven als een geheel getal. Werk dit geheel getal bij naar het dichtstbijzijnde duizendtal. Bijvoorbeeld, in mijn screenshot hieronder was het aanvankelijk <code>77074</code>. Werk dit bij van <code>77074</code> naar <code>77000</code>.</p>
+<p><img alt="Oplossingen" src="../../../../../translated_images/4.1_04_PublisherProperties.b6cbbe7bc0f51446f273bf9a8a06b163c2061a575dab0fc4a5f42007ac01a82c.nl.png" />  </p>
+</li>
+<li>
+<p>Als je contactgegevens voor de oplossing wilt opgeven, selecteer je het tabblad <strong>Contact</strong> en vul je de weergegeven kolommen in.</p>
+<p><img alt="Oplossingen" src="../../../../../translated_images/4.1_05_Contact.fc0b65c96cc1ef06a1bd173f21920516e123fab76d13f592eab8745f529df3ef.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer het tabblad <strong>Eigenschappen</strong> en selecteer <strong>Opslaan</strong> om de uitgever te maken.</p>
+<p><img alt="Oplossingen" src="../../../../../translated_images/4.1_06_SavePublisher.4aabbd20a051b55eab9d5d961761c1fae61d5c0cef07f696c5eaa030f4a5c356.nl.png" />
+1. Het paneel <strong>Nieuwe uitgever</strong> wordt gesloten en je wordt teruggebracht naar het paneel <strong>Nieuwe oplossing</strong> met de zojuist aangemaakte uitgever geselecteerd.</p>
+<p><img alt="Oplossingen" src="../../../../../translated_images/4.1_07_PublisherSelected.5d88b1212348c15841b5f57e78554649d4ed080d10dccaece30e826b6e359132.nl.png" />  </p>
+</li>
+</ol>
+<p>High five, je hebt nu een Solution Publisher aangemaakt! 🙌🏻 We gaan nu leren hoe je een nieuwe aangepaste oplossing maakt.</p>
+<h3 id="42-een-nieuwe-oplossing-maken">4.2 Een nieuwe oplossing maken<a class="headerlink" href="#42-een-nieuwe-oplossing-maken" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Nu we onze uitgevers hebben aangemaakt, kunnen we de rest van het formulier in het paneel <strong>Nieuwe oplossing</strong> invullen.</p>
+<p>Kopieer en plak het volgende als <strong>Weergavenaam</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Contoso Helpdesk Agent
+</span></code></pre></div>
+<p>Kopieer en plak het volgende als <strong>Naam</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ContosoHelpdeskAgent
+</span></code></pre></div>
+<p>Omdat we een nieuwe oplossing maken, zal het <a href="https://learn.microsoft.com/power-apps/maker/data-platform/update-solutions#understanding-version-numbers-for-updates/?WT.mc_id=power-172615-ebenitez"><strong>Versienummer</strong></a> standaard <code>1.0.0.0</code> zijn.</p>
+<p>Vink het selectievakje <strong>Instellen als uw voorkeursoplossing</strong> aan.</p>
+<p><img alt="Oplossingen" src="../../../../../translated_images/4.2_01_SolutionDetails_.ce2945385f3544846ca9e62f209c96a673a2540ea6e20404cd5f1b224d8b5321.nl.png" />  </p>
+</li>
+<li>
+<p>Vouw de <strong>Meer opties</strong> uit om aanvullende details te bekijken die in een oplossing kunnen worden opgegeven.</p>
+<p><img alt="Oplossingen" src="../../../../../translated_images/4.2_02_MoreOptions.3c4b95d2fe119f8a8d8be783f5beba0a3b6c36fb83055cae80eaa45891aea73b.nl.png" /></p>
+</li>
+<li>
+<p>Je ziet het volgende:</p>
+<ul>
+<li>
+<p><strong>Geïnstalleerd op</strong> - de datum waarop de oplossing is geïnstalleerd.</p>
+</li>
+<li>
+<p><strong>Configuratiepagina</strong> - ontwikkelaars stellen een HTML-webresource in om gebruikers te helpen interactie te hebben met hun app, agent of tool, waar het zal verschijnen als een webpagina in de Informatiesectie met instructies of knoppen. Dit wordt meestal gebruikt door bedrijven of ontwikkelaars die oplossingen bouwen en delen met anderen.</p>
+</li>
+<li>
+<p><strong>Beschrijving</strong> - beschrijft de oplossing of een algemene beschrijving van de configuratiepagina.</p>
+</li>
+</ul>
+<p>We laten deze velden leeg voor deze oefening.</p>
+<p>Selecteer <strong>Maken</strong>.</p>
+<p><img alt="Oplossingen" src="../../../../../translated_images/4.2_03_Create.afd1bc27593062dfd945d4a0aa6fb05d87e0b02b0f45d01eaad8810f67a5f295.nl.png" /></p>
+</li>
+<li>
+<p>De oplossing voor Contoso Helpdesk Agent is nu aangemaakt. Er zullen geen componenten zijn totdat we een agent maken in Copilot Studio.</p>
+<p>Selecteer het pictogram <strong>terugpijl</strong> om terug te keren naar de Solution Explorer.</p>
+<p><img alt="Oplossingen" src="../../../../../translated_images/4.2_04_SolutionCreated.f5f543303fd58856f93bfc1d4d6e9a27fd338a82e77b15258bb54f03b9b5f631.nl.png" /></p>
+</li>
+<li>
+<p>Merk op dat de Contoso Helpdesk Agent nu wordt weergegeven als de <strong>Huidige voorkeursoplossing</strong>, omdat we eerder het selectievakje <strong>Instellen als uw voorkeursoplossing</strong> hebben aangevinkt.</p>
+<p><img alt="Oplossingen" src="../../../../../translated_images/4.2_05_CurrentPreferredSolutionSelected.fde1fa6c013f41f445c2b8721af8bc172a6a8bf98c4f5b8e946f87b4d5ec7823.nl.png" /></p>
+</li>
+</ol>
+<h2 id="missie-voltooid">✅ Missie Voltooid<a class="headerlink" href="#missie-voltooid" title="Permanent link">&para;</a></h2>
+<p>Gefeliciteerd! 👏🏻 Je hebt een uitgever aangemaakt en deze gebruikt in je nieuw aangemaakte oplossing om je agent te bouwen!</p>
+<p>Goed gedaan, Agent Maker. Een nette digitale voetafdruk is de eerste stap naar schaalbare operabiliteit. Nu heb je de tools en de mindset voor duurzame, bedrijfsgerichte agentontwikkeling.</p>
+<p>Dit is het einde van <strong>Lab 04 - Een oplossing maken</strong>, selecteer de onderstaande link om door te gaan naar de volgende les. De oplossing die je in deze lab hebt gemaakt, zal worden gebruikt in de lab van de volgende les.</p>
+<p>⏭️ <a href="../05-using-prebuilt-agents/">Ga naar de les <strong>Snel aan de slag met vooraf gebouwde agents</strong></a></p>
+<h2 id="tactische-bronnen">📚 Tactische Bronnen<a class="headerlink" href="#tactische-bronnen" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/power-apps/maker/data-platform/create-solution/?WT.mc_id=power-172615-ebenitez">Een oplossing maken</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-solutions-overview/?WT.mc_id=power-172615-ebenitez">Oplossingen maken en beheren in Copilot Studio</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/admin-share-bots/?WT.mc_id=power-172615-ebenitez">Agents delen met andere gebruikers</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-platform/admin/database-security#summary-of-resources-available-to-predefined-security-roles/?WT.mc_id=power-172615-ebenitez">Samenvatting van beschikbare bronnen voor vooraf gedefinieerde beveiligingsrollen</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-apps/maker/data-platform/update-solutions/?WT.mc_id=power-172615-ebenitez">Een oplossing upgraden of bijwerken</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-platform/alm/pipelines/?WT.mc_id=power-172615-ebenitez">Overzicht van pipelines in Power Platform</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-platform/alm/git-integration/overview/?WT.mc_id=power-172615-ebenitez">Overzicht van Git-integratie in Power Platform</a></p>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/04-creating-a-solution" alt="Analytics" /></p>
+<hr />
+<p><strong>Disclaimer</strong>:<br />
+Dit document is vertaald met behulp van de AI-vertalingsservice <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

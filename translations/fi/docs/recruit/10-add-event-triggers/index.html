@@ -1,0 +1,1019 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/fi/docs/recruit/10-add-event-triggers/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tehtava-10-lisaa-tapahtumatriggereita-ota-kayttoon-autonomisen-agentin-ominaisuudet" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#koodinimi-operation-ghost-routine" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ Koodinimi: OPERATION GHOST ROUTINE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tehtavan-kuvaus" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Tehtävän kuvaus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tavoitteet" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Tavoitteet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mika-on-tapahtumatrigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Mikä on tapahtumatrigger?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kuinka-tapahtumatriggerit-toimivat" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Kuinka tapahtumatriggerit toimivat?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hyotykuormien-ymmartaminen" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Hyötykuormien ymmärtäminen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yleisia-tapahtumatrigger-skenaarioita" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Yleisiä tapahtumatrigger-skenaarioita
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#julkaisu-ja-autentikointihuomiot" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Julkaisu- ja autentikointihuomiot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vianetsinta-ja-rajoitukset" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Vianetsintä ja rajoitukset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorio-10-lisaa-tapahtumatriggereita-autonomisen-agentin-toimintaan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Laboratorio 10 - Lisää tapahtumatriggereitä autonomisen agentin toimintaan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tehtava-suoritettu" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Tehtävä suoritettu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taktiset-resurssit" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Taktiset resurssit
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "cd99a76bcb7372ac2771b6ae178b023d",
+  "translation_date": "2025-10-17T01:39:06+00:00",
+  "source_file": "docs/recruit/10-add-event-triggers/README.md",
+  "language_code": "fi"
+}
+-->
+<h1 id="tehtava-10-lisaa-tapahtumatriggereita-ota-kayttoon-autonomisen-agentin-ominaisuudet">🚨 Tehtävä 10: Lisää tapahtumatriggereitä - Ota käyttöön autonomisen agentin ominaisuudet<a class="headerlink" href="#tehtava-10-lisaa-tapahtumatriggereita-ota-kayttoon-autonomisen-agentin-ominaisuudet" title="Permanent link">&para;</a></h1>
+<h2 id="koodinimi-operation-ghost-routine">🕵️‍♂️ Koodinimi: <code>OPERATION GHOST ROUTINE</code><a class="headerlink" href="#koodinimi-operation-ghost-routine" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operaatioaika:</strong> <code>~45 minuuttia</code></p>
+</blockquote>
+<p>🎥 <strong>Katso opastus</strong></p>
+<p><a href="https://www.youtube.com/watch?v=ZgwHL8PQ1nY" title="Katso opastus YouTubessa"><img alt="Tapahtumatriggereiden videon pikkukuva" src="../../../../../translated_images/video-thumbnail.0d5b477d69adfe668fab9aa8ef5b199377b46788948b33b1969bf19c099b6469.fi.jpg" /></a></p>
+<h2 id="tehtavan-kuvaus">🎯 Tehtävän kuvaus<a class="headerlink" href="#tehtavan-kuvaus" title="Permanent link">&para;</a></h2>
+<p>On aika nostaa agenttisi tasoa keskusteluavustajasta autonomiseksi toimijaksi. Tehtäväsi on mahdollistaa agenttisi toiminta ilman, että sitä tarvitsee erikseen kutsua - reagoimalla signaaleihin digitaalisessa ympäristössäsi tarkasti ja nopeasti.</p>
+<p>Tapahtumatriggereiden avulla koulutat agenttisi seuraamaan ulkoisia järjestelmiä, kuten SharePointia, Teamsia ja Outlookia, ja suorittamaan älykkäitä toimintoja heti, kun signaali vastaanotetaan. Tämä operaatio muuttaa agenttisi täysin toimivaksi kenttäresurssiksi - hiljaiseksi, nopeaksi ja aina valppaaksi.</p>
+<p>Onnistuminen tarkoittaa agenttien rakentamista, jotka tuottavat arvoa aloitteellisesti - eivät vain reagoi siihen.</p>
+<h2 id="tavoitteet">🔎 Tavoitteet<a class="headerlink" href="#tavoitteet" title="Permanent link">&para;</a></h2>
+<p>📖 Tämä oppitunti kattaa:</p>
+<ul>
+<li>Tapahtumatriggereiden ymmärtäminen ja niiden rooli autonomisen agentin toiminnassa</li>
+<li>Tapahtumatriggereiden ja aihetriggereiden erot, mukaan lukien triggerityönkulut ja hyötykuormat</li>
+<li>Yleisimpien tapahtumatrigger-skenaarioiden tutkiminen</li>
+<li>Autentikoinnin, turvallisuuden ja julkaisemisen huomioiminen tapahtumapohjaisille agenteille</li>
+<li>Autonomisen IT-tukipisteagentin rakentaminen, joka reagoi SharePoint-tapahtumiin ja lähettää sähköpostivahvistuksia</li>
+</ul>
+<h2 id="mika-on-tapahtumatrigger">🤔 Mikä on tapahtumatrigger?<a class="headerlink" href="#mika-on-tapahtumatrigger" title="Permanent link">&para;</a></h2>
+<p><strong>Tapahtumatrigger</strong> on mekanismi, joka mahdollistaa agenttisi toiminnan autonomisesti ulkoisten tapahtumien perusteella ilman suoraa käyttäjän syötettä. Ajattele sitä tapana saada agenttisi "tarkkailemaan" tiettyjä tapahtumia ja toimimaan automaattisesti, kun nämä tapahtumat tapahtuvat.</p>
+<p>Toisin kuin aihetriggerit, jotka vaativat käyttäjää kirjoittamaan jotain keskustelun aktivoimiseksi, tapahtumatriggerit aktivoituvat, kun jotain tapahtuu yhdistetyissä järjestelmissäsi. Esimerkiksi:</p>
+<ul>
+<li>Kun uusi tiedosto luodaan SharePointissa tai OneDrive for Businessissa</li>
+<li>Kun Dataversessa luodaan uusi tietue</li>
+<li>Kun Plannerissa tehtävä valmistuu</li>
+<li>Kun uusi Microsoft Forms -vastaus lähetetään</li>
+<li>Kun uusi Microsoft Teams -viesti lisätään</li>
+<li>Perustuen toistuviin aikatauluihin (kuten päivittäiset muistutukset)<br />
+<img alt="Lisää triggeri" src="../../../../../translated_images/10_AddTriggerDialog.d665fde7e50d106d693110cd80e6c6b569bdad34ea985eb72fee7e0fccb3ef26.fi.png" /></li>
+</ul>
+<h3 id="miksi-tapahtumatriggerit-ovat-tarkeita-autonomisille-agenteille">Miksi tapahtumatriggerit ovat tärkeitä autonomisille agenteille<a class="headerlink" href="#miksi-tapahtumatriggerit-ovat-tarkeita-autonomisille-agenteille" title="Permanent link">&para;</a></h3>
+<p>Tapahtumatriggerit muuttavat agenttisi reaktiivisesta avustajasta proaktiiviseksi, autonomiseksi auttajaksi:</p>
+<ol>
+<li>
+<p><strong>Autonominen toiminta</strong> - agenttisi voi työskennellä 24/7 ilman ihmisen väliintuloa, reagoiden tapahtumiin niiden tapahtuessa.</p>
+<ul>
+<li><em>Esimerkki:</em> Tervetuloviestin lähettäminen automaattisesti uusille tiimin jäsenille, kun heidät lisätään tiimiin.</li>
+</ul>
+</li>
+<li>
+<p><strong>Reaaliaikainen reagointi</strong> - sen sijaan, että odotettaisiin käyttäjien kysyvän jotain, agenttisi reagoi välittömästi merkityksellisiin tapahtumiin.</p>
+<ul>
+<li><em>Esimerkki:</em> Ilmoita IT-tiimille, kun SharePoint-dokumenttia muokataan.</li>
+</ul>
+</li>
+<li>
+<p><strong>Työnkulun automatisointi</strong> - ketjuta useita toimintoja yhden trigger-tapahtuman perusteella.</p>
+<ul>
+<li><em>Esimerkki:</em> Kun uusi tukipyyntö luodaan, luo tehtävä, ilmoita esimiehelle ja päivitä seurantataulukko.</li>
+</ul>
+</li>
+<li>
+<p><strong>Johdonmukaiset prosessit</strong> - varmista, että tärkeät vaiheet eivät jää välistä automatisoimalla vastaukset avaintapahtumiin.</p>
+<ul>
+<li><em>Esimerkki:</em> Jokainen uusi työntekijä saa automaattisesti perehdytysmateriaalit ja käyttöoikeuspyynnöt.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tietopohjaiset toiminnot</strong> - käytä tapahtuman sisältämää tietoa älykkäiden päätösten tekemiseen ja asianmukaisten toimien toteuttamiseen.</p>
+<ul>
+<li><em>Esimerkki:</em> Ohjaa kiireelliset tukipyynnöt kokeneille työntekijöille prioriteettitason perusteella triggerin hyötykuormassa.</li>
+</ul>
+</li>
+</ol>
+<h2 id="kuinka-tapahtumatriggerit-toimivat">⚙️ Kuinka tapahtumatriggerit toimivat?<a class="headerlink" href="#kuinka-tapahtumatriggerit-toimivat" title="Permanent link">&para;</a></h2>
+<p>Tapahtumatriggerit toimivat kolmen vaiheen työnkulun kautta, joka mahdollistaa agenttisi autonomisen reagoinnin ulkoisiin tapahtumiin:</p>
+<h3 id="triggerin-tyonkulku">Triggerin työnkulku<a class="headerlink" href="#triggerin-tyonkulku" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Tapahtuman havaitseminen</strong> - Tietty tapahtuma tapahtuu yhdistetyssä järjestelmässä (SharePoint, Teams, Outlook jne.)</li>
+<li><strong>Triggerin aktivointi</strong> - Tapahtumatrigger havaitsee tämän tapahtuman ja lähettää hyötykuorman agentillesi Power Automate Cloud Flown kautta.</li>
+<li><strong>Agentin vastaus</strong> - Agenttisi vastaanottaa hyötykuorman ja suorittaa määritetyt ohjeet.</li>
+</ol>
+<h3 id="tapahtuma-vs-aihetriggerit">Tapahtuma- vs aihetriggerit<a class="headerlink" href="#tapahtuma-vs-aihetriggerit" title="Permanent link">&para;</a></h3>
+<p>Näiden kahden triggerityypin eron ymmärtäminen on tärkeää:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Tapahtumatriggerit</strong></th>
+<th><strong>Aihetriggerit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aktivoituu ulkoisten järjestelmätapahtumien perusteella</td>
+<td>Aktivoituu käyttäjän syötteiden/lauseiden perusteella</td>
+</tr>
+<tr>
+<td>Mahdollistaa autonomisen agentin toiminnan</td>
+<td>Mahdollistaa keskusteluvastaukset</td>
+</tr>
+<tr>
+<td>Käyttää tekijän autentikointia</td>
+<td>Vaihtoehto käyttäjän autentikoinnille</td>
+</tr>
+<tr>
+<td>Toimii ilman käyttäjän vuorovaikutusta</td>
+<td>Vaatii käyttäjän aloittamaan keskustelun</td>
+</tr>
+<tr>
+<td>Esimerkkejä: Tiedosto luotu, sähköposti vastaanotettu</td>
+<td>Esimerkki: "Millainen sää on?"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hyotykuormien-ymmartaminen">📦 Hyötykuormien ymmärtäminen<a class="headerlink" href="#hyotykuormien-ymmartaminen" title="Permanent link">&para;</a></h2>
+<p>Kun tapahtuma tapahtuu, triggeri lähettää agentillesi <strong>hyötykuorman</strong>, joka sisältää tietoa tapahtumasta ja ohjeet siitä, miten reagoida.</p>
+<h3 id="oletus-vs-mukautetut-hyotykuormat">Oletus- vs mukautetut hyötykuormat<a class="headerlink" href="#oletus-vs-mukautetut-hyotykuormat" title="Permanent link">&para;</a></h3>
+<p>Jokaisella triggerityypillä on oletushyötykuorma, mutta voit mukauttaa sitä:</p>
+<p><strong>Oletushyötykuorma</strong> - Käyttää standardimuotoa, kuten <code>Käytä sisältöä {Body}</code></p>
+<ul>
+<li>Sisältää perustiedot tapahtumasta</li>
+<li>Käyttää yleisiä käsittelyohjeita</li>
+<li>Hyvä yksinkertaisiin skenaarioihin</li>
+</ul>
+<p><strong>Mukautettu hyötykuorma</strong> - Lisää tarkat ohjeet ja tietojen muotoilu</p>
+<ul>
+<li>Sisältää yksityiskohtaiset ohjeet agentillesi</li>
+<li>Määrittää tarkasti, mitä tietoja käytetään ja miten</li>
+<li>Parempi monimutkaisiin työnkulkuihin</li>
+</ul>
+<h3 id="agentin-ohjeet-vs-mukautetut-hyotykuormaohjeet">Agentin ohjeet vs mukautetut hyötykuormaohjeet<a class="headerlink" href="#agentin-ohjeet-vs-mukautetut-hyotykuormaohjeet" title="Permanent link">&para;</a></h3>
+<p>Voit ohjata agenttisi toimintaa kahdella tasolla tapahtumatriggereiden avulla:</p>
+<p><strong>Agentin ohjeet</strong> (Yleiset)</p>
+<ul>
+<li>Laajat ohjeet, jotka koskevat kaikkia triggereitä</li>
+<li>Esimerkki: "Kun käsittelet tukipyyntöjä, tarkista aina ensin kaksoiskappaleet"</li>
+<li>Paras yleisiin toimintamalleihin</li>
+</ul>
+<p><strong>Hyötykuormaohjeet</strong> (Trigger-kohtaiset)</p>
+<ul>
+<li>Tarkat ohjeet yksittäisille triggerityypeille  </li>
+<li>Esimerkki: "Tämän SharePoint-päivityksen osalta lähetä yhteenveto projektikanavalle"</li>
+<li>Paras monimutkaisille agenteille, joilla on useita triggereitä</li>
+</ul>
+<p>💡 <strong>Vinkki</strong>: Vältä ristiriitaisia ohjeita näiden kahden tason välillä, sillä tämä voi aiheuttaa odottamatonta käyttäytymistä.</p>
+<h2 id="yleisia-tapahtumatrigger-skenaarioita">🎯 Yleisiä tapahtumatrigger-skenaarioita<a class="headerlink" href="#yleisia-tapahtumatrigger-skenaarioita" title="Permanent link">&para;</a></h2>
+<p>Tässä on käytännön esimerkkejä siitä, kuinka tapahtumatriggerit voivat parantaa agenttisi toimintaa:</p>
+<h3 id="it-tukipisteagentti">IT-tukipisteagentti<a class="headerlink" href="#it-tukipisteagentti" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Triggeri</strong>: Uusi SharePoint-listakohde (tukipyyntö)</li>
+<li><strong>Toiminto</strong>: Luokittele automaattisesti, määritä prioriteetti ja ilmoita asianmukaisille tiimin jäsenille</li>
+</ul>
+<h3 id="tyontekijan-perehdytysagentti">Työntekijän perehdytysagentti<a class="headerlink" href="#tyontekijan-perehdytysagentti" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Triggeri</strong>: Uusi käyttäjä lisätty Dataverseen</li>
+<li><strong>Toiminto</strong>: Lähetä tervetuloviesti, luo perehdytystehtävät ja myönnä käyttöoikeudet</li>
+</ul>
+<h3 id="projektinhallinta-agentti">Projektinhallinta-agentti<a class="headerlink" href="#projektinhallinta-agentti" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Triggeri</strong>: Plannerissa tehtävä valmis</li>
+<li><strong>Toiminto</strong>: Päivitä projektin hallintapaneeli, ilmoita sidosryhmille ja tarkista esteet</li>
+</ul>
+<h3 id="dokumenttien-hallinta-agentti">Dokumenttien hallinta-agentti<a class="headerlink" href="#dokumenttien-hallinta-agentti" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Triggeri</strong>: Tiedosto ladattu tiettyyn SharePoint-kansioon</li>
+<li><strong>Toiminto</strong>: Poimi metatiedot, lisää tunnisteet ja ilmoita dokumentin omistajille</li>
+</ul>
+<h3 id="kokousavustaja-agentti">Kokousavustaja-agentti<a class="headerlink" href="#kokousavustaja-agentti" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Triggeri</strong>: Kalenteritapahtuma luotu</li>
+<li><strong>Toiminto</strong>: Lähetä kokousta edeltävät muistutukset ja agenda, varaa resurssit</li>
+</ul>
+<h2 id="julkaisu-ja-autentikointihuomiot">⚠️ Julkaisu- ja autentikointihuomiot<a class="headerlink" href="#julkaisu-ja-autentikointihuomiot" title="Permanent link">&para;</a></h2>
+<p>Ennen kuin agenttisi voi käyttää tapahtumatriggereitä tuotannossa, sinun on ymmärrettävä autentikoinnin ja turvallisuuden vaikutukset.</p>
+<h3 id="tekijan-autentikointi">Tekijän autentikointi<a class="headerlink" href="#tekijan-autentikointi" title="Permanent link">&para;</a></h3>
+<p>Tapahtumatriggerit käyttävät <strong>agentin luojan tunnuksia</strong> kaikessa autentikoinnissa:</p>
+<ul>
+<li>Agenttisi käyttää järjestelmiä sinun käyttöoikeuksillasi</li>
+<li>Käyttäjät voivat mahdollisesti käyttää tietoja tunnustesi kautta</li>
+<li>Kaikki toiminnot suoritetaan "sinuna", vaikka käyttäjät olisivat vuorovaikutuksessa agentin kanssa</li>
+</ul>
+<h3 id="tietosuojan-parhaat-kaytannot">Tietosuojan parhaat käytännöt<a class="headerlink" href="#tietosuojan-parhaat-kaytannot" title="Permanent link">&para;</a></h3>
+<p>Turvallisuuden ylläpitämiseksi julkaistaessa tapahtumatriggereitä käyttäviä agentteja:</p>
+<ol>
+<li><strong>Arvioi tietojen käyttöoikeudet</strong> - Tarkista, mihin järjestelmiin ja tietoihin triggereilläsi on pääsy</li>
+<li><strong>Testaa huolellisesti</strong> - Ymmärrä, mitä tietoja triggerit sisältävät hyötykuormissa</li>
+<li><strong>Rajaa triggerin laajuus</strong> - Käytä tarkkoja parametreja rajoittaaksesi, mitkä tapahtumat aktivoivat triggereitä</li>
+<li><strong>Tarkista hyötykuormatiedot</strong> - Varmista, etteivät triggerit paljasta arkaluontoisia tietoja</li>
+<li><strong>Seuraa käyttöä</strong> - Seuraa triggerin toimintaa ja resurssien kulutusta</li>
+</ol>
+<h2 id="vianetsinta-ja-rajoitukset">⚠️ Vianetsintä ja rajoitukset<a class="headerlink" href="#vianetsinta-ja-rajoitukset" title="Permanent link">&para;</a></h2>
+<p>Pidä mielessä nämä tärkeät seikat työskennellessäsi tapahtumatriggereiden kanssa:</p>
+<h3 id="kiintio-ja-laskutusvaikutukset">Kiintiö- ja laskutusvaikutukset<a class="headerlink" href="#kiintio-ja-laskutusvaikutukset" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Jokainen triggerin aktivointi lasketaan viestikulutukseesi</li>
+<li>Usein aktivoituvat triggerit (kuten minuutin välein tapahtuvat) voivat nopeasti kuluttaa kiintiön</li>
+<li>Seuraa käyttöä välttääksesi rajoitukset</li>
+</ul>
+<h3 id="teknisia-vaatimuksia">Teknisiä vaatimuksia<a class="headerlink" href="#teknisia-vaatimuksia" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Saatavilla vain agenteille, joilla on generatiivinen orkestrointi käytössä</li>
+<li>Vaatii ratkaisukohtaisen pilvityönkulun jakamisen olevan käytössä ympäristössäsi</li>
+</ul>
+<h3 id="tietojen-menetyksen-estaminen-dlp">Tietojen menetyksen estäminen (DLP)<a class="headerlink" href="#tietojen-menetyksen-estaminen-dlp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Organisaatiosi DLP-käytännöt määrittävät, mitkä triggerit ovat käytettävissä</li>
+<li>Järjestelmänvalvojat voivat estää tapahtumatriggerit kokonaan</li>
+<li>Ota yhteyttä järjestelmänvalvojaan, jos odotetut triggerit eivät ole käytettävissä</li>
+</ul>
+<h2 id="laboratorio-10-lisaa-tapahtumatriggereita-autonomisen-agentin-toimintaan">🧪 Laboratorio 10 - Lisää tapahtumatriggereitä autonomisen agentin toimintaan<a class="headerlink" href="#laboratorio-10-lisaa-tapahtumatriggereita-autonomisen-agentin-toimintaan" title="Permanent link">&para;</a></h2>
+<h3 id="kayttotapaus">🎯 Käyttötapaus<a class="headerlink" href="#kayttotapaus" title="Permanent link">&para;</a></h3>
+<p>Parannat IT-tukipisteagenttiasi reagoimaan automaattisesti uusiin tukipyyntöihin. Kun joku luo uuden kohteen SharePointin tukipyyntölistaan, agenttisi:</p>
+<ol>
+<li>Aktivoituu autonomisesti, kun SharePoint-tukipyyntö luodaan</li>
+<li>Toimittaa tukipyynnön tiedot ja ohjeet, jotka haluat sen suorittavan</li>
+<li>Vahvistaa automaattisesti tukipyynnön lähettäjälle tekoälyn luomalla sähköpostilla</li>
+</ol>
+<p>Tämä laboratorio osoittaa, kuinka tapahtumatriggerit mahdollistavat aidosti autonomisen agentin toiminnan.</p>
+<h3 id="esivaatimukset">Esivaatimukset<a class="headerlink" href="#esivaatimukset" title="Permanent link">&para;</a></h3>
+<p>Ennen kuin aloitat tämän laboratorion, varmista, että sinulla on:</p>
+<ul>
+<li>✅ Suoritettu aiemmat laboratoriot (erityisesti laboratoriot 6-8 IT-tukipisteagentille)</li>
+<li>✅ Pääsy SharePoint-sivustoon, jossa on IT-tukipyyntölista</li>
+<li>✅ Copilot Studio -ympäristö, jossa tapahtumatriggerit ovat käytössä</li>
+<li>✅ Agentillasi on generatiivinen orkestrointi käytössä</li>
+<li>✅ Asianmukaiset käyttöoikeudet SharePointissa ja Copilot Studio -ympäristössäsi</li>
+</ul>
+<h3 id="101-ota-kayttoon-generatiivinen-tekoaly-ja-luo-sharepoint-kohteen-luomistriggeri">10.1 Ota käyttöön generatiivinen tekoäly ja luo SharePoint-kohteen luomistriggeri<a class="headerlink" href="#101-ota-kayttoon-generatiivinen-tekoaly-ja-luo-sharepoint-kohteen-luomistriggeri" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Avaa <strong>IT-tukipisteagenttisi</strong> <strong>Copilot Studiossa</strong></p>
+</li>
+<li>
+<p>Varmista ensin, että <strong>Generatiivinen tekoäly</strong> on käytössä agentillasi:</p>
+</li>
+<li>Siirry <strong>Yleiskatsaus</strong>-välilehdelle</li>
+<li>
+<p>Orkestrointiosiossa, kytke <strong>Generatiivinen orkestrointi</strong> päälle, jos se ei ole jo käytössä<br />
+<img alt="Ota käyttöön generatiivinen tekoäly" src="../../../../../translated_images/10_EnableGenerativeAI.a58904a7599016a94b89a11d6c1cd59022ae686ef553d17f89ebfb6c275cc900.fi.png" /></p>
+</li>
+<li>
+<p>Siirry <strong>Yleiskatsaus</strong>-välilehdelle ja etsi <strong>Triggerit</strong>-osio</p>
+</li>
+<li>
+<p>Klikkaa <strong>+ Lisää triggeri</strong> avataksesi triggerikirjaston<br />
+<img alt="Siirry triggereihin" src="../../../../../translated_images/10_NavigateToTrigger.f5907762b93236a72d2f89cdb7c903608adb61763888ba1d3b4998f46473240c.fi.png" /></p>
+</li>
+<li>
+<p>Etsi ja valitse <strong>Kun kohde luodaan</strong> (SharePoint)<br />
+<img alt="Valitse SharePoint-triggeri" src="../../../../../translated_images/10_SelectSharePointTrigger.d63e7cb0f06cf33e664c0e2316952aeac4adf507d7e0f87254cffebbfa5b3007.fi.png" /></p>
+</li>
+<li>
+<p>Määritä triggerin nimi ja yhteydet:</p>
+</li>
+<li>
+<p><strong>Triggerin nimi:</strong> Uusi tukipyyntö luotu SharePointissa</p>
+</li>
+<li>
+<p>Odota, että yhteydet konfiguroituvat, ja valitse <strong>Seuraava</strong> jatkaaksesi.<br />
+<img alt="Määritä triggerin nimi ja yhteydet" src="../../../../../translated_images/10_ConfigureTriggerNameAndConnections.f526dfc7a9e0dcc31bf791623e6431230f29ae001acb0f5075e175401bebb0f2.fi.png" /></p>
+</li>
+<li>
+<p>Määritä triggerin parametrit:</p>
+</li>
+<li>
+<p><strong>Sivuston osoite</strong>: Valitse "Contoso IT" SharePoint-sivustosi</p>
+</li>
+<li>
+<p><strong>Listan nimi</strong>: Valitse "Tickets"-listasi</p>
+</li>
+<li>
+<p><strong>Lisäohjeet agentille, kun triggeri aktivoituu:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>New Support Ticket Created in SharePoint: {Body}
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Use the &#39;Acknowledge SharePoint Ticket&#39; tool to generate the email body automatically and respond.
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>IMPORTANT: Do not wait for any user input. Work completely autonomously.
+</span></code></pre></div>
+<p><img alt="Määritä triggerin parametrit" src="../../../../../translated_images/10_ConfigureTriggerParams.a67406d4a892ba1f59a04641cbb2f7226a329b9813b04676f92bf18c6003fd23.fi.png" /></p>
+</li>
+<li>
+<p>Valitse <strong>Luo triggeri</strong> viimeistelläksesi triggerin luomisen. Power Automate Cloud Flow luodaan automaattisesti aktivoimaan agentti autonomisesti.</p>
+</li>
+<li>
+<p>Valitse <strong>Sulje</strong>.</p>
+</li>
+</ol>
+<h3 id="102-muokkaa-triggeria">10.2 Muokkaa triggeriä<a class="headerlink" href="#102-muokkaa-triggeria" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Yleiskatsaus</strong>-välilehden <strong>Triggerit</strong>-osiossa, valitse <strong>...</strong>-valikko <strong>Uusi tukipyyntö luotu SharePointissa</strong> -triggerin kohdalla</p>
+</li>
+<li>
+<p>Valitse <strong>Muokkaa Power Automatessa</strong><br />
+<img alt="Muokkaa triggeriä Power Automatessa" src="../../../../../translated_images/10_EditTriggerInPowerAutomate.d99effb8145d40bd4d655021e0a34abf59ba23ff5e94bcae07e7e6711a52eff0.fi.png" /></p>
+</li>
+<li>
+<p>Valitse <strong>Lähettää kehotteen määritetylle copilotille käsittelyä varten</strong> -solmu</p>
+</li>
+<li>
+<p><strong>Body/viesti</strong>-kentässä, poista Body-sisältö, <strong>paina kauttaviiva-näppäintä</strong> (/) ja valitse <strong>Lisää lauseke</strong><br />
+<img alt="Lisää lauseke triggerille" src="../../../../../translated_images/10_InsertExpressionForTrigger.adb940d8fa6e0bc50b325cedc3e3c085b5670e5cf2b275bf7b4ada1180d3ba01.fi.png" /></p>
+</li>
+<li>
+<p>Syötä seuraava lauseke tarjotaksesi agentille tarkat tiedot tukipyynnöstä:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>concat(&#39;Submitted By Name: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Author/DisplayName&#39;], &#39;\nSubmitted By Email: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Author/Email&#39;], &#39;\nTitle: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Title&#39;], &#39;\nIssue Description: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Description&#39;], &#39;\nPriority: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Priority/Value&#39;],&#39;\nTicket ID : &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;ID&#39;])
+</span></code></pre></div>
+</li>
+<li>
+<p>Valitse <strong>Lisää</strong><br />
+<img alt="Triggerin ulostulolauseke" src="../../../../../translated_images/10_TriggerOutputExpression.3b120eaa26cc9a4cd5451bb2ca658ce1a7192eb7a46c7c2b4d7431d20e982187.fi.png" /></p>
+</li>
+<li>
+<p>Valitse <strong>Julkaise</strong> oikean yläkulman työkalupalkista.</p>
+</li>
+</ol>
+<h3 id="103-luo-tyokalu-sahkopostivahvistukselle">10.3 Luo työkalu sähköpostivahvistukselle<a class="headerlink" href="#103-luo-tyokalu-sahkopostivahvistukselle" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Palaa</strong> agenttiisi Copilot Studiossa</p>
+</li>
+<li>
+<p>Siirry agenttisi <strong>Työkalut</strong>-välilehdelle</p>
+</li>
+<li>
+<p>Klikkaa <strong>+ Lisää työkalu</strong> ja valitse <strong>Liitin</strong></p>
+</li>
+<li>
+<p>Etsi ja valitse <strong>Lähetä sähköposti (V2)</strong> -liitin<br />
+<img alt="Valitse Outlook-liitin" src="../../../../../translated_images/10_SelectOutlookConnector.0bf4270b1d25c691574881514f162fd74e10206bc5efd798e5cb15741b73c063.fi.png" /></p>
+</li>
+<li>
+<p>Odota, että yhteys konfiguroituu, ja valitse sitten <strong>Lisää ja konfiguroi</strong></p>
+</li>
+<li>
+<p>Määritä työkalun asetukset:</p>
+</li>
+<li>
+<p><strong>Nimi</strong>: Vahvista SharePoint-tukip</p>
+</li>
+<li>Avaa uusi selainvälilehti ja siirry <strong>SharePoint IT-tukipyyntöjen listaan</strong></li>
+<li>Klikkaa <strong>+ Lisää uusi kohde</strong> luodaksesi testipyynnön:</li>
+<li><strong>Otsikko</strong>: "Ei yhteyttä VPN:ään"</li>
+<li><strong>Kuvaus</strong>: "Ei yhteyttä yrityksen WIFI-verkkoon viimeisimmän päivityksen jälkeen"</li>
+<li>
+<p><strong>Prioriteetti</strong>: "Normaali"</p>
+</li>
+<li>
+<p><strong>Tallenna</strong> SharePoint-kohde<br />
+<img alt="Luo testipyyntö" src="../../../../../translated_images/10_CreateTestTicket.137beedc82d337ef0a467c67d3b53249ec469ce1ce91d88a72fb2f8729a14fce.fi.png" /></p>
+</li>
+<li>Palaa <strong>Copilot Studioon</strong> ja seuraa <strong>Testaa laukaisinta</strong> -paneelia laukaisimen aktivoitumisen varalta. Käytä <strong>Päivitä</strong>-kuvaketta ladataksesi laukaisutapahtuman, tämä voi kestää muutaman minuutin.<br />
+<img alt="Seuraa laukaisimen testiä" src="../../../../../translated_images/10_MonitorTriggerTest.f9883de55ba1c9817121c7f801e29715fa74918603f96312dfcb0f16f9af44e0.fi.png" /></li>
+<li>Kun laukaisin ilmestyy, valitse <strong>Aloita testaus</strong></li>
+<li>Valitse <strong>Toimintakartta-kuvake</strong> <strong>Testaa agenttiasi</strong> -paneelin yläosasta</li>
+<li>Varmista, että agenttisi:</li>
+<li>Sai laukaisimen tiedot</li>
+<li>Käytti "Vahvista SharePoint-pyyntö" -työkalua<br />
+<img alt="Testaa laukaisin" src="../../../../../translated_images/10_TestTrigger.f68b063d3fa221601f61484aec9bf68aa17761366aa1efe8c3cad554ce3da902.fi.png" /></li>
+<li>Tarkista lähettäjän sähköpostilaatikko varmistaaksesi, että vahvistussähköposti on lähetetty<br />
+<img alt="Testaa sähköpostin lähetys" src="../../../../../translated_images/10_TestEmailSent.1efe77ca636ca8b8c2593216539edfe11555f7e002a6dcb5e2024b36b40e12b3.fi.png" /></li>
+<li>Tarkista <strong>Toiminta</strong>-välilehti Copilot Studiossa nähdäksesi täydellisen laukaisimen ja työkalun suorituksen</li>
+</ol>
+<h2 id="tehtava-suoritettu">✅ Tehtävä suoritettu<a class="headerlink" href="#tehtava-suoritettu" title="Permanent link">&para;</a></h2>
+<p>🎉 <strong>Onnittelut!</strong> Olet onnistuneesti toteuttanut tapahtumalaukaisimet liitintyökaluilla, jotka mahdollistavat agenttisi toiminnan itsenäisesti, lähettäen automaattisesti sähköpostivahvistuksia ja käsitellen tukipyyntöjä ilman käyttäjän väliintuloa. Kun agenttisi julkaistaan, se toimii itsenäisesti puolestasi.</p>
+<p>🚀 <strong>Seuraavaksi</strong>: Seuraavassa oppitunnissa opit <a href="../11-publish-your-agent/">julkaisemaan agenttisi</a> Microsoft Teamsiin ja Microsoft 365 Copilotiin, jolloin se on koko organisaatiosi käytettävissä!</p>
+<p>⏭️ <a href="../11-publish-your-agent/">Siirry <strong>Julkaise agenttisi</strong> -oppituntiin</a></p>
+<h2 id="taktiset-resurssit">📚 Taktiset resurssit<a class="headerlink" href="#taktiset-resurssit" title="Permanent link">&para;</a></h2>
+<p>Valmis sukeltamaan syvemmälle tapahtumalaukaisimiin ja itsenäisiin agentteihin? Tutustu näihin resursseihin:</p>
+<ul>
+<li><strong>Microsoft Learn</strong>: <a href="https://learn.microsoft.com/training/modules/autonomous-agents-online-workshop/?WT.mc_id=power-177340-scottdurow">Tee agentistasi itsenäinen Copilot Studiossa</a></li>
+<li><strong>Dokumentaatio</strong>: <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-trigger-event?WT.mc_id=power-177340-scottdurow">Lisää tapahtumalaukaisin</a></li>
+<li><strong>Parhaat käytännöt</strong>: <a href="https://learn.microsoft.com/power-automate/triggers-introduction?WT.mc_id=power-177340-scottdurow">Johdatus Power Automate -laukaisimiin</a></li>
+<li><strong>Edistyneet skenaariot</strong>: <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow-create?WT.mc_id=power-177340-scottdurow">Power Automate -työnkulkujen käyttö agenttien kanssa</a></li>
+<li><strong>Tietoturva</strong>: <a href="https://learn.microsoft.com/microsoft-copilot-studio/admin-data-loss-prevention?WT.mc_id=power-177340-scottdurow">Tietojen menetyksen estäminen Copilot Studiossa</a></li>
+</ul>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/10-add-event-triggers" alt="Analytiikka" /></p>
+<hr />
+<p><strong>Vastuuvapauslauseke</strong>:<br />
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

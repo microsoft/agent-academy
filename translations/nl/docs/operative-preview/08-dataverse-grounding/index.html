@@ -1,0 +1,1225 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/nl/docs/operative-preview/08-dataverse-grounding/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#missie-08-verbeterde-prompts-met-dataverse-koppeling" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codenaam-operatie-grounding-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAAM: OPERATIE GROUNDING CONTROL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missieoverzicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Missieoverzicht
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doelstellingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Doelstellingen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#begrijpen-van-dataverse-koppeling-voor-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Begrijpen van Dataverse-koppeling voor prompts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waarom-toegewijde-prompts-versus-agentgesprekken" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Waarom toegewijde prompts versus agentgesprekken
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-8-voeg-dataverse-koppeling-toe-aan-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 8: Voeg Dataverse-koppeling toe aan prompts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missie-voltooid" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 Missie Voltooid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactische-bronnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Tactische Bronnen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "750f3ea8a94930439ebd8a10871b1d73",
+  "translation_date": "2025-10-17T01:42:36+00:00",
+  "source_file": "docs/operative-preview/08-dataverse-grounding/README.md",
+  "language_code": "nl"
+}
+-->
+<h1 id="missie-08-verbeterde-prompts-met-dataverse-koppeling">🚨 Missie 08: Verbeterde prompts met Dataverse-koppeling<a class="headerlink" href="#missie-08-verbeterde-prompts-met-dataverse-koppeling" title="Permanent link">&para;</a></h1>
+<h2 id="codenaam-operatie-grounding-control">🕵️‍♂️ CODENAAM: <code>OPERATIE GROUNDING CONTROL</code><a class="headerlink" href="#codenaam-operatie-grounding-control" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operatietijdvenster:</strong> <code>~60 minuten</code></p>
+</blockquote>
+<h2 id="missieoverzicht">🎯 Missieoverzicht<a class="headerlink" href="#missieoverzicht" title="Permanent link">&para;</a></h2>
+<p>Welkom terug, Agent. Je multi-agent aanwervingssysteem is operationeel, maar er is een cruciale verbetering nodig voor <strong>datakoppeling</strong> - je AI-modellen hebben real-time toegang nodig tot de gestructureerde gegevens van je organisatie om intelligente beslissingen te nemen.</p>
+<p>Momenteel werkt je "Samenvat CV"-prompt met statische kennis. Maar wat als het dynamisch toegang zou hebben tot je database met functierollen om nauwkeurige, actuele matches te bieden? Wat als het je evaluatiecriteria begreep zonder dat je deze handmatig moest coderen?</p>
+<p>In deze missie verbeter je je aangepaste prompt met <strong>Dataverse-koppeling</strong> - het direct verbinden van je prompts met live gegevensbronnen. Dit transformeert je agents van statische respondenten naar dynamische, datagestuurde systemen die zich aanpassen aan veranderende zakelijke behoeften.</p>
+<p>Je missie: integreer real-time functierollen en evaluatiecriteria in je CV-analyseworkflow, en creëer een zelf-updaterend systeem dat up-to-date blijft met de aanwervingsvereisten van je organisatie.</p>
+<h2 id="doelstellingen">🔎 Doelstellingen<a class="headerlink" href="#doelstellingen" title="Permanent link">&para;</a></h2>
+<p>In deze missie leer je:</p>
+<ol>
+<li>Hoe <strong>Dataverse-koppeling</strong> aangepaste prompts verbetert</li>
+<li>Wanneer je datakoppeling moet gebruiken in plaats van statische instructies</li>
+<li>Het ontwerpen van prompts die dynamisch live gegevens integreren</li>
+<li>Het verbeteren van de "Samenvat CV"-workflow met functierol-matching</li>
+</ol>
+<h2 id="begrijpen-van-dataverse-koppeling-voor-prompts">🧠 Begrijpen van Dataverse-koppeling voor prompts<a class="headerlink" href="#begrijpen-van-dataverse-koppeling-voor-prompts" title="Permanent link">&para;</a></h2>
+<p><strong>Dataverse-koppeling</strong> stelt je aangepaste prompts in staat om live gegevens uit je Dataverse-tabellen te gebruiken bij het verwerken van verzoeken. In plaats van statische instructies kunnen je prompts real-time informatie opnemen om geïnformeerde beslissingen te nemen.</p>
+<h3 id="waarom-dataverse-koppeling-belangrijk-is">Waarom Dataverse-koppeling belangrijk is<a class="headerlink" href="#waarom-dataverse-koppeling-belangrijk-is" title="Permanent link">&para;</a></h3>
+<p>Traditionele prompts werken met vaste instructies:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Match this candidate to these job roles: Developer, Manager, Analyst
+</span></code></pre></div>
+<p>Met Dataverse-koppeling heeft je prompt toegang tot actuele gegevens:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Match this candidate to available job roles from the Job Roles table, 
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>considering current evaluation criteria and requirements
+</span></code></pre></div>
+<p>Deze aanpak biedt verschillende belangrijke voordelen:</p>
+<ul>
+<li><strong>Dynamische updates:</strong> Functierollen en criteria veranderen zonder dat prompts aangepast hoeven te worden</li>
+<li><strong>Consistentie:</strong> Alle agents gebruiken dezelfde actuele gegevensbronnen</li>
+<li><strong>Schaalbaarheid:</strong> Nieuwe rollen en criteria zijn automatisch beschikbaar</li>
+<li><strong>Nauwkeurigheid:</strong> Real-time gegevens zorgen ervoor dat beslissingen aansluiten bij de huidige behoeften</li>
+</ul>
+<h3 id="hoe-dataverse-koppeling-werkt">Hoe Dataverse-koppeling werkt<a class="headerlink" href="#hoe-dataverse-koppeling-werkt" title="Permanent link">&para;</a></h3>
+<p>Wanneer je Dataverse-koppeling inschakelt voor een aangepaste prompt:</p>
+<ol>
+<li><strong>Gegevensselectie:</strong> Kies specifieke Dataverse-tabellen en kolommen om op te nemen. Je kunt ook gerelateerde tabellen selecteren die het systeem filtert op basis van de opgehaalde hoofdrecords.</li>
+<li><strong>Contextinjectie:</strong> De prompt voegt automatisch de opgehaalde gegevens toe aan de promptcontext.</li>
+<li><strong>Intelligent filteren:</strong> Het systeem neemt alleen gegevens op die relevant zijn voor het huidige verzoek als je een filter opgeeft.</li>
+<li><strong>Gestructureerde output:</strong> Je prompt kan de opgehaalde gegevens refereren en redeneren over de records om de output te creëren.</li>
+</ol>
+<h3 id="van-statisch-naar-dynamisch-het-voordeel-van-koppeling">Van statisch naar dynamisch: Het voordeel van koppeling<a class="headerlink" href="#van-statisch-naar-dynamisch-het-voordeel-van-koppeling" title="Permanent link">&para;</a></h3>
+<p>Laten we je huidige "Samenvat CV"-workflow van Missie 07 bekijken en zien hoe Dataverse-koppeling het transformeert van statische naar dynamische intelligentie.</p>
+<p><strong>Huidige statische aanpak:</strong>
+Je bestaande prompt bevatte hardgecodeerde evaluatiecriteria en vooraf bepaalde matchinglogica. Deze aanpak werkt, maar vereist handmatige updates telkens wanneer je nieuwe functierollen toevoegt, evaluatiecriteria wijzigt of bedrijfsprioriteiten verschuift.</p>
+<p><strong>Transformatie door Dataverse-koppeling:</strong>
+Door Dataverse-koppeling toe te voegen, zal je "Samenvat CV"-workflow:</p>
+<ul>
+<li><strong>Toegang krijgen tot actuele functierollen</strong> uit je Functierollen-tabel</li>
+<li><strong>Live evaluatiecriteria gebruiken</strong> in plaats van statische beschrijvingen  </li>
+<li><strong>Nauwkeurige matches bieden</strong> op basis van real-time vereisten</li>
+</ul>
+<h2 id="waarom-toegewijde-prompts-versus-agentgesprekken">🎯 Waarom toegewijde prompts versus agentgesprekken<a class="headerlink" href="#waarom-toegewijde-prompts-versus-agentgesprekken" title="Permanent link">&para;</a></h2>
+<p>In Missie 02 heb je ervaren hoe de Interview Agent kandidaten kon matchen met functierollen, maar dit vereiste complexe gebruikersprompts zoals:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Upload this resume, then show me open job roles,
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>each with a description of the evaluation criteria, 
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>then use this to match the resume to at least one suitable
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>job role even if not a perfect match.
+</span></code></pre></div>
+<p>Hoewel dit werkte, bieden toegewijde prompts met Dataverse-koppeling aanzienlijke voordelen voor specifieke taken:</p>
+<h3 id="belangrijkste-voordelen-van-toegewijde-prompts">Belangrijkste voordelen van toegewijde prompts<a class="headerlink" href="#belangrijkste-voordelen-van-toegewijde-prompts" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Agentgesprekken</th>
+<th>Toegewijde Prompts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Consistentie</strong></td>
+<td>Resultaten variëren afhankelijk van de promptvaardigheden van de gebruiker</td>
+<td>Gestandaardiseerde verwerking elke keer</td>
+</tr>
+<tr>
+<td><strong>Specialisatie</strong></td>
+<td>Algemeen redeneren kan zakelijke nuances missen</td>
+<td>Specifiek ontworpen met geoptimaliseerde bedrijfslogica</td>
+</tr>
+<tr>
+<td><strong>Automatisering</strong></td>
+<td>Vereist menselijke interactie en interpretatie</td>
+<td>Wordt automatisch geactiveerd met gestructureerde JSON-output</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lab-8-voeg-dataverse-koppeling-toe-aan-prompts">🧪 Lab 8: Voeg Dataverse-koppeling toe aan prompts<a class="headerlink" href="#lab-8-voeg-dataverse-koppeling-toe-aan-prompts" title="Permanent link">&para;</a></h2>
+<p>Tijd om je CV-analysecapaciteiten te upgraden! Je zult de bestaande "Samenvat CV"-workflow verbeteren met dynamische functierol-matching.</p>
+<h3 id="vereisten-om-deze-missie-te-voltooien">Vereisten om deze missie te voltooien<a class="headerlink" href="#vereisten-om-deze-missie-te-voltooien" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Je hebt <strong>ofwel</strong>:</p>
+<ul>
+<li><strong>Missie 07 voltooid</strong> en je CV-analysesysteem klaar, <strong>OF</strong></li>
+<li><strong>De starteroplossing van Missie 08 geïmporteerd</strong> als je opnieuw begint of moet inhalen. <a href="https://aka.ms/agent-academy">Download Missie 08 Starteroplossing</a></li>
+</ul>
+</li>
+<li>
+<p>Voorbeeld-CV-documenten van <a href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/operative/sample-data/resumes&amp;filename=operative_sampledata">test CV's</a></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Oplossing importeren en voorbeeldgegevens</p>
+<p>Als je de starteroplossing gebruikt, raadpleeg dan <a href="../01-get-started/">Missie 01</a> voor gedetailleerde instructies over hoe je oplossingen en voorbeeldgegevens in je omgeving importeert.</p>
+</div>
+<h3 id="81-voeg-dataverse-koppeling-toe-aan-je-prompt">8.1 Voeg Dataverse-koppeling toe aan je prompt<a class="headerlink" href="#81-voeg-dataverse-koppeling-toe-aan-je-prompt" title="Permanent link">&para;</a></h3>
+<p>Je bouwt voort op de "Samenvat CV"-prompt die je in Missie 07 hebt gemaakt. Momenteel vat deze alleen het CV samen, maar nu koppel je het met de functierollen zoals ze momenteel in Dataverse bestaan, zodat het altijd actueel blijft.</p>
+<p>Eerst bekijken we de Dataverse-tabellen waarmee je gaat koppelen:</p>
+<ol>
+<li>
+<p><strong>Navigeer</strong> naar <a href="https://make.powerapps.com">Power Apps</a> en selecteer je omgeving met behulp van de <strong>Omgevingsschakelaar</strong> rechtsboven in de navigatiebalk.</p>
+</li>
+<li>
+<p>Selecteer <strong>Tabellen</strong> en zoek de tabel <strong>Functierollen</strong>.</p>
+</li>
+<li>
+<p>Bekijk de belangrijkste kolommen die je zult gebruiken voor koppeling:</p>
+<table>
+<thead>
+<tr>
+<th>Kolom</th>
+<th>Doel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Functierolnummer</strong></td>
+<td>Unieke identificatie voor rolmatching</td>
+</tr>
+<tr>
+<td><strong>Functietitel</strong></td>
+<td>Weergavenaam voor de rol</td>
+</tr>
+<tr>
+<td><strong>Beschrijving</strong></td>
+<td>Gedetailleerde rolvereisten</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Bekijk op dezelfde manier de andere tabellen, zoals de tabel <strong>Evaluatiecriteria</strong>.</p>
+</li>
+</ol>
+<h3 id="82-voeg-dataverse-koppelingsgegevens-toe-aan-je-prompt">8.2 Voeg Dataverse-koppelingsgegevens toe aan je prompt<a class="headerlink" href="#82-voeg-dataverse-koppelingsgegevens-toe-aan-je-prompt" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Navigeer</strong> naar Copilot Studio en selecteer je omgeving met behulp van de <strong>Omgevingsschakelaar</strong> rechtsboven in de navigatiebalk.</p>
+</li>
+<li>
+<p>Selecteer <strong>Tools</strong> in de linker navigatiebalk.</p>
+</li>
+<li>
+<p>Kies <strong>Prompt</strong> en zoek je <strong>Samenvat CV</strong>-prompt van Missie 07.<br />
+<img alt="Selecteer Prompt" src="../../../../../translated_images/8-select-prompt.d66a248a6d11fce2b4bc149422eb2722736c972185bca613c849e74011411941.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer <strong>Bewerken</strong> om de prompt te wijzigen en vervang deze door de verbeterde versie hieronder:</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Zorg ervoor dat de parameters CV en Motivatiebrief intact blijven als parameters.</p>
+</div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>You are tasked with extracting key candidate information from a resume and cover letter to facilitate matching with open job roles and creating a summary for application review.
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>### Instructions:
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>1. **Extract Candidate Details:**
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>   - Identify and extract the candidate&#39;s full name.
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>   - Extract contact information, specifically the email address.
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2. **Analyze Resume and Cover Letter:**
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>   - Review the resume content to identify relevant skills, experience, and qualifications.
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>   - Review the cover letter to understand the candidate&#39;s motivation and suitability for the roles.
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>3. **Match Against Open Job Roles:**
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>   - Compare the extracted candidate information with the requirements and descriptions of the provided open job roles.
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>   - Use the job descriptions to assess potential fit.
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>   - Identify all roles that align with the candidate&#39;s cover letter and profile. You don&#39;t need to assess perfect suitability.
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>   - Provide reasoning for each match based on the specific job requirements.
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>4. **Create Candidate Summary:**
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>   - Summarize the candidate&#39;s profile as multiline text with the following sections:
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>      - Candidate name
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>      - Role(s) applied for if present
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>      - Contact and location
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>      - One-paragraph summary
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>      - Top skills (8–10)
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>      - Experience snapshot (last 2–3 roles with outcomes)
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>      - Key projects (1–3 with metrics)
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>      - Education and certifications
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>      - Availability and work authorization
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>### Output Format
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>Provide the output in valid JSON format with the following structure:
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>{
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>  &quot;CandidateName&quot;: &quot;string&quot;,
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>  &quot;Email&quot;: &quot;string&quot;,
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>  &quot;MatchedRoles&quot;: [
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>    {
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>      &quot;JobRoleNumber&quot;: &quot;ppa_jobrolenumber from grounded data&quot;,
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>      &quot;RoleName&quot;: &quot;ppa_jobtitle from grounded data&quot;,
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>      &quot;Reasoning&quot;: &quot;Detailed explanation based on job requirements&quot;
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>    }
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>  ],
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>  &quot;Summary&quot;: &quot;string&quot;
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>}
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>### Guidelines
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>- Extract information only from the provided resume and cover letter documents.
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>- Ensure accuracy in identifying contact details.
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>- Use the available job role data for matching decisions.
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>- The summary should be concise but informative, suitable for quick application review.
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>- If no suitable matches are found, indicate an empty list for MatchedRoles and explain briefly in the summary.
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>### Input Data
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>Open Job Roles (ppa_jobrolenumber, ppa_jobtitle): /Job Role 
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>Resume: {Resume}
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>Cover Letter: {CoverLetter}
+</span></code></pre></div>
+</li>
+<li>
+<p>In de prompteditor vervang je <code>/Functierol</code> door <strong>+ Inhoud toevoegen</strong>, selecteer <strong>Dataverse</strong> → <strong>Functierol</strong> en selecteer de volgende kolommen, en selecteer vervolgens <strong>Toevoegen</strong>:</p>
+<ol>
+<li>
+<p><strong>Functierolnummer</strong></p>
+</li>
+<li>
+<p><strong>Functietitel</strong></p>
+</li>
+<li>
+<p><strong>Beschrijving</strong></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Je kunt de tabelnaam typen om te zoeken.</p>
+</div>
+</li>
+<li>
+<p>In het <strong>Functierol</strong>-dialoogvenster selecteer je het <strong>Filter</strong>-attribuut, selecteer <strong>Status</strong>, en typ <strong>Actief</strong> als de <strong>Filter</strong>-waarde.<br />
+<img alt="Voeg Dataverse-koppeling toe" src="../../../../../translated_images/8-add-grounding.e377b283acb2087f784ce1440bc65b57de1af7d8d9334ee116bf06095dd813c8.nl.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Je kunt hier <strong>Waarde toevoegen</strong> gebruiken om een invoerparameter toe te voegen - bijvoorbeeld als je een prompt had om een bestaand record samen te vatten, kun je het CV-nummer als parameter opgeven om te filteren.</p>
+</div>
+</li>
+<li>
+<p>Vervolgens voeg je de gerelateerde Dataverse-tabel <strong>Evaluatiecriteria</strong> toe door opnieuw <strong>+ Inhoud toevoegen</strong> te selecteren, <strong>Functierollen</strong> te vinden, en in plaats van de kolommen op Functierol te selecteren, <strong>Functierol (Evaluatiecriteria)</strong> uit te vouwen en de volgende kolommen te selecteren, en vervolgens <strong>Toevoegen</strong>:</p>
+<ol>
+<li>
+<p><strong>Criterianaam</strong></p>
+</li>
+<li>
+<p><strong>Beschrijving</strong><br />
+<img alt="Voeg gerelateerde evaluatiecriteria toe" src="../../../../../translated_images/8-add-eval-criteria.1c2ceb2e208ff3e5c6fd33ef3aad30f0ea545505e6bcc98a0f30c373574525fa.nl.png" /></p>
+<p><img alt="Voltooide Promptparameters en koppeling" src="../../../../../translated_images/8-all-prompt-parameters.6c8d5d173ce4e3f93d78a371474dace6279f85ecae867863249e68c3ad35f668.nl.png" /></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Het is belangrijk om de gerelateerde Evaluatiecriteria te selecteren door eerst de Functierol te selecteren en vervolgens in het menu naar Functierol (Evaluatiecriteria) te navigeren. Dit zorgt ervoor dat alleen de gerelateerde records voor de Functierol worden geladen.</p>
+</div>
+</li>
+<li>
+<p>Selecteer <strong>Instellingen</strong> en pas de <strong>Recordophaling</strong> aan naar 1000 - dit zorgt ervoor dat het maximum aantal Functierollen en Evaluatiecriteria in je prompt wordt opgenomen.<br />
+<img alt="Promptinstellingen" src="../../../../../translated_images/8-prompt-settings.267982cf4eb45cff839bb2f3e370611411a9702e6eb2414445090d0d5b1dc38b.nl.png" /></p>
+</li>
+</ol>
+<h3 id="83-test-de-verbeterde-prompt">8.3 Test de verbeterde prompt<a class="headerlink" href="#83-test-de-verbeterde-prompt" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Selecteer de parameter <strong>CV</strong> en upload een voorbeeld-CV dat je in Missie 07 hebt gebruikt.</li>
+<li>Selecteer <strong>Test</strong>.</li>
+<li>Zodra de test is uitgevoerd, merk je dat de JSON-output nu de <strong>Gematchte Rollen</strong> bevat.</li>
+<li>Selecteer het tabblad <strong>Gebruikte kennis</strong> om de Dataverse-gegevens te zien die met je prompt zijn samengevoegd vóór uitvoering.</li>
+<li><strong>Sla</strong> je bijgewerkte prompt op. Het systeem zal nu automatisch deze Dataverse-gegevens opnemen in je prompt wanneer de bestaande "Samenvat CV"-Agent Flow deze oproept.<br />
+<img alt="Gematchte rollen in JSON" src="../../../../../translated_images/8-matched-roles-json.54b557423d26864f65873170adaac04f5cb5d4ce4cccf65e5b695d9a128a79b3.nl.png" /></li>
+</ol>
+<h3 id="84-voeg-job-application-agent-flow-toe">8.4 Voeg Job Application Agent Flow toe<a class="headerlink" href="#84-voeg-job-application-agent-flow-toe" title="Permanent link">&para;</a></h3>
+<p>Om onze Application Intake Agent in staat te stellen Functierollen te creëren op basis van de voorgestelde rollen, moeten we een Agent Flow maken. De agent zal deze tool aanroepen voor elk van de voorgestelde functierollen waarin de kandidaat geïnteresseerd is.</p>
+<div class="admonition tip">
+<p class="admonition-title">Agent Flow Expressies</p>
+<p>Het is erg belangrijk dat je de instructies voor het benoemen van je knooppunten en het invoeren van expressies precies volgt, omdat de expressies verwijzen naar de vorige knooppunten met hun naam! Raadpleeg de <a href="../../recruit/09-add-an-agent-flow/#you-mentioned-expressions-what-are-expressions">Agent Flow-missie in Recruit</a> voor een snelle opfriscursus!</p>
+</div>
+<ol>
+<li>
+<p>Binnen de <strong>Hiring Agent</strong> selecteer je het tabblad <strong>Agents</strong> en open je de subagent <strong>Application Intake Agent</strong>.</p>
+</li>
+<li>
+<p>Binnen het <strong>Tools</strong>-paneel selecteer je <strong>+ Toevoegen</strong> → <strong>+ Nieuwe tool</strong> → <strong>Agent Flow</strong>.</p>
+</li>
+<li>
+<p>Selecteer het knooppunt <strong>Wanneer een agent de flow aanroept</strong>, gebruik <strong>+ Voeg een invoer toe</strong> om de volgende parameter toe te voegen:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Naam</th>
+<th>Beschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tekst</td>
+<td><code>ResumeNumber</code></td>
+<td>Zorg ervoor dat je alleen het [ResumeNumber] gebruikt - het MOET beginnen met de letter R</td>
+</tr>
+<tr>
+<td>Tekst</td>
+<td><code>JobRoleNumber</code></td>
+<td>Zorg ervoor dat je alleen het [JobRoleNumber] gebruikt - het MOET beginnen met de letter J</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Wanneer een agent de flow aanroept" src="../../../../../translated_images/8-add-application-1.ef0ec277dd86df0e8145aca278fdae1aff1a959711781eb59dc63f4ab0785686.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer het <strong>+</strong>-icoon onder het eerste knooppunt, zoek naar <strong>Dataverse</strong>, selecteer <strong>Meer weergeven</strong>, en zoek vervolgens de actie <strong>Rijen ophalen</strong>.</p>
+</li>
+<li>
+<p><strong>Hernoem</strong> het knooppunt naar <code>Get Resume</code> en stel de volgende parameters in:</p>
+<table>
+<thead>
+<tr>
+<th>Eigenschap</th>
+<th>Hoe in te stellen</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tabelnaam</strong></td>
+<td>Selecteer</td>
+<td>Resumes</td>
+</tr>
+<tr>
+<td><strong>Filterrijen</strong></td>
+<td>Dynamische gegevens (bliksemschicht-icoon)</td>
+<td><code>ppa_resumenumber eq 'ResumeNumber'</code> Selecteer en vervang <strong>ResumeNumber</strong> door <strong>Wanneer een agent de flow aanroept</strong> → <strong>ResumeNumber</strong></td>
+</tr>
+<tr>
+<td><strong>Rijenaantal</strong></td>
+<td>Invoeren</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Get Resume" src="../../../../../translated_images/8-add-application-2.4bc386154caec8bc5deba81c6f0f90f1762719ee213aa664b004091034286338.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer nu het <strong>+</strong>-icoon onder <strong>Get Resume</strong>, zoek naar <strong>Dataverse</strong>, selecteer <strong>Meer weergeven</strong>, en zoek vervolgens de actie <strong>Rijen ophalen</strong>.</p>
+</li>
+<li>
+<p><strong>Hernoem</strong> het knooppunt naar <code>Get Job Role</code> en stel de volgende parameters in:</p>
+<table>
+<thead>
+<tr>
+<th>Eigenschap</th>
+<th>Hoe in te stellen</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tabelnaam</strong></td>
+<td>Selecteer</td>
+<td>Job Roles</td>
+</tr>
+<tr>
+<td><strong>Filterrijen</strong></td>
+<td>Dynamische gegevens (bliksemschicht-icoon)</td>
+<td><code>ppa_jobrolenumber eq 'JobRoleNumber'</code> Selecteer en vervang <strong>JobRoleNumber</strong> door <strong>Wanneer een agent de flow aanroept</strong> → <strong>JobRoleNumber</strong></td>
+</tr>
+<tr>
+<td><strong>Rijenaantal</strong></td>
+<td>Invoeren</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Get Job Role" src="../../../../../translated_images/8-add-application-3.07a9c42e27bd2875ec91a4c9e4a78d185644d945ca54c0e8a2d9a9a092c0b872.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer nu het <strong>+</strong>-icoon onder Get Job Role, zoek naar <strong>Dataverse</strong>, selecteer <strong>Meer weergeven</strong>, en zoek vervolgens de actie <strong>Nieuwe rij toevoegen</strong>.</p>
+</li>
+<li>
+<p><strong>Hernoem</strong> het knooppunt naar <code>Add Application</code> en stel de volgende parameters in:</p>
+<table>
+<thead>
+<tr>
+<th>Eigenschap</th>
+<th>Hoe in te stellen</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tabelnaam</strong></td>
+<td>Selecteer</td>
+<td>Job Applications</td>
+</tr>
+<tr>
+<td><strong>Kandidaat (Kandidaten)</strong></td>
+<td>Expressie (fx-icoon)</td>
+<td><code>concat('ppa_candidates/',first(outputs('Get_Resume')?['body/value'])?['_ppa_candidate_value'])</code></td>
+</tr>
+<tr>
+<td><strong>Functierol (Functierollen)</strong></td>
+<td>Expressie (fx-icoon)</td>
+<td><code>concat('ppa_jobroles/',first(outputs('Get_Job_Role')?['body/value'])?['ppa_jobroleid'])</code></td>
+</tr>
+<tr>
+<td><strong>CV (CV's)</strong></td>
+<td>Expressie (fx-icoon)</td>
+<td><code>concat('ppa_resumes/', first(outputs('Get_Resume')?['body/value'])?['ppa_resumeid'])</code></td>
+</tr>
+<tr>
+<td><strong>Sollicitatiedatum</strong> (gebruik <strong>Alles weergeven</strong>)</td>
+<td>Expressie (fx-icoon)</td>
+<td><code>utcNow()</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Sollicitatie toevoegen" src="../../../../../translated_images/8-add-application-4.68b07059f373c4ef5dc5078da3ae5690525a352a88d0a5bc8de4edf0ce7d4d72.nl.png" /></p>
+<ol>
+<li>
+<p>Selecteer de <strong>Reageer op de agent-node</strong> en klik vervolgens op <strong>+ Een output toevoegen</strong></p>
+<table>
+<thead>
+<tr>
+<th>Eigenschap</th>
+<th>Hoe in te stellen</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>Selecteren</td>
+<td><code>Text</code></td>
+</tr>
+<tr>
+<td><strong>Naam</strong></td>
+<td>Invoeren</td>
+<td><code>ApplicationNumber</code></td>
+</tr>
+<tr>
+<td><strong>Waarde</strong></td>
+<td>Dynamische data (bliksemschicht-icoon)</td>
+<td><em>Sollicitatie toevoegen → Meer weergeven → Sollicitatienummer</em></td>
+</tr>
+<tr>
+<td><strong>Beschrijving</strong></td>
+<td>Invoeren</td>
+<td><code>Het [ApplicationNumber] van de aangemaakte sollicitatie</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Reageer op de agent" src="../../../../../translated_images/8-add-application-5.718d76f32b1a11f1d636fc1561cbfd21f5f475192f3a64ad682ad0d400a6b8f4.nl.png" /></p>
+</li>
+<li>
+<p>Klik rechtsboven op <strong>Concept opslaan</strong></p>
+</li>
+<li>
+<p>Selecteer het tabblad <strong>Overzicht</strong>, klik op <strong>Bewerken</strong> in het <strong>Details</strong>-paneel</p>
+<ul>
+<li><strong>Flownaam</strong>:<code>Create Job Application</code></li>
+<li><strong>Beschrijving</strong>:<code>Maakt een nieuwe sollicitatie aan op basis van [ResumeNumber] en [JobRoleNumber]</code></li>
+<li><strong>Opslaan</strong></li>
+</ul>
+</li>
+<li>
+<p>Ga terug naar het tabblad <strong>Ontwerper</strong> en klik op <strong>Publiceren</strong>.</p>
+</li>
+</ol>
+<h3 id="85-voeg-create-job-application-toe-aan-de-agent">8.5 Voeg 'Create Job Application' toe aan de agent<a class="headerlink" href="#85-voeg-create-job-application-toe-aan-de-agent" title="Permanent link">&para;</a></h3>
+<p>Nu ga je de gepubliceerde flow koppelen aan je Application Intake Agent.</p>
+<ol>
+<li>
+<p>Navigeer terug naar de <strong>Hiring Agent</strong> en selecteer het tabblad <strong>Agents</strong>. Open de <strong>Application Intake Agent</strong> en zoek het <strong>Tools</strong>-paneel.</p>
+</li>
+<li>
+<p>Klik op <strong>+ Toevoegen</strong></p>
+</li>
+<li>
+<p>Selecteer de filter <strong>Flow</strong> en zoek naar <code>Create Job Application</code>. Selecteer de flow <strong>Create Job Application</strong> en klik op <strong>Toevoegen en configureren</strong>.</p>
+</li>
+<li>
+<p>Stel de volgende parameters in:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Beschrijving</strong></td>
+<td><code>Maakt een nieuwe sollicitatie aan op basis van [ResumeNumber] en [JobRoleNumber]</code></td>
+</tr>
+<tr>
+<td><strong>Aanvullende details → Wanneer deze tool kan worden gebruikt</strong></td>
+<td><code>Alleen wanneer verwezen door onderwerpen of agents</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Klik op <strong>Opslaan</strong><br />
+<img alt="Agent Flow toevoegen aan Agent" src="../../../../../translated_images/8-add-application-6.40c79eb32d0c682a29becf59f08aec0f492780c326256602c3359ba97e370c44.nl.png" /></p>
+</li>
+</ol>
+<h3 id="86-definieer-instructies-voor-de-agent">8.6 Definieer instructies voor de agent<a class="headerlink" href="#86-definieer-instructies-voor-de-agent" title="Permanent link">&para;</a></h3>
+<p>Om sollicitaties te maken, moet je de agent vertellen wanneer de nieuwe tool te gebruiken. In dit geval vraag je de gebruiker om te bevestigen op welke voorgestelde functierollen ze willen solliciteren en instrueer je de agent om de tool voor elke rol te gebruiken.</p>
+<ol>
+<li>
+<p>Ga terug naar de <strong>Application Intake Agent</strong> en zoek het <strong>Instructies</strong>-paneel.</p>
+</li>
+<li>
+<p>Voeg in het veld <strong>Instructies</strong> de volgende duidelijke richtlijnen toe voor je subagent aan het <strong>einde van de bestaande</strong> instructies:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>3. Post Resume Upload
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>   - Respond with a formatted bullet list of [SuggestedJobRoles] the candidate could apply for.  
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>   - Use the format: [JobRoleNumber] - [RoleDescription]
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>   - Ask the user to confirm which Job Roles to create applications for the candidate.
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>   - When the user has confirmed a set of [JobRoleNumber]s, move to the next step.
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>4. Post Upload - Application Creation
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    - After the user confirms which [SuggestedJobRoles] for a specific [ResumeNumber]:
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    E.g. &quot;Apply [ResumeNumber] for the Job Roles [JobRoleNumber], [JobRoleNumber], [JobRoleNumber]
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    E.g. &quot;apply to all suggested job roles&quot; - this implies use all the [JobRoleNumbers] 
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>     - Loop over each [JobRoleNumber] and send with [ResumeNumber] to /Create Job Application   
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>     - Summarize the Job Applications Created
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>Strict Rules (that must never be broken)
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>You must always follow these rules and never break them:
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>1. The only valid identifiers are:
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>  - ResumeNumber (ppa_resumenumber)→ format R#####
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>  - CandidateNumber (ppa_candidatenumber)→ format C#####
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>  - ApplicationNumber (ppa_applicationnumber)→ format A#####
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>  - JobRoleNumber (ppa_jobrolenumber)→ format J#####
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>2. Never guess or invent these values.
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>3. Always extract identifiers from the current context (conversation, data, or system output). 
+</span></code></pre></div>
+</li>
+<li>
+<p>Waar de instructies een schuine streep (/) bevatten, selecteer je de tekst na de / en selecteer je de tool <strong>Create Job Application</strong>.</p>
+</li>
+<li>
+<p>Klik op <strong>Opslaan</strong><br />
+<img alt="Instructies voor Create Job Application" src="../../../../../translated_images/8-add-application-7.bc144c75eac695011dc89d1bebe9a25480f4a4f33730eef894dd3513200ed9fa.nl.png" /></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Itereren over meerdere items in Generative Orchestration</p>
+<p>Deze instructies maken gebruik van de mogelijkheid van generative orchestration om over meerdere rijen te itereren bij het nemen van beslissingen over welke stappen en tools te gebruiken. De Matchende Functierollen worden automatisch gelezen en de Application Intake Agent wordt uitgevoerd voor elke rij. Welkom in de magische wereld van generative orchestration!</p>
+</div>
+<h3 id="87-test-je-agent">8.7 Test je agent<a class="headerlink" href="#87-test-je-agent" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Open je <strong>Hiring Agent</strong> in Copilot Studio.</p>
+</li>
+<li>
+<p><strong>Upload</strong> een voorbeeld-CV in de chat en typ:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>This is a new resume for the Power Platform Developer Role.
+</span></code></pre></div>
+</li>
+<li>
+<p>Merk op hoe de agent een lijst met voorgestelde functierollen geeft - elk met een functierolnummer.<br />
+<img alt="Testresultaten met voorgestelde rollen" src="../../../../../translated_images/8-test-1.3a67b59f169aeb1b04a810dc15c78146ea70418ce977f2da3ed3cdf78bdbc9df.nl.png" /></p>
+</li>
+<li>
+<p>Je kunt vervolgens aangeven voor welke van deze rollen je het CV als sollicitatie wilt indienen.
+    <strong>Voorbeelden:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>&quot;Apply for all of those job roles&quot;
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>&quot;Apply for the J10009 Power Platform Developer role&quot;
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>&quot;Apply for the Developer and Architect roles&quot;
+</span></code></pre></div>
+<p><img alt="Testresultaten bij het maken van sollicitaties" src="../../../../../translated_images/8-test-2.b385c7ca9f4cc82b0a22f7090b25a1bad6dc88a119f362de21df0246f64d9911.nl.png" /></p>
+</li>
+<li>
+<p>De <strong>Create Job Application tool</strong> wordt vervolgens uitgevoerd voor elke functierol die je hebt opgegeven. In de Activiteitenkaart zie je dat de tool Create Job Application wordt uitgevoerd voor elke functierol waarvoor je een sollicitatie hebt aangemaakt:<br />
+<img alt="Create Job Application in Activiteitenkaart" src="../../../../../translated_images/8-create-job-application-activity-map.11d9f307a0055ffb7a97fbe8f8488932420cdb8d25f9a90e5609f3bcc95fdfb9.nl.png" /></p>
+</li>
+</ol>
+<h2 id="missie-voltooid">🎉 Missie Voltooid<a class="headerlink" href="#missie-voltooid" title="Permanent link">&para;</a></h2>
+<p>Uitstekend werk, Operative! <strong>Operatie Grounding Control</strong> is nu voltooid. Je hebt met succes je AI-capaciteiten verbeterd met dynamische dataverankering en een echt intelligent wervingssysteem gecreëerd.</p>
+<p>Dit heb je bereikt in deze missie:</p>
+<p><strong>✅ Meesterschap in Dataverse-rankering</strong><br />
+Je begrijpt nu hoe je aangepaste prompts kunt koppelen aan live gegevensbronnen voor dynamische intelligentie.</p>
+<p><strong>✅ Verbeterde CV-analyse</strong><br />
+Je flow 'Samenvatten CV' heeft nu toegang tot realtime functierolgegevens en evaluatiecriteria voor nauwkeurige matching.</p>
+<p><strong>✅ Data-gedreven besluitvorming</strong><br />
+Je wervingsagents kunnen nu automatisch aanpassen aan veranderende functievereisten zonder handmatige promptupdates.</p>
+<p><strong>✅ Sollicitatiecreatie</strong><br />
+Je verbeterde systeem kan nu sollicitaties aanmaken en is klaar voor verdere complexe workfloworkestratie.</p>
+<p>🚀 <strong>Volgende stap:</strong> In je volgende missie leer je hoe je diepgaande redeneercapaciteiten implementeert die je agents helpen complexe beslissingen te nemen en gedetailleerde uitleg te geven voor hun aanbevelingen.</p>
+<p>⏩ <a href="../09-deep-reasoning/">Ga naar Missie 09: Diepgaand redeneren</a></p>
+<h2 id="tactische-bronnen">📚 Tactische Bronnen<a class="headerlink" href="#tactische-bronnen" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/use-your-own-prompt-data?WT.mc_id=power-182762-scottdurow">Gebruik je eigen gegevens in een prompt</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/create-a-custom-prompt?WT.mc_id=power-182762-scottdurow">Maak een aangepaste prompt</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/knowledge-add-dataverse?WT.mc_id=power-182762-scottdurow">Werken met Dataverse in Copilot Studio</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/prompts-overview?WT.mc_id=power-182762-scottdurow">AI Builder overzicht van aangepaste prompts</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/?WT.mc_id=power-182762-scottdurow">Power Platform AI Builder documentatie</a></p>
+<p>📖 <a href="https://learn.microsoft.com/training/modules/ai-builder-grounded-prompts/?WT.mc_id=power-182762-scottdurow">Training: Maak AI Builder prompts met je eigen Dataverse-gegevens</a></p>
+<hr />
+<p><strong>Disclaimer</strong>:<br />
+Dit document is vertaald met behulp van de AI-vertalingsservice <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

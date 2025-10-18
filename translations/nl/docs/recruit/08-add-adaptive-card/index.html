@@ -1,0 +1,1072 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/nl/docs/recruit/08-add-adaptive-card/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#missie-08-verbeter-gebruikersinteracties-in-topics-met-adaptive-cards" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codenaam-operatie-interface-uplift" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAAM: OPERATIE INTERFACE UPLIFT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missiebriefing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Missiebriefing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doelstellingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Doelstellingen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wat-is-een-adaptive-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Wat is een Adaptive Card?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-json-een-persoon" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐱 Is JSON een persoon?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ik-zie-een-andere-optie-om-een-adaptive-card-te-bouwen-met-formule" class="md-nav__link">
+    <span class="md-ellipsis">
+      👀 Ik zie een andere optie om een adaptive card te bouwen met formule
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bouwen-met-de-adaptive-card-designer" class="md-nav__link">
+    <span class="md-ellipsis">
+      👷🏻‍♀️ Bouwen met de Adaptive Card Designer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#begrijpen-van-de-adaptive-card-designer" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Begrijpen van de Adaptive Card Designer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veelvoorkomende-toepassingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌵 Veelvoorkomende toepassingen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beste-praktijken" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⭐ Beste praktijken
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-08-voeg-adaptive-cards-toe-en-verbeter-topicmogelijkheden" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 08 - Voeg adaptive cards toe en verbeter topicmogelijkheden
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missie-voltooid" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Missie Voltooid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactische-bronnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Tactische Bronnen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "dcbcd9396b076da0a0f5d389e9ec1b12",
+  "translation_date": "2025-10-17T01:31:55+00:00",
+  "source_file": "docs/recruit/08-add-adaptive-card/README.md",
+  "language_code": "nl"
+}
+-->
+<h1 id="missie-08-verbeter-gebruikersinteracties-in-topics-met-adaptive-cards">🚨 Missie 08: Verbeter gebruikersinteracties in Topics met Adaptive Cards<a class="headerlink" href="#missie-08-verbeter-gebruikersinteracties-in-topics-met-adaptive-cards" title="Permanent link">&para;</a></h1>
+<h2 id="codenaam-operatie-interface-uplift">🕵️‍♂️ CODENAAM: <code>OPERATIE INTERFACE UPLIFT</code><a class="headerlink" href="#codenaam-operatie-interface-uplift" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operatietijdvenster:</strong> <code>~45 minuten</code></p>
+</blockquote>
+<p>🎥 <strong>Bekijk de walkthrough</strong></p>
+<p><a href="https://www.youtube.com/watch?v=RhIlzYHPCXo" title="Bekijk de walkthrough op YouTube"><img alt="Adaptive cards video thumbnail" src="../../../../../translated_images/video-thumbnail.3fb3463f411ef1f440a0fd0e67d217a67bcca1d39a98b2c2bff4e13cbc1b6f4e.nl.jpg" /></a></p>
+<h2 id="missiebriefing">🎯 Missiebriefing<a class="headerlink" href="#missiebriefing" title="Permanent link">&para;</a></h2>
+<p>Agenten, jullie missie is om de statische gebruikerservaring te infiltreren en te vervangen door rijke, dynamische en actiegerichte Adaptive Cards. Jullie zullen JSON-payloads en Power Fx-formules inzetten om gesprekken in Copilot Studio te transformeren van eenvoudige vraag-en-antwoord naar volledig interactieve interacties. Het doel is om gebruikersinput te verzamelen, gegevens op een aantrekkelijke manier te presenteren en gesprekken met precisie en stijl te sturen. Als je je niet aanpast, kunnen je gebruikers overstappen naar minder intelligente interfaces.</p>
+<h2 id="doelstellingen">🔎 Doelstellingen<a class="headerlink" href="#doelstellingen" title="Permanent link">&para;</a></h2>
+<p>In deze missie leer je:</p>
+<ol>
+<li>Begrijpen wat Adaptive Cards zijn en hoe ze gebruikersinteracties in Copilot Studio verbeteren.</li>
+<li>Leren interactieve kaarten te bouwen met JSON en Power Fx-formules voor dynamische inhoud.</li>
+<li>Verkennen van de Adaptive Card Designer en de belangrijkste componenten voor visuele kaartcreatie.</li>
+<li>Rijke, interactieve formulieren en gegevensverzamelingservaringen binnen agent topics creëren.</li>
+<li>Beste praktijken implementeren voor het ontwerpen van responsieve en gebruiksvriendelijke adaptive cards.</li>
+</ol>
+<h2 id="wat-is-een-adaptive-card">🤔 Wat is een Adaptive Card?<a class="headerlink" href="#wat-is-een-adaptive-card" title="Permanent link">&para;</a></h2>
+<p>Een <strong>Adaptive Card</strong> is een manier om interactieve, visueel rijke UI-elementen te maken die kunnen worden ingebed in apps zoals Microsoft Teams, Microsoft Outlook of agents. Het is een gestructureerd JSON-object dat de lay-out en inhoud van een kaart definieert:</p>
+<ul>
+<li>Welke elementen op de kaart verschijnen - tekst, afbeeldingen, knoppen.</li>
+<li>Hoe die elementen worden gerangschikt.</li>
+<li>
+<p>Welke acties gebruikers kunnen ondernemen, zoals het indienen van een formulier of het openen van een link.</p>
+<p><img alt="Adaptive Card" src="../../../../../translated_images/8.0_01_AdaptiveCard.3ae99605ab7ef4b35ee0d00649ba0fc1a8166620183f82f20258c32fbef2bb3e.nl.png" /></p>
+</li>
+</ul>
+<h3 id="waarom-adaptive-cards-belangrijk-zijn-in-copilot-studio">Waarom Adaptive Cards belangrijk zijn in Copilot Studio<a class="headerlink" href="#waarom-adaptive-cards-belangrijk-zijn-in-copilot-studio" title="Permanent link">&para;</a></h3>
+<p>Stel je voor dat je een agent bouwt die gebruikers vraagt om hun naam, e-mailadres of feedback. Als je alleen gewone tekst gebruikt, kan het gesprek saai of moeilijk te volgen zijn. Daar komen Adaptive Cards van pas!</p>
+<ol>
+<li>
+<p><strong>Maakt gesprekken interactief</strong> - in plaats van tekst als berichten naar de gebruiker te sturen, kun je knoppen, formulieren, afbeeldingen en meer tonen.</p>
+<ul>
+<li>Voorbeeld: een kaart kan de gebruiker vragen om zijn naam en e-mailadres in te vullen in een overzichtelijk formulier.</li>
+</ul>
+</li>
+<li>
+<p><strong>Ziet er overal goed uit</strong> - Adaptive Cards passen zich automatisch aan de stijl van de app waarin ze zich bevinden, zoals Microsoft 365 Copilot chat of Microsoft Teams. Je hoeft je geen zorgen te maken over donkere modus, lettertypen of lay-outs - het past zich aan.</p>
+</li>
+<li>
+<p><strong>Eenvoudig te bouwen met JSON</strong> - je definieert de kaart met behulp van JSON-code (denk aan een <em>recept</em> voor de UI). Copilot Studio helpt je om je kaart te bekijken voordat je deze aan het topic toevoegt.</p>
+</li>
+<li>
+<p><strong>Gegevens verzamelen en gebruiken</strong> - je kunt de kaart gebruiken om vragen te stellen, antwoorden te verzamelen en die gegevens te gebruiken in de gespreksstroom.</p>
+<ul>
+<li>Voorbeeld: Vraag om het telefoonnummer van een gebruiker en toon vervolgens een bevestigingskaart met hun telefoonnummer.</li>
+</ul>
+</li>
+<li>
+<p><strong>Verbeter de gebruikerservaring</strong> - kaarten maken je agent interactiever. Het is een schoner, klikbaar en gebruiksvriendelijker type interface.</p>
+</li>
+</ol>
+<h2 id="is-json-een-persoon">🐱 Is <em>JSON</em> een persoon?<a class="headerlink" href="#is-json-een-persoon" title="Permanent link">&para;</a></h2>
+<p>Uitgesproken als "Jason," is het geen persoon 😅</p>
+<p>JSON, ook wel bekend als <em>JavaScript Object Notation</em>, is een lichtgewicht formaat dat wordt gebruikt om gegevens te structureren. Het is gemakkelijk te lezen en te schrijven en ziet eruit als een reeks sleutel-waardeparen binnen accolades {}.</p>
+<p>Dit is een van de opties die je kunt gebruiken bij het toevoegen van een adaptive card aan je topic.</p>
+<p><img alt="Adaptive card node properties" src="../../../../../translated_images/8.0_02_AdaptiveCardPropertiesPane.cf6bde2350f83ac84bf3fe5c077b2b01ee707af19a8d2f417b1ecc658318fe45.nl.png" /></p>
+<h2 id="ik-zie-een-andere-optie-om-een-adaptive-card-te-bouwen-met-formule">👀 Ik zie een andere optie om een adaptive card te bouwen met <em>formule</em><a class="headerlink" href="#ik-zie-een-andere-optie-om-een-adaptive-card-te-bouwen-met-formule" title="Permanent link">&para;</a></h2>
+<p>Herinner je je nog hoe we leerden over Power Fx in <a href="../07-add-new-topic-with-trigger/#what-power-fx-can-do-in-topics">Missie 07 - Power Fx gebruiken in je nodes</a>? Hetzelfde kan worden toegepast in Adaptive Cards binnen Copilot Studio.</p>
+<p>Als samenvatting:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Power Fx is een low-code programmeertaal die wordt gebruikt om logica en dynamisch gedrag toe te voegen aan je agent. Het is dezelfde taal die wordt gebruikt in Microsoft Power Apps en is ontworpen om eenvoudig en Excel-achtig te zijn, waardoor het gemakkelijk is voor ontwikkelaars en niet-ontwikkelaars.</p>
+</div>
+<h3 id="hoe-power-fx-werkt-in-adaptive-cards">Hoe Power Fx werkt in Adaptive Cards<a class="headerlink" href="#hoe-power-fx-werkt-in-adaptive-cards" title="Permanent link">&para;</a></h3>
+<p>Wanneer je een Adaptive Card ontwerpt in Copilot Studio, kun je Power Fx-formules gebruiken om:</p>
+<ul>
+<li>Dynamisch waarden in te voegen zoals gebruikersnamen, datums of status.</li>
+<li>Tekst of cijfers opmaken, zoals valuta weergeven of cijfers afronden.</li>
+<li>Elementen tonen of verbergen op basis van voorwaarden.</li>
+<li>Reacties aanpassen op basis van gebruikersinput, variabelen, outputs van gespreksnodes.</li>
+</ul>
+<p>Bijvoorbeeld:</p>
+<p>"<code>Hallo</code>" &amp; <code>System.User.DisplayName</code></p>
+<p>Deze formule combineert het woord "Hallo" met de naam van de gebruiker dynamisch.</p>
+<h3 id="waarom-het-nuttig-is">Waarom het nuttig is<a class="headerlink" href="#waarom-het-nuttig-is" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Personalisatie</strong></p>
+<p>Je kunt berichten afstemmen op elke gebruiker, waardoor interacties natuurlijker en relevanter aanvoelen.</p>
+</li>
+<li>
+<p><strong>Dynamische inhoud</strong></p>
+<p>Kaarten kunnen echte gegevens weergeven uit variabelen en outputs van gespreksnodes.</p>
+</li>
+<li>
+<p><strong>Slimme logica</strong></p>
+<p>Je kunt bepalen wat gebruikers zien of mee interageren op basis van voorwaarden, wat de bruikbaarheid verbetert en fouten vermindert.</p>
+</li>
+<li>
+<p><strong>Low-code vriendelijk</strong></p>
+<p>Power Fx is een low-code programmeertaal. Zoals eerder vermeld, is het leesbaar, intuïtief en vergelijkbaar met Excel-formules.</p>
+</li>
+</ol>
+<h2 id="bouwen-met-de-adaptive-card-designer">👷🏻‍♀️ Bouwen met de Adaptive Card Designer<a class="headerlink" href="#bouwen-met-de-adaptive-card-designer" title="Permanent link">&para;</a></h2>
+<p>De <strong>Adaptive Card Designer</strong> is een visuele tool waarmee je interactieve berichtkaarten kunt bouwen met behulp van drag-and-drop-elementen zoals tekst, afbeeldingen, knoppen en invoervelden. Het doel is om rijke, dynamische berichten te creëren zonder complexe code te schrijven, waardoor het gemakkelijker wordt om gebruiksvriendelijke interfaces te ontwerpen.</p>
+<p>De ontwerptool helpt je de kaart visueel te bouwen, maar achter de schermen genereert het de JSON-objecten voor je. Je kunt ook overschakelen naar <em>formule</em>, waarmee Power Fx-uitdrukkingen in de kaart kunnen worden gebruikt om gegevens van elders weer te geven.</p>
+<h2 id="begrijpen-van-de-adaptive-card-designer">🎨 Begrijpen van de Adaptive Card Designer<a class="headerlink" href="#begrijpen-van-de-adaptive-card-designer" title="Permanent link">&para;</a></h2>
+<p><img alt="Adaptive Card Designer" src="../../../../../translated_images/8.0_03_AdaptiveCardPropertiesPane.e97dad10daf78959c15acb61ca17f0178f2716a75bb85c491c80866720cb1e99.nl.png" /></p>
+<h3 id="a-kaartelementen">A) Kaartelementen<a class="headerlink" href="#a-kaartelementen" title="Permanent link">&para;</a></h3>
+<p>Dit zijn de bouwstenen van je adaptive card. Je kunt elementen zoals de volgende slepen en neerzetten:</p>
+<ul>
+<li><strong>TextBlock</strong> om tekst weer te geven.</li>
+<li><strong>Image</strong> om afbeeldingen te tonen.</li>
+<li><strong>FactSet</strong> voor sleutel-waardeparen.</li>
+<li><strong>Invoervelden</strong> om tekstvakken, datumkiezers, schakelaars weer te geven.</li>
+<li><strong>Acties</strong> om knoppen weer te geven zoals <em>Submit</em>, <em>Open URL</em>, of <em>Show Card</em>.</li>
+</ul>
+<p>Elk element heeft zijn eigen doel en kan worden gestileerd of geconfigureerd.</p>
+<h3 id="b-kaartweergave">B) Kaartweergave<a class="headerlink" href="#b-kaartweergave" title="Permanent link">&para;</a></h3>
+<p>Dit is het <strong>Voorbeeld</strong>-gebied waar je kunt zien hoe je kaart er in realtime uitziet. Terwijl je elementen toevoegt of bewerkt, werkt de weergave onmiddellijk bij om wijzigingen weer te geven. Dit stelt je in staat om iteratieve updates te maken en tegelijkertijd het ontwerpresultaat te zien.</p>
+<h3 id="c-kaartstructuur">C) Kaartstructuur<a class="headerlink" href="#c-kaartstructuur" title="Permanent link">&para;</a></h3>
+<p>Dit toont de <strong>hiërarchie en lay-out</strong> van je kaart. Bijvoorbeeld:</p>
+<ul>
+<li>Een kaart kan beginnen met een <strong>TextBlock</strong> voor de titel.</li>
+<li>Vervolgens een <strong>ColumnSet</strong> met een afbeelding aan de ene kant en tekst aan de andere kant.</li>
+<li>Gevolgd door een <strong>FactSet</strong> en enkele <strong>Actieknoppen</strong>.</li>
+</ul>
+<p>Het helpt je te begrijpen hoe elementen zijn genest en georganiseerd.</p>
+<h3 id="d-elementeigenschappen">D) Elementeigenschappen<a class="headerlink" href="#d-elementeigenschappen" title="Permanent link">&para;</a></h3>
+<p>Wanneer je op een element in de kaart klikt, kun je in dit paneel de <strong>instellingen aanpassen</strong>:</p>
+<ul>
+<li>Tekstgrootte, gewicht of kleur wijzigen.</li>
+<li>Afbeeldings-URL's of alt-tekst instellen.</li>
+<li>Invoermogelijkheden configureren zoals plaatshoudertekst of standaardwaarden.</li>
+</ul>
+<p>Hier kun je elk element verfijnen.</p>
+<h3 id="e-kaartpayload-editor">E) Kaartpayload-editor<a class="headerlink" href="#e-kaartpayload-editor" title="Permanent link">&para;</a></h3>
+<p>Dit is de <strong>ruwe JSON-code</strong> achter je kaart. Geavanceerde gebruikers kunnen dit direct bewerken om:</p>
+<ul>
+<li>Templating-functies te gebruiken.</li>
+<li>Kaartdefinities kopiëren/plakken.</li>
+</ul>
+<p>Zelfs als je nieuw bent in de Adaptive Card Designer, is het handig om te zien hoe het visuele ontwerp wordt vertaald naar code.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip - Bekijk de Adaptive Card voorbeelden</p>
+<ol>
+<li>Ga naar <a href="https://adaptivecards.microsoft.com/designer">https://adaptivecards.microsoft.com/designer</a>.</li>
+<li>Selecteer <strong>Nieuwe kaart</strong> om een lijst met voorbeelden te zien die je kunt kiezen en aanpassen.</li>
+<li>Merk op dat deze designer extern (webgebaseerd) is. Wanneer je je kaart bouwt in de webgebaseerde Adaptive Card Designer, kopieer je de JSON uit de Kaartpayload-editor.</li>
+<li>Plak de JSON in je adaptive card in je agent in Copilot Studio.</li>
+</ol>
+<p><img alt="Adaptive Card Designer Samples" src="../../../../../translated_images/8.0_04_AdaptiveCardDesignerSamples.c003b545de5ccfd72ca0c5fa4607addb19d265e8f7105393c652249182754ba9.nl.png" /></p>
+</div>
+<h2 id="veelvoorkomende-toepassingen">🌵 Veelvoorkomende toepassingen<a class="headerlink" href="#veelvoorkomende-toepassingen" title="Permanent link">&para;</a></h2>
+<p>De volgende zijn veelvoorkomende toepassingen voor Adaptive Cards in Copilot Studio wanneer gebruikt in de <strong>Stuur een bericht</strong> of <strong>Stel een vraag</strong> nodes.</p>
+<ol>
+<li>
+<p><strong>Formulieren en gegevensverzameling</strong></p>
+<p>Gebruik adaptive cards om gestructureerde input van gebruikers te verzamelen, zoals:</p>
+<ul>
+<li>Verlofaanvragen.</li>
+<li>Feedbackformulieren.</li>
+<li>Contactinformatie.</li>
+<li>Afspraakplanning.</li>
+</ul>
+</li>
+<li>
+<p><strong>Dynamische informatie weergeven</strong></p>
+<p>Toon gebruikers gepersonaliseerde of realtime gegevens in een overzichtelijk, leesbaar formaat uit bedrijfsbronnen zoals ServiceNow, SAP, Dynamics 365, SharePoint, enz.</p>
+<ul>
+<li>Besteloverzichten.</li>
+<li>Rekeningoverzichten.</li>
+<li>Ticket- of casestatus.</li>
+<li>Aankomende evenementen of deadlines.</li>
+</ul>
+</li>
+<li>
+<p><strong>Interactieve keuzes</strong></p>
+<p>Laat gebruikers direct in het gesprek keuzes maken:</p>
+<ul>
+<li>Kies uit een lijst met opties, bijvoorbeeld productcategorieën, ondersteuningsthema's.</li>
+<li>Bevestig of annuleer een actie.</li>
+<li>Beoordeel een dienst of ervaring.</li>
+</ul>
+</li>
+<li>
+<p><strong>Acties activeren</strong></p>
+<p>Voeg knoppen toe die verdere stappen in het gesprek intern of extern activeren.</p>
+<ul>
+<li>"Verzoek indienen."</li>
+<li>"Bekijk details."</li>
+</ul>
+</li>
+</ol>
+<h2 id="beste-praktijken">⭐ Beste praktijken<a class="headerlink" href="#beste-praktijken" title="Permanent link">&para;</a></h2>
+<p>Hier zijn enkele beste praktijken voor het maken van Adaptive Cards voor agents in Copilot Studio.</p>
+<ol>
+<li>
+<p><strong>Houd het eenvoudig en gefocust</strong></p>
+<ul>
+<li>Ontwerp kaarten met een duidelijk doel, overlaad ze niet met te veel elementen.</li>
+<li>Gebruik beknopte tekst en intuïtieve lay-outs om gebruikers door de interactie te leiden.</li>
+</ul>
+</li>
+<li>
+<p><strong>Wees doelgericht met invoer</strong></p>
+<ul>
+<li>Voeg alleen de noodzakelijke invoerelementen toe, zoals tekst, datumkeuzes, om gebruikers niet te overweldigen.</li>
+<li>Gebruik labels om invoer gemakkelijk te begrijpen te maken.</li>
+</ul>
+</li>
+<li>
+<p><strong>Structuur voor leesbaarheid</strong></p>
+<ul>
+<li>Gebruik <strong>TextBlocks</strong> voor koppen en instructies.</li>
+<li>Groepeer gerelateerde elementen met <strong>Containers</strong> of <strong>ColumnSets</strong> om de visuele stroom te verbeteren.</li>
+</ul>
+</li>
+<li>
+<p><strong>Maak Actie-elementen duidelijk</strong></p>
+<ul>
+<li>Gebruik <strong>Action.Submit</strong> en/of <strong>Action.OpenUrl</strong> met duidelijke knoptitels zoals "Verzoek indienen" of "Bekijk details."</li>
+<li>Vermijd vage labels zoals "Klik hier."</li>
+</ul>
+</li>
+<li>
+<p><strong>Ontwerp voor aanpasbaarheid</strong></p>
+<ul>
+<li>Ga ervan uit dat de kaart op verschillende schermformaten kan worden bekeken.</li>
+<li>Vermijd vaste breedtes en gebruik flexibele lay-outs zoals <strong>ColumnSets</strong> voor responsiviteit.</li>
+</ul>
+</li>
+<li>
+<p><strong>Gebruik dynamische inhoud waar mogelijk</strong></p>
+<ul>
+<li>Bind kaartelementen aan variabelen of outputs van nodes met Power Fx om de gebruikerservaring te personaliseren.</li>
+<li>Bijvoorbeeld, toon de naam of huidige status van de gebruiker dynamisch.</li>
+</ul>
+</li>
+</ol>
+<h2 id="lab-08-voeg-adaptive-cards-toe-en-verbeter-topicmogelijkheden">🧪 Lab 08 - Voeg adaptive cards toe en verbeter topicmogelijkheden<a class="headerlink" href="#lab-08-voeg-adaptive-cards-toe-en-verbeter-topicmogelijkheden" title="Permanent link">&para;</a></h2>
+<p>We gaan nu leren hoe we ons topic kunnen verbeteren met adaptive cards en het gebruik van geavanceerde functionaliteit van topics en nodes.</p>
+<ul>
+<li><a href="../../../../../docs/recruit/08-add-adaptive-card">8.1 Maak een nieuw topic met een adaptive card voor gebruikers om hun verzoek in te dienen</a></li>
+<li><a href="../../../../../docs/recruit/08-add-adaptive-card">8.2 Werk agentinstructies bij om het Request device topic aan te roepen</a></li>
+</ul>
+<h3 id="gebruiksscenario">✨ Gebruiksscenario<a class="headerlink" href="#gebruiksscenario" title="Permanent link">&para;</a></h3>
+<p><strong>Als</strong> medewerker</p>
+<p><strong>Wil ik</strong> een apparaat aanvragen</p>
+<p><strong>Zodat ik</strong> een apparaat kan aanvragen uit de lijst met beschikbare apparaten.</p>
+<p>Laten we beginnen!</p>
+<h3 id="vereisten">Vereisten<a class="headerlink" href="#vereisten" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>SharePoint-lijst</strong></p>
+<p>We zullen de <strong>Devices</strong> SharePoint-lijst gebruiken van <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Les 00 - Cursusinstelling - Stap 3: Maak een nieuwe SharePoint-site</a>.</p>
+<p>Als je de <strong>Devices</strong> SharePoint-lijst nog niet hebt ingesteld, ga dan terug naar <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Les 00 - Cursusinstelling - Stap 3: Maak een nieuwe SharePoint-site</a>.</p>
+</li>
+<li>
+<p><strong>Contoso Helpdesk Copilot</strong></p>
+<p>We gaan dezelfde agent gebruiken die eerder is gemaakt in <a href="../06-create-agent-from-conversation/">Les 06 - Maak een aangepaste agent met natuurlijke taal met Copilot en verbind deze met je gegevens</a>.</p>
+</li>
+</ol>
+<h3 id="81-maak-een-nieuw-topic-met-een-adaptive-card-voor-gebruikers-om-hun-verzoek-in-te-dienen">8.1 Maak een nieuw topic met een adaptive card voor gebruikers om hun verzoek in te dienen<a class="headerlink" href="#81-maak-een-nieuw-topic-met-een-adaptive-card-voor-gebruikers-om-hun-verzoek-in-te-dienen" title="Permanent link">&para;</a></h3>
+<p>We zullen een nieuw topic maken dat het apparaatverzoek van een gebruiker afhandelt. Dit nieuwe topic zal een <strong>Vraag met adaptive card</strong>-node bevatten om gebruikersinteractie met de agent mogelijk te maken.</p>
+<p>Laten we beginnen!</p>
+<ol>
+<li>
+<p>Selecteer het tabblad <strong>Topics</strong> en selecteer vervolgens <strong>+ Voeg een topic toe vanaf blanco</strong>.</p>
+<p><img alt="Selecteer Topics tabblad" src="../../../../../translated_images/8.1_01_NewTopic.f16b94d274f8a7f561f257d9e15483fa56f6fc451a194f26bed03fceb24beb14.nl.png" /></p>
+</li>
+<li>
+<p>Geef het topic de volgende naam,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Request device
+</span></code></pre></div>
+<p>Voer het volgende in als de beschrijving voor de trigger.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>This topic helps users request a device when they answer yes to the question that asks the user if they would like to request one of these devices.
+</span></code></pre></div>
+<p><img alt="Topic Naam en Trigger Beschrijving" src="../../../../../translated_images/8.1_02_TopicNameAndTriggerDescription.3cdbb3ea9a3a480b8cdb23faa47d3a607273c79cbd406ae82dbb100603233879.nl.png" />
+1. Voeg vervolgens een <strong>Vraag met adaptive card</strong>-node toe. Deze node toont een interactieve kaart waarmee de gebruiker kan kiezen welk apparaat hij wil aanvragen.</p>
+<p><img alt="Selecteer Vraag met adaptive card-node" src="../../../../../translated_images/8.1_03_AddAskWithAdaptiveCard.4b8e29223fbce16e4440152c0e7f6827fb88097e2a819a489878cf6254f215a4.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer de node en het <strong>Eigenschappenpaneel van de Adaptive Card Node</strong> verschijnt. We gaan nu de JSON bewerken. Selecteer <strong>Bewerk adaptive card</strong>. Selecteer <strong>Bewerk adaptive card</strong>.</p>
+<p><img alt="Bewerk adaptive card" src="../../../../../translated_images/8.1_04_EditAdaptiveCard.40d31318a2300d467838b0126d72d336a9abb58ba5fd6f62f51170dfb9760992.nl.png" /></p>
+</li>
+<li>
+<p>Dit is de <strong>Adaptive Card Designer</strong> waar je je kaart kunt ontwerpen en het ontwerp in realtime kunt bekijken.</p>
+<p>Probeer de <strong>TextBlock</strong>- en <strong>FactSet</strong>-kaartelementen naar het bewerkingscanvas te slepen, het kaartweergavegebied. Merk op hoe de kaartstructuur en de payload-editor van de kaart worden bijgewerkt terwijl de twee kaartelementen worden toegevoegd. Je kunt de payload-editor van de kaart en het eigenschappenpaneel van de elementen direct bijwerken.</p>
+<p><img alt="Sleep en plaats kaartelementen" src="../../../../../translated_images/8.1_05_DragAndDropCardElements.a9fea2dcf7ec6d235ef7b4f717bdc4fee6536a04a3bdb26fb458678fba79acb9.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer <strong>Voorbeeld</strong> om de kaart in verschillende breedtes te bekijken.</p>
+<p><img alt="Selecteer voorbeeld" src="../../../../../translated_images/8.1_06_PreviewAdaptiveCard.647091529c1fd44ed5eff21738c780bc3bf07e1cbe6434695d206a4aca9b4b25.nl.png" /></p>
+</li>
+<li>
+<p>Het voorbeeld wordt geladen, waar je verschillende kaartuitvoeringen per breedte kunt zien.</p>
+<p><img alt="Voorbeeld kaart in verschillende breedtes" src="../../../../../translated_images/8.1_07_PreviewCardWidths.bf9059b79ef07c1c108308e904bbfaa6742db99fcb30cb18004086f3c7fed086.nl.png" /></p>
+</li>
+<li>
+<p>Sluit <strong>Voorbeeld</strong> door op het <strong>x-icoon</strong> te klikken en selecteer <strong>Ongedaan maken</strong> in de ontwerper om de eerder toegevoegde kaartelementen te verwijderen.</p>
+<p><img alt="Ongedaan maken" src="../../../../../translated_images/8.1_08_Undo.ddcce9dbb87d876e47a932c73229d4fdc98e182d602af256275e2456cd9054eb.nl.png" /></p>
+</li>
+<li>
+<p>Klik in de <strong>Payload-editor van de kaart</strong> en selecteer alle regels met de Windows-toetsencombinatie <em>Ctrl + A</em> of de Mac-toetsencombinatie <em>Command + A</em>, gevolgd door het verwijderen van de regels. <strong>Plak</strong> de JSON uit het <a href="../../../../../docs/recruit/08-add-adaptive-card/assets/8.1_RequestDevice.json">Request devices .JSON-bestand</a>.</p>
+<p><img alt="Payload-editor van de kaart wissen" src="../../../../../translated_images/8.1_09_SelectAll.6aaf936d81c3356870679a7ae5b6fd1298812cc492ca3250fa01179164483e1e.nl.png" /></p>
+</li>
+<li>
+<p>Merk op hoe de <strong>Kaartvoorbeeld</strong> nu elementen bevat die wat tekst en een lijst met beschikbare apparaten weergeven.</p>
+<p>Deze JSON is momenteel een tijdelijke aanduiding en een voorbeeld van wat we als basis voor onze kaart zullen gebruiken, maar in de vorm van een formule in plaats van JSON, omdat we de <strong>globale variabele</strong>, <code>Global.VarDevices.value</code>, gaan refereren die de respons van de <strong>Get items</strong> SharePoint-connectoractie opslaat.</p>
+<p>Selecteer <strong>Opslaan</strong> en selecteer <strong>Sluiten</strong> om de Adaptive Card Designer-modal te verlaten.</p>
+<p><img alt="Selecteer Opslaan" src="../../../../../translated_images/8.1_10_DeviceRequestCard.711ce0bdfbfecf2f221cb7fc4c6aecdefd7467afcfad43f2414e8230fc0d8470.nl.png" /></p>
+</li>
+<li>
+<p>Sluit het <strong>Eigenschappenpaneel van de Adaptive Card Node</strong> door op het <strong>X</strong>-icoon te klikken.</p>
+<p><img alt="Eigenschappenpaneel van de Adaptive Card Node sluiten" src="../../../../../translated_images/8.1_11_ExitAdaptiveCardNodeProperties.fe8760d8df1c22f9a73b7860e9473a4f350e0cb0d83824e9f55a143593ca9c58.nl.png" /></p>
+</li>
+<li>
+<p>In het bewerkingscanvas van het onderwerp zie je de adaptive card.</p>
+<p><img alt="Apparaataanvraag adaptive card" src="../../../../../translated_images/8.1_12_DeviceRequestCard.f4e3961a0fd282aeb37017f8cb49018c839805d375e2fc5a1220321156012b48.nl.png" /></p>
+</li>
+<li>
+<p>Scroll naar de onderkant van de node en je ziet uitvoervariabelen. De <code>commentsId</code> en de <code>deviceSelectionId</code> zijn gedefinieerd in het eigenschappenpaneel van de elementen. Deze twee variabelen slaan waarden op van de kaartelementen waarmee gebruikers interactie hebben. Deze waarden worden verderop in het onderwerp gebruikt, wat we in de volgende les zullen leren.</p>
+<p><img alt="Node-uitvoer variabelen" src="../../../../../translated_images/8.1_13_DeviceRequestCardOutputs.d4580e9384b74e4273f83b52e1fd256a893c49b0cf398e33ac244906edd44b35.nl.png" /></p>
+</li>
+<li>
+<p>Laten we nu de kaart bijwerken van JSON naar formule, omdat we Power Fx opnieuw zullen gebruiken om door de items te lopen die zijn geretourneerd in de <strong>Get items</strong> SharePoint-connectoractie, opgeslagen in de <strong>globale variabele</strong>, <code>Global.VarDevices.value</code>, via de <code>value</code>-eigenschap van de JSON-respons.</p>
+<blockquote>
+<p>We hebben deze globale variabele gemaakt in <a href="../07-add-new-topic-with-trigger/#73-add-a-tool-using-a-connector">Lab 07 - Voeg een nieuw onderwerp toe met gespreksnodes, 7.3 Voeg een tool toe met een connector</a>.</p>
+</blockquote>
+<p>Selecteer de kaart in de <strong>Vraag met Adaptive Card</strong>-node, gevolgd door het selecteren van het <strong>chevron</strong>-icoon en selecteer <strong>Formule</strong>.</p>
+<p><img alt="Wijzig naar formule" src="../../../../../translated_images/8.1_14_ChangeToFormula.03acaccb20320557926f0854e006a2e6a6475eb06ecdb031f429e50d0303f0cf.nl.png" /></p>
+</li>
+<li>
+<p>Klik op het <strong>uitvouw</strong>-icoon om het Formuleveld te vergroten.</p>
+<p><img alt="Klik op uitvouw-icoon" src="../../../../../translated_images/8.1_15_SelectExpand.65dcefe6ec10e6b8c9741c254d303a47f5c0fae7bf586facbf768f820786c839.nl.png" /></p>
+</li>
+<li>
+<p>Klik in de <strong>Payload-editor van de kaart</strong> en selecteer alle regels met de Windows-toetsencombinatie <em>Ctrl + A</em> of de Mac-toetsencombinatie <em>Command + A</em>, gevolgd door het verwijderen van de regels.</p>
+<p><img alt="Klik in payload-editor van de kaart" src="../../../../../translated_images/8.1_16_SelectAll.689cea259e1541f21e87df32ce271bb478c7f88f8e96ba7e02329cc0015a037c.nl.png" /></p>
+<p>Plak de formule uit het <a href="../../../../../docs/recruit/08-add-adaptive-card/assets/8.1_RequestDeviceFormula.txt">Request Devices formulebestand</a>.</p>
+</li>
+<li>
+<p>In de formule zullen we door elk SharePoint-lijstitem lopen met behulp van de <code>For All</code>-functie om de waarden van <code>Model</code> weer te geven in de titel van de keuzeoptie, en het SharePoint-item <code>ID</code> wordt gerefereerd als de waarde. We omhullen de waarden ook met de <code>If(IsBlank()</code>-functies omdat de formule een waarde verwacht om de adaptive card weer te geven in het bewerkingscanvas van het onderwerp. Anders verschijnt er een bericht: "Eigenschap kan niet null zijn."</p>
+<p><strong>Sluit</strong> de kaartmodal.</p>
+<p><img alt="Power Fx Formule" src="../../../../../translated_images/8.1_17_PowerFxFormula.c68848b0af594819636bf70aa6b03c7ec8f4190b285e798fdcb02232be0ca146.nl.png" /></p>
+</li>
+<li>
+<p><strong>Sluit</strong> het <strong>Eigenschappenpaneel van de Adaptive Card Node</strong>.</p>
+</li>
+<li>
+<p><strong>Sla</strong> het onderwerp op.</p>
+<p><img alt="Onderwerp opslaan" src="../../../../../translated_images/8.1_18_SaveTopic.da41cfc240e80d46f7f1379f271be8dafa0c3060868b862535bb4bec87591f6c.nl.png" /></p>
+</li>
+</ol>
+<h3 id="82-update-agentinstructies-om-het-onderwerp-apparaataanvraag-aan-te-roepen">8.2 Update agentinstructies om het onderwerp Apparaataanvraag aan te roepen<a class="headerlink" href="#82-update-agentinstructies-om-het-onderwerp-apparaataanvraag-aan-te-roepen" title="Permanent link">&para;</a></h3>
+<p>Nu we het nieuwe onderwerp hebben gemaakt dat de apparaataanvragen afhandelt, moeten we de <strong>agentinstructies</strong> bijwerken om het onderwerp aan te roepen.</p>
+<ol>
+<li>
+<p>Selecteer het tabblad <strong>Overzicht</strong> en in de <strong>agentinstructies</strong> selecteer <strong>Bewerken</strong>.</p>
+<p><img alt="Instructies bewerken" src="../../../../../translated_images/8.2_01_EditInstructions.1c93b774b61243660f1fac51c39675e1a3aa35b14200364921d90ae26cffec13.nl.png" /></p>
+</li>
+<li>
+<p>Voeg een nieuwe regel toe onder de vorige instructie uit <a href="../07-add-new-topic-with-trigger/#73-add-a-tool-using-a-connector">Lab 07 - Voeg een nieuw onderwerp toe met gespreksnodes, 7.3 Voeg een tool toe met een connector</a>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>- If the user answers yes to the question of requesting a device, trigger [Request device]. Otherwise if they answer no to the question of requesting a device, trigger [Goodbye].
+</span></code></pre></div>
+<p>Selecteer de hele onderwerpplaatsaanduiding tussen vierkante haken en verwijder de plaatsaanduiding.</p>
+<p><img alt="Apparaataanvraag plaatsaanduiding" src="../../../../../translated_images/8.2_02_ReplaceRequestDevicePlaceholder.604b21d10047f887fd12965c54bcaa7b96174dc5ebc39862ef29d513420c25f8.nl.png" /></p>
+</li>
+<li>
+<p>Typ <code>/Req</code> en selecteer het onderwerp <strong>Request devices</strong>.</p>
+<p><img alt="Onderwerp Request devices" src="../../../../../translated_images/8.2_03_ReferenceRequestDeviceTopic.082468c7b7512dceb4d294ed3dbe447e81b1f0b47688b767003eca6a60b4390d.nl.png" /></p>
+</li>
+<li>
+<p>Herhaal dezelfde stappen voor de volgende onderwerpplaatsaanduiding, <strong>[Goodbye]</strong>. Selecteer de hele onderwerpplaatsaanduiding tussen vierkante haken en verwijder de plaatsaanduiding. Typ <code>/Goodbye</code> en selecteer het onderwerp <strong>Goodbye</strong>.</p>
+<ul>
+<li>
+<p>Wanneer de gebruiker <strong>Ja</strong> antwoordt op de vraag van de agent of hij een apparaat wil aanvragen, zal de agent doorverwijzen van het onderwerp <strong>Beschikbare apparaten</strong> naar het onderwerp <strong>Request devices</strong>.</p>
+</li>
+<li>
+<p>Anders, als de gebruiker <strong>Nee</strong> antwoordt, zal de agent doorverwijzen van het onderwerp <strong>Beschikbare apparaten</strong> naar het onderwerp <strong>Goodbye</strong>.</p>
+</li>
+</ul>
+<p><strong>Sla</strong> de bijgewerkte instructies op.</p>
+<p><img alt="Doorverwijzen naar onderwerp Request devices" src="../../../../../translated_images/8.2_04_ReferenceGoodbyeTopic.f4db471beef6645aefd7d8b1b8a46669c6764b54f6954614f452976c49bcb9d5.nl.png" /></p>
+</li>
+<li>
+<p>Laten we nu testen of de doorverwijzing van het onderwerp <em>Beschikbare apparaten</em> naar het onderwerp <em>Request devices</em> werkt. Selecteer <strong>Testen</strong> om het testpaneel te laden en selecteer <strong>Vernieuwen</strong>.</p>
+<p>Selecteer vervolgens het <strong>Activiteitenkaart</strong>-icoon in het testpaneel, gevolgd door het inschakelen van <strong>Volg tussen onderwerpen</strong>. Hiermee kunnen we zien dat het onderwerp <em>Beschikbare apparaten</em> is doorverwezen naar het onderwerp <em>Request devices</em>.</p>
+<p>Oké, we kunnen testen! Voer het volgende in het testpaneel in.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>I need a laptop
+</span></code></pre></div>
+<p><img alt="Agent testen" src="../../../../../translated_images/8.2_05_TestAgent.21b4ed7f831866736edc0b35def2856066bf61082487a6d63952e8635eae8c99.nl.png" /></p>
+</li>
+<li>
+<p>De agent zal reageren met de lijst van beschikbare apparaten, gevolgd door de vraag of de gebruiker een apparaat wil aanvragen. Kopieer en plak het volgende,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>yes please
+</span></code></pre></div>
+<p><img alt="Test onderwerp Request devices" src="../../../../../translated_images/8.2_06_TestRequestDeviceTopic.60f161f89dc2793bc4b40a6d29a06a7cffe156c50e8517de242f1dacbadf5682.nl.png" /></p>
+</li>
+<li>
+<p>Vervolgens zien we dat de agent is doorverwezen naar het onderwerp <strong>Request device</strong>. De agent heeft dit onderwerp aangeroepen volgens de instructies die we hebben toegevoegd.</p>
+<p>De adaptive card met de interactieve elementen wordt nu als bericht aan de gebruiker weergegeven.</p>
+<p><img alt="Vraag-node" src="../../../../../translated_images/8.2_07_AdaptiveCardQuestion.f07775130cfea9a75c5842c48a56bf506e0b5967e4349571b682266c85c02748.nl.png" /></p>
+</li>
+<li>
+<p>We hebben nu met succes getest 😄 dat het onderwerp <em>Beschikbare apparaten</em> doorverwijst naar het onderwerp <em>Request devices</em>. We zullen meer verbeteringen aan dit onderwerp toevoegen in de volgende les.</p>
+<p>Vernieuw het testpaneel.</p>
+<p><img alt="Testpaneel vernieuwen" src="../../../../../translated_images/8.2_08_RefreshTestPane.84d8c1174a9e6cc28a87f2663fb72838e8c6fd216df46153bd4f995b8527227a.nl.png" /></p>
+</li>
+</ol>
+<h2 id="missie-voltooid">✅ Missie Voltooid<a class="headerlink" href="#missie-voltooid" title="Permanent link">&para;</a></h2>
+<p>Gefeliciteerd! 👏🏻 Je hebt geleerd hoe je adaptive cards toevoegt met Power Fx-formules om gegevens uit variabelen weer te geven, en je hebt ook geleerd hoe je van het ene onderwerp naar het andere kunt doorverwijzen. Het maken van compacte onderwerpen maakt je agent beter georganiseerd, maar helpt ook gebruikers door verschillende delen van de gespreksflow met de agent te navigeren.</p>
+<p>Dit is het einde van <strong>Lab 08 - Verbeter gebruikersinteracties met Adaptive Cards</strong>, selecteer de onderstaande link om naar de volgende les te gaan. We zullen de use case in dit lab uitbreiden in de volgende les.</p>
+<p>⏭️ <a href="../09-add-an-agent-flow/">Ga naar <strong>Voeg een agentflow toe aan je onderwerp voor automatisering</strong> les</a></p>
+<h2 id="tactische-bronnen">📚 Tactische Bronnen<a class="headerlink" href="#tactische-bronnen" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/guidance/adaptive-cards-overview?WT.mc_id=power-172619-ebenitez">Adaptive Cards gebruiken in Copilot Studio</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-send-message#add-an-adaptive-card?WT.mc_id=power-172619-ebenitez">Voeg een adaptive card toe in de Verstuur een bericht-node</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-power-fx?WT.mc_id=power-172619-ebenitez">Maak expressies met Power Fx</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep8">Adaptive Cards bouwen met Power FX</a></p>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/08-add-adaptive-card" alt="Analytics" /></p>
+<hr />
+<p><strong>Disclaimer</strong>:<br />
+Dit document is vertaald met behulp van de AI-vertalingsservice <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

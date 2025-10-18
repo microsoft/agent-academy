@@ -1,0 +1,1727 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/es/docs/recruit/09-add-an-agent-flow/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mision-09-agrega-un-flujo-de-agente-a-tu-tema-para-automatizacion" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nombre-en-clave-operacion-potencia-automatica" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ NOMBRE EN CLAVE: OPERACIÓN POTENCIA AUTOMÁTICA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-la-mision" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Resumen de la Misión
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objetivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-flujo-de-agente" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 ¿Qué es un flujo de agente?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#si-pero-como-se-diferencian-de-los-flujos-en-la-nube-de-power-automate" class="md-nav__link">
+    <span class="md-ellipsis">
+      🙋🏽 Sí, pero ¿cómo se diferencian de los flujos en la nube de Power Automate?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-usar-flujos-de-agente" class="md-nav__link">
+    <span class="md-ellipsis">
+      👍🏻 Por qué usar flujos de agente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-mejoran-los-flujos-de-agente-a-tu-agente" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏄🏻‍♂️ ¿Cómo mejoran los flujos de agente a tu agente?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristicas-clave-que-hacen-que-los-flujos-de-agente-sean-poderosos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 Características clave que hacen que los flujos de agente sean poderosos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-funcionan" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Cómo funcionan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-crear-un-flujo-de-agente" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧶 Cómo crear un flujo de agente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-el-disenador-de-flujos-de-agente" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 ¿Qué es el diseñador de flujos de agente?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mencionaste-expresiones-que-son-las-expresiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔤 Mencionaste expresiones - ¿qué son las expresiones?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mejores-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⭐ Mejores prácticas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorio-09-agregar-un-flujo-de-agente-para-automatizacion-y-mejorar-las-capacidades-del-tema" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Laboratorio 09 - Agregar un flujo de agente para automatización y mejorar las capacidades del tema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mision-completa" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Misión Completa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-tacticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Recursos Tácticos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "cc4afa4a5a11c9d03896decfbcbd4060",
+  "translation_date": "2025-10-17T19:00:44+00:00",
+  "source_file": "docs/recruit/09-add-an-agent-flow/README.md",
+  "language_code": "es"
+}
+-->
+<h1 id="mision-09-agrega-un-flujo-de-agente-a-tu-tema-para-automatizacion">🚨 Misión 09: Agrega un flujo de agente a tu Tema para automatización<a class="headerlink" href="#mision-09-agrega-un-flujo-de-agente-a-tu-tema-para-automatizacion" title="Permanent link">&para;</a></h1>
+<h2 id="nombre-en-clave-operacion-potencia-automatica">🕵️‍♂️ NOMBRE EN CLAVE: <code>OPERACIÓN POTENCIA AUTOMÁTICA</code><a class="headerlink" href="#nombre-en-clave-operacion-potencia-automatica" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Ventana de Tiempo de la Operación:</strong> <code>~30 minutos</code>  </p>
+</blockquote>
+<p>🎥 <strong>Mira el Tutorial</strong></p>
+<p><a href="https://www.youtube.com/watch?v=vtLZJT3eBXg" title="Mira el tutorial en YouTube"><img alt="Miniatura del video de flujo de agente" src="../../../../../translated_images/video-thumbnail.ede12df9aaebcc8996680c8b6555d309b53bdf33d1b0165cae3b5173a6bcdd73.es.jpg" /></a></p>
+<h2 id="resumen-de-la-mision">🎯 Resumen de la Misión<a class="headerlink" href="#resumen-de-la-mision" title="Permanent link">&para;</a></h2>
+<p>Tu agente ahora puede conversar con los usuarios y proporcionar información, pero la verdadera excelencia operativa requiere que tu agente tome acción. Esta misión transformará tu agente conversacional en una potencia de automatización al equiparlo con flujos de agente.</p>
+<p>Al final de la misión, habrás creado una automatización completa de solicitud de dispositivos que captura la entrada del usuario a través de una tarjeta adaptativa, recupera datos de SharePoint, envía notificaciones a los gerentes por correo electrónico y proporciona retroalimentación fluida al usuario, todo orquestado por tu agente mediante una automatización inteligente de flujo de trabajo.</p>
+<h2 id="objetivos">🔎 Objetivos<a class="headerlink" href="#objetivos" title="Permanent link">&para;</a></h2>
+<p>En esta misión, aprenderás:</p>
+<ol>
+<li>Entender qué son los flujos de agente y cómo se diferencian de los flujos en la nube de Power Automate para automatización.</li>
+<li>Aprender las características clave que hacen que los flujos de agente sean poderosos, incluyendo acciones de IA y creación de lenguaje natural.</li>
+<li>Explorar el diseñador de flujos de agente y cómo usar expresiones para manejar datos dinámicos.</li>
+<li>Crear una automatización completa de solicitud de dispositivos que integre datos de SharePoint y notificaciones por correo electrónico.</li>
+</ol>
+<h2 id="que-es-un-flujo-de-agente">🤔 ¿Qué es un flujo de agente?<a class="headerlink" href="#que-es-un-flujo-de-agente" title="Permanent link">&para;</a></h2>
+<p>Los flujos de agente son una forma poderosa de automatizar tareas repetitivas e integrar tus aplicaciones y servicios. Piensa en ellos como flujos de trabajo estructurados, paso a paso, que tu agente puede ejecutar para automatizar tareas o conectarse con otras aplicaciones y servicios. Puedes considerarlos como mini flujos que ayudan a tu agente a hacer cosas como enviar notificaciones, actualizar registros o responder a eventos.</p>
+<p>A diferencia de los agentes autónomos que usan IA para tomar decisiones en tiempo real, los flujos de agente son <strong>flujos de trabajo deterministas</strong> - lo que significa que siguen el mismo camino cada vez, asegurando resultados consistentes y confiables.</p>
+<p>En términos simples:</p>
+<ul>
+<li>Ayudan a tu agente a <em>hacer cosas</em>, no solo a <em>decir cosas</em> a los usuarios.</li>
+<li>Son reutilizables en temas y agentes, y pueden ser activados por mensajes de usuario, eventos u otras aplicaciones y servicios.</li>
+</ul>
+<h2 id="si-pero-como-se-diferencian-de-los-flujos-en-la-nube-de-power-automate">🙋🏽 Sí, pero ¿cómo se diferencian de los flujos en la nube de Power Automate?<a class="headerlink" href="#si-pero-como-se-diferencian-de-los-flujos-en-la-nube-de-power-automate" title="Permanent link">&para;</a></h2>
+<p>Tanto los flujos de agente como los flujos en la nube de Power Automate ayudan a automatizar tareas. Están diseñados para propósitos diferentes y funcionan de maneras distintas.</p>
+<h3 id="flujos-de-agente-en-copilot-studio">🤖 Flujos de agente en Copilot Studio<a class="headerlink" href="#flujos-de-agente-en-copilot-studio" title="Permanent link">&para;</a></h3>
+<p><strong>Para qué sirven:</strong></p>
+<ul>
+<li>Diseñados para agentes conversacionales y autónomos (mediante instrucciones de agente) en Copilot Studio.</li>
+<li>Enfocados en automatización inteligente impulsada por IA que interactúa con sistemas empresariales.</li>
+</ul>
+<p><strong>Por qué son útiles:</strong></p>
+<ul>
+<li>Fáciles de construir y gestionar directamente en Copilot Studio.</li>
+<li>Ideales para automatizar tareas que ocurren <em>durante la conversación</em> con los usuarios, como enviar una solicitud de permiso.</li>
+<li>No necesitas una licencia separada de Power Automate, ya que la facturación se basa en el uso dentro de Copilot Studio. Esto puede ahorrar tiempo y costos para equipos empresariales.</li>
+</ul>
+<p><strong>Limitaciones:</strong></p>
+<ul>
+<li>No puedes compartirlos, copiarlos ni asignar co-propietarios.</li>
+<li>Los flujos de agente solo son visibles y utilizables dentro de Copilot Studio.</li>
+<li>Actualmente, los disparadores de eventos para agentes pueden ser editados en el portal de creación de Power Automate.</li>
+</ul>
+<h3 id="flujos-en-la-nube-de-power-automate">☁️ Flujos en la nube de Power Automate<a class="headerlink" href="#flujos-en-la-nube-de-power-automate" title="Permanent link">&para;</a></h3>
+<p><strong>Para qué sirven:</strong></p>
+<ul>
+<li>Diseñados para automatización de propósito general en muchas aplicaciones y servicios.</li>
+<li>Pueden funcionar de manera independiente o junto con flujos de agente.</li>
+</ul>
+<p><strong>Por qué son útiles:</strong></p>
+<ul>
+<li>Ofrecen una amplia gama de conectores.</li>
+<li>Ideales para automatizar procesos fuera de los agentes.</li>
+<li>Pueden ser compartidos, reutilizados y gestionados entre equipos.</li>
+</ul>
+<p><strong>Requisitos:</strong></p>
+<ul>
+<li>Necesitas una licencia de Power Automate para utilizarlos.</li>
+</ul>
+<h3 id="resumen">📗 Resumen<a class="headerlink" href="#resumen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Usa esto</th>
+<th style="text-align: left;">Cuando quieras</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Flujos de agente</td>
+<td style="text-align: left;">Automatizar tareas dentro de un agente, usar IA y mantener todo en Copilot Studio</td>
+</tr>
+<tr>
+<td style="text-align: left;">Flujos en la nube de Power Automate</td>
+<td style="text-align: left;">Automatizar entre aplicaciones y servicios, o construir flujos fuera de los agentes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="por-que-usar-flujos-de-agente">👍🏻 Por qué usar flujos de agente<a class="headerlink" href="#por-que-usar-flujos-de-agente" title="Permanent link">&para;</a></h2>
+<p>Los flujos de agente siempre siguen un camino fijo: hacen lo mismo cada vez que reciben la misma entrada.</p>
+<p>Esto los hace:</p>
+<ul>
+<li><strong>Confiables</strong> - puedes confiar en que se comportarán de la misma manera cada vez.</li>
+<li><strong>Predecibles</strong> - sabes qué resultado esperar cuando el flujo se ejecuta.</li>
+<li><strong>Basados en reglas</strong> - siguen pasos que tú defines.</li>
+</ul>
+<p>Otros beneficios son:</p>
+<ul>
+<li><strong>Automatización</strong> - permite que tu agente maneje tareas repetitivas como enviar formularios o notificaciones.</li>
+<li><strong>Conectados</strong> - se integran con más de 1400 conectores como ServiceNow, SharePoint, Salesforce. También puedes construir tu propio conector personalizado.</li>
+<li><strong>Altamente integrados</strong> - los flujos de agente son parte de la lógica del agente, se activan directamente por mensajes de usuario o acciones en la conversación.</li>
+<li><strong>Escalabilidad</strong> - reutiliza flujos en múltiples agentes o escenarios.</li>
+<li><strong>Sin código o con poco código</strong> - puedes construir flujos usando lenguaje natural o un diseñador visual.</li>
+<li><strong>Plataforma todo-en-uno</strong> - puedes diseñar, probar y desplegar flujos de agente en un solo lugar - Copilot Studio. No necesitas cambiar entre plataformas.</li>
+</ul>
+<h2 id="como-mejoran-los-flujos-de-agente-a-tu-agente">🏄🏻‍♂️ ¿Cómo mejoran los flujos de agente a tu agente?<a class="headerlink" href="#como-mejoran-los-flujos-de-agente-a-tu-agente" title="Permanent link">&para;</a></h2>
+<p>Los flujos de agente amplían lo que tu agente puede hacer más allá de "chatear" con los usuarios. Le permiten tomar acción e interactuar con sistemas.</p>
+<p>Supongamos que trabajas en un departamento de finanzas y recibes muchas facturas de proveedores. Normalmente, alguien tiene que leer cada factura, extraer los detalles importantes - el monto, la fecha, quién la envió, y verificar si todo coincide con tus registros. Luego enviarla a la persona adecuada para su aprobación. Esto lleva tiempo y esfuerzo.</p>
+<p>Con los flujos de agente en Copilot Studio, puedes automatizar este proceso. Tan pronto como llega la factura, el agente:</p>
+<ol>
+<li>Lee el documento usando procesamiento inteligente de documentos para encontrar la información clave.</li>
+<li>Verifica los detalles contra tus datos empresariales para asegurarse de que todo esté correcto.</li>
+<li>La envía para aprobación a la persona adecuada.</li>
+</ol>
+<p>Esto ahorra tiempo, reduce errores y hace que todo el proceso sea mucho más fluido.</p>
+<h3 id="piensa-en-ello-de-esta-manera">Piensa en ello de esta manera<a class="headerlink" href="#piensa-en-ello-de-esta-manera" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Agentes</strong>: los tomadores de decisiones inteligentes.</li>
+<li><strong>Flujos de agente</strong>: los ejecutores confiables.</li>
+</ul>
+<h3 id="por-que-importa">Por qué importa<a class="headerlink" href="#por-que-importa" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Obtienes lo mejor de ambos mundos: automatización confiable e IA flexible.</li>
+<li>Es fácil construir y actualizar flujos a medida que cambian las necesidades de tu negocio.</li>
+<li>Puedes escalar la automatización entre equipos.</li>
+</ul>
+<h2 id="caracteristicas-clave-que-hacen-que-los-flujos-de-agente-sean-poderosos">🔌 Características clave que hacen que los flujos de agente sean poderosos<a class="headerlink" href="#caracteristicas-clave-que-hacen-que-los-flujos-de-agente-sean-poderosos" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Creación de lenguaje natural</strong></p>
+<ul>
+<li>Puedes describir lo que quieres que haga el flujo en inglés sencillo.</li>
+<li>Copilot entiende tu intención y construye el flujo por ti.</li>
+<li>No necesitas escribir código - solo explica tu idea.</li>
+</ul>
+</li>
+<li>
+<p><strong>Acciones de IA</strong></p>
+<p>Usa IA para:</p>
+<ul>
+<li>Leer y entender documentos o imágenes.</li>
+<li>Resumir contenido largo en respuestas cortas y útiles.</li>
+<li>Hacer recomendaciones o decisiones inteligentes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Acciones generativas</strong></p>
+<ul>
+<li>Permiten que el flujo se adapte en tiempo real.</li>
+<li>El agente puede planificar y ajustar pasos según la información cambiante.</li>
+</ul>
+</li>
+<li>
+<p><strong>Acciones de integración</strong></p>
+<ul>
+<li>Conecta tu flujo con otras herramientas como Outlook, Microsoft Teams, ServiceNow, SharePoint y otras aplicaciones y servicios, a través de más de 1400 conectores integrados o tu propio conector personalizado.</li>
+<li>Esto ayuda a tu agente a trabajar con las aplicaciones que tu equipo ya utiliza.</li>
+</ul>
+</li>
+<li>
+<p><strong>Intervención humana</strong></p>
+<ul>
+<li>Agrega pasos de aprobación donde una persona necesita revisar o confirmar algo.</li>
+<li><a href="https://learn.microsoft.com/microsoft-copilot-studio/flows-advanced-approvals?WT.mc_id=power-172621-ebenitez">Aprobaciones avanzadas</a> soporta recordatorios, delegación y aprobaciones en múltiples etapas.</li>
+</ul>
+</li>
+</ol>
+<h2 id="como-funcionan">⚙️ Cómo funcionan<a class="headerlink" href="#como-funcionan" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Disparador</strong></p>
+<p>Un evento inicia el flujo - como un usuario haciendo una pregunta, invocando el flujo desde un tema, un horario programado, o un evento que ocurre en otro sistema.</p>
+</li>
+<li>
+<p><strong>Acciones</strong></p>
+<p>Estos son los pasos que el agente sigue a continuación - enviar un correo electrónico, llamar a una API, actualizar un ticket en ServiceNow.</p>
+</li>
+</ol>
+<h2 id="como-crear-un-flujo-de-agente">🧶 Cómo crear un flujo de agente<a class="headerlink" href="#como-crear-un-flujo-de-agente" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Lenguaje natural</strong>: describe lo que quieres que haga el agente, y Copilot lo construye por ti.</li>
+<li><strong>Lienzo del diseñador</strong>: arrastra y suelta acciones, condiciones y bucles en el diseñador de flujos de agente para construir tu flujo de agente.</li>
+</ol>
+<h2 id="que-es-el-disenador-de-flujos-de-agente">🎨 ¿Qué es el diseñador de flujos de agente?<a class="headerlink" href="#que-es-el-disenador-de-flujos-de-agente" title="Permanent link">&para;</a></h2>
+<p>Es una herramienta visual en Copilot Studio que te ayuda a construir, editar y gestionar flujos de agente que proporcionan instrucciones paso a paso que tu agente sigue para completar tareas. Está diseñado para ser fácil de usar, incluso si eres nuevo en los flujos de agente.</p>
+<h3 id="caracteristicas-clave-del-disenador-de-flujos-de-agente">Características clave del diseñador de flujos de agente<a class="headerlink" href="#caracteristicas-clave-del-disenador-de-flujos-de-agente" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Lienzo visual</strong></p>
+<ul>
+<li>Puedes ver todo tu flujo dispuesto como un diagrama.</li>
+<li>Fácilmente haz zoom, ajusta la vista o usa un minimapa para navegar por flujos grandes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Agregar y eliminar acciones</strong></p>
+<ul>
+<li>Haz clic en el botón <em>más (+)</em> para agregar una nueva acción como enviar un mensaje o actualizar un elemento en una lista de SharePoint.</li>
+<li>Puedes buscar acciones de conectores y configurarlas a través de sus ajustes.</li>
+<li>Para eliminar una acción, haz clic en los <em>tres puntos (⋮)</em> y selecciona <em>Eliminar</em>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Verificar parámetros</strong></p>
+<ul>
+<li>Haz clic en cualquier acción para ver o editar sus ajustes llamados <em>parámetros</em>.</li>
+<li>Puedes ingresar valores manualmente o usar <em>expresiones</em> para hacerlos dinámicos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Historial de versiones</strong></p>
+<ul>
+<li>Cada vez que guardas tu flujo, se registra una versión.</li>
+<li>Puedes regresar y ver o restaurar versiones anteriores si es necesario.</li>
+</ul>
+</li>
+<li>
+<p><strong>Verificación de errores</strong></p>
+<ul>
+<li>El <em>Verificador de Flujos</em> resalta cualquier error.</li>
+<li>Todos los errores deben resolverse antes de publicar tu flujo.</li>
+</ul>
+</li>
+<li>
+<p><strong>Publicar y probar</strong></p>
+<ul>
+<li>Una vez que tu flujo esté libre de errores, publícalo para hacerlo activo.</li>
+<li>Usa la función <em>Probar</em> para ejecutar tu flujo manual o automáticamente, y verifica si funciona como se espera.</li>
+</ul>
+</li>
+</ol>
+<h3 id="por-que-usar-el-disenador-de-flujos-de-agente">Por qué usar el diseñador de flujos de agente<a class="headerlink" href="#por-que-usar-el-disenador-de-flujos-de-agente" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Visual e intuitivo</strong> - puedes construir flujos arrastrando y haciendo clic.</li>
+<li><strong>Seguro para experimentar</strong> - el historial de versiones te permite deshacer cambios.</li>
+<li><strong>Pruebas integradas</strong> - te ayuda a asegurarte de que todo funcione antes de activarlo.</li>
+</ul>
+<h2 id="mencionaste-expresiones-que-son-las-expresiones">🔤 Mencionaste <em>expresiones</em> - ¿qué son las expresiones?<a class="headerlink" href="#mencionaste-expresiones-que-son-las-expresiones" title="Permanent link">&para;</a></h2>
+<p>Las expresiones son pequeñas fórmulas o comandos que ayudan a tu flujo de agente a trabajar con datos. Las usas para calcular valores, dar formato a texto, tomar decisiones o extraer información específica de las entradas.</p>
+<h3 id="por-que-usar-expresiones">Por qué usar expresiones<a class="headerlink" href="#por-que-usar-expresiones" title="Permanent link">&para;</a></h3>
+<p>Las expresiones te permiten:</p>
+<ul>
+<li><strong>Personalizar cómo se manejan los datos</strong> - combinar nombres, dar formato a fechas.</li>
+<li><strong>Tomar decisiones</strong> - si un valor es mayor que 10, hacer algo.</li>
+<li><strong>Transformar datos</strong> - cambiar texto a minúsculas, extraer parte de una cadena.</li>
+<li><strong>Automatizar lógica</strong> - sin escribir código completo.</li>
+</ul>
+<h3 id="como-se-ven-las-expresiones">¿Cómo se ven las expresiones?<a class="headerlink" href="#como-se-ven-las-expresiones" title="Permanent link">&para;</a></h3>
+<p>Las expresiones usan funciones. Voy a tomar prestada una explicación de lo que son las funciones del ex-MVP de Microsoft, Jerry Weinstock.</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>Las funciones son lógica incorporada para transformar tus datos ya sea mediante operaciones simples o complejas en tu expresión.</p>
+</div>
+<p>Las funciones te permiten construir expresiones sin necesidad de escribir código.</p>
+<p>La forma en que me gusta describirlo es que una función en los flujos de agente es similar a las funciones de Excel. Puedes realizar una operación en los datos para transformarlos en un resultado deseado. Al construir tu fórmula en Excel seleccionas tu valor de entrada desde las celdas en una tabla o un rango, y luego aplicas funciones para manipular la salida de datos. Un ejemplo es usar la función <code>COUNT</code> para calcular el número de celdas que contienen números de un rango.</p>
+<p>En los flujos de agente, en lugar de referenciar datos desde celdas en una tabla, estás referenciando salidas de datos desde el disparador o acciones al construir tus expresiones. Continuando con el ejemplo anterior, usa la función <code>length</code> para obtener el número de elementos devueltos desde la acción del conector <em>Obtener elementos</em> de SharePoint.</p>
+<h3 id="por-que-importan-las-funciones">Por qué importan las funciones<a class="headerlink" href="#por-que-importan-las-funciones" title="Permanent link">&para;</a></h3>
+<p>Usar funciones hace que tus flujos de agente sean:</p>
+<ul>
+<li><strong>Más inteligentes</strong> - pueden reaccionar a diferentes entradas o condiciones.</li>
+<li><strong>Flexibles</strong> - puedes personalizar cómo se manejan los datos.</li>
+<li><strong>Eficientes</strong> - evitas pasos manuales al automatizar lógica.</li>
+</ul>
+<h3 id="funciones-mas-utiles">Funciones más útiles<a class="headerlink" href="#funciones-mas-utiles" title="Permanent link">&para;</a></h3>
+<p>Las siguientes son funciones comunes usadas en los flujos de agente. Para la lista completa de funciones, dirígete a la <a href="https://learn.microsoft.com/azure/logic-apps/workflow-definition-language-functions-reference?WT.mc_id=power-172621-ebenitez">guía de referencia</a>.</p>
+<h4 id="texto">🔡 Texto<a class="headerlink" href="#texto" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>concat()</code> - Une dos o más fragmentos de texto.</p>
+<ul>
+<li>Ejemplo: <code>concat('Hola ', firstName)</code> → “Hola Juan”</li>
+</ul>
+</li>
+<li>
+<p><code>toLower()</code> / <code>toUpper()</code> - Cambia texto a minúsculas o mayúsculas.</p>
+<ul>
+<li>Útil para estandarizar entradas.</li>
+</ul>
+</li>
+<li>
+<p><code>substring()</code> - Extrae parte de una cadena.</p>
+<ul>
+<li>Ejemplo: Obtén las primeras 3 letras de un nombre.</li>
+</ul>
+</li>
+<li>
+<p><code>trim()</code> - Elimina espacios al principio y al final del texto.</p>
+</li>
+</ul>
+<h4 id="matematicas-y-numeros">🔢 Matemáticas y números<a class="headerlink" href="#matematicas-y-numeros" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>add()</code>, <code>sub()</code>, <code>mul()</code>, <code>div()</code> - Operaciones matemáticas básicas.<ul>
+<li>Ejemplo: <code>add(5, 3)</code> - el resultado es 8</li>
+</ul>
+</li>
+</ul>
+<h4 id="fecha-y-hora">📅 Fecha y hora<a class="headerlink" href="#fecha-y-hora" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>utcNow()</code> - Obtiene la fecha y hora actual en UTC.</p>
+<ul>
+<li>Ideal para marcas de tiempo.</li>
+</ul>
+</li>
+<li>
+<p><code>addDays()</code>, <code>addHours()</code> - Agrega tiempo a una fecha.</p>
+</li>
+<li>
+<p>Ejemplo: <code>addDays(utcNow(), 7)</code> genera una fecha 7 días a partir de ahora.</p>
+</li>
+<li>
+<p><code>formatDateTime()</code> - Formatea una fecha en una cadena legible.</p>
+<ul>
+<li>Ejemplo: Lunes, 7 de julio de 2025</li>
+</ul>
+</li>
+</ul>
+<h4 id="logica">✅ Lógica<a class="headerlink" href="#logica" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>if()</code> - Ejecuta un valor si es verdadero, otro si es falso.</p>
+<ul>
+<li>Ejemplo: <code>if(score &gt; 50, 'Aprobado', 'Reprobado')</code></li>
+</ul>
+</li>
+<li>
+<p><code>equals()</code> - Verifica si dos valores son iguales.</p>
+</li>
+<li>
+<p><code>and()</code>, <code>or()</code>, <code>not()</code> - Combina múltiples condiciones.</p>
+</li>
+</ul>
+<h4 id="otras-funciones-utiles">🪣 Otras funciones útiles<a class="headerlink" href="#otras-funciones-utiles" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>coalesce()</code> - Devuelve el primer valor no vacío.</p>
+<ul>
+<li>Útil para valores predeterminados o de respaldo.</li>
+</ul>
+</li>
+<li>
+<p><code>guid()</code> - Genera un ID único.</p>
+<ul>
+<li>Útil para seguimiento o registro.</li>
+</ul>
+</li>
+<li>
+<p><code>length()</code> - Cuenta cuántos caracteres o elementos hay en una cadena o arreglo.</p>
+</li>
+</ul>
+<h2 id="mejores-practicas">⭐ Mejores prácticas<a class="headerlink" href="#mejores-practicas" title="Permanent link">&para;</a></h2>
+<p>Aquí tienes algunas mejores prácticas para construir flujos de agentes en Copilot Studio.</p>
+<ol>
+<li>
+<p><strong>Comienza simple y construye gradualmente</strong></p>
+<ul>
+<li>Empieza con una tarea pequeña y clara, como enviar un mensaje.</li>
+<li>Agrega más pasos después de probar lo básico de tu automatización.</li>
+</ul>
+</li>
+<li>
+<p><strong>Usa nombres de acciones claros y descriptivos</strong></p>
+<ul>
+<li>Etiqueta cada paso claramente para que tú y tu equipo entiendan lo que hace.</li>
+<li>Ejemplo: en lugar del nombre predeterminado "Actualizar elemento" para la acción del conector de SharePoint, renómbralo según lo que está actualizando, como "Actualizar estado del dispositivo".</li>
+</ul>
+</li>
+<li>
+<p><strong>Verifica errores antes de publicar</strong></p>
+<ul>
+<li>Usa el <strong>verificador de flujo</strong> para encontrar y corregir problemas.</li>
+<li>No puedes publicar flujos si hay errores, así que intenta resolverlos cuando ocurran.</li>
+</ul>
+</li>
+<li>
+<p><strong>Prueba tu flujo exhaustivamente</strong></p>
+<ul>
+<li>Solo porque se guarde y publique no significa que funcione como se espera.</li>
+<li>Usa la función <em>Probar</em> para ejecutar tu flujo manual o automáticamente y verifica los resultados.</li>
+</ul>
+</li>
+<li>
+<p><strong>Usa el Historial de Versiones</strong></p>
+<ul>
+<li>Guarda tu flujo con frecuencia para poder regresar a versiones anteriores si es necesario.</li>
+<li>Puedes ver y restaurar versiones previas usando el panel de <em>Historial de Versiones</em>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Usa parámetros y expresiones sabiamente</strong></p>
+<ul>
+<li>Al configurar acciones, usa parámetros para hacer tu flujo dinámico.</li>
+<li>Puedes ingresar valores manualmente o usar expresiones para calcularlos, o combinarlos con valores de acciones anteriores usando el selector de <em>contenido dinámico</em>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Elimina acciones no utilizadas</strong></p>
+<ul>
+<li>Si agregas una acción y luego decides que no la necesitas, elimínala para mantener tu flujo limpio.</li>
+</ul>
+</li>
+</ol>
+<h2 id="laboratorio-09-agregar-un-flujo-de-agente-para-automatizacion-y-mejorar-las-capacidades-del-tema">🧪 Laboratorio 09 - Agregar un flujo de agente para automatización y mejorar las capacidades del tema<a class="headerlink" href="#laboratorio-09-agregar-un-flujo-de-agente-para-automatizacion-y-mejorar-las-capacidades-del-tema" title="Permanent link">&para;</a></h2>
+<p>Ahora aprenderemos cómo mejorar nuestro tema con tarjetas adaptativas y utilizando funcionalidades avanzadas de temas y nodos.</p>
+<ul>
+<li><a href="../../../../../docs/recruit/09-add-an-agent-flow">9.1 Crear un flujo de agente</a></li>
+<li><a href="../../../../../docs/recruit/09-add-an-agent-flow">9.2 Agregar flujo de agente al tema</a></li>
+<li><a href="../../../../../docs/recruit/09-add-an-agent-flow">9.3 Actualizar el tema Solicitar dispositivo con varios nodos para una mejor experiencia de usuario</a></li>
+<li><a href="../../../../../docs/recruit/09-add-an-agent-flow">9.4 Probar el agente usando varios escenarios</a></li>
+</ul>
+<h3 id="caso-de-uso">✨ Caso de uso<a class="headerlink" href="#caso-de-uso" title="Permanent link">&para;</a></h3>
+<p><strong>Como</strong> gerente de un empleado</p>
+<p><strong>Quiero</strong> recibir solicitudes de dispositivos</p>
+<p><strong>Para que</strong> pueda revisar el dispositivo solicitado por el empleado.</p>
+<p>¡Comencemos!</p>
+<h3 id="requisitos-previos">Requisitos previos<a class="headerlink" href="#requisitos-previos" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Lista de SharePoint</strong></p>
+<p>Usaremos la lista de <strong>Dispositivos</strong> de SharePoint creada en <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Lección 00 - Configuración del curso - Paso 3: Crear un nuevo sitio de SharePoint</a>.</p>
+<p>Si no has configurado la lista de <strong>Dispositivos</strong> de SharePoint, regresa a <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Lección 00 - Configuración del curso - Paso 3: Crear un nuevo sitio de SharePoint</a>.</p>
+</li>
+<li>
+<p><strong>Agente de soporte técnico de Contoso</strong></p>
+<p>Usaremos el mismo agente creado previamente en <a href="../06-create-agent-from-conversation/">Lección 06 - Crear un agente personalizado usando lenguaje natural con Copilot y conectándolo con tus datos</a>.</p>
+</li>
+</ol>
+<h3 id="91-crear-un-flujo-de-agente">9.1 Crear un flujo de agente<a class="headerlink" href="#91-crear-un-flujo-de-agente" title="Permanent link">&para;</a></h3>
+<p>En este ejercicio, crearemos un flujo de agente que recupere el elemento de SharePoint del dispositivo seleccionado y envíe un correo electrónico a un gerente con los detalles del dispositivo.</p>
+<ol>
+<li>
+<p>En el tema <strong>Solicitar dispositivo</strong>, desplázate hacia abajo hasta el nodo <strong>Preguntar con tarjeta adaptativa</strong> y agrega un nuevo nodo. Selecciona <strong>Agregar una herramienta</strong> y en la pestaña <strong>Herramientas básicas</strong> del panel emergente, selecciona <strong>Nuevo flujo de agente</strong>.</p>
+<p><img alt="Agregar nuevo flujo de agente" src="../../../../../translated_images/9.1_01_AddNewAgentFlow.2b9078604a054d1f022f9c73adaf10fe430e81875ec8717a7f70ef7b05f11c15.es.png" /></p>
+</li>
+<li>
+<p>El <strong>Diseñador de flujos de agente</strong> se cargará con un disparador y una acción.</p>
+<ul>
+<li>
+<p><strong>Disparador</strong> - Cuando un agente llama al flujo</p>
+<ul>
+<li>Esto activará un flujo desde un agente de Copilot Studio.</li>
+</ul>
+</li>
+<li>
+<p><strong>Acción</strong> - Responder al agente</p>
+<ul>
+<li>Esto envía una respuesta que puede contener valores de salida de vuelta al agente de Copilot Studio.</li>
+</ul>
+</li>
+</ul>
+<p>Selecciona el disparador.</p>
+<p><img alt="Seleccionar el disparador" src="../../../../../translated_images/9.1_02_SelectTrigger.92dc20442add764c8aa4b7f737f28416a3223e4471562462ed6dcba2dc7c7936.es.png" /></p>
+</li>
+<li>
+<p>A continuación, agregaremos varios insumos para el flujo de agente.</p>
+<ul>
+<li>
+<p><code>DeviceSharePointId</code> - esto almacenará el valor, ID, del elemento de SharePoint. Este valor de ID es una salida del nodo Preguntar con tarjeta adaptativa donde el usuario seleccionó el dispositivo.</p>
+</li>
+<li>
+<p><code>User</code> - este será el nombre del usuario que provendrá de una variable del sistema del agente.</p>
+</li>
+<li>
+<p><code>AdditionalComments</code> - este será el comentario ingresado por el usuario, que es una salida del nodo Preguntar con tarjeta adaptativa.</p>
+</li>
+</ul>
+<p>Primero agregaremos el <code>DeviceSharePointId</code> como un insumo para nuestro disparador. Selecciona <strong>+ Agregar un insumo</strong>.</p>
+<p><img alt="Agregar un insumo" src="../../../../../translated_images/9.1_03_AddInput.fd1e0a99ecb5e20f3a518cb23fc0d22c6db1435c5ffb2e183fce3b8a056287bb.es.png" /></p>
+</li>
+<li>
+<p>Para el tipo de insumo del usuario, selecciona <strong>Texto</strong>.</p>
+<p><img alt="Seleccionar Texto" src="../../../../../translated_images/9.1_04_SelectText.47ca776822ec5a6c1339c012d51e0eb6eac6bf8315d4ac6f25498b10ada16df9.es.png" /></p>
+</li>
+<li>
+<p>Para el nombre del insumo, ingresa lo siguiente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>DeviceSharePointId
+</span></code></pre></div>
+<p><img alt="Insumo DeviceSharePointId" src="../../../../../translated_images/9.1_05_DeviceSharePointIdInput.caf77f8eb60a1b8649ea8b0abf05dfce9fa4bef9d9c465cd8906395e5b44842e.es.png" /></p>
+</li>
+<li>
+<p>Ahora agregaremos el segundo insumo, <code>User</code>. Repite los mismos pasos, selecciona <strong>+ Agregar un insumo</strong> y selecciona <strong>Texto</strong>.</p>
+<p><img alt="Agregar un insumo" src="../../../../../translated_images/9.1_06_AddInput.3ca4bff9991b6e8a331bd909ff58038387696ce7b6ee7a932a88316aff41bc57.es.png" /></p>
+</li>
+<li>
+<p>Para el nombre del insumo, ingresa lo siguiente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>User
+</span></code></pre></div>
+<p><img alt="Insumo User" src="../../../../../translated_images/9.1_07_UserInput.16b2405f2d5744ea14a6a67b69539ba24719aaf642ddfc2b281e784d74d8c1ea.es.png" /></p>
+</li>
+<li>
+<p>Ahora agregaremos el tercer insumo, <code>AdditionalComments</code>. Repite los mismos pasos, selecciona <strong>+ Agregar un insumo</strong> y selecciona <strong>Texto</strong>.</p>
+<p><img alt="Agregar un insumo" src="../../../../../translated_images/9.1_08_AddInput.4685bb77618e6d9cfca7a42a0945d10f59825b1ca42de372dcf07c9170451680.es.png" /></p>
+</li>
+<li>
+<p>Para el nombre del insumo, ingresa lo siguiente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>AdditionalComments
+</span></code></pre></div>
+<p><img alt="Insumo AdditionalComments" src="../../../../../translated_images/9.1_09_AdditionalComments.a4587b59b85450ca0566615c9473132dd6447e6c7513e4926942655aa0e80195.es.png" /></p>
+</li>
+<li>
+<p>Para el insumo <code>AdditionalComments</code>, lo actualizaremos para hacerlo opcional. Selecciona el <strong>icono de elipsis (...)</strong> y selecciona <strong>Hacer que el campo sea opcional</strong>.</p>
+<p><img alt="Hacer que el campo sea opcional" src="../../../../../translated_images/9.1_10_Optional.753bd03817c2eb37bb44a7bfd7d29314aa7109cde02e3f619c01c42bc9170b71.es.png" /></p>
+</li>
+<li>
+<p>¡Buen trabajo! El disparador ahora está configurado, continuemos. Selecciona el <strong>icono más +</strong> debajo del disparador para insertar una nueva acción.</p>
+<p><img alt="Agregar acción" src="../../../../../translated_images/9.1_11_AddAction.86c14acd1ce22e99b7244e0001f0039362ff6ac3efafe03956788aaa31e705af.es.png" /></p>
+</li>
+<li>
+<p>Aparecerá el <strong>Panel de acciones</strong> donde puedes ver acciones de más de 1400 conectores integrados a servicios de Microsoft y terceros. En el <strong>campo de búsqueda</strong> ingresa lo siguiente,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Get item
+</span></code></pre></div>
+<p>Se mostrará una lista de acciones en los resultados de búsqueda. Selecciona la acción <strong>Obtener elemento</strong> del conector <strong>SharePoint</strong>.</p>
+<p><img alt="Acción Obtener elemento" src="../../../../../translated_images/9.1_12_AddGetItemAction.434cdcb822e1f72993fc4a0c0ad753e1220456f9dab8fc307d42f5711071d45b.es.png" /></p>
+</li>
+<li>
+<p>Ahora podemos comenzar a configurar la acción <strong>Obtener elemento</strong>.</p>
+<p>Selecciona el <strong>icono de elipsis (...)</strong> en la acción <strong>Obtener elemento</strong>.</p>
+<p><img alt="Seleccionar elipsis" src="../../../../../translated_images/9.1_13_SelectEllipsis.88bf304067f3103825f183f8962634af831460541290533e5670f4c014a97c46.es.png" /></p>
+</li>
+<li>
+<p>Selecciona <strong>Renombrar</strong>.</p>
+<p><img alt="Seleccionar Renombrar" src="../../../../../translated_images/9.1_14_SelectRename.74d99c883418b7dbf58758304976cac1d0f2afd30e4cd1992830f00775a46b18.es.png" /></p>
+</li>
+<li>
+<p>Renombra la acción como,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Get Device
+</span></code></pre></div>
+<p><img alt="Renombrar acción" src="../../../../../translated_images/9.1_15_RenameAction.ff64b79f6e6603ae89f272f91d84ff4432c04ba103c401a2808a767e3ceb5617.es.png" /></p>
+</li>
+<li>
+<p>En el campo <strong>Dirección del sitio</strong>, selecciona la <strong>Dirección del sitio</strong> del sitio de SharePoint Contoso IT creado en <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Lección 00 - Configuración del curso - Paso 3: Crear un nuevo sitio de SharePoint</a>.</p>
+<p>En el campo <strong>Nombre de la lista</strong>, selecciona la lista de SharePoint <strong>Dispositivos</strong>.</p>
+<p><img alt="Parámetros de entrada" src="../../../../../translated_images/9.1_16_SharePointSiteAndListParameters.af6e0b112eb4bfb210f9259da02b459097a06307afa6ca269cb33aa9ecc1c1e4.es.png" /></p>
+</li>
+<li>
+<p>En el campo <strong>Id</strong>, selecciona el <strong>icono de rayo</strong> o <strong>icono fx</strong> a la derecha.</p>
+<p><img alt="Selector de contenido dinámico" src="../../../../../translated_images/9.1_17_InsertExpressionIcon.6e250bb84e7b8884de7b2052005f7ff3cd95f2c28671d2da7965001b3f621902.es.png" /></p>
+</li>
+<li>
+<p>En la pestaña <strong>Contenido dinámico</strong> del panel emergente, ingresa lo siguiente,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sharepoint
+</span></code></pre></div>
+<p>Los resultados de búsqueda mostrarán los parámetros de entrada que coinciden con el valor buscado. Selecciona el parámetro <strong>DeviceSharePointId</strong> del disparador.</p>
+<p>Luego, selecciona <strong>Agregar</strong> para agregar el insumo de contenido dinámico en el parámetro <strong>Id</strong> de la acción.</p>
+<p><img alt="Seleccionar insumo DeviceSharePointId" src="../../../../../translated_images/9.1_18_DeviceSharePointId.b9be8e7c3c6b0ab710a8f662e62a0ec0133a530f6877b6cea3c48acc8022fec5.es.png" /></p>
+</li>
+<li>
+<p>El insumo de contenido dinámico del disparador ahora está referenciado en el parámetro <strong>Id</strong> de la acción. Vamos a actualizar uno de los parámetros avanzados a continuación. Selecciona <strong>Mostrar todo</strong> para ver los parámetros avanzados.</p>
+<p><img alt="Ver parámetros avanzados" src="../../../../../translated_images/9.1_19_AdvancedParameters.4bb8e0c11e7864625ad6c30ab1b9021d367cd77374c56985df7b3d43845a1883.es.png" /></p>
+</li>
+<li>
+<p>El parámetro <strong>Limitar columnas por vista</strong> se mostrará y, por defecto, está configurado en <strong>Usar todas las columnas (No limitar)</strong>. Actualizaremos este valor a una vista para limitar las columnas devueltas en la respuesta de la acción. Selecciona el parámetro <strong>Limitar columnas por vista</strong> para ver la lista de vistas.</p>
+<p><img alt="Seleccionar parámetro" src="../../../../../translated_images/9.1_20_LimitColumnsByView.4d30f532f1e1033323d39df5c9b8e803788ea785ed58de2efca2faa5df4b26fc.es.png" /></p>
+</li>
+<li>
+<p>Selecciona la vista <strong>Todos los elementos</strong>.</p>
+<p><img alt="Seleccionar vista Todos los elementos" src="../../../../../translated_images/9.1_21_SelectView.d180e83d5e62f5fb6994a7071d5e6ce8f88143d8cc833cb55b208c6fee41bc02.es.png" /></p>
+</li>
+<li>
+<p>Selecciona el <strong>icono más +</strong> debajo de la acción <em>Obtener dispositivo</em> para insertar una nueva acción.</p>
+<p><img alt="Agregar nueva acción" src="../../../../../translated_images/9.1_22_AddAnAction.904b79142347fe927168036ade55d842fa088deef53710944272c681421e0e84.es.png" /></p>
+</li>
+<li>
+<p>En el campo de búsqueda ingresa lo siguiente,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>send an email
+</span></code></pre></div>
+<p>Se mostrará una lista de acciones en los resultados de búsqueda. Selecciona la acción <strong>Enviar un correo electrónico (V2)</strong> del conector <strong>Office 365 Outlook</strong>.</p>
+<p><img alt="Acción Enviar un correo electrónico" src="../../../../../translated_images/9.1_23_SendAnEmail.f1019365131658b0e71b5b58b57d7d8b3f3a0c670ddb3cca0838bf0b4f8cd354.es.png" /></p>
+</li>
+<li>
+<p>A continuación, necesitamos crear una conexión para la acción del conector. Selecciona <strong>Iniciar sesión</strong>.</p>
+<p><img alt="Crear conexión" src="../../../../../translated_images/9.1_24_CreateConnection.9e968ad4de9d13d81e95779c4fa60809fd40de5f65dbd014f1dc39663c935806.es.png" /></p>
+</li>
+<li>
+<p>Selecciona tu cuenta de usuario iniciada.</p>
+<p><img alt="Seleccionar cuenta de usuario" src="../../../../../translated_images/9.1_25_SelectUserAccount.f3c96ac1a377c4b42a6301ba38c21469eb7bd3f48633f04200f1610902f8bdbe.es.png" /></p>
+</li>
+<li>
+<p>Selecciona <strong>Permitir acceso</strong>. Ahora se ha creado una conexión.</p>
+<p><img alt="Seleccionar permitir acceso" src="../../../../../translated_images/9.1_26_AllowAccess.1abcaea31b9846279cafafd7160baea6bec60cdfac8224df7082ceee3ef22a26.es.png" /></p>
+</li>
+<li>
+<p>Renombra la acción como lo siguiente,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Send an email to manager
+</span></code></pre></div>
+<p>A continuación, definamos los parámetros de entrada de nuestra acción.</p>
+<p>Para el parámetro de entrada <strong>Para</strong>, selecciona tu dirección de correo electrónico. Normalmente, esto sería la dirección de tu gerente o usaríamos otra acción que obtenga la dirección de tu gerente según tu perfil de Entra ID, pero para el propósito de esta lección, selecciona tu propia dirección.</p>
+<p>Para el parámetro de entrada <strong>Asunto</strong>, ingresa lo siguiente,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Request type: new device
+</span></code></pre></div>
+<p>Para el parámetro de entrada <strong>Cuerpo</strong>, ingresa lo siguiente,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Hi,
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>New device requested from
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Manufacturer:
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>Model:
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>Link to item in SharePoint
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>Additional comments from:
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>This is an automated email from Contoso Helpdesk Copilot
+</span></code></pre></div>
+<p><img alt="Renombrar acción y configurar entradas" src="../../../../../translated_images/9.1_27_RenameAndConfigureParameters.c3d29a3481fb5c0240cca85db4119387e6b750546ed12e2af4a9ac62d7454f89.es.png" /></p>
+</li>
+<li>
+<p>A continuación, actualizaremos el parámetro de entrada <strong>Cuerpo</strong> con referencias al contenido dinámico del <strong>disparador</strong> o la acción <strong>Obtener elemento</strong>. Ingresa un espacio después de la segunda línea, ya que insertaremos el nombre del usuario desde el insumo del disparador, <strong>User</strong>.</p>
+<p>Selecciona el <strong>icono de rayo</strong> o <strong>icono fx</strong> a la derecha.</p>
+<p><img alt="Agregar insumo User como contenido dinámico" src="../../../../../translated_images/9.1_28_AddUserInput.f38d3df648faef75f1985bdcc23db16e197ccb1ddc015210c43bbb2569fcf654.es.png" /></p>
+</li>
+<li>
+<p>En la pestaña <strong>Contenido dinámico</strong> del panel emergente, selecciona el insumo <strong>User</strong> del disparador.</p>
+<p>Selecciona <strong>Agregar</strong> para agregar el insumo de contenido dinámico <strong>User</strong> en el parámetro <strong>Cuerpo</strong> de la acción.</p>
+<p><img alt="Seleccionar insumo User" src="../../../../../translated_images/9.1_29_SelectUserInput.4efc79f52d74fa7ae13132ea13f7d51b3f4aab6413afc41a8354c5e59852b9fc.es.png" />
+1. El contenido dinámico del disparador ahora se referencia en el parámetro <strong>Body</strong> de la acción. Repetiremos lo mismo para las líneas restantes en el cuerpo del mensaje de correo electrónico.</p>
+<p><img alt="Entrada del usuario añadida" src="../../../../../translated_images/9.1_30_UserInputAdded.905ec0489e4f1bbe7cc071826050834aa1e5acf53f8a65ad59532ea13b81c607.es.png" /></p>
+</li>
+<li>
+<p>Haz clic en el espacio junto a <code>Manufacturer:</code>. Selecciona el <strong>icono de rayo</strong> o el <strong>icono fx</strong> a la derecha.</p>
+<p>En la pestaña <strong>Dynamic content</strong> del panel emergente, introduce lo siguiente en el campo de búsqueda,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>manufacturer
+</span></code></pre></div>
+<p>Selecciona la entrada <strong>Manufacturer value</strong> del disparador y selecciona <strong>Add</strong>.</p>
+<p><img alt="Añadir entrada Manufacturer value como contenido dinámico" src="../../../../../translated_images/9.1_31_ManufacturerValueAdded.db2cf35a35a20590d80d7f0191d771a045bf55e40ce98982d0e099588e260712.es.png" /></p>
+</li>
+<li>
+<p>Haz clic en el espacio junto a <code>Model:</code>. Selecciona el <strong>icono de rayo</strong> o el <strong>icono fx</strong> a la derecha.</p>
+<p>En la pestaña <strong>Dynamic content</strong> del panel emergente, introduce lo siguiente en el campo de búsqueda,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>model
+</span></code></pre></div>
+<p>Selecciona la entrada <strong>Model</strong> de la acción <strong>Get item</strong> y selecciona <strong>Add</strong>.</p>
+<p><img alt="Añadir entrada Model como contenido dinámico" src="../../../../../translated_images/9.1_32_ModelAdded.ff9d858648ddb85fe70eaaafa6e23d0560500e7327ccb29ee56ecac0d8d36cab.es.png" /></p>
+</li>
+<li>
+<p>Para el texto <code>Link to item in SharePoint</code>, actualizaremos esto para que sea un hipervínculo en el cuerpo del mensaje de correo electrónico. Haz clic al principio de la línea y selecciona el <strong>icono de rayo</strong> o el <strong>icono fx</strong> a la derecha.</p>
+<p><img alt="Añadir contenido dinámico" src="../../../../../translated_images/9.1_33_AddDynamicContent.c662d682377af82adc52de18e05baf9b6aa5a972882dcf6274f3979f14641627.es.png" /></p>
+</li>
+<li>
+<p>Haz clic después de la etiqueta HTML de anclaje y selecciona el <strong>icono de rayo</strong> o el <strong>icono fx</strong> a la derecha.</p>
+<p>En la pestaña <strong>Dynamic content</strong> del panel emergente, introduce lo siguiente en el campo de búsqueda,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>link to item
+</span></code></pre></div>
+<p>Selecciona la entrada <strong>Link to item</strong> de la acción <strong>Get item</strong> y selecciona <strong>Add</strong>.</p>
+<p><img alt="Añadir Link to item como contenido dinámico" src="../../../../../translated_images/9.1_34_AddLinkToItem.6827bd3bad484f7382d060435bb0ef45e9bb1c3ad4774529559bb4c5f9bbca8c.es.png" /></p>
+</li>
+<li>
+<p>Necesitamos cambiar al editor HTML seleccionando el icono <strong>&lt;/&gt;</strong>.</p>
+<p><img alt="Añadir entrada del usuario" src="../../../../../translated_images/9.1_35_ToggleCodeView.ae3a9caf213f2c6366487e10092ad1fad3494f110936219258d842c23e7f46d9.es.png" /></p>
+</li>
+<li>
+<p>El editor HTML ahora está habilitado. Haz clic antes del texto <code>Link to item in SharePoint</code>, añade una etiqueta HTML de anclaje para crear un hipervínculo. Copia y pega lo siguiente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>&lt;a href=&quot;
+</span></code></pre></div>
+<p><img alt="Etiqueta HTML" src="../../../../../translated_images/9.1_36_AddHTMLTag.146220ae5c33eaf9915c393c37d62b9d4b258413e9f4dc42a1ab005437669443.es.png" /></p>
+</li>
+<li>
+<p>La entrada de contenido dinámico de <strong>Link to item</strong> ahora se referencia en el parámetro <strong>Body</strong>. Haz clic después de la entrada <strong>Link to item</strong>, copia y pega lo siguiente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>&quot;&gt;
+</span></code></pre></div>
+<p><img alt="Etiqueta HTML" src="../../../../../translated_images/9.1_37_AddHTMLTag.48f73b302f6a84bb6a51e0666fd30baf1f8d9d906947d44dc4095ededed18a2d.es.png" /></p>
+</li>
+<li>
+<p>Haz clic después del texto <code>Link to item in SharePoint</code>, cierra la etiqueta HTML de anclaje. Copia y pega lo siguiente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>&lt;/a&gt;
+</span></code></pre></div>
+<p><img alt="Etiqueta HTML" src="../../../../../translated_images/9.1_38_AddHTMLTag.47d2f0521e6aba9d609bfe65d86ebae5786e4ad5465fefb7ae0370db6e924c96.es.png" /></p>
+</li>
+<li>
+<p>Selecciona el icono <strong>&lt;/&gt;</strong> para cambiar la vista de código.</p>
+<p><img alt="Desactivar vista de código" src="../../../../../translated_images/9.1_39_ToggleCodeView.88606eb37d702a686904b2dd8943fcf144cec462b37ee781e8ee0415e62bd951.es.png" /></p>
+</li>
+<li>
+<p>Luego vuelve a seleccionar el icono <strong>&lt;/&gt;</strong> para cambiar nuevamente a la vista de código.</p>
+<p><img alt="Volver a la vista de código" src="../../../../../translated_images/9.1_40_ToggleCodeViewAgain.32da9b9804adbbfaf8d85bdaa6fa51d2ae5fc1fbb97f75084813972c66d0c4d9.es.png" /></p>
+</li>
+<li>
+<p>Observa cómo hay varios caracteres extra <code>&amp;lt;br&amp;gt;</code>. Elimina estos caracteres.</p>
+<p><img alt="Eliminar caracteres" src="../../../../../translated_images/9.1_41_DeleteCharacters.f1ef3830b186c2cd9974ea05e336c83c0706d72ab1010d06283716dc4e982875.es.png" /></p>
+</li>
+<li>
+<p>Hemos terminado de añadir un hipervínculo al cuerpo de nuestro mensaje de correo electrónico 😎 Selecciona el icono <strong>&lt;/&gt;</strong> para cambiar la vista de código.</p>
+<p><img alt="Etiqueta HTML ordenada" src="../../../../../translated_images/9.1_42_HTMLTagTidiedUp.1b27fa2c4dc65c3f1a7151abcf6e388f64cb83745b10cd22769c1f9af3421fc6.es.png" /></p>
+</li>
+<li>
+<p>Haz clic después del texto <code>Additional comments from</code> antes del carácter de dos puntos y selecciona el <strong>icono de rayo</strong> o el <strong>icono fx</strong> a la derecha.</p>
+<p><img alt="Añadir parámetro del usuario" src="../../../../../translated_images/9.1_43_AddUserInput.6f0d26739c1b9039383aa37cc46fa1149a269bd4268fb54b897d144afc49c515.es.png" /></p>
+</li>
+<li>
+<p>En la pestaña <strong>Dynamic content</strong> del panel emergente, introduce lo siguiente en el campo de búsqueda,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>user
+</span></code></pre></div>
+<p>Selecciona el parámetro <strong>User</strong> del disparador y selecciona <strong>Add</strong>.</p>
+<p><img alt="Añadir parámetro User como contenido dinámico" src="../../../../../translated_images/9.1_44_AddUserDynamicContent.bb7c76e92650001207712b3447d3275d584f3ebf739034369869c3facf38eacf.es.png" /></p>
+</li>
+<li>
+<p>Ahora vamos a insertar una expresión que mostrará el valor de Additional Comments si el usuario lo proporciona en el nodo <strong>Ask an adaptive card</strong>, de lo contrario mostrará "None" si el usuario no proporciona comentarios.</p>
+<p>Haz clic después de los dos puntos y selecciona el <strong>icono de rayo</strong> o el <strong>icono fx</strong> a la derecha.</p>
+<p><img alt="Añadir expresión" src="../../../../../translated_images/9.1_45_AddExpression.c4c92dc4a56fab75c78ec2c5087682521e562264c1710c8dfaa24134adc3a112.es.png" /></p>
+</li>
+<li>
+<p>En la pestaña <strong>Function</strong> del panel emergente y en el campo de expresión superior, introduce lo siguiente,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>if(empty())
+</span></code></pre></div>
+<p>Esta expresión utiliza la función <code>if</code> para una declaración if-else.</p>
+<p>La siguiente función utilizada es <code>empty</code>, que verifica si existe o no un valor en un parámetro de cadena. El parámetro de cadena que se debe referenciar es el valor del parámetro de entrada <code>AdditionalComments</code> del disparador.</p>
+<p><img alt="Si está vacío" src="../../../../../translated_images/9.1_46_IfEmptyFunctions.95d21ad01f6f7c290cb8d5a57ccbca9c9532df7ce57f800554dea541d503ddc6.es.png" /></p>
+</li>
+<li>
+<p>A continuación, haz clic <strong>dentro de los paréntesis</strong> después de la función <code>empty</code>. Vamos a insertar el parámetro de entrada <code>AdditionalComments</code> del disparador.</p>
+<p>Selecciona la pestaña <strong>Dynamic content</strong>. Introduce lo siguiente en el campo de búsqueda,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Additional
+</span></code></pre></div>
+<p>Desplázate hacia abajo en el panel y selecciona la entrada <strong>AdditionalComments</strong> del disparador. El parámetro ahora se añadirá como un parámetro de cadena en la expresión.</p>
+<p><img alt="Añadir AdditionalComments como contenido dinámico" src="../../../../../translated_images/9.1_47_AdditionalCommentsDynamicContent.f9632f09779888c18a58df8e97ef677ed885b0eaa88c252b13b22c0e4c67495b.es.png" /></p>
+</li>
+<li>
+<p>A continuación, definiremos la lógica <strong><em>true</em></strong>, donde si el parámetro de cadena <code>AdditionalComments</code> está vacío, entonces queremos mostrar una cadena (texto) de <code>None</code>.</p>
+<p>Después del paréntesis que encierra el parámetro de cadena, introduce lo siguiente,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>, &#39;None&#39;,
+</span></code></pre></div>
+<p><img alt="Lógica verdadera" src="../../../../../translated_images/9.1_48_None.31978299f29e07ef3257eedd5dcee09c8675f8b3f61aea8102900118e0b6ca70.es.png" /></p>
+</li>
+<li>
+<p>Finalmente, definiremos la lógica <strong><em>false</em></strong>, donde si el parámetro de cadena <code>AdditionalComments</code> no está vacío, entonces queremos mostrar el valor del parámetro de entrada <strong>AdditionalComments</strong> de nuestro disparador.</p>
+<blockquote>
+<p>Recordatorio: este valor será del campo Additional Comments de la tarjeta adaptativa en el nodo <strong>Ask with adaptive card</strong> en el tema <strong>Request device</strong>.</p>
+</blockquote>
+<p>Después de la coma después de nuestra lógica <strong><em>true</em></strong>, selecciona la pestaña <strong>Dynamic content</strong>. Introduce lo siguiente en el campo de búsqueda,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Additional
+</span></code></pre></div>
+<p>Desplázate hacia abajo en el panel y selecciona la entrada <strong>AdditionalComments</strong> del disparador. El parámetro ahora se añadirá como un parámetro de cadena en la expresión.</p>
+<p>Ahora añádelo a nuestro parámetro <strong>Body</strong> seleccionando <strong>Add</strong>.</p>
+<p><img alt="Lógica falsa" src="../../../../../translated_images/9.1_49_AdditionalCommentsDynamicContent.d42c7fc29f65d901bb26dcbc13408c387633ea185cdd79c35d6439231b7363d5.es.png" /></p>
+</li>
+<li>
+<p>¡Excelente, nuestra expresión está completa! La expresión ahora se ha añadido al parámetro <strong>Body</strong>. Por último, formatea la última línea en cursiva.</p>
+<p><img alt="Cursiva" src="../../../../../translated_images/9.1_50_Italics.a0c01aa33ef4e83167e1fbc21c1d833f95addd60c8f531411cf9c58a96a31b02.es.png" /></p>
+</li>
+<li>
+<p>Ahora vamos a actualizar la acción <strong>Respond to the agent</strong> para enviar el valor del parámetro <strong>Model value</strong> de la acción <strong>Get item</strong> de vuelta al agente.</p>
+<p>Mantén presionado el botón izquierdo del ratón y mueve hacia arriba dentro del diseñador para ver la acción <strong>Respond to the agent</strong>.</p>
+<p>Selecciona la acción <strong>Respond to the agent</strong> y selecciona la salida <strong>Text</strong> como tipo.</p>
+<p><img alt="Seleccionar salida de texto" src="../../../../../translated_images/9.1_51_RespondToTheAgentAction.4c682a440e19a0fcd6d6f51ef9cdbfe76f482a39d635b8905d9b0cbbf33d945f.es.png" /></p>
+</li>
+<li>
+<p>Introduce lo siguiente como el nombre de la salida.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>ModelValue
+</span></code></pre></div>
+<p><img alt="Salida ModelValue" src="../../../../../translated_images/9.1_52_ModelValueInput.20609429eb323281051607b090319adc5315c0245c7d61158eb119714fe4318f.es.png" /></p>
+</li>
+<li>
+<p>Selecciona el campo de valor y selecciona el <strong>icono de rayo</strong> o el <strong>icono fx</strong> a la derecha.</p>
+<p><img alt="Insertar expresión" src="../../../../../translated_images/9.1_53_InsertDynamicContent.108ba565696f9f52d742323e0f4c46c308f322ac4bd67802e3196430155c7443.es.png" /></p>
+</li>
+<li>
+<p>En la pestaña <strong>Dynamic content</strong> del panel emergente, introduce lo siguiente en el campo de búsqueda,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>model
+</span></code></pre></div>
+<p>Selecciona el parámetro <strong>Model</strong> de la acción <strong>Get item</strong> y selecciona <strong>Add</strong>.</p>
+<p><img alt="Añadir parámetro Model como contenido dinámico" src="../../../../../translated_images/9.1_54_ModelParameter.f231fd0ec089ac6b9ac1b7fd2e6a60a35b08484ed10b0098cff6b3ce0c7760cb.es.png" /></p>
+</li>
+<li>
+<p>El parámetro <strong>Model</strong> ahora es el valor de la salida de texto. Selecciona <strong>Save draft</strong> para guardar nuestro flujo del agente.</p>
+<p>Hemos completado nuestro flujo del agente 👏🏻</p>
+<p><img alt="Seleccionar guardar borrador" src="../../../../../translated_images/9.1_55_SaveDraftAgentFlow.5ab97895a901458362881fc9ee576762bdb0883b37a6cbd7a631ddc2750705af.es.png" /></p>
+</li>
+<li>
+<p>Hagamos una última actualización a nuestro flujo del agente antes de publicarlo. Selecciona la pestaña <strong>Overview</strong> y selecciona <strong>Edit</strong>.</p>
+<p><img alt="Seleccionar Editar" src="../../../../../translated_images/9.1_56_EditAgentFlowDetails.023e8149284b9ae79dd3d95f574ff90bbcc1cc4a9fff4be56664ccbe0698f310.es.png" /></p>
+</li>
+<li>
+<p>Para el <strong>Flow name</strong>, copia y pega lo siguiente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Send device request email
+</span></code></pre></div>
+<p>Para la <strong>Description</strong>, selecciona el <strong>icono de actualización</strong> para usar IA y generar automáticamente una descripción basada en el disparador y las acciones en el flujo del agente.</p>
+<p>Selecciona <strong>Save</strong> para guardar el nombre y la descripción actualizados del flujo del agente.</p>
+<p><img alt="Renombrar, añadir descripción y guardar detalles" src="../../../../../translated_images/9.1_57_RenameAndDescription.57a190396550bf998d62c49ca359b66211ae50042ac5f8739b32f8b9bc292607.es.png" /></p>
+</li>
+<li>
+<p>Selecciona la pestaña <strong>Designer</strong> y selecciona <strong>Publish</strong> para publicar el flujo del agente para que pueda añadirse como un nodo en el tema <strong>Request device</strong>.</p>
+<p><img alt="Publicar" src="../../../../../translated_images/9.1_58_Publish.8f43271718c662deee7afea6fb283f64005b277b3a62086e6d91cc0c3ac4f79c.es.png" /></p>
+</li>
+<li>
+<p>Aparecerá un mensaje de confirmación en breve para confirmar que el flujo del agente se ha publicado.</p>
+<p><img alt="Mensaje de confirmación" src="../../../../../translated_images/9.1_59_Confirmation.d406bde76c31b27f794d5742c992b8c84283f46b2e54524f1e500d0688a33716.es.png" /></p>
+</li>
+</ol>
+<h3 id="92-anadir-flujo-del-agente-al-tema">9.2 Añadir flujo del agente al tema<a class="headerlink" href="#92-anadir-flujo-del-agente-al-tema" title="Permanent link">&para;</a></h3>
+<p>Ahora añadamos el flujo del agente al tema <strong>Request device</strong>.</p>
+<ol>
+<li>
+<p>Selecciona <strong>Agents</strong> en el menú del lado izquierdo y selecciona <strong>Contoso Helpdesk Agent</strong>.</p>
+<p><img alt="Seleccionar Agents" src="../../../../../translated_images/9.2_01_SelectAgent.b8a6fd3a8970d6b0c8e78bf0a5411257206612d53acdf9b44f78b2c9c2fe91fc.es.png" /></p>
+</li>
+<li>
+<p>Selecciona la pestaña <strong>Topics</strong>.</p>
+<p><img alt="Seleccionar pestaña Topics" src="../../../../../translated_images/9.2_02_SelectTopics.3e8618aba5f4a1ddf3dee726b6da9a66ed89d04a2e8ca36b52112a6675c2885c.es.png" /></p>
+</li>
+<li>
+<p>Selecciona el tema <strong>Request device</strong>.</p>
+<p><img alt="Seleccionar tema Request device" src="../../../../../translated_images/9.2_03_SelectRequestDevice.df10472702258708b3d069e718e695b9fcabc61d42901d524dc302a03b3fa4a9.es.png" /></p>
+</li>
+<li>
+<p>Desplázate hacia abajo hasta el nodo <strong>Ask with adaptive card</strong> y añade un nuevo nodo.</p>
+<p>Selecciona <strong>Add a tool</strong> y en la pestaña <strong>Basic tools</strong> del panel emergente, selecciona el flujo del agente <strong>Send device request email</strong> que creamos y publicamos recientemente.</p>
+<p><img alt="Seleccionar flujo del agente" src="../../../../../translated_images/9.2_04_SelectAgentFlow.15deca87db95fff1c9d904855d237d22a72c260adf3343d9e78695f07c42a8e0.es.png" /></p>
+</li>
+<li>
+<p>Para las entradas del disparador de nuestro flujo del agente, necesitamos seleccionar las salidas de variables del nodo <strong>Ask with adaptive card</strong>.</p>
+<p>Selecciona el <strong>icono de elipsis (...)</strong> para la entrada <strong>DeviceSharePointId</strong>.</p>
+<p><img alt="Seleccionar variable" src="../../../../../translated_images/9.2_05_SelectVariable.8fe53cbc0f950f732b9e9002b21d8762ddfe74fb601d61c2a5119e32383450a2.es.png" /></p>
+</li>
+<li>
+<p>Selecciona la variable <strong>deviceSelectionId</strong>, que es una de las salidas definidas en el nodo <strong>Ask with adaptive card</strong>.</p>
+<p><img alt="Seleccionar variable deviceSelectionId" src="../../../../../translated_images/9.2_06_SelectdeviceSelectionIdVariable.67c0091e0de9442d3cffbfe3b2cace8d76be37ea67815ddfc99af03ae4b37391.es.png" /></p>
+</li>
+<li>
+<p>A continuación, selecciona el <strong>icono de elipsis (...)</strong> para la entrada <strong>User</strong>.</p>
+<p><img alt="Seleccionar Variable" src="../../../../../translated_images/9.2_07_SelectVariable.bf851128bec5e0255c6cf361a837ce9701d0afac84ed3d5b89665d111a098386.es.png" /></p>
+</li>
+<li>
+<p>Selecciona la pestaña <strong>System</strong> en el panel emergente de variables y selecciona <strong>User.DisplayName</strong>. Esta variable almacena el nombre para mostrar del usuario interno que interactúa con el agente.</p>
+<p><img alt="Seleccionar variable del sistema User.DisplayName" src="../../../../../translated_images/9.2_08_SelectUser.DisplayNameVariable.926a2a7560402fbd7b224e2bf0ff11df9e5612803b7ce51e36f58201a09bbfd7.es.png" /></p>
+</li>
+<li>
+<p>A continuación, selecciona el <strong>icono de mayor que</strong> para <strong>Advanced inputs</strong> para expandir y ver la entrada <strong>AdditionalComments</strong>.</p>
+<p><img alt="Expandir entradas avanzadas" src="../../../../../translated_images/9.2_09_ExpandAdvancedInputs.bded22f83fe4eb21237daa254725e12a81ea75be34bcb0e8ab322037a4e6f418.es.png" /></p>
+</li>
+<li>
+<p>Selecciona el <strong>icono de elipsis (...)</strong> para la entrada AdditionalComments.</p>
+<p><img alt="Seleccionar Variable" src="../../../../../translated_images/9.2_10_SelectVariable.86286cc06323e65fb3874b9fd0ea62d140b9e9b9a2b5116d667192a6dca3815f.es.png" /></p>
+</li>
+<li>
+<p>Selecciona la pestaña <strong>Formula</strong> y el icono de expandir en el panel emergente de variables, ya que usaremos una expresión Power Fx.</p>
+<p><img alt="Pestaña Formula" src="../../../../../translated_images/9.2_11_SelectFormulaAndExpandIcon.3fcd07bfccc4f0779a5d26313b571e60be792da7fd28e937b3e888f8aaeda7e0.es.png" /></p>
+</li>
+<li>
+<p>Similar a la expresión en el flujo del agente que realiza una verificación condicional usando la función <em>if</em>, pero esta vez</p>
+<ul>
+<li>usando funciones de Power Fx,</li>
+<li>e insertando ya sea ningún valor o el valor de la variable de salida <code>commentsId</code> del nodo <strong>Ask with adaptive card</strong>.</li>
+</ul>
+<p>Introduce las siguientes funciones en el campo Power Fx,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>If(IsBlank())
+</span></code></pre></div>
+</li>
+</ol>
+<p>Esta expresión utiliza la función <code>If</code> para una declaración if-else.</p>
+<p>La siguiente función utilizada es <code>IsBlank</code>, que verifica si existe o no un valor en un parámetro de cadena. El parámetro de cadena que se referenciará es la variable de salida <code>commentsId</code> del nodo <strong>Preguntar con tarjeta adaptativa</strong>.</p>
+<p><img alt="Funciones If y IsBlank" src="../../../../../translated_images/9.2_12_IfIsBlank.07f7516c7e1f7579239a8b3833d64a14eb88dc245cae714b3e07d6298e907d51.es.png" /></p>
+<ol>
+<li>A continuación, haz clic <strong>dentro de los paréntesis</strong> después de la función <code>IsBlank</code>. Vamos a insertar la variable de salida <code>commentsId</code> del nodo <strong>Preguntar con tarjeta adaptativa</strong>.</li>
+</ol>
+<p>Ingresa lo siguiente dentro de los paréntesis,</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+Topic.commentsId
+```
+</code></pre></div>
+<p>Y agrega una coma después del paréntesis.</p>
+<p><img alt="Referenciar variable de salida commentsId" src="../../../../../translated_images/9.2_13_Topic.commentsId.1a04dc190dac334ebf6c4dbc1b6df1aad2e4bbdeeb3ef960871e93614381f079.es.png" /></p>
+<ol>
+<li>
+<p>Ahora definiremos la lógica:</p>
+</li>
+<li>
+<p>cuando <strong><em>true</em></strong> - si el parámetro de cadena <code>Topic.commentsId</code> está vacío, entonces no queremos insertar ningún valor.</p>
+</li>
+<li>cuando <strong><em>false</em></strong> - si el parámetro de cadena <code>Topic.commentsId</code> no está vacío, entonces insertamos el valor de la variable commentsId.</li>
+</ol>
+<p>Después del paréntesis que encierra el parámetro de cadena, ingresa lo siguiente,</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+&quot;&quot;, Topic.commentsId)
+```
+</code></pre></div>
+<p>La expresión de Power Fx debería ser la siguiente,</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+If(IsBlank(Topic.commentsId), &quot;&quot;, Topic.commentsId)
+```
+</code></pre></div>
+<p>¡Buen trabajo, nuestra expresión está completa! 🙌🏻 Ahora selecciona <strong>Insertar</strong> para establecer el parámetro de entrada del flujo del agente en la expresión de Power Fx.</p>
+<p><img alt="Expresión de Power Fx" src="../../../../../translated_images/9.2_14_PowerFxExpression.80e76ea59bdb8f131d26edf2657923f4af9000768d44b06c0947115fd218698e.es.png" /></p>
+<ol>
+<li><strong>Guarda</strong> el tema.</li>
+</ol>
+<h3 id="93-actualizar-el-tema-solicitar-dispositivo-con-varios-nodos-para-una-mejor-experiencia-de-usuario">9.3 Actualizar el tema Solicitar dispositivo con varios nodos para una mejor experiencia de usuario<a class="headerlink" href="#93-actualizar-el-tema-solicitar-dispositivo-con-varios-nodos-para-una-mejor-experiencia-de-usuario" title="Permanent link">&para;</a></h3>
+<p>A continuación, agregaremos dos nodos más:</p>
+<ul>
+<li>
+<p><strong>Enviar un mensaje</strong> - esto actuará como un mensaje de confirmación que hace referencia al dispositivo seleccionado y que su solicitud ha sido enviada.</p>
+</li>
+<li>
+<p><strong>Gestión de temas</strong> - para cerrar la conversación, redirigiremos al nodo <strong>Fin de la conversación</strong>.</p>
+</li>
+</ul>
+<p>¡Comencemos!</p>
+<ol>
+<li>Selecciona el <strong>icono más +</strong> debajo del nodo de flujo del agente y selecciona el nodo <strong>Enviar un mensaje</strong>.</li>
+</ol>
+<p><img alt="Agregar nodo enviar un mensaje" src="../../../../../translated_images/9.3_01_AddSendAMessageNode.ac4111729a2602f8301ecffbcb263d692ecb43478aa9da63cae0dd58160f56c8.es.png" /></p>
+<ol>
+<li>
+<p>Ingresa lo siguiente en el campo de mensaje,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>Thanks
+</span></code></pre></div>
+</li>
+</ol>
+<p>Luego selecciona <strong>Insertar variable</strong> ya que haremos referencia al nombre del usuario.</p>
+<p><img alt="Insertar variable" src="../../../../../translated_images/9.3_02_InsertVariable.c5c9ebce61d1f442413d05f4437f74ee1d9c3a8c2ab696244937c56b5171f310.es.png" /></p>
+<ol>
+<li>Selecciona la pestaña <strong>Sistema</strong> y busca <code>User</code> en el campo de búsqueda. Selecciona la variable <strong>User.DisplayName</strong>.</li>
+</ol>
+<p><img alt="Seleccionar variable del sistema" src="../../../../../translated_images/9.3_03_SelectSystemVariable.47cfac2f3a727dbaf32ae960cbafe43ce9ed00f73edf01ac6d48e5b2b167e5fc.es.png" /></p>
+<ol>
+<li>
+<p>Ingresa lo siguiente en el campo de mensaje,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>. Your selected device,
+</span></code></pre></div>
+</li>
+</ol>
+<p>Luego selecciona <strong>Insertar variable</strong> y esta vez en la pestaña <strong>Personalizado</strong>, selecciona la variable <strong>ModelValue</strong>.</p>
+<p>Luego ingresa lo siguiente para completar el mensaje.</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+, has been submitted and will be reviewed by your manager.
+```
+</code></pre></div>
+<p>El mensaje debería verse como el siguiente.</p>
+<p><img alt="Enviar mensaje" src="../../../../../translated_images/9.3_04_SendAMessage.3f6c4b5e53da9c7f9fcf9d0c453a9b65e44e35ea4c1124947fb638d0b682d96d.es.png" /></p>
+<ol>
+<li>Por último, selecciona el <strong>icono más +</strong> debajo del nodo <strong>Enviar un mensaje</strong> y selecciona <strong>Gestión de temas</strong>, seguido de <strong>Ir a otro tema</strong> y selecciona <strong>Fin de la conversación</strong>.</li>
+</ol>
+<p><img alt="Gestión de temas" src="../../../../../translated_images/9.3_05_EndOfConversation.3c6c96d03b29a4d0904dea09d96c62d6ad450fe60dd8d6b2fe9d31681d6cb147.es.png" /></p>
+<ol>
+<li><strong>Guarda</strong> el tema.</li>
+</ol>
+<p><img alt="Guardar" src="../../../../../translated_images/9.3_06_SaveTopic.8c9201fabce9f41af03d9f1beb9ce321e4ee9880a94edabe58b592bffebda80a.es.png" /></p>
+<h3 id="94-probar-el-agente-usando-varios-escenarios">9.4 Probar el agente usando varios escenarios<a class="headerlink" href="#94-probar-el-agente-usando-varios-escenarios" title="Permanent link">&para;</a></h3>
+<p>¡Buen trabajo!!! 😁 Ahora podemos probar nuestro agente.</p>
+<h4 id="941-solicitar-un-dispositivo-y-agregar-un-comentario-en-la-tarjeta-adaptativa">9.4.1 Solicitar un dispositivo y agregar un comentario en la tarjeta adaptativa<a class="headerlink" href="#941-solicitar-un-dispositivo-y-agregar-un-comentario-en-la-tarjeta-adaptativa" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Actualiza</strong> el panel de prueba, selecciona el icono <strong>mapa de actividades</strong> e ingresa lo siguiente como mensaje para el agente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>I need a laptop
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="Probar agente" src="../../../../../translated_images/9.4_01_TestAgent_RequestDevice_Yes.e73a5076dcd7179901dc0536624a039e372e405a6aac7ab89a632ce81bacdc2e.es.png" /></p>
+<ol>
+<li>
+<p>El agente activa el tema <strong>Dispositivos disponibles</strong> y responde con la lista de dispositivos disponibles. Ingresaremos lo siguiente como respuesta a la pregunta de si queremos solicitar un dispositivo.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>Yes
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="Sí" src="../../../../../translated_images/9.4_02_RequestDevice_Yes.25c34743bc168fde33f91743316e7bad87ee0e47150c93e9b82c4662404dcaba.es.png" /></p>
+<ol>
+<li>Observa cómo el agente invocó el tema <strong>Solicitar dispositivo</strong> según las instrucciones del agente y que la tarjeta adaptativa ahora se muestra en el mensaje del agente.</li>
+</ol>
+<p>Selecciona el dispositivo <strong>Surface Laptop 15</strong> y agrega lo siguiente como comentario.</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+I need 16GB of RAM please
+```
+</code></pre></div>
+<p><img alt="Seleccionar dispositivo y agregar comentario" src="../../../../../translated_images/9.4_03_SelectDeviceAndEnterComment.570ea590309bf97edc40c6f7b53dbdc1174365860d8e8a4c32cfb7f1837621c2.es.png" /></p>
+<ol>
+<li>Desplázate hacia abajo hasta que veas el botón <strong>Enviar solicitud</strong> y selecciónalo para enviar la tarjeta adaptativa al agente.</li>
+</ol>
+<p><img alt="Enviar solicitud" src="../../../../../translated_images/9.4_04_SubmitRequest.ce3f4f44b90243a18dbfb401548b9b3cefd3ea17d8293a1bc3377323e3449da9.es.png" /></p>
+<ol>
+<li>Selecciona <strong>Permitir</strong> para que el agente use tus credenciales para la autenticación de conexión de las dos acciones del conector.</li>
+</ol>
+<p><img alt="Permitir" src="../../../../../translated_images/9.4_05_SelectAllow.f7b5bda068fbaee83dcb1cff03a52c946fb4d879137c55f4e5f9eb3953985e0e.es.png" /></p>
+<ol>
+<li>El agente mostrará el mensaje de confirmación que incluye el modelo seleccionado, seguido de la redirección al tema <strong>Fin de la conversación</strong>. ¡Genial!</li>
+</ol>
+<p><img alt="Solicitud enviada" src="../../../../../translated_images/9.4_06_RequestSubmitted.1d4d2e9afbc222a5ba79a4c254e7b2364d6eafc1a200ad6ac0aa142f9f10642d.es.png" /></p>
+<ol>
+<li>Selecciona <strong>Sí</strong> para verificar el resto del tema <strong>Fin de la conversación</strong>.</li>
+</ol>
+<p><img alt="Seleccionar Sí" src="../../../../../translated_images/9.4_07_RedirectNode.e7b1390e4eafe8c2c815fc8ce7fdda56617d9fbeccb0d59423ad2899a8e5f897.es.png" /></p>
+<ol>
+<li>A continuación, califica la experiencia seleccionando cualquiera de las estrellas en la tarjeta de escala de calificación.</li>
+</ol>
+<p>El agente procederá al último nodo <strong>Pregunta</strong> en el tema <strong>Fin de la conversación</strong>. Selecciona <strong>No</strong>.</p>
+<p><img alt="Tema Fin de la conversación" src="../../../../../translated_images/9.4_08_EndOfConversation.b35507f7f561633c0cb3b6c15dc007ae4197a72d58afd8ae616bea439bd6e148.es.png" /></p>
+<ol>
+<li>El tema se completará y se mostrará un mensaje final en el panel de prueba.</li>
+</ol>
+<p><img alt="Tema Fin de la conversación" src="../../../../../translated_images/9.4_09_EndOfConversation.438891b82e322b8a2648533200fbcd01c660ab049223b0920cdd0fbfcdeeb888.es.png" /></p>
+<ol>
+<li>Revisa tu bandeja de entrada de tu cuenta de correo electrónico para revisar el correo enviado al gerente por el flujo del agente. Puedes ver los detalles del dispositivo seleccionado y la nota ingresada en la tarjeta adaptativa.</li>
+</ol>
+<p><img alt="Correo recibido" src="../../../../../translated_images/9.4_10_ReviewEmailMessageWithComment.b0138b0bb9d08aacbd8bbb02fdb633a6796b4131cf8d83212adeabaa1ce04a18.es.png" /></p>
+<ol>
+<li>Haz clic en el hipervínculo y el navegador debería cargar el elemento de SharePoint del dispositivo. ¡Súper!</li>
+</ol>
+<p><img alt="Hacer clic en el enlace del correo" src="../../../../../translated_images/9.4_11_SelectLinkInEmail.2179f17165b61ba1e8aee68e8de4c752d64b0780ad86e0fe9054580d9c24e208.es.png" /></p>
+<h4 id="942-solicitar-un-dispositivo-y-no-agregar-un-comentario-en-la-tarjeta-adaptativa">9.4.2 Solicitar un dispositivo y no agregar un comentario en la tarjeta adaptativa<a class="headerlink" href="#942-solicitar-un-dispositivo-y-no-agregar-un-comentario-en-la-tarjeta-adaptativa" title="Permanent link">&para;</a></h4>
+<p>Ahora probemos el escenario en el que no se ingresa un comentario.</p>
+<ol>
+<li>
+<p>Repite los mismos pasos de:</p>
+</li>
+<li>
+<p><strong>Actualizar</strong> el panel de prueba y seleccionar el icono <strong>mapa de actividades</strong></p>
+</li>
+<li>Ingresar el mensaje, <code>Necesito una laptop</code></li>
+<li>Responder con <code>Sí</code> a la pregunta de solicitar un dispositivo</li>
+</ol>
+<p><img alt="Solicitar dispositivo" src="../../../../../translated_images/9.4_12_RequestDevice_Yes.1e369b8a52547fade4b84a4e36b399ee0692c6edbaa778ba90fe9c15cae75c5c.es.png" /></p>
+<ol>
+<li>Esta vez selecciona <strong>Surface Laptop 13</strong> como el dispositivo y no ingreses un comentario.</li>
+</ol>
+<p><img alt="Seleccionar dispositivo" src="../../../../../translated_images/9.4_13_SelectDevice.d9ad15d17de3f06fd948bd529f116f7c05bedf79c016180d8a1dd7e378322b0e.es.png" /></p>
+<ol>
+<li><strong>Enviar</strong> la solicitud seleccionando el botón <strong>Enviar solicitud</strong>.</li>
+</ol>
+<p><img alt="Enviar solicitud" src="../../../../../translated_images/9.4_14_SubmitRequest.a783ad8460bfb4485cfd2e97db2c065d9d6bf803279e3bd1569fe3e93548a578.es.png" /></p>
+<ol>
+<li>Esta vez, el correo recibido en tu bandeja de entrada mostrará <strong>Ninguno</strong> como el comentario.</li>
+</ol>
+<p><img alt="Correo recibido" src="../../../../../translated_images/9.4_15_ReviewEmailMessage.137f35152c9da4b4a02bebec5f0cc9e55cfa25679770ace003aa19482ed0f3eb.es.png" /></p>
+<h4 id="943-no-solicitar-un-dispositivo">9.4.3 No solicitar un dispositivo<a class="headerlink" href="#943-no-solicitar-un-dispositivo" title="Permanent link">&para;</a></h4>
+<p>Probemos el escenario final, que es no solicitar un dispositivo, y el tema <strong>Adiós</strong> debería ser invocado según las instrucciones del agente.</p>
+<ol>
+<li>
+<p>Repite los mismos pasos de:</p>
+</li>
+<li>
+<p><strong>Actualizar</strong> el panel de prueba y seleccionar el icono <strong>mapa de actividades</strong></p>
+</li>
+<li>Ingresar el mensaje, <code>Necesito una laptop</code></li>
+<li>Esta vez responde con <code>No</code> a la pregunta de solicitar un dispositivo</li>
+</ol>
+<p><img alt="Probar agente" src="../../../../../translated_images/9.4_16_TestAgent_RequestDevice_No.85f205968f1d4083f20cc890a707748f8e06c01a19536cd299a13bdde2350de7.es.png" /></p>
+<ol>
+<li>El agente invocó el tema <strong>Adiós</strong> y se hace la pregunta definida en el tema.</li>
+</ol>
+<p><img alt="Tema Adiós invocado" src="../../../../../translated_images/9.4_17_Goodbye.05ee598a987237e02866647a9699b0efa7ac58d1f448497f956af2ee815cb961.es.png" /></p>
+<h2 id="mision-completa">✅ Misión Completa<a class="headerlink" href="#mision-completa" title="Permanent link">&para;</a></h2>
+<p>¡Felicidades! 👏🏻 Has aprendido cómo construir el flujo de tu agente y agregarlo a nuestro tema existente <strong>Solicitar dispositivo</strong>, y cómo redirigir al agente a otro tema.</p>
+<p>Este es el final de <strong>Laboratorio 09 - Agregar un flujo de agente para la automatización y mejorar las capacidades del tema</strong>, selecciona el enlace a continuación para pasar a la siguiente lección. Ampliaremos el caso de uso de este laboratorio en el laboratorio de la siguiente lección.</p>
+<p>⏭️ <a href="../10-add-event-triggers/">Ir a la lección <strong>Agregar disparadores de eventos - Habilitar capacidades autónomas del agente</strong></a></p>
+<h2 id="recursos-tacticos">📚 Recursos Tácticos<a class="headerlink" href="#recursos-tacticos" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://www.microsoft.com/microsoft-copilot/blog/copilot-studio/introducing-agent-flows-transforming-automation-with-ai-first-workflows/">Presentando los flujos de agente: Transformando la automatización con flujos de trabajo centrados en IA</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/flows-overview?WT.mc_id=power-172621-ebenitez">Descripción general de los flujos de agente</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow?WT.mc_id=power-172621-ebenitez">Usar flujos de agente con tu agente</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/azure/logic-apps/workflow-definition-language-functions-reference?WT.mc_id=power-172621-ebenitez">Lista de funciones en la guía de referencia</a></p>
+<p>📺 <a href="https://www.youtube.com/watch?v=VJTKyk3Pr7s">Flujos de Agente en Copilot Studio</a></p>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/09-add-an-agent-flow" alt="Analytics" /></p>
+<hr />
+<p><strong>Descargo de responsabilidad</strong>:<br />
+Este documento ha sido traducido utilizando el servicio de traducción automática <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Aunque nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que surjan del uso de esta traducción.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

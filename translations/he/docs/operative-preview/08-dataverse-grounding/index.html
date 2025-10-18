@@ -1,0 +1,1230 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/he/docs/operative-preview/08-dataverse-grounding/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#08-dataverse" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ שם קוד: מבצע שליטה בקרקע
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 תיאור המשימה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 מטרות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-dataverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 הבנת חיבור ל-Dataverse עבור הנחיות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 למה הנחיות ייעודיות לעומת שיחות סוכן
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-dataverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 מעבדה 8: הוספת חיבור ל-Dataverse להנחיות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 משימה הושלמה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 משאבים טקטיים
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "750f3ea8a94930439ebd8a10871b1d73",
+  "translation_date": "2025-10-17T01:43:27+00:00",
+  "source_file": "docs/operative-preview/08-dataverse-grounding/README.md",
+  "language_code": "he"
+}
+-->
+<h1 id="08-dataverse">🚨 משימה 08: שדרוג הנחיות עם חיבור ל-Dataverse<a class="headerlink" href="#08-dataverse" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="_1">🕵️‍♂️ שם קוד: <code>מבצע שליטה בקרקע</code><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ חלון זמן למבצע:</strong> <code>~60 דקות</code></p>
+</blockquote>
+<h2 id="_2">🎯 תיאור המשימה<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>ברוך שובך, סוכן. מערכת הגיוס הרב-סוכנים שלך פעילה, אך יש צורך בשדרוג קריטי עבור <strong>חיבור נתונים</strong> - המודלים של הבינה המלאכותית שלך זקוקים לגישה בזמן אמת לנתונים המובנים של הארגון שלך כדי לקבל החלטות חכמות.</p>
+<p>כרגע, ההנחיה שלך לסיכום קורות חיים פועלת עם ידע סטטי. אבל מה אם היא תוכל לגשת באופן דינמי למסד הנתונים של תפקידי העבודה שלך כדי לספק התאמות מדויקות ועדכניות? ומה אם היא תבין את קריטריוני ההערכה שלך מבלי שתצטרך לקודד אותם ידנית?</p>
+<p>במשימה זו, תשדרג את ההנחיה המותאמת שלך עם <strong>חיבור ל-Dataverse</strong> - חיבור ההנחיות שלך ישירות למקורות נתונים חיים. זה יהפוך את הסוכנים שלך ממגיבים סטטיים למערכות מונעות נתונים דינמיות שמתאימות לצרכים העסקיים המשתנים.</p>
+<p>המשימה שלך: לשלב נתוני תפקידי עבודה וקריטריוני הערכה בזמן אמת לתוך תהליך ניתוח קורות החיים, וליצור מערכת שמתעדכנת בעצמה בהתאם לדרישות הגיוס של הארגון שלך.</p>
+<h2 id="_3">🔎 מטרות<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>במשימה זו תלמד:</p>
+<ol>
+<li>כיצד <strong>חיבור ל-Dataverse</strong> משדרג הנחיות מותאמות</li>
+<li>מתי להשתמש בחיבור נתונים לעומת הוראות סטטיות</li>
+<li>עיצוב הנחיות שמשלבות נתונים חיים באופן דינמי</li>
+<li>שדרוג תהליך סיכום קורות חיים עם התאמת תפקידי עבודה</li>
+</ol>
+<h2 id="-dataverse">🧠 הבנת חיבור ל-Dataverse עבור הנחיות<a class="headerlink" href="#-dataverse" title="Permanent link">&para;</a></h2>
+<p><strong>חיבור ל-Dataverse</strong> מאפשר להנחיות המותאמות שלך לגשת לנתונים חיים מטבלאות Dataverse בעת עיבוד בקשות. במקום הוראות סטטיות, ההנחיות שלך יכולות לשלב מידע בזמן אמת כדי לקבל החלטות מושכלות.</p>
+<h3 id="-dataverse_1">למה חיבור ל-Dataverse חשוב<a class="headerlink" href="#-dataverse_1" title="Permanent link">&para;</a></h3>
+<p>הנחיות מסורתיות פועלות עם הוראות קבועות:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Match this candidate to these job roles: Developer, Manager, Analyst
+</span></code></pre></div>
+<p>עם חיבור ל-Dataverse, ההנחיה שלך ניגשת לנתונים עדכניים:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Match this candidate to available job roles from the Job Roles table, 
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>considering current evaluation criteria and requirements
+</span></code></pre></div>
+<p>גישה זו מספקת מספר יתרונות מרכזיים:</p>
+<ul>
+<li><strong>עדכונים דינמיים:</strong> תפקידי עבודה וקריטריונים משתנים ללא צורך בשינויים בהנחיה</li>
+<li><strong>עקביות:</strong> כל הסוכנים משתמשים באותם מקורות נתונים עדכניים</li>
+<li><strong>יכולת הרחבה:</strong> תפקידים וקריטריונים חדשים זמינים באופן אוטומטי</li>
+<li><strong>דיוק:</strong> נתונים בזמן אמת מבטיחים שההחלטות משקפות את הצרכים הנוכחיים</li>
+</ul>
+<h3 id="-dataverse_2">איך חיבור ל-Dataverse עובד<a class="headerlink" href="#-dataverse_2" title="Permanent link">&para;</a></h3>
+<p>כאשר אתה מאפשר חיבור ל-Dataverse עבור הנחיה מותאמת:</p>
+<ol>
+<li><strong>בחירת נתונים:</strong> בחר טבלאות ועמודות ספציפיות מ-Dataverse לשילוב. ניתן גם לבחור טבלאות קשורות שהמערכת תסנן בהתאם לרשומות ההורה שנשלפו.</li>
+<li><strong>הזרקת הקשר:</strong> ההנחיה כוללת באופן אוטומטי את הנתונים שנשלפו בהקשר ההנחיה</li>
+<li><strong>סינון חכם:</strong> המערכת כוללת רק נתונים רלוונטיים לבקשה הנוכחית אם תספק סינון כלשהו.</li>
+<li><strong>פלט מובנה:</strong> ההנחיה שלך יכולה להתייחס לנתונים שנשלפו ולנתח את הרשומות כדי ליצור את הפלט.</li>
+</ol>
+<h3 id="_4">ממידע סטטי לדינמי: יתרון החיבור<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>בוא נבחן את תהליך סיכום קורות החיים הנוכחי שלך ממשימה 07 ונראה איך חיבור ל-Dataverse הופך אותו מאינטליגנציה סטטית לדינמית.</p>
+<p><strong>גישה סטטית נוכחית:</strong>
+ההנחיה הקיימת שלך כללה קריטריוני הערכה מקודדים מראש ולוגיקת התאמה מוגדרת מראש. גישה זו עובדת אך דורשת עדכונים ידניים בכל פעם שאתה מוסיף תפקידי עבודה חדשים, משנה קריטריוני הערכה או משנה את סדרי העדיפויות של החברה.</p>
+<p><strong>שדרוג עם חיבור ל-Dataverse:</strong>
+על ידי הוספת חיבור ל-Dataverse, תהליך סיכום קורות החיים שלך יוכל:</p>
+<ul>
+<li><strong>לגשת לתפקידי עבודה עדכניים</strong> מטבלת תפקידי העבודה שלך</li>
+<li><strong>להשתמש בקריטריוני הערכה חיים</strong> במקום תיאורים סטטיים  </li>
+<li><strong>לספק התאמות מדויקות</strong> בהתבסס על דרישות בזמן אמת</li>
+</ul>
+<h2 id="_5">🎯 למה הנחיות ייעודיות לעומת שיחות סוכן<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>במשימה 02, חווית איך סוכן הראיונות יכול להתאים מועמדים לתפקידי עבודה, אך נדרש ניסוח הנחיות מורכב כמו:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Upload this resume, then show me open job roles,
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>each with a description of the evaluation criteria, 
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>then use this to match the resume to at least one suitable
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>job role even if not a perfect match.
+</span></code></pre></div>
+<p>למרות שזה עבד, הנחיות ייעודיות עם חיבור ל-Dataverse מציעות יתרונות משמעותיים למשימות ספציפיות:</p>
+<h3 id="_6">יתרונות מרכזיים של הנחיות ייעודיות<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>היבט</th>
+<th>שיחות סוכן</th>
+<th>הנחיות ייעודיות</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>עקביות</strong></td>
+<td>תוצאות משתנות בהתאם לכישורי ניסוח ההנחיה של המשתמש</td>
+<td>עיבוד סטנדרטי בכל פעם</td>
+</tr>
+<tr>
+<td><strong>התמחות</strong></td>
+<td>חשיבה כללית עשויה להחמיץ ניואנסים עסקיים</td>
+<td>מותאם במיוחד עם לוגיקה עסקית אופטימלית</td>
+</tr>
+<tr>
+<td><strong>אוטומציה</strong></td>
+<td>דורש אינטראקציה ופירוש אנושי</td>
+<td>מופעל אוטומטית עם פלט JSON מובנה</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-dataverse">🧪 מעבדה 8: הוספת חיבור ל-Dataverse להנחיות<a class="headerlink" href="#8-dataverse" title="Permanent link">&para;</a></h2>
+<p>הגיע הזמן לשדרג את יכולות ניתוח קורות החיים שלך! תשדרג את תהליך סיכום קורות החיים הקיים עם התאמת תפקידי עבודה דינמית.</p>
+<h3 id="_7">דרישות מקדימות להשלמת המשימה<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>תצטרך <strong>או</strong>:</p>
+<ul>
+<li><strong>להשלים את משימה 07</strong> ולהחזיק במערכת ניתוח קורות החיים שלך מוכנה, <strong>או</strong></li>
+<li><strong>לייבא את פתרון ההתחלה של משימה 08</strong> אם אתה מתחיל מאפס או צריך להשלים. <a href="https://aka.ms/agent-academy">הורד פתרון התחלה למשימה 08</a></li>
+</ul>
+</li>
+<li>
+<p>מסמכי קורות חיים לדוגמה מ-<a href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/operative/sample-data/resumes&amp;filename=operative_sampledata">קורות חיים לדוגמה</a></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">ייבוא פתרון ונתוני דוגמה</p>
+<p>אם אתה משתמש בפתרון ההתחלה, עיין ב-<a href="../01-get-started/">משימה 01</a> להוראות מפורטות כיצד לייבא פתרונות ונתוני דוגמה לסביבתך.</p>
+</div>
+<h3 id="81-dataverse">8.1 הוספת חיבור ל-Dataverse להנחיה שלך<a class="headerlink" href="#81-dataverse" title="Permanent link">&para;</a></h3>
+<p>תבנה על ההנחיה לסיכום קורות חיים שיצרת במשימה 07. כרגע היא פשוט מסכמת את קורות החיים, אך כעת תחבר אותה לתפקידי העבודה כפי שהם קיימים כרגע ב-Dataverse, ותשמור אותה תמיד עדכנית.</p>
+<p>ראשית, בוא נבחן את טבלאות ה-Dataverse שתשתמש בהן לחיבור:</p>
+<ol>
+<li>
+<p><strong>נווט</strong> ל-<a href="https://make.powerapps.com">Power Apps</a> ובחר את הסביבה שלך באמצעות <strong>מחליף הסביבה</strong> בפינה הימנית העליונה של סרגל הניווט.</p>
+</li>
+<li>
+<p>בחר <strong>טבלאות</strong> ומצא את טבלת <strong>תפקידי העבודה</strong></p>
+</li>
+<li>
+<p>סקור את העמודות המרכזיות שתשתמש בהן לחיבור:</p>
+<table>
+<thead>
+<tr>
+<th>עמודה</th>
+<th>מטרה</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>מספר תפקיד עבודה</strong></td>
+<td>מזהה ייחודי להתאמת תפקיד</td>
+</tr>
+<tr>
+<td><strong>כותרת תפקיד</strong></td>
+<td>שם תצוגה לתפקיד</td>
+</tr>
+<tr>
+<td><strong>תיאור</strong></td>
+<td>דרישות מפורטות לתפקיד</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>באופן דומה, סקור את הטבלאות האחרות כמו טבלת <strong>קריטריוני הערכה</strong>.</p>
+</li>
+</ol>
+<h3 id="82-dataverse">8.2 הוספת נתוני חיבור ל-Dataverse להנחיה שלך<a class="headerlink" href="#82-dataverse" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>נווט</strong> ל-Copilot Studio, ובחר את הסביבה שלך באמצעות <strong>מחליף הסביבה</strong> בפינה הימנית העליונה של סרגל הניווט.</p>
+</li>
+<li>
+<p>בחר <strong>כלים</strong> מהניווט השמאלי.</p>
+</li>
+<li>
+<p>בחר <strong>הנחיה</strong> ומצא את ההנחיה <strong>סיכום קורות חיים</strong> ממשימה 07.<br />
+<img alt="בחר הנחיה" src="../../../../../translated_images/8-select-prompt.d66a248a6d11fce2b4bc149422eb2722736c972185bca613c849e74011411941.he.png" /></p>
+</li>
+<li>
+<p>בחר <strong>ערוך</strong> כדי לשנות את ההנחיה, והחלף אותה בגרסה המשודרגת למטה:</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>ודא שהפרמטרים של קורות החיים ומכתב הכיסוי נשארים ללא שינוי כפרמטרים.</p>
+</div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>You are tasked with extracting key candidate information from a resume and cover letter to facilitate matching with open job roles and creating a summary for application review.
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>### Instructions:
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>1. **Extract Candidate Details:**
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>   - Identify and extract the candidate&#39;s full name.
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>   - Extract contact information, specifically the email address.
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2. **Analyze Resume and Cover Letter:**
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>   - Review the resume content to identify relevant skills, experience, and qualifications.
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>   - Review the cover letter to understand the candidate&#39;s motivation and suitability for the roles.
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>3. **Match Against Open Job Roles:**
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>   - Compare the extracted candidate information with the requirements and descriptions of the provided open job roles.
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>   - Use the job descriptions to assess potential fit.
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>   - Identify all roles that align with the candidate&#39;s cover letter and profile. You don&#39;t need to assess perfect suitability.
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>   - Provide reasoning for each match based on the specific job requirements.
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>4. **Create Candidate Summary:**
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>   - Summarize the candidate&#39;s profile as multiline text with the following sections:
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>      - Candidate name
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>      - Role(s) applied for if present
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>      - Contact and location
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>      - One-paragraph summary
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>      - Top skills (8–10)
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>      - Experience snapshot (last 2–3 roles with outcomes)
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>      - Key projects (1–3 with metrics)
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>      - Education and certifications
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>      - Availability and work authorization
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>### Output Format
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>Provide the output in valid JSON format with the following structure:
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>{
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>  &quot;CandidateName&quot;: &quot;string&quot;,
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>  &quot;Email&quot;: &quot;string&quot;,
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>  &quot;MatchedRoles&quot;: [
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>    {
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>      &quot;JobRoleNumber&quot;: &quot;ppa_jobrolenumber from grounded data&quot;,
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>      &quot;RoleName&quot;: &quot;ppa_jobtitle from grounded data&quot;,
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>      &quot;Reasoning&quot;: &quot;Detailed explanation based on job requirements&quot;
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>    }
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>  ],
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>  &quot;Summary&quot;: &quot;string&quot;
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>}
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>### Guidelines
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>- Extract information only from the provided resume and cover letter documents.
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>- Ensure accuracy in identifying contact details.
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>- Use the available job role data for matching decisions.
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>- The summary should be concise but informative, suitable for quick application review.
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>- If no suitable matches are found, indicate an empty list for MatchedRoles and explain briefly in the summary.
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>### Input Data
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>Open Job Roles (ppa_jobrolenumber, ppa_jobtitle): /Job Role 
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>Resume: {Resume}
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>Cover Letter: {CoverLetter}
+</span></code></pre></div>
+</li>
+<li>
+<p>בעורך ההנחיות, החלף את <code>/תפקיד עבודה</code> על ידי בחירה ב-<strong>+ הוסף תוכן</strong>, בחירה ב-<strong>Dataverse</strong> → <strong>תפקיד עבודה</strong> ובחירת העמודות הבאות, ולאחר מכן בחר <strong>הוסף</strong>:</p>
+<ol>
+<li>
+<p><strong>מספר תפקיד עבודה</strong></p>
+</li>
+<li>
+<p><strong>כותרת תפקיד</strong></p>
+</li>
+<li>
+<p><strong>תיאור</strong></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>ניתן להקליד את שם הטבלה כדי לחפש.</p>
+</div>
+</li>
+<li>
+<p>בדיאלוג <strong>תפקיד עבודה</strong>, בחר <strong>סינון</strong> מאפיין, בחר <strong>סטטוס</strong>, ולאחר מכן הקלד <strong>פעיל</strong> כערך <strong>סינון</strong>.<br />
+<img alt="הוסף חיבור ל-Dataverse" src="../../../../../translated_images/8-add-grounding.e377b283acb2087f784ce1440bc65b57de1af7d8d9334ee116bf06095dd813c8.he.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>ניתן להשתמש ב-<strong>הוסף ערך</strong> כאן כדי להוסיף גם פרמטר קלט - לדוגמה, אם הייתה לך הנחיה לסיכום רשומה קיימת, תוכל לספק את מספר קורות החיים כפרמטר לסינון.</p>
+</div>
+</li>
+<li>
+<p>לאחר מכן, תוסיף את טבלת ה-Dataverse הקשורה <strong>קריטריוני הערכה</strong>, על ידי בחירה שוב ב-<strong>+ הוסף תוכן</strong>, מציאת <strong>תפקידי עבודה</strong>, ובמקום לבחור בעמודות בתפקיד עבודה, הרחב את <strong>תפקיד עבודה (קריטריוני הערכה)</strong> ובחר את העמודות הבאות, ולאחר מכן בחר <strong>הוסף</strong>:</p>
+<ol>
+<li>
+<p><strong>שם קריטריון</strong></p>
+</li>
+<li>
+<p><strong>תיאור</strong><br />
+<img alt="הוסף קריטריוני הערכה קשורים" src="../../../../../translated_images/8-add-eval-criteria.1c2ceb2e208ff3e5c6fd33ef3aad30f0ea545505e6bcc98a0f30c373574525fa.he.png" /></p>
+<p><img alt="פרמטרים וחיבורי הנחיה שהושלמו" src="../../../../../translated_images/8-all-prompt-parameters.6c8d5d173ce4e3f93d78a371474dace6279f85ecae867863249e68c3ad35f668.he.png" /></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>חשוב לבחור את קריטריוני ההערכה הקשורים על ידי בחירה תחילה בתפקיד העבודה, ולאחר מכן ניווט בתפריט לתפקיד עבודה (קריטריוני הערכה). זה יבטיח שרק הרשומות הקשורות לתפקיד העבודה ייטענו.</p>
+</div>
+</li>
+<li>
+<p>בחר <strong>הגדרות</strong>, והתאם את <strong>שליפת הרשומות</strong> ל-1000 - זה יאפשר לכל תפקידי העבודה וקריטריוני ההערכה להיכלל בהנחיה שלך.<br />
+<img alt="הגדרות הנחיה" src="../../../../../translated_images/8-prompt-settings.267982cf4eb45cff839bb2f3e370611411a9702e6eb2414445090d0d5b1dc38b.he.png" /></p>
+</li>
+</ol>
+<h3 id="83">8.3 בדיקת ההנחיה המשודרגת<a class="headerlink" href="#83" title="Permanent link">&para;</a></h3>
+<ol>
+<li>בחר את פרמטר <strong>קורות החיים</strong>, והעלה קורות חיים לדוגמה שהשתמשת בהם במשימה 07.</li>
+<li>בחר <strong>בדיקה</strong>.</li>
+<li>לאחר שהבדיקה הסתיימה, שים לב שהפלט JSON כולל כעת את <strong>התפקידים שהותאמו</strong>.</li>
+<li>בחר בכרטיסיית <strong>הידע שהשתמשו בו</strong>, כדי לראות את נתוני ה-Dataverse שהתמזגו עם ההנחיה לפני הביצוע.</li>
+<li><strong>שמור</strong> את ההנחיה המשודרגת שלך. המערכת תכלול כעת באופן אוטומטי את נתוני ה-Dataverse הללו עם ההנחיה שלך כאשר תהליך סוכן סיכום קורות החיים הקיים יקרא לה.<br />
+<img alt="תפקידים מותאמים ב-JSON" src="../../../../../translated_images/8-matched-roles-json.54b557423d26864f65873170adaac04f5cb5d4ce4cccf65e5b695d9a128a79b3.he.png" /></li>
+</ol>
+<h3 id="84">8.4 הוספת תהליך סוכן בקשת עבודה<a class="headerlink" href="#84" title="Permanent link">&para;</a></h3>
+<p>כדי לאפשר לסוכן קליטת הבקשות שלנו ליצור תפקידי עבודה בהתבסס על התפקידים המוצעים שהמועמד מעוניין בהם, עלינו ליצור תהליך סוכן. הסוכן יקרא לכלי זה עבור כל אחד מתפקידי העבודה המוצעים שהמועמד מעוניין בהם.</p>
+<div class="admonition tip">
+<p class="admonition-title">ביטויי תהליך סוכן</p>
+<p>חשוב מאוד שתעקוב אחר ההוראות למתן שמות לצמתים ולהזנת ביטויים בדיוק, מכיוון שהביטויים מתייחסים לצמתים הקודמים באמצעות שמם! עיין ב-<a href="../../recruit/09-add-an-agent-flow/#you-mentioned-expressions-what-are-expressions">משימת תהליך סוכן בגיוס</a> לרענון מהיר!</p>
+</div>
+<ol>
+<li>
+<p>בתוך <strong>סוכן הגיוס</strong>, בחר בכרטיסיית <strong>סוכנים</strong>, ופתח את סוכן המשנה <strong>סוכן קליטת הבקשות</strong>.</p>
+</li>
+<li>
+<p>בתוך לוח <strong>כלים</strong>, בחר <strong>+ הוסף</strong> → <strong>+ כלי חדש</strong> → <strong>תהליך סוכן</strong></p>
+</li>
+<li>
+<p>בחר בצומת <strong>כאשר סוכן קורא לתהליך</strong>, השתמש ב-<strong>+ הוסף קלט</strong> כדי להוסיף את הפרמטרים הבאים:</p>
+<table>
+<thead>
+<tr>
+<th>סוג</th>
+<th>שם</th>
+<th>תיאור</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>טקסט</td>
+<td><code>מספר קורות חיים</code></td>
+<td>ודא שאתה משתמש רק ב-[מספר קורות חיים] - חייב להתחיל באות R</td>
+</tr>
+<tr>
+<td>טקסט</td>
+<td><code>מספר תפקיד עבודה</code></td>
+<td>ודא שאתה משתמש רק ב-[מספר תפקיד עבודה] - חייב להתחיל באות J</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="כאשר סוכן קורא לתהליך" src="../../../../../translated_images/8-add-application-1.ef0ec277dd86df0e8145aca278fdae1aff1a959711781eb59dc63f4ab0785686.he.png" /></p>
+</li>
+<li>
+<p>בחר באייקון <strong>+</strong> הוספת פעולה מתחת לצומת הראשונה, חפש <strong>Dataverse</strong>, בחר <strong>ראה עוד</strong>, ולאחר מכן מצא את הפעולה <strong>רשום שורות</strong>.</p>
+</li>
+<li>
+<p><strong>שנה שם</strong> לצומת כ-<code>קבל קורות חיים</code>, ולאחר מכן הגדר את הפרמטרים הבאים:</p>
+<table>
+<thead>
+<tr>
+<th>מאפיין</th>
+<th>איך להגדיר</th>
+<th>ערך</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>שם טבלה</strong></td>
+<td>בחר</td>
+<td>קורות חיים</td>
+</tr>
+<tr>
+<td><strong>סינון שורות</strong></td>
+<td>נתונים דינמיים (אייקון ברק)</td>
+<td><code>ppa_resumenumber eq 'מספר קורות חיים'</code> בחר והחלף <strong>מספר קורות חיים</strong> עם <strong>כאשר סוכן קורא לתהליך</strong> → <strong>מספר קורות חיים</strong></td>
+</tr>
+<tr>
+<td><strong>מספר שורות</strong></td>
+<td>הזן</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="קבל קורות חיים" src="../../../../../translated_images/8-add-application-2.4bc386154caec8bc5deba81c6f0f90f1762719ee213aa664b004091034286338.he.png" /></p>
+</li>
+<li>
+<p>כעת, בחר באייקון <strong>+</strong> הוספת פעולה מתחת ל-<code>קבל קורות חיים</code>, חפש <strong>Dataverse</strong>, בחר <strong>ראה עוד</strong>, ולאחר מכן מצא את הפעולה <strong>רשום שורות</strong>.</p>
+</li>
+<li>
+<p><strong>שנה שם</strong> לצומת כ-<code>קבל תפקיד עבודה</code>, ולאחר מכן הגדר את הפרמטרים הבאים:</p>
+<table>
+<thead>
+<tr>
+<th>מאפיין</th>
+<th>איך להגדיר</th>
+<th>ערך</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>שם טבלה</strong></td>
+<td>בחר</td>
+<td>תפקידי עבודה</td>
+</tr>
+<tr>
+<td><strong>סינון שורות</strong></td>
+<td>נתונים דינמיים (אייקון ברק)</td>
+<td><code>ppa_jobrolenumber eq 'מספר תפקיד עבודה'</code> בחר והחלף <strong>מספר תפקיד עבודה</strong> עם <strong>כאשר סוכן קורא לתהליך</strong> → <strong>מספר תפקיד עבודה</strong></td>
+</tr>
+<tr>
+<td><strong>מספר שורות</strong></td>
+<td>הזן</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="קבל תפקיד עבודה" src="../../../../../translated_images/8-add-application-3.07a9c42e27bd2875ec91a4c9e4a78d185644d945ca54c0e8a2d9a9a092c0b872.he.png" /></p>
+</li>
+<li>
+<p>כעת, בחר באייקון <strong>+</strong> הוספת פעולה מתחת ל-<code>קבל תפקיד עבודה</code>, חפש <strong>Dataverse</strong>, בחר <strong>ראה עוד</strong>, ולאחר מכן מצא את הפעולה <strong>הוסף שורה חדשה</strong>.</p>
+</li>
+<li>
+<p><strong>שנה שם</strong> לצומת כ-<code>הוסף בקשה</code>, ולאחר מכן הגדר את הפרמטרים הבאים:</p>
+<table>
+<thead>
+<tr>
+<th>מאפיין</th>
+<th>איך להגדיר</th>
+<th>ערך</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>שם טבלה</strong></td>
+<td>בחר</td>
+<td>בקשות עבודה</td>
+</tr>
+<tr>
+<td><strong>מועמד (מועמדים)</strong></td>
+<td>ביטוי (אייקון fx)</td>
+<td><code>concat('ppa_candidates/',first(outputs('קבל_קורות_חיים')?['body/value'])?['_ppa_candidate_value'])</code></td>
+</tr>
+<tr>
+<td><strong>תפקיד (תפקידים)</strong></td>
+<td>ביטוי (fx icon)</td>
+<td><code>concat('ppa_jobroles/',first(outputs('Get_Job_Role')?['body/value'])?['ppa_jobroleid'])</code></td>
+</tr>
+<tr>
+<td><strong>קורות חיים (קורות חיים)</strong></td>
+<td>ביטוי (fx icon)</td>
+<td><code>concat('ppa_resumes/', first(outputs('Get_Resume')?['body/value'])?['ppa_resumeid'])</code></td>
+</tr>
+<tr>
+<td><strong>תאריך הגשת מועמדות</strong> (השתמש ב-<strong>הצג הכל</strong>)</td>
+<td>ביטוי (fx icon)</td>
+<td><code>utcNow()</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="הוסף מועמדות" src="../../../../../translated_images/8-add-application-4.68b07059f373c4ef5dc5078da3ae5690525a352a88d0a5bc8de4edf0ce7d4d72.he.png" /></p>
+<ol>
+<li>
+<p>בחר את <strong>Respond to the agent node</strong>, ולאחר מכן בחר <strong>+ Add an output</strong></p>
+<table>
+<thead>
+<tr>
+<th>מאפיין</th>
+<th>איך להגדיר</th>
+<th>פרטים</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>סוג</strong></td>
+<td>בחר</td>
+<td><code>Text</code></td>
+</tr>
+<tr>
+<td><strong>שם</strong></td>
+<td>הזן</td>
+<td><code>ApplicationNumber</code></td>
+</tr>
+<tr>
+<td><strong>ערך</strong></td>
+<td>נתונים דינמיים (thunderbolt icon)</td>
+<td><em>Add Application → See More → Application Number</em></td>
+</tr>
+<tr>
+<td><strong>תיאור</strong></td>
+<td>הזן</td>
+<td><code>The [ApplicationNumber] of the Job Application created</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Respond to the agent" src="../../../../../translated_images/8-add-application-5.718d76f32b1a11f1d636fc1561cbfd21f5f475192f3a64ad682ad0d400a6b8f4.he.png" /></p>
+</li>
+<li>
+<p>בחר <strong>שמור טיוטה</strong> בפינה הימנית העליונה</p>
+</li>
+<li>
+<p>בחר את לשונית <strong>סקירה כללית</strong>, בחר <strong>ערוך</strong> בלוח <strong>פרטים</strong></p>
+<ul>
+<li><strong>שם זרימה</strong>:<code>Create Job Application</code></li>
+<li><strong>תיאור</strong>:<code>Creates a new job application when given [ResumeNumber] and [JobRoleNumber]</code></li>
+<li><strong>שמור</strong></li>
+</ul>
+</li>
+<li>
+<p>חזור ללשונית <strong>מעצב</strong>, ובחר <strong>פרסם</strong>.</p>
+</li>
+</ol>
+<h3 id="85">8.5 הוסף יצירת מועמדות לסוכן<a class="headerlink" href="#85" title="Permanent link">&para;</a></h3>
+<p>עכשיו תחבר את הזרימה שפורסמה לסוכן קבלת המועמדות שלך.</p>
+<ol>
+<li>
+<p>חזור ל-<strong>Hiring Agent</strong> ובחר בלשונית <strong>סוכנים</strong>. פתח את <strong>Application Intake Agent</strong>, ולאחר מכן מצא את לוח <strong>כלים</strong>.</p>
+</li>
+<li>
+<p>בחר <strong>+ הוסף</strong></p>
+</li>
+<li>
+<p>בחר את מסנן <strong>זרימה</strong>, וחפש <code>Create Job Application</code>. בחר את זרימת <strong>Create Job Application</strong>, ולאחר מכן <strong>הוסף והגדר</strong>.</p>
+</li>
+<li>
+<p>הגדר את הפרמטרים הבאים:</p>
+<table>
+<thead>
+<tr>
+<th>פרמטר</th>
+<th>ערך</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>תיאור</strong></td>
+<td><code>Creates a new job application when given [ResumeNumber] and [JobRoleNumber]</code></td>
+</tr>
+<tr>
+<td><strong>פרטים נוספים → מתי ניתן להשתמש בכלי זה</strong></td>
+<td><code>Only when referenced by topics or agents</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>בחר <strong>שמור</strong><br />
+<img alt="הוסף זרימת סוכן לסוכן" src="../../../../../translated_images/8-add-application-6.40c79eb32d0c682a29becf59f08aec0f492780c326256602c3359ba97e370c44.he.png" /></p>
+</li>
+</ol>
+<h3 id="86">8.6 הגדר הוראות לסוכן<a class="headerlink" href="#86" title="Permanent link">&para;</a></h3>
+<p>כדי ליצור מועמדויות, עליך להנחות את הסוכן מתי להשתמש בכלי החדש. במקרה זה, תבקש מהמשתמש לאשר לאילו תפקידים מוצעים להגיש מועמדות, ותנחה את הסוכן להפעיל את הכלי עבור כל תפקיד.</p>
+<ol>
+<li>
+<p>חזור ל-<strong>Application Intake Agent</strong>, ולאחר מכן מצא את לוח <strong>הוראות</strong>.</p>
+</li>
+<li>
+<p>בשדה <strong>הוראות</strong>, <strong>הוסף</strong> את ההנחיות הברורות הבאות לסוכן המשני שלך <strong>בסוף ההוראות הקיימות</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>3. Post Resume Upload
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>   - Respond with a formatted bullet list of [SuggestedJobRoles] the candidate could apply for.  
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>   - Use the format: [JobRoleNumber] - [RoleDescription]
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>   - Ask the user to confirm which Job Roles to create applications for the candidate.
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>   - When the user has confirmed a set of [JobRoleNumber]s, move to the next step.
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>4. Post Upload - Application Creation
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    - After the user confirms which [SuggestedJobRoles] for a specific [ResumeNumber]:
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    E.g. &quot;Apply [ResumeNumber] for the Job Roles [JobRoleNumber], [JobRoleNumber], [JobRoleNumber]
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    E.g. &quot;apply to all suggested job roles&quot; - this implies use all the [JobRoleNumbers] 
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>     - Loop over each [JobRoleNumber] and send with [ResumeNumber] to /Create Job Application   
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>     - Summarize the Job Applications Created
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>Strict Rules (that must never be broken)
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>You must always follow these rules and never break them:
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>1. The only valid identifiers are:
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>  - ResumeNumber (ppa_resumenumber)→ format R#####
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>  - CandidateNumber (ppa_candidatenumber)→ format C#####
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>  - ApplicationNumber (ppa_applicationnumber)→ format A#####
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>  - JobRoleNumber (ppa_jobrolenumber)→ format J#####
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>2. Never guess or invent these values.
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>3. Always extract identifiers from the current context (conversation, data, or system output). 
+</span></code></pre></div>
+</li>
+<li>
+<p>כאשר ההוראות כוללות קו נטוי (/), בחר את הטקסט שמופיע אחרי הקו הנטוי ובחר בכלי <strong>Create Job Application</strong>.</p>
+</li>
+<li>
+<p>בחר <strong>שמור</strong><br />
+<img alt="הוראות יצירת מועמדות" src="../../../../../translated_images/8-add-application-7.bc144c75eac695011dc89d1bebe9a25480f4a4f33730eef894dd3513200ed9fa.he.png" /></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">חזרה על פריטים מרובים באורקסטרציה גנרטיבית</p>
+<p>ההוראות הללו משתמשות ביכולת האורקסטרציה הגנרטיבית לחזור על שורות מרובות כאשר מקבלים החלטות על אילו צעדים וכלים להשתמש. התפקידים המותאמים ייקראו באופן אוטומטי וסוכן קבלת המועמדות יפעל עבור כל שורה. ברוך הבא לעולם הקסום של אורקסטרציה גנרטיבית!</p>
+</div>
+<h3 id="87">8.7 בדוק את הסוכן שלך<a class="headerlink" href="#87" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>פתח את <strong>Hiring Agent</strong> ב-Copilot Studio.</p>
+</li>
+<li>
+<p><strong>העלה</strong> קורות חיים לדוגמה לצ'אט, והקלד:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>This is a new resume for the Power Platform Developer Role.
+</span></code></pre></div>
+</li>
+<li>
+<p>שים לב כיצד הסוכן מספק רשימה של תפקידים מוצעים - כל אחד עם מספר תפקיד.<br />
+<img alt="תוצאות בדיקה עם תפקידים מוצעים" src="../../../../../translated_images/8-test-1.3a67b59f169aeb1b04a810dc15c78146ea70418ce977f2da3ed3cdf78bdbc9df.he.png" /></p>
+</li>
+<li>
+<p>לאחר מכן תוכל לציין לאילו מהם תרצה להוסיף את קורות החיים כמועמדות לתפקיד.
+    <strong>דוגמאות:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>&quot;Apply for all of those job roles&quot;
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>&quot;Apply for the J10009 Power Platform Developer role&quot;
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>&quot;Apply for the Developer and Architect roles&quot;
+</span></code></pre></div>
+<p><img alt="תוצאות בדיקה יצירת מועמדויות" src="../../../../../translated_images/8-test-2.b385c7ca9f4cc82b0a22f7090b25a1bad6dc88a119f362de21df0246f64d9911.he.png" /></p>
+</li>
+<li>
+<p>כלי <strong>Create Job Application</strong> יופעל עבור כל תפקיד שציינת. בתוך מפת הפעילות, תראה את כלי Create Job Application מופעל עבור כל אחד מהתפקידים שביקשת ליצור מועמדות עבורם:<br />
+<img alt="Create Job Application במפת פעילות" src="../../../../../translated_images/8-create-job-application-activity-map.11d9f307a0055ffb7a97fbe8f8488932420cdb8d25f9a90e5609f3bcc95fdfb9.he.png" /></p>
+</li>
+</ol>
+<h2 id="_8">🎉 משימה הושלמה<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>עבודה מצוינת, אופרטיבי! <strong>Operation Grounding Control</strong> הושלמה. שיפרת בהצלחה את יכולות ה-AI שלך עם חיבור נתונים דינמי, ויצרת מערכת גיוס חכמה באמת.</p>
+<p>הנה מה שהשגת במשימה זו:</p>
+<p><strong>✅ שליטה בחיבור נתונים ל-Dataverse</strong><br />
+עכשיו אתה מבין איך לחבר הנחיות מותאמות למקורות נתונים חיים עבור אינטליגנציה דינמית.</p>
+<p><strong>✅ ניתוח קורות חיים משופר</strong><br />
+זרימת Summarize Resume שלך עכשיו ניגשת לנתוני תפקידים בזמן אמת וקריטריוני הערכה להתאמה מדויקת.</p>
+<p><strong>✅ קבלת החלטות מבוססת נתונים</strong><br />
+סוכני הגיוס שלך יכולים עכשיו להתאים עצמם אוטומטית לדרישות תפקיד משתנות ללא עדכוני הנחיות ידניים.</p>
+<p><strong>✅ יצירת מועמדות לתפקיד</strong><br />
+המערכת המשופרת שלך יכולה עכשיו ליצור מועמדויות לתפקיד ומוכנה לאורקסטרציה מורכבת נוספת.</p>
+<p>🚀 <strong>הבא בתור:</strong> במשימה הבאה תלמד איך ליישם יכולות הסקת מסקנות עמוקות שיעזרו לסוכנים שלך לקבל החלטות מורכבות ולספק הסברים מפורטים להמלצותיהם.</p>
+<p>⏩ <a href="../09-deep-reasoning/">עבור למשימה 09: הסקת מסקנות עמוקה</a></p>
+<h2 id="_9">📚 משאבים טקטיים<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/use-your-own-prompt-data?WT.mc_id=power-182762-scottdurow">שימוש בנתונים שלך בהנחיה</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/create-a-custom-prompt?WT.mc_id=power-182762-scottdurow">יצירת הנחיה מותאמת אישית</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/knowledge-add-dataverse?WT.mc_id=power-182762-scottdurow">עבודה עם Dataverse ב-Copilot Studio</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/prompts-overview?WT.mc_id=power-182762-scottdurow">סקירה כללית של הנחיות מותאמות אישית ב-AI Builder</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/?WT.mc_id=power-182762-scottdurow">תיעוד AI Builder של Power Platform</a></p>
+<p>📖 <a href="https://learn.microsoft.com/training/modules/ai-builder-grounded-prompts/?WT.mc_id=power-182762-scottdurow">הדרכה: יצירת הנחיות AI Builder באמצעות נתוני Dataverse שלך</a></p>
+<hr />
+<p><strong>הצהרת אחריות</strong>:<br />
+מסמך זה תורגם באמצעות שירות תרגום AI <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי אנושי. אנו לא נושאים באחריות לכל אי הבנות או פרשנויות שגויות הנובעות משימוש בתרגום זה.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

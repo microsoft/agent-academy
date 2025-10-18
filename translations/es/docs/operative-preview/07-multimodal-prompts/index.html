@@ -1,0 +1,1418 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/es/docs/operative-preview/07-multimodal-prompts/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mision-07-extraccion-de-contenidos-de-curriculums-con-prompts-multimodales" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nombre-clave-document-resume-recon" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ NOMBRE CLAVE: DOCUMENT RESUME RECON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-la-mision" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Resumen de la Misión
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objetivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entendiendo-los-prompts-multimodales" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Entendiendo los prompts multimodales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seleccion-de-modelos-en-ai-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Selección de modelos en AI Builder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatos-de-salida-texto-vs-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Formatos de salida: Texto vs JSON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorio-7-construyendo-un-sistema-de-extraccion-de-curriculums" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Laboratorio 7: Construyendo un sistema de extracción de currículums
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mision-completa" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 Misión Completa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-tacticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Recursos tácticos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "616d142d4fb5f45d2a168fad6c1f9545",
+  "translation_date": "2025-10-17T19:32:39+00:00",
+  "source_file": "docs/operative-preview/07-multimodal-prompts/README.md",
+  "language_code": "es"
+}
+-->
+<h1 id="mision-07-extraccion-de-contenidos-de-curriculums-con-prompts-multimodales">🚨 Misión 07: Extracción de Contenidos de Currículums con Prompts Multimodales<a class="headerlink" href="#mision-07-extraccion-de-contenidos-de-curriculums-con-prompts-multimodales" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="nombre-clave-document-resume-recon">🕵️‍♂️ NOMBRE CLAVE: <code>DOCUMENT RESUME RECON</code><a class="headerlink" href="#nombre-clave-document-resume-recon" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Ventana de Tiempo de la Operación:</strong> <code>~45 minutos</code></p>
+</blockquote>
+<h2 id="resumen-de-la-mision">🎯 Resumen de la Misión<a class="headerlink" href="#resumen-de-la-mision" title="Permanent link">&para;</a></h2>
+<p>Bienvenido, Operativo. Tus misiones anteriores te han dotado de habilidades poderosas para la orquestación de agentes, pero ahora es momento de desbloquear una capacidad revolucionaria: <strong>análisis multimodal de documentos</strong>.</p>
+<p>Tu asignación, si decides aceptarla, es <strong>Document Resume Recon</strong> - extraer datos estructurados de cualquier documento con precisión. Aunque tus agentes pueden procesar texto con facilidad, el mundo real requiere manejar PDFs, imágenes y documentos complejos diariamente. Los currículums se acumulan, las facturas necesitan ser procesadas y los formularios requieren digitalización instantánea.</p>
+<p>Esta misión te transformará de un creador de agentes solo de texto a un <strong>experto multimodal</strong>. Aprenderás a configurar IA que lee y entiende documentos como un analista humano, pero con la velocidad y consistencia de la IA. Al final de la misión, habrás construido un sistema completo de extracción de currículums que se integra con tu flujo de trabajo de contratación.</p>
+<p>Las técnicas que aprendas aquí serán esenciales para las operaciones avanzadas de fundamentación de datos en tu próxima misión.</p>
+<h2 id="objetivos">🔎 Objetivos<a class="headerlink" href="#objetivos" title="Permanent link">&para;</a></h2>
+<p>En esta misión, aprenderás:</p>
+<ol>
+<li>Qué son los prompts multimodales y cuándo usar diferentes modelos de IA</li>
+<li>Cómo configurar prompts con entradas de imágenes y documentos</li>
+<li>Cómo formatear las salidas de los prompts como JSON para la extracción de datos estructurados</li>
+<li>Mejores prácticas para la ingeniería de prompts con análisis de documentos</li>
+<li>Cómo integrar prompts multimodales con Flujos de Agentes</li>
+</ol>
+<h2 id="entendiendo-los-prompts-multimodales">🧠 Entendiendo los prompts multimodales<a class="headerlink" href="#entendiendo-los-prompts-multimodales" title="Permanent link">&para;</a></h2>
+<h3 id="que-hace-que-un-prompt-sea-multimodal">¿Qué hace que un prompt sea "multimodal"?<a class="headerlink" href="#que-hace-que-un-prompt-sea-multimodal" title="Permanent link">&para;</a></h3>
+<p>Los prompts tradicionales trabajan solo con texto. Pero los prompts multimodales pueden procesar múltiples tipos de contenido:</p>
+<ul>
+<li><strong>Texto</strong>: Instrucciones escritas y contenido</li>
+<li><strong>Imágenes</strong>: Fotos, capturas de pantalla, gráficos y diagramas (.PNG, .JPG, .JPEG)  </li>
+<li><strong>Documentos</strong>: Facturas, currículums, formularios (.PDF)</li>
+</ul>
+<p>Esta capacidad abre escenarios poderosos como analizar currículums, procesar facturas o extraer datos de formularios.</p>
+<h3 id="por-que-los-multimodales-son-importantes-para-tus-flujos-de-trabajo">Por qué los multimodales son importantes para tus flujos de trabajo<a class="headerlink" href="#por-que-los-multimodales-son-importantes-para-tus-flujos-de-trabajo" title="Permanent link">&para;</a></h3>
+<p>Cada día, tu organización enfrenta estos desafíos de procesamiento de documentos:</p>
+<ul>
+<li><strong>Revisión de currículums</strong>: Leer manualmente cientos de currículums consume tiempo valioso</li>
+<li><strong>Procesamiento de facturas</strong>: Extraer detalles de proveedores, montos y fechas de formatos variados de documentos</li>
+<li><strong>Análisis de formularios</strong>: Convertir formularios en papel en datos digitales</li>
+</ul>
+<p>Los prompts multimodales eliminan estos cuellos de botella combinando la comprensión del lenguaje de la IA con capacidades de análisis visual. Esto le da a tu IA la habilidad de procesar documentos tan eficazmente como texto.</p>
+<h3 id="escenarios-comunes-de-negocio">Escenarios comunes de negocio<a class="headerlink" href="#escenarios-comunes-de-negocio" title="Permanent link">&para;</a></h3>
+<p>Aquí hay algunos ejemplos de cómo se pueden aplicar los prompts multimodales:</p>
+<table>
+<thead>
+<tr>
+<th>Escenario</th>
+<th>Tarea</th>
+<th>Campos de Salida Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Revisión de currículums</strong></td>
+<td>Extraer nombre del candidato, correo electrónico, teléfono, título actual, años de experiencia y habilidades clave.</td>
+<td>Nombre del Candidato, Dirección de Correo Electrónico, Número de Teléfono, Título Actual, Años de Experiencia, Habilidades Clave</td>
+</tr>
+<tr>
+<td><strong>Procesamiento de facturas</strong></td>
+<td>Extraer información del proveedor, fecha de la factura, monto total y elementos de línea de esta factura.</td>
+<td>Nombre del Proveedor, Fecha de la Factura, Monto Total, Elementos de Línea de la Factura</td>
+</tr>
+<tr>
+<td><strong>Análisis de formularios</strong></td>
+<td>Analizar este formulario de solicitud y extraer todos los campos completados.</td>
+<td>Nombre del Campo (por ejemplo, Nombre del Solicitante), Valor Ingresado (por ejemplo, John Doe), ...</td>
+</tr>
+<tr>
+<td><strong>Verificación de documentos de identificación</strong></td>
+<td>Extraer nombre, número de identificación, fecha de vencimiento y dirección de este documento de identificación. Verificar que todo el texto sea claramente legible y marcar cualquier sección poco clara.</td>
+<td>Nombre Completo, Número de Identificación, Fecha de Vencimiento, Dirección, Bandera de Secciones Poco Claras</td>
+</tr>
+</tbody>
+</table>
+<h2 id="seleccion-de-modelos-en-ai-builder">⚙️ Selección de modelos en AI Builder<a class="headerlink" href="#seleccion-de-modelos-en-ai-builder" title="Permanent link">&para;</a></h2>
+<p>AI Builder ofrece diferentes modelos optimizados para tareas específicas. Entender qué modelo usar es crucial para el éxito.</p>
+<div class="admonition note">
+<p class="admonition-title">Preciso hasta septiembre de 2025</p>
+<p>Los modelos de AI Builder se actualizan regularmente, así que consulta la última <a href="https://learn.microsoft.com/ai-builder/prompt-modelsettings">documentación de configuración de modelos de AI Builder</a> para la disponibilidad actual de modelos.</p>
+</div>
+<h3 id="comparacion-de-modelos">Comparación de modelos<a class="headerlink" href="#comparacion-de-modelos" title="Permanent link">&para;</a></h3>
+<p>Todos los siguientes modelos admiten visión y procesamiento de documentos</p>
+<table>
+<thead>
+<tr>
+<th>Modelo</th>
+<th>💰Costo</th>
+<th>⚡Velocidad</th>
+<th>✅Mejor para</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GPT-4.1 mini</strong></td>
+<td>Básico (más rentable)</td>
+<td>Rápido</td>
+<td>Procesamiento estándar de documentos, resumen, proyectos conscientes del presupuesto</td>
+</tr>
+<tr>
+<td><strong>GPT-4.1</strong></td>
+<td>Estándar</td>
+<td>Moderado</td>
+<td>Documentos complejos, creación avanzada de contenido, necesidades de alta precisión</td>
+</tr>
+<tr>
+<td><strong>o3</strong></td>
+<td>Premium</td>
+<td>Lento (razones primero)</td>
+<td>Análisis de datos, pensamiento crítico, resolución sofisticada de problemas</td>
+</tr>
+<tr>
+<td><strong>GPT-5 chat</strong></td>
+<td>Estándar</td>
+<td>Mejorado</td>
+<td>Última comprensión de documentos, mayor precisión en respuestas</td>
+</tr>
+<tr>
+<td><strong>GPT-5 reasoning</strong></td>
+<td>Premium</td>
+<td>Lento (análisis complejo)</td>
+<td>Análisis más sofisticado, planificación, razonamiento avanzado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="explicacion-de-configuraciones-de-temperatura">Explicación de configuraciones de temperatura<a class="headerlink" href="#explicacion-de-configuraciones-de-temperatura" title="Permanent link">&para;</a></h3>
+<p>La temperatura controla cuán creativas o predecibles son las respuestas de tu IA:</p>
+<ul>
+<li><strong>Temperatura 0</strong>: Resultados más predecibles y consistentes (mejor para extracción de datos)</li>
+<li><strong>Temperatura 0.5</strong>: Creatividad y consistencia equilibradas  </li>
+<li><strong>Temperatura 1</strong>: Máxima creatividad (mejor para generación de contenido)</li>
+</ul>
+<p>Para análisis de documentos, usa <strong>temperatura 0</strong> para garantizar una extracción de datos consistente.</p>
+<h2 id="formatos-de-salida-texto-vs-json">📊 Formatos de salida: Texto vs JSON<a class="headerlink" href="#formatos-de-salida-texto-vs-json" title="Permanent link">&para;</a></h2>
+<p>Elegir el formato de salida correcto es crítico para el procesamiento posterior.</p>
+<h3 id="cuando-usar-salida-de-texto">Cuándo usar salida de texto<a class="headerlink" href="#cuando-usar-salida-de-texto" title="Permanent link">&para;</a></h3>
+<p>La salida de texto funciona bien para:</p>
+<ul>
+<li>Resúmenes legibles por humanos</li>
+<li>Clasificaciones simples</li>
+<li>Contenido que no necesita procesamiento estructurado</li>
+</ul>
+<h3 id="cuando-usar-salida-json">Cuándo usar salida JSON<a class="headerlink" href="#cuando-usar-salida-json" title="Permanent link">&para;</a></h3>
+<p>La salida JSON es esencial para:</p>
+<ul>
+<li>Extracción de datos estructurados</li>
+<li>Integración con bases de datos o sistemas</li>
+<li>Procesamiento de flujos de Power Automate</li>
+<li>Mapeo consistente de campos</li>
+</ul>
+<h3 id="mejores-practicas-para-json">Mejores prácticas para JSON<a class="headerlink" href="#mejores-practicas-para-json" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Definir nombres de campos claros</strong>: Usa nombres descriptivos y consistentes</li>
+<li><strong>Proporcionar ejemplos</strong>: Incluye salida de muestra y valores para cada campo</li>
+<li><strong>Especificar tipos de datos</strong>: Incluye ejemplos para fechas, números y texto</li>
+<li><strong>Manejar datos faltantes</strong>: Planifica valores nulos o vacíos</li>
+<li><strong>Validar estructura</strong>: Prueba con varios tipos de documentos</li>
+</ol>
+<h3 id="consideraciones-sobre-la-calidad-del-documento">Consideraciones sobre la calidad del documento<a class="headerlink" href="#consideraciones-sobre-la-calidad-del-documento" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Resolución</strong>: Asegúrate de que las imágenes sean claras y legibles</li>
+<li><strong>Orientación</strong>: Gira los documentos a la orientación correcta antes de procesarlos</li>
+<li><strong>Soporte de formato</strong>: Prueba con tus tipos específicos de documentos (PDF, JPG, PNG)</li>
+<li><strong>Límites de tamaño</strong>: Ten en cuenta las restricciones de tamaño de archivo en tu entorno</li>
+</ul>
+<h3 id="optimizacion-del-rendimiento">Optimización del rendimiento<a class="headerlink" href="#optimizacion-del-rendimiento" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Elige modelos apropiados</strong>: Actualiza modelos solo cuando sea necesario</li>
+<li><strong>Optimiza los prompts</strong>: A menudo, las instrucciones más cortas y claras funcionan mejor</li>
+<li><strong>Manejo de errores</strong>: Planifica para documentos que no puedan ser procesados</li>
+<li><strong>Monitorea costos</strong>: Los diferentes modelos consumen diferentes cantidades de créditos de AI Builder</li>
+</ul>
+<h2 id="laboratorio-7-construyendo-un-sistema-de-extraccion-de-curriculums">🧪 Laboratorio 7: Construyendo un sistema de extracción de currículums<a class="headerlink" href="#laboratorio-7-construyendo-un-sistema-de-extraccion-de-curriculums" title="Permanent link">&para;</a></h2>
+<p>Es hora de poner en práctica tu conocimiento multimodal. Construirás un sistema integral de extracción de currículums que analiza documentos de candidatos y los transforma en datos estructurados para tu flujo de trabajo de contratación.</p>
+<h3 id="prerrequisitos-para-completar-esta-mision">Prerrequisitos para completar esta misión<a class="headerlink" href="#prerrequisitos-para-completar-esta-mision" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Necesitarás <strong>ya sea</strong>:</p>
+<ul>
+<li><strong>Haber completado la Misión 06</strong> y tener tu sistema de contratación multiagente listo, <strong>O</strong></li>
+<li><strong>Importar la solución inicial de la Misión 07</strong> si estás comenzando desde cero o necesitas ponerte al día. <a href="https://aka.ms/agent-academy">Descargar Solución Inicial de la Misión 07</a></li>
+</ul>
+</li>
+<li>
+<p>Documentos de currículums de muestra de <a href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/operative/sample-data/resumes&amp;filename=operative_sampledata">Currículums de Prueba</a></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Importación de Solución y Datos de Muestra</p>
+<p>Si estás usando la solución inicial, consulta <a href="../01-get-started/">Misión 01</a> para obtener instrucciones detalladas sobre cómo importar soluciones y datos de muestra en tu entorno.</p>
+</div>
+<h3 id="71-crear-un-prompt-multimodal">7.1 Crear un prompt multimodal<a class="headerlink" href="#71-crear-un-prompt-multimodal" title="Permanent link">&para;</a></h3>
+<p>Tu primer objetivo: crear un prompt capaz de analizar documentos de currículums y extraer datos estructurados.</p>
+<ol>
+<li>
+<p>Inicia sesión en <a href="https://copilotstudio.microsoft.com">Copilot Studio</a> y selecciona <strong>Herramientas</strong> desde la navegación izquierda.</p>
+</li>
+<li>
+<p>Selecciona <strong>+ Nueva herramienta</strong>, luego selecciona <strong>Prompt</strong>.<br />
+<img alt="Nuevo Prompt" src="../../../../../translated_images/7-new-prompt.8041acd54e3aecfca0c277aba88b9a2a923482a4b45ba65dcadf9296fac7c458.es.png" /></p>
+</li>
+<li>
+<p><strong>Renombra</strong> el prompt desde el nombre predeterminado con marca de tiempo (Ej. <em>Prompt personalizado 09/04/2025, 04:59:11 PM</em>) a <code>Resumir Currículum</code>.</p>
+</li>
+<li>
+<p>En el campo de Instrucciones, agrega este prompt:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are tasked with extracting key candidate information from a resume and cover letter to facilitate matching with open job roles and creating a summary for application review.
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Instructions:
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>1. Extract Candidate Details:
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    - Identify and extract the candidate’s full name.
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    - Extract contact information, specifically the email address.
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2. Create Candidate Summary:
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    - Summarize the candidate’s profile as multiline text (max 2000 characters) with the following sections:
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        - Candidate name
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        - Role(s) applied for if present
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        - Contact and location
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        - One-paragraph summary
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        - Experience snapshot (last 2–3 roles with outcomes)
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        - Key projects (1–3 with metrics)
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        - Education and certifications
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        - Top skills (Top 10)
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        - Availability and work authorization
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>Guidelines:
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>- Extract information only from the provided resume and cover letter documents.
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>- Ensure accuracy in identifying all details such as contact details and skills.
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>- The summary should be concise but informative, suitable for quick application review.
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>Resume: /document
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>CoverLetter: /text
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Usa la asistencia de Copilot</p>
+<p>Puedes usar "Comenzar con Copilot" para generar tu prompt usando lenguaje natural. ¡Intenta pedirle a Copilot que cree un prompt para resumir un currículum!</p>
+</div>
+</li>
+<li>
+<p><strong>Configura</strong> los parámetros de entrada:</p>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Nombre</th>
+<th>Datos de Muestra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Currículum</td>
+<td>Imagen o documento</td>
+<td>Currículum</td>
+<td>Sube un currículum de muestra desde la carpeta de datos de prueba</td>
+</tr>
+<tr>
+<td>Carta de Presentación</td>
+<td>Texto</td>
+<td>Carta de Presentación</td>
+<td>¡Aquí hay un Currículum!</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Selecciona <strong>Probar</strong> para ver la salida inicial de texto de tu prompt.<br />
+<img alt="Configurar parámetros y probar" src="../../../../../translated_images/7-prompt-parameters.fe63dae637c278e1c7dd1413749ff72bc1361d382162c5a58ebc9ff721f06821.es.png" /></p>
+</li>
+</ol>
+<h3 id="72-configurar-salida-json">7.2 Configurar salida JSON<a class="headerlink" href="#72-configurar-salida-json" title="Permanent link">&para;</a></h3>
+<p>Ahora convertirás el prompt para que genere datos estructurados en formato JSON en lugar de texto plano.</p>
+<ol>
+<li>
+<p>Agrega esta especificación de formato JSON al final de las instrucciones de tu prompt:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Output Format:
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Provide the output in valid JSON format with the following structure:
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>{
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    &quot;CandidateName&quot;: &quot;string&quot;,
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    &quot;Email&quot;: &quot;string&quot;,
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    &quot;Summary&quot;: &quot;string max 2000 characters&quot;,
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    &quot;Skills&quot;: [ {&quot;item&quot;: &quot;Skill 1&quot;}, {&quot;item&quot;: &quot;Skill 2&quot;}],
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    &quot;Experience&quot;: [ {&quot;item&quot;: &quot;Experience 1&quot;}, {&quot;item&quot;: &quot;Experience 2&quot;}],
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p>Cambia la configuración de <strong>Salida</strong> de "Texto" a <strong>JSON</strong>.</p>
+</li>
+<li>
+<p>Selecciona <strong>Probar</strong> nuevamente para verificar que la salida ahora esté formateada como JSON.<br />
+<img alt="Configurar prompt como JSON" src="../../../../../translated_images/7-json-prompt.89afee0b09beedd348dfefcb54ec1aa328abe7f94b72c6c26a363f686652d712.es.png" /></p>
+</li>
+<li>
+<p><strong>Opcional:</strong> Experimenta con diferentes modelos de IA para ver cómo varían las salidas, luego regresa al modelo predeterminado.</p>
+</li>
+<li>
+<p>Selecciona <strong>Guardar</strong> para crear el prompt.</p>
+</li>
+<li>
+<p>En el cuadro de diálogo <strong>Configurar para usar en Agente</strong>, selecciona <strong>Cancelar</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Por qué no estamos agregando esto como una herramienta todavía</p>
+<p>Usarás este prompt en un Flujo de Agente en lugar de directamente como una herramienta, lo que te da más control sobre el flujo de procesamiento de datos.</p>
+</div>
+</li>
+</ol>
+<h3 id="73-agregar-prompt-a-un-flujo-de-agente">7.3 Agregar prompt a un Flujo de Agente<a class="headerlink" href="#73-agregar-prompt-a-un-flujo-de-agente" title="Permanent link">&para;</a></h3>
+<p>Crearás un Flujo de Agente que usa tu prompt para procesar currículums almacenados en Dataverse.</p>
+<div class="admonition tip">
+<p class="admonition-title">Expresiones de Flujo de Agente</p>
+<p>Es muy importante que sigas las instrucciones para nombrar tus nodos y escribir expresiones exactamente porque las expresiones se refieren a los nodos anteriores usando su nombre. Consulta la <a href="../../recruit/09-add-an-agent-flow/#you-mentioned-expressions-what-are-expressions">misión de Flujo de Agente en Reclutar</a> para un repaso rápido.</p>
+</div>
+<ol>
+<li>
+<p>Navega a tu <strong>Agente de Contratación</strong> dentro de Copilot Studio</p>
+</li>
+<li>
+<p>Selecciona la pestaña <strong>Agentes</strong>, y selecciona el <strong>Agente de Recepción de Solicitudes</strong> hijo</p>
+</li>
+<li>
+<p>Dentro del panel <strong>Herramientas</strong>, selecciona <strong>+ Agregar</strong> → <strong>+ Nueva herramienta</strong> → <strong>Flujo de Agente</strong></p>
+</li>
+<li>
+<p>Selecciona el nodo Cuando un agente llama al flujo, usa <strong>+ Agregar una entrada</strong> para agregar el siguiente parámetro:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Nombre</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Texto</td>
+<td>NúmeroCurrículum</td>
+<td>Asegúrate de usar [NúmeroCurrículum]. Esto siempre debe comenzar con la letra R</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Selecciona el icono <strong>+</strong> Insertar acción debajo del primer nodo, busca <strong>Dataverse</strong>, selecciona <strong>Ver más</strong>, y luego localiza la acción <strong>Listar filas</strong></p>
+</li>
+<li>
+<p>Selecciona los <strong>tres puntos (...)</strong> en el nodo Listar filas, y selecciona <strong>Renombrar</strong> a <code>Obtener Registro de Currículum</code>, y luego configura los siguientes parámetros:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Cómo Configurar</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nombre de la tabla</strong></td>
+<td>Seleccionar</td>
+<td>Currículums</td>
+</tr>
+<tr>
+<td><strong>Filtrar filas</strong></td>
+<td>Datos dinámicos (icono de rayo)</td>
+<td><code>ppa_resumenumber eq 'NúmeroCurrículum'</code> Reemplaza <strong>NúmeroCurrículum</strong> con <strong>Cuando un agente llama al flujo</strong> → <strong>NúmeroCurrículum</strong></td>
+</tr>
+<tr>
+<td><strong>Cantidad de filas</strong></td>
+<td>Ingresar</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">¡Optimiza esas consultas!</p>
+<p>Cuando uses esta técnica en producción, siempre debes limitar las columnas seleccionadas solo a las requeridas por el Flujo de Agente.</p>
+</div>
+<p><img alt="Obtener Registro de Currículum" src="../../../../../translated_images/7-summarize-resume-1.4b3b05b2bbab523feaf98c63502e7916c800c61db2d8a2be09b4624e0d83eb71.es.png" /></p>
+</li>
+<li>
+<p>Selecciona el icono <strong>+</strong> Insertar acción debajo del nodo Obtener Registro de Currículum, busca <strong>Dataverse</strong>, selecciona <strong>Ver más</strong>, y luego localiza la acción <strong>Descargar un archivo o una imagen</strong>.</p>
+<div class="admonition tip">
+<p class="admonition-title">¡Elige la acción correcta!</p>
+<p>Asegúrate de no seleccionar la acción que termina en "del entorno seleccionado"</p>
+</div>
+</li>
+<li>
+<p>Como antes, renombra la acción <code>Descargar Currículum</code>, y luego configura los siguientes parámetros:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Cómo Configurar</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nombre de la tabla</strong></td>
+<td>Seleccionar</td>
+<td>Currículums</td>
+</tr>
+<tr>
+<td><strong>ID de fila</strong></td>
+<td>Expresión (icono fx)</td>
+<td><code>first(body('Obtener_Registro_de_Currículum')?['value'])?['ppa_resumeid']</code></td>
+</tr>
+<tr>
+<td><strong>Nombre de columna</strong></td>
+<td>Seleccionar</td>
+<td>PDF del Currículum</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Descargar Currículum" src="../../../../../translated_images/7-summarize-resume-2.c56d74be42ed30a6f3082ef84b3b81ab5286f014c09d995ce32bbfe9af96df42.es.png" /></p>
+</li>
+<li>
+<p>Ahora, selecciona el icono <strong>+</strong> Insertar acción debajo de Descargar Currículum, bajo <strong>Capacidades de IA</strong>, selecciona <strong>Ejecutar un prompt</strong>,</p>
+</li>
+<li>
+<p>Renombra la acción a <code>Resumir Currículum</code> y configura los siguientes parámetros:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Cómo Configurar</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Indicación</strong></td>
+<td>Seleccionar</td>
+<td>Resumir Currículum</td>
+</tr>
+<tr>
+<td><strong>Carta de Presentación</strong></td>
+<td>Expresión (icono fx)</td>
+<td><code>first(body('Get_Resume_Record')?['value'])?['ppa_coverletter']</code></td>
+</tr>
+<tr>
+<td><strong>Currículum</strong></td>
+<td>Datos dinámicos (icono de rayo)</td>
+<td>Descargar Currículum → Contenido de archivo o imagen</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Indicación para Resumir Currículum" src="../../../../../translated_images/7-summarize-resume-3.c1656de643c50805ff6972e2891db16776cbdc433ddb09778819836a60204375.es.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Parámetros de la Indicación</p>
+<p>Observa cómo los parámetros que estás completando son los mismos que configuraste como parámetros de entrada al crear tu indicación.</p>
+</div>
+<h3 id="74-crear-registro-de-candidato">7.4 Crear registro de candidato<a class="headerlink" href="#74-crear-registro-de-candidato" title="Permanent link">&para;</a></h3>
+<p>A continuación, debes tomar la información que te proporcionó la Indicación y crear un nuevo registro de candidato si aún no existe.</p>
+<ol>
+<li>
+<p>Selecciona el icono <strong>+</strong> Insertar acción debajo del nodo Resumir Currículum, busca <strong>Dataverse</strong>, selecciona <strong>Ver más</strong>, y luego localiza la acción <strong>Listar filas</strong>.</p>
+</li>
+<li>
+<p>Renombra el nodo como <code>Get Existing Candidate</code>, y luego configura los siguientes parámetros:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Cómo Configurar</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nombre de la tabla</strong></td>
+<td>Seleccionar</td>
+<td>Candidates</td>
+</tr>
+<tr>
+<td><strong>Filtrar filas</strong></td>
+<td>Datos dinámicos (icono de rayo)</td>
+<td><code>ppa_email eq 'Email'</code>  <strong>Reemplazar</strong> <code>Email</code> con <strong>Resumir Currículum → Email</strong></td>
+</tr>
+<tr>
+<td><strong>Cantidad de filas</strong></td>
+<td>Introducir</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Obtener Candidato Existente" src="../../../../../translated_images/7-summarize-resume-4.c95d900bad4e6e75ad348f4385f69a9db37f76f3b1bb90813157643814a3f6a8.es.png" /></p>
+<ol>
+<li>
+<p>Selecciona el icono <strong>+</strong> Insertar acción debajo del nodo Obtener Candidato Existente, busca <strong>Control</strong>, selecciona <strong>Ver más</strong>, y luego localiza la acción <strong>Condición</strong>.</p>
+</li>
+<li>
+<p>En las propiedades de la condición, configura la siguiente condición:</p>
+<table>
+<thead>
+<tr>
+<th>Condición</th>
+<th>Operador</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Expresión (icono fx): <code>length(outputs('Get_Existing_Candidate')?['body/value'])</code></td>
+<td>es igual a</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Condición de Candidato Existente" src="../../../../../translated_images/7-summarize-resume-5.1a83c05153ac5aa16b8c3fec10989628f64f893fc7c6bfed8b4ec16caf6b7a6b.es.png" /></p>
+<ol>
+<li>
+<p>Selecciona el icono <strong>+</strong> Insertar acción en la rama <strong>True</strong>, busca <strong>Dataverse</strong>, selecciona <strong>Ver más</strong>, y luego localiza la acción <strong>Agregar una nueva fila</strong>.</p>
+</li>
+<li>
+<p>Renombra el nodo como <code>Add a New Candidate</code>, y luego configura los siguientes parámetros:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Cómo Configurar</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nombre de la tabla</strong></td>
+<td>Seleccionar</td>
+<td>Candidates</td>
+</tr>
+<tr>
+<td><strong>Nombre del Candidato</strong></td>
+<td>Datos dinámicos (icono de rayo)</td>
+<td>Resumir Currículum → <code>CandidateName</code></td>
+</tr>
+<tr>
+<td><strong>Email</strong></td>
+<td>Datos dinámicos (icono de rayo)</td>
+<td>Resumir Currículum → <code>Email</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Agregar Nuevo Candidato" src="../../../../../translated_images/7-summarize-resume-6.321bee96056d21981c466a87456aea1bafc394a492cc4b814b97ba2ee6b758fa.es.png" /></p>
+<h3 id="75-actualizar-curriculum-y-configurar-salidas-del-flujo">7.5 Actualizar currículum y configurar salidas del flujo<a class="headerlink" href="#75-actualizar-curriculum-y-configurar-salidas-del-flujo" title="Permanent link">&para;</a></h3>
+<p>Completa el flujo actualizando el registro del currículum y configurando qué datos devolver a tu agente.</p>
+<ol>
+<li>
+<p>Selecciona el icono <strong>+</strong> Insertar acción debajo de la condición, busca <strong>Dataverse</strong>, selecciona <strong>Ver más</strong>, y luego localiza la acción <strong>Actualizar una fila</strong>.</p>
+</li>
+<li>
+<p>Selecciona el título para renombrar el nodo como <code>Update Resume</code>, selecciona <strong>Mostrar todo</strong>, y luego configura los siguientes parámetros:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Cómo Configurar</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nombre de la tabla</strong></td>
+<td>Seleccionar</td>
+<td>Resumes</td>
+</tr>
+<tr>
+<td><strong>ID de la fila</strong></td>
+<td>Expresión (icono fx)</td>
+<td><code>first(body('Get_Resume_Record')?['value'])?['ppa_resumeid']</code></td>
+</tr>
+<tr>
+<td><strong>Resumen</strong></td>
+<td>Datos dinámicos (icono de rayo)</td>
+<td>Resumir Currículum → Texto</td>
+</tr>
+<tr>
+<td><strong>Candidato (Candidates)</strong></td>
+<td>Expresión (icono fx)</td>
+<td><code>if(equals(length(outputs('Get_Existing_Candidate')?['body/value']), 1), first(outputs('Get_Existing_Candidate')?['body/value'])?['ppa_candidateid'], outputs('Add_a_New_Candidate')?['body/ppa_candidateid'])</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Actualizar Currículum" src="../../../../../translated_images/7-summarize-resume-7.0ef51db1ebbf837bae11c0e0bdd8c6e8296d528d500bc729c43660d09967ce57.es.png" /></p>
+<ol>
+<li>
+<p>Selecciona el nodo <strong>Responder al agente</strong> y luego usa <strong>+ Agregar una salida</strong> para configurar:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Nombre</th>
+<th>Cómo Configurar</th>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Texto</td>
+<td><code>CandidateName</code></td>
+<td>Datos dinámicos (icono de rayo)</td>
+<td>Resumir Currículum → Ver más → CandidateName</td>
+<td>El [CandidateName] proporcionado en el Currículum</td>
+</tr>
+<tr>
+<td>Texto</td>
+<td><code>CandidateEmail</code></td>
+<td>Datos dinámicos (icono de rayo)</td>
+<td>Resumir Currículum → Ver más → Email</td>
+<td>El [CandidateEmail] proporcionado en el Currículum</td>
+</tr>
+<tr>
+<td>Texto</td>
+<td><code>CandidateNumber</code></td>
+<td>Expresión (icono fx)</td>
+<td><code>concat('ppa_candidates/', if(equals(length(outputs('Get_Existing_Candidate')?['body/value']), 1), first(outputs('Get_Existing_Candidate')?['body/value'])?['ppa_candidateid'], outputs('Add_a_New_Candidate')?['body/ppa_candidateid']) )</code></td>
+<td>El [CandidateNumber] del candidato nuevo o existente</td>
+</tr>
+<tr>
+<td>Texto</td>
+<td><code>ResumeSummary</code></td>
+<td>Datos dinámicos (icono de rayo)</td>
+<td>Resumir Currículum → Ver más → body/responsev2/predictionOutput/structuredOutput</td>
+<td>El resumen del currículum y detalles en formato JSON</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Responder al agente" src="../../../../../translated_images/7-summarize-resume-8.72c4649f7536863657260438088577b04272ab28bd788c65dabbca1473cd6b5e.es.png" /></p>
+<ol>
+<li>
+<p>Selecciona <strong>Guardar borrador</strong> en la parte superior derecha. Tu Flujo de Agente debería verse como el siguiente<br />
+<img alt="Flujo de Agente para Resumir Currículum" src="../../../../../translated_images/7-summarize-resume-9.491c36275650a2adba1acafcb386970a9c379ab7dad9cc129e27cbbc96c73dd3.es.png" /></p>
+</li>
+<li>
+<p>Selecciona la pestaña <strong>Resumen</strong>, selecciona <strong>Editar</strong> en el panel <strong>Detalles</strong>.</p>
+<ol>
+<li><strong>Nombre del flujo</strong>:<code>Summarize Resume</code></li>
+<li>
+<p><strong>Descripción</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Summarize an existing Resume stored in Dataverse using a [ResumeNumber] as input, return the [CandidateNumber], and resume summary JSON
+</span></code></pre></div>
+</li>
+</ol>
+</li>
+<li>
+<p>Selecciona <strong>Guardar</strong>.</p>
+</li>
+<li>
+<p>Selecciona nuevamente la pestaña <strong>Diseñador</strong>, y selecciona <strong>Publicar</strong>.</p>
+</li>
+</ol>
+<h3 id="76-conectar-el-flujo-a-tu-agente">7.6 Conectar el flujo a tu agente<a class="headerlink" href="#76-conectar-el-flujo-a-tu-agente" title="Permanent link">&para;</a></h3>
+<p>Ahora agregarás el flujo como una herramienta y configurarás tu agente para usarlo.</p>
+<ol>
+<li>
+<p>Abre tu <strong>Agente de Contratación</strong> dentro de Copilot Studio.</p>
+</li>
+<li>
+<p>Selecciona la pestaña <strong>Agentes</strong>, y abre el <strong>Agente de Recepción de Solicitudes</strong>.</p>
+</li>
+<li>
+<p>Selecciona el panel <strong>Herramientas</strong>, y selecciona <strong>+ Agregar una herramienta</strong> → <strong>Flujo</strong> → <strong>Summarize Resume</strong> <strong>(Flujo de Agente)</strong>.</p>
+</li>
+<li>
+<p>Selecciona <strong>Agregar y configurar</strong>.</p>
+</li>
+<li>
+<p>Configura los ajustes de la herramienta como sigue:</p>
+<table>
+<thead>
+<tr>
+<th>Configuración</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Descripción</strong></td>
+<td>Resumir un currículum existente almacenado en Dataverse usando un [ResumeNumber] como entrada, devolver el [CandidateNumber] y el resumen del currículum en formato JSON</td>
+</tr>
+<tr>
+<td><strong>Cuándo se puede usar esta herramienta</strong></td>
+<td>Solo cuando sea referenciada por temas o agentes</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Selecciona <strong>Guardar</strong><br />
+<img alt="Configurar Herramienta para Resumir Currículum" src="../../../../../translated_images/7-configure-summarize-resume-tool.f301e328142193d27b0ab8dea68dcd130e783e897bf37c94f952594d9eca8071.es.png" /></p>
+</li>
+<li>
+<p>Si seleccionas Herramientas dentro del Agente de Contratación, ahora verás que ambas herramientas son utilizables por el <strong>Agente de Recepción de Solicitudes</strong>.<br />
+<img alt="Herramientas del Agente" src="../../../../../translated_images/7-agent-tools.5ab82b09501386a00351a8ef3149a0f177360bca0aa70a7c05cb273289247c61.es.png" /></p>
+</li>
+<li>
+<p>Navega a las Instrucciones del agente <strong>Application Intake Child</strong>, y modifica el paso <strong>Post-Upload</strong> para que sea el siguiente:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2. Post-Upload Processing  
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    - After uploading, be sure to also output the [ResumeNumber] in all messages
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    - Pass [ResumeNumber] to /Summarize Resume  - Be sure to use the correct value that will start with the letter R.
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    - Be sure to also output the [CandidateNumber] in all messages
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    - Use the [ResumeSummary] to output a summary of the processed Resume and candidate
+</span></code></pre></div>
+<p>Reemplaza <code>/Summarize Resume</code> insertando una referencia al <strong>flujo de agente Summarize Resume</strong> escribiendo una barra inclinada (<code>/</code>) o seleccionando <code>/Summarize</code> para insertar la referencia.<br />
+<img alt="Actualizar Instrucciones" src="../../../../../translated_images/7-summarize-instructions-update.b3620bc94c8de06ee09eb5804de4f9ac7bfce8458f87fe4bee41cb51abe7f48c.es.png" /></p>
+</li>
+<li>
+<p>Selecciona <strong>Guardar</strong>.</p>
+</li>
+</ol>
+<h3 id="77-prueba-tu-agente">7.7 Prueba tu agente<a class="headerlink" href="#77-prueba-tu-agente" title="Permanent link">&para;</a></h3>
+<p>Prueba tu sistema multimodal completo para asegurarte de que todo funcione correctamente.</p>
+<ol>
+<li>
+<p><strong>Inicia la prueba</strong>:</p>
+<ul>
+<li>Selecciona <strong>Probar</strong> para abrir el panel de prueba.</li>
+<li>
+<p>Escribe: <code>Aquí está el currículum de un candidato</code>.</p>
+</li>
+<li>
+<p>Sube uno de los currículums de muestra desde <a href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/operative/sample-data/resumes&amp;filename=operative_sampledata">Currículums de Prueba</a>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Verifica los resultados</strong>:</p>
+<ul>
+<li>Una vez que envíes el mensaje y el currículum, verifica que recibas un Número de Currículum (formato: R#####).</li>
+<li>Verifica que obtengas un Número de Candidato y un resumen.</li>
+<li>Usa el mapa de actividad para ver tanto la herramienta de carga de currículum como la herramienta de Resumir Currículum en acción, y los resultados de la Indicación de Resumen recibidos por el agente:<br />
+<img alt="Resultados de Prueba" src="../../../../../translated_images/7-test-result.dcbb6c277666ab7d06d303c3facfb5ad838a33ec6b7f0b92b90f9faddb9bb6bc.es.png" /></li>
+</ul>
+</li>
+<li>
+<p><strong>Verifica la persistencia de datos</strong>:</p>
+<ul>
+<li>Navega a <a href="https://make.powerapps.com">Power Apps</a>.</li>
+<li>Abre <strong>Apps</strong> → <strong>Hiring Hub</strong> → <strong>Play</strong>.</li>
+<li>Ve a <strong>Resumes</strong> para verificar que el currículum fue subido y procesado. Debería tener tanto información resumida como un registro de candidato asociado.</li>
+<li>Revisa <strong>Candidates</strong> para ver la información del candidato extraída.<br />
+<img alt="Currículum con Candidato y Resumen" src="../../../../../translated_images/7-resume-in-dataverse.cbe85a3f889c989f32ef10ac130e6decfed3d7744fd31f48df8a841cebae229b.es.png" /></li>
+<li>Cuando ejecutes el proceso nuevamente, debería usar el Candidato existente (coincidido por el correo electrónico extraído del currículum) en lugar de crear uno nuevo.</li>
+</ul>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Solución de problemas</p>
+<ul>
+<li><strong>El currículum no se procesa</strong>: Asegúrate de que el archivo sea un PDF y esté dentro de los límites de tamaño.</li>
+<li><strong>No se creó un candidato</strong>: Verifica que el correo electrónico se haya extraído correctamente del currículum.</li>
+<li><strong>Errores de formato JSON</strong>: Asegúrate de que las instrucciones de tu indicación incluyan la estructura JSON exacta.</li>
+<li><strong>Errores en el flujo</strong>: Verifica que todas las conexiones y expresiones de Dataverse estén configuradas correctamente.</li>
+</ul>
+</div>
+<h3 id="preparacion-para-produccion">Preparación para producción<a class="headerlink" href="#preparacion-para-produccion" title="Permanent link">&para;</a></h3>
+<p>Aunque no forma parte de esta misión, para hacer que este flujo de agente esté listo para producción podrías considerar lo siguiente:</p>
+<ol>
+<li><strong>Manejo de errores</strong> - Si no se encuentra el Número de Currículum o la indicación no pudo analizar el documento, se debería agregar manejo de errores para devolver un mensaje claro al agente.</li>
+<li><strong>Actualizar Candidatos existentes</strong> - Si se encuentra el candidato usando el correo electrónico, el nombre podría actualizarse para coincidir con el del currículum.</li>
+<li><strong>Dividir la funcionalidad de resumen del currículum y creación de candidato</strong> - Esta funcionalidad podría dividirse en flujos de agente más pequeños para facilitar su mantenimiento, y luego dar instrucciones al agente para usarlos en secuencia.</li>
+</ol>
+<h2 id="mision-completa">🎉 Misión Completa<a class="headerlink" href="#mision-completa" title="Permanent link">&para;</a></h2>
+<p>¡Excelente trabajo, Operativo! <strong>Reconocimiento de Currículum Documental</strong> está ahora completo. Has dominado con éxito las indicaciones multimodales y ahora puedes extraer datos estructurados de cualquier documento con precisión.</p>
+<p>Esto es lo que has logrado en esta misión:</p>
+<p><strong>✅ Dominio de indicaciones multimodales</strong><br />
+Ahora entiendes qué son las indicaciones multimodales y cuándo usar diferentes modelos de IA para obtener resultados óptimos.</p>
+<p><strong>✅ Experiencia en procesamiento de documentos</strong><br />
+Has aprendido a configurar indicaciones con entradas de imagen y documento, y a formatear salidas como JSON para la extracción de datos estructurados.</p>
+<p><strong>✅ Sistema de extracción de currículums</strong><br />
+Has construido un sistema completo de extracción de currículums que procesa documentos de candidatos e integra con tu flujo de trabajo de contratación.</p>
+<p><strong>✅ Implementación de mejores prácticas</strong><br />
+Has aplicado mejores prácticas para la ingeniería de indicaciones con análisis de documentos e integrado indicaciones multimodales con Flujos de Agente.</p>
+<p><strong>✅ Base para procesamiento avanzado</strong><br />
+Tus capacidades mejoradas de análisis de documentos están ahora listas para las características avanzadas de vinculación de datos que agregaremos en próximas misiones.</p>
+<p>🚀 <strong>Próximo paso:</strong> En la Misión 08, descubrirás cómo mejorar tus indicaciones con datos en tiempo real de Dataverse, creando soluciones de IA dinámicas que se adaptan a los requisitos cambiantes del negocio.</p>
+<p>⏩ <a href="../08-dataverse-grounding/">Ir a la Misión 08: Indicaciones mejoradas con vinculación de Dataverse</a></p>
+<h2 id="recursos-tacticos">📚 Recursos tácticos<a class="headerlink" href="#recursos-tacticos" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/create-a-custom-prompt?WT.mc_id=power-power-182762-scottdurow">Crear una indicación</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/add-inputs-prompt?WT.mc_id=power-182762-scottdurow">Agregar entrada de texto, imagen o documento a tu indicación</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/process-responses-json-output?WT.mc_id=power-182762-scottdurow">Procesar respuestas con salida JSON</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/prompt-modelsettings?WT.mc_id=power-182762-scottdurow">Selección de modelo y configuración de temperatura</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/use-a-custom-prompt-in-flow?WT.mc_id=power-182762-scottdurow">Usar tu indicación en Power Automate</a></p>
+<p>📺 <a href="https://www.youtube.com/watch?v=F0fGnWrRY_I">AI Builder: Salidas JSON en el creador de indicaciones</a></p>
+<hr />
+<p><strong>Descargo de responsabilidad</strong>:<br />
+Este documento ha sido traducido utilizando el servicio de traducción automática <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Aunque nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que surjan del uso de esta traducción.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

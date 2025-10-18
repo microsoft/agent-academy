@@ -1,0 +1,941 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/he/docs/recruit/04-creating-a-solution/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#04" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ctrl-alt-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ שם קוד: מבצע CTRL-ALT-PACKAGE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 תדריך המשימה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 מטרות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵🏻‍♀️ פתרון? מה זה?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 למה כדאי להשתמש בפתרון עבור הסוכן שלי?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪪 הבנת מפרסמי פתרונות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 מחזור החיים של פתרון Power Platform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#04_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 מעבדה 04: יצירת פתרון חדש
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ משימה הושלמה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 משאבים טקטיים
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "0c51aabca81d6256990caf4c015e6195",
+  "translation_date": "2025-10-17T01:30:23+00:00",
+  "source_file": "docs/recruit/04-creating-a-solution/README.md",
+  "language_code": "he"
+}
+-->
+<h1 id="04">🚨 משימה 04: יצירת פתרון עבור הסוכן שלך<a class="headerlink" href="#04" title="Permanent link">&para;</a></h1>
+<h2 id="ctrl-alt-package">🕵️‍♂️ שם קוד: <code>מבצע CTRL-ALT-PACKAGE</code><a class="headerlink" href="#ctrl-alt-package" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ חלון זמן המבצע:</strong> <code>~45 דקות</code></p>
+</blockquote>
+<p>🎥 <strong>צפו בהדרכה</strong></p>
+<p><a href="https://www.youtube.com/watch?v=1iATbkgfcpU" title="צפו בהדרכה ביוטיוב"><img alt="תמונה ממוזערת של סרטון יצירת פתרון" src="../../../../../translated_images/video-thumbnail.3d68c6292e459541326e2cadf916f09488731b3cfbcd01de909c4bca9b53b49a.he.jpg" /></a></p>
+<h2 id="_1">🎯 תדריך המשימה<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>יוצר סוכנים, ברוך הבא למבצע הטקטי הבא שלך. במשימה זו תלמד כיצד להרכיב פתרון - כלי הפריסה הרשמי עבור סוכן התמיכה הטכנית שלך שנבנה עם Microsoft Copilot Studio. תחשוב על זה כעל תיק דיגיטלי שמכיל את הסוכן שלך ואת הרכיבים שלו.</p>
+<p>כל סוכן זקוק לבית מובנה היטב. זה בדיוק מה שפתרון Power Platform מספק - סדר, ניידות ומוכנות לייצור.</p>
+<p>בוא נתחיל לארוז.</p>
+<h2 id="_2">🔎 מטרות<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>במשימה זו תלמד:</p>
+<ol>
+<li>להבין מה הם פתרונות Power Platform ותפקידם בפיתוח סוכנים</li>
+<li>ללמוד את היתרונות של שימוש בפתרונות לארגון ופריסת סוכנים</li>
+<li>לחקור את תפקידם של מפרסמי פתרונות בניהול רכיבים</li>
+<li>להבין את מחזור החיים של פתרון Power Platform מפיתוח לייצור</li>
+<li>ליצור מפרסם פתרון ופתרון מותאם אישית עבור סוכן התמיכה הטכנית שלך</li>
+</ol>
+<h2 id="_3">🕵🏻‍♀️ פתרון? מה זה?<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>ב-Microsoft Power Platform, פתרונות הם כמו מכולות או חבילות שמכילות את כל החלקים של האפליקציות או הסוכנים שלך - זה יכול להיות טבלאות, טפסים, זרימות ולוגיקה מותאמת אישית. פתרונות חיוניים לניהול מחזור החיים של אפליקציות (ALM), הם מאפשרים לך לנהל את האפליקציה והסוכנים שלך מרעיון לפיתוח, בדיקה, פריסה ועדכונים.</p>
+<p>ב-Copilot Studio, כל סוכן שאתה יוצר נשמר בפתרון Power Platform. כברירת מחדל, סוכנים נוצרים בפתרון ברירת המחדל, אלא אם כן תיצור פתרון מותאם אישית חדש כדי ליצור את הסוכן שלך בתוכו. זה מה שנלמד 🤓 בשיעור הזה ובמעבדה המעשית.</p>
+<p>פתרונות נוצרו באופן מסורתי בפורטל יוצרי Power Apps - ממשק מבוסס אינטרנט שבו ניתן לבנות ולהתאים אפליקציות, Dataverse, זרימות, לחקור רכיבי AI ועוד.</p>
+<p><img alt="פתרונות" src="../../../../../translated_images/4.0_01_Solutions.4ab938830cdfc6d1b33fc88a172e2043ab713046e174855f866dc072bbeff4dd.he.png" /></p>
+<p>ב-Copilot Studio, יש עכשיו את <strong>Solution Explorer</strong> שבו ניתן לנהל את הפתרונות שלך ישירות. אין צורך לעבור לפורטל יוצרי Power Apps כדי לנהל את הפתרונות שלך, ניתן לעשות זאת ישירות בתוך Copilot Studio 🪄</p>
+<p>זה אומר שאתה יכול לבצע את המשימות הרגילות הקשורות לפתרונות:</p>
+<ul>
+<li><strong>יצירת פתרון</strong> - פתרונות מותאמים אישית מאפשרים לייצא ולייבא סוכנים בין סביבות.</li>
+<li><strong>הגדרת פתרון מועדף</strong> - בחירת הפתרון שבו ייווצרו סוכנים, אפליקציות וכו' כברירת מחדל.</li>
+<li><strong>הוספה או הסרה של רכיבים</strong> - הסוכן שלך עשוי להתייחס לרכיבים אחרים כמו משתני סביבה או זרימות ענן. לכן יש לכלול את הרכיבים הללו בפתרון.</li>
+<li><strong>ייצוא פתרונות</strong> - להעברת פתרונות לסביבה יעד אחרת.</li>
+<li><strong>ייבוא פתרונות</strong> - ייבוא פתרונות שנוצרו במקום אחר, כולל שדרוג או עדכון פתרונות.</li>
+<li><strong>יצירה וניהול של צינורות פתרונות</strong> - אוטומציה של פריסת פתרונות בין סביבות.</li>
+<li><strong>אינטגרציה עם Git</strong> - מאפשרת למפתחים לחבר פתרונות עם מאגרי Git לצורך ניהול גרסאות, שיתוף פעולה ו-ALM. מיועדת לשימוש בסביבות פיתוח בלבד.</li>
+</ul>
+<p><img alt="פתרונות" src="../../../../../translated_images/4.0_02_CopilotStudioSolutionExplorer.042184a894b65fc5b73c91579d9b19a86cd7ca4341c1553c972270dd15852677.he.png" /></p>
+<p>ישנם שני סוגי פתרונות:</p>
+<ul>
+<li><strong>פתרונות לא מנוהלים</strong> - משמשים במהלך הפיתוח. ניתן לערוך ולהתאים אותם באופן חופשי לפי הצורך.</li>
+<li><strong>פתרונות מנוהלים</strong> - משמשים כאשר אתה מוכן לפרוס את האפליקציה שלך לבדיקה או לייצור. הם נעולים כדי למנוע שינויים מקריים.</li>
+</ul>
+<h2 id="_4">🤔 למה <em>כדאי</em> להשתמש בפתרון עבור הסוכן שלי?<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>תחשוב על פתרונות כעל <em>ארגז כלים</em>. כשאתה צריך לתקן או לבנות משהו (סוכן) במקום אחר (סביבה), אתה אוסף את כל הכלים הנחוצים (רכיבים) ושם אותם בארגז הכלים (פתרון). לאחר מכן, אתה יכול לשאת את ארגז הכלים למקום החדש (סביבה) ולהשתמש בכלים (רכיבים) כדי להשלים את העבודה שלך, או להוסיף כלים חדשים (רכיבים) כדי להתאים את הסוכן או הפרויקט שאתה בונה.</p>
+<div class="admonition quote">
+<p class="admonition-title">אלייזה, תומכת הענן הידידותית שלך מצטרפת 🙋🏻‍♀️ לשתף כמה מילים:</p>
+<p>יש לנו אמירה בניו זילנד, "תהיה קיווי מסודר!" שזה קריאה לפעולה לניו זילנדים 🥝 לקחת אחריות על הסביבה שלהם על ידי השלכת פסולת בצורה נכונה ושמירה על מרחבים ציבוריים נקיים. אנחנו יכולים להשתמש באותו הקשר עבור סוכנים על ידי שמירה על כל מה שקשור לסוכן שלך מאורגן ונייד, וזה יעזור לך לשמור על סביבה מסודרת.</p>
+</div>
+<p>זהו נוהג טוב ליצור סוכן בפתרון ייעודי בסביבת המקור (מפתח) שלך. הנה למה פתרונות הם בעלי ערך:</p>
+<p>🧩 <strong>פיתוח מאורגן</strong></p>
+<ul>
+<li>
+<p>אתה שומר את הסוכן שלך בנפרד מפתרון ברירת המחדל שמכיל הכל בסביבה. כל רכיבי הסוכן שלך נמצאים במקום אחד 🎯</p>
+</li>
+<li>
+<p>כל מה שאתה צריך עבור הסוכן שלך נמצא בפתרון, מה שמקל על ייצוא וייבוא לסביבת יעד 👉🏻 זהו הרגל בריא של ALM.</p>
+</li>
+</ul>
+<p>🧩 <strong>פריסה בטוחה</strong></p>
+<ul>
+<li>אתה יכול לייצא את האפליקציה או הסוכן שלך כפתרון מנוהל ולפרוס אותו לסביבות יעד אחרות (כמו בדיקה או ייצור) מבלי לסכן עריכות מקריות.</li>
+</ul>
+<p>🧩 <strong>ניהול גרסאות</strong></p>
+<ul>
+<li>
+<p>אתה יכול ליצור תיקונים (תיקונים ממוקדים), עדכונים (שינוי מקיף יותר) או שדרוגים (החלפת פתרון - בדרך כלל שינויים גדולים והוספת תכונות חדשות).</p>
+</li>
+<li>
+<p>עוזר לך להוציא שינויים בצורה מבוקרת.</p>
+</li>
+</ul>
+<p>🧩 <strong>ניהול תלות</strong></p>
+<ul>
+<li>פתרונות עוקבים אחרי אילו חלקים תלויים באחרים. זה מונע ממך לשבור דברים כשאתה מבצע שינויים.</li>
+</ul>
+<p>🧩 <strong>שיתוף פעולה בצוות</strong></p>
+<ul>
+<li>מפתחים ויוצרים יכולים לעבוד יחד באמצעות פתרונות לא מנוהלים בפיתוח, ואז להעביר פתרון מנוהל לפריסה.</li>
+</ul>
+<h2 id="_5">🪪 הבנת מפרסמי פתרונות<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>מפרסם פתרון ב-Power Platform הוא כמו תווית או מותג שמזהה מי יצר או מחזיק בפתרון. זהו חלק קטן אך חשוב בניהול האפליקציות, הסוכנים וההתאמות האישיות של זרימות, במיוחד כשעובדים בצוותים או בין סביבות.</p>
+<p>כשאתה יוצר פתרון, עליך לבחור מפרסם. מפרסם זה מגדיר:</p>
+<ul>
+<li>
+<p>קידומת שמתווספת לכל הרכיבים המותאמים אישית (כמו טבלאות, שדות וזרימות).</p>
+</li>
+<li>
+<p>שם ומידע ליצירת קשר עבור הארגון או האדם שמחזיק בפתרון.</p>
+</li>
+</ul>
+<h3 id="_6">🤔 למה זה חשוב?<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>זיהוי קל</strong> - הקידומת (לדוגמה - <code>new_</code> או <code>abc_</code>) עוזרת לזהות במהירות אילו רכיבים שייכים לאיזה פתרון או צוות.</p>
+</li>
+<li>
+<p><strong>מניעת התנגשויות</strong> - אם שני צוותים יוצרים עמודה בשם סטטוס, הקידומות שלהם (<code>teamA_status</code>, <code>teamB_status</code>) מונעות התנגשויות בשמות.</p>
+</li>
+<li>
+<p><strong>תומך ב-ALM</strong> - כשמעבירים פתרונות בין סביבות (פיתוח → בדיקה → ייצור), המפרסם עוזר לעקוב אחרי הבעלות ולשמור על עקביות.</p>
+</li>
+</ol>
+<h3 id="_7">✨ דוגמה<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>נניח שאתה יוצר מפרסם בשם Contoso Solutions עם הקידומת <code>cts_</code>.</p>
+<p>אם תוסיף עמודה מותאמת אישית בשם <em>Priority</em>, היא תישמר כ-<code>cts_Priority</code> בפתרון.</p>
+<p>כל מי שייתקל בעמודה ברמת הפתרון, לא משנה באיזו סביבה הוא נמצא, יוכל לזהות בקלות שהיא עמודה שקשורה ל-Contoso Solutions.</p>
+<h2 id="power-platform">🧭 מחזור החיים של פתרון Power Platform<a class="headerlink" href="#power-platform" title="Permanent link">&para;</a></h2>
+<p>עכשיו כשאתה מבין את מטרת הפתרון, בוא נלמד על מחזור החיים.</p>
+<p><strong>1. יצירת פתרון בסביבת הפיתוח</strong> - התחל ביצירת פתרון חדש בסביבת הפיתוח שלך.</p>
+<p><strong>2. הוספת רכיבים</strong> - הוסף אפליקציות, זרימות, טבלאות ורכיבים אחרים לפתרון שלך.</p>
+<p><strong>3. ייצוא כפתרון מנוהל</strong> - ארוז את הפתרון שלך לפריסה על ידי ייצואו כפתרון מנוהל.</p>
+<p><strong>4. ייבוא לסביבת בדיקה</strong> - בדוק את הפתרון שלך בסביבת בדיקה נפרדת כדי לוודא שהכל עובד כמצופה.</p>
+<p><strong>5. ייבוא לסביבת ייצור</strong> - פרוס את הפתרון שנבדק לסביבת הייצור החיה שלך.</p>
+<p><strong>6. יישום תיקונים, עדכונים או שדרוגים</strong> - בצע שיפורים או תיקונים באמצעות תיקונים, עדכונים או שדרוגים. 🔁 חזור על המחזור!</p>
+<h3 id="_8">✨ דוגמה<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>דמיין שאתה בונה סוכן תמיכה טכנית שיעזור לעובדים עם בעיות כמו בעיות במכשירים, פתרון בעיות רשת, הגדרת מדפסות ועוד.</p>
+<ul>
+<li>
+<p>אתה מתחיל בסביבת פיתוח באמצעות פתרון לא מנוהל.</p>
+</li>
+<li>
+<p>ברגע שהוא מוכן, אתה מייצא אותו כפתרון מנוהל ומייבא אותו לסביבת יעד כמו בדיקות מערכת או בדיקות קבלה של משתמשים (UAT).</p>
+</li>
+<li>
+<p>לאחר הבדיקה, אתה מעביר אותו לסביבת הייצור - הכל מבלי לגעת בגרסת הפיתוח המקורית.</p>
+</li>
+</ul>
+<h2 id="04_1">🧪 מעבדה 04: יצירת פתרון חדש<a class="headerlink" href="#04_1" title="Permanent link">&para;</a></h2>
+<p>עכשיו נלמד</p>
+<ul>
+<li><a href="../../../../../docs/recruit/04-creating-a-solution">4.1 איך ליצור מפרסם פתרון</a></li>
+<li><a href="../../../../../docs/recruit/04-creating-a-solution">4.2 איך ליצור פתרון</a></li>
+</ul>
+<p>נשאר עם הדוגמה מהקודם, שבה ניצור פתרון בסביבת Copilot Studio הייעודית כדי לבנות את סוכן התמיכה הטכנית שלנו.</p>
+<p>בואו נתחיל!</p>
+<h3 id="_9">דרישות מוקדמות<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h4 id="_10">תפקיד אבטחה<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<p>ב-Copilot Studio, מה שאתה <em>יכול לעשות</em> ב-Solution Explorer תלוי בתפקיד האבטחה של המשתמש שלך.
+אם אין לך הרשאה לנהל פתרונות במרכז הניהול של Power Apps, לא תוכל לבצע את המשימות הללו גם ב-Copilot Studio.</p>
+<p>כדי לוודא שהכל עובד בצורה חלקה, בדוק שיש לך את תפקידי האבטחה וההרשאות הנכונים. או אם אינך מנהל סביבות בארגון שלך, בקש מצוות מנהלי ה-IT (או המקביל) שמנהל את הדייר/הסביבות שלך.</p>
+<p>הבאים הם תפקידי האבטחה שמאפשרים למשתמשים ליצור פתרון בסביבה שלהם.</p>
+<table>
+<thead>
+<tr>
+<th>תפקיד אבטחה</th>
+<th>תיאור</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>יוצר סביבה</td>
+<td>מספק את ההרשאות הנחוצות ליצירה, התאמה אישית וניהול משאבים בתוך סביבה ספציפית, כולל פתרונות</td>
+</tr>
+<tr>
+<td>מתאם מערכת</td>
+<td>הרשאות רחבות יותר מיוצר סביבה, כולל היכולת להתאים אישית את הסביבה ולנהל תפקידי אבטחה</td>
+</tr>
+<tr>
+<td>מנהל מערכת</td>
+<td>רמת ההרשאות הגבוהה ביותר ויכול לנהל את כל ההיבטים של הסביבה, כולל יצירה והקצאת תפקידי אבטחה</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_11">סביבת פיתוח<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<p>וודא שאתה עובר לסביבת הפיתוח הייעודית שלך, עיין ב-<a href="../00-course-setup/#step-3-create-new-developer-environment">שיעור 00 - הגדרת הקורס - שלב 3: יצירת סביבת פיתוח חדשה</a>.</p>
+<ol>
+<li>
+<p>בפינה הימנית העליונה, בחר את סמל <strong>גלגל השיניים</strong> ועבור מסביבת ברירת המחדל לסביבה שלך, לדוגמה <strong>הסביבה של Adele Vance</strong>.</p>
+<p><img alt="סביבת פיתוח" src="../../../../../translated_images/4.0_03_DeveloperEnvironment.07770f8ffb55e0f76dc7f8a5247154e66ac22a5ac3a00c7a025e1b0e1f43f43e.he.png" /></p>
+</li>
+</ol>
+<h3 id="41">4.1 יצירת מפרסם פתרון<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>באמצעות אותה סביבת Copilot Studio שבה השתמשנו בשיעור הקודם, בחר את סמל <strong>שלוש הנקודות (. . .)</strong> בתפריט הצד השמאלי ב-Copilot Studio. בחר <strong>פתרונות</strong> תחת כותרת <strong>חקירה</strong>.</p>
+<p><img alt="פתרונות" src="../../../../../translated_images/4.1_01_Solutions.1db0ad61bec0859dc3bdd673df996059405a2ab29bed5e4a0f58435d8732fa38.he.png" /></p>
+</li>
+<li>
+<p><strong>Solution Explorer</strong> ב-Copilot Studio ייטען. בחר <strong>+ פתרון חדש</strong></p>
+<p><img alt="פתרונות" src="../../../../../translated_images/4.1_02_NewSolution.a0beb3ae63cbd368567ecac7ca483ce90ab1082fbb7ec4722faf20cb69ec2f59.he.png" /></p>
+</li>
+<li>
+<p>חלונית <strong>פתרון חדש</strong> תופיע שבה נוכל להגדיר את פרטי הפתרון שלנו. קודם כל, עלינו ליצור מפרסם חדש. בחר <strong>+ מפרסם חדש</strong>.</p>
+<p><img alt="פתרונות" src="../../../../../translated_images/4.1_03_NewPublisher.af7ad3f00b1d01bfa741dec8c9f47ca2d1ddaed5af0b292211916fc9fa24a323.he.png" />  </p>
+</li>
+<li>
+<p>לשונית <strong>מאפיינים</strong> של חלונית <strong>מפרסם חדש</strong> תופיע עם שדות חובה ולא חובה שיש למלא בלשונית <strong>מאפיינים</strong>. כאן נוכל לפרט את פרטי המפרסם שישמשו כתווית או מותג שמזהה מי יצר או מחזיק בפתרון.</p>
+<table>
+<thead>
+<tr>
+<th>מאפיין</th>
+<th>תיאור</th>
+<th style="text-align: center;">חובה</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>שם תצוגה</td>
+<td>שם תצוגה עבור המפרסם</td>
+<td style="text-align: center;">כן</td>
+</tr>
+<tr>
+<td>שם</td>
+<td>השם הייחודי ושם הסכימה עבור המפרסם</td>
+<td style="text-align: center;">כן</td>
+</tr>
+<tr>
+<td>תיאור</td>
+<td>מפרט את מטרת הפתרון</td>
+<td style="text-align: center;">לא</td>
+</tr>
+<tr>
+<td>קידומת</td>
+<td>קידומת המפרסם שתוחל על רכיבים חדשים שנוצרו</td>
+<td style="text-align: center;">כן</td>
+</tr>
+<tr>
+<td>קידומת ערך בחירה</td>
+<td>מייצר מספר על בסיס קידומת המפרסם. מספר זה משמש כשמוסיפים אפשרויות לבחירות ומספק אינדיקטור לאיזה פתרון השתמשו להוספת האפשרות.</td>
+<td style="text-align: center;">כן</td>
+</tr>
+</tbody>
+</table>
+<p>העתק והדבק את הבא כ-<strong>שם תצוגה</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Contoso Solutions
+</span></code></pre></div>
+<p>העתק והדבק את הבא כ-<strong>שם</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ContosoSolutions
+</span></code></pre></div>
+<p>העתק והדבק את הבא כ-<strong>תיאור</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Copilot Studio Agent Academy
+</span></code></pre></div>
+<p>העתק והדבק את הבא עבור <strong>קידומת</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cts
+</span></code></pre></div>
+<p>כברירת מחדל, קידומת <strong>ערך בחירה</strong> תציג ערך מספרי. עדכן ערך מספרי זה לאלף הקרוב. לדוגמה, בצילום המסך שלי למטה, זה היה בתחילה <code>77074</code>. עדכן זאת מ-<code>77074</code> ל-<code>77000</code>.</p>
+<p><img alt="פתרונות" src="../../../../../translated_images/4.1_04_PublisherProperties.b6cbbe7bc0f51446f273bf9a8a06b163c2061a575dab0fc4a5f42007ac01a82c.he.png" />  </p>
+</li>
+<li>
+<p>אם ברצונך לספק את פרטי הקשר עבור הפתרון, בחר בלשונית <strong>קשר</strong> ומלא את העמודות המוצגות.</p>
+<p><img alt="פתרונות" src="../../../../../translated_images/4.1_05_Contact.fc0b65c96cc1ef06a1bd173f21920516e123fab76d13f592eab8745f529df3ef.he.png" /></p>
+</li>
+<li>
+<p>בחר בלשונית <strong>מאפיינים</strong> ובחר <strong>שמור</strong> כדי ליצור את המפרסם.</p>
+<p><img alt="פתרונות" src="../../../../../translated_images/4.1_06_SavePublisher.4aabbd20a051b55eab9d5d961761c1fae61d5c0cef07f696c5eaa030f4a5c356.he.png" />
+1. חלון <strong>המו"ל החדש</strong> ייסגר ותועברו חזרה לחלון <strong>הפתרון החדש</strong> עם המו"ל החדש שנבחר.</p>
+<p><img alt="פתרונות" src="../../../../../translated_images/4.1_07_PublisherSelected.5d88b1212348c15841b5f57e78554649d4ed080d10dccaece30e826b6e359132.he.png" />  </p>
+</li>
+</ol>
+<p>כל הכבוד, יצרתם מו"ל פתרונות! 🙌🏻 עכשיו נלמד איך ליצור פתרון מותאם אישית חדש.</p>
+<h3 id="42">4.2 יצירת פתרון חדש<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>עכשיו כשיצרנו את המו"ל שלנו, נוכל להשלים את שאר הטופס בחלון <strong>הפתרון החדש</strong>.</p>
+<p>העתק והדבק את הטקסט הבא כ-<strong>שם תצוגה</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Contoso Helpdesk Agent
+</span></code></pre></div>
+<p>העתק והדבק את הטקסט הבא כ-<strong>שם</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ContosoHelpdeskAgent
+</span></code></pre></div>
+<p>מכיוון שאנחנו יוצרים פתרון חדש, <a href="https://learn.microsoft.com/power-apps/maker/data-platform/update-solutions#understanding-version-numbers-for-updates/?WT.mc_id=power-172615-ebenitez"><strong>מספר הגרסה</strong></a> כברירת מחדל יהיה <code>1.0.0.0</code>.</p>
+<p>סמנו את תיבת הסימון <strong>הגדר כפתרון המועדף שלך</strong>.</p>
+<p><img alt="פתרונות" src="../../../../../translated_images/4.2_01_SolutionDetails_.ce2945385f3544846ca9e62f209c96a673a2540ea6e20404cd5f1b224d8b5321.he.png" />  </p>
+</li>
+<li>
+<p>הרחיבו את <strong>אפשרויות נוספות</strong> כדי לראות פרטים נוספים שניתן לספק בפתרון.</p>
+<p><img alt="פתרונות" src="../../../../../translated_images/4.2_02_MoreOptions.3c4b95d2fe119f8a8d8be783f5beba0a3b6c36fb83055cae80eaa45891aea73b.he.png" /></p>
+</li>
+<li>
+<p>תראו את הפרטים הבאים:</p>
+<ul>
+<li>
+<p><strong>הותקן בתאריך</strong> - התאריך שבו הפתרון הותקן.</p>
+</li>
+<li>
+<p><strong>דף תצורה</strong> - מפתחים מגדירים משאב אינטרנט HTML כדי לעזור למשתמשים לתקשר עם האפליקציה, הסוכן או הכלי שלהם, שם הוא יופיע כדף אינטרנט בסעיף המידע עם הוראות או כפתורים. זה משמש בעיקר חברות או מפתחים שבונים ומשתפים פתרונות עם אחרים.</p>
+</li>
+<li>
+<p><strong>תיאור</strong> - מתאר את הפתרון או תיאור כללי של דף התצורה.</p>
+</li>
+</ul>
+<p>נשאיר את השדות האלה ריקים עבור המעבדה הזו.</p>
+<p>בחרו <strong>צור</strong>.</p>
+<p><img alt="פתרונות" src="../../../../../translated_images/4.2_03_Create.afd1bc27593062dfd945d4a0aa6fb05d87e0b02b0f45d01eaad8810f67a5f295.he.png" /></p>
+</li>
+<li>
+<p>הפתרון עבור Contoso Helpdesk Agent נוצר כעת. לא יהיו רכיבים עד שניצור סוכן ב-Copilot Studio.</p>
+<p>בחרו באייקון <strong>חץ אחורה</strong> כדי לחזור ל-Solution Explorer.</p>
+<p><img alt="פתרונות" src="../../../../../translated_images/4.2_04_SolutionCreated.f5f543303fd58856f93bfc1d4d6e9a27fd338a82e77b15258bb54f03b9b5f631.he.png" /></p>
+</li>
+<li>
+<p>שימו לב איך Contoso Helpdesk Agent מוצג כעת כ-<strong>הפתרון המועדף הנוכחי</strong> מכיוון שסימנו את תיבת הסימון <strong>הגדר כפתרון המועדף שלך</strong> קודם.</p>
+<p><img alt="פתרונות" src="../../../../../translated_images/4.2_05_CurrentPreferredSolutionSelected.fde1fa6c013f41f445c2b8721af8bc172a6a8bf98c4f5b8e946f87b4d5ec7823.he.png" /></p>
+</li>
+</ol>
+<h2 id="_12">✅ משימה הושלמה<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>ברכות! 👏🏻 יצרתם מו"ל והשתמשתם בו בפתרון החדש שלכם כדי לבנות את הסוכן שלכם!</p>
+<p>עבודה מצוינת, יוצרי סוכנים. טביעת רגל דיגיטלית מסודרת היא הצעד הראשון לקראת תפעול בקנה מידה. עכשיו יש לכם את הכלים ואת הגישה לפיתוח סוכנים בר-קיימא ומוכן לארגון.</p>
+<p>זהו סוף <strong>מעבדה 04 - יצירת פתרון</strong>, בחרו בקישור למטה כדי לעבור לשיעור הבא. הפתרון שיצרתם במעבדה זו ישמש במעבדה של השיעור הבא.</p>
+<p>⏭️ <a href="../05-using-prebuilt-agents/">עברו לשיעור <strong>התחלה מהירה עם סוכנים מוכנים מראש</strong></a></p>
+<h2 id="_13">📚 משאבים טקטיים<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/power-apps/maker/data-platform/create-solution/?WT.mc_id=power-172615-ebenitez">יצירת פתרון</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-solutions-overview/?WT.mc_id=power-172615-ebenitez">יצירה וניהול פתרונות ב-Copilot Studio</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/admin-share-bots/?WT.mc_id=power-172615-ebenitez">שיתוף סוכנים עם משתמשים אחרים</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-platform/admin/database-security#summary-of-resources-available-to-predefined-security-roles/?WT.mc_id=power-172615-ebenitez">סיכום משאבים זמינים לתפקידי אבטחה מוגדרים מראש</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-apps/maker/data-platform/update-solutions/?WT.mc_id=power-172615-ebenitez">שדרוג או עדכון פתרון</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-platform/alm/pipelines/?WT.mc_id=power-172615-ebenitez">סקירה כללית של צינורות ב-Power Platform</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-platform/alm/git-integration/overview/?WT.mc_id=power-172615-ebenitez">סקירה כללית של אינטגרציה עם Git ב-Power Platform</a></p>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/04-creating-a-solution" alt="Analytics" /></p>
+<hr />
+<p><strong>הצהרת אחריות</strong>:<br />
+מסמך זה תורגם באמצעות שירות תרגום AI <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי אנושי. אנו לא נושאים באחריות לאי הבנות או פירושים שגויים הנובעים משימוש בתרגום זה.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

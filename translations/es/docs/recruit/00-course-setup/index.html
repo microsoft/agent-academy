@@ -1,0 +1,833 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/es/docs/recruit/00-course-setup/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mision-00-configuracion-del-curso" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nombre-clave-operacion-listos-para-el-despliegue" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ NOMBRE CLAVE: OPERACIÓN LISTOS PARA EL DESPLIEGUE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-la-mision" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Resumen de la Misión
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objetivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requisitos-previos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Requisitos Previos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-1-obtener-una-cuenta-de-microsoft-365" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Obtener una cuenta de Microsoft 365
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-2-iniciar-una-prueba-de-copilot-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 2: Iniciar una Prueba de Copilot Studio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-3-crear-un-nuevo-entorno-de-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 3: Crear un nuevo entorno de desarrollo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-4-crear-un-nuevo-sitio-de-sharepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 4: Crear un nuevo sitio de SharePoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mision-completa" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Misión Completa
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "d9cd8cd1a4fbd8915171a2ed972cc322",
+  "translation_date": "2025-10-17T18:59:46+00:00",
+  "source_file": "docs/recruit/00-course-setup/README.md",
+  "language_code": "es"
+}
+-->
+<h1 id="mision-00-configuracion-del-curso">🚨 Misión 00: Configuración del Curso<a class="headerlink" href="#mision-00-configuracion-del-curso" title="Permanent link">&para;</a></h1>
+<h2 id="nombre-clave-operacion-listos-para-el-despliegue">🕵️‍♂️ NOMBRE CLAVE: <code>OPERACIÓN LISTOS PARA EL DESPLIEGUE</code><a class="headerlink" href="#nombre-clave-operacion-listos-para-el-despliegue" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Ventana de Tiempo de la Operación:</strong> <code>~30 minutos</code>  </p>
+</blockquote>
+<h2 id="resumen-de-la-mision">🎯 Resumen de la Misión<a class="headerlink" href="#resumen-de-la-mision" title="Permanent link">&para;</a></h2>
+<p>Bienvenido a la primera misión de tu entrenamiento como Agente de Copilot Studio.<br />
+Antes de que puedas comenzar a construir tu primer agente de IA, necesitas establecer tu <strong>entorno de desarrollo listo para el campo</strong>.</p>
+<p>Este informe detalla los sistemas, credenciales de acceso y pasos de configuración necesarios para operar con éxito en el ecosistema de Microsoft 365.</p>
+<h2 id="objetivos">🔎 Objetivos<a class="headerlink" href="#objetivos" title="Permanent link">&para;</a></h2>
+<p>Tu misión incluye:</p>
+<ol>
+<li>Obtener una cuenta de Microsoft 365  </li>
+<li>Acceder a Microsoft Copilot Studio  </li>
+<li>(Opcional) Asegurar una licencia de Microsoft 365 Copilot para publicación en producción  </li>
+<li>Crear un entorno de desarrollo como tu entorno de Copilot Studio para trabajar  </li>
+<li>Crear un sitio de SharePoint que servirá como fuente de datos en misiones posteriores  </li>
+</ol>
+<hr />
+<h2 id="requisitos-previos">🔍 Requisitos Previos<a class="headerlink" href="#requisitos-previos" title="Permanent link">&para;</a></h2>
+<p>Antes de comenzar, asegúrate de tener:</p>
+<ol>
+<li>Una <strong>dirección de correo electrónico de trabajo o escuela</strong> (no se admiten cuentas personales como @outlook.com, @gmail.com, etc.).  </li>
+<li>Acceso a internet y un navegador moderno (se recomienda Edge, Chrome o Firefox).  </li>
+<li>Familiaridad básica con Microsoft 365 (por ejemplo, iniciar sesión en aplicaciones de Office o Teams).  </li>
+<li>(Opcional) Una tarjeta de crédito o método de pago si planeas adquirir licencias de pago.  </li>
+</ol>
+<hr />
+<h2 id="paso-1-obtener-una-cuenta-de-microsoft-365">Paso 1: Obtener una cuenta de Microsoft 365<a class="headerlink" href="#paso-1-obtener-una-cuenta-de-microsoft-365" title="Permanent link">&para;</a></h2>
+<p>Copilot Studio se encuentra dentro de Microsoft 365, por lo que necesitas una cuenta de Microsoft 365 para acceder. Puedes usar una cuenta existente si ya tienes una o seguir estos pasos para obtener una licencia adecuada:</p>
+<ol>
+<li><strong>Adquirir una Suscripción de Negocios de Microsoft 365</strong>  </li>
+<li>Ve a la <a href="https://www.microsoft.com/microsoft-365/business/microsoft-365-plans-and-pricing">Página de Planes y Precios de Microsoft 365 Business</a>  </li>
+<li>La opción más económica para comenzar es el plan Microsoft 365 Business Basic. Selecciona <code>Probar gratis</code> y sigue el formulario guiado para completar los detalles de tu suscripción, cuenta e información de pago.<br />
+<img alt="Registro en Microsoft 365" src="../../../../../translated_images/m365-freetrial.985b49b07afc5be89598349721f6e4edbb248680f884831f63915c151668855a.es.png" />  </li>
+<li>
+<p>Una vez que tengas tu nueva cuenta, inicia sesión.  </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Si planeas publicar agentes en Microsoft 365 Copilot Chat o conectarte a datos organizacionales (SharePoint, OneDrive, Dataverse), se requiere una licencia de Microsoft 365 Copilot. Esta es una licencia adicional que puedes conocer más en <a href="https://www.microsoft.com/microsoft-365/copilot#plans">el sitio de licencias</a>.</p>
+</div>
+</li>
+</ol>
+<hr />
+<h2 id="paso-2-iniciar-una-prueba-de-copilot-studio">Paso 2: Iniciar una Prueba de Copilot Studio<a class="headerlink" href="#paso-2-iniciar-una-prueba-de-copilot-studio" title="Permanent link">&para;</a></h2>
+<p>Una vez que tengas tu Tenant de Microsoft 365, necesitas obtener acceso a Copilot Studio. Puedes obtener una prueba gratuita de 30 días siguiendo estos pasos:</p>
+<ol>
+<li>Navega a <a href="https://aka.ms/TryCopilotStudio">aka.ms/TryCopilotStudio</a>.  </li>
+<li>Ingresa la dirección de correo electrónico de la nueva cuenta que configuraste en el paso anterior y selecciona <code>Siguiente</code>.<br />
+<img alt="Registro en Microsoft 365" src="../../../../../translated_images/mcs-trial-screen.bc9d7566637fa38274735f903d9c71bf437994568e08e3a1eada35b0b8c1fb04.es.png" />  </li>
+<li>Debería reconocer tu cuenta. Selecciona <code>Iniciar sesión</code>.<br />
+<img alt="Registro en Microsoft 365" src="../../../../../translated_images/mcs-trial-signin.fe3992c64f2fbdf891ac3377acfa07b4af40cfe90cb19f8ee36b5f2db8fc15e5.es.png" />  </li>
+<li>Selecciona <code>Iniciar prueba gratuita</code>.<br />
+<img alt="Registro en Microsoft 365" src="../../../../../translated_images/mcs-start-trial.cbbdd739179130bc78a620b62c7904819ec4453f4b91d1bd585725b2b69762bc.es.png" />  </li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Notas de la Prueba</p>
+<ol>
+<li>La prueba gratuita proporciona <strong>todas las capacidades de Copilot Studio</strong>.  </li>
+<li>Recibirás notificaciones por correo electrónico sobre la expiración de tu prueba. Puedes extender la prueba en incrementos de 30 días (hasta 90 días de tiempo de ejecución del agente).  </li>
+<li>Si el administrador de tu tenant desactivó el registro de autoservicio, verás un error. Contacta a tu administrador de Microsoft 365 para reactivarlo.  </li>
+</ol>
+</div>
+<hr />
+<h2 id="paso-3-crear-un-nuevo-entorno-de-desarrollo">Paso 3: Crear un nuevo entorno de desarrollo<a class="headerlink" href="#paso-3-crear-un-nuevo-entorno-de-desarrollo" title="Permanent link">&para;</a></h2>
+<h3 id="registrarse-en-el-plan-de-desarrollador-de-power-apps">Registrarse en el Plan de Desarrollador de Power Apps<a class="headerlink" href="#registrarse-en-el-plan-de-desarrollador-de-power-apps" title="Permanent link">&para;</a></h3>
+<p>Usando el mismo tenant de Microsoft 365 del Paso 1, regístrate en el Plan de Desarrollador de Power Apps para crear un entorno de desarrollo gratuito y probar con Copilot Studio.</p>
+<ol>
+<li>
+<p>Regístrate en el <a href="https://aka.ms/PowerAppsDevPlan">sitio web del Plan de Desarrollador de Power Apps</a>.  </p>
+<ul>
+<li>Ingresa tu dirección de correo electrónico  </li>
+<li>Marca la casilla  </li>
+<li>Selecciona <strong>Comenzar gratis</strong>  </li>
+</ul>
+<p><img alt="Registrarse en el Plan de Desarrollador de Power Apps" src="../../../../../translated_images/0.3_01_SignUp.0a30494c83195125a818282a3efd38bb973ead548e3c071757f6313440e0e4ce.es.png" />  </p>
+</li>
+<li>
+<p>Después de registrarte en el Plan de Desarrollador, serás redirigido a <a href="https://make.powerapps.com/">Power Apps</a>. El entorno usa tu nombre, por ejemplo <strong>Entorno de Adele Vance</strong>. Si ya existe un entorno con ese nombre, el nuevo entorno de desarrollador se llamará <strong>Entorno de Adele Vance (1)</strong>.  </p>
+<p>Usa este entorno de desarrollador en Copilot Studio al completar los laboratorios.  </p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Si estás utilizando una cuenta existente de Microsoft 365 y no creaste una en el Paso 1, por ejemplo, usando tu propia cuenta en tu organización laboral, tu administrador de TI (o el equipo equivalente) que gestiona tu tenant/entornos podría haber desactivado el proceso de registro. En este caso, por favor contacta a tu administrador o crea un tenant de prueba como se indica en el Paso 1.  </p>
+</div>
+<hr />
+<h2 id="paso-4-crear-un-nuevo-sitio-de-sharepoint">Paso 4: Crear un nuevo sitio de SharePoint<a class="headerlink" href="#paso-4-crear-un-nuevo-sitio-de-sharepoint" title="Permanent link">&para;</a></h2>
+<p>Se necesita crear un nuevo sitio de SharePoint que será utilizado en <a href="../06-create-agent-from-conversation/#62-add-an-internal-knowledge-source-using-a-sharepoint-site">Lección 06 - Crear un agente personalizado usando la experiencia de creación conversacional con Copilot y fundamentándolo con tus datos</a>.  </p>
+<ol>
+<li>
+<p>Selecciona el ícono de waffle en la esquina superior izquierda de Microsoft Copilot Studio para ver el menú. Selecciona SharePoint en el menú.  </p>
+<p><img alt="Seleccionar SharePoint" src="../../../../../translated_images/0.4_01_SelectSharePoint.39fd392919f757fa669d75b9d1a76f576df793e054a173fe0298e93060e1cebb.es.png" />  </p>
+</li>
+<li>
+<p>SharePoint se cargará. Selecciona <strong>+ Crear sitio</strong> para crear un nuevo sitio de SharePoint.  </p>
+<p><img alt="Crear sitio" src="../../../../../translated_images/0.4_02_CreateSite.df162f5889236f2fb08f3290a069a49872f1360265f9ef39818b2bfed02e06f3.es.png" />  </p>
+</li>
+<li>
+<p>Aparecerá un cuadro de diálogo para guiarte en la creación de un nuevo sitio de SharePoint. Selecciona <strong>Sitio de equipo</strong>.  </p>
+<p><img alt="Sitio de equipo" src="../../../../../translated_images/0.4_03_SelectTeamOrCommunicationSite.b9620d158c751320104ad2e3da48f14751e8b674dc00dad0bdf7f57642ad712e.es.png" />  </p>
+</li>
+<li>
+<p>En el siguiente paso, se cargará una lista de plantillas de Microsoft por defecto. Desplázate hacia abajo y selecciona la plantilla <strong>Mesa de ayuda de TI</strong>.  </p>
+<p><img alt="Plantilla de mesa de ayuda de TI" src="../../../../../translated_images/0.4_04_SelectITHelpDeskTemplate.a391090ba69a7ddcf4423179bf14a421dfdc1279359badfba71645bde97d62a6.es.png" />  </p>
+</li>
+<li>
+<p>Selecciona <strong>Usar plantilla</strong> para crear un nuevo sitio de SharePoint usando la plantilla de mesa de ayuda de TI.  </p>
+<p><img alt="Usar plantilla" src="../../../../../translated_images/0.4_05_SelectUseTemplate.380fb401b622efb6e14f6d283bf75342d86422820253e32180461208feeaeae4.es.png" />  </p>
+</li>
+<li>
+<p>Ingresa información para tu sitio. El siguiente es un ejemplo:  </p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nombre del sitio</td>
+<td>Contoso IT</td>
+</tr>
+<tr>
+<td>Descripción del sitio</td>
+<td>Copilot Studio para Principiantes</td>
+</tr>
+<tr>
+<td>Dirección del sitio</td>
+<td>ContosoIT</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Información del sitio" src="../../../../../translated_images/0.4_06_SiteDetails.a0a8d49f3df370e8663f49927f0b4416ab154f5bf9495bf7b84b070111db0a0c.es.png" />  </p>
+</li>
+<li>
+<p>En el paso final, se puede seleccionar un idioma para el sitio de SharePoint. Por defecto será <strong>Inglés</strong>. Deja el idioma como <strong>Inglés</strong> y selecciona <strong>Crear sitio</strong>.  </p>
+<p><img alt="Idioma y otras opciones" src="../../../../../translated_images/0.4_07_LanguageOtherOptions.256f55ab0ef024b41fe6816d309a6713aa78daa6f45938b90f3bdd71938fb163.es.png" />  </p>
+</li>
+<li>
+<p>El sitio de SharePoint se aprovisionará en los próximos segundos. Mientras tanto, puedes optar por agregar otros usuarios a tu sitio ingresando su dirección de correo electrónico en el campo <strong>Agregar miembros</strong>. Cuando termines, selecciona <strong>Finalizar</strong>.  </p>
+<p><img alt="Seleccionar finalizar" src="../../../../../translated_images/0.4_08_SelectFinish.473163c547450b362c6b0c872d061a7aa438116d8b498f0356180aa8a1a20a88.es.png" />  </p>
+</li>
+<li>
+<p>La página de inicio del sitio de SharePoint se cargará a continuación. <strong>Copia</strong> la URL del sitio de SharePoint.  </p>
+</li>
+<li>
+<p>Esta plantilla proporciona páginas con datos de muestra sobre varias políticas de TI y dos listas de muestra (Tickets y Dispositivos).  </p>
+</li>
+</ol>
+<h3 id="usar-la-lista-de-sharepoint-de-dispositivos">Usar la lista de SharePoint de Dispositivos<a class="headerlink" href="#usar-la-lista-de-sharepoint-de-dispositivos" title="Permanent link">&para;</a></h3>
+<p>Usaremos la lista <strong>Dispositivos</strong> en <a href="../07-add-new-topic-with-trigger/#73-add-a-tool-using-a-connector">Misión 07 - Agregar nuevo tema con disparador y nodos</a>.  </p>
+<h3 id="agregar-nueva-columna">Agregar nueva columna<a class="headerlink" href="#agregar-nueva-columna" title="Permanent link">&para;</a></h3>
+<p>Desplázate hacia la derecha en la lista y selecciona el botón <strong>+ Agregar columna</strong>. Elige el tipo <strong>hipervínculo</strong>, ingresa <strong>Imagen</strong> como nombre de la columna y selecciona agregar.  </p>
+<h3 id="crear-datos-de-muestra-en-la-lista-de-sharepoint-de-dispositivos">Crear datos de muestra en la lista de SharePoint de Dispositivos<a class="headerlink" href="#crear-datos-de-muestra-en-la-lista-de-sharepoint-de-dispositivos" title="Permanent link">&para;</a></h3>
+<p>Asegúrate de llenar esta lista con al menos 4 elementos de datos de muestra y agregar una columna adicional a esta lista.  </p>
+<p>Al agregar datos de muestra, asegúrate de que los siguientes campos estén completos:  </p>
+<ul>
+<li>Foto del dispositivo - usa las imágenes de la <a href="https://github.com/microsoft/agent-academy/tree/main/docs/recruit/00-course-setup/images/device-images">carpeta de imágenes de dispositivos</a>  </li>
+<li>Título  </li>
+<li>Estado  </li>
+<li>Fabricante  </li>
+<li>Modelo  </li>
+<li>Tipo de activo  </li>
+<li>Color  </li>
+<li>Número de serie  </li>
+<li>Fecha de compra  </li>
+<li>Precio de compra  </li>
+<li>Número de pedido  </li>
+<li>Imagen - usa los siguientes enlaces  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Dispositivo</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Surface Laptop 13</td>
+<td><a href="https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Laptop-13.png">https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Laptop-13.png</a></td>
+</tr>
+<tr>
+<td>Surface Laptop 15</td>
+<td><a href="https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Laptop-15.png">https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Laptop-15.png</a></td>
+</tr>
+<tr>
+<td>Surface Pro</td>
+<td><a href="https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Pro-12.png">https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Pro-12.png</a></td>
+</tr>
+<tr>
+<td>Surface Studio</td>
+<td><a href="https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Studio.png">https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Studio.png</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="mision-completa">✅ Misión Completa<a class="headerlink" href="#mision-completa" title="Permanent link">&para;</a></h2>
+<p>Has logrado:</p>
+<ul>
+<li>Configurar un entorno de desarrollo de Microsoft 365  </li>
+<li>Activar tu prueba de Copilot Studio  </li>
+<li>Crear un sitio de SharePoint para fundamentar agentes  </li>
+<li>Rellenar la lista de Dispositivos para usar en futuras misiones  </li>
+</ul>
+<p>Estás oficialmente listo para comenzar tu <strong>entrenamiento de agente nivel Recluta</strong> en <a href="../01-introduction-to-agents/">Lección 01</a>.  </p>
+<!-- markdownlint-disable-next-line MD033 -->
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/00-course-setup" alt="Analytics" /></p>
+<hr />
+<p><strong>Descargo de responsabilidad</strong>:<br />
+Este documento ha sido traducido utilizando el servicio de traducción automática <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Aunque nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que surjan del uso de esta traducción.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

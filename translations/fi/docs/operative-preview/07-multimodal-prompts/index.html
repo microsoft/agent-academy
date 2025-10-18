@@ -1,0 +1,1355 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/fi/docs/operative-preview/07-multimodal-prompts/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tehtava-07-ansioluettelon-sisallon-poiminta-multimodaalisilla-kehotteilla" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#koodinimi-dokumentti-ansioluettelo-tutkimus" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ Koodinimi: DOKUMENTTI ANSIOLUETTELO TUTKIMUS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tehtavan-kuvaus" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Tehtävän kuvaus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tavoitteet" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Tavoitteet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multimodaalisten-kehotteiden-ymmartaminen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Multimodaalisten kehotteiden ymmärtäminen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mallin-valinta-ai-builderissa" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Mallin valinta AI Builderissa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tulostusmuodot-teksti-vs-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Tulostusmuodot: Teksti vs JSON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-7-ansioluettelon-poistojarjestelman-rakentaminen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 7: Ansioluettelon poistojärjestelmän rakentaminen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tehtava-suoritettu" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 Tehtävä suoritettu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taktiset-resurssit" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Taktiset resurssit
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "616d142d4fb5f45d2a168fad6c1f9545",
+  "translation_date": "2025-10-17T02:01:20+00:00",
+  "source_file": "docs/operative-preview/07-multimodal-prompts/README.md",
+  "language_code": "fi"
+}
+-->
+<h1 id="tehtava-07-ansioluettelon-sisallon-poiminta-multimodaalisilla-kehotteilla">🚨 Tehtävä 07: Ansioluettelon sisällön poiminta multimodaalisilla kehotteilla<a class="headerlink" href="#tehtava-07-ansioluettelon-sisallon-poiminta-multimodaalisilla-kehotteilla" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="koodinimi-dokumentti-ansioluettelo-tutkimus">🕵️‍♂️ Koodinimi: <code>DOKUMENTTI ANSIOLUETTELO TUTKIMUS</code><a class="headerlink" href="#koodinimi-dokumentti-ansioluettelo-tutkimus" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operaatioaikaikkuna:</strong> <code>~45 minuuttia</code></p>
+</blockquote>
+<h2 id="tehtavan-kuvaus">🎯 Tehtävän kuvaus<a class="headerlink" href="#tehtavan-kuvaus" title="Permanent link">&para;</a></h2>
+<p>Tervetuloa, Operatiivinen. Aiemmat tehtäväsi ovat antaneet sinulle tehokkaita agenttien orkestrointitaitoja, mutta nyt on aika avata pelin muuttava kyky: <strong>multimodaalinen dokumenttianalyysi</strong>.</p>
+<p>Tehtäväsi, jos päätät hyväksyä sen, on <strong>Dokumentti Ansioluettelo Tutkimus</strong> - poimia jäsenneltyä dataa mistä tahansa dokumentista tarkasti. Vaikka agenttisi voivat käsitellä tekstiä helposti, todellisessa maailmassa on päivittäin käsiteltävä PDF-tiedostoja, kuvia ja monimutkaisia dokumentteja. Ansioluettelot kasaantuvat, laskut vaativat käsittelyä ja lomakkeet tarvitsevat välitöntä digitalisointia.</p>
+<p>Tämä tehtävä muuttaa sinut tekstipohjaisesta agentin rakentajasta <strong>multimodaaliseksi asiantuntijaksi</strong>. Opit konfiguroimaan tekoälyä, joka lukee ja ymmärtää dokumentteja kuin ihmisanalyytikko - mutta tekoälyn nopeudella ja johdonmukaisuudella. Tehtävän lopussa olet rakentanut täydellisen ansioluettelon poistojärjestelmän, joka integroituu rekrytointityönkulkuusi.</p>
+<p>Tässä opitut tekniikat ovat olennaisia seuraavan tehtävän edistyneissä datan perustamisoperaatioissa.</p>
+<h2 id="tavoitteet">🔎 Tavoitteet<a class="headerlink" href="#tavoitteet" title="Permanent link">&para;</a></h2>
+<p>Tässä tehtävässä opit:</p>
+<ol>
+<li>Mitä multimodaaliset kehotteet ovat ja milloin käyttää eri tekoälymalleja</li>
+<li>Kuinka konfiguroida kehotteita kuvan ja dokumentin syötteillä</li>
+<li>Kuinka muotoilla kehotteiden tulokset JSON-muotoon jäsenneltyä datan poimintaa varten</li>
+<li>Parhaat käytännöt kehotteen suunnittelussa dokumenttianalyysiin</li>
+<li>Kuinka integroida multimodaaliset kehotteet Agent Flows -työnkulkuihin</li>
+</ol>
+<h2 id="multimodaalisten-kehotteiden-ymmartaminen">🧠 Multimodaalisten kehotteiden ymmärtäminen<a class="headerlink" href="#multimodaalisten-kehotteiden-ymmartaminen" title="Permanent link">&para;</a></h2>
+<h3 id="mika-tekee-kehotteesta-multimodaalisen">Mikä tekee kehotteesta "multimodaalisen"?<a class="headerlink" href="#mika-tekee-kehotteesta-multimodaalisen" title="Permanent link">&para;</a></h3>
+<p>Perinteiset kehotteet toimivat vain tekstin kanssa. Mutta multimodaaliset kehotteet voivat käsitellä useita sisältötyyppejä:</p>
+<ul>
+<li><strong>Teksti</strong>: Kirjalliset ohjeet ja sisältö</li>
+<li><strong>Kuvat</strong>: Valokuvat, kuvakaappaukset, kaaviot ja diagrammit (.PNG, .JPG, .JPEG)  </li>
+<li><strong>Dokumentit</strong>: Laskut, ansioluettelot, lomakkeet (.PDF)</li>
+</ul>
+<p>Tämä kyky avaa voimakkaita skenaarioita, kuten ansioluetteloiden analysointi, laskujen käsittely tai datan poiminta lomakkeista.</p>
+<h3 id="miksi-multimodaalisuus-on-tarkeaa-tyonkuluillesi">Miksi multimodaalisuus on tärkeää työnkuluillesi<a class="headerlink" href="#miksi-multimodaalisuus-on-tarkeaa-tyonkuluillesi" title="Permanent link">&para;</a></h3>
+<p>Joka päivä organisaatiosi kohtaa näitä dokumenttien käsittelyhaasteita:</p>
+<ul>
+<li><strong>Ansioluetteloiden seulonta</strong>: Satojen ansioluetteloiden manuaalinen lukeminen vie arvokasta aikaa</li>
+<li><strong>Laskujen käsittely</strong>: Toimittajatietojen, summien ja päivämäärien poiminta vaihtelevista dokumenttiformaateista</li>
+<li><strong>Lomakkeiden analyysi</strong>: Paperilomakkeiden muuntaminen digitaaliseksi dataksi</li>
+</ul>
+<p>Multimodaaliset kehotteet poistavat nämä pullonkaulat yhdistämällä tekoälyn kielen ymmärryksen visuaalisen analyysin kykyihin. Tämä antaa tekoälyllesi kyvyn käsitellä dokumentteja yhtä tehokkaasti kuin tekstiä.</p>
+<h3 id="yleiset-liiketoimintaskenaariot">Yleiset liiketoimintaskenaariot<a class="headerlink" href="#yleiset-liiketoimintaskenaariot" title="Permanent link">&para;</a></h3>
+<p>Tässä muutamia esimerkkejä siitä, miten multimodaalisia kehotteita voidaan soveltaa:</p>
+<table>
+<thead>
+<tr>
+<th>Skenaario</th>
+<th>Tehtävä</th>
+<th>Esimerkkitulokentät</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ansioluetteloiden seulonta</strong></td>
+<td>Poimi ehdokkaan nimi, sähköposti, puhelinnumero, nykyinen titteli, työkokemusvuodet ja keskeiset taidot.</td>
+<td>Ehdokkaan nimi, sähköpostiosoite, puhelinnumero, nykyinen työtehtävä, työkokemusvuodet, keskeiset taidot</td>
+</tr>
+<tr>
+<td><strong>Laskujen käsittely</strong></td>
+<td>Poimi toimittajatiedot, laskun päivämäärä, kokonaissumma ja rivitiedot tästä laskusta.</td>
+<td>Toimittajan nimi, laskun päivämäärä, kokonaissumma, laskun rivitiedot</td>
+</tr>
+<tr>
+<td><strong>Lomakkeiden analyysi</strong></td>
+<td>Analysoi tämä hakemuslomake ja poimi kaikki täytetyt kentät.</td>
+<td>Kentän nimi (esim. Hakijan nimi), Syötetty arvo (esim. John Doe), ...</td>
+</tr>
+<tr>
+<td><strong>Henkilöllisyystodistuksen tarkistus</strong></td>
+<td>Poimi nimi, henkilötunnus, voimassaolopäivä ja osoite tästä henkilöllisyystodistuksesta. Varmista, että kaikki teksti on selkeästi luettavissa ja merkitse epäselvät osat.</td>
+<td>Koko nimi, henkilötunnus, voimassaolopäivä, osoite, epäselvien osien merkintä</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mallin-valinta-ai-builderissa">⚙️ Mallin valinta AI Builderissa<a class="headerlink" href="#mallin-valinta-ai-builderissa" title="Permanent link">&para;</a></h2>
+<p>AI Builder tarjoaa erilaisia malleja, jotka on optimoitu tiettyihin tehtäviin. Ymmärtäminen, mitä mallia käyttää, on ratkaisevan tärkeää menestyksen kannalta.</p>
+<div class="admonition note">
+<p class="admonition-title">Tarkka syyskuussa 2025</p>
+<p>AI Builder -mallit päivitetään säännöllisesti, joten tarkista viimeisimmät <a href="https://learn.microsoft.com/ai-builder/prompt-modelsettings">AI Builder -malliasetusten dokumentaatio</a> saadaksesi ajantasaiset tiedot mallien saatavuudesta.</p>
+</div>
+<h3 id="mallien-vertailu">Mallien vertailu<a class="headerlink" href="#mallien-vertailu" title="Permanent link">&para;</a></h3>
+<p>Kaikki seuraavat mallit tukevat visuaalista ja dokumenttien käsittelyä:</p>
+<table>
+<thead>
+<tr>
+<th>Malli</th>
+<th>💰Kustannus</th>
+<th>⚡Nopeus</th>
+<th>✅Paras käyttö</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GPT-4.1 mini</strong></td>
+<td>Perus (edullisin)</td>
+<td>Nopea</td>
+<td>Tavallinen dokumenttien käsittely, tiivistelmät, budjettitietoiset projektit</td>
+</tr>
+<tr>
+<td><strong>GPT-4.1</strong></td>
+<td>Standardi</td>
+<td>Kohtalainen</td>
+<td>Monimutkaiset dokumentit, edistynyt sisällön luominen, korkean tarkkuuden tarpeet</td>
+</tr>
+<tr>
+<td><strong>o3</strong></td>
+<td>Premium</td>
+<td>Hidas (perustelut ensin)</td>
+<td>Datan analyysi, kriittinen ajattelu, hienostunut ongelmanratkaisu</td>
+</tr>
+<tr>
+<td><strong>GPT-5 chat</strong></td>
+<td>Standardi</td>
+<td>Parannettu</td>
+<td>Uusin dokumenttien ymmärtäminen, korkein vastaustarkkuus</td>
+</tr>
+<tr>
+<td><strong>GPT-5 reasoning</strong></td>
+<td>Premium</td>
+<td>Hidas (monimutkainen analyysi)</td>
+<td>Hienostunein analyysi, suunnittelu, edistynyt päättely</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lampotila-asetusten-selitys">Lämpötila-asetusten selitys<a class="headerlink" href="#lampotila-asetusten-selitys" title="Permanent link">&para;</a></h3>
+<p>Lämpötila ohjaa, kuinka luovia tai ennustettavia tekoälyn vastaukset ovat:</p>
+<ul>
+<li><strong>Lämpötila 0</strong>: Ennustettavin, johdonmukaisimmat tulokset (paras datan poimintaan)</li>
+<li><strong>Lämpötila 0.5</strong>: Tasapainoinen luovuus ja johdonmukaisuus  </li>
+<li><strong>Lämpötila 1</strong>: Maksimaalinen luovuus (paras sisällön luomiseen)</li>
+</ul>
+<p>Dokumenttianalyysiin käytä <strong>lämpötila 0</strong> varmistaaksesi johdonmukaisen datan poiminnan.</p>
+<h2 id="tulostusmuodot-teksti-vs-json">📊 Tulostusmuodot: Teksti vs JSON<a class="headerlink" href="#tulostusmuodot-teksti-vs-json" title="Permanent link">&para;</a></h2>
+<p>Oikean tulostusmuodon valinta on kriittistä jatkokäsittelyä varten.</p>
+<h3 id="milloin-kayttaa-tekstimuotoa">Milloin käyttää tekstimuotoa<a class="headerlink" href="#milloin-kayttaa-tekstimuotoa" title="Permanent link">&para;</a></h3>
+<p>Tekstimuoto toimii hyvin:</p>
+<ul>
+<li>Ihmisten luettavissa oleville tiivistelmille</li>
+<li>Yksinkertaisille luokituksille</li>
+<li>Sisällölle, joka ei vaadi jäsenneltyä käsittelyä</li>
+</ul>
+<h3 id="milloin-kayttaa-json-muotoa">Milloin käyttää JSON-muotoa<a class="headerlink" href="#milloin-kayttaa-json-muotoa" title="Permanent link">&para;</a></h3>
+<p>JSON-muoto on välttämätön:</p>
+<ul>
+<li>Jäsenneltyyn datan poimintaan</li>
+<li>Integrointiin tietokantojen tai järjestelmien kanssa</li>
+<li>Power Automate -työnkulkujen käsittelyyn</li>
+<li>Johdonmukaiseen kenttien kartoitukseen</li>
+</ul>
+<h3 id="jsonn-parhaat-kaytannot">JSON:n parhaat käytännöt<a class="headerlink" href="#jsonn-parhaat-kaytannot" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Määrittele selkeät kenttien nimet</strong>: Käytä kuvaavia, johdonmukaisia nimiä</li>
+<li><strong>Tarjoa esimerkkejä</strong>: Sisällytä näytetuloksia ja arvoja jokaiselle kentälle</li>
+<li><strong>Määritä datatyypit</strong>: Sisällytä esimerkkejä päivämääristä, numeroista ja tekstistä</li>
+<li><strong>Käsittele puuttuva data</strong>: Suunnittele null- tai tyhjät arvot</li>
+<li><strong>Vahvista rakenne</strong>: Testaa eri dokumenttityypeillä</li>
+</ol>
+<h3 id="dokumenttien-laatuvaatimukset">Dokumenttien laatuvaatimukset<a class="headerlink" href="#dokumenttien-laatuvaatimukset" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Resoluutio</strong>: Varmista, että kuvat ovat selkeitä ja luettavia</li>
+<li><strong>Orientaatio</strong>: Käännä dokumentit oikeaan suuntaan ennen käsittelyä</li>
+<li><strong>Formaatin tuki</strong>: Testaa erityisillä dokumenttityypeilläsi (PDF, JPG, PNG)</li>
+<li><strong>Kokorajoitukset</strong>: Ole tietoinen ympäristösi tiedostokokorajoituksista</li>
+</ul>
+<h3 id="suorituskyvyn-optimointi">Suorituskyvyn optimointi<a class="headerlink" href="#suorituskyvyn-optimointi" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Valitse sopivat mallit</strong>: Päivitä malleja vain tarvittaessa</li>
+<li><strong>Optimoi kehotteet</strong>: Usein lyhyemmät, selkeämmät ohjeet toimivat paremmin</li>
+<li><strong>Virheenkäsittely</strong>: Suunnittele dokumentteja, joita ei voida käsitellä</li>
+<li><strong>Seuraa kustannuksia</strong>: Eri mallit kuluttavat eri määrän AI Builder -krediittejä</li>
+</ul>
+<h2 id="lab-7-ansioluettelon-poistojarjestelman-rakentaminen">🧪 Lab 7: Ansioluettelon poistojärjestelmän rakentaminen<a class="headerlink" href="#lab-7-ansioluettelon-poistojarjestelman-rakentaminen" title="Permanent link">&para;</a></h2>
+<p>Aika laittaa multimodaalinen tietosi käytäntöön. Rakennat kattavan ansioluettelon poistojärjestelmän, joka analysoi ehdokkaiden dokumentteja ja muuntaa ne jäsenneltyyn dataan rekrytointityönkulkuasi varten.</p>
+<h3 id="edellytykset-tehtavan-suorittamiseksi">Edellytykset tehtävän suorittamiseksi<a class="headerlink" href="#edellytykset-tehtavan-suorittamiseksi" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Sinulla tulee olla <strong>joko</strong>:</p>
+<ul>
+<li><strong>Suorittanut tehtävän 06</strong> ja valmis monen agentin rekrytointijärjestelmä, <strong>TAI</strong></li>
+<li><strong>Tuoda tehtävän 07 aloitusratkaisu</strong>, jos aloitat alusta tai tarvitset kiinniottoa. <a href="https://aka.ms/agent-academy">Lataa tehtävän 07 aloitusratkaisu</a></li>
+</ul>
+</li>
+<li>
+<p>Näyteansioluettelot <a href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/operative/sample-data/resumes&amp;filename=operative_sampledata">Testiansioluettelot</a></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Ratkaisun tuonti ja näytedata</p>
+<p>Jos käytät aloitusratkaisua, katso <a href="../01-get-started/">Tehtävä 01</a> saadaksesi yksityiskohtaiset ohjeet ratkaisujen ja näytedatan tuomisesta ympäristöösi.</p>
+</div>
+<h3 id="71-luo-multimodaalinen-kehotus">7.1 Luo multimodaalinen kehotus<a class="headerlink" href="#71-luo-multimodaalinen-kehotus" title="Permanent link">&para;</a></h3>
+<p>Ensimmäinen tavoitteesi: luo kehotus, joka pystyy analysoimaan ansioluettelodokumentteja ja poimimaan jäsenneltyä dataa.</p>
+<ol>
+<li>
+<p>Kirjaudu sisään <a href="https://copilotstudio.microsoft.com">Copilot Studio</a> ja valitse <strong>Työkalut</strong> vasemmasta navigaatiosta.</p>
+</li>
+<li>
+<p>Valitse <strong>+ Uusi työkalu</strong>, sitten valitse <strong>Kehotus</strong>.<br />
+<img alt="Uusi kehotus" src="../../../../../translated_images/7-new-prompt.8041acd54e3aecfca0c277aba88b9a2a923482a4b45ba65dcadf9296fac7c458.fi.png" /></p>
+</li>
+<li>
+<p><strong>Nimeä uudelleen</strong> kehotus oletusajastetusta nimestä (Esim. <em>Mukautettu kehotus 09/04/2025, 04:59:11 PM</em>) nimellä <code>Yhteenveto Ansioluettelosta</code>.</p>
+</li>
+<li>
+<p>Lisää Ohjeet-kenttään tämä kehotus:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are tasked with extracting key candidate information from a resume and cover letter to facilitate matching with open job roles and creating a summary for application review.
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Instructions:
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>1. Extract Candidate Details:
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    - Identify and extract the candidate’s full name.
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    - Extract contact information, specifically the email address.
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2. Create Candidate Summary:
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    - Summarize the candidate’s profile as multiline text (max 2000 characters) with the following sections:
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        - Candidate name
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        - Role(s) applied for if present
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        - Contact and location
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        - One-paragraph summary
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        - Experience snapshot (last 2–3 roles with outcomes)
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        - Key projects (1–3 with metrics)
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        - Education and certifications
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        - Top skills (Top 10)
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        - Availability and work authorization
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>Guidelines:
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>- Extract information only from the provided resume and cover letter documents.
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>- Ensure accuracy in identifying all details such as contact details and skills.
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>- The summary should be concise but informative, suitable for quick application review.
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>Resume: /document
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>CoverLetter: /text
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Käytä Copilot-apua</p>
+<p>Voit käyttää "Aloita Copilotilla" -toimintoa kehotteen luomiseen luonnollisella kielellä. Kokeile pyytää Copilotia luomaan kehotus ansioluettelon yhteenvetoon!</p>
+</div>
+</li>
+<li>
+<p><strong>Konfiguroi</strong> syöttöparametrit:</p>
+<table>
+<thead>
+<tr>
+<th>Parametri</th>
+<th>Tyyppi</th>
+<th>Nimi</th>
+<th>Näytedata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ansioluettelo</td>
+<td>Kuva tai dokumentti</td>
+<td>Ansioluettelo</td>
+<td>Lataa näyteansioluettelo testidatakansiosta</td>
+</tr>
+<tr>
+<td>Saatekirje</td>
+<td>Teksti</td>
+<td>Saatekirje</td>
+<td>Tässä on ansioluettelo!</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Valitse <strong>Testaa</strong> nähdäksesi kehotteesi alkuperäisen tekstituloksen.<br />
+<img alt="Aseta parametrit ja testaa" src="../../../../../translated_images/7-prompt-parameters.fe63dae637c278e1c7dd1413749ff72bc1361d382162c5a58ebc9ff721f06821.fi.png" /></p>
+</li>
+</ol>
+<h3 id="72-konfiguroi-json-tulostus">7.2 Konfiguroi JSON-tulostus<a class="headerlink" href="#72-konfiguroi-json-tulostus" title="Permanent link">&para;</a></h3>
+<p>Nyt muutat kehotteen tuottamaan jäsenneltyä JSON-dataa tavallisen tekstin sijaan.</p>
+<ol>
+<li>
+<p>Lisää tämä JSON-muotoilumääritys kehotteen ohjeiden loppuun:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Output Format:
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Provide the output in valid JSON format with the following structure:
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>{
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    &quot;CandidateName&quot;: &quot;string&quot;,
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    &quot;Email&quot;: &quot;string&quot;,
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    &quot;Summary&quot;: &quot;string max 2000 characters&quot;,
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    &quot;Skills&quot;: [ {&quot;item&quot;: &quot;Skill 1&quot;}, {&quot;item&quot;: &quot;Skill 2&quot;}],
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    &quot;Experience&quot;: [ {&quot;item&quot;: &quot;Experience 1&quot;}, {&quot;item&quot;: &quot;Experience 2&quot;}],
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p>Vaihda <strong>Tulostus</strong>-asetus "Teksti" → <strong>JSON</strong>.</p>
+</li>
+<li>
+<p>Valitse <strong>Testaa</strong> uudelleen varmistaaksesi, että tulos on nyt JSON-muodossa.<br />
+<img alt="Aseta kehotus JSON-muotoon" src="../../../../../translated_images/7-json-prompt.89afee0b09beedd348dfefcb54ec1aa328abe7f94b72c6c26a363f686652d712.fi.png" /></p>
+</li>
+<li>
+<p><strong>Valinnainen:</strong> Kokeile eri tekoälymalleja nähdäksesi, miten tulokset vaihtelevat, ja palaa sitten oletusmalliin.</p>
+</li>
+<li>
+<p>Valitse <strong>Tallenna</strong> luodaksesi kehotteen.</p>
+</li>
+<li>
+<p><strong>Konfiguroi käyttö agentissa</strong> -valintaikkunassa valitse <strong>Peruuta</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Miksi emme lisää tätä työkaluksi vielä</p>
+<p>Käytät tätä kehotetta Agent Flow -työnkulussa sen sijaan, että käyttäisit sitä suoraan työkaluna, mikä antaa sinulle enemmän hallintaa datan käsittelytyönkulussa.</p>
+</div>
+</li>
+</ol>
+<h3 id="73-lisaa-kehotus-agent-flow-tyonkulkuun">7.3 Lisää kehotus Agent Flow -työnkulkuun<a class="headerlink" href="#73-lisaa-kehotus-agent-flow-tyonkulkuun" title="Permanent link">&para;</a></h3>
+<p>Luo Agent Flow, joka käyttää kehotettasi käsittelemään Dataversessa tallennettuja ansioluetteloita.</p>
+<div class="admonition tip">
+<p class="admonition-title">Agent Flow -ilmaisut</p>
+<p>On erittäin tärkeää, että noudatat ohjeita solmujen nimeämisestä ja ilmaisujen syöttämisestä tarkasti, koska ilmaisut viittaavat edellisiin solmuihin niiden nimien avulla! Katso <a href="../../recruit/09-add-an-agent-flow/#you-mentioned-expressions-what-are-expressions">Agent Flow -tehtävä Rekrytoinnissa</a> nopeaa kertausta varten!</p>
+</div>
+<ol>
+<li>
+<p>Siirry <strong>Rekrytointiajan agenttiisi</strong> Copilot Studiossa</p>
+</li>
+<li>
+<p>Valitse <strong>Agentit</strong>-välilehti ja valitse lapsi <strong>Hakemusten vastaanottoagentti</strong></p>
+</li>
+<li>
+<p><strong>Työkalut</strong>-paneelissa valitse <strong>+ Lisää</strong> → <strong>+ Uusi työkalu</strong> → <strong>Agent Flow</strong></p>
+</li>
+<li>
+<p>Valitse solmussa "Kun agentti kutsuu työnkulun", käytä <strong>+ Lisää syöte</strong> lisätäksesi seuraavan parametrin:</p>
+<table>
+<thead>
+<tr>
+<th>Tyyppi</th>
+<th>Nimi</th>
+<th>Kuvaus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Teksti</td>
+<td>AnsioluettelonNumero</td>
+<td>Varmista, että käytät [AnsioluettelonNumero]. Tämä tulee aina alkaa kirjaimella R</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Valitse <strong>+</strong> Lisää toiminto -kuvake ensimmäisen solmun alapuolella, etsi <strong>Dataverse</strong>, valitse <strong>Näytä lisää</strong>, ja etsi <strong>Listaa rivit</strong> -toiminto</p>
+</li>
+<li>
+<p>Valitse <strong>kolme pistettä (...)</strong> Listaa rivit -solmussa ja valitse <strong>Nimeä uudelleen</strong> nimellä <code>Hae Ansioluettelotieto</code>, ja aseta seuraavat parametrit:</p>
+<table>
+<thead>
+<tr>
+<th>Ominaisuus</th>
+<th>Kuinka asettaa</th>
+<th>Arvo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Taulukon nimi</strong></td>
+<td>Valitse</td>
+<td>Ansioluettelot</td>
+</tr>
+<tr>
+<td><strong>Suodata rivit</strong></td>
+<td>Dynaaminen data (salama-kuvake)</td>
+<td><code>ppa_resumenumber eq 'AnsioluettelonNumero'</code> Korvaa <strong>AnsioluettelonNumero</strong> <strong>Kun agentti kutsuu työnkulun</strong> → <strong>AnsioluettelonNumero</strong></td>
+</tr>
+<tr>
+<td><strong>Rivien määrä</strong></td>
+<td>Syötä</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Optimoi kyselyt!</p>
+<p>Kun käytät tätä tekniikkaa tuotannossa, sinun tulisi aina rajoittaa valittavat sarakkeet vain niihin, joita Agent Flow tarvitsee.</p>
+</div>
+<p><img alt="Hae Ansioluettelotieto" src="../../../../../translated_images/7-summarize-resume-1.4b3b05b2bbab523feaf98c63502e7916c800c61db2d8a2be09b4624e0d83eb71.fi.png" /></p>
+</li>
+<li>
+<p>Valitse <strong>+</strong> Lisää toiminto -kuvake Hae Ansioluettelotieto -solmun alapuolella, etsi <strong>Dataverse</strong>, valitse <strong>Näytä lisää</strong>, ja etsi <strong>Lataa tiedosto tai kuva</strong> -toiminto.</p>
+</li>
+</ol>
+<p>| <strong>Kehote</strong> | Valitse | Tiivistä ansioluettelo |
+| <strong>Hakukirje</strong> | Lauseke (fx-kuvake) | <code>first(body('Get_Resume_Record')?['value'])?['ppa_coverletter']</code> |
+| <strong>Ansioluettelo</strong> | Dynaaminen data (salamakuvake) | Lataa ansioluettelo → Tiedosto tai kuvasisältö |</p>
+<p><img alt="Tiivistä ansioluettelo -kehote" src="../../../../../translated_images/7-summarize-resume-3.c1656de643c50805ff6972e2891db16776cbdc433ddb09778819836a60204375.fi.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Kehotteen parametrit</p>
+<p>Huomaa, että täyttämäsi parametrit ovat samoja, jotka määritit syöteparametreiksi luodessasi kehotteen.</p>
+</div>
+<h3 id="74-luo-hakijarekisteri">7.4 Luo hakijarekisteri<a class="headerlink" href="#74-luo-hakijarekisteri" title="Permanent link">&para;</a></h3>
+<p>Seuraavaksi sinun tulee käyttää kehotteen antamia tietoja ja luoda uusi hakijarekisteri, jos sitä ei ole jo olemassa.</p>
+<ol>
+<li>
+<p>Valitse <strong>+</strong> Lisää toiminto -kuvake Tiivistä ansioluettelo -solmun alapuolelta, etsi <strong>Dataverse</strong>, valitse <strong>Näytä lisää</strong> ja etsi <strong>Listaa rivit</strong> -toiminto.</p>
+</li>
+<li>
+<p>Nimeä solmu <code>Get Existing Candidate</code> ja aseta seuraavat parametrit:</p>
+<table>
+<thead>
+<tr>
+<th>Ominaisuus</th>
+<th>Miten asetetaan</th>
+<th>Arvo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Taulukon nimi</strong></td>
+<td>Valitse</td>
+<td>Candidates</td>
+</tr>
+<tr>
+<td><strong>Suodata rivit</strong></td>
+<td>Dynaaminen data (salamakuvake)</td>
+<td><code>ppa_email eq 'Email'</code>  <strong>Korvaa</strong> <code>Email</code> <strong>Tiivistä ansioluettelo → Email</strong></td>
+</tr>
+<tr>
+<td><strong>Rivimäärä</strong></td>
+<td>Syötä</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Hae olemassa oleva hakija" src="../../../../../translated_images/7-summarize-resume-4.c95d900bad4e6e75ad348f4385f69a9db37f76f3b1bb90813157643814a3f6a8.fi.png" /></p>
+<ol>
+<li>
+<p>Valitse <strong>+</strong> Lisää toiminto -kuvake Hae olemassa oleva hakija -solmun alapuolelta, etsi <strong>Control</strong>, valitse <strong>Näytä lisää</strong> ja etsi <strong>Ehto</strong>-toiminto.</p>
+</li>
+<li>
+<p>Aseta ehtojen ominaisuuksiin seuraava ehto:</p>
+<table>
+<thead>
+<tr>
+<th>Ehto</th>
+<th>Operaattori</th>
+<th>Arvo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lauseke (fx-kuvake): <code>length(outputs('Get_Existing_Candidate')?['body/value'])</code></td>
+<td>on yhtä suuri kuin</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Hae olemassa olevan hakijan ehto" src="../../../../../translated_images/7-summarize-resume-5.1a83c05153ac5aa16b8c3fec10989628f64f893fc7c6bfed8b4ec16caf6b7a6b.fi.png" /></p>
+<ol>
+<li>
+<p>Valitse <strong>+</strong> Lisää toiminto -kuvake <strong>True</strong>-haarassa, etsi <strong>Dataverse</strong>, valitse <strong>Näytä lisää</strong> ja etsi <strong>Lisää uusi rivi</strong> -toiminto.</p>
+</li>
+<li>
+<p>Nimeä solmu <code>Add a New Candidate</code> ja aseta seuraavat parametrit:</p>
+<table>
+<thead>
+<tr>
+<th>Ominaisuus</th>
+<th>Miten asetetaan</th>
+<th>Arvo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Taulukon nimi</strong></td>
+<td>Valitse</td>
+<td>Candidates</td>
+</tr>
+<tr>
+<td><strong>Hakijan nimi</strong></td>
+<td>Dynaaminen data (salamakuvake)</td>
+<td>Tiivistä ansioluettelo → <code>CandidateName</code></td>
+</tr>
+<tr>
+<td><strong>Sähköposti</strong></td>
+<td>Dynaaminen data (salamakuvake)</td>
+<td>Tiivistä ansioluettelo → <code>Email</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Lisää uusi hakija" src="../../../../../translated_images/7-summarize-resume-6.321bee96056d21981c466a87456aea1bafc394a492cc4b814b97ba2ee6b758fa.fi.png" /></p>
+<h3 id="75-paivita-ansioluettelo-ja-maarita-tyonkulun-tulokset">7.5 Päivitä ansioluettelo ja määritä työnkulun tulokset<a class="headerlink" href="#75-paivita-ansioluettelo-ja-maarita-tyonkulun-tulokset" title="Permanent link">&para;</a></h3>
+<p>Viimeistele työnkulku päivittämällä ansioluettelorekisteri ja määrittämällä, mitä tietoja palautetaan agentille.</p>
+<ol>
+<li>
+<p>Valitse <strong>+</strong> Lisää toiminto -kuvake ehdon alapuolelta, etsi <strong>Dataverse</strong>, valitse <strong>Näytä lisää</strong> ja etsi <strong>Päivitä rivi</strong> -toiminto.</p>
+</li>
+<li>
+<p>Valitse otsikko ja nimeä solmu <code>Update Resume</code>, valitse <strong>Näytä kaikki</strong> ja aseta seuraavat parametrit:</p>
+<table>
+<thead>
+<tr>
+<th>Ominaisuus</th>
+<th>Miten asetetaan</th>
+<th>Arvo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Taulukon nimi</strong></td>
+<td>Valitse</td>
+<td>Resumes</td>
+</tr>
+<tr>
+<td><strong>Rivin ID</strong></td>
+<td>Lauseke (fx-kuvake)</td>
+<td><code>first(body('Get_Resume_Record')?['value'])?['ppa_resumeid']</code></td>
+</tr>
+<tr>
+<td><strong>Yhteenveto</strong></td>
+<td>Dynaaminen data (salamakuvake)</td>
+<td>Tiivistä ansioluettelo → Teksti</td>
+</tr>
+<tr>
+<td><strong>Hakija (Candidates)</strong></td>
+<td>Lauseke (fx-kuvake)</td>
+<td><code>if(equals(length(outputs('Get_Existing_Candidate')?['body/value']), 1), first(outputs('Get_Existing_Candidate')?['body/value'])?['ppa_candidateid'], outputs('Add_a_New_Candidate')?['body/ppa_candidateid'])</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Päivitä ansioluettelo" src="../../../../../translated_images/7-summarize-resume-7.0ef51db1ebbf837bae11c0e0bdd8c6e8296d528d500bc729c43660d09967ce57.fi.png" /></p>
+<ol>
+<li>
+<p>Valitse <strong>Vastaa agentille</strong> -solmu ja käytä <strong>+ Lisää tulos</strong> -toimintoa määrittääksesi:</p>
+<table>
+<thead>
+<tr>
+<th>Tyyppi</th>
+<th>Nimi</th>
+<th>Miten asetetaan</th>
+<th>Arvo</th>
+<th>Kuvaus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Teksti</td>
+<td><code>CandidateName</code></td>
+<td>Dynaaminen data (salamakuvake)</td>
+<td>Tiivistä ansioluettelo → Näytä lisää → CandidateName</td>
+<td>Ansioluettelossa annettu [CandidateName]</td>
+</tr>
+<tr>
+<td>Teksti</td>
+<td><code>CandidateEmail</code></td>
+<td>Dynaaminen data (salamakuvake)</td>
+<td>Tiivistä ansioluettelo → Näytä lisää → Email</td>
+<td>Ansioluettelossa annettu [CandidateEmail]</td>
+</tr>
+<tr>
+<td>Teksti</td>
+<td><code>CandidateNumber</code></td>
+<td>Lauseke (fx-kuvake)</td>
+<td><code>concat('ppa_candidates/', if(equals(length(outputs('Get_Existing_Candidate')?['body/value']), 1), first(outputs('Get_Existing_Candidate')?['body/value'])?['ppa_candidateid'], outputs('Add_a_New_Candidate')?['body/ppa_candidateid']) )</code></td>
+<td>Uuden tai olemassa olevan hakijan [CandidateNumber]</td>
+</tr>
+<tr>
+<td>Teksti</td>
+<td><code>ResumeSummary</code></td>
+<td>Dynaaminen data (salamakuvake)</td>
+<td>Tiivistä ansioluettelo → Näytä lisää → body/responsev2/predictionOutput/structuredOutput</td>
+<td>Ansioluettelon yhteenveto ja tiedot JSON-muodossa</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Vastaa agentille" src="../../../../../translated_images/7-summarize-resume-8.72c4649f7536863657260438088577b04272ab28bd788c65dabbca1473cd6b5e.fi.png" /></p>
+<ol>
+<li>
+<p>Valitse <strong>Tallenna luonnos</strong> oikeasta yläkulmasta. Agenttityönkulun pitäisi näyttää seuraavalta:<br />
+<img alt="Tiivistä ansioluettelo -agenttityönkulku" src="../../../../../translated_images/7-summarize-resume-9.491c36275650a2adba1acafcb386970a9c379ab7dad9cc129e27cbbc96c73dd3.fi.png" /></p>
+</li>
+<li>
+<p>Valitse <strong>Yleiskatsaus</strong>-välilehti, valitse <strong>Muokkaa</strong> <strong>Tiedot</strong>-paneelista.</p>
+<ol>
+<li><strong>Työnkulun nimi</strong>: <code>Summarize Resume</code></li>
+<li>
+<p><strong>Kuvaus</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Summarize an existing Resume stored in Dataverse using a [ResumeNumber] as input, return the [CandidateNumber], and resume summary JSON
+</span></code></pre></div>
+</li>
+</ol>
+</li>
+<li>
+<p>Valitse <strong>Tallenna</strong></p>
+</li>
+<li>
+<p>Valitse uudelleen <strong>Suunnittelija</strong>-välilehti ja valitse <strong>Julkaise</strong>.</p>
+</li>
+</ol>
+<h3 id="76-yhdista-tyonkulku-agenttiin">7.6 Yhdistä työnkulku agenttiin<a class="headerlink" href="#76-yhdista-tyonkulku-agenttiin" title="Permanent link">&para;</a></h3>
+<p>Lisää työnkulku työkaluksi ja määritä agentti käyttämään sitä.</p>
+<ol>
+<li>
+<p>Avaa <strong>Hiring Agent</strong> Copilot Studiossa.</p>
+</li>
+<li>
+<p>Valitse <strong>Agents</strong>-välilehti ja avaa <strong>Application Intake Agent</strong>.</p>
+</li>
+<li>
+<p>Valitse <strong>Työkalut</strong>-paneeli ja valitse <strong>+ Lisää työkalu</strong> -&gt; <strong>Flow</strong> -&gt; <strong>Summarize Resume</strong> <strong>(Agent Flow)</strong>.</p>
+</li>
+<li>
+<p>Valitse <strong>Lisää ja määritä</strong>.</p>
+</li>
+<li>
+<p>Määritä työkalun asetukset seuraavasti:</p>
+<table>
+<thead>
+<tr>
+<th>Asetus</th>
+<th>Arvo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kuvaus</strong></td>
+<td>Tiivistä olemassa oleva ansioluettelo, joka on tallennettu Dataverseen käyttämällä [ResumeNumber]-tunnusta syötteenä, palauta [CandidateNumber] ja ansioluettelon yhteenveto JSON-muodossa</td>
+</tr>
+<tr>
+<td><strong>Milloin tätä työkalua voidaan käyttää</strong></td>
+<td>Vain kun viitataan aiheiden tai agenttien toimesta</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Valitse <strong>Tallenna</strong><br />
+<img alt="Määritä Tiivistä ansioluettelo -työkalu" src="../../../../../translated_images/7-configure-summarize-resume-tool.f301e328142193d27b0ab8dea68dcd130e783e897bf37c94f952594d9eca8071.fi.png" /></p>
+</li>
+<li>
+<p>Jos valitset Työkalut Hiring Agentissa, näet nyt molemmat työkalut, jotka ovat käytettävissä <strong>Application Intake Agent</strong> -agentilla.<br />
+<img alt="Agentin työkalut" src="../../../../../translated_images/7-agent-tools.5ab82b09501386a00351a8ef3149a0f177360bca0aa70a7c05cb273289247c61.fi.png" /></p>
+</li>
+<li>
+<p>Siirry <strong>Application Intake Child</strong> -agentin ohjeisiin ja muokkaa <strong>Post-Upload</strong>-vaihe seuraavasti:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2. Post-Upload Processing  
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    - After uploading, be sure to also output the [ResumeNumber] in all messages
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    - Pass [ResumeNumber] to /Summarize Resume  - Be sure to use the correct value that will start with the letter R.
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    - Be sure to also output the [CandidateNumber] in all messages
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    - Use the [ResumeSummary] to output a summary of the processed Resume and candidate
+</span></code></pre></div>
+<p>Korvaa <code>/Summarize Resume</code> lisäämällä viittaus <strong>Summarize Resume agent flow</strong> -työnkulkuun kirjoittamalla kauttaviiva (<code>/)</code>) tai valitsemalla <code>/Summarize</code> lisätäksesi viittauksen.<br />
+<img alt="Päivitä ohjeet" src="../../../../../translated_images/7-summarize-instructions-update.b3620bc94c8de06ee09eb5804de4f9ac7bfce8458f87fe4bee41cb51abe7f48c.fi.png" /></p>
+</li>
+<li>
+<p>Valitse <strong>Tallenna</strong>.</p>
+</li>
+</ol>
+<h3 id="77-testaa-agenttisi">7.7 Testaa agenttisi<a class="headerlink" href="#77-testaa-agenttisi" title="Permanent link">&para;</a></h3>
+<p>Testaa koko multimodaalinen järjestelmäsi varmistaaksesi, että kaikki toimii oikein.</p>
+<ol>
+<li>
+<p><strong>Aloita testaus</strong>:</p>
+<ul>
+<li>Valitse <strong>Testaa</strong> avataksesi testipaneelin</li>
+<li>
+<p>Kirjoita: <code>Tässä on hakijan ansioluettelo</code></p>
+</li>
+<li>
+<p>Lataa yksi esimerkkianisoluetteloista <a href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/operative/sample-data/resumes&amp;filename=operative_sampledata">Test Resumes</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Vahvista tulokset</strong>:</p>
+<ul>
+<li>Kun lähetät viestin ja ansioluettelon, tarkista, että saat ansioluettelon numeron (muoto: R#####)</li>
+<li>Vahvista, että saat hakijan numeron ja yhteenvedon</li>
+<li>Käytä toimintakarttaa nähdäksesi sekä ansioluettelon lataustyökalun että Tiivistä ansioluettelo -työkalun toiminnassa, ja että yhteenvedon kehotteen tulokset vastaanotetaan agentilta:<br />
+<img alt="Testitulokset" src="../../../../../translated_images/7-test-result.dcbb6c277666ab7d06d303c3facfb5ad838a33ec6b7f0b92b90f9faddb9bb6bc.fi.png" /></li>
+</ul>
+</li>
+<li>
+<p><strong>Tarkista tietojen pysyvyys</strong>:</p>
+<ul>
+<li>Siirry <a href="https://make.powerapps.com">Power Apps</a></li>
+<li>Avaa <strong>Sovellukset</strong> → <strong>Hiring Hub</strong> → <strong>Pelaa</strong></li>
+<li>Siirry <strong>Resumes</strong>-osioon varmistaaksesi, että ansioluettelo ladattiin ja käsiteltiin. Sen pitäisi sisältää sekä yhteenvetotiedot että siihen liittyvä hakijarekisteri.</li>
+<li>Tarkista <strong>Candidates</strong>-osio nähdäksesi poimitut hakijatiedot<br />
+<img alt="Ansioluettelo hakijan ja yhteenvedon kanssa" src="../../../../../translated_images/7-resume-in-dataverse.cbe85a3f889c989f32ef10ac130e6decfed3d7744fd31f48df8a841cebae229b.fi.png" /></li>
+<li>Kun suoritat prosessin uudelleen, sen pitäisi käyttää olemassa olevaa hakijaa (sähköpostin perusteella), eikä luoda uutta.</li>
+</ul>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Vianmääritys</p>
+<ul>
+<li><strong>Ansioluettelo ei käsittele</strong>: Varmista, että tiedosto on PDF-muodossa ja kokorajoitusten mukainen</li>
+<li><strong>Hakijaa ei luotu</strong>: Tarkista, että sähköposti poimittiin oikein ansioluettelosta</li>
+<li><strong>JSON-muotoiluvirheet</strong>: Varmista, että kehotteen ohjeet sisältävät tarkan JSON-rakenteen</li>
+<li><strong>Työnkulkuvirheet</strong>: Tarkista, että kaikki Dataverse-yhteydet ja lausekkeet on määritetty oikein</li>
+</ul>
+</div>
+<h3 id="valmius-tuotantokayttoon">Valmius tuotantokäyttöön<a class="headerlink" href="#valmius-tuotantokayttoon" title="Permanent link">&para;</a></h3>
+<p>Vaikka tämä ei ole osa tehtävää, tuotantokäyttöön valmiin agenttityönkulun luomiseksi voit harkita seuraavia:</p>
+<ol>
+<li><strong>Virheenkäsittely</strong> - Jos ansioluettelon numeroa ei löydy tai kehotteen käsittely epäonnistuu, lisää virheenkäsittelyä, joka palauttaa selkeän virheen agentille.</li>
+<li><strong>Olemassa olevien hakijoiden päivittäminen</strong> - Hakija löytyy sähköpostin perusteella, jolloin nimi voitaisiin päivittää vastaamaan ansioluettelossa olevaa.</li>
+<li><strong>Ansioluettelon tiivistämisen ja hakijan luomisen erottaminen</strong> - Tämä toiminnallisuus voitaisiin jakaa pienempiin agenttityönkulkuihin, jotta niitä olisi helpompi ylläpitää, ja sitten agentille annettaisiin ohjeet käyttää niitä vuorotellen.</li>
+</ol>
+<h2 id="tehtava-suoritettu">🎉 Tehtävä suoritettu<a class="headerlink" href="#tehtava-suoritettu" title="Permanent link">&para;</a></h2>
+<p>Hienoa työtä, Operative! <strong>Document Resume Recon</strong> on nyt valmis. Olet onnistuneesti hallinnut multimodaaliset kehotteet ja pystyt nyt poimimaan tarkasti rakenteellista dataa mistä tahansa dokumentista.</p>
+<p>Tässä on, mitä olet saavuttanut tehtävässä:</p>
+<p><strong>✅ Multimodaalisten kehotteiden hallinta</strong><br />
+Ymmärrät nyt, mitä multimodaaliset kehotteet ovat ja milloin käyttää eri AI-malleja optimaalisten tulosten saavuttamiseksi.</p>
+<p><strong>✅ Dokumenttien käsittelyosaaminen</strong><br />
+Olet oppinut määrittämään kehotteita kuva- ja dokumenttisyötteillä sekä muotoilemaan tuloksia JSON-muotoon rakenteellisen datan poimintaa varten.</p>
+<p><strong>✅ Ansioluettelon poistojärjestelmä</strong><br />
+Olet rakentanut täydellisen ansioluettelon poistojärjestelmän, joka käsittelee hakijadokumentteja ja integroituu rekrytointiprosessiisi.</p>
+<p><strong>✅ Parhaiden käytäntöjen toteutus</strong><br />
+Olet soveltanut parhaita käytäntöjä kehotteiden suunnittelussa dokumenttianalyysiin ja integroinut multimodaaliset kehotteet agenttityönkulkuihin.</p>
+<p><strong>✅ Perusta kehittyneelle käsittelylle</strong><br />
+Parannetut dokumenttianalyysikyvyt ovat nyt valmiita edistyneille datan pohjustusominaisuuksille, joita lisätään tulevissa tehtävissä.</p>
+<p>🚀 <strong>Seuraavaksi:</strong> Tehtävässä 08 opit parantamaan kehotteitasi reaaliaikaisella Dataverse-datalla, luoden dynaamisia AI-ratkaisuja, jotka mukautuvat muuttuviin liiketoimintavaatimuksiin.</p>
+<p>⏩ <a href="../08-dataverse-grounding/">Siirry tehtävään 08: Kehotteen parantaminen Dataverse-pohjustuksella</a></p>
+<h2 id="taktiset-resurssit">📚 Taktiset resurssit<a class="headerlink" href="#taktiset-resurssit" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/create-a-custom-prompt?WT.mc_id=power-power-182762-scottdurow">Luo kehote</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/add-inputs-prompt?WT.mc_id=power-182762-scottdurow">Lisää teksti-, kuva- tai dokumenttisyöte kehotteeseesi</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/process-responses-json-output?WT.mc_id=power-182762-scottdurow">Käsittele vastauksia JSON-muodossa</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/prompt-modelsettings?WT.mc_id=power-182762-scottdurow">Mallin valinta ja lämpötila-asetukset</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/use-a-custom-prompt-in-flow?WT.mc_id=power-182762-scottdurow">Käytä kehotettasi Power Automatessa</a></p>
+<p>📺 <a href="https://www.youtube.com/watch?v=F0fGnWrRY_I">AI Builder: JSON-tulokset kehoterakentajassa</a></p>
+<hr />
+<p><strong>Vastuuvapauslauseke</strong>:<br />
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,858 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/nl/docs/operative-preview/01-get-started/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#missie-01-aan-de-slag-met-de-hiring-agent" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codenaam-operatie-talent-scout" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAAM: OPERATIE TALENT SCOUT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missieoverzicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Missieoverzicht
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doelstellingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Doelstellingen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vereisten" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Vereisten
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#begrip-van-het-wervingsautomatiseringsscenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏢 Begrip van het Wervingsautomatiseringsscenario
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-stel-de-hiring-agent-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab: Stel de Hiring Agent in
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missie-voltooid" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 Missie Voltooid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactische-bronnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Tactische Bronnen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "2620cf9eaf09a3fc6be7fa31a3a62956",
+  "translation_date": "2025-10-17T01:48:54+00:00",
+  "source_file": "docs/operative-preview/01-get-started/README.md",
+  "language_code": "nl"
+}
+-->
+<h1 id="missie-01-aan-de-slag-met-de-hiring-agent">🚨 Missie 01: Aan de slag met de Hiring Agent<a class="headerlink" href="#missie-01-aan-de-slag-met-de-hiring-agent" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="codenaam-operatie-talent-scout">🕵️‍♂️ CODENAAM: <code>OPERATIE TALENT SCOUT</code><a class="headerlink" href="#codenaam-operatie-talent-scout" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operatie Tijdvenster:</strong> <code>~45 minuten</code></p>
+</blockquote>
+<h2 id="missieoverzicht">🎯 Missieoverzicht<a class="headerlink" href="#missieoverzicht" title="Permanent link">&para;</a></h2>
+<p>Welkom, Agent. Je eerste opdracht is <strong>Operatie Talent Scout</strong> - het opzetten van de basisinfrastructuur voor een AI-gestuurd wervingssysteem dat de manier waarop organisaties topkandidaten identificeren en aannemen zal transformeren.</p>
+<p>Je missie, als je deze accepteert, is om een uitgebreid wervingsbeheersysteem te implementeren en configureren met behulp van Microsoft Copilot Studio. Je importeert een vooraf gebouwde oplossing met alle benodigde datastructuren en maakt vervolgens je eerste AI-agent - de <strong>Hiring Agent</strong> - die zal fungeren als de centrale coördinator voor alle toekomstige wervingsoperaties.</p>
+<p>Deze eerste implementatie vormt het commandocentrum dat je verder zult uitbreiden tijdens het Agent Academy Operative-programma. Beschouw dit als je basisoperatie - het fundament waarop je een volledig netwerk van gespecialiseerde agents zult bouwen in de volgende missies.</p>
+<hr />
+<h2 id="doelstellingen">🔎 Doelstellingen<a class="headerlink" href="#doelstellingen" title="Permanent link">&para;</a></h2>
+<p>Door deze missie te voltooien, zul je:</p>
+<ul>
+<li><strong>Scenario Begrip</strong>: Uitgebreide kennis opdoen van uitdagingen en oplossingen in wervingsautomatisering</li>
+<li><strong>Oplossing Implementatie</strong>: De basis van een wervingsbeheersysteem succesvol importeren en configureren</li>
+<li><strong>Agent Creatie</strong>: Een Hiring Agent bouwen die het startpunt vormt van het scenario dat je gaat ontwikkelen als Agent Academy Operative</li>
+</ul>
+<hr />
+<h2 id="vereisten">🔍 Vereisten<a class="headerlink" href="#vereisten" title="Permanent link">&para;</a></h2>
+<p>Voordat je aan deze missie begint, zorg ervoor dat je:</p>
+<ul>
+<li>Een Copilot Studio-licentie hebt</li>
+<li>Toegang hebt tot een Microsoft Power Platform-omgeving</li>
+<li>Beheerdersrechten hebt om oplossingen en agents te maken</li>
+</ul>
+<hr />
+<h2 id="begrip-van-het-wervingsautomatiseringsscenario">🏢 Begrip van het Wervingsautomatiseringsscenario<a class="headerlink" href="#begrip-van-het-wervingsautomatiseringsscenario" title="Permanent link">&para;</a></h2>
+<p>Dit scenario laat zien hoe een bedrijf Microsoft Copilot Studio kan gebruiken om het wervingsproces te verbeteren en te automatiseren. Het introduceert een systeem van agents die samenwerken om taken zoals het beoordelen van cv's, het aanbevelen van functies, het voorbereiden van interviewmateriaal en het evalueren van kandidaten af te handelen.</p>
+<h3 id="zakelijke-waarde">Zakelijke Waarde<a class="headerlink" href="#zakelijke-waarde" title="Permanent link">&para;</a></h3>
+<p>De oplossing helpt HR-teams tijd te besparen en betere beslissingen te nemen door:</p>
+<ul>
+<li>Automatisch cv's te verwerken die via e-mail worden ontvangen.</li>
+<li>Geschikte functies voor te stellen op basis van kandidatenprofielen.</li>
+<li>Sollicitaties en interviewgidsen op maat te maken voor elke kandidaat.</li>
+<li>Eerlijke en conforme wervingspraktijken te waarborgen via ingebouwde veiligheids- en moderatiefuncties.</li>
+<li>Feedback te verzamelen om de oplossing te verbeteren.</li>
+</ul>
+<h3 id="hoe-het-werkt">Hoe Het Werkt<a class="headerlink" href="#hoe-het-werkt" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Een centrale <strong>Hiring Agent</strong> coördineert het proces en slaat gegevens op in Microsoft Dataverse.</li>
+<li>Een <strong>Application Intake Agent</strong> leest cv's en maakt sollicitaties.</li>
+<li>Een <strong>Interview Prep Agent</strong> genereert interviewvragen en documenten op basis van de achtergrond van de kandidaat.</li>
+<li>Het systeem kan worden gepubliceerd op een demo-website, zodat belanghebbenden ermee kunnen interactieren.</li>
+</ul>
+<p>Dit scenario is ideaal voor organisaties die hun wervingsprocessen willen moderniseren met AI-gestuurde automatisering, terwijl transparantie, eerlijkheid en efficiëntie behouden blijven.</p>
+<hr />
+<h2 id="lab-stel-de-hiring-agent-in">🧪 Lab: Stel de Hiring Agent in<a class="headerlink" href="#lab-stel-de-hiring-agent-in" title="Permanent link">&para;</a></h2>
+<p>In dit praktische lab leg je de basis voor je wervingsautomatiseringssysteem. Je begint met het importeren van een vooraf geconfigureerde oplossing die alle benodigde Dataverse-tabellen en datastructuren bevat voor het beheren van kandidaten, functies en wervingsprocessen. Vervolgens vul je deze tabellen met voorbeeldgegevens die je ondersteunen bij het leren tijdens deze module en realistische scenario's bieden voor testen. Tot slot maak je de Hiring Agent in Copilot Studio, waarmee je de basis legt voor alle andere functies die je in toekomstige missies zult toevoegen.</p>
+<h3 id="lab-11-oplossing-importeren">🧪 Lab 1.1: Oplossing importeren<a class="headerlink" href="#lab-11-oplossing-importeren" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Ga naar <strong><a href="https://copilotstudio.microsoft.com">Copilot Studio</a></strong></li>
+<li>Selecteer de <strong>...</strong> in de linker navigatie en kies <strong>Solutions</strong></li>
+<li>Klik op de knop <strong>Import Solution</strong> bovenaan</li>
+<li><strong><a href="https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/operative-preview/01-get-started/assets/Operative_1_0_0_0.zip">Download</a></strong> de voorbereide oplossing</li>
+<li>Klik op <strong>Browse</strong> en selecteer de gedownloade oplossing van de vorige stap</li>
+<li>Klik op <strong>Next</strong></li>
+<li>Klik op <strong>Importeren</strong></li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Bij succes zie je een groene notificatiebalk met de volgende boodschap:<br />
+"Solution "Operative" imported successfully."</p>
+</div>
+<p>Wanneer de oplossing is geïmporteerd, bekijk wat je hebt geïmporteerd door de weergavenaam van de oplossing (<code>Operative</code>) te selecteren.</p>
+<p><img alt="Geïmporteerde tabellen" src="../../../../../translated_images/components.3f5c58007fa1635316e9c73133e3c6a6aa68f3d806926f739dcc28feb8a7ff13.nl.png" /></p>
+<p>De volgende componenten zijn geïmporteerd:</p>
+<table>
+<thead>
+<tr>
+<th>Weergavenaam</th>
+<th>Type</th>
+<th>Beschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Candidate</td>
+<td>Tabel</td>
+<td>Informatie over kandidaten</td>
+</tr>
+<tr>
+<td>Evaluation Criteria</td>
+<td>Tabel</td>
+<td>Evaluatiecriteria voor de functie</td>
+</tr>
+<tr>
+<td>Hiring Hub</td>
+<td>Model-Driven App</td>
+<td>Applicatie voor het beheren van het wervingsproces</td>
+</tr>
+<tr>
+<td>Hiring Hub</td>
+<td>Site Map</td>
+<td>Navigatiestructuur voor de Hiring Hub-app</td>
+</tr>
+<tr>
+<td>Job Application</td>
+<td>Tabel</td>
+<td>Sollicitaties</td>
+</tr>
+<tr>
+<td>Job Role</td>
+<td>Tabel</td>
+<td>Functies</td>
+</tr>
+<tr>
+<td>Resume</td>
+<td>Tabel</td>
+<td>Cv's van de kandidaten</td>
+</tr>
+</tbody>
+</table>
+<p>Als laatste taak voor dit lab, klik op de knop <strong>Publish all customizations</strong> bovenaan de pagina.</p>
+<h3 id="lab-12-voorbeeldgegevens-importeren">🧪 Lab 1.2: Voorbeeldgegevens importeren<a class="headerlink" href="#lab-12-voorbeeldgegevens-importeren" title="Permanent link">&para;</a></h3>
+<p>In dit lab voeg je voorbeeldgegevens toe aan enkele van de tabellen die je hebt geïmporteerd in lab 1.1.</p>
+<h4 id="download-de-bestanden-om-te-importeren">Download de bestanden om te importeren<a class="headerlink" href="#download-de-bestanden-om-te-importeren" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong><a href="https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/operative-preview/01-get-started/assets/evaluation-criteria.csv">Download</a></strong> het CSV-bestand met de evaluatiecriteria</li>
+<li><strong><a href="https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/operative-preview/01-get-started/assets/job-roles.csv">Download</a></strong> het CSV-bestand met de functies</li>
+</ol>
+<h4 id="importeer-de-voorbeeldgegevens-voor-functies">Importeer de voorbeeldgegevens voor functies<a class="headerlink" href="#importeer-de-voorbeeldgegevens-voor-functies" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Ga terug naar de oplossing die je net hebt geïmporteerd in het vorige lab</li>
+<li>Selecteer de <strong>Hiring Hub</strong> Model-Driven App door het vinkje voor de rij te selecteren</li>
+<li>
+<p>Klik op de <strong>Play</strong> knop bovenaan</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Mogelijk wordt je gevraagd opnieuw in te loggen. Zorg ervoor dat je dat doet. Daarna zou je de Hiring Hub-app moeten zien.</p>
+</div>
+</li>
+<li>
+<p>Selecteer <strong>Job Roles</strong> in de linker navigatie</p>
+</li>
+<li>Klik op het <strong>Meer</strong>-icoon (drie puntjes onder elkaar) in de commandobalk</li>
+<li>
+<p>Klik op de <strong>rechterpijl</strong> naast <em>Import from Excel</em></p>
+<p><img alt="Importeren vanuit Excel" src="../../../../../translated_images/import-from-excel.fb6a1ebdc1d2207ec157c47bddcf22c867d1c5ab9226b00a975fe40ce054d4ee.nl.png" /></p>
+</li>
+<li>
+<p>Klik op <strong>Import from CSV</strong></p>
+<p><img alt="Importeren vanuit CSV" src="../../../../../translated_images/import-from-csv.7a47152e009c8c637830244c78abf300b180b8d8152e8a42b1cd12ecab9182f3.nl.png" /></p>
+</li>
+<li>
+<p>Klik op de knop <strong>Choose File</strong>, selecteer het <strong>job-roles.csv</strong> bestand dat je net hebt gedownload en klik op <strong>Open</strong></p>
+</li>
+<li>Klik op <strong>Next</strong></li>
+<li>
+<p>Laat de volgende stap zoals deze is en klik op <strong>Review Mapping</strong></p>
+<p><img alt="Mapping controleren" src="../../../../../translated_images/import-from-csv-job-roles.d9891150fa3850d43e4ee6b9533f2f797e96376c0ef626e552046e9815faa2cf.nl.png" /></p>
+</li>
+<li>
+<p>Zorg ervoor dat de mapping correct is en klik op <strong>Finish Import</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Dit start een import en je kunt de voortgang volgen of het proces direct voltooien door op <strong>Done</strong> te klikken.</p>
+</div>
+</li>
+<li>
+<p>Klik op <strong>Done</strong></p>
+</li>
+</ol>
+<p>Dit kan even duren, maar je kunt op de <strong>Refresh</strong> knop klikken om te zien of de import is geslaagd.</p>
+<p><img alt="Succesvolle import van functies" src="../../../../../translated_images/job-roles-import-successful.2b8d19f85db7a48617b5bd93f5f3f77b706b4267ad28ca35d6a85ae0a05bdfc3.nl.png" /></p>
+<h4 id="importeer-de-voorbeeldgegevens-voor-evaluatiecriteria">Importeer de voorbeeldgegevens voor evaluatiecriteria<a class="headerlink" href="#importeer-de-voorbeeldgegevens-voor-evaluatiecriteria" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Selecteer <strong>Evaluation Criteria</strong> in de linker navigatie</li>
+<li>Klik op het <strong>Meer</strong>-icoon (drie puntjes onder elkaar) in de commandobalk</li>
+<li>
+<p>Klik op de <strong>rechterpijl</strong> naast <em>Import from Excel</em></p>
+<p><img alt="Importeren vanuit Excel" src="../../../../../translated_images/import-from-excel.fb6a1ebdc1d2207ec157c47bddcf22c867d1c5ab9226b00a975fe40ce054d4ee.nl.png" /></p>
+</li>
+<li>
+<p>Klik op <strong>Import from CSV</strong></p>
+<p><img alt="Importeren vanuit CSV" src="../../../../../translated_images/import-from-csv.7a47152e009c8c637830244c78abf300b180b8d8152e8a42b1cd12ecab9182f3.nl.png" /></p>
+</li>
+<li>
+<p>Klik op de knop <strong>Choose File</strong>, selecteer het <strong>evaluation-criteria.csv</strong> bestand dat je net hebt gedownload en klik op <strong>Open</strong></p>
+</li>
+<li>Klik op <strong>Next</strong></li>
+<li>
+<p>Laat de volgende stap zoals deze is en klik op <strong>Review Mapping</strong></p>
+<p><img alt="Mapping controleren" src="../../../../../translated_images/import-from-csv-evaluation-criteria.0ca181d91157ee9e51fbd6645ae4b8942a85707135caa1aa84fb3c49e931ecd2.nl.png" /></p>
+</li>
+<li>
+<p>Nu moeten we iets meer werk doen voor de mapping. Klik op het vergrootglas (🔎-icoon) naast het veld Job Role</p>
+</li>
+<li>Zorg ervoor dat <strong>Job Title</strong> hier is geselecteerd, en voeg het toe als dat niet zo is</li>
+<li>Klik op <strong>OK</strong></li>
+<li>
+<p>Zorg ervoor dat de rest van de mapping ook correct is en klik op <strong>Finish Import</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Dit start opnieuw een import en je kunt de voortgang volgen of het proces direct voltooien door op <strong>Done</strong> te klikken.</p>
+</div>
+</li>
+<li>
+<p>Klik op <strong>Done</strong></p>
+</li>
+</ol>
+<p>Dit kan even duren, maar je kunt op de <strong>Refresh</strong> knop klikken om te zien of de import is geslaagd.</p>
+<p><img alt="Succesvolle import van evaluatiecriteria" src="../../../../../translated_images/evaluation-criteria-import-successful.5d793d4bd44fa4c1699d0abfb79807934e8fc00660a919b427dea329de7711fe.nl.png" /></p>
+<h3 id="lab-13-maak-de-hiring-agent">🧪 Lab 1.3: Maak de Hiring Agent<a class="headerlink" href="#lab-13-maak-de-hiring-agent" title="Permanent link">&para;</a></h3>
+<p>Nu je klaar bent met het instellen van de vereisten, is het tijd voor het echte werk! Laten we eerst onze Hiring Agent toevoegen!</p>
+<ol>
+<li>Ga naar <strong><a href="https://copilotstudio.microsoft.com">Copilot Studio</a></strong> en zorg ervoor dat je in dezelfde omgeving bent als waar je de oplossing en de gegevens hebt geïmporteerd</li>
+<li>Selecteer <strong>Agents</strong> in de linker navigatie</li>
+<li>Klik op <strong>New Agent</strong></li>
+<li>Klik op <strong>Configure</strong></li>
+<li>
+<p>Voor <strong>Name</strong>, voer in:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Hiring Agent
+</span></code></pre></div>
+</li>
+<li>
+<p>Voor <strong>Description</strong>, voer in:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Central orchestrator for all hiring activities
+</span></code></pre></div>
+</li>
+<li>
+<p>Klik op de <strong>...</strong> naast de <em>Create</em> knop rechtsboven</p>
+</li>
+<li>Klik op <strong>Update advanced settings</strong></li>
+<li>Selecteer als <strong>Solution</strong> <code>Operative</code></li>
+<li>Klik op <strong>Update</strong></li>
+<li>Klik op <strong>Create</strong> rechtsboven</li>
+</ol>
+<p>Dit zal de Hiring Agent voor je aanmaken, die je zult gebruiken gedurende deze Operative-cursus.</p>
+<hr />
+<h2 id="missie-voltooid">🎉 Missie Voltooid<a class="headerlink" href="#missie-voltooid" title="Permanent link">&para;</a></h2>
+<p>Missie 01 is voltooid! Je hebt nu de volgende vaardigheden onder de knie:</p>
+<p>✅ <strong>Scenario Begrip</strong>: Uitgebreide kennis van uitdagingen en oplossingen in wervingsautomatisering<br />
+✅ <strong>Oplossing Implementatie</strong>: De basis van een wervingsbeheersysteem succesvol geïmporteerd en geconfigureerd<br />
+✅ <strong>Agent Creatie</strong>: Een Hiring Agent gebouwd die het startpunt vormt van het scenario dat je gaat ontwikkelen als Agent Academy Operative  </p>
+<p>De volgende stap is <a href="../02-multi-agent/">Missie 02</a>: Maak je agent klaar voor meerdere agents met verbonden agents.</p>
+<hr />
+<h2 id="tactische-bronnen">📚 Tactische Bronnen<a class="headerlink" href="#tactische-bronnen" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-first-bot">Microsoft Copilot Studio - Maak een agent</a><br />
+📖 <a href="https://learn.microsoft.com/power-apps/maker/data-platform">Microsoft Dataverse Documentatie</a>  </p>
+<hr />
+<p><strong>Disclaimer</strong>:<br />
+Dit document is vertaald met behulp van de AI-vertalingsservice <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

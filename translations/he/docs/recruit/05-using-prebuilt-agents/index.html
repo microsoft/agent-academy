@@ -1,0 +1,739 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/he/docs/recruit/05-using-prebuilt-agents/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#05" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ שם קוד: מבצע נסיעות בטוחות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 תקציר המשימה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 מטרות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 מה הם סוכנים מוכנים מראש?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#05_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 מעבדה 05: התחלה מהירה עם סוכן מוכן מראש
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ משימה הושלמה
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "8e2c64a7f9303e58329ec8bb468c80b4",
+  "translation_date": "2025-10-17T01:14:55+00:00",
+  "source_file": "docs/recruit/05-using-prebuilt-agents/README.md",
+  "language_code": "he"
+}
+-->
+<h1 id="05">🧰 משימה 05: שימוש בסוכן מוכן מראש<a class="headerlink" href="#05" title="Permanent link">&para;</a></h1>
+<h2 id="_1">🕵️‍♂️ שם קוד: <code>מבצע נסיעות בטוחות</code><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ חלון זמן המבצע:</strong> <code>~30 דקות</code></p>
+</blockquote>
+<p>🎥 <strong>צפו בהדרכה</strong></p>
+<p><a href="https://www.youtube.com/watch?v=NmXsx8WjWuM" title="צפו בהדרכה ביוטיוב"><img alt="תמונה ממוזערת של סרטון סוכן מוכן מראש" src="../../../../../translated_images/video-thumbnail.234ee62d2e4e837a7401776b5f092e5d5819f46a2e2859a92654b38f1381789f.he.jpg" /></a></p>
+<h2 id="_2">🎯 תקציר המשימה<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>ברוכים הבאים למשימה הבאה שלכם באקדמיית סוכני Copilot Studio. אתם עומדים לחקור את עולם <strong>הסוכנים המוכנים מראש</strong>—סוכנים חכמים וממוקדי מטרה שנוצרו על ידי Microsoft כדי להאיץ את תהליך הפריסה ולהפחית את זמן ההגעה לערך.</p>
+<p>במקום לבנות מאפס, סוכנים מוכנים מראש (המכונים גם <strong>תבניות סוכנים</strong>) מעניקים לכם יתרון התחלתי על ידי מתן תרחישים מוכנים לשימוש שניתן להתאים ולפרוס תוך דקות.</p>
+<p>במשימה זו, תפרסו את סוכן <strong>נסיעות בטוחות</strong>—סוכן שעוזר למשתמשים שלכם להתכונן לנסיעות עסקיות, להבין את מדיניות החברה ולייעל את תהליך התכנון.</p>
+<hr />
+<h2 id="_3">🧭 מטרות<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>המטרות שלכם במשימה זו הן:</p>
+<ol>
+<li>להבין מה הם סוכנים מוכנים מראש ולמה הם חשובים  </li>
+<li>לפרוס את תבנית הסוכן <strong>נסיעות בטוחות</strong>  </li>
+<li>להתאים את תגובות ותוכן הסוכן  </li>
+<li>לבדוק ולפרסם את הסוכן  </li>
+</ol>
+<hr />
+<h2 id="_4">🧠 מה הם סוכנים מוכנים מראש?<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>סוכנים מוכנים מראש הם סוכני AI מוכנים לשימוש שנוצרו על ידי Microsoft אשר:</p>
+<ul>
+<li>מתמודדים עם צרכים עסקיים נפוצים (כמו נסיעות, משאבי אנוש, תמיכה טכנית)</li>
+<li>כוללים נושאים מתפקדים לחלוטין, ביטויי הפעלה, הוראות ודוגמאות ידע.</li>
+<li>ניתנים לעריכה, הרחבה והתאמה עם הנתונים שלכם</li>
+</ul>
+<p>סוכנים אלו מושלמים להתחלה מהירה או ללמידה על מבנה הסוכנים.</p>
+<hr />
+<h2 id="05_1">🧪 מעבדה 05: התחלה מהירה עם סוכן מוכן מראש<a class="headerlink" href="#05_1" title="Permanent link">&para;</a></h2>
+<p>עכשיו נלמד כיצד לבחור סוכן מוכן מראש ולהתאים אותו.</p>
+<ul>
+<li><a href="../../../../../docs/recruit/05-using-prebuilt-agents">5.1 הפעלת Copilot Studio</a></li>
+<li><a href="../../../../../docs/recruit/05-using-prebuilt-agents">5.2 בחירת תבנית סוכן נסיעות בטוחות</a></li>
+<li><a href="../../../../../docs/recruit/05-using-prebuilt-agents">5.3 התאמת הסוכן</a></li>
+<li><a href="../../../../../docs/recruit/05-using-prebuilt-agents">5.4 בדיקה ופרסום</a></li>
+</ul>
+<p>נמשיך עם הדוגמה מהעבר, שבה ניצור פתרון בסביבת Copilot Studio ייעודית לבניית סוכן תמיכה טכנית.</p>
+<p>בואו נתחיל!</p>
+<h3 id="51-copilot-studio">5.1 הפעלת Copilot Studio<a class="headerlink" href="#51-copilot-studio" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>נווטו ל-<a href="https://copilotstudio.microsoft.com">https://copilotstudio.microsoft.com</a></p>
+</li>
+<li>
+<p>התחברו עם חשבון העבודה או בית הספר שלכם ב-Microsoft 365</p>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>עליכם להיות בדייר שבו Copilot Studio מופעל. אם אינכם רואים את Copilot Studio, חזרו ל-<a href="../00-course-setup/">משימה 00</a> להשלמת ההגדרות שלכם.</p>
+</div>
+<h3 id="52">5.2 בחירת תבנית סוכן נסיעות בטוחות<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>מדף הבית של Copilot Studio, לחצו על <strong>+ יצירה</strong>
+    <img alt="יצירת סוכן" src="../../../../../translated_images/create.ef22dd3e758823e9f17d69ef07c7db6fef8cbc00dd944ac65842bd3bd9f16efd.he.png" /></p>
+</li>
+<li>
+<p>גללו למטה לקטע <strong>התחלה עם תבנית סוכן</strong></p>
+</li>
+<li>
+<p>מצאו ובחרו את <strong>נסיעות בטוחות</strong></p>
+<p><img alt="בחירת תבנית נסיעות בטוחות" src="../../../../../translated_images/choose_template.01c90e72076da7f14a9c93120dec6932b57a109a506823dd3b195d8f610afb07.he.png" /></p>
+</li>
+<li>
+<p>שימו לב שהתבנית מגיעה עם תיאור, הוראות ודוגמאות ידע.</p>
+<p><img alt="סקירת התבנית" src="../../../../../translated_images/template-setup.0b2f5a8dd8c3e7e305d24461df3065a4ec435d3300df75287891830a9b91b974.he.png" /></p>
+</li>
+<li>
+<p>לחצו על <strong>יצירה</strong></p>
+<p><img alt="יצירת סוכן" src="../../../../../translated_images/create-agent-setup.3383d353508b5e33593bd2961c1fbea29568a49868356844ab4cffdad584a655.he.png" /></p>
+</li>
+</ol>
+<p>זה ייצור סוכן חדש בסביבה שלכם בהתבסס על תצורת נסיעות בטוחות.</p>
+<h3 id="53">5.3 התאמת הסוכן<a class="headerlink" href="#53" title="Permanent link">&para;</a></h3>
+<p>עכשיו כשהסוכן נוצר, נתאים אותו לארגון שלכם:</p>
+<ol>
+<li>
+<p>בחרו <strong>הפעלת AI יצירתי</strong> כדי להפעיל את תכונת ה-AI היצירתי כך שיוכל להשתמש בהוראות שסופקו בתבנית.</p>
+<p><img alt="הפעלת תשובות יצירתיות" src="../../../../../translated_images/gen-answers.7e91d692123771a60b0b944956472a1323857f61ffa2c32231f12eeb9bec341c.he.png" /></p>
+</li>
+<li>
+<p>עכשיו נצייד את הסוכן במקור ידע נוסף כדי שיוכל לענות על שאלות בנושא נסיעות באירופה. לשם כך, גללו למטה לקטע <strong>ידע</strong> ובחרו <strong>הוספת ידע</strong></p>
+<p><img alt="הוספת ידע" src="../../../../../translated_images/knowledge.d85f70ad6cffe8700b2f33f76633c1c37ce45a960a33e42b3b48eca2759449b5.he.png" /></p>
+</li>
+<li>
+<p>בחרו <strong>אתרים ציבוריים</strong></p>
+<p><img alt="הוספת אתר ציבורי" src="../../../../../translated_images/public-website.cb547b2284c409058bbe7e0a46e503f2368911b0781eec530b9ae63cd174e0b9.he.png" /></p>
+</li>
+<li>
+<p>בשדה הטקסט, הדביקו <strong><a href="https://european-union.europa.eu/">https://european-union.europa.eu/</a></strong> ובחרו <strong>הוספה</strong></p>
+<p><img alt="הוספת האתר" src="../../../../../translated_images/paste-add.bb80b0f0f9bcd47dfbf00ebcb0a5386fa892be795c2eee74a8348c0d2a6ab5ae.he.png" /></p>
+</li>
+<li>
+<p>בחרו <strong>הוספה לסוכן</strong></p>
+<p><img alt="הוספה לסוכן" src="../../../../../translated_images/add-to-agent.f139c87c5a79ddaa1eef244a93f76c6451c1374dbbf189c23ce24c49a65d6073.he.png" /></p>
+</li>
+</ol>
+<h3 id="54">5.4 בדיקה ופרסום<a class="headerlink" href="#54" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>לחצו על <strong>בדיקה</strong> בפינה הימנית העליונה כדי להפעיל את חלון הבדיקה  </p>
+</li>
+<li>
+<p>נסו ביטויים כמו:</p>
+<ul>
+<li><code>“האם אני צריך ויזה כדי לנסוע מארה"ב לאמסטרדם?”</code></li>
+<li><code>“כמה זמן לוקח להוציא דרכון אמריקאי?”</code></li>
+<li><code>“איפה השגרירות האמריקאית הקרובה ביותר בוולנסיה, ספרד?”</code></li>
+</ul>
+</li>
+<li>
+<p>ודאו שהסוכן מגיב במידע מדויק ומועיל וצפו במפת הפעילות כדי לראות מאיפה הוא השיג את המידע.</p>
+<p><img alt="הוספה לסוכן" src="../../../../../translated_images/response-passport.e91b05c561f49cf5edbbdc6d7a61fffdcc4ad3d413bd17b09cca3f521a578be8.he.png" /></p>
+</li>
+<li>
+<p>כשתהיו מוכנים, לחצו על <strong>פרסום</strong></p>
+<p><img alt="הוספה לסוכן" src="../../../../../translated_images/publish-1.0685cfdf10e365ee58a8d0160c5bab81aef8fa5fbd2eb65535d568f611532637.he.png" /></p>
+</li>
+<li>
+<p>בחרו <strong>פרסום</strong> שוב בתיבת הדו-שיח
+    <img alt="הוספה לסוכן" src="../../../../../translated_images/publish-2.9c3964d72347088eeaaf8c137921d5b67c9962bce0ad067f89e8999f75299aa2.he.png" /></p>
+</li>
+<li>
+<p>באופן אופציונלי, הוסיפו את הסוכן ל-Microsoft Teams באמצעות תכונת <strong>ערוצים</strong> המובנית.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">🧳 מטרה נוספת</p>
+<p>נסו להוסיף לסוכן נסיעות בטוחות אתר SharePoint או קובץ שאלות נפוצות כדי להפוך אותו לרלוונטי יותר למדיניות הנסיעות של החברה שלכם.</p>
+</div>
+<h2 id="_5">✅ משימה הושלמה<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>כעת הצלחתם:</p>
+<ul>
+<li>לפרוס סוכן מוכן מראש של Microsoft  </li>
+<li>להתאים את הסוכן</li>
+<li>לבדוק ולפרסם גרסה משלכם של תבנית הסוכן <strong>נסיעות בטוחות</strong></li>
+</ul>
+<p>⏭️ <a href="../06-create-agent-from-conversation/">עברו לשיעור <strong>יצירת סוכן מותאם אישית מאפס</strong></a>.</p>
+<!-- markdownlint-disable-next-line MD033 -->
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/05-using-prebuilt-agents" alt="סטטיסטיקות אנליטיות" /></p>
+<hr />
+<p><strong>הצהרת אחריות</strong>:<br />
+מסמך זה תורגם באמצעות שירות תרגום AI <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי אנושי. איננו אחראים לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1043 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/de/docs/recruit/10-add-event-triggers/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-10-ereignis-ausloser-hinzufugen-autonome-agentenfahigkeiten-aktivieren" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-ghost-routine" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAME: OPERATION GHOST ROUTINE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missionsbeschreibung" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Missionsbeschreibung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ziele" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Ziele
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#was-ist-ein-ereignis-ausloser" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Was ist ein Ereignis-Auslöser?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wie-funktionieren-ereignis-ausloser" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Wie funktionieren Ereignis-Auslöser?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verstandnis-von-payloads-fur-ausloser" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Verständnis von Payloads für Auslöser
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haufige-szenarien-fur-ereignis-ausloser" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Häufige Szenarien für Ereignis-Auslöser
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veroffentlichungs-und-authentifizierungsuberlegungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Veröffentlichungs- und Authentifizierungsüberlegungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fehlerbehebung-und-einschrankungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Fehlerbehebung und Einschränkungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-10-ereignis-ausloser-fur-autonomes-agentenverhalten-hinzufugen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 10 - Ereignis-Auslöser für autonomes Agentenverhalten hinzufügen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-abgeschlossen" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Mission abgeschlossen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taktische-ressourcen" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Taktische Ressourcen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "cd99a76bcb7372ac2771b6ae178b023d",
+  "translation_date": "2025-10-17T19:16:17+00:00",
+  "source_file": "docs/recruit/10-add-event-triggers/README.md",
+  "language_code": "de"
+}
+-->
+<h1 id="mission-10-ereignis-ausloser-hinzufugen-autonome-agentenfahigkeiten-aktivieren">🚨 Mission 10: Ereignis-Auslöser hinzufügen - Autonome Agentenfähigkeiten aktivieren<a class="headerlink" href="#mission-10-ereignis-ausloser-hinzufugen-autonome-agentenfahigkeiten-aktivieren" title="Permanent link">&para;</a></h1>
+<h2 id="codename-operation-ghost-routine">🕵️‍♂️ CODENAME: <code>OPERATION GHOST ROUTINE</code><a class="headerlink" href="#codename-operation-ghost-routine" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Zeitfenster der Operation:</strong> <code>~45 Minuten</code></p>
+</blockquote>
+<p>🎥 <strong>Schauen Sie sich die Anleitung an</strong></p>
+<p><a href="https://www.youtube.com/watch?v=ZgwHL8PQ1nY" title="Schauen Sie sich die Anleitung auf YouTube an"><img alt="Video-Vorschaubild für Ereignis-Auslöser" src="../../../../../translated_images/video-thumbnail.0d5b477d69adfe668fab9aa8ef5b199377b46788948b33b1969bf19c099b6469.de.jpg" /></a></p>
+<h2 id="missionsbeschreibung">🎯 Missionsbeschreibung<a class="headerlink" href="#missionsbeschreibung" title="Permanent link">&para;</a></h2>
+<p>Es ist an der Zeit, Ihren Agenten von einem Gesprächsassistenten zu einem autonomen Operativen zu erheben. Ihre Mission ist es, Ihren Agenten so zu konfigurieren, dass er ohne Aufforderung handelt – präzise und schnell auf Signale aus Ihrer digitalen Umgebung reagiert.</p>
+<p>Mit Ereignis-Auslösern trainieren Sie Ihren Agenten, externe Systeme wie SharePoint, Teams und Outlook zu überwachen und intelligente Aktionen auszuführen, sobald ein Signal empfangen wird. Diese Operation verwandelt Ihren Agenten in einen voll funktionsfähigen Feldagenten – leise, schnell und immer wachsam.</p>
+<p>Erfolg bedeutet, Agenten zu bauen, die Werte initiieren – nicht nur darauf reagieren.</p>
+<h2 id="ziele">🔎 Ziele<a class="headerlink" href="#ziele" title="Permanent link">&para;</a></h2>
+<p>📖 In dieser Lektion lernen Sie:</p>
+<ul>
+<li>Was Ereignis-Auslöser sind und wie sie autonomes Agentenverhalten ermöglichen</li>
+<li>Den Unterschied zwischen Ereignis-Auslösern und Themen-Auslösern, einschließlich Auslöser-Workflows und Payloads</li>
+<li>Häufige Szenarien für Ereignis-Auslöser</li>
+<li>Authentifizierungs-, Sicherheits- und Veröffentlichungsüberlegungen für ereignisgesteuerte Agenten</li>
+<li>Einen autonomen IT-Helpdesk-Agenten zu erstellen, der auf SharePoint-Ereignisse reagiert und E-Mail-Bestätigungen sendet</li>
+</ul>
+<h2 id="was-ist-ein-ereignis-ausloser">🤔 Was ist ein Ereignis-Auslöser?<a class="headerlink" href="#was-ist-ein-ereignis-ausloser" title="Permanent link">&para;</a></h2>
+<p>Ein <strong>Ereignis-Auslöser</strong> ist ein Mechanismus, der es Ihrem Agenten ermöglicht, autonom auf externe Ereignisse zu reagieren, ohne direkte Benutzereingaben zu benötigen. Stellen Sie sich vor, Ihr Agent "beobachtet" bestimmte Ereignisse und handelt automatisch, wenn diese eintreten.</p>
+<p>Im Gegensatz zu Themen-Auslösern, die Benutzer dazu bringen, etwas einzugeben, um eine Konversation zu starten, werden Ereignis-Auslöser durch Ereignisse in Ihren verbundenen Systemen aktiviert. Zum Beispiel:</p>
+<ul>
+<li>Wenn eine neue Datei in SharePoint oder OneDrive for Business erstellt wird</li>
+<li>Wenn ein Datensatz in Dataverse erstellt wird</li>
+<li>Wenn eine Aufgabe in Planner abgeschlossen wird</li>
+<li>Wenn eine neue Antwort in Microsoft Forms eingereicht wird</li>
+<li>Wenn eine neue Nachricht in Microsoft Teams hinzugefügt wird</li>
+<li>Basierend auf einem wiederkehrenden Zeitplan (z. B. tägliche Erinnerungen)<br />
+<img alt="Auslöser hinzufügen" src="../../../../../translated_images/10_AddTriggerDialog.d665fde7e50d106d693110cd80e6c6b569bdad34ea985eb72fee7e0fccb3ef26.de.png" /></li>
+</ul>
+<h3 id="warum-ereignis-ausloser-fur-autonome-agenten-wichtig-sind">Warum Ereignis-Auslöser für autonome Agenten wichtig sind<a class="headerlink" href="#warum-ereignis-ausloser-fur-autonome-agenten-wichtig-sind" title="Permanent link">&para;</a></h3>
+<p>Ereignis-Auslöser verwandeln Ihren Agenten von einem reaktiven Assistenten in einen proaktiven, autonomen Helfer:</p>
+<ol>
+<li>
+<p><strong>Autonomer Betrieb</strong> - Ihr Agent kann rund um die Uhr ohne menschliches Eingreifen arbeiten und auf Ereignisse reagieren, sobald sie eintreten.</p>
+<ul>
+<li><em>Beispiel:</em> Begrüßen Sie neue Teammitglieder automatisch, wenn sie einem Team hinzugefügt werden.</li>
+</ul>
+</li>
+<li>
+<p><strong>Echtzeit-Reaktionsfähigkeit</strong> - Anstatt darauf zu warten, dass Benutzer Fragen stellen, reagiert Ihr Agent sofort auf relevante Ereignisse.</p>
+<ul>
+<li><em>Beispiel:</em> Benachrichtigen Sie das IT-Team, wenn ein SharePoint-Dokument geändert wird.</li>
+</ul>
+</li>
+<li>
+<p><strong>Workflow-Automatisierung</strong> - Verknüpfen Sie mehrere Aktionen basierend auf einem einzigen Auslöser-Ereignis.</p>
+<ul>
+<li><em>Beispiel:</em> Wenn ein neues Support-Ticket erstellt wird, erstellen Sie eine Aufgabe, benachrichtigen Sie den Manager und aktualisieren Sie das Tracking-Dashboard.</li>
+</ul>
+</li>
+<li>
+<p><strong>Konsistente Prozesse</strong> - Stellen Sie sicher, dass wichtige Schritte nie vergessen werden, indem Sie auf Schlüsselereignisse automatisiert reagieren.</p>
+<ul>
+<li><em>Beispiel:</em> Jeder neue Mitarbeiter erhält automatisch Onboarding-Materialien und Zugriffsanfragen.</li>
+</ul>
+</li>
+<li>
+<p><strong>Datengetriebene Aktionen</strong> - Verwenden Sie Informationen aus dem auslösenden Ereignis, um intelligente Entscheidungen zu treffen und geeignete Maßnahmen zu ergreifen.</p>
+<ul>
+<li><em>Beispiel:</em> Leiten Sie dringende Tickets basierend auf der Prioritätsstufe im Auslöser-Payload an erfahrene Mitarbeiter weiter.</li>
+</ul>
+</li>
+</ol>
+<h2 id="wie-funktionieren-ereignis-ausloser">⚙️ Wie funktionieren Ereignis-Auslöser?<a class="headerlink" href="#wie-funktionieren-ereignis-ausloser" title="Permanent link">&para;</a></h2>
+<p>Ereignis-Auslöser arbeiten durch einen dreistufigen Workflow, der es Ihrem Agenten ermöglicht, autonom auf externe Ereignisse zu reagieren:</p>
+<h3 id="der-ausloser-workflow">Der Auslöser-Workflow<a class="headerlink" href="#der-ausloser-workflow" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Ereigniserkennung</strong> - Ein spezifisches Ereignis tritt in einem verbundenen System (SharePoint, Teams, Outlook usw.) auf.</li>
+<li><strong>Auslöser-Aktivierung</strong> - Der Ereignis-Auslöser erkennt dieses Ereignis und sendet ein Payload über einen Power Automate Cloud Flow an Ihren Agenten.</li>
+<li><strong>Agentenreaktion</strong> - Ihr Agent empfängt das Payload und führt die von Ihnen definierten Anweisungen aus.</li>
+</ol>
+<h3 id="ereignis-vs-themen-ausloser">Ereignis- vs. Themen-Auslöser<a class="headerlink" href="#ereignis-vs-themen-ausloser" title="Permanent link">&para;</a></h3>
+<p>Es ist wichtig, den Unterschied zwischen diesen beiden Auslöser-Typen zu verstehen:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Ereignis-Auslöser</strong></th>
+<th><strong>Themen-Auslöser</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Durch externe Systemereignisse aktiviert</td>
+<td>Durch Benutzereingaben/Phrasen aktiviert</td>
+</tr>
+<tr>
+<td>Ermöglichen autonomes Agentenverhalten</td>
+<td>Ermöglichen Gesprächsantworten</td>
+</tr>
+<tr>
+<td>Verwenden die Authentifizierung des Erstellers</td>
+<td>Option für die Authentifizierung des Benutzers</td>
+</tr>
+<tr>
+<td>Funktionieren ohne Benutzerinteraktion</td>
+<td>Erfordern, dass der Benutzer die Konversation startet</td>
+</tr>
+<tr>
+<td>Beispiele: Datei erstellt, E-Mail empfangen</td>
+<td>Beispiel: "Wie ist das Wetter?"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="verstandnis-von-payloads-fur-ausloser">📦 Verständnis von Payloads für Auslöser<a class="headerlink" href="#verstandnis-von-payloads-fur-ausloser" title="Permanent link">&para;</a></h2>
+<p>Wenn ein Ereignis eintritt, sendet der Auslöser ein <strong>Payload</strong> an Ihren Agenten, das Informationen über das Ereignis und Anweisungen zur Reaktion enthält.</p>
+<h3 id="standard-vs-benutzerdefinierte-payloads">Standard- vs. benutzerdefinierte Payloads<a class="headerlink" href="#standard-vs-benutzerdefinierte-payloads" title="Permanent link">&para;</a></h3>
+<p>Jeder Auslöser-Typ hat eine Standard-Payload-Struktur, die Sie jedoch anpassen können:</p>
+<p><strong>Standard-Payload</strong> - Verwendet das Standardformat wie <code>Verwende Inhalte aus {Body}</code></p>
+<ul>
+<li>Enthält grundlegende Ereignisinformationen</li>
+<li>Verwendet generische Verarbeitungsanweisungen</li>
+<li>Gut für einfache Szenarien</li>
+</ul>
+<p><strong>Benutzerdefinierte Payload</strong> - Fügen Sie spezifische Anweisungen und Datenformatierungen hinzu</p>
+<ul>
+<li>Enthält detaillierte Anweisungen für Ihren Agenten</li>
+<li>Gibt genau an, welche Daten verwendet werden sollen und wie</li>
+<li>Besser für komplexe Workflows</li>
+</ul>
+<h3 id="agenten-anweisungen-vs-benutzerdefinierte-payload-anweisungen">Agenten-Anweisungen vs. benutzerdefinierte Payload-Anweisungen<a class="headerlink" href="#agenten-anweisungen-vs-benutzerdefinierte-payload-anweisungen" title="Permanent link">&para;</a></h3>
+<p>Es gibt zwei Orte, an denen Sie das Verhalten Ihres Agenten mit Ereignis-Auslösern steuern können:</p>
+<p><strong>Agenten-Anweisungen</strong> (Global)</p>
+<ul>
+<li>Allgemeine Anweisungen, die für alle Auslöser gelten</li>
+<li>Beispiel: "Beim Bearbeiten von Tickets immer zuerst auf Duplikate prüfen"</li>
+<li>Am besten für allgemeine Verhaltensmuster geeignet</li>
+</ul>
+<p><strong>Payload-Anweisungen</strong> (Auslöser-spezifisch)</p>
+<ul>
+<li>Spezifische Anweisungen für einzelne Auslöser-Typen  </li>
+<li>Beispiel: "Für dieses SharePoint-Update eine Zusammenfassung an den Projektkanal senden"</li>
+<li>Am besten für komplexe Agenten mit mehreren Auslösern geeignet</li>
+</ul>
+<p>💡 <strong>Profi-Tipp</strong>: Vermeiden Sie widersprüchliche Anweisungen zwischen diesen beiden Ebenen, da dies zu unerwartetem Verhalten führen kann.</p>
+<h2 id="haufige-szenarien-fur-ereignis-ausloser">🎯 Häufige Szenarien für Ereignis-Auslöser<a class="headerlink" href="#haufige-szenarien-fur-ereignis-ausloser" title="Permanent link">&para;</a></h2>
+<p>Hier sind praktische Beispiele, wie Ereignis-Auslöser Ihren Agenten verbessern können:</p>
+<h3 id="it-helpdesk-agent">IT-Helpdesk-Agent<a class="headerlink" href="#it-helpdesk-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Auslöser</strong>: Neues SharePoint-Listenelement (Support-Ticket)</li>
+<li><strong>Aktion</strong>: Automatische Kategorisierung, Priorisierung und Benachrichtigung der entsprechenden Teammitglieder</li>
+</ul>
+<h3 id="mitarbeiter-onboarding-agent">Mitarbeiter-Onboarding-Agent<a class="headerlink" href="#mitarbeiter-onboarding-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Auslöser</strong>: Neuer Benutzer in Dataverse hinzugefügt</li>
+<li><strong>Aktion</strong>: Begrüßungsnachricht senden, Onboarding-Aufgaben erstellen und Zugriff bereitstellen</li>
+</ul>
+<h3 id="projektmanagement-agent">Projektmanagement-Agent<a class="headerlink" href="#projektmanagement-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Auslöser</strong>: Aufgabe in Planner abgeschlossen</li>
+<li><strong>Aktion</strong>: Projekt-Dashboard aktualisieren, Stakeholder benachrichtigen und Blocker prüfen</li>
+</ul>
+<h3 id="dokumentenmanagement-agent">Dokumentenmanagement-Agent<a class="headerlink" href="#dokumentenmanagement-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Auslöser</strong>: Datei in einem bestimmten SharePoint-Ordner hochgeladen</li>
+<li><strong>Aktion</strong>: Metadaten extrahieren, Tags anwenden und Dokumenteneigentümer benachrichtigen</li>
+</ul>
+<h3 id="meeting-assistent-agent">Meeting-Assistent-Agent<a class="headerlink" href="#meeting-assistent-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Auslöser</strong>: Kalendereintrag erstellt</li>
+<li><strong>Aktion</strong>: Vorbesprechungs-Erinnerungen und Agenda senden, Ressourcen buchen</li>
+</ul>
+<h2 id="veroffentlichungs-und-authentifizierungsuberlegungen">⚠️ Veröffentlichungs- und Authentifizierungsüberlegungen<a class="headerlink" href="#veroffentlichungs-und-authentifizierungsuberlegungen" title="Permanent link">&para;</a></h2>
+<p>Bevor Ihr Agent Ereignis-Auslöser in der Produktion verwenden kann, müssen Sie die Authentifizierungs- und Sicherheitsimplikationen verstehen.</p>
+<h3 id="authentifizierung-des-erstellers">Authentifizierung des Erstellers<a class="headerlink" href="#authentifizierung-des-erstellers" title="Permanent link">&para;</a></h3>
+<p>Ereignis-Auslöser verwenden die <strong>Anmeldeinformationen des Agenten-Erstellers</strong> für alle Authentifizierungen:</p>
+<ul>
+<li>Ihr Agent greift mit Ihren Berechtigungen auf Systeme zu</li>
+<li>Benutzer können möglicherweise über Ihre Anmeldeinformationen auf Daten zugreifen</li>
+<li>Alle Aktionen werden "in Ihrem Namen" ausgeführt, auch wenn Benutzer mit dem Agenten interagieren</li>
+</ul>
+<h3 id="best-practices-fur-den-datenschutz">Best Practices für den Datenschutz<a class="headerlink" href="#best-practices-fur-den-datenschutz" title="Permanent link">&para;</a></h3>
+<p>Um die Sicherheit bei der Veröffentlichung von Agenten mit Ereignis-Auslösern zu gewährleisten:</p>
+<ol>
+<li><strong>Datenzugriff bewerten</strong> - Überprüfen Sie, auf welche Systeme und Daten Ihre Auslöser zugreifen können</li>
+<li><strong>Gründlich testen</strong> - Verstehen Sie, welche Informationen Auslöser in Payloads enthalten</li>
+<li><strong>Auslöserbereich eingrenzen</strong> - Verwenden Sie spezifische Parameter, um zu begrenzen, welche Ereignisse Auslöser aktivieren</li>
+<li><strong>Payload-Daten überprüfen</strong> - Stellen Sie sicher, dass Auslöser keine sensiblen Informationen preisgeben</li>
+<li><strong>Nutzung überwachen</strong> - Verfolgen Sie die Aktivität der Auslöser und den Ressourcenverbrauch</li>
+</ol>
+<h2 id="fehlerbehebung-und-einschrankungen">⚠️ Fehlerbehebung und Einschränkungen<a class="headerlink" href="#fehlerbehebung-und-einschrankungen" title="Permanent link">&para;</a></h2>
+<p>Beachten Sie diese wichtigen Überlegungen bei der Arbeit mit Ereignis-Auslösern:</p>
+<h3 id="auswirkungen-auf-kontingent-und-abrechnung">Auswirkungen auf Kontingent und Abrechnung<a class="headerlink" href="#auswirkungen-auf-kontingent-und-abrechnung" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Jede Auslöser-Aktivierung zählt zu Ihrem Nachrichtenverbrauch</li>
+<li>Häufige Auslöser (wie jede Minute) können das Kontingent schnell aufbrauchen</li>
+<li>Überwachen Sie die Nutzung, um Drosselung zu vermeiden</li>
+</ul>
+<h3 id="technische-anforderungen">Technische Anforderungen<a class="headerlink" href="#technische-anforderungen" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Nur verfügbar für Agenten mit aktivierter generativer Orchestrierung</li>
+<li>Erfordert aktivierte lösungsbewusste Cloud-Flow-Freigabe in Ihrer Umgebung</li>
+</ul>
+<h3 id="richtlinien-zur-verhinderung-von-datenverlust-dlp">Richtlinien zur Verhinderung von Datenverlust (DLP)<a class="headerlink" href="#richtlinien-zur-verhinderung-von-datenverlust-dlp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Die DLP-Richtlinien Ihrer Organisation bestimmen, welche Auslöser verfügbar sind</li>
+<li>Administratoren können Ereignis-Auslöser vollständig blockieren</li>
+<li>Kontaktieren Sie Ihren Administrator, wenn erwartete Auslöser nicht verfügbar sind</li>
+</ul>
+<h2 id="lab-10-ereignis-ausloser-fur-autonomes-agentenverhalten-hinzufugen">🧪 Lab 10 - Ereignis-Auslöser für autonomes Agentenverhalten hinzufügen<a class="headerlink" href="#lab-10-ereignis-ausloser-fur-autonomes-agentenverhalten-hinzufugen" title="Permanent link">&para;</a></h2>
+<h3 id="anwendungsfall">🎯 Anwendungsfall<a class="headerlink" href="#anwendungsfall" title="Permanent link">&para;</a></h3>
+<p>Sie werden Ihren IT-Helpdesk-Agenten verbessern, um automatisch auf neue Support-Anfragen zu reagieren. Wenn jemand ein neues Element in Ihrer SharePoint-Support-Ticket-Liste erstellt, wird Ihr Agent:</p>
+<ol>
+<li>Autonom ausgelöst, wenn das SharePoint-Ticket erstellt wird</li>
+<li>Die Ticketdetails und Anweisungen zu den Schritten bereitstellen, die Sie ausführen möchten</li>
+<li>Das Ticket automatisch per KI-generierter E-Mail an den Einreicher bestätigen</li>
+</ol>
+<p>Dieses Labor zeigt, wie Ereignis-Auslöser wirklich autonomes Agentenverhalten ermöglichen.</p>
+<h3 id="voraussetzungen">Voraussetzungen<a class="headerlink" href="#voraussetzungen" title="Permanent link">&para;</a></h3>
+<p>Bevor Sie mit diesem Labor beginnen, stellen Sie sicher, dass Sie:</p>
+<ul>
+<li>✅ Vorherige Labs abgeschlossen haben (insbesondere Lab 6-8 für den IT-Helpdesk-Agenten)</li>
+<li>✅ Zugriff auf die SharePoint-Website mit der IT-Support-Ticket-Liste haben</li>
+<li>✅ Eine Copilot Studio-Umgebung mit aktivierten Ereignis-Auslösern haben</li>
+<li>✅ Ihr Agent generative Orchestrierung aktiviert hat</li>
+<li>✅ Über die entsprechenden Berechtigungen in SharePoint und Ihrer Copilot Studio-Umgebung verfügen</li>
+</ul>
+<h3 id="101-generative-ki-aktivieren-und-einen-sharepoint-element-erstellungs-ausloser-erstellen">10.1 Generative KI aktivieren und einen SharePoint-Element-Erstellungs-Auslöser erstellen<a class="headerlink" href="#101-generative-ki-aktivieren-und-einen-sharepoint-element-erstellungs-ausloser-erstellen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Öffnen Sie Ihren <strong>IT-Helpdesk-Agent</strong> in <strong>Copilot Studio</strong></p>
+</li>
+<li>
+<p>Stellen Sie zunächst sicher, dass <strong>Generative KI</strong> für Ihren Agenten aktiviert ist:</p>
+</li>
+<li>Navigieren Sie zur <strong>Übersicht</strong>-Registerkarte</li>
+<li>
+<p>Unter dem Abschnitt Orchestrierung schalten Sie <strong>Generative Orchestrierung</strong> auf <strong>Ein</strong>, falls dies noch nicht geschehen ist<br />
+<img alt="Generative KI aktivieren" src="../../../../../translated_images/10_EnableGenerativeAI.a58904a7599016a94b89a11d6c1cd59022ae686ef553d17f89ebfb6c275cc900.de.png" /></p>
+</li>
+<li>
+<p>Navigieren Sie zur <strong>Übersicht</strong>-Registerkarte und suchen Sie den Abschnitt <strong>Auslöser</strong></p>
+</li>
+<li>
+<p>Klicken Sie auf <strong>+ Auslöser hinzufügen</strong>, um die Auslöser-Bibliothek zu öffnen<br />
+<img alt="Zu Auslöser navigieren" src="../../../../../translated_images/10_NavigateToTrigger.f5907762b93236a72d2f89cdb7c903608adb61763888ba1d3b4998f46473240c.de.png" /></p>
+</li>
+<li>
+<p>Suchen und wählen Sie <strong>Wenn ein Element erstellt wird</strong> (SharePoint)<br />
+<img alt="SharePoint-Auslöser auswählen" src="../../../../../translated_images/10_SelectSharePointTrigger.d63e7cb0f06cf33e664c0e2316952aeac4adf507d7e0f87254cffebbfa5b3007.de.png" /></p>
+</li>
+<li>
+<p>Konfigurieren Sie den Auslösernamen und die Verbindungen:</p>
+</li>
+<li>
+<p><strong>Auslösername:</strong> Neues Support-Ticket in SharePoint erstellt</p>
+</li>
+<li>
+<p>Warten Sie, bis die Verbindungen konfiguriert sind, und wählen Sie <strong>Weiter</strong>, um fortzufahren.<br />
+<img alt="Auslösername und Verbindungen konfigurieren" src="../../../../../translated_images/10_ConfigureTriggerNameAndConnections.f526dfc7a9e0dcc31bf791623e6431230f29ae001acb0f5075e175401bebb0f2.de.png" /></p>
+</li>
+<li>
+<p>Konfigurieren Sie die Auslöserparameter:</p>
+</li>
+<li>
+<p><strong>Website-Adresse</strong>: Wählen Sie Ihre "Contoso IT"-SharePoint-Website</p>
+</li>
+<li>
+<p><strong>Listenname</strong>: Wählen Sie Ihre "Tickets"-Liste</p>
+</li>
+<li>
+<p><strong>Zusätzliche Anweisungen an den Agenten, wenn er durch den Auslöser aktiviert wird:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>New Support Ticket Created in SharePoint: {Body}
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Use the &#39;Acknowledge SharePoint Ticket&#39; tool to generate the email body automatically and respond.
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>IMPORTANT: Do not wait for any user input. Work completely autonomously.
+</span></code></pre></div>
+<p><img alt="Auslöserparameter konfigurieren" src="../../../../../translated_images/10_ConfigureTriggerParams.a67406d4a892ba1f59a04641cbb2f7226a329b9813b04676f92bf18c6003fd23.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie <strong>Auslöser erstellen</strong>, um die Auslösererstellung abzuschließen. Ein Power Automate Cloud Flow wird automatisch erstellt, um den Agenten autonom auszulösen.</p>
+</li>
+<li>
+<p>Wählen Sie <strong>Schließen</strong>.</p>
+</li>
+</ol>
+<h3 id="102-den-ausloser-bearbeiten">10.2 Den Auslöser bearbeiten<a class="headerlink" href="#102-den-ausloser-bearbeiten" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Im Abschnitt <strong>Auslöser</strong> der <strong>Übersicht</strong>-Registerkarte wählen Sie das <strong>...</strong>-Menü beim Auslöser <strong>Neues Support-Ticket in SharePoint erstellt</strong></p>
+</li>
+<li>
+<p>Wählen Sie <strong>In Power Automate bearbeiten</strong><br />
+<img alt="Auslöser in Power Automate bearbeiten" src="../../../../../translated_images/10_EditTriggerInPowerAutomate.d99effb8145d40bd4d655021e0a34abf59ba23ff5e94bcae07e7e6711a52eff0.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie den Knoten <strong>Sendet eine Eingabeaufforderung an den angegebenen Copilot zur Verarbeitung</strong></p>
+</li>
+<li>
+<p>Im Feld <strong>Body/Nachricht</strong> entfernen Sie den Body-Inhalt, <strong>drücken Sie die Schrägstrich-Taste</strong> (/) und wählen Sie <strong>Ausdruck einfügen</strong><br />
+<img alt="Ausdruck für Auslöser einfügen" src="../../../../../translated_images/10_InsertExpressionForTrigger.adb940d8fa6e0bc50b325cedc3e3c085b5670e5cf2b275bf7b4ada1180d3ba01.de.png" /></p>
+</li>
+<li>
+<p>Geben Sie den folgenden Ausdruck ein, um dem Agenten spezifische Details über das Ticket bereitzustellen:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>concat(&#39;Submitted By Name: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Author/DisplayName&#39;], &#39;\nSubmitted By Email: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Author/Email&#39;], &#39;\nTitle: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Title&#39;], &#39;\nIssue Description: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Description&#39;], &#39;\nPriority: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Priority/Value&#39;],&#39;\nTicket ID : &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;ID&#39;])
+</span></code></pre></div>
+</li>
+<li>
+<p>Wählen Sie <strong>Hinzufügen</strong><br />
+<img alt="Ausdruck für Auslöserausgabe" src="../../../../../translated_images/10_TriggerOutputExpression.3b120eaa26cc9a4cd5451bb2ca658ce1a7192eb7a46c7c2b4d7431d20e982187.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie <strong>Veröffentlichen</strong> in der oberen rechten Symbolleiste.</p>
+</li>
+</ol>
+<h3 id="103-ein-tool-fur-e-mail-bestatigungen-erstellen">10.3 Ein Tool für E-Mail-Bestätigungen erstellen<a class="headerlink" href="#103-ein-tool-fur-e-mail-bestatigungen-erstellen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Kehren Sie zurück</strong> zu Ihrem Agenten in Copilot Studio</p>
+</li>
+<li>
+<p>Navigieren Sie zur <strong>Tools</strong>-Registerkarte in Ihrem Agenten</p>
+</li>
+<li>
+<p>Klicken Sie auf <strong>+ Tool hinzufügen</strong> und wählen Sie <strong>Connector</strong></p>
+</li>
+<li>
+<p>Suchen und wählen Sie den Connector <strong>E-Mail senden (V2)</strong><br />
+<img alt="Outlook-Connector auswählen" src="../../../../../translated_images/10_SelectOutlookConnector.0bf4270b1d25c691574881514f162fd74e10206bc5efd798e5cb15741b73c063.de.png" /></p>
+</li>
+<li>
+<p>Warten Sie, bis die Verbindung konfiguriert ist, und wählen Sie dann <strong>Hinzufügen und konfigurieren</strong></p>
+</li>
+<li>
+<p>Konfigurieren Sie die Tool-Einstellungen:</p>
+</li>
+<li>
+<p><strong>Name</strong>: SharePoint-Ticket bestätigen</p>
+</li>
+<li>
+<p><strong>Beschreibung</strong>: Dieses Tool sendet eine E-Mail-Bestätigung, dass ein Ticket eingegangen ist.</p>
+</li>
+<li>
+<p>Wählen Sie <strong>Anpassen</strong> neben den Eingabeparametern und konfigurieren Sie wie folgt:</p>
+<p><strong>An</strong>:</p>
+<ul>
+<li><strong>Beschreibung</strong>: Die E-Mail-Adresse der Person, die das SharePoint-Ticket eingereicht hat</li>
+<li><strong>Identifizieren als</strong>: E-Mail</li>
+</ul>
+<p><strong>Body</strong>:</p>
+<ul>
+<li><strong>Beschreibung</strong>: Eine Bestätigung, dass das Ticket eingegangen ist, und wir innerhalb von 3 Arbeitstagen antworten werden.</li>
+</ul>
+<p><img alt="Eingabeparameter konfigurieren" src="../../../../../translated_images/10_ConfigureInputParameters.cc8b602c0dc244734cb8eac43f8d7fcf88f4158dcdc7f7ae15658ad93c03beae.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie <strong>Speichern</strong></p>
+</li>
+</ol>
+<h3 id="104-den-ausloser-testen">10.4 Den Auslöser testen<a class="headerlink" href="#104-den-ausloser-testen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Wählen Sie in Ihrem <strong>Helpdesk-Agenten</strong> die <strong>Übersicht</strong>-Registerkarte</li>
+<li>Klicken Sie auf das <strong>Testauslöser</strong>-Symbol neben dem Auslöser <strong>Neues Support-Ticket in SharePoint erstellt</strong>. Dadurch wird das Fenster <strong>Testen Sie Ihren Auslöser</strong> geladen.</li>
+<li>Öffnen Sie einen neuen Browser-Tab und navigieren Sie zu Ihrer <strong>SharePoint IT Support Tickets-Liste</strong>.</li>
+<li>Klicken Sie auf <strong>+ Neues Element hinzufügen</strong>, um ein Test-Ticket zu erstellen:</li>
+<li><strong>Titel</strong>: "Keine Verbindung zum VPN möglich"</li>
+<li><strong>Beschreibung</strong>: "Keine Verbindung zum Unternehmens-WLAN-Netzwerk nach einem kürzlichen Update möglich"</li>
+<li>
+<p><strong>Priorität</strong>: "Normal"</p>
+</li>
+<li>
+<p><strong>Speichern</strong> Sie das SharePoint-Element<br />
+<img alt="Test-Ticket erstellen" src="../../../../../translated_images/10_CreateTestTicket.137beedc82d337ef0a467c67d3b53249ec469ce1ce91d88a72fb2f8729a14fce.de.png" /></p>
+</li>
+<li>Kehren Sie zu <strong>Copilot Studio</strong> zurück und überwachen Sie das Panel <strong>Trigger testen</strong> auf die Aktivierung des Triggers. Verwenden Sie das <strong>Aktualisieren</strong>-Symbol, um das Trigger-Ereignis zu laden. Dies kann einige Minuten dauern.<br />
+<img alt="Trigger-Test überwachen" src="../../../../../translated_images/10_MonitorTriggerTest.f9883de55ba1c9817121c7f801e29715fa74918603f96312dfcb0f16f9af44e0.de.png" /></li>
+<li>Sobald der Trigger erscheint, wählen Sie <strong>Test starten</strong>.</li>
+<li>Wählen Sie das <strong>Aktivitätskarten-Symbol</strong> oben im Panel <strong>Agent testen</strong>.</li>
+<li>Überprüfen Sie, ob Ihr Agent:</li>
+<li>Die Trigger-Nutzlast erhalten hat</li>
+<li>Das Tool "SharePoint-Ticket bestätigen" aufgerufen hat<br />
+<img alt="Trigger testen" src="../../../../../translated_images/10_TestTrigger.f68b063d3fa221601f61484aec9bf68aa17761366aa1efe8c3cad554ce3da902.de.png" /></li>
+<li>Überprüfen Sie den E-Mail-Posteingang des Einreichers, um sicherzustellen, dass die Bestätigungs-E-Mail gesendet wurde.<br />
+<img alt="Test-E-Mail gesendet" src="../../../../../translated_images/10_TestEmailSent.1efe77ca636ca8b8c2593216539edfe11555f7e002a6dcb5e2024b36b40e12b3.de.png" /></li>
+<li>Überprüfen Sie die <strong>Aktivitäts</strong>-Registerkarte in Copilot Studio, um die vollständige Trigger- und Tool-Ausführung zu sehen.</li>
+</ol>
+<h2 id="mission-abgeschlossen">✅ Mission abgeschlossen<a class="headerlink" href="#mission-abgeschlossen" title="Permanent link">&para;</a></h2>
+<p>🎉 <strong>Herzlichen Glückwunsch!</strong> Sie haben erfolgreich Ereignis-Trigger mit Connector-Tools implementiert, die es Ihrem Agenten ermöglichen, autonom zu arbeiten, automatisch E-Mail-Bestätigungen zu senden und Support-Tickets ohne Benutzereingriff zu bearbeiten. Sobald Ihr Agent veröffentlicht ist, wird er autonom in Ihrem Namen handeln.</p>
+<p>🚀 <strong>Als Nächstes</strong>: In unserer nächsten Lektion lernen Sie, wie Sie <a href="../11-publish-your-agent/">Ihren Agenten veröffentlichen</a> und ihn in Microsoft Teams und Microsoft 365 Copilot verfügbar machen, sodass Ihre gesamte Organisation darauf zugreifen kann!</p>
+<p>⏭️ <a href="../11-publish-your-agent/">Zur Lektion <strong>Agenten veröffentlichen</strong> wechseln</a></p>
+<h2 id="taktische-ressourcen">📚 Taktische Ressourcen<a class="headerlink" href="#taktische-ressourcen" title="Permanent link">&para;</a></h2>
+<p>Bereit, tiefer in Ereignis-Trigger und autonome Agenten einzutauchen? Schauen Sie sich diese Ressourcen an:</p>
+<ul>
+<li><strong>Microsoft Learn</strong>: <a href="https://learn.microsoft.com/training/modules/autonomous-agents-online-workshop/?WT.mc_id=power-177340-scottdurow">Machen Sie Ihren Agenten autonom in Copilot Studio</a></li>
+<li><strong>Dokumentation</strong>: <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-trigger-event?WT.mc_id=power-177340-scottdurow">Einen Ereignis-Trigger hinzufügen</a></li>
+<li><strong>Best Practices</strong>: <a href="https://learn.microsoft.com/power-automate/triggers-introduction?WT.mc_id=power-177340-scottdurow">Einführung in Power Automate-Trigger</a></li>
+<li><strong>Erweiterte Szenarien</strong>: <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow-create?WT.mc_id=power-177340-scottdurow">Power Automate-Flows mit Agenten verwenden</a></li>
+<li><strong>Sicherheit</strong>: <a href="https://learn.microsoft.com/microsoft-copilot-studio/admin-data-loss-prevention?WT.mc_id=power-177340-scottdurow">Verhinderung von Datenverlust für Copilot Studio</a></li>
+</ul>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/10-add-event-triggers" alt="Analytics" /></p>
+<hr />
+<p><strong>Haftungsausschluss</strong>:<br />
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a> übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

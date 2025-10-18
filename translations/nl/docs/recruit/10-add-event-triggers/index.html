@@ -1,0 +1,1043 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/nl/docs/recruit/10-add-event-triggers/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#missie-10-voeg-event-triggers-toe-schakel-autonome-agentmogelijkheden-in" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codenaam-operatie-ghost-routine" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAAM: OPERATIE GHOST ROUTINE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missieoverzicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Missieoverzicht
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doelstellingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Doelstellingen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wat-is-een-event-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Wat is een Event Trigger?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hoe-werken-event-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Hoe werken Event Triggers?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#begrijpen-van-trigger-payloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Begrijpen van trigger-payloads
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veelvoorkomende-scenarios-met-event-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Veelvoorkomende scenario's met Event Triggers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publicatie-en-authenticatieoverwegingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Publicatie- en authenticatieoverwegingen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problemen-oplossen-en-beperkingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Problemen oplossen en beperkingen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-10-voeg-event-triggers-toe-voor-autonoom-agentgedrag" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 10 - Voeg Event Triggers toe voor autonoom agentgedrag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missie-voltooid" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Missie Voltooid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactische-bronnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Tactische Bronnen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "cd99a76bcb7372ac2771b6ae178b023d",
+  "translation_date": "2025-10-17T01:39:43+00:00",
+  "source_file": "docs/recruit/10-add-event-triggers/README.md",
+  "language_code": "nl"
+}
+-->
+<h1 id="missie-10-voeg-event-triggers-toe-schakel-autonome-agentmogelijkheden-in">🚨 Missie 10: Voeg Event Triggers toe - Schakel autonome agentmogelijkheden in<a class="headerlink" href="#missie-10-voeg-event-triggers-toe-schakel-autonome-agentmogelijkheden-in" title="Permanent link">&para;</a></h1>
+<h2 id="codenaam-operatie-ghost-routine">🕵️‍♂️ CODENAAM: <code>OPERATIE GHOST ROUTINE</code><a class="headerlink" href="#codenaam-operatie-ghost-routine" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operatietijdvenster:</strong> <code>~45 minuten</code></p>
+</blockquote>
+<p>🎥 <strong>Bekijk de walkthrough</strong></p>
+<p><a href="https://www.youtube.com/watch?v=ZgwHL8PQ1nY" title="Bekijk de walkthrough op YouTube"><img alt="Event triggers video thumbnail" src="../../../../../translated_images/video-thumbnail.0d5b477d69adfe668fab9aa8ef5b199377b46788948b33b1969bf19c099b6469.nl.jpg" /></a></p>
+<h2 id="missieoverzicht">🎯 Missieoverzicht<a class="headerlink" href="#missieoverzicht" title="Permanent link">&para;</a></h2>
+<p>Het is tijd om je agent te upgraden van een conversatie-assistent naar een autonome operatieve eenheid. Jouw missie is om je agent in staat te stellen te handelen zonder dat hij wordt opgeroepen - met precisie en snelheid reageren op signalen vanuit je digitale domein.</p>
+<p>Met Event Triggers train je je agent om externe systemen zoals SharePoint, Teams en Outlook te monitoren en intelligente acties uit te voeren zodra een signaal wordt ontvangen. Deze operatie transformeert je agent in een volledig operationele veldagent - stil, snel en altijd alert.</p>
+<p>Succes betekent het bouwen van agents die waarde initiëren - niet alleen erop reageren.</p>
+<h2 id="doelstellingen">🔎 Doelstellingen<a class="headerlink" href="#doelstellingen" title="Permanent link">&para;</a></h2>
+<p>📖 Deze les behandelt:</p>
+<ul>
+<li>Begrijpen wat Event Triggers zijn en hoe ze autonoom gedrag van agents mogelijk maken</li>
+<li>Leren wat het verschil is tussen event triggers en topic triggers, inclusief trigger workflows en payloads</li>
+<li>Verkennen van veelvoorkomende scenario's met Event Triggers</li>
+<li>Begrijpen van authenticatie, beveiliging en publicatieoverwegingen voor event-gedreven agents</li>
+<li>Bouwen van een autonome IT Helpdesk-agent die reageert op SharePoint-events en e-mailbevestigingen verstuurt</li>
+</ul>
+<h2 id="wat-is-een-event-trigger">🤔 Wat is een Event Trigger?<a class="headerlink" href="#wat-is-een-event-trigger" title="Permanent link">&para;</a></h2>
+<p>Een <strong>Event Trigger</strong> is een mechanisme waarmee je agent autonoom kan handelen in reactie op externe gebeurtenissen, zonder directe gebruikersinput. Zie het als een manier om je agent "te laten kijken" naar specifieke gebeurtenissen en automatisch actie te ondernemen wanneer die gebeurtenissen plaatsvinden.</p>
+<p>In tegenstelling tot topic triggers, die vereisen dat gebruikers iets typen om een gesprek te starten, worden event triggers geactiveerd door gebeurtenissen in je verbonden systemen. Bijvoorbeeld:</p>
+<ul>
+<li>Wanneer een nieuw bestand wordt aangemaakt in SharePoint of OneDrive for Business</li>
+<li>Wanneer een record wordt aangemaakt in Dataverse</li>
+<li>Wanneer een taak wordt voltooid in Planner</li>
+<li>Wanneer een nieuwe Microsoft Form-reactie wordt ingediend</li>
+<li>Wanneer een nieuw Microsoft Teams-bericht wordt toegevoegd</li>
+<li>Op basis van een terugkerend schema (zoals dagelijkse herinneringen)<br />
+<img alt="Trigger toevoegen" src="../../../../../translated_images/10_AddTriggerDialog.d665fde7e50d106d693110cd80e6c6b569bdad34ea985eb72fee7e0fccb3ef26.nl.png" /></li>
+</ul>
+<h3 id="waarom-event-triggers-belangrijk-zijn-voor-autonome-agents">Waarom Event Triggers belangrijk zijn voor autonome agents<a class="headerlink" href="#waarom-event-triggers-belangrijk-zijn-voor-autonome-agents" title="Permanent link">&para;</a></h3>
+<p>Event triggers transformeren je agent van een reactieve assistent naar een proactieve, autonome helper:</p>
+<ol>
+<li>
+<p><strong>Autonome werking</strong> - je agent kan 24/7 werken zonder menselijke tussenkomst, en reageert op gebeurtenissen zodra ze plaatsvinden.</p>
+<ul>
+<li><em>Voorbeeld:</em> Nieuwe teamleden automatisch welkom heten wanneer ze aan een team worden toegevoegd.</li>
+</ul>
+</li>
+<li>
+<p><strong>Realtime responsiviteit</strong> - in plaats van te wachten tot gebruikers vragen stellen, reageert je agent onmiddellijk op relevante gebeurtenissen.</p>
+<ul>
+<li><em>Voorbeeld</em>: Waarschuw het IT-team wanneer een SharePoint-document wordt gewijzigd.</li>
+</ul>
+</li>
+<li>
+<p><strong>Workflow-automatisering</strong> - koppel meerdere acties aan één triggergebeurtenis.</p>
+<ul>
+<li><em>Voorbeeld:</em> Wanneer een nieuw supportticket wordt aangemaakt, maak een taak aan, informeer de manager en werk het trackingdashboard bij.</li>
+</ul>
+</li>
+<li>
+<p><strong>Consistente processen</strong> - zorg ervoor dat belangrijke stappen nooit worden overgeslagen door reacties op belangrijke gebeurtenissen te automatiseren.</p>
+<ul>
+<li><em>Voorbeeld:</em> Elke nieuwe medewerker ontvangt automatisch onboarding-materialen en toegangsverzoeken.</li>
+</ul>
+</li>
+<li>
+<p><strong>Data-gedreven acties</strong> - gebruik informatie van de triggergebeurtenis om slimme beslissingen te nemen en passende acties te ondernemen.</p>
+<ul>
+<li><em>Voorbeeld:</em> Stuur urgente tickets naar senior medewerkers op basis van het prioriteitsniveau in de trigger-payload.</li>
+</ul>
+</li>
+</ol>
+<h2 id="hoe-werken-event-triggers">⚙️ Hoe werken Event Triggers?<a class="headerlink" href="#hoe-werken-event-triggers" title="Permanent link">&para;</a></h2>
+<p>Event triggers werken via een workflow in drie stappen die je agent in staat stelt autonoom te reageren op externe gebeurtenissen:</p>
+<h3 id="de-trigger-workflow">De trigger workflow<a class="headerlink" href="#de-trigger-workflow" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Detectie van gebeurtenis</strong> - Een specifieke gebeurtenis vindt plaats in een verbonden systeem (SharePoint, Teams, Outlook, etc.)</li>
+<li><strong>Activatie van trigger</strong> - De event trigger detecteert deze gebeurtenis en stuurt een payload naar je agent via een Power Automate Cloud Flow.</li>
+<li><strong>Reactie van agent</strong> - Je agent ontvangt de payload en voert de door jou gedefinieerde instructies uit.</li>
+</ol>
+<h3 id="event-triggers-versus-topic-triggers">Event triggers versus topic triggers<a class="headerlink" href="#event-triggers-versus-topic-triggers" title="Permanent link">&para;</a></h3>
+<p>Het begrijpen van het verschil tussen deze twee soorten triggers is cruciaal:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Event Triggers</strong></th>
+<th><strong>Topic Triggers</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geactiveerd door externe systeemgebeurtenissen</td>
+<td>Geactiveerd door gebruikersinput/zinnen</td>
+</tr>
+<tr>
+<td>Maakt autonoom gedrag van agents mogelijk</td>
+<td>Maakt conversatiereacties mogelijk</td>
+</tr>
+<tr>
+<td>Gebruikt authenticatie van de maker</td>
+<td>Optie voor authenticatie van de gebruiker</td>
+</tr>
+<tr>
+<td>Werkt zonder gebruikersinteractie</td>
+<td>Vereist dat de gebruiker een gesprek start</td>
+</tr>
+<tr>
+<td>Voorbeelden: Bestand aangemaakt, e-mail ontvangen</td>
+<td>Voorbeeld: "Wat is het weer?"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="begrijpen-van-trigger-payloads">📦 Begrijpen van trigger-payloads<a class="headerlink" href="#begrijpen-van-trigger-payloads" title="Permanent link">&para;</a></h2>
+<p>Wanneer een gebeurtenis plaatsvindt, stuurt de trigger een <strong>payload</strong> naar je agent met informatie over de gebeurtenis en instructies over hoe te reageren.</p>
+<h3 id="standaard-versus-aangepaste-payloads">Standaard versus aangepaste payloads<a class="headerlink" href="#standaard-versus-aangepaste-payloads" title="Permanent link">&para;</a></h3>
+<p>Elke trigger type heeft een standaard payloadstructuur, maar je kunt deze aanpassen:</p>
+<p><strong>Standaard payload</strong> - Gebruikt het standaardformaat zoals <code>Gebruik inhoud van {Body}</code></p>
+<ul>
+<li>Bevat basisinformatie over de gebeurtenis</li>
+<li>Gebruikt generieke verwerkingsinstructies</li>
+<li>Geschikt voor eenvoudige scenario's</li>
+</ul>
+<p><strong>Aangepaste payload</strong> - Voeg specifieke instructies en gegevensformattering toe</p>
+<ul>
+<li>Bevat gedetailleerde richtlijnen voor je agent</li>
+<li>Specificeert precies welke gegevens te gebruiken en hoe</li>
+<li>Beter voor complexe workflows</li>
+</ul>
+<h3 id="agent-instructies-versus-aangepaste-payload-instructies">Agent-instructies versus aangepaste payload-instructies<a class="headerlink" href="#agent-instructies-versus-aangepaste-payload-instructies" title="Permanent link">&para;</a></h3>
+<p>Je hebt twee plekken om het gedrag van je agent te sturen met event triggers:</p>
+<p><strong>Agent-instructies</strong> (Globaal)</p>
+<ul>
+<li>Brede richtlijnen die van toepassing zijn op alle triggers</li>
+<li>Voorbeeld: "Bij het verwerken van tickets, controleer altijd eerst op duplicaten"</li>
+<li>Beste voor algemene gedragspatronen</li>
+</ul>
+<p><strong>Payload-instructies</strong> (Trigger-specifiek)</p>
+<ul>
+<li>Specifieke richtlijnen voor individuele trigger types  </li>
+<li>Voorbeeld: "Voor deze SharePoint-update, stuur een samenvatting naar het projectkanaal"</li>
+<li>Beste voor complexe agents met meerdere triggers</li>
+</ul>
+<p>💡 <strong>Pro tip</strong>: Vermijd conflicterende instructies tussen deze twee niveaus, omdat dit onverwacht gedrag kan veroorzaken.</p>
+<h2 id="veelvoorkomende-scenarios-met-event-triggers">🎯 Veelvoorkomende scenario's met Event Triggers<a class="headerlink" href="#veelvoorkomende-scenarios-met-event-triggers" title="Permanent link">&para;</a></h2>
+<p>Hier zijn praktische voorbeelden van hoe event triggers je agent kunnen verbeteren:</p>
+<h3 id="it-helpdesk-agent">IT Helpdesk Agent<a class="headerlink" href="#it-helpdesk-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Trigger</strong>: Nieuw SharePoint-lijstitem (supportticket)</li>
+<li><strong>Actie</strong>: Automatisch categoriseren, prioriteit toewijzen en relevante teamleden informeren</li>
+</ul>
+<h3 id="medewerker-onboarding-agent">Medewerker Onboarding Agent<a class="headerlink" href="#medewerker-onboarding-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Trigger</strong>: Nieuwe gebruiker toegevoegd aan Dataverse</li>
+<li><strong>Actie</strong>: Stuur welkomstbericht, maak onboarding-taken aan en regel toegang</li>
+</ul>
+<h3 id="projectmanagement-agent">Projectmanagement Agent<a class="headerlink" href="#projectmanagement-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Trigger</strong>: Taak voltooid in Planner</li>
+<li><strong>Actie</strong>: Werk projectdashboard bij, informeer belanghebbenden en controleer op blokkades</li>
+</ul>
+<h3 id="documentbeheer-agent">Documentbeheer Agent<a class="headerlink" href="#documentbeheer-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Trigger</strong>: Bestand geüpload naar specifieke SharePoint-map</li>
+<li><strong>Actie</strong>: Metadata extraheren, tags toepassen en documenteigenaren informeren</li>
+</ul>
+<h3 id="vergaderassistent-agent">Vergaderassistent Agent<a class="headerlink" href="#vergaderassistent-agent" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Trigger</strong>: Agenda-item aangemaakt</li>
+<li><strong>Actie</strong>: Stuur herinneringen en agenda voorafgaand aan de vergadering, boek middelen</li>
+</ul>
+<h2 id="publicatie-en-authenticatieoverwegingen">⚠️ Publicatie- en authenticatieoverwegingen<a class="headerlink" href="#publicatie-en-authenticatieoverwegingen" title="Permanent link">&para;</a></h2>
+<p>Voordat je agent event triggers in productie kan gebruiken, moet je de authenticatie- en beveiligingsimplicaties begrijpen.</p>
+<h3 id="authenticatie-van-de-maker">Authenticatie van de maker<a class="headerlink" href="#authenticatie-van-de-maker" title="Permanent link">&para;</a></h3>
+<p>Event triggers gebruiken de <strong>referenties van de agentmaker</strong> voor alle authenticatie:</p>
+<ul>
+<li>Je agent heeft toegang tot systemen met jouw machtigingen</li>
+<li>Gebruikers kunnen mogelijk toegang krijgen tot gegevens via jouw referenties</li>
+<li>Alle acties worden uitgevoerd "als jij" zelfs wanneer gebruikers met de agent interageren</li>
+</ul>
+<h3 id="beste-praktijken-voor-gegevensbescherming">Beste praktijken voor gegevensbescherming<a class="headerlink" href="#beste-praktijken-voor-gegevensbescherming" title="Permanent link">&para;</a></h3>
+<p>Om de beveiliging te handhaven bij het publiceren van agents met event triggers:</p>
+<ol>
+<li><strong>Evalueer gegevens toegang</strong> - Controleer welke systemen en gegevens je triggers kunnen benaderen</li>
+<li><strong>Test grondig</strong> - Begrijp welke informatie triggers bevatten in payloads</li>
+<li><strong>Beperk triggerbereik</strong> - Gebruik specifieke parameters om te beperken welke gebeurtenissen triggers activeren</li>
+<li><strong>Controleer payloadgegevens</strong> - Zorg ervoor dat triggers geen gevoelige informatie blootgeven</li>
+<li><strong>Monitor gebruik</strong> - Volg triggeractiviteit en resourceverbruik</li>
+</ol>
+<h2 id="problemen-oplossen-en-beperkingen">⚠️ Problemen oplossen en beperkingen<a class="headerlink" href="#problemen-oplossen-en-beperkingen" title="Permanent link">&para;</a></h2>
+<p>Houd deze belangrijke overwegingen in gedachten bij het werken met event triggers:</p>
+<h3 id="quota-en-factureringsimpact">Quota- en factureringsimpact<a class="headerlink" href="#quota-en-factureringsimpact" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Elke triggeractivatie telt mee voor je berichtverbruik</li>
+<li>Frequente triggers (zoals elke minuut herhaling) kunnen snel quota verbruiken</li>
+<li>Monitor gebruik om throttling te voorkomen</li>
+</ul>
+<h3 id="technische-vereisten">Technische vereisten<a class="headerlink" href="#technische-vereisten" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Alleen beschikbaar voor agents met generatieve orkestratie ingeschakeld</li>
+<li>Vereist oplossing-bewuste cloud flow sharing in je omgeving</li>
+</ul>
+<h3 id="data-loss-prevention-dlp">Data Loss Prevention (DLP)<a class="headerlink" href="#data-loss-prevention-dlp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>DLP-beleid van je organisatie bepaalt welke triggers beschikbaar zijn</li>
+<li>Beheerders kunnen event triggers volledig blokkeren</li>
+<li>Neem contact op met je beheerder als verwachte triggers niet beschikbaar zijn</li>
+</ul>
+<h2 id="lab-10-voeg-event-triggers-toe-voor-autonoom-agentgedrag">🧪 Lab 10 - Voeg Event Triggers toe voor autonoom agentgedrag<a class="headerlink" href="#lab-10-voeg-event-triggers-toe-voor-autonoom-agentgedrag" title="Permanent link">&para;</a></h2>
+<h3 id="gebruiksscenario">🎯 Gebruiksscenario<a class="headerlink" href="#gebruiksscenario" title="Permanent link">&para;</a></h3>
+<p>Je zult je IT Helpdesk-agent verbeteren om automatisch te reageren op nieuwe supportverzoeken. Wanneer iemand een nieuw item aanmaakt in je SharePoint-supportticketslijst, zal je agent:</p>
+<ol>
+<li>Autonoom activeren wanneer het SharePoint-ticket wordt aangemaakt</li>
+<li>De ticketdetails en instructies geven over de stappen die je wilt dat het uitvoert</li>
+<li>Het ticket automatisch bevestigen aan de indiener via een AI gegenereerde e-mail</li>
+</ol>
+<p>Dit lab demonstreert hoe event triggers echt autonoom agentgedrag mogelijk maken.</p>
+<h3 id="vereisten">Vereisten<a class="headerlink" href="#vereisten" title="Permanent link">&para;</a></h3>
+<p>Voordat je dit lab start, zorg ervoor dat je:</p>
+<ul>
+<li>✅ Eerdere labs hebt voltooid (vooral Lab 6-8 voor de IT Helpdesk-agent)</li>
+<li>✅ Toegang hebt tot de SharePoint-site met de IT-supportticketslijst</li>
+<li>✅ Copilot Studio-omgeving met event triggers ingeschakeld</li>
+<li>✅ Je agent generatieve orkestratie heeft ingeschakeld</li>
+<li>✅ Geschikte machtigingen hebt in SharePoint en je Copilot Studio-omgeving</li>
+</ul>
+<h3 id="101-schakel-generatieve-ai-in-en-maak-een-sharepoint-itemcreatietrigger">10.1 Schakel Generatieve AI in en maak een SharePoint-itemcreatietrigger<a class="headerlink" href="#101-schakel-generatieve-ai-in-en-maak-een-sharepoint-itemcreatietrigger" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Open je <strong>IT Helpdesk-agent</strong> in <strong>Copilot Studio</strong></p>
+</li>
+<li>
+<p>Zorg er eerst voor dat <strong>Generatieve AI</strong> is ingeschakeld voor je agent:</p>
+</li>
+<li>Navigeer naar het <strong>Overzicht</strong>-tabblad</li>
+<li>
+<p>Onder het Orkestratiegedeelte, schakel <strong>Generatieve orkestratie</strong> in als deze nog niet is ingeschakeld<br />
+<img alt="Generatieve AI inschakelen" src="../../../../../translated_images/10_EnableGenerativeAI.a58904a7599016a94b89a11d6c1cd59022ae686ef553d17f89ebfb6c275cc900.nl.png" /></p>
+</li>
+<li>
+<p>Navigeer naar het <strong>Overzicht</strong>-tabblad en zoek het <strong>Triggers</strong>-gedeelte</p>
+</li>
+<li>
+<p>Klik op <strong>+ Trigger toevoegen</strong> om de triggerbibliotheek te openen<br />
+<img alt="Navigeer naar Triggers" src="../../../../../translated_images/10_NavigateToTrigger.f5907762b93236a72d2f89cdb7c903608adb61763888ba1d3b4998f46473240c.nl.png" /></p>
+</li>
+<li>
+<p>Zoek en selecteer <strong>Wanneer een item wordt aangemaakt</strong> (SharePoint)<br />
+<img alt="Selecteer SharePoint Trigger" src="../../../../../translated_images/10_SelectSharePointTrigger.d63e7cb0f06cf33e664c0e2316952aeac4adf507d7e0f87254cffebbfa5b3007.nl.png" /></p>
+</li>
+<li>
+<p>Configureer de triggernaam en verbindingen:</p>
+</li>
+<li>
+<p><strong>Triggernaam:</strong> Nieuw Support Ticket Aangemaakt in SharePoint</p>
+</li>
+<li>
+<p>Wacht tot de verbindingen zijn geconfigureerd en selecteer <strong>Volgende</strong> om door te gaan.<br />
+<img alt="Configureer triggernaam en verbindingen" src="../../../../../translated_images/10_ConfigureTriggerNameAndConnections.f526dfc7a9e0dcc31bf791623e6431230f29ae001acb0f5075e175401bebb0f2.nl.png" /></p>
+</li>
+<li>
+<p>Configureer de triggerparameters:</p>
+</li>
+<li>
+<p><strong>Siteadres</strong>: Selecteer je "Contoso IT" SharePoint-site</p>
+</li>
+<li>
+<p><strong>Lijstnaam</strong>: Kies je "Tickets"-lijst</p>
+</li>
+<li>
+<p><strong>Aanvullende instructies aan de agent wanneer deze wordt geactiveerd door de trigger:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>New Support Ticket Created in SharePoint: {Body}
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Use the &#39;Acknowledge SharePoint Ticket&#39; tool to generate the email body automatically and respond.
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>IMPORTANT: Do not wait for any user input. Work completely autonomously.
+</span></code></pre></div>
+<p><img alt="Configureer triggerparameters" src="../../../../../translated_images/10_ConfigureTriggerParams.a67406d4a892ba1f59a04641cbb2f7226a329b9813b04676f92bf18c6003fd23.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer <strong>Trigger maken</strong> om de triggercreatie te voltooien. Er wordt automatisch een Power Automate Cloud Flow aangemaakt om de agent autonoom te activeren.</p>
+</li>
+<li>
+<p>Selecteer <strong>Sluiten</strong>.</p>
+</li>
+</ol>
+<h3 id="102-bewerk-de-trigger">10.2 Bewerk de Trigger<a class="headerlink" href="#102-bewerk-de-trigger" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Binnen het <strong>Triggers</strong>-gedeelte van het <strong>Overzicht</strong>-tabblad, selecteer het <strong>...</strong>-menu op de trigger <strong>Nieuw Support Ticket Aangemaakt in SharePoint</strong></p>
+</li>
+<li>
+<p>Selecteer <strong>Bewerken in Power Automate</strong><br />
+<img alt="Bewerk trigger in Power Automate" src="../../../../../translated_images/10_EditTriggerInPowerAutomate.d99effb8145d40bd4d655021e0a34abf59ba23ff5e94bcae07e7e6711a52eff0.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer de <strong>Verzendt een prompt naar de opgegeven copilot voor verwerking</strong>-node</p>
+</li>
+<li>
+<p>In het veld <strong>Body/bericht</strong>, verwijder de inhoud van Body, <strong>druk op de schuine streep-toets</strong> (/) en selecteer <strong>Expressie invoegen</strong><br />
+<img alt="Expressie invoegen voor trigger" src="../../../../../translated_images/10_InsertExpressionForTrigger.adb940d8fa6e0bc50b325cedc3e3c085b5670e5cf2b275bf7b4ada1180d3ba01.nl.png" /></p>
+</li>
+<li>
+<p>Voer de volgende expressie in om de agent specifieke details over het ticket te geven:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>concat(&#39;Submitted By Name: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Author/DisplayName&#39;], &#39;\nSubmitted By Email: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Author/Email&#39;], &#39;\nTitle: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Title&#39;], &#39;\nIssue Description: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Description&#39;], &#39;\nPriority: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Priority/Value&#39;],&#39;\nTicket ID : &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;ID&#39;])
+</span></code></pre></div>
+</li>
+<li>
+<p>Selecteer <strong>Toevoegen</strong><br />
+<img alt="Trigger output expressie" src="../../../../../translated_images/10_TriggerOutputExpression.3b120eaa26cc9a4cd5451bb2ca658ce1a7192eb7a46c7c2b4d7431d20e982187.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer <strong>Publiceren</strong> in de rechterbovenhoek van de werkbalk.</p>
+</li>
+</ol>
+<h3 id="103-maak-een-tool-voor-e-mailbevestiging">10.3 Maak een tool voor e-mailbevestiging<a class="headerlink" href="#103-maak-een-tool-voor-e-mailbevestiging" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Keer terug</strong> naar je Agent in Copilot Studio</p>
+</li>
+<li>
+<p>Navigeer naar het <strong>Tools</strong>-tabblad in je agent</p>
+</li>
+<li>
+<p>Klik op <strong>+ Een tool toevoegen</strong> en selecteer <strong>Connector</strong></p>
+</li>
+<li>
+<p>Zoek en selecteer de connector <strong>E-mail verzenden (V2)</strong><br />
+<img alt="Selecteer Outlook Connector" src="../../../../../translated_images/10_SelectOutlookConnector.0bf4270b1d25c691574881514f162fd74e10206bc5efd798e5cb15741b73c063.nl.png" /></p>
+</li>
+<li>
+<p>Wacht tot de verbinding is geconfigureerd en selecteer vervolgens <strong>Toevoegen en configureren</strong></p>
+</li>
+<li>
+<p>Configureer de toolinstellingen:</p>
+</li>
+<li>
+<p><strong>Naam</strong>: Bevestig SharePoint-ticket</p>
+</li>
+<li>
+<p><strong>Beschrijving</strong>: Deze tool verstuurt een e-mailbevestiging dat een ticket is ontvangen.</p>
+</li>
+<li>
+<p>Selecteer <strong>Aanpassen</strong> naast de invoerparameters en configureer als volgt:</p>
+<p><strong>Aan</strong>:</p>
+<ul>
+<li><strong>Beschrijving</strong>: Het e-mailadres van de persoon die het SharePoint-ticket indient</li>
+<li><strong>Identificeer als</strong>: E-mail</li>
+</ul>
+<p><strong>Body</strong>:</p>
+<ul>
+<li><strong>Beschrijving</strong>: Een bevestiging dat het ticket is ontvangen en dat we binnen 3 werkdagen zullen reageren.</li>
+</ul>
+<p><img alt="Configureer invoerparameters" src="../../../../../translated_images/10_ConfigureInputParameters.cc8b602c0dc244734cb8eac43f8d7fcf88f4158dcdc7f7ae15658ad93c03beae.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer <strong>Opslaan</strong></p>
+</li>
+</ol>
+<h3 id="104-test-de-trigger">10.4 Test de trigger<a class="headerlink" href="#104-test-de-trigger" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Binnen je <strong>Helpdesk Agent</strong>, selecteer het <strong>Overzicht</strong>-tabblad</li>
+<li>Klik op het <strong>Test Trigger</strong>-pictogram naast de trigger <strong>Nieuw Support Ticket Aangemaakt in SharePoint</strong>. Hiermee wordt het venster <strong>Test je trigger</strong> geladen.</li>
+<li>Open een nieuw browsertabblad en ga naar je <strong>SharePoint IT Support Tickets-lijst</strong>  </li>
+<li>Klik op <strong>+ Nieuw item toevoegen</strong> om een testticket aan te maken:  </li>
+<li><strong>Titel</strong>: "Kan geen verbinding maken met VPN"  </li>
+<li><strong>Beschrijving</strong>: "Kan geen verbinding maken met het bedrijfs-WIFI-netwerk na recente update"  </li>
+<li>
+<p><strong>Prioriteit</strong>: "Normaal"  </p>
+</li>
+<li>
+<p><strong>Opslaan</strong> van het SharePoint-item<br />
+<img alt="Testticket aanmaken" src="../../../../../translated_images/10_CreateTestTicket.137beedc82d337ef0a467c67d3b53249ec469ce1ce91d88a72fb2f8729a14fce.nl.png" />  </p>
+</li>
+<li>Ga terug naar <strong>Copilot Studio</strong> en houd het paneel <strong>Test je trigger</strong> in de gaten voor de activering van de trigger. Gebruik het <strong>Vernieuwen</strong>-icoon om het triggerevenement te laden, dit kan enkele minuten duren.<br />
+<img alt="Trigger test monitoren" src="../../../../../translated_images/10_MonitorTriggerTest.f9883de55ba1c9817121c7f801e29715fa74918603f96312dfcb0f16f9af44e0.nl.png" />  </li>
+<li>Zodra de trigger verschijnt, selecteer <strong>Start testen</strong>  </li>
+<li>Selecteer het <strong>Activiteitenkaart-icoon</strong> bovenaan het paneel <strong>Test je agent</strong>  </li>
+<li>Controleer of je agent:  </li>
+<li>De trigger payload heeft ontvangen  </li>
+<li>De tool "SharePoint-ticket bevestigen" heeft aangeroepen<br />
+<img alt="Trigger testen" src="../../../../../translated_images/10_TestTrigger.f68b063d3fa221601f61484aec9bf68aa17761366aa1efe8c3cad554ce3da902.nl.png" />  </li>
+<li>Controleer de e-mailinbox van de indiener om te bevestigen dat de bevestigingsmail is verzonden<br />
+<img alt="Test e-mail verzonden" src="../../../../../translated_images/10_TestEmailSent.1efe77ca636ca8b8c2593216539edfe11555f7e002a6dcb5e2024b36b40e12b3.nl.png" />  </li>
+<li>Bekijk het tabblad <strong>Activiteit</strong> in Copilot Studio om de volledige trigger- en tooluitvoering te zien  </li>
+</ol>
+<h2 id="missie-voltooid">✅ Missie Voltooid<a class="headerlink" href="#missie-voltooid" title="Permanent link">&para;</a></h2>
+<p>🎉 <strong>Gefeliciteerd!</strong> Je hebt succesvol evenementtriggers geïmplementeerd met connector-tools die je agent in staat stellen autonoom te werken, automatisch e-mailbevestigingen te verzenden en supporttickets te verwerken zonder tussenkomst van gebruikers. Zodra je agent is gepubliceerd, zal deze autonoom namens jou handelen.  </p>
+<p>🚀 <strong>Volgende stap</strong>: In onze volgende les leer je hoe je <a href="../11-publish-your-agent/">je agent publiceert</a> naar Microsoft Teams en Microsoft 365 Copilot, zodat deze beschikbaar wordt voor je hele organisatie!  </p>
+<p>⏭️ <a href="../11-publish-your-agent/">Ga naar de les <strong>Je agent publiceren</strong></a>  </p>
+<h2 id="tactische-bronnen">📚 Tactische Bronnen<a class="headerlink" href="#tactische-bronnen" title="Permanent link">&para;</a></h2>
+<p>Klaar om dieper in te gaan op evenementtriggers en autonome agents? Bekijk deze bronnen:  </p>
+<ul>
+<li><strong>Microsoft Learn</strong>: <a href="https://learn.microsoft.com/training/modules/autonomous-agents-online-workshop/?WT.mc_id=power-177340-scottdurow">Maak je agent autonoom in Copilot Studio</a>  </li>
+<li><strong>Documentatie</strong>: <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-trigger-event?WT.mc_id=power-177340-scottdurow">Een evenementtrigger toevoegen</a>  </li>
+<li><strong>Best Practices</strong>: <a href="https://learn.microsoft.com/power-automate/triggers-introduction?WT.mc_id=power-177340-scottdurow">Introductie triggers in Power Automate</a>  </li>
+<li><strong>Geavanceerde Scenario's</strong>: <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow-create?WT.mc_id=power-177340-scottdurow">Power Automate-flows gebruiken met agents</a>  </li>
+<li><strong>Beveiliging</strong>: <a href="https://learn.microsoft.com/microsoft-copilot-studio/admin-data-loss-prevention?WT.mc_id=power-177340-scottdurow">Preventie van gegevensverlies voor Copilot Studio</a>  </li>
+</ul>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/10-add-event-triggers" alt="Analytics" />  </p>
+<hr />
+<p><strong>Disclaimer</strong>:<br />
+Dit document is vertaald met behulp van de AI-vertalingsservice <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

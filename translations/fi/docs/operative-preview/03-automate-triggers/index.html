@@ -1,0 +1,1700 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/fi/docs/operative-preview/03-automate-triggers/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tehtava-03-lisaa-tapahtumatriggereita-toimimaan-itsenaisesti" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#koodinimi-operation-signal-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ Koodinimi: OPERATION SIGNAL POINT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tehtavan-kuvaus" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Tehtävän kuvaus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tavoitteet" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Tavoitteet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mika-on-tapahtumatriggeri" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Mikä on tapahtumatriggeri?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interaktiivinen-agentti-vs-itsenainen-agentti-vertailu" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏓 Interaktiivinen agentti vs Itsenäinen agentti - vertailu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kehittajavinkit-ja-huomioitavat-asiat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kehittäjävinkit ja huomioitavat asiat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-03-hakemusten-sahkopostien-automatisointi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 03 - Hakemusten sähköpostien automatisointi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tehtava-suoritettu" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Tehtävä suoritettu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taktiset-resurssit" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Taktiset resurssit
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "75efaf515d5694d4fd549bfd6518901a",
+  "translation_date": "2025-10-17T01:55:43+00:00",
+  "source_file": "docs/operative-preview/03-automate-triggers/README.md",
+  "language_code": "fi"
+}
+-->
+<h1 id="tehtava-03-lisaa-tapahtumatriggereita-toimimaan-itsenaisesti">Tehtävä 03: Lisää tapahtumatriggereitä toimimaan itsenäisesti<a class="headerlink" href="#tehtava-03-lisaa-tapahtumatriggereita-toimimaan-itsenaisesti" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="koodinimi-operation-signal-point">🕵️‍♂️ Koodinimi: <code>OPERATION SIGNAL POINT</code><a class="headerlink" href="#koodinimi-operation-signal-point" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operaatioaikaikkuna:</strong> <code>~45 minuuttia</code></p>
+</blockquote>
+<h2 id="tehtavan-kuvaus">🎯 Tehtävän kuvaus<a class="headerlink" href="#tehtavan-kuvaus" title="Permanent link">&para;</a></h2>
+<p>Tervetuloa takaisin, Agentti. <a href="../02-multi-agent/">Tehtävässä 02</a> opit rakentamaan Application Intake -lapsiagentin ja Interview Prep -yhdistetyn agentin laajentaaksesi päärekrytointiauttajasi kykyjä.</p>
+<p>Tehtäväsi, jos päätät hyväksyä sen, on <strong>Operation Signal Point</strong> - syventyminen <strong>tapahtumatriggereihin</strong> - nostamalla agenttijärjestelmäsi reaktiivisesta <strong>itsenäiseen toimintaan</strong>. Muunnat agenttisi odottamasta ihmisen syötettä proaktiivisesti reagoimaan ulkoisiin tapahtumiin ja toimimaan älykkäästi ilman valvontaa.</p>
+<p>Ajattele sitä päivityksenä agenteista, jotka <em>vastaavat kysymyksiin</em>, agenteiksi, jotka <em>ennakoivat tarpeita</em> ja <em>toimivat itsenäisesti</em>. Tapahtumatriggereiden ja automatisoitujen työnkulkujen avulla rekrytointiauttajasi havaitsee saapuvat ansioluettelot sähköpostitse, käsittelee liitteet automaattisesti, tallentaa tiedot Dataverseen ja ilmoittaa HR-rekrytointitiimillesi Microsoft Teamsin kautta - samalla kun keskityt tärkeämpiin tehtäviin.</p>
+<p>Tervetuloa maailmaan, jossa automaatio kohtaa älykkyyden.</p>
+<h2 id="tavoitteet">🔎 Tavoitteet<a class="headerlink" href="#tavoitteet" title="Permanent link">&para;</a></h2>
+<p>Tässä tehtävässä opit:</p>
+<ol>
+<li>Kuinka tapahtumatriggerit mahdollistavat itsenäisen agentin toiminnan ilman käyttäjän vuorovaikutusta</li>
+<li>Erot interaktiivisten ja itsenäisten agenttien välillä Copilot Studiossa</li>
+<li>Kuinka luoda tapahtumatriggereitä, jotka käsittelevät sähköpostiliitteitä automaattisesti ja lataavat tiedostoja Dataverseen</li>
+<li>Kuinka rakentaa agenttivirtoja, jotka lähettävät mukautuvia kortteja Teams-kanaville ilmoituksia varten</li>
+<li>Kuinka siirtää tietoja tapahtumatriggereiden ja agenttivirtojen välillä päästä-päähän automaatiota varten</li>
+</ol>
+<h2 id="mika-on-tapahtumatriggeri">🤔 Mikä on tapahtumatriggeri?<a class="headerlink" href="#mika-on-tapahtumatriggeri" title="Permanent link">&para;</a></h2>
+<p>Aiemmin <a href="../../recruit/10-add-event-triggers/">Recruitissa</a> opimme tapahtumatriggereistä. Käydään tämä nopeasti läpi, jos se jäi välistä.</p>
+<p><strong>Tapahtumatriggerit</strong> antavat agentin <em>toimia</em> <em>itsenäisesti</em>, kun jotain tapahtuu toisessa järjestelmässä - ilman käyttäjän viestiä. Kun määritetty tapahtuma käynnistyy - kuten “uusi SharePoint-kohde,” “uusi sähköposti,” “Planner-tehtävä osoitettu” tai jopa ajastettu toistuvuus, liitin lähettää triggerin hyötykuorman agentillesi. Agentti noudattaa sitten ohjeitasi päättääkseen, mitä toimia tai aiheita kutsua.</p>
+<h3 id="keskeiset-ominaisuudet">Keskeiset ominaisuudet<a class="headerlink" href="#keskeiset-ominaisuudet" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Itsenäinen aktivointi:</strong></p>
+<ul>
+<li>Toisin kuin aiheet, jotka käynnistyvät, kun käyttäjä kirjoittaa agentille, tapahtumatriggerit käynnistyvät ulkoisista tapahtumista, mikä mahdollistaa proaktiivisen toiminnan.</li>
+</ul>
+</li>
+<li>
+<p><strong>Hyötykuormaohjattu:</strong></p>
+<ul>
+<li>Jokainen tapahtuma toimittaa hyötykuorman (muuttujat + valinnaiset ohjeet) liittimen kautta. Agentti käyttää määritettyjä ohjeitasi ja hyötykuormaa päättääkseen, mitä tehdä seuraavaksi.</li>
+<li>Esimerkiksi <em>kutsua aihe</em> tai <em>suorittaa työkalujen määrittämät toiminnot</em>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Esimerkkejä valmiina:</strong></p>
+<ul>
+<li>SharePoint/OneDrive-tiedosto tai -kohde luotu</li>
+<li>Planner-tehtävä suoritettu/osoitettu</li>
+<li>Microsoft Forms -vastaus lähetetty</li>
+<li>Toistuvuus/aikataulu</li>
+</ul>
+<p>Saatavuus riippuu organisaatiosi Power Automate -datapolitiikoista.</p>
+</li>
+<li>
+<p><strong>Vaatii generatiivista orkestrointia:</strong></p>
+<ul>
+<li>Tapahtumatriggerit ovat käytettävissä vain, kun generatiivinen orkestrointi on aktivoitu agentille.</li>
+</ul>
+</li>
+<li>
+<p><strong>Laskutus/käyttö:</strong></p>
+<ul>
+<li>Jokainen triggerin toimitus lasketaan viestiksi Copilot Studion kapasiteetissa.</li>
+<li>Esimerkiksi 10 minuutin toistuvuus lähettää viestin joka 10. minuutti.</li>
+</ul>
+</li>
+<li>
+<p><strong>Todennusmalli ja asennus:</strong></p>
+<ul>
+<li>Lisää triggerit agentin yleiskatsauksessa, kohdassa <em>Triggers</em>. Trigger-liittimen todennus käyttää agentin tekijän tiliä (“agentin tekijän todennus”).</li>
+<li>Voit muokata triggerin parametreja ja hyötykuormaa Power Automate -tekijäportaalissa.</li>
+</ul>
+</li>
+<li>
+<p><strong>Testaus ja havainnointi:</strong></p>
+<ul>
+<li>Voit testata triggereitä agentin testipaneelista ja tarkastella toimintaa aktiviteettikartalla ennen julkaisua.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">TL;DR kehittäjille</p>
+<p>Ajattele tapahtumatriggereitä <strong>webhook-tyyppisinä signaaleina</strong>, jotka työntävät rakenteellisen hyötykuorman agentillesi, antaen sen <em>aloittaa</em> työn ja ketjuttaa toimintoja järjestelmien välillä - odottamatta käyttäjän pyyntöä.</p>
+</div>
+<h3 id="aihetriggerit-miten-ne-eroavat">Aihetriggerit - miten ne eroavat<a class="headerlink" href="#aihetriggerit-miten-ne-eroavat" title="Permanent link">&para;</a></h3>
+<p>Aiemmin opit aihetriggereistä <a href="../../recruit/07-add-new-topic-with-trigger/">Recruitissa</a>, mutta saatat silti miettiä, miten <em>aihetriggerit</em> eroavat <em>tapahtumatriggereistä</em> ja miksi tämä ero on tärkeä ymmärtää, mikä tekee agentista itsenäisen.</p>
+<p>Aihetriggerit hallitsevat <em>milloin aihe käynnistyy</em>, yleensä käyttäjän viestin perusteella.</p>
+<ul>
+<li>Generatiivisessa orkestroinnissa oletustriggeri on <strong>By agent</strong> - suunnittelija valitsee aiheen, jonka nimi/kuvaus parhaiten vastaa käyttäjän viestiä.</li>
+<li>Klassisen orkestroinnin oletus on <strong>Phrases</strong> - suunnittelija valitsee aiheen, kun yksi tai useampi triggerilauseke parhaiten vastaa käyttäjän viestiä.</li>
+</ul>
+<p>Muita triggerityyppejä ovat <code>Message received</code>, <code>Event received</code>, <code>Activity received</code>, <code>Conversation update</code>, <code>Invoke received</code>, <code>On redirect</code>, <code>Inactivity</code> ja <code>Plan complete</code>.</p>
+<div class="admonition info">
+<p class="admonition-title">Keskeinen ero</p>
+<p>Aihetriggerit ovat <em>keskustelutoiminnan</em> käynnistäjiä chatissa.</p>
+<p>Tapahtumatriggerit ovat järjestelmän <em>tapahtumien</em> käynnistäjiä, jotka toimitetaan liittimien kautta ja voivat käynnistää agentin ilman keskustelua.</p>
+</div>
+<h3 id="pikaopas-aihetriggeri-vs-tapahtumatriggeri">Pikaopas: Aihetriggeri vs Tapahtumatriggeri<a class="headerlink" href="#pikaopas-aihetriggeri-vs-tapahtumatriggeri" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Aihetriggeri:</strong> Käyttäjä (tai chat-toiminta) sanoi/teki X ➡️ käynnistä aihe T.</li>
+<li><strong>Tapahtumatriggeri:</strong> SharePoint/Planner/Sähköposti/Ajasti käynnistyi hyötykuormalla P ➡️ agentti arvioi ohjeet ➡️ kutsuu Toiminnot/Aiheet vastaavasti.</li>
+</ul>
+<h2 id="interaktiivinen-agentti-vs-itsenainen-agentti-vertailu">🏓 Interaktiivinen agentti vs Itsenäinen agentti - vertailu<a class="headerlink" href="#interaktiivinen-agentti-vs-itsenainen-agentti-vertailu" title="Permanent link">&para;</a></h2>
+<p>Nyt kun tiedät eron tapahtumatriggereiden ja aihetriggereiden välillä, seuraavaksi opit eron interaktiivisen agentin ja itsenäisen agentin välillä.</p>
+<p>Copilot Studion termeissä "interaktiivinen" viittaa agenteihin, jotka pääasiassa toimivat <strong>aiheiden</strong> kautta chatissa tai kanavassa. "Itsenäinen" viittaa agenteihin, jotka hyödyntävät myös <strong>tapahtumatriggereitä</strong> toimiakseen ilman käyttäjän syötettä.</p>
+<p>Seuraava taulukko tiivistää niiden erot ja yhtäläisyydet.</p>
+<table>
+<thead>
+<tr>
+<th>Ulottuvuus</th>
+<th>Interaktiivinen agentti</th>
+<th>Itsenäinen agentti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Miten käynnistyy</td>
+<td>Käyttäjä (tai chat-toiminta) käynnistää aiheen. Esimerkki: By agent, Phrases, Message received.</td>
+<td>Ulkoinen tapahtumatriggeri lähettää hyötykuorman liittimen kautta agentille. Esimerkki: SharePoint, Planner, sähköposti, aikataulu jne.</td>
+</tr>
+<tr>
+<td>Pääasiallinen käyttö</td>
+<td>Kysymys-vastaus, ohjatut työnkulut, pyyntöihin perustuvat toiminnot chatissa - Teams, web jne.</td>
+<td>Proaktiiviset toiminnot ja taustalla tapahtuva automaatio - reagoi järjestelmämuutoksiin ja ilmoittaa, arkistoi tai orkestroi tehtäviä.</td>
+</tr>
+<tr>
+<td>Triggeripinta</td>
+<td>Aihetriggerit: By agent / Phrases / Message received / Activity types / Invoke / Inactivity / Plan complete</td>
+<td>Tapahtumatriggerikirjasto liittimien kautta; hyötykuorma sisältää tapahtumatiedot + valinnaiset ohjeet.</td>
+</tr>
+<tr>
+<td>Suunnittelija (generatiivinen orkestrointi)</td>
+<td>Hyödynnetään vahvasti By agent- ja Plan complete -triggereissä aiheiden valintaan/järjestykseen.</td>
+<td>Vaaditaan tapahtumatriggereille; agentti käyttää ohjeita + hyötykuormaa päättääkseen, mitä toimintoja/aiheita kutsua.</td>
+</tr>
+<tr>
+<td>Tyypillinen esimerkki</td>
+<td>Käyttäjä kysyy "Mikä on palautuskäytäntömme?" → Aihe käynnistyy, hakee tietoa, vastaa.</td>
+<td>Uusi Planner-tehtävä osoitettu → Tapahtumatriggeri käynnistyy → Agentti lähettää Teams-viestin, päivittää tietueen tai kutsuu aiheen.</td>
+</tr>
+<tr>
+<td>Asennuspolku</td>
+<td>Luo aiheet, määritä triggerityyppi, kirjoita dialogi/toiminnot; julkaise kanaviin.</td>
+<td>Lisää tapahtumatriggeri (Overview → Triggers), todenna liitin agentin tekijän tunnuksilla, määritä hyötykuorma/ohjeet; testaa testipaneelin kautta; julkaise.</td>
+</tr>
+<tr>
+<td>Todennus ja hallinta</td>
+<td>Toimii kanavan/todennuksen kontekstissa; aihetriggerit vastaavat sallittujen kanavien chat-toimintoihin.</td>
+<td>Triggerin saatavuus riippuu Power Automate -datapolitiikoista; liittimet toimivat agentin tekijän tilillä.</td>
+</tr>
+<tr>
+<td>Havainnointi</td>
+<td>Testaa aiheet Copilot Studiossa, tarkastele keskustelutranskripteja/toimintoja.</td>
+<td>Käytä Test triggeriä ja aktiviteettikarttaa varmistaaksesi suoritus ennen julkaisua, seuraa toimintaa julkaisun jälkeen.</td>
+</tr>
+<tr>
+<td>Kapasiteettivaikutus</td>
+<td>Jokainen käyttäjän viesti/agentin vastaus on viesti, joka kuluttaa kapasiteettia.</td>
+<td>Jokainen tapahtuman toimitus on myös viesti, plus mahdolliset seuraavat toiminnot. Esimerkki: 10 minuutin toistuvuus = 6 viestiä/tunti</td>
+</tr>
+</tbody>
+</table>
+<h3 id="milloin-kayttaa-mita">Milloin käyttää mitä?<a class="headerlink" href="#milloin-kayttaa-mita" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Valitse <strong>aihetriggerit (interaktiiviset)</strong>, kun käyttäjät aloittavat agenttikeskustelun - FAQ, ohjattu tiedonkeruu tai komento-tyyliset tehtävät chatissa. Suunnittelijan By agent -triggeri vähentää manuaalista lauseiden kuratointia.</li>
+<li>Lisää <strong>tapahtumatriggerit (itsenäiset)</strong>, kun agentin pitäisi aloittaa keskustelu tai toimia itse - SharePoint/Dataverse-päivityksissä, saapuvassa sähköpostissa tai aikataulussa. Tämä siirtää sinut reaktiivisesta proaktiiviseen toimintaan.</li>
+</ul>
+<h2 id="kehittajavinkit-ja-huomioitavat-asiat">Kehittäjävinkit ja huomioitavat asiat<a class="headerlink" href="#kehittajavinkit-ja-huomioitavat-asiat" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Ota generatiivinen orkestrointi käyttöön</strong> kaikille agenteille, jotka haluat tehdä itsenäisiksi. Tapahtumatriggerit eivät näy muuten.</p>
+</li>
+<li>
+<p><strong>Mallinna hyötykuorma aikaisin.</strong> Päätä, mitkä minimikentät agenttisi tarvitsee triggeristä, kuten <code>itemId</code>, <code>assignedTo</code>, <code>dueDate</code>, ja lisää tiiviit ohjeet, jotka kertovat agentille, mitä toimintoa/aihetta kutsua hyötykuorman arvojen perusteella.</p>
+</li>
+<li>
+<p><strong>Todennuksen laajuus on tärkeä.</strong> Triggerit todennetaan agentin tekijän tilillä. Varmista, että tilillä on oikeat liittimen käyttöoikeudet ja että se noudattaa Power Automate -datapolitiikoita.</p>
+</li>
+<li>
+<p><strong>Hallitse kustannuksia ja melua.</strong> Korkean taajuuden toistuvuudet tai erittäin vilkkaat lähteet voivat nopeasti kuluttaa viestikapasiteettia - rajoita mahdollisuuksien mukaan tai lisää ehtoja triggeriin suodattaaksesi tapahtumia.</p>
+</li>
+<li>
+<p><strong>Testaa ennen julkaisua.</strong> Käytä <strong>Test triggeriä</strong> ja aktiviteettikarttaa tarkkaillaksesi suunnitelmaa ja kutsuttuja toimintoja - iteroi ohjeita/hyötykuormaa, kunnes toiminta on vakaa.</p>
+</li>
+</ol>
+<h2 id="lab-03-hakemusten-sahkopostien-automatisointi">🧪 Lab 03 - Hakemusten sähköpostien automatisointi<a class="headerlink" href="#lab-03-hakemusten-sahkopostien-automatisointi" title="Permanent link">&para;</a></h2>
+<p>Seuraavaksi lisäämme tapahtumatriggerin <strong>Hiring Agentille</strong> ja rakennamme agenttivirran lapsiagenttiin <strong>Application Intake Agent</strong>, joka käsittelee jatkokäsittelyä itsenäisyyden saavuttamiseksi.</p>
+<h3 id="kayttotapaus">✨ Käyttötapaus<a class="headerlink" href="#kayttotapaus" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p><strong>HR-rekrytoijana</strong></p>
+<p><strong>Haluan</strong> saada ilmoituksen, kun ansioluetteloa sisältävä sähköposti saapuu postilaatikkooni ja se on automaattisesti ladattu Dataverseen</p>
+<p><strong>Jotta voin</strong> pysyä ajan tasalla sähköpostitse lähetetyistä hakemuksista, jotka on automaattisesti ladattu Dataverseen</p>
+</div>
+<p>Tämä saavutetaan kahdella tekniikalla</p>
+<ol>
+<li>
+<p>Tapahtumatriggerillä, joka aktivoituu, kun sähköposti saapuu,</p>
+<ol>
+<li>Tarkista, että tiedoston <code>contentType</code> vastaa <code>PDF</code>-muotoa.</li>
+<li>Poimi tiedosto ja lataa se Dataverseen Dataverse-liittimen toimien avulla.</li>
+<li>Lähetä sitten kehotus agentille jatkokäsittelyä varten siirtämällä syöttöparametrit Dataverse-toimista.</li>
+</ol>
+</li>
+<li>
+<p>Agenttivirta lisätään lapsiagenttiin <strong>Application Intake Agent</strong>, joka aktivoituu tapahtumatriggerin kehotuksesta.</p>
+<ol>
+<li>Käytä tapahtumatriggerin kehotuksesta siirrettyjä syöttöparametreja mukautuvassa kortissa, joka lähetetään Microsoft Teams -kanavalle HR-rekrytointitiimin ilmoitukseksi. Mukautuva kortti sisältää linkin Dataversen riville, joka näkyy <strong>Hiring Agentissa</strong>.</li>
+</ol>
+</li>
+</ol>
+<p>Aloitetaan!</p>
+<h3 id="esivaatimukset-tehtavan-suorittamiseksi">✨ Esivaatimukset tehtävän suorittamiseksi<a class="headerlink" href="#esivaatimukset-tehtavan-suorittamiseksi" title="Permanent link">&para;</a></h3>
+<p>Tarvitset <strong>joko</strong>:</p>
+<ul>
+<li><strong>Olla suorittanut Tehtävä 01 ja Tehtävä 02</strong> ja valmiin Hiring Agentin, <strong>TAI</strong></li>
+<li><strong>Tuoda Tehtävä 03 aloitusratkaisun</strong>, jos aloitat alusta tai tarvitset kiinniottoa. <a href="https://aka.ms/agent-academy">Lataa Tehtävä 03 aloitusratkaisu</a></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Ratkaisun tuonti ja esimerkkidata</p>
+<p>Jos käytät aloitusratkaisua, katso <a href="../01-get-started/">Tehtävä 01</a> saadaksesi yksityiskohtaiset ohjeet ratkaisujen ja esimerkkidatan tuomisesta ympäristöösi.</p>
+</div>
+<p>Tarvitset myös pääsyn <strong>Microsoft Teamsiin</strong> suorittaaksesi toisen laboratorion harjoituksen mukautuvan kortin lähettämisestä Microsoft Teamsiin.</p>
+<h3 id="lab-31-automatisoi-ansioluetteloiden-lataaminen-dataverseen-sahkopostitse">Lab 3.1 - Automatisoi ansioluetteloiden lataaminen Dataverseen sähköpostitse<a class="headerlink" href="#lab-31-automatisoi-ansioluetteloiden-lataaminen-dataverseen-sahkopostitse" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Hiring Agentissa, vieritä alas <strong>Overview-välilehdellä</strong> ja valitse <strong>+ Add trigger</strong>.</p>
+<p><img alt="Lisää triggeri agentille" src="../../../../../translated_images/3.1_01_AddTrigger.4d5f4d13a4a6b19fe9ff89e3a483601199d7643236d6df65ff81dfea76d1d443.fi.png" /></p>
+</li>
+<li>
+<p>Lista triggereistä ilmestyy. Valitse <strong>When a new email arrives (V3)</strong> ja valitse <strong>Next</strong>.</p>
+<p><img alt="Valitse When a new email arrives (V3) triggeri" src="../../../../../translated_images/3.1_02_WhenANewEmailArrives.a250875915165d97c1af6eebba70f16fbfc845a37d4d354c9f35a55aa459035e.fi.png" /></p>
+</li>
+<li>
+<p>Näet nyt <strong>Trigger name</strong> ja <strong>Sign in</strong> -yhteysviittaukset listatuista sovelluksista.</p>
+<p>Nimeä triggeri seuraavasti,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>When a new email arrives from an applicant
+</span></code></pre></div>
+<p>Varmista, että näet vihreän tarkistusmerkin jokaisen listatun sovelluksen yhteysviittauksen kohdalla. Jos et näe vihreää tarkistusmerkkiä, kirjaudu sisään ellipsin (...) kautta ja valitse <strong>+ New connection reference</strong> luodaksesi uuden yhteysviittauksen.</p>
+<p><img alt="Päivitä triggerin nimi ja tarkista yhteysviittaukset" src="../../../../../translated_images/3.1_03_RenameTriggerName.3eb80b25bea5f874a51aab600ffd333359de3a981e41eed1b4fc7c8f27eef323.fi.png" /></p>
+</li>
+<li>
+<p>Viimeinen vaihe on asettaa triggerin syöttöominaisuudet. Päivitä seuraavat ominaisuudet seuraavasti,</p>
+<table>
+<thead>
+<tr>
+<th>Ominaisuus</th>
+<th>Miten asetetaan</th>
+<th>Tiedot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Include Attachments (Optional)</strong></td>
+<td>Pudotusvalikko</td>
+<td>Kyllä</td>
+</tr>
+<tr>
+<td><strong>Subject Filter (Optional)</strong></td>
+<td>Kirjoita/näppäile näppäimistöllä</td>
+<td>Application</td>
+</tr>
+<tr>
+<td><strong>Only with Attachments (Optional)</strong></td>
+<td>Pudotusvalikko</td>
+<td>K</td>
+</tr>
+<tr>
+<td>Nyt päivitetään tapahtuman laukaisija lisäämään automaatiomahdollisuuksia. Valitse laukaisijan <strong>kolmipistevalikko (...)</strong> ja valitse <strong>Muokkaa Power Automatessa</strong>.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Valitse Muokkaa Power Automatessa" src="../../../../../translated_images/3.1_05_SelectEditInPowerAutomate.d298b51d7980cf2fd20a9d8193745aef4ce8097a4a2d33341e2dc159b9bfc099.fi.png" /></p>
+<ol>
+<li>Laukaisija latautuu Power Automate -portaalin virtausmuokkaimeen. Näet virtausmuokkaimen Power Automate -portaalissa. Täällä voimme lisätä lisää logiikkaa ja toimintoja automaation tehostamiseksi. Laukaisija näkyy ylhäällä, ja viimeisenä toimintona on <strong>Lähettää kehotteen määritetylle copilotille käsittelyä varten</strong>.</li>
+</ol>
+<p><img alt="Virtausmuokkain Power Automate -portaalissa" src="../../../../../translated_images/3.1_06_EditInPowerAutomate.f8967ace56354224574517f31a2a2ce0a5b5d3ab85bfb9ec6cf70e83ab1b8e6d.fi.png" /></p>
+<ol>
+<li>Oletuksena Power Automaten <strong>Kun uusi sähköposti saapuu</strong> -laukaisija voi käsitellä useita sähköposteja yhdessä, jos niitä saapuu useita kerralla, suorittaen virtauksen vain kerran erälle.</li>
+</ol>
+<p>Jotta virtaus suoritetaan erikseen jokaiselle sähköpostille, ota käyttöön <strong>Split On</strong> -asetus laukaisijan asetuksissa ja valitse <code>@triggerOutputs()?['body/value']</code> pudotusvalikon kentästä.</p>
+<p>Kun <strong>Split On</strong> on käytössä ja kenttä asetettu <code>@triggerOutputs()?['body/value']</code>, virtaus suoritetaan yksittäin jokaiselle viestille, vaikka niitä saapuisi useita samanaikaisesti.</p>
+<p><img alt="Ota käyttöön Split On -asetukset laukaisijassa" src="../../../../../translated_images/3.1_07_UpdateTriggerSettings.0f363c4f4655276732575fa795bf1ad1568df34d34b703c85073591cc8585609.fi.png" /></p>
+<ol>
+<li>Lisätään seuraavaksi logiikkaa tarkistamaan liitteen tiedostotyyppi. Haluamme ladata vain .PDF-tiedostoliitteet, ei kuvia (nämä voivat olla sähköpostin allekirjoituksista). Valitse laukaisijan alapuolella <strong>+</strong>-kuvake ja valitse <strong>Control</strong> kohdasta <strong>Sisäänrakennetut työkalut</strong>.</li>
+</ol>
+<p><img alt="Valitse Control" src="../../../../../translated_images/3.1_08_Control.2fa6987b64ae20d5c8343d1b15937432ab6c893750c4b1427df56067023fd437.fi.png" /></p>
+<ol>
+<li>Valitse <strong>Ehto</strong>-toiminto.</li>
+</ol>
+<p><img alt="Valitse Ehto-toiminto" src="../../../../../translated_images/3.1_09_AddConditionAction.a7eec0b2a42d4a7c54bd305f0c480b72e3feec155a4e2468e12279082257f21f.fi.png" /></p>
+<ol>
+<li>
+<p>Konfiguroidaan ehto tarkistamaan, onko liitteen tiedostotyyppi .PDF. <strong>Valitse arvo</strong> -kentässä valitse oikealla oleva <strong>salaman kuva</strong> tai <strong>fx-kuvake</strong>.</p>
+</li>
+<li>
+<p><strong>Haku</strong>-kenttään kirjoita seuraava:</p>
+</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>content type
+</span></code></pre></div>
+<ol>
+<li>
+<p>Valitse sitten laukaisijan <strong>Attachments Content-Type</strong> -parametri.</p>
+</li>
+<li>
+<p>Valitse <strong>Lisää</strong> lisätäksesi dynaamisen sisällön syötteen toiminnon <strong>Id</strong>-parametriin.</p>
+</li>
+</ol>
+<p><img alt="Konfiguroi Ehto-toiminto" src="../../../../../translated_images/3.1_10_SetDynamicContentValue_V2.23c3d0438146a5ff0d695077e65a3b1c8b230b54c51ded8a099c6e99a948e9ed.fi.png" /></p>
+<ol>
+<li>Pysähdytään hetkeksi, olet ehkä huomannut, että <strong>For each</strong>-toiminto ilmestyi automaattisesti.</li>
+</ol>
+<p>Valitse <strong>For each</strong>-toiminto. Tämä toiminto edustaa silmukointia jokaisen sähköpostin liitteen läpi, koska laukaisijan <strong>Attachments Content-Type</strong> -parametri liittyy jokaiseen liitteeseen.</p>
+<p>Taustalla se on taulukko, ja siksi <strong>For each</strong>-toiminto lisättiin automaattisesti, kun valitsimme <strong>Attachments Content-Type</strong> -parametrin <strong>Ehto</strong>-toiminnossa.</p>
+<p>Lisätietoja tästä saat laajentamalla seuraavan oppimisosion.</p>
+<details class="info">
+<summary>Lisäoppiminen: For each -toiminto ilmestyy automaattisesti</summary>
+</details>
+<p>🤔 <strong>Miksi "Apply to each" tai "For each" ilmestyy automaattisesti?</strong></p>
+<p>Kun valitset parametrin (dynaaminen sisältö), joka edustaa listaa tai taulukkoa - esimerkiksi liitteiden, sähköpostien tai rivien lista - Power Automate tunnistaa, että haluat ehkä käsitellä jokaista kohdetta erikseen.</p>
+<p>Power Automate lisää automaattisesti <strong>"Apply to each"</strong> (tai <strong>For each</strong>) -silmukan toiminnon ympärille. Tämä varmistaa, että toiminto suoritetaan kerran jokaista listan kohdetta varten, sen sijaan että yritettäisiin käsitellä koko lista kerralla (mikä voisi aiheuttaa virheitä).</p>
+<p>🦋 <strong>Esimerkki</strong></p>
+<ul>
+<li>Jos valitset "Attachments" edellisestä toiminnosta (joka on taulukko) ja yrität käyttää sitä toiminnossa, joka odottaa yksittäistä tiedostoa, Power Automate ympäröi toimintosi <strong>"Apply to each"</strong> (tai <strong>For each</strong>) -silmukalla.</li>
+<li>Näin toimintosi suoritetaan <strong>jokaiselle liitteelle</strong> - yksi kerrallaan.</li>
+</ul>
+<p>💡 <strong>Keskeiset kohdat</strong></p>
+<ul>
+<li><strong>Automaattinen:</strong> Silmukka ilmestyy automaattisesti auttamaan sinua käsittelemään jokaista kohdetta kokoelmassa.</li>
+<li><strong>Estää virheet:</strong> Ilman silmukkaa toimintosi saattaa epäonnistua, koska se ei voi käsitellä useita kohteita kerralla.</li>
+<li><strong>Visuaalinen vihje:</strong> Se näyttää visuaalisesti, että virtauksesi toistaa toiminnon jokaiselle listan kohteelle.</li>
+</ul>
+<p><img alt="For Each -toiminto selitetty" src="../../../../../translated_images/3.1_11_ForEach.82bd7b62b815fdbcd67acff0a633137cf03175940c670361ea8669b0df892927.fi.png" /></p>
+<ol>
+<li>Seuraavaksi, toisessa <strong>Valitse arvo</strong> -kentässä, kirjoita seuraava:</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>application/pdf
+</span></code></pre></div>
+<p>Tämä varmistaa, että jokaisen tiedostoliitteen kohdalla tarkistetaan, että tiedostomuoto on .PDF.</p>
+<p><img alt="EqualToValue" src="../../../../../translated_images/3.1_12_EqualToValue.66c107cb8105c1cd3d166b8a5bf690b8dfc30aa2bd2af83c438a9e44d1b544b0.fi.png" /></p>
+<ol>
+<li>Konfiguroidaan <strong>True</strong>-polku, jotta tiedosto voidaan poimia sähköpostista ja ladata <strong>Resume</strong> Dataverse-taulukkoon.</li>
+</ol>
+<p>Lisää uusi toiminto <strong>True</strong>-polun alle ja etsi <code>html to text</code>. Valitse <strong>Html to text</strong>-toiminto.</p>
+<p>Lisätietoja <strong>Html to text</strong>-toiminnosta saat laajentamalla seuraavan oppimisosion.</p>
+<details class="info">
+<summary>Lisäoppiminen: Html to text -toiminto</summary>
+</details>
+<p>🤔 <strong>Mikä on "HTML to text" -toiminto?</strong></p>
+<p><strong>HTML to text</strong>-toiminto Power Automatessa muuntaa HTML-muotoisen sisällön tavalliseksi tekstiksi. Tämä on erityisen hyödyllistä, kun vastaanotat dataa (kuten sähköposteja, verkkosisältöä tai API-vastauksia), jotka sisältävät HTML-tageja, ja haluat poimia vain luettavan tekstin ilman muotoiluja tai koodia.</p>
+<p>⚙️ <strong>Miten se toimii?</strong></p>
+<ul>
+<li><strong>Syöte:</strong> Syötät HTML-sisältöä (esimerkiksi sähköpostin runko).</li>
+<li><strong>Tulos:</strong> Toiminto poistaa kaikki HTML-tagit ja palauttaa vain tavallisen tekstin.</li>
+</ul>
+<p>👍🏻 <strong>Milloin sitä kannattaa käyttää?</strong></p>
+<ul>
+<li>Kun haluat poimia luettavaa tekstiä sähköposteista, verkkosivuilta tai API-vastauksista, jotka sisältävät HTML:ää.</li>
+<li>Ennen sisällön lähettämistä järjestelmiin, jotka eivät tue HTML-muotoilua (kuten tekstiviestit, Teams-viestit tai tietokannat).</li>
+<li>Datan puhdistamiseen ja sisällön valmisteluun jatkokäsittelyä tai analyysiä varten.</li>
+</ul>
+<p>🔭 <strong>Mistä sen löytää?</strong></p>
+<ul>
+<li>Power Automatessa Agent Flows -osiossa, etsi toiminto nimeltä <code>HTML to text</code>. Se löytyy <strong>Data Operations</strong>-liittimestä.</li>
+</ul>
+<p>💡 <strong>Keskeiset kohdat</strong></p>
+<ul>
+<li>Poistaa kaikki HTML-tagit ja jättää vain tekstin.</li>
+<li>Ei tulkitse tai suorita skriptejä/tyylejä - vain poistaa tagit.</li>
+<li>Hyödyllinen datan puhdistamiseen ja sisällön valmisteluun tavallisen tekstin ulostuloja varten.</li>
+</ul>
+<p><img alt="Lisää HTML to text -toiminto" src="../../../../../translated_images/3.1_13_AddHTMLToTextAction.2aa9468b87dbeb847c083f24da0fe99438b39f826b13a70982ec255a97c2aa80.fi.png" /></p>
+<ol>
+<li>Seuraavaksi meidän täytyy luoda uusi yhteysviite <strong>Html to text</strong>-toiminnolle valitsemalla <strong>Lisää uusi</strong>.</li>
+</ol>
+<p><img alt="Lisää uusi yhteysviite" src="../../../../../translated_images/3.1_14_AddNewConnection.4a23546976b62e7f0e882ac1379950e5bfdcaa702070313cb84a1d22b06a79a7.fi.png" /></p>
+<ol>
+<li>Toiminto voidaan nyt konfiguroida. Lisätään laukaisijan <strong>Body</strong>-parametri. <strong>Sisältö</strong>-kentässä valitse oikealla oleva <strong>salaman kuva</strong> tai <strong>fx-kuvake</strong>.</li>
+</ol>
+<p><img alt="Lisää dynaaminen sisältö" src="../../../../../translated_images/3.1_15_AddDynamicContent.0624a9808f55b993efb6d00bf941a88389655e2ab9970ba2b9a1538272fe9643.fi.png" /></p>
+<ol>
+<li><strong>Dynaaminen sisältö</strong>-välilehdessä etsi <code>body</code> ja valitse laukaisijan <strong>Body</strong>-parametri, ja valitse sitten <strong>Lisää</strong>.</li>
+</ol>
+<p><img alt="Lisää Body-parametri" src="../../../../../translated_images/3.1_16_AddDynamicContent.40b7eccc080c20513eed5663062b2a63d40d6482eaf2d42fe4e29cb94797f098.fi.png" /></p>
+<ol>
+<li>Olemme nyt valmiita konfiguroimaan tämän toiminnon, joten poistutaan toiminnosta valitsemalla vasemmalle osoittavat kaksoisnuolet («) paneelin pienentämiseksi.</li>
+</ol>
+<p><img alt="Pienennä toimintopaneeli" src="../../../../../translated_images/3.1_17_CollapseAction.ca2c346efb58f8240372c3d145fa10ba609cab1c2075d7df1a9388c82fab79f5.fi.png" /></p>
+<ol>
+<li>Lisätään uusi toiminto valitsemalla <strong>+</strong>-kuvake <strong>Html to text</strong>-toiminnon alapuolella, mikä avaa paneelin toimintojen lisäämistä varten. Valitse <strong>Microsoft Dataverse</strong>-liitin.</li>
+</ol>
+<p><img alt="Lisää uusi toiminto" src="../../../../../translated_images/3.1_18_AddDataverseAction.5f4be9eb96e22dac239e5545bab5ad9d08b138c2cbcbc700680f33445e132506.fi.png" /></p>
+<ol>
+<li>Valitse <strong>Lisää uusi rivi</strong>-toiminto.</li>
+</ol>
+<p><img alt="Lisää uusi rivi -toiminto" src="../../../../../translated_images/3.1_19_AddANewRow.48e0a3868821e59ed2a299ccb6a521af27b2430082381d48be38087be62c7c15.fi.png" /></p>
+<ol>
+<li>Nimeä toiminto valitsemalla <strong>Kolmipistevalikko (...)</strong>, kopioi ja liitä seuraava nimi:</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Lisää uusi Resume-rivi
+</span></code></pre></div>
+<p><strong>Taulukon nimi</strong>-parametrissa etsi <code>res</code> ja valitse <strong>Resumes</strong>-taulukko.</p>
+<p><img alt="Nimeä toiminto ja konfiguroi Taulukon nimi -parametri" src="../../../../../translated_images/3.1_20_RenameAndSelectResumesTable.89f8485653abb7fda1d6eb44210951f05a05ed6f7450a51895079dfd8e72c8bf.fi.png" /></p>
+<ol>
+<li>Valitse seuraavaksi <strong>Resume Title</strong>-kenttä ja valitse oikealla oleva <strong>salaman kuva</strong> tai <strong>fx-kuvake</strong>.</li>
+</ol>
+<p><img alt="Konfiguroi Resume Title -parametri" src="../../../../../translated_images/3.1_21_AddDynamicContent.9ee1f89420d5a4aa56797944166208f6e9b0ec67116625168fbcefb907850224.fi.png" /></p>
+<ol>
+<li><strong>Funktiot</strong>-välilehdessä syötä seuraava lauseke, joka käyttää <code>item()</code>-funktiota:</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>item()?[&#39;name&#39;]
+</span></code></pre></div>
+<p>Lisätietoja <code>item()</code>-funktiosta saat laajentamalla seuraavan oppimisosion.</p>
+<details class="info">
+<summary>Lisäoppiminen: <code>item()</code>-funktio</summary>
+</details>
+<p>🤔 <strong>Mikä on <code>item()</code>-funktio?</strong></p>
+<ul>
+<li>Kun käytät <strong>Apply to each</strong>-toimintoa, Power Automate käy läpi jokaisen elementin kokoelmassa (taulukossa).</li>
+<li>Sitä käytetään yleisimmin toiminnon kuten <strong>Apply to each</strong> (tai <strong>For each</strong>), <strong>Select</strong> tai <strong>Filter array</strong> sisällä.</li>
+</ul>
+<p>⚙️ <strong>Miten se toimii?</strong></p>
+<ul>
+<li><code>item()</code> on funktio, joka palauttaa silmukassa tai taulukko-operaatiossa käsiteltävän nykyisen kohteen.</li>
+<li>Silmukan sisällä <code>item()</code> viittaa <em>käsiteltävään elementtiin</em>.</li>
+</ul>
+<p>📌 <strong>Missä sitä käytetään?</strong></p>
+<ul>
+<li><strong>Apply to each:</strong> pääsy nykyisen kohteen ominaisuuksiin.</li>
+<li><strong>Select:</strong> taulukon jokaisen kohteen muuntamiseen.</li>
+<li><strong>Filter array:</strong> viittaus nykyiseen arvioitavaan kohteeseen.</li>
+</ul>
+<p>🦋 <strong>Esimerkki</strong></p>
+<ul>
+<li>Lauseke silmukan sisällä:<ul>
+<li><code>item()?['Email']</code></li>
+</ul>
+</li>
+<li>Tämä hakee nykyisen kohteen <code>Email</code>-ominaisuuden.</li>
+</ul>
+<p>💡 <strong>Keskeiset kohdat</strong></p>
+<ul>
+<li><code>item()</code> on <em>kontekstisidonnainen</em>: se viittaa aina silmukassa tai taulukko-operaatiossa käsiteltävään kohteeseen.</li>
+<li>Jos silmukoita on sisäkkäin, voit käyttää <code>items('LoopName')</code> viitataksesi tietyn silmukan kohteisiin.</li>
+</ul>
+<p>Valitse <strong>Lisää</strong> lisätäksesi lausekkeen <strong>Resume Title</strong>-parametriin.</p>
+<p><img alt="Lisää lauseke Resume Title -parametriin" src="../../../../../translated_images/3.1_22_ResumeTitleParameter.9e4fa71a5251cb899e7b09bcc3052eeda1e512841f929118eb9e2b1d232ecb07.fi.png" /></p>
+<ol>
+<li>Meidän täytyy vielä konfiguroida useita parametreja. Valitse <strong>Näytä kaikki</strong> ja <strong>Cover Letter</strong>-kentässä valitse oikealla oleva <strong>salaman kuva</strong> tai <strong>fx-kuvake</strong>.</li>
+</ol>
+<p><strong>Funktiot</strong>-välilehdessä syötä seuraava lauseke, joka käyttää samaa lauseketta edellisessä <a href="../02-multi-agent/">tehtävässä</a>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>if(greater(length(body(&#39;Html_to_text&#39;)), 2000), substring(body(&#39;Html_to_text&#39;), 0, 2000), body(&#39;Html_to_text&#39;))
+</span></code></pre></div>
+<p>Tämä lauseke tarkistaa, onko <strong>Html to text</strong>-toiminnosta saatu <em>teksti</em> pidempi kuin 2000 merkkiä, ja jos on, palauttaa vain ensimmäiset 2000 merkkiä; muuten se palauttaa koko tekstin.</p>
+<p><img alt="Lisää lauseke Cover Letter -parametriin" src="../../../../../translated_images/3.1_23_CoverLetterParameter.d2b521d6b37d05ac4760c91de2964b6d062585a333af6989d9ac0794a4139463.fi.png" /></p>
+<ol>
+<li>Lauseke lisätään nyt <strong>Cover Letter</strong>-kenttään.</li>
+</ol>
+<p><img alt="Lauseke lisätty Cover Letter -parametriin" src="../../../../../translated_images/3.1_24_ExpressionForCoverLetter.3d18124b10b76bad92db61c529ae395b0bb05f3215e3b783771e76ef7677664e.fi.png" /></p>
+<ol>
+<li><strong>Source Email Address</strong>-kenttään etsi <code>from</code> ja valitse laukaisijan <strong>From</strong>-parametri, koska tämä sisältää sähköpostiosoitteen arvon.</li>
+</ol>
+<p><img alt="Source Email Address -parametri" src="../../../../../translated_images/3.1_25_FromParameter.1ed1be46711f6705fb807996f6f1e873adc22e285186a851272e0cf3855487ef.fi.png" /></p>
+<ol>
+<li><strong>Upload Date</strong>-kentässä valitse oikealla oleva <strong>salaman kuva</strong> tai <strong>fx-kuvake</strong>. <strong>Funktiot</strong>-välilehdessä syötä seuraava lauseke, joka käyttää <code>utcNow()</code>-funktiota.</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>utcNow()
+</span></code></pre></div>
+<p>Lisätietoja <code>utcNow</code>-funktiosta saat laajentamalla seuraavan oppimisosion.</p>
+<details class="info">
+<summary>Lisäoppiminen: <code>utcNow</code>-funktio</summary>
+</details>
+<p>🤔 <strong>Mikä on <code>utcNow()</code>-funktio?</strong></p>
+<ul>
+<li><code>utcNow()</code>-funktio Power Automatessa palauttaa nykyisen päivämäärän ja ajan koordinoidussa yleisajassa (UTC) ISO 8601 -muodossa, kuten: <code>2025-09-23T04:32:14Z</code></li>
+</ul>
+<p>🦋 <strong>Esimerkki</strong></p>
+<ul>
+<li>Lauseke:<ul>
+<li><code>concat('Raportti luotu ', utcNow())</code></li>
+</ul>
+</li>
+<li>Tulos on:<ul>
+<li>Raportti luotu <code>2025-09-23T04:32:14Z</code></li>
+</ul>
+</li>
+</ul>
+<p>💡 <strong>Keskeiset kohdat</strong>
+- <strong>Ei vaadi argumentteja (syöttöparametreja):</strong> antaa aina nykyisen UTC-aikaleiman.
+   - <strong>Käyttötapaukset</strong>
+       - Aikaleimojen lisääminen lokitiedostoihin tai tiedostonimiin
+       - Nykyisen ajan vertailu muihin päivämääriin
+       - Ajastaminen tai aikaperusteiset ehdot</p>
+<p><img alt="Latauspäivämäärä-parametri" src="../../../../../translated_images/3.1_26_UploadDateParameter.21b0afc9807bf680c1c432066f1644d4d018cb4988ad0c0788b5186cea285e02.fi.png" /></p>
+<ol>
+<li>Olemme nyt saaneet valmiiksi <strong>Lisää uusi ansioluettelorivi</strong> -toiminnon määrittämisen, joten suljetaan paneeli pienentämällä se.</li>
+</ol>
+<p><img alt="Poistu toimintopaneelista" src="../../../../../translated_images/3.1_27_CollapseAction.c033a86e4d8501b10fc454ba7f9c5e08d71d6d881fc72f58011152e1c5d7a7bb.fi.png" /></p>
+<ol>
+<li>Lisätään uusi toiminto valitsemalla <strong>+ -kuvake</strong> <strong>Lisää uusi ansioluettelorivi</strong> -toiminnon alapuolelta, mikä avaa paneelin toimintojen lisäämistä varten. Valitse uudelleen <strong>Microsoft Dataverse</strong> -liitin.</li>
+</ol>
+<p><img alt="Lisää Dataverse-toiminto" src="../../../../../translated_images/3.1_28_AddDataverseAction.1af4dedc95001bfb56b0a642231e9c82b57459b10c68bf6fc177382339a0a221.fi.png" /></p>
+<ol>
+<li>Valitse <strong>Lataa tiedosto tai kuva</strong> -toiminto.</li>
+</ol>
+<p><img alt="Lisää Lataa tiedosto tai kuva -toiminto" src="../../../../../translated_images/3.1_29_AddUploadAFileOrAnImage.e40ab21b735e37bd1fdb5020b7433d1a2f01d6e387bc43a437e970c6e20ee779.fi.png" /></p>
+<ol>
+<li>Nimeä toiminto uudelleen valitsemalla <strong>Kolme pistettä (...)</strong>, kopioi ja liitä seuraava nimi:</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Lataa ansioluettelo-tiedosto
+</span></code></pre></div>
+<p><img alt="Nimeä toiminto uudelleen" src="../../../../../translated_images/3.1_30_RenameAction.c316fdf225f88e5c3ee26649e672472829c3372c804b544a1372b0455937c204.fi.png" /></p>
+<ol>
+<li>Valitse seuraavaksi <strong>Sisällön nimi</strong> -kenttä ja valitse oikealla puolella oleva <strong>salaman kuvake</strong> tai <strong>fx-kuvake</strong>.</li>
+</ol>
+<p><strong>Funktio-välilehdellä</strong> syötä seuraava lauseke, joka käyttää <code>item ()</code> -funktiota. Tämä hakee nykyisen kohteen (liitetiedoston) <code>name</code>-ominaisuuden.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>item()?[&#39;name&#39;]
+</span></code></pre></div>
+<p><img alt="Määritä Sisällön nimi -parametri" src="../../../../../translated_images/3.1_31_ContentNameParameter.c6606773f1e82dbcea93d7c2f52dff7a2168f9f04d6b865f699f56d62a41d4ec.fi.png" /></p>
+<ol>
+<li><strong>Taulukon nimi</strong> -parametrille etsi <code>res</code> ja valitse <strong>Ansioluettelot</strong>-taulukko.</li>
+</ol>
+<p><img alt="Määritä Taulukon nimi -parametri" src="../../../../../translated_images/3.1_32_SelectResumesTable.6a00bf6d585002219003da47f6e1042dc67cbdb3fbaf7d959253550035e27520.fi.png" /></p>
+<ol>
+<li>Valitse seuraavaksi <strong>Rivin tunnus</strong> -kenttä ja valitse oikealla puolella oleva <strong>salaman kuvake</strong> tai <strong>fx-kuvake</strong>.</li>
+</ol>
+<p>Etsi <code>ID</code> ja valitse <strong>Ansioluettelo</strong>-parametri <em>Lisää uusi rivi</em> Dataverse-toiminnosta, koska tämä sisältää rivin tunnusarvon, johon PDF-tiedosto ladataan.</p>
+<p>Valitse <strong>Lisää</strong>.</p>
+<p><img alt="Valitse Rivin tunnus" src="../../../../../translated_images/3.1_33_RowIDParameter.9824c6b5ea5edf0ce018140c20431a97c2e750d61bcb787f67da260acb6a3838.fi.png" /></p>
+<ol>
+<li>Valitse <strong>Sarakkeen nimi</strong> -kenttä ja valitse <strong>Ansioluettelo PDF</strong> -vaihtoehto.</li>
+</ol>
+<p><img alt="Määritä Sarakkeen nimi -parametri" src="../../../../../translated_images/3.1_34_ColumnNameParameter.ef4f770cbd84cae5c15cfe06d1bdbe028d0c6d54a2286dab30769fa01c948b71.fi.png" /></p>
+<ol>
+<li>Valitse <strong>Sisältö</strong>-kenttä ja valitse oikealla puolella oleva <strong>salaman kuvake</strong> tai <strong>fx-kuvake</strong>.</li>
+</ol>
+<p><strong>Funktio-välilehdellä</strong> syötä seuraava lauseke, joka käyttää <code>item ()</code> -funktiota. Tämä hakee nykyisen kohteen (liitetiedoston) <code>contentBytes</code>-ominaisuuden. <code>contentBytes</code> viittaa tiedoston tai liitteen raakaan binääridataan, joka on koodattu Base64-merkkijonoksi.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>item()?[&#39;contentBytes&#39;]
+</span></code></pre></div>
+<ol>
+<li>Olemme saaneet tämän toiminnon määrittämisen valmiiksi, joten suljetaan toiminto valitsemalla vasemmalle osoittavat kaksoisnuolet («) paneelin pienentämiseksi.</li>
+</ol>
+<p><img alt="Pienennä toimintopaneeli" src="../../../../../translated_images/3.1_36_CollapseAction.1813a7219f0f37b87f80c2cd9f5a9626c3a320858d08a0e62cf14736f97db4c6.fi.png" /></p>
+<ol>
+<li>Valitse seuraavaksi <strong>Lähettää kehotteen määritetylle copilotille käsittelyä varten</strong>, ja vedä ja pudota tämä toiminto <strong>Lataa ansioluettelo-tiedosto</strong> -toiminnon alapuolelle ehdon <em>True</em>-polussa.</li>
+</ol>
+<p><img alt="Vedä ja pudota toiminto True-polussa" src="../../../../../translated_images/3.1_37_DragAndDropAction.57dc2e9f9d25ed892a4fc072a72c55eca6c38e313ab48fb9db37e9371995440f.fi.png" /></p>
+<ol>
+<li>Valitse <strong>Lähettää kehotteen määritetylle copilotille käsittelyä varten</strong> -toiminto sen määrittämiseksi.</li>
+</ol>
+<p><img alt="Valitse toiminto" src="../../../../../translated_images/3.1_38_SelectAction.d125bdf661f66b6397542c75efbc6a78b8c4862e03dce4002776c251f1c48382.fi.png" /></p>
+<ol>
+<li><strong>Runko/viesti</strong>-kentässä valitse kaikki kentän sisältö ja tyhjennä/poista se.</li>
+</ol>
+<p><img alt="Tyhjennä Runko-parametri" src="../../../../../translated_images/3.1_39_ClearBodyParameter.6a345b2e5dbe5510184d7bae7cd406b8cec72c714f34bb40e30741e445a491c0.fi.png" /></p>
+<ol>
+<li>Kopioi ja liitä seuraava teksti <strong>Runko/viesti</strong>-kenttään ja korosta <code>RESUME ID PLACEHOLDER</code>.</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Lähetä [ResumeId (text)] = &quot;RESUME ID PLACEHOLDER&quot; ja [ResumeTitle (text_1)] = &quot;RESUME TITLE PLACEHOLDER&quot; ja [ResumeNumber (text_2)]= &quot;RESUME NUMBER PLACEHOLDER&quot; Työkaluun &quot;Ilmoita Teamsin hakijakanavalle&quot; lapsiagentissa &quot;Hakemusten vastaanottoagentti&quot;
+</span></code></pre></div>
+<p><img alt="Korvaa Ansioluettelon tunnus -paikkamerkki" src="../../../../../translated_images/3.1_40_ReplaceResumeIDPlaceholder.eb61590503cb37d89121aaed6d979a4272aa30c87700206e04db8005e60b294f.fi.png" /></p>
+<ol>
+<li>Valitse oikealla puolella oleva <strong>salaman kuvake</strong> tai <strong>fx-kuvake</strong>.</li>
+</ol>
+<p>Etsi <code>resume</code> ja valitse <strong>Ansioluettelo</strong>-parametri <em>Lisää uusi rivi Dataverse</em>-toiminnosta, koska tämä sisältää luodun ansioluettelorivin <code>ID</code>-arvon.</p>
+<p>Valitse <strong>Lisää</strong>.</p>
+<p><img alt="Valitse Ansioluettelo-parametri" src="../../../../../translated_images/3.1_41_SelectResumeParameter.61c4457c33e5d1b596169857535bfc560ef677264f8798e9148ceac999eeaeb9.fi.png" /></p>
+<ol>
+<li>Korosta <code>RESUME TITLE PLACEHOLDER</code>. Valitse oikealla puolella oleva <strong>salaman kuvake</strong> tai <strong>fx-kuvake</strong>.</li>
+</ol>
+<p>Etsi <code>title</code> ja valitse <strong>Ansioluettelon otsikko</strong> -parametri <em>Lisää uusi rivi Dataverse</em>-toiminnosta, koska tämä sisältää luodun ansioluettelorivin <code>otsikko</code>-arvon.</p>
+<p>Valitse <strong>Lisää</strong>.</p>
+<p><img alt="Valitse Ansioluettelo-parametri" src="../../../../../translated_images/3.1_42_SelectResumeTitleParameter.6c887607128f928da15c4cf6c22254d0473bc22514aa883462fd812bf14245e0.fi.png" /></p>
+<ol>
+<li>Korosta <code>RESUME NUMBER PLACEHOLDER</code>. Valitse oikealla puolella oleva <strong>salaman kuvake</strong> tai <strong>fx-kuvake</strong>.</li>
+</ol>
+<p>Etsi <code>resume number</code> ja valitse <strong>Ansioluettelon numero</strong> -parametri <em>Lisää uusi rivi Dataverse</em>-toiminnosta, koska tämä sisältää luodun ansioluettelorivin <code>numero</code>-arvon.</p>
+<p>Valitse <strong>Lisää</strong>.</p>
+<p><img alt="Valitse Ansioluettelo-parametri" src="../../../../../translated_images/3.1_43_SelectResumeNumberParameter.ca19197525250483a7e94598b621072b47ebdf5deb939e1387c979e807ddc554.fi.png" /></p>
+<ol>
+<li>Olemme saaneet tämän toiminnon määrittämisen valmiiksi ja agenttivirtaus on valmis 🙌🏻 Hyvin tehty! Nyt tallennetaan tapahtumatrigger-virtaus valitsemalla <strong>Tallenna luonnos</strong>.</li>
+</ol>
+<p><img alt="Tallenna luonnos" src="../../../../../translated_images/3.1_44_SaveDraft.0c9eee19f0c7cb8483b8d31bc17e1dd54075352d22f0f44603a9d52b52429188.fi.png" /></p>
+<ol>
+<li>Nyt meidän täytyy muokata agenttivirtauksen yksityiskohtia, valitse <strong>Takaisin</strong>.</li>
+</ol>
+<p><img alt="Valitse Takaisin" src="../../../../../translated_images/3.1_45_Back.3f85535977bdb02231a0fdb8465e0e8b7d86fd5342ff933e4ae8bf9610279989.fi.png" /></p>
+<ol>
+<li>Valitse <strong>Muokkaa</strong> <strong>Yksityiskohdat</strong>-osiossa ja päivitä <strong>Suunnitelma</strong> <strong>Copilot Studio</strong> -vaihtoehtoon.</li>
+</ol>
+<p>Valitse <strong>Tallenna</strong>.</p>
+<p><img alt="Vaihda Copilot Studio -suunnitelma" src="../../../../../translated_images/3.1_46_ChangePlanDetails.6ab15f1f8bd9ebe55b2c1576c3495f47d1a29d7435e343d4c590e46647601269.fi.png" /></p>
+<ol>
+<li>Näyttöön tulee modal, joka pyytää vahvistamaan siirtymisen Copilot Studio -suunnitelmaan. Valitse <strong>Vahvista</strong>.</li>
+</ol>
+<p><img alt="Vahvista Copilot Studio -suunnitelman vaihto" src="../../../../../translated_images/3.1_47_ConfirmCopilotStudioPlan.bc6ab52e7c982127154b0fb743f85ff9cc05dcab944dffc9485bdbcbe0811397.fi.png" /></p>
+<ol>
+<li>Suunnitelma on nyt päivitetty <strong>Copilot Studio</strong> -suunnitelmaan. Valitse <strong>Muokkaa</strong>, koska meidän täytyy julkaista tapahtumatrigger-virtaus agentillemme.</li>
+</ol>
+<p><img alt="Muokkaa virtausta" src="../../../../../translated_images/3.1_48_PlanChangedAndEdit.3c3207766a648817f7a7878c3a6f684cf41cdceea4dca8f6fc43b7315c8dd648.fi.png" /></p>
+<ol>
+<li>Valitse <strong>Julkaise</strong>.</li>
+</ol>
+<p><img alt="Julkaise" src="../../../../../translated_images/3.1_49_Publish.38ff814cfce6b3be1076cafb0c28e4e344f75d8cd4117fabed13ad361d4fde3f.fi.png" /></p>
+<p>Hurraa! Tapahtumatrigger-virtaus on nyt julkaistu 😃</p>
+<p><img alt="Julkaistu" src="../../../../../translated_images/3.1_50_Published.449e7867f7b027ae8a524c749357a1b931955062828bacc3b5a51e979755ef4a.fi.png" /></p>
+<p>Jatketaan uuden agenttivirtauksen luomisella, jonka lapsiagentti <strong>Hakemusten vastaanottoagentti</strong> käynnistää.</p>
+<h3 id="lab-32-ilmoita-teams-kanavalle-mukautetulla-kortilla">Lab 3.2 - Ilmoita Teams-kanavalle mukautetulla kortilla<a class="headerlink" href="#lab-32-ilmoita-teams-kanavalle-mukautetulla-kortilla" title="Permanent link">&para;</a></h3>
+<p>Nyt luomme uuden agenttivirtauksen lapsiagentille <strong>Hakemusten vastaanottoagentti</strong>, joka käyttää tapahtumatriggerin välittämiä arvoja lähettääkseen mukautetun kortin Teams-kanavalle. Tämä mukautettu kortti ilmoittaa HR-rekrytointitiimille automaattisesti ladatusta PDF-tiedostosta, jotta he voivat tarkistaa sen.</p>
+<p>Aloitetaan!</p>
+<ol>
+<li>Valitse <strong>Rekrytointiautomaatti</strong>-agentissa <strong>Agentit</strong>-välilehti ja valitse <strong>Hakemusten vastaanottoagentti</strong>.</li>
+</ol>
+<p><img alt="Valitse Hakemusten vastaanottoagentti" src="../../../../../translated_images/3.2_01_SelectApplicationIntakeAgent.0e9dd3da5c52e9f59ab3a4545c01897ad830853b650ec42f7f8424aa530e0409.fi.png" /></p>
+<ol>
+<li>Vieritä alas kohtaan <strong>Työkalut</strong> ja valitse <strong>+ Lisää</strong>.</li>
+</ol>
+<p><img alt="Lisää työkalu" src="../../../../../translated_images/3.2_02_AddNewTool.7c62275fd9f28cdc1923ea056a148171048dc568ff78056958fd54862133f90e.fi.png" /></p>
+<ol>
+<li>Näyttöön tulee <strong>Lisää työkalu</strong> -modal. Valitse <strong>+ Uusi työkalu</strong>.</li>
+</ol>
+<p><img alt="Valitse Uusi työkalu" src="../../../../../translated_images/3.2_03_SelectNewTool.215e7637a9f065a3799a1ecf248eed1e859f201d2dfdfab71a7c1dc18e454e2d.fi.png" /></p>
+<ol>
+<li>Valitse <strong>Agenttivirtaus</strong>.</li>
+</ol>
+<p><img alt="Valitse Agenttivirtaus" src="../../../../../translated_images/3.2_04_SelectAgentFlow.7bc12b3435efccc0cfee8f563640562f87d173b436b3313a3d1256fe35024907.fi.png" /></p>
+<ol>
+<li>Seuraavaksi latautuu <strong>agenttivirtauksen suunnittelija</strong>. <strong>Kun agentti kutsuu virtauksen</strong> -triggerissä valitse <strong>+ Lisää syöte</strong>.</li>
+</ol>
+<p><img alt="Valitse lisää syöte" src="../../../../../translated_images/3.2_05_SelectAddAnInput.f3dc8465f490929baccb0f2dc72b50629b1435ff8a3861f7974885d1d36cdeb1.fi.png" /></p>
+<ol>
+<li>Valitse <strong>Teksti</strong> käyttäjän syötteen tyypiksi.</li>
+</ol>
+<p><img alt="Valitse Teksti" src="../../../../../translated_images/3.2_06_SelectText.93585b4af8c4e277c11c2052b638e249508a24a075987026a6ec346e75184217.fi.png" /></p>
+<ol>
+<li>Syötteen tekstikenttään kopioi ja liitä seuraava syöttöparametrin nimi.</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ResumeId
+</span></code></pre></div>
+<p><img alt="Ansioluettelon tunnus -syöte" src="../../../../../translated_images/3.2_07_ResumeIdInput.a9e127e343856d6c6d45dd1251cade0503bad9484bc563c02155390951b1faa5.fi.png" /></p>
+<ol>
+<li>Toista samat vaiheet lisätäksesi toisen tekstisyötteen. Kopioi ja liitä seuraava syöttöparametrin nimi.</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>ResumeTitle
+</span></code></pre></div>
+<p><img alt="Ansioluettelon otsikko -syöte" src="../../../../../translated_images/3.2_08_ResumeTitleInput.c71ecd364a974a93abb0de876807c2e9bde59fcea6df317babeb20764b636f26.fi.png" /></p>
+<ol>
+<li>Toista samat vaiheet lisätäksesi kolmannen tekstisyötteen. Kopioi ja liitä seuraava syöttöparametrin nimi.</li>
+</ol>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>ResumeNumber
+</span></code></pre></div>
+<img alt="Ansioluettelon numero -syöte" src="../../../../../translated_images/3.2_09_ResumeNumberInput.a6c060000354deab51dffef3c1ad9f13378cfeabdafdb7a33c2a591bfd044709.fi.png" /></p>
+<ol>
+<li>Muistatko, kuinka <a href="../../recruit/08-add-adaptive-card/#81-create-a-new-topic-with-an-adaptive-card-for-user-to-submit-their-request">Rekrytointi</a> -osiossa lisäsimme mukautetun kortin agentin aiheeseen? Tällä kertaa aiomme lisätä mukautetun kortin agenttivirtaukseen. Nyt lisäämme toisen toiminnon agenttivirtaukseen, joka lähettää mukautetun kortin Teams-kanavalle.</li>
+</ol>
+<p>Valitse triggerin alapuolelta <strong>+ -kuvake</strong>.</p>
+<p><img alt="Lisää uusi toiminto" src="../../../../../translated_images/3.2_10_AddNewAction.4474a2150991cac246d5e4091a74ba91e76e1c5bafa34ad985a8567c09dcdd35.fi.png" /></p>
+<ol>
+<li>Valitse <strong>Lähetä kortti keskusteluun tai kanavalle</strong> -toiminto.</li>
+</ol>
+<p><img alt="Valitse Lähetä kortti keskusteluun tai kanavalle -toiminto" src="../../../../../translated_images/3.2_11_SelectPostCardInAChatOrChannel.97de43ed1c883b14d0150ae65efaa90f53f0815bdf57ec10e0e22cbd3e22ce06.fi.png" /></p>
+<ol>
+<li>Microsoft Teams -yhteysviite täytyy luoda kirjautuneella käyttäjätililläsi. Valitse <strong>Kirjaudu sisään</strong>.</li>
+</ol>
+<p><img alt="Valitse Kirjaudu sisään" src="../../../../../translated_images/3.2_12_SignInToCreateConnectionReference.2297f8b702d71508f1b21a3ed4046df4846dc03b13932a20e5c445403559ac1f.fi.png" /></p>
+<ol>
+<li>Valitse käyttäjätilisi ja valitse <strong>Salli pääsy</strong>.</li>
+</ol>
+<p><img alt="Valitse Salli pääsy" src="../../../../../translated_images/3.2_13_AllowAccess.31cbf82606d75231108bd4f2bfeafffda3cd7e7e760cd46004c2705afe050aaf.fi.png" /></p>
+<ol>
+<li>Seuraaville syöttöparametreille:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parametri</th>
+<th>Miten asetetaan</th>
+<th>Tiedot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lähetä nimellä</strong></td>
+<td>Pudotusvalikko</td>
+<td>Valitse <code>Flow bot</code> -vaihtoehto</td>
+</tr>
+<tr>
+<td><strong>Lähetä</strong></td>
+<td>Pudotusvalikko</td>
+<td>Valitse <code>Kanava</code> -vaihtoehto</td>
+</tr>
+<tr>
+<td><strong>Tiimi</strong></td>
+<td>Pudotusvalikko</td>
+<td>Valitse tiimi, joka on käytettävissä ympäristössäsi tämän harjoituksen suorittamista varten</td>
+</tr>
+<tr>
+<td><strong>Kanava</strong></td>
+<td>Pudotusvalikko</td>
+<td>Valitse kanava, joka on käytettävissä ympäristössäsi tämän harjoituksen suorittamista varten</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Määritä syöttöparametrit" src="../../../../../translated_images/3.2_14_ConfigureParameters.8c21924f90db3acaa33d4e35ef43c70556ba4cc37207a195ac654e55a43400a6.fi.png" /></p>
+<ol>
+<li>Seuraavaksi määritämme <strong>Mukautettu kortti</strong> -kentän. Valitse <strong>Mukautettu kortti</strong> -kenttä.</li>
+</ol>
+<p><img alt="Valitse Mukautettu kortti -kenttä" src="../../../../../translated_images/3.2_15_SelectAdaptiveCardParameter.65323056be6174d2eed7422650aaa70fc16396148f90b8af1801110d7a30d66f.fi.png" /></p>
+<ol>
+<li>Avaa <a href="../../../../../docs/operative-preview/03-automate-triggers/assets/3.2_ResumeTableUpdated.json">Ansioluettelotaulukko päivitetty JSON-tiedosto</a>, kopioi sen koko sisältö ja liitä se Mukautettu kortti -kenttään.</li>
+</ol>
+<p><img alt="Kopioi ja liitä JSON" src="../../../../../translated_images/3.2_16_JSON.f022097fb7139bd12514abb8fdc518309ea940f005cc94a11ba159359cde784b.fi.png" /></p>
+<ol>
+<li>Kuten teimme <a href="../../recruit/08-add-adaptive-card/#81-create-a-new-topic-with-an-adaptive-card-for-user-to-submit-their-request">Rekrytointi</a> -osiossa, korvaamme olemassa olevat arvot JSON-payloadissa todellisilla arvoilla tai dynaamisella sisällöllä.</li>
+</ol>
+<p>Ensiksi päivitetään URL <code>url</code>-ominaisuudelle <code>selectAction</code>-ominaisuuden sisällä. Tämä URL korvataan <strong>Hiring Hub</strong> -mallipohjaisen sovelluksen Ansioluettelot-järjestelmänäkymän URL-osoitteella. Tämä mahdollistaa rekrytoijan valita toiminnon ja siirtyä Ansioluettelot-järjestelmänäkymään mallipohjaisessa sovelluksessa.</p>
+<p>Korosta nykyinen URL-arvo ja poista se.</p>
+<p><img alt="Valitse URL-arvo" src="../../../../../translated_images/3.2_17_SystemViewURL.5e51fd894ac916f436107c7b668d66ca87ca8bdfd7affeb7dae1b10fa8ff5afb.fi.png" /></p>
+<ol>
+<li><strong>Hiring Hub</strong> -mallipohjaisessa sovelluksessa siirry <strong>Ansioluettelot</strong>-järjestelmänäkymään vasemmanpuoleisen valikon avulla ja kopioi URL-osoite. Siirry sitten takaisin agenttivirtaukseen ja liitä kopioitu URL <code>url</code>-ominaisuuteen <code>selectAction</code>-ominaisuuden sisällä.</li>
+</ol>
+<p><img alt="Kopioi Ansioluettelot-järjestelmänäkymän URL" src="../../../../../translated_images/3.2_18_CopyResumesSystemViewURL.14d9f55c7db15977a12dfe2a5df95aab5cf241e646b08f9838cff31aaa27a381.fi.png" />
+1. Näet seuraavan, jossa keltaisella korostettuna ovat ympäristötiedot <strong>Hiring Hub</strong> -mallipohjaisesta sovelluksesta.</p>
+<div class="language-text highlight"><pre><span></span><code> | Parametri | Arvo | Selitys |
+ |----------|------------|---------|
+ | **Organisaation URI** | GUID | Dataverse/Dynamics 365 -ympäristön organisaation URL |
+ | **appid** | GUID | Tietyn mallipohjaisen sovelluksen avaamiseen käytetään joko appid- tai appname-kyselyparametria. Tässä tapauksessa käytetään appid-parametria |
+ | **viewid** | GUID | Kyselyparametri, joka on näkymän tunnus |
+
+   ![Liitä URL](../../../../../translated_images/3.2_19_PasteURL.41f3fdd66190c8ba478857f91c90eb05ee9621243bda7b7ad26eb5802b8e970d.fi.png)
+</code></pre></div>
+<ol>
+<li>
+<p>Seuraavaksi lisätään dynaamisia sisältöarvoja useille ominaisuuksille. Aloitetaan tekstistä, joka näyttää tapahtumatriggerin luoman rivin ansioviitteen.</p>
+<p>Valitse <strong>paneeli</strong>-ikoni ladataksesi toimintopaneelin.</p>
+<p><img alt="Valitse paneeli-ikoni" src="../../../../../translated_images/3.2_20_SelectPannelIcon.786a4147ba12e0e62648c66f14fb2b9a7f89b27c3a610f43420e31cb0c9fb5da.fi.png" /></p>
+</li>
+<li>
+<p>Vieritä alas riville, jossa näet <code>text</code>-ominaisuuden kohdassa <code>RESUME NUMBER PLACEHOLDER</code>. Korosta paikkamerkin arvo ja poista se.</p>
+<p><img alt="Poista paikkamerkki" src="../../../../../translated_images/3.2_21_DeleteResumeNumberPlaceholder.6ffd7a5a073f9d9a11e0e119c87e827243de237f70ebc3ab37dfdd36de615130.fi.png" /></p>
+</li>
+<li>
+<p>Klikkaa lainausmerkkien väliin ja valitse oikealla oleva <strong>salaman kuva</strong> tai <strong>fx-ikoni</strong>.</p>
+<p>Valitse <strong>Dynaaminen sisältö</strong> -välilehdeltä <strong>ResumeNumber</strong>-parametri ja valitse <strong>Lisää</strong>.</p>
+<p><img alt="Lisää ResumeNumber-parametri" src="../../../../../translated_images/3.2_22_SelectResumeNumberParameter.de5a6eecb3ee092441d841ad137dfecd9f8d503a370ff60eb5ccdc0267e37df0.fi.png" /></p>
+</li>
+<li>
+<p><strong>ResumeNumber</strong>-parametri lisätään nyt dynaamiseksi sisällöksi <code>text</code>-ominaisuuteen.</p>
+<p><img alt="ResumeNumber dynaaminen sisältö" src="../../../../../translated_images/3.2_23_ResumeNumberDynamicContent.129a566ac6e9d448b268b828da5766a7056779ac167f65b498e2ca21d703b7f0.fi.png" /></p>
+</li>
+<li>
+<p>Toistetaan samat vaiheet <code>RESUME NAME PLACEHOLDER</code>-kohdalle. Vieritä alas riville, jossa näet <code>text</code>-ominaisuuden kohdassa <code>RESUME NAME PLACEHOLDER</code>. Korosta paikkamerkin arvo ja poista se.</p>
+<p><img alt="Resume Name Placeholder" src="../../../../../translated_images/3.2_24_ResumeNamePlaceholder.6c879b99ae375892f7e0a511bfedd5fa9e60a8dea71ea2a44c2a7a04c8389f43.fi.png" /></p>
+</li>
+<li>
+<p>Klikkaa lainausmerkkien väliin ja valitse oikealla oleva <strong>salaman kuva</strong> tai <strong>fx-ikoni</strong>.</p>
+<p>Valitse <strong>Dynaaminen sisältö</strong> -välilehdeltä <strong>ResumeTitle</strong>-parametri ja valitse <strong>Lisää</strong>.</p>
+<p><img alt="Lisää ResumeTitle-parametri" src="../../../../../translated_images/3.2_25_SelectResumeTitleParameter.18c769bbd2c60e362a56f6055e151ed6287903cb625addcdfbb43044828d7378.fi.png" /></p>
+</li>
+<li>
+<p><strong>ResumeTitle</strong>-parametri lisätään nyt dynaamiseksi sisällöksi <code>text</code>-ominaisuuteen.</p>
+<p><img alt="ResumeTitle dynaaminen sisältö" src="../../../../../translated_images/3.2_26_ResumeTitleDynamicContent.7219e078f71fc0d5d4a6bb228ba2d53f0898ba26a27c5eb859df90d12dd52c70.fi.png" /></p>
+</li>
+<li>
+<p>Toistetaan samat vaiheet <strong>Due Date</strong>-arvolle, joka edustaa päivämäärää, jolloin rekrytoijan tulisi tarkistaa ansioluettelo. Vieritä alas riville, jossa näet <code>text</code>-ominaisuuden kohdassa <code>May 21, 2023</code>.</p>
+<p><img alt="Valitse Salli pääsy" src="../../../../../translated_images/3.2_27_DueDatePlaceholder.17c6003cc9ec1141b0aeb5cde203098a7f5534fa11f01a3cbffb66206ed1633a.fi.png" /></p>
+</li>
+<li>
+<p>Poista tämä päivämääräpaikkamerkin arvo ja klikkaa lainausmerkkien väliin.</p>
+<p><img alt="Poista" src="../../../../../translated_images/3.2_28_DeleteDueDatePlaceholder.9a3df55fb3c9ed72e61e0a60dc3344335b0444ff537c9fb51036b0442a85d268.fi.png" /></p>
+</li>
+<li>
+<p>Valitse oikealla oleva <strong>salaman kuva</strong> tai <strong>fx-ikoni</strong> ja kirjoita <strong>Toiminto</strong>-välilehdelle seuraava lauseke ja valitse <strong>Lisää</strong>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>addDays(utcNow(), 3, &#39;MMM dd, yyyy&#39;)
+</span></code></pre></div>
+<p>Tämä lauseke käyttää kahta toimintoa.</p>
+<table>
+<thead>
+<tr>
+<th>Toiminto</th>
+<th>Selitys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>addDays</strong></td>
+<td>Lisää tietyn määrän päiviä annettuun päivämäärään ja palauttaa tuloksena olevan päivämäärän merkkijonona</td>
+</tr>
+<tr>
+<td><strong>utcNow</strong></td>
+<td>Palauttaa nykyisen päivämäärän ja ajan koordinoidussa yleisaikamuodossa (UTC) merkkijonona.</td>
+</tr>
+</tbody>
+</table>
+<p>utcNow-arvoa varten muotoilemme päivämäärän kuukaudeksi ja päiväksi, jota seuraa vuosi.</p>
+<p><img alt="Lauseke Due Date" src="../../../../../translated_images/3.2_29_01_ExpressionDueDate.a4fa31985f5500971f2fc6da0e81e008af12be19d54a30a240764b74a4b2dbcb.fi.png" /></p>
+<p>Lauseke lisätään nyt <code>text</code>-ominaisuuteen.</p>
+<p><img alt="Lauseke Due Date" src="../../../../../translated_images/3.2_29_02_ExpressionDueDate.6159288450731c7b09628af70f0c9a6d92590ca7c7e39e8a524ae8af7c511f2c.fi.png" /></p>
+</li>
+<li>
+<p>Lopuksi päivitetään URL <code>url</code>-ominaisuudelle JSON-paketin <code>actions</code>-taulukko-ominaisuuden alaosassa. Nykyinen paikkamerkki-URL korvataan ansioluettelorivin URL:lla <strong>Hiring Hub</strong> -mallipohjaisessa sovelluksessa. Tämä mahdollistaa rekrytoijan valita mukautetun kortin <code>Action.OpenURL</code>-toiminnon ja siirtyä ansioluetteloon mallipohjaisessa sovelluksessa.</p>
+<p><img alt="Poista Näytä ansioluettelo URL-paikkamerkki" src="../../../../../translated_images/3.2_30_ViewResumeURLPlaceholder.f27af6cadfb54fb977f0b46ea3ec42ee0638d38ebc5d294eff5da52abf9d4a1b.fi.png" /></p>
+</li>
+<li>
+<p><strong>Hiring Hub</strong> -mallipohjaisessa sovelluksessa avaa rivi <strong>Resumes</strong>-järjestelmänäkymässä vasemmanpuoleisen valikon avulla. Ansioluettelorivi latautuu lomakkeena mallipohjaisessa sovelluksessa.</p>
+<p>Kopioi ansioluettelorivin URL.</p>
+<details class="info">
+<summary>Kuinka navigoida takaisin <strong>Hiring Hub</strong> -mallipohjaiseen sovellukseen, jos olet poistunut/sulkenut sen</summary>
+<ol>
+<li>Siirry osoitteeseen <a href="https://make.powerapps.com">https://make.powerapps.com</a> ja varmista, että olet kehittäjäympäristössä, jota käytät näissä harjoituksissa, tai vaihda siihen.</li>
+</ol>
+<p><img alt="Siirry make.powerapps.com" src="../../../../../translated_images/3.2_31_Note_01_BrowseToURL.a13dfc8b05a0b34f3a4c853f3d3e418864176b52b1b40c069da7712af5562aa5.fi.png" /></p>
+<ol>
+<li>Valitse <strong>Sovellukset</strong> vasemmanpuoleisessa valikkopaneelissa ja valitse <strong>Hiring Hub</strong> -mallipohjaiselle sovellukselle <strong>Pelaa</strong>-ikoni ladataksesi sen selaimeesi.</li>
+</ol>
+<p><img alt="Valitse Hiring Hub -mallipohjainen sovellus" src="../../../../../translated_images/3.2_31_Note_02_HiringHubApp.a09b6ea28b4fea8932809cb847cb0ea3d8faeb7b7b5604852de1f46ab1e9741b.fi.png" /></p>
+</details>
+<p><img alt="Kopioi ansioluettelorivin URL" src="../../../../../translated_images/3.2_31_CopyResumeURL.f6156f8792526129c2613922f0137221b2944fa8ffe7c04766d710521ad8765b.fi.png" /></p>
+</li>
+<li>
+<p>Siirry takaisin agenttivirtaan, korosta nykyinen paikkamerkki-URL-arvo ja poista se.</p>
+<p><img alt="Poista ansioluettelorivin URL-paikkamerkki" src="../../../../../translated_images/3.2_32_SelectResumeURLPlaceHolder.8db783de292428eaa8937242eba4a54ebb1df7bf4c1bc9391b016ee545fb2b9f.fi.png" /></p>
+</li>
+<li>
+<p>Liitä kopioitu URL <strong>url</strong>-ominaisuuteen <code>url</code>-ominaisuuden sisällä.</p>
+<p><img alt="Liitä kopioitu ansioluettelorivin URL" src="../../../../../translated_images/3.2_33_PasteResumeRowURL.d7ba92493d7597b89f75e2f17f76846ac17a9ba89c2e36729dc6b5dc1599b047.fi.png" /></p>
+</li>
+<li>
+<p>Näet seuraavan. Poista <code>GUID</code>-tunnusarvo lopusta. Korvataan tämä dynaamisella sisällöllä - <strong>ResumeId</strong>-parametrilla.</p>
+<p><img alt="Poista Näytä ansioluettelo URL-paikkamerkki" src="../../../../../translated_images/3.2_34_DeleteViewResumePlaceholderURL.7b26209eaeef6dc0a21b16140d05fe2f0e38de5f714575edd24d21dded58102a.fi.png" /></p>
+</li>
+<li>
+<p>Valitse oikealla oleva <strong>salaman kuva</strong> tai <strong>fx-ikoni</strong>.</p>
+<p>Valitse <strong>Dynaaminen sisältö</strong> -välilehdeltä <strong>ResumeId</strong>-parametri ja valitse <strong>Lisää</strong>.</p>
+<p><img alt="ResumeId-parametri" src="../../../../../translated_images/3.2_35_ResumeIdParameter.3dc710a7f5216944387f4d5f82c0a372eee23ee5259dec04147ad00e9c454d7d.fi.png" /></p>
+</li>
+<li>
+<p><strong>ResumeId</strong> lisätään dynaamiseksi sisällöksi. Seuraava keltaisella korostettu on ympäristötietosi <strong>Hiring Hub</strong> -mallipohjaisesta sovelluksesta.</p>
+<table>
+<thead>
+<tr>
+<th>Parametri</th>
+<th>Arvo</th>
+<th>Selitys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Organisaation URI</strong></td>
+<td>GUID</td>
+<td>Dataverse/Dynamics 365 -ympäristön organisaation URL</td>
+</tr>
+<tr>
+<td><strong>appid</strong></td>
+<td>GUID</td>
+<td>Tietyn mallipohjaisen sovelluksen avaamiseen käytetään joko appid- tai appname-kyselyparametria. Tässä tapauksessa käytetään appid-parametria</td>
+</tr>
+<tr>
+<td><strong>id</strong></td>
+<td>GUID</td>
+<td>Kyselyparametri, joka on ansioluettelorivin tunnus</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="ResumeId dynaaminen sisältö" src="../../../../../translated_images/3.2_36_ResumeIdDynamicContent.a1a40dfb4a83b60f1b75b02160890e3fec41c2c7df8adf32e02d652a57c1ee87.fi.png" /></p>
+</li>
+<li>
+<p>Olemme nyt valmiita konfiguroimaan <strong>Post card in a chat or channel</strong> -toiminnon 👏🏻 Poistu toimintokonfiguraatiopaneelista valitsemalla <strong>x</strong>-ikoni.</p>
+<p><img alt="Sulje paneeli" src="../../../../../translated_images/3.2_37_CloseActionPanel.23d07107381411aa9494ef36fb240682a0727a63e6f15082074b34a1defd517b.fi.png" /></p>
+</li>
+<li>
+<p>Lopuksi konfiguroidaan viimeinen toiminto, <strong>Vastaa agentille</strong>, lähettämällä teksti takaisin agentille prosessin päättämiseksi.</p>
+<p><strong>Vastaa agentille</strong> -toiminnossa valitse <strong>+Lisää lähtö</strong>.</p>
+<p><img alt="Valitse Lisää lähtö" src="../../../../../translated_images/3.2_38_AddAnOutput.de1a0e49033cb077eb5d2c226152bbb06dc12fb95d0496c69d469eecdb46c0ae.fi.png" /></p>
+</li>
+<li>
+<p>Valitse <strong>Teksti</strong> lähtötyypiksi.</p>
+<p><img alt="Valitse teksti lähtötyypiksi" src="../../../../../translated_images/3.2_39_SelectText.4e1e82c35fe9d1b569b668092d405aa9b0c81fbe67e7de68a660f2083ed3afdd.fi.png" /></p>
+</li>
+<li>
+<p>Syötä seuraava lähtönimeksi.</p>
+<p><img alt="Päätä keskustelu lähtö" src="../../../../../translated_images/3.2_40_EndConversationOutput.e392b58847d8439443c89459fccbbd88d4ea5e5fa562749b77407c46b9ff4ca4.fi.png" /></p>
+</li>
+<li>
+<p>Syötä seuraava lähtöarvoksi.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Valmis
+</span></code></pre></div>
+<p><img alt="Päätä keskustelu lähtöarvo" src="../../../../../translated_images/3.2_41_EndConversationOutputValue.2cb836900ee9fca802926676e613b077938f1106cc16e77ddd77af64ce92dcc8.fi.png" /></p>
+</li>
+<li>
+<p>Olemme nyt valmiita konfiguroimaan agenttivirran. Valitse <strong>Tallenna luonnos</strong> tallentaaksesi agenttivirran. Vahvistusviesti ilmestyy tallennuksen jälkeen.</p>
+<p><img alt="Tallenna luonnos" src="../../../../../translated_images/3.2_42_SaveDraft.1bb26eec40faf5d2c244d93f869344915e90423623e07e02cac2c1f8c73d1a4a.fi.png" /></p>
+</li>
+<li>
+<p>Ennen agenttivirran julkaisemista meidän täytyy päivittää agenttivirran tiedot. Valitse <strong>Yleiskatsaus</strong>-välilehti ja valitse <strong>Muokkaa</strong>.</p>
+<p>Syötä virran nimeksi seuraava.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Ilmoita Teamsin hakijakanavalle
+</span></code></pre></div>
+<p>Valitse sen jälkeen <strong>Päivitä</strong>-ikoni päivittääksesi agenttivirran kuvauksen AI:n avulla.</p>
+<p>Valitse sitten <strong>Tallenna</strong> tallentaaksesi päivitetyt tiedot agenttivirrasta.</p>
+<p><img alt="Muokkaa ja tallenna tiedot" src="../../../../../translated_images/3.2_43_EditDetails.f0c9b53a9c1b29e4aa3c34774680559ae9173f77b3a37817bab2296b77ffcca7.fi.png" /></p>
+</li>
+<li>
+<p>Siirry takaisin <strong>Suunnittelija</strong>-välilehdelle ja valitse <strong>Julkaise</strong> julkaistaksesi agenttivirran. Vahvistusviesti ilmestyy tallennuksen jälkeen.</p>
+<p><img alt="Julkaise agenttivirta" src="../../../../../translated_images/3.2_44_PublishAgentFlow.3014e6de5e53aa5fc2021bf6e11b901c4990b4fbb4d4cee33cc6d5b6cc641ed8.fi.png" /></p>
+</li>
+<li>
+<p>Agenttivirta täytyy nyt lisätä työkaluksi <strong>Application Intake Agent</strong> -agenttiin. Siirry takaisin <strong>Hiring Agent</strong> -agenttiin ja valitse <strong>Agentit</strong>-välilehti, sitten valitse <strong>Application Intake Agent</strong>.</p>
+<p><img alt="Valitse Application Intake Agent" src="../../../../../translated_images/3.2_45_ApplicationIntakeAgent.0446b1762d0f499e880e7984f59669639193566f72539cd4fba5c62cd1fe8726.fi.png" /></p>
+</li>
+<li>
+<p>Agentin <strong>Tiedot</strong>-osiossa päivitetään <strong>Kuvaus</strong>-kenttä. Kopioi seuraava ja liitä kuvauksen tekstin loppuun.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>ja ilmoita myös Teamsin hakijakanavalle
+</span></code></pre></div>
+<p><img alt="Päivitä agentin kuvaus" src="../../../../../translated_images/3.2_46_UpdateAgentDescription.56344699cd3cc5e417e8f95362ed2288d0c0391f33bd98872e7e008a545175f0.fi.png" /></p>
+</li>
+<li>
+<p>Seuraavaksi lisätään agenttivirta työkaluksi. Vieritä alas ja valitse <strong>+ Lisää</strong>.</p>
+<p><img alt="Valitse Lisää" src="../../../../../translated_images/3.2_47_AddTools.c7557e272bd731129dffe9edebba3b04170d27806aaa14fffbe3d66b7b61808b.fi.png" /></p>
+</li>
+<li>
+<p>Valitse aiemmin luotu agenttivirta, <strong>Ilmoita Teamsin hakijakanavalle</strong>.</p>
+<p><img alt="Valitse agenttivirta" src="../../../../../translated_images/3.2_48_NotifyTeamsApplicantChannelAgentFlow.5985f570786edef4eac93455f7a07978c0daf54e1371660bfd56a4c16b6aaf79.fi.png" /></p>
+</li>
+<li>
+<p>Valitse seuraavaksi <strong>Lisää ja konfiguroi</strong>.</p>
+<p><img alt="Valitse Lisää ja konfiguroi" src="../../../../../translated_images/3.2_49_AddAndConfigure.c2d6cccfa9e4bb23ff58b615ad16d0b3ade4ef867b73b9196a45df6990d8072f.fi.png" /></p>
+</li>
+<li>
+<p>Agenttivirran <strong>Syötteet</strong>-osiossa näkyvät kolme aiemmin agenttivirrassa konfiguroitua syötettä. Oletuksena <strong>Täytä käyttäen</strong>-konfiguraatio on asetettu <strong>Täytä dynaamisesti AI:lla</strong>. Pidetään tämä asetus ennallaan, sillä tapahtumatriggerin kehotus (viimeisessä toiminnossa, <strong>Lähetä kehotus määritetylle copilotille käsittelyä varten</strong> - tämä on vaiheet 38-44 <strong>Lab 3.1 - Automatisoi sähköpostitse vastaanotettujen ansioluetteloiden lataaminen Dataverseen</strong>) sisältää parametriarvot, jotka AI poimii.</p>
+<p><img alt="Työkalun agenttivirran syötteet" src="../../../../../translated_images/3.2_50_Inputs.9fbb57b83b533d5a60f957505bb1e5430886ec9e6c70c10ed1c641d6b33fcc21.fi.png" /></p>
+</li>
+<li>
+<p>Nyt kun työkalu on lisätty <strong>Application Intake Agent</strong> -agenttiin, agentin ohjeet täytyy päivittää. Valitse <strong>takaisin nuoli</strong>-ikoni palataksesi agenttilistaan.</p>
+<p><img alt="Valitse takaisin nuoli-ikoni" src="../../../../../translated_images/3.2_51_SelectBack.6a9a55176d931895777822d3f9276d5d12ffe379a8860dd521e1c895e8188bba.fi.png" /></p>
+</li>
+<li>
+<p>Valitse <strong>Application Intake Agent</strong> <strong>Agentit</strong>-välilehdeltä <strong>Hiring Agent</strong> -agentissa.</p>
+<p><img alt="Valitse Application Intake Agent" src="../../../../../translated_images/3.2_52_SelectApplicationIntakeAgent.039140313422e833389fd134b3a70a0eed11ba175ede5dbdc4abcce6004c7d2d.fi.png" /></p>
+</li>
+<li>
+<p><strong>Ohjeet</strong>-kentässä lisää uusi rivi <code>2.Post-Upload</code>-ohjeiden jälkeen. Kopioi ja liitä seuraavat ohjeet.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Prosessi ansioluettelon lataamiseksi sähköpostitse
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>1. Kun saat viestin, **Lähetä [ResumeId (teksti)] = &quot;1680265f-5793-f011-b41b-7c1e525be9f7&quot; ja [ResumeTitle (teksti_1)] = &quot;TAYLOR TESTPERSON (FICTITIOUS).pdf&quot; ja [ResumeNumber (teksti_2)]= &quot;R01026&quot; työkalulle &quot;Ilmoita Teamsin hakijakanavalle&quot; lapsiagentissa &quot;Application Intake Agent&quot;, kutsu [AGENT FLOW PLACEHOLDER]
+</span></code></pre></div>
+<p><img alt="Päivitä Application Intake Agentin ohjeet" src="../../../../../translated_images/3.2_53_PasteCopiedInstructions.f24ed715e907cf023449a54b894354ca1252b198e9be694eec2875f7f647f9c2.fi.png" /></p>
+</li>
+<li>
+<p>Korosta <code>[AGENT FLOW PLACEHOLDER</code>-teksti.</p>
+<p><img alt="Korosta paikkamerkki" src="../../../../../translated_images/3.2_54_HighlightPlaceholder.6c3fcac3c8f4fb6e5cce2dbd6b6548b84652d009e20fa4a01183a9a1b42b24fb.fi.png" /></p>
+</li>
+<li>
+<p>Syötä eteenpäin vinoviiva <code>/</code> ja valitse <strong>Ilmoita Teamsin hakijakanavalle</strong>-työkalu.</p>
+<p><img alt="Valitse Ilmoita Teamsin hakijakanavalle -työkalu" src="../../../../../translated_images/3.2_55_NotifyTeamsApplicatnChannelTool.2e3dd1e9ee9b2dfe10e1f2feb7e3b74b08856ce3afb16dafae1f2c4b73da904f.fi.png" />
+1. Agenttivirta käynnistetään nyt <strong>Application Intake Agent</strong> -agentin toimesta ohjeiden mukaisesti, kun tapahtumakäynnistimen viimeinen toiminto (<strong>Lähettää kehotteen määritetylle copilotille käsittelyä varten</strong>) lähettää kehotteen, joka sisältää parametrien arvot takaisin agentille.</p>
+<p>Valitse <strong>Tallenna</strong> tallentaaksesi päivitetyt ohjeet <strong>Application Intake Agent</strong> -agentille.</p>
+<p><img alt="Valitse Tallenna" src="../../../../../translated_images/3.2_56_Save.6abb0131f96b20d3753b5990313eaea6a237bef2bf0e2103a2ee5ba570fd7c04.fi.png" /></p>
+</li>
+<li>
+<p>Ohjeet päivitetään, kun agentti on tallennettu.</p>
+<p><img alt="Ohjeet päivitetty" src="../../../../../translated_images/3.2_57_InstructionsUpdated.5bfbfe2ca1da16284358a9917246bd8676cd6c095839ed1c69361d992cacd2b3.fi.png" /></p>
+</li>
+<li>
+<p>Nyt meidän täytyy <strong>Julkaista</strong> <strong>Hiring Agent</strong>. Valitse <strong>Julkaise</strong> oikeasta yläkulmasta ja valitse <em>Julkaise tämä agentti</em> -modaalissa <strong>Julkaise</strong>.</p>
+<p><img alt="Julkaise Hiring Agent" src="../../../../../translated_images/3.2_58_PublishAgent.e7ec81c81b735de0cd11516aa944c759ea510e2b0bc9acf9f00d42d788896991.fi.png" /></p>
+</li>
+<li>
+<p>Julkaisun jälkeen ilmestyy vahvistusviesti, joka ilmoittaa, että agentti on julkaistu.</p>
+<p><img alt="Vahvistusviesti" src="../../../../../translated_images/3.2_59_AgentPublished.d15e01232544cf08943260dfbf61c92339dbd187620349e7c5a43add4796ed12.fi.png" /></p>
+</li>
+</ol>
+<p>Nyt voimme testata agenttia!</p>
+<h3 id="lab-33-testaa-tapahtumakaynnistin">Lab 3.3 - Testaa tapahtumakäynnistin<a class="headerlink" href="#lab-33-testaa-tapahtumakaynnistin" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Tapahtumakäynnistimen suorittamiseksi täytyy lähettää sähköposti, jossa on liitteenä ansioluettelo PDF-tiedostona. Luo uusi sähköpostiviesti Outlookissa.</p>
+<table>
+<thead>
+<tr>
+<th>Sähköpostikomponentti</th>
+<th>Tiedot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vastaanottaja</strong></td>
+<td>Käytä kirjautunutta käyttäjätiliäsi arvona</td>
+</tr>
+<tr>
+<td><strong>Tiedostoliite</strong></td>
+<td>Lataa <a href="../../../../../docs/operative-preview/test-data/resumes/TAYLOR%20TESTPERSON%20(FICTITIOUS).pdf">TAYLOR TESTPERSON (FICTITIOUS)</a> -tiedosto</td>
+</tr>
+<tr>
+<td><strong>Viestin sisältö</strong></td>
+<td>Kopioi ja liitä alla oleva teksti sähköpostin sisältöön</td>
+</tr>
+</tbody>
+</table>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Hyvä rekrytointipäällikkö,
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>Kirjoitan ilmaistakseni kiinnostukseni Senior Power Platform Engineer -tehtävään organisaatiossanne. Yli yhdeksän vuoden kokemuksella turvallisten ja skaalautuvien ratkaisujen toimittamisesta Microsoftin pilvialustoilla olen varma, että voin tehokkaasti tukea tiimiänne.
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>Viimeisimmässä roolissani Lead Power Platform Engineerinä kehitin automatisoidun ansioluetteloiden vastaanottoputken, joka vähensi manuaalista lajittelua ja paransi hakukelpoisuutta. Olen toimittanut HR-tapausten hallintasovelluksia, ottanut käyttöön ratkaisukeskeisiä työnkulkuja ja toteuttanut PR-tarkistuksia parantaakseni käyttöönottoaikoja. Erikoisosaamiseeni kuuluvat Power Apps, Power Automate, Power Pages, Dataverse ja useat Microsoft 365 -palvelut sekä integraatiot Graph/REST API:iden ja Azure Functionsin kanssa.
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>Aiemmin kehitin Teams-hyväksyntöjä mukautetuilla korteilla, mikä lyhensi hyväksyntäaikoja samalle päivälle, ja loin vankkoja virheenkäsittelykehyksiä. Taustani sisältää myös vanhojen työnkulkujen siirtämisen Power Automateen ja itsepalveluportaalien rakentamisen, joita sadat työntekijät ovat ottaneet käyttöön.
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>Minulla on tietojenkäsittelytieteen kandidaatin tutkinto ja olen sertifioitu Power Platform Developer (PL-400) ja Solution Architect (PL-600). Olen myös intohimoinen mentoroinnista ja olen toiminut vapaaehtoisena paikallisissa maker-ryhmissä.
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>Liitteenä on ansioluetteloni harkittavaksenne. Keskustelen mielelläni siitä, miten taitoni ja kokemukseni vastaavat tarpeisiinne.
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>Kiitos ajastanne ja huomiostanne.
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>Ystävällisin terveisin,
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>Taylor Testperson
+</span></code></pre></div>
+<p><strong>Lähetä</strong> sähköposti, kun se on valmis.</p>
+<p><img alt="Luo sähköposti PDF-liitteellä" src="../../../../../translated_images/3.3_01_ComposeEmailWithAttachment.eccba1bbcc276b4373277b193a66d8818b712c6ab9468ee12902545522b670f7.fi.png" /></p>
+</li>
+<li>
+<p>Power Automate -valmistajaportaalissa tapahtumakäynnistimen virralle, valitse <strong>Päivitä</strong>-kuvake nähdäksesi lähetetyn sähköpostin onnistuneen virran suorituksen.</p>
+<p><img alt="Valitse päivitä-kuvake nähdäksesi virran suorituksen" src="../../../../../translated_images/3.3_02_FlowRun.0e99756ebc5fba371dc72719b0619736626934461e58db2dc153535cbabcc1e8.fi.png" /></p>
+</li>
+<li>
+<p>Palaa Copilot Studioon ja valitse <strong>Hiring Agent</strong> -agentissa <strong>Toiminta</strong>-välilehti.</p>
+<p><img alt="Valitse Toiminta-välilehti" src="../../../../../translated_images/3.3_03_SelectActivity.11d78735a8a2a1f64443d285deb47f2bacc5bd53ded039791215f9465dbc3f76.fi.png" /></p>
+</li>
+<li>
+<p><strong>Toiminta</strong>-välilehti latautuu ja näyttää kaikki <strong>Hiring Agent</strong> -agentin toiminnot. Näkyvissä on toiminto nimeltä <strong>Automated</strong>, jonka tila on <strong>Complete</strong>. Tämä toiminto edustaa tapahtumakäynnistintä ja agenttivirtaa, joka käynnistettiin.</p>
+<p><img alt="Toiminto suoritettu" src="../../../../../translated_images/3.3_04_StatusComplete.dbe14ffb9414b0f4d869841426c4ca595d7a664bf13f4b5e2e29a4e251b9064c.fi.png" /></p>
+</li>
+<li>
+<p>Valitse toiminto ja valitse tapahtumakäynnistin toimintokartassa. Huomaa oikeanpuoleisessa paneelissa, kuinka kehotteen syöttöparametrit sisältävät <code>Resume Id</code>, <code>Resume Title</code> ja <code>Resume Number</code> -parametrien arvot <strong>Dataverse</strong>-riviltä, joka luotiin. Tämä johtuu aiemmin vaiheissa 18–27 <strong>Lab 3.1 - Automate uploading resumes to Dataverse received by email</strong> määritetystä dynaamisesta sisällöstä.</p>
+<p><img alt="Tapahtumakäynnistin" src="../../../../../translated_images/3.3_05_EventTrigger.cbd73cd43a79e88e782d1e47ac8ddacdbe30d582a4da61a31010f44a9dacdd12.fi.png" /></p>
+</li>
+<li>
+<p>Siirry takaisin <strong>Hiring Hub</strong> -mallipohjaiseen sovellukseen ja valitse <strong>Resumes system view</strong> -näkymässä <strong>Päivitä</strong> päivittääksesi näkymän. Sähköpostilla lähetetylle ansioluettelolle luotu uusi rivi näkyy nyt, koska se luotiin tapahtumakäynnistimen kautta.</p>
+<p><img alt="Ansioluettelorivi luotu" src="../../../../../translated_images/3.3_06_ResumeRowCreated.9ab850d8d7c066aad8531409b00a4de5f214b4d8d209d39fa0d493d5c55e041d.fi.png" /></p>
+</li>
+<li>
+<p>Palaa Copilot Studioon ja valitse <strong>Notify Teams Applicant Channel</strong> -agenttivirta <strong>Application Intake Agent</strong> -agentissa toimintokartassa. Huomaa oikeanpuoleisessa paneelissa, kuinka syötteillä on arvot Dataverse-riviltä. Tämä johtuu tapahtumakäynnistimen viimeisestä toiminnosta (<strong>Lähettää kehotteen määritetylle copilotille käsittelyä varten</strong>), joka sisältää parametrien arvot juuri luodusta Dataverse-rivistä. Näin voimme siirtää parametrien arvot tapahtumakäynnistimistä agenttivirtoihin.</p>
+<p><img alt="Valitse agenttivirta" src="../../../../../translated_images/3.3_07_NotifyTeamsApplicantChannel.9b6c4654197efca9c88dde72cfb38812038ef5f6bdce8c309046c02643092bb6.fi.png" /></p>
+</li>
+<li>
+<p>Lopuksi tarkastellaan mukautettua korttia, joka on julkaistu kanavalle <strong>Microsoft Teams</strong> -sovelluksessa. Kanavalla näemme mukautetun kortin, joka näyttää tiedot juuri luodusta ansioluettelorivistä Dataversessa. Vie hiiri mukautetun kortin alussa olevan hyperlinkin päälle, huomaa kuinka URL on Resumes system view -näkymän URL, jonka määritimme aiemmin JSON-payloadissa (vaiheet 15–19 <strong>Lab 3.2 - Notify a Teams channel using an adaptive card</strong>).</p>
+<p><img alt="Mukautettu kortti Resumes-taulukon näkymän URL" src="../../../../../translated_images/3.3_08_AdaptiveCardResumeTableURL.5a59821d60c8698e5c9e4746806b975bbdf3c4400dc0bb02a53f350bdea569e9.fi.png" /></p>
+</li>
+<li>
+<p>Valitse hyperlinkki, ja sinut ohjataan Resumes system view -näkymään <strong>Hiring Hub</strong> -mallipohjaisessa sovelluksessa selaimessasi.</p>
+<p><img alt="Ansioluettelonäkymä Hiring Hub -mallipohjaisessa sovelluksessa" src="../../../../../translated_images/3.3_09_ResumeTableSystemView.81f52ab85aadda7d9131ced31d024fb4b411ccf600dd230d9d7e931c476e271c.fi.png" /></p>
+</li>
+<li>
+<p>Palaa mukautettuun korttiin, joka on julkaistu kanavalle Microsoft Teamsissa. Tällä kertaa vie hiiri <strong>View Resume</strong> -kohdan päälle, joka on mukautetun kortin <code>Action.OpenURL</code>-toiminto. Huomaa kuinka URL on ansioluettelorivi, jonka määritimme aiemmin JSON-payloadissa (vaiheet 30–36 <strong>Lab 3.2 - Notify a Teams channel using an adaptive card</strong>).</p>
+<p><img alt="Mukautettu kortti ansioluettelorivin URL" src="../../../../../translated_images/3.3_10_AdaptiveCardResumeRowURL.2063a075c2d4adec27dfcc2ea4c01a385d791e0c4fc127caba912bde14bf77d6.fi.png" /></p>
+</li>
+<li>
+<p>Valitse toiminto, ja sinut ohjataan ansioluettelorivin lomakkeeseen <strong>Hiring Hub</strong> -mallipohjaisessa sovelluksessa selaimessasi.</p>
+<p><img alt="Ansioluettelorivi Hiring Hub -mallipohjaisessa sovelluksessa" src="../../../../../translated_images/3.3_11_ResumeRow.6f051ed512d396712a04ee98319d6643516e0bbfbf8a9de07d3df7d264563b9c.fi.png" /></p>
+</li>
+</ol>
+<h2 id="tehtava-suoritettu">✅ Tehtävä suoritettu<a class="headerlink" href="#tehtava-suoritettu" title="Permanent link">&para;</a></h2>
+<p>Onnittelut! 👏🏻 Erinomaista työtä, Operative.</p>
+<p>✅ Tapahtumakäynnistin: olet luonut tapahtumakäynnistimen, joka siirtää Dataverse-parametrien arvot agenttivirtaan.<br />
+✅ Rakennettu agenttivirta: käyttää Dataverse-parametrien arvoja julkaistakseen mukautetun kortin kanavalle Microsoft Teamsissa HR-rekrytointitiimin ilmoittamiseksi.<br />
+✅ Päivitetty lapsiagentin ohjeet: käynnistää virran, kun tapahtumakäynnistin on suoritettu.</p>
+<p>Tämä mahdollistaa <strong>Hiring Agent</strong> -agentin toimimaan itsenäisesti aina, kun ansioluetteloita vastaanotetaan sähköpostiliitteinä ja ilmoittamaan HR-rekrytointitiimille manuaalista tarkistusta varten.</p>
+<p>Tämä oli <strong>Lab 03 - Automating candidate application emails</strong> -osion loppu, valitse alla oleva linkki siirtyäksesi seuraavaan oppituntiin.</p>
+<p>⏭️ <a href="../04-agent-instructions/">Siirry <strong>Authoring Agent Instructions</strong> -oppituntiin</a></p>
+<h2 id="taktiset-resurssit">📚 Taktiset resurssit<a class="headerlink" href="#taktiset-resurssit" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/training/modules/autonomous-agents-online-workshop/?WT.mc_id=power-188561-ebenitez">Tee agentistasi autonominen Copilot Studiossa</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-trigger-event?WT.mc_id=power-188561-ebenitez">Lisää tapahtumakäynnistin</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow?WT.mc_id=power-188561-ebenitez">Käytä agenttivirtoja agenttisi kanssa</a></p>
+<p>📖 <a href="https://learn.microsoft.com/power-automate/triggers-introduction?WT.mc_id=power-188561-ebenitez">Power Automate -käynnistimien esittely</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow-create?WT.mc_id=power-188561-ebenitez">Power Automate -virtojen käyttö agenttien kanssa</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/admin-data-loss-prevention?WT.mc_id=power-188561-ebenitez">Tietojen menetyksen estäminen Copilot Studiossa</a></p>
+<hr />
+<p><strong>Vastuuvapauslauseke</strong>:<br />
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

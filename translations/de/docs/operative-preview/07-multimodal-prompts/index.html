@@ -1,0 +1,1410 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/de/docs/operative-preview/07-multimodal-prompts/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-07-extrahieren-von-lebenslaufinhalten-mit-multimodalen-eingabeaufforderungen" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-document-resume-recon" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAME: DOCUMENT RESUME RECON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missionsbeschreibung" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Missionsbeschreibung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ziele" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Ziele
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verstandnis-von-multimodalen-eingabeaufforderungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Verständnis von multimodalen Eingabeaufforderungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modellauswahl-im-ai-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Modellauswahl im AI Builder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ausgabeformate-text-vs-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Ausgabeformate: Text vs JSON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-7-aufbau-eines-systems-zur-lebenslaufextraktion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 7: Aufbau eines Systems zur Lebenslaufextraktion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-abgeschlossen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 Mission abgeschlossen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taktische-ressourcen" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Taktische Ressourcen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "616d142d4fb5f45d2a168fad6c1f9545",
+  "translation_date": "2025-10-17T19:34:13+00:00",
+  "source_file": "docs/operative-preview/07-multimodal-prompts/README.md",
+  "language_code": "de"
+}
+-->
+<h1 id="mission-07-extrahieren-von-lebenslaufinhalten-mit-multimodalen-eingabeaufforderungen">🚨 Mission 07: Extrahieren von Lebenslaufinhalten mit multimodalen Eingabeaufforderungen<a class="headerlink" href="#mission-07-extrahieren-von-lebenslaufinhalten-mit-multimodalen-eingabeaufforderungen" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="codename-document-resume-recon">🕵️‍♂️ CODENAME: <code>DOCUMENT RESUME RECON</code><a class="headerlink" href="#codename-document-resume-recon" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Zeitfenster der Operation:</strong> <code>~45 Minuten</code></p>
+</blockquote>
+<h2 id="missionsbeschreibung">🎯 Missionsbeschreibung<a class="headerlink" href="#missionsbeschreibung" title="Permanent link">&para;</a></h2>
+<p>Willkommen, Operative. Ihre bisherigen Missionen haben Ihnen mächtige Fähigkeiten zur Agenten-Orchestrierung vermittelt, aber jetzt ist es an der Zeit, eine bahnbrechende Fähigkeit freizuschalten: <strong>Multimodale Dokumentenanalyse</strong>.</p>
+<p>Ihre Aufgabe, falls Sie sich dafür entscheiden, ist <strong>Document Resume Recon</strong> – das präzise Extrahieren strukturierter Daten aus beliebigen Dokumenten. Während Ihre Agenten Texte problemlos verarbeiten können, erfordert die reale Welt den täglichen Umgang mit PDFs, Bildern und komplexen Dokumenten. Lebensläufe stapeln sich, Rechnungen müssen verarbeitet werden, und Formulare benötigen sofortige Digitalisierung.</p>
+<p>Diese Mission wird Sie von einem reinen Text-Agenten-Ersteller zu einem <strong>multimodalen Experten</strong> machen. Sie lernen, KI so zu konfigurieren, dass sie Dokumente wie ein menschlicher Analyst liest und versteht – jedoch mit der Geschwindigkeit und Konsistenz von KI. Am Ende der Mission haben Sie ein vollständiges System zur Lebenslaufextraktion aufgebaut, das in Ihren Einstellungsworkflow integriert ist.</p>
+<p>Die hier erlernten Techniken werden für die fortgeschrittenen Datenverarbeitungsoperationen in Ihrer nächsten Mission unerlässlich sein.</p>
+<h2 id="ziele">🔎 Ziele<a class="headerlink" href="#ziele" title="Permanent link">&para;</a></h2>
+<p>In dieser Mission lernen Sie:</p>
+<ol>
+<li>Was multimodale Eingabeaufforderungen sind und wann verschiedene KI-Modelle verwendet werden sollten</li>
+<li>Wie man Eingabeaufforderungen mit Bild- und Dokumenteneingaben konfiguriert</li>
+<li>Wie man die Ausgabe von Eingabeaufforderungen als JSON für die strukturierte Datenextraktion formatiert</li>
+<li>Best Practices für die Eingabeaufforderungserstellung bei der Dokumentenanalyse</li>
+<li>Wie man multimodale Eingabeaufforderungen mit Agent Flows integriert</li>
+</ol>
+<h2 id="verstandnis-von-multimodalen-eingabeaufforderungen">🧠 Verständnis von multimodalen Eingabeaufforderungen<a class="headerlink" href="#verstandnis-von-multimodalen-eingabeaufforderungen" title="Permanent link">&para;</a></h2>
+<h3 id="was-macht-eine-eingabeaufforderung-multimodal">Was macht eine Eingabeaufforderung "multimodal"?<a class="headerlink" href="#was-macht-eine-eingabeaufforderung-multimodal" title="Permanent link">&para;</a></h3>
+<p>Traditionelle Eingabeaufforderungen arbeiten nur mit Text. Multimodale Eingabeaufforderungen können jedoch mehrere Arten von Inhalten verarbeiten:</p>
+<ul>
+<li><strong>Text</strong>: Schriftliche Anweisungen und Inhalte</li>
+<li><strong>Bilder</strong>: Fotos, Screenshots, Diagramme und Grafiken (.PNG, .JPG, .JPEG)  </li>
+<li><strong>Dokumente</strong>: Rechnungen, Lebensläufe, Formulare (.PDF)</li>
+</ul>
+<p>Diese Fähigkeit eröffnet leistungsstarke Szenarien wie die Analyse von Lebensläufen, die Verarbeitung von Rechnungen oder die Extraktion von Daten aus Formularen.</p>
+<h3 id="warum-multimodal-fur-ihre-workflows-wichtig-ist">Warum multimodal für Ihre Workflows wichtig ist<a class="headerlink" href="#warum-multimodal-fur-ihre-workflows-wichtig-ist" title="Permanent link">&para;</a></h3>
+<p>Täglich steht Ihre Organisation vor diesen Herausforderungen bei der Dokumentenverarbeitung:</p>
+<ul>
+<li><strong>Lebenslauf-Screening</strong>: Das manuelle Lesen von Hunderten von Lebensläufen kostet wertvolle Zeit</li>
+<li><strong>Rechnungsverarbeitung</strong>: Extrahieren von Lieferantendaten, Beträgen und Daten aus verschiedenen Dokumentformaten</li>
+<li><strong>Formularanalyse</strong>: Umwandlung von Papierformularen in digitale Daten</li>
+</ul>
+<p>Multimodale Eingabeaufforderungen beseitigen diese Engpässe, indem sie das Sprachverständnis der KI mit visuellen Analysefähigkeiten kombinieren. Dies gibt Ihrer KI die Fähigkeit, Dokumente genauso effektiv wie Texte zu verarbeiten.</p>
+<h3 id="haufige-geschaftsszenarien">Häufige Geschäftsszenarien<a class="headerlink" href="#haufige-geschaftsszenarien" title="Permanent link">&para;</a></h3>
+<p>Hier sind einige Beispiele, wie multimodale Eingabeaufforderungen angewendet werden können:</p>
+<table>
+<thead>
+<tr>
+<th>Szenario</th>
+<th>Aufgabe</th>
+<th>Beispiel-Ausgabefelder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lebenslauf-Screening</strong></td>
+<td>Extrahieren von Kandidatenname, E-Mail, Telefonnummer, aktuellem Titel, Berufserfahrung und Schlüsselkompetenzen.</td>
+<td>Kandidatenname, E-Mail-Adresse, Telefonnummer, aktueller Jobtitel, Berufserfahrung, Schlüsselkompetenzen</td>
+</tr>
+<tr>
+<td><strong>Rechnungsverarbeitung</strong></td>
+<td>Extrahieren von Lieferanteninformationen, Rechnungsdatum, Gesamtbetrag und Positionen aus dieser Rechnung.</td>
+<td>Lieferantenname, Rechnungsdatum, Gesamtbetrag, Rechnungspositionen</td>
+</tr>
+<tr>
+<td><strong>Formularanalyse</strong></td>
+<td>Analysieren dieses Antragsformulars und Extrahieren aller ausgefüllten Felder.</td>
+<td>Feldname (z. B. Bewerbername), Eingetragener Wert (z. B. John Doe), ...</td>
+</tr>
+<tr>
+<td><strong>ID-Dokumentprüfung</strong></td>
+<td>Extrahieren von Name, ID-Nummer, Ablaufdatum und Adresse aus diesem Identifikationsdokument. Überprüfen, ob alle Texte klar lesbar sind, und markieren Sie unklare Abschnitte.</td>
+<td>Vollständiger Name, Identifikationsnummer, Ablaufdatum, Adresse, Kennzeichnung unklarer Abschnitte</td>
+</tr>
+</tbody>
+</table>
+<h2 id="modellauswahl-im-ai-builder">⚙️ Modellauswahl im AI Builder<a class="headerlink" href="#modellauswahl-im-ai-builder" title="Permanent link">&para;</a></h2>
+<p>AI Builder bietet verschiedene Modelle, die für spezifische Aufgaben optimiert sind. Zu verstehen, welches Modell verwendet werden sollte, ist entscheidend für den Erfolg.</p>
+<div class="admonition note">
+<p class="admonition-title">Stand: September 2025</p>
+<p>AI Builder-Modelle werden regelmäßig aktualisiert. Überprüfen Sie die neuesten <a href="https://learn.microsoft.com/ai-builder/prompt-modelsettings">AI Builder-Modell-Einstellungen-Dokumentation</a> für aktuelle Modellverfügbarkeit.</p>
+</div>
+<h3 id="modellvergleich">Modellvergleich<a class="headerlink" href="#modellvergleich" title="Permanent link">&para;</a></h3>
+<p>Alle folgenden Modelle unterstützen Vision- und Dokumentenverarbeitung:</p>
+<table>
+<thead>
+<tr>
+<th>Modell</th>
+<th>💰Kosten</th>
+<th>⚡Geschwindigkeit</th>
+<th>✅Am besten geeignet für</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GPT-4.1 mini</strong></td>
+<td>Basic (kostengünstigstes Modell)</td>
+<td>Schnell</td>
+<td>Standard-Dokumentenverarbeitung, Zusammenfassungen, budgetbewusste Projekte</td>
+</tr>
+<tr>
+<td><strong>GPT-4.1</strong></td>
+<td>Standard</td>
+<td>Moderat</td>
+<td>Komplexe Dokumente, fortgeschrittene Inhaltserstellung, hohe Genauigkeitsanforderungen</td>
+</tr>
+<tr>
+<td><strong>o3</strong></td>
+<td>Premium</td>
+<td>Langsam (gründliche Analyse)</td>
+<td>Datenanalyse, kritisches Denken, anspruchsvolle Problemlösung</td>
+</tr>
+<tr>
+<td><strong>GPT-5 chat</strong></td>
+<td>Standard</td>
+<td>Verbesserte Geschwindigkeit</td>
+<td>Neueste Dokumentenverständnis, höchste Antwortgenauigkeit</td>
+</tr>
+<tr>
+<td><strong>GPT-5 reasoning</strong></td>
+<td>Premium</td>
+<td>Langsam (komplexe Analyse)</td>
+<td>Anspruchsvollste Analyse, Planung, fortgeschrittenes Denken</td>
+</tr>
+</tbody>
+</table>
+<h3 id="erklarung-der-temperatureinstellungen">Erklärung der Temperatureinstellungen<a class="headerlink" href="#erklarung-der-temperatureinstellungen" title="Permanent link">&para;</a></h3>
+<p>Die Temperatur steuert, wie kreativ oder vorhersehbar die KI-Antworten sind:</p>
+<ul>
+<li><strong>Temperatur 0</strong>: Am vorhersehbarsten, konsistente Ergebnisse (am besten für Datenextraktion)</li>
+<li><strong>Temperatur 0.5</strong>: Ausgewogene Kreativität und Konsistenz  </li>
+<li><strong>Temperatur 1</strong>: Maximale Kreativität (am besten für Inhaltserstellung)</li>
+</ul>
+<p>Für die Dokumentenanalyse verwenden Sie <strong>Temperatur 0</strong>, um eine konsistente Datenextraktion sicherzustellen.</p>
+<h2 id="ausgabeformate-text-vs-json">📊 Ausgabeformate: Text vs JSON<a class="headerlink" href="#ausgabeformate-text-vs-json" title="Permanent link">&para;</a></h2>
+<p>Die Wahl des richtigen Ausgabeformats ist entscheidend für die nachgelagerte Verarbeitung.</p>
+<h3 id="wann-textausgabe-verwenden">Wann Textausgabe verwenden<a class="headerlink" href="#wann-textausgabe-verwenden" title="Permanent link">&para;</a></h3>
+<p>Textausgabe eignet sich gut für:</p>
+<ul>
+<li>Menschlich lesbare Zusammenfassungen</li>
+<li>Einfache Klassifizierungen</li>
+<li>Inhalte, die keine strukturierte Verarbeitung benötigen</li>
+</ul>
+<h3 id="wann-json-ausgabe-verwenden">Wann JSON-Ausgabe verwenden<a class="headerlink" href="#wann-json-ausgabe-verwenden" title="Permanent link">&para;</a></h3>
+<p>JSON-Ausgabe ist unerlässlich für:</p>
+<ul>
+<li>Strukturierte Datenextraktion</li>
+<li>Integration mit Datenbanken oder Systemen</li>
+<li>Verarbeitung in Power Automate-Flows</li>
+<li>Konsistente Feldzuordnung</li>
+</ul>
+<h3 id="json-best-practices">JSON Best Practices<a class="headerlink" href="#json-best-practices" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Klare Feldnamen definieren</strong>: Verwenden Sie beschreibende, konsistente Benennungen</li>
+<li><strong>Beispiele bereitstellen</strong>: Fügen Sie Beispielausgaben und Werte für jedes Feld hinzu</li>
+<li><strong>Datentypen spezifizieren</strong>: Geben Sie Beispiele für Daten, Zahlen und Text an</li>
+<li><strong>Fehlende Daten handhaben</strong>: Planen Sie für Null- oder leere Werte</li>
+<li><strong>Struktur validieren</strong>: Testen Sie mit verschiedenen Dokumenttypen</li>
+</ol>
+<h3 id="dokumentqualitatsuberlegungen">Dokumentqualitätsüberlegungen<a class="headerlink" href="#dokumentqualitatsuberlegungen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Auflösung</strong>: Stellen Sie sicher, dass Bilder klar und lesbar sind</li>
+<li><strong>Ausrichtung</strong>: Drehen Sie Dokumente vor der Verarbeitung in die richtige Ausrichtung</li>
+<li><strong>Formatunterstützung</strong>: Testen Sie mit Ihren spezifischen Dokumenttypen (PDF, JPG, PNG)</li>
+<li><strong>Größenbeschränkungen</strong>: Beachten Sie die Dateigrößenbeschränkungen in Ihrer Umgebung</li>
+</ul>
+<h3 id="leistungsoptimierung">Leistungsoptimierung<a class="headerlink" href="#leistungsoptimierung" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Geeignete Modelle wählen</strong>: Modelle nur bei Bedarf upgraden</li>
+<li><strong>Eingabeaufforderungen optimieren</strong>: Kürzere, klarere Anweisungen funktionieren oft besser</li>
+<li><strong>Fehlerbehandlung</strong>: Planen Sie für Dokumente, die nicht verarbeitet werden können</li>
+<li><strong>Kosten überwachen</strong>: Verschiedene Modelle verbrauchen unterschiedliche Mengen an AI Builder-Credits</li>
+</ul>
+<h2 id="lab-7-aufbau-eines-systems-zur-lebenslaufextraktion">🧪 Lab 7: Aufbau eines Systems zur Lebenslaufextraktion<a class="headerlink" href="#lab-7-aufbau-eines-systems-zur-lebenslaufextraktion" title="Permanent link">&para;</a></h2>
+<p>Zeit, Ihr Wissen über multimodale Eingabeaufforderungen in die Praxis umzusetzen. Sie werden ein umfassendes System zur Lebenslaufextraktion erstellen, das Kandidatendokumente analysiert und in strukturierte Daten für Ihren Einstellungsworkflow umwandelt.</p>
+<h3 id="voraussetzungen-fur-den-abschluss-dieser-mission">Voraussetzungen für den Abschluss dieser Mission<a class="headerlink" href="#voraussetzungen-fur-den-abschluss-dieser-mission" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Sie benötigen <strong>entweder</strong>:</p>
+<ul>
+<li><strong>Mission 06 abgeschlossen</strong> und Ihr Multi-Agent-Einstellungssystem ist bereit, <strong>ODER</strong></li>
+<li><strong>Importieren Sie die Starterlösung für Mission 07</strong>, wenn Sie neu anfangen oder aufholen müssen. <a href="https://aka.ms/agent-academy">Mission 07 Starterlösung herunterladen</a></li>
+</ul>
+</li>
+<li>
+<p>Beispiel-Lebenslaufdokumente von <a href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/operative/sample-data/resumes&amp;filename=operative_sampledata">Test Resumes</a></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Lösungsimport und Beispieldaten</p>
+<p>Wenn Sie die Starterlösung verwenden, lesen Sie <a href="../01-get-started/">Mission 01</a> für detaillierte Anweisungen zum Importieren von Lösungen und Beispieldaten in Ihre Umgebung.</p>
+</div>
+<h3 id="71-erstellen-einer-multimodalen-eingabeaufforderung">7.1 Erstellen einer multimodalen Eingabeaufforderung<a class="headerlink" href="#71-erstellen-einer-multimodalen-eingabeaufforderung" title="Permanent link">&para;</a></h3>
+<p>Ihr erstes Ziel: Erstellen Sie eine Eingabeaufforderung, die Lebenslaufdokumente analysieren und strukturierte Daten extrahieren kann.</p>
+<ol>
+<li>
+<p>Melden Sie sich bei <a href="https://copilotstudio.microsoft.com">Copilot Studio</a> an und wählen Sie <strong>Tools</strong> aus der linken Navigation.</p>
+</li>
+<li>
+<p>Wählen Sie <strong>+ Neues Tool</strong>, dann <strong>Eingabeaufforderung</strong>.<br />
+<img alt="Neue Eingabeaufforderung" src="../../../../../translated_images/7-new-prompt.8041acd54e3aecfca0c277aba88b9a2a923482a4b45ba65dcadf9296fac7c458.de.png" /></p>
+</li>
+<li>
+<p><strong>Benennen Sie</strong> die Eingabeaufforderung um, von dem Standard-Timestamp-Namen (z. B. <em>Benutzerdefinierte Eingabeaufforderung 09/04/2025, 04:59:11 PM</em>) zu <code>Lebenslauf zusammenfassen</code>.</p>
+</li>
+<li>
+<p>Fügen Sie im Feld Anweisungen diese Eingabeaufforderung hinzu:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are tasked with extracting key candidate information from a resume and cover letter to facilitate matching with open job roles and creating a summary for application review.
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Instructions:
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>1. Extract Candidate Details:
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    - Identify and extract the candidate’s full name.
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    - Extract contact information, specifically the email address.
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2. Create Candidate Summary:
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    - Summarize the candidate’s profile as multiline text (max 2000 characters) with the following sections:
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        - Candidate name
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        - Role(s) applied for if present
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        - Contact and location
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        - One-paragraph summary
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        - Experience snapshot (last 2–3 roles with outcomes)
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        - Key projects (1–3 with metrics)
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        - Education and certifications
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        - Top skills (Top 10)
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        - Availability and work authorization
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>Guidelines:
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>- Extract information only from the provided resume and cover letter documents.
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>- Ensure accuracy in identifying all details such as contact details and skills.
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>- The summary should be concise but informative, suitable for quick application review.
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>Resume: /document
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>CoverLetter: /text
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Copilot-Hilfe verwenden</p>
+<p>Sie können "Mit Copilot starten" verwenden, um Ihre Eingabeaufforderung mit natürlicher Sprache zu erstellen. Versuchen Sie, Copilot zu bitten, eine Eingabeaufforderung zu erstellen, um einen Lebenslauf zusammenzufassen!</p>
+</div>
+</li>
+<li>
+<p><strong>Konfigurieren Sie</strong> die Eingabeparameter:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Typ</th>
+<th>Name</th>
+<th>Beispieldaten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lebenslauf</td>
+<td>Bild oder Dokument</td>
+<td>Lebenslauf</td>
+<td>Laden Sie einen Beispiel-Lebenslauf aus dem Testdaten-Ordner hoch</td>
+</tr>
+<tr>
+<td>Anschreiben</td>
+<td>Text</td>
+<td>Anschreiben</td>
+<td>Hier ist ein Lebenslauf!</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Wählen Sie <strong>Testen</strong>, um die anfängliche Textausgabe Ihrer Eingabeaufforderung zu sehen.<br />
+<img alt="Parameter festlegen und testen" src="../../../../../translated_images/7-prompt-parameters.fe63dae637c278e1c7dd1413749ff72bc1361d382162c5a58ebc9ff721f06821.de.png" /></p>
+</li>
+</ol>
+<h3 id="72-json-ausgabe-konfigurieren">7.2 JSON-Ausgabe konfigurieren<a class="headerlink" href="#72-json-ausgabe-konfigurieren" title="Permanent link">&para;</a></h3>
+<p>Jetzt konvertieren Sie die Eingabeaufforderung, um strukturierte JSON-Daten anstelle von einfachem Text auszugeben.</p>
+<ol>
+<li>
+<p>Fügen Sie diese JSON-Formatspezifikation am Ende Ihrer Eingabeaufforderungsanweisungen hinzu:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Output Format:
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Provide the output in valid JSON format with the following structure:
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>{
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    &quot;CandidateName&quot;: &quot;string&quot;,
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    &quot;Email&quot;: &quot;string&quot;,
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    &quot;Summary&quot;: &quot;string max 2000 characters&quot;,
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    &quot;Skills&quot;: [ {&quot;item&quot;: &quot;Skill 1&quot;}, {&quot;item&quot;: &quot;Skill 2&quot;}],
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    &quot;Experience&quot;: [ {&quot;item&quot;: &quot;Experience 1&quot;}, {&quot;item&quot;: &quot;Experience 2&quot;}],
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p>Ändern Sie die <strong>Ausgabe</strong>-Einstellung von "Text" zu <strong>JSON</strong>.</p>
+</li>
+<li>
+<p>Wählen Sie erneut <strong>Testen</strong>, um zu überprüfen, ob die Ausgabe jetzt als JSON formatiert ist.<br />
+<img alt="Eingabeaufforderung auf JSON setzen" src="../../../../../translated_images/7-json-prompt.89afee0b09beedd348dfefcb54ec1aa328abe7f94b72c6c26a363f686652d712.de.png" /></p>
+</li>
+<li>
+<p><strong>Optional:</strong> Experimentieren Sie mit verschiedenen KI-Modellen, um zu sehen, wie sich die Ausgaben unterscheiden, und kehren Sie dann zum Standardmodell zurück.</p>
+</li>
+<li>
+<p>Wählen Sie <strong>Speichern</strong>, um die Eingabeaufforderung zu erstellen.</p>
+</li>
+<li>
+<p>Wählen Sie im Dialogfeld <strong>Für die Verwendung im Agent konfigurieren</strong> die Option <strong>Abbrechen</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Warum wir dies noch nicht als Tool hinzufügen</p>
+<p>Sie werden diese Eingabeaufforderung in einem Agent Flow verwenden, anstatt direkt als Tool, was Ihnen mehr Kontrolle über den Datenverarbeitungsworkflow gibt.</p>
+</div>
+</li>
+</ol>
+<h3 id="73-eingabeaufforderung-zu-einem-agent-flow-hinzufugen">7.3 Eingabeaufforderung zu einem Agent Flow hinzufügen<a class="headerlink" href="#73-eingabeaufforderung-zu-einem-agent-flow-hinzufugen" title="Permanent link">&para;</a></h3>
+<p>Sie erstellen einen Agent Flow, der Ihre Eingabeaufforderung verwendet, um Lebensläufe zu verarbeiten, die in Dataverse gespeichert sind.</p>
+<div class="admonition tip">
+<p class="admonition-title">Agent Flow-Ausdrücke</p>
+<p>Es ist sehr wichtig, dass Sie die Anweisungen zum Benennen Ihrer Knoten und Eingeben von Ausdrücken genau befolgen, da die Ausdrücke sich auf die vorherigen Knoten anhand ihres Namens beziehen! Lesen Sie die <a href="../../recruit/09-add-an-agent-flow/#you-mentioned-expressions-what-are-expressions">Agent Flow-Mission in Recruit</a> für eine kurze Auffrischung!</p>
+</div>
+<ol>
+<li>
+<p>Navigieren Sie zu Ihrem <strong>Einstellungsagenten</strong> innerhalb von Copilot Studio.</p>
+</li>
+<li>
+<p>Wählen Sie die Registerkarte <strong>Agenten</strong> aus und wählen Sie den untergeordneten <strong>Antragsannahme-Agenten</strong> aus.</p>
+</li>
+<li>
+<p>Wählen Sie im <strong>Tools</strong>-Panel <strong>+ Hinzufügen</strong> → <strong>+ Neues Tool</strong> → <strong>Agent Flow</strong>.</p>
+</li>
+<li>
+<p>Wählen Sie den Knoten "Wenn ein Agent den Flow aufruft", verwenden Sie <strong>+ Eingabe hinzufügen</strong>, um den folgenden Parameter hinzuzufügen:</p>
+<table>
+<thead>
+<tr>
+<th>Typ</th>
+<th>Name</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text</td>
+<td>Lebenslaufnummer</td>
+<td>Stellen Sie sicher, dass Sie [Lebenslaufnummer] verwenden. Dies muss immer mit dem Buchstaben R beginnen</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Wählen Sie das <strong>+</strong> Symbol für Aktion einfügen unter dem ersten Knoten, suchen Sie nach <strong>Dataverse</strong>, wählen Sie <strong>Mehr anzeigen</strong>, und finden Sie die Aktion <strong>Zeilen auflisten</strong>.</p>
+</li>
+<li>
+<p>Wählen Sie die <strong>Ellipsen (...)</strong> auf dem Knoten "Zeilen auflisten" und wählen Sie <strong>Umbenennen</strong> zu <code>Lebenslauf-Datensatz abrufen</code>, und legen Sie die folgenden Parameter fest:</p>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wie einstellen</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tabellenname</strong></td>
+<td>Auswählen</td>
+<td>Lebensläufe</td>
+</tr>
+<tr>
+<td><strong>Zeilen filtern</strong></td>
+<td>Dynamische Daten (Blitzsymbol)</td>
+<td><code>ppa_resumenumber eq 'Lebenslaufnummer'</code> Ersetzen Sie <strong>Lebenslaufnummer</strong> durch <strong>Wenn ein Agent den Flow aufruft</strong> → <strong>Lebenslaufnummer</strong></td>
+</tr>
+<tr>
+<td><strong>Zeilenanzahl</strong></td>
+<td>Eingeben</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Optimieren Sie diese Abfragen!</p>
+<p>Wenn Sie diese Technik in der Produktion verwenden, sollten Sie immer die ausgewählten Spalten auf nur die für den Agent Flow erforderlichen beschränken.</p>
+</div>
+<p><img alt="Lebenslauf-Datensatz abrufen" src="../../../../../translated_images/7-summarize-resume-1.4b3b05b2bbab523feaf98c63502e7916c800c61db2d8a2be09b4624e0d83eb71.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie das <strong>+</strong> Symbol für Aktion einfügen unter dem Knoten "Lebenslauf-Datensatz abrufen", suchen Sie nach <strong>Dataverse</strong>, wählen Sie <strong>Mehr anzeigen</strong>, und finden Sie die Aktion <strong>Eine Datei oder ein Bild herunterladen</strong>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Wählen Sie die richtige Aktion!</p>
+<p>Stellen Sie sicher, dass Sie nicht die Aktion auswählen, die mit "aus ausgewählter Umgebung" endet.</p>
+</div>
+</li>
+<li>
+<p>Wie zuvor, benennen Sie die Aktion <code>Lebenslauf herunterladen</code> um und legen Sie die folgenden Parameter fest:</p>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wie einstellen</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tabellenname</strong></td>
+<td>Auswählen</td>
+<td>Lebensläufe</td>
+</tr>
+<tr>
+<td><strong>Zeilen-ID</strong></td>
+<td>Ausdruck (fx-Symbol)</td>
+<td><code>first(body('Lebenslauf-Datensatz_abrufen')?['value'])?['ppa_resumeid']</code></td>
+</tr>
+<tr>
+<td><strong>Spaltenname</strong></td>
+<td>Auswählen</td>
+<td>Lebenslauf-PDF</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Lebenslauf herunterladen" src="../../../../../translated_images/7-summarize-resume-2.c56d74be42ed30a6f3082ef84b3b81ab5286f014c09d995ce32bbfe9af96df42.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie nun das <strong>+</strong> Symbol für Aktion einfügen unter "Lebenslauf herunterladen", unter <strong>KI-Funktionen</strong>, wählen Sie <strong>Eingabeaufforderung ausführen</strong>.</p>
+</li>
+<li>
+<p>Benennen Sie die Aktion in <code>Lebenslauf zusammenfassen</code> um und legen Sie die folgenden Parameter fest:</p>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Wie einstellen</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Eingabeaufforderung</strong></td>
+<td>Auswählen</td>
+<td>Lebenslauf zusammenfassen</td>
+</tr>
+<tr>
+<td><strong>Anschreiben</strong></td>
+<td>Ausdruck (fx-Symbol)</td>
+<td><code>first(body('Get_Resume_Record')?['value'])?['ppa_coverletter']</code></td>
+</tr>
+<tr>
+<td><strong>Lebenslauf</strong></td>
+<td>Dynamische Daten (Blitzsymbol)</td>
+<td>Lebenslauf herunterladen → Datei- oder Bildinhalt</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Eingabeaufforderung Lebenslauf zusammenfassen" src="../../../../../translated_images/7-summarize-resume-3.c1656de643c50805ff6972e2891db16776cbdc433ddb09778819836a60204375.de.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Parameter der Eingabeaufforderung</p>
+<p>Beachten Sie, dass die Parameter, die Sie ausfüllen, dieselben sind, die Sie als Eingabeparameter konfiguriert haben, als Sie Ihre Eingabeaufforderung erstellt haben.</p>
+</div>
+<h3 id="74-kandidaten-datensatz-erstellen">7.4 Kandidaten-Datensatz erstellen<a class="headerlink" href="#74-kandidaten-datensatz-erstellen" title="Permanent link">&para;</a></h3>
+<p>Als Nächstes müssen Sie die Informationen, die die Eingabeaufforderung Ihnen gegeben hat, verwenden, um einen neuen Kandidaten-Datensatz zu erstellen, falls dieser noch nicht existiert.</p>
+<ol>
+<li>
+<p>Wählen Sie das <strong>+</strong> Symbol für Aktion einfügen unterhalb des Knotens Lebenslauf zusammenfassen, suchen Sie nach <strong>Dataverse</strong>, wählen Sie <strong>Mehr anzeigen</strong> und finden Sie die Aktion <strong>Zeilen auflisten</strong>.</p>
+</li>
+<li>
+<p>Benennen Sie den Knoten um in <code>Get Existing Candidate</code> und setzen Sie die folgenden Parameter:</p>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Einstellung</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tabellenname</strong></td>
+<td>Auswählen</td>
+<td>Kandidaten</td>
+</tr>
+<tr>
+<td><strong>Zeilen filtern</strong></td>
+<td>Dynamische Daten (Blitzsymbol)</td>
+<td><code>ppa_email eq 'Email'</code>  <strong>Ersetzen Sie</strong> <code>Email</code> durch <strong>Lebenslauf zusammenfassen → Email</strong></td>
+</tr>
+<tr>
+<td><strong>Zeilenanzahl</strong></td>
+<td>Eingeben</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Vorhandenen Kandidaten abrufen" src="../../../../../translated_images/7-summarize-resume-4.c95d900bad4e6e75ad348f4385f69a9db37f76f3b1bb90813157643814a3f6a8.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie das <strong>+</strong> Symbol für Aktion einfügen unterhalb des Knotens Vorhandenen Kandidaten abrufen, suchen Sie nach <strong>Steuerung</strong>, wählen Sie <strong>Mehr anzeigen</strong> und finden Sie die Aktion <strong>Bedingung</strong>.</p>
+</li>
+<li>
+<p>Legen Sie in den Eigenschaften der Bedingung die folgende Bedingung fest:</p>
+<table>
+<thead>
+<tr>
+<th>Bedingung</th>
+<th>Operator</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ausdruck (fx-Symbol): <code>length(outputs('Get_Existing_Candidate')?['body/value'])</code></td>
+<td>ist gleich</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Bedingung für vorhandenen Kandidaten" src="../../../../../translated_images/7-summarize-resume-5.1a83c05153ac5aa16b8c3fec10989628f64f893fc7c6bfed8b4ec16caf6b7a6b.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie das <strong>+</strong> Symbol für Aktion einfügen im <strong>True</strong>-Zweig, suchen Sie nach <strong>Dataverse</strong>, wählen Sie <strong>Mehr anzeigen</strong> und finden Sie die Aktion <strong>Neue Zeile hinzufügen</strong>.</p>
+</li>
+<li>
+<p>Benennen Sie den Knoten um in <code>Add a New Candidate</code> und setzen Sie die folgenden Parameter:</p>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Einstellung</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tabellenname</strong></td>
+<td>Auswählen</td>
+<td>Kandidaten</td>
+</tr>
+<tr>
+<td><strong>Kandidat Name</strong></td>
+<td>Dynamische Daten (Blitzsymbol)</td>
+<td>Lebenslauf zusammenfassen → <code>CandidateName</code></td>
+</tr>
+<tr>
+<td><strong>Email</strong></td>
+<td>Dynamische Daten (Blitzsymbol)</td>
+<td>Lebenslauf zusammenfassen → <code>Email</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Neuen Kandidaten hinzufügen" src="../../../../../translated_images/7-summarize-resume-6.321bee96056d21981c466a87456aea1bafc394a492cc4b814b97ba2ee6b758fa.de.png" /></p>
+<h3 id="75-lebenslauf-aktualisieren-und-flow-ausgaben-konfigurieren">7.5 Lebenslauf aktualisieren und Flow-Ausgaben konfigurieren<a class="headerlink" href="#75-lebenslauf-aktualisieren-und-flow-ausgaben-konfigurieren" title="Permanent link">&para;</a></h3>
+<p>Schließen Sie den Flow ab, indem Sie den Lebenslauf-Datensatz aktualisieren und konfigurieren, welche Daten an Ihren Agenten zurückgegeben werden sollen.</p>
+<ol>
+<li>
+<p>Wählen Sie das <strong>+</strong> Symbol für Aktion einfügen unterhalb der Bedingung, suchen Sie nach <strong>Dataverse</strong>, wählen Sie <strong>Mehr anzeigen</strong> und finden Sie die Aktion <strong>Zeile aktualisieren</strong>.</p>
+</li>
+<li>
+<p>Wählen Sie den Titel aus, um den Knoten umzubenennen in <code>Update Resume</code>, wählen Sie <strong>Alle anzeigen</strong> und setzen Sie die folgenden Parameter:</p>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Einstellung</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tabellenname</strong></td>
+<td>Auswählen</td>
+<td>Lebensläufe</td>
+</tr>
+<tr>
+<td><strong>Zeilen-ID</strong></td>
+<td>Ausdruck (fx-Symbol)</td>
+<td><code>first(body('Get_Resume_Record')?['value'])?['ppa_resumeid']</code></td>
+</tr>
+<tr>
+<td><strong>Zusammenfassung</strong></td>
+<td>Dynamische Daten (Blitzsymbol)</td>
+<td>Lebenslauf zusammenfassen → Text</td>
+</tr>
+<tr>
+<td><strong>Kandidat (Kandidaten)</strong></td>
+<td>Ausdruck (fx-Symbol)</td>
+<td><code>if(equals(length(outputs('Get_Existing_Candidate')?['body/value']), 1), first(outputs('Get_Existing_Candidate')?['body/value'])?['ppa_candidateid'], outputs('Add_a_New_Candidate')?['body/ppa_candidateid'])</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Lebenslauf aktualisieren" src="../../../../../translated_images/7-summarize-resume-7.0ef51db1ebbf837bae11c0e0bdd8c6e8296d528d500bc729c43660d09967ce57.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie den Knoten <strong>Agent antworten</strong> aus und verwenden Sie <strong>+ Ausgabe hinzufügen</strong>, um Folgendes zu konfigurieren:</p>
+<table>
+<thead>
+<tr>
+<th>Typ</th>
+<th>Name</th>
+<th>Einstellung</th>
+<th>Wert</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text</td>
+<td><code>CandidateName</code></td>
+<td>Dynamische Daten (Blitzsymbol)</td>
+<td>Lebenslauf zusammenfassen → Mehr anzeigen → CandidateName</td>
+<td>Der [CandidateName], der im Lebenslauf angegeben ist</td>
+</tr>
+<tr>
+<td>Text</td>
+<td><code>CandidateEmail</code></td>
+<td>Dynamische Daten (Blitzsymbol)</td>
+<td>Lebenslauf zusammenfassen → Mehr anzeigen → Email</td>
+<td>Die [CandidateEmail], die im Lebenslauf angegeben ist</td>
+</tr>
+<tr>
+<td>Text</td>
+<td><code>CandidateNumber</code></td>
+<td>Ausdruck (fx-Symbol)</td>
+<td><code>concat('ppa_candidates/', if(equals(length(outputs('Get_Existing_Candidate')?['body/value']), 1), first(outputs('Get_Existing_Candidate')?['body/value'])?['ppa_candidateid'], outputs('Add_a_New_Candidate')?['body/ppa_candidateid']) )</code></td>
+<td>Die [CandidateNumber] des neuen oder vorhandenen Kandidaten</td>
+</tr>
+<tr>
+<td>Text</td>
+<td><code>ResumeSummary</code></td>
+<td>Dynamische Daten (Blitzsymbol)</td>
+<td>Lebenslauf zusammenfassen → Mehr anzeigen → body/responsev2/predictionOutput/structuredOutput</td>
+<td>Die Lebenslauf-Zusammenfassung und Details im JSON-Format</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Agent antworten" src="../../../../../translated_images/7-summarize-resume-8.72c4649f7536863657260438088577b04272ab28bd788c65dabbca1473cd6b5e.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie <strong>Entwurf speichern</strong> oben rechts. Ihr Agent Flow sollte wie folgt aussehen:<br />
+<img alt="Agent Flow Lebenslauf zusammenfassen" src="../../../../../translated_images/7-summarize-resume-9.491c36275650a2adba1acafcb386970a9c379ab7dad9cc129e27cbbc96c73dd3.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie die Registerkarte <strong>Übersicht</strong>, wählen Sie <strong>Bearbeiten</strong> im <strong>Details</strong>-Panel.</p>
+<ol>
+<li><strong>Flow-Name</strong>:<code>Summarize Resume</code></li>
+<li>
+<p><strong>Beschreibung</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Summarize an existing Resume stored in Dataverse using a [ResumeNumber] as input, return the [CandidateNumber], and resume summary JSON
+</span></code></pre></div>
+</li>
+</ol>
+</li>
+<li>
+<p>Wählen Sie <strong>Speichern</strong>.</p>
+</li>
+<li>
+<p>Wählen Sie erneut die Registerkarte <strong>Designer</strong> und dann <strong>Veröffentlichen</strong>.</p>
+</li>
+</ol>
+<h3 id="76-den-flow-mit-ihrem-agenten-verbinden">7.6 Den Flow mit Ihrem Agenten verbinden<a class="headerlink" href="#76-den-flow-mit-ihrem-agenten-verbinden" title="Permanent link">&para;</a></h3>
+<p>Jetzt fügen Sie den Flow als Tool hinzu und konfigurieren Ihren Agenten, ihn zu verwenden.</p>
+<ol>
+<li>
+<p>Öffnen Sie Ihren <strong>Hiring Agent</strong> in Copilot Studio.</p>
+</li>
+<li>
+<p>Wählen Sie die Registerkarte <strong>Agenten</strong> und öffnen Sie den <strong>Application Intake Agent</strong>.</p>
+</li>
+<li>
+<p>Wählen Sie das <strong>Tools</strong>-Panel und dann <strong>+ Tool hinzufügen</strong> -&gt; <strong>Flow</strong> -&gt; <strong>Summarize Resume</strong> <strong>(Agent Flow)</strong>.</p>
+</li>
+<li>
+<p>Wählen Sie <strong>Hinzufügen und konfigurieren</strong>.</p>
+</li>
+<li>
+<p>Konfigurieren Sie die Tool-Einstellungen wie folgt:</p>
+<table>
+<thead>
+<tr>
+<th>Einstellung</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Beschreibung</strong></td>
+<td>Zusammenfassung eines vorhandenen Lebenslaufs, der in Dataverse gespeichert ist, mit [ResumeNumber] als Eingabe, Rückgabe der [CandidateNumber] und Lebenslauf-Zusammenfassung im JSON-Format</td>
+</tr>
+<tr>
+<td><strong>Wann dieses Tool verwendet werden kann</strong></td>
+<td>Nur wenn von Themen oder Agenten referenziert</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Wählen Sie <strong>Speichern</strong>.<br />
+<img alt="Tool Lebenslauf zusammenfassen konfigurieren" src="../../../../../translated_images/7-configure-summarize-resume-tool.f301e328142193d27b0ab8dea68dcd130e783e897bf37c94f952594d9eca8071.de.png" /></p>
+</li>
+<li>
+<p>Wenn Sie Tools im Hiring Agent auswählen, sehen Sie jetzt beide Tools, die vom <strong>Application Intake Agent</strong> verwendet werden können.<br />
+<img alt="Agent Tools" src="../../../../../translated_images/7-agent-tools.5ab82b09501386a00351a8ef3149a0f177360bca0aa70a7c05cb273289247c61.de.png" /></p>
+</li>
+<li>
+<p>Navigieren Sie zu den <strong>Application Intake Child</strong>-Agenten-Anweisungen und ändern Sie den Schritt <strong>Post-Upload</strong> wie folgt:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2. Post-Upload Processing  
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    - After uploading, be sure to also output the [ResumeNumber] in all messages
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    - Pass [ResumeNumber] to /Summarize Resume  - Be sure to use the correct value that will start with the letter R.
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    - Be sure to also output the [CandidateNumber] in all messages
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    - Use the [ResumeSummary] to output a summary of the processed Resume and candidate
+</span></code></pre></div>
+<p>Ersetzen Sie <code>/Summarize Resume</code>, indem Sie eine Referenz auf den <strong>Summarize Resume Agent Flow</strong> einfügen, indem Sie einen Schrägstrich (<code>/</code>) eingeben oder <code>/Summarize</code> auswählen, um die Referenz einzufügen.<br />
+<img alt="Anweisungen aktualisieren" src="../../../../../translated_images/7-summarize-instructions-update.b3620bc94c8de06ee09eb5804de4f9ac7bfce8458f87fe4bee41cb51abe7f48c.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie <strong>Speichern</strong>.</p>
+</li>
+</ol>
+<h3 id="77-testen-sie-ihren-agenten">7.7 Testen Sie Ihren Agenten<a class="headerlink" href="#77-testen-sie-ihren-agenten" title="Permanent link">&para;</a></h3>
+<p>Testen Sie Ihr komplettes multimodales System, um sicherzustellen, dass alles korrekt funktioniert.</p>
+<ol>
+<li>
+<p><strong>Test starten</strong>:</p>
+<ul>
+<li>Wählen Sie <strong>Test</strong>, um das Test-Panel zu öffnen.</li>
+<li>
+<p>Geben Sie ein: <code>Hier ist ein Kandidaten-Lebenslauf</code>.</p>
+</li>
+<li>
+<p>Laden Sie einen der Beispiel-Lebensläufe aus <a href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/operative/sample-data/resumes&amp;filename=operative_sampledata">Test Resumes</a> hoch.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Ergebnisse überprüfen</strong>:</p>
+<ul>
+<li>Sobald Sie die Nachricht und den Lebenslauf senden, überprüfen Sie, ob Sie eine Lebenslaufnummer (Format: R#####) erhalten.</li>
+<li>Überprüfen Sie, ob Sie eine Kandidatennummer und Zusammenfassung erhalten.</li>
+<li>Verwenden Sie die Aktivitätskarte, um sowohl das Lebenslauf-Upload-Tool als auch das Tool Lebenslauf zusammenfassen in Aktion zu sehen, und die Ausgaben der Zusammenfassungsaufforderung werden vom Agenten empfangen:<br />
+<img alt="Testergebnisse" src="../../../../../translated_images/7-test-result.dcbb6c277666ab7d06d303c3facfb5ad838a33ec6b7f0b92b90f9faddb9bb6bc.de.png" /></li>
+</ul>
+</li>
+<li>
+<p><strong>Datenpersistenz überprüfen</strong>:</p>
+<ul>
+<li>Navigieren Sie zu <a href="https://make.powerapps.com">Power Apps</a>.</li>
+<li>Öffnen Sie <strong>Apps</strong> → <strong>Hiring Hub</strong> → <strong>Play</strong>.</li>
+<li>Gehen Sie zu <strong>Lebensläufe</strong>, um zu überprüfen, ob der Lebenslauf hochgeladen und verarbeitet wurde. Er sollte sowohl Zusammenfassungsinformationen als auch einen zugehörigen Kandidaten-Datensatz enthalten.</li>
+<li>Überprüfen Sie <strong>Kandidaten</strong>, um die extrahierten Kandidateninformationen zu sehen.<br />
+<img alt="Lebenslauf mit Kandidat und Zusammenfassung" src="../../../../../translated_images/7-resume-in-dataverse.cbe85a3f889c989f32ef10ac130e6decfed3d7744fd31f48df8a841cebae229b.de.png" /></li>
+<li>Wenn Sie den Prozess erneut ausführen, sollte der vorhandene Kandidat (abgeglichen mit der aus dem Lebenslauf extrahierten E-Mail) verwendet werden, anstatt einen neuen zu erstellen.</li>
+</ul>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Fehlerbehebung</p>
+<ul>
+<li><strong>Lebenslauf wird nicht verarbeitet</strong>: Stellen Sie sicher, dass die Datei ein PDF ist und die Größenbeschränkungen einhält.</li>
+<li><strong>Kein Kandidat erstellt</strong>: Überprüfen Sie, ob die E-Mail korrekt aus dem Lebenslauf extrahiert wurde.</li>
+<li><strong>JSON-Formatfehler</strong>: Vergewissern Sie sich, dass Ihre Eingabeaufforderungsanweisungen die genaue JSON-Struktur enthalten.</li>
+<li><strong>Flow-Fehler</strong>: Überprüfen Sie, ob alle Dataverse-Verbindungen und Ausdrücke korrekt konfiguriert sind.</li>
+</ul>
+</div>
+<h3 id="produktionsbereitschaft">Produktionsbereitschaft<a class="headerlink" href="#produktionsbereitschaft" title="Permanent link">&para;</a></h3>
+<p>Obwohl dies nicht Teil dieser Mission ist, könnten Sie Folgendes in Betracht ziehen, um diesen Agent Flow produktionsbereit zu machen:</p>
+<ol>
+<li><strong>Fehlerbehandlung</strong> - Wenn die Lebenslaufnummer nicht gefunden wurde oder die Eingabeaufforderung das Dokument nicht analysieren konnte, sollte eine Fehlerbehandlung hinzugefügt werden, um dem Agenten eine klare Fehlermeldung zurückzugeben.</li>
+<li><strong>Aktualisierung vorhandener Kandidaten</strong> - Der Kandidat wird anhand der E-Mail gefunden, dann könnte der Name aktualisiert werden, um dem im Lebenslauf angegebenen Namen zu entsprechen.</li>
+<li><strong>Trennung der Lebenslauf-Zusammenfassung und der Kandidatenerstellung</strong> - Diese Funktionalität könnte in kleinere Agent Flows aufgeteilt werden, um sie einfacher zu warten, und dann könnte der Agent Anweisungen erhalten, sie nacheinander zu verwenden.</li>
+</ol>
+<h2 id="mission-abgeschlossen">🎉 Mission abgeschlossen<a class="headerlink" href="#mission-abgeschlossen" title="Permanent link">&para;</a></h2>
+<p>Hervorragende Arbeit, Operative! <strong>Dokument Lebenslauf-Erkennung</strong> ist jetzt abgeschlossen. Sie haben erfolgreich multimodale Eingabeaufforderungen gemeistert und können nun strukturierte Daten aus jedem Dokument präzise extrahieren.</p>
+<p>Das haben Sie in dieser Mission erreicht:</p>
+<p><strong>✅ Multimodale Eingabeaufforderungen gemeistert</strong><br />
+Sie verstehen jetzt, was multimodale Eingabeaufforderungen sind und wann verschiedene KI-Modelle für optimale Ergebnisse verwendet werden sollten.</p>
+<p><strong>✅ Expertise in Dokumentenverarbeitung</strong><br />
+Sie haben gelernt, Eingabeaufforderungen mit Bild- und Dokumenteingaben zu konfigurieren und Ausgaben als JSON für die Extraktion strukturierter Daten zu formatieren.</p>
+<p><strong>✅ Lebenslauf-Extraktionssystem</strong><br />
+Sie haben ein vollständiges Lebenslauf-Extraktionssystem erstellt, das Kandidatendokumente verarbeitet und in Ihren Einstellungsworkflow integriert.</p>
+<p><strong>✅ Best Practices umgesetzt</strong><br />
+Sie haben Best Practices für die Eingabeaufforderungserstellung mit Dokumentenanalyse angewendet und multimodale Eingabeaufforderungen mit Agent Flows integriert.</p>
+<p><strong>✅ Grundlage für fortgeschrittene Verarbeitung</strong><br />
+Ihre erweiterten Dokumentenanalysefähigkeiten sind jetzt bereit für die fortgeschrittenen Datenverankerungsfunktionen, die wir in den kommenden Missionen hinzufügen werden.</p>
+<p>🚀 <strong>Als Nächstes:</strong> In Mission 08 erfahren Sie, wie Sie Ihre Eingabeaufforderungen mit Echtzeitdaten aus Dataverse verbessern können, um dynamische KI-Lösungen zu erstellen, die sich an wechselnde Geschäftsanforderungen anpassen.</p>
+<p>⏩ <a href="../08-dataverse-grounding/">Weiter zu Mission 08: Verbesserte Eingabeaufforderungen mit Dataverse-Verankerung</a></p>
+<h2 id="taktische-ressourcen">📚 Taktische Ressourcen<a class="headerlink" href="#taktische-ressourcen" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/create-a-custom-prompt?WT.mc_id=power-power-182762-scottdurow">Eingabeaufforderung erstellen</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/add-inputs-prompt?WT.mc_id=power-182762-scottdurow">Text-, Bild- oder Dokumenteingabe zu Ihrer Eingabeaufforderung hinzufügen</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/process-responses-json-output?WT.mc_id=power-182762-scottdurow">Antworten mit JSON-Ausgabe verarbeiten</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/prompt-modelsettings?WT.mc_id=power-182762-scottdurow">Modellauswahl und Temperatureinstellungen</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/use-a-custom-prompt-in-flow?WT.mc_id=power-182762-scottdurow">Ihre Eingabeaufforderung in Power Automate verwenden</a></p>
+<p>📺 <a href="https://www.youtube.com/watch?v=F0fGnWrRY_I">AI Builder: JSON-Ausgaben im Eingabeaufforderungs-Builder</a></p>
+<hr />
+<p><strong>Haftungsausschluss</strong>:<br />
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a> übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
