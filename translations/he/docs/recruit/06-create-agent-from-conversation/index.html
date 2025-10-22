@@ -1,0 +1,1119 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/he/docs/recruit/06-create-agent-from-conversation/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#06-copilot" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ שם קוד: מבצע יצירת סוכן
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 תקציר המשימה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 מטרות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 מהו סוכן מותאם אישית?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗣️ השתמשו בשפה טבעית ליצירת סוכנים
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌱 אבל אני חדש ב"לתאר מה אני רוצה" - מה לעשות?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔮 אוקיי, יצרתי את הסוכן שלי... איך אני מטמיע אותו עם ידע?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      סוגי מקורות ידע שניתן להוסיף
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔒 הערה על אבטחה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-copilot-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      שיפור תגובות הסוכן שלכם ב-Copilot Studio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#06-copilot-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 מעבדה 06: יצירת סוכן מותאם אישית ב-Copilot Studio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ משימה הושלמה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 משאבים טקטיים
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "180f9cc0b40527f61be092c9b0f72aba",
+  "translation_date": "2025-10-17T01:35:51+00:00",
+  "source_file": "docs/recruit/06-create-agent-from-conversation/README.md",
+  "language_code": "he"
+}
+-->
+<h1 id="06-copilot">🚨 משימה 06: יצירת סוכן מותאם אישית באמצעות שפה טבעית עם Copilot והטמעתו עם הנתונים שלך<a class="headerlink" href="#06-copilot" title="Permanent link">&para;</a></h1>
+<h2 id="_1">🕵️‍♂️ שם קוד: <code>מבצע יצירת סוכן</code><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ חלון זמן למשימה:</strong> <code>~75 דקות</code></p>
+</blockquote>
+<p>🎥 <strong>צפו בהדרכה</strong></p>
+<p><a href="https://www.youtube.com/watch?v=qZTtQVncGFg" title="צפו בהדרכה ביוטיוב"><img alt="תמונה ממוזערת של סרטון יצירת סוכן מותאם אישית" src="../../../../../translated_images/video-thumbnail.9d5fddc1190fd4a04537488795821ac2f88fdcfe00e017f6e575a33f724e39cb.he.jpg" /></a></p>
+<h2 id="_2">🎯 תקציר המשימה<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>ברוך שובך, יוצר סוכנים. המשימה הזו מציבה אותך בעמדת הפיקוד של היכולת החזקה ביותר ב-Copilot Studio - יצירת סוכן מותאם אישית מאפס באמצעות שפה טבעית... והעצמתו עם הנתונים שלך.</p>
+<p>זה לא סתם עוד צ'אטבוט. אתה בונה עמית דיגיטלי מועשר בידע - כזה שיכול לחשוב, להגיב ולהתייחס למידע אמיתי של הארגון.</p>
+<p>הנשק שלך? שפה טבעית. המשימה שלך? לעצב, לאמן ולבדוק סוכן עזרה מותאם אישית שיכול לענות על שאלות IT באמצעות SharePoint, קבצים שהועלו או כתובות URL של החברה.</p>
+<p>בואו נבנה את הסוכן שלכם מהיסוד.</p>
+<h2 id="_3">🔎 מטרות<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>במשימה זו תלמדו:</p>
+<ol>
+<li>להבין מה הם סוכנים מותאמים אישית וכיצד הם שונים מתבניות מוכנות מראש.</li>
+<li>יצירת סוכנים באמצעות הנחיות שפה טבעית ועיצוב שיחה עם Copilot.</li>
+<li>הטמעת סוכנים עם מקורות ידע ארגוניים כולל SharePoint, מסמכים ואתרי אינטרנט.</li>
+<li>ללמוד על תזמור גנרטיבי וכיצד סוכנים מחפשים ומגיבים באופן דינמי באמצעות מקורות נתונים מרובים.</li>
+<li>בנייה ובדיקה של סוכן עזרה IT פונקציונלי לחלוטין שיכול לענות על שאלות מהנתונים שלכם.</li>
+</ol>
+<h2 id="_4">🤔 מהו סוכן <em>מותאם אישית</em>?<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>סוכן מותאם אישית הוא צ'אטבוט או עוזר וירטואלי שאתם יוצרים ומעצבים ב-Copilot Studio כדי לעזור למשתמשים במשימות או שאלות ספציפיות. הוא נקרא מותאם אישית כי:</p>
+<ul>
+<li><strong>אתם מחליטים על המטרה</strong> - לעזור למשתמשים לבקש חופשה, לבדוק מצב הזמנה, לספק עזרה בשאלות IT.</li>
+<li><strong>אתם מגדירים את השיחה</strong> - מה הסוכן אומר ואיך הוא צריך להגיב.</li>
+<li><strong>אתם מטמיעים אותו עם הנתונים שלכם</strong> - חיבור לנתונים ארגוניים דרך מקורות ידע מובנים.</li>
+<li><strong>אתם מחברים אותו למערכות או יישומים שלכם</strong> - בוחרים מחברים, זרימות, APIs ושרתים.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>תחשבו על זה כך: אתם בונים עוזר דיגיטלי משלכם שיכול לדבר עם משתמשים ולבצע משימות עבורם כמו לענות על שאלות, לאסוף מידע הנדרש לתהליך או להתחבר לנתונים הארגוניים שלכם.</p>
+</div>
+<h3 id="_5">🤖 מה סוכן מותאם אישית יכול לעשות?<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>סוכן מותאם אישית יכול לבצע את הפעולות הבאות:</p>
+<ul>
+<li>לשאול משתמשים מידע כמו שמות, תאריכים או העדפות.</li>
+<li>לשמור את המידע הזה בבסיס נתונים או טבלה.</li>
+<li>לחפש נתונים על סמך שאלות שנשאלו ולענות עליהן.</li>
+<li>לעבוד באופן עצמאי ללא אינטראקציה ישירה עם המשתמשים.</li>
+<li>להפעיל פעולות לפי דרישה דרך אינטראקציה ישירה עם המשתמש או באופן עצמאי כמו שליחת מיילים או יצירת רשומות.</li>
+</ul>
+<h3 id="_6">👩🏻‍💻 למה להשתמש בסוכן מותאם אישית?<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>חוסך זמן על ידי אוטומציה של משימות חוזרות.</li>
+<li>מספק למשתמשים חוויה ידידותית ומכוונת.</li>
+<li>ניתן להתאמה לצרכים העסקיים או הפרויקטיים שלכם.</li>
+</ul>
+<h3 id="_7">✨ דוגמה<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>אתם יוצרים סוכן מותאם אישית שעוזר לעובדים לבקש חופשה.</p>
+<p>הוא שואל את שמם, תאריכי החופשה ושם המנהל שלהם, ואז שומר את המידע במערכת המיועדת לניהול בקשות חופשה, כמו רשימת SharePoint.</p>
+<p>עכשיו, במקום לנווט לרשימת SharePoint וליצור פריט חדש, העובדים פשוט משוחחים עם הסוכן.</p>
+<h2 id="_8">🗣️ השתמשו בשפה טבעית ליצירת סוכנים<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>בעבר למדתם כיצד לבנות סוכנים במהירות ב-Copilot Studio באמצעות תבניות סוכנים מוכנות מראש ב-<a href="../05-using-prebuilt-agents/">שיעור 05 - התחלה מהירה עם סוכנים מוכנים מראש</a>. בשיעור זה, נעמיק בחוויית יצירת השיחה עם Copilot. Copilot Studio הופך את יצירת הסוכנים לקלה על ידי שיחה עם Copilot, ממש כמו שיחה רגילה.</p>
+<p>ב-Copilot Studio, אין צורך לכתוב קוד כדי ליצור סוכן. במקום זאת, אתם מתארים מה אתם רוצים שהסוכן שלכם יעשה בשפה פשוטה, ו-Copilot עוזר לכם לבנות אותו שלב אחר שלב דרך חוויית שיחה.</p>
+<h2 id="-">🌱 אבל אני חדש ב"לתאר מה אני רוצה" - מה לעשות?<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<p>לתאר בשפה טבעית כדי ליצור סוכן מותאם אישית עשוי להיות מושג חדש עבורכם. בכל פעם שאתם משתמשים ב-Copilot במוצרי ושירותי Microsoft, אתם משתמשים בשפה טבעית בצורת <em>הנחיה</em>.</p>
+<p>הנחיה היא ההודעה או ההוראה שאתם נותנים לסוכן AI כדי לומר לו מה אתם רוצים שהוא יעשה. תחשבו על זה כמו לתת הוראות לעוזר. ככל שההוראות שלכם ברורות יותר, כך קל יותר לעוזר שלכם להבין ולפעול בהתאם.</p>
+<h3 id="_9">🪄 למה הנחיות חשובות<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>הן מכוונות את התנהגות הסוכן.</li>
+<li>הן עוזרות לסוכן להבין איזה סוג שיחה לנהל.</li>
+<li>הנחיה טובה הופכת את הסוכן ליותר מועיל ומדויק.</li>
+</ul>
+<h3 id="_10">📝 טיפים לכתיבת הנחיה טובה<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>היו ברורים ומדויקים - אמרו בדיוק מה אתם רוצים שהסוכן יעשה.</li>
+<li>חשבו כמו המשתמש - מה המשתמש יגיד? מה הסוכן צריך לענות?</li>
+<li>כללו דוגמאות - אם אפשר, תנו דוגמת אינטראקציה.</li>
+</ul>
+<h3 id="_11">✨ דוגמה<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>נניח שצוות משאבי אנוש צריך סוכן שיעזור בבקשות חופשה.</p>
+<p>ההנחיה יכולה להיות:</p>
+<div class="language-text highlight"><pre><span></span><code>“אני רוצה לבנות סוכן שעוזר למשתמשים להגיש בקשת חופשה. כאשר משתמש אומר שהוא רוצה לבקש חופשה, הסוכן צריך לשאול את שמו, תאריך תחילת החופשה, תאריך סיום החופשה ושם המנהל שלו. לאחר שהמשתמש מספק את המידע הזה, הסוכן צריך לשמור אותו ברשימת SharePoint שנקראת ‘בקשות חופשה’ ולפרסם הודעה בערוץ Microsoft Teams ייעודי.”
+</code></pre></div>
+<p>למה ההנחיה הזו עובדת:</p>
+<ul>
+<li><strong>מציינת בבירור את המטרה</strong> - להגיש בקשת חופשה.</li>
+<li><strong>מתארת את האינטראקציה עם המשתמש</strong> - מה המשתמש אומר ומה הסוכן צריך לשאול.</li>
+<li><strong>מפרטת את הנתונים הנדרשים</strong> - שם, תאריך התחלה, תאריך סיום, מנהל.</li>
+<li><strong>מציינת לאן הנתונים הולכים</strong> - רשימת SharePoint שנקראת בקשות חופשה.</li>
+</ul>
+<h2 id="_12">🔮 אוקיי, יצרתי את הסוכן שלי... איך אני מטמיע אותו עם ידע?<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>ב-Copilot Studio, מקורות ידע הם מקומות שבהם הסוכן שלכם יכול למצוא מידע כדי לתת תשובות טובות יותר. כאשר אתם מוסיפים את המקורות הללו, הסוכן שלכם יכול לשלב נתונים ארגוניים ממקומות כמו Power Platform, Dynamics 365, אתרי אינטרנט ומערכות או שירותים אחרים שהחברה שלכם משתמשת בהם.</p>
+<p>המקורות הללו עובדים יחד עם AI כדי לעזור לסוכן שלכם להגיב בצורה מדויקת יותר לשאלות משתמשים, זה מושג באמצעות מה שמכונה <strong>תזמור גנרטיבי</strong>.</p>
+<h3 id="_13">🌿 מהו תזמור גנרטיבי בהקשר של סוכנים?<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>תזמור גנרטיבי אומר שהסוכן משתמש ב-AI כדי להחליט באופן דינמי כיצד לענות על שאלה על ידי שילוב הכישורים הלשוניים המובנים שלו עם מידע ממקורות הידע שהוספתם.</p>
+<p>כאשר משתמש שואל שאלה, הסוכן:</p>
+<ul>
+<li>מבין את השאלה באמצעות AI.</li>
+<li>יכול לשאול את המשתמשים על מידע חסר על ידי יצירת שאלות בזמן אמת.</li>
+<li>בוחר את מקורות הידע הרלוונטיים ביותר.</li>
+<li>מחפש את המקורות הללו לתשובות.</li>
+<li>יוצר תגובה טבעית ומועילה באמצעות המידע שמצא.</li>
+</ul>
+<h3 id="_14">🏦 למה מקורות ידע חשובים?<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>תשובות חכמות יותר</strong> - כאשר אתם מוסיפים מקורות ידע, הסוכן שלכם יכול לתת תשובות טובות ומדויקות יותר באמצעות נתונים אמיתיים מהארגון שלכם.</p>
+</li>
+<li>
+<p><strong>פחות עבודה ידנית</strong> - אתם לא צריכים לכתוב כל תשובה אפשרית. הסוכן יכול לחפש במקורות שהוספתם ולהגיב אוטומטית.</p>
+</li>
+<li>
+<p><strong>שימוש במידע אמין</strong> - הסוכן שלכם יכול למשוך תשובות ממערכות שאתם כבר משתמשים בהן כמו Dataverse, SharePoint או אתרי החברה כך שלמשתמשים יהיה מידע אמין ממקור אמת.</p>
+</li>
+<li>
+<p><strong>עובד עם AI גנרטיבי</strong> - מקורות ידע ו-AI עוזרים לסוכן שלכם להבין שאלות ולהגיב בצורה טבעית, גם אם השאלה לא תוכנתה מראש או נוספה כהנחיה התחלתית.</p>
+</li>
+<li>
+<p><strong>גמיש וניתן להרחבה</strong> - אתם יכולים להוסיף מקורות ידע בכל עת במהלך ההגדרה או בשלב מאוחר יותר, הסוכן שלכם נעשה חכם יותר ככל שהצרכים שלכם משתנים.</p>
+</li>
+</ol>
+<h3 id="_15">✨ דוגמה<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p>תארו לעצמכם שאתם בונים סוכן שיעזור לעובדים עם שאלות משאבי אנוש. אתם מוסיפים את מסמך מדיניות משאבי האנוש של החברה ואת אתר SharePoint כמקורות ידע.</p>
+<p>כאשר עובד שואל, <em>“כמה ימי חופשה אני זכאי להם?”</em>, הסוכן משתמש בתזמור גנרטיבי כדי לחפש את המקורות הללו ולהשיב עם המדיניות הנכונה מבלי שתצטרכו לכתוב את התשובה הזו ידנית. זה חוסך לכם זמן בהתמודדות עם כל שאלה אפשרית שעובד עשוי לשאול לגבי זכויותיו.</p>
+<h2 id="_16">סוגי מקורות ידע שניתן להוסיף<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>אתרי אינטרנט ציבוריים</strong></p>
+<ul>
+<li><strong>מה זה עושה:</strong> מחפש אתרים ספציפיים (כמו אתר החברה שלכם) באמצעות Bing.</li>
+<li><strong>למה זה שימושי:</strong> מצוין למשיכת מידע ציבורי כמו שאלות נפוצות או פרטי מוצרים.</li>
+</ul>
+</li>
+<li>
+<p><strong>מסמכים</strong></p>
+<ul>
+<li><strong>מה זה עושה:</strong> משתמש במסמכים שאתם מעלים ישירות לסוכן שלכם, כמו קבצי PDF או Word. הקבצים שהועלו נשמרים בצורה מאובטחת ב-Dataverse.</li>
+<li><strong>למה זה שימושי:</strong> מאפשר לסוכן שלכם לענות על שאלות בהתבסס על מדריכים פנימיים, חוברות או מדיניות.</li>
+</ul>
+</li>
+<li>
+<p><strong>SharePoint</strong></p>
+<ul>
+<li><strong>מה זה עושה:</strong> מתחבר לתיקיות או קבצים ב-SharePoint באמצעות Microsoft Graph Search.</li>
+<li><strong>למה זה שימושי:</strong> אידיאלי לגישה למסמכי צוות, מדיניות HR או קבצי פרויקטים המאוחסנים ב-SharePoint.</li>
+</ul>
+</li>
+<li>
+<p><strong>Dataverse</strong></p>
+<ul>
+<li><strong>מה זה עושה:</strong> משתמש בנתונים מובנים מסביבת Dataverse שלכם, טבלאות ושורות, ויכול ליישם מילים נרדפות והגדרות מילון לטבלאות ועמודות לשיפור תגובות הסוכן.</li>
+<li><strong>למה זה שימושי:</strong> כאשר אתם צריכים לחפש נתונים ארגוניים המאוחסנים ב-Dataverse כמו מידע על לקוחות.</li>
+</ul>
+</li>
+<li>
+<p><strong>ידע בזמן אמת עם מחברים</strong></p>
+<ul>
+<li><strong>מה זה עושה:</strong> מאפשר לסוכן שלכם לגשת לנתונים חיים ממערכות ארגוניות אחרות כמו Salesforce, ServiceNow, Dynamics 365, AzureSQL, Databricks ועוד במהלך שיחה, באמצעות הרשאות המשתמש עצמו.</li>
+<li><strong>למה זה שימושי:</strong> מספק תגובות עדכניות, מאובטחות ומדויקות מבלי לאחסן או לשכפל נתונים, מה שהופך את הסוכן לחכם ובטוח יותר.</li>
+</ul>
+</li>
+<li>
+<p><strong>Azure AI Search</strong></p>
+<ul>
+<li><strong>מה זה עושה:</strong> מאפשר לסוכן שלכם לחפש במערכים גדולים של מסמכים המאוחסנים ב-Azure באמצעות חיפוש סמנטי ווקטורי כדי להבין שאלות משתמשים.</li>
+<li><strong>למה זה שימושי:</strong> מספק תשובות מדויקות ואמינות ממקורות נתונים מורכבים, תומך בציטוטים ומתרחב היטב עבור אוספי מסמכים גדולים עם בקרות גישה מאובטחות.</li>
+</ul>
+</li>
+</ol>
+<h2 id="_17">🔒 הערה על אבטחה<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<h3 id="_18">אימות מקורות ידע<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p>חלק מהמקורות כמו SharePoint ו-Dataverse דורשים אימות משתמש. זה אומר שהסוכן יתייחס רק לנתונים בתשובתו שהמשתמש מורשה לראות. בעוד שמקורות אחרים עשויים לדרוש תצורה נוספת כדי שהסוכן יתחבר אליהם, כמו Azure AI Search שדורש חשבון Azure והגדרת סוג אימות.</p>
+<h2 id="-copilot-studio">שיפור תגובות הסוכן שלכם ב-Copilot Studio<a class="headerlink" href="#-copilot-studio" title="Permanent link">&para;</a></h2>
+<p>לאחר שהסוכן שלכם נוצר מחוויית יצירת השיחה, תרצו לבדוק את הסוכן מול ההוראות ש-Copilot יצר מההנחיה שלכם. שיפור תגובות הסוכן ב-Copilot Studio מתמקד בהבטחת הבנה ברורה של המטרות שלכם ובכך שיש לו את המידע הנכון לעבוד איתו.</p>
+<ol>
+<li>
+<p><strong>שפרו את הוראות הסוכן</strong> - כאן אתם אומרים לסוכן איך הוא צריך להתנהג. השתמשו בשפה ברורה ומדויקת.</p>
+<p>לדוגמה:</p>
+<p>✅ “התנהג כמו סוכן תמיכה ידידותי שמסביר דברים בפשטות.”</p>
+<p>❌ “תהיה מועיל.” (מעורפל מדי)</p>
+</li>
+<li>
+<p><strong>בדקו את הטון והשפה</strong> - ודאו שהטון של הסוכן מתאים לקהל שלכם.</p>
+<p>אתם יכולים להגדיר אותו להיות:</p>
+<ul>
+<li>ידידותי וקליל.</li>
+<li>מקצועי ותמציתי.</li>
+<li>תומך וסבלני.</li>
+</ul>
+</li>
+<li>
+<p><strong>הוסיפו או עדכנו מקורות ידע</strong> - אם הסוכן שלכם צריך לענות על שאלות בנושא מסוים, ודאו שיש לו גישה למידע הנכון.</p>
+<ul>
+<li>הוסיפו קישורים לאתרים, מסמכים או שאלות נפוצות.</li>
+<li>שמרו על התוכן מעודכן.</li>
+<li>השתמשו במידע ברור ומובנה היטב.</li>
+</ul>
+</li>
+<li>
+<p><strong>השתמשו בנושאים ומפעילים</strong> - אם הסוכן שלכם צריך לטפל במשימות או שיחות ספציפיות, אתם יכולים ליצור נושאים עם ביטויי הפעלה. זה עוזר להכווין את השיחה בצורה מדויקת יותר. נלמד על כך יותר בשיעור הבא.</p>
+</li>
+<li>
+<p><strong>בדקו עם שאלות אמיתיות</strong> - נסו לשאול את הסוכן את סוגי השאלות שהמשתמשים עשויים לשאול.</p>
+<p>אם התשובות לא טובות:</p>
+<ul>
+<li>התאימו את הוראות המערכת.</li>
+<li>הוסיפו עוד דוגמאות או ידע.</li>
+<li>נסחו מחדש את השאלות שלכם כדי לראות איך הוא מגיב.</li>
+</ul>
+</li>
+<li>
+<p><strong>סקירה ושיפור מתמיד</strong> - שיפור סוכן הוא תהליך מתמשך!</p>
+<p>לאחר הפרסום:</p>
+<ul>
+<li>אספו משוב ממשתמשים.</li>
+<li>עקבו אחר שאלות נפוצות או בלבול.</li>
+<li>המשיכו לשפר את הגדרות הסוכן.</li>
+</ul>
+</li>
+</ol>
+<h2 id="06-copilot-studio">🧪 מעבדה 06: יצירת סוכן מותאם אישית ב-Copilot Studio<a class="headerlink" href="#06-copilot-studio" title="Permanent link">&para;</a></h2>
+<p>עכשיו נלמד כיצד ליצור סוכן מותאם אישית שיכול לשוחח על הנתונים שלכם</p>
+<ul>
+<li><a href="../../../../../docs/recruit/06-create-agent-from-conversation">6.1 השתמשו בשפה טבעית ליצירת סוכן עם Copilot</a></li>
+<li><a href="../../../../../docs/recruit/06-create-agent-from-conversation">6.2 הוסיפו מקור ידע פנימי באמצעות אתר SharePoint</a></li>
+<li><a href="../../../../../docs/recruit/06-create-agent-from-conversation">6.3 הוסיפו מקור ידע פנימי על ידי העלאת מסמך</a></li>
+<li><a href="../../../../../docs/recruit/06-create-agent-from-conversation">6.4 בדקו את הסוכן</a></li>
+</ul>
+<h3 id="_19">✨ מקרה שימוש<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>נשתמש באותו תרחיש שימוש מ-<a href="../03-create-a-declarative-agent-for-M365Copilot/#use-case-scenario">שיעור 03 - יצירת סוכן דקלרטיבי עבור Microsoft 365 Copilot</a></p>
+<p><strong>כעובד</strong></p>
+<p><strong>אני רוצה</strong> לקבל עזרה מהירה ומדויקת מסוכן התמיכה הטכנית עבור בעיות כמו תקלות במכשירים, פתרון בעיות רשת, הגדרת מדפסות</p>
+<p><strong>כדי שאוכל</strong> להישאר פרודוקטיבי ולפתור בעיות טכניות ללא עיכובים</p>
+<p>בואו נתחיל!</p>
+<h3 id="_20">✨ דרישות מקדימות<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>אתר SharePoint</strong></li>
+</ul>
+<p>נשתמש באתר SharePoint <strong>Contoso IT</strong> מ-<a href="../00-course-setup/#step-4-create-new-sharepoint-site">שיעור 00 - הגדרת הקורס - שלב 3: יצירת אתר SharePoint חדש</a>.</p>
+<p>אם לא הגדרת את אתר SharePoint <strong>Contoso IT</strong>, חזור ל-<a href="../00-course-setup/#step-4-create-new-sharepoint-site">שיעור 00 - הגדרת הקורס - שלב 3: יצירת אתר SharePoint חדש</a>.</p>
+<ul>
+<li><strong>פתרון</strong></li>
+</ul>
+<p>נשתמש בפתרון <strong>Contoso Helpdesk Agent</strong> מ-<a href="../04-creating-a-solution/#41-create-a-solution-publisher">שיעור 04 - יצירת פתרון עבור הסוכן שלך</a>.</p>
+<p>אם לא הגדרת את פתרון <strong>Contoso Agent</strong>, חזור ל-<a href="../04-creating-a-solution/#41-create-a-solution-publisher">שיעור 04 - יצירת פתרון עבור הסוכן שלך</a>.</p>
+<h3 id="61-copilot">6.1 שימוש בשפה טבעית ליצירת סוכן עם Copilot<a class="headerlink" href="#61-copilot" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">שאלות Copilot עשויות להשתנות בין מפגשים</p>
+<p>חוויית יצירת השיחה עם Copilot יכולה להשתנות בכל פעם, כאשר השאלות המוצעות להכוונה עשויות להיות מעט שונות מהפעם הקודמת.</p>
+</div>
+<ol>
+<li>
+<p>נווט לדף הבית של Copilot Studio ובשדה, הזן את ההנחיה הבאה שמתארת את סוכן התמיכה הטכנית. ההנחיה כוללת את מטרת הסוכן, ההקשר, המשימות הצפויות ותבנית התגובה של הסוכן.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are an IT help desk agent. Your goal is to assist users with their IT issues. You can access information from our company&#39;s knowledge base at https://support.microsoft.com/en-us. Your responses should be polite and helpful. If a user reports a slow computer, ask about the age of the device, current software versions, and if they&#39;ve recently installed any new programs. If a user is experiencing trouble logging into their email, guide them through password reset procedures. You should be concise and informative, using step-by-step instructions with bullet points when appropriate.
+</span></code></pre></div>
+<p><img alt="הזן הנחיה" src="../../../../../translated_images/6.1_01_Prompt.c4be2ff2cac9fde3659f2e7016e48f01860b55523d3320b3b8450ef2fcb1f51a.he.png" /></p>
+</li>
+<li>
+<p>חוויית יצירת השיחה עם Copilot תיטען. תראה ש-Copilot בתהליך של תגובה אליך.</p>
+<p><img alt="חוויית יצירת שיחה עם Copilot" src="../../../../../translated_images/6.1_02_ConversationalCreationExperienceLoads.115eaf4e5a15c1b60bc0d25c97a0d97d462d6c740cfed5de369b2bd8fd1cc8bc.he.png" /></p>
+</li>
+<li>
+<p>Copilot מאשר שהסוכן הוגדר עם ההוראות שסופקו, ושואל לאישור שם הסוכן. נבקש מ-Copilot לקרוא לסוכן שלנו בשם:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Contoso Helpdesk Agent
+</span></code></pre></div>
+<p><img alt="שנה את שם הסוכן" src="../../../../../translated_images/6.1_03_AgentName.a848acea10cd1d3d6ba68fea2b0e094ecbd130a124413e3c8134198c81654833.he.png" /></p>
+</li>
+<li>
+<p>Copilot מבצע את הבקשה ונראה ששמו של הסוכן עודכן בלוח הסוכן. לאחר מכן, Copilot מבקש מאיתנו לחדד את ההוראות. הוא שואל כיצד עלינו להגיב לבעיות מסוימות ונבקש שיכיר בבעיה, יספק דוגמאות לנושאים לענות עליהם, ויעצב את התגובה כנקודות.</p>
+<p>העתק והדבק את הטקסט הבא, ושלח את הבקשה ל-Copilot.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>תעדף בקשות דחופות. דוגמאות לבעיות IT או תרחישים לעזרה: תקלות במכשירים, בעיות חיבור לרשת, בעיות התחברות. בעת פתרון בעיות, קודם כל הכיר בבעיה שלהם וענה באמפתיה, לאחר מכן ספק הדרכה שלב אחר שלב באמצעות נקודות ושאל אם הם זקוקים לעזרה נוספת.
+</span></code></pre></div>
+<p><img alt="חדד את הוראות הסוכן" src="../../../../../translated_images/6.1_04_RefineInstructions.9575407dbc12e0399691068d20e0d0252bb8b8f839cf53ee9d715fe2c16afa70.he.png" /></p>
+</li>
+<li>
+<p>ההוראות של הסוכן יעודכנו לאחר ש-Copilot קיבל את הבקשה. שים לב כיצד בלוח בצד ימין, הופיעו הנחיות התחלה. אלו נוצרו על בסיס ההוראות שלנו.</p>
+<p>לאחר מכן, Copilot מבקש אתרים ציבוריים כדי לעגן את הידע של הסוכן.</p>
+<p>העתק והדבק את הטקסט הבא, ושלח את הבקשה ל-Copilot.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>https://support.microsoft.com
+</span></code></pre></div>
+<p><img alt="הוסף אתר ציבורי נגיש" src="../../../../../translated_images/6.1_05_KnowledgeSource.3aec8d869b73d273f88c62cf99bb2f731df83a83c1ca54d92d6e96b86a570637.he.png" /></p>
+</li>
+<li>
+<p>האתר הציבורי יתווסף כמקור ידע. Copilot שואל אם יש להוסיף מקורות ידע נוספים. אין צורך להוסיף אתרים ציבוריים נוספים.</p>
+<p>העתק והדבק את הטקסט הבא, ושלח את הבקשה ל-Copilot.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Proceed with setup
+</span></code></pre></div>
+<p><img alt="המשך בהגדרה" src="../../../../../translated_images/6.1_06_ProceedWithSetup.11ceb9ccccccd19418711681d42b602ee223ebd017d6bf300088de84d1d35f1d.he.png" /></p>
+</li>
+<li>
+<p>Copilot מאשר שההגדרה של סוכן Contoso Helpdesk שלנו הושלמה, אך נוסיף שינוי נוסף. נבקש מהסוכן שלנו לא לענות על שאלות הקשורות למשאבי אנוש. זה יידע את הסוכן שלנו שלא לענות על שאלות הקשורות למשאבי אנוש שנשאלות על ידי משתמשים.</p>
+<p>העתק והדבק את הטקסט הבא, ושלח את הבקשה ל-Copilot.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>אל תספק עזרה לשאלות הקשורות למשאבי אנוש, דוגמאות הן: מה יתרת ימי החופשה שלי? כמה ימי מחלה יש לי? מה כתובת ה-URL לפורטל השכר שלנו?
+</span></code></pre></div>
+<p><img alt="אל תענה על שאלות הקשורות למשאבי אנוש" src="../../../../../translated_images/6.1_07_DoNotTalkAbout.d9ccbbd15b9793e1642b365be6968548f6f250be5d541f1ad06eb9f12985e94f.he.png" /></p>
+</li>
+<li>
+<p>ההוראות יעודכנו לא לספק עזרה עם שאלות הקשורות למשאבי אנוש. אין צורך לבצע עדכונים נוספים, הסוכן שלנו מוכן להיווצר.</p>
+<p><img alt="הוראות הסוכן עודכנו" src="../../../../../translated_images/6.1_08_AgentInstructionsUpdated.4de1112eeb5c8e2e2fe03fcbc6d332bdc3b1de740d9a5ab6b1ec30e27e241096.he.png" /></p>
+</li>
+<li>
+<p>לפני שניצור את הסוכן שלנו, נעשה כמה דברים.</p>
+<p>ראשית, בחר בכרטיסיית <strong>Configure</strong> כדי לצפות בפרטי הסוכן שהוגדרו מהשיחה שלנו עם Copilot. כאן תראה את השם, התיאור, ההוראות, הידע וההנחיות המוצעות/התחלתיות.</p>
+<p><img alt="צפה בפרטי הסוכן" src="../../../../../translated_images/6.1_09_ViewAgentDetails.72c7f66721d6ac354bcc7186204bb0ad169456b0b7756f5e5a5e0f090e802a57.he.png" /></p>
+</li>
+<li>
+<p>שנית, נבדוק את הסוכן שלנו. העתק והדבק את הטקסט הבא, ושלח את השאלה לסוכן שלנו.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>איך אני יכול לבדוק את מצב האחריות של ה-Surface שלי?
+</span></code></pre></div>
+<p><img alt="בדוק את הסוכן" src="../../../../../translated_images/6.1_10_TestAgent.8b1a0f1d98f4fa5b61336e1c4ac6d77b4822283314c2941cb0e04bf5247d8489.he.png" /></p>
+</li>
+<li>
+<p>התגובה לשאלה תוצג לאחר מכן, כאשר התשובות מעוצבות כמדריך שלב אחר שלב באמצעות נקודות. נהדר, הסוכן שלנו עובד! 🙌🏻</p>
+<p><img alt="תגובת הסוכן" src="../../../../../translated_images/6.1_11_AgentResponse.c5fb305335b8e9b456b0f75ec9e237d4abbc3e9a1a6976e14bb656f1adffb14a.he.png" /></p>
+</li>
+<li>
+<p>לבסוף, נבדוק שוב שהפתרון שבו ייווצר הסוכן שלנו הוא הפתרון שיצרנו ובחרנו כפתרון המועדף ב-<a href="../04-creating-a-solution/#42-create-a-new-solution">שיעור 04 - יצירת פתרון חדש</a>.</p>
+<p>בחר באייקון <strong>שלוש הנקודות (...)</strong> ובחר <strong>Update Advanced Settings</strong>.</p>
+<p><img alt="עדכן הגדרות מתקדמות" src="../../../../../translated_images/6.1_12_UpdateAdvancedSettings.5943949ae7c9f492fb90779b0284283deb4186f14cd6588c46920f8e50d8d6d0.he.png" /></p>
+</li>
+<li>
+<p>חלון <strong>Advanced Settings</strong> יופיע ונוכל לראות שהפתרון שיצרנו קודם נבחר כברירת מחדל. זאת בשל בחירת הפתרון שלנו כפתרון המועדף ב-<a href="../04-creating-a-solution/#42-create-a-new-solution">שיעור 04 - יצירת פתרון חדש</a>.</p>
+<p>בחר <strong>Cancel.</strong></p>
+<p><img alt="תצוגת הגדרות מתקדמות" src="../../../../../translated_images/6.1_13_AdvancedSettings.fff0861831346d5bef4e7731fed83073aca6d17aa940633040f65b1f300aee15.he.png" /></p>
+</li>
+<li>
+<p>עכשיו ניצור את הסוכן המותאם אישית שלנו! בחר <strong>Create</strong>.</p>
+<p><img alt="בחר Create" src="../../../../../translated_images/6.1_14_CreateAgent.7330a5fbe44a0664f35c5b5502e499f6dd3bad55d13094ef6c22608e8f8831b1.he.png" /></p>
+</li>
+<li>
+<p>Copilot Studio יתחיל להקים את הסוכן שלנו.</p>
+<p><img alt="הגדרת הסוכן" src="../../../../../translated_images/6.1_15_SettingUpAgent.34028a37bc2922eae13d0a18bb468bd738608b4de948192d89c3a2680fff2496.he.png" /></p>
+</li>
+<li>
+<p>לאחר שהסוכן שלנו הוקם, נוכל לראות את פרטי הסוכן משקפים את מה שביקשנו במהלך חוויית יצירת השיחה עם Copilot. גלול מטה כדי לסקור את הסוכן, שם תראה את השם, התיאור, ההוראות, מקורות הידע וההנחיות המוצעות. מצב האורקסטרציה מופעל כברירת מחדל והמודל המוגדר כברירת מחדל משמש כמודל התגובה של הסוכן.</p>
+<p><img alt="הסוכן נוצר" src="../../../../../translated_images/6.1_16_AgentCreated.91edb1939b33d158930cd385c0d97c320958504e224ffc163ed5030b0cdc72a7.he.png" /></p>
+<p><img alt="מקורות ידע" src="../../../../../translated_images/6.1_17_KnowledgeSources.00f1ed0b7f405e4820971834fb75e39a80659cf1b9eeeee42d861bfc4656240f.he.png" /></p>
+<p><img alt="הנחיות מוצעות" src="../../../../../translated_images/6.1_18_SuggestedPrompts.20b84b9420858de8485460cc50a8e73798b08bb2022c946899adcbf9b484e0f0.he.png" /></p>
+</li>
+<li>
+<p>עכשיו נבדוק את הסוכן החדש שיצרנו. בלוח <strong>Test</strong> בצד ימין, בחר באייקון <strong>Activity Map</strong>.</p>
+<p><img alt="בחר Activity Map" src="../../../../../translated_images/6.1_19_ActivityMap.b2e6c77c69fd953818dc73b4dbe2e6d46529cf105d7a4a18c590d15c0b717cf4.he.png" /></p>
+</li>
+<li>
+<p>הזן את השאלה הבאה בלוח <strong>Test</strong>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>איך אני מוצא את מפתח המוצר של Windows 11 שלי?
+</span></code></pre></div>
+<p><img alt="בדוק את הסוכן החדש שנוצר" src="../../../../../translated_images/6.1_20_TestAgent.a9d3a761477c9b79facd132c173ec886d808320ad2cbc0347066a20c0f9dd669.he.png" /></p>
+</li>
+<li>
+<p>מפת הפעילות תיטען לאחר מכן ותראה לנו בזמן אמת איזה נתיב הסוכן מעבד. בתרחיש זה, הסוכן שלנו הבין את השאלה ומחפש את מקורות הידע. כרגע יש לנו מקור אחד שהוא האתר הציבורי שהוספנו קודם באמצעות Copilot, וזה מה שהסוכן סוקר.</p>
+<p><img alt="סקירת מקורות ידע" src="../../../../../translated_images/6.1_21_ReviewingSources.78068042898e2960667393c931e120dbe80f6b74c9af222b79446f7a82d5c757.he.png" /></p>
+</li>
+<li>
+<p>הסוכן שלנו מגיב לאחר מכן עם תשובות שמפורטות כנקודות, כפי שהוגדר בהוראות. התגובה כוללת הפניות לדפי האינטרנט שהסוכן יצר את תגובתו מהם. זה מאפשר למשתמשים לאמת את מקור התשובה.</p>
+<p><img alt="הפניות בתגובה" src="../../../../../translated_images/6.1_22_Response.44a088e80f2a9fac74bcd364571f1ebb900b43e9e647089ef51d39b809b0f0e9.he.png" /></p>
+</li>
+<li>
+<p>ניתן גם לסקור את התגובה ואת מקורותיה על ידי גלילה מטה בחלון <strong>Knowledge modal</strong> במפת הפעילות.</p>
+<p><img alt="מקורות שהופנו" src="../../../../../translated_images/6.1_23_ReferencedSources.ca8e41855284446d121a34fd9d8d667e05016f5eda741adcf7f356ac2c59c559.he.png" /></p>
+</li>
+</ol>
+<p>ברכות! יצרתם את הסוכן המותאם אישית הראשון שלכם עם Copilot ב-Copilot Studio 🙌🏻</p>
+<h3 id="62-sharepoint">6.2 הוספת מקור ידע פנימי באמצעות אתר SharePoint<a class="headerlink" href="#62-sharepoint" title="Permanent link">&para;</a></h3>
+<p>בעבר עם Copilot, הוספנו אתר ציבורי כמקור ידע חיצוני עבור הסוכן שלנו במהלך חוויית יצירת השיחה. עכשיו נוסיף מקור ידע פנימי באמצעות אתר SharePoint. זה יהיה אתר SharePoint שיצרתם במהלך <a href="../00-course-setup/#step-4-create-new-sharepoint-site">שיעור 00 - הגדרת הקורס</a>.</p>
+<ol>
+<li>
+<p>בחר <strong>+ Add knowledge</strong>.</p>
+<p><img alt="בחר Add knowledge" src="../../../../../translated_images/6.2_01_AddKnowledge.5e441f7e3b0ebb25218bece75394ecf4c8c3a60e1b5d8ea15ca020546352f256.he.png" /></p>
+</li>
+<li>
+<p>בחר <strong>SharePoint</strong>.</p>
+<p><img alt="בחר SharePoint" src="../../../../../translated_images/6.2_02_SelectSharePoint.5bd29d31cc76f581db3eef474731fc2dfce4ef1dab86d9cc11716323ba726408.he.png" /></p>
+</li>
+<li>
+<p>הדבק את <strong>כתובת אתר SharePoint</strong> שיצרת ב-<a href="../00-course-setup/#step-4-create-new-sharepoint-site">שיעור 00 - הגדרת הקורס</a> בשדה כתובת ה-URL של SharePoint ובחר <strong>Add</strong>.</p>
+<p><img alt="הזן כתובת אתר SharePoint" src="../../../../../translated_images/6.2_03_AddSharePointURL.974c251d9690524a8bfa4c9dd930af3d834245749fb9f1fda508c3b1f9773827.he.png" /></p>
+</li>
+<li>
+<p>עדכן את <strong>שם</strong> אתר SharePoint ל-<code>Contoso IT</code> ובחר <strong>Add</strong>.</p>
+<p><img alt="עדכן את שם אתר SharePoint והוסף לסוכן" src="../../../../../translated_images/6.2_04_UpdateNameAddToAgent.46a814c09586fe135bffb77814ba13d0593f25feaaa989174c97e80345f03866.he.png" /></p>
+</li>
+<li>
+<p>אתר SharePoint נוסף עכשיו כמקור ידע עם סטטוס <em>Ready</em>. עמודת הסטטוס תראה אם מקור הידע נטען/חובר בהצלחה, או אם יש בעיה.</p>
+<p><img alt="סטטוס אתר SharePoint" src="../../../../../translated_images/6.2_05_SharePointStatus.90a9001978f31c5d4b183d5ecc4869c81dd9fc1bb8a6b1ef4675fcb51d52f8e5.he.png" /></p>
+</li>
+</ol>
+<h3 id="63">6.3 הוספת מקור ידע פנימי על ידי העלאת מסמך<a class="headerlink" href="#63" title="Permanent link">&para;</a></h3>
+<p>עכשיו נוסיף מקור ידע פנימי נוסף על ידי העלאת מסמך ישירות לסוכן שלנו.</p>
+<ol>
+<li>
+<p>בחר <strong>Add knowledge</strong>.</p>
+<p><img alt="בחר Add knowledge" src="../../../../../translated_images/6.3_01_AddKnowledge.d93caa805efb7e2a433d9777f8eb1789dc5daf4f9ebe95da2a74a2b57cffdd33.he.png" /></p>
+</li>
+<li>
+<p>בחר <strong>Upload file</strong> או <strong>Select to browse</strong>.</p>
+<p><img alt="בחר העלאת קבצים" src="../../../../../translated_images/6.3_02_UploadFile.662de4f3916bfa3f34a6699a9a45846e64e71a70dfecbc656fb5b511792de6b6.he.png" /></p>
+</li>
+<li>
+<p>הורד את <a href="../../../../../docs/recruit/06-create-agent-from-conversation/assets/Contoso_Guest_WiFi_Connection_Guide.docx" title="download">קובץ הדוגמה הזה</a> ובחר אותו ב-File Explorer שלך. בחר <strong>Open</strong>.</p>
+<p><img alt="בחר מסמך" src="../../../../../translated_images/6.3_03_SelectFile.077d73491dc6ff1f6114d259261ee68334c4da182c3b55233468637d1989f14c.he.png" /></p>
+</li>
+<li>
+<p>הקובץ נבחר להעלאה. בחר <strong>Add to agent</strong> לאחר מכן.</p>
+<p><img alt="בחר Add to Agent" src="../../../../../translated_images/6.3_04_AddToAgent.1eec469d6d28c22959c8d7f3ad39aa0df5e07adfdb85ce1e21c0c4fe31c27db5.he.png" /></p>
+</li>
+<li>
+<p>המסמך יהיה בתהליך של הוספה לסוכן. המתן עד שההעלאה תושלם, אל תסגור את חלון הדפדפן. סטטוס המסמך יראה בתחילה כ-<em>In progress</em>, המתן עד שהסטטוס יעודכן ל-<strong>Ready</strong> לפני שתבדוק את הסוכן שלך.</p>
+<p><img alt="סטטוס הקובץ" src="../../../../../translated_images/6.3_05_FileStatus.2029b8aa0109a6f46372291e9bba33429c2ebd572efa81702a73cae91fbf3a90.he.png" /></p>
+</li>
+</ol>
+<p>עכשיו נבדוק את הסוכן שלנו!</p>
+<h3 id="64">6.4 בדיקת הסוכן<a class="headerlink" href="#64" title="Permanent link">&para;</a></h3>
+<p>נבדוק את שלושת מקורות הידע שלנו על ידי שאלת שאלות לסוכן Contoso Helpdesk שלנו.</p>
+<ol>
+<li>
+<p>בחר באייקון <strong>refresh</strong> בלוח הבדיקה, ולאחר מכן בחר באייקון <strong>activity map</strong>.</p>
+<p><img alt="אייקון רענון" src="../../../../../translated_images/6.4_01_RefreshAndActivityMap.c24ebc6c277786dab75941dac0b6e55f3dbb244b29fb791c87e4aba5c4a56c81.he.png" /></p>
+</li>
+<li>
+<p>הזן את השאלה הבאה כדי לבדוק את מקור הידע של האתר הציבורי (חיצוני).</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>How can I find the serial number on my Surface device?
+</span></code></pre></div>
+<p><img alt="הזן הנחיה לבדוק את מקור הידע של האתר" src="../../../../../translated_images/6.4_02_TestQuestion1.3a5aeaaa72a9578a05edd4575275e1ba60ecaf8c7377ab13872619580e0309f9.he.png" /></p>
+</li>
+<li>
+<p>לאחר מכן תראה את הסוכן סוקר את מקורות הידע ומספק תגובה באמצעות מקור הידע של האתר.
+      <img alt="דף אינטרנט שמוזכר בתשובה" src="../../../../../translated_images/6.4_03_ReviewingSources.a56742505402eab51b423b543c814242728ff7947e443360740b3e5dac82ba65.he.png" /></p>
+</li>
+<li>
+<p>תתקבל תשובה ושימו לב שיש הפניות לדף האינטרנט שממנו נוצרה התשובה. אם תגללו מטה במודל הידע במפת הפעילות, תוכלו לראות את מקורות הידע האחרים שהסוכן חיפש, שהם אתר SharePoint והקובץ שהועלה.</p>
+<p>עם זאת, הם לא שימשו, כפי שניתן לראות בסעיף <strong>מקורות שהוזכרו</strong>, רק מקור הידע של האתר הוזכר. התשובה התבססה על מקור הידע של האתר. אם תבחרו את ההפניות, תועברו לדף האינטרנט.</p>
+<p><img alt="מקורות ידע שהוזכרו ונחפשו" src="../../../../../translated_images/6.4_04_ReferencedSources.2fb91e8ed7cac8196c3cc1e43006512d4138adb4f240bdab66cd2af5fd1ec7c6.he.png" /></p>
+</li>
+<li>
+<p>עכשיו נבדוק את מקור הידע של אתר SharePoint ואת מקור הידע של המסמך בהודעה אחת. הזינו את השאלה הבאה.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>How can I access our company Contoso VPN? How do guests connect to the Contoso Guest wifi?
+</span></code></pre></div>
+<p><img alt="בדיקת מקורות ידע של SharePoint ומסמך" src="../../../../../translated_images/6.4_05_TestQuestion2.f77ce87578b59386ec5491716996aff9247c5e5ad458a51226276238adb282f3.he.png" /></p>
+</li>
+<li>
+<p>שוב תראו את הסוכן סוקר את שלושת מקורות הידע כדי ליצור תשובה לשאלות בהודעה אחת. הסוכן מגיב לשתי השאלות בהודעה אחת, ומפנה בנפרד לדף SharePoint ולמסמך שממנו נוצרה התשובה.</p>
+<p>במודל הידע במפת הפעילות, תוכלו לראות את אתר SharePoint והמסמך ששימשו כמקורות ההפניה. יש לכם שקיפות מלאה לגבי אילו מקורות ידע שימשו למענה על שתי השאלות.</p>
+<p><img alt="מקורות ידע שהוזכרו" src="../../../../../translated_images/6.4_06_ReferencedSources.caf049dac28b4317c39b074b481f5d7d5b1b92fd792fc4b796fec0c1575f9581.he.png" /></p>
+</li>
+<li>
+<p>תמיד כדאי לוודא שהתשובה שנוצרה נכונה. בחרו את הפניה לאתר SharePoint ודף ה-FAQs של SharePoint ייטען, שם תוכלו לגלול מטה ולסקור את הוראות ה-VPN.</p>
+<p><img alt="סקירת דף SharePoint" src="../../../../../translated_images/6.4_07_VerifySharePoint.6ee48515fedf37a62564ddc388c2452751ed5777cda321d887c315c2de78d293.he.png" /></p>
+</li>
+<li>
+<p>לאחר מכן, בחרו את הפניה למסמך ומודל יופיע עם הטקסט מהמסמך שמשקף את התשובה.</p>
+<p><img alt="סקירת מסמך" src="../../../../../translated_images/6.4_08_VerifyDocument.0f0680b63e6bdd0b558eb287e85965b87ab820e12b25b1e0965f8ebbde795222.he.png" /></p>
+</li>
+</ol>
+<p>הסוכן יכול לענות על מספר שאלות בהודעה אחת, לחפש במקורות הידע ולהפנות למקורות הידע בתשובתו. תמיד וודאו שהתשובה נכונה על ידי סקירת ההפניות.</p>
+<h2 id="_21">✅ משימה הושלמה<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
+<p>ברכות! 👏🏻 למדתם כיצד להשתמש בשפה טבעית כדי ליצור סוכן מותאם אישית שיכול לשוחח על הנתונים שלכם משלושה מקורות ידע שונים 🙌🏻</p>
+<p>זהו סוף <strong>מעבדה 06 - יצירת סוכן עם Copilot</strong>, בחרו את הקישור למטה כדי לעבור לשיעור הבא. הסוכן המותאם אישית שיצרתם במעבדה זו ישמש במעבדה של השיעור הבא.</p>
+<p>⏭️ <a href="../07-add-new-topic-with-trigger/">מעבר לשיעור <strong>הוספת נושא חדש עם טריגר</strong></a></p>
+<p>ברוכים הבאים לאליטה. עכשיו אתם יודעים כיצד ליצור סוכנים דיגיטליים שמדברים בשפה שלכם, מפנים לנתונים שלכם ותומכים בצוות שלכם. המשיכו הלאה—המשימה שלכם רק מתחילה.</p>
+<h2 id="_22">📚 משאבים טקטיים<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/fundamentals-get-started?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext/?WT.mc_id=power-172617-ebenitez">התחלה מהירה: יצירה ופריסה של סוכן</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-first-bot?WT.mc_id=power-172617-ebenitez">יצירה ומחיקה של סוכנים</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-fundamentals/?WT.mc_id=power-172617-ebenitez">מושגים מרכזיים - יצירת סוכנים</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep1">יצירת סוכן מותאם אישית באמצעות שפה טבעית</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep2">הוספת ידע לסוכנים שלכם</a></p>
+<!-- markdownlint-disable-next-line MD033 -->
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/06-create-agent-from-conversation" alt="Analytics" /></p>
+<hr />
+<p><strong>הצהרת אחריות</strong>:<br />
+מסמך זה תורגם באמצעות שירות תרגום AI <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. למרות שאנו שואפים לדיוק, יש להיות מודעים לכך שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי אנושי. אנו לא נושאים באחריות לכל אי הבנות או פרשנויות שגויות הנובעות משימוש בתרגום זה.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

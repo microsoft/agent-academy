@@ -1,0 +1,1044 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/id/docs/recruit/10-add-event-triggers/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#misi-10-tambahkan-pemicu-acara-aktifkan-kemampuan-agen-otonom" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nama-kode-operasi-rutin-hantu" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ NAMA KODE: OPERASI RUTIN HANTU
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ringkasan-misi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Ringkasan Misi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tujuan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Tujuan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apa-itu-pemicu-acara" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Apa itu Pemicu Acara?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bagaimana-pemicu-acara-bekerja" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Bagaimana Pemicu Acara bekerja?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memahami-payload-pemicu" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Memahami payload pemicu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skenario-pemicu-acara-yang-umum" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Skenario Pemicu Acara yang umum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pertimbangan-publikasi-dan-autentikasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Pertimbangan publikasi dan autentikasi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pemecahan-masalah-dan-batasan" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Pemecahan masalah dan batasan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-10-tambahkan-pemicu-acara-untuk-perilaku-agen-otonom" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 10 - Tambahkan Pemicu Acara untuk perilaku agen otonom
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misi-selesai" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Misi Selesai
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sumber-daya-taktis" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Sumber Daya Taktis
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "cd99a76bcb7372ac2771b6ae178b023d",
+  "translation_date": "2025-10-17T17:15:05+00:00",
+  "source_file": "docs/recruit/10-add-event-triggers/README.md",
+  "language_code": "id"
+}
+-->
+<h1 id="misi-10-tambahkan-pemicu-acara-aktifkan-kemampuan-agen-otonom">🚨 Misi 10: Tambahkan Pemicu Acara - Aktifkan kemampuan agen otonom<a class="headerlink" href="#misi-10-tambahkan-pemicu-acara-aktifkan-kemampuan-agen-otonom" title="Permanent link">&para;</a></h1>
+<h2 id="nama-kode-operasi-rutin-hantu">🕵️‍♂️ NAMA KODE: <code>OPERASI RUTIN HANTU</code><a class="headerlink" href="#nama-kode-operasi-rutin-hantu" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Jangka Waktu Operasi:</strong> <code>~45 menit</code></p>
+</blockquote>
+<p>🎥 <strong>Tonton Panduan</strong></p>
+<p><a href="https://www.youtube.com/watch?v=ZgwHL8PQ1nY" title="Tonton panduan di YouTube"><img alt="Thumbnail video pemicu acara" src="../../../../../translated_images/video-thumbnail.0d5b477d69adfe668fab9aa8ef5b199377b46788948b33b1969bf19c099b6469.id.jpg" /></a></p>
+<h2 id="ringkasan-misi">🎯 Ringkasan Misi<a class="headerlink" href="#ringkasan-misi" title="Permanent link">&para;</a></h2>
+<p>Saatnya meningkatkan agen Anda dari asisten percakapan menjadi operator otonom. Misi Anda adalah memungkinkan agen Anda bertindak tanpa dipanggil - merespons sinyal dari seluruh domain digital Anda dengan presisi dan kecepatan.</p>
+<p>Dengan Pemicu Acara, Anda akan melatih agen Anda untuk memantau sistem eksternal seperti SharePoint, Teams, dan Outlook, serta menjalankan tindakan cerdas saat sinyal diterima. Operasi ini mengubah agen Anda menjadi aset lapangan yang sepenuhnya operasional - diam, cepat, dan selalu mengawasi.</p>
+<p>Keberhasilan berarti membangun agen yang memulai nilai - bukan hanya meresponsnya.</p>
+<h2 id="tujuan">🔎 Tujuan<a class="headerlink" href="#tujuan" title="Permanent link">&para;</a></h2>
+<p>📖 Pelajaran ini akan mencakup:</p>
+<ul>
+<li>Memahami Pemicu Acara dan bagaimana mereka memungkinkan perilaku agen otonom</li>
+<li>Mempelajari perbedaan antara pemicu acara dan pemicu topik, termasuk alur kerja pemicu dan payload</li>
+<li>Mengeksplorasi skenario Pemicu Acara yang umum</li>
+<li>Memahami pertimbangan autentikasi, keamanan, dan publikasi untuk agen berbasis acara</li>
+<li>Membangun agen Help Desk IT otonom yang merespons acara SharePoint dan mengirimkan pengakuan email</li>
+</ul>
+<h2 id="apa-itu-pemicu-acara">🤔 Apa itu Pemicu Acara?<a class="headerlink" href="#apa-itu-pemicu-acara" title="Permanent link">&para;</a></h2>
+<p><strong>Pemicu Acara</strong> adalah mekanisme yang memungkinkan agen Anda bertindak secara otonom sebagai respons terhadap acara eksternal, tanpa memerlukan input langsung dari pengguna. Anggap saja sebagai cara membuat agen Anda "mengawasi" acara tertentu dan secara otomatis mengambil tindakan saat acara tersebut terjadi.</p>
+<p>Berbeda dengan pemicu topik, yang membutuhkan pengguna untuk mengetik sesuatu untuk mengaktifkan percakapan, pemicu acara diaktifkan berdasarkan hal-hal yang terjadi di sistem yang terhubung. Contohnya:</p>
+<ul>
+<li>Ketika file baru dibuat di SharePoint atau OneDrive for Business</li>
+<li>Ketika catatan dibuat di Dataverse</li>
+<li>Ketika tugas selesai di Planner</li>
+<li>Ketika respons Microsoft Form baru dikirimkan</li>
+<li>Ketika pesan Microsoft Teams baru ditambahkan</li>
+<li>Berdasarkan jadwal berulang (seperti pengingat harian)<br />
+<img alt="Tambahkan Pemicu" src="../../../../../translated_images/10_AddTriggerDialog.d665fde7e50d106d693110cd80e6c6b569bdad34ea985eb72fee7e0fccb3ef26.id.png" /></li>
+</ul>
+<h3 id="mengapa-pemicu-acara-penting-untuk-agen-otonom">Mengapa Pemicu Acara penting untuk agen otonom<a class="headerlink" href="#mengapa-pemicu-acara-penting-untuk-agen-otonom" title="Permanent link">&para;</a></h3>
+<p>Pemicu acara mengubah agen Anda dari asisten reaktif menjadi pembantu otonom yang proaktif:</p>
+<ol>
+<li>
+<p><strong>Operasi otonom</strong> - agen Anda dapat bekerja 24/7 tanpa intervensi manusia, merespons acara saat mereka terjadi.</p>
+<ul>
+<li><em>Contoh:</em> Secara otomatis menyambut anggota tim baru saat mereka ditambahkan ke tim.</li>
+</ul>
+</li>
+<li>
+<p><strong>Responsivitas waktu nyata</strong> - alih-alih menunggu pengguna mengajukan pertanyaan, agen Anda merespons segera terhadap acara yang relevan.</p>
+<ul>
+<li><em>Contoh</em>: Memberi tahu tim IT saat dokumen SharePoint dimodifikasi.</li>
+</ul>
+</li>
+<li>
+<p><strong>Otomasi alur kerja</strong> - menghubungkan beberapa tindakan berdasarkan satu acara pemicu.</p>
+<ul>
+<li><em>Contoh:</em> Ketika tiket dukungan baru dibuat, buat tugas, beri tahu manajer, dan perbarui dasbor pelacakan.</li>
+</ul>
+</li>
+<li>
+<p><strong>Proses yang konsisten</strong> - memastikan langkah-langkah penting tidak pernah terlewatkan dengan mengotomasi respons terhadap acara utama.</p>
+<ul>
+<li><em>Contoh:</em> Setiap karyawan baru secara otomatis mendapatkan materi orientasi dan permintaan akses.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tindakan berbasis data</strong> - menggunakan informasi dari acara pemicu untuk membuat keputusan cerdas dan mengambil tindakan yang sesuai.</p>
+<ul>
+<li><em>Contoh:</em> Mengarahkan tiket mendesak ke staf senior berdasarkan tingkat prioritas dalam payload pemicu.</li>
+</ul>
+</li>
+</ol>
+<h2 id="bagaimana-pemicu-acara-bekerja">⚙️ Bagaimana Pemicu Acara bekerja?<a class="headerlink" href="#bagaimana-pemicu-acara-bekerja" title="Permanent link">&para;</a></h2>
+<p>Pemicu acara beroperasi melalui alur kerja tiga langkah yang memungkinkan agen Anda merespons secara otonom terhadap acara eksternal:</p>
+<h3 id="alur-kerja-pemicu">Alur kerja pemicu<a class="headerlink" href="#alur-kerja-pemicu" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Deteksi Acara</strong> - Acara tertentu terjadi di sistem yang terhubung (SharePoint, Teams, Outlook, dll.)</li>
+<li><strong>Aktivasi Pemicu</strong> - Pemicu acara mendeteksi acara ini dan mengirimkan payload ke agen Anda melalui Power Automate Cloud Flow.</li>
+<li><strong>Respons Agen</strong> - Agen Anda menerima payload dan menjalankan instruksi yang telah Anda tentukan.</li>
+</ol>
+<h3 id="pemicu-acara-vs-pemicu-topik">Pemicu Acara vs Pemicu Topik<a class="headerlink" href="#pemicu-acara-vs-pemicu-topik" title="Permanent link">&para;</a></h3>
+<p>Memahami perbedaan antara kedua jenis pemicu ini sangat penting:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Pemicu Acara</strong></th>
+<th><strong>Pemicu Topik</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Diaktifkan oleh acara sistem eksternal</td>
+<td>Diaktifkan oleh input/frasa pengguna</td>
+</tr>
+<tr>
+<td>Memungkinkan perilaku agen otonom</td>
+<td>Memungkinkan respons percakapan</td>
+</tr>
+<tr>
+<td>Menggunakan autentikasi pembuat</td>
+<td>Opsi untuk autentikasi pengguna</td>
+</tr>
+<tr>
+<td>Berjalan tanpa interaksi pengguna</td>
+<td>Membutuhkan pengguna untuk memulai percakapan</td>
+</tr>
+<tr>
+<td>Contoh: File dibuat, email diterima</td>
+<td>Contoh: "Bagaimana cuacanya?"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="memahami-payload-pemicu">📦 Memahami payload pemicu<a class="headerlink" href="#memahami-payload-pemicu" title="Permanent link">&para;</a></h2>
+<p>Ketika sebuah acara terjadi, pemicu mengirimkan <strong>payload</strong> ke agen Anda yang berisi informasi tentang acara dan instruksi tentang cara merespons.</p>
+<h3 id="payload-default-vs-kustom">Payload default vs kustom<a class="headerlink" href="#payload-default-vs-kustom" title="Permanent link">&para;</a></h3>
+<p>Setiap jenis pemicu memiliki struktur payload default, tetapi Anda dapat menyesuaikannya:</p>
+<p><strong>Payload default</strong> - Menggunakan format standar seperti <code>Gunakan konten dari {Body}</code></p>
+<ul>
+<li>Berisi informasi acara dasar</li>
+<li>Menggunakan instruksi pemrosesan umum</li>
+<li>Baik untuk skenario sederhana</li>
+</ul>
+<p><strong>Payload kustom</strong> - Menambahkan instruksi spesifik dan format data</p>
+<ul>
+<li>Menyertakan arahan terperinci untuk agen Anda</li>
+<li>Menentukan data apa yang digunakan dan bagaimana cara menggunakannya</li>
+<li>Lebih baik untuk alur kerja yang kompleks</li>
+</ul>
+<h3 id="instruksi-agen-vs-instruksi-payload-kustom">Instruksi agen vs instruksi payload kustom<a class="headerlink" href="#instruksi-agen-vs-instruksi-payload-kustom" title="Permanent link">&para;</a></h3>
+<p>Anda memiliki dua tempat untuk mengarahkan perilaku agen Anda dengan pemicu acara:</p>
+<p><strong>Instruksi Agen</strong> (Global)</p>
+<ul>
+<li>Panduan luas yang berlaku untuk semua pemicu</li>
+<li>Contoh: "Saat memproses tiket, selalu periksa duplikat terlebih dahulu"</li>
+<li>Terbaik untuk pola perilaku umum</li>
+</ul>
+<p><strong>Instruksi Payload</strong> (Spesifik Pemicu)</p>
+<ul>
+<li>Arahan spesifik untuk jenis pemicu individu  </li>
+<li>Contoh: "Untuk pembaruan SharePoint ini, kirimkan ringkasan ke saluran proyek"</li>
+<li>Terbaik untuk agen kompleks dengan banyak pemicu</li>
+</ul>
+<p>💡 <strong>Tips profesional</strong>: Hindari instruksi yang bertentangan antara kedua level ini, karena dapat menyebabkan perilaku yang tidak terduga.</p>
+<h2 id="skenario-pemicu-acara-yang-umum">🎯 Skenario Pemicu Acara yang umum<a class="headerlink" href="#skenario-pemicu-acara-yang-umum" title="Permanent link">&para;</a></h2>
+<p>Berikut adalah contoh praktis bagaimana pemicu acara dapat meningkatkan agen Anda:</p>
+<h3 id="agen-help-desk-it">Agen Help Desk IT<a class="headerlink" href="#agen-help-desk-it" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pemicu</strong>: Item daftar SharePoint baru (tiket dukungan)</li>
+<li><strong>Tindakan</strong>: Secara otomatis mengkategorikan, menetapkan prioritas, dan memberi tahu anggota tim yang sesuai</li>
+</ul>
+<h3 id="agen-orientasi-karyawan">Agen Orientasi Karyawan<a class="headerlink" href="#agen-orientasi-karyawan" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pemicu</strong>: Pengguna baru ditambahkan ke Dataverse</li>
+<li><strong>Tindakan</strong>: Mengirim pesan selamat datang, membuat tugas orientasi, dan menyediakan akses</li>
+</ul>
+<h3 id="agen-manajemen-proyek">Agen Manajemen Proyek<a class="headerlink" href="#agen-manajemen-proyek" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pemicu</strong>: Tugas selesai di Planner</li>
+<li><strong>Tindakan</strong>: Memperbarui dasbor proyek, memberi tahu pemangku kepentingan, dan memeriksa hambatan</li>
+</ul>
+<h3 id="agen-manajemen-dokumen">Agen Manajemen Dokumen<a class="headerlink" href="#agen-manajemen-dokumen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pemicu</strong>: File diunggah ke folder SharePoint tertentu</li>
+<li><strong>Tindakan</strong>: Mengekstrak metadata, menerapkan tag, dan memberi tahu pemilik dokumen</li>
+</ul>
+<h3 id="agen-asisten-rapat">Agen Asisten Rapat<a class="headerlink" href="#agen-asisten-rapat" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pemicu</strong>: Acara kalender dibuat</li>
+<li><strong>Tindakan</strong>: Mengirim pengingat dan agenda pra-rapat, memesan sumber daya</li>
+</ul>
+<h2 id="pertimbangan-publikasi-dan-autentikasi">⚠️ Pertimbangan publikasi dan autentikasi<a class="headerlink" href="#pertimbangan-publikasi-dan-autentikasi" title="Permanent link">&para;</a></h2>
+<p>Sebelum agen Anda dapat menggunakan pemicu acara dalam produksi, Anda perlu memahami implikasi autentikasi dan keamanan.</p>
+<h3 id="autentikasi-pembuat">Autentikasi pembuat<a class="headerlink" href="#autentikasi-pembuat" title="Permanent link">&para;</a></h3>
+<p>Pemicu acara menggunakan <strong>kredensial pembuat agen</strong> untuk semua autentikasi:</p>
+<ul>
+<li>Agen Anda mengakses sistem menggunakan izin Anda</li>
+<li>Pengguna dapat berpotensi mengakses data melalui kredensial Anda</li>
+<li>Semua tindakan dilakukan "atas nama Anda" bahkan ketika pengguna berinteraksi dengan agen</li>
+</ul>
+<h3 id="praktik-terbaik-perlindungan-data">Praktik terbaik perlindungan data<a class="headerlink" href="#praktik-terbaik-perlindungan-data" title="Permanent link">&para;</a></h3>
+<p>Untuk menjaga keamanan saat menerbitkan agen dengan pemicu acara:</p>
+<ol>
+<li><strong>Evaluasi akses data</strong> - Tinjau sistem dan data apa yang dapat diakses oleh pemicu Anda</li>
+<li><strong>Uji secara menyeluruh</strong> - Pahami informasi apa yang disertakan pemicu dalam payload</li>
+<li><strong>Persempit cakupan pemicu</strong> - Gunakan parameter spesifik untuk membatasi acara yang mengaktifkan pemicu</li>
+<li><strong>Tinjau data payload</strong> - Pastikan pemicu tidak mengekspos informasi sensitif</li>
+<li><strong>Pantau penggunaan</strong> - Lacak aktivitas pemicu dan konsumsi sumber daya</li>
+</ol>
+<h2 id="pemecahan-masalah-dan-batasan">⚠️ Pemecahan masalah dan batasan<a class="headerlink" href="#pemecahan-masalah-dan-batasan" title="Permanent link">&para;</a></h2>
+<p>Perhatikan pertimbangan penting ini saat bekerja dengan pemicu acara:</p>
+<h3 id="dampak-kuota-dan-penagihan">Dampak kuota dan penagihan<a class="headerlink" href="#dampak-kuota-dan-penagihan" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Setiap aktivasi pemicu dihitung terhadap konsumsi pesan Anda</li>
+<li>Pemicu yang sering (seperti pengulangan setiap menit) dapat dengan cepat menghabiskan kuota</li>
+<li>Pantau penggunaan untuk menghindari pembatasan</li>
+</ul>
+<h3 id="persyaratan-teknis">Persyaratan teknis<a class="headerlink" href="#persyaratan-teknis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Hanya tersedia untuk agen dengan orkestrasi generatif yang diaktifkan</li>
+<li>Membutuhkan berbagi alur cloud yang sadar solusi diaktifkan di lingkungan Anda</li>
+</ul>
+<h3 id="pencegahan-kehilangan-data-dlp">Pencegahan Kehilangan Data (DLP)<a class="headerlink" href="#pencegahan-kehilangan-data-dlp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Kebijakan DLP organisasi Anda menentukan pemicu mana yang tersedia</li>
+<li>Administrator dapat memblokir pemicu acara sepenuhnya</li>
+<li>Hubungi admin Anda jika pemicu yang diharapkan tidak tersedia</li>
+</ul>
+<h2 id="lab-10-tambahkan-pemicu-acara-untuk-perilaku-agen-otonom">🧪 Lab 10 - Tambahkan Pemicu Acara untuk perilaku agen otonom<a class="headerlink" href="#lab-10-tambahkan-pemicu-acara-untuk-perilaku-agen-otonom" title="Permanent link">&para;</a></h2>
+<h3 id="kasus-penggunaan">🎯 Kasus penggunaan<a class="headerlink" href="#kasus-penggunaan" title="Permanent link">&para;</a></h3>
+<p>Anda akan meningkatkan agen Help Desk IT Anda untuk secara otomatis merespons permintaan dukungan baru. Ketika seseorang membuat item baru di daftar tiket dukungan SharePoint Anda, agen Anda akan:</p>
+<ol>
+<li>Memicu secara otonom saat tiket SharePoint dibuat</li>
+<li>Memberikan detail tiket dan instruksi tentang langkah-langkah yang ingin Anda lakukan</li>
+<li>Secara otomatis mengakui tiket kepada pengirim melalui email yang dihasilkan AI</li>
+</ol>
+<p>Lab ini menunjukkan bagaimana pemicu acara memungkinkan perilaku agen yang benar-benar otonom.</p>
+<h3 id="prasyarat">Prasyarat<a class="headerlink" href="#prasyarat" title="Permanent link">&para;</a></h3>
+<p>Sebelum memulai lab ini, pastikan Anda memiliki:</p>
+<ul>
+<li>✅ Menyelesaikan lab sebelumnya (terutama Lab 6-8 untuk agen Help Desk IT)</li>
+<li>✅ Akses ke situs SharePoint dengan daftar tiket dukungan IT</li>
+<li>✅ Lingkungan Copilot Studio dengan pemicu acara diaktifkan</li>
+<li>✅ Agen Anda memiliki orkestrasi generatif yang diaktifkan</li>
+<li>✅ Izin yang sesuai di SharePoint dan lingkungan Copilot Studio Anda</li>
+</ul>
+<h3 id="101-aktifkan-ai-generatif-dan-buat-pemicu-pembuatan-item-sharepoint">10.1 Aktifkan AI Generatif dan buat pemicu pembuatan item SharePoint<a class="headerlink" href="#101-aktifkan-ai-generatif-dan-buat-pemicu-pembuatan-item-sharepoint" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Buka <strong>agen Help Desk IT</strong> Anda di <strong>Copilot Studio</strong></p>
+</li>
+<li>
+<p>Pertama, pastikan <strong>AI Generatif</strong> diaktifkan untuk agen Anda:</p>
+</li>
+<li>Navigasikan ke tab <strong>Overview</strong></li>
+<li>
+<p>Di bawah bagian Orkestrasi, Aktifkan <strong>Generative orchestration</strong> ke <strong>On</strong> jika belum diaktifkan<br />
+<img alt="Aktifkan AI Generatif" src="../../../../../translated_images/10_EnableGenerativeAI.a58904a7599016a94b89a11d6c1cd59022ae686ef553d17f89ebfb6c275cc900.id.png" /></p>
+</li>
+<li>
+<p>Navigasikan ke tab <strong>Overview</strong> dan temukan bagian <strong>Triggers</strong></p>
+</li>
+<li>
+<p>Klik <strong>+ Add trigger</strong> untuk membuka pustaka pemicu<br />
+<img alt="Navigasi ke Pemicu" src="../../../../../translated_images/10_NavigateToTrigger.f5907762b93236a72d2f89cdb7c903608adb61763888ba1d3b4998f46473240c.id.png" /></p>
+</li>
+<li>
+<p>Cari dan pilih <strong>When an item is created</strong> (SharePoint)<br />
+<img alt="Pilih Pemicu SharePoint" src="../../../../../translated_images/10_SelectSharePointTrigger.d63e7cb0f06cf33e664c0e2316952aeac4adf507d7e0f87254cffebbfa5b3007.id.png" /></p>
+</li>
+<li>
+<p>Konfigurasikan nama pemicu dan koneksi:</p>
+</li>
+<li>
+<p><strong>Nama Pemicu:</strong> Tiket Dukungan Baru Dibuat di SharePoint</p>
+</li>
+<li>
+<p>Tunggu koneksi untuk dikonfigurasi, dan pilih <strong>Next</strong> untuk melanjutkan.<br />
+<img alt="Konfigurasikan nama pemicu dan koneksi" src="../../../../../translated_images/10_ConfigureTriggerNameAndConnections.f526dfc7a9e0dcc31bf791623e6431230f29ae001acb0f5075e175401bebb0f2.id.png" /></p>
+</li>
+<li>
+<p>Konfigurasikan parameter pemicu:</p>
+</li>
+<li>
+<p><strong>Alamat Situs</strong>: Pilih situs SharePoint "Contoso IT" Anda</p>
+</li>
+<li>
+<p><strong>Nama Daftar</strong>: Pilih daftar "Tickets" Anda</p>
+</li>
+<li>
+<p><strong>Instruksi tambahan untuk agen saat dipanggil oleh pemicu:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>New Support Ticket Created in SharePoint: {Body}
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Use the &#39;Acknowledge SharePoint Ticket&#39; tool to generate the email body automatically and respond.
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>IMPORTANT: Do not wait for any user input. Work completely autonomously.
+</span></code></pre></div>
+<p><img alt="Konfigurasikan parameter pemicu" src="../../../../../translated_images/10_ConfigureTriggerParams.a67406d4a892ba1f59a04641cbb2f7226a329b9813b04676f92bf18c6003fd23.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Create trigger</strong> untuk menyelesaikan pembuatan pemicu. Alur Power Automate Cloud secara otomatis dibuat untuk memicu agen secara otonom.</p>
+</li>
+<li>
+<p>Pilih <strong>Close</strong>.</p>
+</li>
+</ol>
+<h3 id="102-edit-pemicu">10.2 Edit Pemicu<a class="headerlink" href="#102-edit-pemicu" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Di dalam bagian <strong>Triggers</strong> pada tab <strong>Overview</strong>, Pilih menu <strong>...</strong> pada pemicu <strong>Tiket Dukungan Baru Dibuat di SharePoint</strong></p>
+</li>
+<li>
+<p>Pilih <strong>Edit in Power Automate</strong><br />
+<img alt="Edit pemicu di Power Automate" src="../../../../../translated_images/10_EditTriggerInPowerAutomate.d99effb8145d40bd4d655021e0a34abf59ba23ff5e94bcae07e7e6711a52eff0.id.png" /></p>
+</li>
+<li>
+<p>Pilih node <strong>Sends a prompt to the specified copilot for processing</strong></p>
+</li>
+<li>
+<p>Di bidang <strong>Body/message</strong>, hapus konten Body, <strong>tekan tombol garis miring</strong> (/) dan pilih <strong>Insert Expression</strong><br />
+<img alt="Masukkan ekspresi untuk pemicu" src="../../../../../translated_images/10_InsertExpressionForTrigger.adb940d8fa6e0bc50b325cedc3e3c085b5670e5cf2b275bf7b4ada1180d3ba01.id.png" /></p>
+</li>
+<li>
+<p>Masukkan ekspresi berikut untuk memberikan agen detail spesifik tentang tiket:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>concat(&#39;Submitted By Name: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Author/DisplayName&#39;], &#39;\nSubmitted By Email: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Author/Email&#39;], &#39;\nTitle: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Title&#39;], &#39;\nIssue Description: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Description&#39;], &#39;\nPriority: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Priority/Value&#39;],&#39;\nTicket ID : &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;ID&#39;])
+</span></code></pre></div>
+</li>
+<li>
+<p>Pilih <strong>Add</strong><br />
+<img alt="Ekspresi output pemicu" src="../../../../../translated_images/10_TriggerOutputExpression.3b120eaa26cc9a4cd5451bb2ca658ce1a7192eb7a46c7c2b4d7431d20e982187.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Publish</strong> di toolbar kanan atas.</p>
+</li>
+</ol>
+<h3 id="103-buat-alat-untuk-pengakuan-email">10.3 Buat alat untuk pengakuan email<a class="headerlink" href="#103-buat-alat-untuk-pengakuan-email" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Kembali</strong> ke Agen Anda di Copilot Studio</p>
+</li>
+<li>
+<p>Navigasikan ke tab <strong>Tools</strong> di agen Anda</p>
+</li>
+<li>
+<p>Klik <strong>+ Add a tool</strong> dan pilih <strong>Connector</strong></p>
+</li>
+<li>
+<p>Cari dan pilih konektor <strong>Send an email (V2)</strong><br />
+<img alt="Pilih Konektor Outlook" src="../../../../../translated_images/10_SelectOutlookConnector.0bf4270b1d25c691574881514f162fd74e10206bc5efd798e5cb15741b73c063.id.png" /></p>
+</li>
+<li>
+<p>Tunggu koneksi untuk dikonfigurasi, lalu pilih <strong>Add and configure</strong></p>
+</li>
+<li>
+<p>Konfigurasikan pengaturan alat:</p>
+</li>
+<li>
+<p><strong>Nama</strong>: Acknowledge SharePoint ticket</p>
+</li>
+<li>
+<p><strong>Deskripsi</strong>: Alat ini mengirimkan pengakuan email bahwa tiket telah diterima.</p>
+</li>
+<li>
+<p>Pilih <strong>Customize</strong> di sebelah parameter input dan konfigurasikan sebagai berikut:</p>
+<p><strong>To</strong>:</p>
+<ul>
+<li><strong>Deskripsi</strong>: Alamat email orang yang mengirimkan Tiket SharePoint</li>
+<li><strong>Identifikasi sebagai</strong>: Email</li>
+</ul>
+<p><strong>Body</strong>:</p>
+<ul>
+<li><strong>Deskripsi</strong>: Pengakuan bahwa Tiket telah diterima, dan kami akan merespons dalam waktu 3 hari kerja.</li>
+</ul>
+<p><img alt="Konfigurasikan Parameter Input" src="../../../../../translated_images/10_ConfigureInputParameters.cc8b602c0dc244734cb8eac43f8d7fcf88f4158dcdc7f7ae15658ad93c03beae.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Save</strong></p>
+</li>
+</ol>
+<h3 id="104-uji-pemicu">10.4 Uji pemicu<a class="headerlink" href="#104-uji-pemicu" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Di dalam <strong>Help Desk Agent</strong> Anda, pilih tab <strong>Overview</strong></li>
+<li>Klik ikon <strong>Test Trigger</strong> di sebelah pemicu <strong>Tiket Dukungan Baru Dibuat di SharePoint</strong>. Ini akan memuat jendela <strong>Test your trigger</strong>.</li>
+<li>Buka tab browser baru dan navigasikan ke <strong>Daftar Tiket Dukungan IT SharePoint</strong> Anda  </li>
+<li>Klik <strong>+ Tambahkan item baru</strong> untuk membuat tiket uji:  </li>
+<li><strong>Judul</strong>: "Tidak dapat terhubung ke VPN"  </li>
+<li><strong>Deskripsi</strong>: "Tidak dapat terhubung ke jaringan WIFI perusahaan setelah pembaruan terbaru"  </li>
+<li>
+<p><strong>Prioritas</strong>: "Normal"  </p>
+</li>
+<li>
+<p><strong>Simpan</strong> item SharePoint<br />
+<img alt="Buat Tiket Uji" src="../../../../../translated_images/10_CreateTestTicket.137beedc82d337ef0a467c67d3b53249ec469ce1ce91d88a72fb2f8729a14fce.id.png" />  </p>
+</li>
+<li>Kembali ke <strong>Copilot Studio</strong> dan pantau panel <strong>Uji pemicu Anda</strong> untuk aktivasi pemicu. Gunakan ikon <strong>Refresh</strong> untuk memuat acara pemicu, ini mungkin memerlukan beberapa menit.<br />
+<img alt="Pantau Uji Pemicu" src="../../../../../translated_images/10_MonitorTriggerTest.f9883de55ba1c9817121c7f801e29715fa74918603f96312dfcb0f16f9af44e0.id.png" />  </li>
+<li>Setelah pemicu muncul, pilih <strong>Mulai pengujian</strong>  </li>
+<li>Pilih <strong>Ikon Peta Aktivitas</strong> di bagian atas panel <strong>Uji agen Anda</strong>  </li>
+<li>Verifikasi bahwa agen Anda:  </li>
+<li>Menerima payload pemicu  </li>
+<li>Memanggil alat "Acknowledge SharePoint ticket"<br />
+<img alt="Uji pemicu" src="../../../../../translated_images/10_TestTrigger.f68b063d3fa221601f61484aec9bf68aa17761366aa1efe8c3cad554ce3da902.id.png" />  </li>
+<li>Periksa kotak masuk email pengirim untuk memastikan email konfirmasi telah dikirim<br />
+<img alt="Uji email terkirim" src="../../../../../translated_images/10_TestEmailSent.1efe77ca636ca8b8c2593216539edfe11555f7e002a6dcb5e2024b36b40e12b3.id.png" />  </li>
+<li>Tinjau tab <strong>Aktivitas</strong> di Copilot Studio untuk melihat pemicu dan eksekusi alat secara lengkap  </li>
+</ol>
+<h2 id="misi-selesai">✅ Misi Selesai<a class="headerlink" href="#misi-selesai" title="Permanent link">&para;</a></h2>
+<p>🎉 <strong>Selamat!</strong> Anda telah berhasil mengimplementasikan pemicu acara dengan alat konektor yang memungkinkan agen Anda beroperasi secara mandiri, secara otomatis mengirimkan email konfirmasi dan memproses tiket dukungan tanpa intervensi pengguna. Setelah agen Anda dipublikasikan, ia akan bertindak secara mandiri atas nama Anda.  </p>
+<p>🚀 <strong>Selanjutnya</strong>: Dalam pelajaran berikutnya, Anda akan belajar cara <a href="../11-publish-your-agent/">mempublikasikan agen Anda</a> ke Microsoft Teams dan Microsoft 365 Copilot, membuatnya tersedia untuk seluruh organisasi Anda!  </p>
+<p>⏭️ <a href="../11-publish-your-agent/">Lanjut ke pelajaran <strong>Publikasikan agen Anda</strong></a>  </p>
+<h2 id="sumber-daya-taktis">📚 Sumber Daya Taktis<a class="headerlink" href="#sumber-daya-taktis" title="Permanent link">&para;</a></h2>
+<p>Siap untuk mendalami pemicu acara dan agen mandiri? Lihat sumber daya berikut:  </p>
+<ul>
+<li><strong>Microsoft Learn</strong>: <a href="https://learn.microsoft.com/training/modules/autonomous-agents-online-workshop/?WT.mc_id=power-177340-scottdurow">Jadikan agen Anda mandiri di Copilot Studio</a>  </li>
+<li><strong>Dokumentasi</strong>: <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-trigger-event?WT.mc_id=power-177340-scottdurow">Tambahkan pemicu acara</a>  </li>
+<li><strong>Praktik Terbaik</strong>: <a href="https://learn.microsoft.com/power-automate/triggers-introduction?WT.mc_id=power-177340-scottdurow">Pengantar pemicu Power Automate</a>  </li>
+<li><strong>Skenario Lanjutan</strong>: <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow-create?WT.mc_id=power-177340-scottdurow">Menggunakan alur Power Automate dengan agen</a>  </li>
+<li><strong>Keamanan</strong>: <a href="https://learn.microsoft.com/microsoft-copilot-studio/admin-data-loss-prevention?WT.mc_id=power-177340-scottdurow">Pencegahan kehilangan data untuk Copilot Studio</a>  </li>
+</ul>
+<!-- markdownlint-disable-next-line MD033 -->
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/10-add-event-triggers" alt="Analitik" /></p>
+<hr />
+<p><strong>Penafian</strong>:<br />
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Meskipun kami berusaha untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis dapat mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang penting, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau interpretasi yang keliru yang timbul dari penggunaan terjemahan ini.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

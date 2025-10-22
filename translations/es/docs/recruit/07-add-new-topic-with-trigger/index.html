@@ -1,0 +1,1397 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/es/docs/recruit/07-add-new-topic-with-trigger/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mision-07-agregar-nuevo-tema-con-activador-y-nodos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nombre-clave-operacion-mantente-en-el-tema" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ NOMBRE CLAVE: OPERACIÓN MANTENTE EN EL TEMA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-la-mision" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Resumen de la misión
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objetivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-tema" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 ¿Qué es un tema?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-son-utiles-los-temas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐦 ¿Por qué son útiles los temas?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-temas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪺 Tipos de temas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anatomia-de-un-tema" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧬 Anatomía de un tema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usar-power-fx-en-tus-nodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏋🏻‍♀️ Usar Power Fx en tus nodos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-creo-y-edito-temas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏗️ ¿Cómo creo y edito temas?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ok-como-diseno-temas-para-mi-agente" class="md-nav__link">
+    <span class="md-ellipsis">
+      👩🏻‍🎨 OK, ¿cómo diseño temas para mi agente?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorio-07-agregar-un-nuevo-tema-con-nodos-de-conversacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Laboratorio 07 - Agregar un nuevo tema con nodos de conversación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mision-completa" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Misión Completa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-tacticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Recursos Tácticos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "c04b3587170139bc23e3b5cfc24c89ac",
+  "translation_date": "2025-10-17T18:56:46+00:00",
+  "source_file": "docs/recruit/07-add-new-topic-with-trigger/README.md",
+  "language_code": "es"
+}
+-->
+<h1 id="mision-07-agregar-nuevo-tema-con-activador-y-nodos">🚨 Misión 07: Agregar nuevo tema con activador y nodos<a class="headerlink" href="#mision-07-agregar-nuevo-tema-con-activador-y-nodos" title="Permanent link">&para;</a></h1>
+<h2 id="nombre-clave-operacion-mantente-en-el-tema">🕵️‍♂️ NOMBRE CLAVE: <code>OPERACIÓN MANTENTE EN EL TEMA</code><a class="headerlink" href="#nombre-clave-operacion-mantente-en-el-tema" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Ventana de tiempo de la operación:</strong> <code>~60 minutos</code></p>
+</blockquote>
+<p>🎥 <strong>Mira la guía paso a paso</strong></p>
+<p><a href="https://www.youtube.com/watch?v=7iPAZaA8nJs" title="Mira la guía paso a paso en YouTube"><img alt="Miniatura del video de activadores" src="../../../../../translated_images/video-thumbnail.a84cf7cb473be282861469420c5e2c16adb53bcfd64c7c07fbd579e8d32bf8b2.es.jpg" /></a></p>
+<h2 id="resumen-de-la-mision">🎯 Resumen de la misión<a class="headerlink" href="#resumen-de-la-mision" title="Permanent link">&para;</a></h2>
+<p>Has creado un agente. Escucha, aprende y responde preguntas, pero ahora es momento de ser más táctico. En esta misión, profundizarás en su funcionamiento y enseñarás a tu agente cómo responder a indicaciones específicas con precisión.</p>
+<p>Con Temas y Activadores, tu agente puede:</p>
+<ul>
+<li>
+<p>Reconocer intenciones</p>
+</li>
+<li>
+<p>Dirigir conversaciones con lógica</p>
+</li>
+<li>
+<p>Recopilar y almacenar variables</p>
+</li>
+<li>
+<p>Activar flujos y tomar acción</p>
+</li>
+</ul>
+<p>No solo estás construyendo un diálogo, estás conectando su núcleo de toma de decisiones. Bienvenido al Nexus Neural.</p>
+<h2 id="objetivos">🔎 Objetivos<a class="headerlink" href="#objetivos" title="Permanent link">&para;</a></h2>
+<p>En esta misión, aprenderás:</p>
+<ol>
+<li>Comprender qué son los temas y su papel en la creación de conversaciones estructuradas para tu agente.</li>
+<li>Aprender la anatomía de los temas, incluyendo frases activadoras y nodos de conversación.</li>
+<li>Explorar diferentes tipos de nodos de conversación y cómo usar Power Fx para lógica dinámica.</li>
+<li>Crear temas personalizados desde cero para manejar solicitudes y tareas específicas de los usuarios.</li>
+<li>Construir un tema funcional que se conecte a datos de SharePoint usando conectores y herramientas.</li>
+</ol>
+<h2 id="que-es-un-tema">🤔 ¿Qué es un tema?<a class="headerlink" href="#que-es-un-tema" title="Permanent link">&para;</a></h2>
+<p>Un tema es una conversación estructurada que ayuda a tu agente a responder preguntas o tareas específicas de los usuarios. Piensa en un tema como una mini-conversación o tarea que tu agente puede manejar. Cada tema está diseñado para responder a una pregunta o solicitud específica del usuario.</p>
+<h3 id="proposito-de-un-tema">🌌 Propósito de un tema<a class="headerlink" href="#proposito-de-un-tema" title="Permanent link">&para;</a></h3>
+<p>Hay tres propósitos comunes para los temas según lo que los usuarios necesiten:</p>
+<p><strong>Informativo</strong> - responde preguntas como las siguientes:</p>
+<ul>
+<li><code>¿Qué es …?</code></li>
+<li><code>¿Cuándo será …?</code></li>
+<li><code>¿Por qué …?</code></li>
+<li><code>¿Puedes decirme …?</code></li>
+</ul>
+<p><strong>Cumplimiento de tareas</strong> - ayuda a los usuarios a <em>hacer</em> algo:</p>
+<ul>
+<li><code>"Quiero …"</code></li>
+<li><code>"¿Cómo hago …?"</code></li>
+<li><code>"Necesito …?"</code></li>
+</ul>
+<p><strong>Resolución de problemas</strong> - soluciona problemas:</p>
+<ul>
+<li><code>Algo no está funcionando …</code></li>
+<li><code>Estoy encontrando un mensaje de error …</code></li>
+<li><code>Estoy viendo algo inesperado …?</code></li>
+</ul>
+<p>También puedes crear temas para preguntas ambiguas como <code>Necesito ayuda</code>, que piden más detalles a los usuarios antes de continuar.</p>
+<h2 id="por-que-son-utiles-los-temas">🐦 ¿Por qué son útiles los temas?<a class="headerlink" href="#por-que-son-utiles-los-temas" title="Permanent link">&para;</a></h2>
+<p>Los temas te ayudan a:</p>
+<ul>
+<li>
+<p>Organizar el conocimiento de tu agente.</p>
+</li>
+<li>
+<p>Hacer que las conversaciones se sientan naturales.</p>
+</li>
+<li>
+<p>Resolver problemas de los usuarios de manera efectiva.</p>
+</li>
+</ul>
+<h2 id="tipos-de-temas">🪺 Tipos de temas<a class="headerlink" href="#tipos-de-temas" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Temas del sistema</strong> - están integrados y manejan eventos comunes como:</p>
+<ul>
+<li>Iniciar una conversación</li>
+<li>Finalizar una conversación</li>
+<li>Manejar errores</li>
+<li>Pedir a los usuarios que inicien sesión</li>
+<li>Escalar a un agente humano</li>
+</ul>
+</li>
+<li>
+<p><strong>Temas personalizados</strong> - los creas para manejar tareas o preguntas específicas como:</p>
+<ul>
+<li>Solicitud de permiso de empleado</li>
+<li>Solicitar un dispositivo nuevo o de reemplazo</li>
+</ul>
+</li>
+</ol>
+<p><img alt="Tipos de temas" src="../../../../../translated_images/7.0_01_Topics.6e55d2e01c1cc0994b7af05be3c1629b78d46b37cc82f59c7893d4ad90af707e.es.png" /></p>
+<h2 id="anatomia-de-un-tema">🧬 Anatomía de un tema<a class="headerlink" href="#anatomia-de-un-tema" title="Permanent link">&para;</a></h2>
+<p>Cada tema generalmente contiene lo siguiente.</p>
+<h3 id="frases-activadoras">🗣️ Frases activadoras<a class="headerlink" href="#frases-activadoras" title="Permanent link">&para;</a></h3>
+<p>Son palabras o frases que los usuarios podrían decir para iniciar el tema.</p>
+<p><strong>Ejemplos:</strong></p>
+<p>Para un tema de solicitud de permiso, las frases activadoras podrían ser:</p>
+<ul>
+<li><code>Quiero tomar vacaciones</code></li>
+<li><code>Solicitar vacaciones</code></li>
+<li><code>Solicitar tiempo libre</code></li>
+<li><code>¿Cómo puedo enviar una solicitud de permiso?</code></li>
+</ul>
+<p>Para un tema de solicitud de dispositivo, las frases activadoras podrían ser:</p>
+<ul>
+<li><code>Necesito un dispositivo nuevo</code></li>
+<li><code>¿Puedo solicitar un dispositivo?</code></li>
+<li><code>¿Puedes ayudarme con una solicitud de dispositivo?</code></li>
+</ul>
+<h3 id="nodos-de-conversacion">💬 Nodos de conversación<a class="headerlink" href="#nodos-de-conversacion" title="Permanent link">&para;</a></h3>
+<p>Un tema está compuesto por nodos que son pasos que el agente sigue una vez que se activa el tema. Conectas estos pasos para construir un flujo de conversación que tu agente sigue al interactuar con los usuarios.</p>
+<p>Piensa en ellos como instrucciones o acciones tales como:</p>
+<ul>
+<li>Hacer preguntas al usuario</li>
+<li>Enviar mensajes</li>
+<li>Llamar a un servicio externo como un sistema de gestión de permisos</li>
+<li>Establecer o verificar variables</li>
+<li>Usar condiciones para ramificar la conversación</li>
+<li>Dirigir a otro tema</li>
+</ul>
+<p><img alt="Nodos de conversación" src="../../../../../translated_images/7.0_03_ConversationNodes.7b1d93b7d4522d544d7f9eed597a5ef30b9f96ee1670efd048528ce13423481a.es.png" /></p>
+<p>Los siguientes son los principales tipos de nodos que puedes agregar a un agente:</p>
+<h4 id="enviar-un-mensaje">Enviar un mensaje<a class="headerlink" href="#enviar-un-mensaje" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Propósito</strong> - envía un mensaje al usuario.</li>
+<li><strong>Ejemplo</strong> - <code>¡Gracias por tu solicitud! Te ayudaré con eso.</code></li>
+</ul>
+<p>Este nodo permite que tu agente envíe mensajes a los usuarios, que pueden ser texto simple o contenido enriquecido como imágenes, videos, tarjetas, respuestas rápidas y tarjetas adaptativas.</p>
+<p>Puedes personalizar los mensajes usando variables, agregar múltiples variaciones de mensajes para variedad e incluso personalizar la salida de voz para canales habilitados para voz.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Piensa en esto como un bloque de "decir algo" que ayuda a tu agente a comunicarse de manera clara e interactiva con los usuarios.</p>
+</div>
+<h4 id="hacer-una-pregunta">Hacer una pregunta<a class="headerlink" href="#hacer-una-pregunta" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Propósito</strong> - hace una pregunta al usuario y espera su respuesta.</li>
+<li><strong>Ejemplo</strong> - <code>¿Cuáles son tus fechas de vacaciones?</code></li>
+</ul>
+<p>Este nodo se utiliza para pedir información específica a los usuarios durante una conversación y almacenar sus respuestas en variables para uso posterior.</p>
+<p>Puedes personalizar el tipo de pregunta como entrada de texto o usar entidades para una lista definida de valores que el usuario selecciona, y definir cómo debe comportarse el agente si el usuario da una respuesta inválida o se salta la pregunta.</p>
+<p>También admite contenido enriquecido como imágenes y respuestas rápidas, y te permite ajustar la validación, re-preguntar y configuraciones de interrupción para que el flujo de conversación sea fluido.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Piensa en esto como un bloque de "preguntar y escuchar" que ayuda a tu agente a interactuar con los usuarios de manera estructurada que tú defines.</p>
+</div>
+<h4 id="preguntar-con-tarjeta-adaptativa">Preguntar con tarjeta adaptativa<a class="headerlink" href="#preguntar-con-tarjeta-adaptativa" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Propósito</strong> - enviar una tarjeta rica e interactiva usando JSON.</li>
+<li><strong>Ejemplo</strong> - una tarjeta que muestra un selector de fechas de calendario para que el usuario seleccione una fecha.</li>
+</ul>
+<p>Este nodo muestra tarjetas ricas e interactivas que los usuarios pueden completar y enviar, como formularios con cuadros de texto, botones e imágenes. Captura la entrada del usuario y la almacena en variables, que tu agente puede usar más adelante en la conversación.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Piensa en esto como un bloque de "constructor de formularios" personalizable que hace que tu agente sea más atractivo y capaz de recopilar información detallada de los usuarios.</p>
+</div>
+<h4 id="agregar-una-condicion">Agregar una condición<a class="headerlink" href="#agregar-una-condicion" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Propósito</strong> - agregar lógica a la conversación. Verifica algo y decide qué hacer a continuación.</li>
+<li><strong>Ejemplo</strong> - si el usuario dice <code>Sí</code>, pasa al siguiente paso. Si dice <code>No</code>, termina la conversación.</li>
+</ul>
+<p>Este nodo crea puntos de decisión en el flujo de conversación de tu agente al verificar si una variable cumple ciertos criterios. Según si la condición es verdadera o falsa, el agente sigue diferentes caminos.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Piensa en esto como un bloque de "si-entonces" que ayuda a tu agente a tomar decisiones dependiendo de la entrada del usuario o los datos almacenados en variables.</p>
+</div>
+<h4 id="gestion-de-variables">Gestión de variables<a class="headerlink" href="#gestion-de-variables" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Propósito</strong> - almacena o elimina información (llamada variables) durante la conversación.</li>
+<li><strong>Ejemplo</strong> - guarda la fecha que el usuario seleccionó en el nodo de Preguntar que muestra una tarjeta adaptativa.</li>
+</ul>
+<p>Este nodo te permite almacenar y gestionar información durante una conversación, como el nombre del usuario, su respuesta o preferencias. Puedes usar diferentes tipos de variables como texto, números o fechas, y pueden estar limitadas a un solo tema, compartidas entre temas (globales) o incluso extraídas del sistema o entorno.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Piensa en esto como una "caja de memoria" que ayuda a tu agente a recordar información y usarla mientras la conversación continúa con el usuario.</p>
+</div>
+<h4 id="gestion-de-temas">Gestión de temas<a class="headerlink" href="#gestion-de-temas" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Propósito</strong> - mueve la conversación a otro tema o paso dentro del tema, transfiere la conversación o finaliza el tema o la conversación.</li>
+<li><strong>Ejemplo</strong> - redirigir al tema "Política de permisos".</li>
+</ul>
+<p>Este nodo permite que tu agente salte de un tema a otro sin reiniciar la conversación, termine el tema, transfiera o finalice la conversación, o vaya a un paso diferente dentro del mismo tema. Ayuda a guiar a los usuarios a través de diferentes partes del flujo de conversación al hacer transiciones suaves entre temas, y puedes pasar variables entre ellos para mantener el contexto.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Piensa en esto como un bloque de "ir a otra sección/paso" que ayuda a tu agente a ser flexible al conversar con los usuarios.</p>
+</div>
+<h4 id="agregar-una-herramienta">Agregar una herramienta<a class="headerlink" href="#agregar-una-herramienta" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Propósito</strong> - conecta herramientas como conectores, flujos de agente, indicaciones, búsqueda personalizada, consulta de búsqueda, habilidades, protocolo de contexto de modelo.</li>
+<li><strong>Ejemplo</strong> - Flujo de agente ejecutado después de que el usuario envíe su solicitud de vacaciones.</li>
+</ul>
+<p>Este nodo le da a tu agente capacidades para interactuar con sistemas externos o realizar tareas específicas, como enviar correos electrónicos, verificar el clima o acceder a bases de datos. Puedes agregar herramientas usando conectores integrados, APIs personalizadas, flujos de agente, indicaciones, o conectarte a servidores MCP (Protocolo de Contexto de Modelo), e incluso automatización de interfaz gráfica para aplicaciones de escritorio mediante la herramienta de uso de computadora.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Piensa en las herramientas como "bloques de acción" que le dan superpoderes a tu agente para hacer cosas más allá de <em>chatear</em>, como llamar a una API, ejecutar un proceso o recopilar automáticamente la entrada del usuario.</p>
+</div>
+<h4 id="nodo-de-respuestas-generativas">Nodo de respuestas generativas<a class="headerlink" href="#nodo-de-respuestas-generativas" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Propósito</strong> - utiliza un modelo de lenguaje grande para generar respuestas naturales y similares a las humanas basadas en la pregunta del usuario y cualquier dato conectado.</li>
+<li><strong>Ejemplo</strong> - utiliza la fuente de conocimiento conectada que contiene información sobre derechos de vacaciones para responder preguntas de los usuarios sobre solicitudes de vacaciones.</li>
+</ul>
+<p>Este nodo permite que tu agente responda preguntas de los usuarios utilizando información de diversas fuentes de conocimiento, como sitios web, documentos, SharePoint o datos personalizados. Puede usarse como respaldo cuando no se encuentra un tema coincidente, o dentro de un tema para proporcionar respuestas más detalladas y dinámicas basadas en fuentes específicas que hayas configurado para tu agente.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Piensa en esto como un "bloque de respuesta inteligente" que ayuda a tu agente a dar respuestas útiles y precisas buscando contenido confiable que tú defines.</p>
+</div>
+<h4 id="nodo-de-solicitud-http">Nodo de solicitud HTTP<a class="headerlink" href="#nodo-de-solicitud-http" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Propósito</strong> - conecta tu agente a sistemas externos enviando llamadas API (por ejemplo, <code>GET</code> o <code>POST</code>) para obtener o actualizar datos.</li>
+<li><strong>Ejemplo</strong> - cuando un usuario pregunta por su saldo de días de vacaciones, el agente realiza una solicitud <code>GET</code> al sistema de gestión de permisos y extrae el <code>remainingLeaveDays</code> de la respuesta de la API y responde al usuario con el valor.</li>
+</ul>
+<p>Este nodo permite que tu agente se conecte a sistemas externos enviando llamadas API REST, como solicitudes <code>GET</code> o <code>POST</code>. Puedes personalizar la solicitud con encabezados, contenido del cuerpo e incluso usar Power Fx para incluir datos dinámicos, luego almacenar la respuesta en variables para usarla más adelante en la conversación.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Piensa en esto como un bloque de "buscar y obtener información" que ayuda a tu agente a comunicarse con otros servicios, como recuperar detalles del usuario o enviar datos a otro sistema.</p>
+</div>
+<h4 id="enviar-un-evento">Enviar un evento<a class="headerlink" href="#enviar-un-evento" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Propósito</strong> - permite que tu agente envíe acciones no relacionadas con mensajes, como actualizaciones del sistema o activadores de herramientas, al cliente o canal, ayudándolo a realizar tareas.</li>
+<li><strong>Ejemplo</strong> - reaccionar a un usuario que se une a un chat mostrando un mensaje de bienvenida.</li>
+</ul>
+<p>Este nodo permite que tu agente envíe acciones no relacionadas con mensajes a sistemas externos o canales, que luego deciden cómo responder. Le das a cada evento un nombre y adjuntas un valor, que puede ser un número o texto simple, una variable o una fórmula de Power Fx, y se envía como un objeto JSON.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Piensa en esto como un bloque de "activador silencioso" que ayuda a tu agente a hacer cosas detrás de escena o comunicarse con herramientas externas sin necesidad de que el usuario diga algo.</p>
+</div>
+<h2 id="usar-power-fx-en-tus-nodos">🏋🏻‍♀️ Usar Power Fx en tus nodos<a class="headerlink" href="#usar-power-fx-en-tus-nodos" title="Permanent link">&para;</a></h2>
+<p>En Copilot Studio, Power Fx es un lenguaje de programación de bajo código utilizado para agregar lógica y comportamiento dinámico a tu agente. Es el mismo lenguaje utilizado en Microsoft Power Apps, y está diseñado para ser simple y similar a Excel, lo que lo hace fácil para desarrolladores y no desarrolladores.</p>
+<p><img alt="Expresión Power Fx" src="../../../../../translated_images/7.3_13_EnterFormula.d17cc9f73e01e1cab8e2420a55bcb726ae0a0e55673f81ee3d7fe12d20148b92.es.png" /></p>
+<h3 id="que-puede-hacer-power-fx-en-los-temas">Qué puede hacer Power Fx en los temas<a class="headerlink" href="#que-puede-hacer-power-fx-en-los-temas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Establecer y manipular variables<ul>
+<li>Ejemplo: <code>Set(userName, "Adele Vance")</code></li>
+</ul>
+</li>
+<li>Crear condiciones<ul>
+<li>Ejemplo: <code>If(score &gt; 80, "Pass", "Fail")</code></li>
+</ul>
+</li>
+<li>Formatear y transformar datos<ul>
+<li>Ejemplo: <code>Text(DateValue, "dd/mm/yyyy")</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="por-que-usar-power-fx">¿Por qué usar Power Fx?<a class="headerlink" href="#por-que-usar-power-fx" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Flexible:</strong> puedes construir lógica sin escribir líneas completas de código.</p>
+</li>
+<li>
+<p><strong>Familiar:</strong> si has usado fórmulas de Excel, se siente muy similar.</p>
+</li>
+<li>
+<p><strong>Potente:</strong> te permite personalizar conversaciones, validar entradas y controlar cómo se comporta tu agente según los datos del usuario.</p>
+</li>
+</ul>
+<h2 id="como-creo-y-edito-temas">🏗️ ¿Cómo creo y edito temas?<a class="headerlink" href="#como-creo-y-edito-temas" title="Permanent link">&para;</a></h2>
+<p>Hay dos formas en que puedes crear y editar temas para tus agentes.</p>
+<h3 id="1-crear-desde-cero">1. Crear desde cero<a class="headerlink" href="#1-crear-desde-cero" title="Permanent link">&para;</a></h3>
+<p>Esto te permite construir flujos de conversación personalizados desde cero, y puedes agregar o eliminar nodos según sea necesario al editar tu tema.</p>
+<p><img alt="Agregar un tema" src="../../../../../translated_images/7.0_04_AddATopic.111df124a4a7ff8b41e3f577fbef08885ac52d9d6c0c705a82f5968e5ccc384d.es.png" /></p>
+<h4 id="por-que-esto-es-util">Por qué esto es útil<a class="headerlink" href="#por-que-esto-es-util" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Te da control total sobre cómo responde tu agente.</li>
+<li>Puedes personalizar la lógica usando variables, Power Fx y condiciones.</li>
+<li>Es perfecto para construir experiencias adaptadas a necesidades específicas del negocio.</li>
+</ul>
+<h3 id="2-crear-con-copilot">2. Crear con Copilot<a class="headerlink" href="#2-crear-con-copilot" title="Permanent link">&para;</a></h3>
+<p>Esto te permite describir lo que deseas utilizando lenguaje natural, y Copilot construirá la conversación por ti. Lo mismo aplica al editar tu tema, usa lenguaje natural y Copilot revisará y modificará el tema por ti.</p>
+<h4 id="lo-que-copilot-admite">Lo que Copilot admite<a class="headerlink" href="#lo-que-copilot-admite" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Puede crear y editar:<ul>
+<li>Nodos de mensaje</li>
+<li>Nodos de pregunta</li>
+<li>Nodos de condición</li>
+</ul>
+</li>
+<li>No admite configuraciones avanzadas como cómo volver a preguntar al usuario si no responde o cómo manejar interrupciones durante una pregunta. Aún puedes ajustar esas configuraciones manualmente si es necesario.</li>
+</ul>
+<h4 id="por-que-esto-es-util_1">Por qué esto es útil<a class="headerlink" href="#por-que-esto-es-util_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Acelera el desarrollo con asistencia de IA.</li>
+<li>Te permite enfocarte en la lógica y la experiencia del usuario en lugar de configuraciones repetitivas.</li>
+<li>Facilita iterar y mejorar los flujos de conversación con mínimo esfuerzo.</li>
+</ul>
+<h4 id="ejemplos-de-indicaciones">✨ Ejemplos de indicaciones<a class="headerlink" href="#ejemplos-de-indicaciones" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Crear un tema</strong></p>
+<ul>
+<li><code>Aceptar el nombre, edad y fecha de nacimiento de un usuario y luego repetir sus respuestas</code></li>
+<li><code>Recopilar la dirección, estado y código postal de un usuario. El usuario debería poder intentar cada pregunta hasta 4 veces</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Editar un tema</strong></p>
+<ul>
+<li><code>Agregar una pregunta solicitando la fecha de nacimiento del usuario</code></li>
+<li><code>Resumir la información recopilada en una tarjeta adaptativa.</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="ok-como-diseno-temas-para-mi-agente">👩🏻‍🎨 OK, ¿cómo diseño temas para mi agente?<a class="headerlink" href="#ok-como-diseno-temas-para-mi-agente" title="Permanent link">&para;</a></h2>
+<h3 id="paso-1-entender-lo-que-los-usuarios-necesitan">🧙🏻‍♂️ Paso 1 - entender lo que los usuarios necesitan<a class="headerlink" href="#paso-1-entender-lo-que-los-usuarios-necesitan" title="Permanent link">&para;</a></h3>
+<p>Comienza identificando preguntas o tareas comunes que los usuarios pedirán a tu agente. Estas podrían ser:</p>
+<ul>
+<li>Preguntas que los usuarios hacen con frecuencia como, <code>¿cuál es mi derecho a días de enfermedad?</code></li>
+<li>Tareas comunes que los usuarios quieren completar como enviar un formulario</li>
+<li>Problemas que los usuarios enfrentan a menudo como problemas de inicio de sesión</li>
+</ul>
+<h3 id="paso-2-agrupar-los-escenarios">📦 Paso 2 - Agrupar los escenarios<a class="headerlink" href="#paso-2-agrupar-los-escenarios" title="Permanent link">&para;</a></h3>
+<p>Organiza las necesidades de los usuarios en tres categorías basadas en lo que aprendimos anteriormente: el propósito de un tema:</p>
+<ul>
+<li>Informativo - el usuario quiere saber algo</li>
+<li>Completar una tarea - el usuario quiere hacer algo</li>
+<li>Solución de problemas - el usuario necesita ayuda para resolver un problema</li>
+</ul>
+<h3 id="paso-3-disenar-la-conversacion">🗺️ Paso 3 - Diseñar la conversación<a class="headerlink" href="#paso-3-disenar-la-conversacion" title="Permanent link">&para;</a></h3>
+<p>Dibuja un flujo de conversación simple sobre cómo debería responder el agente.</p>
+<ul>
+<li>Comienza con un saludo o confirmación</li>
+<li>Haz preguntas de seguimiento para obtener detalles</li>
+<li>Proporciona respuestas o realiza acciones</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Mantén la conversación breve y enfocada. Solo pregunta lo necesario.</p>
+</div>
+<h3 id="paso-4-manejar-diferentes-tipos-de-conversacion">🔀 Paso 4 - Manejar diferentes tipos de conversación<a class="headerlink" href="#paso-4-manejar-diferentes-tipos-de-conversacion" title="Permanent link">&para;</a></h3>
+<p>Diseña para ambos:</p>
+<ul>
+<li>
+<p><strong>De un solo turno</strong> - una pregunta, una respuesta</p>
+</li>
+<li>
+<p><strong>De varios turnos</strong> - una conversación de ida y vuelta con preguntas de seguimiento</p>
+</li>
+</ul>
+<p>Ejemplo:</p>
+<ul>
+<li>
+<p>Usuario: <code>Quiero solicitar permiso de vacaciones.</code></p>
+</li>
+<li>
+<p>Agente: <code>¡Claro! ¿Qué fecha te gustaría que comenzara tu permiso?</code></p>
+</li>
+<li>
+<p>Usuario: <code>15 de julio</code></p>
+</li>
+<li>
+<p>Agente: <code>Entendido. ¿Y cuándo terminará tu permiso?</code></p>
+</li>
+<li>
+<p>Usuario: <code>22 de julio.</code></p>
+</li>
+<li>
+<p>Agente: <code>Gracias. ¿Cuál es el motivo de tu permiso?</code></p>
+</li>
+<li>
+<p>Usuario: <code>Vacaciones familiares.</code></p>
+</li>
+<li>
+<p>Agente: <code>Gracias por los detalles. He enviado tu solicitud de permiso del 15 al 22 de julio por vacaciones familiares. Pronto recibirás una confirmación.</code></p>
+</li>
+</ul>
+<h3 id="paso-5-usar-ia-para-preguntas-inesperadas">🤖 Paso 5 - Usar IA para preguntas inesperadas<a class="headerlink" href="#paso-5-usar-ia-para-preguntas-inesperadas" title="Permanent link">&para;</a></h3>
+<p>Incluso si has diseñado un tema para solicitudes de permiso, los usuarios podrían hacer preguntas que no están directamente cubiertas. Aquí es donde las características de IA como el tema del sistema <em>Impulso conversacional</em> son útiles.</p>
+<p>Este tema incluye un nodo de respuestas generativas, que permite que tu agente comience a usar fuentes de conocimiento conectadas de inmediato. Cualquier fuente de conocimiento añadida a nivel del agente se incluye automáticamente en el nodo de respuestas generativas dentro del tema del sistema <em>Impulso conversacional</em>.</p>
+<h4 id="ejemplo">Ejemplo<a class="headerlink" href="#ejemplo" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Usuario: <code>¿Puedo transferir días de vacaciones no utilizados al próximo año?</code></li>
+</ul>
+<p>Esta pregunta podría no formar parte del flujo de tema predefinido, especialmente si tu tema solo maneja solicitudes de permiso.</p>
+<h4 id="como-ayuda-la-ia">Cómo ayuda la IA<a class="headerlink" href="#como-ayuda-la-ia" title="Permanent link">&para;</a></h4>
+<p>Si tu agente está conectado a los documentos de política de recursos humanos de tu empresa o al sitio web interno, la IA puede:</p>
+<ul>
+<li>Buscar la política de permisos relevante</li>
+<li>Entender y resumir las reglas</li>
+<li>El agente responde con: <code>Según la política de recursos humanos, puedes transferir días de vacaciones no utilizados al próximo año calendario. Para más detalles, consulta la sección de política de permisos en el portal de recursos humanos.</code></li>
+</ul>
+<h4 id="por-que-esto-es-util_2">Por qué esto es útil<a class="headerlink" href="#por-que-esto-es-util_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>No necesitas crear manualmente un tema para cada pregunta relacionada con políticas.</li>
+<li>La IA puede obtener respuestas precisas de fuentes de conocimiento confiables.</li>
+<li>Mejora la experiencia del usuario haciendo que el agente parezca más inteligente y receptivo.</li>
+</ul>
+<h3 id="paso-6-probar-el-tema-el-flujo-de-conversacion">🔬 Paso 6 - Probar el tema, el flujo de conversación<a class="headerlink" href="#paso-6-probar-el-tema-el-flujo-de-conversacion" title="Permanent link">&para;</a></h3>
+<p>Antes de publicar tu tema:</p>
+<ul>
+<li>Prueba usando preguntas reales o entradas de muestra reales.</li>
+<li>Asegúrate de que suene natural y útil.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Aplica mejoras a tu tema según lo pruebes, como agregar más nodos o eliminar nodos en lugar de redirigir a otro tema.</p>
+</div>
+<h3 id="paso-7-evitar-duplicar-contenido-del-sitio-web">⚠️ Paso 7 - Evitar duplicar contenido del sitio web<a class="headerlink" href="#paso-7-evitar-duplicar-contenido-del-sitio-web" title="Permanent link">&para;</a></h3>
+<p>No copies lo que ya está en tu sitio web.</p>
+<ul>
+<li>Enfócate en temas que los usuarios preguntan con frecuencia.</li>
+<li>Agrega nuevos temas basados en el historial de chat o solicitudes de soporte.</li>
+</ul>
+<h3 id="ejemplo-de-flujo-de-conversacion">✨ Ejemplo de flujo de conversación<a class="headerlink" href="#ejemplo-de-flujo-de-conversacion" title="Permanent link">&para;</a></h3>
+<p>A continuación, se muestra un ejemplo de un tema que maneja solicitudes de permiso.</p>
+<h4 id="paso-1-frase-de-activacion">Paso 1: Frase de activación<a class="headerlink" href="#paso-1-frase-de-activacion" title="Permanent link">&para;</a></h4>
+<p>El usuario escribe,</p>
+<p><code>Quiero solicitar permiso de vacaciones</code></p>
+<h4 id="paso-2-el-agente-solicita-detalles-usando-una-tarjeta-adaptativa">Paso 2: El agente solicita detalles usando una tarjeta adaptativa<a class="headerlink" href="#paso-2-el-agente-solicita-detalles-usando-una-tarjeta-adaptativa" title="Permanent link">&para;</a></h4>
+<p>El agente pregunta,</p>
+<p><code>¡Claro! ¿Qué fechas te gustaría tomar libres?</code></p>
+<p>La tarjeta adaptativa tiene un control de selección de calendario para la fecha de inicio y la fecha de fin.</p>
+<h4 id="paso-3-el-usuario-proporciona-las-fechas">Paso 3: El usuario proporciona las fechas<a class="headerlink" href="#paso-3-el-usuario-proporciona-las-fechas" title="Permanent link">&para;</a></h4>
+<p>El usuario selecciona la fecha de inicio como el 5 de agosto de 2025 y la fecha de fin como el 10 de agosto de 2025, y envía la tarjeta. Los valores de las fechas se almacenan en la salida de la tarjeta adaptativa como variables.</p>
+<h4 id="paso-4-flujo-en-la-nube-ejecutado">Paso 4: Flujo en la nube ejecutado<a class="headerlink" href="#paso-4-flujo-en-la-nube-ejecutado" title="Permanent link">&para;</a></h4>
+<p>Se ha ejecutado un flujo en la nube de Power Automate que crea una nueva solicitud en el sistema de gestión de permisos y envía un correo electrónico para notificar al gerente sobre la solicitud de permiso.</p>
+<h4 id="paso-5-enviar-un-mensaje-de-confirmacion-al-usuario">Paso 5: Enviar un mensaje de confirmación al usuario<a class="headerlink" href="#paso-5-enviar-un-mensaje-de-confirmacion-al-usuario" title="Permanent link">&para;</a></h4>
+<p>El agente responde con,</p>
+<p><code>Tu solicitud de permiso de vacaciones del 5 al 10 de agosto ha sido enviada. Tu gerente la revisará y se pondrá en contacto contigo pronto.</code></p>
+<h2 id="laboratorio-07-agregar-un-nuevo-tema-con-nodos-de-conversacion">🧪 Laboratorio 07 - Agregar un nuevo tema con nodos de conversación<a class="headerlink" href="#laboratorio-07-agregar-un-nuevo-tema-con-nodos-de-conversacion" title="Permanent link">&para;</a></h2>
+<p>Ahora vamos a aprender cómo agregar un nuevo tema con un activador y herramientas. Este laboratorio cubrirá la creación de un tema desde cero para que entiendas cómo personalizar temas según tus necesidades.</p>
+<ul>
+<li><a href="../../../../../docs/recruit/07-add-new-topic-with-trigger">7.1 Agregar un nuevo tema desde cero</a></li>
+<li><a href="../../../../../docs/recruit/07-add-new-topic-with-trigger">7.2 Definir las entradas y salidas del activador</a></li>
+<li><a href="../../../../../docs/recruit/07-add-new-topic-with-trigger">7.3 Agregar una herramienta usando un conector</a></li>
+</ul>
+<h3 id="caso-de-uso">✨ Caso de uso<a class="headerlink" href="#caso-de-uso" title="Permanent link">&para;</a></h3>
+<p><strong>Como</strong> empleado</p>
+<p><strong>Quiero</strong> saber qué dispositivos están disponibles</p>
+<p><strong>Para que</strong> tenga una lista de dispositivos disponibles</p>
+<p>¡Comencemos!</p>
+<h3 id="requisitos-previos">Requisitos previos<a class="headerlink" href="#requisitos-previos" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Lista de SharePoint</strong></p>
+<p>Usaremos la lista de SharePoint <strong>Dispositivos</strong> de <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Lección 00 - Configuración del curso - Paso 3: Crear nuevo sitio de SharePoint</a>.</p>
+<p>Si no has configurado la lista de SharePoint <strong>Dispositivos</strong>, por favor regresa a <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Lección 00 - Configuración del curso - Paso 3: Crear nuevo sitio de SharePoint</a>.</p>
+</li>
+<li>
+<p><strong>Agente de soporte técnico de Contoso</strong></p>
+<p>Usaremos el mismo agente creado previamente en <a href="../06-create-agent-from-conversation/">Lección 06 - Crear un agente personalizado usando lenguaje natural con Copilot y conectándolo con tus datos</a>.</p>
+</li>
+</ol>
+<h3 id="71-agregar-un-nuevo-tema-desde-cero">7.1 Agregar un nuevo tema desde cero<a class="headerlink" href="#71-agregar-un-nuevo-tema-desde-cero" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Selecciona la <strong>pestaña Temas</strong> cerca del nombre del agente. Si no la ves visible, selecciona <strong>+6</strong> y verás <strong>Temas</strong> listados.</p>
+<p><img alt="Seleccionar Temas" src="../../../../../translated_images/7.1_01_Topics.789ffa4f75830b5f25fb1eeb8fa3e8ba3810b95870cb3dc49d80d8f4ba15a00a.es.png" /></p>
+</li>
+<li>
+<p>La pestaña <strong>Temas</strong> se cargará y por defecto se mostrarán los temas <em>Personalizados</em>. Puedes filtrar los temas por Todos, Personalizados y Sistema. Los temas personalizados y del sistema que ves actualmente fueron creados automáticamente cuando se aprovisionó el agente.</p>
+<p>Selecciona <strong>+ Agregar un tema</strong> y selecciona <strong>Desde cero</strong>.</p>
+<p><img alt="Crear tema desde cero" src="../../../../../translated_images/7.1_02_FromBlank.f3fe83fad24825f8eb498b19af8e472810f657868613b96b3b4e033fa1042e75.es.png" /></p>
+</li>
+<li>
+<p>Ingresa un nombre para el tema. Copia y pega lo siguiente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Available devices
+</span></code></pre></div>
+<p><img alt="Nombrar el tema" src="../../../../../translated_images/7.1_03_TopicName.06eb34ebe94516c1d898b5dff183f9586f7526f9316bc122dca641ac29967966.es.png" /></p>
+</li>
+<li>
+<p>Ingresa una descripción del activador que describa lo que hace el tema. Copia y pega lo siguiente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>This topic helps users find devices that are available from our SharePoint Devices list. User can ask to see available devices and it will return a list of devices that are available which can include laptops, smartphones, accessories and more.
+</span></code></pre></div>
+<p><img alt="Ingresar un nombre y descripción para el activador" src="../../../../../translated_images/7.1_04_TriggerDescription.cb748c0358b3af249fcc0fdb0b262185ffed14d8cf628186b8a65ad4bbf14172.es.png" /></p>
+</li>
+</ol>
+<h3 id="72-definir-las-entradas-y-salidas-del-activador">7.2 Definir las entradas y salidas del activador<a class="headerlink" href="#72-definir-las-entradas-y-salidas-del-activador" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>A continuación, vamos a agregar una nueva variable de entrada que la IA generativa usará en su orquestación para extraer el valor del tipo de dispositivo del mensaje del usuario. Selecciona los <strong>tres puntos (...)</strong> en el tema y selecciona <strong>Detalles</strong> para ver el panel de detalles del tema.</p>
+<p><img alt="Seleccionar Detalles del Tema" src="../../../../../translated_images/7.2_01_SelectTopicDetails.cc1b97a86718e101084c366514cc306fe82243a014a44c579394e0f70ba5ca53.es.png" /></p>
+</li>
+<li>
+<p>El panel de <strong>Detalles del Tema</strong> ahora se ha cargado. Selecciona la pestaña <strong>Entrada</strong>.</p>
+<p><img alt="Pestaña de entrada" src="../../../../../translated_images/7.2_02_SelectInputTab.d0b900eb02a8f982324f59e3b7aca34c2cdba78263acdc9301225e1c3e6338b6.es.png" /></p>
+</li>
+<li>
+<p>Selecciona <strong>Crear una nueva variable</strong>.</p>
+<p><img alt="Crear nueva variable de entrada" src="../../../../../translated_images/7.2_03_CreateANewVariable.0d45780268d9b6250617c45a9ddd557cdaa23945b66539b313ca8d74f2c96cc2.es.png" /></p>
+</li>
+<li>
+<p>Ingresa un nombre para la variable. Copia y pega lo siguiente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>VarDeviceType
+</span></code></pre></div>
+<p><img alt="Nombre de la variable de entrada" src="../../../../../translated_images/7.2_04_VariableName.56555922eab13cad52fa29d846f4e515d82c2e9bf61c86705f080a1ba4f3b1af.es.png" /></p>
+</li>
+<li>
+<p>Ahora necesitamos definir nuestras variables de entrada y salida. Las siguientes son propiedades que se pueden definir para las entradas y salidas del tema.</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th style="text-align: left;">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>¿Cómo llenará el agente esta entrada?</td>
+<td style="text-align: left;">Determina cómo el agente llena esta variable con un valor antes de ejecutar el tema. Por defecto está configurado como <em>Llenar dinámicamente con la mejor opción</em>. De lo contrario, puedes sobrescribir una entrada con un valor en lugar de preguntar al usuario</td>
+</tr>
+<tr>
+<td>Tipo de datos de la variable</td>
+<td style="text-align: left;">El tipo de datos de la variable. Los tipos de datos admitidos son <code>String</code>, <code>Boolean</code>, <code>Number</code>, <code>Date</code>, <code>DateTime</code>, <code>DateTimeNoTimeZone</code>, <code>Time</code>, <code>Record</code>, <code>Table</code>, <code>Unspecified</code>, <code>From sample data</code></td>
+</tr>
+<tr>
+<td>Nombre para mostrar</td>
+<td style="text-align: left;">Nombre de la variable</td>
+</tr>
+<tr>
+<td>Identificar como</td>
+<td style="text-align: left;">Tipo de entidad para que el agente capture el tipo de valor correcto</td>
+</tr>
+<tr>
+<td>Descripción</td>
+<td style="text-align: left;">La descripción ayuda al agente a llenar automáticamente las entradas antes de ejecutar el tema o generar preguntas para solicitar los valores</td>
+</tr>
+</tbody>
+</table>
+<p>Las propiedades <em>¿Cómo llenará el agente esta entrada?</em>, <em>Tipo de datos de la variable</em> y <em>Nombre para mostrar</em> pueden permanecer como están. Actualiza la propiedad <strong>Identificar como</strong> a <strong>Respuesta completa del usuario</strong>.</p>
+<p><img alt="Actualizar Identificar como" src="../../../../../translated_images/7.2_05_IdentifyAs.a502101e6f60c27ed8c8b1eff049b8ceedd0531845b932f9b7608ad3d8220090.es.png" /></p>
+</li>
+<li>
+<p>Copia y pega lo siguiente como descripción.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>List of possible values: Laptop, Desktop, Smartphone
+</span></code></pre></div>
+<p><img alt="Descripción" src="../../../../../translated_images/7.2_06_InputDescription.844e1776080e595c6c221bcc33d7a269abcc7e4755c8f11b284c3950f42166b5.es.png" /></p>
+</li>
+<li>
+<p>A continuación, definamos nuestra salida para el tema. Selecciona la pestaña <strong>Salida</strong>.</p>
+<p><img alt="Seleccionar pestaña de salida" src="../../../../../translated_images/7.2_07_SelectOutputTab.ab5aa0a2f385f1492df5a67f8f2cbed752dc0258c1e1ddb9928d204405ec403a.es.png" /></p>
+</li>
+<li>
+<p>Selecciona <strong>Crear una nueva variable</strong>.</p>
+<p><img alt="Crear nueva variable de salida" src="../../../../../translated_images/7.2_08_CreateANewVariable.5518205f121014ff4757af062bedfd38ce768c8f38291dd9d6489d67cd5d5dc8.es.png" /></p>
+</li>
+<li>
+<p>Actualiza las siguientes propiedades.</p>
+<p><strong>Nombre de la variable</strong> - Copia y pega lo siguiente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>VarAvailableDevices
+</span></code></pre></div>
+<p><strong>Tipo de datos de la variable</strong> - Selecciona <strong>Tabla</strong> como el tipo de datos.</p>
+<p><strong>Descripción de la variable</strong> - Copia y pega lo siguiente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>List of available devices by device type
+</span></code></pre></div>
+<p><img alt="Propiedades de salida" src="../../../../../translated_images/7.2_09_OutputVariable.fb0e159fbad5052280040090352c50faf4d91228095c3762e75440b2842e0d29.es.png" /></p>
+</li>
+<li>
+<p>Ahora hemos completado la definición de las entradas y salidas del tema. Selecciona el <strong>icono X</strong> para salir del panel de <strong>Detalles del Tema</strong>.</p>
+<p><img alt="Salir del panel de detalles del tema." src="../../../../../translated_images/7.2_10_ExitTopicDetailsPane.6e8981434f04049bef7ab93f9545ee433087e1c99cdfe27b355ee9858ddfde99.es.png" /></p>
+</li>
+</ol>
+<h3 id="73-agregar-una-herramienta-usando-un-conector">7.3 Agregar una herramienta usando un conector<a class="headerlink" href="#73-agregar-una-herramienta-usando-un-conector" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>A continuación, agreguemos un nodo que permita al agente recuperar la lista de dispositivos de la lista de SharePoint <strong>Dispositivos</strong>. Selecciona el <strong>icono +</strong> debajo del activador.</p>
+<p><img alt="Agregar una herramienta" src="../../../../../translated_images/7.3_01_AddNode.4656328835f7a28bc5f66c440d620a0990bf098e858619ff2c32a9b14fae7c4f.es.png" /></p>
+</li>
+<li>
+<p>Selecciona el nodo <strong>Agregar una herramienta</strong>, luego selecciona la pestaña <strong>Conector</strong>. Busca <code>Obtener elementos</code> y selecciona la acción del conector de SharePoint <strong>Obtener elementos</strong>.</p>
+<p><img alt="Seleccionar obtener elementos" src="../../../../../translated_images/7.3_02_GetItems.a6bdfb122449de789e7c58592f4c3e3a0f38b7bdcec2e0e5eab34b2d9d991f97.es.png" /></p>
+</li>
+<li>
+<p>Se necesita crear una nueva conexión para el conector. Selecciona el <strong>icono de cheurón</strong> y selecciona <strong>Crear nueva conexión</strong>.</p>
+<p><img alt="Agregar una herramienta" src="../../../../../translated_images/7.3_03_CreateNewConnection.03f49fab97e5f5f2a298e4b1b2e5081304c9c98c5f3ad5be0302c241c3d83d94.es.png" /></p>
+</li>
+<li>
+<p>Se mostrarán dos opciones que te permiten conectarte directamente a SharePoint Online o a un SharePoint local. Por defecto, la opción <strong>Conectar directamente (servicios en la nube)</strong> estará seleccionada, que es la que usaremos para nuestra conexión.
+Selecciona <strong>Crear</strong>.</p>
+</li>
+</ol>
+<p><img alt="Seleccionar Crear" src="../../../../../translated_images/7.3_04_SelectCreate.f2216f1e276ed153e06d5b5d47f170a0f9cc6854aa05f0736623acb3aeee1229.es.png" /></p>
+<ol>
+<li>Selecciona tu cuenta de usuario iniciada.</li>
+</ol>
+<p><img alt="Seleccionar cuenta de usuario iniciada" src="../../../../../translated_images/7.3_05_SelectSignedInUserAccount.e27a0ada918a1cf4477f3966adcc5f1d033a8998a2589d02d1208f21f5d93938.es.png" /></p>
+<ol>
+<li>A continuación, necesitas confirmar que tu cuenta de usuario puede ser utilizada para la conexión con el conector de SharePoint. Selecciona <strong>Permitir acceso</strong>.</li>
+</ol>
+<p><img alt="Seleccionar permitir acceso" src="../../../../../translated_images/7.3_06_AllowAccess.69f012dbcedf7ebc1869e648a5eaa661d085b15aa7a2eb69e69c5b63adfa36dd.es.png" /></p>
+<ol>
+<li>Selecciona <strong>Enviar</strong> para que la acción del conector de SharePoint <strong>Obtener elementos</strong> se agregue como un nodo al tema.</li>
+</ol>
+<p><img alt="Enviar" src="../../../../../translated_images/7.3_07_ConnectedSelectSubmit.16ec31ef062696cabb6e7964879debd177f2b9162f88ef95ae1b4eed85e08a21.es.png" /></p>
+<ol>
+<li>La acción del conector de SharePoint <strong>Obtener elementos</strong> ahora está agregada al tema. Ahora podemos comenzar a configurar las entradas de la acción. Selecciona el <strong>icono de elipsis (...)</strong> y selecciona <strong>Propiedades</strong>.</li>
+</ol>
+<p><img alt="Seleccionar Propiedades" src="../../../../../translated_images/7.3_08_GetItemsProperties.32bdda34a1d73a55eb2893695e4b4cf15cd899806e616d0b0b5015471414c9d7.es.png" /></p>
+<ol>
+<li>
+<p>Aparecerá el panel de configuración de <strong>Obtener elementos</strong> y, por defecto, verás la pestaña <strong>Entradas</strong>. Selecciona la pestaña <strong>Inicio</strong> e ingresa una descripción en el campo <strong>Descripción de uso</strong>. Copia y pega lo siguiente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Retrieves devices from SharePoint list
+</span></code></pre></div>
+</li>
+</ol>
+<blockquote>
+<p>Esto será útil cuando veamos la página <em>Administrar tus conexiones</em> de nuestro agente. Volveremos a esto en breve.</p>
+</blockquote>
+<p><img alt="Descripción de Obtener elementos" src="../../../../../translated_images/7.3_09_UpdateDescription.76a8d2ebddd4c3e4ca423daad7485afa60f31f37c97e16529d94e224f9709d60.es.png" /></p>
+<ol>
+<li>Selecciona la pestaña <strong>Entradas</strong> y selecciona el sitio <strong>Contoso IT</strong> y la lista <strong>Dispositivos</strong> que configuraste en <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Lección 00 - Configuración del curso - Paso 3: Crear nuevo sitio de SharePoint</a>.</li>
+</ol>
+<p><img alt="Configurar entradas de Obtener elementos" src="../../../../../translated_images/7.3_10_GetItemsInputs.17f8689e660c480dd405ab2ab57db34dcd2b8e697ec09d54c8f8649eb619c58b.es.png" /></p>
+<ol>
+<li>Ahora, para mostrar solo los dispositivos de la lista de SharePoint basados en:</li>
+<li>el valor seleccionado,</li>
+<li>y solo los dispositivos donde el estado sea <em>Disponible</em>,</li>
+</ol>
+<p>necesitamos aplicar un filtro. Esto se logra ingresando una consulta de filtro con la ayuda de Power Fx. Selecciona el <strong>icono de elipsis (...)</strong>.</p>
+<p><img alt="Seleccionar icono de elipsis" src="../../../../../translated_images/7.3_11_SelectVariable.33bfe876cc230569ea0f6cc5e1efa100432509e44342e9b3d6a9e65ee2bc525f.es.png" /></p>
+<ol>
+<li>Por defecto, estarás en la pestaña <strong>Personalizado</strong>. Selecciona la pestaña <strong>Fórmula</strong>.</li>
+</ol>
+<p><img alt="Seleccionar pestaña Fórmula" src="../../../../../translated_images/7.3_12_SelectFormula.a7aba25c95956d113865da3f30da3f3872e12c7a7a8f3c65098a3e3fac9616a4.es.png" /></p>
+<ol>
+<li>Selecciona el icono de <strong>expandir</strong> para ampliar el campo <strong>Fórmula</strong>. Copia y pega la siguiente expresión de Power Fx.</li>
+</ol>
+<p>Estamos utilizando la función <code>Concatenate</code> para crear una expresión que filtrará:
+   - la columna de SharePoint <strong>Estado</strong> igual a <em>Disponible</em>,
+   - y la columna de SharePoint <strong>Tipo de activo</strong> igual al <em>dispositivo seleccionado del nodo de pregunta</em>.</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+Concatenate(&quot;Status eq &#39;Available&#39; and AssetType eq &#39;&quot;, Topic.VarDeviceType, &quot;&#39;&quot;)
+```
+</code></pre></div>
+<p>Selecciona <strong>Insertar</strong>.</p>
+<p><img alt="Ingresar expresión de Power Fx y seleccionar insertar" src="../../../../../translated_images/7.3_13_EnterFormula.d17cc9f73e01e1cab8e2420a55bcb726ae0a0e55673f81ee3d7fe12d20148b92.es.png" /></p>
+<ol>
+<li>La expresión de Power Fx ahora se aplicará en el parámetro de entrada de consulta de filtro de la acción <strong>Obtener elementos</strong>. A continuación, selecciona la vista <strong>Todos los elementos</strong> en <strong>Limitar columnas por vista</strong>. Esto solo recuperará las columnas de la lista basadas en la vista seleccionada.</li>
+</ol>
+<p><img alt="Listar columnas por vista" src="../../../../../translated_images/7.3_14_LimitColumnsByView.5537126aaa087bd7f81cc35dfe182aa72cdbec4fe1fb5c2e15823a1275dcaa71.es.png" /></p>
+<ol>
+<li>A continuación, actualizaremos el nombre de la variable para la salida. Selecciona la pestaña <strong>Salidas</strong> y selecciona la variable <code>GetItems</code>.</li>
+</ol>
+<p><img alt="Actualizar variable" src="../../../../../translated_images/7.3_15_ConfigureOutputs.d4cb0c5c8e37d1859ed705bd1582fce2d063e7f4d65cc036127a846d743ff391.es.png" /></p>
+<ol>
+<li>
+<p>Actualiza el nombre a lo siguiente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>VarDevices
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="Actualizar nombre de variable" src="../../../../../translated_images/7.3_16_RenameVariable.55d7adb355808d39fe515bf980af123c60e218fa427354079e86efc412dc0f83.es.png" /></p>
+<ol>
+<li>Desplázate hacia abajo y en la sección <strong>Uso</strong>, selecciona <strong>Global</strong>. Esto hará que la variable sea accesible por cualquier tema.</li>
+</ol>
+<p><img alt="Actualizar a variable global" src="../../../../../translated_images/7.3_17_UpdateToGlobalVariable.09bdb05c0938898a04e48b6bcebee1584f17080b63b2577594be74f9f77a5bc3.es.png" /></p>
+<ol>
+<li><strong>Cierra</strong> el panel de <strong>Propiedades de la variable</strong>.</li>
+</ol>
+<p><img alt="Cerrar panel de propiedades de la variable" src="../../../../../translated_images/7.3_18_ExitVariablePropertiesPane.b1a5e76dfe490bdf1274d8e8c78df44f9b3e3542180fa52fb6f903a980ef31ab.es.png" /></p>
+<ol>
+<li>Selecciona el <strong>icono de más +</strong> para insertar un nuevo nodo, selecciona <strong>Gestión de variables</strong> seguido de seleccionar <strong>Establecer un valor de variable</strong>.</li>
+</ol>
+<p><img alt="Agregar nodo Establecer un valor de variable" src="../../../../../translated_images/7.3_19_AddSetAVariableValueNode.958d21c21727ef92506fe76cf0458f05ac8508d84d0a4917077d2889410330e2.es.png" /></p>
+<ol>
+<li>Selecciona el icono de <strong>mayor que</strong> para el parámetro de entrada <strong>Establecer variable</strong>.</li>
+</ol>
+<p><img alt="Establecer variable" src="../../../../../translated_images/7.3_20_SelectAVariable.9d3beb144002569b947c90cbec22afcc9cb34f277b21e3f65dcaf69831abc438.es.png" /></p>
+<ol>
+<li>Selecciona la salida del tema creada anteriormente como la variable, <strong>VarAvailableDevices</strong>.</li>
+</ol>
+<p><img alt="Guardar tema" src="../../../../../translated_images/7.3_21_SelectVarAvailableDevicesOutput.8d7259eb6ce1bc7c89de10b768b62dc3008ad7468c094249282bfe66436d1672.es.png" /></p>
+<ol>
+<li>A continuación, selecciona el <strong>icono de elipsis (...)</strong> para definir el valor de la variable.</li>
+</ol>
+<p><img alt="Seleccionar valor de variable" src="../../../../../translated_images/7.3_22_SelectVariable.f16319e644afc97d24a8cddaf64a7df9fcc52acd7e284b21f20b685a6e53887a.es.png" /></p>
+<ol>
+<li>Ahora utilizaremos una expresión de PowerFx para establecer el valor de la variable como la propiedad <code>value</code> devuelta en la respuesta de <strong>Obtener elementos</strong>, y hacer que el <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-power-fx?WT.mc_id=power-172618-ebenitez">alcance de la variable</a> sea global agregando el prefijo <code>Global</code>.</li>
+</ol>
+<p>Selecciona <strong>Insertar</strong> y <strong>guardar</strong> el tema.</p>
+<p><img alt="Fórmula de Power Fx para valor de variable" src="../../../../../translated_images/7.3_23_PowerFxFormula.f860daa2c8423021926f0697177279ede3d8d443714d471a77e655c3c42edb07.es.png" /></p>
+<ol>
+<li>A continuación, necesitamos actualizar las instrucciones del agente. Selecciona la pestaña <strong>Resumen</strong> y selecciona <strong>Editar</strong>.</li>
+</ol>
+<p><img alt="Editar instrucciones" src="../../../../../translated_images/7.3_24_EditInstructions.ce65a6cbcd74792885230af1da432fbb4079fd8b0f5af24ab840453a900b67a8.es.png" /></p>
+<ol>
+<li>
+<p>Agrega una nueva línea en las instrucciones, copia y pega lo siguiente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>- Help find available devices and give full details using [Available devices]. Always extract the VarDeviceType from the inputs. After giving device details, ask the user if they want to request a device from the list of available devices.
+</span></code></pre></div>
+</li>
+</ol>
+<p>Esta instrucción guiará a la IA generativa para invocar el disparador <strong>Dispositivos disponibles</strong> y mostrar la lista de dispositivos disponibles de la lista <strong>Dispositivos</strong> de SharePoint. Selecciona el marcador de posición del tema completo entre corchetes.</p>
+<p><img alt="Agregar instrucciones" src="../../../../../translated_images/7.3_25_AddInstructions.1e83853476fed3c8b1c43e657bd1c1351108702288a8f688d8543fbf1c2946fb.es.png" /></p>
+<ol>
+<li>Escribe el carácter de barra inclinada <code>/</code> y aparecerá la lista de temas. Selecciona el tema <strong>Dispositivos disponibles</strong>.</li>
+</ol>
+<p><img alt="Referenciar disparador" src="../../../../../translated_images/7.3_26_SelectAvailableDevicesTopic.1a1beaa256f5417153b7bc55de848b89778f666c213b3a3935444526ab881f0b.es.png" /></p>
+<ol>
+<li><strong>Guarda</strong> las instrucciones actualizadas.</li>
+</ol>
+<p><img alt="Guardar instrucciones" src="../../../../../translated_images/7.3_27_SaveUpdatedInstructions.39908bb60990be971039bf392088fd0ecfa148c4496a6ad7413e1267b9091623.es.png" /></p>
+<ol>
+<li>
+<p>Ahora vamos a probar nuestro agente actualizado. Selecciona <strong>Probar</strong> en la parte superior derecha para mostrar el panel de prueba y <strong>actualiza</strong> el panel de prueba. Ingresa el siguiente mensaje al agente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>I need a laptop
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="Probar" src="../../../../../translated_images/7.3_28_Test.a273496de273bf3bebb9ac1504c1cedd8947c250ccf8454cf38b2effbdf66f71.es.png" /></p>
+<ol>
+<li>Antes de que el agente pueda proceder, el usuario necesita verificar que su conexión puede ser utilizada. Selecciona <strong>Permitir</strong>.</li>
+</ol>
+<p><img alt="Seleccionar permitir" src="../../../../../translated_images/7.3_29_SelectAllow.9f508c4001270252924d889792ecf0cc2a984954b903bb00f7ce6b2dc43d08e3.es.png" /></p>
+<ol>
+<li>El agente ejecutará la herramienta de SharePoint que recupera una lista filtrada de dispositivos donde el tipo de dispositivo es "laptop" y el estado es "disponible", utilizando la expresión de Power Fx. Se devolverá una respuesta en forma de puntos para que el usuario la lea.</li>
+</ol>
+<p><img alt="Respuesta de prueba" src="../../../../../translated_images/7.3_30_TestResponse.b60253568edc8b68d737a62960f4a3fa3620d2ba4658b05aa2503ad5fd763383.es.png" /></p>
+<ol>
+<li>Una última cosa que aprender es cómo ver las conexiones utilizadas al visualizar la página <em>Administrar tus conexiones</em> del agente. Selecciona el <strong>icono de elipsis (...)</strong> y selecciona <strong>Administrar conexión</strong>.</li>
+</ol>
+<p><img alt="Administrar conexión" src="../../../../../translated_images/7.3_31_ManageConnections.151932ec4f907e020b67c418cf591806da164c74f6b1d9b73c04d7374d9fc505.es.png" /></p>
+<ol>
+<li>Esta página es donde podemos ver todas las conexiones utilizadas por el agente. Actualmente, solo hay una conexión listada que está asociada a la herramienta de SharePoint que se agregó al tema. Selecciona <strong>1 herramienta</strong> en la columna <strong>Usado por</strong>.</li>
+</ol>
+<p><img alt="Usado por" src="../../../../../translated_images/7.3_32_UsedBy.1e5ff032f1e02a565a0dafdde4f9436486ed3f012fcc23b824871a71b6de543e.es.png" /></p>
+<ol>
+<li>Aquí es donde podemos ver los detalles de la acción Obtener elementos y recordar la <em>descripción de uso</em> que ingresamos anteriormente. Aquí es donde veremos la descripción de uso. Selecciona <strong>Cerrar</strong>.</li>
+</ol>
+<blockquote>
+<p>Esto nos permite saber qué acciones se utilizan y su propósito. Esto mantiene nuestras conexiones organizadas 📁.</p>
+</blockquote>
+<p><img alt="Descripción de uso" src="../../../../../translated_images/7.3_33_UsedByInformation.74a42aedb6dc906c678ff8b281a8706e1c0156ee7375111ed20e02d1a1dfd808.es.png" /></p>
+<ol>
+<li>Regresa a tu pestaña del navegador con Copilot Studio y <strong>actualiza</strong> el panel de prueba para borrar la prueba.</li>
+</ol>
+<h2 id="mision-completa">✅ Misión Completa<a class="headerlink" href="#mision-completa" title="Permanent link">&para;</a></h2>
+<p>¡Felicidades! 👏🏻 Has aprendido cómo agregar un nuevo tema desde cero, cómo agregar una herramienta que llama a la acción del conector Obtener elementos de SharePoint y usar Power Fx para filtrar la respuesta para devolver solo dispositivos donde el estado sea disponible y el tipo de dispositivo sea laptop. 🙌🏻</p>
+<p>Este es el final de <strong>Laboratorio 07 - Agregar un nuevo tema con nodos de conversación</strong>, selecciona el enlace a continuación para pasar a la siguiente lección. Ampliaremos el caso de uso de este laboratorio en el laboratorio de la siguiente lección.</p>
+<p>⏭️ <a href="../08-add-adaptive-card/">Pasar a la lección <strong>Mejorar las interacciones del usuario con tarjetas adaptativas</strong></a></p>
+<h2 id="recursos-tacticos">📚 Recursos Tácticos<a class="headerlink" href="#recursos-tacticos" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-system-topics?mc_id=power-172618-ebenitez">Usar temas del sistema</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/guidance/topics-overview?WT.mc_id=power-172618-ebenitez">Temas en Microsoft Copilot Studio</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-triggers?WT.mc_id=power-172618-ebenitez">Establecer disparadores de temas</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/guidance/defining-chatbot-topics?WT.mc_id=power-172618-ebenitez">Definir temas de agentes</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-power-fx?WT.mc_id=power-172618-ebenitez">Crear expresiones usando Power Fx</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep6">Crear temas usando lenguaje natural</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep4">Agregar acciones a agentes usando conectores</a></p>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/07-add-new-topic-with-trigger" alt="Analítica" /></p>
+<hr />
+<p><strong>Descargo de responsabilidad</strong>:<br />
+Este documento ha sido traducido utilizando el servicio de traducción automática <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Aunque nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que surjan del uso de esta traducción.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,876 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/nl/CONTRIBUTING/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>CONTRIBUTING - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bijdragen-aan-mcs-agent-academy" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CONTRIBUTING
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#documentatiestandaarden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentatiestandaarden
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markdown-linting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Markdown Linting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spellingscontrole" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spellingscontrole
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lokale-documentatievoorvertoning-met-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lokale documentatievoorvertoning met MkDocs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vragen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vragen?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "27c4d44f8372a12eff6e71e06276c22e",
+  "translation_date": "2025-10-17T01:12:05+00:00",
+  "source_file": "CONTRIBUTING.md",
+  "language_code": "nl"
+}
+-->
+<h1 id="bijdragen-aan-mcs-agent-academy">Bijdragen aan MCS Agent Academy<a class="headerlink" href="#bijdragen-aan-mcs-agent-academy" title="Permanent link">&para;</a></h1>
+<p>Bedankt voor je interesse in het bijdragen aan de MCS Agent Academy! Deze gids helpt je bij het opzetten van je ontwikkelomgeving en het begrijpen van onze documentatiestandaarden.</p>
+<h2 id="documentatiestandaarden">Documentatiestandaarden<a class="headerlink" href="#documentatiestandaarden" title="Permanent link">&para;</a></h2>
+<p>We volgen de documentatiestandaarden van Microsoft om consistente, hoogwaardige inhoud te garanderen. Voor uitgebreide richtlijnen over het schrijven van effectieve documentatie, raadpleeg:</p>
+<p>📖 <strong><a href="https://learn.microsoft.com/en-us/contribute/content/how-to-write-docs-auth-pack">Microsoft Docs Authoring Pack</a></strong> - Complete gids voor het schrijven van documentatie volgens de stijl en standaarden van Microsoft.</p>
+<p>Deze bron behandelt:</p>
+<ul>
+<li>Het schrijven van duidelijke, beknopte inhoud</li>
+<li>Het correct gebruiken van markdown-syntaxis</li>
+<li>Het hanteren van consistente terminologie</li>
+<li>Het effectief structureren van documentatie</li>
+<li>Best practices voor toegankelijkheid</li>
+</ul>
+<h2 id="markdown-linting">Markdown Linting<a class="headerlink" href="#markdown-linting" title="Permanent link">&para;</a></h2>
+<p>We gebruiken markdownlint om consistente opmaak en kwaliteit in al onze documentatie te waarborgen. Dit helpt de leesbaarheid en professionele standaarden in de hele repository te behouden.</p>
+<h3 id="markdownlint-cli2-installeren">markdownlint-cli2 installeren<a class="headerlink" href="#markdownlint-cli2-installeren" title="Permanent link">&para;</a></h3>
+<p>Om markdownlint lokaal uit te voeren en overeen te komen met onze GitHub-workflow, installeer markdownlint-cli2:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">npm</span> <span class="n">install</span> <span class="n">-g</span> <span class="n">markdownlint-cli2</span>
+</span></code></pre></div>
+<h3 id="markdownlint-lokaal-uitvoeren">markdownlint lokaal uitvoeren<a class="headerlink" href="#markdownlint-lokaal-uitvoeren" title="Permanent link">&para;</a></h3>
+<p>Na installatie kun je markdownlint uitvoeren op alle markdown-bestanden in de repository:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c"># Scan all markdown files in the repository</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">markdownlint-cli2</span> <span class="s2">&quot;**/*.md&quot;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c"># Scan a specific file</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">markdownlint-cli2</span> <span class="s2">&quot;docs/recruit/README.md&quot;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c"># Auto-fix issues that can be automatically resolved in the docs directory</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">markdownlint-cli2</span> <span class="p">-</span><span class="n">-fix</span> <span class="s2">&quot;**/*.md&quot;</span>
+</span></code></pre></div>
+<h3 id="configuratie">Configuratie<a class="headerlink" href="#configuratie" title="Permanent link">&para;</a></h3>
+<p>Onze markdownlint-configuratie is gedefinieerd in <code>.markdownlint.jsonc</code> in de hoofdmap van de repository. Deze configuratie:</p>
+<ul>
+<li>Schakelt controle op regellengte (MD013) uit omdat we geen standaard hebben gedefinieerd</li>
+<li>Staat dubbele koppen alleen toe bij siblings (MD024) voor veelvoorkomende sjabloonsecties</li>
+<li>Schakelt validatie van genummerde lijstprefixen (MD029) wereldwijd uit vanwege inspringende inhoud die nummering reset</li>
+<li>Staat toe dat codeblokken worden gebruikt voor tekst (MD046)</li>
+</ul>
+<h3 id="inline-uitzonderingen-toevoegen-voor-markdownlint-regels">Inline uitzonderingen toevoegen voor markdownlint-regels<a class="headerlink" href="#inline-uitzonderingen-toevoegen-voor-markdownlint-regels" title="Permanent link">&para;</a></h3>
+<p>Hoewel onze globale configuratie de meeste veelvoorkomende scenario's afdekt, kun je situaties tegenkomen waarin je inline uitzonderingen moet toevoegen voor specifieke markdownlint-regels in individuele bestanden. Hier zijn voorbeelden van hoe je dit kunt doen:</p>
+<h4 id="optie-1-negeer-voor-de-volgende-regel">Optie 1: Negeer voor de volgende regel<a class="headerlink" href="#optie-1-negeer-voor-de-volgende-regel" title="Permanent link">&para;</a></h4>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;!-- markdownlint-disable-next-line MD029 --&gt;
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">6.</span> This list item will ignore MD029 (note: starts with 6 instead of 1)
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>&lt;!-- markdownlint-disable-next-line MD013 --&gt;
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>This is a very long line that would normally trigger the line length rule but will be ignored for this specific line.
+</span></code></pre></div>
+<h4 id="optie-2-negeer-voor-een-specifiek-bereik">Optie 2: Negeer voor een specifiek bereik<a class="headerlink" href="#optie-2-negeer-voor-een-specifiek-bereik" title="Permanent link">&para;</a></h4>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&lt;!-- markdownlint-disable MD029 --&gt;
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">1.</span> First item
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">5.</span> Fifth item (skips numbers but won&#39;t trigger MD029)
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">10.</span> Tenth item
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>&lt;!-- markdownlint-enable MD029 --&gt;
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>&lt;!-- markdownlint-disable MD013 --&gt;
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>Multiple very long lines that exceed the character limit
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>can be placed between disable and enable comments
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>&lt;!-- markdownlint-enable MD013 --&gt;
+</span></code></pre></div>
+<h4 id="optie-3-negeer-voor-het-hele-bestand">Optie 3: Negeer voor het hele bestand<a class="headerlink" href="#optie-3-negeer-voor-het-hele-bestand" title="Permanent link">&para;</a></h4>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&lt;!-- markdownlint-disable MD029 --&gt;
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>&lt;!-- markdownlint-disable MD013 --&gt;
+</span></code></pre></div>
+<blockquote>
+<p>Plaats deze helemaal bovenaan je markdown-bestand om specifieke regels voor het hele document uit te schakelen.</p>
+</blockquote>
+<h3 id="wanneer-inline-uitzonderingen-te-gebruiken">Wanneer inline uitzonderingen te gebruiken<a class="headerlink" href="#wanneer-inline-uitzonderingen-te-gebruiken" title="Permanent link">&para;</a></h3>
+<p>Je hebt mogelijk uitzonderingen nodig voor verschillende markdownlint-regels wanneer:</p>
+<ol>
+<li><strong>MD029 (Genummerde lijstnummering)</strong>: Doorgaan met genummerde lijsten na andere inhoud, opzettelijke nummering die niet bij 1 begint, of complexe geneste inhoud</li>
+<li><strong>MD013 (Regellengte)</strong>: Codevoorbeelden, URL's of technische inhoud die niet redelijk over regels kan worden verdeeld</li>
+<li><strong>MD033 (Inline HTML)</strong>: Wanneer je specifieke HTML-elementen nodig hebt voor opmaak die niet met markdown kan worden bereikt</li>
+<li><strong>MD041 (Eerste regel kop)</strong>: Sjabloonbestanden of documenten die opzettelijk niet met een kop beginnen</li>
+</ol>
+<h3 id="best-practices">Best practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Gebruik uitzonderingen spaarzaam</strong>: Voeg alleen uitzonderingen toe wanneer dit nodig is voor de duidelijkheid van de documentatie</li>
+<li><strong>Geef commentaar bij je uitzonderingen</strong>: Voeg bij het gebruik van uitzonderingen een korte uitleg toe</li>
+<li><strong>Geef de voorkeur aan <code>markdownlint-disable-next-line</code></strong>: Dit is preciezer dan uitschakelen voor hele secties</li>
+<li><strong>Voer de linter uit voordat je commit</strong>: Voer altijd <code>markdownlint-cli2 "**/*.md"</code> uit voordat je wijzigingen indient</li>
+</ol>
+<blockquote>
+<p><strong>Tip:</strong> Je kunt markdownlint en cSpell snel controleren op je markdown-bestanden met het PowerShell-script <code>scripts/validate-markdown.ps1</code>. Dit script automatiseert veelvoorkomende opmaak- en spellingscontroles om ervoor te zorgen dat je bijdragen aan onze richtlijnen voldoen.</p>
+</blockquote>
+<p>Je kunt het uitvoeren vanuit de hoofdmap van de repository met PowerShell:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">./</span><span class="n">scripts</span><span class="p">/</span><span class="n">validate-markdown</span><span class="p">.</span><span class="n">ps1</span>
+</span></code></pre></div>
+<h3 id="veelvoorkomende-markdownlint-fouten-en-oplossingen">Veelvoorkomende markdownlint-fouten en oplossingen<a class="headerlink" href="#veelvoorkomende-markdownlint-fouten-en-oplossingen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>MD036</strong>: Gebruik correcte koppen (<code>## Kop</code>) in plaats van nadruk (<code>**Vetgedrukte tekst**</code>)</li>
+<li><strong>MD007</strong>: Corrigeer inspringing van ongenummerde lijsten (gebruik 2 spaties, geen 4)</li>
+<li><strong>MD022</strong>: Voeg lege regels toe voor en na koppen</li>
+<li><strong>MD032</strong>: Voeg lege regels toe voor en na lijsten</li>
+<li><strong>MD009</strong>: Verwijder spaties aan het einde van regels</li>
+</ul>
+<h3 id="github-workflow">GitHub-workflow<a class="headerlink" href="#github-workflow" title="Permanent link">&para;</a></h3>
+<p>Onze repository bevat een GitHub-workflow die automatisch markdownlint uitvoert op alle pull requests. De workflow:</p>
+<ul>
+<li>Gebruikt dezelfde markdownlint-cli2-tool die je lokaal kunt uitvoeren</li>
+<li>Sluit de bestanden <code>SUPPORT.md</code>, <code>SECURITY.md</code> en <code>CODE_OF_CONDUCT.md</code> uit</li>
+<li>Gebruikt onze <code>.markdownlint.jsonc</code>-configuratie</li>
+<li>Rapporteert problemen als waarschuwingen, zodat PR's kunnen worden samengevoegd terwijl opmaakmogelijkheden worden gemarkeerd</li>
+</ul>
+<h3 id="vs-code-markdownlint-extensie">VS Code markdownlint-extensie<a class="headerlink" href="#vs-code-markdownlint-extensie" title="Permanent link">&para;</a></h3>
+<p>Als je VS Code gebruikt, raden we aan de <a href="https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint">markdownlint-extensie</a> te installeren voor realtime markdown-linting:</p>
+<ol>
+<li><strong>Installeer de extensie</strong> - Zoek naar "markdownlint" van David Anson in de VS Code-extensiemarktplaats</li>
+<li><strong>Automatische configuratie</strong> - De extensie gebruikt automatisch je <code>.markdownlint.jsonc</code>-configuratiebestand</li>
+<li><strong>Realtime feedback</strong> - Zie golvende onderstrepingen bij markdown-opmaakproblemen terwijl je typt</li>
+<li><strong>Snelle oplossingen</strong> - Gebruik <code>Ctrl+.</code> (Cmd+. op Mac) om beschikbare automatische oplossingen te zien</li>
+<li><strong>Problemenpaneel</strong> - Bekijk alle markdown-problemen in het problemenpaneel van VS Code</li>
+</ol>
+<p>Dit biedt directe feedback tijdens het schrijven, waardoor het gemakkelijker wordt om markdown-standaarden te volgen voordat je je wijzigingen commit.</p>
+<h2 id="spellingscontrole">Spellingscontrole<a class="headerlink" href="#spellingscontrole" title="Permanent link">&para;</a></h2>
+<p>We gebruiken cSpell (Code Spell Checker) om consistente spelling in al onze documentatie te behouden. Dit helpt professionele kwaliteit te waarborgen en typefouten in de hele repository te verminderen.</p>
+<h3 id="cspell-installeren">cSpell installeren<a class="headerlink" href="#cspell-installeren" title="Permanent link">&para;</a></h3>
+<p>Om cSpell lokaal uit te voeren, installeer het globaal:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">npm</span> <span class="n">install</span> <span class="n">-g</span> <span class="n">cspell</span>
+</span></code></pre></div>
+<h3 id="cspell-lokaal-uitvoeren">cSpell lokaal uitvoeren<a class="headerlink" href="#cspell-lokaal-uitvoeren" title="Permanent link">&para;</a></h3>
+<p>Na installatie kun je cSpell uitvoeren om spelling in de documentatie te controleren:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c"># Check all markdown files in the docs folder</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">cspell</span> <span class="s2">&quot;docs/**/*.md&quot;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c"># Check all markdown files in the repository</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">cspell</span> <span class="s2">&quot;**/*.md&quot;</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c"># Check a specific file</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="n">cspell</span> <span class="s2">&quot;docs/recruit/README.md&quot;</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="c"># Show suggestions for misspelled words</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="n">cspell</span> <span class="p">-</span><span class="n">-show-suggestions</span> <span class="s2">&quot;docs/**/*.md&quot;</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="c"># Check with minimal output (cleaner display)</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="n">cspell</span> <span class="p">-</span><span class="n">-no-progress</span> <span class="p">-</span><span class="n">-no-summary</span> <span class="s2">&quot;docs/**/*.md&quot;</span>
+</span></code></pre></div>
+<h3 id="configuratie_1">Configuratie<a class="headerlink" href="#configuratie_1" title="Permanent link">&para;</a></h3>
+<p>Onze cSpell-configuratie is gedefinieerd in <code>cspell.json</code> in de hoofdmap van de repository. Deze configuratie:</p>
+<ul>
+<li>Bevat aangepaste woorden die specifiek zijn voor ons domein (Copilot, SharePoint, Dataverse, enz.)</li>
+<li>Negeert veelvoorkomende bestandstypen die geen spellingscontrole nodig hebben (afbeeldingen, buildbestanden)</li>
+<li>Stelt de taal in op Engels voor spellingscontrole</li>
+</ul>
+<h3 id="nieuwe-woorden-toevoegen">Nieuwe woorden toevoegen<a class="headerlink" href="#nieuwe-woorden-toevoegen" title="Permanent link">&para;</a></h3>
+<p>Als je een woord tegenkomt dat door cSpell als verkeerd gespeld wordt gemarkeerd, maar eigenlijk correct is (zoals productnamen, technische termen of eigennamen), kun je het toevoegen aan de <code>words</code>-array in <code>cspell.json</code>:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nt">&quot;words&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="s2">&quot;Contoso&quot;</span><span class="p">,</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="s2">&quot;Dataverse&quot;</span><span class="p">,</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="s2">&quot;YourNewWord&quot;</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">  </span><span class="p">]</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="vs-code-cspell-extensie">VS Code cSpell-extensie<a class="headerlink" href="#vs-code-cspell-extensie" title="Permanent link">&para;</a></h3>
+<p>Als je VS Code gebruikt met de <a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker">Code Spell Checker-extensie</a>, kun je snel woorden toevoegen aan je configuratie:</p>
+<ol>
+<li><strong>Bekijk spelfouten</strong> - Zoek naar golvende onderstrepingen bij verkeerd gespelde woorden</li>
+<li><strong>Gebruik Snelle Oplossing</strong> - Klik met de rechtermuisknop op het onderstreepte woord of gebruik <code>Ctrl+.</code> (Cmd+. op Mac)</li>
+<li><strong>Toevoegen aan configuratie</strong> - Selecteer "Spelling -&gt; Toevoegen aan cSpell-configuratie" in het contextmenu</li>
+<li><strong>Kies locatie</strong> - De extensie voegt het woord automatisch toe aan je <code>cspell.json</code>-bestand</li>
+</ol>
+<p>Dit is veel sneller dan handmatig het configuratiebestand bewerken voor individuele woorden.</p>
+<h3 id="best-practices-voor-spelling">Best practices voor spelling<a class="headerlink" href="#best-practices-voor-spelling" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Voer spellingscontrole uit voordat je commit</strong>: Voer altijd <code>cspell "docs/**/*.md"</code> uit voordat je wijzigingen indient</li>
+<li><strong>Corrigeer typefouten in plaats van ze te negeren</strong>: Corrigeer waar mogelijk echte spelfouten in plaats van ze aan de woordenlijst toe te voegen</li>
+<li><strong>Gebruik consistente terminologie</strong>: Houd je aan vastgestelde productnamen en technische termen</li>
+</ol>
+<h2 id="lokale-documentatievoorvertoning-met-mkdocs">Lokale documentatievoorvertoning met MkDocs<a class="headerlink" href="#lokale-documentatievoorvertoning-met-mkdocs" title="Permanent link">&para;</a></h2>
+<p>We gebruiken MkDocs met het Material-thema om onze documentatiesite te genereren. Je kunt het lokaal uitvoeren om je wijzigingen te bekijken voordat je een pull request indient.</p>
+<p>📖 <strong>Meer informatie</strong>: <a href="https://www.mkdocs.org/">MkDocs Documentatie</a> | <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></p>
+<h3 id="python-omgeving-instellen-in-vs-code">Python-omgeving instellen in VS Code<a class="headerlink" href="#python-omgeving-instellen-in-vs-code" title="Permanent link">&para;</a></h3>
+<p>We raden aan een virtuele omgeving te gebruiken om afhankelijkheden voor dit project te isoleren. VS Code maakt dit proces eenvoudig en zal indien nodig Python installeren.</p>
+<blockquote>
+<p><strong>GitHub Codespaces</strong>: Deze instructies werken perfect in GitHub Codespaces, dat vooraf geïnstalleerde Python en een gebruiksklare VS Code-omgeving biedt.</p>
+</blockquote>
+<p>📖 <strong>Meer informatie</strong>: <a href="https://code.visualstudio.com/docs/languages/python">Python in VS Code</a> | <a href="https://code.visualstudio.com/docs/python/environments">Python-omgevingen in VS Code</a></p>
+<h4 id="vereisten">Vereisten<a class="headerlink" href="#vereisten" title="Permanent link">&para;</a></h4>
+<p><strong>Installeer Python-extensie</strong>: Installeer de <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python-extensie</a> van Microsoft uit de VS Code-marktplaats als je dat nog niet hebt gedaan.</p>
+<h4 id="instellen-in-vs-code">Instellen in VS Code<a class="headerlink" href="#instellen-in-vs-code" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>Maak een virtuele omgeving aan</strong>:</li>
+<li>Open de Command Palette (<code>Ctrl+Shift+P</code> op Windows/Linux, <code>Cmd+Shift+P</code> op Mac)</li>
+<li>Typ "Python: Create Environment" en selecteer het</li>
+<li>Kies "Venv" (virtuele omgeving)</li>
+<li>Als er geen Python-interpreters beschikbaar zijn, begeleidt VS Code je bij het installeren van Python</li>
+<li>Selecteer je Python-interpreter (Python 3.8+)</li>
+<li>
+<p>VS Code maakt een <code>.venv</code>-map en activeert deze automatisch</p>
+</li>
+<li>
+<p><strong>Controleer de installatie</strong>:</p>
+</li>
+<li>Open een nieuwe geïntegreerde terminal (<code>Ctrl+Shift+`</code> op Windows/Linux, <code>Cmd+Shift+`</code> op Mac, of <code>View &gt; Terminal</code>)</li>
+<li>Je zou <code>(.venv)</code> in de terminalprompt moeten zien</li>
+<li>Voer uit: <code>python --version</code> om te controleren</li>
+</ol>
+<blockquote>
+<p><strong>Opmerking</strong>: Het openen van een nieuwe terminal zorgt ervoor dat de Python-omgeving correct wordt geactiveerd. Als je liever een bestaande Python-omgeving gebruikt in plaats van een nieuwe virtuele omgeving te maken, kun je "Python: Select Interpreter" gebruiken in de Command Palette en je gewenste omgeving kiezen.</p>
+</blockquote>
+<h3 id="mkdocs-installeren-in-vs-code">MkDocs installeren in VS Code<a class="headerlink" href="#mkdocs-installeren-in-vs-code" title="Permanent link">&para;</a></h3>
+<p>Met je Python-omgeving ingesteld in VS Code, installeer MkDocs en het Material-thema:</p>
+<ol>
+<li><strong>Open de geïntegreerde terminal van VS Code</strong> (<code>Ctrl+``</code> of <code>View &gt; Terminal</code>)</li>
+<li><strong>Zorg ervoor dat je virtuele omgeving actief is</strong> (je zou <code>(.venv)</code> in de prompt moeten zien)</li>
+<li><strong>Installeer de pakketten</strong>:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs<span class="w"> </span>mkdocs-material
+</span></code></pre></div>
+<h3 id="mkdocs-uitvoeren-in-vs-code">MkDocs uitvoeren in VS Code<a class="headerlink" href="#mkdocs-uitvoeren-in-vs-code" title="Permanent link">&para;</a></h3>
+<p>Om de lokale ontwikkelserver met automatische herlaadfunctie te starten:</p>
+<ol>
+<li><strong>In de geïntegreerde terminal van VS Code</strong>, voer uit:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>mkdocs<span class="w"> </span>serve
+</span></code></pre></div>
+<ol>
+<li><strong>De site is beschikbaar op</strong>: <code>http://127.0.0.1:8000/agent-academy/</code></li>
+</ol>
+<h3 id="voorvertoning-in-vs-code-simple-browser">Voorvertoning in VS Code Simple Browser<a class="headerlink" href="#voorvertoning-in-vs-code-simple-browser" title="Permanent link">&para;</a></h3>
+<p>Voor de beste ontwikkelervaring zonder VS Code te verlaten:</p>
+<ol>
+<li><strong>Start MkDocs-server</strong> in de geïntegreerde terminal (zoals hierboven getoond)</li>
+<li><strong>Open Simple Browser</strong>:</li>
+<li><strong>Methode 1</strong>: Open de Command Palette (<code>Ctrl+Shift+P</code> / <code>Cmd+Shift+P</code>)</li>
+<li>Typ "Simple Browser: Show" en selecteer het</li>
+<li>
+<p>Voer URL in: <code>http://127.0.0.1:8000/agent-academy/</code></p>
+</li>
+<li>
+<p><strong>Methode 2</strong>: Klik met de rechtermuisknop op de URL in de terminaluitvoer en selecteer "Link volgen"</p>
+</li>
+<li>
+<p><strong>Methode 3</strong>: Gebruik <code>Ctrl+Klik</code> (Windows) of <code>Cmd+Klik</code> (Mac) op de URL in de terminal</p>
+</li>
+<li>
+<p><strong>Positioneer de browser</strong>: Je kunt de Simple Browser naast je editor plaatsen voor gelijktijdig bewerken en voorvertonen</p>
+</li>
+</ol>
+<h3 id="voordelen-van-vs-code-werkruimte">Voordelen van VS Code-werkruimte<a class="headerlink" href="#voordelen-van-vs-code-werkruimte" title="Permanent link">&para;</a></h3>
+<p>Volledig werken binnen VS Code biedt deze voordelen:</p>
+<ul>
+<li><strong>Geïntegreerde terminal</strong>: Geen noodzaak om tussen applicaties te schakelen</li>
+<li><strong>Voorvertoning naast elkaar</strong>: Bewerk markdown en bekijk wijzigingen tegelijkertijd  </li>
+<li><strong>Linknavigatie</strong>: Klik direct op terminal-URL's om Simple Browser te openen</li>
+<li><strong>Extensie-integratie</strong>: Python-, markdownlint- en cSpell-extensies werken samen</li>
+<li><strong>Git-integratie</strong>: Ingebouwd broncontrolepaneel voor commits en pull requests</li>
+</ul>
+<h3 id="functies-van-automatische-herlaadfunctie">Functies van automatische herlaadfunctie<a class="headerlink" href="#functies-van-automatische-herlaadfunctie" title="Permanent link">&para;</a></h3>
+<p>Bij het uitvoeren van <code>mkdocs serve</code> krijg je:</p>
+<ul>
+<li><strong>Automatisch vernieuwen</strong>: Wijzigingen in een <code>.md</code>-bestand in de map <code>docs/</code> worden automatisch in de browser geladen</li>
+<li><strong>Configuratie-updates</strong>: Wijzigingen in <code>mkdocs.yml</code> activeren ook herbouw</li>
+<li><strong>Realtime voorvertoning</strong>: Bekijk direct je opmaak, links en inhoudswijzigingen</li>
+<li><strong>Linkvalidatie</strong>: MkDocs waarschuwt je voor gebroken interne links</li>
+</ul>
+<h3 id="handige-mkdocs-commandos-in-vs-code">Handige MkDocs-commando's in VS Code<a class="headerlink" href="#handige-mkdocs-commandos-in-vs-code" title="Permanent link">&para;</a></h3>
+<p>Voer deze commando's uit in de geïntegreerde terminal van VS Code:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Start development server</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>mkdocs<span class="w"> </span>serve
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># Build static site (for production)</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>mkdocs<span class="w"> </span>build
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="c1"># Serve with strict mode (treats warnings as errors)</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>mkdocs<span class="w"> </span>serve<span class="w"> </span>--strict
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="c1"># Show version</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>mkdocs<span class="w"> </span>--version
+</span></code></pre></div>
+<blockquote>
+<p><strong>Tip:</strong> Gebruik het PowerShell-script <code>scripts/serve-docs.ps1</code> om de documentatie lokaal te bekijken met alle afhankelijkheden gecontroleerd.</p>
+</blockquote>
+<h3 id="voordelen-van-lokale-voorvertoning">Voordelen van lokale voorvertoning<a class="headerlink" href="#voordelen-van-lokale-voorvertoning" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Directe feedback</strong>: Bekijk hoe je markdown wordt weergegeven met het Material-thema</li>
+<li><strong>Linkvalidatie</strong>: Controleer gebroken links voordat ze live gaan</li>
+<li><strong>Navigatietests</strong>: Controleer of je inhoud in de juiste secties verschijnt</li>
+<li><strong>Mobiele voorvertoning</strong>: Test hoe je inhoud eruitziet op verschillende schermformaten</li>
+<li><strong>Prestatiecontrole</strong>: Zorg ervoor dat afbeeldingen en middelen correct worden geladen</li>
+</ul>
+<h2 id="vragen">Vragen?<a class="headerlink" href="#vragen" title="Permanent link">&para;</a></h2>
+<p>Als je vragen hebt over markdown-opmaak of richtlijnen voor bijdragen, kun je:</p>
+<ol>
+<li>Deze bijdragegids doornemen</li>
+<li>Bestaande issues controleren op soortgelijke vragen</li>
+<li>Een nieuw issue openen</li>
+</ol>
+<p>Veel succes met bijdragen! 🚀</p>
+<hr />
+<p><strong>Disclaimer</strong>:<br />
+Dit document is vertaald met behulp van de AI-vertalingsservice <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,747 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/de/docs/operative-preview/04-agent-instructions/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-04-anweisungen-fur-agenten-verfassen" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-secret-directive" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAME: OPERATION SECRET DIRECTIVE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missionsbeschreibung" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Missionsbeschreibung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ziele" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Ziele
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anweisungen-fur-agenten-verfassen" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Anweisungen für Agenten verfassen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beschreibungen-fur-werkzeuge-themen-und-agenten-verfassen" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✍️ Beschreibungen für Werkzeuge, Themen und Agenten verfassen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-fur-anweisungen-und-beschreibungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Best Practices für Anweisungen und Beschreibungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beispielstruktur-fur-anweisungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗂️ Beispielstruktur für Anweisungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#labor-anweisungen-fur-agenten-verfassen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Labor: Anweisungen für Agenten verfassen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-abgeschlossen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 Mission abgeschlossen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taktische-ressourcen" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Taktische Ressourcen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "66d1f5ea2cc33dc690a5fc4a8e2a666e",
+  "translation_date": "2025-10-17T19:27:12+00:00",
+  "source_file": "docs/operative-preview/04-agent-instructions/README.md",
+  "language_code": "de"
+}
+-->
+<h1 id="mission-04-anweisungen-fur-agenten-verfassen">🕵️‍♂️ Mission 04: Anweisungen für Agenten verfassen<a class="headerlink" href="#mission-04-anweisungen-fur-agenten-verfassen" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="codename-operation-secret-directive">🕵️‍♂️ CODENAME: <code>OPERATION SECRET DIRECTIVE</code><a class="headerlink" href="#codename-operation-secret-directive" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Zeitfenster der Operation:</strong> <code>~45 Minuten</code></p>
+</blockquote>
+<h2 id="missionsbeschreibung">🎯 Missionsbeschreibung<a class="headerlink" href="#missionsbeschreibung" title="Permanent link">&para;</a></h2>
+<p>Agent, Ihr nächster Auftrag ist <strong>Operation Secret Directive</strong> - die Kunst der Kommunikation und Steuerung von Agenten durch präzise Anweisungen und Beschreibungen zu meistern.</p>
+<p>Ihre Mission, sollten Sie sich dazu entschließen, besteht darin, die entscheidenden Fähigkeiten zu erlernen, klare und umsetzbare Anweisungen zu schreiben, die Ihre Agenten dazu bringen, intelligente Entscheidungen zu treffen, die richtigen Werkzeuge und Wissensquellen zu nutzen und nahtlos mit anderen Agenten zusammenzuarbeiten. Außerdem werden Sie die Kunst des Verfassens hochwertiger Beschreibungen meistern, die den Agenten helfen, ihre Ressourcen zu verstehen und mit chirurgischer Präzision auf Benutzeranfragen zu reagieren.</p>
+<p>Betrachten Sie dies als Ihre fortgeschrittene Ausbildung in Agentenpsychologie und Verhaltensmodifikation. Genau wie ein Einsatzagent klare Missionsparameter benötigt, um erfolgreich zu sein, benötigen Ihre KI-Agenten fachmännisch formulierte Anweisungen, um mit Klarheit und Präzision zu handeln und wertvolle Informationen in realen Szenarien zu liefern.</p>
+<hr />
+<h2 id="ziele">🔎 Ziele<a class="headerlink" href="#ziele" title="Permanent link">&para;</a></h2>
+<p>Durch das Abschließen dieser Mission werden Sie:</p>
+<ul>
+<li><strong>Meister der Anweisungen</strong>: Die Kunst und Wissenschaft des Verfassens von Agentenanweisungen in Copilot Studio verstehen  </li>
+<li><strong>Strategische Führung</strong>: Lernen, wie man Agenten anleitet, Werkzeuge, Wissensquellen zu nutzen und mit anderen Agenten zusammenzuarbeiten  </li>
+<li><strong>Operative Klarheit</strong>: Sicherstellen, dass Ihre Agenten präzise, transparent und effizient handeln  </li>
+</ul>
+<hr />
+<h2 id="anweisungen-fur-agenten-verfassen">📝 Anweisungen für Agenten verfassen<a class="headerlink" href="#anweisungen-fur-agenten-verfassen" title="Permanent link">&para;</a></h2>
+<p>Effektive Anweisungen für Agenten zu schreiben, ist der Schlüssel zu erfolgreichem Agentenverhalten. Anweisungen werden von Agenten verwendet, um:</p>
+<ul>
+<li>Zu entscheiden, welches Werkzeug, Thema oder welche Wissensquelle für eine Benutzeranfrage oder einen autonomen Auslöser verwendet werden soll  </li>
+<li>Eingaben für ein Werkzeug basierend auf dem verfügbaren Kontext auszufüllen  </li>
+<li>Eine Antwort für den Endbenutzer zu generieren  </li>
+</ul>
+<h3 id="wie-anweisungen-funktionieren">Wie Anweisungen funktionieren<a class="headerlink" href="#wie-anweisungen-funktionieren" title="Permanent link">&para;</a></h3>
+<p>Anweisungen müssen auf den Werkzeugen, Themen und Wissensquellen basieren, die für Ihren Agenten konfiguriert sind. Agenten können keine Anweisungen für Ressourcen ausführen, die sie nicht haben. Wenn Sie beispielsweise Ihrem Agenten anweisen, eine FAQ-Seite zu durchsuchen, müssen Sie diese FAQ als Wissensquelle hinzufügen.</p>
+<p>Sie können spezifische Werkzeuge, Themen, Variablen oder Power Fx-Ausdrücke mit <code>/</code> in Ihren Anweisungen referenzieren. Dies hilft dem Agenten, genau zu wissen, was er wann verwenden soll.</p>
+<h3 id="was-in-anweisungen-enthalten-sein-sollte">Was in Anweisungen enthalten sein sollte<a class="headerlink" href="#was-in-anweisungen-enthalten-sein-sollte" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fügen Sie Anweisungen für Fälle hinzu, in denen Sie die Entscheidungen des Agenten lenken möchten, insbesondere wenn Unklarheiten möglich sind.  </li>
+<li>Verwenden Sie Anweisungen, um Leitplanken zu setzen, wie z. B. Themen einzuschränken oder Antwortformate festzulegen.  </li>
+<li>Geben Sie Hinweise zum Ausfüllen von Werkzeugeingaben, z. B. "Verwenden Sie die E-Mail-Adresse aus dem Kontaktfeld des Leads, wenn Sie dem Benutzer helfen, eine E-Mail zu verfassen."  </li>
+<li>Geben Sie an, wie Antworten formatiert werden sollen, z. B. "Geben Sie Antworten zum Bestellstatus immer in Tabellenform."  </li>
+<li>Verwenden Sie Einschränkungen, um die Aktionen des Agenten zu begrenzen, z. B. "Antworten Sie nur auf Anfragen zu Mitarbeiterleistungen."  </li>
+</ul>
+<h3 id="praktische-beispiele">Praktische Beispiele<a class="headerlink" href="#praktische-beispiele" title="Permanent link">&para;</a></h3>
+<ul>
+<li>"Verwenden Sie die FAQ-Dokumente nur, wenn die Frage nicht relevant für Öffnungszeiten, Termine oder Abrechnungen ist."  </li>
+<li>"Verwenden Sie das Thema Ticket-Erstellung nur für das Erstellen von Tickets; für andere Anfragen zur Fehlerbehebung verwenden Sie das Thema Troubleshooting."  </li>
+<li>"Geben Sie Antworten zum Bestellstatus immer in Tabellenform."  </li>
+</ul>
+<h3 id="testen-und-verfeinern">Testen und Verfeinern<a class="headerlink" href="#testen-und-verfeinern" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Nach dem Bearbeiten von Anweisungen verwenden Sie das Testfeld, um das Verhalten des Agenten zu validieren.  </li>
+<li>Aktualisieren und veröffentlichen Sie Änderungen nach Bedarf.  </li>
+</ul>
+<h3 id="erweiterte-anleitung">Erweiterte Anleitung<a class="headerlink" href="#erweiterte-anleitung" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Nummerieren oder listen Sie Ihre Anweisungen auf und geben Sie an, dass sie in der Reihenfolge befolgt werden müssen.  </li>
+<li>Verwenden Sie Markdown-Formatierung für bessere Lesbarkeit und um generative KI bei der Verarbeitung Ihrer Anweisungen zu unterstützen.  </li>
+<li>Wenn Sie möchten, dass Ihr Agent sehr spezifisch ist, sollten Sie ein Thema für diesen Anwendungsfall erstellen.  </li>
+<li>Verwenden Sie genaue Namen für Werkzeuge und Themen in den Anweisungen, um Verwirrung zu vermeiden.  </li>
+</ul>
+<h3 id="sicherheit-und-moderation">Sicherheit und Moderation<a class="headerlink" href="#sicherheit-und-moderation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Begrenzen Sie, welche Werkzeuge der Agent verwenden soll, wenn er Wissensquellen referenziert.  </li>
+<li>Begrenzen Sie, welche Parameter für Werkzeuge verwendet werden sollen (z. B. nur E-Mails an eine bestimmte Liste von Personen senden).  </li>
+<li>Verwenden Sie Anweisungen, um unerwünschtes Verhalten oder Probleme mit Inhaltsfilterung zu verhindern.  </li>
+</ul>
+<hr />
+<h2 id="beschreibungen-fur-werkzeuge-themen-und-agenten-verfassen">✍️ Beschreibungen für Werkzeuge, Themen und Agenten verfassen<a class="headerlink" href="#beschreibungen-fur-werkzeuge-themen-und-agenten-verfassen" title="Permanent link">&para;</a></h2>
+<p>Hochwertige Beschreibungen sind entscheidend für generative Orchestrierung. Ihr Agent verwendet diese Beschreibungen, um die richtigen Werkzeuge, Themen und Agenten auszuwählen, um auf Benutzeranfragen und Auslöser zu reagieren. Befolgen Sie diese Best Practices:</p>
+<ul>
+<li><strong>Verwenden Sie einfache, direkte Sprache</strong>: Vermeiden Sie Fachjargon, Umgangssprache oder übermäßig technische Begriffe. Schreiben Sie in aktiver Stimme und Präsens.  </li>
+<li><strong>Seien Sie spezifisch und relevant</strong>: Fügen Sie Schlüsselwörter hinzu, die sich auf die Funktionalität und die Benutzerabsicht beziehen. Stellen Sie sicher, dass Beschreibungen ähnliche Werkzeuge oder Themen klar unterscheiden, um Unklarheiten zu vermeiden.  </li>
+<li><strong>Halten Sie es kurz und informativ</strong>: Begrenzen Sie Beschreibungen auf ein oder zwei Sätze. Fassen Sie zusammen, was das Werkzeug, Thema oder der Agent tut und wie es dem Benutzer zugutekommt.  </li>
+<li><strong>Verwenden Sie eindeutige, beschreibende Namen</strong>: Vermeiden Sie generische Namen. Zum Beispiel "Wettervorhersage für morgen" statt einfach "Wetter".  </li>
+<li><strong>Listen Sie Aktionen oder Überlegungen auf</strong>: Verwenden Sie Aufzählungszeichen oder nummerierte Listen für Klarheit, wenn Sie mehrere Funktionen oder Schritte beschreiben.  </li>
+<li><strong>Testen Sie auf Überschneidungen</strong>: Wenn mehrere Themen ähnliche Beschreibungen haben, könnte Ihr Agent sie alle aufrufen. Testen und überarbeiten Sie, um Überschneidungen zu vermeiden.  </li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Gute und schlechte Beschreibungsbeispiele</p>
+<p><strong>Gut:</strong> Dieses Thema bietet Wetterinformationen für jeden Ort weltweit für den nächsten Tag. Es liefert die Temperatur. Es ruft nicht das aktuelle Wetter für heute ab.<br />
+<strong>Schlecht:</strong> Dieses Werkzeug kann Fragen beantworten. <em>(Zu vage)</em>  </p>
+</div>
+<hr />
+<h2 id="best-practices-fur-anweisungen-und-beschreibungen">🛠️ Best Practices für Anweisungen und Beschreibungen<a class="headerlink" href="#best-practices-fur-anweisungen-und-beschreibungen" title="Permanent link">&para;</a></h2>
+<p>Um Ihre Anweisungen und Beschreibungen wirklich effektiv zu machen, beachten Sie diese Prinzipien:</p>
+<ul>
+<li>Verwenden Sie aktive Stimme und Präsens (z. B. "Dieses Werkzeug liefert Wetterinformationen").  </li>
+<li>Vermeiden Sie Fachjargon, Umgangssprache oder unnötige technische Begriffe, es sei denn, sie sind für die Zielgruppe erforderlich.  </li>
+<li>Verwenden Sie Aufzählungszeichen oder nummerierte Listen, um Aktionen, Funktionen oder Überlegungen zu trennen.  </li>
+<li>Fügen Sie Schlüsselwörter hinzu, die der Benutzerabsicht und der Funktionalität des Werkzeugs oder Themas entsprechen.  </li>
+<li>Stellen Sie sicher, dass ähnliche Ressourcen eindeutige Namen und Beschreibungen haben, um Verwirrung und Überschneidungen zu vermeiden.  </li>
+</ul>
+<hr />
+<h2 id="beispielstruktur-fur-anweisungen">🗂️ Beispielstruktur für Anweisungen<a class="headerlink" href="#beispielstruktur-fur-anweisungen" title="Permanent link">&para;</a></h2>
+<p>Beim Verfassen von Anweisungen sollten Sie die folgende Struktur für Klarheit und Vollständigkeit berücksichtigen:</p>
+<ol>
+<li><strong>Übersicht</strong>: Beschreiben Sie kurz die Mission und Rolle des Agenten  </li>
+<li><strong>Prozessschritte</strong>: Listen Sie die Hauptschritte auf, die der Agent befolgen soll  </li>
+<li><strong>Kooperationspunkte</strong>: Geben Sie an, wann andere Agenten oder spezifische Werkzeuge aufgerufen werden sollen  </li>
+<li><strong>Sicherheit und Moderation</strong>: Fügen Sie alle Compliance- oder Sicherheitsanforderungen hinzu  </li>
+<li><strong>Feedback-Schleife</strong>: Geben Sie an, wie der Agent Feedback sammeln oder Probleme eskalieren soll  </li>
+</ol>
+<hr />
+<h2 id="labor-anweisungen-fur-agenten-verfassen">🧪 Labor: Anweisungen für Agenten verfassen<a class="headerlink" href="#labor-anweisungen-fur-agenten-verfassen" title="Permanent link">&para;</a></h2>
+<p><em>Lab-Inhalte folgen in Kürze...</em></p>
+<hr />
+<h2 id="mission-abgeschlossen">🎉 Mission abgeschlossen<a class="headerlink" href="#mission-abgeschlossen" title="Permanent link">&para;</a></h2>
+<p>Mission 04 ist abgeschlossen! Sie haben jetzt:</p>
+<p>✅ <strong>Meister der Anweisungen</strong>: Gelernt, wie man klare, umsetzbare Anweisungen für Agenten schreibt<br />
+✅ <strong>Strategische Führung</strong>: Agenten effektiv angeleitet, Werkzeuge zu nutzen und zusammenzuarbeiten<br />
+✅ <strong>Operative Klarheit</strong>: Sichergestellt, dass Agenten präzise und transparent handeln  </p>
+<p>Als Nächstes folgt <a href="../05-agent-responses/">Mission 05</a>: Anpassung von Agentenantworten für maximale Wirkung.</p>
+<hr />
+<h2 id="taktische-ressourcen">📚 Taktische Ressourcen<a class="headerlink" href="#taktische-ressourcen" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-instructions">Microsoft Copilot Studio - Anweisungen verfassen</a><br />
+📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/guidance/generative-mode-guidance">Leitfaden für den generativen Modus</a>  </p>
+<hr />
+<p><strong>Haftungsausschluss</strong>:<br />
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a> übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

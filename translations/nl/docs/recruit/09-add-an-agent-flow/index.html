@@ -1,0 +1,1723 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/nl/docs/recruit/09-add-an-agent-flow/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#missie-09-voeg-een-agent-flow-toe-aan-je-onderwerp-voor-automatisering" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codenaam-operatie-automatisering-powerhouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAAM: OPERATIE AUTOMATISERING POWERHOUSE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missieoverzicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Missieoverzicht
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doelstellingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Doelstellingen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wat-is-een-agent-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Wat is een agent flow?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ja-maar-hoe-verschilt-dit-van-power-automate-cloud-flows" class="md-nav__link">
+    <span class="md-ellipsis">
+      🙋🏽 Ja, maar hoe verschilt dit van Power Automate cloud flows?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waarom-agent-flows-gebruiken" class="md-nav__link">
+    <span class="md-ellipsis">
+      👍🏻 Waarom agent flows gebruiken
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hoe-verbeteren-agent-flows-je-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏄🏻‍♂️ Hoe verbeteren agent flows je agent?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#belangrijke-functies-die-agent-flows-krachtig-maken" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 Belangrijke functies die agent flows krachtig maken
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hoe-werken-ze" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Hoe werken ze?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hoe-maak-je-een-agent-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧶 Hoe maak je een agent flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wat-is-de-agent-flow-designer" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Wat is de agent flow designer?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#je-noemde-expressies-wat-zijn-expressies" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔤 Je noemde expressies - wat zijn expressies?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beste-praktijken" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⭐ Beste praktijken
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-09-voeg-een-agentflow-toe-voor-automatisering-en-verbeter-de-mogelijkheden-van-onderwerpen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 09 - Voeg een agentflow toe voor automatisering en verbeter de mogelijkheden van onderwerpen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missie-voltooid" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Missie Voltooid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactische-bronnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Tactische Bronnen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "cc4afa4a5a11c9d03896decfbcbd4060",
+  "translation_date": "2025-10-17T01:24:22+00:00",
+  "source_file": "docs/recruit/09-add-an-agent-flow/README.md",
+  "language_code": "nl"
+}
+-->
+<h1 id="missie-09-voeg-een-agent-flow-toe-aan-je-onderwerp-voor-automatisering">🚨 Missie 09: Voeg een agent flow toe aan je onderwerp voor automatisering<a class="headerlink" href="#missie-09-voeg-een-agent-flow-toe-aan-je-onderwerp-voor-automatisering" title="Permanent link">&para;</a></h1>
+<h2 id="codenaam-operatie-automatisering-powerhouse">🕵️‍♂️ CODENAAM: <code>OPERATIE AUTOMATISERING POWERHOUSE</code><a class="headerlink" href="#codenaam-operatie-automatisering-powerhouse" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Tijdvenster voor de operatie:</strong> <code>~30 minuten</code>  </p>
+</blockquote>
+<p>🎥 <strong>Bekijk de walkthrough</strong></p>
+<p><a href="https://www.youtube.com/watch?v=vtLZJT3eBXg" title="Bekijk de walkthrough op YouTube"><img alt="Agent flow video thumbnail" src="../../../../../translated_images/video-thumbnail.ede12df9aaebcc8996680c8b6555d309b53bdf33d1b0165cae3b5173a6bcdd73.nl.jpg" /></a></p>
+<h2 id="missieoverzicht">🎯 Missieoverzicht<a class="headerlink" href="#missieoverzicht" title="Permanent link">&para;</a></h2>
+<p>Je agent kan nu met gebruikers communiceren en informatie verstrekken, maar echte operationele uitmuntendheid vereist dat je agent actie onderneemt. Deze missie zal je conversatie-agent transformeren in een automatiseringskrachtpatser door hem uit te rusten met agent flows.</p>
+<p>Aan het einde van de missie heb je een end-to-end automatisering voor apparaatverzoeken gecreëerd die gebruikersinput vastlegt via een adaptieve kaart, gegevens ophaalt uit SharePoint, meldingen naar managers stuurt via e-mail en naadloze gebruikersfeedback biedt - allemaal gecoördineerd door je agent via intelligente workflow-automatisering.</p>
+<h2 id="doelstellingen">🔎 Doelstellingen<a class="headerlink" href="#doelstellingen" title="Permanent link">&para;</a></h2>
+<p>In deze missie leer je:</p>
+<ol>
+<li>Begrijpen wat agent flows zijn en hoe ze verschillen van Power Automate cloud flows voor automatisering.</li>
+<li>De belangrijkste functies ontdekken die agent flows krachtig maken, zoals AI-acties en natuurlijke taalverwerking.</li>
+<li>De agent flow designer verkennen en leren hoe je expressies gebruikt voor dynamische gegevensverwerking.</li>
+<li>Een complete automatisering voor apparaatverzoeken maken die SharePoint-gegevens en e-mailmeldingen integreert.</li>
+</ol>
+<h2 id="wat-is-een-agent-flow">🤔 Wat is een agent flow?<a class="headerlink" href="#wat-is-een-agent-flow" title="Permanent link">&para;</a></h2>
+<p>Agent flows zijn een krachtige manier om repetitieve taken te automatiseren en je apps en services te integreren. Zie ze als gestructureerde, stapsgewijze workflows die je agent kan uitvoeren om taken te automatiseren of verbinding te maken met andere applicaties en services. Je kunt ze beschouwen als mini-workflows die je agent helpen dingen te doen zoals meldingen verzenden, records bijwerken of reageren op gebeurtenissen.</p>
+<p>In tegenstelling tot autonome agents die AI gebruiken om beslissingen te nemen, zijn agent flows <strong>deterministische workflows</strong> - wat betekent dat ze elke keer hetzelfde pad volgen, wat consistente en betrouwbare resultaten garandeert.</p>
+<p>Kort gezegd:</p>
+<ul>
+<li>Ze helpen je agent <em>dingen te doen</em>, niet alleen <em>dingen te zeggen</em> tegen gebruikers.</li>
+<li>Ze zijn herbruikbaar in verschillende onderwerpen en agents en kunnen worden geactiveerd door gebruikersberichten, gebeurtenissen of andere applicaties en services.</li>
+</ul>
+<h2 id="ja-maar-hoe-verschilt-dit-van-power-automate-cloud-flows">🙋🏽 Ja, maar hoe verschilt dit van Power Automate cloud flows?<a class="headerlink" href="#ja-maar-hoe-verschilt-dit-van-power-automate-cloud-flows" title="Permanent link">&para;</a></h2>
+<p>Zowel agent flows als Power Automate cloud flows helpen bij het automatiseren van taken. Ze zijn ontworpen voor verschillende doeleinden en werken op verschillende manieren.</p>
+<h3 id="agent-flows-in-copilot-studio">🤖 Agent flows in Copilot Studio<a class="headerlink" href="#agent-flows-in-copilot-studio" title="Permanent link">&para;</a></h3>
+<p><strong>Waarvoor ze bedoeld zijn:</strong></p>
+<ul>
+<li>Ontworpen voor conversatie- en autonome agents (via agentinstructies) in Copilot Studio.</li>
+<li>Gericht op slimme, AI-gedreven automatisering die interactie heeft met bedrijfssystemen.</li>
+</ul>
+<p><strong>Waarom ze nuttig zijn:</strong></p>
+<ul>
+<li>Eenvoudig te bouwen en beheren rechtstreeks in Copilot Studio.</li>
+<li>Ideaal voor het automatiseren van taken die plaatsvinden <em>tijdens het gesprek</em> met gebruikers, zoals het indienen van een verlofaanvraag.</li>
+<li>Je hebt geen aparte Power Automate-licentie nodig, omdat de facturering gebaseerd is op gebruik binnen Copilot Studio. Dit kan tijd en kosten besparen voor ondernemingen.</li>
+</ul>
+<p><strong>Beperkingen:</strong></p>
+<ul>
+<li>Je kunt ze niet delen, kopiëren of mede-eigenaren toewijzen.</li>
+<li>Agent flows zijn alleen zichtbaar en bruikbaar binnen Copilot Studio.</li>
+<li>Momenteel kunnen gebeurtenistriggers voor agents worden bewerkt in het Power Automate maker portal.</li>
+</ul>
+<h3 id="power-automate-cloud-flows">☁️ Power Automate cloud flows<a class="headerlink" href="#power-automate-cloud-flows" title="Permanent link">&para;</a></h3>
+<p><strong>Waarvoor ze bedoeld zijn:</strong></p>
+<ul>
+<li>Ontworpen voor algemene automatisering over veel apps en services.</li>
+<li>Kunnen onafhankelijk werken of samenwerken met agent flows.</li>
+</ul>
+<p><strong>Waarom ze nuttig zijn:</strong></p>
+<ul>
+<li>Biedt een breed scala aan connectors.</li>
+<li>Ideaal voor het automatiseren van processen buiten agents.</li>
+<li>Kunnen worden gedeeld, hergebruikt en beheerd binnen teams.</li>
+</ul>
+<p><strong>Vereisten:</strong></p>
+<ul>
+<li>Je hebt een Power Automate-licentie nodig om ze te gebruiken.</li>
+</ul>
+<h3 id="samenvatting">📗 Samenvatting<a class="headerlink" href="#samenvatting" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Gebruik dit</th>
+<th style="text-align: left;">Wanneer je wilt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Agent flows</td>
+<td style="text-align: left;">Taken automatiseren binnen een agent, AI gebruiken en alles in Copilot Studio houden</td>
+</tr>
+<tr>
+<td style="text-align: left;">Power Automate cloud flows</td>
+<td style="text-align: left;">Automatiseren over apps en services, of workflows buiten agents bouwen</td>
+</tr>
+</tbody>
+</table>
+<h2 id="waarom-agent-flows-gebruiken">👍🏻 Waarom agent flows gebruiken<a class="headerlink" href="#waarom-agent-flows-gebruiken" title="Permanent link">&para;</a></h2>
+<p>Agent flows volgen altijd een vast pad - ze doen elke keer hetzelfde bij dezelfde input.</p>
+<p>Dit maakt ze:</p>
+<ul>
+<li><strong>Betrouwbaar</strong> - je kunt erop vertrouwen dat ze elke keer hetzelfde gedrag vertonen.</li>
+<li><strong>Voorspelbaar</strong> - je weet welk resultaat je kunt verwachten wanneer de flow wordt uitgevoerd.</li>
+<li><strong>Regelgebaseerd</strong> - ze volgen stappen die je definieert.</li>
+</ul>
+<p>Andere voordelen zijn:</p>
+<ul>
+<li><strong>Automatisering</strong> - stelt je agent in staat om repetitieve taken uit te voeren, zoals formulieren indienen of meldingen verzenden.</li>
+<li><strong>Verbonden</strong> - verbinding maken met meer dan 1400 connectors zoals ServiceNow, SharePoint, Salesforce. Anders kun je je eigen aangepaste connector bouwen.</li>
+<li><strong>Nauw geïntegreerd</strong> - agent flows maken deel uit van de logica van de agent, ze worden direct geactiveerd door gebruikersberichten of acties in het gesprek.</li>
+<li><strong>Schaalbaarheid</strong> - flows hergebruiken over meerdere agents of scenario's.</li>
+<li><strong>No-code of low-code</strong> - je kunt flows bouwen met natuurlijke taal of een visuele ontwerper.</li>
+<li><strong>Alles-in-één-platform</strong> - je kunt agent flows ontwerpen, testen en implementeren op één plek - Copilot Studio. Geen noodzaak om tussen platforms te schakelen.</li>
+</ul>
+<h2 id="hoe-verbeteren-agent-flows-je-agent">🏄🏻‍♂️ Hoe verbeteren agent flows je agent?<a class="headerlink" href="#hoe-verbeteren-agent-flows-je-agent" title="Permanent link">&para;</a></h2>
+<p>Agent flows breiden uit wat je agent kan doen, voorbij "chatten" met gebruikers. Ze stellen hem in staat om actie te ondernemen en met systemen te communiceren.</p>
+<p>Stel dat je werkt op een financiële afdeling en je ontvangt veel facturen van leveranciers. Normaal gesproken moet iemand elke factuur lezen, de belangrijke details eruit halen - het bedrag, de datum, van wie het afkomstig is, en controleren of alles overeenkomt met je gegevens. Vervolgens moet het naar de juiste persoon worden gestuurd voor goedkeuring. Dit kost tijd en moeite.</p>
+<p>Met agent flows in Copilot Studio kun je dit proces automatiseren. Zodra de factuur binnenkomt, doet de agent:</p>
+<ol>
+<li>Leest het document met intelligente documentverwerking om de belangrijkste informatie te vinden.</li>
+<li>Controleert de details aan de hand van je bedrijfsgegevens om te zorgen dat alles klopt.</li>
+<li>Stuurt het ter goedkeuring naar de juiste persoon/personen.</li>
+</ol>
+<p>Dit bespaart tijd, vermindert fouten en maakt het hele proces veel soepeler.</p>
+<h3 id="denk-er-zo-over">Denk er zo over<a class="headerlink" href="#denk-er-zo-over" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Agents</strong>: de slimme besluitvormers</li>
+<li><strong>Agent flows</strong>: de betrouwbare uitvoerders</li>
+</ul>
+<h3 id="waarom-het-belangrijk-is">Waarom het belangrijk is<a class="headerlink" href="#waarom-het-belangrijk-is" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Je krijgt het beste van beide werelden: betrouwbare automatisering en flexibele AI.</li>
+<li>Het is eenvoudig om flows te bouwen en bij te werken naarmate de behoeften van je bedrijf veranderen.</li>
+<li>Je kunt automatisering opschalen over teams.</li>
+</ul>
+<h2 id="belangrijke-functies-die-agent-flows-krachtig-maken">🔌 Belangrijke functies die agent flows krachtig maken<a class="headerlink" href="#belangrijke-functies-die-agent-flows-krachtig-maken" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Natuurlijke taalverwerking</strong></p>
+<ul>
+<li>Je kunt beschrijven wat je wilt dat de flow doet in gewone taal.</li>
+<li>Copilot begrijpt je intentie en bouwt de flow voor je.</li>
+<li>Geen code nodig - leg je idee uit.</li>
+</ul>
+</li>
+<li>
+<p><strong>AI-acties</strong></p>
+<p>Gebruik AI om:</p>
+<ul>
+<li>Documenten of afbeeldingen te lezen en te begrijpen.</li>
+<li>Lange inhoud samen te vatten in korte, nuttige antwoorden.</li>
+<li>Slimme aanbevelingen of beslissingen te maken.</li>
+</ul>
+</li>
+<li>
+<p><strong>Generatieve acties</strong></p>
+<ul>
+<li>Hiermee kan de flow zich in realtime aanpassen.</li>
+<li>De agent kan stappen plannen en aanpassen op basis van veranderende informatie.</li>
+</ul>
+</li>
+<li>
+<p><strong>Integratie-acties</strong></p>
+<ul>
+<li>Verbind je flow met andere tools zoals Outlook, Microsoft Teams, ServiceNow, SharePoint en andere applicaties en services, via meer dan 1400 ingebouwde connectors of je eigen aangepaste connector.</li>
+<li>Dit helpt je agent samen te werken met de apps die je team al gebruikt.</li>
+</ul>
+</li>
+<li>
+<p><strong>Menselijke tussenkomst</strong></p>
+<ul>
+<li>Voeg goedkeuringsstappen toe waarbij iemand iets moet beoordelen of bevestigen.</li>
+<li><a href="https://learn.microsoft.com/microsoft-copilot-studio/flows-advanced-approvals?WT.mc_id=power-172621-ebenitez">Geavanceerde goedkeuringen</a> ondersteunt herinneringen, delegatie en meerfasige goedkeuringen.</li>
+</ul>
+</li>
+</ol>
+<h2 id="hoe-werken-ze">⚙️ Hoe werken ze?<a class="headerlink" href="#hoe-werken-ze" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Trigger</strong></p>
+<p>Een gebeurtenis start de flow - zoals een gebruiker die een vraag stelt, de flow activeert vanuit een onderwerp, een geplande tijd, of een gebeurtenis in een ander systeem.</p>
+</li>
+<li>
+<p><strong>Acties</strong></p>
+<p>Dit zijn stappen die de agent vervolgens volgt - een e-mail verzenden, een API aanroepen, een ticket bijwerken in ServiceNow.</p>
+</li>
+</ol>
+<h2 id="hoe-maak-je-een-agent-flow">🧶 Hoe maak je een agent flow<a class="headerlink" href="#hoe-maak-je-een-agent-flow" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Natuurlijke taal</strong>: beschrijf wat je wilt dat de agent doet, en Copilot bouwt het voor je.</li>
+<li><strong>Ontwerpcanvas</strong>: sleep en plaats acties, voorwaarden en loops in de agent flow designer om je agent flow te bouwen.</li>
+</ol>
+<h2 id="wat-is-de-agent-flow-designer">🎨 Wat is de agent flow designer?<a class="headerlink" href="#wat-is-de-agent-flow-designer" title="Permanent link">&para;</a></h2>
+<p>Het is een visuele tool in Copilot Studio die je helpt bij het bouwen, bewerken en beheren van agent flows die stapsgewijze instructies bieden die je agent volgt om taken uit te voeren. Het is ontworpen om eenvoudig te gebruiken te zijn, zelfs als je nieuw bent met agent flows.</p>
+<h3 id="belangrijke-functies-van-de-agent-flow-designer">Belangrijke functies van de agent flow designer<a class="headerlink" href="#belangrijke-functies-van-de-agent-flow-designer" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Visueel canvas</strong></p>
+<ul>
+<li>Je kunt je hele flow zien als een diagram.</li>
+<li>Eenvoudig in-/uitzoomen, het beeld aanpassen of een minimap gebruiken om grote flows te navigeren.</li>
+</ul>
+</li>
+<li>
+<p><strong>Acties toevoegen en verwijderen</strong></p>
+<ul>
+<li>Klik op de <em>plus (+)</em> knop om een nieuwe actie toe te voegen, zoals een bericht verzenden of een item bijwerken in een SharePoint-lijst.</li>
+<li>Je kunt zoeken naar acties van connectors en ze configureren via de instellingen.</li>
+<li>Om een actie te verwijderen, klik op de <em>drie stippen (⋮)</em> en selecteer <em>Verwijderen</em>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameters controleren</strong></p>
+<ul>
+<li>Klik op een actie om de instellingen, genaamd <em>parameters</em>, te bekijken of te bewerken.</li>
+<li>Je kunt waarden handmatig invoeren of <em>expressies</em> gebruiken om ze dynamisch te maken.</li>
+</ul>
+</li>
+<li>
+<p><strong>Versiegeschiedenis</strong></p>
+<ul>
+<li>Elke keer dat je je flow opslaat, wordt er een versie geregistreerd.</li>
+<li>Je kunt teruggaan en eerdere versies bekijken of herstellen indien nodig.</li>
+</ul>
+</li>
+<li>
+<p><strong>Foutcontrole</strong></p>
+<ul>
+<li>De <em>Flow Checker</em> markeert eventuele fouten.</li>
+<li>Alle fouten moeten worden opgelost voordat je je flow publiceert.</li>
+</ul>
+</li>
+<li>
+<p><strong>Publiceren en testen</strong></p>
+<ul>
+<li>Zodra je flow foutvrij is, publiceer je hem om hem live te maken.</li>
+<li>Gebruik de <em>Test</em>-functie om je flow handmatig of automatisch uit te voeren en te controleren of hij werkt zoals verwacht.</li>
+</ul>
+</li>
+</ol>
+<h3 id="waarom-de-agent-flow-designer-gebruiken">Waarom de agent flow designer gebruiken?<a class="headerlink" href="#waarom-de-agent-flow-designer-gebruiken" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Visueel en intuïtief</strong> - je kunt flows bouwen door te slepen en te klikken.</li>
+<li><strong>Veilig om te experimenteren</strong> - versiegeschiedenis laat je wijzigingen ongedaan maken.</li>
+<li><strong>Ingebouwd testen</strong> - helpt je ervoor te zorgen dat alles werkt voordat het live gaat.</li>
+</ul>
+<h2 id="je-noemde-expressies-wat-zijn-expressies">🔤 Je noemde <em>expressies</em> - wat zijn expressies?<a class="headerlink" href="#je-noemde-expressies-wat-zijn-expressies" title="Permanent link">&para;</a></h2>
+<p>Expressies zijn kleine formules of commando's die je agent flow helpen omgaan met gegevens. Je gebruikt ze om waarden te berekenen, tekst te formatteren, beslissingen te nemen of specifieke informatie uit inputs te halen.</p>
+<h3 id="waarom-expressies-gebruiken">Waarom expressies gebruiken?<a class="headerlink" href="#waarom-expressies-gebruiken" title="Permanent link">&para;</a></h3>
+<p>Expressies laten je:</p>
+<ul>
+<li><strong>Gegevensverwerking aanpassen</strong> - namen combineren, datums formatteren.</li>
+<li><strong>Beslissingen nemen</strong> - als een waarde groter is dan 10, doe iets.</li>
+<li><strong>Gegevens transformeren</strong> - tekst naar kleine letters veranderen, een deel van een string extraheren.</li>
+<li><strong>Logica automatiseren</strong> - zonder volledige code te schrijven.</li>
+</ul>
+<h3 id="hoe-zien-expressies-eruit">Hoe zien expressies eruit?<a class="headerlink" href="#hoe-zien-expressies-eruit" title="Permanent link">&para;</a></h3>
+<p>Expressies gebruiken functies. Ik ga een uitleg lenen van voormalig Microsoft MVP, Jerry Weinstock.</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>Functies zijn ingebouwde logica om je gegevens te transformeren, zowel via eenvoudige als complexe bewerkingen in je expressie.</p>
+</div>
+<p>Functies stellen je in staat om expressies te bouwen zonder dat je code hoeft te schrijven.</p>
+<p>Hoe ik het graag beschrijf, is dat een functie in agent flows vergelijkbaar is met Excel-functies. Je kunt een bewerking uitvoeren op gegevens om ze te transformeren naar een gewenst resultaat. Bij het bouwen van je formule in Excel selecteer je je invoerwaarde uit de cellen in een tabel of een bereik, en pas je functies toe om de gegevensuitvoer te manipuleren. Een voorbeeld is het gebruik van de <code>COUNT</code>-functie om het aantal cellen te berekenen dat nummers bevat uit een bereik.</p>
+<p>In agent flows, in plaats van gegevens uit cellen in een tabel te refereren, verwijs je naar gegevensuitvoer van de trigger of acties bij het bouwen van je expressies. Voortbordurend op het vorige voorbeeld, gebruik de functie <code>length</code> om het aantal items op te halen dat is geretourneerd door de <em>Get items</em> SharePoint connector actie.</p>
+<h3 id="waarom-zijn-functies-belangrijk">Waarom zijn functies belangrijk?<a class="headerlink" href="#waarom-zijn-functies-belangrijk" title="Permanent link">&para;</a></h3>
+<p>Het gebruik van functies maakt je agent flows:</p>
+<ul>
+<li><strong>Slimmer</strong> - ze kunnen reageren op verschillende inputs of omstandigheden.</li>
+<li><strong>Flexibeler</strong> - je kunt aanpassen hoe gegevens worden verwerkt.</li>
+<li><strong>Efficiënter</strong> - je vermijdt handmatige stappen door logica te automatiseren.</li>
+</ul>
+<h3 id="meest-nuttige-functies">Meest nuttige functies<a class="headerlink" href="#meest-nuttige-functies" title="Permanent link">&para;</a></h3>
+<p>De volgende zijn veelgebruikte functies in agent flows. Voor de volledige lijst met functies, ga naar de <a href="https://learn.microsoft.com/azure/logic-apps/workflow-definition-language-functions-reference?WT.mc_id=power-172621-ebenitez">referentiegids</a>.</p>
+<h4 id="tekst">🔡 Tekst<a class="headerlink" href="#tekst" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>concat()</code> - Voegt twee of meer stukken tekst samen.</p>
+<ul>
+<li>Voorbeeld: <code>concat('Hallo ', firstName)</code> → “Hallo John”</li>
+</ul>
+</li>
+<li>
+<p><code>toLower()</code> / <code>toUpper()</code> - Verandert tekst naar kleine of hoofdletters.</p>
+<ul>
+<li>Handig voor standaardisatie van input.</li>
+</ul>
+</li>
+<li>
+<p><code>substring()</code> - Haalt een deel van een string op.</p>
+<ul>
+<li>Voorbeeld: Haal de eerste 3 letters van een naam op.</li>
+</ul>
+</li>
+<li>
+<p><code>trim()</code> - Verwijdert spaties aan het begin en einde van tekst.</p>
+</li>
+</ul>
+<h4 id="wiskunde-en-getallen">🔢 Wiskunde en getallen<a class="headerlink" href="#wiskunde-en-getallen" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>add()</code>, <code>sub()</code>, <code>mul()</code>, <code>div()</code> - Basis wiskundige bewerkingen.<ul>
+<li>Voorbeeld: <code>add(5, 3)</code> - de output is 8</li>
+</ul>
+</li>
+</ul>
+<h4 id="datum-en-tijd">📅 Datum en tijd<a class="headerlink" href="#datum-en-tijd" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>utcNow()</code> - Haalt de huidige datum en tijd op in UTC.</p>
+<ul>
+<li>Geweldig voor tijdstempels.</li>
+</ul>
+</li>
+<li>
+<p><code>addDays()</code>, <code>addHours()</code> - Voegt tijd toe aan een datum.</p>
+</li>
+<li>
+<p>Voorbeeld: <code>addDays(utcNow(), 7)</code> output is 7 dagen vanaf nu.</p>
+</li>
+<li>
+<p><code>formatDateTime()</code> - Formatteert een datum naar een leesbare tekst.</p>
+<ul>
+<li>Voorbeeld: Maandag, 7 juli 2025</li>
+</ul>
+</li>
+</ul>
+<h4 id="logisch">✅ Logisch<a class="headerlink" href="#logisch" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>if()</code> - Voert een waarde uit als waar, een andere als onwaar.</p>
+<ul>
+<li>Voorbeeld: <code>if(score &gt; 50, 'Geslaagd', 'Gezakt')</code></li>
+</ul>
+</li>
+<li>
+<p><code>equals()</code> - Controleert of twee waarden hetzelfde zijn.</p>
+</li>
+<li>
+<p><code>and()</code>, <code>or()</code>, <code>not()</code> - Combineert meerdere voorwaarden.</p>
+</li>
+</ul>
+<h4 id="andere-handige-functies">🪣 Andere handige functies<a class="headerlink" href="#andere-handige-functies" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>coalesce()</code> - Geeft de eerste niet-lege waarde terug.</p>
+<ul>
+<li>Handig voor fallback/standaardwaarden.</li>
+</ul>
+</li>
+<li>
+<p><code>guid()</code> - Genereert een unieke ID.</p>
+<ul>
+<li>Handig voor tracking of logging.</li>
+</ul>
+</li>
+<li>
+<p><code>length()</code> - Telt hoeveel tekens of items er in een string of array zitten.</p>
+</li>
+</ul>
+<h2 id="beste-praktijken">⭐ Beste praktijken<a class="headerlink" href="#beste-praktijken" title="Permanent link">&para;</a></h2>
+<p>Hier zijn enkele beste praktijken voor het bouwen van agentflows in Copilot Studio.</p>
+<ol>
+<li>
+<p><strong>Begin eenvoudig en bouw geleidelijk op</strong></p>
+<ul>
+<li>Start met een kleine, duidelijke taak zoals het verzenden van een bericht.</li>
+<li>Voeg meer stappen toe nadat je de basis van je automatisering hebt getest.</li>
+</ul>
+</li>
+<li>
+<p><strong>Gebruik duidelijke en beschrijvende actienamen</strong></p>
+<ul>
+<li>Label elke stap duidelijk zodat jij en je team begrijpen wat het doet.</li>
+<li>Voorbeeld: in plaats van de standaardnaam "Item bijwerken" voor de SharePoint-connectoractie, hernoem het naar wat het bijwerkt, zoals "Apparaatstatus bijwerken."</li>
+</ul>
+</li>
+<li>
+<p><strong>Controleer op fouten voordat je publiceert</strong></p>
+<ul>
+<li>Gebruik de <strong>flow checker</strong> om eventuele problemen te vinden en op te lossen.</li>
+<li>Je kunt geen flows publiceren als er fouten zijn, dus probeer ze op te lossen zodra ze zich voordoen.</li>
+</ul>
+</li>
+<li>
+<p><strong>Test je flow grondig</strong></p>
+<ul>
+<li>Alleen omdat het opslaat en publiceert, betekent niet dat het werkt zoals verwacht.</li>
+<li>Gebruik de <em>Test</em>-functie om je flow handmatig of automatisch uit te voeren en de resultaten te controleren.</li>
+</ul>
+</li>
+<li>
+<p><strong>Gebruik Versiegeschiedenis</strong></p>
+<ul>
+<li>Sla je flow vaak op zodat je indien nodig terug kunt naar eerdere versies.</li>
+<li>Je kunt eerdere versies bekijken en herstellen via het <em>Versiegeschiedenis</em>-paneel.</li>
+</ul>
+</li>
+<li>
+<p><strong>Gebruik parameters en expressies verstandig</strong></p>
+<ul>
+<li>Gebruik bij het configureren van acties parameters om je flow dynamisch te maken.</li>
+<li>Je kunt waarden handmatig invoeren of expressies gebruiken om ze te berekenen, of combineren met waarden van acties stroomopwaarts door de <em>dynamische inhoud</em>-kiezer te gebruiken.</li>
+</ul>
+</li>
+<li>
+<p><strong>Verwijder ongebruikte acties</strong></p>
+<ul>
+<li>Als je een actie toevoegt en later besluit dat je deze niet nodig hebt, verwijder deze om je flow overzichtelijk te houden.</li>
+</ul>
+</li>
+</ol>
+<h2 id="lab-09-voeg-een-agentflow-toe-voor-automatisering-en-verbeter-de-mogelijkheden-van-onderwerpen">🧪 Lab 09 - Voeg een agentflow toe voor automatisering en verbeter de mogelijkheden van onderwerpen<a class="headerlink" href="#lab-09-voeg-een-agentflow-toe-voor-automatisering-en-verbeter-de-mogelijkheden-van-onderwerpen" title="Permanent link">&para;</a></h2>
+<p>We gaan nu leren hoe we ons onderwerp kunnen verbeteren met adaptieve kaarten en het gebruik van geavanceerde functionaliteiten van onderwerpen en knooppunten.</p>
+<ul>
+<li><a href="../../../../../docs/recruit/09-add-an-agent-flow">9.1 Maak een agentflow</a></li>
+<li><a href="../../../../../docs/recruit/09-add-an-agent-flow">9.2 Voeg agentflow toe aan onderwerp</a></li>
+<li><a href="../../../../../docs/recruit/09-add-an-agent-flow">9.3 Werk het onderwerp "Apparaat aanvragen" bij met meerdere knooppunten voor een betere gebruikerservaring</a></li>
+<li><a href="../../../../../docs/recruit/09-add-an-agent-flow">9.4 Test agent met verschillende scenario's</a></li>
+</ul>
+<h3 id="gebruikssituatie">✨ Gebruikssituatie<a class="headerlink" href="#gebruikssituatie" title="Permanent link">&para;</a></h3>
+<p><strong>Als</strong> manager van een medewerker</p>
+<p><strong>Wil ik</strong> apparaataanvragen ontvangen</p>
+<p><strong>Zodat ik</strong> het aangevraagde apparaat van de medewerker kan beoordelen.</p>
+<p>Laten we beginnen!</p>
+<h3 id="vereisten">Vereisten<a class="headerlink" href="#vereisten" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>SharePoint-lijst</strong></p>
+<p>We gebruiken de <strong>Apparaten</strong> SharePoint-lijst van <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Les 00 - Cursusinstelling - Stap 3: Nieuwe SharePoint-site maken</a>.</p>
+<p>Als je de <strong>Apparaten</strong> SharePoint-lijst nog niet hebt ingesteld, ga dan terug naar <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Les 00 - Cursusinstelling - Stap 3: Nieuwe SharePoint-site maken</a>.</p>
+</li>
+<li>
+<p><strong>Contoso Helpdesk Agent</strong></p>
+<p>We gaan dezelfde agent gebruiken die eerder is gemaakt in <a href="../06-create-agent-from-conversation/">Les 06 - Maak een aangepaste agent met natuurlijke taal met Copilot en verbind deze met je gegevens</a>.</p>
+</li>
+</ol>
+<h3 id="91-maak-een-agentflow">9.1 Maak een agentflow<a class="headerlink" href="#91-maak-een-agentflow" title="Permanent link">&para;</a></h3>
+<p>In deze oefening maken we een agentflow die het SharePoint-item van het geselecteerde apparaat ophaalt en een e-mail naar een manager stuurt met de apparaatgegevens.</p>
+<ol>
+<li>
+<p>In het onderwerp <strong>Apparaat aanvragen</strong>, scroll naar beneden naar het knooppunt <strong>Vraag met adaptieve kaart</strong> en voeg een nieuw knooppunt toe. Selecteer <strong>Een tool toevoegen</strong> en in het tabblad <strong>Basis tools</strong> van het uitvouwpaneel, selecteer <strong>Nieuwe Agentflow</strong>.</p>
+<p><img alt="Nieuwe Agentflow toevoegen" src="../../../../../translated_images/9.1_01_AddNewAgentFlow.2b9078604a054d1f022f9c73adaf10fe430e81875ec8717a7f70ef7b05f11c15.nl.png" /></p>
+</li>
+<li>
+<p>De <strong>Designer</strong> van Agentflows wordt geladen met een trigger en actie.</p>
+<ul>
+<li>
+<p><strong>Trigger</strong> - Wanneer een agent de flow oproept</p>
+<ul>
+<li>Dit triggert een flow vanuit een Copilot Studio-agent.</li>
+</ul>
+</li>
+<li>
+<p><strong>Actie</strong> - Reageer op de agent</p>
+<ul>
+<li>Dit stuurt een reactie die outputwaarden kan bevatten terug naar de Copilot Studio-agent.</li>
+</ul>
+</li>
+</ul>
+<p>Selecteer de trigger.</p>
+<p><img alt="Selecteer de trigger" src="../../../../../translated_images/9.1_02_SelectTrigger.92dc20442add764c8aa4b7f737f28416a3223e4471562462ed6dcba2dc7c7936.nl.png" /></p>
+</li>
+<li>
+<p>Vervolgens gaan we meerdere invoerwaarden toevoegen voor de agentflow.</p>
+<ul>
+<li>
+<p><code>DeviceSharePointId</code> - dit zal de waarde, ID, van het SharePoint-item opslaan. Deze ID-waarde is een output van het knooppunt Vraag met adaptieve kaart waar de gebruiker het apparaat selecteerde.</p>
+</li>
+<li>
+<p><code>User</code> - dit zal de naam van de gebruiker zijn, afkomstig van een systeemvariabele van de agent.</p>
+</li>
+<li>
+<p><code>AdditionalComments</code> - dit zal de opmerking zijn die door de gebruiker is ingevoerd, wat een output is van het knooppunt Vraag met adaptieve kaart.</p>
+</li>
+</ul>
+<p>We voegen eerst de <code>DeviceSharePointId</code> toe als invoer voor onze trigger. Selecteer <strong>+ Een invoer toevoegen</strong>.</p>
+<p><img alt="Een invoer toevoegen" src="../../../../../translated_images/9.1_03_AddInput.fd1e0a99ecb5e20f3a518cb23fc0d22c6db1435c5ffb2e183fce3b8a056287bb.nl.png" /></p>
+</li>
+<li>
+<p>Voor het type gebruikersinvoer, selecteer <strong>Tekst</strong>.</p>
+<p><img alt="Selecteer Tekst" src="../../../../../translated_images/9.1_04_SelectText.47ca776822ec5a6c1339c012d51e0eb6eac6bf8315d4ac6f25498b10ada16df9.nl.png" /></p>
+</li>
+<li>
+<p>Voor de naam van de invoer, voer het volgende in.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>DeviceSharePointId
+</span></code></pre></div>
+<p><img alt="DeviceSharePointId invoer" src="../../../../../translated_images/9.1_05_DeviceSharePointIdInput.caf77f8eb60a1b8649ea8b0abf05dfce9fa4bef9d9c465cd8906395e5b44842e.nl.png" /></p>
+</li>
+<li>
+<p>We voegen nu de tweede invoer toe, <code>User</code>. Herhaal dezelfde stappen, selecteer <strong>+ Een invoer toevoegen</strong> en selecteer <strong>Tekst</strong>.</p>
+<p><img alt="Een invoer toevoegen" src="../../../../../translated_images/9.1_06_AddInput.3ca4bff9991b6e8a331bd909ff58038387696ce7b6ee7a932a88316aff41bc57.nl.png" /></p>
+</li>
+<li>
+<p>Voor de naam van de invoer, voer het volgende in.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>User
+</span></code></pre></div>
+<p><img alt="User invoer" src="../../../../../translated_images/9.1_07_UserInput.16b2405f2d5744ea14a6a67b69539ba24719aaf642ddfc2b281e784d74d8c1ea.nl.png" /></p>
+</li>
+<li>
+<p>We voegen nu de derde invoer toe, <code>AdditionalComments</code>. Herhaal dezelfde stappen, selecteer <strong>+ Een invoer toevoegen</strong> en selecteer <strong>Tekst</strong>.</p>
+<p><img alt="Een invoer toevoegen" src="../../../../../translated_images/9.1_08_AddInput.4685bb77618e6d9cfca7a42a0945d10f59825b1ca42de372dcf07c9170451680.nl.png" /></p>
+</li>
+<li>
+<p>Voor de naam van de invoer, voer het volgende in.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>AdditionalComments
+</span></code></pre></div>
+<p><img alt="AdditionalComments invoer" src="../../../../../translated_images/9.1_09_AdditionalComments.a4587b59b85450ca0566615c9473132dd6447e6c7513e4926942655aa0e80195.nl.png" /></p>
+</li>
+<li>
+<p>Voor de invoer <code>AdditionalComments</code> maken we deze optioneel. Selecteer het <strong>ellips (...) icoon</strong> en selecteer <strong>Maak het veld optioneel</strong>.</p>
+<p><img alt="Maak het veld optioneel" src="../../../../../translated_images/9.1_10_Optional.753bd03817c2eb37bb44a7bfd7d29314aa7109cde02e3f619c01c42bc9170b71.nl.png" /></p>
+</li>
+<li>
+<p>Goed gedaan! De trigger is nu geconfigureerd, laten we doorgaan. Selecteer het <strong>plus + icoon</strong> onder de trigger om een nieuwe actie in te voegen.</p>
+<p><img alt="Actie toevoegen" src="../../../../../translated_images/9.1_11_AddAction.86c14acd1ce22e99b7244e0001f0039362ff6ac3efafe03956788aaa31e705af.nl.png" /></p>
+</li>
+<li>
+<p>Het <strong>Acties-paneel</strong> verschijnt waar je acties kunt bekijken van meer dan 1400 ingebouwde connectors naar Microsoft- en externe services. Voer in het <strong>zoekveld</strong> het volgende in,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Get item
+</span></code></pre></div>
+<p>Een lijst met acties wordt weergegeven in de zoekresultaten. Selecteer de actie <strong>Item ophalen</strong> van de <strong>SharePoint-connector</strong>.</p>
+<p><img alt="Item ophalen actie" src="../../../../../translated_images/9.1_12_AddGetItemAction.434cdcb822e1f72993fc4a0c0ad753e1220456f9dab8fc307d42f5711071d45b.nl.png" /></p>
+</li>
+<li>
+<p>We kunnen nu beginnen met het configureren van de actie <strong>Item ophalen</strong>.</p>
+<p>Selecteer het <strong>Ellips (...)</strong> icoon in de actie <strong>Item ophalen</strong>.</p>
+<p><img alt="Selecteer ellips" src="../../../../../translated_images/9.1_13_SelectEllipsis.88bf304067f3103825f183f8962634af831460541290533e5670f4c014a97c46.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer <strong>Hernoemen</strong>.</p>
+<p><img alt="Selecteer Hernoemen" src="../../../../../translated_images/9.1_14_SelectRename.74d99c883418b7dbf58758304976cac1d0f2afd30e4cd1992830f00775a46b18.nl.png" /></p>
+</li>
+<li>
+<p>Hernoem de actie naar,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Get Device
+</span></code></pre></div>
+<p><img alt="Actie hernoemen" src="../../../../../translated_images/9.1_15_RenameAction.ff64b79f6e6603ae89f272f91d84ff4432c04ba103c401a2808a767e3ceb5617.nl.png" /></p>
+</li>
+<li>
+<p>In het veld <strong>Siteadres</strong>, selecteer het <strong>Siteadres</strong> van de Contoso IT SharePoint-site die is gemaakt in <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Les 00 - Cursusinstelling - Stap 3: Nieuwe SharePoint-site maken</a>.</p>
+<p>In het veld <strong>Lijstnaam</strong>, selecteer de <strong>Apparaten</strong> SharePoint-lijst.</p>
+<p><img alt="Invoerparameters" src="../../../../../translated_images/9.1_16_SharePointSiteAndListParameters.af6e0b112eb4bfb210f9259da02b459097a06307afa6ca269cb33aa9ecc1c1e4.nl.png" /></p>
+</li>
+<li>
+<p>In het veld <strong>Id</strong>, selecteer het <strong>bliksemschicht-icoon</strong> of <strong>fx-icoon</strong> aan de rechterkant.</p>
+<p><img alt="Dynamische inhoud kiezer" src="../../../../../translated_images/9.1_17_InsertExpressionIcon.6e250bb84e7b8884de7b2052005f7ff3cd95f2c28671d2da7965001b3f621902.nl.png" /></p>
+</li>
+<li>
+<p>In het tabblad <strong>Dynamische inhoud</strong> van het uitvouwpaneel, voer het volgende in,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sharepoint
+</span></code></pre></div>
+<p>De zoekresultaten tonen invoerparameters die overeenkomen met de ingevoerde waarde. Selecteer de parameter <strong>DeviceSharePointId</strong> van de trigger.</p>
+<p>Selecteer vervolgens <strong>Toevoegen</strong> om de invoer van dynamische inhoud toe te voegen aan de parameter <strong>Id</strong> van de actie.</p>
+<p><img alt="Selecteer DeviceSharePointId invoer" src="../../../../../translated_images/9.1_18_DeviceSharePointId.b9be8e7c3c6b0ab710a8f662e62a0ec0133a530f6877b6cea3c48acc8022fec5.nl.png" /></p>
+</li>
+<li>
+<p>De invoer van dynamische inhoud van de trigger wordt nu verwezen in de parameter <strong>Id</strong> van de actie. We gaan een van de geavanceerde parameters bijwerken. Selecteer <strong>Alles weergeven</strong> om de geavanceerde parameters te bekijken.</p>
+<p><img alt="Bekijk geavanceerde parameters" src="../../../../../translated_images/9.1_19_AdvancedParameters.4bb8e0c11e7864625ad6c30ab1b9021d367cd77374c56985df7b3d43845a1883.nl.png" /></p>
+</li>
+<li>
+<p>De parameter <strong>Kolommen beperken op weergave</strong> wordt weergegeven en standaard ingesteld op <strong>Alle kolommen gebruiken (Niet beperken)</strong>. We werken deze waarde bij naar een weergave om de kolommen die worden geretourneerd in de respons van de actie te beperken. Selecteer de parameter <strong>Kolommen beperken op weergave</strong> om de lijst met weergaven te bekijken.</p>
+<p><img alt="Selecteer parameter" src="../../../../../translated_images/9.1_20_LimitColumnsByView.4d30f532f1e1033323d39df5c9b8e803788ea785ed58de2efca2faa5df4b26fc.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer de weergave <strong>Alle items</strong>.</p>
+<p><img alt="Selecteer Alle items weergave" src="../../../../../translated_images/9.1_21_SelectView.d180e83d5e62f5fb6994a7071d5e6ce8f88143d8cc833cb55b208c6fee41bc02.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer het <strong>plus + icoon</strong> onder de actie <em>Apparaat ophalen</em> om een nieuwe actie in te voegen.</p>
+<p><img alt="Nieuwe actie toevoegen" src="../../../../../translated_images/9.1_22_AddAnAction.904b79142347fe927168036ade55d842fa088deef53710944272c681421e0e84.nl.png" /></p>
+</li>
+<li>
+<p>Voer in het zoekveld het volgende in,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>send an email
+</span></code></pre></div>
+<p>Een lijst met acties wordt weergegeven in de zoekresultaten. Selecteer de actie <strong>E-mail verzenden (V2)</strong> van de <strong>Office 365 Outlook-connector</strong>.</p>
+<p><img alt="E-mail verzenden actie" src="../../../../../translated_images/9.1_23_SendAnEmail.f1019365131658b0e71b5b58b57d7d8b3f3a0c670ddb3cca0838bf0b4f8cd354.nl.png" /></p>
+</li>
+<li>
+<p>We moeten een verbinding maken voor de connectoractie. Selecteer <strong>Inloggen</strong>.</p>
+<p><img alt="Verbinding maken" src="../../../../../translated_images/9.1_24_CreateConnection.9e968ad4de9d13d81e95779c4fa60809fd40de5f65dbd014f1dc39663c935806.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer je ingelogde gebruikersaccount.</p>
+<p><img alt="Selecteer gebruikersaccount" src="../../../../../translated_images/9.1_25_SelectUserAccount.f3c96ac1a377c4b42a6301ba38c21469eb7bd3f48633f04200f1610902f8bdbe.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer <strong>Toegang toestaan</strong>. Er is nu een verbinding gemaakt.</p>
+<p><img alt="Selecteer toegang toestaan" src="../../../../../translated_images/9.1_26_AllowAccess.1abcaea31b9846279cafafd7160baea6bec60cdfac8224df7082ceee3ef22a26.nl.png" /></p>
+</li>
+<li>
+<p>Hernoem de actie naar het volgende,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Send an email to manager
+</span></code></pre></div>
+<p>Laten we vervolgens de invoerparameters van onze actie definiëren.</p>
+<p>Voor de invoerparameter <strong>Aan</strong>, selecteer jezelf. Normaal gesproken zou dit je manager zijn of zouden we een andere actie gebruiken die je manager ophaalt op basis van je Entra ID-profiel, maar voor de doeleinden van deze les selecteer je jezelf.</p>
+<p>Voor de invoerparameter <strong>Onderwerp</strong>, voer het volgende in,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Request type: new device
+</span></code></pre></div>
+<p>Voor de invoerparameter <strong>Body</strong>, voer het volgende in,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Hi,
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>New device requested from
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Manufacturer:
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>Model:
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>Link to item in SharePoint
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>Additional comments from:
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>This is an automated email from Contoso Helpdesk Copilot
+</span></code></pre></div>
+<p><img alt="Actie hernoemen en invoer configureren" src="../../../../../translated_images/9.1_27_RenameAndConfigureParameters.c3d29a3481fb5c0240cca85db4119387e6b750546ed12e2af4a9ac62d7454f89.nl.png" /></p>
+</li>
+<li>
+<p>Vervolgens gaan we de invoerparameter <strong>Body</strong> bijwerken met verwijzingen naar dynamische inhoud van de <strong>trigger</strong> of <strong>Item ophalen</strong> actie. Voer een spatie in na de tweede regel, omdat we de naam van de gebruiker uit de triggerinvoer, <strong>User</strong>, gaan invoegen.</p>
+<p>Selecteer het <strong>bliksemschicht-icoon</strong> of <strong>fx-icoon</strong> aan de rechterkant.</p>
+<p><img alt="Voeg User invoer toe als dynamische inhoud" src="../../../../../translated_images/9.1_28_AddUserInput.f38d3df648faef75f1985bdcc23db16e197ccb1ddc015210c43bbb2569fcf654.nl.png" /></p>
+</li>
+<li>
+<p>In het tabblad <strong>Dynamische inhoud</strong> van het uitvouwpaneel, selecteer de invoer <strong>User</strong> van de trigger.</p>
+<p>Selecteer <strong>Toevoegen</strong> om de dynamische inhoud <strong>User</strong> invoer toe te voegen aan de parameter <strong>Body</strong> van de actie.</p>
+<p><img alt="Selecteer User invoer" src="../../../../../translated_images/9.1_29_SelectUserInput.4efc79f52d74fa7ae13132ea13f7d51b3f4aab6413afc41a8354c5e59852b9fc.nl.png" />
+1. De dynamische inhoud van de trigger wordt nu verwezen in de <strong>Body</strong>-parameter van de actie. We herhalen hetzelfde voor de resterende regels in de e-mailtekst.</p>
+<p><img alt="Gebruikersinvoer toegevoegd" src="../../../../../translated_images/9.1_30_UserInputAdded.905ec0489e4f1bbe7cc071826050834aa1e5acf53f8a65ad59532ea13b81c607.nl.png" /></p>
+</li>
+<li>
+<p>Klik in de ruimte naast <code>Fabrikant:</code>. Selecteer het <strong>bliksemschicht-icoon</strong> of <strong>fx-icoon</strong> aan de rechterkant.</p>
+<p>In het tabblad <strong>Dynamische inhoud</strong> van het uitklapvenster, voer het volgende in het zoekveld in,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>manufacturer
+</span></code></pre></div>
+<p>Selecteer de <strong>Fabrikantwaarde</strong> invoer van de trigger en klik op <strong>Toevoegen</strong>.</p>
+<p><img alt="Fabrikantwaarde invoer toevoegen als dynamische inhoud" src="../../../../../translated_images/9.1_31_ManufacturerValueAdded.db2cf35a35a20590d80d7f0191d771a045bf55e40ce98982d0e099588e260712.nl.png" /></p>
+</li>
+<li>
+<p>Klik in de ruimte naast <code>Model:</code>. Selecteer het <strong>bliksemschicht-icoon</strong> of <strong>fx-icoon</strong> aan de rechterkant.</p>
+<p>In het tabblad <strong>Dynamische inhoud</strong> van het uitklapvenster, voer het volgende in het zoekveld in,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>model
+</span></code></pre></div>
+<p>Selecteer de <strong>Model</strong> invoer van de <strong>Get item</strong> actie en klik op <strong>Toevoegen</strong>.</p>
+<p><img alt="Model invoer toevoegen als dynamische inhoud" src="../../../../../translated_images/9.1_32_ModelAdded.ff9d858648ddb85fe70eaaafa6e23d0560500e7327ccb29ee56ecac0d8d36cab.nl.png" /></p>
+</li>
+<li>
+<p>Voor de tekst <code>Link naar item in SharePoint</code> gaan we dit bijwerken naar een hyperlink in de e-mailtekst. Klik aan het begin van de regel en selecteer het <strong>bliksemschicht-icoon</strong> of <strong>fx-icoon</strong> aan de rechterkant.</p>
+<p><img alt="Dynamische inhoud toevoegen" src="../../../../../translated_images/9.1_33_AddDynamicContent.c662d682377af82adc52de18e05baf9b6aa5a972882dcf6274f3979f14641627.nl.png" /></p>
+</li>
+<li>
+<p>Klik na de HTML-anchor tag en selecteer het <strong>bliksemschicht-icoon</strong> of <strong>fx-icoon</strong> aan de rechterkant.</p>
+<p>In het tabblad <strong>Dynamische inhoud</strong> van het uitklapvenster, voer het volgende in het zoekveld in,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>link to item
+</span></code></pre></div>
+<p>Selecteer de <strong>Link naar item</strong> invoer van de <strong>Get item</strong> actie en klik op <strong>Toevoegen</strong>.</p>
+<p><img alt="Link naar item toevoegen als dynamische inhoud" src="../../../../../translated_images/9.1_34_AddLinkToItem.6827bd3bad484f7382d060435bb0ef45e9bb1c3ad4774529559bb4c5f9bbca8c.nl.png" /></p>
+</li>
+<li>
+<p>We moeten overschakelen naar de HTML-editor door het <strong>&lt;/&gt;</strong> icoon te selecteren.</p>
+<p><img alt="Gebruikersinvoer toevoegen" src="../../../../../translated_images/9.1_35_ToggleCodeView.ae3a9caf213f2c6366487e10092ad1fad3494f110936219258d842c23e7f46d9.nl.png" /></p>
+</li>
+<li>
+<p>De HTML-editor is nu ingeschakeld. Klik vóór de tekst <code>Link naar item in SharePoint</code>, voeg een HTML-anchor tag toe om een hyperlink te maken. Kopieer en plak het volgende.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>&lt;a href=&quot;
+</span></code></pre></div>
+<p><img alt="HTML-tag" src="../../../../../translated_images/9.1_36_AddHTMLTag.146220ae5c33eaf9915c393c37d62b9d4b258413e9f4dc42a1ab005437669443.nl.png" /></p>
+</li>
+<li>
+<p>De dynamische inhoud van <strong>Link naar item</strong> wordt nu verwezen in de <strong>Body</strong>-parameter. Klik na de <strong>Link naar item</strong> invoer, kopieer en plak het volgende.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>&quot;&gt;
+</span></code></pre></div>
+<p><img alt="HTML-tag" src="../../../../../translated_images/9.1_37_AddHTMLTag.48f73b302f6a84bb6a51e0666fd30baf1f8d9d906947d44dc4095ededed18a2d.nl.png" /></p>
+</li>
+<li>
+<p>Klik na de tekst <code>Link naar item in SharePoint</code>, sluit de HTML-anchor tag. Kopieer en plak het volgende.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>&lt;/a&gt;
+</span></code></pre></div>
+<p><img alt="HTML-tag" src="../../../../../translated_images/9.1_38_AddHTMLTag.47d2f0521e6aba9d609bfe65d86ebae5786e4ad5465fefb7ae0370db6e924c96.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer het <strong>&lt;/&gt;</strong> icoon om de codeweergave uit te schakelen.</p>
+<p><img alt="Codeweergave uitschakelen" src="../../../../../translated_images/9.1_39_ToggleCodeView.88606eb37d702a686904b2dd8943fcf144cec462b37ee781e8ee0415e62bd951.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer vervolgens opnieuw het <strong>&lt;/&gt;</strong> icoon om de codeweergave weer in te schakelen.</p>
+<p><img alt="Terug naar codeweergave" src="../../../../../translated_images/9.1_40_ToggleCodeViewAgain.32da9b9804adbbfaf8d85bdaa6fa51d2ae5fc1fbb97f75084813972c66d0c4d9.nl.png" /></p>
+</li>
+<li>
+<p>Merk op dat er verschillende extra tekens <code>&amp;lt;br&amp;gt;</code> zijn. Verwijder deze tekens.</p>
+<p><img alt="Tekens verwijderen" src="../../../../../translated_images/9.1_41_DeleteCharacters.f1ef3830b186c2cd9974ea05e336c83c0706d72ab1010d06283716dc4e982875.nl.png" /></p>
+</li>
+<li>
+<p>We hebben nu een hyperlink toegevoegd aan onze e-mailtekst 😎 Selecteer het <strong>&lt;/&gt;</strong> icoon om de codeweergave uit te schakelen.</p>
+<p><img alt="HTML-tag opgeruimd" src="../../../../../translated_images/9.1_42_HTMLTagTidiedUp.1b27fa2c4dc65c3f1a7151abcf6e388f64cb83745b10cd22769c1f9af3421fc6.nl.png" /></p>
+</li>
+<li>
+<p>Klik na de tekst <code>Aanvullende opmerkingen van</code> vóór het dubbelepunt en selecteer het <strong>bliksemschicht-icoon</strong> of <strong>fx-icoon</strong> aan de rechterkant.</p>
+<p><img alt="Gebruikersparameter toevoegen" src="../../../../../translated_images/9.1_43_AddUserInput.6f0d26739c1b9039383aa37cc46fa1149a269bd4268fb54b897d144afc49c515.nl.png" /></p>
+</li>
+<li>
+<p>In het tabblad <strong>Dynamische inhoud</strong> van het uitklapvenster, voer het volgende in het zoekveld in,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>user
+</span></code></pre></div>
+<p>Selecteer de <strong>Gebruikers</strong>-parameter van de trigger en klik op <strong>Toevoegen</strong>.</p>
+<p><img alt="Gebruikersparameter toevoegen als dynamische inhoud" src="../../../../../translated_images/9.1_44_AddUserDynamicContent.bb7c76e92650001207712b3447d3275d584f3ebf739034369869c3facf38eacf.nl.png" /></p>
+</li>
+<li>
+<p>We gaan nu een expressie invoegen die de waarde van Aanvullende opmerkingen weergeeft als deze door de gebruiker is opgegeven in de <strong>Vraag een adaptieve kaart</strong>-node, anders wordt "Geen" weergegeven als de gebruiker geen opmerkingen heeft opgegeven.</p>
+<p>Klik na het dubbelepunt en selecteer het <strong>bliksemschicht-icoon</strong> of <strong>fx-icoon</strong> aan de rechterkant.</p>
+<p><img alt="Expressie toevoegen" src="../../../../../translated_images/9.1_45_AddExpression.c4c92dc4a56fab75c78ec2c5087682521e562264c1710c8dfaa24134adc3a112.nl.png" /></p>
+</li>
+<li>
+<p>In het tabblad <strong>Functie</strong> van het uitklapvenster en in het expressieveld bovenaan, voer het volgende in,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>if(empty())
+</span></code></pre></div>
+<p>Deze expressie gebruikt de <code>if</code>-functie voor een if-else statement.</p>
+<p>De volgende functie die wordt gebruikt is <code>empty</code>, die controleert of er een waarde bestaat in een stringparameter. De stringparameter die wordt verwezen is de waarde van de invoerparameter <code>AdditionalComments</code> van de trigger.</p>
+<p><img alt="Als leeg" src="../../../../../translated_images/9.1_46_IfEmptyFunctions.95d21ad01f6f7c290cb8d5a57ccbca9c9532df7ce57f800554dea541d503ddc6.nl.png" /></p>
+</li>
+<li>
+<p>Klik vervolgens <strong>binnen de haakjes</strong> na de <code>empty</code>-functie. We gaan de invoerparameter <code>AdditionalComments</code> van de trigger invoegen.</p>
+<p>Selecteer het tabblad <strong>Dynamische inhoud</strong>. Voer het volgende in het zoekveld in,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Additional
+</span></code></pre></div>
+<p>Scroll naar beneden in het venster en selecteer de invoer <strong>AdditionalComments</strong> van de trigger. De parameter wordt nu toegevoegd als een stringparameter in de expressie.</p>
+<p><img alt="AdditionalComments toevoegen als dynamische inhoud" src="../../../../../translated_images/9.1_47_AdditionalCommentsDynamicContent.f9632f09779888c18a58df8e97ef677ed885b0eaa88c252b13b22c0e4c67495b.nl.png" /></p>
+</li>
+<li>
+<p>Vervolgens definiëren we de <strong><em>true</em></strong> logica, waarbij als de stringparameter <code>AdditionalComments</code> leeg is, we een string (tekst) van <code>Geen</code> willen weergeven.</p>
+<p>Na de haakjes die de stringparameter omsluiten, voer het volgende in,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>, &#39;None&#39;,
+</span></code></pre></div>
+<p><img alt="True logica" src="../../../../../translated_images/9.1_48_None.31978299f29e07ef3257eedd5dcee09c8675f8b3f61aea8102900118e0b6ca70.nl.png" /></p>
+</li>
+<li>
+<p>Tot slot definiëren we de <strong><em>false</em></strong> logica, waarbij als de stringparameter <code>AdditionalComments</code> niet leeg is, we de waarde van de invoerparameter <strong>AdditionalComments</strong> van onze trigger willen weergeven.</p>
+<blockquote>
+<p>Een herinnering: deze waarde komt uit het veld Aanvullende opmerkingen van de adaptieve kaart in de <strong>Vraag met adaptieve kaart</strong>-node in het <strong>Vraag apparaat</strong>-onderwerp.</p>
+</blockquote>
+<p>Na de komma na onze <strong><em>true</em></strong> logica, selecteer het tabblad <strong>Dynamische inhoud</strong>. Voer het volgende in het zoekveld in,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Additional
+</span></code></pre></div>
+<p>Scroll naar beneden in het venster en selecteer de invoer <strong>AdditionalComments</strong> van de trigger. De parameter wordt nu toegevoegd als een stringparameter in de expressie.</p>
+<p>Voeg het nu toe aan onze <strong>Body</strong>-parameter door op <strong>Toevoegen</strong> te klikken.</p>
+<p><img alt="False logica" src="../../../../../translated_images/9.1_49_AdditionalCommentsDynamicContent.d42c7fc29f65d901bb26dcbc13408c387633ea185cdd79c35d6439231b7363d5.nl.png" /></p>
+</li>
+<li>
+<p>Uitstekend, onze expressie is compleet! De expressie is nu toegevoegd aan de <strong>Body</strong>-parameter. Format de laatste regel als cursief.</p>
+<p><img alt="Cursief" src="../../../../../translated_images/9.1_50_Italics.a0c01aa33ef4e83167e1fbc21c1d833f95addd60c8f531411cf9c58a96a31b02.nl.png" /></p>
+</li>
+<li>
+<p>We gaan nu de actie <strong>Reageer op de agent</strong> bijwerken om de waarde van de <strong>Modelwaarde</strong>-parameter van de <strong>Get item</strong>-actie terug te sturen naar de agent.</p>
+<p>Houd de linkermuisknop ingedrukt en beweeg omhoog in de ontwerper om de actie <strong>Reageer op de agent</strong> te bekijken.</p>
+<p>Selecteer de actie <strong>Reageer op de agent</strong> en selecteer de <strong>Tekst</strong>-uitvoer als type.</p>
+<p><img alt="Selecteer Tekst-uitvoer" src="../../../../../translated_images/9.1_51_RespondToTheAgentAction.4c682a440e19a0fcd6d6f51ef9cdbfe76f482a39d635b8905d9b0cbbf33d945f.nl.png" /></p>
+</li>
+<li>
+<p>Voer het volgende in als naam van de uitvoer.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>ModelValue
+</span></code></pre></div>
+<p><img alt="ModelValue uitvoer" src="../../../../../translated_images/9.1_52_ModelValueInput.20609429eb323281051607b090319adc5315c0245c7d61158eb119714fe4318f.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer het waardeveld en selecteer het <strong>bliksemschicht-icoon</strong> of <strong>fx-icoon</strong> aan de rechterkant.</p>
+<p><img alt="Expressie invoegen" src="../../../../../translated_images/9.1_53_InsertDynamicContent.108ba565696f9f52d742323e0f4c46c308f322ac4bd67802e3196430155c7443.nl.png" /></p>
+</li>
+<li>
+<p>In het tabblad <strong>Dynamische inhoud</strong> van het uitklapvenster, voer het volgende in het zoekveld in,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>model
+</span></code></pre></div>
+<p>Selecteer de <strong>Model</strong>-parameter van de <strong>Get item</strong>-actie en klik op <strong>Toevoegen</strong>.</p>
+<p><img alt="Modelparameter toevoegen als dynamische inhoud" src="../../../../../translated_images/9.1_54_ModelParameter.f231fd0ec089ac6b9ac1b7fd2e6a60a35b08484ed10b0098cff6b3ce0c7760cb.nl.png" /></p>
+</li>
+<li>
+<p>De <strong>Model</strong>-parameter is nu de waarde van de tekstuitvoer. Selecteer <strong>Concept opslaan</strong> om onze agentflow op te slaan.</p>
+<p>We hebben onze agentflow nu voltooid 👏🏻</p>
+<p><img alt="Concept opslaan" src="../../../../../translated_images/9.1_55_SaveDraftAgentFlow.5ab97895a901458362881fc9ee576762bdb0883b37a6cbd7a631ddc2750705af.nl.png" /></p>
+</li>
+<li>
+<p>Laten we nog één update maken aan onze agentflow voordat we publiceren. Selecteer het tabblad <strong>Overzicht</strong> en klik op <strong>Bewerken</strong>.</p>
+<p><img alt="Bewerken selecteren" src="../../../../../translated_images/9.1_56_EditAgentFlowDetails.023e8149284b9ae79dd3d95f574ff90bbcc1cc4a9fff4be56664ccbe0698f310.nl.png" /></p>
+</li>
+<li>
+<p>Voor de <strong>Flownaam</strong>, kopieer en plak het volgende.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Send device request email
+</span></code></pre></div>
+<p>Voor de <strong>Beschrijving</strong>, selecteer het <strong>vernieuwingsicoon</strong> om AI te gebruiken om automatisch een beschrijving voor je te genereren op basis van de trigger en acties in de agentflow.</p>
+<p>Klik op <strong>Opslaan</strong> om de bijgewerkte naam en beschrijving van de agentflow op te slaan.</p>
+<p><img alt="Naam wijzigen, beschrijving toevoegen en details opslaan" src="../../../../../translated_images/9.1_57_RenameAndDescription.57a190396550bf998d62c49ca359b66211ae50042ac5f8739b32f8b9bc292607.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer het tabblad <strong>Ontwerper</strong> en klik op <strong>Publiceren</strong> om de agentflow te publiceren zodat deze kan worden toegevoegd als een node in het <strong>Vraag apparaat</strong>-onderwerp.</p>
+<p><img alt="Publiceren" src="../../../../../translated_images/9.1_58_Publish.8f43271718c662deee7afea6fb283f64005b277b3a62086e6d91cc0c3ac4f79c.nl.png" /></p>
+</li>
+<li>
+<p>Er verschijnt binnenkort een bevestigingsbericht om te bevestigen dat de agentflow is gepubliceerd.</p>
+<p><img alt="Bevestigingsbericht" src="../../../../../translated_images/9.1_59_Confirmation.d406bde76c31b27f794d5742c992b8c84283f46b2e54524f1e500d0688a33716.nl.png" /></p>
+</li>
+</ol>
+<h3 id="92-agentflow-toevoegen-aan-onderwerp">9.2 Agentflow toevoegen aan onderwerp<a class="headerlink" href="#92-agentflow-toevoegen-aan-onderwerp" title="Permanent link">&para;</a></h3>
+<p>Laten we nu de agentflow toevoegen aan het <strong>Vraag apparaat</strong>-onderwerp.</p>
+<ol>
+<li>
+<p>Selecteer <strong>Agents</strong> in het menu aan de linkerkant en selecteer de <strong>Contoso Helpdesk Agent</strong>.</p>
+<p><img alt="Agents selecteren" src="../../../../../translated_images/9.2_01_SelectAgent.b8a6fd3a8970d6b0c8e78bf0a5411257206612d53acdf9b44f78b2c9c2fe91fc.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer het tabblad <strong>Onderwerpen</strong>.</p>
+<p><img alt="Tabblad Onderwerpen selecteren" src="../../../../../translated_images/9.2_02_SelectTopics.3e8618aba5f4a1ddf3dee726b6da9a66ed89d04a2e8ca36b52112a6675c2885c.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer het <strong>Vraag apparaat</strong>-onderwerp.</p>
+<p><img alt="Vraag apparaat onderwerp selecteren" src="../../../../../translated_images/9.2_03_SelectRequestDevice.df10472702258708b3d069e718e695b9fcabc61d42901d524dc302a03b3fa4a9.nl.png" /></p>
+</li>
+<li>
+<p>Scroll naar beneden naar de <strong>Vraag met adaptieve kaart</strong>-node en voeg een nieuwe node toe.</p>
+<p>Selecteer <strong>Een tool toevoegen</strong> en in het tabblad <strong>Basis tools</strong> van het uitklapvenster, selecteer de agentflow <strong>Verzend e-mail voor apparaatverzoek</strong> die we onlangs hebben gemaakt en gepubliceerd.</p>
+<p><img alt="Agentflow selecteren" src="../../../../../translated_images/9.2_04_SelectAgentFlow.15deca87db95fff1c9d904855d237d22a72c260adf3343d9e78695f07c42a8e0.nl.png" /></p>
+</li>
+<li>
+<p>Voor de triggerinputs van onze agentflow moeten we de variabele outputs selecteren van de <strong>Vraag met adaptieve kaart</strong>-node.</p>
+<p>Selecteer het <strong>ellips (...) icoon</strong> voor de <strong>DeviceSharePointId</strong>-invoer.</p>
+<p><img alt="Variabele selecteren" src="../../../../../translated_images/9.2_05_SelectVariable.8fe53cbc0f950f732b9e9002b21d8762ddfe74fb601d61c2a5119e32383450a2.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer de <strong>deviceSelectionId</strong>-variabele, een van de outputs die is gedefinieerd in de <strong>Vraag met adaptieve kaart</strong>-node.</p>
+<p><img alt="deviceSelectionId selecteren" src="../../../../../translated_images/9.2_06_SelectdeviceSelectionIdVariable.67c0091e0de9442d3cffbfe3b2cace8d76be37ea67815ddfc99af03ae4b37391.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer vervolgens het <strong>ellips (...) icoon</strong> voor de <strong>Gebruiker</strong>-invoer.</p>
+<p><img alt="Variabele selecteren" src="../../../../../translated_images/9.2_07_SelectVariable.bf851128bec5e0255c6cf361a837ce9701d0afac84ed3d5b89665d111a098386.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer het tabblad <strong>Systeem</strong> in het uitklapvenster en selecteer <strong>User.DisplayName</strong>. Deze variabele slaat de weergavenaam op van de interne gebruiker die met de agent communiceert.</p>
+<p><img alt="User.DisplayName systeemvariabele selecteren" src="../../../../../translated_images/9.2_08_SelectUser.DisplayNameVariable.926a2a7560402fbd7b224e2bf0ff11df9e5612803b7ce51e36f58201a09bbfd7.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer vervolgens het <strong>groter dan icoon</strong> voor <strong>Geavanceerde inputs</strong> om de <strong>AdditionalComments</strong>-invoer uit te klappen en te bekijken.</p>
+<p><img alt="Geavanceerde inputs uitklappen" src="../../../../../translated_images/9.2_09_ExpandAdvancedInputs.bded22f83fe4eb21237daa254725e12a81ea75be34bcb0e8ab322037a4e6f418.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer het <strong>ellips (...) icoon</strong> voor de AdditionalComments-invoer.</p>
+<p><img alt="Variabele selecteren" src="../../../../../translated_images/9.2_10_SelectVariable.86286cc06323e65fb3874b9fd0ea62d140b9e9b9a2b5116d667192a6dca3815f.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer het tabblad <strong>Formule</strong> en het uitklapicoon in het uitklapvenster, omdat we een Power Fx-expressie gaan gebruiken.</p>
+<p><img alt="Formule tabblad" src="../../../../../translated_images/9.2_11_SelectFormulaAndExpandIcon.3fcd07bfccc4f0779a5d26313b571e60be792da7fd28e937b3e888f8aaeda7e0.nl.png" /></p>
+</li>
+<li>
+<p>Net zoals de expressie in de agentflow die een voorwaardelijke controle uitvoert met behulp van de <em>if</em>-functie, maar deze keer</p>
+<ul>
+<li>met behulp van Power Fx-functies,</li>
+<li>en het invoegen van ofwel geen waarde, of de waarde van de <code>commentsId</code> uitvoer variabele van de <strong>Vraag met adaptieve kaart</strong>-node.</li>
+</ul>
+<p>Voer de volgende functies in het Power Fx-veld in,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>If(IsBlank())
+</span></code></pre></div>
+</li>
+</ol>
+<p>Deze expressie gebruikt de functie <code>If</code> voor een if-else statement.</p>
+<p>De volgende functie die wordt gebruikt is <code>IsBlank</code>, waarmee wordt gecontroleerd of een waarde wel of niet bestaat in een stringparameter. De te refereren stringparameter is de uitvoervariabele <code>commentsId</code> van de <strong>Vraag met adaptieve kaart</strong>-node.</p>
+<p><img alt="If en IsBlank functies" src="../../../../../translated_images/9.2_12_IfIsBlank.07f7516c7e1f7579239a8b3833d64a14eb88dc245cae714b3e07d6298e907d51.nl.png" /></p>
+<ol>
+<li>Klik vervolgens <strong>binnen de haakjes</strong> na de functie <code>IsBlank</code>. We gaan de uitvoervariabele <code>commentsId</code> van de <strong>Vraag met adaptieve kaart</strong>-node invoegen.</li>
+</ol>
+<p>Voer het volgende in binnen de haakjes,</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+Topic.commentsId
+```
+</code></pre></div>
+<p>En voeg een komma toe na het haakje.</p>
+<p><img alt="Referentie naar commentsId uitvoer" src="../../../../../translated_images/9.2_13_Topic.commentsId.1a04dc190dac334ebf6c4dbc1b6df1aad2e4bbdeeb3ef960871e93614381f079.nl.png" /></p>
+<ol>
+<li>
+<p>Vervolgens definiëren we de logica:</p>
+<ul>
+<li>wanneer <strong><em>true</em></strong> - als de stringparameter <code>Topic.commentsId</code> leeg is, willen we geen waarde invoegen.</li>
+<li>wanneer <strong><em>false</em></strong> - als de stringparameter <code>Topic.commentsId</code> niet leeg is, voegen we de waarde van de variabele commentsId in.</li>
+</ul>
+</li>
+</ol>
+<p>Na het haakje dat de stringparameter omsluit, voer het volgende in,</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+&quot;&quot;, Topic.commentsId)
+```
+</code></pre></div>
+<p>De Power Fx-expressie zou als volgt moeten zijn,</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+If(IsBlank(Topic.commentsId), &quot;&quot;, Topic.commentsId)
+```
+</code></pre></div>
+<p>Goed gedaan, onze expressie is compleet! 🙌🏻 Selecteer nu <strong>Invoegen</strong> om de invoerparameter van de agentflow in te stellen op de Power Fx-expressie.</p>
+<p><img alt="Power Fx expressie" src="../../../../../translated_images/9.2_14_PowerFxExpression.80e76ea59bdb8f131d26edf2657923f4af9000768d44b06c0947115fd218698e.nl.png" /></p>
+<ol>
+<li><strong>Sla</strong> het onderwerp op.</li>
+</ol>
+<h3 id="93-update-het-onderwerp-apparaat-aanvragen-met-meerdere-nodes-voor-een-betere-gebruikerservaring">9.3 Update het onderwerp "Apparaat aanvragen" met meerdere nodes voor een betere gebruikerservaring<a class="headerlink" href="#93-update-het-onderwerp-apparaat-aanvragen-met-meerdere-nodes-voor-een-betere-gebruikerservaring" title="Permanent link">&para;</a></h3>
+<p>We voegen nu twee extra nodes toe:</p>
+<ul>
+<li><strong>Bericht verzenden</strong> - dit fungeert als een bevestigingsbericht dat verwijst naar het geselecteerde apparaat en dat de aanvraag is ingediend.</li>
+<li><strong>Onderwerpbeheer</strong> - om het gesprek te beëindigen, leiden we door naar de <strong>Einde van gesprek</strong>-node.</li>
+</ul>
+<p>Laten we beginnen!</p>
+<ol>
+<li>Selecteer het <strong>plus + icoon</strong> onder de agentflownode en selecteer de <strong>Bericht verzenden</strong>-node.</li>
+</ol>
+<p><img alt="Bericht verzenden node toevoegen" src="../../../../../translated_images/9.3_01_AddSendAMessageNode.ac4111729a2602f8301ecffbcb263d692ecb43478aa9da63cae0dd58160f56c8.nl.png" /></p>
+<ol>
+<li>
+<p>Voer het volgende in het berichtveld in,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>Thanks
+</span></code></pre></div>
+</li>
+</ol>
+<p>Selecteer vervolgens <strong>Variabele invoegen</strong>, omdat we de naam van de gebruiker gaan refereren.</p>
+<p><img alt="Variabele invoegen" src="../../../../../translated_images/9.3_02_InsertVariable.c5c9ebce61d1f442413d05f4437f74ee1d9c3a8c2ab696244937c56b5171f310.nl.png" /></p>
+<ol>
+<li>Selecteer het tabblad <strong>Systeem</strong> en zoek naar <code>User</code> in het zoekveld. Selecteer de variabele <strong>User.DisplayName</strong>.</li>
+</ol>
+<p><img alt="Systeemvariabele selecteren" src="../../../../../translated_images/9.3_03_SelectSystemVariable.47cfac2f3a727dbaf32ae960cbafe43ce9ed00f73edf01ac6d48e5b2b167e5fc.nl.png" /></p>
+<ol>
+<li>
+<p>Voer het volgende in het berichtveld in,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>. Your selected device,
+</span></code></pre></div>
+</li>
+</ol>
+<p>Selecteer vervolgens <strong>Variabele invoegen</strong> en dit keer in het tabblad <strong>Aangepast</strong>, selecteer de variabele <strong>ModelValue</strong>.</p>
+<p>Voer vervolgens het volgende in om het bericht af te maken.</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+, has been submitted and will be reviewed by your manager.
+```
+</code></pre></div>
+<p>Het bericht zou er als volgt uit moeten zien.</p>
+<p><img alt="Bericht verzenden" src="../../../../../translated_images/9.3_04_SendAMessage.3f6c4b5e53da9c7f9fcf9d0c453a9b65e44e35ea4c1124947fb638d0b682d96d.nl.png" /></p>
+<ol>
+<li>Selecteer ten slotte het <strong>plus + icoon</strong> onder de <strong>Bericht verzenden</strong>-node en selecteer <strong>Onderwerpbeheer</strong>, gevolgd door <strong>Ga naar een ander onderwerp</strong> en selecteer <strong>Einde van gesprek</strong>.</li>
+</ol>
+<p><img alt="Onderwerpbeheer" src="../../../../../translated_images/9.3_05_EndOfConversation.3c6c96d03b29a4d0904dea09d96c62d6ad450fe60dd8d6b2fe9d31681d6cb147.nl.png" /></p>
+<ol>
+<li><strong>Sla</strong> het onderwerp op.</li>
+</ol>
+<p><img alt="Opslaan" src="../../../../../translated_images/9.3_06_SaveTopic.8c9201fabce9f41af03d9f1beb9ce321e4ee9880a94edabe58b592bffebda80a.nl.png" /></p>
+<h3 id="94-test-de-agent-met-verschillende-scenarios">9.4 Test de agent met verschillende scenario's<a class="headerlink" href="#94-test-de-agent-met-verschillende-scenarios" title="Permanent link">&para;</a></h3>
+<p>Goed gedaan!!! 😁 We kunnen nu onze agent testen.</p>
+<h4 id="941-vraag-een-apparaat-aan-en-voer-een-opmerking-in-op-de-adaptieve-kaart">9.4.1 Vraag een apparaat aan en voer een opmerking in op de adaptieve kaart<a class="headerlink" href="#941-vraag-een-apparaat-aan-en-voer-een-opmerking-in-op-de-adaptieve-kaart" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Vernieuw</strong> het testpaneel, selecteer het <strong>activiteitskaart</strong>-icoon en voer het volgende in als bericht aan de agent.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>I need a laptop
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="Agent testen" src="../../../../../translated_images/9.4_01_TestAgent_RequestDevice_Yes.e73a5076dcd7179901dc0536624a039e372e405a6aac7ab89a632ce81bacdc2e.nl.png" /></p>
+<ol>
+<li>
+<p>De agent activeert <strong>Beschikbare apparaten</strong> en reageert met de lijst van beschikbare apparaten. We voeren het volgende in als antwoord op de vraag of we een apparaat willen aanvragen.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>Yes
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="Ja" src="../../../../../translated_images/9.4_02_RequestDevice_Yes.25c34743bc168fde33f91743316e7bad87ee0e47150c93e9b82c4662404dcaba.nl.png" /></p>
+<ol>
+<li>Merk op hoe de agent de <strong>Apparaat aanvragen</strong> heeft geactiveerd volgens de instructies van de agent en dat de adaptieve kaart nu wordt weergegeven in het bericht van de agent.</li>
+</ol>
+<p>Selecteer het apparaat <strong>Surface Laptop 15</strong> en voeg het volgende in als opmerking.</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+I need 16GB of RAM please
+```
+</code></pre></div>
+<p><img alt="Apparaat selecteren en opmerking invoeren" src="../../../../../translated_images/9.4_03_SelectDeviceAndEnterComment.570ea590309bf97edc40c6f7b53dbdc1174365860d8e8a4c32cfb7f1837621c2.nl.png" /></p>
+<ol>
+<li>Scroll naar beneden totdat je de knop <strong>Aanvraag indienen</strong> ziet en selecteer deze om de adaptieve kaart naar de agent te verzenden.</li>
+</ol>
+<p><img alt="Aanvraag indienen" src="../../../../../translated_images/9.4_04_SubmitRequest.ce3f4f44b90243a18dbfb401548b9b3cefd3ea17d8293a1bc3377323e3449da9.nl.png" /></p>
+<ol>
+<li>Selecteer <strong>Toestaan</strong> zodat de agent je inloggegevens kan gebruiken voor de authenticatie van de verbinding van de twee connectoracties.</li>
+</ol>
+<p><img alt="Toestaan" src="../../../../../translated_images/9.4_05_SelectAllow.f7b5bda068fbaee83dcb1cff03a52c946fb4d879137c55f4e5f9eb3953985e0e.nl.png" /></p>
+<ol>
+<li>De agent toont vervolgens het bevestigingsbericht met het geselecteerde model, gevolgd door een doorverwijzing naar het onderwerp <strong>Einde van gesprek</strong>. Cool!</li>
+</ol>
+<p><img alt="Aanvraag ingediend" src="../../../../../translated_images/9.4_06_RequestSubmitted.1d4d2e9afbc222a5ba79a4c254e7b2364d6eafc1a200ad6ac0aa142f9f10642d.nl.png" /></p>
+<ol>
+<li>Selecteer <strong>Ja</strong> om de rest van het onderwerp <strong>Einde van gesprek</strong> te verifiëren.</li>
+</ol>
+<p><img alt="Ja selecteren" src="../../../../../translated_images/9.4_07_RedirectNode.e7b1390e4eafe8c2c815fc8ce7fdda56617d9fbeccb0d59423ad2899a8e5f897.nl.png" /></p>
+<ol>
+<li>Beoordeel de ervaring door een van de sterren in de beoordelingskaart te selecteren.</li>
+</ol>
+<p>De agent gaat vervolgens door naar de laatste <strong>Vraag</strong>-node in het onderwerp <strong>Einde van gesprek</strong>. Selecteer <strong>Nee</strong>.</p>
+<p><img alt="Einde van gesprek onderwerp" src="../../../../../translated_images/9.4_08_EndOfConversation.b35507f7f561633c0cb3b6c15dc007ae4197a72d58afd8ae616bea439bd6e148.nl.png" /></p>
+<ol>
+<li>Het onderwerp wordt vervolgens afgerond en een laatste bericht wordt weergegeven in het testpaneel.</li>
+</ol>
+<p><img alt="Einde van gesprek onderwerp" src="../../../../../translated_images/9.4_09_EndOfConversation.438891b82e322b8a2648533200fbcd01c660ab049223b0920cdd0fbfcdeeb888.nl.png" /></p>
+<ol>
+<li>Controleer je inbox van je e-mailaccount om de e-mail te bekijken die door de agentflow naar de manager is verzonden. Je kunt de details van het geselecteerde apparaat en de opmerking die is ingevoerd in de adaptieve kaart zien.</li>
+</ol>
+<p><img alt="E-mail ontvangen" src="../../../../../translated_images/9.4_10_ReviewEmailMessageWithComment.b0138b0bb9d08aacbd8bbb02fdb633a6796b4131cf8d83212adeabaa1ce04a18.nl.png" /></p>
+<ol>
+<li>Klik op de hyperlink en de browser zou het SharePoint-item van het apparaat moeten laden. Super!</li>
+</ol>
+<p><img alt="Klik op hyperlink in e-mail" src="../../../../../translated_images/9.4_11_SelectLinkInEmail.2179f17165b61ba1e8aee68e8de4c752d64b0780ad86e0fe9054580d9c24e208.nl.png" /></p>
+<h4 id="942-vraag-een-apparaat-aan-en-voer-geen-opmerking-in-op-de-adaptieve-kaart">9.4.2 Vraag een apparaat aan en voer geen opmerking in op de adaptieve kaart<a class="headerlink" href="#942-vraag-een-apparaat-aan-en-voer-geen-opmerking-in-op-de-adaptieve-kaart" title="Permanent link">&para;</a></h4>
+<p>Laten we nu het scenario testen waarin geen opmerking wordt ingevoerd.</p>
+<ol>
+<li>
+<p>Herhaal dezelfde stappen:</p>
+<ul>
+<li><strong>Vernieuw</strong> het testpaneel en selecteer het <strong>activiteitskaart</strong>-icoon</li>
+<li>Voer het bericht in, <code>Ik heb een laptop nodig</code></li>
+<li>Reageer met <code>Ja</code> op de vraag of je een apparaat wilt aanvragen</li>
+</ul>
+</li>
+</ol>
+<p><img alt="Apparaat aanvragen" src="../../../../../translated_images/9.4_12_RequestDevice_Yes.1e369b8a52547fade4b84a4e36b399ee0692c6edbaa778ba90fe9c15cae75c5c.nl.png" /></p>
+<ol>
+<li>Selecteer dit keer <strong>Surface Laptop 13</strong> als apparaat en voer geen opmerking in.</li>
+</ol>
+<p><img alt="Apparaat selecteren" src="../../../../../translated_images/9.4_13_SelectDevice.d9ad15d17de3f06fd948bd529f116f7c05bedf79c016180d8a1dd7e378322b0e.nl.png" /></p>
+<ol>
+<li><strong>Dien</strong> de aanvraag in door de knop <strong>Aanvraag indienen</strong> te selecteren.</li>
+</ol>
+<p><img alt="Aanvraag indienen" src="../../../../../translated_images/9.4_14_SubmitRequest.a783ad8460bfb4485cfd2e97db2c065d9d6bf803279e3bd1569fe3e93548a578.nl.png" /></p>
+<ol>
+<li>Dit keer toont de e-mail die je in je inbox ontvangt <strong>Geen</strong> als opmerking.</li>
+</ol>
+<p><img alt="E-mail ontvangen" src="../../../../../translated_images/9.4_15_ReviewEmailMessage.137f35152c9da4b4a02bebec5f0cc9e55cfa25679770ace003aa19482ed0f3eb.nl.png" /></p>
+<h4 id="943-vraag-geen-apparaat-aan">9.4.3 Vraag geen apparaat aan<a class="headerlink" href="#943-vraag-geen-apparaat-aan" title="Permanent link">&para;</a></h4>
+<p>Laten we het laatste scenario testen waarin geen apparaat wordt aangevraagd en het onderwerp <strong>Afscheid</strong> wordt geactiveerd volgens de instructies van de agent.</p>
+<ol>
+<li>
+<p>Herhaal dezelfde stappen:</p>
+<ul>
+<li><strong>Vernieuw</strong> het testpaneel en selecteer het <strong>activiteitskaart</strong>-icoon</li>
+<li>Voer het bericht in, <code>Ik heb een laptop nodig</code></li>
+<li>Reageer dit keer met <code>Nee</code> op de vraag of je een apparaat wilt aanvragen</li>
+</ul>
+</li>
+</ol>
+<p><img alt="Agent testen" src="../../../../../translated_images/9.4_16_TestAgent_RequestDevice_No.85f205968f1d4083f20cc890a707748f8e06c01a19536cd299a13bdde2350de7.nl.png" /></p>
+<ol>
+<li>De agent activeert het onderwerp <strong>Afscheid</strong> en de vraag zoals gedefinieerd in het onderwerp wordt gesteld.</li>
+</ol>
+<p><img alt="Afscheid onderwerp geactiveerd" src="../../../../../translated_images/9.4_17_Goodbye.05ee598a987237e02866647a9699b0efa7ac58d1f448497f956af2ee815cb961.nl.png" /></p>
+<h2 id="missie-voltooid">✅ Missie Voltooid<a class="headerlink" href="#missie-voltooid" title="Permanent link">&para;</a></h2>
+<p>Gefeliciteerd! 👏🏻 Je hebt geleerd hoe je je agentflow kunt bouwen en deze kunt toevoegen aan ons bestaande onderwerp <strong>Apparaat aanvragen</strong>, en hoe je de agent kunt doorverwijzen naar een ander onderwerp.</p>
+<p>Dit is het einde van <strong>Lab 09 - Voeg een agentflow toe voor automatisering en verbeter de mogelijkheden van onderwerpen</strong>, selecteer de onderstaande link om door te gaan naar de volgende les. We zullen de use case in dit lab uitbreiden in de lab van de volgende les.</p>
+<p>⏭️ <a href="../10-add-event-triggers/">Ga naar <strong>Triggers voor evenementen toevoegen - Autonome agentmogelijkheden inschakelen</strong> les</a></p>
+<h2 id="tactische-bronnen">📚 Tactische Bronnen<a class="headerlink" href="#tactische-bronnen" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://www.microsoft.com/microsoft-copilot/blog/copilot-studio/introducing-agent-flows-transforming-automation-with-ai-first-workflows/">Agentflows introduceren: Automatisering transformeren met AI-first workflows</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/flows-overview?WT.mc_id=power-172621-ebenitez">Overzicht van agentflows</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow?WT.mc_id=power-172621-ebenitez">Gebruik agentflows met je agent</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/azure/logic-apps/workflow-definition-language-functions-reference?WT.mc_id=power-172621-ebenitez">Lijst van functies in de referentiegids</a></p>
+<p>📺 <a href="https://www.youtube.com/watch?v=VJTKyk3Pr7s">Agent Flows in Copilot Studio</a></p>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/09-add-an-agent-flow" alt="Analytics" /></p>
+<hr />
+<p><strong>Disclaimer</strong>:<br />
+Dit document is vertaald met behulp van de AI-vertalingsservice <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1418 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/fr/docs/operative-preview/07-multimodal-prompts/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-07-extraction-de-contenu-de-cv-avec-des-invites-multimodales" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nom-de-code-document-resume-recon" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ NOM DE CODE : DOCUMENT RESUME RECON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resume-de-la-mission" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Résumé de la mission
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objectifs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprendre-les-invites-multimodales" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Comprendre les invites multimodales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selection-de-modeles-dans-ai-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Sélection de modèles dans AI Builder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formats-de-sortie-texte-vs-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Formats de sortie : Texte vs JSON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratoire-7-construire-un-systeme-dextraction-de-cv" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Laboratoire 7 : Construire un système d'extraction de CV
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-accomplie" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 Mission accomplie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ressources-tactiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Ressources tactiques
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "616d142d4fb5f45d2a168fad6c1f9545",
+  "translation_date": "2025-10-17T19:33:26+00:00",
+  "source_file": "docs/operative-preview/07-multimodal-prompts/README.md",
+  "language_code": "fr"
+}
+-->
+<h1 id="mission-07-extraction-de-contenu-de-cv-avec-des-invites-multimodales">🚨 Mission 07 : Extraction de contenu de CV avec des invites multimodales<a class="headerlink" href="#mission-07-extraction-de-contenu-de-cv-avec-des-invites-multimodales" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="nom-de-code-document-resume-recon">🕵️‍♂️ NOM DE CODE : <code>DOCUMENT RESUME RECON</code><a class="headerlink" href="#nom-de-code-document-resume-recon" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Fenêtre temporelle de l'opération :</strong> <code>~45 minutes</code></p>
+</blockquote>
+<h2 id="resume-de-la-mission">🎯 Résumé de la mission<a class="headerlink" href="#resume-de-la-mission" title="Permanent link">&para;</a></h2>
+<p>Bienvenue, Opératif. Vos missions précédentes vous ont doté de compétences puissantes en orchestration d'agents, mais il est temps de débloquer une capacité révolutionnaire : <strong>l'analyse multimodale de documents</strong>.</p>
+<p>Votre mission, si vous l'acceptez, est <strong>Document Resume Recon</strong> - extraire des données structurées de tout document avec précision. Bien que vos agents puissent traiter du texte facilement, le monde réel exige de gérer quotidiennement des PDF, des images et des documents complexes. Les CV s'accumulent, les factures doivent être traitées, et les formulaires nécessitent une numérisation instantanée.</p>
+<p>Cette mission vous transformera d'un créateur d'agents textuels en un <strong>expert multimodal</strong>. Vous apprendrez à configurer une IA qui lit et comprend les documents comme un analyste humain - mais avec la vitesse et la cohérence de l'IA. À la fin de la mission, vous aurez construit un système complet d'extraction de CV intégré à votre flux de recrutement.</p>
+<p>Les techniques que vous apprendrez ici seront essentielles pour les opérations avancées de mise en correspondance des données lors de votre prochaine mission.</p>
+<h2 id="objectifs">🔎 Objectifs<a class="headerlink" href="#objectifs" title="Permanent link">&para;</a></h2>
+<p>Dans cette mission, vous apprendrez :</p>
+<ol>
+<li>Ce que sont les invites multimodales et quand utiliser différents modèles d'IA</li>
+<li>Comment configurer des invites avec des entrées d'image et de document</li>
+<li>Comment formater les sorties d'invites en JSON pour l'extraction de données structurées</li>
+<li>Les meilleures pratiques pour l'ingénierie des invites avec l'analyse de documents</li>
+<li>Comment intégrer des invites multimodales avec les flux d'agents</li>
+</ol>
+<h2 id="comprendre-les-invites-multimodales">🧠 Comprendre les invites multimodales<a class="headerlink" href="#comprendre-les-invites-multimodales" title="Permanent link">&para;</a></h2>
+<h3 id="quest-ce-qui-rend-une-invite-multimodale">Qu'est-ce qui rend une invite "multimodale" ?<a class="headerlink" href="#quest-ce-qui-rend-une-invite-multimodale" title="Permanent link">&para;</a></h3>
+<p>Les invites traditionnelles fonctionnent uniquement avec du texte. Mais les invites multimodales peuvent traiter plusieurs types de contenu :</p>
+<ul>
+<li><strong>Texte</strong> : Instructions écrites et contenu</li>
+<li><strong>Images</strong> : Photos, captures d'écran, graphiques et diagrammes (.PNG, .JPG, .JPEG)  </li>
+<li><strong>Documents</strong> : Factures, CV, formulaires (.PDF)</li>
+</ul>
+<p>Cette capacité ouvre des scénarios puissants comme l'analyse de CV, le traitement de factures ou l'extraction de données de formulaires.</p>
+<h3 id="pourquoi-les-multimodales-sont-importantes-pour-vos-flux-de-travail">Pourquoi les multimodales sont importantes pour vos flux de travail<a class="headerlink" href="#pourquoi-les-multimodales-sont-importantes-pour-vos-flux-de-travail" title="Permanent link">&para;</a></h3>
+<p>Chaque jour, votre organisation fait face à ces défis de traitement de documents :</p>
+<ul>
+<li><strong>Tri des CV</strong> : Lire manuellement des centaines de CV prend beaucoup de temps</li>
+<li><strong>Traitement des factures</strong> : Extraire les détails des fournisseurs, les montants et les dates à partir de formats de documents variés</li>
+<li><strong>Analyse de formulaires</strong> : Convertir des formulaires papier en données numériques</li>
+</ul>
+<p>Les invites multimodales éliminent ces goulots d'étranglement en combinant la compréhension du langage par l'IA avec des capacités d'analyse visuelle. Cela donne à votre IA la capacité de traiter les documents aussi efficacement que le texte.</p>
+<h3 id="scenarios-courants-en-entreprise">Scénarios courants en entreprise<a class="headerlink" href="#scenarios-courants-en-entreprise" title="Permanent link">&para;</a></h3>
+<p>Voici quelques exemples d'application des invites multimodales :</p>
+<table>
+<thead>
+<tr>
+<th>Scénario</th>
+<th>Tâche</th>
+<th>Champs de sortie exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tri des CV</strong></td>
+<td>Extraire le nom du candidat, l'email, le téléphone, le poste actuel, les années d'expérience et les compétences clés.</td>
+<td>Nom du candidat, Adresse email, Numéro de téléphone, Poste actuel, Années d'expérience, Compétences clés</td>
+</tr>
+<tr>
+<td><strong>Traitement des factures</strong></td>
+<td>Extraire les informations du fournisseur, la date de la facture, le montant total et les articles de cette facture.</td>
+<td>Nom du fournisseur, Date de la facture, Montant total, Articles de la facture</td>
+</tr>
+<tr>
+<td><strong>Analyse de formulaires</strong></td>
+<td>Analyser ce formulaire de candidature et extraire tous les champs remplis.</td>
+<td>Nom du champ (ex. : Nom du candidat), Valeur saisie (ex. : John Doe), ...</td>
+</tr>
+<tr>
+<td><strong>Vérification de documents d'identité</strong></td>
+<td>Extraire le nom, le numéro d'identification, la date d'expiration et l'adresse de ce document d'identité. Vérifier que tout le texte est clairement lisible et signaler les sections peu claires.</td>
+<td>Nom complet, Numéro d'identification, Date d'expiration, Adresse, Signalement des sections peu claires</td>
+</tr>
+</tbody>
+</table>
+<h2 id="selection-de-modeles-dans-ai-builder">⚙️ Sélection de modèles dans AI Builder<a class="headerlink" href="#selection-de-modeles-dans-ai-builder" title="Permanent link">&para;</a></h2>
+<p>AI Builder propose différents modèles optimisés pour des tâches spécifiques. Comprendre quel modèle utiliser est crucial pour réussir.</p>
+<div class="admonition note">
+<p class="admonition-title">Exact à partir de septembre 2025</p>
+<p>Les modèles AI Builder sont mis à jour régulièrement, alors consultez la dernière <a href="https://learn.microsoft.com/ai-builder/prompt-modelsettings">documentation des paramètres de modèles AI Builder</a> pour connaître la disponibilité actuelle des modèles.</p>
+</div>
+<h3 id="comparaison-des-modeles">Comparaison des modèles<a class="headerlink" href="#comparaison-des-modeles" title="Permanent link">&para;</a></h3>
+<p>Tous les modèles suivants prennent en charge la vision et le traitement des documents.</p>
+<table>
+<thead>
+<tr>
+<th>Modèle</th>
+<th>💰Coût</th>
+<th>⚡Vitesse</th>
+<th>✅Idéal pour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GPT-4.1 mini</strong></td>
+<td>Basique (le plus économique)</td>
+<td>Rapide</td>
+<td>Traitement standard des documents, résumés, projets économiques</td>
+</tr>
+<tr>
+<td><strong>GPT-4.1</strong></td>
+<td>Standard</td>
+<td>Modéré</td>
+<td>Documents complexes, création de contenu avancée, besoins de haute précision</td>
+</tr>
+<tr>
+<td><strong>o3</strong></td>
+<td>Premium</td>
+<td>Lent (raisonnement prioritaire)</td>
+<td>Analyse de données, réflexion critique, résolution de problèmes sophistiquée</td>
+</tr>
+<tr>
+<td><strong>GPT-5 chat</strong></td>
+<td>Standard</td>
+<td>Amélioré</td>
+<td>Compréhension des documents la plus récente, précision de réponse maximale</td>
+</tr>
+<tr>
+<td><strong>GPT-5 reasoning</strong></td>
+<td>Premium</td>
+<td>Lent (analyse complexe)</td>
+<td>Analyse la plus sophistiquée, planification, raisonnement avancé</td>
+</tr>
+</tbody>
+</table>
+<h3 id="explication-des-parametres-de-temperature">Explication des paramètres de température<a class="headerlink" href="#explication-des-parametres-de-temperature" title="Permanent link">&para;</a></h3>
+<p>La température contrôle à quel point les réponses de l'IA sont créatives ou prévisibles :</p>
+<ul>
+<li><strong>Température 0</strong> : Résultats les plus prévisibles et cohérents (idéal pour l'extraction de données)</li>
+<li><strong>Température 0.5</strong> : Équilibre entre créativité et cohérence  </li>
+<li><strong>Température 1</strong> : Créativité maximale (idéal pour la génération de contenu)</li>
+</ul>
+<p>Pour l'analyse de documents, utilisez <strong>température 0</strong> pour garantir une extraction de données cohérente.</p>
+<h2 id="formats-de-sortie-texte-vs-json">📊 Formats de sortie : Texte vs JSON<a class="headerlink" href="#formats-de-sortie-texte-vs-json" title="Permanent link">&para;</a></h2>
+<p>Choisir le bon format de sortie est essentiel pour le traitement en aval.</p>
+<h3 id="quand-utiliser-une-sortie-texte">Quand utiliser une sortie texte<a class="headerlink" href="#quand-utiliser-une-sortie-texte" title="Permanent link">&para;</a></h3>
+<p>La sortie texte fonctionne bien pour :</p>
+<ul>
+<li>Résumés lisibles par l'humain</li>
+<li>Classifications simples</li>
+<li>Contenu qui n'a pas besoin de traitement structuré</li>
+</ul>
+<h3 id="quand-utiliser-une-sortie-json">Quand utiliser une sortie JSON<a class="headerlink" href="#quand-utiliser-une-sortie-json" title="Permanent link">&para;</a></h3>
+<p>La sortie JSON est essentielle pour :</p>
+<ul>
+<li>Extraction de données structurées</li>
+<li>Intégration avec des bases de données ou systèmes</li>
+<li>Traitement des flux Power Automate</li>
+<li>Cartographie cohérente des champs</li>
+</ul>
+<h3 id="meilleures-pratiques-pour-json">Meilleures pratiques pour JSON<a class="headerlink" href="#meilleures-pratiques-pour-json" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Définir des noms de champs clairs</strong> : Utilisez des noms descriptifs et cohérents</li>
+<li><strong>Fournir des exemples</strong> : Incluez des exemples de sortie et de valeurs pour chaque champ</li>
+<li><strong>Spécifier les types de données</strong> : Incluez des exemples pour les dates, les nombres et le texte</li>
+<li><strong>Gérer les données manquantes</strong> : Prévoir des valeurs nulles ou vides</li>
+<li><strong>Valider la structure</strong> : Tester avec différents types de documents</li>
+</ol>
+<h3 id="considerations-sur-la-qualite-des-documents">Considérations sur la qualité des documents<a class="headerlink" href="#considerations-sur-la-qualite-des-documents" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Résolution</strong> : Assurez-vous que les images sont claires et lisibles</li>
+<li><strong>Orientation</strong> : Faites pivoter les documents dans la bonne orientation avant le traitement</li>
+<li><strong>Compatibilité des formats</strong> : Testez avec vos types de documents spécifiques (PDF, JPG, PNG)</li>
+<li><strong>Limites de taille</strong> : Soyez conscient des restrictions de taille de fichier dans votre environnement</li>
+</ul>
+<h3 id="optimisation-des-performances">Optimisation des performances<a class="headerlink" href="#optimisation-des-performances" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Choisir les modèles appropriés</strong> : Mettez à niveau les modèles uniquement si nécessaire</li>
+<li><strong>Optimiser les invites</strong> : Souvent, des instructions plus courtes et plus claires donnent de meilleurs résultats</li>
+<li><strong>Gestion des erreurs</strong> : Prévoir des documents qui ne peuvent pas être traités</li>
+<li><strong>Surveiller les coûts</strong> : Les différents modèles consomment des quantités différentes de crédits AI Builder</li>
+</ul>
+<h2 id="laboratoire-7-construire-un-systeme-dextraction-de-cv">🧪 Laboratoire 7 : Construire un système d'extraction de CV<a class="headerlink" href="#laboratoire-7-construire-un-systeme-dextraction-de-cv" title="Permanent link">&para;</a></h2>
+<p>Il est temps de mettre en pratique vos connaissances en multimodalité. Vous allez construire un système complet d'extraction de CV qui analyse les documents des candidats et les transforme en données structurées pour votre flux de recrutement.</p>
+<h3 id="prerequis-pour-completer-cette-mission">Prérequis pour compléter cette mission<a class="headerlink" href="#prerequis-pour-completer-cette-mission" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Vous devez <strong>soit</strong> :</p>
+<ul>
+<li><strong>Avoir terminé la Mission 06</strong> et avoir votre système de recrutement multi-agents prêt, <strong>OU</strong></li>
+<li><strong>Importer la solution de démarrage de la Mission 07</strong> si vous commencez à zéro ou avez besoin de rattraper votre retard. <a href="https://aka.ms/agent-academy">Télécharger la solution de démarrage de la Mission 07</a></li>
+</ul>
+</li>
+<li>
+<p>Documents de CV d'exemple disponibles sur <a href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/operative/sample-data/resumes&amp;filename=operative_sampledata">Test Resumes</a></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Importation de solution et données d'exemple</p>
+<p>Si vous utilisez la solution de démarrage, consultez <a href="../01-get-started/">Mission 01</a> pour des instructions détaillées sur l'importation des solutions et des données d'exemple dans votre environnement.</p>
+</div>
+<h3 id="71-creer-une-invite-multimodale">7.1 Créer une invite multimodale<a class="headerlink" href="#71-creer-une-invite-multimodale" title="Permanent link">&para;</a></h3>
+<p>Votre premier objectif : créer une invite capable d'analyser des documents de CV et d'extraire des données structurées.</p>
+<ol>
+<li>
+<p>Connectez-vous à <a href="https://copilotstudio.microsoft.com">Copilot Studio</a> et sélectionnez <strong>Outils</strong> dans la navigation à gauche.</p>
+</li>
+<li>
+<p>Sélectionnez <strong>+ Nouvel outil</strong>, puis sélectionnez <strong>Invite</strong>.<br />
+<img alt="Nouvelle invite" src="../../../../../translated_images/7-new-prompt.8041acd54e3aecfca0c277aba88b9a2a923482a4b45ba65dcadf9296fac7c458.fr.png" /></p>
+</li>
+<li>
+<p><strong>Renommez</strong> l'invite du nom par défaut basé sur l'horodatage (ex. : <em>Invite personnalisée 09/04/2025, 16:59:11</em>) en <code>Résumé du CV</code>.</p>
+</li>
+<li>
+<p>Dans le champ Instructions, ajoutez cette invite :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are tasked with extracting key candidate information from a resume and cover letter to facilitate matching with open job roles and creating a summary for application review.
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Instructions:
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>1. Extract Candidate Details:
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    - Identify and extract the candidate’s full name.
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    - Extract contact information, specifically the email address.
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2. Create Candidate Summary:
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    - Summarize the candidate’s profile as multiline text (max 2000 characters) with the following sections:
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        - Candidate name
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        - Role(s) applied for if present
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        - Contact and location
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        - One-paragraph summary
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        - Experience snapshot (last 2–3 roles with outcomes)
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        - Key projects (1–3 with metrics)
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        - Education and certifications
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        - Top skills (Top 10)
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        - Availability and work authorization
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>Guidelines:
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>- Extract information only from the provided resume and cover letter documents.
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>- Ensure accuracy in identifying all details such as contact details and skills.
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>- The summary should be concise but informative, suitable for quick application review.
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>Resume: /document
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>CoverLetter: /text
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Utilisez l'assistance Copilot</p>
+<p>Vous pouvez utiliser "Commencer avec Copilot" pour générer votre invite en langage naturel. Essayez de demander à Copilot de créer une invite pour résumer un CV !</p>
+</div>
+</li>
+<li>
+<p><strong>Configurez</strong> les paramètres d'entrée :</p>
+<table>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Type</th>
+<th>Nom</th>
+<th>Données d'exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CV</td>
+<td>Image ou document</td>
+<td>CV</td>
+<td>Téléchargez un CV d'exemple depuis le dossier de données de test</td>
+</tr>
+<tr>
+<td>Lettre de motivation</td>
+<td>Texte</td>
+<td>LettreDeMotivation</td>
+<td>Voici un CV !</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Sélectionnez <strong>Tester</strong> pour voir la sortie texte initiale de votre invite.<br />
+<img alt="Configurer les paramètres et tester" src="../../../../../translated_images/7-prompt-parameters.fe63dae637c278e1c7dd1413749ff72bc1361d382162c5a58ebc9ff721f06821.fr.png" /></p>
+</li>
+</ol>
+<h3 id="72-configurer-la-sortie-json">7.2 Configurer la sortie JSON<a class="headerlink" href="#72-configurer-la-sortie-json" title="Permanent link">&para;</a></h3>
+<p>Vous allez maintenant convertir l'invite pour produire des données structurées au format JSON au lieu de texte brut.</p>
+<ol>
+<li>
+<p>Ajoutez cette spécification de format JSON à la fin des instructions de votre invite :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Output Format:
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Provide the output in valid JSON format with the following structure:
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>{
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    &quot;CandidateName&quot;: &quot;string&quot;,
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    &quot;Email&quot;: &quot;string&quot;,
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    &quot;Summary&quot;: &quot;string max 2000 characters&quot;,
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    &quot;Skills&quot;: [ {&quot;item&quot;: &quot;Skill 1&quot;}, {&quot;item&quot;: &quot;Skill 2&quot;}],
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    &quot;Experience&quot;: [ {&quot;item&quot;: &quot;Experience 1&quot;}, {&quot;item&quot;: &quot;Experience 2&quot;}],
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p>Changez le paramètre <strong>Sortie</strong> de "Texte" à <strong>JSON</strong>.</p>
+</li>
+<li>
+<p>Sélectionnez <strong>Tester</strong> à nouveau pour vérifier que la sortie est maintenant formatée en JSON.<br />
+<img alt="Configurer l'invite en JSON" src="../../../../../translated_images/7-json-prompt.89afee0b09beedd348dfefcb54ec1aa328abe7f94b72c6c26a363f686652d712.fr.png" /></p>
+</li>
+<li>
+<p><strong>Optionnel :</strong> Expérimentez avec différents modèles d'IA pour voir comment les sorties varient, puis revenez au modèle par défaut.</p>
+</li>
+<li>
+<p>Sélectionnez <strong>Enregistrer</strong> pour créer l'invite.</p>
+</li>
+<li>
+<p>Dans la boîte de dialogue <strong>Configurer pour utilisation dans Agent</strong>, sélectionnez <strong>Annuler</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Pourquoi nous n'ajoutons pas cela comme un outil pour l'instant</p>
+<p>Vous utiliserez cette invite dans un flux d'agent plutôt que directement comme un outil, ce qui vous donne plus de contrôle sur le flux de traitement des données.</p>
+</div>
+</li>
+</ol>
+<h3 id="73-ajouter-linvite-a-un-flux-dagent">7.3 Ajouter l'invite à un flux d'agent<a class="headerlink" href="#73-ajouter-linvite-a-un-flux-dagent" title="Permanent link">&para;</a></h3>
+<p>Vous allez créer un flux d'agent qui utilise votre invite pour traiter les CV stockés dans Dataverse.</p>
+<div class="admonition tip">
+<p class="admonition-title">Expressions de flux d'agent</p>
+<p>Il est très important de suivre les instructions pour nommer vos nœuds et entrer les expressions exactement, car les expressions se réfèrent aux nœuds précédents en utilisant leur nom ! Consultez la <a href="../../recruit/09-add-an-agent-flow/#you-mentioned-expressions-what-are-expressions">mission Flux d'agent dans Recrutement</a> pour un rappel rapide !</p>
+</div>
+<ol>
+<li>
+<p>Accédez à votre <strong>Agent de recrutement</strong> dans Copilot Studio</p>
+</li>
+<li>
+<p>Sélectionnez l'onglet <strong>Agents</strong>, puis sélectionnez le sous-agent <strong>Agent de réception des candidatures</strong></p>
+</li>
+<li>
+<p>Dans le panneau <strong>Outils</strong>, sélectionnez <strong>+ Ajouter</strong> → <strong>+ Nouvel outil</strong> → <strong>Flux d'agent</strong></p>
+</li>
+<li>
+<p>Sélectionnez le nœud Lorsque un agent appelle le flux, utilisez <strong>+ Ajouter une entrée</strong> pour ajouter le paramètre suivant :</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Nom</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Texte</td>
+<td>NumeroCV</td>
+<td>Assurez-vous d'utiliser [NumeroCV]. Cela doit toujours commencer par la lettre R</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Sélectionnez l'icône <strong>+</strong> Insérer une action sous le premier nœud, recherchez <strong>Dataverse</strong>, sélectionnez <strong>Voir plus</strong>, puis localisez l'action <strong>Lister les lignes</strong></p>
+</li>
+<li>
+<p>Sélectionnez les <strong>trois points (...)</strong> sur le nœud Lister les lignes, et sélectionnez <strong>Renommer</strong> en <code>Obtenir l'enregistrement du CV</code>, puis définissez les paramètres suivants :</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Comment définir</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nom de la table</strong></td>
+<td>Sélectionner</td>
+<td>CV</td>
+</tr>
+<tr>
+<td><strong>Filtrer les lignes</strong></td>
+<td>Données dynamiques (icône éclair)</td>
+<td><code>ppa_resumenumber eq 'NumeroCV'</code> Remplacez <strong>NumeroCV</strong> par <strong>Lorsque un agent appelle le flux</strong> → <strong>NumeroCV</strong></td>
+</tr>
+<tr>
+<td><strong>Nombre de lignes</strong></td>
+<td>Entrer</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Optimisez ces requêtes !</p>
+<p>Lorsque vous utilisez cette technique en production, vous devriez toujours limiter les colonnes sélectionnées uniquement à celles requises par le flux d'agent.</p>
+</div>
+<p><img alt="Obtenir l'enregistrement du CV" src="../../../../../translated_images/7-summarize-resume-1.4b3b05b2bbab523feaf98c63502e7916c800c61db2d8a2be09b4624e0d83eb71.fr.png" /></p>
+</li>
+<li>
+<p>Sélectionnez l'icône <strong>+</strong> Insérer une action sous le nœud Obtenir l'enregistrement du CV, recherchez <strong>Dataverse</strong>, sélectionnez <strong>Voir plus</strong>, puis localisez l'action <strong>Télécharger un fichier ou une image</strong>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Choisissez la bonne action !</p>
+<p>Assurez-vous de ne pas sélectionner l'action qui se termine par "de l'environnement sélectionné"</p>
+</div>
+</li>
+<li>
+<p>Comme précédemment, renommez l'action <code>Télécharger le CV</code>, puis définissez les paramètres suivants :</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Comment définir</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nom de la table</strong></td>
+<td>Sélectionner</td>
+<td>CV</td>
+</tr>
+<tr>
+<td><strong>ID de la ligne</strong></td>
+<td>Expression (icône fx)</td>
+<td><code>first(body('Obtenir_l_enregistrement_du_CV')?['value'])?['ppa_resumeid']</code></td>
+</tr>
+<tr>
+<td><strong>Nom de la colonne</strong></td>
+<td>Sélectionner</td>
+<td>PDF du CV</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Télécharger le CV" src="../../../../../translated_images/7-summarize-resume-2.c56d74be42ed30a6f3082ef84b3b81ab5286f014c09d995ce32bbfe9af96df42.fr.png" /></p>
+</li>
+<li>
+<p>Maintenant, sélectionnez l'icône <strong>+</strong> Insérer une action sous Télécharger le CV, sous <strong>Capacités IA</strong>, sélectionnez <strong>Exécuter une invite</strong>,</p>
+</li>
+<li>
+<p>Renommez l'action en <code>Résumé du CV</code> et définissez les paramètres suivants :</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Comment définir</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Invite</strong></td>
+<td>Sélectionner</td>
+<td>Résumer le CV</td>
+</tr>
+<tr>
+<td><strong>Lettre de motivation</strong></td>
+<td>Expression (icône fx)</td>
+<td><code>first(body('Get_Resume_Record')?['value'])?['ppa_coverletter']</code></td>
+</tr>
+<tr>
+<td><strong>CV</strong></td>
+<td>Données dynamiques (icône éclair)</td>
+<td>Télécharger le CV → Contenu du fichier ou de l'image</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Invite pour résumer le CV" src="../../../../../translated_images/7-summarize-resume-3.c1656de643c50805ff6972e2891db16776cbdc433ddb09778819836a60204375.fr.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Paramètres de l'invite</p>
+<p>Remarquez que les paramètres que vous remplissez sont les mêmes que ceux que vous avez configurés comme paramètres d'entrée lors de la création de votre invite.</p>
+</div>
+<h3 id="74-creer-un-enregistrement-de-candidat">7.4 Créer un enregistrement de candidat<a class="headerlink" href="#74-creer-un-enregistrement-de-candidat" title="Permanent link">&para;</a></h3>
+<p>Ensuite, vous devez utiliser les informations fournies par l'invite pour créer un nouvel enregistrement de candidat s'il n'existe pas déjà.</p>
+<ol>
+<li>
+<p>Sélectionnez l'icône <strong>+</strong> Insérer une action sous le nœud Résumer le CV, recherchez <strong>Dataverse</strong>, sélectionnez <strong>Voir plus</strong>, puis localisez l'action <strong>Lister les lignes</strong>.</p>
+</li>
+<li>
+<p>Renommez le nœud en <code>Get Existing Candidate</code>, puis configurez les paramètres suivants :</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Comment configurer</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nom de la table</strong></td>
+<td>Sélectionner</td>
+<td>Candidats</td>
+</tr>
+<tr>
+<td><strong>Filtrer les lignes</strong></td>
+<td>Données dynamiques (icône éclair)</td>
+<td><code>ppa_email eq 'Email'</code>  <strong>Remplacer</strong> <code>Email</code> par <strong>Résumer le CV → Email</strong></td>
+</tr>
+<tr>
+<td><strong>Nombre de lignes</strong></td>
+<td>Entrer</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Obtenir un candidat existant" src="../../../../../translated_images/7-summarize-resume-4.c95d900bad4e6e75ad348f4385f69a9db37f76f3b1bb90813157643814a3f6a8.fr.png" /></p>
+<ol>
+<li>
+<p>Sélectionnez l'icône <strong>+</strong> Insérer une action sous le nœud Obtenir un candidat existant, recherchez <strong>Contrôle</strong>, sélectionnez <strong>Voir plus</strong>, puis localisez l'action <strong>Condition</strong>.</p>
+</li>
+<li>
+<p>Dans les propriétés de la condition, configurez la condition suivante :</p>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Opérateur</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Expression (icône fx) : <code>length(outputs('Get_Existing_Candidate')?['body/value'])</code></td>
+<td>est égal à</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Condition pour obtenir un candidat existant" src="../../../../../translated_images/7-summarize-resume-5.1a83c05153ac5aa16b8c3fec10989628f64f893fc7c6bfed8b4ec16caf6b7a6b.fr.png" /></p>
+<ol>
+<li>
+<p>Sélectionnez l'icône <strong>+</strong> Insérer une action dans la branche <strong>True</strong>, recherchez <strong>Dataverse</strong>, sélectionnez <strong>Voir plus</strong>, puis localisez l'action <strong>Ajouter une nouvelle ligne</strong>.</p>
+</li>
+<li>
+<p>Renommez le nœud en <code>Add a New Candidate</code>, puis configurez les paramètres suivants :</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Comment configurer</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nom de la table</strong></td>
+<td>Sélectionner</td>
+<td>Candidats</td>
+</tr>
+<tr>
+<td><strong>Nom du candidat</strong></td>
+<td>Données dynamiques (icône éclair)</td>
+<td>Résumer le CV → <code>CandidateName</code></td>
+</tr>
+<tr>
+<td><strong>Email</strong></td>
+<td>Données dynamiques (icône éclair)</td>
+<td>Résumer le CV → <code>Email</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Ajouter un nouveau candidat" src="../../../../../translated_images/7-summarize-resume-6.321bee96056d21981c466a87456aea1bafc394a492cc4b814b97ba2ee6b758fa.fr.png" /></p>
+<h3 id="75-mettre-a-jour-le-cv-et-configurer-les-sorties-du-flux">7.5 Mettre à jour le CV et configurer les sorties du flux<a class="headerlink" href="#75-mettre-a-jour-le-cv-et-configurer-les-sorties-du-flux" title="Permanent link">&para;</a></h3>
+<p>Complétez le flux en mettant à jour l'enregistrement du CV et en configurant les données à retourner à votre agent.</p>
+<ol>
+<li>
+<p>Sélectionnez l'icône <strong>+</strong> Insérer une action sous la condition, recherchez <strong>Dataverse</strong>, sélectionnez <strong>Voir plus</strong>, puis localisez l'action <strong>Mettre à jour une ligne</strong>.</p>
+</li>
+<li>
+<p>Sélectionnez le titre pour renommer le nœud en <code>Update Resume</code>, sélectionnez <strong>Afficher tout</strong>, puis configurez les paramètres suivants :</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Comment configurer</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nom de la table</strong></td>
+<td>Sélectionner</td>
+<td>CVs</td>
+</tr>
+<tr>
+<td><strong>ID de la ligne</strong></td>
+<td>Expression (icône fx)</td>
+<td><code>first(body('Get_Resume_Record')?['value'])?['ppa_resumeid']</code></td>
+</tr>
+<tr>
+<td><strong>Résumé</strong></td>
+<td>Données dynamiques (icône éclair)</td>
+<td>Résumer le CV → Texte</td>
+</tr>
+<tr>
+<td><strong>Candidat (Candidats)</strong></td>
+<td>Expression (icône fx)</td>
+<td><code>if(equals(length(outputs('Get_Existing_Candidate')?['body/value']), 1), first(outputs('Get_Existing_Candidate')?['body/value'])?['ppa_candidateid'], outputs('Add_a_New_Candidate')?['body/ppa_candidateid'])</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Mettre à jour le CV" src="../../../../../translated_images/7-summarize-resume-7.0ef51db1ebbf837bae11c0e0bdd8c6e8296d528d500bc729c43660d09967ce57.fr.png" /></p>
+<ol>
+<li>
+<p>Sélectionnez le nœud <strong>Répondre à l'agent</strong>, puis utilisez <strong>+ Ajouter une sortie</strong> pour configurer :</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Nom</th>
+<th>Comment configurer</th>
+<th>Valeur</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Texte</td>
+<td><code>CandidateName</code></td>
+<td>Données dynamiques (icône éclair)</td>
+<td>Résumer le CV → Voir plus → CandidateName</td>
+<td>Le [Nom du candidat] indiqué dans le CV</td>
+</tr>
+<tr>
+<td>Texte</td>
+<td><code>CandidateEmail</code></td>
+<td>Données dynamiques (icône éclair)</td>
+<td>Résumer le CV → Voir plus → Email</td>
+<td>L'[Email du candidat] indiqué dans le CV</td>
+</tr>
+<tr>
+<td>Texte</td>
+<td><code>CandidateNumber</code></td>
+<td>Expression (icône fx)</td>
+<td><code>concat('ppa_candidates/', if(equals(length(outputs('Get_Existing_Candidate')?['body/value']), 1), first(outputs('Get_Existing_Candidate')?['body/value'])?['ppa_candidateid'], outputs('Add_a_New_Candidate')?['body/ppa_candidateid']) )</code></td>
+<td>Le [Numéro du candidat] du nouveau ou existant candidat</td>
+</tr>
+<tr>
+<td>Texte</td>
+<td><code>ResumeSummary</code></td>
+<td>Données dynamiques (icône éclair)</td>
+<td>Résumer le CV → Voir plus → body/responsev2/predictionOutput/structuredOutput</td>
+<td>Le résumé du CV et les détails au format JSON</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Répondre à l'agent" src="../../../../../translated_images/7-summarize-resume-8.72c4649f7536863657260438088577b04272ab28bd788c65dabbca1473cd6b5e.fr.png" /></p>
+<ol>
+<li>
+<p>Sélectionnez <strong>Enregistrer le brouillon</strong> en haut à droite. Votre flux d'agent devrait ressembler à ceci :<br />
+<img alt="Flux d'agent Résumer le CV" src="../../../../../translated_images/7-summarize-resume-9.491c36275650a2adba1acafcb386970a9c379ab7dad9cc129e27cbbc96c73dd3.fr.png" /></p>
+</li>
+<li>
+<p>Sélectionnez l'onglet <strong>Aperçu</strong>, puis <strong>Modifier</strong> dans le panneau <strong>Détails</strong>.</p>
+<ol>
+<li><strong>Nom du flux</strong> : <code>Summarize Resume</code></li>
+<li>
+<p><strong>Description</strong> :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Summarize an existing Resume stored in Dataverse using a [ResumeNumber] as input, return the [CandidateNumber], and resume summary JSON
+</span></code></pre></div>
+</li>
+</ol>
+</li>
+<li>
+<p>Sélectionnez <strong>Enregistrer</strong>.</p>
+</li>
+<li>
+<p>Revenez à l'onglet <strong>Concepteur</strong>, puis sélectionnez <strong>Publier</strong>.</p>
+</li>
+</ol>
+<h3 id="76-connecter-le-flux-a-votre-agent">7.6 Connecter le flux à votre agent<a class="headerlink" href="#76-connecter-le-flux-a-votre-agent" title="Permanent link">&para;</a></h3>
+<p>Ajoutez maintenant le flux comme outil et configurez votre agent pour l'utiliser.</p>
+<ol>
+<li>
+<p>Ouvrez votre <strong>Agent de recrutement</strong> dans Copilot Studio.</p>
+</li>
+<li>
+<p>Sélectionnez l'onglet <strong>Agents</strong>, puis ouvrez l'<strong>Agent de réception des candidatures</strong>.</p>
+</li>
+<li>
+<p>Sélectionnez le panneau <strong>Outils</strong>, puis <strong>+ Ajouter un outil</strong> -&gt; <strong>Flux</strong> -&gt; <strong>Summarize Resume</strong> <strong>(Agent Flow)</strong>.</p>
+</li>
+<li>
+<p>Sélectionnez <strong>Ajouter et configurer</strong>.</p>
+</li>
+<li>
+<p>Configurez les paramètres de l'outil comme suit :</p>
+<table>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Résumer un CV existant stocké dans Dataverse en utilisant un [Numéro de CV] comme entrée, retourner le [Numéro du candidat] et le résumé du CV au format JSON</td>
+</tr>
+<tr>
+<td><strong>Quand cet outil peut être utilisé</strong></td>
+<td>Seulement lorsqu'il est référencé par des sujets ou des agents</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Sélectionnez <strong>Enregistrer</strong>.<br />
+<img alt="Configurer l'outil Résumer le CV" src="../../../../../translated_images/7-configure-summarize-resume-tool.f301e328142193d27b0ab8dea68dcd130e783e897bf37c94f952594d9eca8071.fr.png" /></p>
+</li>
+<li>
+<p>Si vous sélectionnez Outils dans l'Agent de recrutement, vous verrez maintenant que nos deux outils sont utilisables par l'<strong>Agent de réception des candidatures</strong>.<br />
+<img alt="Outils de l'agent" src="../../../../../translated_images/7-agent-tools.5ab82b09501386a00351a8ef3149a0f177360bca0aa70a7c05cb273289247c61.fr.png" /></p>
+</li>
+<li>
+<p>Accédez aux instructions de l'agent <strong>Application Intake Child</strong>, et modifiez l'étape <strong>Post-Upload</strong> comme suit :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2. Post-Upload Processing  
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    - After uploading, be sure to also output the [ResumeNumber] in all messages
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    - Pass [ResumeNumber] to /Summarize Resume  - Be sure to use the correct value that will start with the letter R.
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    - Be sure to also output the [CandidateNumber] in all messages
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    - Use the [ResumeSummary] to output a summary of the processed Resume and candidate
+</span></code></pre></div>
+<p>Remplacez <code>/Summarize Resume</code> en insérant une référence au <strong>flux d'agent Résumer le CV</strong> en tapant une barre oblique (<code>/</code>) ou en sélectionnant <code>/Summarize</code> pour insérer la référence.<br />
+<img alt="Mettre à jour les instructions" src="../../../../../translated_images/7-summarize-instructions-update.b3620bc94c8de06ee09eb5804de4f9ac7bfce8458f87fe4bee41cb51abe7f48c.fr.png" /></p>
+</li>
+<li>
+<p>Sélectionnez <strong>Enregistrer</strong>.</p>
+</li>
+</ol>
+<h3 id="77-tester-votre-agent">7.7 Tester votre agent<a class="headerlink" href="#77-tester-votre-agent" title="Permanent link">&para;</a></h3>
+<p>Testez votre système multimodal complet pour vous assurer que tout fonctionne correctement.</p>
+<ol>
+<li>
+<p><strong>Commencez les tests</strong> :</p>
+<ul>
+<li>Sélectionnez <strong>Tester</strong> pour ouvrir le panneau de test.</li>
+<li>
+<p>Tapez : <code>Voici un CV de candidat</code>.</p>
+</li>
+<li>
+<p>Téléchargez l'un des CV d'exemple depuis <a href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/operative/sample-data/resumes&amp;filename=operative_sampledata">Test Resumes</a>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Vérifiez les résultats</strong> :</p>
+<ul>
+<li>Une fois le message et le CV envoyés, vérifiez que vous recevez un Numéro de CV (format : R#####).</li>
+<li>Vérifiez que vous obtenez un Numéro de candidat et un résumé.</li>
+<li>Utilisez la carte d'activité pour voir à la fois l'outil de téléchargement de CV et l'outil Résumer le CV en action, et les sorties de l'invite de résumé reçues par l'agent :<br />
+<img alt="Résultats des tests" src="../../../../../translated_images/7-test-result.dcbb6c277666ab7d06d303c3facfb5ad838a33ec6b7f0b92b90f9faddb9bb6bc.fr.png" /></li>
+</ul>
+</li>
+<li>
+<p><strong>Vérifiez la persistance des données</strong> :</p>
+<ul>
+<li>Accédez à <a href="https://make.powerapps.com">Power Apps</a>.</li>
+<li>Ouvrez <strong>Apps</strong> → <strong>Hiring Hub</strong> → <strong>Jouer</strong>.</li>
+<li>Allez dans <strong>CVs</strong> pour vérifier que le CV a été téléchargé et traité. Il devrait contenir des informations résumées et un enregistrement de candidat associé.</li>
+<li>Vérifiez <strong>Candidats</strong> pour voir les informations extraites du candidat.<br />
+<img alt="CV avec candidat et résumé" src="../../../../../translated_images/7-resume-in-dataverse.cbe85a3f889c989f32ef10ac130e6decfed3d7744fd31f48df8a841cebae229b.fr.png" /></li>
+<li>Lorsque vous exécutez à nouveau le processus, il devrait utiliser le candidat existant (correspondant à l'email extrait du CV) au lieu d'en créer un nouveau.</li>
+</ul>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Dépannage</p>
+<ul>
+<li><strong>Le CV ne se traite pas</strong> : Assurez-vous que le fichier est un PDF et respecte les limites de taille.</li>
+<li><strong>Aucun candidat créé</strong> : Vérifiez que l'email a été correctement extrait du CV.</li>
+<li><strong>Erreurs de format JSON</strong> : Assurez-vous que les instructions de votre invite incluent la structure JSON exacte.</li>
+<li><strong>Erreurs de flux</strong> : Vérifiez que toutes les connexions Dataverse et expressions sont correctement configurées.</li>
+</ul>
+</div>
+<h3 id="pret-pour-la-production">Prêt pour la production<a class="headerlink" href="#pret-pour-la-production" title="Permanent link">&para;</a></h3>
+<p>Bien que cela ne fasse pas partie de cette mission, pour rendre ce flux d'agent prêt pour la production, vous pourriez envisager les éléments suivants :</p>
+<ol>
+<li><strong>Gestion des erreurs</strong> - Si le Numéro de CV n'a pas été trouvé ou si l'invite n'a pas réussi à analyser le document, une gestion des erreurs devrait être ajoutée pour retourner une erreur claire à l'agent.</li>
+<li><strong>Mise à jour des candidats existants</strong> - Le candidat est trouvé en utilisant l'email, puis le nom pourrait être mis à jour pour correspondre à celui du CV.</li>
+<li><strong>Séparation de la synthèse du CV et de la création du candidat</strong> - Cette fonctionnalité pourrait être divisée en flux d'agent plus petits pour les rendre plus faciles à maintenir, puis l'agent pourrait recevoir des instructions pour les utiliser successivement.</li>
+</ol>
+<h2 id="mission-accomplie">🎉 Mission accomplie<a class="headerlink" href="#mission-accomplie" title="Permanent link">&para;</a></h2>
+<p>Excellent travail, Opératif ! <strong>Reconnaissance des CV documentés</strong> est maintenant terminée. Vous avez maîtrisé les invites multimodales et pouvez désormais extraire des données structurées de n'importe quel document avec précision.</p>
+<p>Voici ce que vous avez accompli dans cette mission :</p>
+<p><strong>✅ Maîtrise des invites multimodales</strong><br />
+Vous comprenez maintenant ce que sont les invites multimodales et quand utiliser différents modèles d'IA pour des résultats optimaux.</p>
+<p><strong>✅ Expertise en traitement de documents</strong><br />
+Vous avez appris à configurer des invites avec des entrées d'image et de document, et à formater les sorties en JSON pour l'extraction de données structurées.</p>
+<p><strong>✅ Système d'extraction de CV</strong><br />
+Vous avez construit un système complet d'extraction de CV qui traite les documents des candidats et s'intègre à votre flux de recrutement.</p>
+<p><strong>✅ Mise en œuvre des meilleures pratiques</strong><br />
+Vous avez appliqué les meilleures pratiques pour l'ingénierie des invites avec analyse de documents et intégré des invites multimodales avec des flux d'agent.</p>
+<p><strong>✅ Base pour un traitement avancé</strong><br />
+Vos capacités d'analyse de documents améliorées sont maintenant prêtes pour les fonctionnalités avancées de mise à jour des données que nous ajouterons dans les prochaines missions.</p>
+<p>🚀 <strong>Prochaine étape :</strong> Dans la Mission 08, vous découvrirez comment améliorer vos invites avec des données en temps réel provenant de Dataverse, créant des solutions d'IA dynamiques qui s'adaptent aux exigences commerciales changeantes.</p>
+<p>⏩ <a href="../08-dataverse-grounding/">Passer à la Mission 08 : Invites améliorées avec Dataverse</a></p>
+<h2 id="ressources-tactiques">📚 Ressources tactiques<a class="headerlink" href="#ressources-tactiques" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/create-a-custom-prompt?WT.mc_id=power-power-182762-scottdurow">Créer une invite</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/add-inputs-prompt?WT.mc_id=power-182762-scottdurow">Ajouter des entrées texte, image ou document à votre invite</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/process-responses-json-output?WT.mc_id=power-182762-scottdurow">Traiter les réponses avec une sortie JSON</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/prompt-modelsettings?WT.mc_id=power-182762-scottdurow">Sélection de modèle et réglages de température</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/use-a-custom-prompt-in-flow?WT.mc_id=power-182762-scottdurow">Utiliser votre invite dans Power Automate</a></p>
+<p>📺 <a href="https://www.youtube.com/watch?v=F0fGnWrRY_I">AI Builder : Sorties JSON dans le générateur d'invites</a></p>
+<hr />
+<p><strong>Avertissement</strong> :<br />
+Ce document a été traduit à l'aide du service de traduction automatique <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction humaine professionnelle. Nous ne sommes pas responsables des malentendus ou des interprétations erronées résultant de l'utilisation de cette traduction.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

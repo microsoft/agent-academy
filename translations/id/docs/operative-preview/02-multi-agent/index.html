@@ -1,0 +1,1512 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/id/docs/operative-preview/02-multi-agent/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#misi-02-agen-terhubung" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nama-kode-operasi-symphony" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ NAMA KODE: OPERASI SYMPHONY
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ringkasan-misi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Ringkasan Misi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tujuan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Tujuan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apa-itu-agen-terhubung" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Apa itu agen terhubung?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agen-anak-vs-agen-terhubung-perbedaan-utama" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Agen anak vs agen terhubung: Perbedaan utama
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pola-arsitektur-multi-agen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Pola arsitektur multi-agen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#komunikasi-agen-dan-berbagi-konteks" class="md-nav__link">
+    <span class="md-ellipsis">
+      💬Komunikasi agen dan berbagi konteks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agen-anak-agen-penerimaan-aplikasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      ↘️Agen anak: Agen Penerimaan Aplikasi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agen-terhubung-agen-persiapan-wawancara" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔀Agen terhubung: Agen Persiapan Wawancara
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-21-menambahkan-agen-penerimaan-aplikasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪Lab 2.1: Menambahkan Agen Penerimaan Aplikasi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-22-menambahkan-agen-terhubung-interview-prep" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪Lab 2.2: Menambahkan agen terhubung Interview Prep
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misi-selesai" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 Misi Selesai
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sumber-daya-taktis" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Sumber Daya Taktis
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "4fb913dfc3bbc71506dd3602c4b8e6ed",
+  "translation_date": "2025-10-17T17:16:30+00:00",
+  "source_file": "docs/operative-preview/02-multi-agent/README.md",
+  "language_code": "id"
+}
+-->
+<h1 id="misi-02-agen-terhubung">🚨 Misi 02: Agen Terhubung<a class="headerlink" href="#misi-02-agen-terhubung" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="nama-kode-operasi-symphony">🕵️‍♂️ NAMA KODE: <code>OPERASI SYMPHONY</code><a class="headerlink" href="#nama-kode-operasi-symphony" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Waktu Operasi:</strong> <code>~45 menit</code></p>
+</blockquote>
+<h2 id="ringkasan-misi">🎯 Ringkasan Misi<a class="headerlink" href="#ringkasan-misi" title="Permanent link">&para;</a></h2>
+<p>Selamat datang kembali, Agen. Pada Misi 01, Anda telah membangun Agen Perekrutan utama Anda - sebuah dasar yang kokoh untuk mengelola alur kerja perekrutan. Namun, satu agen saja tidak cukup.</p>
+<p>Tugas Anda, jika Anda memilih untuk menerimanya, adalah <strong>Operasi Symphony</strong> - mengubah agen tunggal Anda menjadi sistem <strong>multi-agen</strong>: tim terorganisir dari agen-agen spesialis yang bekerja sama untuk menangani tantangan perekrutan yang kompleks. Anggap saja seperti meningkatkan dari operator tunggal menjadi komandan pasukan tugas khusus.</p>
+<p>Seperti orkestra simfoni di mana setiap musisi memainkan perannya dengan harmoni sempurna, Anda akan menambahkan dua spesialis penting ke Agen Perekrutan Anda yang sudah ada: Agen Penerimaan Aplikasi untuk memproses resume secara otomatis, dan Agen Persiapan Wawancara untuk membuat materi wawancara yang komprehensif. Agen-agen ini akan bekerja bersama dengan lancar di bawah pengawasan utama Anda.</p>
+<h2 id="tujuan">🔎 Tujuan<a class="headerlink" href="#tujuan" title="Permanent link">&para;</a></h2>
+<p>Dalam misi ini, Anda akan belajar:</p>
+<ol>
+<li>Kapan menggunakan <strong>agen anak</strong> vs <strong>agen terhubung</strong></li>
+<li>Cara merancang <strong>arsitektur multi-agen</strong> yang skalabel  </li>
+<li>Membuat <strong>agen anak</strong> untuk tugas-tugas fokus</li>
+<li>Membangun <strong>pola komunikasi</strong> antar agen</li>
+<li>Membuat Agen Penerimaan Aplikasi dan Agen Persiapan Wawancara</li>
+</ol>
+<h2 id="apa-itu-agen-terhubung">🧠 Apa itu agen terhubung?<a class="headerlink" href="#apa-itu-agen-terhubung" title="Permanent link">&para;</a></h2>
+<p>Di Copilot Studio, Anda tidak terbatas pada membangun agen tunggal yang monolitik. Anda dapat membuat <strong>sistem multi-agen</strong> - jaringan agen spesialis yang bekerja sama untuk menangani alur kerja yang kompleks.</p>
+<p>Anggap saja seperti organisasi dunia nyata: alih-alih satu orang melakukan segalanya, Anda memiliki spesialis yang unggul dalam tugas tertentu dan berkolaborasi saat diperlukan.</p>
+<h3 id="mengapa-sistem-multi-agen-penting">Mengapa sistem multi-agen penting<a class="headerlink" href="#mengapa-sistem-multi-agen-penting" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Skalabilitas:</strong> Setiap agen dapat dikembangkan, diuji, dan dipelihara secara independen oleh tim yang berbeda.  </li>
+<li><strong>Spesialisasi:</strong> Agen dapat fokus pada apa yang mereka lakukan terbaik. Mungkin satu untuk pemrosesan data, satu lagi untuk interaksi pengguna, satu lagi untuk pengambilan keputusan.  </li>
+<li><strong>Fleksibilitas:</strong> Anda dapat mencampur dan mencocokkan agen, menggunakannya kembali di berbagai proyek, dan mengembangkan sistem Anda secara bertahap.  </li>
+<li><strong>Kemudahan Pemeliharaan:</strong> Perubahan pada satu agen tidak harus memengaruhi agen lainnya, membuat pembaruan lebih aman dan mudah.</li>
+</ul>
+<h3 id="contoh-dunia-nyata-proses-perekrutan">Contoh dunia nyata: Proses perekrutan<a class="headerlink" href="#contoh-dunia-nyata-proses-perekrutan" title="Permanent link">&para;</a></h3>
+<p>Pertimbangkan alur kerja perekrutan kita - beberapa agen mungkin bekerja bersama dengan tanggung jawab berikut:</p>
+<ul>
+<li><strong>Penerimaan resume</strong> membutuhkan keterampilan parsing dokumen dan ekstraksi data</li>
+<li><strong>Penilaian</strong> melibatkan evaluasi resume kandidat dan mencocokkannya dengan persyaratan pekerjaan</li>
+<li><strong>Persiapan wawancara</strong> membutuhkan penalaran mendalam tentang kecocokan kandidat  </li>
+<li><strong>Komunikasi dengan kandidat</strong> membutuhkan kemampuan komunikasi yang empatik</li>
+</ul>
+<p>Daripada membangun satu agen besar yang mencoba menangani semua keterampilan yang berbeda ini, Anda dapat membuat agen spesialis untuk setiap area dan mengatur mereka bersama-sama.</p>
+<h2 id="agen-anak-vs-agen-terhubung-perbedaan-utama">🔗 Agen anak vs agen terhubung: Perbedaan utama<a class="headerlink" href="#agen-anak-vs-agen-terhubung-perbedaan-utama" title="Permanent link">&para;</a></h2>
+<p>Copilot Studio menawarkan dua cara untuk membangun sistem multi-agen, masing-masing dengan kasus penggunaan yang berbeda:</p>
+<h3 id="agen-anak">↘️ Agen anak<a class="headerlink" href="#agen-anak" title="Permanent link">&para;</a></h3>
+<p>Agen anak adalah <strong>spesialis ringan</strong> yang hidup di dalam agen utama Anda. Anggap mereka sebagai tim spesialis dalam departemen yang sama.</p>
+<h4 id="detail-teknis-utama">Detail teknis utama<a class="headerlink" href="#detail-teknis-utama" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Agen anak hidup di dalam agen induk dan memiliki satu halaman konfigurasi.</li>
+<li>Alat dan Pengetahuan <strong>disimpan di agen induk</strong>, tetapi dikonfigurasi agar "Tersedia untuk" agen anak.</li>
+<li>Agen anak <strong>berbagi topik</strong> dari agen induk mereka. Topik dapat dirujuk oleh instruksi agen anak.</li>
+<li>Agen anak <strong>tidak memerlukan penerbitan terpisah</strong> - mereka secara otomatis tersedia di dalam agen induk mereka setelah dibuat. Ini membuat pengujian lebih mudah karena perubahan pada agen induk dan anak dapat dilakukan di <strong>ruang kerja bersama yang sama</strong>.</li>
+</ul>
+<h4 id="gunakan-agen-anak-ketika">Gunakan agen anak ketika<a class="headerlink" href="#gunakan-agen-anak-ketika" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Satu tim mengelola seluruh solusi</li>
+<li>Anda ingin mengatur alat dan pengetahuan secara logis ke dalam sub-agen</li>
+<li>Anda tidak memerlukan autentikasi atau penerapan terpisah untuk setiap agen</li>
+<li>Agen tidak akan diterbitkan secara terpisah atau digunakan secara independen</li>
+<li>Anda tidak perlu menggunakan kembali agen di beberapa solusi</li>
+</ul>
+<p><strong>Contoh:</strong> Agen helpdesk IT dengan agen anak untuk:</p>
+<ul>
+<li>Prosedur reset kata sandi</li>
+<li>Pemecahan masalah perangkat keras  </li>
+<li>Panduan instalasi perangkat lunak</li>
+</ul>
+<h3 id="agen-terhubung">🔀 Agen terhubung<a class="headerlink" href="#agen-terhubung" title="Permanent link">&para;</a></h3>
+<p>Agen terhubung adalah <strong>agen independen yang sepenuhnya berdiri sendiri</strong> yang dapat berkolaborasi dengan agen utama Anda. Anggap mereka sebagai departemen terpisah yang bekerja bersama dalam sebuah proyek.</p>
+<h4 id="detail-teknis-utama_1">Detail teknis utama<a class="headerlink" href="#detail-teknis-utama_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Agen terhubung memiliki <strong>topik dan alur percakapan mereka sendiri</strong>. Mereka beroperasi secara independen dengan pengaturan, logika, dan siklus penerapan mereka sendiri.</li>
+<li>Agen terhubung <strong>harus diterbitkan</strong> sebelum dapat ditambahkan dan digunakan oleh agen lain.</li>
+<li>Selama pengujian, perubahan pada agen terhubung harus diterbitkan sebelum dapat digunakan oleh agen pemanggil.</li>
+</ul>
+<h4 id="gunakan-agen-terhubung-ketika">Gunakan agen terhubung ketika<a class="headerlink" href="#gunakan-agen-terhubung-ketika" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Beberapa tim mengembangkan dan memelihara agen yang berbeda secara independen</li>
+<li>Agen membutuhkan pengaturan, autentikasi, dan saluran penerapan mereka sendiri</li>
+<li>Anda ingin menerbitkan dan memelihara agen secara terpisah dengan manajemen siklus aplikasi (ALM) independen untuk setiap agen</li>
+<li>Agen harus dapat digunakan kembali di beberapa solusi</li>
+</ul>
+<p><strong>Contoh:</strong> Sistem layanan pelanggan yang terhubung ke:</p>
+<ul>
+<li>Agen penagihan terpisah yang dikelola oleh tim keuangan</li>
+<li>Agen dukungan teknis terpisah yang dikelola oleh tim produk</li>
+<li>Agen pengembalian terpisah yang dikelola oleh tim operasional</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Anda dapat mencampur kedua pendekatan! Misalnya, agen utama Anda dapat terhubung ke agen eksternal dari tim lain sambil juga memiliki agen anak sendiri untuk tugas internal yang khusus.</p>
+</div>
+<h2 id="pola-arsitektur-multi-agen">🎯 Pola arsitektur multi-agen<a class="headerlink" href="#pola-arsitektur-multi-agen" title="Permanent link">&para;</a></h2>
+<p>Saat merancang sistem multi-agen, beberapa pola muncul berdasarkan bagaimana agen berinteraksi:</p>
+<table>
+<thead>
+<tr>
+<th>Pola</th>
+<th>Deskripsi</th>
+<th>Terbaik Untuk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hub dan Spoke</strong></td>
+<td>Agen pengatur utama mengoordinasikan dengan beberapa agen spesialis. Pengatur menangani interaksi pengguna dan mendelegasikan tugas ke agen anak atau terhubung.</td>
+<td>Alur kerja kompleks di mana satu agen mengoordinasikan tugas-tugas khusus</td>
+</tr>
+<tr>
+<td><strong>Pipeline</strong></td>
+<td>Agen meneruskan pekerjaan secara berurutan dari satu ke yang berikutnya, masing-masing menambahkan nilai sebelum meneruskan ke tahap berikutnya.</td>
+<td>Proses linear seperti pemrosesan aplikasi (penerimaan → penyaringan → wawancara → keputusan)</td>
+</tr>
+<tr>
+<td><strong>Kolaboratif</strong></td>
+<td>Agen bekerja bersama secara simultan pada aspek yang berbeda dari masalah yang sama, berbagi konteks dan hasil.</td>
+<td>Analisis kompleks yang membutuhkan berbagai perspektif atau bidang keahlian</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Anda bahkan dapat memiliki kombinasi dari dua atau lebih pola ini.</p>
+</div>
+<h2 id="komunikasi-agen-dan-berbagi-konteks">💬Komunikasi agen dan berbagi konteks<a class="headerlink" href="#komunikasi-agen-dan-berbagi-konteks" title="Permanent link">&para;</a></h2>
+<p>Ketika agen bekerja bersama, mereka perlu berbagi informasi secara efektif. Berikut cara kerjanya di Copilot Studio:</p>
+<h3 id="riwayat-percakapan">Riwayat percakapan<a class="headerlink" href="#riwayat-percakapan" title="Permanent link">&para;</a></h3>
+<p>Secara default, ketika agen utama memanggil agen anak atau terhubung, ia dapat meneruskan <strong>riwayat percakapan</strong>. Ini memberikan agen spesialis konteks penuh tentang apa yang telah dibahas oleh pengguna.</p>
+<p>Anda dapat menonaktifkan ini untuk alasan keamanan atau kinerja - misalnya, jika agen spesialis hanya perlu menyelesaikan tugas tertentu tanpa membutuhkan konteks percakapan penuh. Ini bisa menjadi pertahanan yang baik terhadap <strong>kebocoran data</strong>.</p>
+<h3 id="instruksi-eksplisit">Instruksi eksplisit<a class="headerlink" href="#instruksi-eksplisit" title="Permanent link">&para;</a></h3>
+<p>Agen utama Anda dapat memberikan <strong>instruksi spesifik</strong> kepada agen anak atau terhubung. Misalnya: "Proses resume ini dan ringkas keterampilan mereka untuk peran Senior Developer."</p>
+<h3 id="nilai-pengembalian">Nilai pengembalian<a class="headerlink" href="#nilai-pengembalian" title="Permanent link">&para;</a></h3>
+<p>Agen dapat mengembalikan informasi terstruktur kembali ke agen pemanggil, memungkinkan agen utama menggunakan informasi tersebut dalam langkah-langkah berikutnya atau membagikannya dengan agen lain.</p>
+<h3 id="integrasi-dataverse">Integrasi Dataverse<a class="headerlink" href="#integrasi-dataverse" title="Permanent link">&para;</a></h3>
+<p>Untuk skenario yang lebih kompleks, agen dapat berbagi informasi melalui <strong>Dataverse</strong> atau penyimpanan data lainnya, memungkinkan berbagi konteks yang persisten di beberapa interaksi.</p>
+<h2 id="agen-anak-agen-penerimaan-aplikasi">↘️Agen anak: Agen Penerimaan Aplikasi<a class="headerlink" href="#agen-anak-agen-penerimaan-aplikasi" title="Permanent link">&para;</a></h2>
+<p>Mari kita mulai membangun sistem perekrutan multi-agen kita. Spesialis pertama kita adalah <strong>Agen Penerimaan Aplikasi</strong> - agen anak yang bertanggung jawab untuk memproses resume dan informasi kandidat yang masuk.</p>
+<pre class="mermaid"><code>---
+config:
+  layout: elk
+  look: neo
+---
+flowchart TB
+ subgraph People["People"]
+    direction TB
+        HiringManager["Hiring Manager"]
+        Interviewers["Interviewers"]
+  end
+ subgraph Agents["Agents"]
+    direction LR
+        ApplicationIntakeAgent["Application Intake Agent&lt;br&gt;(Child)"]
+        InterviewAgent["Interview Agent&lt;br&gt;(Connected)"]
+        HRAgent["HR Agent"]
+  end
+    HiringManager -- Upload CV --&gt; HRAgent
+    HRAgent -- Upload Resume, Create Candidate, Match to Job Roles --&gt; ApplicationIntakeAgent
+    ApplicationIntakeAgent -- Create Resume, Upsert Candidate, Create Job Application --&gt; Dataverse["Dataverse"]
+    ApplicationIntakeAgent -- Store Resume file in file column --&gt; Dataverse
+    HiringManager -- Ask for summaries --&gt; HRAgent
+    Interviewers -- Request interview pack --&gt; HRAgent
+    HRAgent -- Generate interview pack and summarize data --&gt; InterviewAgent
+    InterviewAgent -- Read all Candidate, Resume, Job Roles, Evaluation Criteria Data --&gt; Dataverse
+     HiringManager:::person
+     Interviewers:::person
+     ApplicationIntakeAgent:::agent
+     InterviewAgent:::agent
+     HRAgent:::agent
+     Dataverse:::data
+    classDef person fill:#e6f0ff,stroke:#3b82f6,color:#0b3660
+    classDef agent fill:#e8f9ef,stroke:#10b981,color:#064e3b
+    classDef data  fill:#f3f4f6,stroke:#6b7280,color:#111827</code></pre>
+<h3 id="tanggung-jawab-agen-penerimaan-aplikasi">🤝Tanggung jawab Agen Penerimaan Aplikasi<a class="headerlink" href="#tanggung-jawab-agen-penerimaan-aplikasi" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Memproses konten resume</strong> dari PDF yang diberikan melalui chat interaktif (Di misi mendatang Anda akan belajar cara memproses resume secara otomatis).</li>
+<li><strong>Menarik data terstruktur</strong> (nama, keterampilan, pengalaman, pendidikan)</li>
+<li><strong>Mencocokkan kandidat dengan peran yang tersedia</strong> berdasarkan kualifikasi dan surat pengantar</li>
+<li><strong>Menyimpan informasi kandidat</strong> di Dataverse untuk pemrosesan selanjutnya</li>
+<li><strong>Menghindari duplikasi aplikasi</strong> untuk mencegah pembuatan kandidat yang sama dua kali, mencocokkan dengan catatan yang ada menggunakan alamat email yang diekstraksi dari resume.</li>
+</ul>
+<h3 id="mengapa-ini-harus-menjadi-agen-anak">⭐Mengapa ini harus menjadi agen anak<a class="headerlink" href="#mengapa-ini-harus-menjadi-agen-anak" title="Permanent link">&para;</a></h3>
+<p>Agen Penerimaan Aplikasi sangat cocok sebagai agen anak karena:</p>
+<ul>
+<li>Ini khusus untuk pemrosesan dokumen dan ekstraksi data</li>
+<li>Tidak memerlukan penerbitan terpisah  </li>
+<li>Ini adalah bagian dari solusi perekrutan keseluruhan yang dikelola oleh tim yang sama</li>
+<li>Ini berfokus pada pemicu tertentu (resume baru diterima) dan dipanggil dari Agen Perekrutan.</li>
+</ul>
+<h2 id="agen-terhubung-agen-persiapan-wawancara">🔀Agen terhubung: Agen Persiapan Wawancara<a class="headerlink" href="#agen-terhubung-agen-persiapan-wawancara" title="Permanent link">&para;</a></h2>
+<p>Spesialis kedua kita adalah <strong>Agen Persiapan Wawancara</strong> - agen terhubung yang membantu membuat materi wawancara yang komprehensif dan mengevaluasi respons kandidat.</p>
+<h3 id="tanggung-jawab-agen-persiapan-wawancara">🤝Tanggung jawab Agen Persiapan Wawancara<a class="headerlink" href="#tanggung-jawab-agen-persiapan-wawancara" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Membuat paket wawancara</strong> dengan informasi perusahaan, persyaratan peran, dan kriteria evaluasi</li>
+<li><strong>Menghasilkan pertanyaan wawancara</strong> yang disesuaikan dengan peran tertentu dan latar belakang kandidat</li>
+<li><strong>Menjawab pertanyaan umum</strong> tentang peran pekerjaan dan aplikasi untuk komunikasi dengan pemangku kepentingan</li>
+</ul>
+<h3 id="mengapa-ini-harus-menjadi-agen-terhubung">⭐Mengapa ini harus menjadi agen terhubung<a class="headerlink" href="#mengapa-ini-harus-menjadi-agen-terhubung" title="Permanent link">&para;</a></h3>
+<p>Agen Persiapan Wawancara lebih baik sebagai agen terhubung karena:</p>
+<ul>
+<li>Tim akuisisi bakat mungkin ingin menggunakannya secara independen di berbagai proses perekrutan</li>
+<li>Ia membutuhkan basis pengetahuan sendiri tentang praktik terbaik wawancara dan kriteria evaluasi</li>
+<li>Manajer perekrutan yang berbeda mungkin ingin menyesuaikan perilakunya untuk tim mereka</li>
+<li>Ia dapat digunakan kembali untuk posisi internal, bukan hanya perekrutan eksternal</li>
+</ul>
+<h2 id="lab-21-menambahkan-agen-penerimaan-aplikasi">🧪Lab 2.1: Menambahkan Agen Penerimaan Aplikasi<a class="headerlink" href="#lab-21-menambahkan-agen-penerimaan-aplikasi" title="Permanent link">&para;</a></h2>
+<p>Siap untuk menerapkan teori ke praktik? Mari tambahkan agen anak pertama kita ke Agen Perekrutan Anda yang sudah ada.</p>
+<h3 id="prasyarat-untuk-menyelesaikan-misi-ini">Prasyarat untuk menyelesaikan misi ini<a class="headerlink" href="#prasyarat-untuk-menyelesaikan-misi-ini" title="Permanent link">&para;</a></h3>
+<p>Anda perlu <strong>salah satu</strong>:</p>
+<ul>
+<li><strong>Telah menyelesaikan Misi 01</strong> dan memiliki Agen Perekrutan Anda siap, <strong>ATAU</strong></li>
+<li><strong>Mengimpor solusi awal Misi 02</strong> jika Anda memulai dari awal atau perlu mengejar ketinggalan. <a href="https://aka.ms/agent-academy">Unduh Solusi Awal Misi 02</a></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Impor Solusi dan Data Contoh</p>
+<p>Jika Anda menggunakan solusi awal, lihat <a href="../01-get-started/">Misi 01</a> untuk instruksi rinci tentang cara mengimpor solusi dan data contoh ke lingkungan Anda.</p>
+</div>
+<h3 id="211-pengaturan-solusi">2.1.1 Pengaturan solusi<a class="headerlink" href="#211-pengaturan-solusi" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Di dalam Copilot Studio, pilih elipsis (...) di bawah Tools di navigasi kiri.</li>
+<li>Pilih <strong>Solutions</strong>.<br />
+<img alt="Pilih Solutions" src="../../../../../translated_images/2-select-solutions.42b77407cffd37d7c8b3265f2fd8adb88053b9ebda31bdf0b22cd77ec5b7bf88.id.png" /></li>
+<li>Temukan solusi Operative Anda, pilih <strong>elipsis (...)</strong> di sebelahnya, dan pilih <strong>Set preferred solution</strong>. Ini akan memastikan bahwa semua pekerjaan Anda akan ditambahkan ke solusi ini.<br />
+<img alt="Set Preferred Solution" src="../../../../../translated_images/2-select-preferred-solution.4542e922555429074f49c6480f6e8345f8c8818b2549fe0cd625fa58a45aede9.id.png" /></li>
+</ol>
+<h3 id="212-konfigurasi-instruksi-agen-hiring-agent-anda">2.1.2 Konfigurasi instruksi agen Hiring Agent Anda<a class="headerlink" href="#212-konfigurasi-instruksi-agen-hiring-agent-anda" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Navigasikan</strong> ke Copilot Studio. Pastikan lingkungan Anda dipilih di <strong>Environment Picker</strong> di kanan atas.</p>
+</li>
+<li>
+<p>Buka <strong>Hiring Agent</strong> Anda dari Misi 01</p>
+</li>
+<li>
+<p>Pilih <strong>Edit</strong> di bagian <strong>Instructions</strong> dari tab <strong>Overview</strong>, dan tambahkan instruksi berikut di bagian atas:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are the central orchestrator for the hiring process. You coordinate activities, provide summaries, and delegate work to specialized agents.
+</span></code></pre></div>
+</li>
+<li>
+<p>Pilih <strong>Save</strong><br />
+<img alt="Instruksi Hiring Agent" src="../../../../../translated_images/2-hiring-agent-instructions.dc1fcc2513c88722145e46794f3b3cd8b96d62482090275da62679bbfb6e352a.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Settings</strong> (kanan atas)</p>
+</li>
+<li>
+<p>Pastikan pengaturan berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Pengaturan</th>
+<th>Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gunakan orkestrasi AI generatif untuk respons agen Anda</td>
+<td><strong>Ya</strong></td>
+</tr>
+<tr>
+<td>Moderasi Konten</td>
+<td><strong>Sedang</strong></td>
+</tr>
+<tr>
+<td>Gunakan pengetahuan umum</td>
+<td><strong>Mati</strong></td>
+</tr>
+<tr>
+<td>Gunakan informasi dari Web</td>
+<td><strong>Mati</strong></td>
+</tr>
+<tr>
+<td>Unggahan file</td>
+<td><strong>Aktif</strong></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Gunakan Orkestrasi Generatif" src="../../../../../translated_images/2-gen-orchestration.29e616a2d5721c51953fb6bde452c1ee06f40684911a6eba44e07de41c328726.id.png" />
+<img alt="Pengaturan Moderasi" src="../../../../../translated_images/2-set-medium-moderation.c6c0c1d6c427abac44441aad97892c84bbc43420b91c2c18e704980f604ec1b2.id.png" />
+<img alt="Pengaturan Pengetahuan dan Web" src="../../../../../translated_images/2-settings-knowledge-web.716090f708dff925ebb0d259f20734da39c831bba4df4f97bd334ce701aa92a9.id.png" /></p>
+<h3 id="213-tambahkan-agen-anak-application-intake">2.1.3 Tambahkan agen anak Application Intake<a class="headerlink" href="#213-tambahkan-agen-anak-application-intake" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Navigasikan</strong> ke tab <strong>Agents</strong> di dalam Hiring Agent Anda - di sinilah Anda akan menambahkan agen spesialis.</p>
+</li>
+<li>
+<p>Pilih <strong>+ Add</strong> lalu <strong>Create an agent</strong>. Perhatikan bahwa ini diberi label "<em>Buat agen ringan yang hidup di dalam agen Anda saat ini dan mewarisi pengaturannya. Ideal untuk memecah logika yang kompleks</em> "<br />
+<img alt="Tambahkan Agen Anak" src="../../../../../translated_images/2-add-child-agent.47e6246572a58b85236c969c69f3bae835fd5099f4d7603abeab6b1ad9ce2a70.id.png" /></p>
+</li>
+<li>
+<p><strong>Nama</strong> agen Anda <code>Application Intake Agent</code></p>
+</li>
+<li>
+<p>Pilih <strong>The agent chooses</strong> - Berdasarkan deskripsi di dropdown <strong>When will this be used?</strong>. Opsi ini mirip dengan pemicu yang dapat dikonfigurasi untuk topik.</p>
+</li>
+<li>
+<p>Tetapkan <strong>Deskripsi</strong> sebagai:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Processes incoming resumes and stores candidates in the system
+</span></code></pre></div>
+<p><img alt="Deskripsi Agen Penerimaan Aplikasi" src="../../../../../translated_images/2-application-intake-agent-description.c5c0bf8ee632c04b9fb63c774f638de84cb8fa6ddf8c853cf0b651ea0e4964f0.id.png" /></p>
+</li>
+<li>
+<p>Perluas <strong>Advanced</strong>, dan tetapkan Prioritas menjadi <code>10000</code>. Ini akan memastikan bahwa nanti Agen Wawancara akan digunakan untuk menjawab pertanyaan umum sebelum agen ini. Kondisi juga dapat ditetapkan di sini seperti memastikan bahwa ada setidaknya satu lampiran.</p>
+</li>
+<li>
+<p>Pastikan toggle <strong>Web Search</strong> diatur ke <strong>Disabled</strong>. Ini karena kita hanya ingin menggunakan informasi yang diberikan oleh agen induk.</p>
+</li>
+<li>
+<p>Pilih <strong>Save</strong></p>
+</li>
+</ol>
+<h3 id="214-konfigurasi-alur-agen-upload-resume">2.1.4 Konfigurasi alur agen Upload Resume<a class="headerlink" href="#214-konfigurasi-alur-agen-upload-resume" title="Permanent link">&para;</a></h3>
+<p>Agen tidak dapat melakukan tindakan apa pun tanpa diberikan alat atau topik.
+Kami menggunakan <strong>alat Agent Flow</strong> daripada Topik untuk langkah <em>Upload Resume</em> karena proses backend multi-langkah ini membutuhkan eksekusi deterministik dan integrasi dengan sistem eksternal. Sementara Topik lebih baik untuk membimbing dialog percakapan, Agent Flow menyediakan otomatisasi terstruktur yang diperlukan untuk menangani pemrosesan file, validasi data, dan upsert database (menambahkan baru atau memperbarui yang sudah ada) secara andal tanpa bergantung pada interaksi pengguna.</p>
+<ol>
+<li>
+<p>Temukan bagian <strong>Tools</strong> di halaman Application Intake Agent.
+   <strong>Penting:</strong> Ini bukan tab Tools dari parent agent, tetapi dapat ditemukan jika Anda menggulir ke bawah di bawah instruksi child agent.</p>
+</li>
+<li>
+<p>Pilih <strong>+ Add</strong>
+   <img alt="Add Tool" src="../../../../../translated_images/2-add-tool.bbf282ab0b7abeb6cad0032db2dba94adf53e4f206ac976c6c7b9b339fb0e996.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>+ New tool</strong> <img alt="Add new tool" src="../../../../../translated_images/2-new-tool-2.6e09c313b1af9d233ecb1c1559fb9f5d92123bfc2af6cc2df5f52e549b6b961c.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Agent flow</strong>.
+    Desainer Agent Flow akan terbuka, di sinilah kita akan menambahkan logika upload resume.<br />
+<img alt="Add Agent Flow" src="../../../../../translated_images/2-add-agent-flow.e5aecede97ecd79e08aae4be784a6255f354f13edb2621d3d61e961b09a70d53.id.png" /></p>
+</li>
+<li>
+<p>Pilih node <strong>When an agent calls the flow</strong>, dan pilih <strong>+ Add</strong> input untuk Parameter berikut, pastikan untuk menambahkan nama dan deskripsi.</p>
+<table>
+<thead>
+<tr>
+<th>Tipe</th>
+<th>Nama</th>
+<th>Deskripsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File</td>
+<td>Resume</td>
+<td>File PDF Resume</td>
+</tr>
+<tr>
+<td>Teks</td>
+<td>Message</td>
+<td>Ekstrak pesan gaya cover letter dari konteks. Pesan harus kurang dari 2000 karakter.</td>
+</tr>
+<tr>
+<td>Teks</td>
+<td>UserEmail</td>
+<td>Alamat email asal Resume. Ini akan menjadi pengguna yang mengunggah resume di chat, atau alamat email pengirim jika diterima melalui email.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Configure input parameters" src="../../../../../translated_images/2-upload-resume-trigger.1f3ca963aa3d9d723756d0636d99c1d458e197b16df93f2ac360283cf07f3fb1.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>+ icon</strong> di bawah node trigger, cari <code>Dataverse</code>, pilih <strong>See more</strong> di sebelah Microsoft Dataverse, lalu pilih aksi <strong>Add a new row</strong> di bagian <strong>Microsoft Dataverse</strong><br />
+<img alt="Add a new row node" src="../../../../../translated_images/2-upload-resume-add-resume.0e5bb197fef951167c9168c827e48e8d45a24c7d619452d387d980336a30d421.id.png" /></p>
+</li>
+<li>
+<p>Beri nama node menjadi <strong>Create Resume</strong>, dengan memilih <strong>ellipsis(...)</strong>, lalu pilih <strong>Rename</strong><br />
+<img alt="Rename node" src="../../../../../translated_images/2-upload-resume-add-resume-rename.f8ecb680cca6fe7d98cd9590ba4d59d0fe19a742baca4c05f7558ed3fea8c44e.id.png" /></p>
+</li>
+<li>
+<p>Atur <strong>Table name</strong> menjadi <strong>Resumes</strong>, lalu pilih <strong>Show all</strong>, untuk menampilkan semua parameter.</p>
+</li>
+<li>
+<p>Atur <strong>properties</strong> berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Properti</th>
+<th>Cara Mengatur</th>
+<th>Detail / Ekspresi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resume Title</strong></td>
+<td>Data dinamis (ikon petir)</td>
+<td><strong>When an agent calls the flow</strong> → <strong>Resume name</strong> Jika Anda tidak melihat Resume name, pastikan Anda telah mengonfigurasi parameter Resume di atas sebagai tipe data.</td>
+</tr>
+<tr>
+<td><strong>Cover letter</strong></td>
+<td>Ekspresi (ikon fx)</td>
+<td><code>if(greater(length(triggerBody()?['text']), 2000), substring(triggerBody()?['text'], 0, 2000), triggerBody()?['text'])</code></td>
+</tr>
+<tr>
+<td><strong>Source Email Address</strong></td>
+<td>Data dinamis (ikon petir)</td>
+<td><strong>When an agent calls the flow</strong> → <strong>UserEmail</strong></td>
+</tr>
+<tr>
+<td><strong>Upload Date</strong></td>
+<td>Ekspresi (ikon fx)</td>
+<td><code>utcNow()</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Edit Properties" src="../../../../../translated_images/2-upload-resume-add-resume-props.17586d1a9546933fbc66b13e8f36366d5122a90db2f37abb1b459dea97605270.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>+ icon</strong> di bawah node Create Resume, cari <code>Dataverse</code>, pilih <strong>See more</strong> di sebelah Microsoft Dataverse, lalu pilih aksi <strong>Upload a file or an image</strong>.
+   <strong>Penting:</strong> Pastikan untuk tidak memilih aksi Upload a file or an image to the selected environment.</p>
+</li>
+<li>
+<p>Beri nama node menjadi <strong>Upload Resume File</strong>, dengan memilih <strong>ellipsis(...)</strong>, lalu pilih <strong>Rename</strong></p>
+</li>
+<li>
+<p>Atur <strong>properties</strong> berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Properti</th>
+<th>Cara Mengatur</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Content name</strong></td>
+<td>Data dinamis (ikon petir)</td>
+<td>When an agent calls the flow → Resume name</td>
+</tr>
+<tr>
+<td><strong>Table name</strong></td>
+<td>Pilih</td>
+<td>Resumes</td>
+</tr>
+<tr>
+<td><strong>Row ID</strong></td>
+<td>Data dinamis (ikon petir)</td>
+<td>Create Resume → See more → Resume</td>
+</tr>
+<tr>
+<td><strong>Column Name</strong></td>
+<td>Pilih</td>
+<td>Resume PDF</td>
+</tr>
+<tr>
+<td><strong>Content</strong></td>
+<td>Data dinamis (ikon petir)</td>
+<td>When an agent calls the flow → Resume contentBytes</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Set properties" src="../../../../../translated_images/2-upload-resume-upload-resume-file.2250f45ffd06b6c60e91e0517966334acbd9cf6c0f98dc2f3f615431ae03be90.id.png" /></p>
+</li>
+<li>
+<p>Pilih node <strong>Respond to the agent</strong>, lalu pilih <strong>+ Add an output</strong></p>
+<table>
+<thead>
+<tr>
+<th>Properti</th>
+<th>Cara Mengatur</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>Pilih</td>
+<td><code>Text</code></td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>Masukkan</td>
+<td><code>ResumeNumber</code></td>
+</tr>
+<tr>
+<td><strong>Value</strong></td>
+<td>Data dinamis (ikon petir)</td>
+<td>Create Resume → See More → Resume Number</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Masukkan</td>
+<td><code>Nomor [ResumeNumber] dari Resume yang dibuat</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Set Properties" src="../../../../../translated_images/2-upload-resume-return.f9beac6547b4f228a4ee6c538ca64e86883ab7b5d85b08c2cd6da26e4cc2e4c8.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Save draft</strong> di kanan atas<br />
+<img alt="Save as draft" src="../../../../../translated_images/2-upload-resume-save-draft.6d5bed32d254815c765c19109b82113fd2520dbb5dce84288a3eb13896958d93.id.png" /></p>
+</li>
+<li>
+<p>Pilih tab <strong>Overview</strong>, lalu pilih <strong>Edit</strong> di panel <strong>Details</strong></p>
+<ol>
+<li><strong>Flow name</strong>:<code>Resume Upload</code></li>
+<li><strong>Description</strong>:<code>Mengunggah Resume saat diperintahkan</code></li>
+</ol>
+<p><img alt="Rename agent flow" src="../../../../../translated_images/2-upload-resume-rename.a26569a2def30b456ed3176c21ce889637c4d1155c56ca479521d278f25a4d5d.id.png" /></p>
+</li>
+<li>
+<p>Pilih tab <strong>Designer</strong> lagi, lalu pilih <strong>Publish</strong>.<br />
+<img alt="Publishing" src="../../../../../translated_images/2-upload-resume-publish.36f763ffc4487b32114a47a087fd5282beb7a9bb0272b3ff46046d8cd413e053.id.png" /></p>
+</li>
+</ol>
+<h3 id="215-hubungkan-flow-ke-agent-anda">2.1.5 Hubungkan flow ke agent Anda<a class="headerlink" href="#215-hubungkan-flow-ke-agent-anda" title="Permanent link">&para;</a></h3>
+<p>Sekarang Anda akan menghubungkan flow yang telah dipublikasikan ke Application Intake Agent Anda.</p>
+<ol>
+<li>
+<p>Navigasikan kembali ke <strong>Hiring Agent</strong> dan pilih tab <strong>Agents</strong>. Buka <strong>Application Intake Agent</strong>, lalu temukan panel <strong>Tools</strong>.<br />
+<img alt="Add agent flow to agent" src="../../../../../translated_images/2-add-agent-flow-to-agent.3c9aadae42fc389e7c6f56ea80505cd067e45ba7e4aa03f201e2cd792e24d1fe.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>+ Add</strong></p>
+</li>
+<li>
+<p>Pilih filter <strong>Flow</strong>, lalu cari <code>Resume Upload</code>. Pilih flow <strong>Resume Upload</strong>, lalu <strong>Add and configure</strong>.</p>
+</li>
+<li>
+<p>Atur parameter berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td><code>Mengunggah Resume saat diperintahkan. ATURAN KETAT: Hanya panggil alat ini saat disebutkan dalam bentuk "Resume Upload" dan ada Lampiran</code></td>
+</tr>
+<tr>
+<td><strong>Additional details → When this tool may be used</strong></td>
+<td><code>hanya saat disebutkan oleh topik atau agen</code></td>
+</tr>
+<tr>
+<td><strong>Inputs → Add Input</strong></td>
+<td><code>contentBytes</code></td>
+</tr>
+<tr>
+<td><strong>Inputs → Add Input</strong></td>
+<td><code>name</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Resume Upload Details 1" src="../../../../../translated_images/2-resume-upload-tool-props-1.e3d8bf3ebdfd5aa8df23aa6ab83eec8a5def709f2c7d27fb700bef16c598da2f.id.png" /></p>
+<p><img alt="Add inputs" src="../../../../../translated_images/2-resume-upload-tool-props-2.16fb1380a34a9fa63b7c9673c7290ff09d491e920a5ff33b439a4b1a5abfccba.id.png" /></p>
+</li>
+<li>
+<p>Selanjutnya atur properti input sebagai berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Input</th>
+<th>Properti</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>contentBytes</strong></td>
+<td>Isi menggunakan</td>
+<td>Nilai kustom</td>
+</tr>
+<tr>
+<td></td>
+<td>Nilai (...→Formula→Insert)</td>
+<td><code>First(System.Activity.Attachments).Content</code></td>
+</tr>
+<tr>
+<td><strong>name</strong></td>
+<td>Isi menggunakan</td>
+<td>Nilai kustom</td>
+</tr>
+<tr>
+<td></td>
+<td>Nilai (...→Formula→Insert)</td>
+<td><code>First(System.Activity.Attachments).Name</code></td>
+</tr>
+<tr>
+<td><strong>Message</strong></td>
+<td>Kustomisasi</td>
+<td>Konfigurasikan pengaturan kustom</td>
+</tr>
+<tr>
+<td></td>
+<td>Deskripsi</td>
+<td><code>Ekstrak pesan gaya cover letter dari konteks. Pastikan untuk tidak meminta pengguna dan buat setidaknya cover letter minimal dari konteks yang tersedia. ATURAN KETAT - pesan harus kurang dari 2000 karakter.</code></td>
+</tr>
+<tr>
+<td></td>
+<td>Berapa kali reprompt</td>
+<td>Jangan ulangi</td>
+</tr>
+<tr>
+<td></td>
+<td>Tindakan jika tidak ditemukan entitas</td>
+<td>Atur variabel ke nilai</td>
+</tr>
+<tr>
+<td></td>
+<td>Nilai entitas default</td>
+<td>Resume upload</td>
+</tr>
+<tr>
+<td><strong>UserEmail</strong></td>
+<td>Isi menggunakan</td>
+<td>Nilai kustom</td>
+</tr>
+<tr>
+<td></td>
+<td>Nilai (...→Formula→Insert)</td>
+<td><code>System.User.Email</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Set input properties" src="../../../../../translated_images/2-resume-upload-tool-props-3.a18364f22b2c41c3e4f8fee68dddb01ff5190d57410d9fd3fe2fbddb3d74e352.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Save</strong></p>
+</li>
+</ol>
+<h3 id="216-tentukan-instruksi-agent">2.1.6 Tentukan instruksi agent<a class="headerlink" href="#216-tentukan-instruksi-agent" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Kembali ke <strong>Application Intake Agent</strong> dengan memilih tab <strong>Agents</strong>, lalu temukan panel <strong>Instructions</strong>.</p>
+</li>
+<li>
+<p>Di bidang <strong>Instructions</strong>, tempelkan panduan jelas berikut untuk child agent Anda:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>You are tasked with managing incoming Resumes, Candidate information, and creating Job Applications.  
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Only use tools if the step exactly matches the defined process. Otherwise, indicate you cannot help.  
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Process for Resume Upload via Chat  
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>1. Upload Resume  
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  - Trigger only if /System.Activity.Attachments contains exactly one new resume.  
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  - If more than one file, instruct the user to upload one at a time and stop.  
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  - Call /Upload Resume once. Never upload more than once for the same message.  
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2. Post-Upload  
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  - Always output the [ResumeNumber] (R#####).  
+</span></code></pre></div>
+</li>
+<li>
+<p>Di mana instruksi mencakup garis miring (/), pilih teks setelah / dan pilih nama yang sesuai. Lakukan ini untuk:</p>
+<ul>
+<li><code>System.Activity.Attachments</code> (Variable)</li>
+<li><code>Upload Resume</code> (Tool)</li>
+</ul>
+<p><img alt="Edit the Instructions" src="../../../../../translated_images/2-application-agent-instructions.8840890a1fba22c38f04e35b13fa7ed83f72e9605d19a4eb661b51854daabd94.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Save</strong></p>
+</li>
+</ol>
+<h3 id="217-uji-application-intake-agent-anda">2.1.7 Uji Application Intake Agent Anda<a class="headerlink" href="#217-uji-application-intake-agent-anda" title="Permanent link">&para;</a></h3>
+<p>Sekarang mari kita verifikasi bahwa anggota orkestra pertama Anda bekerja dengan benar.</p>
+<ol>
+<li>
+<p><strong>Unduh</strong> <a href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/operative/sample-data/resumes&amp;filename=operative_sampledata">test Resumes.</a></p>
+</li>
+<li>
+<p><strong>Aktifkan</strong> panel uji dengan memilih <strong>Test</strong>.</p>
+</li>
+<li>
+<p><strong>Unggah</strong> dua Resume di chat uji, dan berikan pesan <code>Process these resumes</code></p>
+<ul>
+<li>Agen harus mengembalikan pesan yang mirip dengan <em>Hanya satu resume yang dapat diunggah sekaligus. Silakan unggah satu resume untuk melanjutkan.</em></li>
+</ul>
+<p><img alt="Test multiple uploads" src="../../../../../translated_images/2-test-multi-uploads.eb8866589463dcadb5570aba720531f0670ebfa6464d57e87415a84d9934a973.id.png" /></p>
+</li>
+<li>
+<p>Coba unggah <strong>hanya satu Resume</strong>, dengan pesan <code>Process this resume</code></p>
+<ul>
+<li>Agen kemudian harus memberikan pesan yang mirip dengan <em>Resume untuk Avery Example telah berhasil diunggah. Nomor resume adalah R10026.</em></li>
+</ul>
+</li>
+<li>
+<p>Di <strong>Activity map</strong>, Anda harus melihat <strong>Application Intake Agent</strong> menangani upload resume.<br />
+<img alt="Upload Resume Activity Map" src="../../../../../translated_images/2-upload-activity-map.dd11a9d3e114f4f0a576408116d7ed89c6b144d8b4ac54a228c5247af036ecef.id.png" /></p>
+</li>
+<li>
+<p>Navigasikan ke make.powerapps.com → Pastikan lingkungan Anda dipilih di kanan atas Environment Picker.</p>
+</li>
+<li>
+<p>Pilih <strong>Apps</strong> → Hiring Hub → menu ellipsis(...) → <strong>Play</strong><br />
+<img alt="Open model driven app" src="../../../../../translated_images/2-open-model-driven-app.550a2b764d513db4836444dd616dd87909adf54f2a930891276943b1a6e0ec77.id.png" /></p>
+<p>Catatan: Jika tombol play berwarna abu-abu, itu berarti Anda belum mempublikasikan solusi Anda dari Misi 01. Pilih <strong>Solutions</strong> → <strong>Publish all customizations</strong>.</p>
+</li>
+<li>
+<p>Navigasikan ke <strong>Resumes</strong>, dan periksa bahwa file resume diunggah dan cover letter diatur sesuai.<br />
+<img alt="Resume uploaded to Dataverse" src="../../../../../translated_images/2-resume-uploade.92a046941cd273a2597d47c593b158d158320fa5384c60907143dbe798a56644.id.png" /></p>
+</li>
+</ol>
+<h2 id="lab-22-menambahkan-agen-terhubung-interview-prep">🧪Lab 2.2: Menambahkan agen terhubung Interview Prep<a class="headerlink" href="#lab-22-menambahkan-agen-terhubung-interview-prep" title="Permanent link">&para;</a></h2>
+<p>Sekarang mari kita buat agen terhubung untuk persiapan wawancara dan tambahkan ke Hiring Agent Anda yang sudah ada.</p>
+<h3 id="221-buat-agen-interview-yang-terhubung">2.2.1 Buat agen Interview yang terhubung<a class="headerlink" href="#221-buat-agen-interview-yang-terhubung" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Navigasikan</strong> ke Copilot Studio. Pastikan lingkungan Anda masih dipilih di kanan atas Environment Picker.</p>
+</li>
+<li>
+<p>Buka <strong>Hiring Agent</strong> Anda</p>
+</li>
+<li>
+<p>Navigasikan ke tab Agent, dan pilih <strong>+ Add an agent</strong></p>
+</li>
+<li>
+<p>Pilih <strong>Connect an existing agent</strong> → <strong>Copilot Studio</strong></p>
+</li>
+<li>
+<p>Pilih <strong>+ New agent</strong></p>
+</li>
+</ol>
+<h3 id="222-konfigurasikan-pengaturan-dasar">2.2.2 Konfigurasikan pengaturan dasar<a class="headerlink" href="#222-konfigurasikan-pengaturan-dasar" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Pilih tab <strong>Configure</strong>, dan masukkan properti berikut:</p>
+<ul>
+<li><strong>Name</strong>: <code>Interview Agent</code></li>
+<li><strong>Description</strong>: <code>Membantu proses wawancara.</code></li>
+</ul>
+</li>
+<li>
+<p>Instruksi:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>You are the Interview Agent. You help interviewers and hiring managers prepare for interviews. You never contact candidates. 
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Use Knowledge to help with interview preparation. 
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>The only valid identifiers are:
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  - ResumeNumber (ppa_resumenumber)→ format R#####
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  - CandidateNumber (ppa_candidatenumber)→ format C#####
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  - ApplicationNumber (ppa_applicationnumber)→ format A#####
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>  - JobRoleNumber (ppa_jobrolenumber)→ format J#####
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>Examples you handle
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  - Give me a summary of ...
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>  - Help me prepare to interview candidates for the Power Platform Developer role
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>  - Create interview assistance for the candidates for Power Platform Developer
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>  - Give targeted questions for Candidate Alex Johnson focusing on the criteria for the Job Application
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>How to work:
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    You are expected to ask clarification questions if required information for queries is not provided
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    - If asked for interview help without providing a job role, ask for it
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    - If asking for interview questions, ask for the candidate and job role if not provided.
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>General behavior
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>- Do not invent or guess facts
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>- Be concise, professional, and evidence-based
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>- Map strengths and risks to the highest-weight criteria
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>- If data is missing (e.g., no resume), state what is missing and ask for clarification
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>- Never address or message a candidate
+</span></code></pre></div>
+</li>
+<li>
+<p>Aktifkan <strong>Web Search</strong> ke <strong>Disabled</strong></p>
+</li>
+<li>
+<p>Pilih <strong>Create</strong><br />
+<img alt="Create the Interview Agent" src="../../../../../translated_images/2-create-interview-agent.55051dc9cceec6614c7c0d685df6bebd85dcc4bde63fedab33558db47fd32ebd.id.png" /></p>
+</li>
+</ol>
+<h3 id="223-konfigurasikan-akses-data-dan-publikasikan">2.2.3 Konfigurasikan akses data dan publikasikan<a class="headerlink" href="#223-konfigurasikan-akses-data-dan-publikasikan" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Di bagian <strong>Knowledge</strong>, pilih <strong>+ Add knowledge</strong><br />
+<img alt="Add knowledge" src="../../../../../translated_images/2-interview-agent-add-knowledge.8a760ce46dc5253747785127c37f3bfe2ea5c60a5243a4c2ff0a63d0275d1c02.id.png" /></li>
+<li>Pilih <strong>Dataverse</strong><br />
+<img alt="Select Dataverse" src="../../../../../translated_images/2-interview-agent-add-knowledge-select-dataverse.1449c08b33f90f35c806071fb430c5e769a9d54d42b146a137404c63dc697d52.id.png" /></li>
+<li>Di kotak <strong>Search</strong>, ketik <code>ppa_</code>. Ini adalah prefix untuk tabel yang Anda impor sebelumnya.</li>
+<li><strong>Pilih</strong> semua 5 tabel (Candidate, Evaluation Criteria, Job Application, Job Role, Resume)</li>
+<li>Pilih <strong>Add to agent</strong><br />
+<img alt="Select Dataverse tables" src="../../../../../translated_images/2-interview-agent-add-knowledge-select-tables.1b8e5f6286f4d58555b4f3e5ee49de7ad559f21d1b6806a1253d7f0c84bf7ab8.id.png" /></li>
+<li>
+<p>Pilih <strong>Settings</strong>, pada Interview Agent, dan atur pengaturan berikut:</p>
+<ul>
+<li><strong>Let other agents connect to and use this one:</strong> <code>On</code></li>
+<li><strong>Use general knowledge</strong>: <code>Off</code></li>
+<li><strong>File uploads</strong>: <code>Off</code></li>
+<li><strong>Content moderation level:</strong> <code>Medium</code></li>
+<li>Pilih <strong>Save</strong></li>
+<li>Pilih <strong>Publish</strong>, dan tunggu hingga proses publikasi selesai.</li>
+</ul>
+</li>
+</ol>
+<h3 id="224-hubungkan-interview-prep-agent-ke-hiring-agent-anda">2.2.4 Hubungkan Interview Prep Agent ke Hiring Agent Anda<a class="headerlink" href="#224-hubungkan-interview-prep-agent-ke-hiring-agent-anda" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Navigasikan kembali ke <strong>Hiring Agent</strong> Anda</p>
+</li>
+<li>
+<p>Pilih tab <strong>Agents</strong></p>
+</li>
+<li>
+<p>Gunakan <strong>+Add an agent</strong> → <strong>Copilot Studio</strong>, untuk menambahkan <strong>Interview Agent</strong>. Atur Deskripsi menjadi:
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Assists with the interview process and provides information about Resumes, Candidates, Job Roles, and Evaluation Criteria.
+</span></code></pre></div></p>
+<p><img alt="Detail Agen yang Terhubung" src="../../../../../translated_images/2-add-connected-agent.1d8c42eb5dd78891649fef9771473f639eb7015c6bda76ac17e24093c359b6b1.id.png" />
+Perhatikan bahwa opsi Pass conversation history to this agent dicentang. Ini memungkinkan agen induk memberikan konteks penuh kepada agen yang terhubung.</p>
+</li>
+<li>
+<p>Pilih <strong>Add agent</strong></p>
+</li>
+<li>
+<p>Pastikan Anda melihat baik <strong>Application Intake Agent</strong> maupun <strong>Interview Agent</strong>. Perhatikan bagaimana satu adalah agen anak dan yang lainnya adalah agen yang terhubung.<br />
+<img alt="Agen anak dan agen yang terhubung" src="../../../../../translated_images/2-child-and-connected.d888e561872260dfa66c657d5b31f99f2a3e492c2ed62284e124c5b81af54e7b.id.png" /></p>
+</li>
+</ol>
+<h3 id="225-uji-kolaborasi-multi-agen">2.2.5 Uji kolaborasi multi-agen<a class="headerlink" href="#225-uji-kolaborasi-multi-agen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Buka</strong> panel uji dengan memilih <strong>Test</strong>.</p>
+</li>
+<li>
+<p><strong>Unggah</strong> salah satu resume uji, dan masukkan deskripsi berikut yang memberi tahu agen induk apa yang dapat didelegasikan ke agen yang terhubung:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Upload this resume, then show me open job roles, each with a description of the evaluation criteria, then use this to match the resume to at least one suitable job role even if not a perfect match.
+</span></code></pre></div>
+<p><img alt="Pengujian multi-agen" src="../../../../../translated_images/2-multi-agent-test.1e7c8e9dc283f220983f74a960f49b194d9e1c013c4369e33354c84411fc991c.id.png" /></p>
+</li>
+<li>
+<p>Perhatikan bagaimana Hiring Agent mendelegasikan pengunggahan ke agen anak, lalu meminta Interview Agent untuk memberikan ringkasan dan kecocokan peran pekerjaan menggunakan pengetahuannya.<br />
+   Cobalah berbagai cara untuk mengajukan pertanyaan tentang Resume, Peran Pekerjaan, dan Kriteria Evaluasi.<br />
+<strong>Contoh:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Give me a summary of active resumes
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Summarize resume R10044
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Which active resumes are suitable for the Power Platform Developer role?
+</span></code></pre></div>
+</li>
+</ol>
+<h2 id="misi-selesai">🎉 Misi Selesai<a class="headerlink" href="#misi-selesai" title="Permanent link">&para;</a></h2>
+<p>Kerja luar biasa, Agen! <strong>Operation Symphony</strong> kini selesai. Anda telah berhasil mengubah Hiring Agent tunggal Anda menjadi orkestra multi-agen yang canggih dengan kemampuan khusus.</p>
+<p>Berikut adalah pencapaian Anda dalam misi ini:</p>
+<p><strong>✅ Penguasaan arsitektur multi-agen</strong><br />
+Anda sekarang memahami kapan harus menggunakan agen anak vs agen yang terhubung dan bagaimana merancang sistem yang dapat berkembang.</p>
+<p><strong>✅ Agen anak Application Intake</strong><br />
+Anda telah menambahkan agen anak khusus ke Hiring Agent Anda yang memproses resume, mengekstrak data kandidat, dan menyimpan informasi di Dataverse.</p>
+<p><strong>✅ Agen terhubung Interview Prep</strong><br />
+Anda telah membangun agen terhubung yang dapat digunakan kembali untuk persiapan wawancara dan berhasil menghubungkannya ke Hiring Agent Anda.</p>
+<p><strong>✅ Komunikasi antar agen</strong><br />
+Anda telah melihat bagaimana agen utama Anda dapat berkoordinasi dengan agen spesialis, berbagi konteks, dan mengatur alur kerja yang kompleks.</p>
+<p><strong>✅ Fondasi untuk otonomi</strong><br />
+Sistem perekrutan yang ditingkatkan Anda sekarang siap untuk fitur-fitur canggih yang akan kita tambahkan dalam misi mendatang: pemicu otonom, moderasi konten, dan penalaran mendalam.</p>
+<p>🚀<strong>Selanjutnya:</strong> Dalam misi berikutnya, Anda akan belajar bagaimana mengonfigurasi agen Anda untuk memproses resume secara otomatis dari email!</p>
+<p>⏩<a href="../03-automate-triggers/">Lanjut ke Misi 03: Otomatiskan agen Anda dengan pemicu</a></p>
+<h2 id="sumber-daya-taktis">📚 Sumber Daya Taktis<a class="headerlink" href="#sumber-daya-taktis" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-add-other-agents?WT.mc_id=power-182762-scottdurow">Tambahkan agen lain (pratinjau)</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-plugin-actions?WT.mc_id=power-182762-scottdurow">Tambahkan alat ke agen khusus</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/knowledge-add-dataverse?WT.mc_id=power-182762-scottdurow">Bekerja dengan Dataverse di Copilot Studio</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/flows-overview?WT.mc_id=power-182762-scottdurow">Ikhtisar alur agen</a></p>
+<p>📖 <a href="https://learn.microsoft.com/power-platform/alm/solution-concepts-alm?WT.mc_id=power-182762-scottdurow">Buat solusi</a></p>
+<p>📖 <a href="https://learn.microsoft.com/power-platform/alm/overview-alm?WT.mc_id=power-182762-scottdurow">Panduan ALM solusi Power Platform</a></p>
+<p>📺 <a href="https://youtu.be/d-oD3pApHAg?si=rwIHKhJTkjSvhTHw">Kolaborasi antar agen di Copilot Studio</a></p>
+<hr />
+<p><strong>Penafian</strong>:<br />
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang timbul dari penggunaan terjemahan ini.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

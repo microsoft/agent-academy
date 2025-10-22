@@ -1,0 +1,942 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/id/docs/recruit/04-creating-a-solution/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#misi-04-membuat-solusi-untuk-agen-anda" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nama-kode-operasi-ctrl-alt-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ NAMA KODE: OPERASI CTRL-ALT-PACKAGE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ringkasan-misi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Ringkasan Misi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tujuan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Tujuan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solusi-apa-itu" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵🏻‍♀️ Solusi? Apa itu?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mengapa-harus-menggunakan-solusi-untuk-agen-saya" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Mengapa harus menggunakan Solusi untuk agen saya?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memahami-penerbit-solusi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪪 Memahami Penerbit Solusi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#siklus-hidup-solusi-power-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 Siklus hidup Solusi Power Platform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-04-membuat-solusi-baru" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 04: Membuat Solusi Baru
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misi-selesai" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Misi Selesai
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sumber-daya-taktis" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Sumber Daya Taktis
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "0c51aabca81d6256990caf4c015e6195",
+  "translation_date": "2025-10-17T17:12:16+00:00",
+  "source_file": "docs/recruit/04-creating-a-solution/README.md",
+  "language_code": "id"
+}
+-->
+<h1 id="misi-04-membuat-solusi-untuk-agen-anda">🚨 Misi 04: Membuat Solusi untuk Agen Anda<a class="headerlink" href="#misi-04-membuat-solusi-untuk-agen-anda" title="Permanent link">&para;</a></h1>
+<h2 id="nama-kode-operasi-ctrl-alt-package">🕵️‍♂️ NAMA KODE: <code>OPERASI CTRL-ALT-PACKAGE</code><a class="headerlink" href="#nama-kode-operasi-ctrl-alt-package" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Waktu Operasi:</strong> <code>~45 menit</code></p>
+</blockquote>
+<p>🎥 <strong>Tonton Panduan</strong></p>
+<p><a href="https://www.youtube.com/watch?v=1iATbkgfcpU" title="Tonton panduan di YouTube"><img alt="Thumbnail video membuat solusi" src="../../../../../translated_images/video-thumbnail.3d68c6292e459541326e2cadf916f09488731b3cfbcd01de909c4bca9b53b49a.id.jpg" /></a></p>
+<h2 id="ringkasan-misi">🎯 Ringkasan Misi<a class="headerlink" href="#ringkasan-misi" title="Permanent link">&para;</a></h2>
+<p>Pembuat Agen, selamat datang di operasi taktis berikutnya. Dalam misi ini, Anda akan belajar merakit Solusi - kendaraan resmi untuk penerapan Agen IT Helpdesk Anda yang dibangun dengan Microsoft Copilot Studio. Anggap ini sebagai membuat koper digital yang menyimpan agen Anda dan artefaknya.</p>
+<p>Setiap agen membutuhkan rumah yang terstruktur dengan baik. Itulah yang disediakan oleh solusi Power Platform - keteraturan, portabilitas, dan kesiapan untuk produksi.</p>
+<p>Mari kita mulai.</p>
+<h2 id="tujuan">🔎 Tujuan<a class="headerlink" href="#tujuan" title="Permanent link">&para;</a></h2>
+<p>Dalam misi ini, Anda akan belajar:</p>
+<ol>
+<li>Memahami apa itu solusi Power Platform dan perannya dalam pengembangan agen</li>
+<li>Mempelajari manfaat menggunakan solusi untuk mengorganisasi dan menerapkan agen</li>
+<li>Mengeksplorasi penerbit solusi dan pentingnya dalam pengelolaan komponen</li>
+<li>Memahami siklus hidup solusi Power Platform dari pengembangan hingga produksi</li>
+<li>Membuat penerbit solusi dan solusi khusus untuk Agen IT Helpdesk Anda</li>
+</ol>
+<h2 id="solusi-apa-itu">🕵🏻‍♀️ Solusi? Apa itu?<a class="headerlink" href="#solusi-apa-itu" title="Permanent link">&para;</a></h2>
+<p>Dalam Microsoft Power Platform, solusi adalah seperti wadah atau paket yang menyimpan semua bagian dari aplikasi atau agen Anda - ini bisa berupa tabel, formulir, alur, dan logika khusus. Solusi sangat penting untuk Application Lifecycle Management (ALM), memungkinkan Anda mengelola aplikasi dan agen Anda dari ide hingga pengembangan, pengujian, penerapan, dan pembaruan.</p>
+<p>Di Copilot Studio, setiap agen yang Anda buat disimpan dalam solusi Power Platform. Secara default, agen dibuat dalam solusi Default, kecuali Anda membuat solusi khusus baru untuk membuat agen Anda di dalamnya. Inilah yang akan kita pelajari 🤓 dalam pelajaran ini dan di lab praktik.</p>
+<p>Solusi secara tradisional dibuat di <strong>portal pembuat Power Apps</strong> - antarmuka berbasis web di mana Anda dapat membangun dan menyesuaikan aplikasi, Dataverse, alur, mengeksplorasi komponen AI, dan lainnya.</p>
+<p><img alt="Solusi" src="../../../../../translated_images/4.0_01_Solutions.4ab938830cdfc6d1b33fc88a172e2043ab713046e174855f866dc072bbeff4dd.id.png" /></p>
+<p>Di Copilot Studio, sekarang ada <strong>Solution Explorer</strong> di mana Anda dapat mengelola solusi Anda secara langsung. Anda tidak perlu lagi beralih ke portal pembuat Power Apps untuk mengelola solusi Anda, semuanya dapat dilakukan langsung di dalam Copilot Studio 🪄</p>
+<p>Ini berarti Anda dapat melakukan tugas-tugas terkait solusi seperti biasa:</p>
+<ul>
+<li><strong>Membuat solusi</strong> - solusi khusus memungkinkan agen diekspor dan diimpor antar lingkungan.</li>
+<li><strong>Mengatur solusi pilihan Anda</strong> - pilih solusi tempat agen, aplikasi, dll akan dibuat secara default.</li>
+<li><strong>Menambahkan atau menghapus komponen</strong> - agen Anda mungkin merujuk komponen lain seperti variabel lingkungan atau alur cloud. Oleh karena itu, komponen ini perlu dimasukkan dalam solusi.</li>
+<li><strong>Mengekspor solusi</strong> - untuk memindahkan solusi ke lingkungan target lainnya.</li>
+<li><strong>Mengimpor solusi</strong> - mengimpor solusi yang dibuat di tempat lain, termasuk peningkatan atau pembaruan solusi.</li>
+<li><strong>Membuat dan mengelola pipeline solusi</strong> - mengotomatisasi penerapan solusi antar lingkungan.</li>
+<li><strong>Integrasi Git</strong> - memungkinkan pengembang menghubungkan solusi dengan repositori Git untuk kontrol versi, kolaborasi, dan ALM. Dimaksudkan untuk digunakan hanya di lingkungan pengembang.</li>
+</ul>
+<p><img alt="Solusi" src="../../../../../translated_images/4.0_02_CopilotStudioSolutionExplorer.042184a894b65fc5b73c91579d9b19a86cd7ca4341c1553c972270dd15852677.id.png" /></p>
+<p>Ada dua jenis solusi:</p>
+<ul>
+<li><strong>Solusi tidak terkelola</strong> - digunakan selama pengembangan. Anda dapat mengedit dan menyesuaikan dengan bebas sesuai kebutuhan.</li>
+<li><strong>Solusi terkelola</strong> - digunakan saat Anda siap menerapkan aplikasi ke pengujian atau produksi. Solusi ini dikunci untuk mencegah perubahan yang tidak disengaja.</li>
+</ul>
+<h2 id="mengapa-harus-menggunakan-solusi-untuk-agen-saya">🤔 Mengapa <em>harus</em> menggunakan Solusi untuk agen saya?<a class="headerlink" href="#mengapa-harus-menggunakan-solusi-untuk-agen-saya" title="Permanent link">&para;</a></h2>
+<p>Anggap Solusi sebagai <em>kotak alat</em>. Ketika Anda perlu memperbaiki atau membangun sesuatu (agen) di lokasi lain (lingkungan), Anda mengumpulkan semua alat yang diperlukan (komponen) dan memasukkannya ke dalam kotak alat Anda (Solusi). Anda kemudian dapat membawa kotak alat ini ke lokasi baru (lingkungan) dan menggunakan alat-alat tersebut (komponen) untuk menyelesaikan pekerjaan Anda, atau menambahkan alat baru (komponen) untuk menyesuaikan agen atau proyek yang sedang Anda bangun.</p>
+<div class="admonition quote">
+<p class="admonition-title">Elaiza, advokat cloud ramah Anda muncul di sini 🙋🏻‍♀️ untuk berbagi beberapa kata:</p>
+<p>Kami memiliki pepatah di Selandia Baru, "Jadilah Kiwi yang rapi!" yang merupakan seruan bagi warga Selandia Baru 🥝 untuk bertanggung jawab atas lingkungan mereka dengan membuang sampah dengan benar dan menjaga kebersihan ruang publik. Kita dapat menggunakan konteks yang sama untuk agen dengan menjaga segala sesuatu yang terkait dengan agen Anda tetap terorganisasi dan portabel, dan ini akan membantu Anda menjaga lingkungan yang rapi.</p>
+</div>
+<p>Adalah praktik yang baik untuk membuat agen dalam solusi khusus di lingkungan sumber (pengembang) Anda. Berikut alasan mengapa solusi itu berharga:</p>
+<p>🧩 <strong>Pengembangan yang terorganisasi</strong></p>
+<ul>
+<li>
+<p>Anda menjaga agen Anda terpisah dari solusi Default yang berisi segala sesuatu di lingkungan. Semua komponen agen Anda berada di satu tempat 🎯</p>
+</li>
+<li>
+<p>Segala sesuatu yang Anda butuhkan untuk agen Anda ada dalam solusi, membuatnya lebih mudah untuk diekspor dan diimpor ke lingkungan target 👉🏻 ini adalah kebiasaan sehat dari ALM.</p>
+</li>
+</ul>
+<p>🧩 <strong>Penerapan yang aman</strong></p>
+<ul>
+<li>Anda dapat mengekspor aplikasi atau agen Anda sebagai solusi terkelola dan menerapkannya ke lingkungan target lainnya (seperti pengujian atau produksi) tanpa risiko pengeditan yang tidak disengaja.</li>
+</ul>
+<p>🧩 <strong>Kontrol versi</strong></p>
+<ul>
+<li>
+<p>Anda dapat membuat patch (perbaikan target), pembaruan (perubahan yang lebih komprehensif) atau peningkatan (mengganti solusi - biasanya perubahan besar dan memperkenalkan fitur baru).</p>
+</li>
+<li>
+<p>Membantu Anda meluncurkan perubahan dengan cara yang terkontrol.</p>
+</li>
+</ul>
+<p>🧩 <strong>Manajemen ketergantungan</strong></p>
+<ul>
+<li>Solusi melacak bagian mana yang bergantung pada yang lain. Ini mencegah Anda merusak sesuatu saat Anda melakukan perubahan.</li>
+</ul>
+<p>🧩 <strong>Kolaborasi tim</strong></p>
+<ul>
+<li>Pengembang dan pembuat dapat bekerja sama menggunakan solusi tidak terkelola dalam pengembangan, kemudian menyerahkan solusi terkelola untuk penerapan.</li>
+</ul>
+<h2 id="memahami-penerbit-solusi">🪪 Memahami Penerbit Solusi<a class="headerlink" href="#memahami-penerbit-solusi" title="Permanent link">&para;</a></h2>
+<p>Penerbit Solusi dalam Power Platform adalah seperti label atau merek yang mengidentifikasi siapa yang membuat atau memiliki solusi. Ini adalah bagian kecil tetapi penting dalam mengelola aplikasi, agen, dan kustomisasi alur Anda, terutama saat bekerja dalam tim atau lintas lingkungan.</p>
+<p>Saat Anda membuat solusi, Anda harus memilih penerbit. Penerbit ini menentukan:</p>
+<ul>
+<li>
+<p>Awalan yang ditambahkan ke semua komponen khusus (seperti tabel, bidang, dan alur).</p>
+</li>
+<li>
+<p>Nama dan informasi kontak untuk organisasi atau orang yang memiliki solusi.</p>
+</li>
+</ul>
+<h3 id="mengapa-ini-penting">🤔 Mengapa ini penting?<a class="headerlink" href="#mengapa-ini-penting" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Identifikasi mudah</strong> - awalan (Contoh - <code>new_</code> atau <code>abc_</code>) membantu Anda dengan cepat mengidentifikasi komponen mana yang milik solusi atau tim mana.</p>
+</li>
+<li>
+<p><strong>Menghindari konflik</strong> - jika dua tim membuat kolom bernama status, awalan mereka (<code>teamA_status</code>, <code>teamB_status</code>) mencegah tabrakan nama.</p>
+</li>
+<li>
+<p><strong>Mendukung ALM</strong> - saat memindahkan solusi antar lingkungan (Dev → Test → Prod), penerbit membantu melacak kepemilikan dan menjaga konsistensi.</p>
+</li>
+</ol>
+<h3 id="contoh">✨ Contoh<a class="headerlink" href="#contoh" title="Permanent link">&para;</a></h3>
+<p>Misalnya Anda membuat penerbit bernama Contoso Solutions dengan awalan <code>cts_</code>.</p>
+<p>Jika Anda menambahkan kolom khusus bernama <em>Priority</em>, kolom tersebut akan disimpan sebagai <code>cts_Priority</code> dalam solusi.</p>
+<p>Siapa pun yang menemukan kolom tersebut di tingkat solusi, terlepas dari lingkungan tempat mereka berada, dapat dengan mudah mengidentifikasinya sebagai kolom yang terkait dengan Contoso Solutions.</p>
+<h2 id="siklus-hidup-solusi-power-platform">🧭 Siklus hidup Solusi Power Platform<a class="headerlink" href="#siklus-hidup-solusi-power-platform" title="Permanent link">&para;</a></h2>
+<p>Sekarang Anda memahami tujuan Solusi, mari kita pelajari siklus hidupnya.</p>
+<p><strong>1. Buat Solusi di lingkungan Pengembangan</strong> - mulai dengan membuat solusi baru di lingkungan Pengembangan Anda.</p>
+<p><strong>2. Tambahkan Komponen</strong> - tambahkan aplikasi, alur, tabel, dan elemen lainnya ke solusi Anda.</p>
+<p><strong>3. Ekspor sebagai solusi Terkelola</strong> - paketkan solusi Anda untuk penerapan dengan mengekspornya sebagai solusi Terkelola.</p>
+<p><strong>4. Impor ke lingkungan Pengujian</strong> - uji solusi Anda di lingkungan Pengujian terpisah untuk memastikan semuanya berfungsi seperti yang diharapkan.</p>
+<p><strong>5. Impor ke lingkungan Produksi</strong> - terapkan solusi yang telah diuji ke lingkungan Produksi langsung Anda.</p>
+<p><strong>6. Terapkan Patch, Pembaruan, atau Peningkatan</strong> - lakukan perbaikan atau peningkatan menggunakan patch, pembaruan, atau peningkatan. 🔁 Ulangi siklusnya!</p>
+<h3 id="contoh_1">✨ Contoh<a class="headerlink" href="#contoh_1" title="Permanent link">&para;</a></h3>
+<p>Bayangkan Anda sedang membangun agen IT helpdesk untuk membantu karyawan dengan masalah seperti masalah perangkat, pemecahan masalah jaringan, pengaturan printer, dan lainnya.</p>
+<ul>
+<li>
+<p>Anda mulai di lingkungan Pengembangan menggunakan solusi tidak terkelola.</p>
+</li>
+<li>
+<p>Setelah siap, Anda mengekspornya sebagai solusi terkelola dan mengimpornya ke lingkungan target seperti Pengujian Sistem atau Pengujian Penerimaan Pengguna (UAT).</p>
+</li>
+<li>
+<p>Setelah pengujian, Anda memindahkannya ke lingkungan Produksi - semuanya tanpa menyentuh versi pengembangan asli.</p>
+</li>
+</ul>
+<h2 id="lab-04-membuat-solusi-baru">🧪 Lab 04: Membuat Solusi Baru<a class="headerlink" href="#lab-04-membuat-solusi-baru" title="Permanent link">&para;</a></h2>
+<p>Sekarang kita akan belajar</p>
+<ul>
+<li><a href="../../../../../docs/recruit/04-creating-a-solution">4.1 Cara membuat penerbit Solusi</a></li>
+<li><a href="../../../../../docs/recruit/04-creating-a-solution">4.2 Cara membuat Solusi</a></li>
+</ul>
+<p>Kita akan tetap menggunakan contoh dari sebelumnya, di mana kita akan membuat solusi di lingkungan Copilot Studio khusus untuk membangun agen IT helpdesk kita.</p>
+<p>Mari kita mulai!</p>
+<h3 id="prasyarat">Prasyarat<a class="headerlink" href="#prasyarat" title="Permanent link">&para;</a></h3>
+<h4 id="peran-keamanan">Peran keamanan<a class="headerlink" href="#peran-keamanan" title="Permanent link">&para;</a></h4>
+<p>Di Copilot Studio, apa yang <em>dapat Anda lakukan</em> di solution explorer bergantung pada peran keamanan pengguna Anda.
+Jika Anda tidak memiliki izin untuk mengelola solusi di pusat admin Power Apps, Anda juga tidak akan dapat melakukan tugas-tugas tersebut di Copilot Studio.</p>
+<p>Untuk memastikan semuanya berjalan lancar, periksa apakah Anda memiliki peran keamanan dan izin yang tepat. Atau jika Anda tidak mengelola lingkungan di organisasi Anda, tanyakan kepada administrator IT Anda (atau tim yang setara) yang mengelola tenant/lingkungan Anda.</p>
+<p>Berikut adalah peran keamanan yang memungkinkan pengguna untuk membuat solusi di lingkungan mereka.</p>
+<table>
+<thead>
+<tr>
+<th>Peran Keamanan</th>
+<th>Deskripsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pembuat Lingkungan</td>
+<td>Memberikan izin yang diperlukan untuk membuat, menyesuaikan, dan mengelola sumber daya dalam lingkungan tertentu, termasuk solusi</td>
+</tr>
+<tr>
+<td>Penyesuai Sistem</td>
+<td>Izin yang lebih luas daripada Pembuat Lingkungan, termasuk kemampuan untuk menyesuaikan lingkungan dan mengelola peran keamanan</td>
+</tr>
+<tr>
+<td>Administrator Sistem</td>
+<td>Tingkat izin tertinggi dan dapat mengelola semua aspek lingkungan, termasuk membuat dan menetapkan peran keamanan</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lingkungan-pengembang">Lingkungan pengembang<a class="headerlink" href="#lingkungan-pengembang" title="Permanent link">&para;</a></h4>
+<p>Pastikan Anda beralih ke lingkungan pengembang khusus Anda, lihat <a href="../00-course-setup/#step-3-create-new-developer-environment">Pelajaran 00 - Pengaturan Kursus - Langkah 3: Buat lingkungan pengembang baru</a>.</p>
+<ol>
+<li>
+<p>Di kanan atas, pilih ikon <strong>Roda Gigi</strong> dan beralih dari lingkungan default ke lingkungan Anda, misalnya <strong>Lingkungan Adele Vance</strong>.</p>
+<p><img alt="Lingkungan pengembang" src="../../../../../translated_images/4.0_03_DeveloperEnvironment.07770f8ffb55e0f76dc7f8a5247154e66ac22a5ac3a00c7a025e1b0e1f43f43e.id.png" /></p>
+</li>
+</ol>
+<h3 id="41-membuat-penerbit-solusi">4.1 Membuat penerbit Solusi<a class="headerlink" href="#41-membuat-penerbit-solusi" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Menggunakan lingkungan Copilot Studio yang sama seperti yang digunakan dalam pelajaran sebelumnya, pilih ikon <strong>titik tiga (. . .)</strong> di menu sisi kiri di Copilot Studio. Pilih <strong>Solusi</strong> di bawah header <strong>Explore</strong>.</p>
+<p><img alt="Solusi" src="../../../../../translated_images/4.1_01_Solutions.1db0ad61bec0859dc3bdd673df996059405a2ab29bed5e4a0f58435d8732fa38.id.png" /></p>
+</li>
+<li>
+<p><strong>Solution Explorer</strong> di Copilot Studio akan dimuat. Pilih <strong>+ Solusi baru</strong></p>
+<p><img alt="Solusi" src="../../../../../translated_images/4.1_02_NewSolution.a0beb3ae63cbd368567ecac7ca483ce90ab1082fbb7ec4722faf20cb69ec2f59.id.png" /></p>
+</li>
+<li>
+<p>Panel <strong>Solusi baru</strong> akan muncul di mana kita dapat menentukan detail solusi kita. Pertama, kita perlu membuat penerbit baru. Pilih <strong>+ Penerbit baru</strong>.</p>
+<p><img alt="Solusi" src="../../../../../translated_images/4.1_03_NewPublisher.af7ad3f00b1d01bfa741dec8c9f47ca2d1ddaed5af0b292211916fc9fa24a323.id.png" />  </p>
+</li>
+<li>
+<p>Tab <strong>Properti</strong> dari panel <strong>Penerbit baru</strong> akan muncul dengan kolom yang wajib dan tidak wajib diisi di tab <strong>Properti</strong>. Di sinilah kita dapat menguraikan detail penerbit yang akan digunakan sebagai label atau merek yang mengidentifikasi siapa yang membuat atau memiliki solusi.</p>
+<table>
+<thead>
+<tr>
+<th>Properti</th>
+<th>Deskripsi</th>
+<th style="text-align: center;">Wajib</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nama tampilan</td>
+<td>Nama tampilan untuk penerbit</td>
+<td style="text-align: center;">Ya</td>
+</tr>
+<tr>
+<td>Nama</td>
+<td>Nama unik dan nama skema untuk penerbit</td>
+<td style="text-align: center;">Ya</td>
+</tr>
+<tr>
+<td>Deskripsi</td>
+<td>Menguraikan tujuan solusi</td>
+<td style="text-align: center;">Tidak</td>
+</tr>
+<tr>
+<td>Awalan</td>
+<td>Awalan penerbit yang akan diterapkan pada komponen yang baru dibuat</td>
+<td style="text-align: center;">Ya</td>
+</tr>
+<tr>
+<td>Awalan nilai pilihan</td>
+<td>Menghasilkan angka berdasarkan awalan penerbit. Angka ini digunakan saat Anda menambahkan opsi ke pilihan dan memberikan indikator solusi mana yang digunakan untuk menambahkan opsi tersebut.</td>
+<td style="text-align: center;">Ya</td>
+</tr>
+</tbody>
+</table>
+<p>Salin dan tempel yang berikut sebagai <strong>Nama tampilan</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Contoso Solutions
+</span></code></pre></div>
+<p>Salin dan tempel yang berikut sebagai <strong>Nama</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ContosoSolutions
+</span></code></pre></div>
+<p>Salin dan tempel yang berikut sebagai <strong>Deskripsi</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Copilot Studio Agent Academy
+</span></code></pre></div>
+<p>Salin dan tempel yang berikut untuk <strong>Awalan</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cts
+</span></code></pre></div>
+<p>Secara default, awalan <strong>Nilai pilihan</strong> akan menampilkan nilai integer. Perbarui nilai integer ini ke angka ribuan terdekat. Misalnya, dalam tangkapan layar saya di bawah, awalnya adalah <code>77074</code>. Perbarui ini dari <code>77074</code> menjadi <code>77000</code>.</p>
+<p><img alt="Solusi" src="../../../../../translated_images/4.1_04_PublisherProperties.b6cbbe7bc0f51446f273bf9a8a06b163c2061a575dab0fc4a5f42007ac01a82c.id.png" />  </p>
+</li>
+<li>
+<p>Jika Anda ingin memberikan detail kontak untuk Solusi, pilih tab <strong>Kontak</strong> dan isi kolom berikut yang ditampilkan.</p>
+<p><img alt="Solusi" src="../../../../../translated_images/4.1_05_Contact.fc0b65c96cc1ef06a1bd173f21920516e123fab76d13f592eab8745f529df3ef.id.png" /></p>
+</li>
+<li>
+<p>Pilih tab <strong>Properti</strong> dan pilih <strong>Simpan</strong> untuk membuat Penerbit.</p>
+<p><img alt="Solusi" src="../../../../../translated_images/4.1_06_SavePublisher.4aabbd20a051b55eab9d5d961761c1fae61d5c0cef07f696c5eaa030f4a5c356.id.png" />
+1. Panel <strong>Penerbit Baru</strong> akan tertutup dan Anda akan kembali ke panel <strong>Solusi Baru</strong> dengan Penerbit yang baru saja dibuat sudah dipilih.</p>
+<p><img alt="Solusi" src="../../../../../translated_images/4.1_07_PublisherSelected.5d88b1212348c15841b5f57e78554649d4ed080d10dccaece30e826b6e359132.id.png" />  </p>
+</li>
+</ol>
+<p>Selamat, Anda telah berhasil membuat Penerbit Solusi! 🙌🏻 Selanjutnya, kita akan belajar cara membuat solusi kustom baru.</p>
+<h3 id="42-membuat-solusi-baru">4.2 Membuat Solusi Baru<a class="headerlink" href="#42-membuat-solusi-baru" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Sekarang setelah kita membuat penerbit solusi, kita dapat melengkapi sisa formulir di panel <strong>Solusi Baru</strong>.</p>
+<p>Salin dan tempel teks berikut sebagai <strong>Nama Tampilan</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Contoso Helpdesk Agent
+</span></code></pre></div>
+<p>Salin dan tempel teks berikut sebagai <strong>Nama</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ContosoHelpdeskAgent
+</span></code></pre></div>
+<p>Karena kita sedang membuat solusi baru, <a href="https://learn.microsoft.com/power-apps/maker/data-platform/update-solutions#understanding-version-numbers-for-updates/?WT.mc_id=power-172615-ebenitez"><strong>Nomor Versi</strong></a> secara default akan menjadi <code>1.0.0.0</code>.</p>
+<p>Centang kotak <strong>Tetapkan sebagai solusi pilihan Anda</strong>.</p>
+<p><img alt="Solusi" src="../../../../../translated_images/4.2_01_SolutionDetails_.ce2945385f3544846ca9e62f209c96a673a2540ea6e20404cd5f1b224d8b5321.id.png" />  </p>
+</li>
+<li>
+<p>Perluas <strong>Opsi lainnya</strong> untuk melihat detail tambahan yang dapat disediakan dalam solusi.</p>
+<p><img alt="Solusi" src="../../../../../translated_images/4.2_02_MoreOptions.3c4b95d2fe119f8a8d8be783f5beba0a3b6c36fb83055cae80eaa45891aea73b.id.png" /></p>
+</li>
+<li>
+<p>Anda akan melihat hal berikut,</p>
+<ul>
+<li>
+<p><strong>Diinstal pada</strong> - tanggal saat Solusi diinstal.</p>
+</li>
+<li>
+<p><strong>Halaman konfigurasi</strong> - pengembang mengatur sumber daya web HTML untuk membantu pengguna berinteraksi dengan aplikasi, agen, atau alat mereka, yang akan muncul sebagai halaman web di bagian Informasi dengan instruksi atau tombol. Ini biasanya digunakan oleh perusahaan atau pengembang yang membangun dan berbagi solusi dengan orang lain.</p>
+</li>
+<li>
+<p><strong>Deskripsi</strong> - menjelaskan solusi atau gambaran umum tentang halaman konfigurasi.</p>
+</li>
+</ul>
+<p>Kita akan membiarkan bagian ini kosong untuk lab ini.</p>
+<p>Pilih <strong>Buat</strong>.</p>
+<p><img alt="Solusi" src="../../../../../translated_images/4.2_03_Create.afd1bc27593062dfd945d4a0aa6fb05d87e0b02b0f45d01eaad8810f67a5f295.id.png" /></p>
+</li>
+<li>
+<p>Solusi untuk Contoso Helpdesk Agent sekarang telah dibuat. Akan ada nol komponen hingga kita membuat agen di Copilot Studio.</p>
+<p>Pilih ikon <strong>panah kembali</strong> untuk kembali ke Solution Explorer.</p>
+<p><img alt="Solusi" src="../../../../../translated_images/4.2_04_SolutionCreated.f5f543303fd58856f93bfc1d4d6e9a27fd338a82e77b15258bb54f03b9b5f631.id.png" /></p>
+</li>
+<li>
+<p>Perhatikan bagaimana Contoso Helpdesk Agent sekarang ditampilkan sebagai <strong>Solusi pilihan saat ini</strong> karena kita telah mencentang kotak <strong>Tetapkan sebagai solusi pilihan Anda</strong> sebelumnya.</p>
+<p><img alt="Solusi" src="../../../../../translated_images/4.2_05_CurrentPreferredSolutionSelected.fde1fa6c013f41f445c2b8721af8bc172a6a8bf98c4f5b8e946f87b4d5ec7823.id.png" /></p>
+</li>
+</ol>
+<h2 id="misi-selesai">✅ Misi Selesai<a class="headerlink" href="#misi-selesai" title="Permanent link">&para;</a></h2>
+<p>Selamat! 👏🏻 Anda telah membuat Penerbit dan menggunakannya dalam Solusi baru yang Anda buat untuk membangun agen Anda!</p>
+<p>Kerja bagus, Pembuat Agen. Jejak digital yang rapi adalah langkah pertama menuju operabilitas dalam skala besar. Sekarang Anda memiliki alat dan pola pikir untuk pengembangan agen yang berkelanjutan dan siap untuk perusahaan.</p>
+<p>Ini adalah akhir dari <strong>Lab 04 - Membuat Solusi</strong>, pilih tautan di bawah untuk melanjutkan ke pelajaran berikutnya. Solusi yang Anda buat dalam lab ini akan digunakan dalam lab pelajaran berikutnya.</p>
+<p>⏭️ <a href="../05-using-prebuilt-agents/">Lanjut ke pelajaran <strong>Memulai dengan cepat menggunakan agen yang sudah dibuat sebelumnya</strong></a></p>
+<h2 id="sumber-daya-taktis">📚 Sumber Daya Taktis<a class="headerlink" href="#sumber-daya-taktis" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/power-apps/maker/data-platform/create-solution/?WT.mc_id=power-172615-ebenitez">Membuat solusi</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-solutions-overview/?WT.mc_id=power-172615-ebenitez">Membuat dan mengelola solusi di Copilot Studio</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/admin-share-bots/?WT.mc_id=power-172615-ebenitez">Berbagi agen dengan pengguna lain</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-platform/admin/database-security#summary-of-resources-available-to-predefined-security-roles/?WT.mc_id=power-172615-ebenitez">Ringkasan sumber daya yang tersedia untuk peran keamanan yang telah ditentukan sebelumnya</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-apps/maker/data-platform/update-solutions/?WT.mc_id=power-172615-ebenitez">Meningkatkan atau memperbarui solusi</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-platform/alm/pipelines/?WT.mc_id=power-172615-ebenitez">Ikhtisar pipeline di Power Platform</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-platform/alm/git-integration/overview/?WT.mc_id=power-172615-ebenitez">Ikhtisar integrasi Git di Power Platform</a></p>
+<!-- markdownlint-disable-next-line MD033 -->
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/04-creating-a-solution" alt="Analitik" /></p>
+<hr />
+<p><strong>Penafian</strong>:<br />
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis dapat mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang penting, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang timbul dari penggunaan terjemahan ini.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

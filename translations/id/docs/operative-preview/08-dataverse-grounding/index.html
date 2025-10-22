@@ -1,0 +1,1230 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/id/docs/operative-preview/08-dataverse-grounding/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#misi-08-peningkatan-prompt-dengan-dasar-dataverse" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nama-kode-operasi-kontrol-dasar" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ NAMA KODE: OPERASI KONTROL DASAR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ringkasan-misi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Ringkasan Misi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tujuan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Tujuan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memahami-dasar-dataverse-untuk-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Memahami dasar Dataverse untuk prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mengapa-prompt-khusus-vs-percakapan-agen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Mengapa prompt khusus vs percakapan agen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-8-tambahkan-dasar-dataverse-ke-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 8: Tambahkan dasar Dataverse ke prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misi-selesai" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 Misi Selesai
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sumber-daya-taktis" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Sumber Daya Taktis
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "750f3ea8a94930439ebd8a10871b1d73",
+  "translation_date": "2025-10-17T17:15:56+00:00",
+  "source_file": "docs/operative-preview/08-dataverse-grounding/README.md",
+  "language_code": "id"
+}
+-->
+<h1 id="misi-08-peningkatan-prompt-dengan-dasar-dataverse">🚨 Misi 08: Peningkatan prompt dengan dasar Dataverse<a class="headerlink" href="#misi-08-peningkatan-prompt-dengan-dasar-dataverse" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="nama-kode-operasi-kontrol-dasar">🕵️‍♂️ NAMA KODE: <code>OPERASI KONTROL DASAR</code><a class="headerlink" href="#nama-kode-operasi-kontrol-dasar" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Waktu Operasi:</strong> <code>~60 menit</code></p>
+</blockquote>
+<h2 id="ringkasan-misi">🎯 Ringkasan Misi<a class="headerlink" href="#ringkasan-misi" title="Permanent link">&para;</a></h2>
+<p>Selamat datang kembali, Operatif. Sistem perekrutan multi-agen Anda sudah beroperasi, tetapi ada peningkatan penting yang diperlukan untuk <strong>dasar data</strong> - model AI Anda membutuhkan akses real-time ke data terstruktur organisasi Anda untuk membuat keputusan yang cerdas.</p>
+<p>Saat ini, prompt Ringkasan Resume Anda beroperasi dengan pengetahuan statis. Tetapi bagaimana jika ia dapat mengakses database peran pekerjaan Anda secara dinamis untuk memberikan kecocokan yang akurat dan terkini? Bagaimana jika ia memahami kriteria evaluasi Anda tanpa harus Anda kodekan secara manual?</p>
+<p>Dalam misi ini, Anda akan meningkatkan prompt kustom Anda dengan <strong>dasar Dataverse</strong> - menghubungkan prompt Anda langsung ke sumber data langsung. Ini mengubah agen Anda dari responden statis menjadi sistem berbasis data yang dinamis yang dapat beradaptasi dengan kebutuhan bisnis yang berubah.</p>
+<p>Misi Anda: integrasikan data peran pekerjaan dan kriteria evaluasi real-time ke dalam alur analisis resume Anda, menciptakan sistem yang selalu diperbarui sesuai dengan kebutuhan perekrutan organisasi Anda.</p>
+<h2 id="tujuan">🔎 Tujuan<a class="headerlink" href="#tujuan" title="Permanent link">&para;</a></h2>
+<p>Dalam misi ini, Anda akan mempelajari:</p>
+<ol>
+<li>Bagaimana <strong>dasar Dataverse</strong> meningkatkan prompt kustom</li>
+<li>Kapan menggunakan dasar data vs instruksi statis</li>
+<li>Merancang prompt yang secara dinamis menggabungkan data langsung</li>
+<li>Meningkatkan alur Ringkasan Resume dengan pencocokan peran pekerjaan</li>
+</ol>
+<h2 id="memahami-dasar-dataverse-untuk-prompt">🧠 Memahami dasar Dataverse untuk prompt<a class="headerlink" href="#memahami-dasar-dataverse-untuk-prompt" title="Permanent link">&para;</a></h2>
+<p><strong>Dasar Dataverse</strong> memungkinkan prompt kustom Anda mengakses data langsung dari tabel Dataverse saat memproses permintaan. Alih-alih instruksi statis, prompt Anda dapat menggabungkan informasi real-time untuk membuat keputusan yang terinformasi.</p>
+<h3 id="mengapa-dasar-dataverse-penting">Mengapa dasar Dataverse penting<a class="headerlink" href="#mengapa-dasar-dataverse-penting" title="Permanent link">&para;</a></h3>
+<p>Prompt tradisional bekerja dengan instruksi tetap:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Match this candidate to these job roles: Developer, Manager, Analyst
+</span></code></pre></div>
+<p>Dengan dasar Dataverse, prompt Anda mengakses data terkini:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Match this candidate to available job roles from the Job Roles table, 
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>considering current evaluation criteria and requirements
+</span></code></pre></div>
+<p>Pendekatan ini memberikan beberapa manfaat utama:</p>
+<ul>
+<li><strong>Pembaruan dinamis:</strong> Peran pekerjaan dan kriteria berubah tanpa modifikasi prompt</li>
+<li><strong>Konsistensi:</strong> Semua agen menggunakan sumber data terkini yang sama</li>
+<li><strong>Skalabilitas:</strong> Peran dan kriteria baru tersedia secara otomatis</li>
+<li><strong>Akurasi:</strong> Data real-time memastikan keputusan mencerminkan kebutuhan terkini</li>
+</ul>
+<h3 id="cara-kerja-dasar-dataverse">Cara kerja dasar Dataverse<a class="headerlink" href="#cara-kerja-dasar-dataverse" title="Permanent link">&para;</a></h3>
+<p>Saat Anda mengaktifkan dasar Dataverse untuk prompt kustom:</p>
+<ol>
+<li><strong>Pemilihan data:</strong> Pilih tabel dan kolom Dataverse spesifik untuk disertakan. Anda juga dapat memilih tabel terkait yang akan difilter oleh sistem berdasarkan catatan induk yang diambil.</li>
+<li><strong>Penyuntikan konteks:</strong> Prompt secara otomatis menyertakan data yang diambil dalam konteks prompt</li>
+<li><strong>Penyaringan cerdas:</strong> Sistem hanya menyertakan data yang relevan dengan permintaan saat ini jika Anda memberikan penyaringan.</li>
+<li><strong>Output terstruktur:</strong> Prompt Anda dapat merujuk data yang diambil dan mempertimbangkan catatan yang diambil untuk membuat output.</li>
+</ol>
+<h3 id="dari-statis-ke-dinamis-keunggulan-dasar">Dari statis ke dinamis: Keunggulan dasar<a class="headerlink" href="#dari-statis-ke-dinamis-keunggulan-dasar" title="Permanent link">&para;</a></h3>
+<p>Mari kita periksa alur Ringkasan Resume Anda saat ini dari Misi 07 dan lihat bagaimana dasar Dataverse mengubahnya dari kecerdasan statis menjadi dinamis.</p>
+<p><strong>Pendekatan statis saat ini:</strong>
+Prompt Anda yang ada menyertakan kriteria evaluasi yang dikodekan secara manual dan logika pencocokan yang telah ditentukan sebelumnya. Pendekatan ini berfungsi tetapi memerlukan pembaruan manual setiap kali Anda menambahkan peran pekerjaan baru, mengubah kriteria evaluasi, atau menggeser prioritas perusahaan.</p>
+<p><strong>Transformasi dasar Dataverse:</strong>
+Dengan menambahkan dasar Dataverse, alur Ringkasan Resume Anda akan:</p>
+<ul>
+<li><strong>Mengakses peran pekerjaan terkini</strong> dari tabel Peran Pekerjaan Anda</li>
+<li><strong>Menggunakan kriteria evaluasi langsung</strong> alih-alih deskripsi statis  </li>
+<li><strong>Memberikan kecocokan yang akurat</strong> berdasarkan kebutuhan real-time</li>
+</ul>
+<h2 id="mengapa-prompt-khusus-vs-percakapan-agen">🎯 Mengapa prompt khusus vs percakapan agen<a class="headerlink" href="#mengapa-prompt-khusus-vs-percakapan-agen" title="Permanent link">&para;</a></h2>
+<p>Dalam Misi 02, Anda mengalami bagaimana Agen Wawancara dapat mencocokkan kandidat dengan peran pekerjaan, tetapi memerlukan prompt pengguna yang kompleks seperti:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Upload this resume, then show me open job roles,
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>each with a description of the evaluation criteria, 
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>then use this to match the resume to at least one suitable
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>job role even if not a perfect match.
+</span></code></pre></div>
+<p>Meskipun ini berfungsi, prompt khusus dengan dasar Dataverse menawarkan keuntungan signifikan untuk tugas tertentu:</p>
+<h3 id="keuntungan-utama-dari-prompt-khusus">Keuntungan utama dari prompt khusus<a class="headerlink" href="#keuntungan-utama-dari-prompt-khusus" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspek</th>
+<th>Percakapan Agen</th>
+<th>Prompt Khusus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Konsistensi</strong></td>
+<td>Hasil bervariasi berdasarkan keterampilan pengguna dalam membuat prompt</td>
+<td>Pemrosesan yang terstandarisasi setiap saat</td>
+</tr>
+<tr>
+<td><strong>Spesialisasi</strong></td>
+<td>Penalaran umum mungkin melewatkan nuansa bisnis</td>
+<td>Dibangun khusus dengan logika bisnis yang dioptimalkan</td>
+</tr>
+<tr>
+<td><strong>Otomasi</strong></td>
+<td>Memerlukan interaksi dan interpretasi manusia</td>
+<td>Dipicu secara otomatis dengan output JSON terstruktur</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lab-8-tambahkan-dasar-dataverse-ke-prompt">🧪 Lab 8: Tambahkan dasar Dataverse ke prompt<a class="headerlink" href="#lab-8-tambahkan-dasar-dataverse-ke-prompt" title="Permanent link">&para;</a></h2>
+<p>Saatnya meningkatkan kemampuan analisis resume Anda! Anda akan meningkatkan alur Ringkasan Resume yang ada dengan pencocokan peran pekerjaan yang dinamis.</p>
+<h3 id="prasyarat-untuk-menyelesaikan-misi-ini">Prasyarat untuk menyelesaikan misi ini<a class="headerlink" href="#prasyarat-untuk-menyelesaikan-misi-ini" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Anda perlu <strong>salah satu</strong>:</p>
+<ul>
+<li><strong>Telah menyelesaikan Misi 07</strong> dan memiliki sistem analisis resume Anda siap, <strong>ATAU</strong></li>
+<li><strong>Mengimpor solusi awal Misi 08</strong> jika Anda memulai dari awal atau perlu mengejar ketinggalan. <a href="https://aka.ms/agent-academy">Unduh Solusi Awal Misi 08</a></li>
+</ul>
+</li>
+<li>
+<p>Dokumen resume sampel dari <a href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/operative/sample-data/resumes&amp;filename=operative_sampledata">test Resumes</a></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Impor Solusi dan Data Sampel</p>
+<p>Jika Anda menggunakan solusi awal, lihat <a href="../01-get-started/">Misi 01</a> untuk instruksi rinci tentang cara mengimpor solusi dan data sampel ke lingkungan Anda.</p>
+</div>
+<h3 id="81-tambahkan-dasar-dataverse-ke-prompt-anda">8.1 Tambahkan dasar Dataverse ke prompt Anda<a class="headerlink" href="#81-tambahkan-dasar-dataverse-ke-prompt-anda" title="Permanent link">&para;</a></h3>
+<p>Anda akan membangun prompt Ringkasan Resume yang Anda buat di Misi 07. Saat ini hanya merangkum resume, tetapi sekarang Anda akan mendasarkannya dengan peran pekerjaan sebagaimana adanya di Dataverse, menjadikannya selalu terkini.</p>
+<p>Pertama, mari kita periksa tabel Dataverse yang akan Anda gunakan sebagai dasar:</p>
+<ol>
+<li>
+<p><strong>Navigasikan</strong> ke <a href="https://make.powerapps.com">Power Apps</a> dan pilih lingkungan Anda menggunakan <strong>Pengalih Lingkungan</strong> di kanan atas bilah navigasi.</p>
+</li>
+<li>
+<p>Pilih <strong>Tabel</strong> dan temukan tabel <strong>Peran Pekerjaan</strong></p>
+</li>
+<li>
+<p>Tinjau kolom utama yang akan Anda gunakan sebagai dasar:</p>
+<table>
+<thead>
+<tr>
+<th>Kolom</th>
+<th>Tujuan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nomor Peran Pekerjaan</strong></td>
+<td>Pengidentifikasi unik untuk pencocokan peran</td>
+</tr>
+<tr>
+<td><strong>Judul Pekerjaan</strong></td>
+<td>Nama tampilan untuk peran</td>
+</tr>
+<tr>
+<td><strong>Deskripsi</strong></td>
+<td>Persyaratan peran yang rinci</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Demikian pula, tinjau tabel lainnya seperti tabel <strong>Kriteria Evaluasi</strong>.</p>
+</li>
+</ol>
+<h3 id="82-tambahkan-data-dasar-dataverse-ke-prompt-anda">8.2 Tambahkan data dasar Dataverse ke prompt Anda<a class="headerlink" href="#82-tambahkan-data-dasar-dataverse-ke-prompt-anda" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Navigasikan</strong> ke Copilot Studio, dan pilih lingkungan Anda menggunakan <strong>Pengalih Lingkungan</strong> di kanan atas bilah navigasi.</p>
+</li>
+<li>
+<p>Pilih <strong>Tools</strong> dari navigasi kiri.</p>
+</li>
+<li>
+<p>Pilih <strong>Prompt</strong> dan temukan prompt <strong>Ringkasan Resume</strong> Anda dari Misi 07.<br />
+<img alt="Pilih Prompt" src="../../../../../translated_images/8-select-prompt.d66a248a6d11fce2b4bc149422eb2722736c972185bca613c849e74011411941.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Edit</strong> untuk memodifikasi prompt, dan ganti dengan versi yang ditingkatkan di bawah ini:</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Pastikan parameter Resume dan Surat Lamaran tetap utuh sebagai parameter.</p>
+</div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>You are tasked with extracting key candidate information from a resume and cover letter to facilitate matching with open job roles and creating a summary for application review.
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>### Instructions:
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>1. **Extract Candidate Details:**
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>   - Identify and extract the candidate&#39;s full name.
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>   - Extract contact information, specifically the email address.
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2. **Analyze Resume and Cover Letter:**
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>   - Review the resume content to identify relevant skills, experience, and qualifications.
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>   - Review the cover letter to understand the candidate&#39;s motivation and suitability for the roles.
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>3. **Match Against Open Job Roles:**
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>   - Compare the extracted candidate information with the requirements and descriptions of the provided open job roles.
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>   - Use the job descriptions to assess potential fit.
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>   - Identify all roles that align with the candidate&#39;s cover letter and profile. You don&#39;t need to assess perfect suitability.
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>   - Provide reasoning for each match based on the specific job requirements.
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>4. **Create Candidate Summary:**
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>   - Summarize the candidate&#39;s profile as multiline text with the following sections:
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>      - Candidate name
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>      - Role(s) applied for if present
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>      - Contact and location
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>      - One-paragraph summary
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>      - Top skills (8–10)
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>      - Experience snapshot (last 2–3 roles with outcomes)
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>      - Key projects (1–3 with metrics)
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>      - Education and certifications
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>      - Availability and work authorization
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>### Output Format
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>Provide the output in valid JSON format with the following structure:
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>{
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>  &quot;CandidateName&quot;: &quot;string&quot;,
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>  &quot;Email&quot;: &quot;string&quot;,
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>  &quot;MatchedRoles&quot;: [
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>    {
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>      &quot;JobRoleNumber&quot;: &quot;ppa_jobrolenumber from grounded data&quot;,
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>      &quot;RoleName&quot;: &quot;ppa_jobtitle from grounded data&quot;,
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>      &quot;Reasoning&quot;: &quot;Detailed explanation based on job requirements&quot;
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>    }
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>  ],
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>  &quot;Summary&quot;: &quot;string&quot;
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>}
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>### Guidelines
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>- Extract information only from the provided resume and cover letter documents.
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>- Ensure accuracy in identifying contact details.
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>- Use the available job role data for matching decisions.
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>- The summary should be concise but informative, suitable for quick application review.
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>- If no suitable matches are found, indicate an empty list for MatchedRoles and explain briefly in the summary.
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>### Input Data
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>Open Job Roles (ppa_jobrolenumber, ppa_jobtitle): /Job Role 
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>Resume: {Resume}
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>Cover Letter: {CoverLetter}
+</span></code></pre></div>
+</li>
+<li>
+<p>Di editor prompt, ganti <code>/Job Role</code> dengan memilih <strong>+ Tambahkan konten</strong>, memilih <strong>Dataverse</strong> → <strong>Peran Pekerjaan</strong> dan pilih kolom berikut, lalu pilih <strong>Tambahkan</strong>:</p>
+<ol>
+<li>
+<p><strong>Nomor Peran Pekerjaan</strong></p>
+</li>
+<li>
+<p><strong>Judul Pekerjaan</strong></p>
+</li>
+<li>
+<p><strong>Deskripsi</strong></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Anda dapat mengetik nama tabel untuk mencari.</p>
+</div>
+</li>
+<li>
+<p>Di dialog <strong>Peran Pekerjaan</strong>, pilih atribut <strong>Filter</strong>, pilih <strong>Status</strong>, lalu ketik <strong>Aktif</strong> sebagai nilai <strong>Filter</strong>.<br />
+<img alt="Tambahkan Dasar Dataverse" src="../../../../../translated_images/8-add-grounding.e377b283acb2087f784ce1440bc65b57de1af7d8d9334ee116bf06095dd813c8.id.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Anda dapat menggunakan <strong>Tambahkan nilai</strong> di sini untuk menambahkan parameter input juga - misalnya jika Anda memiliki prompt untuk merangkum catatan yang ada, Anda dapat memberikan Nomor Resume sebagai parameter untuk difilter.</p>
+</div>
+</li>
+<li>
+<p>Selanjutnya, Anda akan menambahkan tabel Dataverse terkait <strong>Kriteria Evaluasi</strong>, dengan kembali memilih <strong>+ Tambahkan konten</strong>, menemukan <strong>Peran Pekerjaan</strong>, dan alih-alih memilih kolom di Peran Pekerjaan, perluas <strong>Peran Pekerjaan (Kriteria Evaluasi)</strong> dan pilih kolom berikut, lalu pilih <strong>Tambahkan</strong>:</p>
+<ol>
+<li>
+<p><strong>Nama Kriteria</strong></p>
+</li>
+<li>
+<p><strong>Deskripsi</strong><br />
+<img alt="Tambahkan kriteria evaluasi terkait" src="../../../../../translated_images/8-add-eval-criteria.1c2ceb2e208ff3e5c6fd33ef3aad30f0ea545505e6bcc98a0f30c373574525fa.id.png" /></p>
+<p><img alt="Parameter prompt dan dasar yang selesai" src="../../../../../translated_images/8-all-prompt-parameters.6c8d5d173ce4e3f93d78a371474dace6279f85ecae867863249e68c3ad35f668.id.png" /></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Penting untuk memilih Kriteria Evaluasi terkait dengan terlebih dahulu memilih Peran Pekerjaan, lalu menavigasi di menu ke Peran Pekerjaan (Kriteria Evaluasi). Ini akan memastikan bahwa hanya catatan terkait untuk Peran Pekerjaan yang akan dimuat.</p>
+</div>
+</li>
+<li>
+<p>Pilih <strong>Pengaturan</strong>, dan sesuaikan <strong>Pengambilan catatan</strong> menjadi 1000 - ini akan memungkinkan Peran Pekerjaan dan Kriteria Evaluasi maksimum untuk disertakan dalam prompt Anda.<br />
+<img alt="Pengaturan Prompt" src="../../../../../translated_images/8-prompt-settings.267982cf4eb45cff839bb2f3e370611411a9702e6eb2414445090d0d5b1dc38b.id.png" /></p>
+</li>
+</ol>
+<h3 id="83-uji-prompt-yang-ditingkatkan">8.3 Uji prompt yang ditingkatkan<a class="headerlink" href="#83-uji-prompt-yang-ditingkatkan" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Pilih parameter <strong>Resume</strong>, dan unggah resume sampel yang Anda gunakan di Misi 07.</li>
+<li>Pilih <strong>Uji</strong>.</li>
+<li>Setelah pengujian selesai, perhatikan bahwa output JSON sekarang menyertakan <strong>Peran yang Cocok</strong>.</li>
+<li>Pilih tab <strong>Pengetahuan yang digunakan</strong>, untuk melihat data Dataverse yang digabungkan dengan prompt Anda sebelum eksekusi.</li>
+<li><strong>Simpan</strong> prompt yang diperbarui. Sistem sekarang akan secara otomatis menyertakan data Dataverse ini dengan prompt Anda saat Alur Agen Ringkasan Resume yang ada memanggilnya.<br />
+<img alt="Peran yang Cocok dalam JSON" src="../../../../../translated_images/8-matched-roles-json.54b557423d26864f65873170adaac04f5cb5d4ce4cccf65e5b695d9a128a79b3.id.png" /></li>
+</ol>
+<h3 id="84-tambahkan-alur-agen-aplikasi-pekerjaan">8.4 Tambahkan Alur Agen Aplikasi Pekerjaan<a class="headerlink" href="#84-tambahkan-alur-agen-aplikasi-pekerjaan" title="Permanent link">&para;</a></h3>
+<p>Untuk memungkinkan Agen Penerimaan Aplikasi kami membuat Peran Pekerjaan berdasarkan peran yang disarankan, kami perlu membuat Alur Agen. Agen akan memanggil alat ini untuk setiap peran pekerjaan yang disarankan yang diminati oleh kandidat.</p>
+<div class="admonition tip">
+<p class="admonition-title">Ekspresi Alur Agen</p>
+<p>Sangat penting bahwa Anda mengikuti instruksi untuk memberi nama node Anda dan memasukkan ekspresi dengan tepat karena ekspresi merujuk pada node sebelumnya menggunakan nama mereka! Lihat <a href="../../recruit/09-add-an-agent-flow/#you-mentioned-expressions-what-are-expressions">misi Alur Agen di Rekrut</a> untuk penyegaran cepat!</p>
+</div>
+<ol>
+<li>
+<p>Di dalam <strong>Agen Perekrutan,</strong> pilih tab <strong>Agen</strong>, dan buka agen anak <strong>Agen Penerimaan Aplikasi</strong>.</p>
+</li>
+<li>
+<p>Di dalam panel <strong>Tools</strong>, pilih <strong>+ Tambahkan</strong> → <strong>+ Alat baru</strong> → <strong>Alur Agen</strong></p>
+</li>
+<li>
+<p>Pilih node <strong>Saat agen memanggil alur</strong>, gunakan <strong>+ Tambahkan input</strong> untuk menambahkan parameter berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Tipe</th>
+<th>Nama</th>
+<th>Deskripsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Teks</td>
+<td><code>NomorResume</code></td>
+<td>Pastikan hanya menggunakan [NomorResume] - harus dimulai dengan huruf R</td>
+</tr>
+<tr>
+<td>Teks</td>
+<td><code>NomorPeranPekerjaan</code></td>
+<td>Pastikan hanya menggunakan [NomorPeranPekerjaan] - harus dimulai dengan huruf J</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Saat agen memanggil alur" src="../../../../../translated_images/8-add-application-1.ef0ec277dd86df0e8145aca278fdae1aff1a959711781eb59dc63f4ab0785686.id.png" /></p>
+</li>
+<li>
+<p>Pilih ikon <strong>+</strong> Tambahkan aksi di bawah node pertama, cari <strong>Dataverse</strong>, pilih <strong>Lihat lebih banyak</strong>, lalu temukan aksi <strong>List rows</strong>.</p>
+</li>
+<li>
+<p><strong>Ganti nama</strong> node sebagai <code>Dapatkan Resume</code>, lalu atur parameter berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Properti</th>
+<th>Cara Mengatur</th>
+<th>Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nama tabel</strong></td>
+<td>Pilih</td>
+<td>Resume</td>
+</tr>
+<tr>
+<td><strong>Filter baris</strong></td>
+<td>Data dinamis (ikon petir)</td>
+<td><code>ppa_resumenumber eq 'NomorResume'</code> Pilih dan ganti <strong>NomorResume</strong> dengan <strong>Saat agen memanggil alur</strong> → <strong>NomorResume</strong></td>
+</tr>
+<tr>
+<td><strong>Jumlah baris</strong></td>
+<td>Masukkan</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Dapatkan Resume" src="../../../../../translated_images/8-add-application-2.4bc386154caec8bc5deba81c6f0f90f1762719ee213aa664b004091034286338.id.png" /></p>
+</li>
+<li>
+<p>Sekarang, pilih ikon <strong>+</strong> Tambahkan aksi di bawah <strong>Dapatkan Resume</strong>, cari <strong>Dataverse</strong>, pilih <strong>Lihat lebih banyak</strong>, lalu temukan aksi <strong>List rows</strong>.</p>
+</li>
+<li>
+<p><strong>Ganti nama</strong> node sebagai <code>Dapatkan Peran Pekerjaan</code>, lalu atur parameter berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Properti</th>
+<th>Cara Mengatur</th>
+<th>Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nama tabel</strong></td>
+<td>Pilih</td>
+<td>Peran Pekerjaan</td>
+</tr>
+<tr>
+<td><strong>Filter baris</strong></td>
+<td>Data dinamis (ikon petir)</td>
+<td><code>ppa_jobrolenumber eq 'NomorPeranPekerjaan'</code> Pilih dan ganti <strong>NomorPeranPekerjaan</strong> dengan <strong>Saat agen memanggil alur</strong> → <strong>NomorPeranPekerjaan</strong></td>
+</tr>
+<tr>
+<td><strong>Jumlah baris</strong></td>
+<td>Masukkan</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Dapatkan Peran Pekerjaan" src="../../../../../translated_images/8-add-application-3.07a9c42e27bd2875ec91a4c9e4a78d185644d945ca54c0e8a2d9a9a092c0b872.id.png" /></p>
+</li>
+<li>
+<p>Sekarang, pilih ikon <strong>+</strong> Tambahkan aksi di bawah Dapatkan Peran Pekerjaan, cari <strong>Dataverse</strong>, pilih <strong>Lihat lebih banyak</strong>, lalu temukan aksi <strong>Tambahkan baris baru</strong>.</p>
+</li>
+<li>
+<p><strong>Ganti nama</strong> node sebagai <code>Tambahkan Aplikasi</code>, lalu atur parameter berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Properti</th>
+<th>Cara Mengatur</th>
+<th>Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nama tabel</strong></td>
+<td>Pilih</td>
+<td>Aplikasi Pekerjaan</td>
+</tr>
+<tr>
+<td><strong>Kandidat (Kandidat)</strong></td>
+<td>Ekspresi (ikon fx)</td>
+<td><code>concat('ppa_candidates/',first(outputs('Dapatkan_Resume')?['body/value'])?['_ppa_candidate_value'])</code></td>
+</tr>
+<tr>
+<td><strong>Peran Pekerjaan (Job Roles)</strong></td>
+<td>Ekspresi (ikon fx)</td>
+<td><code>concat('ppa_jobroles/',first(outputs('Get_Job_Role')?['body/value'])?['ppa_jobroleid'])</code></td>
+</tr>
+<tr>
+<td><strong>Resume (Resumes)</strong></td>
+<td>Ekspresi (ikon fx)</td>
+<td><code>concat('ppa_resumes/', first(outputs('Get_Resume')?['body/value'])?['ppa_resumeid'])</code></td>
+</tr>
+<tr>
+<td><strong>Tanggal Aplikasi</strong> (gunakan <strong>Tampilkan semua</strong>)</td>
+<td>Ekspresi (ikon fx)</td>
+<td><code>utcNow()</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Tambahkan Aplikasi" src="../../../../../translated_images/8-add-application-4.68b07059f373c4ef5dc5078da3ae5690525a352a88d0a5bc8de4edf0ce7d4d72.id.png" /></p>
+<ol>
+<li>
+<p>Pilih <strong>Respond to the agent node</strong>, lalu pilih <strong>+ Tambahkan output</strong></p>
+<table>
+<thead>
+<tr>
+<th>Properti</th>
+<th>Cara Mengatur</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tipe</strong></td>
+<td>Pilih</td>
+<td><code>Text</code></td>
+</tr>
+<tr>
+<td><strong>Nama</strong></td>
+<td>Masukkan</td>
+<td><code>ApplicationNumber</code></td>
+</tr>
+<tr>
+<td><strong>Nilai</strong></td>
+<td>Data dinamis (ikon petir)</td>
+<td><em>Add Application → Lihat Lebih Banyak → Application Number</em></td>
+</tr>
+<tr>
+<td><strong>Deskripsi</strong></td>
+<td>Masukkan</td>
+<td><code>The [ApplicationNumber] dari Aplikasi Pekerjaan yang dibuat</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Respond to the agent" src="../../../../../translated_images/8-add-application-5.718d76f32b1a11f1d636fc1561cbfd21f5f475192f3a64ad682ad0d400a6b8f4.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Simpan draf</strong> di kanan atas</p>
+</li>
+<li>
+<p>Pilih tab <strong>Overview</strong>, lalu pilih <strong>Edit</strong> pada panel <strong>Details</strong></p>
+<ul>
+<li><strong>Nama Alur</strong>:<code>Create Job Application</code></li>
+<li><strong>Deskripsi</strong>:<code>Membuat aplikasi pekerjaan baru ketika diberikan [ResumeNumber] dan [JobRoleNumber]</code></li>
+<li><strong>Simpan</strong></li>
+</ul>
+</li>
+<li>
+<p>Pilih tab <strong>Designer</strong> lagi, lalu pilih <strong>Publish</strong>.</p>
+</li>
+</ol>
+<h3 id="85-tambahkan-create-job-application-ke-agen">8.5 Tambahkan Create Job Application ke agen<a class="headerlink" href="#85-tambahkan-create-job-application-ke-agen" title="Permanent link">&para;</a></h3>
+<p>Sekarang Anda akan menghubungkan alur yang telah dipublikasikan ke Application Intake Agent Anda.</p>
+<ol>
+<li>
+<p>Kembali ke <strong>Hiring Agent</strong> dan pilih tab <strong>Agents</strong>. Buka <strong>Application Intake Agent</strong>, lalu temukan panel <strong>Tools</strong>.</p>
+</li>
+<li>
+<p>Pilih <strong>+ Tambahkan</strong></p>
+</li>
+<li>
+<p>Pilih filter <strong>Flow</strong>, dan cari <code>Create Job Application</code>. Pilih alur <strong>Create Job Application</strong>, lalu <strong>Tambahkan dan konfigurasikan</strong>.</p>
+</li>
+<li>
+<p>Atur parameter berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Deskripsi</strong></td>
+<td><code>Membuat aplikasi pekerjaan baru ketika diberikan [ResumeNumber] dan [JobRoleNumber]</code></td>
+</tr>
+<tr>
+<td><strong>Detail tambahan → Kapan alat ini dapat digunakan</strong></td>
+<td><code>Hanya ketika dirujuk oleh topik atau agen</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Pilih <strong>Simpan</strong><br />
+<img alt="Tambahkan Alur Agen ke Agen" src="../../../../../translated_images/8-add-application-6.40c79eb32d0c682a29becf59f08aec0f492780c326256602c3359ba97e370c44.id.png" /></p>
+</li>
+</ol>
+<h3 id="86-tentukan-instruksi-agen">8.6 Tentukan instruksi agen<a class="headerlink" href="#86-tentukan-instruksi-agen" title="Permanent link">&para;</a></h3>
+<p>Untuk membuat aplikasi pekerjaan, Anda perlu memberi tahu agen kapan harus menggunakan alat baru. Dalam hal ini, Anda akan meminta pengguna untuk mengonfirmasi peran pekerjaan yang disarankan untuk dilamar, dan menginstruksikan agen untuk menjalankan alat untuk setiap peran.</p>
+<ol>
+<li>
+<p>Kembali ke <strong>Application Intake Agent</strong>, lalu temukan panel <strong>Instructions</strong>.</p>
+</li>
+<li>
+<p>Di bidang <strong>Instructions</strong>, <strong>tambahkan</strong> panduan yang jelas berikut untuk agen anak Anda di <strong>akhir instruksi yang ada</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>3. Post Resume Upload
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>   - Respond with a formatted bullet list of [SuggestedJobRoles] the candidate could apply for.  
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>   - Use the format: [JobRoleNumber] - [RoleDescription]
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>   - Ask the user to confirm which Job Roles to create applications for the candidate.
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>   - When the user has confirmed a set of [JobRoleNumber]s, move to the next step.
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>4. Post Upload - Application Creation
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    - After the user confirms which [SuggestedJobRoles] for a specific [ResumeNumber]:
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    E.g. &quot;Apply [ResumeNumber] for the Job Roles [JobRoleNumber], [JobRoleNumber], [JobRoleNumber]
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    E.g. &quot;apply to all suggested job roles&quot; - this implies use all the [JobRoleNumbers] 
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>     - Loop over each [JobRoleNumber] and send with [ResumeNumber] to /Create Job Application   
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>     - Summarize the Job Applications Created
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>Strict Rules (that must never be broken)
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>You must always follow these rules and never break them:
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>1. The only valid identifiers are:
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>  - ResumeNumber (ppa_resumenumber)→ format R#####
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>  - CandidateNumber (ppa_candidatenumber)→ format C#####
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>  - ApplicationNumber (ppa_applicationnumber)→ format A#####
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>  - JobRoleNumber (ppa_jobrolenumber)→ format J#####
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>2. Never guess or invent these values.
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>3. Always extract identifiers from the current context (conversation, data, or system output). 
+</span></code></pre></div>
+</li>
+<li>
+<p>Di mana instruksi mencakup garis miring (/), pilih teks setelah / dan pilih alat <strong>Create Job Application</strong>.</p>
+</li>
+<li>
+<p>Pilih <strong>Simpan</strong><br />
+<img alt="Instruksi Create Job Application" src="../../../../../translated_images/8-add-application-7.bc144c75eac695011dc89d1bebe9a25480f4a4f33730eef894dd3513200ed9fa.id.png" /></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Iterasi atas beberapa item dalam Generative Orchestration</p>
+<p>Instruksi ini menggunakan kemampuan generative orchestration untuk melakukan iterasi atas beberapa baris saat membuat keputusan tentang langkah dan alat yang akan digunakan. Peran Pekerjaan yang Cocok akan dibaca secara otomatis dan Application Intake Agent akan berjalan untuk setiap baris. Selamat datang di dunia ajaib generative orchestration!</p>
+</div>
+<h3 id="87-uji-agen-anda">8.7 Uji agen Anda<a class="headerlink" href="#87-uji-agen-anda" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Buka <strong>Hiring Agent</strong> Anda di Copilot Studio.</p>
+</li>
+<li>
+<p><strong>Unggah</strong> resume contoh ke dalam chat, dan ketik:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>This is a new resume for the Power Platform Developer Role.
+</span></code></pre></div>
+</li>
+<li>
+<p>Perhatikan bagaimana agen memberikan daftar Peran Pekerjaan yang Disarankan - masing-masing dengan nomor Peran Pekerjaan.<br />
+<img alt="Hasil uji dengan peran yang disarankan" src="../../../../../translated_images/8-test-1.3a67b59f169aeb1b04a810dc15c78146ea70418ce977f2da3ed3cdf78bdbc9df.id.png" /></p>
+</li>
+<li>
+<p>Anda kemudian dapat memberikan peran mana yang ingin Anda tambahkan sebagai aplikasi pekerjaan untuk resume tersebut.
+    <strong>Contoh:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>&quot;Apply for all of those job roles&quot;
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>&quot;Apply for the J10009 Power Platform Developer role&quot;
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>&quot;Apply for the Developer and Architect roles&quot;
+</span></code></pre></div>
+<p><img alt="Hasil uji membuat aplikasi pekerjaan" src="../../../../../translated_images/8-test-2.b385c7ca9f4cc82b0a22f7090b25a1bad6dc88a119f362de21df0246f64d9911.id.png" /></p>
+</li>
+<li>
+<p>Alat <strong>Create Job Application</strong> kemudian akan dijalankan untuk setiap peran pekerjaan yang Anda tentukan. Di dalam peta Aktivitas, Anda akan melihat alat Create Job Application dijalankan untuk setiap Peran Pekerjaan yang Anda minta untuk dibuatkan aplikasi:<br />
+<img alt="Create Job Application di Peta Aktivitas" src="../../../../../translated_images/8-create-job-application-activity-map.11d9f307a0055ffb7a97fbe8f8488932420cdb8d25f9a90e5609f3bcc95fdfb9.id.png" /></p>
+</li>
+</ol>
+<h2 id="misi-selesai">🎉 Misi Selesai<a class="headerlink" href="#misi-selesai" title="Permanent link">&para;</a></h2>
+<p>Kerja luar biasa, Operative! <strong>Operation Grounding Control</strong> kini selesai. Anda telah berhasil meningkatkan kemampuan AI Anda dengan data dinamis, menciptakan sistem perekrutan yang benar-benar cerdas.</p>
+<p>Berikut adalah pencapaian Anda dalam misi ini:</p>
+<p><strong>✅ Penguasaan grounding Dataverse</strong><br />
+Anda sekarang memahami cara menghubungkan prompt khusus ke sumber data langsung untuk kecerdasan dinamis.</p>
+<p><strong>✅ Analisis resume yang ditingkatkan</strong><br />
+Alur Summarize Resume Anda sekarang mengakses data peran pekerjaan dan kriteria evaluasi secara real-time untuk pencocokan yang akurat.</p>
+<p><strong>✅ Pengambilan keputusan berbasis data</strong><br />
+Agen perekrutan Anda sekarang dapat beradaptasi secara otomatis dengan persyaratan pekerjaan yang berubah tanpa pembaruan prompt manual.</p>
+<p><strong>✅ Pembuatan Aplikasi Pekerjaan</strong><br />
+Sistem Anda yang ditingkatkan sekarang dapat membuat Aplikasi Pekerjaan dan siap untuk orkestrasi alur kerja yang lebih kompleks.</p>
+<p>🚀 <strong>Selanjutnya:</strong> Dalam misi berikutnya, Anda akan belajar cara menerapkan kemampuan penalaran mendalam yang membantu agen Anda membuat keputusan kompleks dan memberikan penjelasan rinci untuk rekomendasi mereka.</p>
+<p>⏩ <a href="../09-deep-reasoning/">Lanjut ke Misi 09: Penalaran mendalam</a></p>
+<h2 id="sumber-daya-taktis">📚 Sumber Daya Taktis<a class="headerlink" href="#sumber-daya-taktis" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/use-your-own-prompt-data?WT.mc_id=power-182762-scottdurow">Gunakan data Anda sendiri dalam prompt</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/create-a-custom-prompt?WT.mc_id=power-182762-scottdurow">Buat prompt khusus</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/knowledge-add-dataverse?WT.mc_id=power-182762-scottdurow">Bekerja dengan Dataverse di Copilot Studio</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/prompts-overview?WT.mc_id=power-182762-scottdurow">Ikhtisar prompt khusus AI Builder</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/?WT.mc_id=power-182762-scottdurow">Dokumentasi AI Builder Power Platform</a></p>
+<p>📖 <a href="https://learn.microsoft.com/training/modules/ai-builder-grounded-prompts/?WT.mc_id=power-182762-scottdurow">Pelatihan: Buat prompt AI Builder menggunakan data Dataverse Anda sendiri</a></p>
+<hr />
+<p><strong>Penafian</strong>:<br />
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau interpretasi yang salah yang timbul dari penggunaan terjemahan ini.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

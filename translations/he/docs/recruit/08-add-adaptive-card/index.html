@@ -1,0 +1,1072 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/he/docs/recruit/08-add-adaptive-card/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#08-adaptive-cards" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ שם קוד: מבצע שדרוג ממשק
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 תדריך משימה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 מטרות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adaptive" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 מהו כרטיס Adaptive?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐱 האם JSON הוא אדם?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adaptive_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      👀 אני רואה אפשרות נוספת לבניית כרטיס Adaptive באמצעות נוסחה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adaptive_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      👷🏻‍♀️ בנייה עם מעצב כרטיסי Adaptive
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adaptive_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 הבנת מעצב כרטיסי Adaptive
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌵 שימושים נפוצים
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⭐ שיטות עבודה מומלצות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#08-adaptive" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 מעבדה 08 - הוספת כרטיסי Adaptive ושיפור יכולות נושא
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ משימה הושלמה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 משאבים טקטיים
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "dcbcd9396b076da0a0f5d389e9ec1b12",
+  "translation_date": "2025-10-17T01:32:32+00:00",
+  "source_file": "docs/recruit/08-add-adaptive-card/README.md",
+  "language_code": "he"
+}
+-->
+<h1 id="08-adaptive-cards">🚨 משימה 08: שיפור אינטראקציות משתמשים בנושאים באמצעות כרטיסי Adaptive Cards<a class="headerlink" href="#08-adaptive-cards" title="Permanent link">&para;</a></h1>
+<h2 id="_1">🕵️‍♂️ שם קוד: <code>מבצע שדרוג ממשק</code><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ חלון זמן המבצע:</strong> <code>~45 דקות</code></p>
+</blockquote>
+<p>🎥 <strong>צפו בהדרכה</strong></p>
+<p><a href="https://www.youtube.com/watch?v=RhIlzYHPCXo" title="צפו בהדרכה ביוטיוב"><img alt="תמונה ממוזערת של סרטון כרטיסי Adaptive" src="../../../../../translated_images/video-thumbnail.3fb3463f411ef1f440a0fd0e67d217a67bcca1d39a98b2c2bff4e13cbc1b6f4e.he.jpg" /></a></p>
+<h2 id="_2">🎯 תדריך משימה<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>סוכנים, המשימה שלכם היא לחדור לחוויית המשתמש הסטטית ולהחליף אותה בכרטיסי Adaptive Cards עשירים, דינמיים ופעילים. תשתמשו במטעני JSON ובנוסחאות Power Fx כדי להפוך שיחות ב-Copilot Studio מאינטראקציות בסיסיות לשיחות אינטראקטיביות לחלוטין. המטרה שלכם היא לאסוף קלט משתמשים, להציג נתונים בצורה מרהיבה ולכוון שיחות בדיוק ובסטייל. אם לא תסתגלו, המשתמשים שלכם עשויים לעבור לממשקים פחות אינטליגנטיים.</p>
+<h2 id="_3">🔎 מטרות<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>במשימה זו תלמדו:</p>
+<ol>
+<li>להבין מה הם כרטיסי Adaptive Cards וכיצד הם משפרים אינטראקציות משתמשים ב-Copilot Studio</li>
+<li>ללמוד לבנות כרטיסים אינטראקטיביים באמצעות JSON ונוסחאות Power Fx לתוכן דינמי</li>
+<li>לחקור את מעצב כרטיסי Adaptive ואת הרכיבים המרכזיים שלו ליצירת כרטיסים חזותיים</li>
+<li>ליצור טפסים עשירים ואינטראקטיביים וחוויות איסוף נתונים בתוך נושאי סוכן</li>
+<li>ליישם שיטות עבודה מומלצות לעיצוב כרטיסי Adaptive רספונסיביים וידידותיים למשתמש</li>
+</ol>
+<h2 id="adaptive">🤔 מהו כרטיס Adaptive?<a class="headerlink" href="#adaptive" title="Permanent link">&para;</a></h2>
+<p><strong>כרטיס Adaptive</strong> הוא דרך ליצור אלמנטים ממשק משתמש אינטראקטיביים ועשירים חזותית שניתן להטמיע באפליקציות כמו Microsoft Teams, Microsoft Outlook או סוכנים. זהו אובייקט JSON מובנה שמגדיר את הפריסה והתוכן של הכרטיס:</p>
+<ul>
+<li>אילו אלמנטים מופיעים בכרטיס - טקסט, תמונות, כפתורים</li>
+<li>כיצד האלמנטים הללו מסודרים</li>
+<li>
+<p>אילו פעולות המשתמשים יכולים לבצע כמו שליחת טופס או פתיחת קישור</p>
+<p><img alt="כרטיס Adaptive" src="../../../../../translated_images/8.0_01_AdaptiveCard.3ae99605ab7ef4b35ee0d00649ba0fc1a8166620183f82f20258c32fbef2bb3e.he.png" /></p>
+</li>
+</ul>
+<h3 id="adaptive-copilot-studio">למה כרטיסי Adaptive חשובים ב-Copilot Studio<a class="headerlink" href="#adaptive-copilot-studio" title="Permanent link">&para;</a></h3>
+<p>דמיינו שאתם בונים סוכן ששואל משתמשים את שמם, כתובת האימייל שלהם או משוב. אם תשתמשו רק בטקסט פשוט, השיחה יכולה להרגיש משעממת או קשה למעקב. כאן נכנסים לתמונה כרטיסי Adaptive!</p>
+<ol>
+<li>
+<p><strong>הופכים שיחות לאינטראקטיביות</strong> - במקום לשלוח טקסט כהודעות למשתמש, תוכלו להציג כפתורים, טפסים, תמונות ועוד.</p>
+<ul>
+<li>דוגמה: כרטיס יכול לבקש מהמשתמש למלא את שמו וכתובת האימייל שלו בטופס נקי.</li>
+</ul>
+</li>
+<li>
+<p><strong>נראים נהדר בכל מקום</strong> - כרטיסי Adaptive מתאימים אוטומטית לסגנון האפליקציה שבה הם נמצאים, כמו צ'אט Microsoft 365 Copilot או Microsoft Teams. אין צורך לדאוג לגבי מצב כהה, גופן או פריסות - הם מתאימים.</p>
+</li>
+<li>
+<p><strong>קל לבנות עם JSON</strong> - אתם מגדירים את הכרטיס באמצעות קוד JSON (חשבו על זה כמתכון לממשק המשתמש). Copilot Studio עוזר לכם להציג תצוגה מקדימה של הכרטיס לפני הוספתו לנושא.</p>
+</li>
+<li>
+<p><strong>איסוף ושימוש בנתונים</strong> - ניתן להשתמש בכרטיס כדי לשאול שאלות, לאסוף תשובות ולהשתמש בנתונים הללו בזרימת השיחה.</p>
+<ul>
+<li>דוגמה: בקשו את מספר הטלפון של המשתמש, ואז הציגו כרטיס אישור עם מספר הטלפון שלו.</li>
+</ul>
+</li>
+<li>
+<p><strong>שיפור חוויית המשתמש</strong> - כרטיסים גורמים לסוכן שלכם להרגיש יותר אינטראקטיבי. זהו ממשק נקי, לחיץ וידידותי יותר למשתמש.</p>
+</li>
+</ol>
+<h2 id="json">🐱 האם <em>JSON</em> הוא אדם?<a class="headerlink" href="#json" title="Permanent link">&para;</a></h2>
+<p>מבטאים את זה כ"ג'ייסון", אבל זה לא אדם 😅</p>
+<p>JSON, הידוע גם כ-<em>JavaScript Object Notation</em>, הוא פורמט קל משקל המשמש למבנה נתונים. קל לקרוא ולכתוב אותו, והוא נראה כמו סדרת זוגות מפתח-ערך בתוך סוגריים מסולסלים {}.</p>
+<p>זו אחת האפשרויות לשימוש בעת הוספת כרטיס Adaptive לנושא שלכם.</p>
+<p><img alt="תכונות צומת כרטיס Adaptive" src="../../../../../translated_images/8.0_02_AdaptiveCardPropertiesPane.cf6bde2350f83ac84bf3fe5c077b2b01ee707af19a8d2f417b1ecc658318fe45.he.png" /></p>
+<h2 id="adaptive_1">👀 אני רואה אפשרות נוספת לבניית כרטיס Adaptive באמצעות <em>נוסחה</em><a class="headerlink" href="#adaptive_1" title="Permanent link">&para;</a></h2>
+<p>זוכרים איך למדנו על Power Fx ב-<a href="../07-add-new-topic-with-trigger/#what-power-fx-can-do-in-topics">משימה 07 - שימוש ב-Power Fx בצמתים שלכם</a>? אותו דבר ניתן ליישם בכרטיסי Adaptive בתוך Copilot Studio.</p>
+<p>כתזכורת,</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Power Fx הוא שפת תכנות בקוד נמוך המשמשת להוספת לוגיקה והתנהגות דינמית לסוכן שלכם. זו אותה שפה המשמשת ב-Microsoft Power Apps, והיא נועדה להיות פשוטה ודומה ל-Excel, מה שהופך אותה לקלה למפתחים ולא למפתחים כאחד.</p>
+</div>
+<h3 id="power-fx-adaptive">איך Power Fx עובד בכרטיסי Adaptive<a class="headerlink" href="#power-fx-adaptive" title="Permanent link">&para;</a></h3>
+<p>כשאתם מעצבים כרטיס Adaptive ב-Copilot Studio, תוכלו להשתמש בנוסחאות Power Fx כדי:</p>
+<ul>
+<li>להכניס ערכים באופן דינמי כמו שמות משתמשים, תאריכים או סטטוס.</li>
+<li>לעצב טקסט או מספרים כמו הצגת מטבע או עיגול מספרים.</li>
+<li>להציג או להסתיר אלמנטים בהתבסס על תנאים.</li>
+<li>להתאים תגובות בהתבסס על קלט משתמשים, משתנים, פלטים מצמתים בשיחה.</li>
+</ul>
+<p>לדוגמה,</p>
+<p>"<code>שלום</code>" &amp; <code>System.User.DisplayName</code></p>
+<p>נוסחה זו משלבת את המילה "שלום" עם שם המשתמש באופן דינמי.</p>
+<h3 id="_4">למה זה שימושי<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>התאמה אישית</strong></p>
+<p>תוכלו להתאים את ההודעה לכל משתמש, מה שהופך את האינטראקציות לטבעיות ורלוונטיות יותר.</p>
+</li>
+<li>
+<p><strong>תוכן דינמי</strong></p>
+<p>כרטיסים יכולים להציג נתונים אמיתיים ממשתנים ופלטים מצמתים בשיחה.</p>
+</li>
+<li>
+<p><strong>לוגיקה חכמה</strong></p>
+<p>תוכלו לשלוט במה שהמשתמשים רואים או מתקשרים איתו בהתבסס על תנאים, מה שמשפר את השימושיות ומפחית טעויות.</p>
+</li>
+<li>
+<p><strong>ידידותי לקוד נמוך</strong></p>
+<p>Power Fx היא שפת תכנות בקוד נמוך. כפי שצוין קודם, היא קריאה, אינטואיטיבית ודומה לנוסחאות Excel.</p>
+</li>
+</ol>
+<h2 id="adaptive_2">👷🏻‍♀️ בנייה עם מעצב כרטיסי Adaptive<a class="headerlink" href="#adaptive_2" title="Permanent link">&para;</a></h2>
+<p><strong>מעצב כרטיסי Adaptive</strong> הוא כלי חזותי שמאפשר לכם לבנות כרטיסי הודעות אינטראקטיביים באמצעות אלמנטים גרירה ושחרור כמו טקסט, תמונות, כפתורים וקלטים. מטרתו היא לעזור לכם ליצור הודעות עשירות ודינמיות ללא כתיבת קוד מורכב, מה שמקל על עיצוב ממשקים ידידותיים למשתמש.</p>
+<p>כלי המעצב עוזר לכם לבנות את הכרטיס באופן חזותי, אך מאחורי הקלעים, הוא מייצר עבורכם את אובייקט ה-JSON. תוכלו גם לעבור ל_נוסחה_ שמאפשרת שימוש בביטויי Power Fx בכרטיס כדי להציג נתונים ממקומות אחרים.</p>
+<h2 id="adaptive_3">🎨 הבנת מעצב כרטיסי Adaptive<a class="headerlink" href="#adaptive_3" title="Permanent link">&para;</a></h2>
+<p><img alt="מעצב כרטיסי Adaptive" src="../../../../../translated_images/8.0_03_AdaptiveCardPropertiesPane.e97dad10daf78959c15acb61ca17f0178f2716a75bb85c491c80866720cb1e99.he.png" /></p>
+<h3 id="_5">א) אלמנטים של כרטיס<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>אלו הם אבני הבניין של כרטיס ה-Adaptive שלכם. תוכלו לגרור ולשחרר אלמנטים כמו הבאים:</p>
+<ul>
+<li><strong>TextBlock</strong> להצגת טקסט.</li>
+<li><strong>Image</strong> להצגת תמונות.</li>
+<li><strong>FactSet</strong> לזוגות מפתח-ערך.</li>
+<li><strong>שדות קלט</strong> להצגת תיבות טקסט, בוחרי תאריכים, מתגים.</li>
+<li><strong>פעולות</strong> להצגת כפתורים כמו <em>שלח</em>, <em>פתח קישור</em>, או <em>הצג כרטיס</em>.</li>
+</ul>
+<p>לכל אלמנט יש מטרה משלו וניתן לעצב או להגדיר אותו.</p>
+<h3 id="_6">ב) תצוגת כרטיס<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>זהו אזור ה<strong>תצוגה המקדימה</strong> שבו תוכלו לראות כיצד ייראה הכרטיס שלכם בזמן אמת. כשאתם מוסיפים או עורכים אלמנטים, התצוגה מתעדכנת מיד כדי לשקף שינויים. זה מאפשר לכם לבצע עדכונים חוזרים ולראות את תוצאת העיצוב בו זמנית.</p>
+<h3 id="_7">ג) מבנה כרטיס<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>זה מציג את <strong>ההיררכיה והפריסה</strong> של הכרטיס שלכם. לדוגמה:</p>
+<ul>
+<li>כרטיס עשוי להתחיל עם <strong>TextBlock</strong> לכותרת.</li>
+<li>לאחר מכן <strong>ColumnSet</strong> עם תמונה בצד אחד וטקסט בצד השני.</li>
+<li>ואחריו <strong>FactSet</strong> וכמה <strong>כפתורי פעולה</strong>.</li>
+</ul>
+<p>זה עוזר לכם להבין כיצד האלמנטים מקוננים ומאורגנים.</p>
+<h3 id="_8">ד) תכונות אלמנט<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>כשאתם לוחצים על כל אלמנט בכרטיס, פאנל זה מאפשר לכם <strong>להתאים את ההגדרות שלו</strong>:</p>
+<ul>
+<li>שינוי גודל טקסט, משקל או צבע.</li>
+<li>הגדרת כתובות URL של תמונות או טקסט חלופי.</li>
+<li>הגדרת אפשרויות קלט כמו טקסט מציין מיקום או ערכים ברירת מחדל.</li>
+</ul>
+<p>כאן אתם משפרים כל אלמנט.</p>
+<h3 id="_9">ה) עורך מטען כרטיס<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>זהו קוד ה-JSON הגולמי שמאחורי הכרטיס שלכם. משתמשים מתקדמים יכולים לערוך אותו ישירות כדי:</p>
+<ul>
+<li>להשתמש בתכונות תבנית.</li>
+<li>להעתיק/להדביק הגדרות כרטיס.</li>
+</ul>
+<p>גם אם אתם חדשים במעצב כרטיסי Adaptive, זה מועיל לראות כיצד העיצוב החזותי מתורגם לקודים.</p>
+<div class="admonition tip">
+<p class="admonition-title">טיפ - עיינו בדוגמאות של כרטיסי Adaptive</p>
+<ol>
+<li>בקרו ב-<a href="https://adaptivecards.microsoft.com/designer">https://adaptivecards.microsoft.com/designer</a>.</li>
+<li>בחרו <strong>כרטיס חדש</strong> כדי לראות רשימת דוגמאות שתוכלו לבחור ולשנות.</li>
+<li>שימו לב שהמעצב הזה הוא חיצוני (מבוסס אינטרנט). כשאתם בונים את הכרטיס שלכם במעצב כרטיסי Adaptive מבוסס האינטרנט, העתיקו את ה-JSON מעורך מטען הכרטיס.</li>
+<li>הדביקו את ה-JSON בכרטיס Adaptive שלכם בסוכן ב-Copilot Studio.</li>
+</ol>
+<p><img alt="דוגמאות מעצב כרטיסי Adaptive" src="../../../../../translated_images/8.0_04_AdaptiveCardDesignerSamples.c003b545de5ccfd72ca0c5fa4607addb19d265e8f7105393c652249182754ba9.he.png" /></p>
+</div>
+<h2 id="_10">🌵 שימושים נפוצים<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>הבאים הם שימושים נפוצים לכרטיסי Adaptive ב-Copilot Studio כאשר משתמשים בהם בצמתים <strong>שלח הודעה</strong> או <strong>שאל שאלה</strong>.</p>
+<ol>
+<li>
+<p><strong>טפסים ואיסוף נתונים</strong></p>
+<p>השתמשו בכרטיסי Adaptive כדי לאסוף קלט מובנה ממשתמשים, כגון:</p>
+<ul>
+<li>בקשות חופשה</li>
+<li>טפסי משוב</li>
+<li>מידע ליצירת קשר</li>
+<li>תזמון פגישות</li>
+</ul>
+</li>
+<li>
+<p><strong>הצגת מידע דינמי</strong></p>
+<p>הצגת נתונים מותאמים אישית או בזמן אמת בפורמט נקי וקריא ממקורות ארגוניים כמו ServiceNow, SAP, Dynamics 365, SharePoint וכו'.</p>
+<ul>
+<li>סיכומי הזמנות</li>
+<li>יתרות חשבון</li>
+<li>סטטוס כרטיסים או תיקים</li>
+<li>אירועים או מועדים קרובים</li>
+</ul>
+</li>
+<li>
+<p><strong>בחירות אינטראקטיביות</strong></p>
+<p>אפשרו למשתמשים לבצע בחירות ישירות בשיחה:</p>
+<ul>
+<li>בחירה מתוך רשימת אפשרויות, לדוגמה קטגוריות מוצרים, נושאי תמיכה.</li>
+<li>אישור או ביטול פעולה.</li>
+<li>דירוג שירות או חוויה.</li>
+</ul>
+</li>
+<li>
+<p><strong>הפעלת פעולות</strong></p>
+<p>כללו כפתורים שמפעילים צעדים נוספים בשיחה פנימית או חיצונית.</p>
+<ul>
+<li>"שלח בקשה"</li>
+<li>"צפה בפרטים"</li>
+</ul>
+</li>
+</ol>
+<h2 id="_11">⭐ שיטות עבודה מומלצות<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p>הנה כמה שיטות עבודה מומלצות ליצירת כרטיסי Adaptive עבור סוכנים ב-Copilot Studio.</p>
+<ol>
+<li>
+<p><strong>שמרו על פשטות ומיקוד</strong></p>
+<ul>
+<li>עיצבו כרטיסים עם מטרה ברורה, אל תעמיסו עליהם יותר מדי אלמנטים.</li>
+<li>השתמשו בטקסט תמציתי ובפריסות אינטואיטיביות כדי להנחות משתמשים דרך האינטראקציה.</li>
+</ul>
+</li>
+<li>
+<p><strong>היו מכוונים עם קלטים</strong></p>
+<ul>
+<li>כללו רק את אלמנטי הקלט הנחוצים כמו טקסט, בחירות תאריך, כדי לא להעמיס על המשתמשים.</li>
+<li>השתמשו בתוויות כדי להפוך את הקלטים לקלים להבנה.</li>
+</ul>
+</li>
+<li>
+<p><strong>מבנה לקריאות</strong></p>
+<ul>
+<li>השתמשו ב-<strong>TextBlocks</strong> לכותרות והוראות.</li>
+<li>קבצו אלמנטים קשורים באמצעות <strong>Containers</strong> או <strong>ColumnSets</strong> כדי לשפר את הזרימה החזותית.</li>
+</ul>
+</li>
+<li>
+<p><strong>הפכו את אלמנטי הפעולה לברורים</strong></p>
+<ul>
+<li>השתמשו ב-<strong>Action.Submit</strong> או <strong>Action.OpenUrl</strong> עם כותרות כפתורים ברורות כמו "שלח בקשה" או "צפה בפרטים".</li>
+<li>הימנעו מתוויות מעורפלות כמו "לחץ כאן".</li>
+</ul>
+</li>
+<li>
+<p><strong>עצבו להתאמה</strong></p>
+<ul>
+<li>הניחו שהכרטיס עשוי להיראות על גדלי מסך שונים.</li>
+<li>הימנעו מרוחבים קבועים והשתמשו בפריסות גמישות כמו <strong>ColumnSets</strong> לרספונסיביות.</li>
+</ul>
+</li>
+<li>
+<p><strong>השתמשו בתוכן דינמי כשאפשר</strong></p>
+<ul>
+<li>קשרו אלמנטים של כרטיס למשתנים או פלטים מצמתים באמצעות Power Fx כדי להתאים אישית את חוויית המשתמש.</li>
+<li>לדוגמה, הציגו את שם המשתמש או הסטטוס הנוכחי באופן דינמי.</li>
+</ul>
+</li>
+</ol>
+<h2 id="08-adaptive">🧪 מעבדה 08 - הוספת כרטיסי Adaptive ושיפור יכולות נושא<a class="headerlink" href="#08-adaptive" title="Permanent link">&para;</a></h2>
+<p>עכשיו נלמד כיצד לשפר את הנושא שלנו עם כרטיסי Adaptive ושימוש בפונקציונליות מתקדמת של נושאים וצמתים.</p>
+<ul>
+<li><a href="../../../../../docs/recruit/08-add-adaptive-card">8.1 יצירת נושא חדש עם כרטיס Adaptive למשתמש להגיש את בקשתו</a></li>
+<li><a href="../../../../../docs/recruit/08-add-adaptive-card">8.2 עדכון הוראות הסוכן להפעלת נושא בקשת מכשיר</a></li>
+</ul>
+<h3 id="_12">✨ מקרה שימוש<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p><strong>כ</strong> עובד</p>
+<p><strong>אני רוצה</strong> לבקש מכשיר</p>
+<p><strong>כדי ש</strong> אוכל לבקש מכשיר מרשימת המכשירים הזמינים</p>
+<p>בואו נתחיל!</p>
+<h3 id="_13">דרישות מוקדמות<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>רשימת SharePoint</strong></p>
+<p>נשתמש ברשימת <strong>Devices</strong> של SharePoint מ-<a href="../00-course-setup/#step-4-create-new-sharepoint-site">שיעור 00 - הגדרת הקורס - שלב 3: יצירת אתר SharePoint חדש</a>.</p>
+<p>אם לא הגדרתם את רשימת <strong>Devices</strong> של SharePoint, אנא חזרו ל-<a href="../00-course-setup/#step-4-create-new-sharepoint-site">שיעור 00 - הגדרת הקורס - שלב 3: יצירת אתר SharePoint חדש</a>.</p>
+</li>
+<li>
+<p><strong>Contoso Helpdesk Copilot</strong></p>
+<p>נשתמש באותו סוכן שנוצר קודם ב-<a href="../06-create-agent-from-conversation/">שיעור 06 - יצירת סוכן מותאם אישית באמצעות שפה טבעית עם Copilot והצמדתו לנתונים שלכם</a>.</p>
+</li>
+</ol>
+<h3 id="81-adaptive">8.1 יצירת נושא חדש עם כרטיס Adaptive למשתמש להגיש את בקשתו<a class="headerlink" href="#81-adaptive" title="Permanent link">&para;</a></h3>
+<p>ניצור נושא חדש שיטפל בבקשת מכשיר של משתמש. נושא חדש זה יכיל צומת <strong>שאל עם כרטיס Adaptive</strong> כדי לאפשר אינטראקציה של המשתמש עם הסוכן.</p>
+<p>בואו נתחיל!</p>
+<ol>
+<li>
+<p>בחרו בכרטיסיית <strong>נושאים</strong>, ואז בחרו <strong>+ הוסף נושא חדש מריק</strong>.</p>
+<p><img alt="בחרו בכרטיסיית נושאים" src="../../../../../translated_images/8.1_01_NewTopic.f16b94d274f8a7f561f257d9e15483fa56f6fc451a194f26bed03fceb24beb14.he.png" /></p>
+</li>
+<li>
+<p>תנו לנושא את השם הבא,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Request device
+</span></code></pre></div>
+<p>הזינו את התיאור הבא עבור ההפעלה.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>This topic helps users request a device when they answer yes to the question that asks the user if they would like to request one of these devices.
+</span></code></pre></div>
+<p><img alt="שם נושא ותיאור הפעלה" src="../../../../../translated_images/8.1_02_TopicNameAndTriggerDescription.3cdbb3ea9a3a480b8cdb23faa47d3a607273c79cbd406ae82dbb100603233879.he.png" />
+1. לאחר מכן, הוסף צומת <strong>שאל עם כרטיס אדפטיבי</strong>. צומת זה יציג כרטיס אינטראקטיבי למשתמש כדי לבחור באיזה מכשיר הוא מעוניין לבקש.</p>
+<p><img alt="בחר צומת שאל עם כרטיס אדפטיבי" src="../../../../../translated_images/8.1_03_AddAskWithAdaptiveCard.4b8e29223fbce16e4440152c0e7f6827fb88097e2a819a489878cf6254f215a4.he.png" /></p>
+</li>
+<li>
+<p>בחר את הצומת ותופיע חלונית <strong>מאפייני צומת כרטיס אדפטיבי</strong>. עכשיו נערוך את ה-JSON. בחר <strong>ערוך כרטיס אדפטיבי</strong>.</p>
+<p><img alt="ערוך כרטיס אדפטיבי" src="../../../../../translated_images/8.1_04_EditAdaptiveCard.40d31318a2300d467838b0126d72d336a9abb58ba5fd6f62f51170dfb9760992.he.png" /></p>
+</li>
+<li>
+<p>זהו <strong>מעצב הכרטיסים האדפטיביים</strong> שבו ניתן לעצב את הכרטיס ולראות את העיצוב בזמן אמת.</p>
+<p>נסה לגרור ולשחרר את האלמנטים <strong>TextBlock</strong> ו-<strong>FactSet</strong> לאזור העריכה, אזור הצגת הכרטיס. שים לב כיצד מבנה הכרטיס ועורך המטען של הכרטיס מתעדכנים כאשר שני האלמנטים נוספו. ניתן לעדכן ישירות את עורך המטען של הכרטיס ואת חלונית מאפייני האלמנטים.</p>
+<p><img alt="גרור ושחרר אלמנטים של כרטיס" src="../../../../../translated_images/8.1_05_DragAndDropCardElements.a9fea2dcf7ec6d235ef7b4f717bdc4fee6536a04a3bdb26fb458678fba79acb9.he.png" /></p>
+</li>
+<li>
+<p>בחר <strong>תצוגה מקדימה</strong> כדי לראות את הכרטיס ברוחבים שונים.</p>
+<p><img alt="בחר תצוגה מקדימה" src="../../../../../translated_images/8.1_06_PreviewAdaptiveCard.647091529c1fd44ed5eff21738c780bc3bf07e1cbe6434695d206a4aca9b4b25.he.png" /></p>
+</li>
+<li>
+<p>התצוגה המקדימה תיטען ותראה תוצאות כרטיס שונות לפי רוחב.</p>
+<p><img alt="תצוגה מקדימה של כרטיס ברוחבים שונים" src="../../../../../translated_images/8.1_07_PreviewCardWidths.bf9059b79ef07c1c108308e904bbfaa6742db99fcb30cb18004086f3c7fed086.he.png" /></p>
+</li>
+<li>
+<p>צא מ<strong>תצוגה מקדימה</strong> על ידי בחירת <strong>אייקון X</strong> ובחר <strong>בטל</strong> במעצב כדי להסיר את שני האלמנטים שהוספו קודם.</p>
+<p><img alt="בטל" src="../../../../../translated_images/8.1_08_Undo.ddcce9dbb87d876e47a932c73229d4fdc98e182d602af256275e2456cd9054eb.he.png" /></p>
+</li>
+<li>
+<p>לחץ על <strong>עורך מטען הכרטיס</strong> ובחר את כל השורות באמצעות קיצור המקלדת <em>Ctrl + A</em> ב-Windows או <em>Command + A</em> ב-Mac, ולאחר מכן מחק את השורות. <strong>הדבק</strong> את ה-JSON מקובץ <a href="../../../../../docs/recruit/08-add-adaptive-card/assets/8.1_RequestDevice.json">Request devices .JSON file</a>.</p>
+<p><img alt="נקה עורך מטען הכרטיס" src="../../../../../translated_images/8.1_09_SelectAll.6aaf936d81c3356870679a7ae5b6fd1298812cc492ca3250fa01179164483e1e.he.png" /></p>
+</li>
+<li>
+<p>שים לב כיצד <strong>תצוגת הכרטיס</strong> עכשיו כוללת אלמנטים שמציגים טקסט ורשימת מכשירים זמינים.</p>
+<p>ה-JSON הזה הוא כרגע תבנית ותצוגה מקדימה למה שנשתמש בו כבסיס לכרטיס, אך בצורה של נוסחה במקום JSON, מכיוון שנשתמש ב<strong>משתנה גלובלי</strong>, <code>Global.VarDevices.value</code>, שמאחסן את התגובה של פעולת מחבר SharePoint <strong>קבל פריטים</strong>.</p>
+<p>בחר <strong>שמור</strong> ובחר <strong>סגור</strong> כדי לצאת ממעצב הכרטיסים האדפטיביים.</p>
+<p><img alt="בחר שמור" src="../../../../../translated_images/8.1_10_DeviceRequestCard.711ce0bdfbfecf2f221cb7fc4c6aecdefd7467afcfad43f2414e8230fc0d8470.he.png" /></p>
+</li>
+<li>
+<p>סגור את חלונית <strong>מאפייני צומת כרטיס אדפטיבי</strong> על ידי בחירת <strong>אייקון X</strong>.</p>
+<p><img alt="סגור חלונית מאפייני צומת כרטיס אדפטיבי" src="../../../../../translated_images/8.1_11_ExitAdaptiveCardNodeProperties.fe8760d8df1c22f9a73b7860e9473a4f350e0cb0d83824e9f55a143593ca9c58.he.png" /></p>
+</li>
+<li>
+<p>באזור העריכה של הנושא, תראה את הכרטיס האדפטיבי.</p>
+<p><img alt="כרטיס בקשת מכשיר" src="../../../../../translated_images/8.1_12_DeviceRequestCard.f4e3961a0fd282aeb37017f8cb49018c839805d375e2fc5a1220321156012b48.he.png" /></p>
+</li>
+<li>
+<p>גלול לתחתית הצומת ותראה משתני פלט. <code>commentsId</code> ו-<code>deviceSelectionId</code> הוגדרו במאפייני האלמנטים. שני משתנים אלו יאחסנו ערכים מהאלמנטים בכרטיס שהמשתמשים מתקשרים איתם. ערכים אלו ישמשו בהמשך הנושא, עליו נלמד במעבדה של השיעור הבא.</p>
+<p><img alt="פלט משתני צומת" src="../../../../../translated_images/8.1_13_DeviceRequestCardOutputs.d4580e9384b74e4273f83b52e1fd256a893c49b0cf398e33ac244906edd44b35.he.png" /></p>
+</li>
+<li>
+<p>עכשיו נעדכן את הכרטיס מ-JSON לנוסחה, מכיוון שנשתמש שוב ב-Power Fx כדי לעבור על הפריטים שהוחזרו בפעולת מחבר SharePoint <strong>קבל פריטים</strong>, המאוחסנים ב<strong>משתנה גלובלי</strong>, <code>Global.VarDevices.value</code>, דרך מאפיין <code>value</code> של תגובת ה-JSON.</p>
+<blockquote>
+<p>יצרנו את המשתנה הגלובלי הזה ב-<a href="../07-add-new-topic-with-trigger/#73-add-a-tool-using-a-connector">מעבדה 07 - הוסף נושא חדש עם צמתי שיחה, 7.3 הוסף כלי באמצעות מחבר</a>.</p>
+</blockquote>
+<p>בחר את הכרטיס בצומת <strong>שאל עם כרטיס אדפטיבי</strong>, ולאחר מכן בחר את <strong>אייקון החץ</strong> ובחר <strong>נוסחה</strong>.</p>
+<p><img alt="שנה לנוסחה" src="../../../../../translated_images/8.1_14_ChangeToFormula.03acaccb20320557926f0854e006a2e6a6475eb06ecdb031f429e50d0303f0cf.he.png" /></p>
+</li>
+<li>
+<p>לחץ על <strong>אייקון ההרחבה</strong> כדי להגדיל את שדה הנוסחה.</p>
+<p><img alt="לחץ על אייקון ההרחבה" src="../../../../../translated_images/8.1_15_SelectExpand.65dcefe6ec10e6b8c9741c254d303a47f5c0fae7bf586facbf768f820786c839.he.png" /></p>
+</li>
+<li>
+<p>לחץ על <strong>עורך מטען הכרטיס</strong> ובחר את כל השורות באמצעות קיצור המקלדת <em>Ctrl + A</em> ב-Windows או <em>Command + A</em> ב-Mac, ולאחר מכן מחק את השורות.</p>
+<p><img alt="לחץ על עורך מטען הכרטיס" src="../../../../../translated_images/8.1_16_SelectAll.689cea259e1541f21e87df32ce271bb478c7f88f8e96ba7e02329cc0015a037c.he.png" /></p>
+<p>הדבק את הנוסחה מקובץ <a href="../../../../../docs/recruit/08-add-adaptive-card/assets/8.1_RequestDeviceFormula.txt">Request Devices formula file</a>.</p>
+</li>
+<li>
+<p>בנוסחה, נעבור על כל פריט ברשימת SharePoint באמצעות פונקציית <code>For All</code> כדי להציג את הערכים של <code>Model</code> בכותרת אפשרות הבחירה, ופריט SharePoint <code>ID</code> יופנה כערך. אנו גם עוטפים את הערכים עם פונקציות <code>If(IsBlank()</code> מכיוון שהנוסחה מצפה לערך כדי להציג את הכרטיס האדפטיבי באזור העריכה של הנושא. אחרת תופיע הודעה, "Property cannot be null".</p>
+<p><strong>סגור</strong> את חלונית הכרטיס.</p>
+<p><img alt="נוסחת Power Fx" src="../../../../../translated_images/8.1_17_PowerFxFormula.c68848b0af594819636bf70aa6b03c7ec8f4190b285e798fdcb02232be0ca146.he.png" /></p>
+</li>
+<li>
+<p><strong>סגור</strong> את חלונית <strong>מאפייני צומת כרטיס אדפטיבי</strong>.</p>
+</li>
+<li>
+<p><strong>שמור</strong> את הנושא.</p>
+<p><img alt="שמור נושא" src="../../../../../translated_images/8.1_18_SaveTopic.da41cfc240e80d46f7f1379f271be8dafa0c3060868b862535bb4bec87591f6c.he.png" /></p>
+</li>
+</ol>
+<h3 id="82">8.2 עדכן הוראות סוכן להפעלת נושא בקשת מכשיר<a class="headerlink" href="#82" title="Permanent link">&para;</a></h3>
+<p>עכשיו שיצרנו את הנושא החדש שמטפל בבקשות למכשירים, עלינו לעדכן את <strong>הוראות הסוכן</strong> כדי להפעיל את הנושא.</p>
+<ol>
+<li>
+<p>בחר את לשונית <strong>סקירה כללית</strong> וב<strong>הוראות הסוכן</strong> בחר <strong>ערוך</strong>.</p>
+<p><img alt="ערוך הוראות" src="../../../../../translated_images/8.2_01_EditInstructions.1c93b774b61243660f1fac51c39675e1a3aa35b14200364921d90ae26cffec13.he.png" /></p>
+</li>
+<li>
+<p>הוסף שורה חדשה מתחת להוראה הקודמת מ-<a href="../07-add-new-topic-with-trigger/#73-add-a-tool-using-a-connector">מעבדה 07 - הוסף נושא חדש עם צמתי שיחה, 7.3 הוסף כלי באמצעות מחבר</a>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>- If the user answers yes to the question of requesting a device, trigger [Request device]. Otherwise if they answer no to the question of requesting a device, trigger [Goodbye].
+</span></code></pre></div>
+<p>בחר את כל התבנית של הנושא בסוגריים מרובעים ומחק את התבנית.</p>
+<p><img alt="תבנית בקשת מכשיר" src="../../../../../translated_images/8.2_02_ReplaceRequestDevicePlaceholder.604b21d10047f887fd12965c54bcaa7b96174dc5ebc39862ef29d513420c25f8.he.png" /></p>
+</li>
+<li>
+<p>הקלד <code>/Req</code> ובחר את נושא <strong>בקשת מכשירים</strong>.</p>
+<p><img alt="נושא בקשת מכשירים" src="../../../../../translated_images/8.2_03_ReferenceRequestDeviceTopic.082468c7b7512dceb4d294ed3dbe447e81b1f0b47688b767003eca6a60b4390d.he.png" /></p>
+</li>
+<li>
+<p>חזור על אותם צעדים עבור תבנית הנושא הבאה, <strong>[להתראות]</strong>. בחר את כל התבנית של הנושא בסוגריים מרובעים ומחק את התבנית. הקלד <code>/Goodbye</code> ובחר את נושא <strong>להתראות</strong>.</p>
+<ul>
+<li>
+<p>כאשר המשתמש עונה <strong>כן</strong> לשאלת הסוכן אם הוא מעוניין לבקש מכשיר, הסוכן יפנה מנושא <strong>מכשירים זמינים</strong> לנושא <strong>בקשת מכשירים</strong>.</p>
+</li>
+<li>
+<p>אחרת, אם המשתמש עונה <strong>לא</strong>, הסוכן יפנה מנושא <strong>מכשירים זמינים</strong> לנושא <strong>להתראות</strong>.</p>
+</li>
+</ul>
+<p><strong>שמור</strong> את ההוראות המעודכנות.</p>
+<p><img alt="הפניה לנושא בקשת מכשיר" src="../../../../../translated_images/8.2_04_ReferenceGoodbyeTopic.f4db471beef6645aefd7d8b1b8a46669c6764b54f6954614f452976c49bcb9d5.he.png" /></p>
+</li>
+<li>
+<p>עכשיו נבדוק את ההפניה מנושא <em>מכשירים זמינים</em> לנושא <em>בקשת מכשירים</em>. בחר <strong>בדיקה</strong> כדי לטעון את חלונית הבדיקה ובחר <strong>רענן</strong>.</p>
+<p>לאחר מכן בחר את אייקון <strong>מפת הפעילות</strong> בחלונית הבדיקה, ולאחר מכן הפעל <strong>מעקב בין נושאים</strong>. זה יאפשר לנו לראות שנושא <em>מכשירים זמינים</em> הפנה לנושא <em>בקשת מכשירים</em>.</p>
+<p>בסדר, אנחנו מוכנים לבדוק! הכנס את הטקסט הבא בחלונית הבדיקה.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>I need a laptop
+</span></code></pre></div>
+<p><img alt="בדוק סוכן" src="../../../../../translated_images/8.2_05_TestAgent.21b4ed7f831866736edc0b35def2856066bf61082487a6d63952e8635eae8c99.he.png" /></p>
+</li>
+<li>
+<p>הסוכן יגיב עם רשימת המכשירים הזמינים ולאחר מכן ישאל את המשתמש אם הוא מעוניין לבקש מכשיר. העתק והדבק את הטקסט הבא,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>yes please
+</span></code></pre></div>
+<p><img alt="בדוק נושא בקשת מכשיר" src="../../../../../translated_images/8.2_06_TestRequestDeviceTopic.60f161f89dc2793bc4b40a6d29a06a7cffe156c50e8517de242f1dacbadf5682.he.png" /></p>
+</li>
+<li>
+<p>לאחר מכן נראה שהסוכן הפנה לנושא <strong>בקשת מכשיר</strong>. הסוכן הפעיל את הנושא הזה בהתאם להוראות שהוספנו.</p>
+<p>הכרטיס האדפטיבי עם האלמנטים האינטראקטיביים יוצג עכשיו כהודעה למשתמש.</p>
+<p><img alt="צומת שאלה" src="../../../../../translated_images/8.2_07_AdaptiveCardQuestion.f07775130cfea9a75c5842c48a56bf506e0b5967e4349571b682266c85c02748.he.png" /></p>
+</li>
+<li>
+<p>עכשיו בדקנו בהצלחה 😄 את ההפניה מנושא <em>מכשירים זמינים</em> לנושא <em>בקשת מכשירים</em>. נוסיף עוד שיפורים לנושא הזה במעבדה של השיעור הבא.</p>
+<p>רענן את חלונית הבדיקה.</p>
+<p><img alt="רענן חלונית בדיקה" src="../../../../../translated_images/8.2_08_RefreshTestPane.84d8c1174a9e6cc28a87f2663fb72838e8c6fd216df46153bd4f995b8527227a.he.png" /></p>
+</li>
+</ol>
+<h2 id="_14">✅ משימה הושלמה<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<p>ברכות! 👏🏻 למדת כיצד להוסיף כרטיסים אדפטיביים באמצעות נוסחאות Power Fx כדי להציג נתונים ממשתנים, ולמדת גם כיצד להפנות מנושא אחד לנושא אחר. יצירת נושאים קטנים וממוקדים הופכת את הסוכן שלך למאורגן יותר, וגם עוזרת להנחות משתמשים דרך חלקים שונים בזרימת השיחה עם הסוכן.</p>
+<p>זהו סוף <strong>מעבדה 08 - שפר אינטראקציות משתמש עם כרטיסים אדפטיביים</strong>, בחר את הקישור למטה כדי לעבור לשיעור הבא. נרחיב על המקרה במעבדה של השיעור הבא.</p>
+<p>⏭️ <a href="../09-add-an-agent-flow/">עבור לשיעור <strong>הוסף זרימת סוכן לנושא שלך לאוטומציה</strong></a></p>
+<h2 id="_15">📚 משאבים טקטיים<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/guidance/adaptive-cards-overview?WT.mc_id=power-172619-ebenitez">שימוש בכרטיסים אדפטיביים ב-Copilot Studio</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-send-message#add-an-adaptive-card?WT.mc_id=power-172619-ebenitez">הוסף כרטיס אדפטיבי בצומת שליחת הודעה</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-power-fx?WT.mc_id=power-172619-ebenitez">צור ביטויים באמצעות Power Fx</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep8">בניית כרטיסים אדפטיביים עם Power FX</a></p>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/08-add-adaptive-card" alt="Analytics" /></p>
+<hr />
+<p><strong>הצהרת אחריות</strong>:<br />
+מסמך זה תורגם באמצעות שירות תרגום AI <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי אנושי. אנו לא נושאים באחריות לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1196 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/de/docs/recruit/03-create-a-declarative-agent-for-M365Copilot/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-03-einen-deklarativen-agenten-fur-microsoft-365-copilot-bereitstellen" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-copilot-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAME: OPERATION COPILOT EXTENSION
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missionsbriefing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Missionsbriefing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ziele" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Ziele
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#was-ist-ein-deklarativer-agent-fur-microsoft-365-copilot" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵🏻‍♀️ Was ist ein deklarativer Agent für Microsoft 365 Copilot?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warum-sollte-ich-microsoft-copilot-studio-verwenden-um-einen-deklarativen-agenten-zu-erstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Warum sollte ich Microsoft Copilot Studio verwenden, um einen deklarativen Agenten zu erstellen?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-03-einen-deklarativen-agenten-in-microsoft-copilot-studio-fur-microsoft-365-copilot-erstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 03: Einen deklarativen Agenten in Microsoft Copilot Studio für Microsoft 365 Copilot erstellen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-abgeschlossen" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Mission abgeschlossen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taktische-ressourcen" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Taktische Ressourcen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "723c35983c8885e2ad1698305c040745",
+  "translation_date": "2025-10-17T18:55:47+00:00",
+  "source_file": "docs/recruit/03-create-a-declarative-agent-for-M365Copilot/README.md",
+  "language_code": "de"
+}
+-->
+<h1 id="mission-03-einen-deklarativen-agenten-fur-microsoft-365-copilot-bereitstellen">🚨 Mission 03: Einen deklarativen Agenten für Microsoft 365 Copilot bereitstellen<a class="headerlink" href="#mission-03-einen-deklarativen-agenten-fur-microsoft-365-copilot-bereitstellen" title="Permanent link">&para;</a></h1>
+<h2 id="codename-operation-copilot-extension">🕵️‍♂️ CODENAME: <code>OPERATION COPILOT EXTENSION</code><a class="headerlink" href="#codename-operation-copilot-extension" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Zeitfenster der Operation:</strong> <code>~60 Minuten</code></p>
+</blockquote>
+<p>🎥 <strong>Schauen Sie sich die Anleitung an</strong></p>
+<p><a href="https://www.youtube.com/watch?v=BVNUmLXFCq8" title="Schauen Sie sich die Anleitung auf YouTube an"><img alt="Video-Thumbnail zum Erstellen eines deklarativen Agenten" src="../../../../../translated_images/video-thumbnail.3405ba2c516e48afc544f051cc0ddf43eaee2f01cf32af9c02aa8c5e6968a38b.de.jpg" /></a></p>
+<h2 id="missionsbriefing">🎯 Missionsbriefing<a class="headerlink" href="#missionsbriefing" title="Permanent link">&para;</a></h2>
+<p>Willkommen bei Ihrem ersten Außeneinsatz, Agent Maker. Sie wurden ausgewählt, um einen deklarativen Agenten zu entwerfen, auszustatten und bereitzustellen – einen spezialisierten Agenten, der direkt in Microsoft 365 Copilot und Microsoft Teams eingebettet ist.</p>
+<p>Im Gegensatz zu traditionellen Agenten arbeiten deklarative Agenten mit einer definierten Mission (Anweisungen), Werkzeugen (Prompts/Connectors) und strategischem Zugang zu interner Intelligenz (Wissensquellen wie SharePoint, Dataverse und mehr). Ihre Aufgabe ist es, diesen Agenten mithilfe von Microsoft Copilot Studio zu erstellen – einem No-Code-Kommandozentrum, in dem die Fähigkeiten und der Zweck Ihres Agenten zum Leben erweckt werden.</p>
+<p>Los geht’s.</p>
+<h2 id="ziele">🔎 Ziele<a class="headerlink" href="#ziele" title="Permanent link">&para;</a></h2>
+<p>In dieser Mission lernen Sie:</p>
+<ol>
+<li>Verstehen, was deklarative Agenten sind und wie sie Microsoft 365 Copilot mit benutzerdefinierten Funktionen erweitern</li>
+<li>Vergleich zwischen Microsoft Copilot Studio und Copilot Studio Agent Builder für die Erstellung deklarativer Agenten</li>
+<li>Erstellen eines deklarativen Agenten mithilfe natürlicher Sprache durch die konversationelle Erstellungserfahrung</li>
+<li>Hinzufügen von KI-Prompts als Werkzeuge zur Verbesserung des spezialisierten Wissens und der Problemlösungsfähigkeiten Ihres Agenten</li>
+<li>Veröffentlichen und Testen Ihres deklarativen Agenten in Microsoft 365 Copilot und Microsoft Teams</li>
+</ol>
+<h2 id="was-ist-ein-deklarativer-agent-fur-microsoft-365-copilot">🕵🏻‍♀️ Was ist ein deklarativer Agent für Microsoft 365 Copilot?<a class="headerlink" href="#was-ist-ein-deklarativer-agent-fur-microsoft-365-copilot" title="Permanent link">&para;</a></h2>
+<p>Deklarative Agenten sind maßgeschneiderte Versionen von Microsoft 365 Copilot. Sie können Microsoft 365 Copilot an spezifische Geschäftsanforderungen anpassen, indem Sie ihm Anweisungen geben, um einen bestimmten Prozess zu unterstützen, ihn mit Unternehmenswissen verankern und Werkzeuge für eine breitere Erweiterbarkeit nutzen. Dies ermöglicht es Organisationen, personalisierte Erfahrungen mit größerer Funktionalität für ihre Benutzer zu schaffen.</p>
+<h2 id="warum-sollte-ich-microsoft-copilot-studio-verwenden-um-einen-deklarativen-agenten-zu-erstellen">🤔 Warum sollte ich Microsoft Copilot Studio verwenden, um einen deklarativen Agenten zu erstellen?<a class="headerlink" href="#warum-sollte-ich-microsoft-copilot-studio-verwenden-um-einen-deklarativen-agenten-zu-erstellen" title="Permanent link">&para;</a></h2>
+<p>Als Entwickler haben Sie möglicherweise bereits <a href="https://learn.microsoft.com/microsoft-365-copilot/extensibility/copilot-studio-agent-builder?WT.mc_id=power-172614-ebenitez">Copilot Studio Agent Builder</a> in Microsoft 365 Copilot erkundet und fragen sich daher wahrscheinlich: <em>Warum sollte ich einen deklarativen Agenten in Microsoft Copilot Studio erstellen?</em></p>
+<p>Microsoft Copilot Studio bietet eine umfassende Palette von Werkzeugen und Funktionen für deklarative Agenten, die über die Einschränkungen des Copilot Studio Agent Builders hinausgehen. Ähnlich wie beim Copilot Studio Agent Builder benötigen Sie keine Programmier- oder Softwareentwicklungskenntnisse, um in Microsoft Copilot Studio zu arbeiten. Lassen Sie uns dies weiter aufschlüsseln, um die Unterschiede zwischen Copilot Studio Agent Builder und Copilot Studio für die Erstellung deklarativer Agenten zu verstehen.</p>
+<h3 id="funktionsvergleich">Funktionsvergleich<a class="headerlink" href="#funktionsvergleich" title="Permanent link">&para;</a></h3>
+<p>Die folgende Tabelle hebt die Unterschiede bei der Erstellung eines deklarativen Agenten in Copilot Studio Agent Builder und Copilot Studio hervor.</p>
+<table>
+<thead>
+<tr>
+<th>Funktion</th>
+<th>Copilot Studio Agent Builder in Microsoft 365 Copilot</th>
+<th>Microsoft 365 Copilot in Copilot Studio erweitern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Wissen</strong></td>
+<td>Web, SharePoint, Microsoft Teams-Chats, Outlook-E-Mails, Copilot-Connectors</td>
+<td>Websuche (über Bing), SharePoint, Dataverse, Dynamics 365, Copilot-Connectors</td>
+</tr>
+<tr>
+<td><strong>Werkzeuge</strong></td>
+<td>Code-Interpreter, Bildgenerator</td>
+<td>1400+ Power Platform Connectors, benutzerdefinierte Connectors, Prompt, Computeranwendung, REST-API, Model Context Protocol</td>
+</tr>
+<tr>
+<td><strong>Starter-Prompts</strong></td>
+<td>Prompts für Benutzer konfigurieren, um schnell zu starten</td>
+<td>Prompts für Benutzer konfigurieren, um schnell zu starten</td>
+</tr>
+<tr>
+<td><strong>Kanal</strong></td>
+<td>Agent nur für Microsoft 365 Copilot veröffentlicht</td>
+<td>Agent für Microsoft 365 Copilot und Microsoft Teams veröffentlicht</td>
+</tr>
+<tr>
+<td><strong>Freigabeberechtigungen</strong></td>
+<td>Benutzer sind nur Betrachter</td>
+<td>Benutzer können Bearbeiter oder Betrachter sein</td>
+</tr>
+</tbody>
+</table>
+<p>Es gibt weitere Funktionen für deklarative Agenten, die in Microsoft Copilot Studio erstellt wurden und die wir als Nächstes kennenlernen werden.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>Um mehr über den Copilot Studio Agent Builder zu erfahren, besuchen Sie <a href="https://microsoft.github.io/copilot-camp/pages/make/agent-builder/01-first-agent/">Copilot Developer Camp: Lab MAB1 - Build your first agent</a></li>
+<li>Für die professionelle Entwicklung zur Erweiterung eines deklarativen Agenten über den Copilot Studio Agent Builder für Microsoft 365 Copilot hinaus besuchen Sie <a href="https://microsoft.github.io/copilot-camp/pages/extend-m365-copilot/">Copilot Developer Camp: Lab MAB1 - Build your first agent</a></li>
+</ul>
+</div>
+<h3 id="microsoft-365-copilot-mit-deklarativen-agenten-in-copilot-studio-erweitern">Microsoft 365 Copilot mit deklarativen Agenten in Copilot Studio erweitern<a class="headerlink" href="#microsoft-365-copilot-mit-deklarativen-agenten-in-copilot-studio-erweitern" title="Permanent link">&para;</a></h3>
+<p>Lassen Sie uns das, was wir aus der Funktionsvergleichstabelle gelernt haben, erweitern.</p>
+<h4 id="anpassung">Anpassung<a class="headerlink" href="#anpassung" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Detaillierte Anweisungen</strong>: Sie können detaillierte Anweisungen und Fähigkeiten bereitstellen, um den Zweck und das Verhalten des Agenten genau zu definieren.</li>
+<li>
+<p>Dazu gehört das Aufrufen von Werkzeugen einfach durch die Verwendung natürlicher Sprache.</p>
+</li>
+<li>
+<p><strong>Zugriff auf Unternehmenswissen</strong>: Ermöglicht den Zugriff auf Unternehmenswissen unter Berücksichtigung der Benutzerberechtigungen.</p>
+</li>
+<li>SharePoint-Integration</li>
+<li>Dataverse-Integration</li>
+<li>Dynamics 365-Integration</li>
+<li>Microsoft 365 Copilot-Connectors, die vom Administrator Ihrer Organisation aktiviert wurden</li>
+</ul>
+<p><img alt="Anpassung" src="../../../../../translated_images/3.0_01_Customization.b8e31d7637b02ec72f4bbb3b25a5ae6339af4424d212a6120ca2c437bb5cf150.de.png" /></p>
+<h4 id="erweiterte-funktionen">Erweiterte Funktionen<a class="headerlink" href="#erweiterte-funktionen" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Integration mit externen Diensten</strong>: Ermöglicht die Auswahl aus über 1400 Power Platform Connectors, die mit externen Diensten integriert sind und komplexere und leistungsstärkere Funktionen bieten.</li>
+<li>Beispiele umfassen <a href="https://learn.microsoft.com/connectors/docusign/?WT.mc_id=power-172614-ebenitez">docusign</a>, <a href="https://learn.microsoft.com/connectors/service-now/?WT.mc_id=power-172614-ebenitez">ServiceNow</a>, <a href="https://learn.microsoft.com/connectors/salesforce/?WT.mc_id=power-172614-ebenitez">Salesforce</a>, <a href="https://learn.microsoft.com/connectors/sap/?WT.mc_id=power-172614-ebenitez">SAP</a> und mehr</li>
+<li>
+<p>Alternativ können Sie auch Model Context Protocol-Server und REST-APIs direkt in Ihrem deklarativen Agenten nutzen</p>
+</li>
+<li>
+<p><strong>KI-Prompts</strong>: Verwenden Sie einen Prompt, um Text, Dokumente, Bilder und Daten mit natürlicher Sprache und KI-Logik zu analysieren und zu transformieren.</p>
+</li>
+<li>Wählen Sie das Chat-Modell aus, wählen Sie zwischen Basic (Standard), Standard, Premium</li>
+<li>
+<p>Möglichkeit, Ihr eigenes Azure AI Foundry-Modell einzubringen, um Ihren Prompt zu verankern</p>
+</li>
+<li>
+<p><strong>Mehr Optionen für die Bereitstellungskonfiguration</strong>: Wählen Sie Kanäle aus und definieren Sie Benutzerberechtigungen.</p>
+</li>
+<li>Veröffentlichung in Microsoft Teams, einer vertrauten Benutzeroberfläche für Ihre Benutzer für eine schnellere Akzeptanz</li>
+<li>Bearbeitungsberechtigungen können geteilt werden, um eine Abhängigkeit von einer einzigen Person zu vermeiden</li>
+</ul>
+<p><img alt="Anpassung" src="../../../../../translated_images/3.0_02_AdvancedCapabilities.567f1ad30242874e1fef898b809026bfa893c5758f15366e1ba71587f8ff4784.de.png" /></p>
+<p>Zusammenfassend ermöglichen deklarative Agenten in Microsoft Copilot Studio die Anpassung von Microsoft 365 Copilot an Geschäftsanforderungen durch die Integration von Unternehmenswissenssystemen, Werkzeugen zur Verbindung mit externen Diensten oder KI-GPT-Modellen.</p>
+<h2 id="lab-03-einen-deklarativen-agenten-in-microsoft-copilot-studio-fur-microsoft-365-copilot-erstellen">🧪 Lab 03: Einen deklarativen Agenten in Microsoft Copilot Studio für Microsoft 365 Copilot erstellen<a class="headerlink" href="#lab-03-einen-deklarativen-agenten-in-microsoft-copilot-studio-fur-microsoft-365-copilot-erstellen" title="Permanent link">&para;</a></h2>
+<p>Als Nächstes lernen wir, wie man einen deklarativen Agenten für einen "Business-to-Employee"-Anwendungsfall erstellt, der als <strong>IT-Helpdesk-Agent</strong> fungiert.</p>
+<ul>
+<li><a href="../../../../../docs/recruit/03-create-a-declarative-agent-for-M365Copilot">3.1 Einen deklarativen Agenten erstellen</a></li>
+<li><a href="../../../../../docs/recruit/03-create-a-declarative-agent-for-M365Copilot">3.2 Einen Prompt für Ihren deklarativen Agenten erstellen und hinzufügen</a></li>
+<li><a href="../../../../../docs/recruit/03-create-a-declarative-agent-for-M365Copilot">3.3 Anweisungen aktualisieren und Ihren deklarativen Agenten testen</a></li>
+<li><a href="../../../../../docs/recruit/03-create-a-declarative-agent-for-M365Copilot">3.4 Ihren deklarativen Agenten in Microsoft 365 Copilot und Microsoft Teams veröffentlichen</a></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Dieses Lab wird Schritte zum Hinzufügen eines Prompts als Werkzeug skizzieren. Die folgenden Lektionen werden sich mit dem Hinzufügen von Wissensquellen und anderen verfügbaren Werkzeugen befassen. Einfach gehalten für Ihr Lernen 😊</p>
+</div>
+<h3 id="verstandnis-von-business-to-employee-b2e">👩🏻‍💼 Verständnis von Business-to-Employee (B2E)<a class="headerlink" href="#verstandnis-von-business-to-employee-b2e" title="Permanent link">&para;</a></h3>
+<p>Business-to-Employee (B2E) bezieht sich auf die Interaktionen und Dienstleistungen, die ein Unternehmen direkt seinen Mitarbeitern bietet. Im Kontext eines Agenten bedeutet dies, die erweiterten Fähigkeiten von Copilot Studio zu nutzen, um die Arbeitserfahrung der Mitarbeiter innerhalb der Organisation zu unterstützen und zu verbessern.</p>
+<h3 id="anwendungsfall-szenario">✨ Anwendungsfall-Szenario<a class="headerlink" href="#anwendungsfall-szenario" title="Permanent link">&para;</a></h3>
+<p><strong>Als</strong> Mitarbeiter</p>
+<p><strong>Möchte ich</strong> schnelle und präzise Hilfe vom IT-Helpdesk-Agenten für Probleme wie Geräteprobleme, Netzwerkprobleme, Druckereinrichtung erhalten</p>
+<p><strong>Damit ich</strong> produktiv bleiben und technische Probleme ohne Verzögerungen lösen kann</p>
+<p>Lassen Sie uns beginnen!</p>
+<h3 id="voraussetzungen">Voraussetzungen<a class="headerlink" href="#voraussetzungen" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Entwickler müssen Berechtigungen haben, um in einer Copilot Studio-Umgebung zu erstellen und darauf zuzugreifen.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Lizenzhinweis</p>
+<p>Dieses Lab wird Schritte zum Hinzufügen eines Prompts als Werkzeug skizzieren. Die folgenden Lektionen werden sich mit dem Hinzufügen von Wissensquellen und anderen verfügbaren Werkzeugen befassen. Einfach gehalten für Ihr Lernen 😊</p>
+<p>Sie benötigen keine Microsoft 365 Copilot-Benutzerlizenz, um Ihren in Copilot Studio erstellten deklarativen Agenten in Microsoft 365 Copilot zu veröffentlichen. <strong>Benutzer</strong> des <em>veröffentlichten deklarativen Agenten</em> in Microsoft 365 Copilot benötigen jedoch eine Microsoft 365 Copilot-Benutzerlizenz.</p>
+</div>
+<h3 id="31-einen-deklarativen-agenten-erstellen">3.1 Einen deklarativen Agenten erstellen<a class="headerlink" href="#31-einen-deklarativen-agenten-erstellen" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Copilot-Fragen können sich zwischen Sitzungen unterscheiden</p>
+<p>Die konversationelle Erstellungserfahrung von Copilot kann sich jedes Mal ändern, wobei die bereitgestellten Fragen zur Anleitung möglicherweise leicht anders sind als zuvor.</p>
+</div>
+<ol>
+<li>
+<p>Navigieren Sie zu <a href="https://copilotstudio.microsoft.com/">https://copilotstudio.microsoft.com/</a> und melden Sie sich mit Ihren Zugangsdaten an. Stellen Sie sicher, dass Sie zu Ihrer Umgebung wechseln, die Sie für diese Labs verwenden.</p>
+</li>
+<li>
+<p>Wählen Sie <strong>Agenten</strong> aus dem Menü und wählen Sie <strong>Copilot für Microsoft 365</strong>.</p>
+<p><img alt="Copilot für Microsoft 365" src="../../../../../translated_images/3.1_02_CopilotForM365.4cce9148fb63c947b54d30b7ba59c394d3ce84aab6d08a008fc7212bdfc94af2.de.png" /></p>
+</li>
+<li>
+<p>Als Nächstes erstellen wir einen deklarativen Agenten, indem wir <strong>+ Agent hinzufügen</strong> auswählen.</p>
+<p><img alt="Agent hinzufügen" src="../../../../../translated_images/3.1_03_AddAgent.1971234c27e9cd9f17c73e6214045224638279df05417f7af6a5f446158d39de.de.png" /></p>
+</li>
+<li>
+<p>Anschließend wird die konversationelle Erstellungserfahrung geladen, bei der wir in natürlicher Sprache mit Copilot chatten können, um den deklarativen Agenten zu beschreiben, den wir erstellen möchten, und die bereitgestellten Fragen zur Anleitung nutzen.</p>
+<p>Geben Sie eine detaillierte Beschreibung ein, die Folgendes umfasst,<br />
+   - die Aufgabe des Agenten<br />
+   - welche Art von Anfragen er bearbeiten kann<br />
+   - das Format seiner Antwort<br />
+   - das Ziel des Agenten  </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Sie sind ein hochqualifizierter und erfahrener IT-Experte, der sich auf eine Vielzahl von Computersystemen, Netzwerken und Cybersicherheit spezialisiert hat. Sie können technische Probleme diagnostizieren und lösen, Lösungen klar und verständlich für Benutzer aller technischen Niveaus erklären und Anleitungen zu Best Practices geben. Sie sollten prägnant und informativ sein, Schritt-für-Schritt-Anweisungen mit Aufzählungspunkten verwenden, wenn dies angebracht ist. Ihr Ziel ist es, dem Benutzer zu helfen, das Problem zu verstehen und es effektiv zu lösen.
+</span></code></pre></div>
+<p><img alt="Prompt erstellen" src="../../../../../translated_images/3.1_04_CreatePrompt.089a4778ab7e652d18695bb2e792db64e2754c8140d5fd63e76b9eefb52bdf13.de.png" /></p>
+</li>
+<li>
+<p>Nach dem Einreichen des Prompts erscheint eine auffällige Aktualisierung im rechten Bereich mit den Details und Anweisungen des Agenten, wie im Prompt definiert. Als Nächstes werden Sie aufgefordert, den Namen Ihres Agenten zu bestätigen, und Copilot wird einen Namen vorschlagen.</p>
+<p>Geben Sie entweder <code>ja</code> ein, um den vorgeschlagenen Namen zu akzeptieren, oder geben Sie einen anderen Namen wie den folgenden ein,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Contoso Tech Support Pro
+</span></code></pre></div>
+<p><img alt="Anweisungen aktualisiert" src="../../../../../translated_images/3.1_05_InstructionsUpdated.110cd93fa69ba2627e59aef2c555eebe7f91a85880b094cde9205b2069991a9d.de.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Erinnerung: Copilot-Fragen können sich zwischen Sitzungen unterscheiden</p>
+<p>Die konversationelle Erstellungserfahrung von Copilot kann sich jedes Mal ändern, wobei die bereitgestellten Fragen zur Anleitung möglicherweise leicht anders sind als zuvor.</p>
+</div>
+</li>
+<li>
+<p>Der Name des Agenten wurde nun aktualisiert, wie im rechten Bereich zu sehen ist. Jetzt werden wir aufgefordert, die Anweisungen für den Agenten zu verfeinern. Was Copilot vorgeschlagen hat, klingt großartig, also werden wir es bitten, seine eigenen Vorschläge zu verwenden. Wir geben Folgendes ein,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Focus on the IT issues and scenarios you&#39;ve identified
+</span></code></pre></div>
+<p><img alt="Name aktualisiert" src="../../../../../translated_images/3.1_06_NameUpdated.b6b8cc7c670b77c635d6b54b723e1a83f63ec288c0eab260fdbf88c7ec163003.de.png" /></p>
+</li>
+<li>
+<p>Als Nächstes werden wir gefragt, ob wir öffentlich zugängliche Websites oder Wissen hinzufügen möchten. Wir antworten mit <code>Nein</code>, da wir in diesem Lab nur einen Prompt für unseren deklarativen Agenten hinzufügen werden. Nachfolgende Labs in zukünftigen Lektionen werden Wissensquellen behandeln.</p>
+<p><img alt="Keine Websites oder Wissensquellen hinzugefügt" src="../../../../../translated_images/3.1_07_KnowledgeSources.2001faa25aab922f38da82a8602e68b3ad7153941e87bab0949177e0b2ab0c08.de.png" /></p>
+</li>
+<li>
+<p>Anschließend erhalten wir eine Antwort von Copilot, dass wir die Konfiguration unseres Agenten mithilfe der konversationellen Erstellungserfahrung abgeschlossen haben. Lassen Sie uns jedoch noch etwas verfeinern, indem wir festlegen, dass er prägnant und informativ mit Aufzählungspunkten sein sollte, Empathie in der Kommunikation verwenden und nach der Bereitstellung von Lösungen um Feedback bitten sollte.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Concise and Informative:
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>- Bullet Points: Use bullet points for clarity and to break down information into digestible parts.
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>- Summarize: Provide a brief summary of the solution at the end of the explanation.
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>User-Friendly Communication:
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>- Empathy: Show empathy and understanding of the user&#39;s frustration or confusion.
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>- Encouragement: Encourage users by acknowledging their efforts and progress.
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>Interactive and Engaging:
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>- Ask for Feedback: After providing a solution, ask if the user needs further assistance or if the solution worked.
+</span></code></pre></div>
+<p><img alt="Agent-Anweisungen aktualisieren" src="../../../../../translated_images/3.1_08_FurtherRefinements.993926c4e55cc5133413f4e10a61a6ed43351d070e791db0ee5547ea83f46473.de.png" /></p>
+</li>
+<li>
+<p>Copilot bestätigt, dass die Anweisungen aktualisiert wurden. Klicken Sie auf <strong>Erstellen</strong>, um den deklarativen Agenten für Microsoft 365 Copilot bereitzustellen.</p>
+<p><img alt="Agent erstellen" src="../../../../../translated_images/3.1_09_CreateDeclarativeAgent.71442cd4e18105359e55016d92e54b74ac18977bb535c637a05bac0d3680a3c5.de.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Erinnerung: Copilot-Fragen können sich zwischen Sitzungen unterscheiden</p>
+<p>Die konversationelle Erstellungserfahrung von Copilot kann sich jedes Mal ändern, wobei die bereitgestellten Fragen zur Anleitung möglicherweise leicht anders sind als zuvor.</p>
+</div>
+</li>
+<li>
+<p>Sobald der Agent bereitgestellt wurde, sehen Sie die Details des Agenten, die die Beschreibung und die während der konversationellen Erstellungserfahrung definierten Anweisungen enthalten.
+<img alt="Agentendetails" src="../../../../../translated_images/3.1_10_01_AgentDetails.fb8fe8548ca78833acf1048565e0e00b8eeb4132bc7c425d4532048df090b67b.de.png" /></p>
+</li>
+</ol>
+<p>Scrollen Sie nach unten im Bereich, und Sie sehen auch die Möglichkeiten, Wissen hinzuzufügen, die Websuche (über Bing) zu aktivieren, Starter-Prompts und die Veröffentlichungsdetails des deklarativen Agenten für Microsoft 365 Copilot. Die Starter-Prompts werden auch im Testbereich auf der rechten Seite angezeigt. Benutzer können diese Starter-Prompts auswählen, um mit dem Agenten zu interagieren.</p>
+<p><img alt="Vorgeschlagene Prompts" src="../../../../../translated_images/3.1_10_02_SuggestedPrompts.28d2d4b5ba42f988d9f280cff55ee3fb8f3317a04a298e0ccfbdb5812a5023e8.de.png" /></p>
+<ol>
+<li>Im Abschnitt „Details“ des Agenten haben Sie auch die Möglichkeit, das Agenten-Symbol zu ändern. Wählen Sie <strong>Bearbeiten</strong>.</li>
+</ol>
+<p><img alt="Details bearbeiten" src="../../../../../translated_images/3.1_11_01_EditDetails.ae1ac52a9966c28edb74ee2884ca25e465eda7342d098446b9c7c62f2268cbf0.de.png" /></p>
+<p>Hier können Sie das Symbol und die Hintergrundfarbe ändern. Wählen Sie <strong>Speichern</strong> und anschließend erneut <strong>Speichern</strong>, um die Details des Agenten zu aktualisieren.</p>
+<p><img alt="Symbol ändern" src="../../../../../translated_images/3.1_11_02_ChangeIcon.1d0b6fa41429d8e8576d0288a1c900ce01b203eb7a86d728b9f46b7685d3c5f2.de.png" /></p>
+<ol>
+<li>Lassen Sie uns einen kurzen Test des erstellten Agenten durchführen. Wählen Sie einen der <strong>Starter-Prompts</strong> im Testbereich auf der rechten Seite aus.</li>
+</ol>
+<p><img alt="Starter-Prompt testen" src="../../../../../translated_images/3.1_12_TestUsingStarterPrompt.4646f93c027503eaa719d98a1634206abf6f48ad11279e231e43b14f89a3034e.de.png" /></p>
+<ol>
+<li>Unser Agent wird dann antworten. Beachten Sie, wie er den Anweisungen folgt, indem er Informationen in übersichtliche Punkte unterteilt und Empathie in seiner Antwort zeigt.</li>
+</ol>
+<p>Wenn Sie zum Ende der Nachricht scrollen, sehen Sie, dass er auch nach Feedback gefragt hat, nachdem er eine Lösung bereitgestellt hat, wie angewiesen.</p>
+<p><img alt="Antwort aus dem Test" src="../../../../../translated_images/3.1_13_TestResponse.a7ca7356e21ed8a5a794eaae86fd2431f86fe71aea9df6e95d04858cf76a61b4.de.png" /></p>
+<p>In wenigen Minuten haben Sie einen deklarativen Agenten für Microsoft 365 Copilot in Copilot Studio hinzugefügt 🙌🏻</p>
+<p>Als Nächstes lernen wir, wie man ein Tool zu unserem Agenten hinzufügt und einen Prompt erstellt.</p>
+<h3 id="32-erstellen-und-hinzufugen-eines-prompts-fur-ihren-deklarativen-agenten">3.2 Erstellen und Hinzufügen eines Prompts für Ihren deklarativen Agenten<a class="headerlink" href="#32-erstellen-und-hinzufugen-eines-prompts-fur-ihren-deklarativen-agenten" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Scrollen Sie nach unten zum Abschnitt <strong>Tools</strong> und wählen Sie <strong>+ Tool hinzufügen</strong>.</li>
+</ol>
+<p><img alt="Tool hinzufügen" src="../../../../../translated_images/3.2_01_AddTool.4c788e69f1ab437eb030de94bac204193f9c5e945873755f4fe7b9e62a846db3.de.png" /></p>
+<ol>
+<li>Das Tools-Modul wird angezeigt, und eine Liste der Power Platform-Connectoren wird angezeigt. Um einen Prompt hinzuzufügen, wählen Sie <strong>+ Neues Tool</strong>.</li>
+</ol>
+<p><img alt="Neues Tool" src="../../../../../translated_images/3.2_02_NewTool.34502593943d37ea113a4c47b419be037906d968cf28c628041810b0bbb9c842.de.png" /></p>
+<ol>
+<li>Eine Liste anderer Tools wird angezeigt – Prompt, benutzerdefinierter Connector, REST-API und Model Context Protocol. Wenn Ihre Organisation die <a href="https://learn.microsoft.com/microsoft-copilot-studio/computer-use?tabs=new#requirements/?WT.mc_id=power-172614-ebenitez">Anforderungen für Computerverwendung</a> erfüllt, wird dies ebenfalls in der Liste angezeigt. Wählen Sie <strong>Prompt</strong>.</li>
+</ol>
+<p><img alt="Prompt auswählen" src="../../../../../translated_images/3.2_03_SelectPrompt.167f376cc35bd3b58a2ddcb6e1fb2fa5f7328c8da549c3caffbdfa1ed792e8f6.de.png" /></p>
+<ol>
+<li>Geben Sie einen Namen für den Prompt ein. Nennen wir unseren Prompt <code>IT-Experte</code>.</li>
+</ol>
+<p><img alt="Name eingeben" src="../../../../../translated_images/3.2_04_NamePrompt.67178a4b79333994794e77a58448f1f1f80227fdbc16b21a4b88bc0b905b33aa.de.png" /></p>
+<ol>
+<li>Wählen Sie das <strong>Chevron-Symbol</strong> neben dem <strong>Modell</strong>, um die verschiedenen Chat-Modelle anzuzeigen, aus denen Sie wählen können. Standardmäßig ist das Modell <strong>Basic GPT-4.1 mini</strong> ausgewählt, und Sie haben auch die Möglichkeit, Ihr eigenes Modell mit Azure AI Foundry Models zu verwenden. Wir bleiben beim ausgewählten Standardmodell.</li>
+</ol>
+<p><img alt="Modell ändern" src="../../../../../translated_images/3.2_05_ChangeModel.8a75ced775c7a4cffa706207974fdb262fb706f80b5ca021bbcf2efa7319e460.de.png" /></p>
+<ol>
+<li>
+<p>Als Nächstes geben wir unserem Prompt Anweisungen. Es gibt drei Methoden, aus denen Sie wählen können:</p>
+</li>
+<li>
+<p>Verwenden Sie Copilot, um Anweisungen basierend auf Ihrer Beschreibung dessen, was der Prompt tun soll, zu generieren.</p>
+</li>
+<li>Verwenden Sie eine Vorlage aus der Prompt-Bibliothek, um einen Prompt zu erstellen.</li>
+<li>
+<p>Geben Sie Ihre eigenen Anweisungen manuell ein.</p>
+</li>
+<li>
+<p>Probieren wir zunächst aus, wie Copilot Anweisungen basierend auf einer eingegebenen Beschreibung generiert. Geben Sie Folgendes in das Copilot-Feld ein und senden Sie es ab.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>I need an IT expert that can help answer questions related to networking, computer systems, user devices and anything else IT related
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="Mit Copilot beginnen" src="../../../../../translated_images/3.2_06_UseCopilot_EnterPrompt.844ae5bc3ea5b59016da38ea8563e2554cdb82d6d2185c080c4a263b595eb2d0.de.png" /></p>
+<ol>
+<li>Copilot beginnt dann, einen Prompt für uns zu erstellen.</li>
+</ol>
+<p><img alt="Copilot entwirft Prompts" src="../../../../../translated_images/3.2_07_CopilotDraftingPrompt.ae455082f5d3ed62c586e140b4d5a8a3e822f0b86da01aa61ebb722fc7453310.de.png" /></p>
+<ol>
+<li>Die von Copilot generierten Entwurfsanweisungen werden dann angezeigt.</li>
+</ol>
+<p><img alt="Von Copilot generierte Entwurfsanweisungen" src="../../../../../translated_images/3.2_08_CopilotGeneratedInstructions.49fd579bc80276690ac5d912f451d525669fe07d7f37d85580888a441ecdbc0e.de.png" /></p>
+<ol>
+<li>Scrollen Sie nach unten zu den Anweisungen, und Sie sehen den von Copilot bereits definierten Benutzer-Eingabeparameter. Sie haben dann die Möglichkeit:</li>
+<li>Die generierten Entwurfsanweisungen beizubehalten.</li>
+<li>Die Entwurfsanweisungen mit Copilot zu aktualisieren.</li>
+<li>Die Entwurfsanweisungen zu löschen.</li>
+</ol>
+<p>Löschen Sie die Entwurfsanweisungen, indem Sie das <strong>Papierkorb-Symbol</strong> auswählen, und probieren wir als Nächstes die Prompt-Bibliothek aus.</p>
+<p><img alt="Prompt-Anweisungen" src="../../../../../translated_images/3.2_09_Options.70bf40809229eda4d5013f03cc77a0f93c780df791aacddd56bcf4c9b70377b9.de.png" /></p>
+<ol>
+<li>Wählen Sie den Link <strong>Prompt-Vorlage</strong>.</li>
+</ol>
+<p><img alt="Prompt-Vorlage auswählen" src="../../../../../translated_images/3.2_10_SelectPromptLibrary.dacbf227258c997904b33db61240a4379300599fe2c5a08e0cb588d3530a6bfe.de.png" /></p>
+<ol>
+<li>Sie sehen eine Liste von Prompt-Vorlagen, aus denen Sie wählen können. Diese stammen aus der <a href="https://aka.ms/power-prompts">Power Platform Prompt-Bibliothek</a>.</li>
+</ol>
+<p><img alt="Prompt-Bibliothek" src="../../../../../translated_images/3.2_11_PromptLibrary.67d20018c8a75228f385e6bcda52e0e4867f84696fac1ef14bc190e203fe87a1.de.png" /></p>
+<ol>
+<li>Suchen Sie nach dem Prompt <code>IT-Experte</code> und wählen Sie ihn aus.</li>
+</ol>
+<p><img alt="IT-Experte-Prompt auswählen" src="../../../../../translated_images/3.2_12_ITExpertPrompt.a9c5f4a7b5f82691c77074e4bdf6a236f3e934d4a5604ace2ff2196b01d35ecd.de.png" /></p>
+<ol>
+<li>Der Prompt wird dann als Anweisungen mit dem Eingabeparameter hinzugefügt, wie in der Prompt-Vorlage definiert. Ähnlich wie bei der Vorgehensweise, die wir bei der Bereitstellung von Anweisungen für unseren Agenten während der Konversationserstellung mit Copilot angewendet haben, beschreibt diese Prompt-Vorlage:</li>
+<li>eine Aufgabe,</li>
+<li>welche Art von Anfragen sie bearbeiten kann,</li>
+<li>und das Format ihrer Antwort sowie das Ziel des Prompts.</li>
+</ol>
+<p><img alt="Prompt-Anweisungen" src="../../../../../translated_images/3.2_13_ITExpertPromptInstructions.3d2bde84982eddb06f9fa627377316e2090e5a83f3a41669cc8f5a8b5615a3b3.de.png" /></p>
+<ol>
+<li>
+<p>Löschen Sie die Anweisungen, und probieren wir als Nächstes aus, wie man die Anweisungen manuell eingibt. Wir verwenden den <a href="https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-powerplatform-prompts-it-expert/">IT-Experte-Prompt</a> aus der <a href="https://aka.ms/power-prompts">Power Platform Prompt-Bibliothek</a>. Kopieren und fügen Sie den Prompt ein.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>I want you to act as an IT Expert. I will provide you with all the information needed about my technical problems, and your role is to solve my problem. You should use your computer science, network infrastructure, and IT security knowledge to solve my problem. Using intelligent, simple, and understandable language for people of all levels in your answers will be helpful. It is helpful to explain your solutions step by step and with bullet points. Try to avoid too many technical details, but use them when necessary. I want you to reply with the solution, not write any explanations. My problem is [Problem]
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="Prompt-Anweisungen" src="../../../../../translated_images/3.2_14_PromptInstructions.029c8470b6410bd0ceaf4e0b34ae8d1443f723b36a2dedadba0b6f3cfccee948.de.png" /></p>
+<ol>
+<li>Als Nächstes können wir die Benutzer-Eingabeparameter unseres Prompts definieren. Diese können Text und Bilder sowie Beispieldaten zum Testen umfassen. Es besteht auch die Möglichkeit, den Prompt mit Wissen aus Dataverse-Tabellen zu verknüpfen. Für diese Übung haben wir nur eine Benutzer-Eingabe zu definieren, nämlich die Problem-Eingabe. Diese ist derzeit ein Platzhalter in unserem Prompt als <code>[Problem]</code>. Wir konfigurieren diese Eingabe jetzt, indem wir das Zeichen <code>/</code> eingeben oder <strong>+Inhalt hinzufügen</strong> auswählen und dann <strong>Text</strong> wählen.</li>
+</ol>
+<p><img alt="Text-Eingabe" src="../../../../../translated_images/3.2_15_AddContent.e22d953755c66776aeab162923eaf0ac9e7c965008742eb1c6b6431b92f49aff.de.png" /></p>
+<ol>
+<li>Wir können jetzt einen Namen für unseren Eingabeparameter und Beispieldaten eingeben.</li>
+</ol>
+<p>Geben Sie Folgendes als Namen ein:</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+problem input
+```
+</code></pre></div>
+<p>Geben Sie Folgendes als Beispieldaten ein:</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+My laptop gets an error with a blue screen
+```
+</code></pre></div>
+<p>Wählen Sie anschließend <strong>Schließen</strong>.</p>
+<p><img alt="Problem-Eingabe konfigurieren" src="../../../../../translated_images/3.2_16_NameSampleData.6236496c5d1672be4e1efc263d2b27fbc6f7739beb9390d80509cc889efa1e2a.de.png" /></p>
+<ol>
+<li>Der Problem-Eingabeparameter wird nun mit den konfigurierten Beispieldaten zu den Anweisungen hinzugefügt. Wir können unseren Prompt jetzt testen!</li>
+</ol>
+<p><img alt="Problem-Eingabe hinzugefügt" src="../../../../../translated_images/3.2_17_InputAdded.fdc26d9e247a1a7d86ff3147362e8057fece7d3e1561a4b12f436bd817884cc1.de.png" /></p>
+<ol>
+<li>Wählen Sie <strong>Testen</strong>, um den Prompt zu testen.</li>
+</ol>
+<p><img alt="Anweisungen testen" src="../../../../../translated_images/3.2_18_SelectTest.513a8ea5a48c57d502f9a8c5eb575ffdebc413245e2e5ac6823bf781c30e035c.de.png" /></p>
+<ol>
+<li>Die Antwort wird dann angezeigt. Beachten Sie, wie die Antwort gemäß den Anweisungen Überschriften mit Aufzählungspunkten enthält. Scrollen Sie nach unten und überprüfen Sie den Rest der Modellantwort.</li>
+</ol>
+<p><img alt="Modellantwort" src="../../../../../translated_images/3.2_19_ModelResponse.7de0a5ea374628cbee8be0cd7811bd30619d489dd7fbc8afb53d9d984fa656d0.de.png" /></p>
+<ol>
+<li>Bevor wir unseren Prompt speichern, lernen wir die Einstellungen kennen, die für diesen Prompt konfiguriert werden können. Wählen Sie das <strong>Ellipsen-Symbol (...)</strong>.</li>
+</ol>
+<p><img alt="Prompt-Einstellungen" src="../../../../../translated_images/3.2_20_PromptSettings.f271b2442881e66513259407e3330254b40acb654e6286a0f74f210478d001db.de.png" /></p>
+<ol>
+<li>
+<p>Hier sehen wir drei Einstellungen, die konfiguriert werden können:</p>
+</li>
+<li>
+<p><strong>Temperatur</strong>: Niedrigere Temperaturen führen zu vorhersehbaren Ergebnissen, während höhere Temperaturen vielfältigere oder kreativere Antworten ermöglichen.</p>
+</li>
+<li><strong>Datensatzabruf</strong>: Geben Sie die Anzahl der abgerufenen Datensätze für Ihre Wissensquellen an.</li>
+<li><strong>Links in der Antwort einfügen</strong>: Wenn ausgewählt, enthält die Antwort Link-Zitate für die abgerufenen Datensätze.</li>
+</ol>
+<p>Wählen Sie das <strong>X-Symbol</strong>, um die Einstellungen zu verlassen.</p>
+<p><img alt="Einstellungen konfigurieren" src="../../../../../translated_images/3.2_21_ConfigureSettings.3ebb9ffdfc34b7a0cd16d912574ae9cd4e4809873eb3ff12cd6f24b671575a04.de.png" /></p>
+<ol>
+<li>Wählen Sie <strong>Speichern</strong>, um den Prompt zu speichern.</li>
+</ol>
+<p><img alt="Prompt speichern" src="../../../../../translated_images/3.2_22_SavePrompt.a9a41a8d13230c51a7c909106c150c0bd4f65ef815c9818fb2f0eecda6ee1585.de.png" /></p>
+<ol>
+<li>Wählen Sie als Nächstes <strong>Zum Agenten hinzufügen</strong>, um den Prompt zu unserem deklarativen Agenten hinzuzufügen.</li>
+</ol>
+<p><img alt="Prompt-Anweisungen" src="../../../../../translated_images/3.2_23_AddToAgent.7ae508e48025742d0f32eed323deb3ffe4f6c9e53609ba638ccc3864d25d05b8.de.png" /></p>
+<ol>
+<li>Der Prompt wird nun unter Tools angezeigt 🙌🏻</li>
+</ol>
+<p><img alt="Prompt hinzugefügt" src="../../../../../translated_images/3.2_24_PromptAdded.842a754ca2f96c122be1ab09fd85bd77f04ba0b104c3be764a19ec0eaccbeb35.de.png" /></p>
+<p>Als Nächstes aktualisieren wir unsere Anweisungen, um den Prompt aufzurufen und unseren deklarativen Agenten zu testen.</p>
+<h3 id="33-anweisungen-aktualisieren-und-ihren-deklarativen-agenten-testen">3.3 Anweisungen aktualisieren und Ihren deklarativen Agenten testen<a class="headerlink" href="#33-anweisungen-aktualisieren-und-ihren-deklarativen-agenten-testen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Scrollen Sie nach oben zum Abschnitt <strong>Details</strong> und wählen Sie <strong>Bearbeiten</strong>. Dadurch werden die Felder bearbeitbar.</li>
+</ol>
+<p><img alt="Bearbeiten auswählen" src="../../../../../translated_images/3.3_01_EditInstructions.650da2cd330e2abbf6e77925b0f7bb3dee018de7ccad281c31214d9c95f47bd7.de.png" /></p>
+<ol>
+<li>
+<p>Wir können jetzt unsere Anweisungen aktualisieren, um unseren Prompt durch Referenzierung des Namens des Prompts aufzurufen. Löschen Sie die Anweisungen und kopieren und fügen Sie Folgendes ein:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>- When a user asks questions about their device, run the &quot;IT Expert&quot; prompt. Use their question as the problem input of the &quot;IT Expert&quot; prompt.
+</span></code></pre></div>
+</li>
+</ol>
+<p>Beachten Sie, wie der letzte Satz den Agenten anweist, die vom Benutzer gestellte Frage als Wert für den Problem-Eingabeparameter zu verwenden. Der Agent wird die Frage als Problem-Eingabe für den Prompt verwenden. Wählen Sie als Nächstes <strong>Speichern</strong>.</p>
+<p><img alt="Anweisungen aktualisieren, um Prompt aufzurufen" src="../../../../../translated_images/3.3_02_UpdateInstructionsWithPrompt.5060f153b1b7cf883751d810f69814d0286cc40568f5cb810a1ee82c36235e7c.de.png" /></p>
+<ol>
+<li>Wir sind jetzt bereit, die aktualisierten Anweisungen unseres deklarativen Agenten zu testen. Wählen Sie das <strong>Aktualisieren-Symbol</strong> im Testbereich.</li>
+</ol>
+<p><img alt="Aktualisieren-Symbol auswählen" src="../../../../../translated_images/3.3_03_RefreshTestPane.dc6058feab088db4abf25b950466a2e6f5a23b97d3d9eacb65c913a012e7779b.de.png" /></p>
+<ol>
+<li>Geben Sie als Nächstes den folgenden Prompt ein und senden Sie ihn ab:</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Können Sie mir helfen, mein Laptop hat einen Bluescreen.
+</span></code></pre></div>
+<p><img alt="Test durchführen" src="../../../../../translated_images/3.3_04_PerformTest.ca63a96e11176eab6d3fc348546bc41beb49dcaeeefe3262991aa11a250ce16e.de.png" /></p>
+<ol>
+<li>Der Agent ruft den Prompt auf und antwortet.</li>
+</ol>
+<p><img alt="Prompt-Anweisungen" src="../../../../../translated_images/3.3_05_ModelResponse.bb159090f70aae7a62183a9316ebb9894eb2fe7cfe3c53d3fa81e9e5ab68180a.de.png" /></p>
+<p>Lassen Sie uns nun unseren deklarativen Agenten veröffentlichen 😃</p>
+<h3 id="34-veroffentlichen-sie-ihren-deklarativen-agenten-fur-microsoft-365-copilot-und-microsoft-teams">3.4 Veröffentlichen Sie Ihren deklarativen Agenten für Microsoft 365 Copilot und Microsoft Teams<a class="headerlink" href="#34-veroffentlichen-sie-ihren-deklarativen-agenten-fur-microsoft-365-copilot-und-microsoft-teams" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Wählen Sie <strong>Veröffentlichen</strong>.</li>
+</ol>
+<p><img alt="Agent veröffentlichen" src="../../../../../translated_images/3.4_01_PublishAgent.48430d1c1c3914189d335ae840394e2761f3349a609785d4f05b2b91b10e5c27.de.png" /></p>
+<ol>
+<li>
+<p>Ein Modal wird angezeigt, das die Kanäle und Veröffentlichungsdetails anzeigt, die aktualisiert werden können.</p>
+</li>
+<li>
+<p>Kanäle: Der Agent wird für Microsoft 365 Copilot und Microsoft Teams veröffentlicht.</p>
+</li>
+<li>Informationen zur Agenten-App: Dies wird angezeigt, wenn der Benutzer den Agenten zu Microsoft 365 Copilot oder Microsoft Teams hinzufügt. Diese Felder können bei Bedarf aktualisiert werden.</li>
+</ol>
+<p><img alt="Details zur Agenten-App" src="../../../../../translated_images/3.4_02_ConfigurePublishingAgentDetails.12d6876889ca99dd5811b6442254945b1028bdbfac555d095ccfd9aa55ee7211.de.png" /></p>
+<ol>
+<li>Beispielsweise können Sie die <strong>Kurzbeschreibung</strong>, <strong>Langbeschreibung</strong>, <strong>Entwicklername</strong> mit Ihrem Namen aktualisieren.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Wenn nicht alle Felder in Ihrem Browser angezeigt werden, versuchen Sie, herauszuzoomen, z. B. auf 75 %.</p>
+</div>
+<p>Wählen Sie <strong>Veröffentlichen</strong>. Copilot Studio beginnt dann mit der Veröffentlichung des Agenten.</p>
+<p><img alt="Agent veröffentlichen" src="../../../../../translated_images/3.4_03_UpdatePublishingAgentDetails.9b80137a3273ead50d00149cc52b3e3efa0feeb415723d68bf617147710f58ed.de.png" /></p>
+<ol>
+<li>Nach Abschluss der Veröffentlichung sehen wir die <a href="https://learn.microsoft.com/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions#set-availability-options/?WT.mc_id=power-172614-ebenitez">Verfügbarkeitsoptionen</a> des Agenten.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Verfügbarkeitsoption</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Link teilen</td>
+<td>Kopieren Sie den Link, um ihn mit freigegebenen Benutzern zu teilen, damit sie den Agenten in Microsoft 365 Copilot öffnen können.</td>
+</tr>
+<tr>
+<td>Meinen Teamkollegen und freigegebenen Benutzern anzeigen</td>
+<td>Ermöglicht es Ihnen, anderen die Teilnahme an der Erstellung des Agenten zu gewähren oder Sicherheitsgruppen Zugriff zu gewähren, damit sie den Agenten in Microsoft 365 Chat oder Microsoft Teams verwenden können.</td>
+</tr>
+<tr>
+<td>Allen in meiner Organisation anzeigen</td>
+<td>Reichen Sie den Agenten beim Tenant-Administrator ein, um ihn dem Organisationskatalog hinzuzufügen, damit alle Tenant-Benutzer den Agenten hinzufügen können. Der Agent wird unter „Von Ihrer Organisation erstellt“ in Microsoft 365 Copilot und in Microsoft Teams angezeigt.</td>
+</tr>
+<tr>
+<td>Als .zip herunterladen</td>
+<td>Als ZIP-Datei herunterladen, um sie als benutzerdefinierte App in Microsoft Teams hochzuladen.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Verfügbarkeitsoptionen" src="../../../../../translated_images/3.4_04_AvailabilityOptions.7a7189f3e79617b041b78984a4eb862429bd6bb5584f0fa9b72e68b34bc5f051.de.png" /></p>
+<ol>
+<li>Schauen wir uns an, wie der Agent geteilt werden kann. Wählen Sie <strong>Meinen Teamkollegen und freigegebenen Benutzern anzeigen</strong>. Ein Bereich wird angezeigt, in dem Sie nach Benutzern suchen können, mit denen Sie den Agenten teilen möchten, indem Sie entweder ihren Namen, ihre E-Mail-Adresse oder eine Sicherheitsgruppe eingeben. Sie können diese Liste jederzeit überprüfen, um zu bearbeiten, wer Zugriff auf den Agenten hat.</li>
+</ol>
+<p>Es gibt auch zwei Kontrollkästchen:
+- <em>Eine E-Mail-Einladung an neue Benutzer senden</em> – neue Benutzer erhalten eine E-Mail-Einladung.
+- <em>Sichtbar unter „Mit Power Platform erstellt“</em> – der Agent wird im Abschnitt „Mit Power Platform erstellt“ des Teams-App-Stores verfügbar.
+Für weitere Details siehe <a href="https://learn.microsoft.com/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams/?WT.mc_id=power-172614-ebenitez">Verbinden und Konfigurieren eines Agenten für Teams und Microsoft 365</a>.</p>
+<p>Wählen Sie <strong>Abbrechen</strong> oder das <strong>X</strong>-Symbol, um das Fenster zu schließen.</p>
+<p><img alt="Agent teilen" src="../../../../../translated_images/3.4_05_ShareAgent.991664ebeb3f292f7afaaf9dc45f6f09c5adff34b3f178fbe2f569a5a4d75855.de.png" /></p>
+<ol>
+<li>Wählen Sie <strong>Kopieren</strong> und fügen Sie den Link in einem neuen Browser-Tab ein.</li>
+</ol>
+<p><img alt="Link kopieren" src="../../../../../translated_images/3.4_06_CopyLink.1e048be824c352cf1af678a1f6425e21aff9d1768fcb2f2e6dfb243cba1dc776.de.png" /></p>
+<ol>
+<li>Microsoft 365 Copilot wird geladen und ein Modal erscheint mit den Details der Agenten-App. Beachten Sie, wie der Entwicklername, die kurze Beschreibung und die ausführliche Beschreibung angezeigt werden. Diese stammen aus den Veröffentlichungsdetails, die in einem früheren Schritt aktualisiert wurden.</li>
+</ol>
+<p>Wählen Sie <strong>Hinzufügen</strong>.</p>
+<p><img alt="Verfügbarkeitsoptionen" src="../../../../../translated_images/3.4_07_AgentAppDetails.0f2825b7cbd2d29e70fb7351d5053d65c0cee31bfb3c238338df54ca0de384ad.de.png" /></p>
+<ol>
+<li>Unser deklarativer Agent wird als Nächstes geladen. Wir sehen die Startaufforderungen, aus denen wir auswählen können, um den Benutzern schnell zu helfen.</li>
+</ol>
+<p>Wählen Sie eine der Startaufforderungen aus. In meinen Startaufforderungen wähle ich die Aufforderung <strong>Hilfe bei der Softwareinstallation</strong>, die das Nachrichtenfeld von Copilot automatisch ausfüllt. Senden Sie die Frage an Copilot.</p>
+<p><img alt="Startaufforderung auswählen" src="../../../../../translated_images/3.4_08_SelectStarterPrompt.49a14ca6d01b1814872e874c9e58b2b179f5cb755bc1061a509441fd4e6fa7e9.de.png" /></p>
+<ol>
+<li>Wählen Sie <strong>Immer erlauben</strong>, um Ihrem deklarativen Agenten die Berechtigung zu erteilen, die IT-Experten-Aufforderung aufzurufen.</li>
+</ol>
+<p><img alt="Immer erlauben auswählen" src="../../../../../translated_images/3.4_09_AlwaysAllow.b6561f2d7b0b91bb8ad534df057ada512c9d877a0388dbdbe36916f55955b5cd.de.png" /></p>
+<ol>
+<li>Der Agent ruft dann unsere <strong>IT-Experten</strong>-Aufforderung auf und wir sehen die Modellantwort, die als Nachricht in unserem deklarativen Agenten zurückgegeben wird.</li>
+</ol>
+<p><img alt="Antwort" src="../../../../../translated_images/3.4_10_01_Response.0820217c919d198f59831822b4f2ee60e692d2880e64de709fde3c566f90c466.de.png" /></p>
+<p>Scrollen Sie nach unten, um die vollständigen Details der Antwort zu sehen.</p>
+<p><img alt="Antwort" src="../../../../../translated_images/3.4_10_02_Response.5baaf06380965beef61c117a925cd4ae64e451b6cd97290da3d929d738add6c8.de.png" /></p>
+<ol>
+<li>Aber <em>wie wissen wir</em>, dass der deklarative Agent die Aufforderung aufgerufen hat? 👀 Hier ein Tipp!</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Sie können Agenten in Microsoft 365 Copilot testen und debuggen, indem Sie den <a href="https://learn.microsoft.com/microsoft-365-copilot/extensibility/debugging-copilot-agent#use-developer-mode-in-copilot-chat/?WT.mc_id=power-172614-ebenitez">Entwicklermodus aktivieren</a>.</p>
+</div>
+<p>Geben Sie Folgendes in das Nachrichtenfeld von Copilot ein und senden Sie es ab.</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+-developer on
+```
+</code></pre></div>
+<p>Eine Bestätigungsmeldung erscheint, die Ihnen mitteilt, dass der Entwicklermodus jetzt aktiviert ist.</p>
+<p><img alt="Entwicklermodus aktiviert" src="../../../../../translated_images/3.4_11_DeveloperModeEnabled.81ed6a62e5771bf59d17d94b15beb3c696a177d70616795836cff2024baa0139.de.png" /></p>
+<ol>
+<li>
+<p>Senden Sie die folgende Frage, um die Aufforderung aufzurufen.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Can you help me, my laptop is encountering a blue screen
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="Frage eingeben" src="../../../../../translated_images/3.4_12_EnterQuestion.bb41817937dd3d864aa120a668d2d7ddaedd5025a201d9579ff4d97dd4bb6a92.de.png" /></p>
+<ol>
+<li>Wir sehen erneut eine Modellantwort von unserer <strong>IT-Experten</strong>-Aufforderung, die als Nachricht zurückgegeben wird. Scrollen Sie bis zum Ende der Nachricht und eine Karte mit Debug-Informationen wird angezeigt.</li>
+</ol>
+<p>Erweitern Sie <strong>Agent Debug Info</strong>, indem Sie darauf klicken.</p>
+<p><img alt="Agent Debug Info" src="../../../../../translated_images/3.4_13_AgentDebuggingInfo.a7765c7594922e6842268dd05b4de1aeb6b1725e69de7f2b00e80dc1c4804940.de.png" /></p>
+<ol>
+<li>Hier finden Sie Informationen zu den Agenten-Metadaten, die zur Laufzeit aufgetreten sind.</li>
+</ol>
+<p><img alt="Agent Debug Info erweitert" src="../../../../../translated_images/3.4_14_01_ReviewAgentDebugInfo.8cb4e7f64da4f124859cc4401b8d1f9fa6eec34b6ec3174606adf153aaf80b23.de.png" /></p>
+<p>In unserem Anwendungsfall konzentrieren wir uns auf den Abschnitt <em>Aktionen</em>.</p>
+<ul>
+<li><strong>Übereinstimmende Aktionen</strong> zeigen den aktuellen Status der während der App-Suche gefundenen Funktionen.</li>
+<li><strong>Ausgewählte Aktionen</strong> zeigen den aktuellen Status der Funktionen, die basierend auf dem Entscheidungsprozess der App ausgewählt wurden.</li>
+</ul>
+<p><img alt="Agent Debug Info erweitert" src="../../../../../translated_images/3.4_14_02_ReviewAgentDebugInfo.7b3143a8001067974eeb47b0740b9c9fab5af4b5348b04d09bfcc0885b19ab27.de.png" /></p>
+<p>Hier sehen wir, dass der Agent-Orchestrator die IT-Experten-Aufforderung gemäß den Anweisungen unseres deklarativen Agenten aufgerufen hat. Dies wird im Abschnitt <em>Ausgeführte Aktionen</em> weiter erläutert, der uns auch mitteilt, dass die Aufforderung erfolgreich aufgerufen wurde.</p>
+<p><img alt="Agent Debug Info überprüfen" src="../../../../../translated_images/3.4_14_03_ReviewAgentDebugInfo.d71e86364cd014b4d0bd80d3298be28946066e19fbaec53cb6e4f34f6df744fb.de.png" /></p>
+<ol>
+<li>
+<p>Um den Entwicklermodus zu deaktivieren, geben Sie Folgendes in das Nachrichtenfeld von Copilot ein und senden Sie es ab.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>-developer off
+</span></code></pre></div>
+</li>
+</ol>
+<p>Eine Bestätigungsmeldung erscheint, die Ihnen mitteilt, dass der Entwicklermodus deaktiviert ist. Cool, jetzt wissen Sie, wie Sie überprüfen können, ob Ihr deklarativer Agent in Microsoft 365 Copilot Ihre Aufforderung aufgerufen hat 🌞</p>
+<p><img alt="Entwicklermodus deaktiviert" src="../../../../../translated_images/3.4_15_DeveloperModeDisabled.405f17682964ef7c1f4b1eec8c6aee939e7dabcec3b8b3721f2fc3890a5fc20d.de.png" /></p>
+<ol>
+<li>Wir testen nun unseren Agenten in Microsoft Teams. Navigieren Sie zu <strong>Apps</strong> über das Menü auf der linken Seite und wählen Sie <strong>Teams</strong> unter dem Abschnitt <em>Apps</em>.</li>
+</ol>
+<p><img alt="Teams in Apps auswählen" src="../../../../../translated_images/3.4_16_NavigateToApps.c9747b0f44570fe737aeac7defe5d0125d693aff384e03b864453da70b0c6206.de.png" /></p>
+<ol>
+<li>Microsoft Teams wird dann in einem neuen Browser-Tab geladen und wir werden mit den Nutzungsbedingungen für Microsoft 365 Copilot konfrontiert. Wählen Sie <strong>Zustimmen</strong>.</li>
+</ol>
+<p><img alt="Zustimmen auswählen" src="../../../../../translated_images/3.4_17_Agree.3777ebcf791edd12825395218770987d5b25338b21ab41b7bd7e40b97468ba32.de.png" /></p>
+<ol>
+<li>Microsoft 365 Copilot wird dann standardmäßig geladen, mit dem rechten Seitenbereich, der alle Ihre verfügbaren Agenten auflistet, einschließlich des deklarativen Agenten <strong>Contoso Tech Support Pro</strong>.</li>
+</ol>
+<p><img alt="Microsoft 365 Copilot in Teams" src="../../../../../translated_images/3.4_18_CopilotAgentsInTeams.8525ff1d3c3eaeeed7f66e1b8206ba5eb559840c8f29f3e4e8905a8e5d626856.de.png" /></p>
+<ol>
+<li>Wählen Sie das <strong>Ellipsen-Symbol (...)</strong> im Menü auf der linken Seite. Suchen Sie entweder nach <strong>Contoso Tech Support Pro</strong> im Suchfeld oder wählen Sie den Agenten aus, wenn Sie ihn sehen.</li>
+</ol>
+<p>Sie können auch mit der rechten Maustaste klicken, um den Agenten <strong>Anzuheften</strong> für schnellen Zugriff im Menü auf der linken Seite in Microsoft Teams.</p>
+<p><img alt="Agent auswählen und anheften" src="../../../../../translated_images/3.4_19_SelectAndPinAgentFromApps.ad59bff56f9e09660976e8210f339d0d2ce49856e4015a7258552d652195e62f.de.png" /></p>
+<ol>
+<li>
+<p>Unser Agent wird dann geladen. 1. Lassen Sie uns als Nächstes unseren Agenten testen. Geben Sie die folgende Aufforderung ein und senden Sie sie ab.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Can you help me, my laptop is encountering a blue screen
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="Agent anheften" src="../../../../../translated_images/3.4_20_EnterQuestion.e00b73e4c776c7c758144070d19d7a2b11a6733dc3bc31a7f5b6b8e9c47340df.de.png" /></p>
+<ol>
+<li>Eine Modellantwort von unserer Aufforderung wird dann angezeigt.</li>
+</ol>
+<p><img alt="Antwort in Teams" src="../../../../../translated_images/3.4_21_AgentInTeamsResponse.a86243f9b0a94fe889462afc0180d2c97d71ff484113bc70c8cccf642db7035e.de.png" /></p>
+<p>In wenigen Minuten haben Sie gelernt, wie Sie Ihren deklarativen Agenten veröffentlichen und ihn in Microsoft 365 Copilot und Microsoft Teams testen 😊</p>
+<h2 id="mission-abgeschlossen">✅ Mission abgeschlossen<a class="headerlink" href="#mission-abgeschlossen" title="Permanent link">&para;</a></h2>
+<p>Herzlichen Glückwunsch! 👏🏻 Sie haben einen deklarativen Agenten in Copilot Studio erstellt, bei dem Sie eine Aufforderung hinzugefügt, den Agenten angewiesen haben, die Aufforderung zu verwenden, und gelernt haben, wie Sie Ihren Agenten testen und veröffentlichen können, sowohl in Microsoft 365 Copilot als auch in Microsoft Teams.</p>
+<p>Ihr Agent ist jetzt einsatzbereit—bereit, interne Benutzer auf Abruf zu unterstützen, Probleme zu lösen und zu helfen.</p>
+<p>Dies ist das Ende von <strong>Lab 03 - Erstellen eines deklarativen Agenten in Microsoft Copilot Studio für Microsoft 365 Copilot</strong>, wählen Sie den untenstehenden Link, um zur nächsten Lektion zu gelangen.</p>
+<p>⏭️ <a href="../04-creating-a-solution/">Weiter zur Lektion <strong>Erstellen einer neuen Lösung</strong></a></p>
+<p>Bis zum nächsten Mal, bleiben Sie aufmerksam. Die Zukunft der Unternehmensarbeit führt über Agenten—und jetzt wissen Sie, wie man einen erstellt.</p>
+<h2 id="taktische-ressourcen">📚 Taktische Ressourcen<a class="headerlink" href="#taktische-ressourcen" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext/?WT.mc_id=power-172614-ebenitez">Deklarativen Agenten in Microsoft Copilot Studio für Microsoft 365 Copilot erstellen</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/ai-builder/create-a-custom-prompt?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext/?WT.mc_id=power-172614-ebenitez">Aufforderungen hinzufügen</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/admin-share-bots/?WT.mc_id=power-172614-ebenitez">Agenten mit anderen Benutzern teilen</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep3">Aufforderungen für Ihren Agenten erstellen</a></p>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/03-create-a-declarative-agent-for-M365Copilot" alt="Analytics" /></p>
+<hr />
+<p><strong>Haftungsausschluss</strong>:<br />
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a> übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

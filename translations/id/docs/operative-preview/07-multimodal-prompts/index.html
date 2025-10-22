@@ -1,0 +1,1410 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/id/docs/operative-preview/07-multimodal-prompts/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#misi-07-ekstraksi-konten-resume-dengan-prompt-multimodal" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nama-kode-document-resume-recon" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ NAMA KODE: DOCUMENT RESUME RECON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ringkasan-misi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Ringkasan Misi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tujuan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Tujuan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memahami-prompt-multimodal" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Memahami prompt multimodal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pemilihan-model-di-ai-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Pemilihan model di AI Builder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format-output-teks-vs-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Format output: Teks vs JSON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-7-membangun-sistem-ekstraksi-resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 7: Membangun sistem ekstraksi resume
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misi-selesai" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 Misi Selesai
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sumber-daya-taktis" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Sumber daya taktis
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "616d142d4fb5f45d2a168fad6c1f9545",
+  "translation_date": "2025-10-17T17:20:53+00:00",
+  "source_file": "docs/operative-preview/07-multimodal-prompts/README.md",
+  "language_code": "id"
+}
+-->
+<h1 id="misi-07-ekstraksi-konten-resume-dengan-prompt-multimodal">🚨 Misi 07: Ekstraksi Konten Resume dengan Prompt Multimodal<a class="headerlink" href="#misi-07-ekstraksi-konten-resume-dengan-prompt-multimodal" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="nama-kode-document-resume-recon">🕵️‍♂️ NAMA KODE: <code>DOCUMENT RESUME RECON</code><a class="headerlink" href="#nama-kode-document-resume-recon" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Jangka Waktu Operasi:</strong> <code>~45 menit</code></p>
+</blockquote>
+<h2 id="ringkasan-misi">🎯 Ringkasan Misi<a class="headerlink" href="#ringkasan-misi" title="Permanent link">&para;</a></h2>
+<p>Selamat datang, Operatif. Misi-misi sebelumnya telah membekali Anda dengan keterampilan orkestrasi agen yang kuat, tetapi sekarang saatnya untuk membuka kemampuan yang mengubah permainan: <strong>analisis dokumen multimodal</strong>.</p>
+<p>Tugas Anda, jika Anda memilih untuk menerimanya, adalah <strong>Document Resume Recon</strong> - mengekstraksi data terstruktur dari dokumen apa pun dengan presisi. Meskipun agen Anda dapat memproses teks dengan mudah, dunia nyata membutuhkan penanganan PDF, gambar, dan dokumen kompleks setiap hari. Resume menumpuk, faktur perlu diproses, dan formulir membutuhkan digitalisasi instan.</p>
+<p>Misi ini akan mengubah Anda dari pembuat agen berbasis teks menjadi <strong>ahli multimodal</strong>. Anda akan belajar mengonfigurasi AI yang membaca dan memahami dokumen seperti analis manusia - tetapi dengan kecepatan dan konsistensi AI. Pada akhir misi, Anda akan membangun sistem ekstraksi resume lengkap yang terintegrasi dengan alur kerja perekrutan Anda.</p>
+<p>Teknik yang Anda pelajari di sini akan sangat penting untuk operasi pengikatan data lanjutan di misi berikutnya.</p>
+<h2 id="tujuan">🔎 Tujuan<a class="headerlink" href="#tujuan" title="Permanent link">&para;</a></h2>
+<p>Dalam misi ini, Anda akan mempelajari:</p>
+<ol>
+<li>Apa itu prompt multimodal dan kapan menggunakan model AI yang berbeda</li>
+<li>Cara mengonfigurasi prompt dengan input gambar dan dokumen</li>
+<li>Cara memformat output prompt sebagai JSON untuk ekstraksi data terstruktur</li>
+<li>Praktik terbaik untuk rekayasa prompt dengan analisis dokumen</li>
+<li>Cara mengintegrasikan prompt multimodal dengan Agent Flows</li>
+</ol>
+<h2 id="memahami-prompt-multimodal">🧠 Memahami prompt multimodal<a class="headerlink" href="#memahami-prompt-multimodal" title="Permanent link">&para;</a></h2>
+<h3 id="apa-yang-membuat-sebuah-prompt-menjadi-multimodal">Apa yang membuat sebuah prompt menjadi "multimodal"?<a class="headerlink" href="#apa-yang-membuat-sebuah-prompt-menjadi-multimodal" title="Permanent link">&para;</a></h3>
+<p>Prompt tradisional hanya bekerja dengan teks. Tetapi prompt multimodal dapat memproses berbagai jenis konten:</p>
+<ul>
+<li><strong>Teks</strong>: Instruksi dan konten tertulis</li>
+<li><strong>Gambar</strong>: Foto, tangkapan layar, grafik, dan diagram (.PNG, .JPG, .JPEG)  </li>
+<li><strong>Dokumen</strong>: Faktur, resume, formulir (.PDF)</li>
+</ul>
+<p>Kemampuan ini membuka skenario yang kuat seperti menganalisis resume, memproses faktur, atau mengekstraksi data dari formulir.</p>
+<h3 id="mengapa-multimodal-penting-untuk-alur-kerja-anda">Mengapa multimodal penting untuk alur kerja Anda<a class="headerlink" href="#mengapa-multimodal-penting-untuk-alur-kerja-anda" title="Permanent link">&para;</a></h3>
+<p>Setiap hari, organisasi Anda menghadapi tantangan pemrosesan dokumen berikut:</p>
+<ul>
+<li><strong>Penyaringan resume</strong>: Membaca ratusan resume secara manual memakan waktu berharga</li>
+<li><strong>Pemrosesan faktur</strong>: Mengekstraksi detail vendor, jumlah, dan tanggal dari berbagai format dokumen</li>
+<li><strong>Analisis formulir</strong>: Mengubah formulir kertas menjadi data digital</li>
+</ul>
+<p>Prompt multimodal menghilangkan hambatan ini dengan menggabungkan pemahaman bahasa AI dengan kemampuan analisis visual. Ini memberikan kemampuan AI untuk memproses dokumen seefektif teks.</p>
+<h3 id="skenario-bisnis-umum">Skenario bisnis umum<a class="headerlink" href="#skenario-bisnis-umum" title="Permanent link">&para;</a></h3>
+<p>Berikut adalah beberapa contoh bagaimana prompt multimodal dapat diterapkan:</p>
+<table>
+<thead>
+<tr>
+<th>Skenario</th>
+<th>Tugas</th>
+<th>Contoh Output Bidang</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Penyaringan resume</strong></td>
+<td>Mengekstraksi nama kandidat, email, telepon, jabatan saat ini, tahun pengalaman, dan keterampilan utama.</td>
+<td>Nama Kandidat, Alamat Email, Nomor Telepon, Jabatan Saat Ini, Tahun Pengalaman, Keterampilan Utama</td>
+</tr>
+<tr>
+<td><strong>Pemrosesan faktur</strong></td>
+<td>Mengekstraksi informasi vendor, tanggal faktur, jumlah total, dan item baris dari faktur ini.</td>
+<td>Nama Vendor, Tanggal Faktur, Jumlah Total, Item Baris Faktur</td>
+</tr>
+<tr>
+<td><strong>Analisis formulir</strong></td>
+<td>Menganalisis formulir aplikasi ini dan mengekstraksi semua bidang yang diisi.</td>
+<td>Nama Bidang (misalnya, Nama Pelamar), Nilai yang Dimasukkan (misalnya, John Doe), ...</td>
+</tr>
+<tr>
+<td><strong>Verifikasi dokumen identitas</strong></td>
+<td>Mengekstraksi nama, nomor ID, tanggal kedaluwarsa, dan alamat dari dokumen identifikasi ini. Memverifikasi bahwa semua teks dapat dibaca dengan jelas dan menandai bagian yang tidak jelas.</td>
+<td>Nama Lengkap, Nomor Identifikasi, Tanggal Kedaluwarsa, Alamat, Penanda Bagian Tidak Jelas</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pemilihan-model-di-ai-builder">⚙️ Pemilihan model di AI Builder<a class="headerlink" href="#pemilihan-model-di-ai-builder" title="Permanent link">&para;</a></h2>
+<p>AI Builder menawarkan berbagai model yang dioptimalkan untuk tugas tertentu. Memahami model mana yang digunakan sangat penting untuk keberhasilan.</p>
+<div class="admonition note">
+<p class="admonition-title">Akurat per September 2025</p>
+<p>Model AI Builder diperbarui secara berkala, jadi periksa dokumentasi <a href="https://learn.microsoft.com/ai-builder/prompt-modelsettings">pengaturan model AI Builder</a> terbaru untuk ketersediaan model saat ini.</p>
+</div>
+<h3 id="perbandingan-model">Perbandingan model<a class="headerlink" href="#perbandingan-model" title="Permanent link">&para;</a></h3>
+<p>Semua model berikut mendukung penglihatan dan pemrosesan dokumen</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>💰Biaya</th>
+<th>⚡Kecepatan</th>
+<th>✅Terbaik untuk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GPT-4.1 mini</strong></td>
+<td>Dasar (paling hemat biaya)</td>
+<td>Cepat</td>
+<td>Pemrosesan dokumen standar, ringkasan, proyek dengan anggaran terbatas</td>
+</tr>
+<tr>
+<td><strong>GPT-4.1</strong></td>
+<td>Standar</td>
+<td>Sedang</td>
+<td>Dokumen kompleks, pembuatan konten lanjutan, kebutuhan akurasi tinggi</td>
+</tr>
+<tr>
+<td><strong>o3</strong></td>
+<td>Premium</td>
+<td>Lambat (prioritas alasan)</td>
+<td>Analisis data, pemikiran kritis, pemecahan masalah canggih</td>
+</tr>
+<tr>
+<td><strong>GPT-5 chat</strong></td>
+<td>Standar</td>
+<td>Ditingkatkan</td>
+<td>Pemahaman dokumen terbaru, akurasi respons tertinggi</td>
+</tr>
+<tr>
+<td><strong>GPT-5 reasoning</strong></td>
+<td>Premium</td>
+<td>Lambat (analisis kompleks)</td>
+<td>Analisis paling canggih, perencanaan, penalaran lanjutan</td>
+</tr>
+</tbody>
+</table>
+<h3 id="penjelasan-pengaturan-suhu">Penjelasan pengaturan suhu<a class="headerlink" href="#penjelasan-pengaturan-suhu" title="Permanent link">&para;</a></h3>
+<p>Suhu mengontrol seberapa kreatif atau dapat diprediksi respons AI Anda:</p>
+<ul>
+<li><strong>Suhu 0</strong>: Hasil paling dapat diprediksi, konsisten (terbaik untuk ekstraksi data)</li>
+<li><strong>Suhu 0.5</strong>: Keseimbangan kreativitas dan konsistensi  </li>
+<li><strong>Suhu 1</strong>: Kreativitas maksimum (terbaik untuk pembuatan konten)</li>
+</ul>
+<p>Untuk analisis dokumen, gunakan <strong>suhu 0</strong> untuk memastikan ekstraksi data yang konsisten.</p>
+<h2 id="format-output-teks-vs-json">📊 Format output: Teks vs JSON<a class="headerlink" href="#format-output-teks-vs-json" title="Permanent link">&para;</a></h2>
+<p>Memilih format output yang tepat sangat penting untuk pemrosesan lanjutan.</p>
+<h3 id="kapan-menggunakan-output-teks">Kapan menggunakan output teks<a class="headerlink" href="#kapan-menggunakan-output-teks" title="Permanent link">&para;</a></h3>
+<p>Output teks cocok untuk:</p>
+<ul>
+<li>Ringkasan yang dapat dibaca manusia</li>
+<li>Klasifikasi sederhana</li>
+<li>Konten yang tidak memerlukan pemrosesan terstruktur</li>
+</ul>
+<h3 id="kapan-menggunakan-output-json">Kapan menggunakan output JSON<a class="headerlink" href="#kapan-menggunakan-output-json" title="Permanent link">&para;</a></h3>
+<p>Output JSON sangat penting untuk:</p>
+<ul>
+<li>Ekstraksi data terstruktur</li>
+<li>Integrasi dengan basis data atau sistem</li>
+<li>Pemrosesan alur Power Automate</li>
+<li>Pemetaan bidang yang konsisten</li>
+</ul>
+<h3 id="praktik-terbaik-json">Praktik terbaik JSON<a class="headerlink" href="#praktik-terbaik-json" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Tentukan nama bidang yang jelas</strong>: Gunakan penamaan yang deskriptif dan konsisten</li>
+<li><strong>Berikan contoh</strong>: Sertakan output sampel dan nilai untuk setiap bidang</li>
+<li><strong>Tentukan tipe data</strong>: Sertakan contoh untuk tanggal, angka, dan teks</li>
+<li><strong>Tangani data yang hilang</strong>: Rencanakan untuk nilai null atau kosong</li>
+<li><strong>Validasi struktur</strong>: Uji dengan berbagai jenis dokumen</li>
+</ol>
+<h3 id="pertimbangan-kualitas-dokumen">Pertimbangan kualitas dokumen<a class="headerlink" href="#pertimbangan-kualitas-dokumen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Resolusi</strong>: Pastikan gambar jelas dan dapat dibaca</li>
+<li><strong>Orientasi</strong>: Putar dokumen ke orientasi yang benar sebelum diproses</li>
+<li><strong>Dukungan format</strong>: Uji dengan jenis dokumen spesifik Anda (PDF, JPG, PNG)</li>
+<li><strong>Batas ukuran</strong>: Perhatikan batas ukuran file di lingkungan Anda</li>
+</ul>
+<h3 id="optimasi-kinerja">Optimasi kinerja<a class="headerlink" href="#optimasi-kinerja" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pilih model yang sesuai</strong>: Tingkatkan model hanya jika diperlukan</li>
+<li><strong>Optimalkan prompt</strong>: Seringkali, instruksi yang lebih pendek dan jelas memberikan hasil yang lebih baik</li>
+<li><strong>Penanganan kesalahan</strong>: Rencanakan untuk dokumen yang tidak dapat diproses</li>
+<li><strong>Pantau biaya</strong>: Model yang berbeda mengonsumsi jumlah kredit AI Builder yang berbeda</li>
+</ul>
+<h2 id="lab-7-membangun-sistem-ekstraksi-resume">🧪 Lab 7: Membangun sistem ekstraksi resume<a class="headerlink" href="#lab-7-membangun-sistem-ekstraksi-resume" title="Permanent link">&para;</a></h2>
+<p>Saatnya menerapkan pengetahuan multimodal Anda. Anda akan membangun sistem ekstraksi resume yang komprehensif yang menganalisis dokumen kandidat dan mengubahnya menjadi data terstruktur untuk alur kerja perekrutan Anda.</p>
+<h3 id="prasyarat-untuk-menyelesaikan-misi-ini">Prasyarat untuk menyelesaikan misi ini<a class="headerlink" href="#prasyarat-untuk-menyelesaikan-misi-ini" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Anda perlu <strong>salah satu</strong>:</p>
+<ul>
+<li><strong>Telah menyelesaikan Misi 06</strong> dan memiliki sistem perekrutan multi-agen Anda siap, <strong>ATAU</strong></li>
+<li><strong>Mengimpor solusi awal Misi 07</strong> jika Anda memulai dari awal atau perlu mengejar ketinggalan. <a href="https://aka.ms/agent-academy">Unduh Solusi Awal Misi 07</a></li>
+</ul>
+</li>
+<li>
+<p>Dokumen resume sampel dari <a href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/operative/sample-data/resumes&amp;filename=operative_sampledata">Test Resumes</a></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Impor Solusi dan Data Sampel</p>
+<p>Jika Anda menggunakan solusi awal, lihat <a href="../01-get-started/">Misi 01</a> untuk instruksi rinci tentang cara mengimpor solusi dan data sampel ke lingkungan Anda.</p>
+</div>
+<h3 id="71-membuat-prompt-multimodal">7.1 Membuat prompt multimodal<a class="headerlink" href="#71-membuat-prompt-multimodal" title="Permanent link">&para;</a></h3>
+<p>Tujuan pertama Anda: membuat prompt yang mampu menganalisis dokumen resume dan mengekstraksi data terstruktur.</p>
+<ol>
+<li>
+<p>Masuk ke <a href="https://copilotstudio.microsoft.com">Copilot Studio</a> dan pilih <strong>Tools</strong> dari navigasi kiri.</p>
+</li>
+<li>
+<p>Pilih <strong>+ New tool</strong>, lalu pilih <strong>Prompt</strong>.<br />
+<img alt="Prompt Baru" src="../../../../../translated_images/7-new-prompt.8041acd54e3aecfca0c277aba88b9a2a923482a4b45ba65dcadf9296fac7c458.id.png" /></p>
+</li>
+<li>
+<p><strong>Ganti nama</strong> prompt dari nama default timestamp (Misalnya <em>Custom prompt 09/04/2025, 04:59:11 PM</em>) menjadi <code>Summarize Resume</code>.</p>
+</li>
+<li>
+<p>Di bidang Instruksi, tambahkan prompt ini:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are tasked with extracting key candidate information from a resume and cover letter to facilitate matching with open job roles and creating a summary for application review.
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Instructions:
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>1. Extract Candidate Details:
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    - Identify and extract the candidate’s full name.
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    - Extract contact information, specifically the email address.
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2. Create Candidate Summary:
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    - Summarize the candidate’s profile as multiline text (max 2000 characters) with the following sections:
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        - Candidate name
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        - Role(s) applied for if present
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        - Contact and location
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        - One-paragraph summary
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        - Experience snapshot (last 2–3 roles with outcomes)
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        - Key projects (1–3 with metrics)
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        - Education and certifications
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        - Top skills (Top 10)
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        - Availability and work authorization
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>Guidelines:
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>- Extract information only from the provided resume and cover letter documents.
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>- Ensure accuracy in identifying all details such as contact details and skills.
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>- The summary should be concise but informative, suitable for quick application review.
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>Resume: /document
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>CoverLetter: /text
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Gunakan bantuan Copilot</p>
+<p>Anda dapat menggunakan "Get started with Copilot" untuk menghasilkan prompt Anda menggunakan bahasa alami. Cobalah meminta Copilot untuk membuat prompt untuk merangkum resume!</p>
+</div>
+</li>
+<li>
+<p><strong>Konfigurasikan</strong> parameter input:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Tipe</th>
+<th>Nama</th>
+<th>Data Sampel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resume</td>
+<td>Gambar atau dokumen</td>
+<td>Resume</td>
+<td>Unggah resume sampel dari folder data uji</td>
+</tr>
+<tr>
+<td>CoverLetter</td>
+<td>Teks</td>
+<td>CoverLetter</td>
+<td>Ini adalah Resume!</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Pilih <strong>Test</strong> untuk melihat output teks awal dari prompt Anda.<br />
+<img alt="Setel parameter dan uji" src="../../../../../translated_images/7-prompt-parameters.fe63dae637c278e1c7dd1413749ff72bc1361d382162c5a58ebc9ff721f06821.id.png" /></p>
+</li>
+</ol>
+<h3 id="72-konfigurasi-output-json">7.2 Konfigurasi output JSON<a class="headerlink" href="#72-konfigurasi-output-json" title="Permanent link">&para;</a></h3>
+<p>Sekarang Anda akan mengubah prompt untuk menghasilkan data JSON terstruktur daripada teks biasa.</p>
+<ol>
+<li>
+<p>Tambahkan spesifikasi format JSON ini ke akhir instruksi prompt Anda:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Output Format:
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Provide the output in valid JSON format with the following structure:
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>{
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    &quot;CandidateName&quot;: &quot;string&quot;,
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    &quot;Email&quot;: &quot;string&quot;,
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    &quot;Summary&quot;: &quot;string max 2000 characters&quot;,
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    &quot;Skills&quot;: [ {&quot;item&quot;: &quot;Skill 1&quot;}, {&quot;item&quot;: &quot;Skill 2&quot;}],
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    &quot;Experience&quot;: [ {&quot;item&quot;: &quot;Experience 1&quot;}, {&quot;item&quot;: &quot;Experience 2&quot;}],
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>}
+</span></code></pre></div>
+</li>
+<li>
+<p>Ubah pengaturan <strong>Output</strong> dari "Text" menjadi <strong>JSON</strong>.</p>
+</li>
+<li>
+<p>Pilih <strong>Test</strong> lagi untuk memverifikasi bahwa output sekarang diformat sebagai JSON.<br />
+<img alt="Setel prompt menjadi JSON" src="../../../../../translated_images/7-json-prompt.89afee0b09beedd348dfefcb54ec1aa328abe7f94b72c6c26a363f686652d712.id.png" /></p>
+</li>
+<li>
+<p><strong>Opsional:</strong> Bereksperimenlah dengan model AI yang berbeda untuk melihat bagaimana output bervariasi, lalu kembali ke model default.</p>
+</li>
+<li>
+<p>Pilih <strong>Save</strong> untuk membuat prompt.</p>
+</li>
+<li>
+<p>Di dialog <strong>Configure for use in Agent</strong>, pilih <strong>Cancel</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Mengapa kita tidak menambahkan ini sebagai alat sekarang</p>
+<p>Anda akan menggunakan prompt ini dalam Agent Flow daripada langsung sebagai alat, yang memberi Anda lebih banyak kontrol atas alur pemrosesan data.</p>
+</div>
+</li>
+</ol>
+<h3 id="73-tambahkan-prompt-ke-agent-flow">7.3 Tambahkan prompt ke Agent Flow<a class="headerlink" href="#73-tambahkan-prompt-ke-agent-flow" title="Permanent link">&para;</a></h3>
+<p>Anda akan membuat Agent Flow yang menggunakan prompt Anda untuk memproses resume yang disimpan di Dataverse.</p>
+<div class="admonition tip">
+<p class="admonition-title">Ekspresi Agent Flow</p>
+<p>Sangat penting bahwa Anda mengikuti instruksi untuk memberi nama node dan memasukkan ekspresi dengan tepat karena ekspresi merujuk pada node sebelumnya menggunakan nama mereka! Lihat <a href="../../recruit/09-add-an-agent-flow/#you-mentioned-expressions-what-are-expressions">misi Agent Flow di Recruit</a> untuk penyegaran cepat!</p>
+</div>
+<ol>
+<li>
+<p>Navigasikan ke <strong>Hiring Agent</strong> Anda di dalam Copilot Studio</p>
+</li>
+<li>
+<p>Pilih tab <strong>Agents</strong>, dan pilih <strong>Application Intake Agent</strong> anak</p>
+</li>
+<li>
+<p>Di panel <strong>Tools</strong>, Pilih <strong>+ Add</strong> → <strong>+ New tool</strong> → <strong>Agent flow</strong></p>
+</li>
+<li>
+<p>Pilih node When an agent calls the flow, gunakan <strong>+ Add an input</strong> untuk menambahkan parameter berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Tipe</th>
+<th>Nama</th>
+<th>Deskripsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Teks</td>
+<td>ResumeNumber</td>
+<td>Pastikan menggunakan [ResumeNumber]. Ini harus selalu dimulai dengan huruf R</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Pilih ikon <strong>+</strong> Insert action di bawah node pertama, cari <strong>Dataverse</strong>, pilih <strong>See more</strong>, lalu temukan aksi <strong>List rows</strong></p>
+</li>
+<li>
+<p>Pilih <strong>ellipsis (...)</strong> pada node List rows, dan pilih <strong>Rename</strong> menjadi <code>Get Resume Record</code>, lalu atur parameter berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Properti</th>
+<th>Cara Mengatur</th>
+<th>Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Table name</strong></td>
+<td>Pilih</td>
+<td>Resumes</td>
+</tr>
+<tr>
+<td><strong>Filter rows</strong></td>
+<td>Data dinamis (ikon petir)</td>
+<td><code>ppa_resumenumber eq 'ResumeNumber'</code> Ganti <strong>ResumeNumber</strong> dengan <strong>When an agent calls the flow</strong> → <strong>ResumeNumber</strong></td>
+</tr>
+<tr>
+<td><strong>Row count</strong></td>
+<td>Masukkan</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Optimalkan kueri tersebut!</p>
+<p>Saat menggunakan teknik ini dalam produksi, Anda harus selalu membatasi kolom yang dipilih hanya pada yang diperlukan oleh Agent Flow.</p>
+</div>
+<p><img alt="Get Resume Record" src="../../../../../translated_images/7-summarize-resume-1.4b3b05b2bbab523feaf98c63502e7916c800c61db2d8a2be09b4624e0d83eb71.id.png" /></p>
+</li>
+<li>
+<p>Pilih ikon <strong>+</strong> Insert action di bawah node Get Resume Record, cari <strong>Dataverse</strong>, pilih <strong>See more</strong>, lalu temukan aksi <strong>Download a file or an image</strong>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Pilih aksi yang benar!</p>
+<p>Pastikan tidak memilih aksi yang diakhiri dengan "from selected environment"</p>
+</div>
+</li>
+<li>
+<p>Seperti sebelumnya, ganti nama aksi menjadi <code>Download Resume</code>, lalu atur parameter berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Properti</th>
+<th>Cara Mengatur</th>
+<th>Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Table name</strong></td>
+<td>Pilih</td>
+<td>Resumes</td>
+</tr>
+<tr>
+<td><strong>Row ID</strong></td>
+<td>Ekspresi (ikon fx)</td>
+<td><code>first(body('Get_Resume_Record')?['value'])?['ppa_resumeid']</code></td>
+</tr>
+<tr>
+<td><strong>Column name</strong></td>
+<td>Pilih</td>
+<td>Resume PDF</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Download Resume" src="../../../../../translated_images/7-summarize-resume-2.c56d74be42ed30a6f3082ef84b3b81ab5286f014c09d995ce32bbfe9af96df42.id.png" /></p>
+</li>
+<li>
+<p>Sekarang, pilih ikon <strong>+</strong> Insert action di bawah Download Resume, di bawah <strong>AI capabilities</strong>, pilih <strong>Run a prompt</strong>,</p>
+</li>
+<li>
+<p>Ganti nama aksi menjadi <code>Summarize Resume</code> dan atur parameter berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Properti</th>
+<th>Cara Mengatur</th>
+<th>Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Prompt</strong></td>
+<td>Pilih</td>
+<td>Ringkas Resume</td>
+</tr>
+<tr>
+<td><strong>CoverLetter</strong></td>
+<td>Ekspresi (ikon fx)</td>
+<td><code>first(body('Get_Resume_Record')?['value'])?['ppa_coverletter']</code></td>
+</tr>
+<tr>
+<td><strong>Resume</strong></td>
+<td>Data dinamis (ikon petir)</td>
+<td>Unduh Resume → Konten file atau gambar</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Ringkas Resume Prompt" src="../../../../../translated_images/7-summarize-resume-3.c1656de643c50805ff6972e2891db16776cbdc433ddb09778819836a60204375.id.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Parameter Prompt</p>
+<p>Perhatikan bagaimana parameter yang Anda isi adalah parameter yang sama yang Anda konfigurasi sebagai parameter input saat Anda membuat prompt.</p>
+</div>
+<h3 id="74-buat-catatan-kandidat">7.4 Buat catatan kandidat<a class="headerlink" href="#74-buat-catatan-kandidat" title="Permanent link">&para;</a></h3>
+<p>Selanjutnya, Anda perlu mengambil informasi yang diberikan oleh Prompt dan membuat catatan kandidat baru jika belum ada.</p>
+<ol>
+<li>
+<p>Pilih ikon tindakan <strong>+</strong> Insert di bawah node Ringkas Resume, cari <strong>Dataverse</strong>, pilih <strong>Lihat lebih banyak</strong>, lalu temukan tindakan <strong>List rows</strong></p>
+</li>
+<li>
+<p>Ubah nama node menjadi <code>Get Existing Candidate</code>, lalu atur parameter berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Properti</th>
+<th>Cara Mengatur</th>
+<th>Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nama tabel</strong></td>
+<td>Pilih</td>
+<td>Candidates</td>
+</tr>
+<tr>
+<td><strong>Filter rows</strong></td>
+<td>Data dinamis (ikon petir)</td>
+<td><code>ppa_email eq 'Email'</code>  <strong>Ganti</strong> <code>Email</code> dengan <strong>Ringkas Resume → Email</strong></td>
+</tr>
+<tr>
+<td><strong>Jumlah baris</strong></td>
+<td>Masukkan</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Get Existing Candidate" src="../../../../../translated_images/7-summarize-resume-4.c95d900bad4e6e75ad348f4385f69a9db37f76f3b1bb90813157643814a3f6a8.id.png" /></p>
+</li>
+<li>
+<p>Pilih ikon tindakan <strong>+</strong> Insert di bawah node Get Existing Candidate, cari <strong>Control</strong>, pilih <strong>Lihat lebih banyak</strong>, lalu temukan tindakan <strong>Condition</strong></p>
+</li>
+<li>
+<p>Pada properti kondisi, atur kondisi berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Kondisi</th>
+<th>Operator</th>
+<th>Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ekspresi (ikon fx): <code>length(outputs('Get_Existing_Candidate')?['body/value'])</code></td>
+<td>sama dengan</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Get Existing Candidate Condition" src="../../../../../translated_images/7-summarize-resume-5.1a83c05153ac5aa16b8c3fec10989628f64f893fc7c6bfed8b4ec16caf6b7a6b.id.png" /></p>
+</li>
+<li>
+<p>Pilih ikon tindakan <strong>+</strong> Insert di cabang <strong>True</strong>, cari <strong>Dataverse</strong>, pilih <strong>Lihat lebih banyak</strong>, lalu temukan tindakan <strong>Add a new row</strong>.</p>
+</li>
+<li>
+<p>Ubah nama node menjadi <code>Add a New Candidate</code>, lalu atur parameter berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Properti</th>
+<th>Cara Mengatur</th>
+<th>Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nama tabel</strong></td>
+<td>Pilih</td>
+<td>Candidates</td>
+</tr>
+<tr>
+<td><strong>Nama Kandidat</strong></td>
+<td>Data dinamis (ikon petir)</td>
+<td>Ringkas Resume → <code>CandidateName</code></td>
+</tr>
+<tr>
+<td><strong>Email</strong></td>
+<td>Data dinamis (ikon petir)</td>
+<td>Ringkas Resume → <code>Email</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="Add New Candidate" src="../../../../../translated_images/7-summarize-resume-6.321bee96056d21981c466a87456aea1bafc394a492cc4b814b97ba2ee6b758fa.id.png" /></p>
+<h3 id="75-perbarui-resume-dan-konfigurasi-output-alur">7.5 Perbarui resume dan konfigurasi output alur<a class="headerlink" href="#75-perbarui-resume-dan-konfigurasi-output-alur" title="Permanent link">&para;</a></h3>
+<p>Selesaikan alur dengan memperbarui catatan resume dan mengonfigurasi data apa yang akan dikembalikan ke agen Anda.</p>
+<ol>
+<li>
+<p>Pilih ikon tindakan <strong>+</strong> Insert di bawah kondisi, cari <strong>Dataverse</strong>, pilih <strong>Lihat lebih banyak</strong>, lalu temukan tindakan <strong>Update a row</strong></p>
+</li>
+<li>
+<p>Pilih judul untuk mengubah nama node menjadi <code>Update Resume</code>, pilih <strong>Tampilkan semua</strong>, lalu atur parameter berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Properti</th>
+<th>Cara Mengatur</th>
+<th>Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nama tabel</strong></td>
+<td>Pilih</td>
+<td>Resumes</td>
+</tr>
+<tr>
+<td><strong>Row ID</strong></td>
+<td>Ekspresi (ikon fx)</td>
+<td><code>first(body('Get_Resume_Record')?['value'])?['ppa_resumeid']</code></td>
+</tr>
+<tr>
+<td><strong>Ringkasan</strong></td>
+<td>Data dinamis (ikon petir)</td>
+<td>Ringkas Resume → Teks</td>
+</tr>
+<tr>
+<td><strong>Kandidat (Candidates)</strong></td>
+<td>Ekspresi (ikon fx)</td>
+<td><code>if(equals(length(outputs('Get_Existing_Candidate')?['body/value']), 1), first(outputs('Get_Existing_Candidate')?['body/value'])?['ppa_candidateid'], outputs('Add_a_New_Candidate')?['body/ppa_candidateid'])</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Update Resume" src="../../../../../translated_images/7-summarize-resume-7.0ef51db1ebbf837bae11c0e0bdd8c6e8296d528d500bc729c43660d09967ce57.id.png" /></p>
+</li>
+<li>
+<p>Pilih node <strong>Respond to the agent</strong> lalu gunakan <strong>+ Add an output</strong> untuk mengonfigurasi:</p>
+<table>
+<thead>
+<tr>
+<th>Tipe</th>
+<th>Nama</th>
+<th>Cara Mengatur</th>
+<th>Nilai</th>
+<th>Deskripsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Teks</td>
+<td><code>CandidateName</code></td>
+<td>Data dinamis (ikon petir)</td>
+<td>Ringkas Resume → Lihat lebih banyak → CandidateName</td>
+<td>[CandidateName] yang diberikan pada Resume</td>
+</tr>
+<tr>
+<td>Teks</td>
+<td><code>CandidateEmail</code></td>
+<td>Data dinamis (ikon petir)</td>
+<td>Ringkas Resume → Lihat lebih banyak → Email</td>
+<td>[CandidateEmail] yang diberikan pada Resume</td>
+</tr>
+<tr>
+<td>Teks</td>
+<td><code>CandidateNumber</code></td>
+<td>Ekspresi (ikon fx)</td>
+<td><code>concat('ppa_candidates/', if(equals(length(outputs('Get_Existing_Candidate')?['body/value']), 1), first(outputs('Get_Existing_Candidate')?['body/value'])?['ppa_candidateid'], outputs('Add_a_New_Candidate')?['body/ppa_candidateid']) )</code></td>
+<td>[CandidateNumber] dari kandidat baru atau yang sudah ada</td>
+</tr>
+<tr>
+<td>Teks</td>
+<td><code>ResumeSummary</code></td>
+<td>Data dinamis (ikon petir)</td>
+<td>Ringkas Resume → Lihat lebih banyak → body/responsev2/predictionOutput/structuredOutput</td>
+<td>Ringkasan resume dan detail dalam format JSON</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Respond to the agent" src="../../../../../translated_images/7-summarize-resume-8.72c4649f7536863657260438088577b04272ab28bd788c65dabbca1473cd6b5e.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Save draft</strong> di kanan atas. Alur Agen Anda seharusnya terlihat seperti berikut<br />
+<img alt="Summarize Resume Agent Flow" src="../../../../../translated_images/7-summarize-resume-9.491c36275650a2adba1acafcb386970a9c379ab7dad9cc129e27cbbc96c73dd3.id.png" /></p>
+</li>
+<li>
+<p>Pilih tab <strong>Overview</strong>, pilih <strong>Edit</strong> pada panel <strong>Details</strong></p>
+<ol>
+<li><strong>Nama alur</strong>:<code>Summarize Resume</code></li>
+<li>
+<p><strong>Deskripsi</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Summarize an existing Resume stored in Dataverse using a [ResumeNumber] as input, return the [CandidateNumber], and resume summary JSON
+</span></code></pre></div>
+</li>
+</ol>
+</li>
+<li>
+<p>Pilih <strong>Save</strong></p>
+</li>
+<li>
+<p>Pilih tab <strong>Designer</strong> lagi, lalu pilih <strong>Publish</strong>.</p>
+</li>
+</ol>
+<h3 id="76-hubungkan-alur-ke-agen-anda">7.6 Hubungkan alur ke agen Anda<a class="headerlink" href="#76-hubungkan-alur-ke-agen-anda" title="Permanent link">&para;</a></h3>
+<p>Sekarang Anda akan menambahkan alur sebagai alat dan mengonfigurasi agen Anda untuk menggunakannya.</p>
+<ol>
+<li>
+<p>Buka <strong>Hiring Agent</strong> Anda di dalam Copilot Studio</p>
+</li>
+<li>
+<p>Pilih tab <strong>Agents</strong>, lalu buka <strong>Application Intake Agent</strong></p>
+</li>
+<li>
+<p>Pilih panel <strong>Tools</strong>, lalu pilih <strong>+ Add a tool</strong> - &gt; <strong>Flow</strong> -&gt; <strong>Summarize Resume</strong> <strong>(Agent Flow)</strong></p>
+</li>
+<li>
+<p>Pilih <strong>Add and configure</strong></p>
+</li>
+<li>
+<p>Konfigurasikan pengaturan alat sebagai berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Pengaturan</th>
+<th>Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Deskripsi</strong></td>
+<td>Ringkas Resume yang ada yang disimpan di Dataverse menggunakan [ResumeNumber] sebagai input, kembalikan [CandidateNumber], dan ringkasan resume dalam JSON</td>
+</tr>
+<tr>
+<td><strong>Kapan alat ini dapat digunakan</strong></td>
+<td>Hanya saat dirujuk oleh topik atau agen</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Pilih <strong>Save</strong><br />
+<img alt="Configure Summarize Resume Tool" src="../../../../../translated_images/7-configure-summarize-resume-tool.f301e328142193d27b0ab8dea68dcd130e783e897bf37c94f952594d9eca8071.id.png" /></p>
+</li>
+<li>
+<p>Jika Anda memilih Tools di dalam Hiring Agent, Anda sekarang akan melihat kedua alat kami menunjukkan bahwa mereka dapat digunakan oleh <strong>Application Intake Agent</strong>.<br />
+<img alt="Agent Tools" src="../../../../../translated_images/7-agent-tools.5ab82b09501386a00351a8ef3149a0f177360bca0aa70a7c05cb273289247c61.id.png" /></p>
+</li>
+<li>
+<p>Navigasikan ke instruksi agen <strong>Application Intake Child</strong>, lalu modifikasi langkah <strong>Post-Upload</strong> menjadi berikut:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2. Post-Upload Processing  
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    - After uploading, be sure to also output the [ResumeNumber] in all messages
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    - Pass [ResumeNumber] to /Summarize Resume  - Be sure to use the correct value that will start with the letter R.
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    - Be sure to also output the [CandidateNumber] in all messages
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    - Use the [ResumeSummary] to output a summary of the processed Resume and candidate
+</span></code></pre></div>
+<p>Ganti <code>/Summarize Resume</code> dengan memasukkan referensi ke <strong>Summarize Resume agent flow</strong> dengan mengetik garis miring (<code>/)</code> atau memilih <code>/Summarize</code> untuk memasukkan referensi.<br />
+<img alt="Update Instructions" src="../../../../../translated_images/7-summarize-instructions-update.b3620bc94c8de06ee09eb5804de4f9ac7bfce8458f87fe4bee41cb51abe7f48c.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Save</strong>.</p>
+</li>
+</ol>
+<h3 id="77-uji-agen-anda">7.7 Uji agen Anda<a class="headerlink" href="#77-uji-agen-anda" title="Permanent link">&para;</a></h3>
+<p>Uji sistem multimodal lengkap Anda untuk memastikan semuanya berfungsi dengan benar.</p>
+<ol>
+<li>
+<p><strong>Mulai pengujian</strong>:</p>
+<ul>
+<li>Pilih <strong>Test</strong> untuk membuka panel pengujian</li>
+<li>
+<p>Ketik: <code>Ini adalah Resume kandidat</code></p>
+</li>
+<li>
+<p>Unggah salah satu resume sampel dari <a href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/operative/sample-data/resumes&amp;filename=operative_sampledata">Test Resumes</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Verifikasi hasil</strong>:</p>
+<ul>
+<li>Setelah Anda mengirim pesan dan resume, periksa apakah Anda menerima Resume Number (format: R#####)</li>
+<li>Verifikasi Anda mendapatkan Candidate Number dan ringkasan</li>
+<li>Gunakan peta aktivitas untuk melihat alat unggah Resume dan alat Ringkas Resume beraksi, serta output dari Prompt Ringkasan diterima oleh agen:<br />
+<img alt="Testing Results" src="../../../../../translated_images/7-test-result.dcbb6c277666ab7d06d303c3facfb5ad838a33ec6b7f0b92b90f9faddb9bb6bc.id.png" /></li>
+</ul>
+</li>
+<li>
+<p><strong>Periksa persistensi data</strong>:</p>
+<ul>
+<li>Navigasikan ke <a href="https://make.powerapps.com">Power Apps</a></li>
+<li>Buka <strong>Apps</strong> → <strong>Hiring Hub</strong> → <strong>Play</strong></li>
+<li>Pergi ke <strong>Resumes</strong> untuk memverifikasi bahwa resume telah diunggah dan diproses. Seharusnya memiliki informasi ringkasan dan catatan kandidat terkait.</li>
+<li>Periksa <strong>Candidates</strong> untuk melihat informasi kandidat yang diekstraksi<br />
+<img alt="Resume with Candidate and Summary" src="../../../../../translated_images/7-resume-in-dataverse.cbe85a3f889c989f32ef10ac130e6decfed3d7744fd31f48df8a841cebae229b.id.png" /></li>
+<li>Ketika Anda menjalankan proses lagi, seharusnya menggunakan Kandidat yang sudah ada (cocok berdasarkan email yang diekstraksi dari resume) daripada membuat yang baru.</li>
+</ul>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Pemecahan Masalah</p>
+<ul>
+<li><strong>Resume tidak diproses</strong>: Pastikan file adalah PDF dan di bawah batas ukuran</li>
+<li><strong>Tidak ada kandidat yang dibuat</strong>: Periksa apakah email diekstraksi dengan benar dari resume</li>
+<li><strong>Kesalahan format JSON</strong>: Verifikasi instruksi prompt Anda mencakup struktur JSON yang tepat</li>
+<li><strong>Kesalahan alur</strong>: Periksa bahwa semua koneksi Dataverse dan ekspresi dikonfigurasi dengan benar</li>
+</ul>
+</div>
+<h3 id="kesiapan-produksi">Kesiapan produksi<a class="headerlink" href="#kesiapan-produksi" title="Permanent link">&para;</a></h3>
+<p>Meskipun bukan bagian dari misi ini, untuk membuat alur agen ini siap produksi Anda mungkin juga mempertimbangkan hal berikut:</p>
+<ol>
+<li><strong>Penanganan kesalahan</strong> - Jika Resume Number tidak ditemukan, atau prompt gagal memproses dokumen, penanganan kesalahan harus ditambahkan untuk mengembalikan kesalahan yang jelas kepada agen.</li>
+<li><strong>Memperbarui Kandidat yang sudah ada</strong> - Kandidat ditemukan menggunakan email, kemudian nama dapat diperbarui agar sesuai dengan yang ada di resume.</li>
+<li><strong>Memisahkan ringkasan Resume dan pembuatan Kandidat</strong> - Fungsi ini dapat dipisahkan menjadi alur agen yang lebih kecil untuk membuatnya lebih mudah dikelola, lalu agen diberikan instruksi untuk menggunakannya secara bergantian.</li>
+</ol>
+<h2 id="misi-selesai">🎉 Misi Selesai<a class="headerlink" href="#misi-selesai" title="Permanent link">&para;</a></h2>
+<p>Kerja bagus, Operative! <strong>Document Resume Recon</strong> sekarang selesai. Anda telah berhasil menguasai prompt multimodal dan sekarang dapat mengekstrak data terstruktur dari dokumen apa pun dengan presisi.</p>
+<p>Berikut adalah apa yang telah Anda capai dalam misi ini:</p>
+<p><strong>✅ Penguasaan prompt multimodal</strong><br />
+Anda sekarang memahami apa itu prompt multimodal dan kapan menggunakan model AI yang berbeda untuk hasil optimal.</p>
+<p><strong>✅ Keahlian pemrosesan dokumen</strong><br />
+Anda telah belajar mengonfigurasi prompt dengan input gambar dan dokumen, serta memformat output sebagai JSON untuk ekstraksi data terstruktur.</p>
+<p><strong>✅ Sistem ekstraksi resume</strong><br />
+Anda telah membangun sistem ekstraksi resume lengkap yang memproses dokumen kandidat dan terintegrasi dengan alur kerja perekrutan Anda.</p>
+<p><strong>✅ Implementasi praktik terbaik</strong><br />
+Anda telah menerapkan praktik terbaik untuk rekayasa prompt dengan analisis dokumen dan mengintegrasikan prompt multimodal dengan Agent Flows.</p>
+<p><strong>✅ Fondasi untuk pemrosesan lanjutan</strong><br />
+Kemampuan analisis dokumen Anda yang ditingkatkan sekarang siap untuk fitur penguatan data lanjutan yang akan kami tambahkan dalam misi mendatang.</p>
+<p>🚀 <strong>Selanjutnya:</strong> Dalam Misi 08, Anda akan menemukan cara meningkatkan prompt Anda dengan data waktu nyata dari Dataverse, menciptakan solusi AI dinamis yang beradaptasi dengan kebutuhan bisnis yang berubah.</p>
+<p>⏩ <a href="../08-dataverse-grounding/">Lanjut ke Misi 08: Peningkatan prompt dengan penguatan Dataverse</a></p>
+<h2 id="sumber-daya-taktis">📚 Sumber daya taktis<a class="headerlink" href="#sumber-daya-taktis" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/create-a-custom-prompt?WT.mc_id=power-power-182762-scottdurow">Buat prompt</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/add-inputs-prompt?WT.mc_id=power-182762-scottdurow">Tambahkan input teks, gambar, atau dokumen ke prompt Anda</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/process-responses-json-output?WT.mc_id=power-182762-scottdurow">Proses respons dengan output JSON</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/prompt-modelsettings?WT.mc_id=power-182762-scottdurow">Pemilihan model dan pengaturan suhu</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/use-a-custom-prompt-in-flow?WT.mc_id=power-182762-scottdurow">Gunakan prompt Anda di Power Automate</a></p>
+<p>📺 <a href="https://www.youtube.com/watch?v=F0fGnWrRY_I">AI Builder: Output JSON dalam pembuat prompt</a></p>
+<hr />
+<p><strong>Penafian</strong>:<br />
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang penting, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau interpretasi yang keliru yang timbul dari penggunaan terjemahan ini.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

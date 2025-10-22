@@ -1,0 +1,845 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/nl/docs/recruit/02-copilot-studio-fundamentals/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#missie-02-copilot-studio-basisprincipes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codenaam-operatie-kernprotocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAAM: OPERATIE KERNPROTOCOL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missieoverzicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Missieoverzicht
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doelstellingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Doelstellingen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wat-zijn-agents-in-copilot-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wat zijn agents in Copilot Studio?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wanneer-en-waarom-copilot-studio-gebruiken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wanneer en waarom Copilot Studio gebruiken
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vier-bouwstenen-van-een-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vier bouwstenen van een agent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hoe-de-vier-bouwstenen-samenwerken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hoe de vier bouwstenen samenwerken
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missie-voltooid" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 Missie Voltooid
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "90a3c5122f5687bbc8cc819990f175d4",
+  "translation_date": "2025-10-17T01:38:19+00:00",
+  "source_file": "docs/recruit/02-copilot-studio-fundamentals/README.md",
+  "language_code": "nl"
+}
+-->
+<h1 id="missie-02-copilot-studio-basisprincipes">🚨 Missie 02: Copilot Studio Basisprincipes<a class="headerlink" href="#missie-02-copilot-studio-basisprincipes" title="Permanent link">&para;</a></h1>
+<h2 id="codenaam-operatie-kernprotocol">🕵️‍♂️ CODENAAM: <code>OPERATIE KERNPROTOCOL</code><a class="headerlink" href="#codenaam-operatie-kernprotocol" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operatietijdvenster:</strong> <code>~30 minuten – alleen informatie, geen veldwerk vereist</code>  </p>
+</blockquote>
+<p>🎥 <strong>Bekijk de walkthrough</strong></p>
+<p><a href="https://www.youtube.com/watch?v=x4OCwDRGeLE" title="Bekijk de walkthrough op YouTube"><img alt="Copilot Studio basisprincipes video thumbnail" src="../../../../../translated_images/video-thumbnail.60293a065d12abc483567901321099335595e0b8bd4e42177bdb05db16db335b.nl.jpg" /></a></p>
+<h2 id="missieoverzicht">🎯 Missieoverzicht<a class="headerlink" href="#missieoverzicht" title="Permanent link">&para;</a></h2>
+<p>Welkom, Rekruut. Deze missie geeft je de basisinformatie die je nodig hebt om te begrijpen hoe Copilot Studio werkt en hoe je intelligente agents kunt bouwen die echte zakelijke waarde leveren.</p>
+<p>Voordat je je eerste agent bouwt, moet je de vier belangrijkste componenten begrijpen die elke aangepaste AI-agent vormen: Kennis, Tools, Onderwerpen en Instructies. Je leert ook hoe deze elementen samenwerken in de Copilot Studio orkestrator.</p>
+<h2 id="doelstellingen">🔎 Doelstellingen<a class="headerlink" href="#doelstellingen" title="Permanent link">&para;</a></h2>
+<p>In deze missie leer je:</p>
+<ul>
+<li><strong>Wat Copilot Studio is</strong></li>
+<li><strong>Wanneer en waarom je agents moet gebruiken</strong></li>
+<li><strong>De vier bouwstenen van agents verkennen</strong><ul>
+<li><strong>Kennis</strong></li>
+<li><strong>Tools</strong></li>
+<li><strong>Onderwerpen</strong></li>
+<li><strong>Instructies</strong></li>
+</ul>
+</li>
+<li><strong>Begrijpen hoe deze componenten samenwerken</strong> om een intelligente, geautomatiseerde agent te creëren</li>
+</ul>
+<hr />
+<h2 id="wat-zijn-agents-in-copilot-studio">Wat zijn agents in Copilot Studio?<a class="headerlink" href="#wat-zijn-agents-in-copilot-studio" title="Permanent link">&para;</a></h2>
+<p>Een <strong>agent</strong> is een gespecialiseerde AI-assistent die je ontwerpt om specifieke taken of vragen af te handelen. In tegenstelling tot een algemene chatbot:</p>
+<ul>
+<li><strong>Kent het bedrijfsspecifieke gegevens</strong> (beleid, documenten, databases)  </li>
+<li><strong>Voert echte taken uit</strong> (berichten verzenden, agenda-afspraken maken, records bijwerken)  </li>
+<li><strong>Behoudt conversatiecontext</strong> zodat het kan voortbouwen op eerdere vragen  </li>
+</ul>
+<p>Omdat Copilot Studio low-code is, kun je vooraf gebouwde componenten slepen en neerzetten—geen diepgaande programmeervaardigheden vereist. Zodra je agent is gebouwd, kunnen mensen deze gebruiken in Teams, Slack of zelfs een aangepaste webpagina om antwoorden te krijgen of workflows automatisch te starten.</p>
+<hr />
+<h2 id="wanneer-en-waarom-copilot-studio-gebruiken">Wanneer en waarom Copilot Studio gebruiken<a class="headerlink" href="#wanneer-en-waarom-copilot-studio-gebruiken" title="Permanent link">&para;</a></h2>
+<p>Hoewel Microsoft 365 Copilot algemene AI-assistentie biedt in Office-apps, wil je een aangepaste agent gebruiken wanneer:</p>
+<h3 id="je-specifieke-domeinkennis-nodig-hebt">Je specifieke domeinkennis nodig hebt<a class="headerlink" href="#je-specifieke-domeinkennis-nodig-hebt" title="Permanent link">&para;</a></h3>
+<ul>
+<li>De standaard Copilot kent mogelijk de interne procedures of gegevens van je bedrijf niet. Een agent kan je SharePoint-sites, databases of aangepaste bronnen raadplegen om nauwkeurige en actuele antwoorden te geven.  </li>
+</ul>
+<h3 id="je-multi-step-workflows-wilt-automatiseren">Je multi-step workflows wilt automatiseren<a class="headerlink" href="#je-multi-step-workflows-wilt-automatiseren" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Bijvoorbeeld: "Wanneer iemand een uitgave indient, stuur deze ter goedkeuring, werk de financiële tracker bij en informeer de manager." Een aangepaste agent kan elke stap afhandelen, geactiveerd door een enkel commando of gebeurtenis.  </li>
+</ul>
+<h3 id="je-een-contextuele-in-tool-ervaring-nodig-hebt">Je een contextuele, in-tool ervaring nodig hebt<a class="headerlink" href="#je-een-contextuele-in-tool-ervaring-nodig-hebt" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Stel je een Onboarding-agent voor nieuwe medewerkers in Teams voor die HR-medewerkers door elk beleid begeleidt, de benodigde formulieren verzendt en oriëntatiebijeenkomsten plant—direct binnen je bestaande samenwerkingsplatform.  </li>
+</ul>
+<hr />
+<h2 id="vier-bouwstenen-van-een-agent">Vier bouwstenen van een agent<a class="headerlink" href="#vier-bouwstenen-van-een-agent" title="Permanent link">&para;</a></h2>
+<p>Elke Copilot Studio-agent is opgebouwd uit vier kerncomponenten:</p>
+<ol>
+<li><strong>Kennis</strong>  </li>
+<li><strong>Tools (Acties)</strong>  </li>
+<li><strong>Onderwerpen</strong>  </li>
+<li><strong>Instructies</strong></li>
+</ol>
+<p>Hieronder definiëren we elke bouwsteen en laten we zien hoe ze samenwerken om een effectieve agent te creëren.</p>
+<h3 id="1-kennis">1. Kennis<a class="headerlink" href="#1-kennis" title="Permanent link">&para;</a></h3>
+<p><strong>Kennis</strong> is de gegevens en context die je agent gebruikt om vragen nauwkeurig te beantwoorden. Het bestaat uit twee delen:</p>
+<h4 id="aangepaste-instructies-context">Aangepaste instructies &amp; context<a class="headerlink" href="#aangepaste-instructies-context" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Je schrijft een korte beschrijving van het doel en de toon van de agent. Bijvoorbeeld:  </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are an IT support agent. You help employees troubleshoot common software issues, provide troubleshooting steps, and escalate urgent tickets.
+</span></code></pre></div>
+</li>
+<li>
+<p>Tijdens een gesprek onthoudt de agent eerdere interacties, zodat het kan verwijzen naar wat al is besproken (bijvoorbeeld als de gebruiker eerst zegt: "Mijn printer is offline," en later vraagt: "Heb je het inktniveau gecontroleerd?" herinnert de agent zich de printercontext).</p>
+</li>
+</ul>
+<h4 id="kennisbronnen-basisgegevens">Kennisbronnen (Basisgegevens)<a class="headerlink" href="#kennisbronnen-basisgegevens" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Je verbindt je agent met meerdere gegevensbronnen—SharePoint-bibliotheken, documentatiesites, wiki's of andere databases.  </li>
+<li>Wanneer een gebruiker een vraag stelt, haalt de agent relevante fragmenten uit die bronnen, zodat antwoorden <strong>gebaseerd</strong> zijn op de werkelijke beleidsregels, handleidingen of andere vertrouwelijke informatie van je organisatie.  </li>
+<li>Je kunt de agent zelfs dwingen om alleen te reageren met informatie uit die bronnen, zodat het geen gokt of "hallucinaties" geeft.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Een "Beleidsassistent"-agent kan verbinding maken met je HR SharePoint-site. Als een gebruiker vraagt: "Wat is ons PTO-opbouwpercentage?" haalt de agent de exacte tekst uit het HR-beleidsdocument in plaats van te vertrouwen op een generiek AI-antwoord.</p>
+</div>
+<hr />
+<h3 id="2-tools-acties">2. Tools (Acties)<a class="headerlink" href="#2-tools-acties" title="Permanent link">&para;</a></h3>
+<p><strong>Tools (Acties)</strong> definiëren wat de agent kan doen naast chatten. Elke actie is een taak die de agent programmatisch uitvoert, zoals:</p>
+<ul>
+<li>Een e-mail of Teams-bericht verzenden  </li>
+<li>Een agenda-afspraak maken of bijwerken  </li>
+<li>Een record toevoegen of bewerken in een database (bijv. een SharePoint-lijst of Dataverse-tabel)  </li>
+<li>Een Power Automate-flow of REST API aanroepen  </li>
+</ul>
+<h4 id="hoe-acties-werken">Hoe acties werken<a class="headerlink" href="#hoe-acties-werken" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Definieer invoer &amp; uitvoer</strong>  </p>
+<ul>
+<li>Bijvoorbeeld, een actie "E-mail verzenden" kan vereisen:  <ul>
+<li><code>OntvangerEmailAdres</code>  </li>
+<li><code>OnderwerpRegel</code>  </li>
+<li><code>EmailInhoud</code>  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Combineer acties in workflows</strong>  </p>
+<ul>
+<li>Vaak omvat het vervullen van een gebruikersverzoek meerdere stappen.  </li>
+<li>Je kunt acties in een volgorde plaatsen zodat:<br />
+         1. De agent gegevens ophaalt uit een SharePoint-lijst.<br />
+         2. Een samenvatting genereert met behulp van de LLM.<br />
+         3. Een Teams-bericht verzendt met die samenvatting.  </li>
+</ul>
+</li>
+<li>
+<p><strong>Verbind met externe systemen</strong>  </p>
+<ul>
+<li>Als je een CRM moet bijwerken of een interne API moet aanroepen, maak je een aangepaste actie om dat te doen.  </li>
+<li>Copilot Studio kan integreren met het Power Platform of elk HTTP-gebaseerd eindpunt.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Een "Uitgavehulp"-agent kan:</p>
+<ol>
+<li>Luisteren naar een "Uitgave indienen"-verzoek.  </li>
+<li>De uitgavegegevens van de gebruiker ophalen uit een formulier.  </li>
+<li>Een "Toevoegen aan SharePoint-lijst"-actie gebruiken om de gegevens op te slaan.  </li>
+<li>Een "E-mail verzenden"-actie activeren om de goedkeurder te informeren.  </li>
+</ol>
+</div>
+<hr />
+<h3 id="3-onderwerpen">3. Onderwerpen<a class="headerlink" href="#3-onderwerpen" title="Permanent link">&para;</a></h3>
+<p><strong>Onderwerpen</strong> definiëren de conversatietriggers of startpunten voor je agent. Elk onderwerp komt overeen met een functionaliteit of een categorie van vragen.</p>
+<h4 id="conversatietriggers">Conversatietriggers<a class="headerlink" href="#conversatietriggers" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Een onderwerp kan zijn "IT-ticket indienen," "Vakantiesaldo controleren," of "Verkooprapport maken."  </li>
+<li>Onder de motorkap gebruikt Copilot Studio <strong>generatieve orkestratie</strong>: in plaats van te vertrouwen op exacte trefwoorden, interpreteert de AI de intentie van de gebruiker en kiest het juiste onderwerp op basis van een korte beschrijving die je opgeeft.  </li>
+</ul>
+<h4 id="onderwerpbeschrijvingen">Onderwerpbeschrijvingen<a class="headerlink" href="#onderwerpbeschrijvingen" title="Permanent link">&para;</a></h4>
+<ul>
+<li>In elk onderwerp schrijf je een duidelijke, beknopte beschrijving van wat dat onderwerp behandelt.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Voorbeeld van onderwerpbeschrijving</p>
+<p>Dit onderwerp helpt gebruikers een IT-ondersteuningsticket in te dienen door de details van het probleem, prioriteit en contactinformatie te verzamelen.</p>
+</div>
+<ul>
+<li>De AI gebruikt die beschrijving om te bepalen wanneer dit onderwerp moet worden geactiveerd, zelfs als de formulering van de gebruiker niet exact overeenkomt.</li>
+</ul>
+<h4 id="onderwerpen-koppelen-aan-acties">Onderwerpen koppelen aan acties<a class="headerlink" href="#onderwerpen-koppelen-aan-acties" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Elk onderwerp is verbonden met een of meer acties of gegevensophaalstappen.  </li>
+<li>Wanneer de AI een onderwerp kiest, begeleidt het de conversatie door de door jou gedefinieerde volgorde (stel vervolgvragen, roep acties aan, geef resultaten terug).</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Als een gebruiker zegt: "Ik heb hulp nodig bij het instellen van mijn nieuwe laptop," kan de AI die intentie koppelen aan het onderwerp "IT-ticket indienen." De agent vraagt dan om het laptopmodel, gebruikersgegevens en plaatst automatisch een ticket in het helpdesksysteem.</p>
+</div>
+<hr />
+<h3 id="4-instructies">4. Instructies<a class="headerlink" href="#4-instructies" title="Permanent link">&para;</a></h3>
+<p><strong>Instructies</strong> (soms "Prompts" of "Systeemberichten" genoemd) sturen de toon, stijl en grenzen van de LLM. Ze bepalen hoe de agent in elke situatie reageert.</p>
+<h4 id="rol-persoonlijkheid">Rol &amp; Persoonlijkheid<a class="headerlink" href="#rol-persoonlijkheid" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Je vertelt de AI wie het is (bijv. "Je bent een klantenserviceagent voor Contoso Retail").  </li>
+<li>Dit bepaalt de toon—vriendelijk, beknopt, formeel of informeel—afhankelijk van je gebruikssituatie.</li>
+</ul>
+<h4 id="richtlijnen-voor-antwoorden">Richtlijnen voor antwoorden<a class="headerlink" href="#richtlijnen-voor-antwoorden" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Specificeer regels die de agent moet volgen, zoals:  <ul>
+<li>"Vat beleidsinformatie altijd samen in opsommingstekens."  </li>
+<li>"Als je het antwoord niet weet, zeg dan ‘Sorry, ik heb die informatie niet.’"  </li>
+<li>"Geef nooit vertrouwelijke gegevens buiten de context."</li>
+</ul>
+</li>
+</ul>
+<h4 id="regels-voor-geheugen-context">Regels voor geheugen &amp; context<a class="headerlink" href="#regels-voor-geheugen-context" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Je kunt de agent instrueren hoeveel beurten van het gesprek hij moet onthouden.  </li>
+<li>Bijvoorbeeld: "Onthoud details van de verzoeken van deze gebruiker voor maximaal drie vervolgvragen."</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">In een "Voordelenadviseur"-agent kun je opnemen:</p>
+<p>"Verwijs altijd naar de meest recente HR-handleiding bij het beantwoorden van vragen. Als er wordt gevraagd naar inschrijvingsdeadlines, geef dan de specifieke datums uit het beleid. Houd antwoorden onder de 150 woorden."</p>
+</div>
+<hr />
+<h2 id="hoe-de-vier-bouwstenen-samenwerken">Hoe de vier bouwstenen samenwerken<a class="headerlink" href="#hoe-de-vier-bouwstenen-samenwerken" title="Permanent link">&para;</a></h2>
+<p>Wanneer je <strong>Kennis</strong>, <strong>Tools</strong>, <strong>Onderwerpen</strong> en <strong>Instructies</strong> samenvoegt, creëert de AI-orkestrator van Copilot Studio een agent die:</p>
+<ol>
+<li><strong>Luistert naar een relevant onderwerp</strong> (geleid door jouw onderwerpbeschrijvingen).  </li>
+<li><strong>Past instructies toe</strong> om de toon te bepalen, te beslissen wanneer vervolgvragen te stellen en regels te handhaven.  </li>
+<li><strong>Benut kennisbronnen</strong> om antwoorden te baseren op de gegevens van jouw organisatie.  </li>
+<li><strong>Roept tools (acties) aan</strong> indien nodig om taken uit te voeren—berichten verzenden, records bijwerken of API's aanroepen.  </li>
+</ol>
+<p>Onder de motorkap gebruikt de orkestrator een <strong>generatieve planningsaanpak</strong>: het bepaalt welke stappen moeten worden genomen, in welke volgorde, om een gebruikersverzoek te vervullen. Als een actie mislukt (bijvoorbeeld, een e-mail kan niet worden verzonden), volgt de agent jouw richtlijnen voor het omgaan met uitzonderingen (stel een verduidelijkende vraag of rapporteer de fout). Omdat de LLM zich aanpast aan de context van het gesprek, kan de agent geheugen behouden over meerdere beurten en nieuwe informatie opnemen terwijl het gesprek zich ontvouwt.</p>
+<p><strong>Visueel stroomvoorbeeld:</strong>  </p>
+<!--
+1. **Gebruiker:** "Laat me mijn vakantiesaldo zien."
+1. **AI (Onderwerpen):** Koppelt aan het onderwerp "Vakantiesaldo controleren."  
+1. **AI (Instructies):** Gebruikt een vriendelijke, beknopte toon.  
+1. **Agent (Kennis):** Vraagt de HR SharePoint-lijst op voor het saldo van de gebruiker.  
+1. **Agent (Acties):** Haalt de waarde op en verzendt een Teams-bericht:  
+   > "Je huidige vakantiesaldo is 12 dagen."  
+-->
+
+<pre class="mermaid"><code>sequenceDiagram
+    participant User
+    participant AI
+    participant Agent
+
+    User-&gt;&gt;AI: "Show me my PTO balance."
+    AI-&gt;&gt;AI: Match topic: "Check PTO Balance"
+    Note over AI: Instructions: Apply friendly, concise tone
+    AI-&gt;&gt;Agent: Request user's PTO balance
+    Note right of Agent: Knowledge: Query HR SharePoint list
+    Agent--&gt;&gt;AI: PTO balance = 12 days
+    AI-&gt;&gt;Agent: Send message to user (Teams)
+    Note right of Agent: Action: Deliver notification
+    Agent--&gt;&gt;User: "Your current PTO balance is 12 days."</code></pre>
+<hr />
+<h2 id="missie-voltooid">🎉 Missie Voltooid<a class="headerlink" href="#missie-voltooid" title="Permanent link">&para;</a></h2>
+<p>Je hebt je basisbriefing succesvol afgerond. Je hebt nu geleerd over de vier essentiële bouwstenen van elke agent in Copilot Studio:</p>
+<ol>
+<li><strong>Kennis</strong> – Waar de agent feitelijke informatie opzoekt en gesprekcontext behoudt.  </li>
+<li><strong>Tools</strong> – De taken die de agent kan uitvoeren om dingen automatisch te regelen.  </li>
+<li><strong>Onderwerpen</strong> – Hoe de agent gebruikersintentie herkent en beslist welke workflow moet worden uitgevoerd.  </li>
+<li><strong>Instructies</strong> – De regels, toon en grenzen die elke reactie sturen.</li>
+</ol>
+<p>Met deze componenten kun je een basisagent bouwen die vragen beantwoordt en eenvoudige workflows uitvoert. In de volgende les doorlopen we een stapsgewijze tutorial om een "Service Desk"-agent te maken—van het verbinden van je eerste kennisbron tot het definiëren van een onderwerp en het koppelen van een actie.</p>
+<p>Volgende stap: Je gaat je <a href="../03-create-a-declarative-agent-for-M365Copilot/">eerste declaratieve agent voor M365 Copilot bouwen</a>.</p>
+<!-- markdownlint-disable-next-line MD033 -->
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/02-copilot-studio-fundamentals" alt="Analytics" /></p>
+<hr />
+<p><strong>Disclaimer</strong>:<br />
+Dit document is vertaald met behulp van de AI-vertalingsservice <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

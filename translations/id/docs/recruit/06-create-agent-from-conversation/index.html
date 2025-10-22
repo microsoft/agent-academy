@@ -1,0 +1,1122 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/id/docs/recruit/06-create-agent-from-conversation/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#misi-06-membuat-agen-kustom-menggunakan-bahasa-alami-dengan-copilot-dan-menghubungkannya-dengan-data-anda" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nama-kode-operasi-pembuatan-agen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ NAMA KODE: OPERASI PEMBUATAN AGEN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ringkasan-misi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Ringkasan Misi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tujuan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Tujuan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apa-itu-agen-kustom" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Apa itu agen kustom?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gunakan-bahasa-alami-untuk-membuat-agen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗣️ Gunakan bahasa alami untuk membuat agen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tapi-saya-baru-dalam-menjelaskan-apa-yang-saya-inginkan-apa-yang-harus-saya-lakukan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌱 Tapi saya baru dalam "menjelaskan apa yang saya inginkan" - apa yang harus saya lakukan?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ok-saya-telah-membuat-agen-saya-bagaimana-cara-menghubungkannya-dengan-pengetahuan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔮 OK, saya telah membuat agen saya... bagaimana cara menghubungkannya dengan pengetahuan?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenis-sumber-pengetahuan-yang-dapat-ditambahkan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jenis sumber pengetahuan yang dapat ditambahkan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#catatan-tentang-keamanan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔒 Catatan tentang keamanan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meningkatkan-respons-agen-anda-di-copilot-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meningkatkan respons agen Anda di Copilot Studio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-06-membuat-agen-kustom-di-copilot-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 06: Membuat agen kustom di Copilot Studio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misi-selesai" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Misi Selesai
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sumber-daya-taktis" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Sumber Daya Taktis
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "180f9cc0b40527f61be092c9b0f72aba",
+  "translation_date": "2025-10-17T17:13:34+00:00",
+  "source_file": "docs/recruit/06-create-agent-from-conversation/README.md",
+  "language_code": "id"
+}
+-->
+<h1 id="misi-06-membuat-agen-kustom-menggunakan-bahasa-alami-dengan-copilot-dan-menghubungkannya-dengan-data-anda">🚨 Misi 06: Membuat agen kustom menggunakan bahasa alami dengan Copilot dan menghubungkannya dengan data Anda<a class="headerlink" href="#misi-06-membuat-agen-kustom-menggunakan-bahasa-alami-dengan-copilot-dan-menghubungkannya-dengan-data-anda" title="Permanent link">&para;</a></h1>
+<h2 id="nama-kode-operasi-pembuatan-agen">🕵️‍♂️ NAMA KODE: <code>OPERASI PEMBUATAN AGEN</code><a class="headerlink" href="#nama-kode-operasi-pembuatan-agen" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Waktu Operasi:</strong> <code>~75 menit</code></p>
+</blockquote>
+<p>🎥 <strong>Tonton Panduan</strong></p>
+<p><a href="https://www.youtube.com/watch?v=qZTtQVncGFg" title="Tonton panduan di YouTube"><img alt="Thumbnail video membuat agen kustom" src="../../../../../translated_images/video-thumbnail.9d5fddc1190fd4a04537488795821ac2f88fdcfe00e017f6e575a33f724e39cb.id.jpg" /></a></p>
+<h2 id="ringkasan-misi">🎯 Ringkasan Misi<a class="headerlink" href="#ringkasan-misi" title="Permanent link">&para;</a></h2>
+<p>Selamat datang kembali, Pembuat Agen. Misi ini menempatkan Anda di kursi komando kemampuan paling kuat di Copilot Studio - membuat agen kustom dari awal hanya dengan menggunakan bahasa alami… dan memperkuatnya dengan data Anda sendiri.</p>
+<p>Ini bukan sekadar chatbot biasa. Anda sedang membangun rekan kerja digital yang berpengetahuan - yang dapat berpikir, merespons, dan merujuk informasi perusahaan yang nyata.</p>
+<p>Senjata pilihan Anda? Bahasa alami. Misi Anda? Merancang, melatih, dan menguji agen helpdesk kustom yang sepenuhnya dapat menjawab pertanyaan IT menggunakan SharePoint, file yang diunggah, atau URL perusahaan.</p>
+<p>Mari kita bangun agen Anda dari awal.</p>
+<h2 id="tujuan">🔎 Tujuan<a class="headerlink" href="#tujuan" title="Permanent link">&para;</a></h2>
+<p>Dalam misi ini, Anda akan belajar:</p>
+<ol>
+<li>Memahami apa itu agen kustom dan bagaimana mereka berbeda dari template yang sudah dibuat sebelumnya</li>
+<li>Membuat agen menggunakan perintah bahasa alami dan desain percakapan dengan Copilot</li>
+<li>Menghubungkan agen dengan sumber pengetahuan perusahaan termasuk SharePoint, dokumen, dan situs web</li>
+<li>Mempelajari tentang orkestrasi generatif dan bagaimana agen secara dinamis mencari dan merespons menggunakan berbagai sumber data</li>
+<li>Membuat dan menguji agen helpdesk IT yang sepenuhnya berfungsi yang dapat menjawab pertanyaan dari data Anda sendiri</li>
+</ol>
+<h2 id="apa-itu-agen-kustom">🤔 Apa itu agen <em>kustom</em>?<a class="headerlink" href="#apa-itu-agen-kustom" title="Permanent link">&para;</a></h2>
+<p>Agen kustom adalah chatbot atau asisten virtual yang Anda buat dan desain di Copilot Studio untuk membantu pengguna dengan tugas atau pertanyaan tertentu. Disebut kustom karena:</p>
+<ul>
+<li><strong>Anda menentukan tujuannya</strong> - membantu pengguna meminta cuti, memeriksa status pesanan, memberikan bantuan terkait IT.</li>
+<li><strong>Anda mendefinisikan percakapannya</strong> - apa yang dikatakan agen dan bagaimana ia harus merespons.</li>
+<li><strong>Anda menghubungkannya dengan data Anda sendiri</strong> - terhubung ke data perusahaan Anda melalui sumber pengetahuan yang didukung bawaan.</li>
+<li><strong>Anda menghubungkannya ke sistem atau aplikasi Anda sendiri</strong> - pilih dari konektor, alur, REST API, dan server protokol konteks model.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pikirkan seperti ini: Anda sedang membangun asisten digital Anda sendiri yang dapat berbicara dengan pengguna dan menyelesaikan tugas untuk mereka seperti menjawab pertanyaan, mengumpulkan informasi yang diperlukan oleh proses, atau terhubung ke data perusahaan Anda.</p>
+</div>
+<h3 id="apa-yang-dapat-dilakukan-agen-kustom">🤖 Apa yang dapat dilakukan agen kustom?<a class="headerlink" href="#apa-yang-dapat-dilakukan-agen-kustom" title="Permanent link">&para;</a></h3>
+<p>Agen kustom dapat melakukan hal berikut:</p>
+<ul>
+<li>Meminta informasi dari pengguna seperti nama, tanggal, atau preferensi.</li>
+<li>Menyimpan informasi tersebut ke dalam database atau tabel.</li>
+<li>Mencari data berdasarkan pertanyaan yang diajukan dan menjawabnya.</li>
+<li>Bekerja secara mandiri tanpa interaksi langsung dari pengguna.</li>
+<li>Memicu tindakan baik secara langsung melalui interaksi pengguna atau secara mandiri seperti mengirim email atau membuat catatan.</li>
+</ul>
+<h3 id="mengapa-menggunakan-agen-kustom">👩🏻‍💻 Mengapa menggunakan agen kustom?<a class="headerlink" href="#mengapa-menggunakan-agen-kustom" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Menghemat waktu dengan mengotomatisasi tugas yang berulang.</li>
+<li>Memberikan pengalaman yang ramah dan terarah kepada pengguna.</li>
+<li>Menyesuaikan dengan kebutuhan bisnis atau proyek Anda.</li>
+</ul>
+<h3 id="contoh">✨ Contoh<a class="headerlink" href="#contoh" title="Permanent link">&para;</a></h3>
+<p>Anda membuat agen kustom yang membantu karyawan meminta cuti.</p>
+<p>Agen tersebut meminta nama mereka, tanggal cuti, dan nama manajer mereka, lalu menyimpan informasi tersebut ke dalam sistem yang ditunjuk untuk mengelola permintaan cuti, seperti daftar SharePoint.</p>
+<p>Sekarang, alih-alih menavigasi ke daftar SharePoint dan membuat item baru, karyawan cukup berbicara dengan agen tersebut.</p>
+<h2 id="gunakan-bahasa-alami-untuk-membuat-agen">🗣️ Gunakan bahasa alami untuk membuat agen<a class="headerlink" href="#gunakan-bahasa-alami-untuk-membuat-agen" title="Permanent link">&para;</a></h2>
+<p>Sebelumnya Anda telah belajar cara cepat membuat agen di Copilot Studio menggunakan template agen yang sudah dibuat sebelumnya di <a href="../05-using-prebuilt-agents/">Pelajaran 05 - Memulai dengan cepat menggunakan agen yang sudah dibuat sebelumnya</a>. Dalam pelajaran ini, kita akan mendalami pengalaman pembuatan percakapan dengan Copilot. Copilot Studio mempermudah pembuatan agen dengan berbicara dengan Copilot, seperti sedang melakukan percakapan.</p>
+<p>Di Copilot Studio, Anda tidak perlu menulis kode untuk membuat agen. Sebaliknya, Anda cukup menjelaskan apa yang Anda ingin agen lakukan dalam bahasa biasa, dan Copilot membantu Anda membangunnya langkah demi langkah melalui pengalaman seperti obrolan.</p>
+<h2 id="tapi-saya-baru-dalam-menjelaskan-apa-yang-saya-inginkan-apa-yang-harus-saya-lakukan">🌱 Tapi saya baru dalam "menjelaskan apa yang saya inginkan" - apa yang harus saya lakukan?<a class="headerlink" href="#tapi-saya-baru-dalam-menjelaskan-apa-yang-saya-inginkan-apa-yang-harus-saya-lakukan" title="Permanent link">&para;</a></h2>
+<p>Menjelaskan dalam bahasa alami untuk membuat agen kustom mungkin merupakan konsep baru bagi Anda. Setiap kali Anda menggunakan Copilot di produk dan layanan Microsoft, Anda menggunakan bahasa alami dalam bentuk <em>prompt</em>.</p>
+<p>Prompt adalah pesan atau instruksi yang Anda berikan kepada agen AI untuk memberitahunya apa yang Anda ingin ia lakukan. Anggap saja seperti memberikan arahan kepada asisten. Semakin jelas instruksi Anda, semakin mudah bagi asisten Anda untuk memahami dan melaksanakannya.</p>
+<h3 id="mengapa-prompt-penting">🪄 Mengapa Prompt penting<a class="headerlink" href="#mengapa-prompt-penting" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Mereka membimbing perilaku agen.</li>
+<li>Mereka membantu agen memahami jenis percakapan yang harus dilakukan.</li>
+<li>Prompt yang baik membuat agen lebih membantu dan akurat.</li>
+</ul>
+<h3 id="tips-untuk-menulis-prompt-yang-baik">📝 Tips untuk menulis prompt yang baik<a class="headerlink" href="#tips-untuk-menulis-prompt-yang-baik" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Jelas dan spesifik - katakan dengan tepat apa yang Anda ingin agen lakukan.</li>
+<li>Pikirkan seperti pengguna - apa yang akan dikatakan pengguna? Apa yang harus dijawab agen?</li>
+<li>Sertakan contoh - jika memungkinkan, berikan contoh interaksi.</li>
+</ul>
+<h3 id="contoh_1">✨ Contoh<a class="headerlink" href="#contoh_1" title="Permanent link">&para;</a></h3>
+<p>Misalnya tim HR membutuhkan agen untuk membantu permintaan cuti.</p>
+<p>Promptnya bisa seperti ini,</p>
+<div class="language-text highlight"><pre><span></span><code>“Saya ingin membuat agen yang membantu pengguna mengajukan permintaan cuti. Ketika pengguna mengatakan mereka ingin meminta cuti, agen harus meminta nama mereka, tanggal mulai cuti, tanggal akhir cuti, dan nama manajer mereka. Setelah pengguna memberikan informasi ini, agen harus menyimpannya ke daftar SharePoint bernama ‘Permintaan Cuti’ dan memposting notifikasi di saluran Microsoft Teams yang didedikasikan.”
+</code></pre></div>
+<p>Mengapa prompt ini berhasil:</p>
+<ul>
+<li><strong>Jelas menyatakan tujuan</strong> - mengajukan permintaan cuti</li>
+<li><strong>Menggambarkan interaksi pengguna</strong> - apa yang dikatakan pengguna dan apa yang harus ditanyakan agen</li>
+<li><strong>Mencantumkan data yang diperlukan</strong> - nama, tanggal mulai, tanggal akhir, manajer</li>
+<li><strong>Menyebutkan ke mana data akan pergi</strong> - daftar SharePoint bernama Permintaan Cuti</li>
+</ul>
+<h2 id="ok-saya-telah-membuat-agen-saya-bagaimana-cara-menghubungkannya-dengan-pengetahuan">🔮 OK, saya telah membuat agen saya... bagaimana cara menghubungkannya dengan pengetahuan?<a class="headerlink" href="#ok-saya-telah-membuat-agen-saya-bagaimana-cara-menghubungkannya-dengan-pengetahuan" title="Permanent link">&para;</a></h2>
+<p>Di Copilot Studio, sumber pengetahuan adalah tempat di mana agen Anda dapat menemukan informasi untuk memberikan jawaban yang lebih baik. Ketika Anda menambahkan sumber-sumber ini, agen Anda dapat menarik data perusahaan Anda dari tempat-tempat seperti Power Platform, Dynamics 365, situs web, dan sistem atau layanan lain yang digunakan perusahaan Anda.</p>
+<p>Sumber-sumber ini bekerja bersama dengan AI untuk membantu agen Anda merespons pertanyaan pengguna dengan lebih akurat, ini dicapai melalui apa yang dikenal sebagai <strong>orkestrasi generatif</strong>.</p>
+<h3 id="apa-itu-orkestrasi-generatif-dalam-konteks-agen">🌿 Apa itu orkestrasi generatif dalam konteks agen?<a class="headerlink" href="#apa-itu-orkestrasi-generatif-dalam-konteks-agen" title="Permanent link">&para;</a></h3>
+<p>Orkestrasi generatif berarti agen menggunakan AI untuk secara dinamis memutuskan bagaimana menjawab pertanyaan dengan menggabungkan keterampilan bahasa bawaan dengan informasi dari sumber pengetahuan yang Anda tambahkan.</p>
+<p>Ketika pengguna mengajukan pertanyaan, agen:</p>
+<ul>
+<li>Memahami pertanyaan menggunakan AI.</li>
+<li>Dapat meminta informasi yang hilang dari pengguna dengan menghasilkan pertanyaan secara langsung.</li>
+<li>Memilih sumber pengetahuan yang paling relevan.</li>
+<li>Mencari jawaban dari sumber-sumber tersebut.</li>
+<li>Menghasilkan respons yang alami dan membantu menggunakan informasi yang ditemukan.</li>
+</ul>
+<h3 id="mengapa-sumber-pengetahuan-penting">🏦 Mengapa sumber pengetahuan penting?<a class="headerlink" href="#mengapa-sumber-pengetahuan-penting" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Jawaban yang lebih cerdas</strong> - ketika Anda menambahkan sumber pengetahuan, agen Anda dapat memberikan jawaban yang lebih baik dan lebih akurat menggunakan data nyata dari organisasi Anda.</p>
+</li>
+<li>
+<p><strong>Lebih sedikit pekerjaan manual</strong> - Anda tidak perlu menulis setiap kemungkinan jawaban. Agen dapat mencari melalui sumber yang Anda tambahkan dan merespons secara otomatis.</p>
+</li>
+<li>
+<p><strong>Menggunakan informasi terpercaya</strong> - agen Anda dapat menarik jawaban dari sistem yang sudah Anda gunakan seperti Dataverse, SharePoint, atau situs web perusahaan sehingga pengguna mendapatkan informasi yang dapat diandalkan dari sumber yang terpercaya.</p>
+</li>
+<li>
+<p><strong>Bekerja dengan AI generatif</strong> - sumber pengetahuan dan AI membantu agen Anda memahami pertanyaan dan merespons secara alami, bahkan jika pertanyaan tersebut belum diprogram sebelumnya atau ditambahkan sebagai prompt awal.</p>
+</li>
+<li>
+<p><strong>Fleksibel dan dapat diperluas</strong> - Anda dapat menambahkan sumber pengetahuan kapan saja selama pengaturan atau di kemudian hari, agen Anda menjadi lebih pintar seiring perubahan kebutuhan Anda.</p>
+</li>
+</ol>
+<h3 id="contoh_2">✨ Contoh<a class="headerlink" href="#contoh_2" title="Permanent link">&para;</a></h3>
+<p>Bayangkan Anda membuat agen untuk membantu karyawan dengan pertanyaan HR. Anda menambahkan dokumen kebijakan HR perusahaan Anda dan situs SharePoint sebagai sumber pengetahuan.</p>
+<p>Ketika seorang karyawan bertanya, <em>“Berapa banyak hari cuti yang saya dapatkan?”</em>, agen menggunakan orkestrasi generatif untuk mencari sumber-sumber tersebut dan menjawab dengan kebijakan yang benar tanpa Anda harus menulis jawaban tersebut secara manual. Ini menghemat waktu Anda untuk memperhitungkan setiap kemungkinan pertanyaan yang mungkin diajukan karyawan tentang hak mereka.</p>
+<h2 id="jenis-sumber-pengetahuan-yang-dapat-ditambahkan">Jenis sumber pengetahuan yang dapat ditambahkan<a class="headerlink" href="#jenis-sumber-pengetahuan-yang-dapat-ditambahkan" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Situs web publik</strong></p>
+<ul>
+<li><strong>Apa yang dilakukan:</strong> Mencari situs web tertentu (seperti situs perusahaan Anda) menggunakan Bing.</li>
+<li><strong>Mengapa berguna:</strong> Sangat baik untuk menarik informasi yang bersifat publik seperti FAQ atau detail produk.</li>
+</ul>
+</li>
+<li>
+<p><strong>Dokumen</strong></p>
+<ul>
+<li><strong>Apa yang dilakukan:</strong> Menggunakan dokumen yang Anda unggah langsung ke agen Anda, seperti PDF atau file Word. File yang diunggah ini disimpan dengan aman di Dataverse.</li>
+<li><strong>Mengapa berguna:</strong> Memungkinkan agen Anda menjawab pertanyaan berdasarkan panduan internal, manual, atau kebijakan.</li>
+</ul>
+</li>
+<li>
+<p><strong>SharePoint</strong></p>
+<ul>
+<li><strong>Apa yang dilakukan:</strong> Terhubung ke folder atau file SharePoint menggunakan Microsoft Graph Search.</li>
+<li><strong>Mengapa berguna:</strong> Ideal untuk mengakses dokumen tim, kebijakan HR, atau file proyek yang disimpan di SharePoint.</li>
+</ul>
+</li>
+<li>
+<p><strong>Dataverse</strong></p>
+<ul>
+<li><strong>Apa yang dilakukan:</strong> Menggunakan data terstruktur dari tabel dan baris lingkungan Dataverse Anda, dan dapat menerapkan sinonim serta definisi glosarium untuk tabel dan kolom untuk meningkatkan respons agen.</li>
+<li><strong>Mengapa berguna:</strong> Ketika Anda perlu mencari data perusahaan yang disimpan di Dataverse seperti informasi pelanggan.</li>
+</ul>
+</li>
+<li>
+<p><strong>Pengetahuan real-time dengan konektor</strong></p>
+<ul>
+<li><strong>Apa yang dilakukan:</strong> Memungkinkan agen Anda mengakses data langsung dari sistem perusahaan lain seperti Salesforce, ServiceNow, Dynamics 365, AzureSQL, Databricks, dan lainnya selama percakapan, menggunakan izin pengguna.</li>
+<li><strong>Mengapa berguna:</strong> Memberikan respons yang terkini, aman, dan akurat tanpa menyimpan atau menduplikasi data, membuat agen Anda lebih pintar dan lebih aman.</li>
+</ul>
+</li>
+<li>
+<p><strong>Azure AI Search</strong></p>
+<ul>
+<li><strong>Apa yang dilakukan:</strong> Memungkinkan agen Anda mencari melalui kumpulan dokumen besar yang disimpan di Azure menggunakan pencarian semantik dan vektor untuk memahami pertanyaan pengguna.</li>
+<li><strong>Mengapa berguna:</strong> Memberikan jawaban yang akurat dan terpercaya dari sumber data yang kompleks, mendukung kutipan, dan skala yang baik untuk koleksi dokumen besar dengan kontrol akses yang aman.</li>
+</ul>
+</li>
+</ol>
+<h2 id="catatan-tentang-keamanan">🔒 Catatan tentang keamanan<a class="headerlink" href="#catatan-tentang-keamanan" title="Permanent link">&para;</a></h2>
+<h3 id="autentikasi-sumber-pengetahuan">Autentikasi sumber pengetahuan<a class="headerlink" href="#autentikasi-sumber-pengetahuan" title="Permanent link">&para;</a></h3>
+<p>Beberapa sumber seperti SharePoint dan Dataverse memerlukan autentikasi pengguna. Ini berarti agen hanya akan merujuk data dalam responsnya yang diizinkan untuk dilihat oleh pengguna. Sedangkan sumber lain mungkin memerlukan konfigurasi tambahan agar agen dapat terhubung, seperti Azure AI Search yang memerlukan akun Azure dan menentukan jenis autentikasi.</p>
+<h2 id="meningkatkan-respons-agen-anda-di-copilot-studio">Meningkatkan respons agen Anda di Copilot Studio<a class="headerlink" href="#meningkatkan-respons-agen-anda-di-copilot-studio" title="Permanent link">&para;</a></h2>
+<p>Setelah agen Anda dibuat dari pengalaman pembuatan percakapan, Anda akan ingin menguji agen Anda terhadap instruksi yang dihasilkan Copilot dari prompt Anda. Meningkatkan respons agen Anda di Copilot Studio adalah tentang memastikan ia memahami tujuan Anda dengan jelas dan memiliki informasi yang tepat untuk bekerja.</p>
+<ol>
+<li>
+<p><strong>Perbaiki instruksi agen</strong> - di sini Anda memberi tahu agen bagaimana ia harus berperilaku. Gunakan bahasa yang jelas dan spesifik.</p>
+<p>Contoh:</p>
+<p>✅ “Bertindak seperti agen dukungan pelanggan yang ramah dan menjelaskan hal-hal dengan sederhana.”</p>
+<p>❌ “Bersikap membantu.” (Terlalu samar)</p>
+</li>
+<li>
+<p><strong>Periksa nada dan bahasa</strong> - pastikan nada agen sesuai dengan audiens Anda.</p>
+<p>Anda dapat mengaturnya menjadi:</p>
+<ul>
+<li>Ramah dan santai.</li>
+<li>Profesional dan ringkas.</li>
+<li>Mendukung dan sabar.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tambahkan atau perbarui sumber pengetahuan</strong> - jika agen Anda perlu menjawab pertanyaan tentang suatu topik, pastikan ia memiliki akses ke informasi yang tepat.</p>
+<ul>
+<li>Tambahkan tautan ke situs web, dokumen, atau FAQ.</li>
+<li>Jaga agar konten tetap terbaru.</li>
+<li>Gunakan informasi yang jelas dan terstruktur dengan baik.</li>
+</ul>
+</li>
+<li>
+<p><strong>Gunakan Topik dan Pemicu</strong> - Jika agen Anda perlu menangani tugas atau percakapan tertentu, Anda dapat membuat topik dengan frasa pemicu. Ini membantu membimbing percakapan dengan lebih tepat. Kita akan mempelajari lebih lanjut tentang ini di pelajaran berikutnya.</p>
+</li>
+<li>
+<p><strong>Uji dengan pertanyaan nyata</strong> - coba ajukan kepada agen Anda jenis pertanyaan yang mungkin diajukan pengguna.</p>
+<p>Jika jawabannya kurang baik:</p>
+<ul>
+<li>Sesuaikan instruksi sistem.</li>
+<li>Tambahkan lebih banyak contoh atau pengetahuan.</li>
+<li>Ulangi pertanyaan Anda untuk melihat bagaimana ia merespons.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tinjau dan iterasi</strong> - meningkatkan agen adalah proses yang berkelanjutan!</p>
+<p>Setelah dipublikasikan:</p>
+<ul>
+<li>Kumpulkan umpan balik dari pengguna.</li>
+<li>Perhatikan pertanyaan umum atau kebingungan.</li>
+<li>Terus perbaiki pengaturan agen.</li>
+</ul>
+</li>
+</ol>
+<h2 id="lab-06-membuat-agen-kustom-di-copilot-studio">🧪 Lab 06: Membuat agen kustom di Copilot Studio<a class="headerlink" href="#lab-06-membuat-agen-kustom-di-copilot-studio" title="Permanent link">&para;</a></h2>
+<p>Sekarang kita akan belajar cara membuat agen kustom yang dapat berbicara dengan data Anda</p>
+<ul>
+<li><a href="../../../../../docs/recruit/06-create-agent-from-conversation">6.1 Gunakan bahasa alami untuk membuat agen dengan Copilot</a></li>
+<li><a href="../../../../../docs/recruit/06-create-agent-from-conversation">6.2 Tambahkan sumber pengetahuan internal menggunakan situs SharePoint</a></li>
+<li><a href="../../../../../docs/recruit/06-create-agent-from-conversation">6.3 Tambahkan sumber pengetahuan internal dengan mengunggah dokumen</a></li>
+<li><a href="../../../../../docs/recruit/06-create-agent-from-conversation">6.4 Uji agen</a></li>
+</ul>
+<h3 id="kasus-penggunaan">✨ Kasus penggunaan<a class="headerlink" href="#kasus-penggunaan" title="Permanent link">&para;</a></h3>
+<p>Kami akan menggunakan kasus penggunaan yang sama dari <a href="../03-create-a-declarative-agent-for-M365Copilot/#use-case-scenario">Pelajaran 03 - Membuat agen deklaratif untuk Microsoft 365 Copilot</a></p>
+<p><strong>Sebagai</strong> karyawan</p>
+<p><strong>Saya ingin</strong> mendapatkan bantuan cepat dan akurat dari agen helpdesk IT untuk masalah seperti masalah perangkat, pemecahan masalah jaringan, pengaturan printer</p>
+<p><strong>Agar saya dapat</strong> tetap produktif dan menyelesaikan masalah teknis tanpa penundaan</p>
+<p>Mari kita mulai!</p>
+<h3 id="prasyarat">✨ Prasyarat<a class="headerlink" href="#prasyarat" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Situs SharePoint</strong></li>
+</ul>
+<p>Kami akan menggunakan situs SharePoint <strong>Contoso IT</strong> dari <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Pelajaran 00 - Persiapan Kursus - Langkah 3: Membuat situs SharePoint baru</a>.</p>
+<p>Jika Anda belum menyiapkan situs SharePoint <strong>Contoso IT</strong>, silakan kembali ke <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Pelajaran 00 - Persiapan Kursus - Langkah 3: Membuat situs SharePoint baru</a>.</p>
+<ul>
+<li><strong>Solusi</strong></li>
+</ul>
+<p>Kami akan menggunakan solusi <strong>Contoso Helpdesk Agent</strong> dari <a href="../04-creating-a-solution/#41-create-a-solution-publisher">Pelajaran 04 - Membuat Solusi untuk agen Anda</a>.</p>
+<p>Jika Anda belum menyiapkan solusi <strong>Contoso Agent</strong>, silakan kembali ke <a href="../04-creating-a-solution/#41-create-a-solution-publisher">Pelajaran 04 - Membuat Solusi untuk agen Anda</a>.</p>
+<h3 id="61-gunakan-bahasa-alami-untuk-membuat-agen-dengan-copilot">6.1 Gunakan bahasa alami untuk membuat agen dengan Copilot<a class="headerlink" href="#61-gunakan-bahasa-alami-untuk-membuat-agen-dengan-copilot" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Pertanyaan Copilot mungkin berbeda di setiap sesi</p>
+<p>Pengalaman pembuatan percakapan Copilot dapat bervariasi setiap kali, di mana pertanyaan yang diberikan untuk panduan mungkin sedikit berbeda dari sebelumnya.</p>
+</div>
+<ol>
+<li>
+<p>Navigasikan ke halaman utama Copilot Studio dan di bidang tersebut, masukkan prompt berikut yang menjelaskan agen helpdesk IT. Prompt ini mencakup tujuan agen, konteks, tugas yang diharapkan, dan format respons agen.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are an IT help desk agent. Your goal is to assist users with their IT issues. You can access information from our company&#39;s knowledge base at https://support.microsoft.com/en-us. Your responses should be polite and helpful. If a user reports a slow computer, ask about the age of the device, current software versions, and if they&#39;ve recently installed any new programs. If a user is experiencing trouble logging into their email, guide them through password reset procedures. You should be concise and informative, using step-by-step instructions with bullet points when appropriate.
+</span></code></pre></div>
+<p><img alt="Masukkan prompt" src="../../../../../translated_images/6.1_01_Prompt.c4be2ff2cac9fde3659f2e7016e48f01860b55523d3320b3b8450ef2fcb1f51a.id.png" /></p>
+</li>
+<li>
+<p>Pengalaman pembuatan percakapan dengan Copilot akan dimuat berikutnya. Anda akan melihat Copilot sedang memproses respons untuk Anda.</p>
+<p><img alt="Pengalaman pembuatan percakapan Copilot" src="../../../../../translated_images/6.1_02_ConversationalCreationExperienceLoads.115eaf4e5a15c1b60bc0d25c97a0d97d462d6c740cfed5de369b2bd8fd1cc8bc.id.png" /></p>
+</li>
+<li>
+<p>Copilot mengonfirmasi bahwa agen telah disiapkan dengan instruksi yang diberikan, dan meminta konfirmasi nama agen. Kami akan meminta Copilot untuk menamai agen kami sebagai,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Contoso Helpdesk Agent
+</span></code></pre></div>
+<p><img alt="Ganti nama agen" src="../../../../../translated_images/6.1_03_AgentName.a848acea10cd1d3d6ba68fea2b0e094ecbd130a124413e3c8134198c81654833.id.png" /></p>
+</li>
+<li>
+<p>Copilot melaksanakan permintaan tersebut dan kita akan melihat bahwa nama agen telah diperbarui di panel agen. Copilot kemudian meminta kita untuk menyempurnakan instruksi. Copilot meminta bagaimana kita harus merespons masalah tertentu, dan kita akan meminta agar ia mengakui masalah tersebut, memberikan contoh topik untuk dijawab, dan memformat respons dalam bentuk poin-poin.</p>
+<p>Salin dan tempel teks berikut, lalu kirimkan permintaan ke Copilot.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Prioritaskan permintaan mendesak. Contoh masalah atau skenario IT yang dapat dibantu: masalah perangkat, konektivitas jaringan, masalah login. Saat memecahkan masalah, pertama-tama akui masalah mereka dan tanggapi dengan empati, lalu berikan panduan langkah demi langkah menggunakan poin-poin dan tanyakan apakah mereka memerlukan bantuan lebih lanjut.
+</span></code></pre></div>
+<p><img alt="Sempurnakan instruksi agen" src="../../../../../translated_images/6.1_04_RefineInstructions.9575407dbc12e0399691068d20e0d0252bb8b8f839cf53ee9d715fe2c16afa70.id.png" /></p>
+</li>
+<li>
+<p>Instruksi agen akan diperbarui setelah Copilot menerima permintaan tersebut. Perhatikan bagaimana di panel sisi kanan, prompt awal sekarang telah muncul. Prompt ini dibentuk berdasarkan instruksi kita.</p>
+<p>Selanjutnya, Copilot meminta situs web publik untuk mendasari pengetahuan agen.</p>
+<p>Salin dan tempel teks berikut, lalu kirimkan permintaan ke Copilot.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>https://support.microsoft.com
+</span></code></pre></div>
+<p><img alt="Tambahkan situs web yang dapat diakses publik" src="../../../../../translated_images/6.1_05_KnowledgeSource.3aec8d869b73d273f88c62cf99bb2f731df83a83c1ca54d92d6e96b86a570637.id.png" /></p>
+</li>
+<li>
+<p>Situs web publik akan ditambahkan sebagai sumber pengetahuan. Copilot bertanya apakah ada sumber pengetahuan tambahan yang perlu ditambahkan. Kita tidak perlu menambahkan situs web publik tambahan.</p>
+<p>Salin dan tempel teks berikut, lalu kirimkan permintaan ke Copilot.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Proceed with setup
+</span></code></pre></div>
+<p><img alt="Lanjutkan dengan pengaturan" src="../../../../../translated_images/6.1_06_ProceedWithSetup.11ceb9ccccccd19418711681d42b602ee223ebd017d6bf300088de84d1d35f1d.id.png" /></p>
+</li>
+<li>
+<p>Copilot mengonfirmasi bahwa pengaturan agen Contoso Helpdesk kami telah selesai, tetapi kami akan menambahkan satu modifikasi lagi, yaitu meminta agar agen kami tidak menjawab pertanyaan terkait HR. Hal ini memberi tahu agen kami bahwa ia tidak boleh menjawab pertanyaan terkait HR yang diajukan oleh pengguna.</p>
+<p>Salin dan tempel teks berikut, lalu kirimkan permintaan ke Copilot.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Jangan memberikan bantuan untuk pertanyaan terkait HR, contohnya: Berapa saldo cuti saya? Berapa hari sakit yang saya miliki? Apa URL portal penggajian kami?
+</span></code></pre></div>
+<p><img alt="Jangan menjawab pertanyaan terkait HR" src="../../../../../translated_images/6.1_07_DoNotTalkAbout.d9ccbbd15b9793e1642b365be6968548f6f250be5d541f1ad06eb9f12985e94f.id.png" /></p>
+</li>
+<li>
+<p>Instruksi akan diperbarui untuk tidak memberikan bantuan dengan pertanyaan terkait HR. Kita tidak perlu melakukan pembaruan lebih lanjut, agen kita siap untuk dibuat.</p>
+<p><img alt="Instruksi agen diperbarui" src="../../../../../translated_images/6.1_08_AgentInstructionsUpdated.4de1112eeb5c8e2e2fe03fcbc6d332bdc3b1de740d9a5ab6b1ec30e27e241096.id.png" /></p>
+</li>
+<li>
+<p>Sebelum kita membuat agen kita, mari lakukan beberapa hal.</p>
+<p>Pertama, pilih tab <strong>Configure</strong> untuk melihat detail agen yang didefinisikan dari percakapan kita dengan Copilot. Di sini Anda akan melihat Nama, Deskripsi, Instruksi, Pengetahuan, dan Prompt yang Disarankan/Awal.</p>
+<p><img alt="Lihat detail agen" src="../../../../../translated_images/6.1_09_ViewAgentDetails.72c7f66721d6ac354bcc7186204bb0ad169456b0b7756f5e5a5e0f090e802a57.id.png" /></p>
+</li>
+<li>
+<p>Kedua, mari uji agen kita. Salin dan tempel teks berikut, lalu kirimkan pertanyaan ke agen kita.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Bagaimana cara memeriksa status garansi Surface saya?
+</span></code></pre></div>
+<p><img alt="Uji agen" src="../../../../../translated_images/6.1_10_TestAgent.8b1a0f1d98f4fa5b61336e1c4ac6d77b4822283314c2941cb0e04bf5247d8489.id.png" /></p>
+</li>
+<li>
+<p>Respons terhadap pertanyaan kemudian akan ditampilkan di mana jawaban diberikan dalam format panduan langkah demi langkah menggunakan poin-poin. Hebat, agen kita berfungsi! 🙌🏻</p>
+<p><img alt="Respons agen" src="../../../../../translated_images/6.1_11_AgentResponse.c5fb305335b8e9b456b0f75ec9e237d4abbc3e9a1a6976e14bb656f1adffb14a.id.png" /></p>
+</li>
+<li>
+<p>Terakhir, kita akan memeriksa solusi tempat agen kita akan dibuat, yaitu solusi yang kita buat dan pilih sebagai solusi yang disukai di <a href="../04-creating-a-solution/#42-create-a-new-solution">Pelajaran 04 - Membuat solusi baru</a>.</p>
+<p>Pilih ikon <strong>ellipsis (...)</strong> dan pilih <strong>Update Advanced Settings</strong>.</p>
+<p><img alt="Perbarui Pengaturan Lanjutan" src="../../../../../translated_images/6.1_12_UpdateAdvancedSettings.5943949ae7c9f492fb90779b0284283deb4186f14cd6588c46920f8e50d8d6d0.id.png" /></p>
+</li>
+<li>
+<p>Modal <strong>Advanced Settings</strong> akan muncul dan kita dapat melihat solusi yang kita buat sebelumnya dipilih secara default. Hal ini disebabkan oleh pemilihan solusi kita sebagai solusi yang disukai di <a href="../04-creating-a-solution/#42-create-a-new-solution">Pelajaran 04 - Membuat solusi baru</a>.</p>
+<p>Pilih <strong>Cancel.</strong></p>
+<p><img alt="Tampilan Pengaturan Lanjutan" src="../../../../../translated_images/6.1_13_AdvancedSettings.fff0861831346d5bef4e7731fed83073aca6d17aa940633040f65b1f300aee15.id.png" /></p>
+</li>
+<li>
+<p>Sekarang mari kita buat agen kustom kita! Pilih <strong>Create</strong>.</p>
+<p><img alt="Pilih Create" src="../../../../../translated_images/6.1_14_CreateAgent.7330a5fbe44a0664f35c5b5502e499f6dd3bad55d13094ef6c22608e8f8831b1.id.png" /></p>
+</li>
+<li>
+<p>Copilot Studio akan mulai menyediakan agen kita.</p>
+<p><img alt="Menyiapkan agen" src="../../../../../translated_images/6.1_15_SettingUpAgent.34028a37bc2922eae13d0a18bb468bd738608b4de948192d89c3a2680fff2496.id.png" /></p>
+</li>
+<li>
+<p>Setelah agen kita disediakan, kita dapat melihat detail agen mencerminkan apa yang kita minta selama pengalaman pembuatan percakapan Copilot. Gulir ke bawah untuk meninjau agen di mana Anda akan melihat nama, deskripsi, instruksi, sumber pengetahuan, dan prompt yang disarankan. Mode orkestrasi diaktifkan secara default dan model default digunakan untuk model respons agen.</p>
+<p><img alt="Agen dibuat" src="../../../../../translated_images/6.1_16_AgentCreated.91edb1939b33d158930cd385c0d97c320958504e224ffc163ed5030b0cdc72a7.id.png" /></p>
+<p><img alt="Sumber pengetahuan" src="../../../../../translated_images/6.1_17_KnowledgeSources.00f1ed0b7f405e4820971834fb75e39a80659cf1b9eeeee42d861bfc4656240f.id.png" /></p>
+<p><img alt="Prompt yang disarankan" src="../../../../../translated_images/6.1_18_SuggestedPrompts.20b84b9420858de8485460cc50a8e73798b08bb2022c946899adcbf9b484e0f0.id.png" /></p>
+</li>
+<li>
+<p>Sekarang mari kita uji agen yang baru saja kita buat. Di panel <strong>Test</strong> di sisi kanan, pilih ikon <strong>Activity Map</strong>.</p>
+<p><img alt="Pilih Activity Map" src="../../../../../translated_images/6.1_19_ActivityMap.b2e6c77c69fd953818dc73b4dbe2e6d46529cf105d7a4a18c590d15c0b717cf4.id.png" /></p>
+</li>
+<li>
+<p>Masukkan pertanyaan berikut di panel <strong>Test</strong>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Bagaimana cara menemukan product key Windows 11 saya?
+</span></code></pre></div>
+<p><img alt="Uji agen yang baru dibuat" src="../../../../../translated_images/6.1_20_TestAgent.a9d3a761477c9b79facd132c173ec886d808320ad2cbc0347066a20c0f9dd669.id.png" /></p>
+</li>
+<li>
+<p>Peta Aktivitas kemudian akan dimuat yang menunjukkan kepada kita secara real-time jalur apa yang sedang diproses oleh agen. Dalam skenario ini, agen kita telah memahami pertanyaan dan mencari sumber pengetahuan. Saat ini kita memiliki satu sumber yaitu situs web publik yang kita tambahkan sebelumnya menggunakan Copilot, yang sedang ditinjau oleh agen.</p>
+<p><img alt="Meninjau sumber pengetahuan" src="../../../../../translated_images/6.1_21_ReviewingSources.78068042898e2960667393c931e120dbe80f6b74c9af222b79446f7a82d5c757.id.png" /></p>
+</li>
+<li>
+<p>Agen kita kemudian merespons dengan jawaban yang diuraikan sebagai poin-poin, seperti yang didefinisikan dalam instruksi. Respons tersebut memiliki referensi ke halaman web yang menjadi dasar jawaban agen. Hal ini memungkinkan pengguna untuk memverifikasi sumber jawaban.</p>
+<p><img alt="Referensi dalam respons" src="../../../../../translated_images/6.1_22_Response.44a088e80f2a9fac74bcd364571f1ebb900b43e9e647089ef51d39b809b0f0e9.id.png" /></p>
+</li>
+<li>
+<p>Anda juga dapat meninjau respons dan sumbernya dengan menggulir ke bawah modal <strong>Knowledge</strong> di peta Aktivitas.</p>
+<p><img alt="Sumber yang dirujuk" src="../../../../../translated_images/6.1_23_ReferencedSources.ca8e41855284446d121a34fd9d8d667e05016f5eda741adcf7f356ac2c59c559.id.png" /></p>
+</li>
+</ol>
+<p>Selamat! Anda telah membangun agen kustom pertama Anda dengan Copilot di Copilot Studio 🙌🏻</p>
+<h3 id="62-tambahkan-sumber-pengetahuan-internal-menggunakan-situs-sharepoint">6.2 Tambahkan sumber pengetahuan internal menggunakan situs SharePoint<a class="headerlink" href="#62-tambahkan-sumber-pengetahuan-internal-menggunakan-situs-sharepoint" title="Permanent link">&para;</a></h3>
+<p>Sebelumnya dengan Copilot, kami menambahkan situs web publik sebagai sumber pengetahuan eksternal untuk agen kami selama pengalaman pembuatan percakapan. Sekarang kami akan menambahkan sumber pengetahuan internal menggunakan situs SharePoint. Ini akan menjadi situs SharePoint yang Anda buat selama <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Pelajaran 00 - Persiapan Kursus</a>.</p>
+<ol>
+<li>
+<p>Pilih <strong>+ Add knowledge</strong>.</p>
+<p><img alt="Pilih Add knowledge" src="../../../../../translated_images/6.2_01_AddKnowledge.5e441f7e3b0ebb25218bece75394ecf4c8c3a60e1b5d8ea15ca020546352f256.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>SharePoint</strong>.</p>
+<p><img alt="Pilih SharePoint" src="../../../../../translated_images/6.2_02_SelectSharePoint.5bd29d31cc76f581db3eef474731fc2dfce4ef1dab86d9cc11716323ba726408.id.png" /></p>
+</li>
+<li>
+<p>Tempelkan <strong>alamat situs SharePoint</strong> yang dibuat di <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Pelajaran 00 - Persiapan Kursus</a> di bidang URL SharePoint dan pilih <strong>Add</strong>.</p>
+<p><img alt="Masukkan URL situs SharePoint" src="../../../../../translated_images/6.2_03_AddSharePointURL.974c251d9690524a8bfa4c9dd930af3d834245749fb9f1fda508c3b1f9773827.id.png" /></p>
+</li>
+<li>
+<p>Perbarui <strong>nama</strong> situs SharePoint menjadi <code>Contoso IT</code> dan pilih <strong>Add</strong>.</p>
+<p><img alt="Perbarui nama situs SharePoint dan tambahkan ke agen" src="../../../../../translated_images/6.2_04_UpdateNameAddToAgent.46a814c09586fe135bffb77814ba13d0593f25feaaa989174c97e80345f03866.id.png" /></p>
+</li>
+<li>
+<p>Situs SharePoint sekarang telah ditambahkan sebagai sumber pengetahuan dengan status <em>Ready</em>. Kolom Status akan menunjukkan apakah sumber pengetahuan telah dimuat/terhubung dengan sukses, atau jika ada masalah.</p>
+<p><img alt="Status situs SharePoint" src="../../../../../translated_images/6.2_05_SharePointStatus.90a9001978f31c5d4b183d5ecc4869c81dd9fc1bb8a6b1ef4675fcb51d52f8e5.id.png" /></p>
+</li>
+</ol>
+<h3 id="63-tambahkan-sumber-pengetahuan-internal-dengan-mengunggah-dokumen">6.3 Tambahkan sumber pengetahuan internal dengan mengunggah dokumen<a class="headerlink" href="#63-tambahkan-sumber-pengetahuan-internal-dengan-mengunggah-dokumen" title="Permanent link">&para;</a></h3>
+<p>Sekarang kita akan menambahkan sumber pengetahuan internal lainnya dengan mengunggah dokumen langsung ke agen kita.</p>
+<ol>
+<li>
+<p>Pilih <strong>Add knowledge</strong>.</p>
+<p><img alt="Pilih Add knowledge" src="../../../../../translated_images/6.3_01_AddKnowledge.d93caa805efb7e2a433d9777f8eb1789dc5daf4f9ebe95da2a74a2b57cffdd33.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Upload file</strong> atau <strong>Select to browse</strong>.</p>
+<p><img alt="Pilih unggah file" src="../../../../../translated_images/6.3_02_UploadFile.662de4f3916bfa3f34a6699a9a45846e64e71a70dfecbc656fb5b511792de6b6.id.png" /></p>
+</li>
+<li>
+<p>Unduh <a href="../../../../../docs/recruit/06-create-agent-from-conversation/assets/Contoso_Guest_WiFi_Connection_Guide.docx" title="download">file contoh ini</a> dan pilih file tersebut di File Explorer Anda. Pilih <strong>Open</strong>.</p>
+<p><img alt="Pilih dokumen" src="../../../../../translated_images/6.3_03_SelectFile.077d73491dc6ff1f6114d259261ee68334c4da182c3b55233468637d1989f14c.id.png" /></p>
+</li>
+<li>
+<p>File telah dipilih untuk diunggah. Pilih <strong>Add to agent</strong> selanjutnya.</p>
+<p><img alt="Pilih Add to Agent" src="../../../../../translated_images/6.3_04_AddToAgent.1eec469d6d28c22959c8d7f3ad39aa0df5e07adfdb85ce1e21c0c4fe31c27db5.id.png" /></p>
+</li>
+<li>
+<p>Dokumen akan dalam proses ditambahkan ke agen. Tunggu hingga unggahan selesai, jangan tutup jendela browser. Status dokumen awalnya akan menunjukkan <em>In progress</em>, tunggu hingga status diperbarui menjadi <strong>Ready</strong> sebelum menguji agen Anda.</p>
+<p><img alt="Status file" src="../../../../../translated_images/6.3_05_FileStatus.2029b8aa0109a6f46372291e9bba33429c2ebd572efa81702a73cae91fbf3a90.id.png" /></p>
+</li>
+</ol>
+<p>Sekarang mari kita uji agen kita!</p>
+<h3 id="64-uji-agen">6.4 Uji agen<a class="headerlink" href="#64-uji-agen" title="Permanent link">&para;</a></h3>
+<p>Kami akan menguji tiga sumber pengetahuan kami dengan mengajukan pertanyaan kepada Contoso Helpdesk Agent kami.</p>
+<ol>
+<li>
+<p>Pilih ikon <strong>refresh</strong> di panel uji, diikuti dengan memilih ikon <strong>activity map</strong>.</p>
+<p><img alt="Ikon refresh" src="../../../../../translated_images/6.4_01_RefreshAndActivityMap.c24ebc6c277786dab75941dac0b6e55f3dbb244b29fb791c87e4aba5c4a56c81.id.png" /></p>
+</li>
+<li>
+<p>Masukkan pertanyaan berikut untuk menguji sumber pengetahuan situs web publik (eksternal).</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>How can I find the serial number on my Surface device?
+</span></code></pre></div>
+<p><img alt="Masukkan prompt untuk menguji sumber pengetahuan situs web" src="../../../../../translated_images/6.4_02_TestQuestion1.3a5aeaaa72a9578a05edd4575275e1ba60ecaf8c7377ab13872619580e0309f9.id.png" /></p>
+</li>
+<li>
+<p>Anda akan melihat agen meninjau sumber pengetahuan dan memberikan respons menggunakan sumber pengetahuan situs web.
+<img alt="Halaman web yang dirujuk dalam respons" src="../../../../../translated_images/6.4_03_ReviewingSources.a56742505402eab51b423b543c814242728ff7947e443360740b3e5dac82ba65.id.png" /></p>
+</li>
+<li>
+<p>Sebuah respons akan dikembalikan dan perhatikan bagaimana terdapat referensi ke halaman web yang digunakan untuk membentuk jawabannya. Jika Anda menggulir ke bawah modal pengetahuan di peta aktivitas, Anda akan melihat sumber pengetahuan lain yang dicari oleh agen, yaitu situs SharePoint dan file yang diunggah.</p>
+<p>Namun, sumber-sumber ini tidak digunakan karena di bagian <strong>Sumber yang Dirujuk</strong>, hanya sumber pengetahuan dari situs web yang dirujuk. Jawaban didasarkan pada sumber pengetahuan dari situs web. Jika Anda memilih referensi tersebut, Anda akan diarahkan ke halaman web.</p>
+</li>
+</ol>
+<p><img alt="Sumber pengetahuan yang dirujuk dan dicari" src="../../../../../translated_images/6.4_04_ReferencedSources.2fb91e8ed7cac8196c3cc1e43006512d4138adb4f240bdab66cd2af5fd1ec7c6.id.png" /></p>
+<ol>
+<li>
+<p>Sekarang mari kita uji sumber pengetahuan situs SharePoint dan dokumen kita dalam satu pesan. Masukkan pertanyaan berikut.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>How can I access our company Contoso VPN? How do guests connect to the Contoso Guest wifi?
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="Uji sumber pengetahuan SharePoint dan dokumen" src="../../../../../translated_images/6.4_05_TestQuestion2.f77ce87578b59386ec5491716996aff9247c5e5ad458a51226276238adb282f3.id.png" /></p>
+<ol>
+<li>
+<p>Sekali lagi Anda akan melihat agen meninjau tiga sumber pengetahuan untuk menghasilkan respons terhadap pertanyaan dalam satu pesan. Agen merespons kedua pertanyaan dalam satu pesan, dan secara terpisah merujuk halaman SharePoint dan dokumen tempat jawabannya dihasilkan.</p>
+<p>Dalam modal pengetahuan di peta aktivitas, Anda akan melihat situs SharePoint dan dokumen digunakan sebagai sumber referensi. Anda memiliki visibilitas penuh tentang sumber pengetahuan yang digunakan untuk menjawab kedua pertanyaan.</p>
+</li>
+</ol>
+<p><img alt="Sumber pengetahuan yang dirujuk" src="../../../../../translated_images/6.4_06_ReferencedSources.caf049dac28b4317c39b074b481f5d7d5b1b92fd792fc4b796fec0c1575f9581.id.png" /></p>
+<ol>
+<li>Selalu baik untuk memverifikasi apakah respons yang dihasilkan benar. Pilih referensi situs SharePoint dan halaman FAQ SharePoint akan dimuat, di mana Anda dapat menggulir ke bawah untuk meninjau instruksi VPN.</li>
+</ol>
+<p><img alt="Tinjau halaman SharePoint" src="../../../../../translated_images/6.4_07_VerifySharePoint.6ee48515fedf37a62564ddc388c2452751ed5777cda321d887c315c2de78d293.id.png" /></p>
+<ol>
+<li>Selanjutnya, pilih referensi dokumen dan sebuah modal akan muncul dengan teks dari dokumen yang mencerminkan jawaban.</li>
+</ol>
+<p><img alt="Tinjau dokumen" src="../../../../../translated_images/6.4_08_VerifyDocument.0f0680b63e6bdd0b558eb287e85965b87ab820e12b25b1e0965f8ebbde795222.id.png" /></p>
+<p>Agen dapat menjawab beberapa pertanyaan dalam satu pesan, mencari sumber pengetahuan, dan merujuk sumber pengetahuan dalam responsnya. Pastikan untuk selalu memverifikasi apakah respons benar dengan meninjau referensi.</p>
+<h2 id="misi-selesai">✅ Misi Selesai<a class="headerlink" href="#misi-selesai" title="Permanent link">&para;</a></h2>
+<p>Selamat! 👏🏻 Anda telah belajar cara menggunakan bahasa alami untuk membuat agen kustom Anda sendiri yang dapat berbicara dengan data Anda dari tiga sumber pengetahuan yang berbeda 🙌🏻</p>
+<p>Ini adalah akhir dari <strong>Lab 06 - Membuat agen dengan Copilot</strong>, pilih tautan di bawah untuk melanjutkan ke pelajaran berikutnya. Agen kustom Anda yang dibuat dalam lab ini akan digunakan dalam lab pelajaran berikutnya.</p>
+<p>⏭️ <a href="../07-add-new-topic-with-trigger/">Lanjut ke pelajaran <strong>Menambahkan Topik Baru dengan Pemicu</strong></a></p>
+<p>Selamat datang di level elit. Anda sekarang tahu cara menciptakan agen digital yang berbicara dalam bahasa Anda, merujuk data Anda, dan mendukung tim Anda. Teruslah maju—misi Anda baru saja dimulai.</p>
+<h2 id="sumber-daya-taktis">📚 Sumber Daya Taktis<a class="headerlink" href="#sumber-daya-taktis" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/fundamentals-get-started?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext/?WT.mc_id=power-172617-ebenitez">Panduan Cepat: Membuat dan menerapkan agen</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-first-bot?WT.mc_id=power-172617-ebenitez">Membuat dan menghapus agen</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-fundamentals/?WT.mc_id=power-172617-ebenitez">Konsep utama - Membuat agen</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep1">Membuat agen kustom menggunakan bahasa alami</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep2">Menambahkan pengetahuan ke agen Anda</a></p>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/06-create-agent-from-conversation" alt="Analitik" /></p>
+<hr />
+<p><strong>Penafian</strong>:<br />
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang timbul dari penggunaan terjemahan ini.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

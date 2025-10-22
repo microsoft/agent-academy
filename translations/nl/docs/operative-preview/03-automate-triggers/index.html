@@ -1,0 +1,1701 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/nl/docs/operative-preview/03-automate-triggers/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#missie-03-voeg-event-triggers-toe-om-autonoom-te-handelen" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codenaam-operatie-signal-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAAM: OPERATIE SIGNAL POINT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missieoverzicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Missieoverzicht
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doelstellingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Doelstellingen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wat-is-een-event-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Wat is een Event Trigger?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactieve-agent-vs-autonome-agent-vergelijking" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏓 Interactieve agent vs Autonome agent - vergelijking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ontwikkelaarstips-aandachtspunten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontwikkelaarstips &amp; aandachtspunten
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-03-automatiseren-van-sollicitatie-e-mails" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 03 - Automatiseren van sollicitatie-e-mails
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missie-voltooid" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Missie Voltooid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactische-bronnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Tactische Bronnen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "75efaf515d5694d4fd549bfd6518901a",
+  "translation_date": "2025-10-17T01:57:47+00:00",
+  "source_file": "docs/operative-preview/03-automate-triggers/README.md",
+  "language_code": "nl"
+}
+-->
+<h1 id="missie-03-voeg-event-triggers-toe-om-autonoom-te-handelen">Missie 03: Voeg Event Triggers toe om autonoom te handelen<a class="headerlink" href="#missie-03-voeg-event-triggers-toe-om-autonoom-te-handelen" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="codenaam-operatie-signal-point">🕵️‍♂️ CODENAAM: <code>OPERATIE SIGNAL POINT</code><a class="headerlink" href="#codenaam-operatie-signal-point" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operatietijdvenster:</strong> <code>~45 minuten</code></p>
+</blockquote>
+<h2 id="missieoverzicht">🎯 Missieoverzicht<a class="headerlink" href="#missieoverzicht" title="Permanent link">&para;</a></h2>
+<p>Welkom terug, Agent. In <a href="../02-multi-agent/">Missie 02</a> - leerde je hoe je een Application Intake subagent en een Interview Prep verbonden agent kunt bouwen om de mogelijkheden van je hoofd Hiring Agent uit te breiden.</p>
+<p>Je opdracht, als je ervoor kiest om deze te accepteren, is <strong>Operatie Signal Point</strong> - dieper duiken in <strong>event triggers</strong> - je agentsysteem verheffen van reactief naar <strong>autonome werking</strong>. Je transformeert je agents van wachten op menselijke input naar proactief reageren op externe gebeurtenissen en intelligente acties ondernemen zonder toezicht.</p>
+<p>Zie het als een upgrade van agents die <em>vragen beantwoorden</em> naar agents die <em>behoeften anticiperen</em> en <em>zelfstandig handelen</em>. Door event triggers en geautomatiseerde workflows zal je Hiring Agent inkomende cv-e-mails detecteren, bijlagen automatisch verwerken, gegevens opslaan in Dataverse en je HR-recruitmentteam via Microsoft Teams op de hoogte stellen - terwijl jij je richt op taken met hogere waarde.</p>
+<p>Welkom in de wereld waar automatisering en intelligentie samenkomen.</p>
+<h2 id="doelstellingen">🔎 Doelstellingen<a class="headerlink" href="#doelstellingen" title="Permanent link">&para;</a></h2>
+<p>In deze missie leer je:</p>
+<ol>
+<li>Hoe event triggers autonoom gedrag van agents mogelijk maken zonder gebruikersinteractie</li>
+<li>De verschillen tussen interactieve en autonome agents in Copilot Studio</li>
+<li>Hoe je event triggers maakt die e-mailbijlagen automatisch verwerken en bestanden uploaden naar Dataverse</li>
+<li>Hoe je agentflows bouwt die adaptieve kaarten posten naar Teams-kanalen voor meldingen</li>
+<li>Hoe je gegevens doorgeeft tussen event triggers en agentflows voor end-to-end automatisering</li>
+</ol>
+<h2 id="wat-is-een-event-trigger">🤔 Wat is een Event Trigger?<a class="headerlink" href="#wat-is-een-event-trigger" title="Permanent link">&para;</a></h2>
+<p>Eerder in <a href="../../recruit/10-add-event-triggers/">Recruit</a>, leerden we over event triggers. Laten we dit snel herhalen voor het geval je het gemist hebt.</p>
+<p><strong>Event triggers</strong> laten een agent <em>zelf handelen</em> wanneer er iets gebeurt in een ander systeem - geen gebruikersbericht vereist. Wanneer de geconfigureerde gebeurtenis plaatsvindt - zoals “nieuw SharePoint-item,” “nieuwe e-mail,” “Planner-taak toegewezen,” of zelfs een tijdgebaseerde herhaling, stuurt een connector een triggerpayload naar je agent. De agent volgt dan jouw instructies om te beslissen welke acties of onderwerpen opgeroepen moeten worden.</p>
+<h3 id="belangrijke-kenmerken">Belangrijke kenmerken<a class="headerlink" href="#belangrijke-kenmerken" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Autonome activatie:</strong></p>
+<ul>
+<li>In tegenstelling tot topic triggers die starten wanneer een gebruiker met de agent communiceert, worden event triggers geactiveerd door externe gebeurtenissen, wat proactief gedrag mogelijk maakt.</li>
+</ul>
+</li>
+<li>
+<p><strong>Payload-gestuurd:</strong></p>
+<ul>
+<li>Elke gebeurtenis levert een payload (variabelen + optionele instructies) via een connector. De agent gebruikt jouw gedefinieerde instructies en de payload om te bepalen wat er vervolgens moet gebeuren.</li>
+<li>Bijvoorbeeld <em>een onderwerp oproepen</em> of <em>acties uitvoeren die door Tools zijn gedefinieerd</em>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Voorbeelden standaard beschikbaar:</strong></p>
+<ul>
+<li>SharePoint/OneDrive bestand of item aangemaakt</li>
+<li>Planner-taak voltooid/toegewezen</li>
+<li>Microsoft Forms-reactie ingediend</li>
+<li>Herhaling/schema</li>
+</ul>
+<p>Beschikbaarheid hangt af van de databeleid van je organisatie die is geconfigureerd in Power Automate.</p>
+</li>
+<li>
+<p><strong>Vereist generatieve orkestratie:</strong></p>
+<ul>
+<li>Event triggers zijn alleen beschikbaar wanneer generatieve orkestratie is ingeschakeld voor de agent.</li>
+</ul>
+</li>
+<li>
+<p><strong>Facturering/gebruik:</strong></p>
+<ul>
+<li>Elke triggerlevering telt als een bericht binnen de capaciteit van Copilot Studio.</li>
+<li>Bijvoorbeeld een herhaling van 10 minuten stuurt elke 10 minuten een bericht.</li>
+</ul>
+</li>
+<li>
+<p><strong>Authenticatiemodel en setup:</strong></p>
+<ul>
+<li>Je voegt triggers toe binnen het agentoverzicht, onder <em>Triggers</em>. Authenticatie voor de triggerconnector gebruikt het account van de agentmaker (“authenticatie door agentauteur”).</li>
+<li>Je kunt triggerparameters en payload bewerken in de Power Automate-makerportal.</li>
+</ul>
+</li>
+<li>
+<p><strong>Testen &amp; observatie:</strong></p>
+<ul>
+<li>Je kunt triggers testen vanuit het testpaneel van de agent en het gedrag inspecteren met de activiteitenkaart voordat je publiceert.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">TL;DR voor ontwikkelaars</p>
+<p>Denk aan event triggers als <strong>webhook-achtige signalen</strong> die een gestructureerde payload naar je agent sturen, waardoor deze <em>werk kan starten</em> en acties kan koppelen tussen systemen - zonder te wachten tot een gebruiker erom vraagt.</p>
+</div>
+<h3 id="topic-triggers-hoe-ze-verschillen">Topic triggers - hoe ze verschillen<a class="headerlink" href="#topic-triggers-hoe-ze-verschillen" title="Permanent link">&para;</a></h3>
+<p>Eerder leerde je over topic triggers in <a href="../../recruit/07-add-new-topic-with-trigger/">Recruit</a>, maar je vraagt je misschien nog steeds af hoe <em>Topic</em> triggers verschillen van <em>Event</em> triggers, en waarom dat onderscheid belangrijk is om te begrijpen wat een agent autonoom maakt.</p>
+<p>Topic triggers bepalen <em>wanneer een onderwerp wordt uitgevoerd</em>, meestal als reactie op een gebruikersbericht.</p>
+<ul>
+<li>In generatieve orkestratie is de standaardtrigger <strong>Door agent</strong> - de planner kiest een onderwerp waarvan de naam/beschrijving het beste overeenkomt met het bericht van de gebruiker.</li>
+<li>In klassieke orkestratie is de standaardtrigger <strong>Zinnen</strong> - de planner kiest een onderwerp wanneer een of meerdere triggerzinnen het beste overeenkomen met het bericht van de gebruiker.</li>
+</ul>
+<p>Andere triggertypes zijn <code>Bericht ontvangen</code>, <code>Event ontvangen</code>, <code>Activiteit ontvangen</code>, <code>Gespreksupdate</code>, <code>Invoke ontvangen</code>, <code>Inactiviteit</code>, en <code>Plan voltooid</code>.</p>
+<div class="admonition info">
+<p class="admonition-title">Belangrijk verschil</p>
+<p>Topic triggers starten <em>gespreksactiviteiten</em> binnen de chat.</p>
+<p>Event triggers starten <em>systeemevenementen</em> geleverd via connectors die de agent kunnen laten werken zonder enige conversatie.</p>
+</div>
+<h3 id="snelle-gids-voor-topic-trigger-vs-event-trigger">Snelle gids voor Topic trigger vs Event trigger<a class="headerlink" href="#snelle-gids-voor-topic-trigger-vs-event-trigger" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Topic trigger:</strong> Gebruiker (of chatactiviteit) zei/deed X ➡️ voer Onderwerp T uit.</li>
+<li><strong>Event trigger:</strong> SharePoint/Planner/E-mail/Timer geactiveerd met payload P ➡️ agent evalueert instructies ➡️ voert Acties/Onderwerpen uit.</li>
+</ul>
+<h2 id="interactieve-agent-vs-autonome-agent-vergelijking">🏓 Interactieve agent vs Autonome agent - vergelijking<a class="headerlink" href="#interactieve-agent-vs-autonome-agent-vergelijking" title="Permanent link">&para;</a></h2>
+<p>Nu je het verschil kent tussen event triggers en topic triggers, laten we verder leren over het verschil tussen een interactieve agent en een autonome agent.</p>
+<p>In Copilot Studio termen, "interactief" verwijst naar agents die voornamelijk communiceren via <strong>onderwerpen</strong> in een chat of kanaal. "Autonoom" verwijst naar agents die ook gebruik maken van <strong>event triggers</strong> om te werken zonder gebruikersinput.</p>
+<p>De volgende tabel vat hun verschillen en overeenkomsten samen.</p>
+<table>
+<thead>
+<tr>
+<th>Dimensie</th>
+<th>Interactieve agent</th>
+<th>Autonome agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hoe het start</td>
+<td>Gebruiker (of chatactiviteit) triggert een onderwerp. Voorbeeld: Door agent, Zinnen, Bericht ontvangen.</td>
+<td>Externe event trigger stuurt een payload via connector naar de agent. Voorbeeld: SharePoint, Planner, e-mail, schema, etc.</td>
+</tr>
+<tr>
+<td>Primaire gebruik</td>
+<td>V&amp;A, begeleide workflows, verzoekgestuurde acties in chat - Teams, web, etc.</td>
+<td>Proactieve operaties en achtergrondautomatisering - reageren op systeemwijzigingen en vervolgens melden, opslaan of taken orkestreren.</td>
+</tr>
+<tr>
+<td>Triggeroppervlak</td>
+<td>Topic triggers: Door agent / Zinnen / Bericht ontvangen / Activiteitstypes / Invoke / Inactiviteit / Plan voltooid</td>
+<td>Event triggers bibliotheek via connectors; payload bevat gebeurtenisgegevens + optionele instructies.</td>
+</tr>
+<tr>
+<td>Planner (generatieve orkestratie)</td>
+<td>Sterk gebruikt voor Door agent en Plan voltooid triggers om onderwerpen te selecteren/sequencen.</td>
+<td>Vereist voor event triggers; de agent gebruikt instructies + payload om te bepalen welke acties/onderwerpen op te roepen.</td>
+</tr>
+<tr>
+<td>Typisch voorbeeld</td>
+<td>Gebruiker vraagt "Wat is ons restitutiebeleid?" → Onderwerp wordt uitgevoerd, kennis wordt opgevraagd, antwoord.</td>
+<td>Nieuwe Planner-taak toegewezen → Event trigger wordt geactiveerd → Agent post een Teams-bericht, werkt een record bij, of roept een onderwerp op.</td>
+</tr>
+<tr>
+<td>Instelpad</td>
+<td>Maak onderwerpen, definieer triggertype, schrijf dialoog/acties; publiceer naar kanalen.</td>
+<td>Voeg event trigger toe (Overzicht → Triggers), verifieer connector met agentauteurreferenties, configureer payload/instructies; test via testpaneel; publiceer.</td>
+</tr>
+<tr>
+<td>Auth en governance</td>
+<td>Werkt onder kanaal/auth context; topic triggers reageren op chatactiviteiten in toegestane kanalen.</td>
+<td>Triggerbeschikbaarheid hangt af van Power Automate databeleid; connectors werken onder het account van de agentmaker.</td>
+</tr>
+<tr>
+<td>Observatie</td>
+<td>Test onderwerpen binnen Copilot Studio, inspecteer gespreksverslagen/activiteiten.</td>
+<td>Gebruik Test trigger en activiteitenkaart om uitvoering te valideren voordat je publiceert, monitor activiteit na publicatie.</td>
+</tr>
+<tr>
+<td>Capaciteitsimpact</td>
+<td>Elk gebruikersbericht/agentantwoord is een bericht dat capaciteit verbruikt.</td>
+<td>Elke gebeurtenislevering is ook een bericht, plus eventuele daaropvolgende acties. Voorbeeld: een herhaling van 10 minuten = 6 berichten/uur</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wanneer-gebruik-je-wat">Wanneer gebruik je wat?<a class="headerlink" href="#wanneer-gebruik-je-wat" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Kies <strong>topic triggers (interactief)</strong> wanneer gebruikers het agentgesprek starten - FAQ, begeleide intake, of opdrachtstijl taken binnen chat. De Door agent trigger van de planner vermindert handmatige zinnenverzameling.</li>
+<li>Voeg <strong>event triggers (autonoom)</strong> toe wanneer de agent het gesprek moet starten of zelf actie moet ondernemen - bij updates in SharePoint/Dataverse, inkomende e-mail, of op een schema. Dit verschuift je van reactieve naar proactieve operaties.</li>
+</ul>
+<h2 id="ontwikkelaarstips-aandachtspunten">Ontwikkelaarstips &amp; aandachtspunten<a class="headerlink" href="#ontwikkelaarstips-aandachtspunten" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Schakel generatieve orkestratie in</strong> voor elke agent die je autonoom wilt maken. Event triggers verschijnen anders niet.</p>
+</li>
+<li>
+<p><strong>Modelleer de payload vroeg.</strong> Bepaal welke minimale velden je agent nodig heeft van de trigger, zoals <code>itemId</code>, <code>assignedTo</code>, <code>dueDate</code>, en voeg beknopte instructies toe die de agent vertellen welke actie/onderwerp op te roepen op basis van payloadwaarden.</p>
+</li>
+<li>
+<p><strong>Auth-scope is belangrijk.</strong> Triggers verifiëren met het account van de agentmaker. Zorg ervoor dat dat account de juiste connectorrechten heeft en voldoet aan Power Automate databeleid.</p>
+</li>
+<li>
+<p><strong>Beheers kosten en ruis.</strong> Hoge frequentieherhalingen of zeer drukke bronnen kunnen snel berichtenverbruik veroorzaken - beperk waar mogelijk of voeg voorwaarden toe in de trigger om gebeurtenissen te filteren.</p>
+</li>
+<li>
+<p><strong>Test voordat je publiceert.</strong> Gebruik <strong>Test trigger</strong> en de activiteitenkaart om het plan en de opgeroepen acties te bekijken - herhaal instructies/payload totdat het gedrag stabiel is.</p>
+</li>
+</ol>
+<h2 id="lab-03-automatiseren-van-sollicitatie-e-mails">🧪 Lab 03 - Automatiseren van sollicitatie-e-mails<a class="headerlink" href="#lab-03-automatiseren-van-sollicitatie-e-mails" title="Permanent link">&para;</a></h2>
+<p>We gaan nu een event trigger toevoegen aan de <strong>Hiring Agent</strong> en een agentflow bouwen in de subagent <strong>Application Intake Agent</strong> om verdere verwerking voor autonomie te regelen.</p>
+<h3 id="gebruiksscenario">✨ Gebruiksscenario<a class="headerlink" href="#gebruiksscenario" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p><strong>Als</strong> HR-recruiter</p>
+<p><strong>Wil ik</strong> op de hoogte worden gesteld wanneer een e-mail met een cv in mijn inbox is aangekomen en automatisch is geüpload naar Dataverse</p>
+<p><strong>Zodat ik</strong> op de hoogte blijf van cv's die per e-mail worden verzonden voor sollicitaties die automatisch naar Dataverse worden geüpload</p>
+</div>
+<p>We bereiken dit met twee technieken:</p>
+<ol>
+<li>
+<p>Een event trigger voor wanneer de e-mail arriveert,</p>
+<ol>
+<li>Controleer of de <code>contentType</code> van het bestand gelijk is aan <code>PDF</code> als bestandsformaat.</li>
+<li>Haal het bestand op en upload het naar Dataverse met acties via de Dataverse-connector.</li>
+<li>Stuur vervolgens een prompt naar de agent voor verdere verwerking door invoerparameters door te geven vanuit de Dataverse-acties.</li>
+</ol>
+</li>
+<li>
+<p>Een agentflow wordt toegevoegd aan de subagent <strong>Application Intake Agent</strong> die wordt aangeroepen door de prompt in de event trigger.</p>
+<ol>
+<li>Gebruik de invoerparameters die zijn doorgegeven vanuit de prompt van de event trigger in een adaptieve kaart die wordt gepost naar een kanaal in Microsoft Teams om het HR-recruitmentteam te informeren. De adaptieve kaart bevat een link naar de rij in Dataverse die wordt bekeken in de <strong>Hiring Agent</strong>.</li>
+</ol>
+</li>
+</ol>
+<p>Laten we beginnen!</p>
+<h3 id="vereisten-om-deze-missie-te-voltooien">✨ Vereisten om deze missie te voltooien<a class="headerlink" href="#vereisten-om-deze-missie-te-voltooien" title="Permanent link">&para;</a></h3>
+<p>Je moet <strong>ofwel</strong>:</p>
+<ul>
+<li><strong>Missie 01 en Missie 02 hebben voltooid</strong> en je Hiring Agent klaar hebben, <strong>OF</strong></li>
+<li><strong>De starteroplossing van Missie 03 importeren</strong> als je opnieuw begint of moet inhalen. <a href="https://aka.ms/agent-academy">Download Mission 03 Starter Solution</a></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Oplossing importeren en voorbeeldgegevens</p>
+<p>Als je de starteroplossing gebruikt, raadpleeg <a href="../01-get-started/">Missie 01</a> voor gedetailleerde instructies over het importeren van oplossingen en voorbeeldgegevens in je omgeving.</p>
+</div>
+<p>Je hebt ook toegang nodig tot <strong>Microsoft Teams</strong> om de tweede laboefening van het posten van een adaptieve kaart naar Microsoft Teams te voltooien.</p>
+<h3 id="lab-31-automatisch-cvs-uploaden-naar-dataverse-die-per-e-mail-worden-ontvangen">Lab 3.1 - Automatisch cv's uploaden naar Dataverse die per e-mail worden ontvangen<a class="headerlink" href="#lab-31-automatisch-cvs-uploaden-naar-dataverse-die-per-e-mail-worden-ontvangen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>In de Hiring Agent, scroll naar beneden in het <strong>Overzicht-tabblad</strong> en selecteer <strong>+ Trigger toevoegen</strong>.</p>
+<p><img alt="Trigger toevoegen aan agent" src="../../../../../translated_images/3.1_01_AddTrigger.4d5f4d13a4a6b19fe9ff89e3a483601199d7643236d6df65ff81dfea76d1d443.nl.png" /></p>
+</li>
+<li>
+<p>Er verschijnt een lijst met triggers. Selecteer <strong>Wanneer een nieuwe e-mail arriveert (V3)</strong> en selecteer <strong>Volgende</strong>.</p>
+<p><img alt="Selecteer Wanneer een nieuwe e-mail arriveert (V3) trigger" src="../../../../../translated_images/3.1_02_WhenANewEmailArrives.a250875915165d97c1af6eebba70f16fbfc845a37d4d354c9f35a55aa459035e.nl.png" /></p>
+</li>
+<li>
+<p>We zien nu de <strong>Triggernaam</strong> en de <strong>Aanmeldingsverbindingreferenties</strong> voor de vermelde apps.</p>
+<p>Hernoem de triggernaam naar het volgende,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Wanneer een nieuwe e-mail arriveert van een sollicitant
+</span></code></pre></div>
+<p>Zorg ervoor dat je een groen vinkje ziet bij elk van de verbindingreferenties van de vermelde apps. Als je geen groen vinkje ziet, meld je aan via de ellipsen (...) en selecteer <strong>+ Nieuwe verbindingreferentie</strong> om een nieuwe verbindingreferentie te maken.</p>
+<p><img alt="Details bijwerken voor triggernaam en controleer verbindingreferenties" src="../../../../../translated_images/3.1_03_RenameTriggerName.3eb80b25bea5f874a51aab600ffd333359de3a981e41eed1b4fc7c8f27eef323.nl.png" /></p>
+</li>
+<li>
+<p>De laatste stap is het instellen van de invoereigenschappen van de trigger. Werk de volgende eigenschappen bij naar het volgende,</p>
+<table>
+<thead>
+<tr>
+<th>Eigenschap</th>
+<th>Hoe in te stellen</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bijlagen opnemen (Optioneel)</strong></td>
+<td>Dropdown</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td><strong>Onderwerpfilter (Optioneel)</strong></td>
+<td>Typ/voer in met toetsenbord</td>
+<td>Sollicitatie</td>
+</tr>
+<tr>
+<td><strong>Alleen met bijlagen (Optioneel)</strong></td>
+<td>Dropdown</td>
+<td>Ja</td>
+</tr>
+</tbody>
+</table>
+<p>Selecteer <strong>Trigger maken</strong>.</p>
+<p><img alt="Triggerinvoer configureren" src="../../../../../translated_images/3.1_04_ConfigureTriggerInputs.2151044f4953b31b40402c2a94fd63fb71fe8eede27a5cbf1d124d4300318446.nl.png" /></p>
+</li>
+<li>
+<p>Zodra de trigger is gemaakt, verschijnt er een bevestigingsbericht dat de trigger is toegevoegd aan de agent. Selecteer <strong>Sluiten</strong> en de trigger wordt vermeld in de sectie <strong>Triggers</strong>.
+We gaan nu de gebeurtenistrigger bijwerken om meer automatiseringsmogelijkheden toe te voegen. Selecteer de <strong>ellipsen (...)</strong> bij de trigger en kies <strong>Bewerken in Power Automate</strong>.</p>
+</li>
+</ol>
+<p><img alt="Selecteer Bewerken in Power Automate" src="../../../../../translated_images/3.1_05_SelectEditInPowerAutomate.d298b51d7980cf2fd20a9d8193745aef4ce8097a4a2d33341e2dc159b9bfc099.nl.png" /></p>
+<ol>
+<li>De trigger wordt vervolgens geladen als een stroom in het Power Automate-makerportaal. Wat je ziet, is de stroomontwerper in het Power Automate-makerportaal. Hier kunnen we extra logica en acties toevoegen voor meer automatisering. De trigger verschijnt bovenaan, gevolgd door <strong>Stuurt een prompt naar de opgegeven copilot voor verwerking</strong> als laatste actie in de stroom.</li>
+</ol>
+<p><img alt="Stroomontwerper in Power Automate-makerportaal" src="../../../../../translated_images/3.1_06_EditInPowerAutomate.f8967ace56354224574517f31a2a2ce0a5b5d3ab85bfb9ec6cf70e83ab1b8e6d.nl.png" /></p>
+<ol>
+<li>Standaard kan de trigger <strong>Wanneer een nieuwe e-mail arriveert</strong> in Power Automate meerdere e-mails tegelijk verwerken als er meerdere tegelijk binnenkomen, waarbij de stroom slechts één keer wordt uitgevoerd voor de batch.</li>
+</ol>
+<p>Om ervoor te zorgen dat de stroom afzonderlijk wordt uitgevoerd voor elke e-mail, schakel je de instelling <strong>Split On</strong> in de triggerinstellingen in en selecteer je <code>@triggerOutputs()?['body/value']</code> in het dropdown-arrayveld.</p>
+<p>Met <strong>Split On</strong> ingeschakeld en het arrayveld ingesteld op <code>@triggerOutputs()?['body/value']</code>, wordt de stroom afzonderlijk uitgevoerd voor elk bericht, zelfs als er veel tegelijk binnenkomen.</p>
+<p><img alt="Schakel Split On-instellingen in de trigger in" src="../../../../../translated_images/3.1_07_UpdateTriggerSettings.0f363c4f4655276732575fa795bf1ad1568df34d34b703c85073591cc8585609.nl.png" /></p>
+<ol>
+<li>Laten we nu wat logica toevoegen om het bestandstype van de bijlage te controleren. We willen alleen .PDF-bestandsbijlagen uploaden en geen afbeeldingen (deze kunnen afkomstig zijn van e-mailhandtekeningen). Selecteer het <strong>+</strong>-pictogram onder de trigger en kies <strong>Control</strong> onder de sectie <strong>Ingebouwde tools</strong>.</li>
+</ol>
+<p><img alt="Selecteer Control" src="../../../../../translated_images/3.1_08_Control.2fa6987b64ae20d5c8343d1b15937432ab6c893750c4b1427df56067023fd437.nl.png" /></p>
+<ol>
+<li>Selecteer de actie <strong>Voorwaarde</strong>.</li>
+</ol>
+<p><img alt="Selecteer Voorwaarde-actie" src="../../../../../translated_images/3.1_09_AddConditionAction.a7eec0b2a42d4a7c54bd305f0c480b72e3feec155a4e2468e12279082257f21f.nl.png" /></p>
+<ol>
+<li>
+<p>Nu configureren we de voorwaarde om te controleren of het bestandstype van de bijlage .PDF is. In het veld <strong>Een waarde kiezen</strong>, selecteer je het <strong>bliksemschichtpictogram</strong> of <strong>fx-pictogram</strong> aan de rechterkant.</p>
+</li>
+<li>
+<p>Typ in het veld <strong>Zoeken</strong> het volgende:</p>
+</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>content type
+</span></code></pre></div>
+<ol>
+<li>
+<p>Selecteer vervolgens de parameter <strong>Bijlagen Content-Type</strong> van de trigger.</p>
+</li>
+<li>
+<p>Klik daarna op <strong>Toevoegen</strong> om de dynamische inhoud in te voegen in de parameter <strong>Id</strong> van de actie.</p>
+</li>
+</ol>
+<p><img alt="Configureer Voorwaarde-actie" src="../../../../../translated_images/3.1_10_SetDynamicContentValue_V2.23c3d0438146a5ff0d695077e65a3b1c8b230b54c51ded8a099c6e99a948e9ed.nl.png" /></p>
+<ol>
+<li>Laten we hier even pauzeren, je hebt waarschijnlijk gemerkt dat de actie <strong>Voor elk</strong> automatisch is verschenen.</li>
+</ol>
+<p>Selecteer de actie <strong>Voor elk</strong>. Deze actie vertegenwoordigt het doorlopen van elke bijlage in de e-mail, aangezien de parameter <strong>Bijlagen Content-Type</strong> van de trigger is gekoppeld aan elke bijlage.</p>
+<p>Onder de motorkap is het een array en daarom is de actie <strong>Voor elk</strong> automatisch toegevoegd toen we de parameter <strong>Bijlagen Content-Type</strong> selecteerden in de actie <strong>Voorwaarde</strong>.</p>
+<p>Om hier meer over te leren, vouw je het volgende extra leerblok uit.</p>
+<details class="info">
+<summary>Extra leren: Actie Voor elk automatisch verschijnen</summary>
+</details>
+<p>🤔 <strong>Waarom verschijnt "Toepassen op elk" of "Voor elk" automatisch?</strong></p>
+<p>Wanneer je een parameter (dynamische inhoud) selecteert die een lijst of array van items vertegenwoordigt - bijvoorbeeld een lijst van bijlagen, e-mails of rijen - herkent Power Automate dat je mogelijk elk item afzonderlijk wilt verwerken.</p>
+<p>Om je hierbij te helpen, voegt Power Automate automatisch een <strong>"Toepassen op elk"</strong> (of <strong>Voor elk</strong>) lus toe rond je actie. Dit zorgt ervoor dat je actie één keer wordt uitgevoerd voor elk item in de lijst, in plaats van te proberen de hele lijst in één keer te verwerken (wat fouten kan veroorzaken).</p>
+<p>🦋 <strong>Voorbeeld</strong></p>
+<ul>
+<li>Als je "Bijlagen" selecteert van een vorige actie (wat een array is), en probeert deze te gebruiken in een actie die een enkel bestand verwacht, voegt Power Automate je actie in een <strong>"Toepassen op elk"</strong> (of <strong>Voor elk</strong>) lus.</li>
+<li>Op deze manier wordt je actie uitgevoerd voor <strong>elke bijlage</strong> - één tegelijk.</li>
+</ul>
+<p>💡 <strong>Belangrijke punten</strong></p>
+<ul>
+<li><strong>Automatisch:</strong> De lus verschijnt automatisch om je te helpen elk item in een verzameling te verwerken.</li>
+<li><strong>Voorkomt fouten:</strong> Zonder de lus kan je actie mislukken omdat deze mogelijk niet meerdere items tegelijk kan verwerken.</li>
+<li><strong>Visuele aanwijzing:</strong> Het is een visuele manier om te laten zien dat je stroom de actie herhaalt voor elk item in de lijst.</li>
+</ul>
+<p><img alt="Voor elk actie uitgelegd" src="../../../../../translated_images/3.1_11_ForEach.82bd7b62b815fdbcd67acff0a633137cf03175940c670361ea8669b0df892927.nl.png" /></p>
+<ol>
+<li>Voer vervolgens in het andere veld <strong>Een waarde kiezen</strong> het volgende in:</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>application/pdf
+</span></code></pre></div>
+<p>Dit zorgt ervoor dat voor elke bestandbijlage wordt gecontroleerd of het bestandsextensieformaat .PDF is.</p>
+<p><img alt="EqualToValue" src="../../../../../translated_images/3.1_12_EqualToValue.66c107cb8105c1cd3d166b8a5bf690b8dfc30aa2bd2af83c438a9e44d1b544b0.nl.png" /></p>
+<ol>
+<li>Nu configureren we het <strong>True</strong>-pad om het bestand uit de e-mail te halen en te uploaden naar de <strong>CV</strong>-tabel in Dataverse.</li>
+</ol>
+<p>Voeg een nieuwe actie toe onder het <strong>True</strong>-pad en zoek naar <code>html to text</code>. Selecteer de actie <strong>Html naar tekst</strong>.</p>
+<p>Om meer te leren over de actie <strong>Html naar tekst</strong>, vouw je het volgende extra leerblok uit.</p>
+<details class="info">
+<summary>Extra leren: Html naar tekst actie</summary>
+</details>
+<p>🤔 <strong>Wat is de actie "HTML naar tekst"?</strong></p>
+<p>De actie <strong>HTML naar tekst</strong> in Power Automate wordt gebruikt om HTML-geformatteerde inhoud om te zetten in platte tekst. Dit is vooral handig wanneer je gegevens ontvangt (zoals e-mails, webinhoud of API-reacties) die HTML-tags bevatten, en je alleen de leesbare tekst wilt extraheren zonder enige opmaak of code.</p>
+<p>⚙️ <strong>Hoe werkt het?</strong></p>
+<ul>
+<li><strong>Invoer:</strong> Je geeft een string van HTML-inhoud op (bijvoorbeeld de tekst van een e-mail).</li>
+<li><strong>Uitvoer:</strong> De actie verwijdert alle HTML-tags en geeft alleen de platte tekst terug.</li>
+</ul>
+<p>👍🏻 <strong>Wanneer gebruik je het?</strong></p>
+<ul>
+<li>Wanneer je leesbare tekst wilt extraheren uit e-mails, webpagina's of API-reacties die HTML bevatten.</li>
+<li>Voordat je inhoud verzendt naar systemen die geen HTML-opmaak ondersteunen (zoals SMS, Teams-berichten of databases).</li>
+<li>Om gegevens op te schonen voor verdere verwerking of analyse.</li>
+</ul>
+<p>🔭 <strong>Waar vind je het?</strong></p>
+<ul>
+<li>In Power Automate voor Agent Flows, zoek naar de actie genaamd <code>HTML naar tekst</code>. Het bevindt zich onder de connector <strong>Gegevensbewerkingen</strong>.</li>
+</ul>
+<p>💡 <strong>Belangrijke punten</strong></p>
+<ul>
+<li>Het verwijdert alle HTML-tags en laat alleen de tekst over.</li>
+<li>Het interpreteert of voert geen scripts/stijlen uit - het verwijdert alleen tags.</li>
+<li>Handig voor gegevensopschoning en het voorbereiden van inhoud voor uitvoer in platte tekst.</li>
+</ul>
+<p><img alt="Voeg HTML naar tekst actie toe" src="../../../../../translated_images/3.1_13_AddHTMLToTextAction.2aa9468b87dbeb847c083f24da0fe99438b39f826b13a70982ec255a97c2aa80.nl.png" /></p>
+<ol>
+<li>Vervolgens moeten we een nieuwe verbindingsreferentie maken voor de actie <strong>Html naar tekst</strong> door <strong>Nieuw toevoegen</strong> te selecteren.</li>
+</ol>
+<p><img alt="Nieuwe verbindingsreferentie toevoegen" src="../../../../../translated_images/3.1_14_AddNewConnection.4a23546976b62e7f0e882ac1379950e5bfdcaa702070313cb84a1d22b06a79a7.nl.png" /></p>
+<ol>
+<li>De actie kan nu worden geconfigureerd. Voeg de parameter <strong>Body</strong> van de trigger toe. In het veld <strong>Inhoud</strong>, selecteer je het <strong>bliksemschichtpictogram</strong> of <strong>fx-pictogram</strong> aan de rechterkant.</li>
+</ol>
+<p><img alt="Dynamische inhoud toevoegen" src="../../../../../translated_images/3.1_15_AddDynamicContent.0624a9808f55b993efb6d00bf941a88389655e2ab9970ba2b9a1538272fe9643.nl.png" /></p>
+<ol>
+<li>Zoek in het tabblad <strong>Dynamische inhoud</strong> naar <code>body</code> en selecteer de parameter <strong>Body</strong>, gevolgd door <strong>Toevoegen</strong>.</li>
+</ol>
+<p><img alt="Body-parameter toevoegen" src="../../../../../translated_images/3.1_16_AddDynamicContent.40b7eccc080c20513eed5663062b2a63d40d6482eaf2d42fe4e29cb94797f098.nl.png" /></p>
+<ol>
+<li>We hebben deze actie geconfigureerd, dus laten we de actie afsluiten door de twee naar links wijzende hoekige haakjes («) te selecteren om het paneel in te klappen.</li>
+</ol>
+<p><img alt="Actiepaneel inklappen" src="../../../../../translated_images/3.1_17_CollapseAction.ca2c346efb58f8240372c3d145fa10ba609cab1c2075d7df1a9388c82fab79f5.nl.png" /></p>
+<ol>
+<li>Voeg een nieuwe actie toe door het <strong>+ icoon</strong> onder de actie <strong>Html naar tekst</strong> te selecteren, waardoor het paneel wordt geladen om acties toe te voegen. Selecteer de connector <strong>Microsoft Dataverse</strong>.</li>
+</ol>
+<p><img alt="Nieuwe actie toevoegen" src="../../../../../translated_images/3.1_18_AddDataverseAction.5f4be9eb96e22dac239e5545bab5ad9d08b138c2cbcbc700680f33445e132506.nl.png" /></p>
+<ol>
+<li>Selecteer de actie <strong>Een nieuwe rij toevoegen</strong>.</li>
+</ol>
+<p><img alt="Een nieuwe rij toevoegen actie" src="../../../../../translated_images/3.1_19_AddANewRow.48e0a3868821e59ed2a299ccb6a521af27b2430082381d48be38087be62c7c15.nl.png" /></p>
+<ol>
+<li>Hernoem de actie door de <strong>Ellipsen (...)</strong> te selecteren, kopieer en plak het volgende als naam:</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Voeg een nieuwe CV-rij toe
+</span></code></pre></div>
+<p>Voor de parameter <strong>Tabelnaam</strong>, zoek naar <code>res</code> en selecteer de tabel <strong>CV's</strong>.</p>
+<p><img alt="Actie hernoemen en Tabelnaam-parameter configureren" src="../../../../../translated_images/3.1_20_RenameAndSelectResumesTable.89f8485653abb7fda1d6eb44210951f05a05ed6f7450a51895079dfd8e72c8bf.nl.png" /></p>
+<ol>
+<li>Selecteer het veld <strong>CV-titel</strong> en selecteer het <strong>bliksemschichtpictogram</strong> of <strong>fx-pictogram</strong> aan de rechterkant.</li>
+</ol>
+<p><img alt="CV-titel parameter configureren" src="../../../../../translated_images/3.1_21_AddDynamicContent.9ee1f89420d5a4aa56797944166208f6e9b0ec67116625168fbcefb907850224.nl.png" /></p>
+<ol>
+<li>Voer in het tabblad <strong>Functie</strong> de volgende expressie in die de functie <code>item()</code> gebruikt:</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>item()?[&#39;name&#39;]
+</span></code></pre></div>
+<p>Om meer te leren over de functie <code>item()</code>, vouw je het volgende extra leerblok uit.</p>
+<details class="info">
+<summary>Extra leren: <code>item()</code> functie</summary>
+</details>
+<p>🤔 <strong>Wat is de <code>item()</code> functie?</strong></p>
+<ul>
+<li>Wanneer je een actie <strong>Toepassen op elk</strong> gebruikt, doorloopt Power Automate elk element in een verzameling (array).</li>
+<li>Het wordt meestal gebruikt binnen acties zoals <strong>Toepassen op elk</strong> (of <strong>Voor elk</strong>), <strong>Selecteren</strong>, of <strong>Filter array</strong>.</li>
+</ul>
+<p>⚙️ <strong>Hoe werkt het?</strong></p>
+<ul>
+<li><code>item()</code> is een functie die het huidige item retourneert dat wordt verwerkt in een lus of arraybewerking.</li>
+<li>Binnen die lus verwijst <code>item()</code> naar het <em>huidige element</em> dat wordt verwerkt.</li>
+</ul>
+<p>📌 <strong>Waar gebruik je het?</strong></p>
+<ul>
+<li><strong>Toepassen op elk:</strong> om eigenschappen van het huidige item te openen.</li>
+<li><strong>Selecteren:</strong> om elk item in een array te transformeren.</li>
+<li><strong>Filter array:</strong> om te verwijzen naar het huidige item dat wordt geëvalueerd.</li>
+</ul>
+<p>🦋 <strong>Voorbeeld</strong></p>
+<ul>
+<li>Expressie binnen een lus:<ul>
+<li><code>item()?['Email']</code></li>
+</ul>
+</li>
+<li>Dit haalt de eigenschap <code>Email</code> van het huidige item op.</li>
+</ul>
+<p>💡 <strong>Belangrijke punten</strong></p>
+<ul>
+<li><code>item()</code> is <em>contextgevoelig</em>: het verwijst altijd naar het huidige item in de lus of arraybewerking waarin je je bevindt.</li>
+<li>Als je lussen nestelt, kun je <code>items('LoopName')</code> gebruiken om te verwijzen naar items in een specifieke lus.</li>
+</ul>
+<p>Selecteer <strong>Toevoegen</strong> om de expressie toe te voegen aan de parameter <strong>CV-titel</strong>.</p>
+<p><img alt="Expressie toevoegen voor CV-titel parameter" src="../../../../../translated_images/3.1_22_ResumeTitleParameter.9e4fa71a5251cb899e7b09bcc3052eeda1e512841f929118eb9e2b1d232ecb07.nl.png" /></p>
+<ol>
+<li>We moeten nog enkele parameters configureren. Selecteer <strong>Alles weergeven</strong> en selecteer in het veld <strong>Motivatiebrief</strong> het <strong>bliksemschichtpictogram</strong> of <strong>fx-pictogram</strong> aan de rechterkant.</li>
+</ol>
+<p>Voer in het tabblad <strong>Functie</strong> de volgende expressie in die dezelfde expressie gebruikt als in de vorige <a href="../02-multi-agent/">missie</a>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>if(greater(length(body(&#39;Html_to_text&#39;)), 2000), substring(body(&#39;Html_to_text&#39;), 0, 2000), body(&#39;Html_to_text&#39;))
+</span></code></pre></div>
+<p>Deze expressie controleert of de <em>tekst</em> van de actie <strong>Html naar tekst</strong> langer is dan 2000 tekens, en als dat zo is, retourneert alleen de eerste 2000 tekens; anders retourneert het de volledige tekst.</p>
+<p><img alt="Expressie toevoegen voor Motivatiebrief-parameter" src="../../../../../translated_images/3.1_23_CoverLetterParameter.d2b521d6b37d05ac4760c91de2964b6d062585a333af6989d9ac0794a4139463.nl.png" /></p>
+<ol>
+<li>De expressie wordt nu toegevoegd aan het veld <strong>Motivatiebrief</strong>.</li>
+</ol>
+<p><img alt="Expressie toegevoegd aan de Motivatiebrief-parameter" src="../../../../../translated_images/3.1_24_ExpressionForCoverLetter.3d18124b10b76bad92db61c529ae395b0bb05f3215e3b783771e76ef7677664e.nl.png" /></p>
+<ol>
+<li>Voor het veld <strong>Bron e-mailadres</strong>, zoek naar <code>from</code> en selecteer de parameter <strong>Van</strong> van de trigger, aangezien deze de waarde van het e-mailadres bevat.</li>
+</ol>
+<p><img alt="Bron e-mailadres parameter" src="../../../../../translated_images/3.1_25_FromParameter.1ed1be46711f6705fb807996f6f1e873adc22e285186a851272e0cf3855487ef.nl.png" /></p>
+<ol>
+<li>Voor het veld <strong>Uploaddatum</strong>, selecteer het <strong>bliksemschichtpictogram</strong> of <strong>fx-pictogram</strong> aan de rechterkant. Voer in het tabblad <strong>Functie</strong> de volgende expressie in die de functie <code>utcNow()</code> gebruikt:</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>utcNow()
+</span></code></pre></div>
+<p>Om meer te leren over de functie <code>utcNow</code>, vouw je het volgende extra leerblok uit.</p>
+<details class="info">
+<summary>Extra leren: <code>utcNow</code> functie</summary>
+</details>
+<p>🤔 <strong>Wat is de <code>utcNow()</code> functie?</strong></p>
+<ul>
+<li>De functie utcNow() in Power Automate retourneert de huidige datum en tijd in Coordinated Universal Time (UTC) in een ISO 8601-formaat, zoals: <code>2025-09-23T04:32:14Z</code></li>
+</ul>
+<p>🦋 <strong>Voorbeeld</strong></p>
+<ul>
+<li>Expressie:<ul>
+<li><code>concat('Rapport gegenereerd op ', utcNow())</code></li>
+</ul>
+</li>
+<li>Uitvoer is:<ul>
+<li>Rapport gegenereerd op <code>2025-09-23T04:32:14Z</code></li>
+</ul>
+</li>
+</ul>
+<p>💡 <strong>Belangrijke punten</strong>
+- <strong>Geen argumenten (invoerparameters) vereist:</strong> geeft altijd de huidige UTC-tijdstempel.
+   - <strong>Toepassingen</strong>
+       - Tijdsregistratie toevoegen aan logbestanden of bestandsnamen
+       - Huidige tijd vergelijken met andere datums
+       - Plannen of tijdsgebonden voorwaarden</p>
+<p><img alt="Uploaddatumparameter" src="../../../../../translated_images/3.1_26_UploadDateParameter.21b0afc9807bf680c1c432066f1644d4d018cb4988ad0c0788b5186cea285e02.nl.png" /></p>
+<ol>
+<li>We hebben nu de configuratie van de actie <strong>Een nieuwe CV-rij toevoegen</strong> voltooid, dus laten we het paneel sluiten door het in te klappen.</li>
+</ol>
+<p><img alt="Paneel verlaten" src="../../../../../translated_images/3.1_27_CollapseAction.c033a86e4d8501b10fc454ba7f9c5e08d71d6d881fc72f58011152e1c5d7a7bb.nl.png" /></p>
+<ol>
+<li>We voegen een nieuwe actie toe door op het <strong>+ icoon</strong> onder de actie <strong>Een nieuwe CV-rij toevoegen</strong> te klikken, waarmee het paneel voor het toevoegen van acties wordt geladen. Selecteer opnieuw de <strong>Microsoft Dataverse</strong>-connector.</li>
+</ol>
+<p><img alt="Dataverse-actie toevoegen" src="../../../../../translated_images/3.1_28_AddDataverseAction.1af4dedc95001bfb56b0a642231e9c82b57459b10c68bf6fc177382339a0a221.nl.png" /></p>
+<ol>
+<li>Selecteer de actie <strong>Een bestand of afbeelding uploaden</strong>.</li>
+</ol>
+<p><img alt="Actie Een bestand of afbeelding uploaden toevoegen" src="../../../../../translated_images/3.1_29_AddUploadAFileOrAnImage.e40ab21b735e37bd1fdb5020b7433d1a2f01d6e387bc43a437e970c6e20ee779.nl.png" /></p>
+<ol>
+<li>Hernoem de actie door op de <strong>Ellipsis (...)</strong> te klikken, kopieer en plak de volgende naam:</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Upload CV-bestand
+</span></code></pre></div>
+<p><img alt="Actie hernoemen" src="../../../../../translated_images/3.1_30_RenameAction.c316fdf225f88e5c3ee26649e672472829c3372c804b544a1372b0455937c204.nl.png" /></p>
+<ol>
+<li>Selecteer vervolgens het veld <strong>Inhoudsnaam</strong> en klik op het <strong>bliksemschicht-icoon</strong> of <strong>fx-icoon</strong> aan de rechterkant.</li>
+</ol>
+<p>In het <strong>Functie-tabblad</strong>, voer de volgende expressie in die de <code>item()</code>-functie gebruikt. Dit haalt de <code>name</code>-eigenschap op van het huidige item (het bijgevoegde bestand).</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>item()?[&#39;name&#39;]
+</span></code></pre></div>
+<p><img alt="Inhoudsnaamparameter configureren" src="../../../../../translated_images/3.1_31_ContentNameParameter.c6606773f1e82dbcea93d7c2f52dff7a2168f9f04d6b865f699f56d62a41d4ec.nl.png" /></p>
+<ol>
+<li>Voor de parameter <strong>Tabelnaam</strong>, zoek naar <code>res</code> en selecteer de tabel <strong>CV's</strong>.</li>
+</ol>
+<p><img alt="Tabelnaamparameter configureren" src="../../../../../translated_images/3.1_32_SelectResumesTable.6a00bf6d585002219003da47f6e1042dc67cbdb3fbaf7d959253550035e27520.nl.png" /></p>
+<ol>
+<li>Selecteer vervolgens het veld <strong>Rij-ID</strong> en klik op het <strong>bliksemschicht-icoon</strong> of <strong>fx-icoon</strong> aan de rechterkant.</li>
+</ol>
+<p>Zoek naar <code>ID</code> en selecteer de parameter <strong>CV</strong> van de <em>Een nieuwe rij toevoegen</em>-Dataverse-actie, omdat deze de ID-waarde bevat van de rij waarnaar het PDF-bestand moet worden geüpload.</p>
+<p>Klik op <strong>Toevoegen</strong>.</p>
+<p><img alt="Rij-ID selecteren" src="../../../../../translated_images/3.1_33_RowIDParameter.9824c6b5ea5edf0ce018140c20431a97c2e750d61bcb787f67da260acb6a3838.nl.png" /></p>
+<ol>
+<li>Selecteer het veld <strong>Kolomnaam</strong> en kies de optie <strong>CV PDF</strong>.</li>
+</ol>
+<p><img alt="Kolomnaamparameter configureren" src="../../../../../translated_images/3.1_34_ColumnNameParameter.ef4f770cbd84cae5c15cfe06d1bdbe028d0c6d54a2286dab30769fa01c948b71.nl.png" /></p>
+<ol>
+<li>Selecteer het veld <strong>Inhoud</strong> en klik op het <strong>bliksemschicht-icoon</strong> of <strong>fx-icoon</strong> aan de rechterkant.</li>
+</ol>
+<p>In het <strong>Functie-tabblad</strong>, voer de volgende expressie in die de <code>item()</code>-functie gebruikt. Dit haalt de <code>contentBytes</code>-eigenschap op van het huidige item (het bijgevoegde bestand). <code>contentBytes</code> verwijst naar de ruwe binaire gegevens van een bestand of bijlage, gecodeerd als een Base64-string.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>item()?[&#39;contentBytes&#39;]
+</span></code></pre></div>
+<ol>
+<li>We hebben deze actie geconfigureerd, dus laten we het paneel sluiten door op de twee naar links wijzende hoekige haakjes («) te klikken.</li>
+</ol>
+<p><img alt="Actiepaneel sluiten" src="../../../../../translated_images/3.1_36_CollapseAction.1813a7219f0f37b87f80c2cd9f5a9626c3a320858d08a0e62cf14736f97db4c6.nl.png" /></p>
+<ol>
+<li>Selecteer vervolgens <strong>Stuurt een prompt naar de opgegeven copilot voor verwerking</strong>, en sleep deze actie onder de actie <strong>Upload CV-bestand</strong> in het <em>True</em>-pad van de voorwaarde.</li>
+</ol>
+<p><img alt="Actie slepen en neerzetten in True-pad" src="../../../../../translated_images/3.1_37_DragAndDropAction.57dc2e9f9d25ed892a4fc072a72c55eca6c38e313ab48fb9db37e9371995440f.nl.png" /></p>
+<ol>
+<li>Selecteer <strong>Stuurt een prompt naar de opgegeven copilot voor verwerking</strong> om deze te configureren.</li>
+</ol>
+<p><img alt="Actie selecteren" src="../../../../../translated_images/3.1_38_SelectAction.d125bdf661f66b6397542c75efbc6a78b8c4862e03dce4002776c251f1c48382.nl.png" /></p>
+<ol>
+<li>Selecteer alle inhoud in het veld <strong>Body/bericht</strong> en wis/verwijder deze.</li>
+</ol>
+<p><img alt="Bodyparameter wissen" src="../../../../../translated_images/3.1_39_ClearBodyParameter.6a345b2e5dbe5510184d7bae7cd406b8cec72c714f34bb40e30741e445a491c0.nl.png" /></p>
+<ol>
+<li>Kopieer en plak de volgende tekst in het veld <strong>Body/bericht</strong> en markeer de <code>CV-ID PLAATSHOUDER</code>.</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Stuur [CV-ID (tekst)] = &quot;CV-ID PLAATSHOUDER&quot; en [CV-Titel (tekst_1)] = &quot;CV-TITEL PLAATSHOUDER&quot; en [CV-Nummer (tekst_2)] = &quot;CV-NUMMER PLAATSHOUDER&quot; naar de Tool &quot;Teams Bewerkerkanaal informeren&quot; in de subagent &quot;Aanvraagverwerkingsagent&quot;
+</span></code></pre></div>
+<p><img alt="CV-ID Plaatshoudertekst vervangen" src="../../../../../translated_images/3.1_40_ReplaceResumeIDPlaceholder.eb61590503cb37d89121aaed6d979a4272aa30c87700206e04db8005e60b294f.nl.png" /></p>
+<ol>
+<li>Klik op het <strong>bliksemschicht-icoon</strong> of <strong>fx-icoon</strong> aan de rechterkant.</li>
+</ol>
+<p>Zoek naar <code>cv</code> en selecteer de parameter <strong>CV</strong> van de <em>Een nieuwe rij toevoegen Dataverse</em>-actie, omdat deze de <code>ID</code>-waarde bevat van de CV-rij die is aangemaakt.</p>
+<p>Klik op <strong>Toevoegen</strong>.</p>
+<p><img alt="CV-parameter selecteren" src="../../../../../translated_images/3.1_41_SelectResumeParameter.61c4457c33e5d1b596169857535bfc560ef677264f8798e9148ceac999eeaeb9.nl.png" /></p>
+<ol>
+<li>Markeer de <code>CV-TITEL PLAATSHOUDER</code>. Klik op het <strong>bliksemschicht-icoon</strong> of <strong>fx-icoon</strong> aan de rechterkant.</li>
+</ol>
+<p>Zoek naar <code>titel</code> en selecteer de parameter <strong>CV-Titel</strong> van de <em>Een nieuwe rij toevoegen Dataverse</em>-actie, omdat deze de <code>cv-titel</code>-waarde bevat van de CV-rij die is aangemaakt.</p>
+<p>Klik op <strong>Toevoegen</strong>.</p>
+<p><img alt="CV-Titelparameter selecteren" src="../../../../../translated_images/3.1_42_SelectResumeTitleParameter.6c887607128f928da15c4cf6c22254d0473bc22514aa883462fd812bf14245e0.nl.png" /></p>
+<ol>
+<li>Markeer de <code>CV-NUMMER PLAATSHOUDER</code>. Klik op het <strong>bliksemschicht-icoon</strong> of <strong>fx-icoon</strong> aan de rechterkant.</li>
+</ol>
+<p>Zoek naar <code>cv-nummer</code> en selecteer de parameter <strong>CV-Nummer</strong> van de <em>Een nieuwe rij toevoegen Dataverse</em>-actie, omdat deze de <code>CV-Nummer</code>-waarde bevat van de CV-rij die is aangemaakt.</p>
+<p>Klik op <strong>Toevoegen</strong>.</p>
+<p><img alt="CV-Nummerparameter selecteren" src="../../../../../translated_images/3.1_43_SelectResumeNumberParameter.ca19197525250483a7e94598b621072b47ebdf5deb939e1387c979e807ddc554.nl.png" /></p>
+<ol>
+<li>We hebben deze actie geconfigureerd en onze agentflow is voltooid 🙌🏻 Goed bezig! Laten we nu onze gebeurtenistriggerflow opslaan door <strong>Concept opslaan</strong> te selecteren.</li>
+</ol>
+<p><img alt="Concept opslaan" src="../../../../../translated_images/3.1_44_SaveDraft.0c9eee19f0c7cb8483b8d31bc17e1dd54075352d22f0f44603a9d52b52429188.nl.png" /></p>
+<ol>
+<li>We moeten nu de details van de agentflow bewerken, selecteer <strong>Terug</strong>.</li>
+</ol>
+<p><img alt="Terug selecteren" src="../../../../../translated_images/3.1_45_Back.3f85535977bdb02231a0fdb8465e0e8b7d86fd5342ff933e4ae8bf9610279989.nl.png" /></p>
+<ol>
+<li>Selecteer <strong>Bewerken</strong> in de sectie <strong>Details</strong> en werk het <strong>Plan</strong> bij naar de optie <strong>Copilot Studio</strong>.</li>
+</ol>
+<p>Klik op <strong>Opslaan</strong>.</p>
+<p><img alt="Copilot Studio-plan wijzigen" src="../../../../../translated_images/3.1_46_ChangePlanDetails.6ab15f1f8bd9ebe55b2c1576c3495f47d1a29d7435e343d4c590e46647601269.nl.png" /></p>
+<ol>
+<li>Er verschijnt een modal waarin wordt gevraagd om te bevestigen dat je wilt overschakelen naar het Copilot Studio-plan. Selecteer <strong>Bevestigen</strong>.</li>
+</ol>
+<p><img alt="Copilot Studio-planwijziging bevestigen" src="../../../../../translated_images/3.1_47_ConfirmCopilotStudioPlan.bc6ab52e7c982127154b0fb743f85ff9cc05dcab944dffc9485bdbcbe0811397.nl.png" /></p>
+<ol>
+<li>Het plan is nu bijgewerkt naar <strong>Copilot Studio</strong>. Selecteer <strong>Bewerken</strong>, omdat we de gebeurtenistriggerflow voor onze agent moeten publiceren.</li>
+</ol>
+<p><img alt="Flow bewerken" src="../../../../../translated_images/3.1_48_PlanChangedAndEdit.3c3207766a648817f7a7878c3a6f684cf41cdceea4dca8f6fc43b7315c8dd648.nl.png" /></p>
+<ol>
+<li>Selecteer <strong>Publiceren</strong>.</li>
+</ol>
+<p><img alt="Publiceren" src="../../../../../translated_images/3.1_49_Publish.38ff814cfce6b3be1076cafb0c28e4e344f75d8cd4117fabed13ad361d4fde3f.nl.png" /></p>
+<p>Hoera! De gebeurtenistriggerflow is nu gepubliceerd 😃</p>
+<p><img alt="Gepubliceerd" src="../../../../../translated_images/3.1_50_Published.449e7867f7b027ae8a524c749357a1b931955062828bacc3b5a51e979755ef4a.nl.png" /></p>
+<p>Laten we doorgaan met het maken van een nieuwe agentflow die wordt aangeroepen door de subagent <strong>Aanvraagverwerkingsagent</strong>.</p>
+<h3 id="lab-32-een-teams-kanaal-informeren-met-een-adaptieve-kaart">Lab 3.2 - Een Teams-kanaal informeren met een adaptieve kaart<a class="headerlink" href="#lab-32-een-teams-kanaal-informeren-met-een-adaptieve-kaart" title="Permanent link">&para;</a></h3>
+<p>We gaan nu een nieuwe agentflow maken voor de subagent <strong>Aanvraagverwerkingsagent</strong> die de waarden gebruikt die door de gebeurtenistrigger zijn doorgegeven, om een adaptieve kaart te posten in een Teams-kanaal. Deze adaptieve kaart zal het HR-recruitmentteam waarschuwen over de PDF die automatisch is geüpload, zodat ze deze kunnen beoordelen.</p>
+<p>Laten we beginnen!</p>
+<ol>
+<li>Selecteer in de <strong>Wervingsagent</strong> het tabblad <strong>Agents</strong> en kies de <strong>Aanvraagverwerkingsagent</strong>.</li>
+</ol>
+<p><img alt="Aanvraagverwerkingsagent selecteren" src="../../../../../translated_images/3.2_01_SelectApplicationIntakeAgent.0e9dd3da5c52e9f59ab3a4545c01897ad830853b650ec42f7f8424aa530e0409.nl.png" /></p>
+<ol>
+<li>Scroll naar beneden naar <strong>Tools</strong> en selecteer <strong>+ Toevoegen</strong>.</li>
+</ol>
+<p><img alt="Tool toevoegen" src="../../../../../translated_images/3.2_02_AddNewTool.7c62275fd9f28cdc1923ea056a148171048dc568ff78056958fd54862133f90e.nl.png" /></p>
+<ol>
+<li>De modal <strong>Tool toevoegen</strong> verschijnt. Selecteer <strong>+ Nieuwe tool</strong>.</li>
+</ol>
+<p><img alt="Nieuwe tool selecteren" src="../../../../../translated_images/3.2_03_SelectNewTool.215e7637a9f065a3799a1ecf248eed1e859f201d2dfdfab71a7c1dc18e454e2d.nl.png" /></p>
+<ol>
+<li>Selecteer <strong>Agentflow</strong>.</li>
+</ol>
+<p><img alt="Agentflow selecteren" src="../../../../../translated_images/3.2_04_SelectAgentFlow.7bc12b3435efccc0cfee8f563640562f87d173b436b3313a3d1256fe35024907.nl.png" /></p>
+<ol>
+<li>De <strong>agentflow-ontwerper</strong> wordt geladen. Selecteer in de trigger <strong>Wanneer een agent de flow oproept</strong> <strong>+ Een invoer toevoegen</strong>.</li>
+</ol>
+<p><img alt="Invoer toevoegen selecteren" src="../../../../../translated_images/3.2_05_SelectAddAnInput.f3dc8465f490929baccb0f2dc72b50629b1435ff8a3861f7974885d1d36cdeb1.nl.png" /></p>
+<ol>
+<li>Selecteer <strong>Tekst</strong> als type gebruikersinvoer.</li>
+</ol>
+<p><img alt="Tekst selecteren" src="../../../../../translated_images/3.2_06_SelectText.93585b4af8c4e277c11c2052b638e249508a24a075987026a6ec346e75184217.nl.png" /></p>
+<ol>
+<li>Kopieer en plak de volgende naam voor de invoerparameter in het tekstveld.</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>CV-ID
+</span></code></pre></div>
+<p><img alt="CV-ID invoer" src="../../../../../translated_images/3.2_07_ResumeIdInput.a9e127e343856d6c6d45dd1251cade0503bad9484bc563c02155390951b1faa5.nl.png" /></p>
+<ol>
+<li>Herhaal dezelfde stappen om een tweede tekstinvoer toe te voegen. Kopieer en plak de volgende naam voor de invoerparameter.</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>CV-Titel
+</span></code></pre></div>
+<p><img alt="CV-Titel invoer" src="../../../../../translated_images/3.2_08_ResumeTitleInput.c71ecd364a974a93abb0de876807c2e9bde59fcea6df317babeb20764b636f26.nl.png" /></p>
+<ol>
+<li>Herhaal dezelfde stappen om een derde tekstinvoer toe te voegen. Kopieer en plak de volgende naam voor de invoerparameter.</li>
+</ol>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>CV-Nummer
+</span></code></pre></div>
+<img alt="CV-Nummer invoer" src="../../../../../translated_images/3.2_09_ResumeNumberInput.a6c060000354deab51dffef3c1ad9f13378cfeabdafdb7a33c2a591bfd044709.nl.png" /></p>
+<ol>
+<li>Herinner je je nog hoe we in <a href="../../recruit/08-add-adaptive-card/#81-create-a-new-topic-with-an-adaptive-card-for-user-to-submit-their-request">Recruit</a> een adaptieve kaart hebben toegevoegd binnen een onderwerp voor onze agent? Deze keer gaan we een adaptieve kaart toevoegen in een agentflow. We gaan nu een andere actie toevoegen aan onze agentflow die een adaptieve kaart post in een Teams-kanaal.</li>
+</ol>
+<p>Selecteer het <strong>+ icoon</strong> onder de trigger.</p>
+<p><img alt="Nieuwe actie toevoegen" src="../../../../../translated_images/3.2_10_AddNewAction.4474a2150991cac246d5e4091a74ba91e76e1c5bafa34ad985a8567c09dcdd35.nl.png" /></p>
+<ol>
+<li>Selecteer de actie <strong>Kaart posten in een chat of kanaal</strong>.</li>
+</ol>
+<p><img alt="Actie Kaart posten in een chat of kanaal selecteren" src="../../../../../translated_images/3.2_11_SelectPostCardInAChatOrChannel.97de43ed1c883b14d0150ae65efaa90f53f0815bdf57ec10e0e22cbd3e22ce06.nl.png" /></p>
+<ol>
+<li>Er moet een verbindingsreferentie naar Microsoft Teams worden gemaakt met je ingelogde gebruikersaccount. Selecteer <strong>Inloggen</strong>.</li>
+</ol>
+<p><img alt="Inloggen selecteren" src="../../../../../translated_images/3.2_12_SignInToCreateConnectionReference.2297f8b702d71508f1b21a3ed4046df4846dc03b13932a20e5c445403559ac1f.nl.png" /></p>
+<ol>
+<li>Selecteer je gebruikersaccount en klik vervolgens op <strong>Toegang toestaan</strong>.</li>
+</ol>
+<p><img alt="Toegang toestaan selecteren" src="../../../../../translated_images/3.2_13_AllowAccess.31cbf82606d75231108bd4f2bfeafffda3cd7e7e760cd46004c2705afe050aaf.nl.png" /></p>
+<ol>
+<li>Voor de volgende invoerparameters:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Hoe in te stellen</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Posten als</strong></td>
+<td>Dropdown</td>
+<td>Selecteer de optie <code>Flow bot</code></td>
+</tr>
+<tr>
+<td><strong>Posten in</strong></td>
+<td>Dropdown</td>
+<td>Selecteer de optie <code>Kanaal</code></td>
+</tr>
+<tr>
+<td><strong>Team</strong></td>
+<td>Dropdown</td>
+<td>Selecteer een team dat beschikbaar is in je omgeving en waartoe je toegang hebt voor het voltooien van deze laboefening</td>
+</tr>
+<tr>
+<td><strong>Kanaal</strong></td>
+<td>Dropdown</td>
+<td>Selecteer een kanaal dat beschikbaar is in je omgeving en waartoe je toegang hebt voor het voltooien van deze laboefening</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Invoerparameters configureren" src="../../../../../translated_images/3.2_14_ConfigureParameters.8c21924f90db3acaa33d4e35ef43c70556ba4cc37207a195ac654e55a43400a6.nl.png" /></p>
+<ol>
+<li>Vervolgens configureren we het veld <strong>Adaptieve kaart</strong>. Selecteer het veld <strong>Adaptieve kaart</strong>.</li>
+</ol>
+<p><img alt="Adaptieve kaartveld selecteren" src="../../../../../translated_images/3.2_15_SelectAdaptiveCardParameter.65323056be6174d2eed7422650aaa70fc16396148f90b8af1801110d7a30d66f.nl.png" /></p>
+<ol>
+<li>Open het <a href="../../../../../docs/operative-preview/03-automate-triggers/assets/3.2_ResumeTableUpdated.json">JSON-bestand met bijgewerkte CV-tabel</a>, kopieer de volledige inhoud en plak deze in het veld Adaptieve kaart.</li>
+</ol>
+<p><img alt="JSON kopiëren en plakken" src="../../../../../translated_images/3.2_16_JSON.f022097fb7139bd12514abb8fdc518309ea940f005cc94a11ba159359cde784b.nl.png" /></p>
+<ol>
+<li>Net zoals we deden in <a href="../../recruit/08-add-adaptive-card/#81-create-a-new-topic-with-an-adaptive-card-for-user-to-submit-their-request">Recruit</a>, gaan we bestaande waarden in de JSON-payload vervangen door daadwerkelijke waarden of dynamische inhoud.</li>
+</ol>
+<p>Laten we eerst de URL voor de <code>url</code>-eigenschap binnen de <code>selectAction</code>-eigenschap bijwerken. Deze URL wordt vervangen door de URL van de CV's systeemweergave in de <strong>Hiring Hub</strong> modelgestuurde app. Hierdoor kan de recruiter de actie selecteren en naar de CV's systeemweergave in de modelgestuurde app worden geleid.</p>
+<p>Markeer de huidige URL-waarde en verwijder deze.</p>
+<p><img alt="URL-waarde selecteren" src="../../../../../translated_images/3.2_17_SystemViewURL.5e51fd894ac916f436107c7b668d66ca87ca8bdfd7affeb7dae1b10fa8ff5afb.nl.png" /></p>
+<ol>
+<li>Navigeer in de <strong>Hiring Hub</strong> modelgestuurde app naar de <strong>CV's</strong> systeemweergave via het menu aan de linkerkant en kopieer de URL. Navigeer vervolgens terug naar de agentflow en plak de gekopieerde URL in de <strong>url</strong>-eigenschap binnen de <code>selectAction</code>-eigenschap.</li>
+</ol>
+<p><img alt="URL van CV's systeemweergave kopiëren" src="../../../../../translated_images/3.2_18_CopyResumesSystemViewURL.14d9f55c7db15977a12dfe2a5df95aab5cf241e646b08f9838cff31aaa27a381.nl.png" />
+1. Je zou het volgende moeten zien, waarbij de geel gemarkeerde delen de details van jouw omgeving zijn in de <strong>Hiring Hub</strong> modelgestuurde app.</p>
+<div class="language-text highlight"><pre><span></span><code> | Parameter | Waarde | Uitleg |
+ |----------|------------|---------|
+ | **Organisatie-URI** | GUID | De URL van de Dataverse/Dynamics 365 omgeving |
+ | **appid** | GUID | Om een specifieke modelgestuurde app te openen, wordt de queryparameter appid of appname gebruikt. In dit geval wordt appid gebruikt |
+ | **viewid** | GUID | De queryparameter die de id van de weergave is |
+
+   ![URL plakken](../../../../../translated_images/3.2_19_PasteURL.41f3fdd66190c8ba478857f91c90eb05ee9621243bda7b7ad26eb5802b8e970d.nl.png)
+</code></pre></div>
+<ol>
+<li>
+<p>Vervolgens voegen we dynamische inhoudswaarden toe voor verschillende eigenschappen. Laten we beginnen met de tekst die het referentienummer van de cv weergeeft die autonoom is aangemaakt door de gebeurtenistrigger.</p>
+<p>Selecteer het <strong>paneel</strong>-icoon om het actiepaneel te laden.</p>
+<p><img alt="Selecteer paneel-icoon" src="../../../../../translated_images/3.2_20_SelectPannelIcon.786a4147ba12e0e62648c66f14fb2b9a7f89b27c3a610f43420e31cb0c9fb5da.nl.png" /></p>
+</li>
+<li>
+<p>Scroll naar de regel waar je de eigenschap <code>text</code> ziet voor <code>RESUME NUMBER PLACEHOLDER</code>. Markeer de placeholderwaarde en verwijder deze.</p>
+<p><img alt="Placeholder verwijderen" src="../../../../../translated_images/3.2_21_DeleteResumeNumberPlaceholder.6ffd7a5a073f9d9a11e0e119c87e827243de237f70ebc3ab37dfdd36de615130.nl.png" /></p>
+</li>
+<li>
+<p>Klik tussen de dubbele aanhalingstekens en selecteer het <strong>bliksemschicht-icoon</strong> of <strong>fx-icoon</strong> aan de rechterkant.</p>
+<p>In het tabblad <strong>Dynamische inhoud</strong> selecteer je de parameter <strong>ResumeNumber</strong> en klik op <strong>Toevoegen</strong>.</p>
+<p><img alt="ResumeNumber parameter toevoegen" src="../../../../../translated_images/3.2_22_SelectResumeNumberParameter.de5a6eecb3ee092441d841ad137dfecd9f8d503a370ff60eb5ccdc0267e37df0.nl.png" /></p>
+</li>
+<li>
+<p>De parameter <strong>ResumeNumber</strong> wordt nu toegevoegd als dynamische inhoud aan de eigenschap <code>text</code>.</p>
+<p><img alt="ResumeNumber dynamische inhoud" src="../../../../../translated_images/3.2_23_ResumeNumberDynamicContent.129a566ac6e9d448b268b828da5766a7056779ac167f65b498e2ca21d703b7f0.nl.png" /></p>
+</li>
+<li>
+<p>We herhalen dezelfde stappen voor de <code>RESUME NAME PLACEHOLDER</code>. Scroll naar de regel waar je de eigenschap <code>text</code> ziet voor <code>RESUME NAME PLACEHOLDER</code>. Markeer de placeholderwaarde en verwijder deze.</p>
+<p><img alt="Resume Name Placeholder" src="../../../../../translated_images/3.2_24_ResumeNamePlaceholder.6c879b99ae375892f7e0a511bfedd5fa9e60a8dea71ea2a44c2a7a04c8389f43.nl.png" /></p>
+</li>
+<li>
+<p>Klik tussen de dubbele aanhalingstekens en selecteer het <strong>bliksemschicht-icoon</strong> of <strong>fx-icoon</strong> aan de rechterkant.</p>
+<p>In het tabblad <strong>Dynamische inhoud</strong> selecteer je de parameter <strong>ResumeTitle</strong> en klik op <strong>Toevoegen</strong>.</p>
+<p><img alt="ResumeTitle parameter toevoegen" src="../../../../../translated_images/3.2_25_SelectResumeTitleParameter.18c769bbd2c60e362a56f6055e151ed6287903cb625addcdfbb43044828d7378.nl.png" /></p>
+</li>
+<li>
+<p>De parameter <strong>ResumeTitle</strong> wordt nu toegevoegd als dynamische inhoud aan de eigenschap <code>text</code>.</p>
+<p><img alt="ResumeTitle dynamische inhoud" src="../../../../../translated_images/3.2_26_ResumeTitleDynamicContent.7219e078f71fc0d5d4a6bb228ba2d53f0898ba26a27c5eb859df90d12dd52c70.nl.png" /></p>
+</li>
+<li>
+<p>We herhalen dezelfde stappen voor de waarde <strong>Due Date</strong>, die aangeeft wanneer een recruiter de cv moet beoordelen. Scroll naar de regel waar je de eigenschap <code>text</code> ziet voor <code>May 21, 2023</code>.</p>
+<p><img alt="Selecteer toegang toestaan" src="../../../../../translated_images/3.2_27_DueDatePlaceholder.17c6003cc9ec1141b0aeb5cde203098a7f5534fa11f01a3cbffb66206ed1633a.nl.png" /></p>
+</li>
+<li>
+<p>Verwijder deze placeholderwaarde en klik tussen de dubbele aanhalingstekens.</p>
+<p><img alt="Verwijderen" src="../../../../../translated_images/3.2_28_DeleteDueDatePlaceholder.9a3df55fb3c9ed72e61e0a60dc3344335b0444ff537c9fb51036b0442a85d268.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer het <strong>bliksemschicht-icoon</strong> of <strong>fx-icoon</strong> aan de rechterkant en voer in het tabblad <strong>Functie</strong> de volgende expressie in en klik op <strong>Toevoegen</strong>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>addDays(utcNow(), 3, &#39;MMM dd, yyyy&#39;)
+</span></code></pre></div>
+<p>Deze expressie maakt gebruik van twee functies.</p>
+<table>
+<thead>
+<tr>
+<th>Functie</th>
+<th>Uitleg</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>addDays</strong></td>
+<td>Voegt een opgegeven aantal dagen toe aan een gegeven datum en retourneert de resulterende datum in stringformaat</td>
+</tr>
+<tr>
+<td><strong>utcNow</strong></td>
+<td>Retourneert de huidige datum en tijd in Coordinated Universal Time (UTC) formaat als een string.</td>
+</tr>
+</tbody>
+</table>
+<p>Voor de waarde utcNow formatteren we de datum als maand en dag, gevolgd door het jaar.</p>
+<p><img alt="Expressie Due Date" src="../../../../../translated_images/3.2_29_01_ExpressionDueDate.a4fa31985f5500971f2fc6da0e81e008af12be19d54a30a240764b74a4b2dbcb.nl.png" /></p>
+<p>De expressie wordt nu toegevoegd aan de eigenschap <code>text</code>.</p>
+<p><img alt="Expressie Due Date" src="../../../../../translated_images/3.2_29_02_ExpressionDueDate.6159288450731c7b09628af70f0c9a6d92590ca7c7e39e8a524ae8af7c511f2c.nl.png" /></p>
+</li>
+<li>
+<p>Tot slot werken we de URL bij voor de eigenschap <code>url</code> binnen de eigenschap <code>actions</code> array onderaan de JSON-payload. Deze huidige placeholder-URL wordt vervangen door de URL van de cv-rij in de <strong>Hiring Hub</strong> modelgestuurde app. Dit stelt de recruiter in staat om de actie <code>Action.OpenURL</code> van de adaptieve kaart te selecteren en naar de cv in de modelgestuurde app te worden geleid.</p>
+<p><img alt="Placeholder URL voor cv bekijken verwijderen" src="../../../../../translated_images/3.2_30_ViewResumeURLPlaceholder.f27af6cadfb54fb977f0b46ea3ec42ee0638d38ebc5d294eff5da52abf9d4a1b.nl.png" /></p>
+</li>
+<li>
+<p>Open in de <strong>Hiring Hub</strong> modelgestuurde app een rij in de systeemweergave <strong>Resumes</strong> via het menu aan de linkerkant. De cv-rij wordt geladen als een formulier in de modelgestuurde app.</p>
+<p>Kopieer de URL van de cv-rij.</p>
+<details class="info">
+<summary>Hoe navigeer je terug naar de <strong>Hiring Hub</strong> modelgestuurde app als je deze hebt verlaten/gesloten</summary>
+<ol>
+<li>Ga naar <a href="https://make.powerapps.com">https://make.powerapps.com</a> en zorg ervoor dat je in de ontwikkelaarsomgeving bent die je gebruikt voor deze lab-oefeningen, anders schakel je naar deze omgeving.</li>
+</ol>
+<p><img alt="Ga naar make.powerapps.com" src="../../../../../translated_images/3.2_31_Note_01_BrowseToURL.a13dfc8b05a0b34f3a4c853f3d3e418864176b52b1b40c069da7712af5562aa5.nl.png" /></p>
+<ol>
+<li>Selecteer <strong>Apps</strong> in het menu aan de linkerkant en selecteer voor de <strong>Hiring Hub</strong> modelgestuurde app het <strong>Afspelen</strong>-icoon om deze in je browser te laden.</li>
+</ol>
+<p><img alt="Selecteer Hiring Hub modelgestuurde app" src="../../../../../translated_images/3.2_31_Note_02_HiringHubApp.a09b6ea28b4fea8932809cb847cb0ea3d8faeb7b7b5604852de1f46ab1e9741b.nl.png" /></p>
+</details>
+<p><img alt="Kopieer cv-rij URL" src="../../../../../translated_images/3.2_31_CopyResumeURL.f6156f8792526129c2613922f0137221b2944fa8ffe7c04766d710521ad8765b.nl.png" /></p>
+</li>
+<li>
+<p>Navigeer vervolgens terug naar de agent flow, markeer de huidige placeholder-URL-waarde en verwijder deze.</p>
+<p><img alt="Placeholder URL voor cv-rij verwijderen" src="../../../../../translated_images/3.2_32_SelectResumeURLPlaceHolder.8db783de292428eaa8937242eba4a54ebb1df7bf4c1bc9391b016ee545fb2b9f.nl.png" /></p>
+</li>
+<li>
+<p>Plak vervolgens de gekopieerde URL in de eigenschap <strong>url</strong> binnen de eigenschap <code>url</code>.</p>
+<p><img alt="Gekopieerde cv-rij URL plakken" src="../../../../../translated_images/3.2_33_PasteResumeRowURL.d7ba92493d7597b89f75e2f17f76846ac17a9ba89c2e36729dc6b5dc1599b047.nl.png" /></p>
+</li>
+<li>
+<p>Je zou het volgende moeten zien. Verwijder de <code>GUID</code> id-waarde aan het einde. We vervangen dit door dynamische inhoud - de parameter <strong>ResumeId</strong>.</p>
+<p><img alt="Placeholder URL voor cv bekijken verwijderen" src="../../../../../translated_images/3.2_34_DeleteViewResumePlaceholderURL.7b26209eaeef6dc0a21b16140d05fe2f0e38de5f714575edd24d21dded58102a.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer het <strong>bliksemschicht-icoon</strong> of <strong>fx-icoon</strong> aan de rechterkant.</p>
+<p>In het tabblad <strong>Dynamische inhoud</strong> selecteer je de parameter <strong>ResumeId</strong> en klik op <strong>Toevoegen</strong>.</p>
+<p><img alt="ResumeId parameter" src="../../../../../translated_images/3.2_35_ResumeIdParameter.3dc710a7f5216944387f4d5f82c0a372eee23ee5259dec04147ad00e9c454d7d.nl.png" /></p>
+</li>
+<li>
+<p>De <strong>ResumeId</strong> wordt toegevoegd als dynamische inhoud. Het volgende, geel gemarkeerd, zijn jouw omgevingsdetails van de <strong>Hiring Hub</strong> modelgestuurde app.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Waarde</th>
+<th>Uitleg</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Organisatie-URI</strong></td>
+<td>GUID</td>
+<td>De URL van de Dataverse/Dynamics 365 omgeving</td>
+</tr>
+<tr>
+<td><strong>appid</strong></td>
+<td>GUID</td>
+<td>Om een specifieke modelgestuurde app te openen, wordt de queryparameter appid of appname gebruikt. In dit geval wordt appid gebruikt</td>
+</tr>
+<tr>
+<td><strong>id</strong></td>
+<td>GUID</td>
+<td>De queryparameter die de id van de cv-rij is</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="ResumeId dynamische inhoud" src="../../../../../translated_images/3.2_36_ResumeIdDynamicContent.a1a40dfb4a83b60f1b75b02160890e3fec41c2c7df8adf32e02d652a57c1ee87.nl.png" /></p>
+</li>
+<li>
+<p>We hebben de configuratie van de actie <strong>Post card in a chat or channel</strong> voltooid 👏🏻 Sluit het configuratiepaneel van de actie door op het <strong>x</strong>-icoon te klikken.</p>
+<p><img alt="Paneel sluiten" src="../../../../../translated_images/3.2_37_CloseActionPanel.23d07107381411aa9494ef36fb240682a0727a63e6f15082074b34a1defd517b.nl.png" /></p>
+</li>
+<li>
+<p>Tot slot configureren we de laatste actie, <strong>Respond to the agent</strong>, door een tekst terug te sturen naar de agent om de verwerking te beëindigen.</p>
+<p>Selecteer in de actie <strong>Respond to the agent</strong> <strong>+Een output toevoegen</strong>.</p>
+<p><img alt="Output toevoegen selecteren" src="../../../../../translated_images/3.2_38_AddAnOutput.de1a0e49033cb077eb5d2c226152bbb06dc12fb95d0496c69d469eecdb46c0ae.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer <strong>Tekst</strong> als het type output.</p>
+<p><img alt="Tekst als type output selecteren" src="../../../../../translated_images/3.2_39_SelectText.4e1e82c35fe9d1b569b668092d405aa9b0c81fbe67e7de68a660f2083ed3afdd.nl.png" /></p>
+</li>
+<li>
+<p>Voer het volgende in als naam van de output.</p>
+<p><img alt="Einde gesprek output" src="../../../../../translated_images/3.2_40_EndConversationOutput.e392b58847d8439443c89459fccbbd88d4ea5e5fa562749b77407c46b9ff4ca4.nl.png" /></p>
+</li>
+<li>
+<p>Voer het volgende in als waarde voor de output.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Finished
+</span></code></pre></div>
+<p><img alt="Waarde einde gesprek output" src="../../../../../translated_images/3.2_41_EndConversationOutputValue.2cb836900ee9fca802926676e613b077938f1106cc16e77ddd77af64ce92dcc8.nl.png" /></p>
+</li>
+<li>
+<p>We hebben nu de configuratie van de agent flow voltooid. Selecteer <strong>Concept opslaan</strong> om de agent flow op te slaan. Er verschijnt een bevestigingsbericht zodra het is opgeslagen.</p>
+<p><img alt="Concept opslaan" src="../../../../../translated_images/3.2_42_SaveDraft.1bb26eec40faf5d2c244d93f869344915e90423623e07e02cac2c1f8c73d1a4a.nl.png" /></p>
+</li>
+<li>
+<p>Voordat we de agent flow publiceren, moeten we de details voor de agent flow bijwerken. Selecteer het tabblad <strong>Overzicht</strong> en klik op <strong>Bewerken</strong>.</p>
+<p>Voer in het veld voor de naam van de flow het volgende in.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Notify Teams Applicant channel
+</span></code></pre></div>
+<p>Selecteer daarna het <strong>Vernieuwen</strong>-icoon om de beschrijving van de agent flow bij te werken met behulp van AI.</p>
+<p>Klik vervolgens op <strong>Opslaan</strong> om de bijgewerkte details voor de agent flow op te slaan.</p>
+<p><img alt="Details bewerken en opslaan" src="../../../../../translated_images/3.2_43_EditDetails.f0c9b53a9c1b29e4aa3c34774680559ae9173f77b3a37817bab2296b77ffcca7.nl.png" /></p>
+</li>
+<li>
+<p>Navigeer terug naar het tabblad <strong>Ontwerper</strong> en selecteer <strong>Publiceren</strong> om de agent flow te publiceren. Er verschijnt een bevestigingsbericht zodra het is opgeslagen.</p>
+<p><img alt="Agent flow publiceren" src="../../../../../translated_images/3.2_44_PublishAgentFlow.3014e6de5e53aa5fc2021bf6e11b901c4990b4fbb4d4cee33cc6d5b6cc641ed8.nl.png" /></p>
+</li>
+<li>
+<p>De agent flow moet nu worden toegevoegd als een tool in de <strong>Application Intake Agent</strong>. Navigeer terug naar de <strong>Hiring Agent</strong> en selecteer het tabblad <strong>Agents</strong>, selecteer vervolgens de <strong>Application Intake Agent</strong>.</p>
+<p><img alt="Application Intake Agent selecteren" src="../../../../../translated_images/3.2_45_ApplicationIntakeAgent.0446b1762d0f499e880e7984f59669639193566f72539cd4fba5c62cd1fe8726.nl.png" /></p>
+</li>
+<li>
+<p>In de sectie <strong>Details</strong> van de agent werken we het veld <strong>Beschrijving</strong> bij. Kopieer het volgende en plak dit aan het einde van de beschrijvingstekst.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>en ook de Teams Applicant channel notificeren
+</span></code></pre></div>
+<p><img alt="Agent beschrijving bijwerken" src="../../../../../translated_images/3.2_46_UpdateAgentDescription.56344699cd3cc5e417e8f95362ed2288d0c0391f33bd98872e7e008a545175f0.nl.png" /></p>
+</li>
+<li>
+<p>Vervolgens voegen we de agent flow toe als een tool. Scroll naar beneden en selecteer <strong>+ Toevoegen</strong>.</p>
+<p><img alt="Toevoegen selecteren" src="../../../../../translated_images/3.2_47_AddTools.c7557e272bd731129dffe9edebba3b04170d27806aaa14fffbe3d66b7b61808b.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer de eerder aangemaakte agent flow, <strong>Notify Teams Applicant Channel</strong>.</p>
+<p><img alt="Agent flow selecteren" src="../../../../../translated_images/3.2_48_NotifyTeamsApplicantChannelAgentFlow.5985f570786edef4eac93455f7a07978c0daf54e1371660bfd56a4c16b6aaf79.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer vervolgens <strong>Toevoegen en configureren</strong>.</p>
+<p><img alt="Toevoegen en configureren selecteren" src="../../../../../translated_images/3.2_49_AddAndConfigure.c2d6cccfa9e4bb23ff58b615ad16d0b3ade4ef867b73b9196a45df6990d8072f.nl.png" /></p>
+</li>
+<li>
+<p>In de sectie <strong>Inputs</strong> van de agent flow zijn de drie inputs die we eerder hebben geconfigureerd zichtbaar. Standaard is de configuratie <strong>Automatisch invullen met AI</strong> ingesteld. We laten deze instelling zoals deze is, omdat de prompt van de gebeurtenistrigger (in de laatste actie, <strong>Verstuurt een prompt naar de opgegeven copilot voor verwerking</strong> - dit zijn stappen 38-44 van <strong>Lab 3.1 - Automatisch cv's uploaden naar Dataverse ontvangen via e-mail</strong>) de parameterwaarden bevat die AI zal extraheren.</p>
+<p><img alt="Tool agent flow inputs" src="../../../../../translated_images/3.2_50_Inputs.9fbb57b83b533d5a60f957505bb1e5430886ec9e6c70c10ed1c641d6b33fcc21.nl.png" /></p>
+</li>
+<li>
+<p>Nu de tool is toegevoegd aan de <strong>Application Intake Agent</strong>, moeten de instructies van de agent worden bijgewerkt. Selecteer het <strong>terug-pijl</strong>-icoon om terug te keren naar de lijst met agents.</p>
+<p><img alt="Terug-pijl icoon selecteren" src="../../../../../translated_images/3.2_51_SelectBack.6a9a55176d931895777822d3f9276d5d12ffe379a8860dd521e1c895e8188bba.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer de <strong>Application Intake Agent</strong> in het tabblad <strong>Agents</strong> van de <strong>Hiring Agent</strong>.</p>
+<p><img alt="Application Intake Agent selecteren" src="../../../../../translated_images/3.2_52_SelectApplicationIntakeAgent.039140313422e833389fd134b3a70a0eed11ba175ede5dbdc4abcce6004c7d2d.nl.png" /></p>
+</li>
+<li>
+<p>In het veld <strong>Instructies</strong> voeg je een nieuwe regel toe na de <code>2.Post-Upload</code> instructies. Kopieer en plak de volgende instructies.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Proces voor het uploaden van cv&#39;s via e-mail
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>1. Wanneer je een bericht ontvangt, **Stuur [ResumeId (text)] = &quot;1680265f-5793-f011-b41b-7c1e525be9f7&quot; en [ResumeTitle (text_1)] = &quot;TAYLOR TESTPERSON (FICTIEF).pdf&quot; en [ResumeNumber (text_2)]= &quot;R01026&quot; naar de tool &quot;Notify Teams Applicant channel&quot;** in de subagent &quot;Application Intake Agent&quot;, roep [AGENT FLOW PLACEHOLDER] aan.
+</span></code></pre></div>
+<p><img alt="Instructies van Application Intake Agent bijwerken" src="../../../../../translated_images/3.2_53_PasteCopiedInstructions.f24ed715e907cf023449a54b894354ca1252b198e9be694eec2875f7f647f9c2.nl.png" /></p>
+</li>
+<li>
+<p>Markeer de tekst <code>[AGENT FLOW PLACEHOLDER]</code>.</p>
+<p><img alt="Placeholder markeren" src="../../../../../translated_images/3.2_54_HighlightPlaceholder.6c3fcac3c8f4fb6e5cce2dbd6b6548b84652d009e20fa4a01183a9a1b42b24fb.nl.png" /></p>
+</li>
+<li>
+<p>Voer het schuine streepje, <code>/</code>, in en selecteer de tool <strong>Notify Teams Applicant Channel</strong>.</p>
+<p><img alt="Notify Teams Applicant Channel tool selecteren" src="../../../../../translated_images/3.2_55_NotifyTeamsApplicatnChannelTool.2e3dd1e9ee9b2dfe10e1f2feb7e3b74b08856ce3afb16dafae1f2c4b73da904f.nl.png" />
+1. De agentflow zal nu worden gestart door de <strong>Application Intake Agent</strong> volgens de instructies, nadat de laatste actie (<strong>Stuurt een prompt naar de opgegeven copilot voor verwerking</strong>) in de event trigger de prompt met de parameterwaarden terugstuurt naar de agent.</p>
+<p>Selecteer <strong>Opslaan</strong> om de bijgewerkte instructies voor de <strong>Application Intake Agent</strong> op te slaan.</p>
+<p><img alt="Selecteer Opslaan" src="../../../../../translated_images/3.2_56_Save.6abb0131f96b20d3753b5990313eaea6a237bef2bf0e2103a2ee5ba570fd7c04.nl.png" /></p>
+</li>
+<li>
+<p>De instructies worden nu bijgewerkt zodra de agent is opgeslagen.</p>
+<p><img alt="Instructies bijgewerkt" src="../../../../../translated_images/3.2_57_InstructionsUpdated.5bfbfe2ca1da16284358a9917246bd8676cd6c095839ed1c69361d992cacd2b3.nl.png" /></p>
+</li>
+<li>
+<p>We moeten nu de <strong>Hiring Agent</strong> publiceren. Selecteer <strong>Publiceren</strong> rechtsboven en selecteer <strong>Publiceren</strong> in de <em>Publiceer deze agent-modal</em> die verschijnt.</p>
+<p><img alt="Publiceer Hiring Agent" src="../../../../../translated_images/3.2_58_PublishAgent.e7ec81c81b735de0cd11516aa944c759ea510e2b0bc9acf9f00d42d788896991.nl.png" /></p>
+</li>
+<li>
+<p>Na publicatie verschijnt een bevestigingsbericht dat de agent is gepubliceerd.</p>
+<p><img alt="Bevestigingsbericht" src="../../../../../translated_images/3.2_59_AgentPublished.d15e01232544cf08943260dfbf61c92339dbd187620349e7c5a43add4796ed12.nl.png" /></p>
+</li>
+</ol>
+<p>We kunnen nu de agent testen!</p>
+<h3 id="lab-33-test-event-trigger">Lab 3.3 - Test event trigger<a class="headerlink" href="#lab-33-test-event-trigger" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Om de event trigger uit te voeren, moet er een e-mail worden verzonden met een pdf-bestand van een cv. Stel een nieuwe e-mail op in Outlook.</p>
+<table>
+<thead>
+<tr>
+<th>E-mailonderdeel</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Aan ontvanger</strong></td>
+<td>Gebruik je ingelogde gebruikersaccount als waarde</td>
+</tr>
+<tr>
+<td><strong>Bestandsbijlage</strong></td>
+<td>Upload het bestand <a href="../../../../../docs/operative-preview/test-data/resumes/TAYLOR%20TESTPERSON%20(FICTITIOUS).pdf">TAYLOR TESTPERSON (FICTIEF)</a></td>
+</tr>
+<tr>
+<td><strong>Tekst</strong></td>
+<td>Kopieer en plak de onderstaande tekst als de inhoud van de e-mail</td>
+</tr>
+</tbody>
+</table>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Beste Hiring Manager,
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>Ik schrijf u om mijn interesse kenbaar te maken in de functie van Senior Power Platform Engineer bij uw organisatie. Met meer dan negen jaar ervaring in het leveren van veilige en schaalbare oplossingen op Microsoft-cloudplatforms, ben ik ervan overtuigd dat ik effectief kan bijdragen aan uw team.
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>In mijn meest recente rol als Lead Power Platform Engineer heb ik een geautomatiseerde cv-intake pipeline ontwikkeld, waardoor handmatige triage werd verminderd en de doorzoekbaarheid werd verbeterd. Ik heb HR-casebeheerapplicaties geleverd, oplossing-bewuste flows geïntroduceerd en PR-controles geïmplementeerd om de implementatietijden te verbeteren. Mijn expertise omvat Power Apps, Power Automate, Power Pages, Dataverse en een reeks Microsoft 365-diensten, evenals integratie met Graph/REST API&#39;s en Azure Functions.
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>Eerder heb ik goedkeuringen in Teams ontwikkeld met adaptieve kaarten, waardoor goedkeuringstijden werden teruggebracht tot dezelfde dag, en robuuste foutafhandelingsframeworks gecreëerd. Mijn achtergrond omvat ook het migreren van legacy-workflows naar Power Automate en het bouwen van selfserviceportalen die door honderden medewerkers zijn geadopteerd.
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>Ik heb een B.Sc. in Computer Science en ben gecertificeerd als Power Platform Developer (PL-400) en Solution Architect (PL-600). Daarnaast ben ik gepassioneerd over mentoring en heb ik vrijwilligerswerk gedaan bij lokale maker-groepen.
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>Bijgevoegd vindt u mijn cv ter overweging. Ik zou graag de kans krijgen om te bespreken hoe mijn vaardigheden en ervaring aansluiten bij uw behoeften.
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>Dank u voor uw tijd en overweging.
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>Met vriendelijke groet,  
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>Taylor Testperson
+</span></code></pre></div>
+<p><strong>Verzend</strong> de e-mail zodra deze is opgesteld.</p>
+<p><img alt="E-mail opstellen met PDF-bestandsbijlage" src="../../../../../translated_images/3.3_01_ComposeEmailWithAttachment.eccba1bbcc276b4373277b193a66d8818b712c6ab9468ee12902545522b670f7.nl.png" /></p>
+</li>
+<li>
+<p>Ga in het Power Automate-makerportaal naar de event trigger flow en selecteer het <strong>Vernieuwen</strong>-icoon om de geslaagde flowuitvoering voor de verzonden e-mail te bekijken.</p>
+<p><img alt="Selecteer vernieuwen-icoon om flowuitvoering te bekijken" src="../../../../../translated_images/3.3_02_FlowRun.0e99756ebc5fba371dc72719b0619736626934461e58db2dc153535cbabcc1e8.nl.png" /></p>
+</li>
+<li>
+<p>Ga terug naar Copilot Studio in de <strong>Hiring Agent</strong> en selecteer het tabblad <strong>Activiteit</strong>.</p>
+<p><img alt="Selecteer tabblad Activiteit" src="../../../../../translated_images/3.3_03_SelectActivity.11d78735a8a2a1f64443d285deb47f2bacc5bd53ded039791215f9465dbc3f76.nl.png" /></p>
+</li>
+<li>
+<p>Het tabblad <strong>Activiteit</strong> wordt geladen en toont alle activiteiten van de <strong>Hiring Agent</strong>. Er zal een activiteit zijn met de naamwaarde <strong>Automated</strong> en de status <strong>Voltooid</strong>. Deze activiteit vertegenwoordigt de event trigger en de agentflow die is gestart.</p>
+<p><img alt="Activiteit voltooid" src="../../../../../translated_images/3.3_04_StatusComplete.dbe14ffb9414b0f4d869841426c4ca595d7a664bf13f4b5e2e29a4e251b9064c.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer de activiteit en selecteer de event trigger in de activiteitenkaart. In het paneel aan de rechterkant zie je hoe de invoerparameters in de prompt de waarden <code>Resume Id</code>, <code>Resume Title</code> en <code>Resume Number</code> bevatten van de <strong>Dataverse</strong>-rij die is aangemaakt. Dit komt voort uit de dynamische inhoudswaarden die eerder zijn geconfigureerd in stappen 18 - 27 van <strong>Lab 3.1 - Automatisch cv's uploaden naar Dataverse die per e-mail zijn ontvangen</strong>.</p>
+<p><img alt="Event trigger" src="../../../../../translated_images/3.3_05_EventTrigger.cbd73cd43a79e88e782d1e47ac8ddacdbe30d582a4da61a31010f44a9dacdd12.nl.png" /></p>
+</li>
+<li>
+<p>Navigeer terug naar de <strong>Hiring Hub</strong> modelgestuurde app en selecteer in de <strong>Resumes system view</strong> de optie <strong>Vernieuwen</strong> om de weergave te verversen. De nieuw aangemaakte rij voor het cv dat per e-mail is verzonden, wordt nu weergegeven omdat deze is aangemaakt via de event trigger.</p>
+<p><img alt="Cv-rij aangemaakt" src="../../../../../translated_images/3.3_06_ResumeRowCreated.9ab850d8d7c066aad8531409b00a4de5f214b4d8d209d39fa0d493d5c55e041d.nl.png" /></p>
+</li>
+<li>
+<p>Navigeer terug naar Copilot Studio en selecteer de <strong>Notify Teams Applicant Channel</strong> agentflow binnen de <strong>Application Intake Agent</strong> in de activiteitenkaart. In het paneel aan de rechterkant zie je hoe de invoerwaarden afkomstig zijn van de Dataverse-rij. Dit komt voort uit de prompt die is verzonden door de laatste actie (<strong>Stuurt een prompt naar de opgegeven copilot voor verwerking</strong>) in de event trigger die de parameterwaarden bevat van de nieuw aangemaakte Dataverse-rij. Zo kunnen we parameterwaarden doorgeven van event triggers naar agentflows.</p>
+<p><img alt="Selecteer agentflow" src="../../../../../translated_images/3.3_07_NotifyTeamsApplicantChannel.9b6c4654197efca9c88dde72cfb38812038ef5f6bdce8c309046c02643092bb6.nl.png" /></p>
+</li>
+<li>
+<p>Laten we tot slot kijken naar de adaptieve kaart die is gepost in het kanaal in <strong>Microsoft Teams</strong>. In het kanaal zien we de adaptieve kaart die informatie weergeeft over de nieuw aangemaakte cv-rij in Dataverse. Beweeg de muis over de hyperlink aan het begin van de adaptieve kaart en merk op hoe de URL de Resumes system view-URL is die we eerder hebben geconfigureerd in de JSON (stappen 15 - 19 van <strong>Lab 3.2 - Een Teams-kanaal informeren met een adaptieve kaart</strong>) payload van de adaptieve kaart.</p>
+<p><img alt="Adaptieve kaart Resumes Table system view URL" src="../../../../../translated_images/3.3_08_AdaptiveCardResumeTableURL.5a59821d60c8698e5c9e4746806b975bbdf3c4400dc0bb02a53f350bdea569e9.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer de hyperlink en je wordt doorgestuurd naar de Resumes system view in de <strong>Hiring Hub</strong> modelgestuurde app in je browser.</p>
+<p><img alt="Cv-systeemweergave in Hiring Hub modelgestuurde app" src="../../../../../translated_images/3.3_09_ResumeTableSystemView.81f52ab85aadda7d9131ced31d024fb4b411ccf600dd230d9d7e931c476e271c.nl.png" /></p>
+</li>
+<li>
+<p>Navigeer terug naar de adaptieve kaart die is gepost in het kanaal in Microsoft Teams. Beweeg deze keer de muis over <strong>View Resume</strong>, wat de <code>Action.OpenURL</code>-actie is van de adaptieve kaart. Merk op hoe de URL de cv-rij is die we eerder hebben geconfigureerd in de JSON (stappen 30 - 36 van <strong>Lab 3.2 - Een Teams-kanaal informeren met een adaptieve kaart</strong>) payload van de adaptieve kaart.</p>
+<p><img alt="Adaptieve kaart cv-rij URL" src="../../../../../translated_images/3.3_10_AdaptiveCardResumeRowURL.2063a075c2d4adec27dfcc2ea4c01a385d791e0c4fc127caba912bde14bf77d6.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer de actie en je wordt doorgestuurd naar het cv-rijformulier in de <strong>Hiring Hub</strong> modelgestuurde app in je browser.</p>
+<p><img alt="Cv-rij in Hiring Hub modelgestuurde app" src="../../../../../translated_images/3.3_11_ResumeRow.6f051ed512d396712a04ee98319d6643516e0bbfbf8a9de07d3df7d264563b9c.nl.png" /></p>
+</li>
+</ol>
+<h2 id="missie-voltooid">✅ Missie Voltooid<a class="headerlink" href="#missie-voltooid" title="Permanent link">&para;</a></h2>
+<p>Gefeliciteerd! 👏🏻 Uitstekend werk, Operative.</p>
+<p>✅ Event trigger: je hebt een event trigger gemaakt die Dataverse-parameterwaarden doorgeeft aan een agentflow.<br />
+✅ Een agentflow gebouwd: gebruikt de Dataverse-parameterwaarden om een adaptieve kaart te posten in een kanaal in Microsoft Teams om het HR-recruitmentteam te waarschuwen.<br />
+✅ Instructies voor onderliggende agent bijgewerkt: om de flow te starten zodra de event trigger is voltooid.</p>
+<p>Dit stelt de <strong>Hiring Agent</strong> in staat om autonoom te werken wanneer cv's als e-mailbijlagen worden ontvangen en het HR-recruitmentteam te informeren voor handmatige beoordeling.</p>
+<p>Dit is het einde van <strong>Lab 03 - Automatiseren van sollicitatie-e-mails</strong>, selecteer de onderstaande link om door te gaan naar de volgende les.</p>
+<p>⏭️ <a href="../04-agent-instructions/">Ga naar de les <strong>Agentinstructies opstellen</strong></a></p>
+<h2 id="tactische-bronnen">📚 Tactische Bronnen<a class="headerlink" href="#tactische-bronnen" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/training/modules/autonomous-agents-online-workshop/?WT.mc_id=power-188561-ebenitez">Maak je agent autonoom in Copilot Studio</a>  </p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-trigger-event?WT.mc_id=power-188561-ebenitez">Een event trigger toevoegen</a>  </p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow?WT.mc_id=power-188561-ebenitez">Agentflows gebruiken met je agent</a>  </p>
+<p>📖 <a href="https://learn.microsoft.com/power-automate/triggers-introduction?WT.mc_id=power-188561-ebenitez">Introductie Power Automate triggers</a>  </p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow-create?WT.mc_id=power-188561-ebenitez">Power Automate flows gebruiken met agents</a>  </p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/admin-data-loss-prevention?WT.mc_id=power-188561-ebenitez">Preventie van gegevensverlies voor Copilot Studio</a>  </p>
+<hr />
+<p><strong>Disclaimer</strong>:<br />
+Dit document is vertaald met behulp van de AI-vertalingsservice <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

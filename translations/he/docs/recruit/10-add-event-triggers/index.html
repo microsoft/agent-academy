@@ -1,0 +1,1042 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/he/docs/recruit/10-add-event-triggers/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#10-" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ שם קוד: מבצע שגרה רפאים
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 תדריך משימה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 מטרות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 מהו טריגר לאירוע?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ איך טריגרים לאירועים עובדים?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 הבנת מטעני טריגרים
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 תרחישים נפוצים של טריגרים לאירועים
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ שיקולי פרסום ואימות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ פתרון בעיות ומגבלות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 מעבדה 10 - הוספת טריגרים לאירועים להתנהגות סוכן אוטונומית
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ משימה הושלמה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 משאבים טקטיים
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "cd99a76bcb7372ac2771b6ae178b023d",
+  "translation_date": "2025-10-17T01:40:11+00:00",
+  "source_file": "docs/recruit/10-add-event-triggers/README.md",
+  "language_code": "he"
+}
+-->
+<h1 id="10-">🚨 משימה 10: הוספת טריגרים לאירועים - הפעלת יכולות סוכן אוטונומי<a class="headerlink" href="#10-" title="Permanent link">&para;</a></h1>
+<h2 id="_1">🕵️‍♂️ שם קוד: <code>מבצע שגרה רפאים</code><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ חלון זמן למבצע:</strong> <code>~45 דקות</code></p>
+</blockquote>
+<p>🎥 <strong>צפו בהדרכה</strong></p>
+<p><a href="https://www.youtube.com/watch?v=ZgwHL8PQ1nY" title="צפו בהדרכה ביוטיוב"><img alt="תמונה ממוזערת של סרטון טריגרים לאירועים" src="../../../../../translated_images/video-thumbnail.0d5b477d69adfe668fab9aa8ef5b199377b46788948b33b1969bf19c099b6469.he.jpg" /></a></p>
+<h2 id="_2">🎯 תדריך משימה<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>הגיע הזמן לשדרג את הסוכן שלכם מעוזר שיחה לסוכן אוטונומי. המשימה שלכם היא לאפשר לסוכן לפעול ללא קריאה - להגיב לאותות מכל רחבי המרחב הדיגיטלי שלכם בדיוק ובמהירות.</p>
+<p>עם טריגרים לאירועים, תלמדו את הסוכן שלכם לעקוב אחר מערכות חיצוניות כמו SharePoint, Teams ו-Outlook, ולבצע פעולות חכמות ברגע שמתקבל אות. מבצע זה הופך את הסוכן שלכם לנכס מבצעי מלא - שקט, מהיר ותמיד צופה.</p>
+<p>הצלחה פירושה בניית סוכנים שמייצרים ערך - לא רק מגיבים אליו.</p>
+<h2 id="_3">🔎 מטרות<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>📖 השיעור הזה יכסה:</p>
+<ul>
+<li>הבנת טריגרים לאירועים וכיצד הם מאפשרים התנהגות סוכן אוטונומית</li>
+<li>למידת ההבדל בין טריגרים לאירועים לטריגרים לנושאים, כולל זרימות עבודה של טריגרים ומטענים</li>
+<li>חקר תרחישים נפוצים של טריגרים לאירועים</li>
+<li>הבנת שיקולי אימות, אבטחה ופרסום עבור סוכנים מבוססי אירועים</li>
+<li>בניית סוכן IT Help Desk אוטונומי שמגיב לאירועים ב-SharePoint ושולח אישורי דוא"ל</li>
+</ul>
+<h2 id="_4">🤔 מהו טריגר לאירוע?<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><strong>טריגר לאירוע</strong> הוא מנגנון שמאפשר לסוכן שלכם לפעול באופן אוטונומי בתגובה לאירועים חיצוניים, ללא צורך בקלט ישיר מהמשתמש. חשבו על זה כעל הפיכת הסוכן שלכם ל"צופה" באירועים ספציפיים ולוקח פעולה אוטומטית כשהם מתרחשים.</p>
+<p>בניגוד לטריגרים לנושאים, שדורשים מהמשתמשים להקליד משהו כדי להפעיל שיחה, טריגרים לאירועים מופעלים על סמך דברים שקורים במערכות המחוברות שלכם. לדוגמה:</p>
+<ul>
+<li>כאשר קובץ חדש נוצר ב-SharePoint או OneDrive for Business</li>
+<li>כאשר רשומה נוצרת ב-Dataverse</li>
+<li>כאשר משימה מושלמת ב-Planner</li>
+<li>כאשר תגובה חדשה לטופס Microsoft נשלחת</li>
+<li>כאשר הודעה חדשה ב-Microsoft Teams מתווספת</li>
+<li>על בסיס לוח זמנים חוזר (כמו תזכורות יומיות)<br />
+<img alt="הוספת טריגר" src="../../../../../translated_images/10_AddTriggerDialog.d665fde7e50d106d693110cd80e6c6b569bdad34ea985eb72fee7e0fccb3ef26.he.png" /></li>
+</ul>
+<h3 id="_5">למה טריגרים לאירועים חשובים בסוכנים אוטונומיים<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>טריגרים לאירועים הופכים את הסוכן שלכם מעוזר תגובתי לעוזר אוטונומי ופרואקטיבי:</p>
+<ol>
+<li>
+<p><strong>פעולה אוטונומית</strong> - הסוכן שלכם יכול לעבוד 24/7 ללא התערבות אנושית, להגיב לאירועים בזמן שהם מתרחשים.</p>
+<ul>
+<li><em>דוגמה:</em> קבלת פנים אוטומטית לחברי צוות חדשים כשהם מתווספים לצוות.</li>
+</ul>
+</li>
+<li>
+<p><strong>תגובתיות בזמן אמת</strong> - במקום להמתין שהמשתמשים ישאלו שאלות, הסוכן שלכם מגיב מיד לאירועים רלוונטיים.</p>
+<ul>
+<li><em>דוגמה:</em> התרעת צוות ה-IT כאשר מסמך SharePoint משתנה.</li>
+</ul>
+</li>
+<li>
+<p><strong>אוטומציה של זרימות עבודה</strong> - חיבור מספר פעולות על בסיס אירוע טריגר יחיד.</p>
+<ul>
+<li><em>דוגמה:</em> כאשר נוצר כרטיס תמיכה חדש, יצירת משימה, הודעת מנהל ועדכון לוח מעקב.</li>
+</ul>
+</li>
+<li>
+<p><strong>תהליכים עקביים</strong> - הבטחת ביצוע שלבים חשובים על ידי אוטומציה של תגובות לאירועים מרכזיים.</p>
+<ul>
+<li><em>דוגמה:</em> כל עובד חדש מקבל באופן אוטומטי חומרי קליטה ובקשות גישה.</li>
+</ul>
+</li>
+<li>
+<p><strong>פעולות מבוססות נתונים</strong> - שימוש במידע מהאירוע המפעיל כדי לקבל החלטות חכמות ולבצע פעולות מתאימות.</p>
+<ul>
+<li><em>דוגמה:</em> הפניית כרטיסים דחופים לצוות בכיר על סמך רמת עדיפות במטען הטריגר.</li>
+</ul>
+</li>
+</ol>
+<h2 id="_6">⚙️ איך טריגרים לאירועים עובדים?<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>טריגרים לאירועים פועלים באמצעות זרימת עבודה בת שלושה שלבים שמאפשרת לסוכן שלכם להגיב באופן אוטונומי לאירועים חיצוניים:</p>
+<h3 id="_7">זרימת העבודה של הטריגר<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>זיהוי אירוע</strong> - אירוע ספציפי מתרחש במערכת מחוברת (SharePoint, Teams, Outlook וכו')</li>
+<li><strong>הפעלת טריגר</strong> - טריגר האירוע מזהה את האירוע ושולח מטען לסוכן שלכם דרך Power Automate Cloud Flow.</li>
+<li><strong>תגובת הסוכן</strong> - הסוכן שלכם מקבל את המטען ומבצע את ההוראות שהגדרתם.</li>
+</ol>
+<h3 id="_8">טריגרים לאירועים מול טריגרים לנושאים<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>הבנת ההבדל בין שני סוגי הטריגרים הללו היא קריטית:</p>
+<table>
+<thead>
+<tr>
+<th><strong>טריגרים לאירועים</strong></th>
+<th><strong>טריגרים לנושאים</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>מופעלים על ידי אירועים במערכות חיצוניות</td>
+<td>מופעלים על ידי קלט/ביטויים של משתמשים</td>
+</tr>
+<tr>
+<td>מאפשרים התנהגות סוכן אוטונומית</td>
+<td>מאפשרים תגובות שיחה</td>
+</tr>
+<tr>
+<td>משתמשים באימות של היוצר</td>
+<td>אפשרות לאימות של המשתמש</td>
+</tr>
+<tr>
+<td>פועלים ללא אינטראקציה של משתמש</td>
+<td>דורשים מהמשתמש להתחיל שיחה</td>
+</tr>
+<tr>
+<td>דוגמאות: יצירת קובץ, קבלת דוא"ל</td>
+<td>דוגמה: "מה מזג האוויר?"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_9">📦 הבנת מטעני טריגרים<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>כאשר אירוע מתרחש, הטריגר שולח <strong>מטען</strong> לסוכן שלכם שמכיל מידע על האירוע והוראות כיצד להגיב.</p>
+<h3 id="_10">מטענים ברירת מחדל מול מטענים מותאמים אישית<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>כל סוג טריגר מגיע עם מבנה מטען ברירת מחדל, אך ניתן להתאים אותו:</p>
+<p><strong>מטען ברירת מחדל</strong> - משתמש בפורמט סטנדרטי כמו <code>Use content from {Body}</code></p>
+<ul>
+<li>מכיל מידע בסיסי על האירוע</li>
+<li>משתמש בהוראות עיבוד כלליות</li>
+<li>מתאים לתרחישים פשוטים</li>
+</ul>
+<p><strong>מטען מותאם אישית</strong> - הוספת הוראות ספציפיות ועיצוב נתונים</p>
+<ul>
+<li>כולל הוראות מפורטות לסוכן שלכם</li>
+<li>מפרט בדיוק אילו נתונים להשתמש וכיצד</li>
+<li>מתאים לזרימות עבודה מורכבות</li>
+</ul>
+<h3 id="_11">הוראות לסוכן מול הוראות מטען מותאמות אישית<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>יש לכם שני מקומות להנחות את התנהגות הסוכן עם טריגרים לאירועים:</p>
+<p><strong>הוראות לסוכן</strong> (גלובלי)</p>
+<ul>
+<li>הנחיות רחבות החלות על כל הטריגרים</li>
+<li>דוגמה: "בעת עיבוד כרטיסים, תמיד בדוק כפילויות תחילה"</li>
+<li>מתאים לדפוסי התנהגות כלליים</li>
+</ul>
+<p><strong>הוראות מטען</strong> (ספציפי לטריגר)</p>
+<ul>
+<li>הוראות ספציפיות לסוגי טריגרים בודדים  </li>
+<li>דוגמה: "לשדרוג זה ב-SharePoint, שלח סיכום לערוץ הפרויקט"</li>
+<li>מתאים לסוכנים מורכבים עם מספר טריגרים</li>
+</ul>
+<p>💡 <strong>טיפ מקצועי</strong>: הימנעו מהוראות סותרות בין שני הרמות הללו, שכן זה יכול לגרום להתנהגות בלתי צפויה.</p>
+<h2 id="_12">🎯 תרחישים נפוצים של טריגרים לאירועים<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>להלן דוגמאות מעשיות כיצד טריגרים לאירועים יכולים לשפר את הסוכן שלכם:</p>
+<h3 id="it-help-desk">סוכן IT Help Desk<a class="headerlink" href="#it-help-desk" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>טריגר</strong>: פריט חדש ברשימת SharePoint (כרטיס תמיכה)</li>
+<li><strong>פעולה</strong>: סיווג אוטומטי, קביעת עדיפות, והודעה לחברי הצוות המתאימים</li>
+</ul>
+<h3 id="_13">סוכן קליטת עובדים<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>טריגר</strong>: משתמש חדש שנוסף ל-Dataverse</li>
+<li><strong>פעולה</strong>: שליחת הודעת ברוך הבא, יצירת משימות קליטה, והקצאת גישה</li>
+</ul>
+<h3 id="_14">סוכן ניהול פרויקטים<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>טריגר</strong>: משימה מושלמת ב-Planner</li>
+<li><strong>פעולה</strong>: עדכון לוח פרויקט, הודעה לבעלי עניין, ובדיקת חסמים</li>
+</ul>
+<h3 id="_15">סוכן ניהול מסמכים<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>טריגר</strong>: קובץ שהועלה לתיקיית SharePoint ספציפית</li>
+<li><strong>פעולה</strong>: חילוץ מטא-נתונים, יישום תגיות, והודעה לבעלי המסמך</li>
+</ul>
+<h3 id="_16">סוכן עוזר פגישות<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>טריגר</strong>: אירוע בלוח שנה נוצר</li>
+<li><strong>פעולה</strong>: שליחת תזכורות לפני הפגישה ואג'נדה, הזמנת משאבים</li>
+</ul>
+<h2 id="_17">⚠️ שיקולי פרסום ואימות<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<p>לפני שהסוכן שלכם יוכל להשתמש בטריגרים לאירועים בסביבת ייצור, עליכם להבין את השלכות האימות והאבטחה.</p>
+<h3 id="_18">אימות היוצר<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p>טריגרים לאירועים משתמשים ב<strong>אישורי היוצר של הסוכן</strong> לכל האימות:</p>
+<ul>
+<li>הסוכן שלכם ניגש למערכות באמצעות ההרשאות שלכם</li>
+<li>משתמשים יכולים לגשת לנתונים דרך האישורים שלכם</li>
+<li>כל הפעולות מתבצעות "כמוכם" גם כאשר משתמשים מתקשרים עם הסוכן</li>
+</ul>
+<h3 id="_19">שיטות עבודה מומלצות להגנת נתונים<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>כדי לשמור על אבטחה בעת פרסום סוכנים עם טריגרים לאירועים:</p>
+<ol>
+<li><strong>הערכת גישה לנתונים</strong> - בדקו אילו מערכות ונתונים הטריגרים שלכם יכולים לגשת אליהם</li>
+<li><strong>בדיקה יסודית</strong> - הבינו אילו מידע כלול במטעני הטריגרים</li>
+<li><strong>צמצום טווח הטריגר</strong> - השתמשו בפרמטרים ספציפיים כדי להגביל אילו אירועים מפעילים טריגרים</li>
+<li><strong>סקירת נתוני מטען</strong> - ודאו שהטריגרים לא חושפים מידע רגיש</li>
+<li><strong>מעקב אחר שימוש</strong> - עקבו אחר פעילות הטריגרים וצריכת משאבים</li>
+</ol>
+<h2 id="_20">⚠️ פתרון בעיות ומגבלות<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<p>שימו לב לשיקולים חשובים אלו בעת עבודה עם טריגרים לאירועים:</p>
+<h3 id="_21">השפעות מכסה וחיוב<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li>כל הפעלת טריגר נחשבת לצריכת הודעה</li>
+<li>טריגרים תכופים (כמו חזרה כל דקה) יכולים לצרוך מכסה במהירות</li>
+<li>עקבו אחר השימוש כדי להימנע מהגבלות</li>
+</ul>
+<h3 id="_22">דרישות טכניות<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<ul>
+<li>זמין רק עבור סוכנים עם אורקסטרציה גנרטיבית מופעלת</li>
+<li>דורש שיתוף זרימת ענן מודעת לפתרון בסביבתכם</li>
+</ul>
+<h3 id="dlp">מניעת אובדן נתונים (DLP)<a class="headerlink" href="#dlp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>מדיניות ה-DLP של הארגון שלכם קובעת אילו טריגרים זמינים</li>
+<li>מנהלים יכולים לחסום טריגרים לאירועים לחלוטין</li>
+<li>צרו קשר עם המנהל שלכם אם טריגרים צפויים אינם זמינים</li>
+</ul>
+<h2 id="10-_1">🧪 מעבדה 10 - הוספת טריגרים לאירועים להתנהגות סוכן אוטונומית<a class="headerlink" href="#10-_1" title="Permanent link">&para;</a></h2>
+<h3 id="_23">🎯 מקרה שימוש<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<p>תשדרגו את סוכן ה-IT Help Desk שלכם כדי להגיב אוטומטית לבקשות תמיכה חדשות. כאשר מישהו יוצר פריט חדש ברשימת כרטיסי התמיכה שלכם ב-SharePoint, הסוכן שלכם:</p>
+<ol>
+<li>יופעל באופן אוטונומי כאשר כרטיס SharePoint נוצר</li>
+<li>יספק את פרטי הכרטיס והוראות על השלבים שתרצו שיבצע</li>
+<li>יכיר את הכרטיס למגיש באמצעות דוא"ל שנוצר על ידי AI</li>
+</ol>
+<p>מעבדה זו מדגימה כיצד טריגרים לאירועים מאפשרים התנהגות סוכן אוטונומית באמת.</p>
+<h3 id="_24">דרישות מוקדמות<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<p>לפני תחילת המעבדה, ודאו שיש לכם:</p>
+<ul>
+<li>✅ השלמת מעבדות קודמות (במיוחד מעבדות 6-8 עבור סוכן ה-IT Help Desk)</li>
+<li>✅ גישה לאתר SharePoint עם רשימת כרטיסי התמיכה של ה-IT</li>
+<li>✅ סביבת Copilot Studio עם טריגרים לאירועים מופעלים</li>
+<li>✅ הסוכן שלכם עם אורקסטרציה גנרטיבית מופעלת</li>
+<li>✅ הרשאות מתאימות ב-SharePoint ובסביבת Copilot Studio שלכם</li>
+</ul>
+<h3 id="101-ai-sharepoint">10.1 הפעלת AI גנרטיבי ויצירת טריגר ליצירת פריט ב-SharePoint<a class="headerlink" href="#101-ai-sharepoint" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>פתחו את <strong>סוכן ה-IT Help Desk</strong> שלכם ב-<strong>Copilot Studio</strong></p>
+</li>
+<li>
+<p>תחילה, ודאו ש-<strong>AI גנרטיבי</strong> מופעל עבור הסוכן שלכם:</p>
+</li>
+<li>נווטו ללשונית <strong>סקירה כללית</strong></li>
+<li>
+<p>תחת סעיף האורקסטרציה, הפעילו את <strong>אורקסטרציה גנרטיבית</strong> ל-<strong>מופעל</strong> אם היא עדיין לא מופעלת<br />
+<img alt="הפעלת AI גנרטיבי" src="../../../../../translated_images/10_EnableGenerativeAI.a58904a7599016a94b89a11d6c1cd59022ae686ef553d17f89ebfb6c275cc900.he.png" /></p>
+</li>
+<li>
+<p>נווטו ללשונית <strong>סקירה כללית</strong> ומצאו את סעיף <strong>טריגרים</strong></p>
+</li>
+<li>
+<p>לחצו על <strong>+ הוספת טריגר</strong> כדי לפתוח את ספריית הטריגרים<br />
+<img alt="ניווט לטריגרים" src="../../../../../translated_images/10_NavigateToTrigger.f5907762b93236a72d2f89cdb7c903608adb61763888ba1d3b4998f46473240c.he.png" /></p>
+</li>
+<li>
+<p>חפשו ובחרו <strong>כאשר פריט נוצר</strong> (SharePoint)<br />
+<img alt="בחירת טריגר SharePoint" src="../../../../../translated_images/10_SelectSharePointTrigger.d63e7cb0f06cf33e664c0e2316952aeac4adf507d7e0f87254cffebbfa5b3007.he.png" /></p>
+</li>
+<li>
+<p>הגדירו את שם הטריגר והחיבורים:</p>
+</li>
+<li>
+<p><strong>שם הטריגר:</strong> כרטיס תמיכה חדש נוצר ב-SharePoint</p>
+</li>
+<li>
+<p>המתינו שהחיבורים יוגדרו, ובחרו <strong>הבא</strong> כדי להמשיך.<br />
+<img alt="הגדרת שם הטריגר והחיבורים" src="../../../../../translated_images/10_ConfigureTriggerNameAndConnections.f526dfc7a9e0dcc31bf791623e6431230f29ae001acb0f5075e175401bebb0f2.he.png" /></p>
+</li>
+<li>
+<p>הגדירו את פרמטרי הטריגר:</p>
+</li>
+<li>
+<p><strong>כתובת האתר</strong>: בחרו באתר SharePoint שלכם "Contoso IT"</p>
+</li>
+<li>
+<p><strong>שם הרשימה</strong>: בחרו ברשימת "כרטיסים" שלכם</p>
+</li>
+<li>
+<p><strong>הוראות נוספות לסוכן כאשר הוא מופעל על ידי הטריגר:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>New Support Ticket Created in SharePoint: {Body}
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Use the &#39;Acknowledge SharePoint Ticket&#39; tool to generate the email body automatically and respond.
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>IMPORTANT: Do not wait for any user input. Work completely autonomously.
+</span></code></pre></div>
+<p><img alt="הגדרת פרמטרי הטריגר" src="../../../../../translated_images/10_ConfigureTriggerParams.a67406d4a892ba1f59a04641cbb2f7226a329b9813b04676f92bf18c6003fd23.he.png" /></p>
+</li>
+<li>
+<p>בחרו <strong>יצירת טריגר</strong> כדי להשלים את יצירת הטריגר. זרימת ענן Power Automate נוצרת אוטומטית כדי להפעיל את הסוכן באופן אוטונומי.</p>
+</li>
+<li>
+<p>בחרו <strong>סגור</strong>.</p>
+</li>
+</ol>
+<h3 id="102">10.2 עריכת הטריגר<a class="headerlink" href="#102" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>בתוך סעיף <strong>טריגרים</strong> בלשונית <strong>סקירה כללית</strong>, בחרו בתפריט <strong>...</strong> על הטריגר <strong>כרטיס תמיכה חדש נוצר ב-SharePoint</strong></p>
+</li>
+<li>
+<p>בחרו <strong>עריכה ב-Power Automate</strong><br />
+<img alt="עריכת טריגר ב-Power Automate" src="../../../../../translated_images/10_EditTriggerInPowerAutomate.d99effb8145d40bd4d655021e0a34abf59ba23ff5e94bcae07e7e6711a52eff0.he.png" /></p>
+</li>
+<li>
+<p>בחרו בצומת <strong>שולח הנחיה לסוכן המוגדר לעיבוד</strong></p>
+</li>
+<li>
+<p>בשדה <strong>גוף/הודעה</strong>, הסירו את תוכן הגוף, <strong>לחצו על מקש הסלאש קדימה</strong> (/) ובחרו <strong>הכנס ביטוי</strong><br />
+<img alt="הכנסת ביטוי לטריגר" src="../../../../../translated_images/10_InsertExpressionForTrigger.adb940d8fa6e0bc50b325cedc3e3c085b5670e5cf2b275bf7b4ada1180d3ba01.he.png" /></p>
+</li>
+<li>
+<p>הכניסו את הביטוי הבא כדי לספק לסוכן פרטים ספציפיים על הכרטיס:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>concat(&#39;Submitted By Name: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Author/DisplayName&#39;], &#39;\nSubmitted By Email: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Author/Email&#39;], &#39;\nTitle: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Title&#39;], &#39;\nIssue Description: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Description&#39;], &#39;\nPriority: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Priority/Value&#39;],&#39;\nTicket ID : &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;ID&#39;])
+</span></code></pre></div>
+</li>
+<li>
+<p>בחרו <strong>הוסף</strong><br />
+<img alt="ביטוי פלט לטריגר" src="../../../../../translated_images/10_TriggerOutputExpression.3b120eaa26cc9a4cd5451bb2ca658ce1a7192eb7a46c7c2b4d7431d20e982187.he.png" /></p>
+</li>
+<li>
+<p>בחרו <strong>פרסם</strong> בסרגל הכלים העליון.</p>
+</li>
+</ol>
+<h3 id="103">10.3 יצירת כלי לאישור דוא"ל<a class="headerlink" href="#103" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>חזרו</strong> לסוכן שלכם ב-Copilot Studio</p>
+</li>
+<li>
+<p>נווטו ללשונית <strong>כלים</strong> בסוכן שלכם</p>
+</li>
+<li>
+<p>לחצו על <strong>+ הוספת כלי</strong> ובחרו <strong>מחבר</strong></p>
+</li>
+<li>
+<p>חפשו ובחרו <strong>שליחת דוא"ל (V2)</strong> מחבר<br />
+<img alt="בחירת מחבר Outlook" src="../../../../../translated_images/10_SelectOutlookConnector.0bf4270b1d25c691574881514f162fd74e10206bc5efd798e5cb15741b73c063.he.png" /></p>
+</li>
+<li>
+<p>המתינו שהחיבור יוגדר, ואז בחרו <strong>הוסף והגדר</strong></p>
+</li>
+<li>
+<p>הגדירו את הגדרות הכלי:</p>
+</li>
+<li>
+<p><strong>שם</strong>: אישור כרטיס SharePoint</p>
+</li>
+<li>
+<p><strong>תיאור</strong>: כלי זה שולח אישור דוא"ל שהכרטיס התקבל.</p>
+</li>
+<li>
+<p>בחרו <strong>התאמה אישית</strong> ליד פרמטרי הקלט והגדירו כך:</p>
+<p><strong>אל</strong>:</p>
+<ul>
+<li><strong>תיאור</strong>: כתובת הדוא"ל של האדם שמגיש את כרטיס SharePoint</li>
+<li><strong>זיהוי כ</strong>: דוא"ל</li>
+</ul>
+<p><strong>גוף</strong>:</p>
+<ul>
+<li><strong>תיאור</strong>: אישור שהכרטיס התקבל, ואנו שואפים להגיב תוך 3 ימי עבודה.</li>
+</ul>
+<p><img alt="הגדרת פרמטרי קלט" src="../../../../../translated_images/10_ConfigureInputParameters.cc8b602c0dc244734cb8eac43f8d7fcf88f4158dcdc7f7ae15658ad93c03beae.he.png" /></p>
+</li>
+<li>
+<p>בחרו <strong>שמור</strong></p>
+</li>
+</ol>
+<h3 id="104">10.4 בדיקת הטריגר<a class="headerlink" href="#104" title="Permanent link">&para;</a></h3>
+<ol>
+<li>בתוך <strong>סוכן Help Desk</strong>, בחרו</li>
+<li>פתחו לשונית חדשה בדפדפן ונווטו אל <strong>רשימת כרטיסי התמיכה של SharePoint IT</strong>  </li>
+<li>לחצו על <strong>+ הוסף פריט חדש</strong> כדי ליצור כרטיס בדיקה:  </li>
+<li><strong>כותרת</strong>: "לא מצליח להתחבר ל-VPN"  </li>
+<li><strong>תיאור</strong>: "לא מצליח להתחבר לרשת ה-WIFI הארגונית לאחר עדכון אחרון"  </li>
+<li>
+<p><strong>עדיפות</strong>: "רגילה"  </p>
+</li>
+<li>
+<p><strong>שמרו</strong> את הפריט ב-SharePoint<br />
+<img alt="יצירת כרטיס בדיקה" src="../../../../../translated_images/10_CreateTestTicket.137beedc82d337ef0a467c67d3b53249ec469ce1ce91d88a72fb2f8729a14fce.he.png" />  </p>
+</li>
+<li>חזרו ל-<strong>Copilot Studio</strong> ועקבו אחר לוח <strong>בדוק את ההפעלה של הטריגר</strong> כדי לראות את הפעלת הטריגר. השתמשו באייקון <strong>רענן</strong> כדי לטעון את אירוע הטריגר, זה עשוי לקחת כמה דקות.<br />
+<img alt="מעקב אחר בדיקת טריגר" src="../../../../../translated_images/10_MonitorTriggerTest.f9883de55ba1c9817121c7f801e29715fa74918603f96312dfcb0f16f9af44e0.he.png" />  </li>
+<li>ברגע שהטריגר מופיע, בחרו <strong>התחל בדיקה</strong>  </li>
+<li>בחרו את <strong>אייקון מפת הפעילות</strong> בראש לוח <strong>בדוק את הסוכן שלך</strong>  </li>
+<li>ודאו שהסוכן שלכם:  </li>
+<li>קיבל את המטען של הטריגר  </li>
+<li>השתמש בכלי "אישור כרטיס SharePoint"<br />
+<img alt="בדיקת טריגר" src="../../../../../translated_images/10_TestTrigger.f68b063d3fa221601f61484aec9bf68aa17761366aa1efe8c3cad554ce3da902.he.png" />  </li>
+<li>בדקו את תיבת הדואר האלקטרוני של המגיש כדי לוודא שנשלח מייל אישור<br />
+<img alt="בדיקת שליחת מייל" src="../../../../../translated_images/10_TestEmailSent.1efe77ca636ca8b8c2593216539edfe11555f7e002a6dcb5e2024b36b40e12b3.he.png" />  </li>
+<li>עברו ללשונית <strong>פעילות</strong> ב-Copilot Studio כדי לראות את ההפעלה המלאה של הטריגר והכלי  </li>
+</ol>
+<h2 id="_25">✅ משימה הושלמה<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h2>
+<p>🎉 <strong>ברכות!</strong> הצלחתם ליישם טריגרים לאירועים עם כלי מחברים שמאפשרים לסוכן שלכם לפעול באופן עצמאי, לשלוח אישורי מייל באופן אוטומטי ולעבד כרטיסי תמיכה ללא התערבות משתמש. ברגע שהסוכן שלכם יפורסם, הוא יפעל באופן עצמאי בשמכם.  </p>
+<p>🚀 <strong>הבא בתור</strong>: בשיעור הבא תלמדו כיצד <a href="../11-publish-your-agent/">לפרסם את הסוכן שלכם</a> ל-Microsoft Teams ול-Microsoft 365 Copilot, כך שיהיה זמין לכל הארגון שלכם!  </p>
+<p>⏭️ <a href="../11-publish-your-agent/">עברו לשיעור <strong>פרסום הסוכן שלכם</strong></a>  </p>
+<h2 id="_26">📚 משאבים טקטיים<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h2>
+<p>מוכנים לצלול לעומק הטריגרים לאירועים וסוכנים אוטונומיים? עיינו במשאבים הבאים:  </p>
+<ul>
+<li><strong>Microsoft Learn</strong>: <a href="https://learn.microsoft.com/training/modules/autonomous-agents-online-workshop/?WT.mc_id=power-177340-scottdurow">הפכו את הסוכן שלכם לאוטונומי ב-Copilot Studio</a>  </li>
+<li><strong>תיעוד</strong>: <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-trigger-event?WT.mc_id=power-177340-scottdurow">הוספת טריגר לאירוע</a>  </li>
+<li><strong>שיטות עבודה מומלצות</strong>: <a href="https://learn.microsoft.com/power-automate/triggers-introduction?WT.mc_id=power-177340-scottdurow">מבוא לטריגרים ב-Power Automate</a>  </li>
+<li><strong>תרחישים מתקדמים</strong>: <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow-create?WT.mc_id=power-177340-scottdurow">שימוש בזרימות Power Automate עם סוכנים</a>  </li>
+<li><strong>אבטחה</strong>: <a href="https://learn.microsoft.com/microsoft-copilot-studio/admin-data-loss-prevention?WT.mc_id=power-177340-scottdurow">מניעת אובדן נתונים עבור Copilot Studio</a>  </li>
+</ul>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/10-add-event-triggers" alt="סטטיסטיקות אנליטיות" /></p>
+<hr />
+<p><strong>הצהרת אחריות</strong>:<br />
+מסמך זה תורגם באמצעות שירות תרגום AI <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי אנושי. אנו לא נושאים באחריות לכל אי הבנות או פרשנויות שגויות הנובעות משימוש בתרגום זה.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

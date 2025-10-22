@@ -1,0 +1,1727 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/id/docs/recruit/09-add-an-agent-flow/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#misi-09-tambahkan-alur-agen-ke-topik-anda-untuk-otomatisasi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nama-kode-operasi-automation-powerhouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ NAMA KODE: OPERASI AUTOMATION POWERHOUSE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ringkasan-misi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Ringkasan Misi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tujuan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Tujuan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apa-itu-alur-agen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Apa itu alur agen?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ya-tapi-bagaimana-bedanya-dengan-alur-cloud-power-automate" class="md-nav__link">
+    <span class="md-ellipsis">
+      🙋🏽 Ya, tapi bagaimana bedanya dengan alur cloud Power Automate?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mengapa-menggunakan-alur-agen" class="md-nav__link">
+    <span class="md-ellipsis">
+      👍🏻 Mengapa menggunakan alur agen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bagaimana-alur-agen-meningkatkan-agen-anda" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏄🏻‍♂️ Bagaimana alur agen meningkatkan agen Anda?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fitur-utama-yang-membuat-alur-agen-kuat" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 Fitur utama yang membuat alur agen kuat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bagaimana-cara-kerjanya" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Bagaimana cara kerjanya
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cara-membuat-alur-agen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧶 Cara membuat alur agen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apa-itu-desainer-alur-agen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Apa itu desainer alur agen?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anda-menyebutkan-ekspresi-apa-itu-ekspresi" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔤 Anda menyebutkan ekspresi - apa itu ekspresi?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#praktik-terbaik" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⭐ Praktik terbaik
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-09-tambahkan-alur-agen-untuk-otomatisasi-dan-tingkatkan-kemampuan-topik" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 09 - Tambahkan alur agen untuk otomatisasi dan tingkatkan kemampuan topik
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misi-selesai" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Misi Selesai
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sumber-daya-taktis" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Sumber Daya Taktis
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "cc4afa4a5a11c9d03896decfbcbd4060",
+  "translation_date": "2025-10-17T17:10:19+00:00",
+  "source_file": "docs/recruit/09-add-an-agent-flow/README.md",
+  "language_code": "id"
+}
+-->
+<h1 id="misi-09-tambahkan-alur-agen-ke-topik-anda-untuk-otomatisasi">🚨 Misi 09: Tambahkan alur agen ke Topik Anda untuk otomatisasi<a class="headerlink" href="#misi-09-tambahkan-alur-agen-ke-topik-anda-untuk-otomatisasi" title="Permanent link">&para;</a></h1>
+<h2 id="nama-kode-operasi-automation-powerhouse">🕵️‍♂️ NAMA KODE: <code>OPERASI AUTOMATION POWERHOUSE</code><a class="headerlink" href="#nama-kode-operasi-automation-powerhouse" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Jangka Waktu Operasi:</strong> <code>~30 menit</code>  </p>
+</blockquote>
+<p>🎥 <strong>Tonton Panduan</strong></p>
+<p><a href="https://www.youtube.com/watch?v=vtLZJT3eBXg" title="Tonton panduan di YouTube"><img alt="Thumbnail video alur agen" src="../../../../../translated_images/video-thumbnail.ede12df9aaebcc8996680c8b6555d309b53bdf33d1b0165cae3b5173a6bcdd73.id.jpg" /></a></p>
+<h2 id="ringkasan-misi">🎯 Ringkasan Misi<a class="headerlink" href="#ringkasan-misi" title="Permanent link">&para;</a></h2>
+<p>Agen Anda sekarang dapat berkomunikasi dengan pengguna dan memberikan informasi, tetapi keunggulan operasional sejati membutuhkan agen Anda untuk mengambil tindakan. Misi ini akan mengubah agen percakapan Anda menjadi pusat otomatisasi dengan melengkapi agen Anda dengan alur agen.</p>
+<p>Pada akhir misi, Anda akan membuat otomatisasi permintaan perangkat end-to-end yang menangkap input pengguna melalui kartu adaptif, mengambil data dari SharePoint, mengirim notifikasi kepada manajer melalui email, dan memberikan umpan balik pengguna yang mulus - semuanya diatur oleh agen Anda melalui otomatisasi alur kerja yang cerdas.</p>
+<h2 id="tujuan">🔎 Tujuan<a class="headerlink" href="#tujuan" title="Permanent link">&para;</a></h2>
+<p>Dalam misi ini, Anda akan belajar:</p>
+<ol>
+<li>Memahami apa itu alur agen dan bagaimana mereka berbeda dari alur cloud Power Automate untuk otomatisasi</li>
+<li>Mempelajari fitur utama yang membuat alur agen kuat termasuk tindakan AI dan penulisan bahasa alami</li>
+<li>Mengeksplorasi desainer alur agen dan cara menggunakan ekspresi untuk menangani data secara dinamis</li>
+<li>Membuat otomatisasi permintaan perangkat lengkap yang mengintegrasikan data SharePoint dan notifikasi email</li>
+</ol>
+<h2 id="apa-itu-alur-agen">🤔 Apa itu alur agen?<a class="headerlink" href="#apa-itu-alur-agen" title="Permanent link">&para;</a></h2>
+<p>Alur agen adalah cara yang kuat untuk mengotomatisasi tugas berulang dan mengintegrasikan aplikasi serta layanan Anda. Anggap mereka sebagai alur kerja terstruktur, langkah demi langkah yang dapat dijalankan oleh agen Anda untuk mengotomatisasi tugas atau terhubung dengan aplikasi dan layanan lainnya. Anda dapat menganggap mereka sebagai alur mini yang membantu agen Anda melakukan hal-hal seperti mengirim notifikasi, memperbarui catatan, atau merespons peristiwa.</p>
+<p>Berbeda dengan agen otonom yang menggunakan AI untuk membuat keputusan secara langsung, alur agen adalah <strong>alur kerja deterministik</strong> - artinya mereka mengikuti jalur yang sama setiap kali, memastikan hasil yang konsisten dan dapat diandalkan.</p>
+<p>Secara sederhana:</p>
+<ul>
+<li>Mereka membantu agen Anda <em>melakukan sesuatu</em>, bukan hanya <em>mengatakan sesuatu</em> kepada pengguna.</li>
+<li>Mereka dapat digunakan kembali di berbagai topik dan agen, dan dapat dipicu oleh pesan pengguna, peristiwa, atau aplikasi dan layanan lainnya.</li>
+</ul>
+<h2 id="ya-tapi-bagaimana-bedanya-dengan-alur-cloud-power-automate">🙋🏽 Ya, tapi bagaimana bedanya dengan alur cloud Power Automate?<a class="headerlink" href="#ya-tapi-bagaimana-bedanya-dengan-alur-cloud-power-automate" title="Permanent link">&para;</a></h2>
+<p>Baik alur agen maupun alur cloud Power Automate membantu mengotomatisasi tugas. Mereka dirancang untuk tujuan yang berbeda dan bekerja dengan cara yang berbeda.</p>
+<h3 id="alur-agen-di-copilot-studio">🤖 Alur agen di Copilot Studio<a class="headerlink" href="#alur-agen-di-copilot-studio" title="Permanent link">&para;</a></h3>
+<p><strong>Untuk apa mereka:</strong></p>
+<ul>
+<li>Dibangun untuk agen percakapan dan otonom (melalui instruksi agen) di Copilot Studio.</li>
+<li>Berfokus pada otomatisasi cerdas berbasis AI yang berinteraksi dengan sistem bisnis.</li>
+</ul>
+<p><strong>Mengapa mereka berguna:</strong></p>
+<ul>
+<li>Mudah dibuat dan dikelola langsung di Copilot Studio.</li>
+<li>Sangat baik untuk mengotomatisasi tugas yang terjadi <em>selama percakapan</em> dengan pengguna seperti mengajukan permintaan cuti.</li>
+<li>Anda tidak memerlukan lisensi Power Automate terpisah karena penagihan didasarkan pada penggunaan di dalam Copilot Studio. Ini dapat menghemat waktu dan biaya untuk tim perusahaan.</li>
+</ul>
+<p><strong>Keterbatasan:</strong></p>
+<ul>
+<li>Anda tidak dapat membagikan, menyalin, atau menetapkan pemilik bersama.</li>
+<li>Alur agen hanya terlihat dan dapat digunakan di dalam Copilot Studio.</li>
+<li>Saat ini, pemicu peristiwa untuk agen dapat diedit di portal pembuat Power Automate.</li>
+</ul>
+<h3 id="alur-cloud-power-automate">☁️ Alur cloud Power Automate<a class="headerlink" href="#alur-cloud-power-automate" title="Permanent link">&para;</a></h3>
+<p><strong>Untuk apa mereka:</strong></p>
+<ul>
+<li>Dirancang untuk otomatisasi tujuan umum di berbagai aplikasi dan layanan.</li>
+<li>Dapat berjalan secara independen atau bekerja bersama alur agen.</li>
+</ul>
+<p><strong>Mengapa mereka berguna:</strong></p>
+<ul>
+<li>Menawarkan berbagai konektor.</li>
+<li>Ideal untuk mengotomatisasi proses di luar agen.</li>
+<li>Dapat dibagikan, digunakan kembali, dan dikelola di seluruh tim.</li>
+</ul>
+<p><strong>Persyaratan:</strong></p>
+<ul>
+<li>Anda memerlukan lisensi Power Automate untuk menggunakannya.</li>
+</ul>
+<h3 id="ringkasan">📗 Ringkasan<a class="headerlink" href="#ringkasan" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Gunakan ini</th>
+<th style="text-align: left;">Ketika Anda ingin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Alur agen</td>
+<td style="text-align: left;">Mengotomatisasi tugas di dalam agen, menggunakan AI, dan menjaga semuanya di Copilot Studio</td>
+</tr>
+<tr>
+<td style="text-align: left;">Alur cloud Power Automate</td>
+<td style="text-align: left;">Mengotomatisasi di berbagai aplikasi dan layanan, atau membangun alur kerja di luar agen</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mengapa-menggunakan-alur-agen">👍🏻 Mengapa menggunakan alur agen<a class="headerlink" href="#mengapa-menggunakan-alur-agen" title="Permanent link">&para;</a></h2>
+<p>Alur agen selalu mengikuti jalur tetap - mereka melakukan hal yang sama setiap kali diberikan input yang sama.</p>
+<p>Ini membuat mereka:</p>
+<ul>
+<li><strong>Dapat diandalkan</strong> - Anda dapat mempercayai bahwa mereka akan berperilaku sama setiap kali.</li>
+<li><strong>Dapat diprediksi</strong> - Anda tahu hasil apa yang diharapkan saat alur berjalan.</li>
+<li><strong>Berbasis aturan</strong> - mereka mengikuti langkah-langkah yang Anda tentukan.</li>
+</ul>
+<p>Manfaat lainnya adalah:</p>
+<ul>
+<li><strong>Otomatisasi</strong> - memungkinkan agen Anda menangani tugas berulang seperti mengirimkan formulir atau mengirim notifikasi.</li>
+<li><strong>Terhubung</strong> - terhubung dengan lebih dari 1400 konektor seperti ServiceNow, SharePoint, Salesforce. Atau Anda dapat membuat konektor kustom sendiri.</li>
+<li><strong>Terintegrasi erat</strong> - alur agen adalah bagian dari logika agen, mereka dipicu langsung oleh pesan pengguna atau tindakan dalam percakapan.</li>
+<li><strong>Skalabilitas</strong> - menggunakan kembali alur di berbagai agen atau skenario.</li>
+<li><strong>Tanpa kode atau kode rendah</strong> - Anda dapat membangun alur menggunakan bahasa alami atau desainer visual.</li>
+<li><strong>Platform all-in-one</strong> - Anda dapat merancang, menguji, dan menerapkan alur agen di satu tempat - Copilot Studio. Tidak perlu beralih antar platform.</li>
+</ul>
+<h2 id="bagaimana-alur-agen-meningkatkan-agen-anda">🏄🏻‍♂️ Bagaimana alur agen meningkatkan agen Anda?<a class="headerlink" href="#bagaimana-alur-agen-meningkatkan-agen-anda" title="Permanent link">&para;</a></h2>
+<p>Alur agen memperluas apa yang dapat dilakukan agen Anda di luar "mengobrol" dengan pengguna. Mereka memungkinkan agen untuk mengambil tindakan dan berinteraksi dengan sistem.</p>
+<p>Misalnya, Anda bekerja di departemen keuangan dan menerima banyak faktur dari vendor. Biasanya, seseorang harus membaca setiap faktur, mengambil detail penting - jumlah, tanggal, siapa pengirimnya, dan memeriksa apakah semuanya sesuai dengan catatan Anda. Kemudian mengirimkannya kepada orang yang tepat untuk persetujuan. Ini memakan waktu dan tenaga.</p>
+<p>Dengan alur agen di Copilot Studio, Anda dapat mengotomatisasi proses ini. Begitu faktur masuk, agen:</p>
+<ol>
+<li>Membaca dokumen menggunakan pemrosesan dokumen cerdas untuk menemukan informasi penting.</li>
+<li>Memeriksa detail terhadap data perusahaan Anda untuk memastikan semuanya terlihat benar.</li>
+<li>Mengarahkan untuk persetujuan kepada orang yang tepat.</li>
+</ol>
+<p>Ini menghemat waktu, mengurangi kesalahan, dan membuat seluruh proses lebih lancar.</p>
+<h3 id="pikirkan-seperti-ini">Pikirkan seperti ini<a class="headerlink" href="#pikirkan-seperti-ini" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Agen</strong>: pengambil keputusan yang cerdas</li>
+<li><strong>Alur agen</strong>: pelaksana yang dapat diandalkan</li>
+</ul>
+<h3 id="mengapa-ini-penting">Mengapa ini penting<a class="headerlink" href="#mengapa-ini-penting" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Anda mendapatkan yang terbaik dari kedua dunia: otomatisasi yang dapat diandalkan dan AI yang fleksibel.</li>
+<li>Mudah untuk membangun dan memperbarui alur sesuai kebutuhan bisnis Anda.</li>
+<li>Anda dapat meningkatkan otomatisasi di seluruh tim.</li>
+</ul>
+<h2 id="fitur-utama-yang-membuat-alur-agen-kuat">🔌 Fitur utama yang membuat alur agen kuat<a class="headerlink" href="#fitur-utama-yang-membuat-alur-agen-kuat" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Penulisan bahasa alami</strong></p>
+<ul>
+<li>Anda dapat menjelaskan apa yang ingin dilakukan alur dalam bahasa sederhana.</li>
+<li>Copilot memahami maksud Anda dan membangun alur untuk Anda.</li>
+<li>Tidak perlu menulis kode - cukup jelaskan ide Anda.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tindakan AI</strong></p>
+<p>Gunakan AI untuk:</p>
+<ul>
+<li>Membaca dan memahami dokumen atau gambar.</li>
+<li>Merangkum konten panjang menjadi jawaban singkat yang berguna.</li>
+<li>Memberikan rekomendasi atau keputusan yang cerdas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tindakan generatif</strong></p>
+<ul>
+<li>Ini memungkinkan alur beradaptasi secara real-time.</li>
+<li>Agen dapat merencanakan dan menyesuaikan langkah berdasarkan informasi yang berubah.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tindakan integrasi</strong></p>
+<ul>
+<li>Hubungkan alur Anda ke alat lain seperti Outlook, Microsoft Teams, ServiceNow, SharePoint, dan aplikasi serta layanan lainnya, melalui lebih dari 1400 konektor bawaan atau konektor kustom Anda sendiri.</li>
+<li>Ini membantu agen Anda bekerja dengan aplikasi yang sudah digunakan tim Anda.</li>
+</ul>
+</li>
+<li>
+<p><strong>Manusia dalam proses</strong></p>
+<ul>
+<li>Tambahkan langkah persetujuan di mana seseorang perlu meninjau atau mengonfirmasi sesuatu.</li>
+<li><a href="https://learn.microsoft.com/microsoft-copilot-studio/flows-advanced-approvals?WT.mc_id=power-172621-ebenitez">Persetujuan lanjutan</a> mendukung pengingat, delegasi, dan persetujuan multi-tahap.</li>
+</ul>
+</li>
+</ol>
+<h2 id="bagaimana-cara-kerjanya">⚙️ Bagaimana cara kerjanya<a class="headerlink" href="#bagaimana-cara-kerjanya" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Pemicu</strong></p>
+<p>Sebuah peristiwa memulai alur - seperti pengguna mengajukan pertanyaan, memanggil alur dari topik, waktu yang dijadwalkan, atau peristiwa yang terjadi di sistem lain.</p>
+</li>
+<li>
+<p><strong>Tindakan</strong></p>
+<p>Ini adalah langkah-langkah yang diikuti agen berikutnya - mengirim email, memanggil API, memperbarui tiket di ServiceNow.</p>
+</li>
+</ol>
+<h2 id="cara-membuat-alur-agen">🧶 Cara membuat alur agen<a class="headerlink" href="#cara-membuat-alur-agen" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Bahasa alami</strong>: jelaskan apa yang ingin dilakukan agen, dan Copilot membangunnya untuk Anda.</li>
+<li><strong>Kanvas desainer</strong>: seret dan lepas tindakan, kondisi, dan loop di desainer alur agen untuk membangun alur agen Anda.</li>
+</ol>
+<h2 id="apa-itu-desainer-alur-agen">🎨 Apa itu desainer alur agen?<a class="headerlink" href="#apa-itu-desainer-alur-agen" title="Permanent link">&para;</a></h2>
+<p>Ini adalah alat visual di Copilot Studio yang membantu Anda membangun, mengedit, dan mengelola alur agen yang memberikan instruksi langkah demi langkah yang diikuti agen Anda untuk menyelesaikan tugas. Dirancang agar mudah digunakan, bahkan jika Anda baru mengenal alur agen.</p>
+<h3 id="fitur-utama-desainer-alur-agen">Fitur utama desainer alur agen<a class="headerlink" href="#fitur-utama-desainer-alur-agen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Kanvas visual</strong></p>
+<ul>
+<li>Anda dapat melihat seluruh alur Anda yang ditata seperti diagram.</li>
+<li>Mudah memperbesar/memperkecil, menyesuaikan tampilan, atau menggunakan peta mini untuk menavigasi alur besar.</li>
+</ul>
+</li>
+<li>
+<p><strong>Menambahkan dan menghapus tindakan</strong></p>
+<ul>
+<li>Klik tombol <em>plus (+)</em> untuk menambahkan tindakan baru seperti mengirim pesan atau memperbarui item dalam daftar SharePoint.</li>
+<li>Anda dapat mencari tindakan dari konektor, dan mengonfigurasinya melalui pengaturan.</li>
+<li>Untuk menghapus tindakan, klik <em>tiga titik (⋮)</em> dan pilih <em>Hapus</em>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Memeriksa parameter</strong></p>
+<ul>
+<li>Klik pada tindakan apa pun untuk melihat atau mengedit pengaturannya yang disebut <em>parameter</em>.</li>
+<li>Anda dapat memasukkan nilai secara manual atau menggunakan <em>ekspresi</em> untuk membuatnya dinamis.</li>
+</ul>
+</li>
+<li>
+<p><strong>Riwayat versi</strong></p>
+<ul>
+<li>Setiap kali Anda menyimpan alur Anda, versi dicatat.</li>
+<li>Anda dapat kembali dan melihat atau memulihkan versi sebelumnya jika diperlukan.</li>
+</ul>
+</li>
+<li>
+<p><strong>Pemeriksaan kesalahan</strong></p>
+<ul>
+<li><em>Flow Checker</em> menyoroti kesalahan apa pun.</li>
+<li>Semua kesalahan harus diselesaikan sebelum menerbitkan alur Anda.</li>
+</ul>
+</li>
+<li>
+<p><strong>Publikasikan dan uji</strong></p>
+<ul>
+<li>Setelah alur Anda bebas dari kesalahan, terbitkan untuk membuatnya aktif.</li>
+<li>Gunakan fitur <em>Test</em> untuk menjalankan alur Anda secara manual atau otomatis, dan memeriksa apakah alur bekerja seperti yang diharapkan.</li>
+</ul>
+</li>
+</ol>
+<h3 id="mengapa-menggunakan-desainer-alur-agen">Mengapa menggunakan desainer alur agen?<a class="headerlink" href="#mengapa-menggunakan-desainer-alur-agen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Visual dan intuitif</strong> - Anda dapat membangun alur dengan menyeret dan mengklik.</li>
+<li><strong>Aman untuk bereksperimen</strong> - riwayat versi memungkinkan Anda membatalkan perubahan.</li>
+<li><strong>Pengujian bawaan</strong> - membantu Anda memastikan semuanya berfungsi sebelum aktif.</li>
+</ul>
+<h2 id="anda-menyebutkan-ekspresi-apa-itu-ekspresi">🔤 Anda menyebutkan <em>ekspresi</em> - apa itu ekspresi?<a class="headerlink" href="#anda-menyebutkan-ekspresi-apa-itu-ekspresi" title="Permanent link">&para;</a></h2>
+<p>Ekspresi adalah rumus kecil atau perintah yang membantu alur agen Anda bekerja dengan data. Anda menggunakannya untuk menghitung nilai, memformat teks, membuat keputusan, atau mengambil informasi spesifik dari input.</p>
+<h3 id="mengapa-menggunakan-ekspresi">Mengapa menggunakan ekspresi?<a class="headerlink" href="#mengapa-menggunakan-ekspresi" title="Permanent link">&para;</a></h3>
+<p>Ekspresi memungkinkan Anda:</p>
+<ul>
+<li><strong>Menyesuaikan cara data ditangani</strong> - menggabungkan nama, memformat tanggal.</li>
+<li><strong>Membuat keputusan</strong> - jika nilai lebih besar dari 10, lakukan sesuatu.</li>
+<li><strong>Mengubah data</strong> - ubah teks menjadi huruf kecil, ambil bagian dari string.</li>
+<li><strong>Mengotomatisasi logika</strong> - tanpa menulis kode lengkap.</li>
+</ul>
+<h3 id="seperti-apa-ekspresi-itu">Seperti apa ekspresi itu?<a class="headerlink" href="#seperti-apa-ekspresi-itu" title="Permanent link">&para;</a></h3>
+<p>Ekspresi menggunakan fungsi. Saya akan meminjam penjelasan tentang apa itu fungsi dari mantan Microsoft MVP, Jerry Weinstock.</p>
+<div class="admonition kutipan">
+<p class="admonition-title">Kutipan</p>
+<p>Fungsi adalah logika bawaan untuk mengubah data Anda baik melalui operasi sederhana atau kompleks dalam ekspresi Anda.</p>
+</div>
+<p>Fungsi memungkinkan Anda membangun ekspresi tanpa perlu menulis kode.</p>
+<p>Cara saya menjelaskannya, fungsi dalam alur agen mirip dengan fungsi Excel. Anda dapat melakukan operasi pada data untuk mengubahnya menjadi output yang diinginkan. Saat membangun rumus Anda di Excel, Anda memilih nilai input dari sel dalam tabel atau rentang, lalu menerapkan fungsi untuk memanipulasi output data. Contohnya adalah menggunakan fungsi <code>COUNT</code> untuk menghitung jumlah sel yang berisi angka dari rentang.</p>
+<p>Dalam alur agen, alih-alih merujuk data dari sel dalam tabel, Anda merujuk output data dari pemicu atau tindakan saat membangun ekspresi Anda. Melanjutkan contoh sebelumnya, gunakan fungsi <code>length</code> untuk mengambil jumlah item yang dikembalikan dari tindakan konektor <em>Get items</em> SharePoint.</p>
+<h3 id="mengapa-fungsi-penting">Mengapa fungsi penting?<a class="headerlink" href="#mengapa-fungsi-penting" title="Permanent link">&para;</a></h3>
+<p>Menggunakan fungsi membuat alur agen Anda:</p>
+<ul>
+<li><strong>Lebih pintar</strong> - mereka dapat bereaksi terhadap input atau kondisi yang berbeda.</li>
+<li><strong>Fleksibel</strong> - Anda dapat menyesuaikan cara data ditangani.</li>
+<li><strong>Efisien</strong> - Anda menghindari langkah manual dengan mengotomatisasi logika.</li>
+</ul>
+<h3 id="fungsi-yang-paling-berguna">Fungsi yang paling berguna<a class="headerlink" href="#fungsi-yang-paling-berguna" title="Permanent link">&para;</a></h3>
+<p>Berikut adalah fungsi umum yang digunakan dalam alur agen. Untuk daftar lengkap fungsi, kunjungi <a href="https://learn.microsoft.com/azure/logic-apps/workflow-definition-language-functions-reference?WT.mc_id=power-172621-ebenitez">panduan referensi</a>.</p>
+<h4 id="teks">🔡 Teks<a class="headerlink" href="#teks" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>concat()</code> - Menggabungkan dua atau lebih bagian teks.</p>
+<ul>
+<li>Contoh: <code>concat('Halo ', firstName)</code> → “Halo John”</li>
+</ul>
+</li>
+<li>
+<p><code>toLower()</code> / <code>toUpper()</code> - Mengubah teks menjadi huruf kecil atau huruf besar.</p>
+<ul>
+<li>Berguna untuk standarisasi input.</li>
+</ul>
+</li>
+<li>
+<p><code>substring()</code> - Mengambil bagian dari string.</p>
+<ul>
+<li>Contoh: Ambil 3 huruf pertama dari nama.</li>
+</ul>
+</li>
+<li>
+<p><code>trim()</code> - Menghapus spasi dari awal dan akhir teks.</p>
+</li>
+</ul>
+<h4 id="matematika-dan-angka">🔢 Matematika dan angka<a class="headerlink" href="#matematika-dan-angka" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>add()</code>, <code>sub()</code>, <code>mul()</code>, <code>div()</code> - Operasi matematika dasar.<ul>
+<li>Contoh: <code>add(5, 3)</code> - outputnya adalah 8</li>
+</ul>
+</li>
+</ul>
+<h4 id="tanggal-dan-waktu">📅 Tanggal dan waktu<a class="headerlink" href="#tanggal-dan-waktu" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>utcNow()</code> - Mengambil tanggal dan waktu saat ini dalam UTC.</p>
+<ul>
+<li>Sangat baik untuk penanda waktu.</li>
+</ul>
+</li>
+<li>
+<p><code>addDays()</code>, <code>addHours()</code> - Menambahkan waktu ke tanggal.</p>
+</li>
+<li>
+<p>Contoh: <code>addDays(utcNow(), 7)</code> menghasilkan 7 hari dari sekarang.</p>
+</li>
+<li>
+<p><code>formatDateTime()</code> - Memformat tanggal menjadi string yang mudah dibaca.</p>
+<ul>
+<li>Contoh: Senin, 7 Juli 2025</li>
+</ul>
+</li>
+</ul>
+<h4 id="logika">✅ Logika<a class="headerlink" href="#logika" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>if()</code> - Menjalankan satu nilai jika benar, nilai lain jika salah.</p>
+<ul>
+<li>Contoh: <code>if(score &gt; 50, 'Lulus', 'Gagal')</code></li>
+</ul>
+</li>
+<li>
+<p><code>equals()</code> - Memeriksa apakah dua nilai sama.</p>
+</li>
+<li>
+<p><code>and()</code>, <code>or()</code>, <code>not()</code> - Menggabungkan beberapa kondisi.</p>
+</li>
+</ul>
+<h4 id="fungsi-lain-yang-berguna">🪣 Fungsi lain yang berguna<a class="headerlink" href="#fungsi-lain-yang-berguna" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>coalesce()</code> - Mengembalikan nilai pertama yang tidak kosong.</p>
+<ul>
+<li>Berguna untuk nilai cadangan/default.</li>
+</ul>
+</li>
+<li>
+<p><code>guid()</code> - Menghasilkan ID unik.</p>
+<ul>
+<li>Berguna untuk pelacakan atau pencatatan.</li>
+</ul>
+</li>
+<li>
+<p><code>length()</code> - Menghitung jumlah karakter atau item dalam string atau array.</p>
+</li>
+</ul>
+<h2 id="praktik-terbaik">⭐ Praktik terbaik<a class="headerlink" href="#praktik-terbaik" title="Permanent link">&para;</a></h2>
+<p>Berikut adalah beberapa praktik terbaik untuk membangun alur agen di Copilot Studio.</p>
+<ol>
+<li>
+<p><strong>Mulai dengan sederhana dan bangun secara bertahap</strong></p>
+<ul>
+<li>Mulailah dengan tugas kecil dan jelas seperti mengirim pesan.</li>
+<li>Tambahkan langkah-langkah lebih lanjut setelah menguji dasar-dasar otomatisasi Anda.</li>
+</ul>
+</li>
+<li>
+<p><strong>Gunakan nama tindakan yang jelas dan deskriptif</strong></p>
+<ul>
+<li>Beri label setiap langkah dengan jelas sehingga Anda dan tim Anda memahami apa yang dilakukan.</li>
+<li>Contoh: daripada menggunakan nama default "Update item" untuk tindakan konektor SharePoint, ubah namanya menjadi apa yang diperbarui, seperti "Update device status."</li>
+</ul>
+</li>
+<li>
+<p><strong>Periksa kesalahan sebelum mempublikasikan</strong></p>
+<ul>
+<li>Gunakan <strong>flow checker</strong> untuk menemukan dan memperbaiki masalah apa pun.</li>
+<li>Anda tidak dapat mempublikasikan alur jika ada kesalahan, jadi coba selesaikan saat terjadi.</li>
+</ul>
+</li>
+<li>
+<p><strong>Uji alur Anda secara menyeluruh</strong></p>
+<ul>
+<li>Hanya karena alur disimpan dan dipublikasikan, bukan berarti alur bekerja seperti yang diharapkan.</li>
+<li>Gunakan fitur <em>Test</em> untuk menjalankan alur Anda secara manual atau otomatis, dan periksa hasilnya.</li>
+</ul>
+</li>
+<li>
+<p><strong>Gunakan Riwayat Versi</strong></p>
+<ul>
+<li>Simpan alur Anda sering kali sehingga Anda dapat kembali ke versi sebelumnya jika diperlukan.</li>
+<li>Anda dapat melihat dan memulihkan versi sebelumnya menggunakan panel <em>Version History</em>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Gunakan parameter dan ekspresi dengan bijak</strong></p>
+<ul>
+<li>Saat mengonfigurasi tindakan, gunakan parameter untuk membuat alur Anda dinamis.</li>
+<li>Anda dapat memasukkan nilai secara manual atau menggunakan ekspresi untuk menghitungnya, atau menggabungkannya dengan nilai dari tindakan sebelumnya menggunakan pemilih <em>dynamic content</em>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Hapus tindakan yang tidak digunakan</strong></p>
+<ul>
+<li>Jika Anda menambahkan tindakan dan kemudian memutuskan tidak membutuhkannya, hapus untuk menjaga alur Anda tetap rapi.</li>
+</ul>
+</li>
+</ol>
+<h2 id="lab-09-tambahkan-alur-agen-untuk-otomatisasi-dan-tingkatkan-kemampuan-topik">🧪 Lab 09 - Tambahkan alur agen untuk otomatisasi dan tingkatkan kemampuan topik<a class="headerlink" href="#lab-09-tambahkan-alur-agen-untuk-otomatisasi-dan-tingkatkan-kemampuan-topik" title="Permanent link">&para;</a></h2>
+<p>Sekarang kita akan belajar bagaimana meningkatkan topik kita dengan kartu adaptif dan menggunakan fungsi lanjutan dari topik dan node.</p>
+<ul>
+<li><a href="../../../../../docs/recruit/09-add-an-agent-flow">9.1 Buat alur agen</a></li>
+<li><a href="../../../../../docs/recruit/09-add-an-agent-flow">9.2 Tambahkan alur agen ke topik</a></li>
+<li><a href="../../../../../docs/recruit/09-add-an-agent-flow">9.3 Perbarui topik Permintaan perangkat dengan beberapa node untuk pengalaman pengguna yang lebih baik</a></li>
+<li><a href="../../../../../docs/recruit/09-add-an-agent-flow">9.4 Uji agen menggunakan beberapa skenario</a></li>
+</ul>
+<h3 id="kasus-penggunaan">✨ Kasus penggunaan<a class="headerlink" href="#kasus-penggunaan" title="Permanent link">&para;</a></h3>
+<p><strong>Sebagai</strong> manajer karyawan</p>
+<p><strong>Saya ingin</strong> menerima permintaan perangkat</p>
+<p><strong>Sehingga saya</strong> dapat meninjau perangkat yang diminta oleh karyawan.</p>
+<p>Mari kita mulai!</p>
+<h3 id="prasyarat">Prasyarat<a class="headerlink" href="#prasyarat" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Daftar SharePoint</strong></p>
+<p>Kita akan menggunakan daftar SharePoint <strong>Devices</strong> dari <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Pelajaran 00 - Penyiapan Kursus - Langkah 3: Buat situs SharePoint baru</a>.</p>
+<p>Jika Anda belum menyiapkan daftar SharePoint <strong>Devices</strong>, silakan kembali ke <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Pelajaran 00 - Penyiapan Kursus - Langkah 3: Buat situs SharePoint baru</a>.</p>
+</li>
+<li>
+<p><strong>Agen Bantuan Contoso</strong></p>
+<p>Kita akan menggunakan agen yang sama yang dibuat sebelumnya di <a href="../06-create-agent-from-conversation/">Pelajaran 06 - Buat agen kustom menggunakan bahasa alami dengan Copilot dan menghubungkannya dengan data Anda</a>.</p>
+</li>
+</ol>
+<h3 id="91-buat-alur-agen">9.1 Buat alur agen<a class="headerlink" href="#91-buat-alur-agen" title="Permanent link">&para;</a></h3>
+<p>Dalam latihan ini, kita akan membuat alur agen yang mengambil item SharePoint dari perangkat yang dipilih dan mengirim email kepada manajer dengan detail perangkat.</p>
+<ol>
+<li>
+<p>Di topik <strong>Permintaan perangkat</strong>, gulir ke bawah ke node <strong>Ask with adaptive card</strong> dan tambahkan node baru. Pilih <strong>Add a tool</strong> dan di tab <strong>Basic tools</strong> pada panel yang muncul, pilih <strong>New Agent flow</strong>.</p>
+<p><img alt="Tambahkan alur Agen baru" src="../../../../../translated_images/9.1_01_AddNewAgentFlow.2b9078604a054d1f022f9c73adaf10fe430e81875ec8717a7f70ef7b05f11c15.id.png" /></p>
+</li>
+<li>
+<p><strong>Designer</strong> alur Agen akan dimuat dengan pemicu dan tindakan.</p>
+<ul>
+<li>
+<p><strong>Trigger</strong> - Saat agen memanggil alur</p>
+<ul>
+<li>Ini akan memicu alur dari agen Copilot Studio.</li>
+</ul>
+</li>
+<li>
+<p><strong>Action</strong> - Merespons agen</p>
+<ul>
+<li>Ini mengirimkan respons yang dapat berisi nilai output kembali ke agen Copilot Studio.</li>
+</ul>
+</li>
+</ul>
+<p>Pilih pemicu.</p>
+<p><img alt="Pilih pemicu" src="../../../../../translated_images/9.1_02_SelectTrigger.92dc20442add764c8aa4b7f737f28416a3223e4471562462ed6dcba2dc7c7936.id.png" /></p>
+</li>
+<li>
+<p>Selanjutnya, kita akan menambahkan beberapa input untuk alur agen.</p>
+<ul>
+<li>
+<p><code>DeviceSharePointId</code> - ini akan menyimpan nilai, ID, dari item SharePoint. Nilai ID ini adalah output dari node Ask with adaptive card di mana pengguna memilih perangkat.</p>
+</li>
+<li>
+<p><code>User</code> - ini akan menjadi nama pengguna yang berasal dari variabel sistem agen.</p>
+</li>
+<li>
+<p><code>AdditionalComments</code> - ini akan menjadi komentar yang dimasukkan oleh pengguna, yang merupakan output dari node Ask with adaptive card.</p>
+</li>
+</ul>
+<p>Pertama-tama kita akan menambahkan <code>DeviceSharePointId</code> sebagai input untuk pemicu kita. Pilih <strong>+ Add an input</strong>.</p>
+<p><img alt="Tambahkan input" src="../../../../../translated_images/9.1_03_AddInput.fd1e0a99ecb5e20f3a518cb23fc0d22c6db1435c5ffb2e183fce3b8a056287bb.id.png" /></p>
+</li>
+<li>
+<p>Untuk jenis input pengguna, pilih <strong>Text</strong>.</p>
+<p><img alt="Pilih Text" src="../../../../../translated_images/9.1_04_SelectText.47ca776822ec5a6c1339c012d51e0eb6eac6bf8315d4ac6f25498b10ada16df9.id.png" /></p>
+</li>
+<li>
+<p>Untuk nama input, masukkan berikut ini.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>DeviceSharePointId
+</span></code></pre></div>
+<p><img alt="Input DeviceSharePointId" src="../../../../../translated_images/9.1_05_DeviceSharePointIdInput.caf77f8eb60a1b8649ea8b0abf05dfce9fa4bef9d9c465cd8906395e5b44842e.id.png" /></p>
+</li>
+<li>
+<p>Sekarang kita akan menambahkan input kedua, <code>User</code>. Ulangi langkah yang sama, pilih <strong>+ Add an input</strong> dan pilih <strong>Text</strong>.</p>
+<p><img alt="Tambahkan input" src="../../../../../translated_images/9.1_06_AddInput.3ca4bff9991b6e8a331bd909ff58038387696ce7b6ee7a932a88316aff41bc57.id.png" /></p>
+</li>
+<li>
+<p>Untuk nama input, masukkan berikut ini.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>User
+</span></code></pre></div>
+<p><img alt="Input User" src="../../../../../translated_images/9.1_07_UserInput.16b2405f2d5744ea14a6a67b69539ba24719aaf642ddfc2b281e784d74d8c1ea.id.png" /></p>
+</li>
+<li>
+<p>Sekarang kita akan menambahkan input ketiga, <code>AdditionalComments</code>. Ulangi langkah yang sama, pilih <strong>+ Add an input</strong> dan pilih <strong>Text</strong>.</p>
+<p><img alt="Tambahkan input" src="../../../../../translated_images/9.1_08_AddInput.4685bb77618e6d9cfca7a42a0945d10f59825b1ca42de372dcf07c9170451680.id.png" /></p>
+</li>
+<li>
+<p>Untuk nama input, masukkan berikut ini.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>AdditionalComments
+</span></code></pre></div>
+<p><img alt="Input AdditionalComments" src="../../../../../translated_images/9.1_09_AdditionalComments.a4587b59b85450ca0566615c9473132dd6447e6c7513e4926942655aa0e80195.id.png" /></p>
+</li>
+<li>
+<p>Untuk input <code>AdditionalComments</code>, kita akan memperbaruinya agar menjadi opsional. Pilih <strong>ikon elipsis (...)</strong> dan pilih <strong>Make the field optional</strong>.</p>
+<p><img alt="Jadikan field opsional" src="../../../../../translated_images/9.1_10_Optional.753bd03817c2eb37bb44a7bfd7d29314aa7109cde02e3f619c01c42bc9170b71.id.png" /></p>
+</li>
+<li>
+<p>Kerja bagus! Pemicu sekarang telah dikonfigurasi, mari lanjutkan. Pilih <strong>ikon plus +</strong> di bawah pemicu untuk menyisipkan tindakan baru.</p>
+<p><img alt="Tambahkan tindakan" src="../../../../../translated_images/9.1_11_AddAction.86c14acd1ce22e99b7244e0001f0039362ff6ac3efafe03956788aaa31e705af.id.png" /></p>
+</li>
+<li>
+<p><strong>Panel Tindakan</strong> akan muncul di mana Anda dapat melihat tindakan dari lebih dari 1400+ konektor bawaan ke layanan Microsoft dan pihak ketiga. Di <strong>field pencarian</strong> masukkan berikut ini,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Get item
+</span></code></pre></div>
+<p>Daftar tindakan akan ditampilkan dalam hasil pencarian. Pilih tindakan <strong>Get item</strong> dari konektor <strong>SharePoint</strong>.</p>
+<p><img alt="Tindakan Get item" src="../../../../../translated_images/9.1_12_AddGetItemAction.434cdcb822e1f72993fc4a0c0ad753e1220456f9dab8fc307d42f5711071d45b.id.png" /></p>
+</li>
+<li>
+<p>Kita sekarang dapat mulai mengonfigurasi tindakan <strong>Get item</strong>.</p>
+<p>Pilih <strong>ikon elipsis (...)</strong> di tindakan <strong>Get item</strong>.</p>
+<p><img alt="Pilih elipsis" src="../../../../../translated_images/9.1_13_SelectEllipsis.88bf304067f3103825f183f8962634af831460541290533e5670f4c014a97c46.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Rename</strong>.</p>
+<p><img alt="Pilih Rename" src="../../../../../translated_images/9.1_14_SelectRename.74d99c883418b7dbf58758304976cac1d0f2afd30e4cd1992830f00775a46b18.id.png" /></p>
+</li>
+<li>
+<p>Ubah nama tindakan menjadi,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Get Device
+</span></code></pre></div>
+<p><img alt="Ubah nama tindakan" src="../../../../../translated_images/9.1_15_RenameAction.ff64b79f6e6603ae89f272f91d84ff4432c04ba103c401a2808a767e3ceb5617.id.png" /></p>
+</li>
+<li>
+<p>Di field <strong>Site Address</strong>, pilih <strong>Alamat situs</strong> dari situs SharePoint Contoso IT yang dibuat di <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Pelajaran 00 - Penyiapan Kursus - Langkah 3: Buat situs SharePoint baru</a>.</p>
+<p>Di field <strong>List Name</strong>, pilih daftar SharePoint <strong>Devices</strong>.</p>
+<p><img alt="Parameter input" src="../../../../../translated_images/9.1_16_SharePointSiteAndListParameters.af6e0b112eb4bfb210f9259da02b459097a06307afa6ca269cb33aa9ecc1c1e4.id.png" /></p>
+</li>
+<li>
+<p>Di field <strong>Id</strong>, pilih <strong>ikon petir</strong> atau <strong>ikon fx</strong> di sebelah kanan.</p>
+<p><img alt="Pemilih konten dinamis" src="../../../../../translated_images/9.1_17_InsertExpressionIcon.6e250bb84e7b8884de7b2052005f7ff3cd95f2c28671d2da7965001b3f621902.id.png" /></p>
+</li>
+<li>
+<p>Di tab <strong>Dynamic content</strong> pada panel yang muncul, masukkan berikut ini,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sharepoint
+</span></code></pre></div>
+<p>Hasil pencarian akan menunjukkan parameter input yang cocok dengan nilai yang dicari. Pilih parameter <strong>DeviceSharePointId</strong> dari pemicu.</p>
+<p>Selanjutnya, pilih <strong>Add</strong> untuk menambahkan input konten dinamis ke parameter <strong>Id</strong> dari tindakan.</p>
+<p><img alt="Pilih input DeviceSharePointId" src="../../../../../translated_images/9.1_18_DeviceSharePointId.b9be8e7c3c6b0ab710a8f662e62a0ec0133a530f6877b6cea3c48acc8022fec5.id.png" /></p>
+</li>
+<li>
+<p>Input konten dinamis dari pemicu sekarang dirujuk dalam parameter <strong>Id</strong> dari tindakan. Kita akan memperbarui salah satu parameter lanjutan berikutnya. Pilih <strong>Show all</strong> untuk melihat parameter lanjutan.</p>
+<p><img alt="Lihat parameter lanjutan" src="../../../../../translated_images/9.1_19_AdvancedParameters.4bb8e0c11e7864625ad6c30ab1b9021d367cd77374c56985df7b3d43845a1883.id.png" /></p>
+</li>
+<li>
+<p>Parameter <strong>Limit Columns by View</strong> akan ditampilkan dan secara default diatur ke <strong>Use all columns (Do not limit)</strong>. Kita akan memperbarui nilai ini ke tampilan untuk membatasi kolom yang dikembalikan dalam respons tindakan. Pilih parameter <strong>Limit Columns by View</strong> untuk melihat daftar tampilan.</p>
+<p><img alt="Pilih parameter" src="../../../../../translated_images/9.1_20_LimitColumnsByView.4d30f532f1e1033323d39df5c9b8e803788ea785ed58de2efca2faa5df4b26fc.id.png" /></p>
+</li>
+<li>
+<p>Pilih tampilan <strong>All Items</strong>.</p>
+<p><img alt="Pilih tampilan All Items" src="../../../../../translated_images/9.1_21_SelectView.d180e83d5e62f5fb6994a7071d5e6ce8f88143d8cc833cb55b208c6fee41bc02.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>ikon plus +</strong> di bawah tindakan <em>Get Device</em> untuk menyisipkan tindakan baru.</p>
+<p><img alt="Tambahkan tindakan baru" src="../../../../../translated_images/9.1_22_AddAnAction.904b79142347fe927168036ade55d842fa088deef53710944272c681421e0e84.id.png" /></p>
+</li>
+<li>
+<p>Di field pencarian masukkan berikut ini,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>send an email
+</span></code></pre></div>
+<p>Daftar tindakan akan ditampilkan dalam hasil pencarian. Pilih tindakan <strong>Send an email (V2)</strong> dari konektor <strong>Office 365 Outlook</strong>.</p>
+<p><img alt="Tindakan Send an email" src="../../../../../translated_images/9.1_23_SendAnEmail.f1019365131658b0e71b5b58b57d7d8b3f3a0c670ddb3cca0838bf0b4f8cd354.id.png" /></p>
+</li>
+<li>
+<p>Selanjutnya kita perlu membuat koneksi untuk tindakan konektor. Pilih <strong>Sign in</strong>.</p>
+<p><img alt="Buat koneksi" src="../../../../../translated_images/9.1_24_CreateConnection.9e968ad4de9d13d81e95779c4fa60809fd40de5f65dbd014f1dc39663c935806.id.png" /></p>
+</li>
+<li>
+<p>Pilih akun pengguna yang sudah masuk.</p>
+<p><img alt="Pilih akun pengguna" src="../../../../../translated_images/9.1_25_SelectUserAccount.f3c96ac1a377c4b42a6301ba38c21469eb7bd3f48633f04200f1610902f8bdbe.id.png" /></p>
+</li>
+<li>
+<p>Pilih <strong>Allow access</strong>. Koneksi sekarang telah dibuat.</p>
+<p><img alt="Pilih allow access" src="../../../../../translated_images/9.1_26_AllowAccess.1abcaea31b9846279cafafd7160baea6bec60cdfac8224df7082ceee3ef22a26.id.png" /></p>
+</li>
+<li>
+<p>Ubah nama tindakan menjadi berikut ini,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Send an email to manager
+</span></code></pre></div>
+<p>Selanjutnya mari kita definisikan parameter input dari tindakan kita.</p>
+<p>Untuk parameter input <strong>To</strong>, pilih diri Anda sendiri. Biasanya ini akan menjadi manajer Anda atau kita akan menggunakan tindakan lain yang menarik manajer Anda berdasarkan profil Entra ID Anda, tetapi untuk tujuan pelajaran ini, pilih diri Anda sendiri.</p>
+<p>Untuk parameter input <strong>Subject</strong>, masukkan berikut ini,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Request type: new device
+</span></code></pre></div>
+<p>Untuk parameter input <strong>Body</strong>, masukkan berikut ini,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Hi,
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>New device requested from
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Manufacturer:
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>Model:
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>Link to item in SharePoint
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>Additional comments from:
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>This is an automated email from Contoso Helpdesk Copilot
+</span></code></pre></div>
+<p><img alt="Ubah nama tindakan dan konfigurasi input" src="../../../../../translated_images/9.1_27_RenameAndConfigureParameters.c3d29a3481fb5c0240cca85db4119387e6b750546ed12e2af4a9ac62d7454f89.id.png" /></p>
+</li>
+<li>
+<p>Selanjutnya, kita akan memperbarui parameter input <strong>Body</strong> dengan referensi ke input konten dinamis dari <strong>pemicu</strong> atau tindakan <strong>Get item</strong>. Masukkan spasi setelah baris kedua karena kita akan menyisipkan nama pengguna dari input pemicu, <strong>User</strong>.</p>
+<p>Pilih <strong>ikon petir</strong> atau <strong>ikon fx</strong> di sebelah kanan.</p>
+<p><img alt="Tambahkan input User sebagai konten dinamis" src="../../../../../translated_images/9.1_28_AddUserInput.f38d3df648faef75f1985bdcc23db16e197ccb1ddc015210c43bbb2569fcf654.id.png" /></p>
+</li>
+<li>
+<p>Di tab <strong>Dynamic content</strong> pada panel yang muncul, pilih input <strong>User</strong> dari pemicu.</p>
+<p>Pilih <strong>Add</strong> untuk menambahkan input konten dinamis <strong>User</strong> ke parameter <strong>Body</strong> dari tindakan.</p>
+<p><img alt="Pilih input User" src="../../../../../translated_images/9.1_29_SelectUserInput.4efc79f52d74fa7ae13132ea13f7d51b3f4aab6413afc41a8354c5e59852b9fc.id.png" />
+1. Input konten dinamis dari pemicu sekarang dirujuk dalam parameter <strong>Body</strong> pada aksi. Kita akan mengulangi langkah yang sama untuk baris-baris lainnya di badan pesan email.</p>
+<p><img alt="Input pengguna ditambahkan" src="../../../../../translated_images/9.1_30_UserInputAdded.905ec0489e4f1bbe7cc071826050834aa1e5acf53f8a65ad59532ea13b81c607.id.png" /></p>
+</li>
+<li>
+<p>Klik pada ruang di sebelah <code>Manufacturer:</code>. Pilih ikon <strong>petir</strong> atau ikon <strong>fx</strong> di sebelah kanan.</p>
+<p>Pada tab <strong>Dynamic content</strong> di panel yang muncul, masukkan berikut ini di kolom pencarian,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>manufacturer
+</span></code></pre></div>
+<p>Pilih input <strong>Manufacturer value</strong> dari pemicu dan klik <strong>Add</strong>.</p>
+<p><img alt="Tambahkan input nilai Manufacturer sebagai konten dinamis" src="../../../../../translated_images/9.1_31_ManufacturerValueAdded.db2cf35a35a20590d80d7f0191d771a045bf55e40ce98982d0e099588e260712.id.png" /></p>
+</li>
+<li>
+<p>Klik pada ruang di sebelah <code>Model:</code>. Pilih ikon <strong>petir</strong> atau ikon <strong>fx</strong> di sebelah kanan.</p>
+<p>Pada tab <strong>Dynamic content</strong> di panel yang muncul, masukkan berikut ini di kolom pencarian,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>model
+</span></code></pre></div>
+<p>Pilih input <strong>Model</strong> dari aksi <strong>Get item</strong> dan klik <strong>Add</strong>.</p>
+<p><img alt="Tambahkan input Model sebagai konten dinamis" src="../../../../../translated_images/9.1_32_ModelAdded.ff9d858648ddb85fe70eaaafa6e23d0560500e7327ccb29ee56ecac0d8d36cab.id.png" /></p>
+</li>
+<li>
+<p>Untuk teks <code>Link to item in SharePoint</code>, kita akan memperbaruinya menjadi hyperlink di badan pesan email. Klik di awal baris dan pilih ikon <strong>petir</strong> atau ikon <strong>fx</strong> di sebelah kanan.</p>
+<p><img alt="Tambahkan konten dinamis" src="../../../../../translated_images/9.1_33_AddDynamicContent.c662d682377af82adc52de18e05baf9b6aa5a972882dcf6274f3979f14641627.id.png" /></p>
+</li>
+<li>
+<p>Klik setelah tag anchor HTML dan pilih ikon <strong>petir</strong> atau ikon <strong>fx</strong> di sebelah kanan.</p>
+<p>Pada tab <strong>Dynamic content</strong> di panel yang muncul, masukkan berikut ini di kolom pencarian,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>link to item
+</span></code></pre></div>
+<p>Pilih input <strong>Link to item</strong> dari aksi <strong>Get item</strong> dan klik <strong>Add</strong>.</p>
+<p><img alt="Tambahkan Link to item sebagai konten dinamis" src="../../../../../translated_images/9.1_34_AddLinkToItem.6827bd3bad484f7382d060435bb0ef45e9bb1c3ad4774529559bb4c5f9bbca8c.id.png" /></p>
+</li>
+<li>
+<p>Kita perlu beralih ke editor HTML dengan memilih ikon <strong>&lt;/&gt;</strong>.</p>
+<p><img alt="Tambahkan input pengguna" src="../../../../../translated_images/9.1_35_ToggleCodeView.ae3a9caf213f2c6366487e10092ad1fad3494f110936219258d842c23e7f46d9.id.png" /></p>
+</li>
+<li>
+<p>Editor HTML sekarang diaktifkan. Klik sebelum teks <code>Link to item in SharePoint</code>, tambahkan tag anchor HTML untuk membuat hyperlink. Salin dan tempel berikut ini.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>&lt;a href=&quot;
+</span></code></pre></div>
+<p><img alt="Tag HTML" src="../../../../../translated_images/9.1_36_AddHTMLTag.146220ae5c33eaf9915c393c37d62b9d4b258413e9f4dc42a1ab005437669443.id.png" /></p>
+</li>
+<li>
+<p>Input konten dinamis <strong>Link to item</strong> sekarang dirujuk dalam parameter <strong>Body</strong>. Klik setelah input <strong>Link to item</strong>, salin dan tempel berikut ini.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>&quot;&gt;
+</span></code></pre></div>
+<p><img alt="Tag HTML" src="../../../../../translated_images/9.1_37_AddHTMLTag.48f73b302f6a84bb6a51e0666fd30baf1f8d9d906947d44dc4095ededed18a2d.id.png" /></p>
+</li>
+<li>
+<p>Klik setelah teks <code>Link to item in SharePoint</code>, tutup tag anchor HTML. Salin dan tempel berikut ini.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>&lt;/a&gt;
+</span></code></pre></div>
+<p><img alt="Tag HTML" src="../../../../../translated_images/9.1_38_AddHTMLTag.47d2f0521e6aba9d609bfe65d86ebae5786e4ad5465fefb7ae0370db6e924c96.id.png" /></p>
+</li>
+<li>
+<p>Pilih ikon <strong>&lt;/&gt;</strong> untuk beralih tampilan kode.</p>
+<p><img alt="Nonaktifkan tampilan kode" src="../../../../../translated_images/9.1_39_ToggleCodeView.88606eb37d702a686904b2dd8943fcf144cec462b37ee781e8ee0415e62bd951.id.png" /></p>
+</li>
+<li>
+<p>Kemudian pilih kembali ikon <strong>&lt;/&gt;</strong> untuk beralih kembali ke tampilan kode.</p>
+<p><img alt="Kembali ke tampilan kode" src="../../../../../translated_images/9.1_40_ToggleCodeViewAgain.32da9b9804adbbfaf8d85bdaa6fa51d2ae5fc1fbb97f75084813972c66d0c4d9.id.png" /></p>
+</li>
+<li>
+<p>Perhatikan ada beberapa karakter tambahan <code>&amp;lt;br&amp;gt;</code>. Hapus karakter-karakter ini.</p>
+<p><img alt="Hapus karakter" src="../../../../../translated_images/9.1_41_DeleteCharacters.f1ef3830b186c2cd9974ea05e336c83c0706d72ab1010d06283716dc4e982875.id.png" /></p>
+</li>
+<li>
+<p>Kita telah selesai menambahkan hyperlink ke badan pesan email 😎 Pilih ikon <strong>&lt;/&gt;</strong> untuk beralih tampilan kode.</p>
+<p><img alt="Tag HTML dirapikan" src="../../../../../translated_images/9.1_42_HTMLTagTidiedUp.1b27fa2c4dc65c3f1a7151abcf6e388f64cb83745b10cd22769c1f9af3421fc6.id.png" /></p>
+</li>
+<li>
+<p>Klik setelah teks <code>Additional comments from</code> sebelum karakter titik dua dan pilih ikon <strong>petir</strong> atau ikon <strong>fx</strong> di sebelah kanan.</p>
+<p><img alt="Tambahkan parameter pengguna" src="../../../../../translated_images/9.1_43_AddUserInput.6f0d26739c1b9039383aa37cc46fa1149a269bd4268fb54b897d144afc49c515.id.png" /></p>
+</li>
+<li>
+<p>Pada tab <strong>Dynamic content</strong> di panel yang muncul, masukkan berikut ini di kolom pencarian,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>user
+</span></code></pre></div>
+<p>Pilih parameter <strong>User</strong> dari pemicu dan klik <strong>Add</strong>.</p>
+<p><img alt="Tambahkan parameter pengguna sebagai konten dinamis" src="../../../../../translated_images/9.1_44_AddUserDynamicContent.bb7c76e92650001207712b3447d3275d584f3ebf739034369869c3facf38eacf.id.png" /></p>
+</li>
+<li>
+<p>Sekarang kita akan memasukkan ekspresi yang akan menampilkan nilai Additional Comments jika diberikan oleh pengguna di node <strong>Ask an adaptive card</strong>, atau menampilkan "None" jika pengguna tidak memberikan komentar.</p>
+<p>Klik setelah titik dua dan pilih ikon <strong>petir</strong> atau ikon <strong>fx</strong> di sebelah kanan.</p>
+<p><img alt="Tambahkan ekspresi" src="../../../../../translated_images/9.1_45_AddExpression.c4c92dc4a56fab75c78ec2c5087682521e562264c1710c8dfaa24134adc3a112.id.png" /></p>
+</li>
+<li>
+<p>Pada tab <strong>Function</strong> di panel yang muncul dan di kolom ekspresi di atas, masukkan berikut ini,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>if(empty())
+</span></code></pre></div>
+<p>Ekspresi ini menggunakan fungsi <code>if</code> untuk pernyataan if-else.</p>
+<p>Fungsi berikutnya yang digunakan adalah <code>empty</code> yang memeriksa apakah ada nilai atau tidak dalam parameter string. Parameter string yang dirujuk adalah nilai parameter input <code>AdditionalComments</code> dari pemicu.</p>
+<p><img alt="Jika kosong" src="../../../../../translated_images/9.1_46_IfEmptyFunctions.95d21ad01f6f7c290cb8d5a57ccbca9c9532df7ce57f800554dea541d503ddc6.id.png" /></p>
+</li>
+<li>
+<p>Selanjutnya, klik <strong>di dalam tanda kurung</strong> setelah fungsi <code>empty</code>. Kita akan memasukkan parameter input <code>AdditionalComments</code> dari pemicu.</p>
+<p>Pilih tab <strong>Dynamic content</strong>. Masukkan berikut ini di kolom pencarian,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Additional
+</span></code></pre></div>
+<p>Gulir ke bawah panel dan pilih input <strong>AdditionalComments</strong> dari pemicu. Parameter sekarang akan ditambahkan sebagai parameter string dalam ekspresi.</p>
+<p><img alt="Tambahkan AdditionalComments sebagai konten dinamis" src="../../../../../translated_images/9.1_47_AdditionalCommentsDynamicContent.f9632f09779888c18a58df8e97ef677ed885b0eaa88c252b13b22c0e4c67495b.id.png" /></p>
+</li>
+<li>
+<p>Selanjutnya kita akan mendefinisikan logika <strong><em>true</em></strong>, di mana jika parameter string <code>AdditionalComments</code> kosong, maka kita ingin menampilkan string (teks) <code>None</code>.</p>
+<p>Setelah tanda kurung yang menutup parameter string, masukkan berikut ini,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>, &#39;None&#39;,
+</span></code></pre></div>
+<p><img alt="Logika true" src="../../../../../translated_images/9.1_48_None.31978299f29e07ef3257eedd5dcee09c8675f8b3f61aea8102900118e0b6ca70.id.png" /></p>
+</li>
+<li>
+<p>Akhirnya kita akan mendefinisikan logika <strong><em>false</em></strong>, di mana jika parameter string <code>AdditionalComments</code> tidak kosong, maka kita ingin menampilkan nilai parameter input <strong>AdditionalComments</strong> dari pemicu kita.</p>
+<blockquote>
+<p>Pengingat bahwa nilai ini akan berasal dari kolom Additional Comments pada kartu adaptif di node <strong>Ask with adaptive card</strong> dalam topik <strong>Request device</strong>.</p>
+</blockquote>
+<p>Setelah koma setelah logika <strong><em>true</em></strong>, pilih tab <strong>Dynamic content</strong>. Masukkan berikut ini di kolom pencarian,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Additional
+</span></code></pre></div>
+<p>Gulir ke bawah panel dan pilih input <strong>AdditionalComments</strong> dari pemicu. Parameter sekarang akan ditambahkan sebagai parameter string dalam ekspresi.</p>
+<p>Sekarang tambahkan ke parameter <strong>Body</strong> kita dengan memilih <strong>Add</strong>.</p>
+<p><img alt="Logika false" src="../../../../../translated_images/9.1_49_AdditionalCommentsDynamicContent.d42c7fc29f65d901bb26dcbc13408c387633ea185cdd79c35d6439231b7363d5.id.png" /></p>
+</li>
+<li>
+<p>Bagus, ekspresi kita sudah selesai! Ekspresi sekarang telah ditambahkan ke parameter <strong>Body</strong>. Terakhir, format baris terakhir dalam Italic.</p>
+<p><img alt="Italic" src="../../../../../translated_images/9.1_50_Italics.a0c01aa33ef4e83167e1fbc21c1d833f95addd60c8f531411cf9c58a96a31b02.id.png" /></p>
+</li>
+<li>
+<p>Sekarang kita akan memperbarui aksi <strong>Respond to the agent</strong> untuk mengirimkan nilai parameter <strong>Model value</strong> dari aksi <strong>Get item</strong> kembali ke agen.</p>
+<p>Tahan tombol kiri mouse dan gerakkan ke atas dalam desain untuk melihat aksi <strong>Respond to the agent</strong>.</p>
+<p>Pilih aksi <strong>Respond to the agent</strong> dan pilih output <strong>Text</strong> sebagai tipe.</p>
+<p><img alt="Pilih output Text" src="../../../../../translated_images/9.1_51_RespondToTheAgentAction.4c682a440e19a0fcd6d6f51ef9cdbfe76f482a39d635b8905d9b0cbbf33d945f.id.png" /></p>
+</li>
+<li>
+<p>Masukkan berikut ini sebagai nama output.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>ModelValue
+</span></code></pre></div>
+<p><img alt="Output ModelValue" src="../../../../../translated_images/9.1_52_ModelValueInput.20609429eb323281051607b090319adc5315c0245c7d61158eb119714fe4318f.id.png" /></p>
+</li>
+<li>
+<p>Pilih kolom nilai dan pilih ikon <strong>petir</strong> atau ikon <strong>fx</strong> di sebelah kanan.</p>
+<p><img alt="Masukkan ekspresi" src="../../../../../translated_images/9.1_53_InsertDynamicContent.108ba565696f9f52d742323e0f4c46c308f322ac4bd67802e3196430155c7443.id.png" /></p>
+</li>
+<li>
+<p>Pada tab <strong>Dynamic content</strong> di panel yang muncul, masukkan berikut ini di kolom pencarian,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>model
+</span></code></pre></div>
+<p>Pilih parameter <strong>Model</strong> dari aksi <strong>Get item</strong> dan klik <strong>Add</strong>.</p>
+<p><img alt="Tambahkan parameter Model sebagai konten dinamis" src="../../../../../translated_images/9.1_54_ModelParameter.f231fd0ec089ac6b9ac1b7fd2e6a60a35b08484ed10b0098cff6b3ce0c7760cb.id.png" /></p>
+</li>
+<li>
+<p>Parameter <strong>Model</strong> sekarang menjadi nilai output teks. Pilih <strong>Save draft</strong> untuk menyimpan alur agen kita.</p>
+<p>Kita telah menyelesaikan alur agen kita 👏🏻</p>
+<p><img alt="Pilih save draft" src="../../../../../translated_images/9.1_55_SaveDraftAgentFlow.5ab97895a901458362881fc9ee576762bdb0883b37a6cbd7a631ddc2750705af.id.png" /></p>
+</li>
+<li>
+<p>Mari kita lakukan satu pembaruan lagi pada alur agen kita sebelum mempublikasikan. Pilih tab <strong>Overview</strong> dan pilih <strong>Edit</strong>.</p>
+<p><img alt="Pilih Edit" src="../../../../../translated_images/9.1_56_EditAgentFlowDetails.023e8149284b9ae79dd3d95f574ff90bbcc1cc4a9fff4be56664ccbe0698f310.id.png" /></p>
+</li>
+<li>
+<p>Untuk <strong>Flow name</strong>, salin dan tempel berikut ini.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Send device request email
+</span></code></pre></div>
+<p>Untuk <strong>Description</strong>, pilih ikon <strong>refresh</strong> untuk menggunakan AI untuk secara otomatis menghasilkan deskripsi berdasarkan pemicu dan aksi dalam alur agen.</p>
+<p>Pilih <strong>Save</strong> untuk menyimpan nama dan deskripsi yang diperbarui dari alur agen.</p>
+<p><img alt="Ganti nama, tambahkan deskripsi, dan simpan detail" src="../../../../../translated_images/9.1_57_RenameAndDescription.57a190396550bf998d62c49ca359b66211ae50042ac5f8739b32f8b9bc292607.id.png" /></p>
+</li>
+<li>
+<p>Pilih tab <strong>Designer</strong> dan pilih <strong>Publish</strong> untuk mempublikasikan alur agen sehingga dapat ditambahkan sebagai node dalam topik <strong>Request device</strong>.</p>
+<p><img alt="Publikasikan" src="../../../../../translated_images/9.1_58_Publish.8f43271718c662deee7afea6fb283f64005b277b3a62086e6d91cc0c3ac4f79c.id.png" /></p>
+</li>
+<li>
+<p>Pesan konfirmasi akan muncul sebentar lagi untuk mengonfirmasi bahwa alur agen telah dipublikasikan.</p>
+<p><img alt="Pesan konfirmasi" src="../../../../../translated_images/9.1_59_Confirmation.d406bde76c31b27f794d5742c992b8c84283f46b2e54524f1e500d0688a33716.id.png" /></p>
+</li>
+</ol>
+<h3 id="92-tambahkan-alur-agen-ke-topik">9.2 Tambahkan alur agen ke topik<a class="headerlink" href="#92-tambahkan-alur-agen-ke-topik" title="Permanent link">&para;</a></h3>
+<p>Sekarang mari tambahkan alur agen ke topik <strong>Request device</strong>.</p>
+<ol>
+<li>
+<p>Pilih <strong>Agents</strong> di menu sisi kiri dan pilih <strong>Contoso Helpdesk Agent</strong>.</p>
+<p><img alt="Pilih Agents" src="../../../../../translated_images/9.2_01_SelectAgent.b8a6fd3a8970d6b0c8e78bf0a5411257206612d53acdf9b44f78b2c9c2fe91fc.id.png" /></p>
+</li>
+<li>
+<p>Pilih tab <strong>Topics</strong>.</p>
+<p><img alt="Pilih tab Topics" src="../../../../../translated_images/9.2_02_SelectTopics.3e8618aba5f4a1ddf3dee726b6da9a66ed89d04a2e8ca36b52112a6675c2885c.id.png" /></p>
+</li>
+<li>
+<p>Pilih topik <strong>Request device</strong>.</p>
+<p><img alt="Pilih topik Request device" src="../../../../../translated_images/9.2_03_SelectRequestDevice.df10472702258708b3d069e718e695b9fcabc61d42901d524dc302a03b3fa4a9.id.png" /></p>
+</li>
+<li>
+<p>Gulir ke bawah ke node <strong>Ask with adaptive card</strong> dan tambahkan node baru.</p>
+<p>Pilih <strong>Add a tool</strong> dan pada tab <strong>Basic tools</strong> di panel yang muncul, pilih alur agen <strong>Send device request email</strong> yang baru saja kita buat dan publikasikan.</p>
+<p><img alt="Pilih alur agen" src="../../../../../translated_images/9.2_04_SelectAgentFlow.15deca87db95fff1c9d904855d237d22a72c260adf3343d9e78695f07c42a8e0.id.png" /></p>
+</li>
+<li>
+<p>Untuk input pemicu dari alur agen kita, kita perlu memilih output variabel dari node <strong>Ask with adaptive card</strong>.</p>
+<p>Pilih ikon <strong>ellipsis (...)</strong> untuk input <strong>DeviceSharePointId</strong>.</p>
+<p><img alt="Pilih variabel" src="../../../../../translated_images/9.2_05_SelectVariable.8fe53cbc0f950f732b9e9002b21d8762ddfe74fb601d61c2a5119e32383450a2.id.png" /></p>
+</li>
+<li>
+<p>Pilih variabel <strong>deviceSelectionId</strong> yang merupakan salah satu output yang didefinisikan di node <strong>Ask with adaptive card</strong>.</p>
+<p><img alt="Pilih variabel deviceSelectionId" src="../../../../../translated_images/9.2_06_SelectdeviceSelectionIdVariable.67c0091e0de9442d3cffbfe3b2cace8d76be37ea67815ddfc99af03ae4b37391.id.png" /></p>
+</li>
+<li>
+<p>Selanjutnya, pilih ikon <strong>ellipsis (...)</strong> untuk input <strong>User</strong>.</p>
+<p><img alt="Pilih Variabel" src="../../../../../translated_images/9.2_07_SelectVariable.bf851128bec5e0255c6cf361a837ce9701d0afac84ed3d5b89665d111a098386.id.png" /></p>
+</li>
+<li>
+<p>Pilih tab <strong>System</strong> di panel variabel yang muncul dan pilih <strong>User.DisplayName</strong>. Variabel ini menyimpan nama tampilan pengguna internal yang berinteraksi dengan agen.</p>
+<p><img alt="Pilih variabel sistem User.DisplayName" src="../../../../../translated_images/9.2_08_SelectUser.DisplayNameVariable.926a2a7560402fbd7b224e2bf0ff11df9e5612803b7ce51e36f58201a09bbfd7.id.png" /></p>
+</li>
+<li>
+<p>Selanjutnya, pilih ikon <strong>greater than</strong> untuk <strong>Advanced inputs</strong> untuk memperluas dan melihat input <strong>AdditionalComments</strong>.</p>
+<p><img alt="Perluas input lanjutan" src="../../../../../translated_images/9.2_09_ExpandAdvancedInputs.bded22f83fe4eb21237daa254725e12a81ea75be34bcb0e8ab322037a4e6f418.id.png" /></p>
+</li>
+<li>
+<p>Pilih ikon <strong>ellipsis (...)</strong> untuk input AdditionalComments.</p>
+<p><img alt="Pilih Variabel" src="../../../../../translated_images/9.2_10_SelectVariable.86286cc06323e65fb3874b9fd0ea62d140b9e9b9a2b5116d667192a6dca3815f.id.png" /></p>
+</li>
+<li>
+<p>Pilih tab <strong>Formula</strong> dan ikon perluas di panel variabel yang muncul karena kita akan menggunakan ekspresi Power Fx.</p>
+<p><img alt="Tab Formula" src="../../../../../translated_images/9.2_11_SelectFormulaAndExpandIcon.3fcd07bfccc4f0779a5d26313b571e60be792da7fd28e937b3e888f8aaeda7e0.id.png" /></p>
+</li>
+<li>
+<p>Mirip dengan ekspresi dalam alur agen yang melakukan pemeriksaan kondisi menggunakan fungsi <em>if</em>, tetapi kali ini</p>
+<ul>
+<li>menggunakan fungsi Power Fx,</li>
+<li>dan memasukkan baik nilai kosong, atau nilai variabel output <code>commentsId</code> dari node <strong>Ask with adaptive card</strong>.</li>
+</ul>
+<p>Masukkan fungsi berikut di kolom Power Fx,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>If(IsBlank())
+</span></code></pre></div>
+</li>
+</ol>
+<p>Ekspresi ini menggunakan fungsi <code>If</code> untuk pernyataan if-else.</p>
+<p>Fungsi berikutnya yang digunakan adalah <code>IsBlank</code> yang memeriksa apakah sebuah nilai ada atau tidak ada dalam parameter string. Parameter string yang akan dirujuk adalah variabel output <code>commentsId</code> dari node <strong>Ask with adaptive card</strong>.</p>
+<p><img alt="Fungsi If dan IsBlank" src="../../../../../translated_images/9.2_12_IfIsBlank.07f7516c7e1f7579239a8b3833d64a14eb88dc245cae714b3e07d6298e907d51.id.png" /></p>
+<ol>
+<li>Selanjutnya, klik <strong>di dalam tanda kurung</strong> setelah fungsi <code>IsBlank</code>. Kita akan memasukkan variabel output <code>commentsId</code> dari node <strong>Ask with adaptive card</strong>.</li>
+</ol>
+<p>Masukkan berikut ini di dalam tanda kurung,</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+Topic.commentsId
+```
+</code></pre></div>
+<p>Dan tambahkan koma setelah tanda kurung.</p>
+<p><img alt="Referensi variabel output commentsId" src="../../../../../translated_images/9.2_13_Topic.commentsId.1a04dc190dac334ebf6c4dbc1b6df1aad2e4bbdeeb3ef960871e93614381f079.id.png" /></p>
+<ol>
+<li>
+<p>Selanjutnya kita akan mendefinisikan logika</p>
+</li>
+<li>
+<p>ketika <strong><em>true</em></strong> - jika parameter string <code>Topic.commentsId</code> kosong, maka kita ingin memasukkan nilai kosong.</p>
+</li>
+<li>ketika <strong><em>false</em></strong> - jika parameter string <code>Topic.commentsId</code> tidak kosong, maka masukkan nilai dari variabel commentsId.</li>
+</ol>
+<p>Setelah tanda kurung yang menutup parameter string, masukkan berikut ini,</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+&quot;&quot;, Topic.commentsId)
+```
+</code></pre></div>
+<p>Ekspresi Power Fx seharusnya seperti berikut ini,</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+If(IsBlank(Topic.commentsId), &quot;&quot;, Topic.commentsId)
+```
+</code></pre></div>
+<p>Kerja bagus, ekspresi kita sudah selesai! 🙌🏻 Sekarang pilih <strong>Insert</strong> untuk menetapkan parameter input alur agen ke ekspresi Power Fx.</p>
+<p><img alt="Ekspresi Power Fx" src="../../../../../translated_images/9.2_14_PowerFxExpression.80e76ea59bdb8f131d26edf2657923f4af9000768d44b06c0947115fd218698e.id.png" /></p>
+<ol>
+<li><strong>Simpan</strong> topik.</li>
+</ol>
+<h3 id="93-perbarui-topik-permintaan-perangkat-dengan-beberapa-node-untuk-pengalaman-pengguna-yang-lebih-baik">9.3 Perbarui topik Permintaan perangkat dengan beberapa node untuk pengalaman pengguna yang lebih baik<a class="headerlink" href="#93-perbarui-topik-permintaan-perangkat-dengan-beberapa-node-untuk-pengalaman-pengguna-yang-lebih-baik" title="Permanent link">&para;</a></h3>
+<p>Selanjutnya kita akan menambahkan dua node lagi:</p>
+<ul>
+<li>
+<p><strong>Send a message</strong> - ini akan berfungsi sebagai pesan konfirmasi yang merujuk perangkat yang dipilih dan bahwa permintaan mereka telah diajukan.</p>
+</li>
+<li>
+<p><strong>Topic management</strong> - untuk menutup percakapan, kita akan mengarahkan ke node <strong>End of conversation</strong>.</p>
+</li>
+</ul>
+<p>Mari kita mulai!</p>
+<ol>
+<li>Pilih <strong>ikon plus +</strong> di bawah node alur agen dan pilih node <strong>Send a message</strong>.</li>
+</ol>
+<p><img alt="Tambahkan node send a message" src="../../../../../translated_images/9.3_01_AddSendAMessageNode.ac4111729a2602f8301ecffbcb263d692ecb43478aa9da63cae0dd58160f56c8.id.png" /></p>
+<ol>
+<li>
+<p>Masukkan berikut ini di bawah bidang pesan,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>Thanks
+</span></code></pre></div>
+</li>
+</ol>
+<p>Kemudian pilih <strong>Insert variable</strong> karena kita akan merujuk nama pengguna.</p>
+<p><img alt="Masukkan variabel" src="../../../../../translated_images/9.3_02_InsertVariable.c5c9ebce61d1f442413d05f4437f74ee1d9c3a8c2ab696244937c56b5171f310.id.png" /></p>
+<ol>
+<li>Pilih tab <strong>System</strong> dan cari <code>User</code> di bidang pencarian. Pilih variabel <strong>User.DisplayName</strong>.</li>
+</ol>
+<p><img alt="Pilih variabel sistem" src="../../../../../translated_images/9.3_03_SelectSystemVariable.47cfac2f3a727dbaf32ae960cbafe43ce9ed00f73edf01ac6d48e5b2b167e5fc.id.png" /></p>
+<ol>
+<li>
+<p>Masukkan berikut ini di bawah bidang pesan,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>. Your selected device,
+</span></code></pre></div>
+</li>
+</ol>
+<p>Kemudian pilih <strong>Insert variable</strong> dan kali ini di tab <strong>Custom</strong>, pilih variabel <strong>ModelValue</strong>.</p>
+<p>Kemudian masukkan berikut ini di bawah untuk melengkapi pesan.</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+, has been submitted and will be reviewed by your manager.
+```
+</code></pre></div>
+<p>Pesan seharusnya terlihat seperti berikut ini.</p>
+<p><img alt="Kirim pesan" src="../../../../../translated_images/9.3_04_SendAMessage.3f6c4b5e53da9c7f9fcf9d0c453a9b65e44e35ea4c1124947fb638d0b682d96d.id.png" /></p>
+<ol>
+<li>Terakhir, pilih <strong>ikon plus +</strong> di bawah node <strong>Send a message</strong> dan pilih <strong>Topic management</strong>, diikuti dengan <strong>Go to another topic</strong> dan pilih <strong>End of Conversation</strong>.</li>
+</ol>
+<p><img alt="Manajemen topik" src="../../../../../translated_images/9.3_05_EndOfConversation.3c6c96d03b29a4d0904dea09d96c62d6ad450fe60dd8d6b2fe9d31681d6cb147.id.png" /></p>
+<ol>
+<li><strong>Simpan</strong> topik.</li>
+</ol>
+<p><img alt="Simpan" src="../../../../../translated_images/9.3_06_SaveTopic.8c9201fabce9f41af03d9f1beb9ce321e4ee9880a94edabe58b592bffebda80a.id.png" /></p>
+<h3 id="94-uji-agen-menggunakan-beberapa-skenario">9.4 Uji agen menggunakan beberapa skenario<a class="headerlink" href="#94-uji-agen-menggunakan-beberapa-skenario" title="Permanent link">&para;</a></h3>
+<p>Kerja bagus!!! 😁 Sekarang kita bisa menguji agen kita.</p>
+<h4 id="941-meminta-perangkat-dan-memasukkan-komentar-di-kartu-adaptif">9.4.1 Meminta perangkat dan memasukkan komentar di kartu adaptif<a class="headerlink" href="#941-meminta-perangkat-dan-memasukkan-komentar-di-kartu-adaptif" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Refresh</strong> panel uji, pilih ikon <strong>activity map</strong> dan masukkan berikut ini sebagai pesan ke agen.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>I need a laptop
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="Uji agen" src="../../../../../translated_images/9.4_01_TestAgent_RequestDevice_Yes.e73a5076dcd7179901dc0536624a039e372e405a6aac7ab89a632ce81bacdc2e.id.png" /></p>
+<ol>
+<li>
+<p>Agen memicu <strong>Available devices</strong> dan merespons dengan daftar perangkat yang tersedia. Kita akan memasukkan berikut ini sebagai jawaban atas pertanyaan apakah kita ingin meminta perangkat.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>Yes
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="Ya" src="../../../../../translated_images/9.4_02_RequestDevice_Yes.25c34743bc168fde33f91743316e7bad87ee0e47150c93e9b82c4662404dcaba.id.png" /></p>
+<ol>
+<li>Perhatikan bagaimana agen memanggil <strong>Request device</strong> sesuai instruksi agen dan bahwa kartu adaptif sekarang ditampilkan dalam pesan agen.</li>
+</ol>
+<p>Pilih perangkat <strong>Surface Laptop 15</strong> dan tambahkan berikut ini sebagai komentar.</p>
+<div class="language-text highlight"><pre><span></span><code>```text
+I need 16GB of RAM please
+```
+</code></pre></div>
+<p><img alt="Pilih perangkat dan masukkan komentar" src="../../../../../translated_images/9.4_03_SelectDeviceAndEnterComment.570ea590309bf97edc40c6f7b53dbdc1174365860d8e8a4c32cfb7f1837621c2.id.png" /></p>
+<ol>
+<li>Gulir ke bawah hingga Anda melihat tombol <strong>Submit Request</strong> dan pilih untuk mengirimkan kartu adaptif ke agen.</li>
+</ol>
+<p><img alt="Kirim permintaan" src="../../../../../translated_images/9.4_04_SubmitRequest.ce3f4f44b90243a18dbfb401548b9b3cefd3ea17d8293a1bc3377323e3449da9.id.png" /></p>
+<ol>
+<li>Pilih <strong>Allow</strong> agar agen menggunakan kredensial Anda untuk autentikasi koneksi dari dua tindakan konektor.</li>
+</ol>
+<p><img alt="Izinkan" src="../../../../../translated_images/9.4_05_SelectAllow.f7b5bda068fbaee83dcb1cff03a52c946fb4d879137c55f4e5f9eb3953985e0e.id.png" /></p>
+<ol>
+<li>Agen kemudian akan menampilkan pesan konfirmasi yang mencakup model yang dipilih, diikuti dengan pengalihan ke topik <strong>End of Conversation</strong>. Keren!</li>
+</ol>
+<p><img alt="Permintaan diajukan" src="../../../../../translated_images/9.4_06_RequestSubmitted.1d4d2e9afbc222a5ba79a4c254e7b2364d6eafc1a200ad6ac0aa142f9f10642d.id.png" /></p>
+<ol>
+<li>Pilih <strong>Yes</strong> untuk memverifikasi sisa topik <strong>End of Conversation</strong>.</li>
+</ol>
+<p><img alt="Pilih Ya" src="../../../../../translated_images/9.4_07_RedirectNode.e7b1390e4eafe8c2c815fc8ce7fdda56617d9fbeccb0d59423ad2899a8e5f897.id.png" /></p>
+<ol>
+<li>Selanjutnya, beri penilaian pengalaman dengan memilih salah satu bintang di kartu skala penilaian.</li>
+</ol>
+<p>Agen kemudian akan melanjutkan ke node <strong>Question</strong> terakhir di topik <strong>End of Conversation</strong>. Pilih <strong>No</strong>.</p>
+<p><img alt="Topik akhir percakapan" src="../../../../../translated_images/9.4_08_EndOfConversation.b35507f7f561633c0cb3b6c15dc007ae4197a72d58afd8ae616bea439bd6e148.id.png" /></p>
+<ol>
+<li>Topik kemudian akan selesai karena pesan akhir akan ditampilkan di panel uji.</li>
+</ol>
+<p><img alt="Topik akhir percakapan" src="../../../../../translated_images/9.4_09_EndOfConversation.438891b82e322b8a2648533200fbcd01c660ab049223b0920cdd0fbfcdeeb888.id.png" /></p>
+<ol>
+<li>Periksa kotak masuk email Anda untuk meninjau email yang dikirim ke manajer oleh alur agen. Anda dapat melihat detail perangkat yang dipilih, dan catatan yang dimasukkan di kartu adaptif.</li>
+</ol>
+<p><img alt="Email diterima" src="../../../../../translated_images/9.4_10_ReviewEmailMessageWithComment.b0138b0bb9d08aacbd8bbb02fdb633a6796b4131cf8d83212adeabaa1ce04a18.id.png" /></p>
+<ol>
+<li>Klik hyperlink dan browser seharusnya memuat item SharePoint dari perangkat tersebut. Hebat!</li>
+</ol>
+<p><img alt="Klik hyperlink di email" src="../../../../../translated_images/9.4_11_SelectLinkInEmail.2179f17165b61ba1e8aee68e8de4c752d64b0780ad86e0fe9054580d9c24e208.id.png" /></p>
+<h4 id="942-meminta-perangkat-dan-tidak-memasukkan-komentar-di-kartu-adaptif">9.4.2 Meminta perangkat dan tidak memasukkan komentar di kartu adaptif<a class="headerlink" href="#942-meminta-perangkat-dan-tidak-memasukkan-komentar-di-kartu-adaptif" title="Permanent link">&para;</a></h4>
+<p>Sekarang mari kita uji skenario ketika komentar tidak dimasukkan.</p>
+<ol>
+<li>
+<p>Ulangi langkah-langkah yang sama yaitu</p>
+</li>
+<li>
+<p><strong>Refresh</strong> panel uji dan pilih ikon <strong>activity map</strong></p>
+</li>
+<li>Masukkan pesan, <code>I need a laptop</code></li>
+<li>Jawab dengan <code>Yes</code> untuk pertanyaan tentang meminta perangkat</li>
+</ol>
+<p><img alt="Meminta perangkat" src="../../../../../translated_images/9.4_12_RequestDevice_Yes.1e369b8a52547fade4b84a4e36b399ee0692c6edbaa778ba90fe9c15cae75c5c.id.png" /></p>
+<ol>
+<li>Kali ini pilih <strong>Surface Laptop 13</strong> sebagai perangkat dan jangan masukkan komentar.</li>
+</ol>
+<p><img alt="Pilih perangkat" src="../../../../../translated_images/9.4_13_SelectDevice.d9ad15d17de3f06fd948bd529f116f7c05bedf79c016180d8a1dd7e378322b0e.id.png" /></p>
+<ol>
+<li><strong>Kirimkan</strong> permintaan dengan memilih tombol <strong>Submit Request</strong>.</li>
+</ol>
+<p><img alt="Kirim Permintaan" src="../../../../../translated_images/9.4_14_SubmitRequest.a783ad8460bfb4485cfd2e97db2c065d9d6bf803279e3bd1569fe3e93548a578.id.png" /></p>
+<ol>
+<li>Kali ini email yang diterima di kotak masuk Anda akan menampilkan <strong>None</strong> sebagai komentar.</li>
+</ol>
+<p><img alt="Email diterima" src="../../../../../translated_images/9.4_15_ReviewEmailMessage.137f35152c9da4b4a02bebec5f0cc9e55cfa25679770ace003aa19482ed0f3eb.id.png" /></p>
+<h4 id="943-tidak-meminta-perangkat">9.4.3 Tidak meminta perangkat<a class="headerlink" href="#943-tidak-meminta-perangkat" title="Permanent link">&para;</a></h4>
+<p>Mari kita uji skenario terakhir yaitu tidak meminta perangkat, dan topik <strong>Goodbye</strong> seharusnya dipanggil sesuai instruksi agen.</p>
+<ol>
+<li>
+<p>Ulangi langkah-langkah yang sama yaitu</p>
+</li>
+<li>
+<p><strong>Refresh</strong> panel uji dan pilih ikon <strong>activity map</strong></p>
+</li>
+<li>Masukkan pesan, <code>I need a laptop</code></li>
+<li>Kali ini jawab dengan <code>No</code> untuk pertanyaan tentang meminta perangkat</li>
+</ol>
+<p><img alt="Uji agen" src="../../../../../translated_images/9.4_16_TestAgent_RequestDevice_No.85f205968f1d4083f20cc890a707748f8e06c01a19536cd299a13bdde2350de7.id.png" /></p>
+<ol>
+<li>Agen memanggil topik <strong>Goodbye</strong> dan pertanyaan seperti yang didefinisikan dalam topik ditanyakan.</li>
+</ol>
+<p><img alt="Topik Goodbye dipanggil" src="../../../../../translated_images/9.4_17_Goodbye.05ee598a987237e02866647a9699b0efa7ac58d1f448497f956af2ee815cb961.id.png" /></p>
+<h2 id="misi-selesai">✅ Misi Selesai<a class="headerlink" href="#misi-selesai" title="Permanent link">&para;</a></h2>
+<p>Selamat! 👏🏻 Anda telah belajar cara membangun alur agen dan menambahkannya ke topik <strong>Request device</strong> yang sudah ada, serta cara mengarahkan agen ke topik lain.</p>
+<p>Ini adalah akhir dari <strong>Lab 09 - Tambahkan alur agen untuk otomatisasi dan tingkatkan kemampuan topik</strong>, pilih tautan di bawah untuk melanjutkan ke pelajaran berikutnya. Kita akan memperluas kasus penggunaan dalam lab pelajaran berikutnya.</p>
+<p>⏭️ <a href="../10-add-event-triggers/">Lanjut ke pelajaran <strong>Add Event Triggers - Enable autonomous agent capabilities</strong></a></p>
+<h2 id="sumber-daya-taktis">📚 Sumber Daya Taktis<a class="headerlink" href="#sumber-daya-taktis" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://www.microsoft.com/microsoft-copilot/blog/copilot-studio/introducing-agent-flows-transforming-automation-with-ai-first-workflows/">Memperkenalkan alur agen: Mengubah otomatisasi dengan alur kerja berbasis AI</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/flows-overview?WT.mc_id=power-172621-ebenitez">Ikhtisar alur agen</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow?WT.mc_id=power-172621-ebenitez">Gunakan alur agen dengan agen Anda</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/azure/logic-apps/workflow-definition-language-functions-reference?WT.mc_id=power-172621-ebenitez">Daftar fungsi dalam panduan referensi</a></p>
+<p>📺 <a href="https://www.youtube.com/watch?v=VJTKyk3Pr7s">Alur Agen di Copilot Studio</a></p>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/09-add-an-agent-flow" alt="Analitik" /></p>
+<hr />
+<p><strong>Penafian</strong>:<br />
+Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis dapat mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang penting, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau interpretasi yang salah yang timbul dari penggunaan terjemahan ini.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

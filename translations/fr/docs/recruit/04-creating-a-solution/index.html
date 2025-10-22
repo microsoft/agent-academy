@@ -1,0 +1,942 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/fr/docs/recruit/04-creating-a-solution/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-04-creer-une-solution-pour-votre-agent" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nom-de-code-operation-ctrl-alt-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ NOM DE CODE : OPÉRATION CTRL-ALT-PACKAGE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resume-de-la-mission" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Résumé de la mission
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objectifs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#une-solution-quest-ce-que-cest" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵🏻‍♀️ Une solution ? Qu'est-ce que c'est ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pourquoi-devrais-je-utiliser-une-solution-pour-mon-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Pourquoi devrais-je utiliser une solution pour mon agent ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprendre-les-editeurs-de-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪪 Comprendre les éditeurs de solutions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cycle-de-vie-des-solutions-power-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 Cycle de vie des solutions Power Platform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratoire-04-creer-une-nouvelle-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Laboratoire 04 : Créer une nouvelle solution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-accomplie" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Mission accomplie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ressources-tactiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Ressources tactiques
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "0c51aabca81d6256990caf4c015e6195",
+  "translation_date": "2025-10-17T19:07:00+00:00",
+  "source_file": "docs/recruit/04-creating-a-solution/README.md",
+  "language_code": "fr"
+}
+-->
+<h1 id="mission-04-creer-une-solution-pour-votre-agent">🚨 Mission 04 : Créer une solution pour votre agent<a class="headerlink" href="#mission-04-creer-une-solution-pour-votre-agent" title="Permanent link">&para;</a></h1>
+<h2 id="nom-de-code-operation-ctrl-alt-package">🕵️‍♂️ NOM DE CODE : <code>OPÉRATION CTRL-ALT-PACKAGE</code><a class="headerlink" href="#nom-de-code-operation-ctrl-alt-package" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Durée de l'opération :</strong> <code>~45 minutes</code></p>
+</blockquote>
+<p>🎥 <strong>Regardez la vidéo explicative</strong></p>
+<p><a href="https://www.youtube.com/watch?v=1iATbkgfcpU" title="Regardez la vidéo explicative sur YouTube"><img alt="Miniature vidéo de création de solution" src="../../../../../translated_images/video-thumbnail.3d68c6292e459541326e2cadf916f09488731b3cfbcd01de909c4bca9b53b49a.fr.jpg" /></a></p>
+<h2 id="resume-de-la-mission">🎯 Résumé de la mission<a class="headerlink" href="#resume-de-la-mission" title="Permanent link">&para;</a></h2>
+<p>Créateur d'agent, bienvenue dans votre prochaine opération tactique. Dans cette mission, vous apprendrez à assembler une Solution - le véhicule officiel de déploiement pour votre agent IT Helpdesk construit avec Microsoft Copilot Studio. Pensez à cela comme à la création d'une mallette numérique qui contient votre agent et ses artefacts.</p>
+<p>Chaque agent a besoin d'un domicile bien structuré. C'est ce que fournit une solution Power Platform - ordre, portabilité et préparation pour la production.</p>
+<p>Préparons-nous.</p>
+<h2 id="objectifs">🔎 Objectifs<a class="headerlink" href="#objectifs" title="Permanent link">&para;</a></h2>
+<p>Dans cette mission, vous apprendrez :</p>
+<ol>
+<li>À comprendre ce que sont les solutions Power Platform et leur rôle dans le développement d'agents</li>
+<li>À découvrir les avantages d'utiliser des solutions pour organiser et déployer des agents</li>
+<li>À explorer les éditeurs de solutions et leur importance dans la gestion des composants</li>
+<li>À comprendre le cycle de vie des solutions Power Platform, du développement à la production</li>
+<li>À créer votre propre éditeur de solution et une solution personnalisée pour votre agent IT Helpdesk</li>
+</ol>
+<h2 id="une-solution-quest-ce-que-cest">🕵🏻‍♀️ Une solution ? Qu'est-ce que c'est ?<a class="headerlink" href="#une-solution-quest-ce-que-cest" title="Permanent link">&para;</a></h2>
+<p>Dans Microsoft Power Platform, les solutions sont comme des conteneurs ou des packages qui regroupent toutes les parties de vos applications ou agents - cela peut inclure des tables, des formulaires, des flux et des logiques personnalisées. Les solutions sont essentielles pour la gestion du cycle de vie des applications (ALM), elles vous permettent de gérer votre application et vos agents depuis l'idée jusqu'au développement, aux tests, au déploiement et aux mises à jour.</p>
+<p>Dans Copilot Studio, chaque agent que vous créez est stocké dans une solution Power Platform. Par défaut, les agents sont créés dans la solution par défaut, sauf si vous créez une nouvelle solution personnalisée pour y créer votre agent. C'est ce que nous allons apprendre 🤓 dans cette leçon et dans le laboratoire pratique.</p>
+<p>Traditionnellement, les solutions étaient créées dans le <strong>portail de création Power Apps</strong> - une interface web où vous pouvez construire et personnaliser des applications, Dataverse, des flux, explorer des composants IA et plus encore.</p>
+<p><img alt="Solutions" src="../../../../../translated_images/4.0_01_Solutions.4ab938830cdfc6d1b33fc88a172e2043ab713046e174855f866dc072bbeff4dd.fr.png" /></p>
+<p>Dans Copilot Studio, il existe désormais l'<strong>Explorateur de solutions</strong> où vous pouvez gérer vos solutions directement. Vous n'avez plus besoin de passer au portail de création Power Apps pour gérer vos solutions, cela peut être fait directement dans Copilot Studio 🪄</p>
+<p>Cela signifie que vous pouvez effectuer les tâches habituelles liées aux solutions :</p>
+<ul>
+<li><strong>Créer une solution</strong> - les solutions personnalisées permettent aux agents d'être exportés et importés entre les environnements.</li>
+<li><strong>Définir votre solution préférée</strong> - choisissez la solution dans laquelle les agents, applications, etc. seront créés par défaut.</li>
+<li><strong>Ajouter ou supprimer des composants</strong> - votre agent peut référencer d'autres composants tels que des variables d'environnement ou des flux cloud. Ces composants doivent donc être inclus dans la solution.</li>
+<li><strong>Exporter des solutions</strong> - pour déplacer des solutions vers un autre environnement cible.</li>
+<li><strong>Importer des solutions</strong> - importer des solutions créées ailleurs, y compris la mise à niveau ou la mise à jour des solutions.</li>
+<li><strong>Créer et gérer des pipelines de solutions</strong> - automatiser le déploiement des solutions entre les environnements.</li>
+<li><strong>Intégration Git</strong> - permet aux développeurs de connecter des solutions à des dépôts Git pour le contrôle de version, la collaboration et l'ALM. Destiné à être utilisé uniquement dans des environnements de développement.</li>
+</ul>
+<p><img alt="Solutions" src="../../../../../translated_images/4.0_02_CopilotStudioSolutionExplorer.042184a894b65fc5b73c91579d9b19a86cd7ca4341c1553c972270dd15852677.fr.png" /></p>
+<p>Il existe deux types de solutions :</p>
+<ul>
+<li><strong>Solutions non gérées</strong> - utilisées pendant le développement. Vous pouvez les modifier et les personnaliser librement.</li>
+<li><strong>Solutions gérées</strong> - utilisées lorsque vous êtes prêt à déployer votre application pour des tests ou en production. Elles sont verrouillées pour éviter les modifications accidentelles.</li>
+</ul>
+<h2 id="pourquoi-devrais-je-utiliser-une-solution-pour-mon-agent">🤔 Pourquoi <em>devrais-je</em> utiliser une solution pour mon agent ?<a class="headerlink" href="#pourquoi-devrais-je-utiliser-une-solution-pour-mon-agent" title="Permanent link">&para;</a></h2>
+<p>Pensez aux solutions comme à une <em>boîte à outils</em>. Lorsque vous devez réparer ou construire quelque chose (un agent) dans un autre endroit (environnement), vous rassemblez tous les outils nécessaires (composants) et les mettez dans votre boîte à outils (Solution). Vous pouvez ensuite transporter cette boîte à outils vers le nouvel endroit (environnement) et utiliser les outils (composants) pour accomplir votre travail, ou ajouter de nouveaux outils (composants) pour personnaliser votre agent ou projet en cours de construction.</p>
+<div class="admonition quote">
+<p class="admonition-title">Elaiza, votre sympathique défenseure du cloud, intervient ici 🙋🏻‍♀️ pour partager quelques mots :</p>
+<p>Nous avons un dicton en Nouvelle-Zélande, "Soyez un Kiwi ordonné !" qui est un appel à l'action pour les Néo-Zélandais 🥝 afin de prendre soin de leur environnement en jetant correctement les déchets et en gardant les espaces publics propres. Nous pouvons utiliser le même contexte pour les agents en gardant tout ce qui concerne votre agent organisé et portable, ce qui vous aidera à maintenir un environnement ordonné.</p>
+</div>
+<p>Il est bon de créer un agent dans une solution dédiée dans votre environnement source (développeur). Voici pourquoi les solutions sont précieuses :</p>
+<p>🧩 <strong>Développement organisé</strong></p>
+<ul>
+<li>
+<p>Vous gardez votre agent séparé de la solution par défaut qui contient tout dans l'environnement. Tous les composants de votre agent sont au même endroit 🎯</p>
+</li>
+<li>
+<p>Tout ce dont vous avez besoin pour votre agent est dans une solution, ce qui facilite l'exportation et l'importation vers un environnement cible 👉🏻 c'est une bonne pratique pour l'ALM.</p>
+</li>
+</ul>
+<p>🧩 <strong>Déploiement sécurisé</strong></p>
+<ul>
+<li>Vous pouvez exporter votre application ou agent en tant que solution gérée et la déployer dans d'autres environnements cibles (comme les tests ou la production) sans risquer des modifications accidentelles.</li>
+</ul>
+<p>🧩 <strong>Contrôle de version</strong></p>
+<ul>
+<li>
+<p>Vous pouvez créer des correctifs (réparations ciblées), des mises à jour (modifications plus complètes) ou des mises à niveau (remplacement d'une solution - généralement des changements majeurs et l'introduction de nouvelles fonctionnalités).</p>
+</li>
+<li>
+<p>Cela vous aide à déployer des modifications de manière contrôlée.</p>
+</li>
+</ul>
+<p>🧩 <strong>Gestion des dépendances</strong></p>
+<ul>
+<li>Les solutions suivent les parties qui dépendent des autres. Cela vous empêche de casser des choses lorsque vous apportez des modifications.</li>
+</ul>
+<p>🧩 <strong>Collaboration en équipe</strong></p>
+<ul>
+<li>Les développeurs et les créateurs peuvent travailler ensemble en utilisant des solutions non gérées en développement, puis transmettre une solution gérée pour le déploiement.</li>
+</ul>
+<h2 id="comprendre-les-editeurs-de-solutions">🪪 Comprendre les éditeurs de solutions<a class="headerlink" href="#comprendre-les-editeurs-de-solutions" title="Permanent link">&para;</a></h2>
+<p>Un éditeur de solution dans Power Platform est comme une étiquette ou une marque qui identifie qui a créé ou possède une solution. C'est une petite mais importante partie de la gestion de vos applications, agents et personnalisations de flux, surtout lorsque vous travaillez en équipe ou entre différents environnements.</p>
+<p>Lorsque vous créez une solution, vous devez choisir un éditeur. Cet éditeur définit :</p>
+<ul>
+<li>
+<p>Un préfixe qui est ajouté à tous les composants personnalisés (comme les tables, champs et flux).</p>
+</li>
+<li>
+<p>Un nom et des informations de contact pour l'organisation ou la personne qui possède la solution.</p>
+</li>
+</ul>
+<h3 id="pourquoi-est-ce-important">🤔 Pourquoi est-ce important ?<a class="headerlink" href="#pourquoi-est-ce-important" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Identification facile</strong> - le préfixe (Exemple - <code>new_</code> ou <code>abc_</code>) vous aide à identifier rapidement quels composants appartiennent à quelle solution ou équipe.</p>
+</li>
+<li>
+<p><strong>Évite les conflits</strong> - si deux équipes créent une colonne appelée statut, leurs préfixes (<code>teamA_status</code>, <code>teamB_status</code>) empêchent les collisions de noms.</p>
+</li>
+<li>
+<p><strong>Soutient l'ALM</strong> - lors du déplacement des solutions entre les environnements (Dev → Test → Prod), l'éditeur aide à suivre la propriété et à maintenir la cohérence.</p>
+</li>
+</ol>
+<h3 id="exemple">✨ Exemple<a class="headerlink" href="#exemple" title="Permanent link">&para;</a></h3>
+<p>Disons que vous créez un éditeur appelé Contoso Solutions avec le préfixe <code>cts_</code>.</p>
+<p>Si vous ajoutez une colonne personnalisée appelée <em>Priorité</em>, elle sera stockée sous le nom <code>cts_Priority</code> dans la solution.</p>
+<p>Quiconque rencontre la colonne au niveau de la solution, peu importe l'environnement dans lequel il se trouve, peut facilement l'identifier comme une colonne associée à Contoso Solutions.</p>
+<h2 id="cycle-de-vie-des-solutions-power-platform">🧭 Cycle de vie des solutions Power Platform<a class="headerlink" href="#cycle-de-vie-des-solutions-power-platform" title="Permanent link">&para;</a></h2>
+<p>Maintenant que vous comprenez l'objectif d'une solution, apprenons le cycle de vie.</p>
+<p><strong>1. Créer une solution dans l'environnement de développement</strong> - commencez par créer une nouvelle solution dans votre environnement de développement.</p>
+<p><strong>2. Ajouter des composants</strong> - ajoutez des applications, des flux, des tables et d'autres éléments à votre solution.</p>
+<p><strong>3. Exporter en tant que solution gérée</strong> - préparez votre solution pour le déploiement en l'exportant en tant que solution gérée.</p>
+<p><strong>4. Importer dans l'environnement de test</strong> - testez votre solution dans un environnement de test séparé pour vous assurer que tout fonctionne comme prévu.</p>
+<p><strong>5. Importer dans l'environnement de production</strong> - déployez la solution testée dans votre environnement de production en direct.</p>
+<p><strong>6. Appliquer des correctifs, mises à jour ou mises à niveau</strong> - apportez des améliorations ou des corrections en utilisant des correctifs, des mises à jour ou des mises à niveau. 🔁 Répétez le cycle !</p>
+<h3 id="exemple_1">✨ Exemple<a class="headerlink" href="#exemple_1" title="Permanent link">&para;</a></h3>
+<p>Imaginez que vous construisez un agent IT Helpdesk pour aider les employés avec des problèmes tels que des problèmes de périphériques, des dépannages réseau, des configurations d'imprimantes et plus encore.</p>
+<ul>
+<li>
+<p>Vous commencez dans un environnement de développement en utilisant une solution non gérée.</p>
+</li>
+<li>
+<p>Une fois qu'il est prêt, vous l'exportez en tant que solution gérée et l'importez dans un environnement cible tel qu'un environnement de test système ou de test d'acceptation utilisateur (UAT).</p>
+</li>
+<li>
+<p>Après les tests, vous le déplacez vers l'environnement de production - tout cela sans toucher à la version originale de développement.</p>
+</li>
+</ul>
+<h2 id="laboratoire-04-creer-une-nouvelle-solution">🧪 Laboratoire 04 : Créer une nouvelle solution<a class="headerlink" href="#laboratoire-04-creer-une-nouvelle-solution" title="Permanent link">&para;</a></h2>
+<p>Nous allons maintenant apprendre</p>
+<ul>
+<li><a href="../../../../../docs/recruit/04-creating-a-solution">4.1 Comment créer un éditeur de solution</a></li>
+<li><a href="../../../../../docs/recruit/04-creating-a-solution">4.2 Comment créer une solution</a></li>
+</ul>
+<p>Nous allons suivre l'exemple précédent, où nous allons créer une solution dans l'environnement dédié Copilot Studio pour construire notre agent IT Helpdesk.</p>
+<p>Commençons !</p>
+<h3 id="prerequis">Prérequis<a class="headerlink" href="#prerequis" title="Permanent link">&para;</a></h3>
+<h4 id="role-de-securite">Rôle de sécurité<a class="headerlink" href="#role-de-securite" title="Permanent link">&para;</a></h4>
+<p>Dans Copilot Studio, ce que vous <em>pouvez faire</em> dans l'explorateur de solutions dépend de votre rôle de sécurité utilisateur.
+Si vous n'avez pas la permission de gérer les solutions dans le centre d'administration Power Apps, vous ne pourrez pas effectuer ces tâches dans Copilot Studio non plus.</p>
+<p>Pour vous assurer que tout fonctionne correctement, vérifiez que vous avez les bons rôles de sécurité et permissions. Ou si vous ne gérez pas les environnements dans votre organisation, demandez à votre administrateur IT (ou l'équipe équivalente) qui gère votre tenant/environnements.</p>
+<p>Les rôles de sécurité suivants permettent aux utilisateurs de créer une solution dans leur environnement.</p>
+<table>
+<thead>
+<tr>
+<th>Rôle de sécurité</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Créateur d'environnement</td>
+<td>Fournit les permissions nécessaires pour créer, personnaliser et gérer des ressources dans un environnement spécifique, y compris les solutions</td>
+</tr>
+<tr>
+<td>Personnalisateur système</td>
+<td>Permissions plus larges que le Créateur d'environnement, y compris la capacité de personnaliser l'environnement et de gérer les rôles de sécurité</td>
+</tr>
+<tr>
+<td>Administrateur système</td>
+<td>Niveau de permissions le plus élevé et peut gérer tous les aspects de l'environnement, y compris la création et l'attribution de rôles de sécurité</td>
+</tr>
+</tbody>
+</table>
+<h4 id="environnement-de-developpement">Environnement de développement<a class="headerlink" href="#environnement-de-developpement" title="Permanent link">&para;</a></h4>
+<p>Assurez-vous de passer à votre environnement de développement dédié, consultez <a href="../00-course-setup/#step-3-create-new-developer-environment">Leçon 00 - Configuration du cours - Étape 3 : Créer un nouvel environnement de développement</a>.</p>
+<ol>
+<li>
+<p>En haut à droite, sélectionnez l'icône <strong>Roue dentée</strong> et passez de l'environnement par défaut à votre environnement, par exemple <strong>Environnement d'Adele Vance</strong>.</p>
+<p><img alt="Environnement de développement" src="../../../../../translated_images/4.0_03_DeveloperEnvironment.07770f8ffb55e0f76dc7f8a5247154e66ac22a5ac3a00c7a025e1b0e1f43f43e.fr.png" /></p>
+</li>
+</ol>
+<h3 id="41-creer-un-editeur-de-solution">4.1 Créer un éditeur de solution<a class="headerlink" href="#41-creer-un-editeur-de-solution" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>En utilisant le même environnement Copilot Studio utilisé dans la leçon précédente, sélectionnez l'<strong>icône de points de suspension (. . .)</strong> dans le menu de gauche dans Copilot Studio. Sélectionnez <strong>Solutions</strong> sous l'en-tête <strong>Explorer</strong>.</p>
+<p><img alt="Solutions" src="../../../../../translated_images/4.1_01_Solutions.1db0ad61bec0859dc3bdd673df996059405a2ab29bed5e4a0f58435d8732fa38.fr.png" /></p>
+</li>
+<li>
+<p>L'<strong>Explorateur de solutions</strong> dans Copilot Studio se chargera. Sélectionnez <strong>+ Nouvelle solution</strong></p>
+<p><img alt="Solutions" src="../../../../../translated_images/4.1_02_NewSolution.a0beb3ae63cbd368567ecac7ca483ce90ab1082fbb7ec4722faf20cb69ec2f59.fr.png" /></p>
+</li>
+<li>
+<p>Le volet <strong>Nouvelle solution</strong> apparaîtra où nous pouvons définir les détails de notre solution. Tout d'abord, nous devons créer un nouvel éditeur. Sélectionnez <strong>+ Nouvel éditeur</strong>.</p>
+<p><img alt="Solutions" src="../../../../../translated_images/4.1_03_NewPublisher.af7ad3f00b1d01bfa741dec8c9f47ca2d1ddaed5af0b292211916fc9fa24a323.fr.png" />  </p>
+</li>
+<li>
+<p>L'onglet <strong>Propriétés</strong> du volet <strong>Nouvel éditeur</strong> apparaîtra avec des champs obligatoires et non obligatoires à remplir dans l'onglet <strong>Propriétés</strong>. C'est ici que nous pouvons définir les détails de l'éditeur qui sera utilisé comme étiquette ou marque identifiant qui a créé ou possède la solution.</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Description</th>
+<th style="text-align: center;">Obligatoire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nom d'affichage</td>
+<td>Nom d'affichage pour l'éditeur</td>
+<td style="text-align: center;">Oui</td>
+</tr>
+<tr>
+<td>Nom</td>
+<td>Le nom unique et le nom de schéma pour l'éditeur</td>
+<td style="text-align: center;">Oui</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Décrit l'objectif de la solution</td>
+<td style="text-align: center;">Non</td>
+</tr>
+<tr>
+<td>Préfixe</td>
+<td>Préfixe de l'éditeur qui sera appliqué aux composants nouvellement créés</td>
+<td style="text-align: center;">Oui</td>
+</tr>
+<tr>
+<td>Préfixe de valeur de choix</td>
+<td>Génère un numéro basé sur le préfixe de l'éditeur. Ce numéro est utilisé lorsque vous ajoutez des options aux choix et fournit un indicateur de la solution utilisée pour ajouter l'option.</td>
+<td style="text-align: center;">Oui</td>
+</tr>
+</tbody>
+</table>
+<p>Copiez et collez ce qui suit comme <strong>Nom d'affichage</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Contoso Solutions
+</span></code></pre></div>
+<p>Copiez et collez ce qui suit comme <strong>Nom</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ContosoSolutions
+</span></code></pre></div>
+<p>Copiez et collez ce qui suit comme <strong>Description</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Copilot Studio Agent Academy
+</span></code></pre></div>
+<p>Copiez et collez ce qui suit pour le <strong>Préfixe</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cts
+</span></code></pre></div>
+<p>Par défaut, le préfixe de <strong>Valeur de choix</strong> affichera une valeur entière. Mettez à jour cette valeur entière au millier le plus proche. Par exemple, dans ma capture d'écran ci-dessous, elle était initialement <code>77074</code>. Mettez à jour cela de <code>77074</code> à <code>77000</code>.</p>
+<p><img alt="Solutions" src="../../../../../translated_images/4.1_04_PublisherProperties.b6cbbe7bc0f51446f273bf9a8a06b163c2061a575dab0fc4a5f42007ac01a82c.fr.png" />  </p>
+</li>
+<li>
+<p>Si vous souhaitez fournir les coordonnées pour la Solution, sélectionnez l'onglet <strong>Contact</strong> et remplissez les colonnes affichées.</p>
+<p><img alt="Solutions" src="../../../../../translated_images/4.1_05_Contact.fc0b65c96cc1ef06a1bd173f21920516e123fab76d13f592eab8745f529df3ef.fr.png" /></p>
+</li>
+<li>
+<p>Sélectionnez l'onglet <strong>Propriétés</strong> et cliquez sur <strong>Enregistrer</strong> pour créer l'éditeur.</p>
+<p><img alt="Solutions" src="../../../../../translated_images/4.1_06_SavePublisher.4aabbd20a051b55eab9d5d961761c1fae61d5c0cef07f696c5eaa030f4a5c356.fr.png" />
+1. Le volet <strong>Nouveau éditeur</strong> se fermera et vous serez ramené au volet <strong>Nouvelle solution</strong> avec l'Éditeur nouvellement créé sélectionné.</p>
+<p><img alt="Solutions" src="../../../../../translated_images/4.1_07_PublisherSelected.5d88b1212348c15841b5f57e78554649d4ed080d10dccaece30e826b6e359132.fr.png" />  </p>
+</li>
+</ol>
+<p>Bravo, vous avez maintenant créé un Éditeur de Solution ! 🙌🏻 Nous allons maintenant apprendre à créer une nouvelle solution personnalisée.</p>
+<h3 id="42-creer-une-nouvelle-solution">4.2 Créer une nouvelle Solution<a class="headerlink" href="#42-creer-une-nouvelle-solution" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Maintenant que nous avons créé nos solutions, nous pouvons compléter le reste du formulaire dans le volet <strong>Nouvelle solution</strong>.</p>
+<p>Copiez et collez ce qui suit comme <strong>Nom d'affichage</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Contoso Helpdesk Agent
+</span></code></pre></div>
+<p>Copiez et collez ce qui suit comme <strong>Nom</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ContosoHelpdeskAgent
+</span></code></pre></div>
+<p>Étant donné que nous créons une nouvelle solution, le <a href="https://learn.microsoft.com/power-apps/maker/data-platform/update-solutions#understanding-version-numbers-for-updates/?WT.mc_id=power-172615-ebenitez"><strong>Numéro de version</strong></a> par défaut sera <code>1.0.0.0</code>.</p>
+<p>Cochez la case <strong>Définir comme votre solution préférée</strong>.</p>
+<p><img alt="Solutions" src="../../../../../translated_images/4.2_01_SolutionDetails_.ce2945385f3544846ca9e62f209c96a673a2540ea6e20404cd5f1b224d8b5321.fr.png" />  </p>
+</li>
+<li>
+<p>Développez les <strong>Options supplémentaires</strong> pour voir les détails supplémentaires qui peuvent être fournis dans une solution.</p>
+<p><img alt="Solutions" src="../../../../../translated_images/4.2_02_MoreOptions.3c4b95d2fe119f8a8d8be783f5beba0a3b6c36fb83055cae80eaa45891aea73b.fr.png" /></p>
+</li>
+<li>
+<p>Vous verrez les éléments suivants :</p>
+<ul>
+<li>
+<p><strong>Installé le</strong> - la date à laquelle la Solution a été installée.</p>
+</li>
+<li>
+<p><strong>Page de configuration</strong> - les développeurs configurent une ressource web HTML pour aider les utilisateurs à interagir avec leur application, agent ou outil où elle apparaîtra comme une page web dans la section Informations avec des instructions ou des boutons. Elle est principalement utilisée par les entreprises ou les développeurs qui créent et partagent des solutions avec d'autres.</p>
+</li>
+<li>
+<p><strong>Description</strong> - décrit la solution ou donne une description générale de la page de configuration.</p>
+</li>
+</ul>
+<p>Nous laisserons ces champs vides pour cet exercice.</p>
+<p>Sélectionnez <strong>Créer</strong>.</p>
+<p><img alt="Solutions" src="../../../../../translated_images/4.2_03_Create.afd1bc27593062dfd945d4a0aa6fb05d87e0b02b0f45d01eaad8810f67a5f295.fr.png" /></p>
+</li>
+<li>
+<p>La solution pour Contoso Helpdesk Agent a maintenant été créée. Il n'y aura aucun composant jusqu'à ce que nous créions un agent dans Copilot Studio.</p>
+<p>Sélectionnez l'icône <strong>flèche retour</strong> pour revenir à l'Explorateur de solutions.</p>
+<p><img alt="Solutions" src="../../../../../translated_images/4.2_04_SolutionCreated.f5f543303fd58856f93bfc1d4d6e9a27fd338a82e77b15258bb54f03b9b5f631.fr.png" /></p>
+</li>
+<li>
+<p>Remarquez comment Contoso Helpdesk Agent s'affiche maintenant comme la <strong>Solution préférée actuelle</strong> puisque nous avons coché la case <strong>Définir comme votre solution préférée</strong> plus tôt.</p>
+<p><img alt="Solutions" src="../../../../../translated_images/4.2_05_CurrentPreferredSolutionSelected.fde1fa6c013f41f445c2b8721af8bc172a6a8bf98c4f5b8e946f87b4d5ec7823.fr.png" /></p>
+</li>
+</ol>
+<h2 id="mission-accomplie">✅ Mission accomplie<a class="headerlink" href="#mission-accomplie" title="Permanent link">&para;</a></h2>
+<p>Félicitations ! 👏🏻 Vous avez créé un Éditeur et l'avez utilisé dans votre nouvelle Solution pour construire votre agent !</p>
+<p>Bien joué, créateur d'agents. Une empreinte numérique bien organisée est la première étape vers une opérabilité à grande échelle. Vous avez maintenant les outils et l'état d'esprit pour un développement d'agents durable et prêt pour l'entreprise.</p>
+<p>Ceci marque la fin de <strong>Lab 04 - Création d'une Solution</strong>, sélectionnez le lien ci-dessous pour passer à la leçon suivante. La solution créée dans ce laboratoire sera utilisée dans le laboratoire de la prochaine leçon.</p>
+<p>⏭️ <a href="../05-using-prebuilt-agents/">Passer à la leçon <strong>Commencer rapidement avec des agents préconstruits</strong></a></p>
+<h2 id="ressources-tactiques">📚 Ressources tactiques<a class="headerlink" href="#ressources-tactiques" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/power-apps/maker/data-platform/create-solution/?WT.mc_id=power-172615-ebenitez">Créer une solution</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-solutions-overview/?WT.mc_id=power-172615-ebenitez">Créer et gérer des solutions dans Copilot Studio</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/admin-share-bots/?WT.mc_id=power-172615-ebenitez">Partager des agents avec d'autres utilisateurs</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-platform/admin/database-security#summary-of-resources-available-to-predefined-security-roles/?WT.mc_id=power-172615-ebenitez">Résumé des ressources disponibles pour les rôles de sécurité prédéfinis</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-apps/maker/data-platform/update-solutions/?WT.mc_id=power-172615-ebenitez">Mettre à niveau ou mettre à jour une solution</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-platform/alm/pipelines/?WT.mc_id=power-172615-ebenitez">Vue d'ensemble des pipelines dans Power Platform</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-platform/alm/git-integration/overview/?WT.mc_id=power-172615-ebenitez">Vue d'ensemble de l'intégration Git dans Power Platform</a></p>
+<!-- markdownlint-disable-next-line MD033 -->
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/04-creating-a-solution" alt="Analytique" /></p>
+<hr />
+<p><strong>Avertissement</strong> :<br />
+Ce document a été traduit à l'aide du service de traduction automatique <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de faire appel à une traduction humaine professionnelle. Nous ne sommes pas responsables des malentendus ou des interprétations erronées résultant de l'utilisation de cette traduction.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

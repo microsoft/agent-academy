@@ -1,0 +1,1512 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/he/docs/operative-preview/02-multi-agent/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#02" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ שם קוד: מבצע סימפוניה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 תדריך משימה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 מטרות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 מה הם סוכנים מחוברים?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 סוכנים ילדים לעומת סוכנים מחוברים: ההבדל המרכזי
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 דפוסי ארכיטקטורה רב-סוכנים
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      💬 תקשורת בין סוכנים ושיתוף הקשר
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      ↘️ סוכן ילד: סוכן קליטת בקשות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔀 סוכן מחובר: סוכן הכנת ראיונות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 מעבדה 2.1: הוספת סוכן קליטת בקשות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪מעבדה 2.2: הוספת סוכן מחובר להכנה לראיון
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 משימה הושלמה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 משאבים טקטיים
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "4fb913dfc3bbc71506dd3602c4b8e6ed",
+  "translation_date": "2025-10-17T01:47:05+00:00",
+  "source_file": "docs/operative-preview/02-multi-agent/README.md",
+  "language_code": "he"
+}
+-->
+<h1 id="02">🚨 משימה 02: סוכנים מחוברים<a class="headerlink" href="#02" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="_1">🕵️‍♂️ שם קוד: <code>מבצע סימפוניה</code><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ חלון זמן המבצע:</strong> <code>~45 דקות</code></p>
+</blockquote>
+<h2 id="_2">🎯 תדריך משימה<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>ברוך שובך, סוכן. במשימה 01, בנית את סוכן הגיוס הראשי שלך - בסיס מוצק לניהול תהליכי גיוס. אבל סוכן אחד יכול לעשות רק כל כך הרבה.</p>
+<p>המשימה שלך, אם תבחר לקבל אותה, היא <strong>מבצע סימפוניה</strong> - להפוך את הסוכן היחיד שלך למערכת <strong>רב-סוכנים</strong>: צוות מתוזמר של סוכנים מומחים שעובדים יחד כדי להתמודד עם אתגרי גיוס מורכבים. תחשוב על זה כמו לשדרג ממפעיל יחיד לפיקוד על כוח משימה מיוחד.</p>
+<p>כמו תזמורת סימפונית שבה כל מוזיקאי מנגן את חלקו בהרמוניה מושלמת, תוסיף שני מומחים קריטיים לסוכן הגיוס הקיים שלך: סוכן קליטת בקשות לעיבוד קורות חיים באופן אוטומטי, וסוכן הכנת ראיונות ליצירת חומרי ראיונות מקיפים. סוכנים אלו יעבדו יחד בצורה חלקה תחת המנצח הראשי שלך.</p>
+<h2 id="_3">🔎 מטרות<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>במשימה זו תלמד:</p>
+<ol>
+<li>מתי להשתמש ב<strong>סוכנים ילדים</strong> לעומת <strong>סוכנים מחוברים</strong></li>
+<li>כיצד לעצב <strong>ארכיטקטורות רב-סוכנים</strong> שמסוגלות להתרחב  </li>
+<li>יצירת <strong>סוכנים ילדים</strong> למשימות ממוקדות</li>
+<li>יצירת <strong>דפוסי תקשורת</strong> בין סוכנים</li>
+<li>בניית סוכן קליטת בקשות וסוכן הכנת ראיונות</li>
+</ol>
+<h2 id="_4">🧠 מה הם סוכנים מחוברים?<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>ב-Copilot Studio, אינך מוגבל לבניית סוכנים יחידים ומונוליתיים. אתה יכול ליצור <strong>מערכות רב-סוכנים</strong> - רשתות של סוכנים מומחים שעובדים יחד כדי להתמודד עם תהליכים מורכבים.</p>
+<p>תחשוב על זה כמו ארגון בעולם האמיתי: במקום שאדם אחד יעשה הכל, יש לך מומחים שמצטיינים במשימות ספציפיות ומשתפים פעולה כשצריך.</p>
+<h3 id="-">למה מערכות רב-סוכנים חשובות<a class="headerlink" href="#-" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>יכולת להתרחב:</strong> כל סוכן יכול להיות מפותח, נבדק ומתוחזק באופן עצמאי על ידי צוותים שונים.  </li>
+<li><strong>התמחות:</strong> סוכנים יכולים להתמקד במה שהם עושים הכי טוב. אולי אחד לעיבוד נתונים, אחר לאינטראקציה עם משתמשים, ואחר לקבלת החלטות.  </li>
+<li><strong>גמישות:</strong> ניתן לשלב ולהתאים סוכנים, להשתמש בהם מחדש בפרויקטים שונים, ולפתח את המערכת באופן הדרגתי.  </li>
+<li><strong>תחזוקה:</strong> שינויים בסוכן אחד לא בהכרח משפיעים על אחרים, מה שהופך עדכונים לבטוחים וקלים יותר.</li>
+</ul>
+<h3 id="_5">דוגמה מהעולם האמיתי: תהליך גיוס<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>תחשוב על תהליך הגיוס שלנו - סוכנים מרובים עשויים לעבוד יחד עם תחומי אחריות הבאים:</p>
+<ul>
+<li><strong>קליטת קורות חיים</strong> דורשת מיומנויות עיבוד מסמכים והפקת נתונים</li>
+<li><strong>ציון</strong> כולל הערכת קורות חיים של מועמדים והתאמתם לדרישות התפקיד</li>
+<li><strong>הכנת ראיונות</strong> דורשת ניתוח מעמיק של התאמת המועמד  </li>
+<li><strong>תקשורת עם מועמדים</strong> דורשת יכולות תקשורת אמפתיות</li>
+</ul>
+<p>במקום לבנות סוכן אחד ענק שמנסה להתמודד עם כל הכישורים השונים הללו, אתה יכול ליצור סוכנים מומחים לכל תחום ולתזמר אותם יחד.</p>
+<h2 id="_6">🔗 סוכנים ילדים לעומת סוכנים מחוברים: ההבדל המרכזי<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>Copilot Studio מציע שתי דרכים לבנות מערכות רב-סוכנים, כל אחת עם שימושים שונים:</p>
+<h3 id="_7">↘️ סוכנים ילדים<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>סוכנים ילדים הם <strong>מומחים קלים</strong> שחיים בתוך הסוכן הראשי שלך. תחשוב עליהם כצוותים מומחים בתוך אותו מחלקה.</p>
+<h4 id="_8">פרטים טכניים מרכזיים<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<ul>
+<li>סוכנים ילדים חיים בתוך הסוכן הראשי ויש להם דף תצורה יחיד.</li>
+<li>כלים וידע <strong>מאוחסנים בסוכן הראשי</strong>, אך מוגדרים כ"זמינים ל" סוכן הילד.</li>
+<li>סוכנים ילדים <strong>משתפים את הנושאים</strong> של הסוכן הראשי. ניתן להתייחס לנושאים בהוראות סוכן הילד.</li>
+<li>סוכנים ילדים <strong>לא צריכים פרסום נפרד</strong> - הם זמינים אוטומטית בתוך הסוכן הראשי ברגע שנוצרו. זה הופך את הבדיקות לקלות יותר מכיוון ששינויים בסוכן הראשי ובסוכנים הילדים יכולים להתבצע ב<strong>אותו סביבת עבודה משותפת</strong>.</li>
+</ul>
+<h4 id="_9">השתמש בסוכנים ילדים כאשר<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<ul>
+<li>צוות אחד מנהל את כל הפתרון</li>
+<li>אתה רוצה לארגן כלים וידע באופן לוגי לסוכנים תת-סוגיים</li>
+<li>אינך זקוק לאימות או פריסה נפרדים לכל סוכן</li>
+<li>הסוכנים לא יפורסמו בנפרד או ישמשו באופן עצמאי</li>
+<li>אינך זקוק לשימוש חוזר בסוכנים במגוון פתרונות</li>
+</ul>
+<p><strong>דוגמה:</strong> סוכן תמיכה טכנית עם סוכנים ילדים עבור:</p>
+<ul>
+<li>נהלי איפוס סיסמאות</li>
+<li>פתרון בעיות חומרה  </li>
+<li>מדריכי התקנת תוכנה</li>
+</ul>
+<h3 id="_10">🔀 סוכנים מחוברים<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>סוכנים מחוברים הם <strong>סוכנים עצמאיים לחלוטין</strong> שהסוכן הראשי שלך יכול לשתף פעולה איתם. תחשוב עליהם כמחלקות נפרדות שעובדות יחד על פרויקט.</p>
+<h4 id="_11">פרטים טכניים מרכזיים<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<ul>
+<li>לסוכנים מחוברים יש <strong>נושאים משלהם</strong> וזרימות שיחה. הם פועלים באופן עצמאי עם הגדרות, לוגיקה ומחזור חיים פריסה משלהם.</li>
+<li>סוכנים מחוברים <strong>חייבים להיות מפורסמים</strong> לפני שניתן להוסיף אותם ולהשתמש בהם על ידי סוכנים אחרים.</li>
+<li>במהלך הבדיקות, שינויים בסוכן המחובר חייבים להיות מפורסמים לפני שניתן להשתמש בהם על ידי הסוכן הקורא.</li>
+</ul>
+<h4 id="_12">השתמש בסוכנים מחוברים כאשר<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<ul>
+<li>צוותים מרובים מפתחים ומתחזקים סוכנים שונים באופן עצמאי</li>
+<li>סוכנים זקוקים להגדרות, אימות וערוצי פריסה משלהם</li>
+<li>אתה רוצה לפרסם ולתחזק סוכנים בנפרד עם ניהול מחזור חיים יישומי (ALM) עצמאי לכל סוכן</li>
+<li>סוכנים צריכים להיות ניתנים לשימוש חוזר במגוון פתרונות</li>
+</ul>
+<p><strong>דוגמה:</strong> מערכת שירות לקוחות שמתחברת ל:</p>
+<ul>
+<li>סוכן חיוב נפרד שמנוהל על ידי צוות הכספים</li>
+<li>סוכן תמיכה טכנית נפרד שמנוהל על ידי צוות המוצר</li>
+<li>סוכן החזרות נפרד שמנוהל על ידי צוות התפעול</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">טיפ</p>
+<p>ניתן לשלב את שתי הגישות! לדוגמה, הסוכן הראשי שלך יכול להתחבר לסוכנים חיצוניים מצוותים אחרים תוך כדי שיש לו סוכנים ילדים למשימות פנימיות מיוחדות.</p>
+</div>
+<h2 id="-_1">🎯 דפוסי ארכיטקטורה רב-סוכנים<a class="headerlink" href="#-_1" title="Permanent link">&para;</a></h2>
+<p>בעת עיצוב מערכות רב-סוכנים, מתגלים מספר דפוסים בהתבסס על אופן האינטראקציה בין הסוכנים:</p>
+<table>
+<thead>
+<tr>
+<th>דפוס</th>
+<th>תיאור</th>
+<th>מתאים ל</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>מרכז ודוברים</strong></td>
+<td>סוכן מנצח ראשי מתאם עם סוכנים מומחים מרובים. המנצח מטפל באינטראקציה עם המשתמש ומעביר משימות לסוכנים ילדים או מחוברים.</td>
+<td>תהליכים מורכבים שבהם סוכן אחד מתאם משימות מיוחדות</td>
+</tr>
+<tr>
+<td><strong>צינור</strong></td>
+<td>סוכנים מעבירים עבודה באופן רציף מאחד לשני, כל אחד מוסיף ערך לפני העברה לשלב הבא.</td>
+<td>תהליכים ליניאריים כמו עיבוד בקשות (קליטה → סינון → ראיון → החלטה)</td>
+</tr>
+<tr>
+<td><strong>שיתופי פעולה</strong></td>
+<td>סוכנים עובדים יחד בו זמנית על היבטים שונים של אותה בעיה, משתפים הקשר ותוצאות.</td>
+<td>ניתוח מורכב הדורש פרספקטיבות או תחומי מומחיות שונים</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">טיפ</p>
+<p>ייתכן שתשלב אפילו שניים או יותר מהדפוסים הללו.</p>
+</div>
+<h2 id="_13">💬 תקשורת בין סוכנים ושיתוף הקשר<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p>כאשר סוכנים עובדים יחד, הם צריכים לשתף מידע בצורה יעילה. כך זה עובד ב-Copilot Studio:</p>
+<h3 id="_14">היסטוריית שיחה<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>כברירת מחדל, כאשר סוכן ראשי קורא לסוכן ילד או מחובר, הוא יכול להעביר את <strong>היסטוריית השיחה</strong>. זה נותן לסוכן המומחה הקשר מלא לגבי מה שהמשתמש דיבר עליו.</p>
+<p>ניתן להשבית זאת מסיבות אבטחה או ביצועים - לדוגמה, אם סוכן המומחה צריך רק להשלים משימה ספציפית מבלי להזדקק להקשר השיחה המלא. זה יכול להיות הגנה טובה מפני <strong>דליפת נתונים</strong>.</p>
+<h3 id="_15">הוראות מפורשות<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p>הסוכן הראשי שלך יכול לתת <strong>הוראות ספציפיות</strong> לסוכנים ילדים או מחוברים. לדוגמה: "עבד את קורות החיים האלה וסכם את הכישורים שלהם לתפקיד מפתח בכיר."</p>
+<h3 id="_16">ערכי החזרה<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p>סוכנים יכולים להחזיר מידע מובנה לסוכן הקורא, מה שמאפשר לסוכן הראשי להשתמש במידע זה בשלבים הבאים או לשתף אותו עם סוכנים אחרים.</p>
+<h3 id="dataverse">אינטגרציה עם Dataverse<a class="headerlink" href="#dataverse" title="Permanent link">&para;</a></h3>
+<p>למצבים מורכבים יותר, סוכנים יכולים לשתף מידע דרך <strong>Dataverse</strong> או מאגרי נתונים אחרים, מה שמאפשר שיתוף הקשר מתמשך בין אינטראקציות מרובות.</p>
+<h2 id="_17">↘️ סוכן ילד: סוכן קליטת בקשות<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<p>בוא נתחיל לבנות את מערכת הגיוס הרב-סוכנים שלנו. המומחה הראשון שלנו יהיה <strong>סוכן קליטת בקשות</strong> - סוכן ילד שאחראי על עיבוד קורות חיים ומידע מועמדים נכנסים.</p>
+<pre class="mermaid"><code>---
+config:
+  layout: elk
+  look: neo
+---
+flowchart TB
+ subgraph People["People"]
+    direction TB
+        HiringManager["Hiring Manager"]
+        Interviewers["Interviewers"]
+  end
+ subgraph Agents["Agents"]
+    direction LR
+        ApplicationIntakeAgent["Application Intake Agent&lt;br&gt;(Child)"]
+        InterviewAgent["Interview Agent&lt;br&gt;(Connected)"]
+        HRAgent["HR Agent"]
+  end
+    HiringManager -- Upload CV --&gt; HRAgent
+    HRAgent -- Upload Resume, Create Candidate, Match to Job Roles --&gt; ApplicationIntakeAgent
+    ApplicationIntakeAgent -- Create Resume, Upsert Candidate, Create Job Application --&gt; Dataverse["Dataverse"]
+    ApplicationIntakeAgent -- Store Resume file in file column --&gt; Dataverse
+    HiringManager -- Ask for summaries --&gt; HRAgent
+    Interviewers -- Request interview pack --&gt; HRAgent
+    HRAgent -- Generate interview pack and summarize data --&gt; InterviewAgent
+    InterviewAgent -- Read all Candidate, Resume, Job Roles, Evaluation Criteria Data --&gt; Dataverse
+     HiringManager:::person
+     Interviewers:::person
+     ApplicationIntakeAgent:::agent
+     InterviewAgent:::agent
+     HRAgent:::agent
+     Dataverse:::data
+    classDef person fill:#e6f0ff,stroke:#3b82f6,color:#0b3660
+    classDef agent fill:#e8f9ef,stroke:#10b981,color:#064e3b
+    classDef data  fill:#f3f4f6,stroke:#6b7280,color:#111827</code></pre>
+<h3 id="_18">🤝 תחומי אחריות של סוכן קליטת בקשות<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>עיבוד תוכן קורות חיים</strong> מקבצים PDF שסופקו דרך צ'אט אינטראקטיבי (במשימה עתידית תלמד כיצד לעבד קורות חיים באופן אוטונומי).</li>
+<li><strong>הפקת נתונים מובנים</strong> (שם, כישורים, ניסיון, השכלה)</li>
+<li><strong>התאמת מועמדים לתפקידים פתוחים</strong> בהתבסס על כישורים ומכתב מקדים</li>
+<li><strong>אחסון מידע מועמדים</strong> ב-Dataverse לעיבוד מאוחר יותר</li>
+<li><strong>מניעת כפילויות בקשות</strong> כדי להימנע מיצירת אותו מועמד פעמיים, התאמה לרשומות קיימות באמצעות כתובת האימייל שהופקה מקורות החיים.</li>
+</ul>
+<h3 id="_19">⭐ למה זה צריך להיות סוכן ילד<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>סוכן קליטת בקשות מתאים באופן מושלם כסוכן ילד מכיוון ש:</p>
+<ul>
+<li>הוא מתמחה בעיבוד מסמכים והפקת נתונים</li>
+<li>הוא לא זקוק לפרסום נפרד  </li>
+<li>הוא חלק מפתרון הגיוס הכולל שלנו שמנוהל על ידי אותו צוות</li>
+<li>הוא מתמקד בהדק ספציפי (קורות חיים חדשים שהתקבלו) ומופעל מהסוכן הראשי.</li>
+</ul>
+<h2 id="_20">🔀 סוכן מחובר: סוכן הכנת ראיונות<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<p>המומחה השני שלנו יהיה <strong>סוכן הכנת ראיונות</strong> - סוכן מחובר שעוזר ליצור חומרי ראיונות מקיפים ומעריך תגובות מועמדים.</p>
+<h3 id="_21">🤝 תחומי אחריות של סוכן הכנת ראיונות<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>יצירת חבילות ראיונות</strong> עם מידע על החברה, דרישות התפקיד וקריטריוני הערכה</li>
+<li><strong>יצירת שאלות ראיונות</strong> מותאמות לתפקידים ספציפיים ורקע מועמדים</li>
+<li><strong>מענה על שאלות כלליות</strong> על תפקידי עבודה ובקשות לתקשורת עם בעלי עניין</li>
+</ul>
+<h3 id="_22">⭐ למה זה צריך להיות סוכן מחובר<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<p>סוכן הכנת ראיונות עובד טוב יותר כסוכן מחובר מכיוון ש:</p>
+<ul>
+<li>צוות רכישת הכישרונות עשוי לרצות להשתמש בו באופן עצמאי בתהליכי גיוס מרובים</li>
+<li>הוא זקוק לבסיס ידע משלו של שיטות ראיונות וקריטריוני הערכה</li>
+<li>מנהלי גיוס שונים עשויים לרצות להתאים את התנהגותו לצוותים שלהם</li>
+<li>ניתן להשתמש בו מחדש לתפקידים פנימיים, לא רק לגיוס חיצוני</li>
+</ul>
+<h2 id="21">🧪 מעבדה 2.1: הוספת סוכן קליטת בקשות<a class="headerlink" href="#21" title="Permanent link">&para;</a></h2>
+<p>מוכן ליישם את התיאוריה בפועל? בוא נוסיף את סוכן הילד הראשון שלנו לסוכן הגיוס הקיים שלך.</p>
+<h3 id="_23">דרישות מוקדמות להשלמת המשימה<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<p>תצטרך <strong>או</strong>:</p>
+<ul>
+<li><strong>להשלים את משימה 01</strong> ולהכין את סוכן הגיוס שלך, <strong>או</strong></li>
+<li><strong>לייבא את פתרון ההתחלה של משימה 02</strong> אם אתה מתחיל מאפס או צריך להשלים. <a href="https://aka.ms/agent-academy">הורד פתרון התחלה למשימה 02</a></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">ייבוא פתרון ונתוני דוגמה</p>
+<p>אם אתה משתמש בפתרון ההתחלה, עיין ב-<a href="../01-get-started/">משימה 01</a> להוראות מפורטות כיצד לייבא פתרונות ונתוני דוגמה לסביבתך.</p>
+</div>
+<h3 id="211">2.1.1 הגדרת פתרון<a class="headerlink" href="#211" title="Permanent link">&para;</a></h3>
+<ol>
+<li>בתוך Copilot Studio, בחר את שלוש הנקודות (...) מתחת לכלים בניווט השמאלי.</li>
+<li>בחר <strong>פתרונות</strong>.<br />
+<img alt="בחר פתרונות" src="../../../../../translated_images/2-select-solutions.42b77407cffd37d7c8b3265f2fd8adb88053b9ebda31bdf0b22cd77ec5b7bf88.he.png" /></li>
+<li>מצא את פתרון Operative שלך, בחר את <strong>שלוש הנקודות (...)</strong> לידו, ובחר <strong>הגדר פתרון מועדף</strong>. זה יבטיח שכל העבודה שלך תתווסף לפתרון זה.<br />
+<img alt="הגדר פתרון מועדף" src="../../../../../translated_images/2-select-preferred-solution.4542e922555429074f49c6480f6e8345f8c8818b2549fe0cd625fa58a45aede9.he.png" /></li>
+</ol>
+<h3 id="212">2.1.2 הגדר הוראות סוכן הגיוס שלך<a class="headerlink" href="#212" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>נווט</strong> ל-Copilot Studio. ודא שסביבתך נבחרה בפינה הימנית העליונה <strong>בחירת סביבה</strong>.</p>
+</li>
+<li>
+<p>פתח את <strong>סוכן הגיוס</strong> שלך ממשימה 01</p>
+</li>
+<li>
+<p>בחר <strong>ערוך</strong> בסעיף <strong>הוראות</strong> בלשונית <strong>סקירה כללית</strong>, והוסף את ההוראות הבאות לראש:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are the central orchestrator for the hiring process. You coordinate activities, provide summaries, and delegate work to specialized agents.
+</span></code></pre></div>
+</li>
+<li>
+<p>בחר <strong>שמור</strong><br />
+<img alt="הוראות סוכן גיוס" src="../../../../../translated_images/2-hiring-agent-instructions.dc1fcc2513c88722145e46794f3b3cd8b96d62482090275da62679bbfb6e352a.he.png" /></p>
+</li>
+<li>
+<p>בחר <strong>הגדרות</strong> (למעלה מימין)</p>
+</li>
+<li>
+<p>ודא את ההגדרות הבאות:</p>
+<table>
+<thead>
+<tr>
+<th>הגדרה</th>
+<th>ערך</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>השתמש באורקסטרציה AI גנרטיבית לתגובות הסוכן שלך</td>
+<td><strong>כן</strong></td>
+</tr>
+<tr>
+<td>מתינות תוכן</td>
+<td><strong>מתון</strong></td>
+</tr>
+<tr>
+<td>השתמש בידע כללי</td>
+<td><strong>כבוי</strong></td>
+</tr>
+<tr>
+<td>השתמש במידע מהאינטרנט</td>
+<td><strong>כבוי</strong></td>
+</tr>
+<tr>
+<td>העלאות קבצים</td>
+<td><strong>פעיל</strong></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><img alt="השתמש באורקסטרציה גנרטיבית" src="../../../../../translated_images/2-gen-orchestration.29e616a2d5721c51953fb6bde452c1ee06f40684911a6eba44e07de41c328726.he.png" />
+<img alt="הגדרת מתינות" src="../../../../../translated_images/2-set-medium-moderation.c6c0c1d6c427abac44441aad97892c84bbc43420b91c2c18e704980f604ec1b2.he.png" />
+<img alt="הגדרות ידע ואינטרנט" src="../../../../../translated_images/2-settings-knowledge-web.716090f708dff925ebb0d259f20734da39c831bba4df4f97bd334ce701aa92a9.he.png" /></p>
+<h3 id="213">2.1.3 הוסף את סוכן הילד של קליטת בקשות<a class="headerlink" href="#213" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>נווט</strong> ללשונית <strong>סוכנים</strong> בתוך סוכן הגיוס שלך - כאן תוסיף סוכנים מומחים.</p>
+</li>
+<li>
+<p>בחר <strong>+ הוסף</strong> ואז <strong>צור סוכן</strong>. שים לב שזה מסומן כ"<em>צור סוכן קל שחי בתוך הסוכן הנוכחי שלך ויורש את הגדרותיו. אידיאלי לפירוק לוגיקה מורכבת</em> "<br />
+<img alt="הוסף סוכן ילד" src="../../../../../translated_images/2-add-child-agent.47e6246572a58b85236c969c69f3bae835fd5099f4d7603abeab6b1ad9ce2a70.he.png" /></p>
+</li>
+<li>
+<p><strong>תן שם</strong> לסוכן שלך <code>סוכן קליטת בקשות</code></p>
+</li>
+<li>
+<p>בחר <strong>הסוכן בוחר</strong> - בהתבסס על תיאור בתפריט הנפתח <strong>מתי זה ישמש?</strong>. אפשרויות אלו דומות להדקים שניתן להגדיר לנושאים.</p>
+</li>
+<li>
+<p>הגדר את <strong>התיאור</strong> להיות:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Processes incoming resumes and stores candidates in the system
+</span></code></pre></div>
+<p><img alt="תיאור סוכן קליטת בקשות" src="../../../../../translated_images/2-application-intake-agent-description.c5c0bf8ee632c04b9fb63c774f638de84cb8fa6ddf8c853cf0b651ea0e4964f0.he.png" /></p>
+</li>
+<li>
+<p>הרחב <strong>מתקדם</strong>, והגדר את העדיפות להיות <code>10000</code>. זה יבטיח שבהמשך סוכן הראיונות ישמש למענה על שאלות כלליות לפני זה. ניתן להגדיר כאן גם תנאי כמו לוודא שיש לפחות קובץ מצורף אחד.</p>
+</li>
+<li>
+<p>ודא שהמתג <strong>חיפוש באינטרנט</strong> מוגדר ל<strong>מושבת</strong>. זאת מכיוון שאנחנו רוצים להשתמש רק במידע שסופק על ידי הסוכן הראשי.</p>
+</li>
+<li>
+<p>בחר <strong>שמור</strong></p>
+</li>
+</ol>
+<h3 id="214">2.1.4 הגדר זרימת סוכן העלאת קורות חיים<a class="headerlink" href="#214" title="Permanent link">&para;</a></h3>
+<p>סוכנים לא יכולים לבצע שום פעולה מבלי לקבל כלים או נושאים.
+אנחנו משתמשים בכלי <strong>Agent Flow</strong> במקום נושאים עבור שלב <em>העלאת קורות חיים</em> מכיוון שתהליך backend רב-שלבי זה דורש ביצוע דטרמיניסטי ואינטגרציה עם מערכות חיצוניות. בעוד שנושאים מתאימים יותר להנחיית דיאלוג שיחתי, Agent Flows מספקים את האוטומציה המובנית הנדרשת לטיפול אמין בעיבוד קבצים, אימות נתונים ועדכונים בבסיסי נתונים (הוספה חדשה או עדכון קיים) ללא תלות באינטראקציה עם המשתמש.</p>
+<ol>
+<li>
+<p>מצאו את סעיף <strong>Tools</strong> בתוך דף Application Intake Agent.
+   <strong>חשוב:</strong> זה לא לשונית Tools של הסוכן הראשי, אלא ניתן למצוא אותו אם תגללו למטה מתחת להוראות הסוכן המשני.</p>
+</li>
+<li>
+<p>בחרו <strong>+ Add</strong>
+   <img alt="Add Tool" src="../../../../../translated_images/2-add-tool.bbf282ab0b7abeb6cad0032db2dba94adf53e4f206ac976c6c7b9b339fb0e996.he.png" /></p>
+</li>
+<li>
+<p>בחרו <strong>+ New tool</strong> <img alt="Add new tool" src="../../../../../translated_images/2-new-tool-2.6e09c313b1af9d233ecb1c1559fb9f5d92123bfc2af6cc2df5f52e549b6b961c.he.png" /></p>
+</li>
+<li>
+<p>בחרו <strong>Agent flow</strong>.
+    מעצב Agent Flow ייפתח, כאן נוסיף את הלוגיקה להעלאת קורות חיים.<br />
+<img alt="Add Agent Flow" src="../../../../../translated_images/2-add-agent-flow.e5aecede97ecd79e08aae4be784a6255f354f13edb2621d3d61e961b09a70d53.he.png" /></p>
+</li>
+<li>
+<p>בחרו את הצומת <strong>When an agent calls the flow</strong>, ובחרו <strong>+ Add</strong> קלט עבור הפרמטרים הבאים, תוך הקפדה להוסיף גם את השם וגם את התיאור.</p>
+<table>
+<thead>
+<tr>
+<th>סוג</th>
+<th>שם</th>
+<th>תיאור</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>קובץ</td>
+<td>Resume</td>
+<td>קובץ PDF של קורות החיים</td>
+</tr>
+<tr>
+<td>טקסט</td>
+<td>Message</td>
+<td>חילוץ הודעה בסגנון מכתב מקדים מההקשר. ההודעה חייבת להיות פחות מ-2000 תווים.</td>
+</tr>
+<tr>
+<td>טקסט</td>
+<td>UserEmail</td>
+<td>כתובת האימייל שממנה הגיעו קורות החיים. זו תהיה כתובת האימייל של המשתמש שמעלה את הקובץ בצ'אט, או כתובת השולח אם התקבל באימייל.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Configure input parameters" src="../../../../../translated_images/2-upload-resume-trigger.1f3ca963aa3d9d723756d0636d99c1d458e197b16df93f2ac360283cf07f3fb1.he.png" /></p>
+</li>
+<li>
+<p>בחרו את <strong>+ icon</strong> מתחת לצומת ההפעלה, חפשו <code>Dataverse</code>, בחרו <strong>See more</strong> ליד Microsoft Dataverse, ואז בחרו את הפעולה <strong>Add a new row</strong> בסעיף <strong>Microsoft Dataverse</strong><br />
+<img alt="Add a new row node" src="../../../../../translated_images/2-upload-resume-add-resume.0e5bb197fef951167c9168c827e48e8d45a24c7d619452d387d980336a30d421.he.png" /></p>
+</li>
+<li>
+<p>תנו שם לצומת <strong>Create Resume</strong>, על ידי בחירת <strong>ellipsis(...)</strong>, ובחירת <strong>Rename</strong><br />
+<img alt="Rename node" src="../../../../../translated_images/2-upload-resume-add-resume-rename.f8ecb680cca6fe7d98cd9590ba4d59d0fe19a742baca4c05f7558ed3fea8c44e.he.png" /></p>
+</li>
+<li>
+<p>הגדירו את <strong>Table name</strong> ל-<strong>Resumes</strong>, ואז בחרו <strong>Show all</strong>, כדי להציג את כל הפרמטרים.</p>
+</li>
+<li>
+<p>הגדירו את <strong>properties</strong> הבאים:</p>
+<table>
+<thead>
+<tr>
+<th>מאפיין</th>
+<th>איך להגדיר</th>
+<th>פרטים / ביטוי</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resume Title</strong></td>
+<td>נתונים דינמיים (אייקון ברק)</td>
+<td><strong>When an agent calls the flow</strong> → <strong>Resume name</strong> אם אינכם רואים את שם הקובץ, ודאו שהגדרתם את הפרמטר Resume לעיל כטיפוס נתונים.</td>
+</tr>
+<tr>
+<td><strong>Cover letter</strong></td>
+<td>ביטוי (אייקון fx)</td>
+<td><code>if(greater(length(triggerBody()?['text']), 2000), substring(triggerBody()?['text'], 0, 2000), triggerBody()?['text'])</code></td>
+</tr>
+<tr>
+<td><strong>Source Email Address</strong></td>
+<td>נתונים דינמיים (אייקון ברק)</td>
+<td><strong>When an agent calls the flow</strong> → <strong>UserEmail</strong></td>
+</tr>
+<tr>
+<td><strong>Upload Date</strong></td>
+<td>ביטוי (אייקון fx)</td>
+<td><code>utcNow()</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Edit Properties" src="../../../../../translated_images/2-upload-resume-add-resume-props.17586d1a9546933fbc66b13e8f36366d5122a90db2f37abb1b459dea97605270.he.png" /></p>
+</li>
+<li>
+<p>בחרו את <strong>+ icon</strong> מתחת לצומת Create Resume, חפשו <code>Dataverse</code>, בחרו <strong>See more</strong> ליד Microsoft Dataverse, ואז בחרו את הפעולה <strong>Upload a file or an image</strong>.
+   <strong>חשוב:</strong> ודאו שלא בחרתם את הפעולה Upload a file or an image to the selected environment.</p>
+</li>
+<li>
+<p>תנו שם לצומת <strong>Upload Resume File</strong>, על ידי בחירת <strong>ellipsis(...)</strong>, ובחירת <strong>Rename</strong></p>
+</li>
+<li>
+<p>הגדירו את <strong>properties</strong> הבאים:</p>
+<table>
+<thead>
+<tr>
+<th>מאפיין</th>
+<th>איך להגדיר</th>
+<th>פרטים</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Content name</strong></td>
+<td>נתונים דינמיים (אייקון ברק)</td>
+<td>When an agent calls the flow → Resume name</td>
+</tr>
+<tr>
+<td><strong>Table name</strong></td>
+<td>בחרו</td>
+<td>Resumes</td>
+</tr>
+<tr>
+<td><strong>Row ID</strong></td>
+<td>נתונים דינמיים (אייקון ברק)</td>
+<td>Create Resume → See more → Resume</td>
+</tr>
+<tr>
+<td><strong>Column Name</strong></td>
+<td>בחרו</td>
+<td>Resume PDF</td>
+</tr>
+<tr>
+<td><strong>Content</strong></td>
+<td>נתונים דינמיים (אייקון ברק)</td>
+<td>When an agent calls the flow → Resume contentBytes</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Set properties" src="../../../../../translated_images/2-upload-resume-upload-resume-file.2250f45ffd06b6c60e91e0517966334acbd9cf6c0f98dc2f3f615431ae03be90.he.png" /></p>
+</li>
+<li>
+<p>בחרו את הצומת <strong>Respond to the agent</strong>, ואז בחרו <strong>+ Add an output</strong></p>
+<table>
+<thead>
+<tr>
+<th>מאפיין</th>
+<th>איך להגדיר</th>
+<th>פרטים</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>בחרו</td>
+<td><code>Text</code></td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>הזינו</td>
+<td><code>ResumeNumber</code></td>
+</tr>
+<tr>
+<td><strong>Value</strong></td>
+<td>נתונים דינמיים (אייקון ברק)</td>
+<td>Create Resume → See More → Resume Number</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>הזינו</td>
+<td><code>The [ResumeNumber] of the Resume created</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Set Properties" src="../../../../../translated_images/2-upload-resume-return.f9beac6547b4f228a4ee6c538ca64e86883ab7b5d85b08c2cd6da26e4cc2e4c8.he.png" /></p>
+</li>
+<li>
+<p>בחרו <strong>Save draft</strong> בפינה הימנית העליונה<br />
+<img alt="Save as draft" src="../../../../../translated_images/2-upload-resume-save-draft.6d5bed32d254815c765c19109b82113fd2520dbb5dce84288a3eb13896958d93.he.png" /></p>
+</li>
+<li>
+<p>בחרו את לשונית <strong>Overview</strong>, בחרו <strong>Edit</strong> בפאנל <strong>Details</strong></p>
+<ol>
+<li><strong>Flow name</strong>:<code>Resume Upload</code></li>
+<li><strong>Description</strong>:<code>Uploads a Resume when instructed</code></li>
+</ol>
+<p><img alt="Rename agent flow" src="../../../../../translated_images/2-upload-resume-rename.a26569a2def30b456ed3176c21ce889637c4d1155c56ca479521d278f25a4d5d.he.png" /></p>
+</li>
+<li>
+<p>בחרו שוב את לשונית <strong>Designer</strong>, ובחרו <strong>Publish</strong>.<br />
+<img alt="Publishing" src="../../../../../translated_images/2-upload-resume-publish.36f763ffc4487b32114a47a087fd5282beb7a9bb0272b3ff46046d8cd413e053.he.png" /></p>
+</li>
+</ol>
+<h3 id="215">2.1.5 חיבור הזרימה לסוכן שלכם<a class="headerlink" href="#215" title="Permanent link">&para;</a></h3>
+<p>עכשיו תחברו את הזרימה שפורסמה לסוכן Application Intake שלכם.</p>
+<ol>
+<li>
+<p>חזרו ל-<strong>Hiring Agent</strong> ובחרו את לשונית <strong>Agents</strong>. פתחו את <strong>Application Intake Agent</strong>, ואז מצאו את פאנל <strong>Tools</strong>.<br />
+<img alt="Add agent flow to agent" src="../../../../../translated_images/2-add-agent-flow-to-agent.3c9aadae42fc389e7c6f56ea80505cd067e45ba7e4aa03f201e2cd792e24d1fe.he.png" /></p>
+</li>
+<li>
+<p>בחרו <strong>+ Add</strong></p>
+</li>
+<li>
+<p>בחרו את המסנן <strong>Flow</strong>, וחפשו <code>Resume Upload</code>. בחרו את זרימת <strong>Resume Upload</strong>, ואז <strong>Add and configure</strong>.</p>
+</li>
+<li>
+<p>הגדירו את הפרמטרים הבאים:</p>
+<table>
+<thead>
+<tr>
+<th>פרמטר</th>
+<th>ערך</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td><code>Uploads a Resume when instructed. STRICT RULE: Only call this tool when referenced in the form "Resume Upload" and there are Attachments</code></td>
+</tr>
+<tr>
+<td><strong>Additional details → When this tool may be used</strong></td>
+<td><code>only when referenced by topics or agents</code></td>
+</tr>
+<tr>
+<td><strong>Inputs → Add Input</strong></td>
+<td><code>contentBytes</code></td>
+</tr>
+<tr>
+<td><strong>Inputs → Add Input</strong></td>
+<td><code>name</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Resume Upload Details 1" src="../../../../../translated_images/2-resume-upload-tool-props-1.e3d8bf3ebdfd5aa8df23aa6ab83eec8a5def709f2c7d27fb700bef16c598da2f.he.png" /></p>
+<p><img alt="Add inputs" src="../../../../../translated_images/2-resume-upload-tool-props-2.16fb1380a34a9fa63b7c9673c7290ff09d491e920a5ff33b439a4b1a5abfccba.he.png" /></p>
+</li>
+<li>
+<p>לאחר מכן הגדירו את מאפייני הקלטים כך:</p>
+<table>
+<thead>
+<tr>
+<th>פרמטר קלט</th>
+<th>מאפיין</th>
+<th>פרטים</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>contentBytes</strong></td>
+<td>Fill using</td>
+<td>Custom value</td>
+</tr>
+<tr>
+<td></td>
+<td>Value (...→Formula→Insert)</td>
+<td><code>First(System.Activity.Attachments).Content</code></td>
+</tr>
+<tr>
+<td><strong>name</strong></td>
+<td>Fill using</td>
+<td>Custom value</td>
+</tr>
+<tr>
+<td></td>
+<td>Value (...→Formula→Insert)</td>
+<td><code>First(System.Activity.Attachments).Name</code></td>
+</tr>
+<tr>
+<td><strong>Message</strong></td>
+<td>Customize</td>
+<td>Configure custom settings</td>
+</tr>
+<tr>
+<td></td>
+<td>Description</td>
+<td><code>Extract a cover letter style message from the context. Be sure to never prompt the user and create at least a minimal cover letter from the available context. STRICT RULE - the message must be less than 2000 characters.</code></td>
+</tr>
+<tr>
+<td></td>
+<td>How many reprompts</td>
+<td>Don't repeat</td>
+</tr>
+<tr>
+<td></td>
+<td>Action if no entity found</td>
+<td>Set variable to value</td>
+</tr>
+<tr>
+<td></td>
+<td>Default entity value</td>
+<td>Resume upload</td>
+</tr>
+<tr>
+<td><strong>UserEmail</strong></td>
+<td>Fill using</td>
+<td>Custom value</td>
+</tr>
+<tr>
+<td></td>
+<td>Value (...→Formula→Insert)</td>
+<td><code>System.User.Email</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Set input properties" src="../../../../../translated_images/2-resume-upload-tool-props-3.a18364f22b2c41c3e4f8fee68dddb01ff5190d57410d9fd3fe2fbddb3d74e352.he.png" /></p>
+</li>
+<li>
+<p>בחרו <strong>Save</strong></p>
+</li>
+</ol>
+<h3 id="216">2.1.6 הגדרת הוראות לסוכן<a class="headerlink" href="#216" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>חזרו ל-<strong>Application Intake Agent</strong> על ידי בחירת לשונית <strong>Agents</strong>, ואז מצאו את פאנל <strong>Instructions</strong>.</p>
+</li>
+<li>
+<p>בשדה <strong>Instructions</strong>, הדביקו את ההנחיות הברורות הבאות עבור הסוכן המשני שלכם:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>You are tasked with managing incoming Resumes, Candidate information, and creating Job Applications.  
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Only use tools if the step exactly matches the defined process. Otherwise, indicate you cannot help.  
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Process for Resume Upload via Chat  
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>1. Upload Resume  
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  - Trigger only if /System.Activity.Attachments contains exactly one new resume.  
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  - If more than one file, instruct the user to upload one at a time and stop.  
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  - Call /Upload Resume once. Never upload more than once for the same message.  
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2. Post-Upload  
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  - Always output the [ResumeNumber] (R#####).  
+</span></code></pre></div>
+</li>
+<li>
+<p>כאשר ההוראות כוללות קו נטוי (/), בחרו את הטקסט אחרי הקו הנטוי ובחרו את השם המיושב. עשו זאת עבור:</p>
+<ul>
+<li><code>System.Activity.Attachments</code> (Variable)</li>
+<li><code>Upload Resume</code> (Tool)</li>
+</ul>
+<p><img alt="Edit the Instructions" src="../../../../../translated_images/2-application-agent-instructions.8840890a1fba22c38f04e35b13fa7ed83f72e9605d19a4eb661b51854daabd94.he.png" /></p>
+</li>
+<li>
+<p>בחרו <strong>Save</strong></p>
+</li>
+</ol>
+<h3 id="217-application-intake">2.1.7 בדיקת סוכן Application Intake שלכם<a class="headerlink" href="#217-application-intake" title="Permanent link">&para;</a></h3>
+<p>עכשיו נוודא שחבר התזמורת הראשון שלכם עובד כראוי.</p>
+<ol>
+<li>
+<p><strong>הורידו</strong> את <a href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/operative/sample-data/resumes&amp;filename=operative_sampledata">קורות החיים לבדיקה.</a></p>
+</li>
+<li>
+<p><strong>הפעילו</strong> את פאנל הבדיקה על ידי בחירת <strong>Test</strong>.</p>
+</li>
+<li>
+<p><strong>העלו</strong> שני קורות חיים בצ'אט הבדיקה, ותנו את ההודעה <code>Process these resumes</code></p>
+<ul>
+<li>הסוכן אמור להחזיר הודעה דומה ל-<em>ניתן להעלות רק קובץ קורות חיים אחד בכל פעם. אנא העלו קובץ אחד כדי להמשיך.</em></li>
+</ul>
+<p><img alt="Test multiple uploads" src="../../../../../translated_images/2-test-multi-uploads.eb8866589463dcadb5570aba720531f0670ebfa6464d57e87415a84d9934a973.he.png" /></p>
+</li>
+<li>
+<p>נסו להעלות <strong>רק קובץ קורות חיים אחד</strong>, עם ההודעה <code>Process this resume</code></p>
+<ul>
+<li>הסוכן אמור להחזיר הודעה דומה ל-<em>הקובץ של Avery Example הועלה בהצלחה. מספר הקובץ הוא R10026.</em></li>
+</ul>
+</li>
+<li>
+<p>במפת <strong>Activity map</strong>, אתם אמורים לראות את <strong>Application Intake Agent</strong> מטפל בהעלאת הקובץ.<br />
+<img alt="Upload Resume Activity Map" src="../../../../../translated_images/2-upload-activity-map.dd11a9d3e114f4f0a576408116d7ed89c6b144d8b4ac54a228c5247af036ecef.he.png" /></p>
+</li>
+<li>
+<p>נווטו ל-make.powerapps.com → ודאו שהסביבה שלכם נבחרה בפינה הימנית העליונה של בורר הסביבה.</p>
+</li>
+<li>
+<p>בחרו <strong>Apps</strong> → Hiring Hub → תפריט ellipsis(...) → <strong>Play</strong><br />
+<img alt="Open model driven app" src="../../../../../translated_images/2-open-model-driven-app.550a2b764d513db4836444dd616dd87909adf54f2a930891276943b1a6e0ec77.he.png" /></p>
+<p>הערה: אם כפתור ההפעלה אפור, זה אומר שלא פרסמתם את הפתרון שלכם ממשימה 01. בחרו <strong>Solutions</strong> → <strong>Publish all customizations</strong>.</p>
+</li>
+<li>
+<p>נווטו ל-<strong>Resumes</strong>, ובדקו שהקובץ הועלה ומכתב הכיסוי הוגדר בהתאם.<br />
+<img alt="Resume uploaded to Dataverse" src="../../../../../translated_images/2-resume-uploade.92a046941cd273a2597d47c593b158d158320fa5384c60907143dbe798a56644.he.png" /></p>
+</li>
+</ol>
+<h2 id="22">🧪מעבדה 2.2: הוספת סוכן מחובר להכנה לראיון<a class="headerlink" href="#22" title="Permanent link">&para;</a></h2>
+<p>עכשיו ניצור את הסוכן המחובר להכנה לראיון ונוסיף אותו לסוכן Hiring Agent הקיים שלכם.</p>
+<h3 id="221">2.2.1 יצירת סוכן ראיון מחובר<a class="headerlink" href="#221" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>נווטו</strong> ל-Copilot Studio. ודאו שהסביבה שלכם עדיין נבחרה בפינה הימנית העליונה של בורר הסביבה.</p>
+</li>
+<li>
+<p>פתחו את <strong>Hiring Agent</strong></p>
+</li>
+<li>
+<p>נווטו ללשונית Agent, ובחרו <strong>+ Add an agent</strong></p>
+</li>
+<li>
+<p>בחרו <strong>Connect an existing agent</strong> → <strong>Copilot Studio</strong></p>
+</li>
+<li>
+<p>בחרו <strong>+ New agent</strong></p>
+</li>
+</ol>
+<h3 id="222">2.2.2 הגדרת הגדרות בסיסיות<a class="headerlink" href="#222" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>בחרו בלשונית <strong>Configure</strong>, והזינו את המאפיינים הבאים:</p>
+<ul>
+<li><strong>Name</strong>: <code>Interview Agent</code></li>
+<li><strong>Description</strong>: <code>Assists with the interview process.</code></li>
+</ul>
+</li>
+<li>
+<p>הוראות:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>You are the Interview Agent. You help interviewers and hiring managers prepare for interviews. You never contact candidates. 
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Use Knowledge to help with interview preparation. 
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>The only valid identifiers are:
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  - ResumeNumber (ppa_resumenumber)→ format R#####
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  - CandidateNumber (ppa_candidatenumber)→ format C#####
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  - ApplicationNumber (ppa_applicationnumber)→ format A#####
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>  - JobRoleNumber (ppa_jobrolenumber)→ format J#####
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>Examples you handle
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  - Give me a summary of ...
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>  - Help me prepare to interview candidates for the Power Platform Developer role
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>  - Create interview assistance for the candidates for Power Platform Developer
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>  - Give targeted questions for Candidate Alex Johnson focusing on the criteria for the Job Application
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>How to work:
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    You are expected to ask clarification questions if required information for queries is not provided
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    - If asked for interview help without providing a job role, ask for it
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    - If asking for interview questions, ask for the candidate and job role if not provided.
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>General behavior
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>- Do not invent or guess facts
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>- Be concise, professional, and evidence-based
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>- Map strengths and risks to the highest-weight criteria
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>- If data is missing (e.g., no resume), state what is missing and ask for clarification
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>- Never address or message a candidate
+</span></code></pre></div>
+</li>
+<li>
+<p>החליפו <strong>Web Search</strong> ל-<strong>Disabled</strong></p>
+</li>
+<li>
+<p>בחרו <strong>Create</strong><br />
+<img alt="Create the Interview Agent" src="../../../../../translated_images/2-create-interview-agent.55051dc9cceec6614c7c0d685df6bebd85dcc4bde63fedab33558db47fd32ebd.he.png" /></p>
+</li>
+</ol>
+<h3 id="223">2.2.3 הגדרת גישה לנתונים ופרסום<a class="headerlink" href="#223" title="Permanent link">&para;</a></h3>
+<ol>
+<li>בסעיף <strong>Knowledge</strong>, בחרו <strong>+ Add knowledge</strong><br />
+<img alt="Add knowledge" src="../../../../../translated_images/2-interview-agent-add-knowledge.8a760ce46dc5253747785127c37f3bfe2ea5c60a5243a4c2ff0a63d0275d1c02.he.png" /></li>
+<li>בחרו <strong>Dataverse</strong><br />
+<img alt="Select Dataverse" src="../../../../../translated_images/2-interview-agent-add-knowledge-select-dataverse.1449c08b33f90f35c806071fb430c5e769a9d54d42b146a137404c63dc697d52.he.png" /></li>
+<li>בתיבת החיפוש, הקלידו <code>ppa_</code>. זהו הקידומת לטבלאות שייבאתם קודם.</li>
+<li><strong>בחרו</strong> את כל 5 הטבלאות (Candidate, Evaluation Criteria, Job Application, Job Role, Resume)</li>
+<li>בחרו <strong>Add to agent</strong><br />
+<img alt="Select Dataverse tables" src="../../../../../translated_images/2-interview-agent-add-knowledge-select-tables.1b8e5f6286f4d58555b4f3e5ee49de7ad559f21d1b6806a1253d7f0c84bf7ab8.he.png" /></li>
+<li>
+<p>בחרו את <strong>Settings</strong>, בסוכן הראיון, והגדירו את ההגדרות הבאות:</p>
+<ul>
+<li><strong>Let other agents connect to and use this one:</strong> <code>On</code></li>
+<li><strong>Use general knowledge</strong>: <code>Off</code></li>
+<li><strong>File uploads</strong>: <code>Off</code></li>
+<li><strong>Content moderation level:</strong> <code>Medium</code></li>
+<li>בחרו <strong>Save</strong></li>
+<li>בחרו <strong>Publish</strong>, והמתינו לסיום הפרסום.</li>
+</ul>
+</li>
+</ol>
+<h3 id="224-hiring">2.2.4 חיבור סוכן ההכנה לראיון לסוכן Hiring שלכם<a class="headerlink" href="#224-hiring" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>חזרו ל-<strong>Hiring Agent</strong></p>
+</li>
+<li>
+<p>בחרו בלשונית <strong>Agents</strong></p>
+</li>
+<li>
+<p>השתמשו ב-<strong>+Add an agent</strong> → <strong>Copilot Studio</strong>, כדי להוסיף את <strong>Interview Agent</strong>. הגדירו את התיאור להיות:
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Assists with the interview process and provides information about Resumes, Candidates, Job Roles, and Evaluation Criteria.
+</span></code></pre></div></p>
+<p><img alt="פרטי סוכן מחובר" src="../../../../../translated_images/2-add-connected-agent.1d8c42eb5dd78891649fef9771473f639eb7015c6bda76ac17e24093c359b6b1.he.png" />
+שימו לב שהאפשרות להעביר את היסטוריית השיחה לסוכן זה מסומנת. זה מאפשר לסוכן ההורה לספק הקשר מלא לסוכן המחובר.</p>
+</li>
+<li>
+<p>בחרו <strong>הוסף סוכן</strong></p>
+</li>
+<li>
+<p>ודאו שאתם רואים את <strong>סוכן קליטת הבקשות</strong> ואת <strong>סוכן הראיונות</strong>. שימו לב כיצד אחד מהם הוא סוכן ילד והשני הוא סוכן מחובר.<br />
+<img alt="סוכן ילד וסוכן מחובר" src="../../../../../translated_images/2-child-and-connected.d888e561872260dfa66c657d5b31f99f2a3e492c2ed62284e124c5b81af54e7b.he.png" /></p>
+</li>
+</ol>
+<h3 id="225">2.2.5 בדיקת שיתוף פעולה בין סוכנים<a class="headerlink" href="#225" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>פתחו</strong> את לוח הבדיקה על ידי בחירת <strong>בדיקה</strong>.</p>
+</li>
+<li>
+<p><strong>העלו</strong> אחד מקורות החיים לבדיקה, והזינו את התיאור הבא שמסביר לסוכן ההורה מה ניתן להאציל לסוכן המחובר:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Upload this resume, then show me open job roles, each with a description of the evaluation criteria, then use this to match the resume to at least one suitable job role even if not a perfect match.
+</span></code></pre></div>
+<p><img alt="בדיקת סוכנים מרובים" src="../../../../../translated_images/2-multi-agent-test.1e7c8e9dc283f220983f74a960f49b194d9e1c013c4369e33354c84411fc991c.he.png" /></p>
+</li>
+<li>
+<p>שימו לב כיצד סוכן הגיוס האציל את ההעלאה לסוכן הילד, ולאחר מכן ביקש מסוכן הראיונות לספק סיכום והתאמה לתפקיד באמצעות הידע שלו.<br />
+   נסו דרכים שונות לשאול שאלות על קורות חיים, תפקידים ומדדי הערכה.<br />
+<strong>דוגמאות:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Give me a summary of active resumes
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Summarize resume R10044
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Which active resumes are suitable for the Power Platform Developer role?
+</span></code></pre></div>
+</li>
+</ol>
+<h2 id="_24">🎉 משימה הושלמה<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h2>
+<p>עבודה מצוינת, סוכן! <strong>מבצע סימפוניה</strong> הושלם. הצלחתם להפוך את סוכן הגיוס היחיד שלכם לתזמורת רב-סוכנים מתוחכמת עם יכולות מתמחות.</p>
+<p>הנה מה שהשגתם במשימה זו:</p>
+<p><strong>✅ שליטה בארכיטקטורה רב-סוכנים</strong><br />
+כעת אתם מבינים מתי להשתמש בסוכנים ילדים מול סוכנים מחוברים וכיצד לעצב מערכות שמתרחבות.</p>
+<p><strong>✅ סוכן ילד לקליטת בקשות</strong><br />
+הוספתם סוכן ילד מתמחה לסוכן הגיוס שלכם שמטפל בקורות חיים, מוציא נתוני מועמדים ושומר מידע ב-Dataverse.</p>
+<p><strong>✅ סוכן מחובר להכנת ראיונות</strong><br />
+יצרתם סוכן מחובר לשימוש חוזר להכנת ראיונות וחיברתם אותו בהצלחה לסוכן הגיוס שלכם.</p>
+<p><strong>✅ תקשורת בין סוכנים</strong><br />
+ראיתם כיצד הסוכן הראשי שלכם יכול לתאם עם סוכנים מתמחים, לשתף הקשר ולנהל תהליכים מורכבים.</p>
+<p><strong>✅ בסיס לאוטונומיה</strong><br />
+מערכת הגיוס המשופרת שלכם מוכנה כעת לתכונות מתקדמות שנוסיף במשימות הבאות: טריגרים אוטונומיים, ניהול תוכן וחשיבה מעמיקה.</p>
+<p>🚀<strong>הבא בתור:</strong> במשימה הבאה תלמדו כיצד להגדיר את הסוכן שלכם לעיבוד אוטונומי של קורות חיים מתוך מיילים!</p>
+<p>⏩<a href="../03-automate-triggers/">עברו למשימה 03: אוטומציה של הסוכן עם טריגרים</a></p>
+<h2 id="_25">📚 משאבים טקטיים<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-add-other-agents?WT.mc_id=power-182762-scottdurow">הוספת סוכנים אחרים (תצוגה מקדימה)</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-plugin-actions?WT.mc_id=power-182762-scottdurow">הוספת כלים לסוכנים מותאמים אישית</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/knowledge-add-dataverse?WT.mc_id=power-182762-scottdurow">עבודה עם Dataverse ב-Copilot Studio</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/flows-overview?WT.mc_id=power-182762-scottdurow">סקירה כללית של זרימות סוכנים</a></p>
+<p>📖 <a href="https://learn.microsoft.com/power-platform/alm/solution-concepts-alm?WT.mc_id=power-182762-scottdurow">יצירת פתרון</a></p>
+<p>📖 <a href="https://learn.microsoft.com/power-platform/alm/overview-alm?WT.mc_id=power-182762-scottdurow">מדריך ALM לפתרונות Power Platform</a></p>
+<p>📺 <a href="https://youtu.be/d-oD3pApHAg?si=rwIHKhJTkjSvhTHw">שיתוף פעולה בין סוכנים ב-Copilot Studio</a></p>
+<hr />
+<p><strong>הצהרת אחריות</strong>:<br />
+מסמך זה תורגם באמצעות שירות תרגום AI <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי אנושי. איננו אחראים לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

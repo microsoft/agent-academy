@@ -1,0 +1,1118 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/fi/docs/recruit/06-create-agent-from-conversation/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tehtava-06-luo-mukautettu-agentti-luonnollisella-kielella-copilotilla-ja-yhdista-se-omaan-dataasi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#koodinimi-operation-agent-forge" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ Koodinimi: OPERATION AGENT FORGE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tehtavan-kuvaus" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Tehtävän kuvaus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tavoitteet" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Tavoitteet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mika-on-mukautettu-agentti" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Mikä on mukautettu agentti?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kayta-luonnollista-kielta-agenttien-luomiseen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗣️ Käytä luonnollista kieltä agenttien luomiseen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mutta-olen-uusi-kuvailemaan-mita-haluan-mita-teen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌱 Mutta olen uusi "kuvailemaan mitä haluan" - mitä teen?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ok-olen-luonut-agenttini-miten-yhdistan-sen-tietoon" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔮 OK, olen luonut agenttini... miten yhdistän sen tietoon?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tietolahteiden-tyypit-jotka-voidaan-lisata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tietolähteiden tyypit, jotka voidaan lisätä
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#huomio-turvallisuudesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔒 Huomio turvallisuudesta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agentin-vastausten-parantaminen-copilot-studiossa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agentin vastausten parantaminen Copilot Studiossa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#labra-06-luo-mukautettu-agentti-copilot-studiossa" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Labra 06: Luo mukautettu agentti Copilot Studiossa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tehtava-suoritettu" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Tehtävä suoritettu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taktiset-resurssit" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Taktiset resurssit
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "180f9cc0b40527f61be092c9b0f72aba",
+  "translation_date": "2025-10-17T01:33:57+00:00",
+  "source_file": "docs/recruit/06-create-agent-from-conversation/README.md",
+  "language_code": "fi"
+}
+-->
+<h1 id="tehtava-06-luo-mukautettu-agentti-luonnollisella-kielella-copilotilla-ja-yhdista-se-omaan-dataasi">🚨 Tehtävä 06: Luo mukautettu agentti luonnollisella kielellä Copilotilla ja yhdistä se omaan dataasi<a class="headerlink" href="#tehtava-06-luo-mukautettu-agentti-luonnollisella-kielella-copilotilla-ja-yhdista-se-omaan-dataasi" title="Permanent link">&para;</a></h1>
+<h2 id="koodinimi-operation-agent-forge">🕵️‍♂️ Koodinimi: <code>OPERATION AGENT FORGE</code><a class="headerlink" href="#koodinimi-operation-agent-forge" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operaatioaika:</strong> <code>~75 minuuttia</code></p>
+</blockquote>
+<p>🎥 <strong>Katso opastusvideo</strong></p>
+<p><a href="https://www.youtube.com/watch?v=qZTtQVncGFg" title="Katso opastus YouTubessa"><img alt="Luo mukautettu agentti videon pikkukuva" src="../../../../../translated_images/video-thumbnail.9d5fddc1190fd4a04537488795821ac2f88fdcfe00e017f6e575a33f724e39cb.fi.jpg" /></a></p>
+<h2 id="tehtavan-kuvaus">🎯 Tehtävän kuvaus<a class="headerlink" href="#tehtavan-kuvaus" title="Permanent link">&para;</a></h2>
+<p>Tervetuloa takaisin, Agent Maker. Tässä tehtävässä pääset hyödyntämään Copilot Studion tehokkainta ominaisuutta - luomaan mukautetun agentin alusta alkaen pelkästään luonnollisella kielellä… ja vahvistamaan sitä omalla datallasi.</p>
+<p>Tämä ei ole vain tavallinen chatbot. Olet rakentamassa tietoon perustuvaa digitaalista työtoveria - sellaista, joka osaa järkeillä, vastata ja viitata todelliseen yritystietoon.</p>
+<p>Työkalusi? Luonnollinen kieli. Tehtäväsi? Suunnitella, kouluttaa ja testata täysin mukautettu IT-tukipalveluagentti, joka vastaa kysymyksiin SharePointin, ladattujen tiedostojen tai yrityksen URL-osoitteiden avulla.</p>
+<p>Rakennetaan agentti alusta alkaen.</p>
+<h2 id="tavoitteet">🔎 Tavoitteet<a class="headerlink" href="#tavoitteet" title="Permanent link">&para;</a></h2>
+<p>Tässä tehtävässä opit:</p>
+<ol>
+<li>Ymmärtämään, mitä mukautetut agentit ovat ja miten ne eroavat valmiista malleista</li>
+<li>Luomaan agentteja luonnollisen kielen kehotteiden ja keskustelusuunnittelun avulla Copilotilla</li>
+<li>Yhdistämään agentit yrityksen tietolähteisiin, kuten SharePointiin, dokumentteihin ja verkkosivustoihin</li>
+<li>Oppimaan generatiivisesta orkestroinnista ja siitä, miten agentit etsivät ja vastaavat dynaamisesti useista tietolähteistä</li>
+<li>Rakentamaan ja testaamaan täysin toimivan IT-tukipalveluagentin, joka voi vastata kysymyksiin omasta datastasi</li>
+</ol>
+<h2 id="mika-on-mukautettu-agentti">🤔 Mikä on <em>mukautettu</em> agentti?<a class="headerlink" href="#mika-on-mukautettu-agentti" title="Permanent link">&para;</a></h2>
+<p>Mukautettu agentti on chatbot tai virtuaaliassistentti, jonka luot ja suunnittelet Copilot Studiossa auttamaan käyttäjiä tietyissä tehtävissä tai kysymyksissä. Sitä kutsutaan mukautetuksi, koska:</p>
+<ul>
+<li><strong>Sinä päätät tarkoituksen</strong> - autat käyttäjiä pyytämään lomaa, tarkistamaan tilauksen tilan, tarjoamaan apua IT-kysymyksissä.</li>
+<li><strong>Sinä määrität keskustelun</strong> - mitä agentti sanoo ja miten sen pitäisi vastata.</li>
+<li><strong>Sinä yhdistät sen omaan dataasi</strong> - yhdistä yrityksesi data sisäänrakennettujen tietolähteiden avulla.</li>
+<li><strong>Sinä yhdistät sen omiin järjestelmiisi tai sovelluksiisi</strong> - valitse liittimet, työnkulut, REST-rajapinnat ja mallikontekstiprotokollapalvelimet.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ajattele sitä näin: rakennat oman digitaalisen avustajan, joka voi keskustella käyttäjien kanssa ja suorittaa tehtäviä heidän puolestaan, kuten vastata kysymyksiin, kerätä prosessiin tarvittavaa tietoa tai yhdistää yrityksesi dataan.</p>
+</div>
+<h3 id="mita-mukautettu-agentti-voi-tehda">🤖 Mitä mukautettu agentti voi tehdä?<a class="headerlink" href="#mita-mukautettu-agentti-voi-tehda" title="Permanent link">&para;</a></h3>
+<p>Mukautettu agentti voi tehdä seuraavaa:</p>
+<ul>
+<li>Kysyä käyttäjiltä tietoja, kuten nimiä, päivämääriä tai mieltymyksiä.</li>
+<li>Tallentaa tiedot tietokantaan tai taulukkoon.</li>
+<li>Etsiä tietoa kysymysten perusteella ja vastata niihin.</li>
+<li>Työskennellä itsenäisesti ilman, että käyttäjät ovat suoraan vuorovaikutuksessa agentin kanssa.</li>
+<li>Käynnistää toimintoja joko käyttäjän pyynnöstä tai itsenäisesti, kuten lähettää sähköposteja tai luoda tietueita.</li>
+</ul>
+<h3 id="miksi-kayttaa-mukautettua-agenttia">👩🏻‍💻 Miksi käyttää mukautettua agenttia?<a class="headerlink" href="#miksi-kayttaa-mukautettua-agenttia" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Säästää aikaa automatisoimalla toistuvia tehtäviä.</li>
+<li>Tarjoaa käyttäjille ystävällisen ja ohjatun kokemuksen.</li>
+<li>Räätälöi sen yrityksesi tai projektisi tarpeisiin.</li>
+</ul>
+<h3 id="esimerkki">✨ Esimerkki<a class="headerlink" href="#esimerkki" title="Permanent link">&para;</a></h3>
+<p>Rakennat mukautetun agentin, joka auttaa työntekijöitä pyytämään lomaa.</p>
+<p>Se kysyy heidän nimensä, lomapäivämäärät ja heidän esimiehensä nimen, ja tallentaa tiedot järjestelmään, joka hallinnoi lomapyyntöjä, kuten SharePoint-listaan.</p>
+<p>Nyt työntekijät voivat keskustella agentin kanssa sen sijaan, että navigoisivat SharePoint-listaan ja luovat uuden kohteen.</p>
+<h2 id="kayta-luonnollista-kielta-agenttien-luomiseen">🗣️ Käytä luonnollista kieltä agenttien luomiseen<a class="headerlink" href="#kayta-luonnollista-kielta-agenttien-luomiseen" title="Permanent link">&para;</a></h2>
+<p>Aiemmin opit, kuinka nopeasti voit rakentaa agentteja Copilot Studiossa valmiiden agenttimallien avulla <a href="../05-using-prebuilt-agents/">Oppitunnilla 05 - Aloita nopeasti valmiiden agenttien avulla</a>. Tässä oppitunnissa sukellamme Copilotin keskusteluluomiskokemukseen. Copilot Studio tekee agenttien rakentamisesta helppoa keskustelemalla Copilotin kanssa, aivan kuin kävisit keskustelua.</p>
+<p>Copilot Studiossa sinun ei tarvitse kirjoittaa koodia luodaksesi agentin. Sen sijaan kuvailet, mitä haluat agenttisi tekevän, ja Copilot auttaa sinua rakentamaan sen askel askeleelta keskustelun kautta.</p>
+<h2 id="mutta-olen-uusi-kuvailemaan-mita-haluan-mita-teen">🌱 Mutta olen uusi "kuvailemaan mitä haluan" - mitä teen?<a class="headerlink" href="#mutta-olen-uusi-kuvailemaan-mita-haluan-mita-teen" title="Permanent link">&para;</a></h2>
+<p>Mukautetun agentin luominen luonnollisella kielellä voi olla sinulle uusi konsepti. Aina kun käytät Copilotia Microsoftin tuotteissa ja palveluissa, käytät luonnollista kieltä muodossa <em>kehotus</em>.</p>
+<p>Kehotus on viesti tai ohje, jonka annat tekoälyagentille kertoaksesi, mitä haluat sen tekevän. Ajattele sitä kuin antaisit ohjeita avustajalle. Mitä selkeämmät ohjeesi ovat, sitä helpompi avustajan on ymmärtää ja toimia niiden mukaan.</p>
+<h3 id="miksi-kehotukset-ovat-tarkeita">🪄 Miksi kehotukset ovat tärkeitä<a class="headerlink" href="#miksi-kehotukset-ovat-tarkeita" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ne ohjaavat agentin käyttäytymistä.</li>
+<li>Ne auttavat agenttia ymmärtämään, millainen keskustelu sen tulisi käydä.</li>
+<li>Hyvä kehotus tekee agentista hyödyllisemmän ja tarkemman.</li>
+</ul>
+<h3 id="vinkkeja-hyvan-kehotuksen-kirjoittamiseen">📝 Vinkkejä hyvän kehotuksen kirjoittamiseen<a class="headerlink" href="#vinkkeja-hyvan-kehotuksen-kirjoittamiseen" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ole selkeä ja tarkka - kerro täsmälleen, mitä haluat agentin tekevän.</li>
+<li>Ajattele kuin käyttäjä - mitä käyttäjä sanoo? Mitä agentin pitäisi vastata?</li>
+<li>Sisällytä esimerkkejä - jos mahdollista, anna näytekeskustelu.</li>
+</ul>
+<h3 id="esimerkki_1">✨ Esimerkki<a class="headerlink" href="#esimerkki_1" title="Permanent link">&para;</a></h3>
+<p>HR-tiimi tarvitsee agentin auttamaan lomapyyntöjen kanssa.</p>
+<p>Kehotus voisi olla:</p>
+<div class="language-text highlight"><pre><span></span><code>“Haluan rakentaa agentin, joka auttaa käyttäjiä lähettämään lomapyyntöjä. Kun käyttäjä sanoo haluavansa pyytää lomaa, agentin tulisi kysyä heidän nimensä, loman alkamispäivämäärä, loman päättymispäivämäärä ja heidän esimiehensä nimi. Kun käyttäjä antaa nämä tiedot, agentin tulisi tallentaa ne SharePoint-listaan nimeltä ‘Lomapyyntöjä’ ja lähettää ilmoitus omistettuun Microsoft Teams -kanavaan.”
+</code></pre></div>
+<p>Miksi tämä kehotus toimii:</p>
+<ul>
+<li><strong>Määrittelee tavoitteen selkeästi</strong> - lähettää lomapyyntö</li>
+<li><strong>Kuvailee käyttäjän vuorovaikutuksen</strong> - mitä käyttäjä sanoo ja mitä agentin tulisi kysyä</li>
+<li><strong>Listaa tarvittavat tiedot</strong> - nimi, alkamispäivämäärä, päättymispäivämäärä, esimies</li>
+<li><strong>Mainitsee, minne tiedot menevät</strong> - SharePoint-listaan nimeltä Lomapyyntöjä</li>
+</ul>
+<h2 id="ok-olen-luonut-agenttini-miten-yhdistan-sen-tietoon">🔮 OK, olen luonut agenttini... miten yhdistän sen tietoon?<a class="headerlink" href="#ok-olen-luonut-agenttini-miten-yhdistan-sen-tietoon" title="Permanent link">&para;</a></h2>
+<p>Copilot Studiossa tietolähteet ovat paikkoja, joista agenttisi voi löytää tietoa antaakseen parempia vastauksia. Kun lisäät nämä lähteet, agenttisi voi tuoda yrityksesi dataa paikoista, kuten Power Platform, Dynamics 365, verkkosivustot ja muut järjestelmät tai palvelut, joita yrityksesi käyttää.</p>
+<p>Nämä lähteet toimivat yhdessä tekoälyn kanssa auttaakseen agenttiasi vastaamaan tarkemmin käyttäjien kysymyksiin, mikä saavutetaan niin sanotun <strong>generatiivisen orkestroinnin</strong> avulla.</p>
+<h3 id="mita-generatiivinen-orkestrointi-tarkoittaa-agenttien-yhteydessa">🌿 Mitä generatiivinen orkestrointi tarkoittaa agenttien yhteydessä?<a class="headerlink" href="#mita-generatiivinen-orkestrointi-tarkoittaa-agenttien-yhteydessa" title="Permanent link">&para;</a></h3>
+<p>Generatiivinen orkestrointi tarkoittaa, että agentti käyttää tekoälyä päättääkseen dynaamisesti, miten vastata kysymykseen yhdistämällä sisäänrakennetut kielitaidot lisättyjen tietolähteiden informaatioon.</p>
+<p>Kun käyttäjä kysyy kysymyksen, agentti:</p>
+<ul>
+<li>Ymmärtää kysymyksen tekoälyn avulla.</li>
+<li>Voi kysyä käyttäjiltä puuttuvia tietoja luomalla kysymyksiä lennossa.</li>
+<li>Valitsee relevantit tietolähteet.</li>
+<li>Etsii vastauksia näistä lähteistä.</li>
+<li>Luo luonnollisen, hyödyllisen vastauksen löytämänsä tiedon perusteella.</li>
+</ul>
+<h3 id="miksi-tietolahteet-ovat-tarkeita">🏦 Miksi tietolähteet ovat tärkeitä?<a class="headerlink" href="#miksi-tietolahteet-ovat-tarkeita" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Älykkäämmät vastaukset</strong> - kun lisäät tietolähteitä, agenttisi voi antaa parempia, tarkempia vastauksia käyttäen organisaatiosi todellista dataa.</p>
+</li>
+<li>
+<p><strong>Vähemmän manuaalista työtä</strong> - sinun ei tarvitse kirjoittaa jokaista mahdollista vastausta. Agentti voi etsiä lisätyistä lähteistä ja vastata automaattisesti.</p>
+</li>
+<li>
+<p><strong>Käytä luotettavaa tietoa</strong> - agenttisi voi hakea vastauksia järjestelmistä, joita jo käytät, kuten Dataverse, SharePoint tai yrityksen verkkosivustot, jotta käyttäjät saavat luotettavaa tietoa.</p>
+</li>
+<li>
+<p><strong>Toimii generatiivisen tekoälyn kanssa</strong> - tietolähteet ja tekoäly auttavat agenttiasi ymmärtämään kysymyksiä ja vastaamaan luonnollisesti, vaikka kysymystä ei olisi ohjelmoitu etukäteen tai lisätty aloituskehotteeksi.</p>
+</li>
+<li>
+<p><strong>Joustava ja laajennettavissa</strong> - voit lisätä tietolähteitä milloin tahansa asennuksen aikana tai myöhemmin, jolloin agenttisi kehittyy tarpeidesi mukaan.</p>
+</li>
+</ol>
+<h3 id="esimerkki_2">✨ Esimerkki<a class="headerlink" href="#esimerkki_2" title="Permanent link">&para;</a></h3>
+<p>Kuvittele, että rakennat agentin auttamaan työntekijöitä HR-kysymyksissä. Lisäät yrityksesi HR-politiikkadokumentin ja SharePoint-sivuston tietolähteiksi.</p>
+<p>Kun työntekijä kysyy, <em>“Kuinka monta lomapäivää minulla on oikeus saada?”</em>, agentti käyttää generatiivista orkestrointia etsiäkseen näistä lähteistä ja vastatakseen oikealla politiikalla ilman, että sinun tarvitsee kirjoittaa vastausta manuaalisesti. Tämä säästää aikaa, koska sinun ei tarvitse huomioida jokaista mahdollista kysymystä, jonka työntekijä voi esittää oikeuksistaan.</p>
+<h2 id="tietolahteiden-tyypit-jotka-voidaan-lisata">Tietolähteiden tyypit, jotka voidaan lisätä<a class="headerlink" href="#tietolahteiden-tyypit-jotka-voidaan-lisata" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Julkiset verkkosivustot</strong></p>
+<ul>
+<li><strong>Mitä se tekee:</strong> Etsii tietoa tietyiltä verkkosivustoilta (kuten yrityksesi sivustolta) Bingin avulla.</li>
+<li><strong>Miksi se on hyödyllinen:</strong> Erinomainen julkisten tietojen, kuten usein kysyttyjen kysymysten tai tuote-esittelyjen, tuomiseen.</li>
+</ul>
+</li>
+<li>
+<p><strong>Dokumentit</strong></p>
+<ul>
+<li><strong>Mitä se tekee:</strong> Käyttää dokumentteja, jotka lataat suoraan agentillesi, kuten PDF- tai Word-tiedostoja. Nämä ladatut tiedostot tallennetaan turvallisesti Dataverseen.</li>
+<li><strong>Miksi se on hyödyllinen:</strong> Mahdollistaa agentin vastaamaan kysymyksiin sisäisten oppaiden, käsikirjojen tai politiikkojen perusteella.</li>
+</ul>
+</li>
+<li>
+<p><strong>SharePoint</strong></p>
+<ul>
+<li><strong>Mitä se tekee:</strong> Yhdistää SharePoint-kansioihin tai tiedostoihin Microsoft Graph Searchin avulla.</li>
+<li><strong>Miksi se on hyödyllinen:</strong> Ihanteellinen tiimidokumenttien, HR-politiikkojen tai projektitiedostojen käyttämiseen, jotka on tallennettu SharePointiin.</li>
+</ul>
+</li>
+<li>
+<p><strong>Dataverse</strong></p>
+<ul>
+<li><strong>Mitä se tekee:</strong> Käyttää rakenteellista dataa Dataverse-ympäristön taulukoista ja riveistä, ja voi soveltaa synonyymejä ja sanastomääritelmiä taulukoille ja sarakkeille parantaakseen agentin vastauksia.</li>
+<li><strong>Miksi se on hyödyllinen:</strong> Kun tarvitset yritysdatan hakemista Dataversesta, kuten asiakastietoja.</li>
+</ul>
+</li>
+<li>
+<p><strong>Reaaliaikainen tieto liittimillä</strong></p>
+<ul>
+<li><strong>Mitä se tekee:</strong> Mahdollistaa agentin pääsyn reaaliaikaiseen dataan muista yritysjärjestelmistä, kuten Salesforce, ServiceNow, Dynamics 365, AzureSQL, Databricks ja enemmän keskustelun aikana käyttäjän omilla käyttöoikeuksilla.</li>
+<li><strong>Miksi se on hyödyllinen:</strong> Tarjoaa ajankohtaisia, turvallisia ja tarkkoja vastauksia ilman datan tallentamista tai kopioimista, tehden agentista älykkäämmän ja turvallisemman.</li>
+</ul>
+</li>
+<li>
+<p><strong>Azure AI Search</strong></p>
+<ul>
+<li><strong>Mitä se tekee:</strong> Mahdollistaa agentin hakemisen suurista dokumenttijoukoista, jotka on tallennettu Azureen, käyttäen semanttista ja vektorihakua ymmärtääkseen käyttäjän kysymyksiä.</li>
+<li><strong>Miksi se on hyödyllinen:</strong> Toimittaa tarkkoja, luotettavia vastauksia monimutkaisista tietolähteistä, tukee viittauksia ja skaalautuu hyvin suurille dokumenttikokoelmille turvallisilla käyttöoikeuksilla.</li>
+</ul>
+</li>
+</ol>
+<h2 id="huomio-turvallisuudesta">🔒 Huomio turvallisuudesta<a class="headerlink" href="#huomio-turvallisuudesta" title="Permanent link">&para;</a></h2>
+<h3 id="tietolahteiden-autentikointi">Tietolähteiden autentikointi<a class="headerlink" href="#tietolahteiden-autentikointi" title="Permanent link">&para;</a></h3>
+<p>Jotkut lähteet, kuten SharePoint ja Dataverse, vaativat käyttäjän autentikointia. Tämä tarkoittaa, että agentti viittaa vastauksissaan vain dataan, jonka käyttäjä saa nähdä. Muilla lähteillä voi olla lisäasetuksia, jotka vaaditaan agentin yhdistämiseksi, kuten Azure AI Search, joka vaatii Azure-tilin ja autentikointityypin määrittämisen.</p>
+<h2 id="agentin-vastausten-parantaminen-copilot-studiossa">Agentin vastausten parantaminen Copilot Studiossa<a class="headerlink" href="#agentin-vastausten-parantaminen-copilot-studiossa" title="Permanent link">&para;</a></h2>
+<p>Kun agenttisi on luotu keskusteluluomiskokemuksen kautta, haluat testata sen antamia vastauksia kehotteesi perusteella. Agentin vastausten parantaminen Copilot Studiossa tarkoittaa sitä, että varmistat sen ymmärtävän tavoitteesi selkeästi ja että sillä on oikea tieto käytettävissään.</p>
+<ol>
+<li>
+<p><strong>Tarkenna agentin ohjeita</strong> - tässä kerrot agentille, miten sen tulisi käyttäytyä. Käytä selkeää ja tarkkaa kieltä.</p>
+<p>Esimerkiksi:</p>
+<p>✅ “Toimi kuin ystävällinen asiakastukihenkilö, joka selittää asiat yksinkertaisesti.”</p>
+<p>❌ “Ole avulias.” (Liian epämääräinen)</p>
+</li>
+<li>
+<p><strong>Tarkista sävy ja kieli</strong> - varmista, että agentin sävy vastaa kohdeyleisöäsi.</p>
+<p>Voit asettaa sen olemaan:</p>
+<ul>
+<li>Ystävällinen ja rento.</li>
+<li>Ammattimainen ja ytimekäs.</li>
+<li>Tukevainen ja kärsivällinen.</li>
+</ul>
+</li>
+<li>
+<p><strong>Lisää tai päivitä tietolähteitä</strong> - jos agenttisi tarvitsee vastata kysymyksiin tietystä aiheesta, varmista, että sillä on pääsy oikeaan tietoon.</p>
+<ul>
+<li>Lisää linkkejä verkkosivustoihin, dokumentteihin tai usein kysyttyihin kysymyksiin.</li>
+<li>Pidä sisältö ajan tasalla.</li>
+<li>Käytä selkeää, hyvin jäsenneltyä tietoa.</li>
+</ul>
+</li>
+<li>
+<p><strong>Käytä aiheita ja laukaisimia</strong> - Jos agenttisi tarvitsee käsitellä tiettyjä tehtäviä tai keskusteluja, voit luoda aiheita laukaisulausekkeilla. Tämä auttaa ohjaamaan keskustelua tarkemmin. Opimme tästä lisää seuraavassa oppitunnissa.</p>
+</li>
+<li>
+<p><strong>Testaa oikeilla kysymyksillä</strong> - kokeile kysyä agentiltasi sellaisia kysymyksiä, joita käyttäjät saattavat kysyä.</p>
+<p>Jos vastaukset eivät ole hyviä:</p>
+<ul>
+<li>Säädä järjestelmäohjeita.</li>
+<li>Lisää enemmän esimerkkejä tai tietoa.</li>
+<li>Muotoile kysymyksesi uudelleen nähdäksesi, miten se vastaa.</li>
+</ul>
+</li>
+<li>
+<p><strong>Arvioi ja kehitä</strong> - agentin parantaminen on jatkuva prosessi!</p>
+<p>Julkaisun jälkeen:</p>
+<ul>
+<li>Kerää palautetta käyttäjiltä.</li>
+<li>Tarkkaile yleisiä kysymyksiä tai epäselvyyksiä.</li>
+<li>Jatka agentin asetusten hienosäätöä.</li>
+</ul>
+</li>
+</ol>
+<h2 id="labra-06-luo-mukautettu-agentti-copilot-studiossa">🧪 Labra 06: Luo mukautettu agentti Copilot Studiossa<a class="headerlink" href="#labra-06-luo-mukautettu-agentti-copilot-studiossa" title="Permanent link">&para;</a></h2>
+<p>Nyt opimme, kuinka luoda mukautettu agentti, joka voi keskustella datasi kanssa</p>
+<ul>
+<li><a href="../../../../../docs/recruit/06-create-agent-from-conversation">6.1 Käytä luonnollista kieltä agentin luomiseen Copilotilla</a></li>
+<li><a href="../../../../../docs/recruit/06-create-agent-from-conversation">6.2 Lisää sisäinen tietolähde SharePoint-sivuston avulla</a></li>
+<li>[6.3 Lisää sisäinen tietolähde lataamalla dokumentti](#63-add-an-internal
+Käytämme samaa käyttötapausta kuin <a href="../03-create-a-declarative-agent-for-M365Copilot/#use-case-scenario">Oppitunti 03 - Luo deklaratiivinen agentti Microsoft 365 Copilotille</a></li>
+</ul>
+<p><strong>Työntekijänä</strong></p>
+<p><strong>Haluan</strong> saada nopeaa ja tarkkaa apua IT-tukihenkilöltä ongelmiin, kuten laiteongelmiin, verkon vianmääritykseen, tulostimen asennukseen</p>
+<p><strong>Jotta voin</strong> pysyä tuottavana ja ratkaista tekniset ongelmat viivytyksettä</p>
+<p>Aloitetaan!</p>
+<h3 id="esivaatimukset">✨ Esivaatimukset<a class="headerlink" href="#esivaatimukset" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>SharePoint-sivusto</strong></li>
+</ul>
+<p>Käytämme <strong>Contoso IT</strong> SharePoint-sivustoa oppitunnista <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Oppitunti 00 - Kurssin asennus - Vaihe 3: Luo uusi SharePoint-sivusto</a>.</p>
+<p>Jos et ole vielä luonut <strong>Contoso IT</strong> SharePoint-sivustoa, palaa takaisin oppituntiin <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Oppitunti 00 - Kurssin asennus - Vaihe 3: Luo uusi SharePoint-sivusto</a>.</p>
+<ul>
+<li><strong>Ratkaisu</strong></li>
+</ul>
+<p>Käytämme <strong>Contoso Helpdesk Agent</strong> -ratkaisua oppitunnista <a href="../04-creating-a-solution/#41-create-a-solution-publisher">Oppitunti 04 - Ratkaisun luominen agentillesi</a>.</p>
+<p>Jos et ole vielä luonut <strong>Contoso Agent</strong> -ratkaisua, palaa takaisin oppituntiin <a href="../04-creating-a-solution/#41-create-a-solution-publisher">Oppitunti 04 - Ratkaisun luominen agentillesi</a>.</p>
+<h3 id="61-luo-agentti-luonnollisella-kielella-copilotin-avulla">6.1 Luo agentti luonnollisella kielellä Copilotin avulla<a class="headerlink" href="#61-luo-agentti-luonnollisella-kielella-copilotin-avulla" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Copilot-kysymykset voivat vaihdella eri istunnoissa</p>
+<p>Copilotin keskusteluluontikokemus voi vaihdella, ja tarjotut ohjaavat kysymykset voivat olla hieman erilaisia kuin aiemmin.</p>
+</div>
+<ol>
+<li>
+<p>Siirry Copilot Studion etusivulle ja kirjoita kenttään seuraava kehotus, joka kuvaa IT-tukihenkilöagenttia. Kehotus sisältää agentin tavoitteen, kontekstin, odotetut tehtävät ja agentin vastausten muodon.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are an IT help desk agent. Your goal is to assist users with their IT issues. You can access information from our company&#39;s knowledge base at https://support.microsoft.com/en-us. Your responses should be polite and helpful. If a user reports a slow computer, ask about the age of the device, current software versions, and if they&#39;ve recently installed any new programs. If a user is experiencing trouble logging into their email, guide them through password reset procedures. You should be concise and informative, using step-by-step instructions with bullet points when appropriate.
+</span></code></pre></div>
+<p><img alt="Kirjoita kehotus" src="../../../../../translated_images/6.1_01_Prompt.c4be2ff2cac9fde3659f2e7016e48f01860b55523d3320b3b8450ef2fcb1f51a.fi.png" /></p>
+</li>
+<li>
+<p>Seuraavaksi latautuu Copilotin keskusteluluontikokemus. Näet, että Copilot käsittelee vastausta.</p>
+<p><img alt="Copilotin keskusteluluontikokemus latautuu" src="../../../../../translated_images/6.1_02_ConversationalCreationExperienceLoads.115eaf4e5a15c1b60bc0d25c97a0d97d462d6c740cfed5de369b2bd8fd1cc8bc.fi.png" /></p>
+</li>
+<li>
+<p>Copilot vahvistaa, että agentti on asetettu annettujen ohjeiden mukaisesti, ja pyytää vahvistusta agentin nimestä. Pyydämme Copilotia nimeämään agenttimme seuraavasti:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Contoso Helpdesk Agent
+</span></code></pre></div>
+<p><img alt="Nimeä agentti uudelleen" src="../../../../../translated_images/6.1_03_AgentName.a848acea10cd1d3d6ba68fea2b0e094ecbd130a124413e3c8134198c81654833.fi.png" /></p>
+</li>
+<li>
+<p>Copilot suorittaa pyynnön, ja näemme, että agentin nimi on päivitetty agenttipaneelissa. Seuraavaksi Copilot pyytää meitä tarkentamaan ohjeita. Se kysyy, miten meidän tulisi vastata tiettyihin ongelmiin, ja pyydämme, että se tunnistaa ongelman, antaa esimerkkejä aiheista ja muotoilee vastauksen luettelomerkein.</p>
+<p>Kopioi ja liitä seuraava teksti ja lähetä pyyntö Copilotille.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Priorisoi kiireelliset pyynnöt. Esimerkkejä IT-ongelmista tai skenaarioista, joissa auttaa: laiteongelmat, verkkoyhteysongelmat, kirjautumisongelmat. Vianmäärityksessä tunnista ensin heidän ongelmansa ja vastaa empaattisesti, sitten anna vaiheittaiset ohjeet luettelomerkein ja kysy, tarvitsevatko he lisäapua.
+</span></code></pre></div>
+<p><img alt="Tarkenna agentin ohjeita" src="../../../../../translated_images/6.1_04_RefineInstructions.9575407dbc12e0399691068d20e0d0252bb8b8f839cf53ee9d715fe2c16afa70.fi.png" /></p>
+</li>
+<li>
+<p>Agentin ohjeet päivitetään sen jälkeen, kun Copilot on vastaanottanut pyynnön. Huomaa, että oikealla puolella olevassa paneelissa näkyy nyt aloituskehotuksia. Nämä on muodostettu ohjeidemme perusteella.</p>
+<p>Seuraavaksi Copilot pyytää julkisia verkkosivustoja agentin tiedon pohjaksi.</p>
+<p>Kopioi ja liitä seuraava teksti ja lähetä pyyntö Copilotille.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>https://support.microsoft.com
+</span></code></pre></div>
+<p><img alt="Lisää julkisesti saatavilla oleva verkkosivusto" src="../../../../../translated_images/6.1_05_KnowledgeSource.3aec8d869b73d273f88c62cf99bb2f731df83a83c1ca54d92d6e96b86a570637.fi.png" /></p>
+</li>
+<li>
+<p>Julkinen verkkosivusto lisätään tiedon lähteeksi. Copilot kysyy, halutaanko lisätä muita tiedon lähteitä. Emme tarvitse lisätä muita julkisia verkkosivustoja.</p>
+<p>Kopioi ja liitä seuraava teksti ja lähetä pyyntö Copilotille.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Proceed with setup
+</span></code></pre></div>
+<p><img alt="Jatka asennusta" src="../../../../../translated_images/6.1_06_ProceedWithSetup.11ceb9ccccccd19418711681d42b602ee223ebd017d6bf300088de84d1d35f1d.fi.png" /></p>
+</li>
+<li>
+<p>Copilot vahvistaa, että Contoso Helpdesk Agentin asennus on valmis, mutta teemme vielä yhden muutoksen: pyydämme, että agenttimme ei vastaa HR-aiheisiin liittyviin kysymyksiin. Tämä kertoo agentille, että sen ei tulisi vastata käyttäjien HR-aiheisiin kysymyksiin.</p>
+<p>Kopioi ja liitä seuraava teksti ja lähetä pyyntö Copilotille.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Älä anna apua HR-aiheisiin liittyvissä kysymyksissä, esimerkkejä: Mikä on lomapäivieni saldo? Kuinka monta sairauspäivää minulla on? Mikä on palkkahallinnon portaalin URL-osoite?
+</span></code></pre></div>
+<p><img alt="Älä vastaa HR-aiheisiin liittyviin kysymyksiin" src="../../../../../translated_images/6.1_07_DoNotTalkAbout.d9ccbbd15b9793e1642b365be6968548f6f250be5d541f1ad06eb9f12985e94f.fi.png" /></p>
+</li>
+<li>
+<p>Ohjeet päivitetään niin, että HR-aiheisiin liittyviin kysymyksiin ei anneta apua. Emme tarvitse tehdä muita päivityksiä, agenttimme on valmis luotavaksi.</p>
+<p><img alt="Agentin ohjeet päivitetty" src="../../../../../translated_images/6.1_08_AgentInstructionsUpdated.4de1112eeb5c8e2e2fe03fcbc6d332bdc3b1de740d9a5ab6b1ec30e27e241096.fi.png" /></p>
+</li>
+<li>
+<p>Ennen kuin luomme agenttimme, tehdään pari asiaa.</p>
+<p>Valitse ensin <strong>Configure</strong>-välilehti nähdäksesi agentin tiedot, jotka on määritelty keskustelussa Copilotin kanssa. Täältä näet nimen, kuvauksen, ohjeet, tiedon ja ehdotetut/aloituskehotukset.</p>
+<p><img alt="Näytä agentin tiedot" src="../../../../../translated_images/6.1_09_ViewAgentDetails.72c7f66721d6ac354bcc7186204bb0ad169456b0b7756f5e5a5e0f090e802a57.fi.png" /></p>
+</li>
+<li>
+<p>Toiseksi, testataan agenttiamme. Kopioi ja liitä seuraava teksti ja lähetä kysymys agentillemme.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Kuinka voin tarkistaa Surface-laitteeni takuun tilan?
+</span></code></pre></div>
+<p><img alt="Testaa agentti" src="../../../../../translated_images/6.1_10_TestAgent.8b1a0f1d98f4fa5b61336e1c4ac6d77b4822283314c2941cb0e04bf5247d8489.fi.png" /></p>
+</li>
+<li>
+<p>Kysymykseen annettu vastaus näkyy, ja vastaukset ovat vaiheittaisen oppaan muodossa luettelomerkein. Hienoa, agenttimme toimii! 🙌🏻</p>
+<p><img alt="Agentin vastaus" src="../../../../../translated_images/6.1_11_AgentResponse.c5fb305335b8e9b456b0f75ec9e237d4abbc3e9a1a6976e14bb656f1adffb14a.fi.png" /></p>
+</li>
+<li>
+<p>Lopuksi tarkistamme, että ratkaisu, johon agenttimme luodaan, on ratkaisu, jonka loimme ja valitsimme ensisijaiseksi ratkaisuksi oppitunnissa <a href="../04-creating-a-solution/#42-create-a-new-solution">Oppitunti 04 - Luo uusi ratkaisu</a>.</p>
+<p>Valitse <strong>kolmipistekuvake (...)</strong> ja valitse <strong>Update Advanced Settings</strong>.</p>
+<p><img alt="Päivitä lisäasetukset" src="../../../../../translated_images/6.1_12_UpdateAdvancedSettings.5943949ae7c9f492fb90779b0284283deb4186f14cd6588c46920f8e50d8d6d0.fi.png" /></p>
+</li>
+<li>
+<p><strong>Advanced Settings</strong> -modaali tulee näkyviin, ja näemme, että aiemmin luomamme ratkaisu on valittu oletuksena. Tämä johtuu siitä, että valitsimme ratkaisumme ensisijaiseksi ratkaisuksi oppitunnissa <a href="../04-creating-a-solution/#42-create-a-new-solution">Oppitunti 04 - Luo uusi ratkaisu</a>.</p>
+<p>Valitse <strong>Cancel.</strong></p>
+<p><img alt="Näytä lisäasetukset" src="../../../../../translated_images/6.1_13_AdvancedSettings.fff0861831346d5bef4e7731fed83073aca6d17aa940633040f65b1f300aee15.fi.png" /></p>
+</li>
+<li>
+<p>Luodaan nyt mukautettu agenttimme! Valitse <strong>Create</strong>.</p>
+<p><img alt="Valitse Luo" src="../../../../../translated_images/6.1_14_CreateAgent.7330a5fbe44a0664f35c5b5502e499f6dd3bad55d13094ef6c22608e8f8831b1.fi.png" /></p>
+</li>
+<li>
+<p>Copilot Studio alkaa luoda agenttiamme.</p>
+<p><img alt="Agentin asennus käynnissä" src="../../../../../translated_images/6.1_15_SettingUpAgent.34028a37bc2922eae13d0a18bb468bd738608b4de948192d89c3a2680fff2496.fi.png" /></p>
+</li>
+<li>
+<p>Kun agentti on luotu, voimme nähdä agentin tiedot, jotka heijastavat keskusteluluontikokemuksen aikana antamiamme pyyntöjä. Vieritä alas tarkistaaksesi agentin tiedot, joissa näkyvät nimi, kuvaus, ohjeet, tiedon lähteet ja ehdotetut kehotukset. Orkestrointitila on oletuksena käytössä, ja oletusmalli on käytössä agentin vastausmallina.</p>
+<p><img alt="Agentti luotu" src="../../../../../translated_images/6.1_16_AgentCreated.91edb1939b33d158930cd385c0d97c320958504e224ffc163ed5030b0cdc72a7.fi.png" /></p>
+<p><img alt="Tiedon lähteet" src="../../../../../translated_images/6.1_17_KnowledgeSources.00f1ed0b7f405e4820971834fb75e39a80659cf1b9eeeee42d861bfc4656240f.fi.png" /></p>
+<p><img alt="Ehdotetut kehotukset" src="../../../../../translated_images/6.1_18_SuggestedPrompts.20b84b9420858de8485460cc50a8e73798b08bb2022c946899adcbf9b484e0f0.fi.png" /></p>
+</li>
+<li>
+<p>Testataan nyt juuri luotua agenttiamme. Oikealla puolella olevassa <strong>Test</strong>-paneelissa valitse <strong>Activity Map</strong> -kuvake.</p>
+<p><img alt="Valitse Activity Map" src="../../../../../translated_images/6.1_19_ActivityMap.b2e6c77c69fd953818dc73b4dbe2e6d46529cf105d7a4a18c590d15c0b717cf4.fi.png" /></p>
+</li>
+<li>
+<p>Kirjoita seuraava kysymys <strong>Test</strong>-paneeliin.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Kuinka löydän Windows 11 -tuoteavaimeni?
+</span></code></pre></div>
+<p><img alt="Testaa juuri luotua agenttia" src="../../../../../translated_images/6.1_20_TestAgent.a9d3a761477c9b79facd132c173ec886d808320ad2cbc0347066a20c0f9dd669.fi.png" /></p>
+</li>
+<li>
+<p>Activity Map latautuu ja näyttää meille reaaliajassa, mitä polkua agentti käsittelee. Tässä skenaariossa agenttimme on ymmärtänyt kysymyksen ja etsii tiedon lähteitä. Tällä hetkellä meillä on yksi lähde, joka on aiemmin Copilotin avulla lisätty julkinen verkkosivusto, jota agentti tarkastelee.</p>
+<p><img alt="Tarkastellaan tiedon lähteitä" src="../../../../../translated_images/6.1_21_ReviewingSources.78068042898e2960667393c931e120dbe80f6b74c9af222b79446f7a82d5c757.fi.png" /></p>
+</li>
+<li>
+<p>Agenttimme vastaa sitten vastauksilla, jotka on hahmoteltu luettelomerkein, kuten ohjeissa määriteltiin. Vastauksessa on viittauksia verkkosivuihin, joista agentti muodosti vastauksensa. Tämä mahdollistaa käyttäjien tarkistaa vastauksen lähteen.</p>
+<p><img alt="Viittaukset vastauksessa" src="../../../../../translated_images/6.1_22_Response.44a088e80f2a9fac74bcd364571f1ebb900b43e9e647089ef51d39b809b0f0e9.fi.png" /></p>
+</li>
+<li>
+<p>Voit myös tarkistaa vastauksen ja sen lähteet vierittämällä alas <strong>Knowledge modal</strong> -osiossa Activity Mapissa.</p>
+<p><img alt="Viitatut lähteet" src="../../../../../translated_images/6.1_23_ReferencedSources.ca8e41855284446d121a34fd9d8d667e05016f5eda741adcf7f356ac2c59c559.fi.png" /></p>
+</li>
+</ol>
+<p>Onnittelut! Olet rakentanut ensimmäisen mukautetun agenttisi Copilotilla Copilot Studiossa 🙌🏻</p>
+<h3 id="62-lisaa-sisainen-tiedon-lahde-sharepoint-sivuston-avulla">6.2 Lisää sisäinen tiedon lähde SharePoint-sivuston avulla<a class="headerlink" href="#62-lisaa-sisainen-tiedon-lahde-sharepoint-sivuston-avulla" title="Permanent link">&para;</a></h3>
+<p>Aiemmin Copilotin kanssa lisäsimme julkisen verkkosivuston agentin ulkoiseksi tiedon lähteeksi keskusteluluontikokemuksen aikana. Nyt aiomme lisätä sisäisen tiedon lähteen SharePoint-sivuston avulla. Tämä on SharePoint-sivusto, jonka loit oppitunnin <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Oppitunti 00 - Kurssin asennus</a> aikana.</p>
+<ol>
+<li>
+<p>Valitse <strong>+ Add knowledge</strong>.</p>
+<p><img alt="Valitse Lisää tietoa" src="../../../../../translated_images/6.2_01_AddKnowledge.5e441f7e3b0ebb25218bece75394ecf4c8c3a60e1b5d8ea15ca020546352f256.fi.png" /></p>
+</li>
+<li>
+<p>Valitse <strong>SharePoint</strong>.</p>
+<p><img alt="Valitse SharePoint" src="../../../../../translated_images/6.2_02_SelectSharePoint.5bd29d31cc76f581db3eef474731fc2dfce4ef1dab86d9cc11716323ba726408.fi.png" /></p>
+</li>
+<li>
+<p>Liitä <strong>SharePoint-sivuston osoite</strong>, joka luotiin oppitunnin <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Oppitunti 00 - Kurssin asennus</a> aikana, SharePoint URL -kenttään ja valitse <strong>Add</strong>.</p>
+<p><img alt="Syötä SharePoint-sivuston URL-osoite" src="../../../../../translated_images/6.2_03_AddSharePointURL.974c251d9690524a8bfa4c9dd930af3d834245749fb9f1fda508c3b1f9773827.fi.png" /></p>
+</li>
+<li>
+<p>Päivitä SharePoint-sivuston <strong>nimi</strong> muotoon <code>Contoso IT</code> ja valitse <strong>Add</strong>.</p>
+<p><img alt="Päivitä SharePoint-sivuston nimi ja lisää agenttiin" src="../../../../../translated_images/6.2_04_UpdateNameAddToAgent.46a814c09586fe135bffb77814ba13d0593f25feaaa989174c97e80345f03866.fi.png" /></p>
+</li>
+<li>
+<p>SharePoint-sivusto on nyt lisätty tiedon lähteeksi tilalla <em>Ready</em>. Status-sarake näyttää, onko tiedon lähde ladattu/yhdistetty onnistuneesti vai onko ongelmia.</p>
+<p><img alt="SharePoint-sivuston tila" src="../../../../../translated_images/6.2_05_SharePointStatus.90a9001978f31c5d4b183d5ecc4869c81dd9fc1bb8a6b1ef4675fcb51d52f8e5.fi.png" /></p>
+</li>
+</ol>
+<h3 id="63-lisaa-sisainen-tiedon-lahde-lataamalla-dokumentti">6.3 Lisää sisäinen tiedon lähde lataamalla dokumentti<a class="headerlink" href="#63-lisaa-sisainen-tiedon-lahde-lataamalla-dokumentti" title="Permanent link">&para;</a></h3>
+<p>Lisäämme nyt toisen sisäisen tiedon lähteen lataamalla dokumentin suoraan agentillemme.</p>
+<ol>
+<li>
+<p>Valitse <strong>Add knowledge</strong>.</p>
+<p><img alt="Valitse Lisää tietoa" src="../../../../../translated_images/6.3_01_AddKnowledge.d93caa805efb7e2a433d9777f8eb1789dc5daf4f9ebe95da2a74a2b57cffdd33.fi.png" /></p>
+</li>
+<li>
+<p>Valitse <strong>Upload file</strong> tai <strong>Select to browse</strong>.</p>
+<p><img alt="Valitse tiedostojen lataus" src="../../../../../translated_images/6.3_02_UploadFile.662de4f3916bfa3f34a6699a9a45846e64e71a70dfecbc656fb5b511792de6b6.fi.png" /></p>
+</li>
+<li>
+<p>Lataa tämä <a href="../../../../../docs/recruit/06-create-agent-from-conversation/assets/Contoso_Guest_WiFi_Connection_Guide.docx" title="download">esimerkkitiedosto</a> ja valitse se tiedostonhallinnassasi. Valitse <strong>Open</strong>.</p>
+<p><img alt="Valitse dokumentti" src="../../../../../translated_images/6.3_03_SelectFile.077d73491dc6ff1f6114d259261ee68334c4da182c3b55233468637d1989f14c.fi.png" /></p>
+</li>
+<li>
+<p>Tiedosto on valittu ladattavaksi. Valitse seuraavaksi <strong>Add to agent</strong>.</p>
+<p><img alt="Valitse Lisää agenttiin" src="../../../../../translated_images/6.3_04_AddToAgent.1eec469d6d28c22959c8d7f3ad39aa0df5e07adfdb85ce1e21c0c4fe31c27db5.fi.png" /></p>
+</li>
+<li>
+<p>Dokumentti on prosessissa lisättävänä agentille. Odota, kunnes lataus on valmis, älä sulje selaimen ikkunaa. Dokumentin tila näyttää aluksi <em>In progress</em>, odota, kunnes tila on päivitetty <strong>Ready</strong> ennen agentin testaamista.</p>
+<p><img alt="Tiedoston tila" src="../../../../../translated_images/6.3_05_FileStatus.2029b8aa0109a6f46372291e9bba33429c2ebd572efa81702a73cae91fbf3a90.fi.png" /></p>
+</li>
+</ol>
+<p>Testataan nyt agenttiamme!</p>
+<h3 id="64-testaa-agentti">6.4 Testaa agentti<a class="headerlink" href="#64-testaa-agentti" title="Permanent link">&para;</a></h3>
+<p>Testaamme kolmea tiedon lähdettä kysymällä kysymyksiä Contoso Helpdesk Agentilta.</p>
+<ol>
+<li>
+<p>Valitse <strong>refresh</strong>-kuvake testipaneelissa, ja sen jälkeen valitse <strong>activity map</strong> -kuvake.</p>
+<p><img alt="Päivitä kuvake" src="../../../../../translated_images/6.4_01_RefreshAndActivityMap.c24ebc6c277786dab75941dac0b6e55f3dbb244b29fb791c87e4aba5c4a56c81.fi.png" /></p>
+</li>
+<li>
+<p>Kirjoita seuraava kysymys testataksesi julkisen verkkosivuston (ulkoisen) tiedon lähdettä.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>How can I find the serial number on my Surface device?
+</span></code></pre></div>
+<p><img alt="Kirjoita kehotus testataksesi verkkosivuston tiedon lähdettä" src="../../../../../translated_images/6.4_02_TestQuestion1.3a5aeaaa72a9578a05edd4575275e1ba60ecaf8c7377ab13872619580e0309f9.fi.png" /></p>
+</li>
+<li>
+<p>Seuraavaksi näet agentin tarkastelevan tiedon lähteitä ja antavan vastauksen verkkosivuston tiedon lähteen avulla.
+<img alt="Verkkosivu, johon vastauksessa viitataan" src="../../../../../translated_images/6.4_03_ReviewingSources.a56742505402eab51b423b543c814242728ff7947e443360740b3e5dac82ba65.fi.png" /></p>
+</li>
+<li>
+<p>Vastaus palautetaan, ja huomaat, että siinä viitataan verkkosivuun, josta vastaus on muodostettu. Jos vierität aktiviteettikartan tietomodaalia alaspäin, näet muut tietolähteet, joita agentti on etsinyt, kuten SharePoint-sivuston ja ladatun tiedoston.</p>
+</li>
+</ol>
+<p>Näitä ei kuitenkaan käytetty, sillä <strong>Viitatut lähteet</strong> -osiossa viitattiin vain verkkosivun tietolähteeseen. Vastaus perustui verkkosivun tietolähteeseen. Jos valitset viittaukset, sinut ohjataan kyseiselle verkkosivulle.</p>
+<p><img alt="Viitatut ja haetut tietolähteet" src="../../../../../translated_images/6.4_04_ReferencedSources.2fb91e8ed7cac8196c3cc1e43006512d4138adb4f240bdab66cd2af5fd1ec7c6.fi.png" /></p>
+<ol>
+<li>
+<p>Testataan nyt sekä SharePoint-sivuston tietolähdettä että dokumentin tietolähdettä yhdessä viestissä. Syötä seuraava kysymys.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>How can I access our company Contoso VPN? How do guests connect to the Contoso Guest wifi?
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="Testaa SharePoint- ja dokumenttitietolähteitä" src="../../../../../translated_images/6.4_05_TestQuestion2.f77ce87578b59386ec5491716996aff9247c5e5ad458a51226276238adb282f3.fi.png" /></p>
+<ol>
+<li>Näet jälleen, kuinka agentti tarkastelee kolmea tietolähdettä luodakseen vastauksen kysymyksiin yhdessä viestissä. Agentti vastaa molempiin kysymyksiin yhdessä viestissä ja viittaa erikseen SharePoint-sivuun ja dokumenttiin, joista vastaus on muodostettu.</li>
+</ol>
+<p>Aktiviteettikartan tietomodaalissa näet SharePoint-sivuston ja dokumentin, joita käytettiin viitattuina lähteinä. Sinulla on täydellinen näkyvyys siitä, mitä tietolähteitä käytettiin molempien kysymysten vastaamiseen.</p>
+<p><img alt="Viitatut tietolähteet" src="../../../../../translated_images/6.4_06_ReferencedSources.caf049dac28b4317c39b074b481f5d7d5b1b92fd792fc4b796fec0c1575f9581.fi.png" /></p>
+<ol>
+<li>On aina hyvä varmistaa, että luotu vastaus on oikein. Valitse SharePoint-sivuston viittaus, jolloin latautuu SharePoint-sivun UKK-osio, jossa voit vierittää alaspäin tarkistaaksesi VPN-ohjeet.</li>
+</ol>
+<p><img alt="Tarkista SharePoint-sivu" src="../../../../../translated_images/6.4_07_VerifySharePoint.6ee48515fedf37a62564ddc388c2452751ed5777cda321d887c315c2de78d293.fi.png" /></p>
+<ol>
+<li>Seuraavaksi valitse dokumenttiviittaus, jolloin avautuu modaalinen ikkuna, jossa näkyy dokumentin teksti, joka vastaa annettua vastausta.</li>
+</ol>
+<p><img alt="Tarkista dokumentti" src="../../../../../translated_images/6.4_08_VerifyDocument.0f0680b63e6bdd0b558eb287e85965b87ab820e12b25b1e0965f8ebbde795222.fi.png" /></p>
+<p>Agentti voi vastata useisiin kysymyksiin yhdessä viestissä, etsiä tietolähteitä ja viitata niihin vastauksessaan. Varmista aina, että vastaus on oikein tarkistamalla viittaukset.</p>
+<h2 id="tehtava-suoritettu">✅ Tehtävä suoritettu<a class="headerlink" href="#tehtava-suoritettu" title="Permanent link">&para;</a></h2>
+<p>Onnittelut! 👏🏻 Olet oppinut käyttämään luonnollista kieltä luodaksesi oman mukautetun agentin, joka voi keskustella kolmen eri tietolähteen datan pohjalta 🙌🏻</p>
+<p>Tämä oli <strong>Lab 06 - Luo agentti Copilotilla</strong> -osion loppu. Valitse alla oleva linkki siirtyäksesi seuraavaan oppituntiin. Tässä laboratoriossa luomaasi mukautettua agenttia käytetään seuraavan oppitunnin laboratoriossa.</p>
+<p>⏭️ <a href="../07-add-new-topic-with-trigger/">Siirry <strong>Lisää uusi aihe ja käynnistäjä</strong> -oppituntiin</a></p>
+<p>Tervetuloa eliittiin. Nyt osaat luoda digitaalisia agentteja, jotka puhuvat kieltäsi, viittaavat dataasi ja tukevat tiimiäsi. Jatka eteenpäin—tehtäväsi on vasta alussa.</p>
+<h2 id="taktiset-resurssit">📚 Taktiset resurssit<a class="headerlink" href="#taktiset-resurssit" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/fundamentals-get-started?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext/?WT.mc_id=power-172617-ebenitez">Pikaopas: Luo ja ota agentti käyttöön</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-first-bot?WT.mc_id=power-172617-ebenitez">Luo ja poista agentteja</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-fundamentals/?WT.mc_id=power-172617-ebenitez">Keskeiset käsitteet - Agenttien luominen</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep1">Luo mukautettu agentti luonnollisella kielellä</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep2">Lisää tietoa agenteillesi</a></p>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/06-create-agent-from-conversation" alt="Analytiikka" /></p>
+<hr />
+<p><strong>Vastuuvapauslauseke</strong>:<br />
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

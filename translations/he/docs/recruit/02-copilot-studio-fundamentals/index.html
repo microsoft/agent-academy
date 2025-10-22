@@ -1,0 +1,845 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/he/docs/recruit/02-copilot-studio-fundamentals/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#02-copilot-studio" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ שם קוד: מבצע פרוטוקול ליבה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 תדריך המשימה
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 מטרות
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-copilot-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      מה הם סוכנים ב-Copilot Studio?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-copilot-studio_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      מתי ולמה להשתמש ב-Copilot Studio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      ארבע אבני הבניין של סוכן
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      כיצד ארבע אבני הבניין פועלות יחד
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎉 משימה הושלמה
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "90a3c5122f5687bbc8cc819990f175d4",
+  "translation_date": "2025-10-17T01:38:39+00:00",
+  "source_file": "docs/recruit/02-copilot-studio-fundamentals/README.md",
+  "language_code": "he"
+}
+-->
+<h1 id="02-copilot-studio">🚨 משימה 02: יסודות Copilot Studio<a class="headerlink" href="#02-copilot-studio" title="Permanent link">&para;</a></h1>
+<h2 id="_1">🕵️‍♂️ שם קוד: <code>מבצע פרוטוקול ליבה</code><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ חלון זמן למבצע:</strong> <code>~30 דקות – מידע בלבד, ללא עבודה בשטח</code>  </p>
+</blockquote>
+<p>🎥 <strong>צפו בסרטון ההדרכה</strong></p>
+<p><a href="https://www.youtube.com/watch?v=x4OCwDRGeLE" title="צפו בהדרכה ביוטיוב"><img alt="תמונה ממוזערת של סרטון יסודות Copilot Studio" src="../../../../../translated_images/video-thumbnail.60293a065d12abc483567901321099335595e0b8bd4e42177bdb05db16db335b.he.jpg" /></a></p>
+<h2 id="_2">🎯 תדריך המשימה<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>ברוכים הבאים, מגויסים. משימה זו תספק לכם מידע בסיסי להבנת אופן הפעולה של Copilot Studio וכיצד לבנות סוכנים חכמים שמספקים ערך עסקי אמיתי.</p>
+<p>לפני שתבנו את הסוכן הראשון שלכם, עליכם להבין את ארבעת המרכיבים המרכזיים שמרכיבים כל סוכן AI מותאם אישית: ידע, כלים, נושאים והוראות. תלמדו גם כיצד אלמנטים אלו פועלים יחד במנהל התזמורת של Copilot Studio.</p>
+<h2 id="_3">🔎 מטרות<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>במשימה זו, תלמדו:</p>
+<ul>
+<li><strong>מהו Copilot Studio</strong></li>
+<li><strong>מתי ולמה להשתמש בסוכנים</strong></li>
+<li><strong>לחקור את ארבעת אבני הבניין של סוכנים</strong><ul>
+<li><strong>ידע</strong></li>
+<li><strong>כלים</strong></li>
+<li><strong>נושאים</strong></li>
+<li><strong>הוראות</strong></li>
+</ul>
+</li>
+<li><strong>להבין כיצד המרכיבים הללו פועלים יחד</strong> ליצירת סוכן חכם ואוטומטי</li>
+</ul>
+<hr />
+<h2 id="-copilot-studio">מה הם סוכנים ב-Copilot Studio?<a class="headerlink" href="#-copilot-studio" title="Permanent link">&para;</a></h2>
+<p><strong>סוכן</strong> הוא עוזר AI מיוחד שאתם מעצבים כדי להתמודד עם משימות או שאלות ספציפיות. בניגוד לצ'אטבוט כללי, הסוכן שלכם:</p>
+<ul>
+<li><strong>מכיר נתונים ספציפיים לחברה</strong> (מדיניות, מסמכים, מסדי נתונים)  </li>
+<li><strong>מבצע משימות בעולם האמיתי</strong> (שליחת הודעות, יצירת אירועים ביומן, עדכון רשומות)  </li>
+<li><strong>שומר על הקשר השיחה</strong> כך שהוא יכול להמשיך משאלות קודמות  </li>
+</ul>
+<p>מכיוון ש-Copilot Studio הוא בעל קוד נמוך, תוכלו לגרור ולשחרר רכיבים מוכנים מראש – אין צורך בכישורי קידוד מעמיקים. לאחר שהסוכן שלכם נבנה, אנשים יכולים להשתמש בו בתוך Teams, Slack או אפילו באתר מותאם אישית כדי לקבל תשובות או להפעיל תהליכי עבודה באופן אוטומטי.</p>
+<hr />
+<h2 id="-copilot-studio_1">מתי ולמה להשתמש ב-Copilot Studio<a class="headerlink" href="#-copilot-studio_1" title="Permanent link">&para;</a></h2>
+<p>בעוד ש-Microsoft 365 Copilot מספק סיוע AI כללי באפליקציות Office, תצטרכו סוכן מותאם אישית כאשר:</p>
+<h3 id="_4">אתם זקוקים לידע ספציפי לתחום<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Copilot המובנה עשוי לא להכיר את הנהלים או הנתונים הפנימיים של החברה שלכם. סוכן יכול לשאול אתרי SharePoint, מסדי נתונים או מקורות מותאמים אישית כדי לספק תשובות מדויקות ועדכניות.  </li>
+</ul>
+<h3 id="_5">אתם רוצים לאוטומט תהליכי עבודה מרובי שלבים<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>לדוגמה: "כאשר מישהו מגיש הוצאה, שלח אותה לאישור, עדכן את מעקב הכספים והודע למנהל." סוכן מותאם אישית יכול לטפל בכל שלב, מופעל על ידי פקודה או אירוע יחיד.  </li>
+</ul>
+<h3 id="_6">אתם זקוקים לחוויה קונטקסטואלית בתוך הכלי<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>דמיינו סוכן קליטת עובדים חדשים ב-Teams שמנחה את צוות משאבי האנוש בכל מדיניות, שולח טפסים נחוצים ומתזמן פגישות אוריינטציה – הכל בתוך פלטפורמת שיתוף הפעולה הקיימת שלכם.  </li>
+</ul>
+<hr />
+<h2 id="_7">ארבע אבני הבניין של סוכן<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>כל סוכן ב-Copilot Studio בנוי מארבעה מרכיבים מרכזיים:</p>
+<ol>
+<li><strong>ידע</strong>  </li>
+<li><strong>כלים (פעולות)</strong>  </li>
+<li><strong>נושאים</strong>  </li>
+<li><strong>הוראות</strong></li>
+</ol>
+<p>להלן, נגדיר כל אבן בניין ונראה כיצד הן פועלות יחד ליצירת סוכן אפקטיבי.</p>
+<h3 id="1">1. ידע<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p><strong>ידע</strong> הוא הנתונים וההקשר שהסוכן שלכם משתמש בהם כדי לענות על שאלות בצורה מדויקת. יש לו שני חלקים:</p>
+<h4 id="_8">הוראות מותאמות והקשר<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>אתם כותבים תיאור קצר של מטרת הסוכן והטון שלו. לדוגמה:  </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are an IT support agent. You help employees troubleshoot common software issues, provide troubleshooting steps, and escalate urgent tickets.
+</span></code></pre></div>
+</li>
+<li>
+<p>במהלך שיחה, הסוכן זוכר פניות קודמות כך שהוא יכול להתייחס למה שכבר נדון (לדוגמה, אם המשתמש אומר תחילה, "המדפסת שלי לא מחוברת," ואז שואל מאוחר יותר, "בדקת את רמת הדיו?" הסוכן זוכר את ההקשר של המדפסת).</p>
+</li>
+</ul>
+<h4 id="_9">מקורות ידע (נתוני בסיס)<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<ul>
+<li>אתם מחברים את הסוכן שלכם למספר מקורות נתונים – ספריות SharePoint, אתרי תיעוד, וויקי או מסדי נתונים אחרים.  </li>
+<li>כאשר משתמש שואל שאלה, הסוכן שולף קטעים רלוונטיים ממקורות אלו כך שהתשובות יהיו <strong>מבוססות</strong> על המדיניות, מדריכי המוצרים או כל מידע קנייני של הארגון שלכם.  </li>
+<li>אתם יכולים אפילו להכריח את הסוכן להגיב רק עם מידע ממקורות אלו, ולמנוע ממנו לנחש או "להמציא" תשובות.</li>
+</ul>
+<div class="admonition דוגמה">
+<p class="admonition-title">דוגמה</p>
+<p>סוכן "עוזר מדיניות" עשוי להתחבר לאתר SharePoint של משאבי אנוש שלכם. אם משתמש שואל, "מהו שיעור הצבירה של PTO שלנו?" הסוכן שולף את הטקסט המדויק ממסמך מדיניות משאבי האנוש במקום להסתמך על תשובת AI כללית.</p>
+</div>
+<hr />
+<h3 id="2">2. כלים (פעולות)<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p><strong>כלים (פעולות)</strong> מגדירים מה הסוכן יכול לעשות מעבר לשיחה. כל פעולה היא משימה שהסוכן מבצע באופן תכנותי, כגון:</p>
+<ul>
+<li>שליחת דוא"ל או הודעת Teams  </li>
+<li>יצירת או עדכון אירוע ביומן  </li>
+<li>הוספה או עריכה של רשומה במסד נתונים (לדוגמה, רשימת SharePoint או טבלת Dataverse)  </li>
+<li>קריאה לזרימת Power Automate או REST API  </li>
+</ul>
+<h4 id="_10">כיצד פעולות פועלות<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>הגדרת קלטים ופלטים</strong>  </p>
+<ul>
+<li>לדוגמה, פעולה של שליחת דוא"ל עשויה לדרוש:  <ul>
+<li><code>RecipientEmailAddress</code>  </li>
+<li><code>SubjectLine</code>  </li>
+<li><code>EmailBody</code>  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>שילוב פעולות בתהליכי עבודה</strong>  </p>
+<ul>
+<li>לעיתים, מילוי בקשת משתמש כרוך במספר שלבים.  </li>
+<li>ניתן לרצף פעולות כך ש:<br />
+         1. הסוכן שולף נתונים מרשימת SharePoint.<br />
+         2. הוא יוצר סיכום באמצעות LLM.<br />
+         3. הוא שולח הודעת Teams עם הסיכום הזה.  </li>
+</ul>
+</li>
+<li>
+<p><strong>חיבור למערכות חיצוניות</strong>  </p>
+<ul>
+<li>אם אתם צריכים לעדכן CRM או לקרוא ל-API פנימי, צרו פעולה מותאמת אישית שתטפל בכך.  </li>
+<li>Copilot Studio יכול להשתלב עם Power Platform או כל נקודת קצה מבוססת HTTP.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition דוגמה">
+<p class="admonition-title">סוכן "עוזר הוצאות" יכול:</p>
+<ol>
+<li>להאזין לבקשת "שלח הוצאה".  </li>
+<li>לאסוף את פרטי ההוצאה של המשתמש מטופס.  </li>
+<li>להשתמש בפעולה "הוסף לרשימת SharePoint" כדי לשמור את הנתונים.  </li>
+<li>להפעיל פעולה "שלח דוא"ל" כדי להודיע למאשר.  </li>
+</ol>
+</div>
+<hr />
+<h3 id="3">3. נושאים<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<p><strong>נושאים</strong> מגדירים את הטריגרים השיחתיים או נקודות הכניסה לסוכן שלכם. כל נושא מתייחס לקטגוריית שאלה או פונקציונליות מסוימת.</p>
+<h4 id="_11">טריגרים שיחתיים<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<ul>
+<li>נושא יכול להיות "שלח קריאת שירות IT," "בדוק יתרת חופשה," או "צור דוח מכירות."  </li>
+<li>מאחורי הקלעים, Copilot Studio משתמש ב<strong>תזמורת גנרטיבית</strong>: במקום להסתמך על מילות מפתח מדויקות, ה-AI מפרש את כוונת המשתמש ובוחר את הנושא הנכון על סמך תיאור קצר שאתם מספקים.  </li>
+</ul>
+<h4 id="_12">תיאורי נושאים<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<ul>
+<li>בכל נושא, אתם כותבים תיאור ברור ותמציתי של מה שהנושא מכסה.</li>
+</ul>
+<div class="admonition דוגמה">
+<p class="admonition-title">דוגמה לתיאור נושא</p>
+<p>נושא זה עוזר למשתמשים לשלוח קריאת תמיכה IT על ידי איסוף פרטי הבעיה, עדיפות ומידע ליצירת קשר.</p>
+</div>
+<ul>
+<li>ה-AI משתמש בתיאור זה כדי להחליט מתי להפעיל את הנושא הזה, גם אם ניסוח המשתמש אינו תואם בדיוק.</li>
+</ul>
+<h4 id="_13">מיפוי נושאים לפעולות<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<ul>
+<li>כל נושא מחובר לאחת או יותר פעולות או שלבי שליפת נתונים.  </li>
+<li>כאשר ה-AI בוחר נושא, הוא מנחה את השיחה דרך הרצף שהגדרתם (שואל שאלות המשך, קורא לפעולות, מחזיר תוצאות).</li>
+</ul>
+<div class="admonition דוגמה">
+<p class="admonition-title">דוגמה</p>
+<p>אם משתמש אומר, "אני צריך עזרה בהגדרת המחשב הנייד החדש שלי," ה-AI עשוי להתאים את הכוונה לנושא "שלח קריאת IT". הסוכן אז שואל על דגם המחשב הנייד, פרטי המשתמש, ומכניס קריאה למערכת התמיכה באופן אוטומטי.</p>
+</div>
+<hr />
+<h3 id="4">4. הוראות<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<p><strong>הוראות</strong> (לעיתים נקראות "הנחיות" או "הודעות מערכת") מנחות את הטון, הסגנון והגבולות של ה-LLM. הן מעצבות את אופן התגובה של הסוכן בכל מצב.</p>
+<h4 id="_14">תפקיד ואישיות<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<ul>
+<li>אתם אומרים ל-AI מי הוא (לדוגמה, "אתה סוכן שירות לקוחות עבור Contoso Retail").  </li>
+<li>זה קובע את הטון – ידידותי, תמציתי, פורמלי או קליל – בהתאם למקרה השימוש שלכם.</li>
+</ul>
+<h4 id="_15">הנחיות תגובה<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ציינו כללים שהסוכן חייב לעקוב אחריהם, כגון:  <ul>
+<li>"תמיד סכם מידע מדיניות בנקודות."  </li>
+<li>"אם אינך יודע את התשובה, אמור 'מצטער, אין לי את המידע הזה.'"  </li>
+<li>"לעולם אל תכלול נתונים חסויים מחוץ להקשר."</li>
+</ul>
+</li>
+</ul>
+<h4 id="_16">כללי זיכרון והקשר<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ניתן להנחות את הסוכן כמה פניות שיחה לזכור.  </li>
+<li>לדוגמה: "זכור פרטים מבקשות המשתמש הזה עד שלוש שאלות המשך."</li>
+</ul>
+<div class="admonition דוגמה">
+<p class="admonition-title">בסוכן "יועץ הטבות", תוכלו לכלול:</p>
+<p>"תמיד התייחס למדריך משאבי האנוש העדכני ביותר בעת מענה לשאלות. אם נשאל על מועדי הרשמה, ספק את התאריכים הספציפיים מהמדיניות. שמור תשובות מתחת ל-150 מילים."</p>
+</div>
+<hr />
+<h2 id="_17">כיצד ארבע אבני הבניין פועלות יחד<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<p>כאשר אתם מרכיבים <strong>ידע</strong>, <strong>כלים</strong>, <strong>נושאים</strong> ו<strong>הוראות</strong>, מנהל התזמורת של Copilot Studio יוצר סוכן ש:</p>
+<ol>
+<li><strong>מאזין לנושא רלוונטי</strong> (בהתאם לתיאורי הנושא שלכם).  </li>
+<li><strong>מיישם הוראות</strong> כדי לקבוע את הטון, להחליט מתי לשאול שאלות המשך ולאכוף כללים.  </li>
+<li><strong>מנצל מקורות ידע</strong> כדי לבסס את תשובותיו על נתוני הארגון שלכם.  </li>
+<li><strong>מפעיל כלים (פעולות)</strong> לפי הצורך לביצוע משימות – שליחת הודעות, עדכון רשומות או קריאה ל-APIs.  </li>
+</ol>
+<p>מאחורי הקלעים, מנהל התזמורת משתמש בגישה של <strong>תכנון גנרטיבי</strong>: הוא מחליט אילו צעדים לנקוט ובאיזה סדר כדי למלא בקשת משתמש. אם פעולה נכשלת (לדוגמה, לא ניתן לשלוח דוא"ל), הסוכן עוקב אחר הנחיות הטיפול שלכם בשגיאות (שואל שאלה מבהירה או מדווח על השגיאה). מכיוון שה-LLM מתאים את עצמו להקשר השיחה, הסוכן יכול לשמור זיכרון על פני מספר פניות ולשלב מידע חדש ככל שהשיחה מתקדמת.</p>
+<p><strong>דוגמה לזרימה חזותית:</strong>  </p>
+<!--
+1. **משתמש:** "הראה לי את יתרת ה-PTO שלי."
+1. **AI (נושאים):** מתאים לנושא "בדוק יתרת PTO".  
+1. **AI (הוראות):** משתמש בטון ידידותי ותמציתי.  
+1. **סוכן (ידע):** שואל את רשימת SharePoint של משאבי האנוש עבור יתרת המשתמש.  
+1. **סוכן (פעולות):** שולף את הערך ושולח הודעת Teams:  
+   > "יתרת ה-PTO הנוכחית שלך היא 12 ימים."  
+-->
+
+<pre class="mermaid"><code>sequenceDiagram
+    participant User
+    participant AI
+    participant Agent
+
+    User-&gt;&gt;AI: "Show me my PTO balance."
+    AI-&gt;&gt;AI: Match topic: "Check PTO Balance"
+    Note over AI: Instructions: Apply friendly, concise tone
+    AI-&gt;&gt;Agent: Request user's PTO balance
+    Note right of Agent: Knowledge: Query HR SharePoint list
+    Agent--&gt;&gt;AI: PTO balance = 12 days
+    AI-&gt;&gt;Agent: Send message to user (Teams)
+    Note right of Agent: Action: Deliver notification
+    Agent--&gt;&gt;User: "Your current PTO balance is 12 days."</code></pre>
+<hr />
+<h2 id="_18">🎉 משימה הושלמה<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<p>סיימתם בהצלחה את תדריך היסודות. עכשיו למדתם את ארבעת אבני הבניין החיוניות של כל סוכן ב-Copilot Studio:</p>
+<ol>
+<li><strong>ידע</strong> – המקום שבו הסוכן מחפש מידע עובדתי ושומר זיכרון שיחה.  </li>
+<li><strong>כלים</strong> – המשימות שהסוכן יכול לבצע כדי לפעול באופן אוטומטי.  </li>
+<li><strong>נושאים</strong> – כיצד הסוכן מזהה את כוונת המשתמש ומחליט איזה תהליך להפעיל.  </li>
+<li><strong>הוראות</strong> – הכללים, הטון והגבולות שמנחים כל תגובה.</li>
+</ol>
+<p>עם מרכיבים אלו, תוכלו לבנות סוכן בסיסי שעונה על שאלות ומבצע תהליכי עבודה פשוטים. בשיעור הבא, נעבור על מדריך שלב אחר שלב ליצירת סוכן "שירות לקוחות" – החל מחיבור מקור הידע הראשון שלכם ועד להגדרת נושא וחיבור פעולה.</p>
+<p>בהמשך: תבנו את <a href="../03-create-a-declarative-agent-for-M365Copilot/">הסוכן ההצהרתי הראשון שלכם עבור M365 Copilot</a>.</p>
+<!-- markdownlint-disable-next-line MD033 -->
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/02-copilot-studio-fundamentals" alt="Analytics" /></p>
+<hr />
+<p><strong>כתב ויתור</strong>:<br />
+מסמך זה תורגם באמצעות שירות תרגום AI <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. בעוד שאנו שואפים לדיוק, יש להיות מודעים לכך שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי אנושי. איננו אחראים לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

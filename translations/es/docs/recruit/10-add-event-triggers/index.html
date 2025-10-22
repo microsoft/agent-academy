@@ -1,0 +1,1043 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/es/docs/recruit/10-add-event-triggers/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mision-10-agregar-disparadores-de-eventos-habilitar-capacidades-de-agentes-autonomos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nombre-clave-operacion-rutina-fantasma" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ NOMBRE CLAVE: OPERACIÓN RUTINA FANTASMA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-la-mision" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Resumen de la Misión
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objetivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-disparador-de-evento" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 ¿Qué es un Disparador de Evento?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-funcionan-los-disparadores-de-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ ¿Cómo funcionan los Disparadores de Eventos?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprender-las-cargas-utiles-de-los-disparadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Comprender las cargas útiles de los disparadores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escenarios-comunes-de-disparadores-de-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Escenarios comunes de Disparadores de Eventos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideraciones-de-publicacion-y-autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Consideraciones de publicación y autenticación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solucion-de-problemas-y-limitaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Solución de problemas y limitaciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorio-10-agregar-disparadores-de-eventos-para-comportamiento-autonomo-del-agente" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Laboratorio 10 - Agregar Disparadores de Eventos para comportamiento autónomo del agente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mision-completa" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Misión Completa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-tacticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Recursos Tácticos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "cd99a76bcb7372ac2771b6ae178b023d",
+  "translation_date": "2025-10-17T19:15:14+00:00",
+  "source_file": "docs/recruit/10-add-event-triggers/README.md",
+  "language_code": "es"
+}
+-->
+<h1 id="mision-10-agregar-disparadores-de-eventos-habilitar-capacidades-de-agentes-autonomos">🚨 Misión 10: Agregar Disparadores de Eventos - Habilitar capacidades de agentes autónomos<a class="headerlink" href="#mision-10-agregar-disparadores-de-eventos-habilitar-capacidades-de-agentes-autonomos" title="Permanent link">&para;</a></h1>
+<h2 id="nombre-clave-operacion-rutina-fantasma">🕵️‍♂️ NOMBRE CLAVE: <code>OPERACIÓN RUTINA FANTASMA</code><a class="headerlink" href="#nombre-clave-operacion-rutina-fantasma" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Ventana de Tiempo de la Operación:</strong> <code>~45 minutos</code></p>
+</blockquote>
+<p>🎥 <strong>Mira la Guía</strong></p>
+<p><a href="https://www.youtube.com/watch?v=ZgwHL8PQ1nY" title="Mira la guía en YouTube"><img alt="Miniatura del video de disparadores de eventos" src="../../../../../translated_images/video-thumbnail.0d5b477d69adfe668fab9aa8ef5b199377b46788948b33b1969bf19c099b6469.es.jpg" /></a></p>
+<h2 id="resumen-de-la-mision">🎯 Resumen de la Misión<a class="headerlink" href="#resumen-de-la-mision" title="Permanent link">&para;</a></h2>
+<p>Es hora de elevar tu agente de asistente conversacional a operativo autónomo. Tu misión es habilitar que tu agente actúe sin ser llamado, respondiendo a señales de todo tu dominio digital con precisión y rapidez.</p>
+<p>Con los Disparadores de Eventos, entrenarás a tu agente para que monitoree sistemas externos como SharePoint, Teams y Outlook, y ejecute acciones inteligentes en el momento en que se reciba una señal. Esta operación transforma tu agente en un activo de campo completamente operativo: silencioso, rápido y siempre alerta.</p>
+<p>El éxito significa construir agentes que generen valor de manera proactiva, no solo reaccionen a él.</p>
+<h2 id="objetivos">🔎 Objetivos<a class="headerlink" href="#objetivos" title="Permanent link">&para;</a></h2>
+<p>📖 Esta lección cubrirá:</p>
+<ul>
+<li>Comprender los Disparadores de Eventos y cómo habilitan el comportamiento autónomo del agente</li>
+<li>Aprender la diferencia entre disparadores de eventos y disparadores de temas, incluyendo flujos de trabajo de disparadores y cargas útiles</li>
+<li>Explorar escenarios comunes de Disparadores de Eventos</li>
+<li>Comprender las consideraciones de autenticación, seguridad y publicación para agentes impulsados por eventos</li>
+<li>Construir un agente autónomo de Mesa de Ayuda de TI que responda a eventos de SharePoint y envíe reconocimientos por correo electrónico</li>
+</ul>
+<h2 id="que-es-un-disparador-de-evento">🤔 ¿Qué es un Disparador de Evento?<a class="headerlink" href="#que-es-un-disparador-de-evento" title="Permanent link">&para;</a></h2>
+<p>Un <strong>Disparador de Evento</strong> es un mecanismo que permite que tu agente actúe de manera autónoma en respuesta a eventos externos, sin requerir entrada directa del usuario. Piensa en ello como hacer que tu agente "observe" eventos específicos y tome acción automáticamente cuando ocurran.</p>
+<p>A diferencia de los disparadores de temas, que requieren que los usuarios escriban algo para activar una conversación, los disparadores de eventos se activan en función de cosas que suceden en tus sistemas conectados. Ejemplo:</p>
+<ul>
+<li>Cuando se crea un nuevo archivo en SharePoint o OneDrive para Empresas</li>
+<li>Cuando se crea un registro en Dataverse</li>
+<li>Cuando se completa una tarea en Planner</li>
+<li>Cuando se envía una nueva respuesta de Microsoft Forms</li>
+<li>Cuando se agrega un nuevo mensaje en Microsoft Teams</li>
+<li>Basado en un horario recurrente (como recordatorios diarios)<br />
+<img alt="Agregar Disparador" src="../../../../../translated_images/10_AddTriggerDialog.d665fde7e50d106d693110cd80e6c6b569bdad34ea985eb72fee7e0fccb3ef26.es.png" /></li>
+</ul>
+<h3 id="por-que-los-disparadores-de-eventos-son-importantes-en-agentes-autonomos">Por qué los Disparadores de Eventos son importantes en agentes autónomos<a class="headerlink" href="#por-que-los-disparadores-de-eventos-son-importantes-en-agentes-autonomos" title="Permanent link">&para;</a></h3>
+<p>Los disparadores de eventos transforman tu agente de un asistente reactivo a un ayudante proactivo y autónomo:</p>
+<ol>
+<li>
+<p><strong>Operación autónoma</strong> - tu agente puede trabajar 24/7 sin intervención humana, respondiendo a eventos a medida que ocurren.</p>
+<ul>
+<li><em>Ejemplo:</em> Dar la bienvenida automáticamente a nuevos miembros del equipo cuando se agregan a un equipo.</li>
+</ul>
+</li>
+<li>
+<p><strong>Capacidad de respuesta en tiempo real</strong> - en lugar de esperar a que los usuarios hagan preguntas, tu agente responde inmediatamente a eventos relevantes.</p>
+<ul>
+<li><em>Ejemplo</em>: Alertar al equipo de TI cuando se modifica un documento de SharePoint.</li>
+</ul>
+</li>
+<li>
+<p><strong>Automatización de flujos de trabajo</strong> - encadenar múltiples acciones basadas en un solo evento disparador.</p>
+<ul>
+<li><em>Ejemplo:</em> Cuando se crea un nuevo ticket de soporte, crear una tarea, notificar al gerente y actualizar el tablero de seguimiento.</li>
+</ul>
+</li>
+<li>
+<p><strong>Procesos consistentes</strong> - garantizar que nunca se omitan pasos importantes automatizando respuestas a eventos clave.</p>
+<ul>
+<li><em>Ejemplo:</em> Cada nuevo empleado recibe automáticamente materiales de incorporación y solicitudes de acceso.</li>
+</ul>
+</li>
+<li>
+<p><strong>Acciones basadas en datos</strong> - usar información del evento disparador para tomar decisiones inteligentes y realizar acciones apropiadas.</p>
+<ul>
+<li><em>Ejemplo:</em> Enviar tickets urgentes al personal senior según el nivel de prioridad en la carga útil del disparador.</li>
+</ul>
+</li>
+</ol>
+<h2 id="como-funcionan-los-disparadores-de-eventos">⚙️ ¿Cómo funcionan los Disparadores de Eventos?<a class="headerlink" href="#como-funcionan-los-disparadores-de-eventos" title="Permanent link">&para;</a></h2>
+<p>Los disparadores de eventos operan a través de un flujo de trabajo de tres pasos que permite que tu agente responda de manera autónoma a eventos externos:</p>
+<h3 id="el-flujo-de-trabajo-del-disparador">El flujo de trabajo del disparador<a class="headerlink" href="#el-flujo-de-trabajo-del-disparador" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Detección de Evento</strong> - Ocurre un evento específico en un sistema conectado (SharePoint, Teams, Outlook, etc.)</li>
+<li><strong>Activación del Disparador</strong> - El disparador de evento detecta este evento y envía una carga útil a tu agente a través de un Flujo en la Nube de Power Automate.</li>
+<li><strong>Respuesta del Agente</strong> - Tu agente recibe la carga útil y ejecuta las instrucciones que has definido.</li>
+</ol>
+<h3 id="disparadores-de-evento-vs-disparadores-de-tema">Disparadores de Evento vs Disparadores de Tema<a class="headerlink" href="#disparadores-de-evento-vs-disparadores-de-tema" title="Permanent link">&para;</a></h3>
+<p>Comprender la diferencia entre estos dos tipos de disparadores es crucial:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Disparadores de Evento</strong></th>
+<th><strong>Disparadores de Tema</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Activados por eventos de sistemas externos</td>
+<td>Activados por entrada/frases del usuario</td>
+</tr>
+<tr>
+<td>Habilitan el comportamiento autónomo del agente</td>
+<td>Habilitan respuestas conversacionales</td>
+</tr>
+<tr>
+<td>Usan la autenticación del creador</td>
+<td>Opción para la autenticación del usuario</td>
+</tr>
+<tr>
+<td>Funcionan sin interacción del usuario</td>
+<td>Requieren que el usuario inicie la conversación</td>
+</tr>
+<tr>
+<td>Ejemplos: Archivo creado, correo recibido</td>
+<td>Ejemplo: "¿Cómo está el clima?"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="comprender-las-cargas-utiles-de-los-disparadores">📦 Comprender las cargas útiles de los disparadores<a class="headerlink" href="#comprender-las-cargas-utiles-de-los-disparadores" title="Permanent link">&para;</a></h2>
+<p>Cuando ocurre un evento, el disparador envía una <strong>carga útil</strong> a tu agente que contiene información sobre el evento e instrucciones sobre cómo responder.</p>
+<h3 id="cargas-utiles-predeterminadas-vs-personalizadas">Cargas útiles predeterminadas vs personalizadas<a class="headerlink" href="#cargas-utiles-predeterminadas-vs-personalizadas" title="Permanent link">&para;</a></h3>
+<p>Cada tipo de disparador viene con una estructura de carga útil predeterminada, pero puedes personalizarla:</p>
+<p><strong>Carga útil predeterminada</strong> - Usa el formato estándar como <code>Usar contenido de {Body}</code></p>
+<ul>
+<li>Contiene información básica del evento</li>
+<li>Usa instrucciones de procesamiento genéricas</li>
+<li>Bueno para escenarios simples</li>
+</ul>
+<p><strong>Carga útil personalizada</strong> - Agrega instrucciones específicas y formato de datos</p>
+<ul>
+<li>Incluye direcciones detalladas para tu agente</li>
+<li>Especifica exactamente qué datos usar y cómo</li>
+<li>Mejor para flujos de trabajo complejos</li>
+</ul>
+<h3 id="instrucciones-del-agente-vs-instrucciones-de-la-carga-util-personalizada">Instrucciones del agente vs instrucciones de la carga útil personalizada<a class="headerlink" href="#instrucciones-del-agente-vs-instrucciones-de-la-carga-util-personalizada" title="Permanent link">&para;</a></h3>
+<p>Tienes dos lugares para guiar el comportamiento de tu agente con los disparadores de eventos:</p>
+<p><strong>Instrucciones del Agente</strong> (Globales)</p>
+<ul>
+<li>Orientación general que aplica a todos los disparadores</li>
+<li>Ejemplo: "Al procesar tickets, siempre verifica primero si hay duplicados"</li>
+<li>Mejor para patrones de comportamiento general</li>
+</ul>
+<p><strong>Instrucciones de la Carga Útil</strong> (Específicas del disparador)</p>
+<ul>
+<li>Direcciones específicas para tipos individuales de disparadores  </li>
+<li>Ejemplo: "Para esta actualización de SharePoint, envía un resumen al canal del proyecto"</li>
+<li>Mejor para agentes complejos con múltiples disparadores</li>
+</ul>
+<p>💡 <strong>Consejo profesional</strong>: Evita instrucciones conflictivas entre estos dos niveles, ya que esto puede causar comportamientos inesperados.</p>
+<h2 id="escenarios-comunes-de-disparadores-de-eventos">🎯 Escenarios comunes de Disparadores de Eventos<a class="headerlink" href="#escenarios-comunes-de-disparadores-de-eventos" title="Permanent link">&para;</a></h2>
+<p>Aquí hay ejemplos prácticos de cómo los disparadores de eventos pueden mejorar tu agente:</p>
+<h3 id="agente-de-mesa-de-ayuda-de-ti">Agente de Mesa de Ayuda de TI<a class="headerlink" href="#agente-de-mesa-de-ayuda-de-ti" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Disparador</strong>: Nuevo elemento de lista de SharePoint (ticket de soporte)</li>
+<li><strong>Acción</strong>: Categorizar automáticamente, asignar prioridad y notificar a los miembros del equipo apropiados.</li>
+</ul>
+<h3 id="agente-de-incorporacion-de-empleados">Agente de Incorporación de Empleados<a class="headerlink" href="#agente-de-incorporacion-de-empleados" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Disparador</strong>: Nuevo usuario agregado a Dataverse</li>
+<li><strong>Acción</strong>: Enviar mensaje de bienvenida, crear tareas de incorporación y proporcionar acceso.</li>
+</ul>
+<h3 id="agente-de-gestion-de-proyectos">Agente de Gestión de Proyectos<a class="headerlink" href="#agente-de-gestion-de-proyectos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Disparador</strong>: Tarea completada en Planner</li>
+<li><strong>Acción</strong>: Actualizar el tablero del proyecto, notificar a los interesados y verificar bloqueos.</li>
+</ul>
+<h3 id="agente-de-gestion-de-documentos">Agente de Gestión de Documentos<a class="headerlink" href="#agente-de-gestion-de-documentos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Disparador</strong>: Archivo subido a una carpeta específica de SharePoint</li>
+<li><strong>Acción</strong>: Extraer metadatos, aplicar etiquetas y notificar a los propietarios del documento.</li>
+</ul>
+<h3 id="agente-asistente-de-reuniones">Agente Asistente de Reuniones<a class="headerlink" href="#agente-asistente-de-reuniones" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Disparador</strong>: Evento de calendario creado</li>
+<li><strong>Acción</strong>: Enviar recordatorios previos a la reunión y agenda, reservar recursos.</li>
+</ul>
+<h2 id="consideraciones-de-publicacion-y-autenticacion">⚠️ Consideraciones de publicación y autenticación<a class="headerlink" href="#consideraciones-de-publicacion-y-autenticacion" title="Permanent link">&para;</a></h2>
+<p>Antes de que tu agente pueda usar disparadores de eventos en producción, necesitas comprender las implicaciones de autenticación y seguridad.</p>
+<h3 id="autenticacion-del-creador">Autenticación del creador<a class="headerlink" href="#autenticacion-del-creador" title="Permanent link">&para;</a></h3>
+<p>Los disparadores de eventos usan las <strong>credenciales del creador del agente</strong> para toda la autenticación:</p>
+<ul>
+<li>Tu agente accede a sistemas usando tus permisos</li>
+<li>Los usuarios pueden potencialmente acceder a datos a través de tus credenciales</li>
+<li>Todas las acciones se realizan "como tú" incluso cuando los usuarios interactúan con el agente.</li>
+</ul>
+<h3 id="mejores-practicas-de-proteccion-de-datos">Mejores prácticas de protección de datos<a class="headerlink" href="#mejores-practicas-de-proteccion-de-datos" title="Permanent link">&para;</a></h3>
+<p>Para mantener la seguridad al publicar agentes con disparadores de eventos:</p>
+<ol>
+<li><strong>Evaluar acceso a datos</strong> - Revisa qué sistemas y datos pueden acceder tus disparadores.</li>
+<li><strong>Probar exhaustivamente</strong> - Comprende qué información incluyen los disparadores en las cargas útiles.</li>
+<li><strong>Limitar el alcance del disparador</strong> - Usa parámetros específicos para limitar qué eventos activan los disparadores.</li>
+<li><strong>Revisar datos de la carga útil</strong> - Asegúrate de que los disparadores no expongan información sensible.</li>
+<li><strong>Monitorear uso</strong> - Rastrear la actividad de los disparadores y el consumo de recursos.</li>
+</ol>
+<h2 id="solucion-de-problemas-y-limitaciones">⚠️ Solución de problemas y limitaciones<a class="headerlink" href="#solucion-de-problemas-y-limitaciones" title="Permanent link">&para;</a></h2>
+<p>Ten en cuenta estas consideraciones importantes al trabajar con disparadores de eventos:</p>
+<h3 id="impactos-en-cuotas-y-facturacion">Impactos en cuotas y facturación<a class="headerlink" href="#impactos-en-cuotas-y-facturacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cada activación de disparador cuenta hacia tu consumo de mensajes.</li>
+<li>Los disparadores frecuentes (como recurrencia cada minuto) pueden consumir rápidamente la cuota.</li>
+<li>Monitorea el uso para evitar restricciones.</li>
+</ul>
+<h3 id="requisitos-tecnicos">Requisitos técnicos<a class="headerlink" href="#requisitos-tecnicos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Solo disponible para agentes con orquestación generativa habilitada.</li>
+<li>Requiere que el uso compartido de flujos en la nube con conocimiento de soluciones esté habilitado en tu entorno.</li>
+</ul>
+<h3 id="prevencion-de-perdida-de-datos-dlp">Prevención de Pérdida de Datos (DLP)<a class="headerlink" href="#prevencion-de-perdida-de-datos-dlp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Las políticas de DLP de tu organización determinan qué disparadores están disponibles.</li>
+<li>Los administradores pueden bloquear los disparadores de eventos por completo.</li>
+<li>Contacta a tu administrador si los disparadores esperados no están disponibles.</li>
+</ul>
+<h2 id="laboratorio-10-agregar-disparadores-de-eventos-para-comportamiento-autonomo-del-agente">🧪 Laboratorio 10 - Agregar Disparadores de Eventos para comportamiento autónomo del agente<a class="headerlink" href="#laboratorio-10-agregar-disparadores-de-eventos-para-comportamiento-autonomo-del-agente" title="Permanent link">&para;</a></h2>
+<h3 id="caso-de-uso">🎯 Caso de uso<a class="headerlink" href="#caso-de-uso" title="Permanent link">&para;</a></h3>
+<p>Mejorarás tu agente de Mesa de Ayuda de TI para responder automáticamente a nuevas solicitudes de soporte. Cuando alguien crea un nuevo elemento en tu lista de tickets de soporte de SharePoint, tu agente:</p>
+<ol>
+<li>Se activará automáticamente cuando se cree el ticket de SharePoint.</li>
+<li>Proporcionará los detalles del ticket e instrucciones sobre los pasos que deseas que realice.</li>
+<li>Reconocerá automáticamente el ticket al remitente mediante un correo electrónico generado por IA.</li>
+</ol>
+<p>Este laboratorio demuestra cómo los disparadores de eventos habilitan un comportamiento verdaderamente autónomo del agente.</p>
+<h3 id="requisitos-previos">Requisitos previos<a class="headerlink" href="#requisitos-previos" title="Permanent link">&para;</a></h3>
+<p>Antes de comenzar este laboratorio, asegúrate de tener:</p>
+<ul>
+<li>✅ Completado los laboratorios anteriores (especialmente los Laboratorios 6-8 para el agente de Mesa de Ayuda de TI).</li>
+<li>✅ Acceso al sitio de SharePoint con la lista de tickets de soporte de TI.</li>
+<li>✅ Entorno de Copilot Studio con disparadores de eventos habilitados.</li>
+<li>✅ Tu agente tiene orquestación generativa habilitada.</li>
+<li>✅ Permisos apropiados en SharePoint y tu entorno de Copilot Studio.</li>
+</ul>
+<h3 id="101-habilitar-ia-generativa-y-crear-un-disparador-de-creacion-de-elementos-de-sharepoint">10.1 Habilitar IA Generativa y crear un disparador de creación de elementos de SharePoint<a class="headerlink" href="#101-habilitar-ia-generativa-y-crear-un-disparador-de-creacion-de-elementos-de-sharepoint" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Abre tu <strong>agente de Mesa de Ayuda de TI</strong> en <strong>Copilot Studio</strong>.</p>
+</li>
+<li>
+<p>Primero, asegúrate de que la <strong>IA Generativa</strong> esté habilitada para tu agente:</p>
+</li>
+<li>Navega a la pestaña <strong>Resumen</strong>.</li>
+<li>
+<p>En la sección de Orquestación, activa <strong>Orquestación generativa</strong> si aún no está habilitada.<br />
+<img alt="Habilitar IA Generativa" src="../../../../../translated_images/10_EnableGenerativeAI.a58904a7599016a94b89a11d6c1cd59022ae686ef553d17f89ebfb6c275cc900.es.png" /></p>
+</li>
+<li>
+<p>Navega a la pestaña <strong>Resumen</strong> y localiza la sección <strong>Disparadores</strong>.</p>
+</li>
+<li>
+<p>Haz clic en <strong>+ Agregar disparador</strong> para abrir la biblioteca de disparadores.<br />
+<img alt="Navegar a Disparadores" src="../../../../../translated_images/10_NavigateToTrigger.f5907762b93236a72d2f89cdb7c903608adb61763888ba1d3b4998f46473240c.es.png" /></p>
+</li>
+<li>
+<p>Busca y selecciona <strong>Cuando se crea un elemento</strong> (SharePoint).<br />
+<img alt="Seleccionar Disparador de SharePoint" src="../../../../../translated_images/10_SelectSharePointTrigger.d63e7cb0f06cf33e664c0e2316952aeac4adf507d7e0f87254cffebbfa5b3007.es.png" /></p>
+</li>
+<li>
+<p>Configura el nombre del disparador y las conexiones:</p>
+</li>
+<li>
+<p><strong>Nombre del disparador:</strong> Nuevo Ticket de Soporte Creado en SharePoint.</p>
+</li>
+<li>
+<p>Espera a que las conexiones se configuren y selecciona <strong>Siguiente</strong> para continuar.<br />
+<img alt="Configurar nombre y conexiones del disparador" src="../../../../../translated_images/10_ConfigureTriggerNameAndConnections.f526dfc7a9e0dcc31bf791623e6431230f29ae001acb0f5075e175401bebb0f2.es.png" /></p>
+</li>
+<li>
+<p>Configura los parámetros del disparador:</p>
+</li>
+<li>
+<p><strong>Dirección del sitio</strong>: Selecciona tu sitio de SharePoint "Contoso IT".</p>
+</li>
+<li>
+<p><strong>Nombre de la lista</strong>: Elige tu lista "Tickets".</p>
+</li>
+<li>
+<p><strong>Instrucciones adicionales para el agente cuando sea invocado por el disparador:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>New Support Ticket Created in SharePoint: {Body}
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Use the &#39;Acknowledge SharePoint Ticket&#39; tool to generate the email body automatically and respond.
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>IMPORTANT: Do not wait for any user input. Work completely autonomously.
+</span></code></pre></div>
+<p><img alt="Configurar parámetros del disparador" src="../../../../../translated_images/10_ConfigureTriggerParams.a67406d4a892ba1f59a04641cbb2f7226a329b9813b04676f92bf18c6003fd23.es.png" /></p>
+</li>
+<li>
+<p>Selecciona <strong>Crear disparador</strong> para completar la creación del disparador. Se crea automáticamente un Flujo en la Nube de Power Automate para activar el agente de manera autónoma.</p>
+</li>
+<li>
+<p>Selecciona <strong>Cerrar</strong>.</p>
+</li>
+</ol>
+<h3 id="102-editar-el-disparador">10.2 Editar el Disparador<a class="headerlink" href="#102-editar-el-disparador" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Dentro de la sección <strong>Disparadores</strong> de la pestaña <strong>Resumen</strong>, selecciona el menú <strong>...</strong> en el disparador <strong>Nuevo Ticket de Soporte Creado en SharePoint</strong>.</p>
+</li>
+<li>
+<p>Selecciona <strong>Editar en Power Automate</strong>.<br />
+<img alt="Editar disparador en Power Automate" src="../../../../../translated_images/10_EditTriggerInPowerAutomate.d99effb8145d40bd4d655021e0a34abf59ba23ff5e94bcae07e7e6711a52eff0.es.png" /></p>
+</li>
+<li>
+<p>Selecciona el nodo <strong>Envía un mensaje al copiloto especificado para su procesamiento</strong>.</p>
+</li>
+<li>
+<p>En el campo <strong>Cuerpo/mensaje</strong>, elimina el contenido del cuerpo, <strong>presiona la tecla de barra diagonal</strong> (/) y selecciona <strong>Insertar Expresión</strong>.<br />
+<img alt="Insertar expresión para el disparador" src="../../../../../translated_images/10_InsertExpressionForTrigger.adb940d8fa6e0bc50b325cedc3e3c085b5670e5cf2b275bf7b4ada1180d3ba01.es.png" /></p>
+</li>
+<li>
+<p>Ingresa la siguiente expresión para proporcionar al agente detalles específicos sobre el ticket:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>concat(&#39;Submitted By Name: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Author/DisplayName&#39;], &#39;\nSubmitted By Email: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Author/Email&#39;], &#39;\nTitle: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Title&#39;], &#39;\nIssue Description: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Description&#39;], &#39;\nPriority: &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;Priority/Value&#39;],&#39;\nTicket ID : &#39;, first(triggerOutputs()?[&#39;body/value&#39;])?[&#39;ID&#39;])
+</span></code></pre></div>
+</li>
+<li>
+<p>Selecciona <strong>Agregar</strong>.<br />
+<img alt="Expresión de salida del disparador" src="../../../../../translated_images/10_TriggerOutputExpression.3b120eaa26cc9a4cd5451bb2ca658ce1a7192eb7a46c7c2b4d7431d20e982187.es.png" /></p>
+</li>
+<li>
+<p>Selecciona <strong>Publicar</strong> en la barra de herramientas superior derecha.</p>
+</li>
+</ol>
+<h3 id="103-crear-una-herramienta-para-el-reconocimiento-por-correo-electronico">10.3 Crear una herramienta para el reconocimiento por correo electrónico<a class="headerlink" href="#103-crear-una-herramienta-para-el-reconocimiento-por-correo-electronico" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Regresa</strong> a tu Agente en Copilot Studio.</p>
+</li>
+<li>
+<p>Navega a la pestaña <strong>Herramientas</strong> en tu agente.</p>
+</li>
+<li>
+<p>Haz clic en <strong>+ Agregar una herramienta</strong> y selecciona <strong>Conector</strong>.</p>
+</li>
+<li>
+<p>Busca y selecciona el conector <strong>Enviar un correo electrónico (V2)</strong>.<br />
+<img alt="Seleccionar Conector de Outlook" src="../../../../../translated_images/10_SelectOutlookConnector.0bf4270b1d25c691574881514f162fd74e10206bc5efd798e5cb15741b73c063.es.png" /></p>
+</li>
+<li>
+<p>Espera a que la conexión se configure y luego selecciona <strong>Agregar y configurar</strong>.</p>
+</li>
+<li>
+<p>Configura los ajustes de la herramienta:</p>
+</li>
+<li>
+<p><strong>Nombre</strong>: Reconocer ticket de SharePoint.</p>
+</li>
+<li>
+<p><strong>Descripción</strong>: Esta herramienta envía un correo electrónico de reconocimiento indicando que se ha recibido un ticket.</p>
+</li>
+<li>
+<p>Selecciona <strong>Personalizar</strong> junto a los parámetros de entrada y configura lo siguiente:</p>
+<p><strong>Para</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: La dirección de correo electrónico de la persona que envió el ticket de SharePoint.</li>
+<li><strong>Identificar como</strong>: Correo electrónico.</li>
+</ul>
+<p><strong>Cuerpo</strong>:</p>
+<ul>
+<li><strong>Descripción</strong>: Un reconocimiento de que el ticket fue recibido y que se responderá en un plazo de 3 días hábiles.</li>
+</ul>
+<p><img alt="Configurar parámetros de entrada" src="../../../../../translated_images/10_ConfigureInputParameters.cc8b602c0dc244734cb8eac43f8d7fcf88f4158dcdc7f7ae15658ad93c03beae.es.png" /></p>
+</li>
+<li>
+<p>Selecciona <strong>Guardar</strong>.</p>
+</li>
+</ol>
+<h3 id="104-probar-el-disparador">10.4 Probar el disparador<a class="headerlink" href="#104-probar-el-disparador" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Dentro de tu <strong>Agente de Mesa de Ayuda</strong>, selecciona la pestaña <strong>Resumen</strong>.</li>
+<li>Haz clic en el ícono <strong>Probar Disparador</strong> junto al disparador <strong>Nuevo Ticket de Soporte Creado en SharePoint</strong>. Esto cargará la ventana <strong>Probar tu disparador</strong>.</li>
+<li>Abre una nueva pestaña del navegador y navega a tu <strong>lista de Tickets de Soporte IT en SharePoint</strong>  </li>
+<li>Haz clic en <strong>+ Agregar nuevo elemento</strong> para crear un ticket de prueba:  </li>
+<li><strong>Título</strong>: "No se puede conectar a la VPN"  </li>
+<li><strong>Descripción</strong>: "No se puede conectar a la red WIFI corporativa después de la actualización reciente"  </li>
+<li>
+<p><strong>Prioridad</strong>: "Normal"  </p>
+</li>
+<li>
+<p><strong>Guarda</strong> el elemento de SharePoint<br />
+<img alt="Crear Ticket de Prueba" src="../../../../../translated_images/10_CreateTestTicket.137beedc82d337ef0a467c67d3b53249ec469ce1ce91d88a72fb2f8729a14fce.es.png" />  </p>
+</li>
+<li>Regresa a <strong>Copilot Studio</strong> y monitorea el panel <strong>Probar tu activador</strong> para la activación del activador. Usa el icono de <strong>Actualizar</strong> para cargar el evento del activador, esto puede tardar unos minutos.<br />
+<img alt="Monitorear Prueba de Activador" src="../../../../../translated_images/10_MonitorTriggerTest.f9883de55ba1c9817121c7f801e29715fa74918603f96312dfcb0f16f9af44e0.es.png" />  </li>
+<li>Una vez que aparezca el activador, selecciona <strong>Iniciar prueba</strong>  </li>
+<li>Selecciona el <strong>icono del Mapa de Actividades</strong> en la parte superior del panel <strong>Probar tu agente</strong>  </li>
+<li>Verifica que tu agente:  </li>
+<li>Recibió la carga útil del activador  </li>
+<li>Llamó a la herramienta "Reconocer ticket de SharePoint"<br />
+<img alt="Prueba de activador" src="../../../../../translated_images/10_TestTrigger.f68b063d3fa221601f61484aec9bf68aa17761366aa1efe8c3cad554ce3da902.es.png" />  </li>
+<li>Revisa la bandeja de entrada de correo electrónico del remitente para confirmar que se envió el correo de reconocimiento<br />
+<img alt="Prueba de correo enviado" src="../../../../../translated_images/10_TestEmailSent.1efe77ca636ca8b8c2593216539edfe11555f7e002a6dcb5e2024b36b40e12b3.es.png" />  </li>
+<li>Revisa la pestaña <strong>Actividad</strong> en Copilot Studio para ver la ejecución completa del activador y la herramienta  </li>
+</ol>
+<h2 id="mision-completa">✅ Misión Completa<a class="headerlink" href="#mision-completa" title="Permanent link">&para;</a></h2>
+<p>🎉 <strong>¡Felicidades!</strong> Has implementado con éxito activadores de eventos con herramientas de conectores que permiten que tu agente opere de manera autónoma, enviando automáticamente correos de reconocimiento y procesando tickets de soporte sin intervención del usuario. Una vez que tu agente esté publicado, actuará de manera autónoma en tu nombre.  </p>
+<p>🚀 <strong>Próximo paso</strong>: En nuestra próxima lección, aprenderás cómo <a href="../11-publish-your-agent/">publicar tu agente</a> en Microsoft Teams y Microsoft 365 Copilot, haciéndolo disponible para toda tu organización.  </p>
+<p>⏭️ <a href="../11-publish-your-agent/">Ir a la lección <strong>Publicar tu agente</strong></a>  </p>
+<h2 id="recursos-tacticos">📚 Recursos Tácticos<a class="headerlink" href="#recursos-tacticos" title="Permanent link">&para;</a></h2>
+<p>¿Listo para profundizar en activadores de eventos y agentes autónomos? Consulta estos recursos:  </p>
+<ul>
+<li><strong>Microsoft Learn</strong>: <a href="https://learn.microsoft.com/training/modules/autonomous-agents-online-workshop/?WT.mc_id=power-177340-scottdurow">Haz que tu agente sea autónomo en Copilot Studio</a>  </li>
+<li><strong>Documentación</strong>: <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-trigger-event?WT.mc_id=power-177340-scottdurow">Agregar un activador de evento</a>  </li>
+<li><strong>Mejores Prácticas</strong>: <a href="https://learn.microsoft.com/power-automate/triggers-introduction?WT.mc_id=power-177340-scottdurow">Introducción a activadores en Power Automate</a>  </li>
+<li><strong>Escenarios Avanzados</strong>: <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow-create?WT.mc_id=power-177340-scottdurow">Usar flujos de Power Automate con agentes</a>  </li>
+<li><strong>Seguridad</strong>: <a href="https://learn.microsoft.com/microsoft-copilot-studio/admin-data-loss-prevention?WT.mc_id=power-177340-scottdurow">Prevención de pérdida de datos para Copilot Studio</a>  </li>
+</ul>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/10-add-event-triggers" alt="Analítica" />  </p>
+<hr />
+<p><strong>Descargo de responsabilidad</strong>:<br />
+Este documento ha sido traducido utilizando el servicio de traducción automática <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Aunque nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que surjan del uso de esta traducción.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

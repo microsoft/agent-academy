@@ -1,0 +1,1701 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/de/docs/operative-preview/03-automate-triggers/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-03-ereignistrigger-hinzufugen-um-autonom-zu-handeln" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-signal-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAME: OPERATION SIGNAL POINT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missionsbeschreibung" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Missionsbeschreibung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ziele" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Ziele
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#was-ist-ein-ereignistrigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Was ist ein Ereignistrigger?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interaktiver-agent-vs-autonomer-agent-vergleich" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏓 Interaktiver Agent vs Autonomer Agent - Vergleich
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entwicklertipps-stolperfallen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entwicklertipps &amp; Stolperfallen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-03-automatisierung-von-bewerbungs-e-mails" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 03 - Automatisierung von Bewerbungs-E-Mails
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-abgeschlossen" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Mission abgeschlossen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taktische-ressourcen" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Taktische Ressourcen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "75efaf515d5694d4fd549bfd6518901a",
+  "translation_date": "2025-10-17T19:30:56+00:00",
+  "source_file": "docs/operative-preview/03-automate-triggers/README.md",
+  "language_code": "de"
+}
+-->
+<h1 id="mission-03-ereignistrigger-hinzufugen-um-autonom-zu-handeln">Mission 03: Ereignistrigger hinzufügen, um autonom zu handeln<a class="headerlink" href="#mission-03-ereignistrigger-hinzufugen-um-autonom-zu-handeln" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="codename-operation-signal-point">🕵️‍♂️ CODENAME: <code>OPERATION SIGNAL POINT</code><a class="headerlink" href="#codename-operation-signal-point" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Zeitfenster der Operation:</strong> <code>~45 Minuten</code></p>
+</blockquote>
+<h2 id="missionsbeschreibung">🎯 Missionsbeschreibung<a class="headerlink" href="#missionsbeschreibung" title="Permanent link">&para;</a></h2>
+<p>Willkommen zurück, Agent. In <a href="../02-multi-agent/">Mission 02</a> - haben Sie gelernt, wie Sie einen Application Intake Child-Agent und einen Interview Prep Connected-Agent erstellen, um die Fähigkeiten Ihres Haupt-Hiring-Agent zu erweitern.</p>
+<p>Ihr Auftrag, falls Sie ihn annehmen, ist <strong>Operation Signal Point</strong> - ein tieferer Einstieg in <strong>Ereignistrigger</strong>, um Ihr Agentensystem von reaktiv zu <strong>autonomem Betrieb</strong> zu transformieren. Sie werden Ihre Agenten von der Abhängigkeit menschlicher Eingaben befreien und sie dazu bringen, proaktiv auf externe Ereignisse zu reagieren und intelligente Aktionen ohne Aufsicht auszuführen.</p>
+<p>Stellen Sie sich das als ein Upgrade von Agenten vor, die <em>Fragen beantworten</em>, zu Agenten, die <em>Bedürfnisse antizipieren</em> und <em>selbstständig handeln</em>. Durch Ereignistrigger und automatisierte Workflows wird Ihr Hiring-Agent eingehende Lebenslauf-E-Mails erkennen, Anhänge automatisch verarbeiten, Daten in Dataverse speichern und Ihr HR-Rekrutierungsteam über Microsoft Teams benachrichtigen - während Sie sich auf Aufgaben mit höherem Wert konzentrieren.</p>
+<p>Willkommen in der Welt, in der Automatisierung auf Intelligenz trifft.</p>
+<h2 id="ziele">🔎 Ziele<a class="headerlink" href="#ziele" title="Permanent link">&para;</a></h2>
+<p>In dieser Mission lernen Sie:</p>
+<ol>
+<li>Wie Ereignistrigger autonomes Agentenverhalten ohne Benutzerinteraktion ermöglichen</li>
+<li>Die Unterschiede zwischen interaktiven und autonomen Agenten in Copilot Studio</li>
+<li>Wie man Ereignistrigger erstellt, die E-Mail-Anhänge automatisch verarbeiten und Dateien in Dataverse hochladen</li>
+<li>Wie man Agenten-Flows erstellt, die adaptive Karten in Teams-Kanälen für Benachrichtigungen posten</li>
+<li>Wie man Daten zwischen Ereignistriggern und Agenten-Flows für eine End-to-End-Automatisierung übergibt</li>
+</ol>
+<h2 id="was-ist-ein-ereignistrigger">🤔 Was ist ein Ereignistrigger?<a class="headerlink" href="#was-ist-ein-ereignistrigger" title="Permanent link">&para;</a></h2>
+<p>In <a href="../../recruit/10-add-event-triggers/">Recruit</a> haben wir bereits über Ereignistrigger gelernt. Lassen Sie uns dies kurz wiederholen, falls Sie es verpasst haben.</p>
+<p><strong>Ereignistrigger</strong> ermöglichen es einem Agenten, <em>selbstständig zu handeln</em>, wenn etwas in einem anderen System passiert - ohne dass eine Benutzernachricht erforderlich ist. Wenn das konfigurierte Ereignis ausgelöst wird - wie „neues SharePoint-Element“, „neue E-Mail“, „Planner-Aufgabe zugewiesen“ oder sogar eine zeitbasierte Wiederholung, sendet ein Connector eine Trigger-Nutzlast an Ihren Agenten. Der Agent folgt dann Ihren Anweisungen, um zu entscheiden, welche Aktionen oder Themen aufgerufen werden sollen.</p>
+<h3 id="hauptmerkmale">Hauptmerkmale<a class="headerlink" href="#hauptmerkmale" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Autonome Aktivierung:</strong></p>
+<ul>
+<li>Im Gegensatz zu Themen-Triggern, die starten, wenn ein Benutzer mit dem Agenten interagiert, werden Ereignistrigger durch externe Ereignisse ausgelöst und ermöglichen proaktives Verhalten.</li>
+</ul>
+</li>
+<li>
+<p><strong>Nutzlast-gesteuert:</strong></p>
+<ul>
+<li>Jedes Ereignis liefert eine Nutzlast (Variablen + optionale Anweisungen) über einen Connector. Der Agent verwendet Ihre definierten Anweisungen und die Nutzlast, um zu entscheiden, was als Nächstes zu tun ist.</li>
+<li>Zum Beispiel <em>ein Thema aufrufen</em> oder <em>Aktionen ausführen, die durch Tools definiert sind</em>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Beispiele direkt verfügbar:</strong></p>
+<ul>
+<li>SharePoint/OneDrive-Datei oder -Element erstellt</li>
+<li>Planner-Aufgabe abgeschlossen/zugewiesen</li>
+<li>Microsoft Forms-Antwort eingereicht</li>
+<li>Wiederholung/Planung</li>
+</ul>
+<p>Die Verfügbarkeit hängt von den Datenrichtlinien Ihrer Organisation ab, die in Power Automate konfiguriert sind.</p>
+</li>
+<li>
+<p><strong>Erfordert generative Orchestrierung:</strong></p>
+<ul>
+<li>Ereignistrigger sind nur verfügbar, wenn generative Orchestrierung für den Agenten aktiviert ist.</li>
+</ul>
+</li>
+<li>
+<p><strong>Abrechnung/Nutzung:</strong></p>
+<ul>
+<li>Jede Trigger-Lieferung zählt als Nachricht im Rahmen der Kapazität von Copilot Studio.</li>
+<li>Zum Beispiel sendet eine 10-minütige Wiederholung alle 10 Minuten eine Nachricht.</li>
+</ul>
+</li>
+<li>
+<p><strong>Authentifizierungsmodell und Einrichtung:</strong></p>
+<ul>
+<li>Sie fügen Trigger im Agenten-Übersicht unter <em>Triggers</em> hinzu. Die Authentifizierung für den Trigger-Connector verwendet das Konto des Agenten-Erstellers („Agenten-Autor-Authentifizierung“).</li>
+<li>Sie können Trigger-Parameter und Nutzlast im Power Automate Maker-Portal bearbeiten.</li>
+</ul>
+</li>
+<li>
+<p><strong>Testen &amp; Beobachtbarkeit:</strong></p>
+<ul>
+<li>Sie können Trigger aus dem Testbereich des Agenten testen und das Verhalten mit der Aktivitätskarte vor der Veröffentlichung überprüfen.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">TL;DR für Entwickler</p>
+<p>Denken Sie an Ereignistrigger als <strong>webhook-ähnliche Signale</strong>, die eine strukturierte Nutzlast in Ihren Agenten pushen, sodass er <em>Arbeit initiieren</em> und Aktionen über Systeme hinweg verketten kann - ohne darauf zu warten, dass ein Benutzer eine Anfrage stellt.</p>
+</div>
+<h3 id="themen-trigger-unterschiede">Themen-Trigger - Unterschiede<a class="headerlink" href="#themen-trigger-unterschiede" title="Permanent link">&para;</a></h3>
+<p>Zuvor haben Sie in <a href="../../recruit/07-add-new-topic-with-trigger/">Recruit</a> über Themen-Trigger gelernt, aber Sie fragen sich vielleicht immer noch, wie sich <em>Themen</em>-Trigger von <em>Ereignis</em>-Triggern unterscheiden und warum diese Unterscheidung wichtig ist, um zu verstehen, was einen Agenten autonom macht.</p>
+<p>Themen-Trigger steuern, <em>wann ein Thema ausgeführt wird</em>, normalerweise als Reaktion auf eine Benutzernachricht.</p>
+<ul>
+<li>In der generativen Orchestrierung ist der Standard-Trigger <strong>By agent</strong> - der Planer wählt ein Thema aus, dessen Name/Beschreibung am besten zur Nachricht des Benutzers passt.</li>
+<li>In der klassischen Orchestrierung ist der Standard <strong>Phrases</strong> - der Planer wählt ein Thema aus, wenn ein oder mehrere Trigger-Phrasen am besten zur Nachricht des Benutzers passen.</li>
+</ul>
+<p>Andere Trigger-Typen umfassen <code>Message received</code>, <code>Event received</code>, <code>Activity received</code>, <code>Conversation update</code>, <code>Invoke received</code>, <code>On redirect</code>, <code>Inactivity</code> und <code>Plan complete</code>.</p>
+<div class="admonition info">
+<p class="admonition-title">Wesentlicher Unterschied</p>
+<p>Themen-Trigger sind <em>Gesprächsaktivitätsstarter</em> innerhalb des Chats.</p>
+<p>Ereignistrigger sind <em>Systemereignisstarter</em>, die über Connectors geliefert werden und den Agenten ganz ohne Gespräch ausführen können.</p>
+</div>
+<h3 id="schnellubersicht-themen-trigger-vs-ereignistrigger">Schnellübersicht: Themen-Trigger vs Ereignistrigger<a class="headerlink" href="#schnellubersicht-themen-trigger-vs-ereignistrigger" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Themen-Trigger:</strong> Benutzer (oder Chat-Aktivität) sagt/tut X ➡️ Thema T ausführen.</li>
+<li><strong>Ereignistrigger:</strong> SharePoint/Planner/E-Mail/Timer löst mit Nutzlast P aus ➡️ Agent bewertet Anweisungen ➡️ ruft entsprechend Aktionen/Themen auf.</li>
+</ul>
+<h2 id="interaktiver-agent-vs-autonomer-agent-vergleich">🏓 Interaktiver Agent vs Autonomer Agent - Vergleich<a class="headerlink" href="#interaktiver-agent-vs-autonomer-agent-vergleich" title="Permanent link">&para;</a></h2>
+<p>Jetzt, da Sie den Unterschied zwischen Ereignistriggern und Themen-Triggern kennen, lernen wir als Nächstes den Unterschied zwischen einem interaktiven Agenten und einem autonomen Agenten.</p>
+<p>In Copilot Studio bedeutet "interaktiv", dass Agenten hauptsächlich über <strong>Themen</strong> in einem Chat oder Kanal interagieren. "Autonom" bedeutet, dass Agenten auch <strong>Ereignistrigger</strong> nutzen, um ohne Benutzereingabe zu arbeiten.</p>
+<p>Die folgende Tabelle fasst ihre Unterschiede und Gemeinsamkeiten zusammen.</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Interaktiver Agent</th>
+<th>Autonomer Agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wie es startet</td>
+<td>Benutzer (oder Chat-Aktivität) löst ein Thema aus. Beispiel: By agent, Phrases, Message received.</td>
+<td>Externer Ereignistrigger sendet eine Nutzlast über einen Connector an den Agenten. Beispiel: SharePoint, Planner, E-Mail, Zeitplan, etc.</td>
+</tr>
+<tr>
+<td>Hauptanwendung</td>
+<td>Q&amp;A, geführte Workflows, anfragegesteuerte Aktionen im Chat - Teams, Web, etc.</td>
+<td>Proaktive Operationen und Hintergrundautomatisierung - auf Systemänderungen reagieren und dann benachrichtigen, speichern oder Aufgaben orchestrieren.</td>
+</tr>
+<tr>
+<td>Trigger-Oberfläche</td>
+<td>Themen-Trigger: By agent / Phrases / Message received / Activity types / Invoke / Inactivity / Plan complete</td>
+<td>Ereignistrigger-Bibliothek über Connectors; Nutzlast enthält Ereignisdaten + optionale Anweisungen.</td>
+</tr>
+<tr>
+<td>Planer (generative Orchestrierung)</td>
+<td>Stark genutzt für By agent und Plan complete Trigger, um Themen auszuwählen/zu sequenzieren.</td>
+<td>Erforderlich für Ereignistrigger; der Agent verwendet Anweisungen + Nutzlast, um zu entscheiden, welche Aktionen/Themen aufgerufen werden sollen.</td>
+</tr>
+<tr>
+<td>Typisches Beispiel</td>
+<td>Benutzer fragt "Was ist unsere Rückerstattungsrichtlinie?" → Thema wird ausgeführt, Abfrage der Wissensdatenbank, Antwort.</td>
+<td>Neue Planner-Aufgabe zugewiesen → Ereignistrigger wird ausgelöst → Agent postet eine Teams-Nachricht, aktualisiert einen Datensatz oder ruft ein Thema auf.</td>
+</tr>
+<tr>
+<td>Einrichtungsweg</td>
+<td>Themen erstellen, Trigger-Typ definieren, Dialog/Aktionen verfassen; in Kanälen veröffentlichen.</td>
+<td>Ereignistrigger hinzufügen (Übersicht → Triggers), Connector mit Agenten-Autor-Anmeldedaten authentifizieren, Nutzlast/Anweisungen konfigurieren; im Testbereich testen; veröffentlichen.</td>
+</tr>
+<tr>
+<td>Authentifizierung und Governance</td>
+<td>Läuft im Kanal-/Authentifizierungskontext; Themen-Trigger reagieren auf Chat-Aktivitäten in erlaubten Kanälen.</td>
+<td>Trigger-Verfügbarkeit hängt von Power Automate-Datenrichtlinien ab; Connectors laufen unter dem Konto des Agenten-Erstellers.</td>
+</tr>
+<tr>
+<td>Beobachtbarkeit</td>
+<td>Themen innerhalb von Copilot Studio testen, Gesprächsprotokolle/Aktivitäten überprüfen.</td>
+<td>Test-Trigger und Aktivitätskarte verwenden, um die Ausführung vor der Veröffentlichung zu validieren, Aktivität nach der Veröffentlichung überwachen.</td>
+</tr>
+<tr>
+<td>Kapazitätsauswirkung</td>
+<td>Jede Benutzernachricht/Agentenantwort ist eine Nachricht, die Kapazität verbraucht.</td>
+<td>Jede Ereignislieferung ist ebenfalls eine Nachricht, plus alle nachfolgenden Aktionen. Beispiel: eine 10-minütige Wiederholung = 6 Nachrichten/Stunde</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wann-sollte-was-verwendet-werden">Wann sollte was verwendet werden?<a class="headerlink" href="#wann-sollte-was-verwendet-werden" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Wählen Sie <strong>Themen-Trigger (interaktiv)</strong>, wenn Benutzer die Agenten-Konversation initiieren - FAQ, geführte Intake oder Aufgaben im Befehlsstil innerhalb des Chats. Der By agent-Trigger des Planers reduziert den manuellen Aufwand bei der Phrasenerstellung.</li>
+<li>Fügen Sie <strong>Ereignistrigger (autonom)</strong> hinzu, wenn der Agent die Konversation starten oder selbstständig handeln soll - bei Updates in SharePoint/Dataverse, eingehenden E-Mails oder nach einem Zeitplan. Dies bringt Sie von reaktiven zu proaktiven Operationen.</li>
+</ul>
+<h2 id="entwicklertipps-stolperfallen">Entwicklertipps &amp; Stolperfallen<a class="headerlink" href="#entwicklertipps-stolperfallen" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Generative Orchestrierung aktivieren</strong> für jeden Agenten, den Sie autonom machen möchten. Ereignistrigger werden sonst nicht angezeigt.</p>
+</li>
+<li>
+<p><strong>Modellieren Sie die Nutzlast frühzeitig.</strong> Entscheiden Sie, welche minimalen Felder Ihr Agent vom Trigger benötigt, wie <code>itemId</code>, <code>assignedTo</code>, <code>dueDate</code>, und fügen Sie prägnante Anweisungen hinzu, die dem Agenten sagen, welche Aktion/welches Thema basierend auf den Nutzlastwerten aufgerufen werden soll.</p>
+</li>
+<li>
+<p><strong>Authentifizierungsbereich beachten.</strong> Trigger authentifizieren sich über das Konto des Agenten-Erstellers. Stellen Sie sicher, dass dieses Konto die richtigen Connector-Berechtigungen hat und den Power Automate-Datenrichtlinien entspricht.</p>
+</li>
+<li>
+<p><strong>Kosten und Lärm kontrollieren.</strong> Hochfrequente Wiederholungen oder sehr gesprächige Quellen können den Nachrichtenverbrauch schnell erhöhen - drosseln Sie, wo möglich, oder fügen Sie Bedingungen im Trigger hinzu, um Ereignisse zu filtern.</p>
+</li>
+<li>
+<p><strong>Vor der Veröffentlichung testen.</strong> Verwenden Sie <strong>Test-Trigger</strong> und die Aktivitätskarte, um den Plan und die aufgerufenen Aktionen zu beobachten - iterieren Sie Anweisungen/Nutzlast, bis das Verhalten stabil ist.</p>
+</li>
+</ol>
+<h2 id="lab-03-automatisierung-von-bewerbungs-e-mails">🧪 Lab 03 - Automatisierung von Bewerbungs-E-Mails<a class="headerlink" href="#lab-03-automatisierung-von-bewerbungs-e-mails" title="Permanent link">&para;</a></h2>
+<p>Als Nächstes werden wir einen Ereignistrigger zum <strong>Hiring Agent</strong> hinzufügen und einen Agenten-Flow im Child-Agent <strong>Application Intake Agent</strong> erstellen, um die weitere Verarbeitung für Autonomie zu ermöglichen.</p>
+<h3 id="anwendungsfall-szenario">✨ Anwendungsfall-Szenario<a class="headerlink" href="#anwendungsfall-szenario" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p><strong>Als</strong> HR-Recruiter</p>
+<p><strong>möchte ich</strong> benachrichtigt werden, wenn eine E-Mail mit einem Lebenslauf in meinem Posteingang angekommen ist, die automatisch in Dataverse hochgeladen wurde</p>
+<p><strong>damit ich</strong> über Lebensläufe, die per E-Mail für Bewerbungen gesendet und automatisch in Dataverse hochgeladen wurden, informiert bleibe</p>
+</div>
+<p>Wir werden dies mit zwei Techniken erreichen:</p>
+<ol>
+<li>
+<p>Ein Ereignistrigger für den Eingang der E-Mail,</p>
+<ol>
+<li>Überprüfen, ob der <code>contentType</code> der Datei <code>PDF</code> als Formattyp entspricht.</li>
+<li>Datei extrahieren und mit Aktionen über den Dataverse-Connector in Dataverse hochladen.</li>
+<li>Anschließend einen Prompt an den Agenten senden, um die weitere Verarbeitung durch Übergabe von Eingabeparametern aus den Dataverse-Aktionen zu starten.</li>
+</ol>
+</li>
+<li>
+<p>Ein Agenten-Flow wird dem Child-Agent <strong>Application Intake Agent</strong> hinzugefügt, der durch den Prompt im Ereignistrigger aufgerufen wird.</p>
+<ol>
+<li>Die Eingabeparameter, die vom Prompt des Ereignistriggers übergeben werden, in einer adaptiven Karte verwenden, die in einem Kanal in Microsoft Teams gepostet wird, um das HR-Rekrutierungsteam zu benachrichtigen. Die adaptive Karte enthält einen Link zur Zeile in Dataverse, die im <strong>Hiring Agent</strong> angezeigt wird.</li>
+</ol>
+</li>
+</ol>
+<p>Legen wir los!</p>
+<h3 id="voraussetzungen-fur-die-durchfuhrung-dieser-mission">✨ Voraussetzungen für die Durchführung dieser Mission<a class="headerlink" href="#voraussetzungen-fur-die-durchfuhrung-dieser-mission" title="Permanent link">&para;</a></h3>
+<p>Sie benötigen <strong>entweder</strong>:</p>
+<ul>
+<li><strong>Mission 01 und Mission 02 abgeschlossen</strong> und Ihren Hiring Agent bereit, <strong>ODER</strong></li>
+<li><strong>Die Starterlösung für Mission 03 importieren</strong>, falls Sie neu beginnen oder aufholen müssen. <a href="https://aka.ms/agent-academy">Mission 03 Starterlösung herunterladen</a></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Lösungsimport und Beispieldaten</p>
+<p>Wenn Sie die Starterlösung verwenden, lesen Sie <a href="../01-get-started/">Mission 01</a> für detaillierte Anweisungen zum Importieren von Lösungen und Beispieldaten in Ihre Umgebung.</p>
+</div>
+<p>Sie benötigen außerdem Zugriff auf <strong>Microsoft Teams</strong>, um die zweite Übung des Labs abzuschließen, bei der eine adaptive Karte in Microsoft Teams gepostet wird.</p>
+<h3 id="lab-31-automatisches-hochladen-von-lebenslaufen-in-dataverse-die-per-e-mail-empfangen-werden">Lab 3.1 - Automatisches Hochladen von Lebensläufen in Dataverse, die per E-Mail empfangen werden<a class="headerlink" href="#lab-31-automatisches-hochladen-von-lebenslaufen-in-dataverse-die-per-e-mail-empfangen-werden" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Im Hiring Agent scrollen Sie im <strong>Übersicht-Tab</strong> nach unten und wählen <strong>+ Trigger hinzufügen</strong>.</p>
+<p><img alt="Trigger zum Agenten hinzufügen" src="../../../../../translated_images/3.1_01_AddTrigger.4d5f4d13a4a6b19fe9ff89e3a483601199d7643236d6df65ff81dfea76d1d443.de.png" /></p>
+</li>
+<li>
+<p>Eine Liste von Triggern wird angezeigt. Wählen Sie <strong>Wenn eine neue E-Mail eingeht (V3)</strong> und klicken Sie auf <strong>Weiter</strong>.</p>
+<p><img alt="Trigger &quot;Wenn eine neue E-Mail eingeht (V3)&quot; auswählen" src="../../../../../translated_images/3.1_02_WhenANewEmailArrives.a250875915165d97c1af6eebba70f16fbfc845a37d4d354c9f35a55aa459035e.de.png" /></p>
+</li>
+<li>
+<p>Nun sehen Sie den <strong>Trigger-Namen</strong> und die <strong>Anmeldeverbindungen</strong> für die aufgeführten Apps.</p>
+<p>Benennen Sie den Trigger wie folgt um:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Wenn eine neue E-Mail von einem Bewerber eingeht
+</span></code></pre></div>
+<p>Stellen Sie sicher, dass Sie ein grünes Häkchen bei jeder der aufgeführten Verbindungen sehen. Falls nicht, melden Sie sich über die Ellipse (...) an und wählen <strong>+ Neue Verbindungsreferenz</strong>, um eine neue Verbindungsreferenz zu erstellen.</p>
+<p><img alt="Details für Trigger-Namen aktualisieren und Verbindungsreferenzen überprüfen" src="../../../../../translated_images/3.1_03_RenameTriggerName.3eb80b25bea5f874a51aab600ffd333359de3a981e41eed1b4fc7c8f27eef323.de.png" /></p>
+</li>
+<li>
+<p>Der letzte Schritt besteht darin, die Eingabeeigenschaften des Triggers festzulegen. Aktualisieren Sie die folgenden Eigenschaften wie angegeben:</p>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Einstellung</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Anhänge einbeziehen (optional)</strong></td>
+<td>Dropdown</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td><strong>Betreff-Filter (optional)</strong></td>
+<td>Mit Tastatur eingeben</td>
+<td>Bewerbung</td>
+</tr>
+<tr>
+<td><strong>Nur mit Anhängen (optional)</strong></td>
+<td>Dropdown</td>
+<td>Ja</td>
+</tr>
+</tbody>
+</table>
+<p>Wählen Sie <strong>Trigger erstellen</strong>.</p>
+<p><img alt="Trigger-Eingaben konfigurieren" src="../../../../../translated_images/3.1_04_ConfigureTriggerInputs.2151044f4953b31b40402c2a94fd63fb71fe8eede27a5cbf1d124d4300318446.de.png" /></p>
+</li>
+<li>
+<p>Nach der Erstellung erscheint eine Bestätigungsmeldung, dass der Trigger dem Agenten hinzugefügt wurde. Wählen Sie <strong>Schließen</strong>, und der Trigger wird im Abschnitt <strong>Triggers</strong> aufgelistet.
+Wir werden nun den Ereignisauslöser aktualisieren, um weitere Automatisierungsfunktionen hinzuzufügen. Wählen Sie die <strong>Ellipsen (...)</strong> beim Auslöser und dann <strong>In Power Automate bearbeiten</strong> aus.</p>
+</li>
+</ol>
+<p><img alt="In Power Automate bearbeiten auswählen" src="../../../../../translated_images/3.1_05_SelectEditInPowerAutomate.d298b51d7980cf2fd20a9d8193745aef4ce8097a4a2d33341e2dc159b9bfc099.de.png" /></p>
+<ol>
+<li>Der Auslöser wird dann als Flow im Power Automate Maker-Portal geladen. Was Sie sehen, ist der Flow-Designer im Power Automate Maker-Portal. Hier können wir weitere Logik und Aktionen für mehr Automatisierung hinzufügen. Der Auslöser erscheint oben, gefolgt von <strong>Sendet eine Eingabeaufforderung an den angegebenen Copilot zur Verarbeitung</strong> als letzte Aktion im Flow.</li>
+</ol>
+<p><img alt="Flow-Designer im Power Automate Maker-Portal" src="../../../../../translated_images/3.1_06_EditInPowerAutomate.f8967ace56354224574517f31a2a2ce0a5b5d3ab85bfb9ec6cf70e83ab1b8e6d.de.png" /></p>
+<ol>
+<li>Standardmäßig kann der Auslöser <strong>Wenn eine neue E-Mail eintrifft</strong> in Power Automate mehrere E-Mails gleichzeitig verarbeiten, wenn mehrere E-Mails auf einmal eintreffen, und den Flow nur einmal für die gesamte Gruppe ausführen.</li>
+</ol>
+<p>Um sicherzustellen, dass der Flow für jede E-Mail separat ausgeführt wird, aktivieren Sie die Einstellung <strong>Split On</strong> in den Einstellungen des Auslösers und wählen Sie <code>@triggerOutputs()?['body/value']</code> im Dropdown-Feld für Arrays aus.</p>
+<p>Mit aktivierter <strong>Split On</strong>-Einstellung und dem Array-Feld auf <code>@triggerOutputs()?['body/value']</code> gesetzt, wird der Flow individuell für jede Nachricht ausgeführt, auch wenn viele gleichzeitig eintreffen.</p>
+<p><img alt="Split On-Einstellungen im Auslöser aktivieren" src="../../../../../translated_images/3.1_07_UpdateTriggerSettings.0f363c4f4655276732575fa795bf1ad1568df34d34b703c85073591cc8585609.de.png" /></p>
+<ol>
+<li>Als Nächstes fügen wir eine Logik hinzu, um den Dateityp des Anhangs zu überprüfen. Wir möchten nur .PDF-Dateianhänge hochladen und keine Bilder (diese könnten aus E-Mail-Signaturen stammen). Wählen Sie das <strong>+</strong>-Symbol unterhalb des Auslösers und dann <strong>Steuerung</strong> im Abschnitt <strong>Integrierte Tools</strong> aus.</li>
+</ol>
+<p><img alt="Steuerung auswählen" src="../../../../../translated_images/3.1_08_Control.2fa6987b64ae20d5c8343d1b15937432ab6c893750c4b1427df56067023fd437.de.png" /></p>
+<ol>
+<li>Wählen Sie die Aktion <strong>Bedingung</strong> aus.</li>
+</ol>
+<p><img alt="Bedingung-Aktion auswählen" src="../../../../../translated_images/3.1_09_AddConditionAction.a7eec0b2a42d4a7c54bd305f0c480b72e3feec155a4e2468e12279082257f21f.de.png" /></p>
+<ol>
+<li>
+<p>Konfigurieren Sie nun die Bedingung, um zu überprüfen, ob der Dateityp des Anhangs .PDF ist. Im Feld <strong>Wert auswählen</strong> wählen Sie das <strong>Blitzsymbol</strong> oder das <strong>fx-Symbol</strong> rechts aus.</p>
+</li>
+<li>
+<p>Geben Sie im <strong>Suchfeld</strong> Folgendes ein:</p>
+</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>content type
+</span></code></pre></div>
+<ol>
+<li>
+<p>Wählen Sie dann den Parameter <strong>Attachments Content-Type</strong> aus dem Auslöser aus.</p>
+</li>
+<li>
+<p>Wählen Sie anschließend <strong>Hinzufügen</strong>, um den dynamischen Inhalt in den <strong>Id</strong>-Parameter der Aktion einzufügen.</p>
+</li>
+</ol>
+<p><img alt="Bedingung-Aktion konfigurieren" src="../../../../../translated_images/3.1_10_SetDynamicContentValue_V2.23c3d0438146a5ff0d695077e65a3b1c8b230b54c51ded8a099c6e99a948e9ed.de.png" /></p>
+<ol>
+<li>Lassen Sie uns hier kurz innehalten. Sie haben wahrscheinlich bemerkt, dass die Aktion <strong>Für jedes</strong> automatisch erschienen ist.</li>
+</ol>
+<p>Wählen Sie die Aktion <strong>Für jedes</strong> aus. Diese Aktion stellt das Durchlaufen jedes Anhangs in der E-Mail dar, da der Parameter <strong>Attachments Content-Type</strong> aus dem Auslöser mit jedem Anhang verknüpft ist.</p>
+<p>Im Hintergrund handelt es sich um ein Array, und deshalb wurde die Aktion <strong>Für jedes</strong> automatisch hinzugefügt, als wir den Parameter <strong>Attachments Content-Type</strong> in der Aktion <strong>Bedingung</strong> ausgewählt haben.</p>
+<p>Um mehr darüber zu erfahren, erweitern Sie den folgenden zusätzlichen Lernblock.</p>
+<details class="info">
+<summary>Zusätzliches Lernen: Für jedes-Aktion erscheint automatisch</summary>
+</details>
+<p>🤔 <strong>Warum erscheint "Für jedes" automatisch?</strong></p>
+<p>Wenn Sie einen Parameter (dynamischen Inhalt) auswählen, der eine Liste oder ein Array von Elementen darstellt – zum Beispiel eine Liste von Anhängen, E-Mails oder Zeilen – erkennt Power Automate, dass Sie möglicherweise jedes Element einzeln verarbeiten möchten.</p>
+<p>Um Ihnen dabei zu helfen, fügt Power Automate automatisch eine <strong>"Für jedes"</strong>-Schleife um Ihre Aktion hinzu. Dies stellt sicher, dass Ihre Aktion einmal für jedes Element in der Liste ausgeführt wird, anstatt zu versuchen, die gesamte Liste auf einmal zu verarbeiten (was zu Fehlern führen könnte).</p>
+<p>🦋 <strong>Beispiel</strong></p>
+<ul>
+<li>Wenn Sie "Anhänge" aus einer vorherigen Aktion auswählen (was ein Array ist) und versuchen, es in einer Aktion zu verwenden, die eine einzelne Datei erwartet, umschließt Power Automate Ihre Aktion in einer <strong>"Für jedes"</strong>-Schleife.</li>
+<li>Auf diese Weise wird Ihre Aktion für <strong>jeden Anhang</strong> ausgeführt – einzeln.</li>
+</ul>
+<p>💡 <strong>Wichtige Punkte</strong></p>
+<ul>
+<li><strong>Automatisch:</strong> Die Schleife erscheint automatisch, um Ihnen zu helfen, jedes Element in einer Sammlung zu verarbeiten.</li>
+<li><strong>Verhindert Fehler:</strong> Ohne die Schleife könnte Ihre Aktion fehlschlagen, da sie möglicherweise nicht mit mehreren Elementen gleichzeitig umgehen kann.</li>
+<li><strong>Visueller Hinweis:</strong> Es ist eine visuelle Darstellung, dass Ihr Flow die Aktion für jedes Element in der Liste wiederholt.</li>
+</ul>
+<p><img alt="Für jedes-Aktion erklärt" src="../../../../../translated_images/3.1_11_ForEach.82bd7b62b815fdbcd67acff0a633137cf03175940c670361ea8669b0df892927.de.png" /></p>
+<ol>
+<li>Geben Sie im anderen Feld <strong>Wert auswählen</strong> Folgendes ein:</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>application/pdf
+</span></code></pre></div>
+<p>Dies stellt sicher, dass für jeden Dateianhang überprüft wird, ob das Dateiformat .PDF ist.</p>
+<p><img alt="EqualToValue" src="../../../../../translated_images/3.1_12_EqualToValue.66c107cb8105c1cd3d166b8a5bf690b8dfc30aa2bd2af83c438a9e44d1b544b0.de.png" /></p>
+<ol>
+<li>Nun konfigurieren wir den <strong>Wahr</strong>-Pfad, um die Datei aus der E-Mail zu extrahieren und sie in die <strong>Lebenslauf</strong>-Dataverse-Tabelle hochzuladen.</li>
+</ol>
+<p>Fügen Sie eine neue Aktion im <strong>Wahr</strong>-Pfad hinzu und suchen Sie nach <code>html to text</code>. Wählen Sie die Aktion <strong>Html to text</strong> aus.</p>
+<p>Um mehr über die Aktion <strong>Html to text</strong> zu erfahren, erweitern Sie den folgenden zusätzlichen Lernblock.</p>
+<details class="info">
+<summary>Zusätzliches Lernen: Html to text-Aktion</summary>
+</details>
+<p>🤔 <strong>Was ist die "HTML to text"-Aktion?</strong></p>
+<p>Die <strong>HTML to text</strong>-Aktion in Power Automate wird verwendet, um HTML-formatierte Inhalte in reinen Text umzuwandeln. Dies ist besonders nützlich, wenn Sie Daten (wie E-Mails, Webinhalte oder API-Antworten) erhalten, die HTML-Tags enthalten, und Sie nur den lesbaren Text ohne Formatierung oder Code extrahieren möchten.</p>
+<p>⚙️ <strong>Wie funktioniert es?</strong></p>
+<ul>
+<li><strong>Eingabe:</strong> Sie geben eine Zeichenfolge mit HTML-Inhalt an (zum Beispiel den Textkörper einer E-Mail).</li>
+<li><strong>Ausgabe:</strong> Die Aktion entfernt alle HTML-Tags und gibt nur den reinen Text zurück.</li>
+</ul>
+<p>👍🏻 <strong>Wann sollten Sie es verwenden?</strong></p>
+<ul>
+<li>Wenn Sie lesbaren Text aus E-Mails, Webseiten oder API-Antworten extrahieren möchten, die HTML enthalten.</li>
+<li>Bevor Sie Inhalte an Systeme senden, die keine HTML-Formatierung unterstützen (wie SMS, Teams-Nachrichten oder Datenbanken).</li>
+<li>Um Daten für die weitere Verarbeitung oder Analyse zu bereinigen.</li>
+</ul>
+<p>🔭 <strong>Wo finden Sie es?</strong></p>
+<ul>
+<li>In Power Automate für Agenten-Flows, suchen Sie nach der Aktion <code>HTML to text</code>. Sie befindet sich unter dem <strong>Datenoperationen</strong>-Konnektor.</li>
+</ul>
+<p>💡 <strong>Wichtige Punkte</strong></p>
+<ul>
+<li>Es entfernt alle HTML-Tags und lässt nur den Text übrig.</li>
+<li>Es interpretiert oder führt keine Skripte/Styles aus – es entfernt nur die Tags.</li>
+<li>Nützlich zur Datenbereinigung und zur Vorbereitung von Inhalten für reine Textausgaben.</li>
+</ul>
+<p><img alt="HTML to text-Aktion hinzufügen" src="../../../../../translated_images/3.1_13_AddHTMLToTextAction.2aa9468b87dbeb847c083f24da0fe99438b39f826b13a70982ec255a97c2aa80.de.png" /></p>
+<ol>
+<li>Als Nächstes müssen wir eine neue Verbindungsreferenz für die Aktion <strong>Html to text</strong> erstellen, indem wir <strong>Neu hinzufügen</strong> auswählen.</li>
+</ol>
+<p><img alt="Neue Verbindungsreferenz hinzufügen" src="../../../../../translated_images/3.1_14_AddNewConnection.4a23546976b62e7f0e882ac1379950e5bfdcaa702070313cb84a1d22b06a79a7.de.png" /></p>
+<ol>
+<li>Die Aktion kann nun konfiguriert werden. Fügen Sie den <strong>Body</strong>-Parameter aus dem Auslöser hinzu. Wählen Sie im Feld <strong>Inhalt</strong> das <strong>Blitzsymbol</strong> oder <strong>fx-Symbol</strong> rechts aus.</li>
+</ol>
+<p><img alt="Dynamischen Inhalt hinzufügen" src="../../../../../translated_images/3.1_15_AddDynamicContent.0624a9808f55b993efb6d00bf941a88389655e2ab9970ba2b9a1538272fe9643.de.png" /></p>
+<ol>
+<li>Suchen Sie im Tab <strong>Dynamischer Inhalt</strong> nach <code>body</code> und wählen Sie den <strong>Body</strong>-Parameter aus, gefolgt von <strong>Hinzufügen</strong>.</li>
+</ol>
+<p><img alt="Body-Parameter hinzufügen" src="../../../../../translated_images/3.1_16_AddDynamicContent.40b7eccc080c20513eed5663062b2a63d40d6482eaf2d42fe4e29cb94797f098.de.png" /></p>
+<ol>
+<li>Wir haben die Konfiguration dieser Aktion abgeschlossen, also verlassen wir die Aktion, indem wir auf die beiden nach links zeigenden Winkelklammern («) klicken, um das Panel zu minimieren.</li>
+</ol>
+<p><img alt="Aktionspanel minimieren" src="../../../../../translated_images/3.1_17_CollapseAction.ca2c346efb58f8240372c3d145fa10ba609cab1c2075d7df1a9388c82fab79f5.de.png" /></p>
+<ol>
+<li>Fügen Sie eine neue Aktion hinzu, indem Sie auf das <strong>+ Symbol</strong> unterhalb der Aktion <strong>Html to text</strong> klicken, wodurch das Panel zum Hinzufügen von Aktionen geladen wird. Wählen Sie den <strong>Microsoft Dataverse</strong>-Konnektor aus.</li>
+</ol>
+<p><img alt="Neue Aktion hinzufügen" src="../../../../../translated_images/3.1_18_AddDataverseAction.5f4be9eb96e22dac239e5545bab5ad9d08b138c2cbcbc700680f33445e132506.de.png" /></p>
+<ol>
+<li>Wählen Sie die Aktion <strong>Neue Zeile hinzufügen</strong> aus.</li>
+</ol>
+<p><img alt="Neue Zeile hinzufügen-Aktion" src="../../../../../translated_images/3.1_19_AddANewRow.48e0a3868821e59ed2a299ccb6a521af27b2430082381d48be38087be62c7c15.de.png" /></p>
+<ol>
+<li>Benennen Sie die Aktion um, indem Sie die <strong>Ellipsen (...)</strong> auswählen, und kopieren und fügen Sie den folgenden Namen ein:</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Neuen Lebenslauf hinzufügen
+</span></code></pre></div>
+<p>Für den Parameter <strong>Tabellenname</strong> suchen Sie nach <code>res</code> und wählen die Tabelle <strong>Lebensläufe</strong> aus.</p>
+<p><img alt="Aktion umbenennen und Tabellenname konfigurieren" src="../../../../../translated_images/3.1_20_RenameAndSelectResumesTable.89f8485653abb7fda1d6eb44210951f05a05ed6f7450a51895079dfd8e72c8bf.de.png" /></p>
+<ol>
+<li>Wählen Sie das Feld <strong>Lebenslauftitel</strong> aus und klicken Sie auf das <strong>Blitzsymbol</strong> oder <strong>fx-Symbol</strong> rechts.</li>
+</ol>
+<p><img alt="Lebenslauftitel-Parameter konfigurieren" src="../../../../../translated_images/3.1_21_AddDynamicContent.9ee1f89420d5a4aa56797944166208f6e9b0ec67116625168fbcefb907850224.de.png" /></p>
+<ol>
+<li>Geben Sie im <strong>Funktion-Tab</strong> den folgenden Ausdruck ein, der die Funktion <code>item()</code> verwendet:</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>item()?[&#39;name&#39;]
+</span></code></pre></div>
+<p>Um mehr über die Funktion <code>item()</code> zu erfahren, erweitern Sie den folgenden zusätzlichen Lernblock.</p>
+<details class="info">
+<summary>Zusätzliches Lernen: <code>item()</code>-Funktion</summary>
+</details>
+<p>🤔 <strong>Was ist die <code>item()</code>-Funktion?</strong></p>
+<ul>
+<li>Wenn Sie eine <strong>Für jedes</strong>-Aktion verwenden, durchläuft Power Automate jedes Element in einer Sammlung (Array).</li>
+<li>Sie wird am häufigsten in Aktionen wie <strong>Für jedes</strong>, <strong>Auswählen</strong> oder <strong>Array filtern</strong> verwendet.</li>
+</ul>
+<p>⚙️ <strong>Wie funktioniert es?</strong></p>
+<ul>
+<li><code>item()</code> ist eine Funktion, die das aktuelle Element zurückgibt, das in einer Schleife oder Array-Operation verarbeitet wird.</li>
+<li>Innerhalb dieser Schleife bezieht sich <code>item()</code> auf das <em>aktuelle Element</em>, das verarbeitet wird.</li>
+</ul>
+<p>📌 <strong>Wo wird sie verwendet?</strong></p>
+<ul>
+<li><strong>Für jedes:</strong> Um auf Eigenschaften des aktuellen Elements zuzugreifen.</li>
+<li><strong>Auswählen:</strong> Um jedes Element in einem Array zu transformieren.</li>
+<li><strong>Array filtern:</strong> Um auf das aktuelle Element zuzugreifen, das ausgewertet wird.</li>
+</ul>
+<p>🦋 <strong>Beispiel</strong></p>
+<ul>
+<li>Ausdruck innerhalb einer Schleife:<ul>
+<li><code>item()?['Email']</code></li>
+</ul>
+</li>
+<li>Dies ruft die Eigenschaft <code>Email</code> des aktuellen Elements ab.</li>
+</ul>
+<p>💡 <strong>Wichtige Punkte</strong></p>
+<ul>
+<li><code>item()</code> ist <em>kontextabhängig</em>: Es bezieht sich immer auf das aktuelle Element in der Schleife oder Array-Operation, in der Sie sich befinden.</li>
+<li>Wenn Sie verschachtelte Schleifen haben, können Sie <code>items('LoopName')</code> verwenden, um auf Elemente in einer bestimmten Schleife zu verweisen.</li>
+</ul>
+<p>Wählen Sie <strong>Hinzufügen</strong>, um den Ausdruck in den Parameter <strong>Lebenslauftitel</strong> einzufügen.</p>
+<p><img alt="Ausdruck für Lebenslauftitel-Parameter hinzufügen" src="../../../../../translated_images/3.1_22_ResumeTitleParameter.9e4fa71a5251cb899e7b09bcc3052eeda1e512841f929118eb9e2b1d232ecb07.de.png" /></p>
+<ol>
+<li>Wir müssen noch mehrere Parameter konfigurieren. Wählen Sie <strong>Alle anzeigen</strong> und im Feld <strong>Anschreiben</strong> das <strong>Blitzsymbol</strong> oder <strong>fx-Symbol</strong> rechts aus.</li>
+</ol>
+<p>Geben Sie im <strong>Funktion-Tab</strong> den folgenden Ausdruck ein, der denselben Ausdruck wie in der vorherigen <a href="../02-multi-agent/">Mission</a> verwendet:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>if(greater(length(body(&#39;Html_to_text&#39;)), 2000), substring(body(&#39;Html_to_text&#39;), 0, 2000), body(&#39;Html_to_text&#39;))
+</span></code></pre></div>
+<p>Dieser Ausdruck überprüft, ob der <em>Text</em> aus der Aktion <strong>Html to text</strong> länger als 2000 Zeichen ist, und gibt, falls ja, nur die ersten 2000 Zeichen zurück; andernfalls gibt er den vollständigen Text zurück.</p>
+<p><img alt="Ausdruck für Anschreiben-Parameter hinzufügen" src="../../../../../translated_images/3.1_23_CoverLetterParameter.d2b521d6b37d05ac4760c91de2964b6d062585a333af6989d9ac0794a4139463.de.png" /></p>
+<ol>
+<li>Der Ausdruck wird nun dem Feld <strong>Anschreiben</strong> hinzugefügt.</li>
+</ol>
+<p><img alt="Ausdruck zum Anschreiben-Parameter hinzugefügt" src="../../../../../translated_images/3.1_24_ExpressionForCoverLetter.3d18124b10b76bad92db61c529ae395b0bb05f3215e3b783771e76ef7677664e.de.png" /></p>
+<ol>
+<li>Für das Feld <strong>E-Mail-Adresse der Quelle</strong> suchen Sie nach <code>from</code> und wählen den Parameter <strong>Von</strong> aus dem Auslöser aus, da dieser den Wert der E-Mail-Adresse enthält.</li>
+</ol>
+<p><img alt="Parameter E-Mail-Adresse der Quelle" src="../../../../../translated_images/3.1_25_FromParameter.1ed1be46711f6705fb807996f6f1e873adc22e285186a851272e0cf3855487ef.de.png" /></p>
+<ol>
+<li>Für das Feld <strong>Hochladedatum</strong> wählen Sie das <strong>Blitzsymbol</strong> oder <strong>fx-Symbol</strong> rechts aus. Geben Sie im <strong>Funktion-Tab</strong> den folgenden Ausdruck ein, der die Funktion <code>utcNow()</code> verwendet:</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>utcNow()
+</span></code></pre></div>
+<p>Um mehr über die Funktion <code>utcNow</code> zu erfahren, erweitern Sie den folgenden zusätzlichen Lernblock.</p>
+<details class="info">
+<summary>Zusätzliches Lernen: <code>utcNow</code>-Funktion</summary>
+</details>
+<p>🤔 <strong>Was ist die <code>utcNow()</code>-Funktion?</strong></p>
+<ul>
+<li>Die Funktion <code>utcNow()</code> in Power Automate gibt das aktuelle Datum und die Uhrzeit in koordinierter Weltzeit (UTC) im ISO 8601-Format zurück, z. B.: <code>2025-09-23T04:32:14Z</code>.</li>
+</ul>
+<p>🦋 <strong>Beispiel</strong></p>
+<ul>
+<li>Ausdruck:<ul>
+<li><code>concat('Bericht erstellt am ', utcNow())</code></li>
+</ul>
+</li>
+<li>Ausgabe ist:<ul>
+<li>Bericht erstellt am <code>2025-09-23T04:32:14Z</code>.</li>
+</ul>
+</li>
+</ul>
+<p>💡 <strong>Wichtige Punkte</strong>
+- <strong>Keine Argumente (Eingabeparameter) erforderlich:</strong> Gibt immer den aktuellen UTC-Zeitstempel zurück.
+   - <strong>Anwendungsfälle</strong>
+       - Hinzufügen von Zeitstempeln zu Protokollen oder Dateinamen
+       - Vergleich der aktuellen Zeit mit anderen Daten
+       - Planung oder zeitbasierte Bedingungen</p>
+<p><img alt="Upload-Datum-Parameter" src="../../../../../translated_images/3.1_26_UploadDateParameter.21b0afc9807bf680c1c432066f1644d4d018cb4988ad0c0788b5186cea285e02.de.png" /></p>
+<ol>
+<li>Wir haben nun die Konfiguration der Aktion <strong>Neue Lebenslaufzeile hinzufügen</strong> abgeschlossen, also verlassen wir das Panel, indem wir es einklappen.</li>
+</ol>
+<p><img alt="Aus Aktion-Panel aussteigen" src="../../../../../translated_images/3.1_27_CollapseAction.c033a86e4d8501b10fc454ba7f9c5e08d71d6d881fc72f58011152e1c5d7a7bb.de.png" /></p>
+<ol>
+<li>Wir fügen eine neue Aktion hinzu, indem wir das <strong>+ Symbol</strong> unter der Aktion <strong>Neue Lebenslaufzeile hinzufügen</strong> auswählen, wodurch das Panel zum Hinzufügen von Aktionen geladen wird. Wählen Sie erneut den <strong>Microsoft Dataverse</strong>-Connector aus.</li>
+</ol>
+<p><img alt="Dataverse-Aktion hinzufügen" src="../../../../../translated_images/3.1_28_AddDataverseAction.1af4dedc95001bfb56b0a642231e9c82b57459b10c68bf6fc177382339a0a221.de.png" /></p>
+<ol>
+<li>Wählen Sie die Aktion <strong>Eine Datei oder ein Bild hochladen</strong> aus.</li>
+</ol>
+<p><img alt="Aktion &quot;Eine Datei oder ein Bild hochladen&quot; hinzufügen" src="../../../../../translated_images/3.1_29_AddUploadAFileOrAnImage.e40ab21b735e37bd1fdb5020b7433d1a2f01d6e387bc43a437e970c6e20ee779.de.png" /></p>
+<ol>
+<li>Benennen Sie die Aktion um, indem Sie die <strong>Ellipsis (...)</strong> auswählen, und kopieren und fügen Sie den folgenden Namen ein:</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Upload Resume File
+</span></code></pre></div>
+<p><img alt="Aktion umbenennen" src="../../../../../translated_images/3.1_30_RenameAction.c316fdf225f88e5c3ee26649e672472829c3372c804b544a1372b0455937c204.de.png" /></p>
+<ol>
+<li>Wählen Sie als Nächstes das Feld <strong>Content name</strong> aus und klicken Sie auf das <strong>Blitzsymbol</strong> oder <strong>fx-Symbol</strong> rechts.</li>
+</ol>
+<p>Im <strong>Funktions-Tab</strong> geben Sie den folgenden Ausdruck ein, der die Funktion <code>item()</code> verwendet. Dies ruft die Eigenschaft <code>name</code> des aktuellen Elements (der Anhangsdatei) ab.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>item()?[&#39;name&#39;]
+</span></code></pre></div>
+<p><img alt="Content name-Parameter konfigurieren" src="../../../../../translated_images/3.1_31_ContentNameParameter.c6606773f1e82dbcea93d7c2f52dff7a2168f9f04d6b865f699f56d62a41d4ec.de.png" /></p>
+<ol>
+<li>Für den Parameter <strong>Table name</strong> suchen Sie nach <code>res</code> und wählen die Tabelle <strong>Resumes</strong> aus.</li>
+</ol>
+<p><img alt="Table name-Parameter konfigurieren" src="../../../../../translated_images/3.1_32_SelectResumesTable.6a00bf6d585002219003da47f6e1042dc67cbdb3fbaf7d959253550035e27520.de.png" /></p>
+<ol>
+<li>Wählen Sie als Nächstes das Feld <strong>Row ID</strong> aus und klicken Sie auf das <strong>Blitzsymbol</strong> oder <strong>fx-Symbol</strong> rechts.</li>
+</ol>
+<p>Suchen Sie nach <code>ID</code> und wählen Sie den Parameter <strong>Resume</strong> aus der Aktion <em>Neue Zeile hinzufügen</em> im Dataverse aus, da dieser den ID-Wert der Zeile enthält, in die die PDF-Datei hochgeladen werden soll.</p>
+<p>Wählen Sie <strong>Hinzufügen</strong>.</p>
+<p><img alt="Row ID auswählen" src="../../../../../translated_images/3.1_33_RowIDParameter.9824c6b5ea5edf0ce018140c20431a97c2e750d61bcb787f67da260acb6a3838.de.png" /></p>
+<ol>
+<li>Wählen Sie das Feld <strong>Column name</strong> aus und wählen Sie die Option <strong>Resume PDF</strong>.</li>
+</ol>
+<p><img alt="Column name-Parameter konfigurieren" src="../../../../../translated_images/3.1_34_ColumnNameParameter.ef4f770cbd84cae5c15cfe06d1bdbe028d0c6d54a2286dab30769fa01c948b71.de.png" /></p>
+<ol>
+<li>Wählen Sie das Feld <strong>Content</strong> aus und klicken Sie auf das <strong>Blitzsymbol</strong> oder <strong>fx-Symbol</strong> rechts.</li>
+</ol>
+<p>Im <strong>Funktions-Tab</strong> geben Sie den folgenden Ausdruck ein, der die Funktion <code>item()</code> verwendet. Dies ruft die Eigenschaft <code>contentBytes</code> des aktuellen Elements (der Anhangsdatei) ab. <code>contentBytes</code> bezieht sich auf die rohen Binärdaten einer Datei oder eines Anhangs, codiert als Base64-String.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>item()?[&#39;contentBytes&#39;]
+</span></code></pre></div>
+<ol>
+<li>Wir haben die Konfiguration dieser Aktion abgeschlossen, also verlassen wir die Aktion, indem wir die beiden nach links zeigenden Winkelklammern («) auswählen, um das Panel einzuklappen.</li>
+</ol>
+<p><img alt="Aktion-Panel einklappen" src="../../../../../translated_images/3.1_36_CollapseAction.1813a7219f0f37b87f80c2cd9f5a9626c3a320858d08a0e62cf14736f97db4c6.de.png" /></p>
+<ol>
+<li>Wählen Sie als Nächstes die Aktion <strong>Sendet eine Eingabeaufforderung an den angegebenen Copilot zur Verarbeitung</strong> aus und ziehen Sie diese Aktion unter die Aktion <strong>Upload Resume File</strong> im <em>True</em>-Pfad der Bedingung.</li>
+</ol>
+<p><img alt="Aktion im True-Pfad ziehen und ablegen" src="../../../../../translated_images/3.1_37_DragAndDropAction.57dc2e9f9d25ed892a4fc072a72c55eca6c38e313ab48fb9db37e9371995440f.de.png" /></p>
+<ol>
+<li>Wählen Sie die Aktion <strong>Sendet eine Eingabeaufforderung an den angegebenen Copilot zur Verarbeitung</strong> aus, um sie zu konfigurieren.</li>
+</ol>
+<p><img alt="Aktion auswählen" src="../../../../../translated_images/3.1_38_SelectAction.d125bdf661f66b6397542c75efbc6a78b8c4862e03dce4002776c251f1c48382.de.png" /></p>
+<ol>
+<li>Im Feld <strong>Body/message</strong> wählen Sie den gesamten Feldinhalt aus und löschen Sie ihn.</li>
+</ol>
+<p><img alt="Body-Parameter löschen" src="../../../../../translated_images/3.1_39_ClearBodyParameter.6a345b2e5dbe5510184d7bae7cd406b8cec72c714f34bb40e30741e445a491c0.de.png" /></p>
+<ol>
+<li>Kopieren und fügen Sie den folgenden Text in das Feld <strong>Body/message</strong> ein und markieren Sie den Platzhalter <code>RESUME ID PLACEHOLDER</code>.</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Send [ResumeId (text)] = &quot;RESUME ID PLACEHOLDER&quot; and [ResumeTitle (text_1)] = &quot;RESUME TITLE PLACEHOLDER&quot; and [ResumeNumber (text_2)]= &quot;RESUME NUMBER PLACEHOLDER&quot; to the Tool &quot;Notify Teams Applicant channel&quot; in the child agent &quot;Application Intake Agent&quot;
+</span></code></pre></div>
+<p><img alt="Resume ID Placeholder-Text ersetzen" src="../../../../../translated_images/3.1_40_ReplaceResumeIDPlaceholder.eb61590503cb37d89121aaed6d979a4272aa30c87700206e04db8005e60b294f.de.png" /></p>
+<ol>
+<li>Wählen Sie das <strong>Blitzsymbol</strong> oder <strong>fx-Symbol</strong> rechts aus.</li>
+</ol>
+<p>Suchen Sie nach <code>resume</code> und wählen Sie den Parameter <strong>Resume</strong> aus der Aktion <em>Neue Zeile hinzufügen</em> im Dataverse aus, da dieser den <code>ID</code>-Wert der erstellten Lebenslaufzeile enthält.</p>
+<p>Wählen Sie <strong>Hinzufügen</strong>.</p>
+<p><img alt="Resume-Parameter auswählen" src="../../../../../translated_images/3.1_41_SelectResumeParameter.61c4457c33e5d1b596169857535bfc560ef677264f8798e9148ceac999eeaeb9.de.png" /></p>
+<ol>
+<li>Markieren Sie den Platzhalter <code>RESUME TITLE PLACEHOLDER</code>. Wählen Sie das <strong>Blitzsymbol</strong> oder <strong>fx-Symbol</strong> rechts aus.</li>
+</ol>
+<p>Suchen Sie nach <code>title</code> und wählen Sie den Parameter <strong>Resume Title</strong> aus der Aktion <em>Neue Zeile hinzufügen</em> im Dataverse aus, da dieser den Wert <code>resume title</code> der erstellten Lebenslaufzeile enthält.</p>
+<p>Wählen Sie <strong>Hinzufügen</strong>.</p>
+<p><img alt="Resume-Parameter auswählen" src="../../../../../translated_images/3.1_42_SelectResumeTitleParameter.6c887607128f928da15c4cf6c22254d0473bc22514aa883462fd812bf14245e0.de.png" /></p>
+<ol>
+<li>Markieren Sie den Platzhalter <code>RESUME NUMBER PLACEHOLDER</code>. Wählen Sie das <strong>Blitzsymbol</strong> oder <strong>fx-Symbol</strong> rechts aus.</li>
+</ol>
+<p>Suchen Sie nach <code>resume number</code> und wählen Sie den Parameter <strong>Resume Number</strong> aus der Aktion <em>Neue Zeile hinzufügen</em> im Dataverse aus, da dieser den Wert <code>Resume Number</code> der erstellten Lebenslaufzeile enthält.</p>
+<p>Wählen Sie <strong>Hinzufügen</strong>.</p>
+<p><img alt="Resume-Parameter auswählen" src="../../../../../translated_images/3.1_43_SelectResumeNumberParameter.ca19197525250483a7e94598b621072b47ebdf5deb939e1387c979e807ddc554.de.png" /></p>
+<ol>
+<li>Wir haben die Konfiguration dieser Aktion und unseres Agentenflusses abgeschlossen 🙌🏻 Sie machen das großartig! Speichern Sie nun den Ereignisauslöser-Flow, indem Sie <strong>Entwurf speichern</strong> auswählen.</li>
+</ol>
+<p><img alt="Entwurf speichern" src="../../../../../translated_images/3.1_44_SaveDraft.0c9eee19f0c7cb8483b8d31bc17e1dd54075352d22f0f44603a9d52b52429188.de.png" /></p>
+<ol>
+<li>Jetzt müssen wir die Details des Agentenflusses bearbeiten. Wählen Sie <strong>Zurück</strong>.</li>
+</ol>
+<p><img alt="Zurück auswählen" src="../../../../../translated_images/3.1_45_Back.3f85535977bdb02231a0fdb8465e0e8b7d86fd5342ff933e4ae8bf9610279989.de.png" /></p>
+<ol>
+<li>Wählen Sie <strong>Bearbeiten</strong> im Abschnitt <strong>Details</strong> und aktualisieren Sie den <strong>Plan</strong> auf die Option <strong>Copilot Studio</strong>.</li>
+</ol>
+<p>Wählen Sie <strong>Speichern</strong>.</p>
+<p><img alt="Copilot Studio-Plan ändern" src="../../../../../translated_images/3.1_46_ChangePlanDetails.6ab15f1f8bd9ebe55b2c1576c3495f47d1a29d7435e343d4c590e46647601269.de.png" /></p>
+<ol>
+<li>Ein Modal wird angezeigt, um Sie zu bitten, den Wechsel zum Copilot Studio-Plan zu bestätigen. Wählen Sie <strong>Bestätigen</strong>.</li>
+</ol>
+<p><img alt="Copilot Studio-Planänderung bestätigen" src="../../../../../translated_images/3.1_47_ConfirmCopilotStudioPlan.bc6ab52e7c982127154b0fb743f85ff9cc05dcab944dffc9485bdbcbe0811397.de.png" /></p>
+<ol>
+<li>Der Plan wurde nun auf <strong>Copilot Studio</strong> aktualisiert. Wählen Sie <strong>Bearbeiten</strong>, da wir den Ereignisauslöser-Flow für unseren Agenten veröffentlichen müssen.</li>
+</ol>
+<p><img alt="Flow bearbeiten" src="../../../../../translated_images/3.1_48_PlanChangedAndEdit.3c3207766a648817f7a7878c3a6f684cf41cdceea4dca8f6fc43b7315c8dd648.de.png" /></p>
+<ol>
+<li>Wählen Sie <strong>Veröffentlichen</strong>.</li>
+</ol>
+<p><img alt="Veröffentlichen" src="../../../../../translated_images/3.1_49_Publish.38ff814cfce6b3be1076cafb0c28e4e344f75d8cd4117fabed13ad361d4fde3f.de.png" /></p>
+<p>Hurra! Der Ereignisauslöser-Flow ist jetzt veröffentlicht 😃</p>
+<p><img alt="Veröffentlicht" src="../../../../../translated_images/3.1_50_Published.449e7867f7b027ae8a524c749357a1b931955062828bacc3b5a51e979755ef4a.de.png" /></p>
+<p>Lassen Sie uns einen neuen Agentenfluss erstellen, der vom untergeordneten <strong>Intake Application Agent</strong> aufgerufen wird.</p>
+<h3 id="lab-32-benachrichtigen-eines-teams-kanals-mit-einer-adaptiven-karte">Lab 3.2 - Benachrichtigen eines Teams-Kanals mit einer adaptiven Karte<a class="headerlink" href="#lab-32-benachrichtigen-eines-teams-kanals-mit-einer-adaptiven-karte" title="Permanent link">&para;</a></h3>
+<p>Wir werden nun einen neuen Agentenfluss für den untergeordneten <strong>Intake Application Agent</strong> erstellen, der die vom Ereignisauslöser übergebenen Werte verwendet, um eine adaptive Karte in einem Teams-Kanal zu posten. Diese adaptive Karte wird das HR-Rekrutierungsteam über die automatisch hochgeladene PDF-Datei informieren, damit sie diese überprüfen können.</p>
+<p>Legen wir los!</p>
+<ol>
+<li>Wählen Sie im <strong>Hiring Agent</strong> die Registerkarte <strong>Agents</strong> aus und wählen Sie den <strong>Application Intake Agent</strong>.</li>
+</ol>
+<p><img alt="Application Intake Agent auswählen" src="../../../../../translated_images/3.2_01_SelectApplicationIntakeAgent.0e9dd3da5c52e9f59ab3a4545c01897ad830853b650ec42f7f8424aa530e0409.de.png" /></p>
+<ol>
+<li>Scrollen Sie zu <strong>Tools</strong> und wählen Sie <strong>+ Hinzufügen</strong>.</li>
+</ol>
+<p><img alt="Tool hinzufügen" src="../../../../../translated_images/3.2_02_AddNewTool.7c62275fd9f28cdc1923ea056a148171048dc568ff78056958fd54862133f90e.de.png" /></p>
+<ol>
+<li>Das Modal <strong>Tool hinzufügen</strong> wird angezeigt. Wählen Sie <strong>+ Neues Tool</strong>.</li>
+</ol>
+<p><img alt="Neues Tool auswählen" src="../../../../../translated_images/3.2_03_SelectNewTool.215e7637a9f065a3799a1ecf248eed1e859f201d2dfdfab71a7c1dc18e454e2d.de.png" /></p>
+<ol>
+<li>Wählen Sie <strong>Agentenfluss</strong>.</li>
+</ol>
+<p><img alt="Agentenfluss auswählen" src="../../../../../translated_images/3.2_04_SelectAgentFlow.7bc12b3435efccc0cfee8f563640562f87d173b436b3313a3d1256fe35024907.de.png" /></p>
+<ol>
+<li>Der <strong>Agentenfluss-Designer</strong> wird geladen. Wählen Sie im Trigger <strong>Wenn ein Agent den Flow aufruft</strong> <strong>+ Eingabe hinzufügen</strong>.</li>
+</ol>
+<p><img alt="Eingabe hinzufügen auswählen" src="../../../../../translated_images/3.2_05_SelectAddAnInput.f3dc8465f490929baccb0f2dc72b50629b1435ff8a3861f7974885d1d36cdeb1.de.png" /></p>
+<ol>
+<li>Wählen Sie <strong>Text</strong> als Typ der Benutzereingabe.</li>
+</ol>
+<p><img alt="Text auswählen" src="../../../../../translated_images/3.2_06_SelectText.93585b4af8c4e277c11c2052b638e249508a24a075987026a6ec346e75184217.de.png" /></p>
+<ol>
+<li>Kopieren und fügen Sie den folgenden Text in das Eingabefeld für den Parametername ein.</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ResumeId
+</span></code></pre></div>
+<p><img alt="ResumeId-Eingabe" src="../../../../../translated_images/3.2_07_ResumeIdInput.a9e127e343856d6c6d45dd1251cade0503bad9484bc563c02155390951b1faa5.de.png" /></p>
+<ol>
+<li>Wiederholen Sie die gleichen Schritte, um eine zweite Texteingabe hinzuzufügen. Kopieren und fügen Sie den folgenden Text für den Parametername ein.</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>ResumeTitle
+</span></code></pre></div>
+<p><img alt="ResumeTitle-Eingabe" src="../../../../../translated_images/3.2_08_ResumeTitleInput.c71ecd364a974a93abb0de876807c2e9bde59fcea6df317babeb20764b636f26.de.png" /></p>
+<ol>
+<li>Wiederholen Sie die gleichen Schritte, um eine dritte Texteingabe hinzuzufügen. Kopieren und fügen Sie den folgenden Text für den Parametername ein.</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>ResumeNumber
+</span></code></pre></div>
+<p><img alt="ResumeNumber-Eingabe" src="../../../../../translated_images/3.2_09_ResumeNumberInput.a6c060000354deab51dffef3c1ad9f13378cfeabdafdb7a33c2a591bfd044709.de.png" /></p>
+<ol>
+<li>Erinnern Sie sich daran, wie wir in <a href="../../recruit/08-add-adaptive-card/#81-create-a-new-topic-with-an-adaptive-card-for-user-to-submit-their-request">Recruit</a> eine adaptive Karte innerhalb eines Themas für unseren Agenten hinzugefügt haben? Diesmal fügen wir eine adaptive Karte in einem Agentenfluss hinzu. Wir werden nun eine weitere Aktion zu unserem Agentenfluss hinzufügen, die eine adaptive Karte in einem Teams-Kanal postet.</li>
+</ol>
+<p>Wählen Sie das <strong>+ Symbol</strong> unterhalb des Triggers.</p>
+<p><img alt="Neue Aktion hinzufügen" src="../../../../../translated_images/3.2_10_AddNewAction.4474a2150991cac246d5e4091a74ba91e76e1c5bafa34ad985a8567c09dcdd35.de.png" /></p>
+<ol>
+<li>Wählen Sie die Aktion <strong>Karte in einem Chat oder Kanal posten</strong>.</li>
+</ol>
+<p><img alt="Aktion &quot;Karte in einem Chat oder Kanal posten&quot; auswählen" src="../../../../../translated_images/3.2_11_SelectPostCardInAChatOrChannel.97de43ed1c883b14d0150ae65efaa90f53f0815bdf57ec10e0e22cbd3e22ce06.de.png" /></p>
+<ol>
+<li>Eine Verbindungsreferenz zu Microsoft Teams muss mit Ihrem angemeldeten Benutzerkonto erstellt werden. Wählen Sie <strong>Anmelden</strong>.</li>
+</ol>
+<p><img alt="Anmelden auswählen" src="../../../../../translated_images/3.2_12_SignInToCreateConnectionReference.2297f8b702d71508f1b21a3ed4046df4846dc03b13932a20e5c445403559ac1f.de.png" /></p>
+<ol>
+<li>Wählen Sie Ihr Benutzerkonto aus und klicken Sie auf <strong>Zugriff erlauben</strong>.</li>
+</ol>
+<p><img alt="Zugriff erlauben auswählen" src="../../../../../translated_images/3.2_13_AllowAccess.31cbf82606d75231108bd4f2bfeafffda3cd7e7e760cd46004c2705afe050aaf.de.png" /></p>
+<ol>
+<li>Für die folgenden Eingabeparameter:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Wie einstellen</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Posten als</strong></td>
+<td>Dropdown</td>
+<td>Wählen Sie die Option <code>Flow bot</code></td>
+</tr>
+<tr>
+<td><strong>Posten in</strong></td>
+<td>Dropdown</td>
+<td>Wählen Sie die Option <code>Channel</code></td>
+</tr>
+<tr>
+<td><strong>Team</strong></td>
+<td>Dropdown</td>
+<td>Wählen Sie ein Team aus, das in Ihrer Umgebung verfügbar ist und auf das Sie für diese Übung Zugriff haben</td>
+</tr>
+<tr>
+<td><strong>Kanal</strong></td>
+<td>Dropdown</td>
+<td>Wählen Sie einen Kanal aus, der in Ihrer Umgebung verfügbar ist und auf den Sie für diese Übung Zugriff haben</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Eingabeparameter konfigurieren" src="../../../../../translated_images/3.2_14_ConfigureParameters.8c21924f90db3acaa33d4e35ef43c70556ba4cc37207a195ac654e55a43400a6.de.png" /></p>
+<ol>
+<li>Als Nächstes konfigurieren wir das Feld <strong>Adaptive Card</strong>. Wählen Sie das Feld <strong>Adaptive Card</strong> aus.</li>
+</ol>
+<p><img alt="Adaptive Card-Feld auswählen" src="../../../../../translated_images/3.2_15_SelectAdaptiveCardParameter.65323056be6174d2eed7422650aaa70fc16396148f90b8af1801110d7a30d66f.de.png" /></p>
+<ol>
+<li>Öffnen Sie die <a href="../../../../../docs/operative-preview/03-automate-triggers/assets/3.2_ResumeTableUpdated.json">Resume Table Updated JSON-Datei</a>, kopieren Sie den gesamten Inhalt und fügen Sie ihn in das Feld Adaptive Card ein.</li>
+</ol>
+<p><img alt="JSON kopieren und einfügen" src="../../../../../translated_images/3.2_16_JSON.f022097fb7139bd12514abb8fdc518309ea940f005cc94a11ba159359cde784b.de.png" /></p>
+<ol>
+<li>Ähnlich wie wir es in <a href="../../recruit/08-add-adaptive-card/#81-create-a-new-topic-with-an-adaptive-card-for-user-to-submit-their-request">Recruit</a> gemacht haben, werden wir bestehende Werte im JSON-Payload durch tatsächliche Werte oder dynamische Inhalte ersetzen.</li>
+</ol>
+<p>Zuerst aktualisieren wir die URL für die Eigenschaft <code>url</code> innerhalb der Eigenschaft <code>selectAction</code>. Diese URL wird durch die URL der Resumes-Systemansicht in der <strong>Hiring Hub</strong>-Modellgesteuerten App ersetzt. Dadurch kann der Recruiter die Aktion auswählen und zur Resumes-Systemansicht in der modellgesteuerten App weitergeleitet werden.</p>
+<p>Markieren Sie den aktuellen URL-Wert und löschen Sie ihn.</p>
+<p><img alt="URL-Wert auswählen" src="../../../../../translated_images/3.2_17_SystemViewURL.5e51fd894ac916f436107c7b668d66ca87ca8bdfd7affeb7dae1b10fa8ff5afb.de.png" /></p>
+<ol>
+<li>Navigieren Sie in der <strong>Hiring Hub</strong>-Modellgesteuerten App zur <strong>Resumes</strong>-Systemansicht über das Menü auf der linken Seite und kopieren Sie die URL. Navigieren Sie dann zurück zum Agentenfluss und fügen Sie die kopierte URL in die Eigenschaft <strong>url</strong> innerhalb der Eigenschaft <code>selectAction</code> ein.</li>
+</ol>
+<p><img alt="Resumes-Systemansicht-URL kopieren" src="../../../../../translated_images/3.2_18_CopyResumesSystemViewURL.14d9f55c7db15977a12dfe2a5df95aab5cf241e646b08f9838cff31aaa27a381.de.png" />
+1. Sie sollten Folgendes sehen, wobei die in Gelb hervorgehobenen Details Ihre Umgebungsinformationen der <strong>Hiring Hub</strong> modellgesteuerten App sind.</p>
+<div class="language-text highlight"><pre><span></span><code> | Parameter | Wert | Erklärung |
+ |----------|------------|---------|
+ | **Organization URI** | GUID | Die URL der Dataverse/Dynamics 365-Umgebungsorganisation |
+ | **appid** | GUID | Um eine spezifische modellgesteuerte App zu öffnen, wird der Abfrageparameter entweder appid oder appname verwendet. In diesem Fall wird appid verwendet |
+ | **viewid** | GUID | Der Abfrageparameter, der die ID der Ansicht ist |
+
+   ![URL einfügen](../../../../../translated_images/3.2_19_PasteURL.41f3fdd66190c8ba478857f91c90eb05ee9621243bda7b7ad26eb5802b8e970d.de.png)
+</code></pre></div>
+<ol>
+<li>
+<p>Als Nächstes fügen wir dynamische Inhaltswerte für mehrere Eigenschaften hinzu. Beginnen wir mit dem Text, der die Referenznummer des Lebenslaufs anzeigt, die durch den Ereignisauslöser autonom erstellt wurde.</p>
+<p>Wählen Sie das <strong>Panel</strong>-Symbol aus, um das Aktionspanel zu laden.</p>
+<p><img alt="Panel-Symbol auswählen" src="../../../../../translated_images/3.2_20_SelectPannelIcon.786a4147ba12e0e62648c66f14fb2b9a7f89b27c3a610f43420e31cb0c9fb5da.de.png" /></p>
+</li>
+<li>
+<p>Scrollen Sie nach unten zu der Zeile, in der Sie die <code>text</code>-Eigenschaft für <code>RESUME NUMBER PLACEHOLDER</code> sehen. Markieren Sie den Platzhalterwert und löschen Sie ihn.</p>
+<p><img alt="Platzhalter löschen" src="../../../../../translated_images/3.2_21_DeleteResumeNumberPlaceholder.6ffd7a5a073f9d9a11e0e119c87e827243de237f70ebc3ab37dfdd36de615130.de.png" /></p>
+</li>
+<li>
+<p>Klicken Sie zwischen die Anführungszeichen und wählen Sie das <strong>Blitzsymbol</strong> oder <strong>fx-Symbol</strong> rechts aus.</p>
+<p>Wählen Sie im Tab <strong>Dynamischer Inhalt</strong> den Parameter <strong>ResumeNumber</strong> aus und klicken Sie auf <strong>Hinzufügen</strong>.</p>
+<p><img alt="ResumeNumber-Parameter hinzufügen" src="../../../../../translated_images/3.2_22_SelectResumeNumberParameter.de5a6eecb3ee092441d841ad137dfecd9f8d503a370ff60eb5ccdc0267e37df0.de.png" /></p>
+</li>
+<li>
+<p>Der Parameter <strong>ResumeNumber</strong> wird nun als dynamischer Inhalt zur <code>text</code>-Eigenschaft hinzugefügt.</p>
+<p><img alt="ResumeNumber dynamischer Inhalt" src="../../../../../translated_images/3.2_23_ResumeNumberDynamicContent.129a566ac6e9d448b268b828da5766a7056779ac167f65b498e2ca21d703b7f0.de.png" /></p>
+</li>
+<li>
+<p>Wiederholen Sie die gleichen Schritte für den <code>RESUME NAME PLACEHOLDER</code>. Scrollen Sie nach unten zu der Zeile, in der Sie die <code>text</code>-Eigenschaft für <code>RESUME NAME PLACEHOLDER</code> sehen. Markieren Sie den Platzhalterwert und löschen Sie ihn.</p>
+<p><img alt="Resume Name Placeholder" src="../../../../../translated_images/3.2_24_ResumeNamePlaceholder.6c879b99ae375892f7e0a511bfedd5fa9e60a8dea71ea2a44c2a7a04c8389f43.de.png" /></p>
+</li>
+<li>
+<p>Klicken Sie zwischen die Anführungszeichen und wählen Sie das <strong>Blitzsymbol</strong> oder <strong>fx-Symbol</strong> rechts aus.</p>
+<p>Wählen Sie im Tab <strong>Dynamischer Inhalt</strong> den Parameter <strong>ResumeTitle</strong> aus und klicken Sie auf <strong>Hinzufügen</strong>.</p>
+<p><img alt="ResumeTitle-Parameter hinzufügen" src="../../../../../translated_images/3.2_25_SelectResumeTitleParameter.18c769bbd2c60e362a56f6055e151ed6287903cb625addcdfbb43044828d7378.de.png" /></p>
+</li>
+<li>
+<p>Der Parameter <strong>ResumeTitle</strong> wird nun als dynamischer Inhalt zur <code>text</code>-Eigenschaft hinzugefügt.</p>
+<p><img alt="ResumeTitle dynamischer Inhalt" src="../../../../../translated_images/3.2_26_ResumeTitleDynamicContent.7219e078f71fc0d5d4a6bb228ba2d53f0898ba26a27c5eb859df90d12dd52c70.de.png" /></p>
+</li>
+<li>
+<p>Wiederholen Sie die gleichen Schritte für den Wert <strong>Fälligkeitsdatum</strong>, der angibt, wann ein Recruiter den Lebenslauf überprüfen sollte. Scrollen Sie nach unten zu der Zeile, in der Sie die <code>text</code>-Eigenschaft für <code>May 21, 2023</code> sehen.</p>
+<p><img alt="Zugriff erlauben auswählen" src="../../../../../translated_images/3.2_27_DueDatePlaceholder.17c6003cc9ec1141b0aeb5cde203098a7f5534fa11f01a3cbffb66206ed1633a.de.png" /></p>
+</li>
+<li>
+<p>Löschen Sie diesen Platzhalterwert für das Datum und klicken Sie zwischen die Anführungszeichen.</p>
+<p><img alt="Löschen" src="../../../../../translated_images/3.2_28_DeleteDueDatePlaceholder.9a3df55fb3c9ed72e61e0a60dc3344335b0444ff537c9fb51036b0442a85d268.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie das <strong>Blitzsymbol</strong> oder <strong>fx-Symbol</strong> rechts aus und geben Sie im Tab <strong>Funktion</strong> den folgenden Ausdruck ein und klicken Sie auf <strong>Hinzufügen</strong>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>addDays(utcNow(), 3, &#39;MMM dd, yyyy&#39;)
+</span></code></pre></div>
+<p>Dieser Ausdruck verwendet zwei Funktionen.</p>
+<table>
+<thead>
+<tr>
+<th>Funktion</th>
+<th>Erklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>addDays</strong></td>
+<td>Fügt einem angegebenen Datum eine bestimmte Anzahl von Tagen hinzu und gibt das resultierende Datum im String-Format zurück</td>
+</tr>
+<tr>
+<td><strong>utcNow</strong></td>
+<td>Gibt das aktuelle Datum und die Uhrzeit im UTC-Format als String zurück.</td>
+</tr>
+</tbody>
+</table>
+<p>Für den Wert utcNow formatieren wir das Datum als Monat und Tag, gefolgt vom Jahr.</p>
+<p><img alt="Ausdruck Fälligkeitsdatum" src="../../../../../translated_images/3.2_29_01_ExpressionDueDate.a4fa31985f5500971f2fc6da0e81e008af12be19d54a30a240764b74a4b2dbcb.de.png" /></p>
+<p>Der Ausdruck wird nun zur <code>text</code>-Eigenschaft hinzugefügt.</p>
+<p><img alt="Ausdruck Fälligkeitsdatum" src="../../../../../translated_images/3.2_29_02_ExpressionDueDate.6159288450731c7b09628af70f0c9a6d92590ca7c7e39e8a524ae8af7c511f2c.de.png" /></p>
+</li>
+<li>
+<p>Zum Schluss aktualisieren wir die URL für die <code>url</code>-Eigenschaft innerhalb der <code>actions</code>-Array-Eigenschaft am Ende der JSON-Nutzlast. Diese aktuelle Platzhalter-URL wird durch die URL der Lebenslaufzeile in der <strong>Hiring Hub</strong> modellgesteuerten App ersetzt. Dadurch kann der Recruiter die Aktion <code>Action.OpenURL</code> der adaptiven Karte auswählen und wird zur Lebenslaufzeile in der modellgesteuerten App weitergeleitet.</p>
+<p><img alt="Platzhalter-URL für Lebenslaufansicht löschen" src="../../../../../translated_images/3.2_30_ViewResumeURLPlaceholder.f27af6cadfb54fb977f0b46ea3ec42ee0638d38ebc5d294eff5da52abf9d4a1b.de.png" /></p>
+</li>
+<li>
+<p>Öffnen Sie in der <strong>Hiring Hub</strong> modellgesteuerten App eine Zeile in der Systemansicht <strong>Resumes</strong> über das Menü auf der linken Seite. Die Lebenslaufzeile wird als Formular in der modellgesteuerten App geladen.</p>
+<p>Kopieren Sie die URL für die Lebenslaufzeile.</p>
+<details class="info">
+<summary>Wie Sie zur <strong>Hiring Hub</strong> modellgesteuerten App zurückkehren, falls Sie diese verlassen/geschlossen haben</summary>
+<ol>
+<li>Gehen Sie zu <a href="https://make.powerapps.com">https://make.powerapps.com</a> und stellen Sie sicher, dass Sie sich in Ihrer Entwicklerumgebung befinden, die Sie für diese Lab-Übungen verwenden, andernfalls wechseln Sie zu dieser.</li>
+</ol>
+<p><img alt="Zu make.powerapps.com navigieren" src="../../../../../translated_images/3.2_31_Note_01_BrowseToURL.a13dfc8b05a0b34f3a4c853f3d3e418864176b52b1b40c069da7712af5562aa5.de.png" /></p>
+<ol>
+<li>Wählen Sie <strong>Apps</strong> im Menü auf der linken Seite und klicken Sie bei der <strong>Hiring Hub</strong> modellgesteuerten App auf das <strong>Play</strong>-Symbol, um sie in Ihrem Browser zu laden.</li>
+</ol>
+<p><img alt="Hiring Hub modellgesteuerte App auswählen" src="../../../../../translated_images/3.2_31_Note_02_HiringHubApp.a09b6ea28b4fea8932809cb847cb0ea3d8faeb7b7b5604852de1f46ab1e9741b.de.png" /></p>
+</details>
+<p><img alt="URL der Lebenslaufzeile kopieren" src="../../../../../translated_images/3.2_31_CopyResumeURL.f6156f8792526129c2613922f0137221b2944fa8ffe7c04766d710521ad8765b.de.png" /></p>
+</li>
+<li>
+<p>Navigieren Sie zurück zum Agentenfluss, markieren Sie den aktuellen Platzhalterwert der URL und löschen Sie ihn.</p>
+<p><img alt="Platzhalter-URL der Lebenslaufzeile löschen" src="../../../../../translated_images/3.2_32_SelectResumeURLPlaceHolder.8db783de292428eaa8937242eba4a54ebb1df7bf4c1bc9391b016ee545fb2b9f.de.png" /></p>
+</li>
+<li>
+<p>Fügen Sie die kopierte URL in die <strong>url</strong>-Eigenschaft innerhalb der <code>url</code>-Eigenschaft ein.</p>
+<p><img alt="Kopierte URL der Lebenslaufzeile einfügen" src="../../../../../translated_images/3.2_33_PasteResumeRowURL.d7ba92493d7597b89f75e2f17f76846ac17a9ba89c2e36729dc6b5dc1599b047.de.png" /></p>
+</li>
+<li>
+<p>Sie sollten Folgendes sehen. Löschen Sie den <code>GUID</code>-ID-Wert am Ende. Wir ersetzen diesen durch dynamischen Inhalt - den Parameter <strong>ResumeId</strong>.</p>
+<p><img alt="Platzhalter-URL für Lebenslaufansicht löschen" src="../../../../../translated_images/3.2_34_DeleteViewResumePlaceholderURL.7b26209eaeef6dc0a21b16140d05fe2f0e38de5f714575edd24d21dded58102a.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie das <strong>Blitzsymbol</strong> oder <strong>fx-Symbol</strong> rechts aus.</p>
+<p>Wählen Sie im Tab <strong>Dynamischer Inhalt</strong> den Parameter <strong>ResumeId</strong> aus und klicken Sie auf <strong>Hinzufügen</strong>.</p>
+<p><img alt="ResumeId-Parameter" src="../../../../../translated_images/3.2_35_ResumeIdParameter.3dc710a7f5216944387f4d5f82c0a372eee23ee5259dec04147ad00e9c454d7d.de.png" /></p>
+</li>
+<li>
+<p>Der <strong>ResumeId</strong> wird als dynamischer Inhalt hinzugefügt. Die in Gelb hervorgehobenen Details sind Ihre Umgebungsinformationen der <strong>Hiring Hub</strong> modellgesteuerten App.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Wert</th>
+<th>Erklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Organization URI</strong></td>
+<td>GUID</td>
+<td>Die URL der Dataverse/Dynamics 365-Umgebungsorganisation</td>
+</tr>
+<tr>
+<td><strong>appid</strong></td>
+<td>GUID</td>
+<td>Um eine spezifische modellgesteuerte App zu öffnen, wird der Abfrageparameter entweder appid oder appname verwendet. In diesem Fall wird appid verwendet</td>
+</tr>
+<tr>
+<td><strong>id</strong></td>
+<td>GUID</td>
+<td>Der Abfrageparameter, der die ID der Lebenslaufzeile ist</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="ResumeId dynamischer Inhalt" src="../../../../../translated_images/3.2_36_ResumeIdDynamicContent.a1a40dfb4a83b60f1b75b02160890e3fec41c2c7df8adf32e02d652a57c1ee87.de.png" /></p>
+</li>
+<li>
+<p>Wir haben die Konfiguration der Aktion <strong>Post card in a chat or channel</strong> abgeschlossen 👏🏻 Verlassen Sie das Aktionskonfigurationspanel, indem Sie das <strong>x</strong>-Symbol auswählen.</p>
+<p><img alt="Panel schließen" src="../../../../../translated_images/3.2_37_CloseActionPanel.23d07107381411aa9494ef36fb240682a0727a63e6f15082074b34a1defd517b.de.png" /></p>
+</li>
+<li>
+<p>Schließlich konfigurieren wir die letzte Aktion, <strong>Respond to the agent</strong>, indem wir eine Textnachricht zurück an den Agenten senden, um die Verarbeitung zu beenden.</p>
+<p>Wählen Sie in der Aktion <strong>Respond to the agent</strong> <strong>+Add an output</strong> aus.</p>
+<p><img alt="Ausgabe hinzufügen auswählen" src="../../../../../translated_images/3.2_38_AddAnOutput.de1a0e49033cb077eb5d2c226152bbb06dc12fb95d0496c69d469eecdb46c0ae.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie <strong>Text</strong> als Ausgabetyp aus.</p>
+<p><img alt="Text als Ausgabetyp auswählen" src="../../../../../translated_images/3.2_39_SelectText.4e1e82c35fe9d1b569b668092d405aa9b0c81fbe67e7de68a660f2083ed3afdd.de.png" /></p>
+</li>
+<li>
+<p>Geben Sie Folgendes als Namen der Ausgabe ein.</p>
+<p><img alt="Ende der Konversation Ausgabe" src="../../../../../translated_images/3.2_40_EndConversationOutput.e392b58847d8439443c89459fccbbd88d4ea5e5fa562749b77407c46b9ff4ca4.de.png" /></p>
+</li>
+<li>
+<p>Geben Sie Folgendes als Wert für die Ausgabe ein.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Finished
+</span></code></pre></div>
+<p><img alt="Ende der Konversation Ausgabewert" src="../../../../../translated_images/3.2_41_EndConversationOutputValue.2cb836900ee9fca802926676e613b077938f1106cc16e77ddd77af64ce92dcc8.de.png" /></p>
+</li>
+<li>
+<p>Wir haben die Konfiguration des Agentenflusses abgeschlossen. Wählen Sie <strong>Save draft</strong>, um den Agentenfluss zu speichern. Eine Bestätigungsmeldung erscheint nach dem Speichern.</p>
+<p><img alt="Entwurf speichern" src="../../../../../translated_images/3.2_42_SaveDraft.1bb26eec40faf5d2c244d93f869344915e90423623e07e02cac2c1f8c73d1a4a.de.png" /></p>
+</li>
+<li>
+<p>Bevor der Agentenfluss veröffentlicht wird, müssen die Details des Agentenflusses aktualisiert werden. Wählen Sie den Tab <strong>Overview</strong> und klicken Sie auf <strong>Edit</strong>.</p>
+<p>Geben Sie im Feld für den Flussnamen Folgendes ein.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Notify Teams Applicant channel
+</span></code></pre></div>
+<p>Danach wählen Sie das <strong>Aktualisieren</strong>-Symbol, um die Beschreibung des Agentenflusses mithilfe von KI zu aktualisieren.</p>
+<p>Wählen Sie anschließend <strong>Save</strong>, um die aktualisierten Details des Agentenflusses zu speichern.</p>
+<p><img alt="Details bearbeiten und speichern" src="../../../../../translated_images/3.2_43_EditDetails.f0c9b53a9c1b29e4aa3c34774680559ae9173f77b3a37817bab2296b77ffcca7.de.png" /></p>
+</li>
+<li>
+<p>Navigieren Sie zurück zum Tab <strong>Designer</strong> und wählen Sie <strong>Publish</strong>, um den Agentenfluss zu veröffentlichen. Eine Bestätigungsmeldung erscheint nach dem Speichern.</p>
+<p><img alt="Agentenfluss veröffentlichen" src="../../../../../translated_images/3.2_44_PublishAgentFlow.3014e6de5e53aa5fc2021bf6e11b901c4990b4fbb4d4cee33cc6d5b6cc641ed8.de.png" /></p>
+</li>
+<li>
+<p>Der Agentenfluss muss nun als Tool im <strong>Application Intake Agent</strong> hinzugefügt werden. Navigieren Sie zurück zum <strong>Hiring Agent</strong> und wählen Sie den Tab <strong>Agents</strong>, dann wählen Sie den <strong>Application Intake Agent</strong>.</p>
+<p><img alt="Application Intake Agent auswählen" src="../../../../../translated_images/3.2_45_ApplicationIntakeAgent.0446b1762d0f499e880e7984f59669639193566f72539cd4fba5c62cd1fe8726.de.png" /></p>
+</li>
+<li>
+<p>Im Abschnitt <strong>Details</strong> des Agenten aktualisieren wir das Feld <strong>Description</strong>. Kopieren Sie Folgendes und fügen Sie es am Ende des Beschreibungstextes ein.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>und benachrichtigt auch den Teams Applicant-Kanal
+</span></code></pre></div>
+<p><img alt="Agentenbeschreibung aktualisieren" src="../../../../../translated_images/3.2_46_UpdateAgentDescription.56344699cd3cc5e417e8f95362ed2288d0c0391f33bd98872e7e008a545175f0.de.png" /></p>
+</li>
+<li>
+<p>Als Nächstes fügen wir den Agentenfluss als Tool hinzu. Scrollen Sie nach unten und wählen Sie <strong>+ Add</strong>.</p>
+<p><img alt="Hinzufügen auswählen" src="../../../../../translated_images/3.2_47_AddTools.c7557e272bd731129dffe9edebba3b04170d27806aaa14fffbe3d66b7b61808b.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie den zuvor erstellten Agentenfluss <strong>Notify Teams Applicant Channel</strong> aus.</p>
+<p><img alt="Agentenfluss auswählen" src="../../../../../translated_images/3.2_48_NotifyTeamsApplicantChannelAgentFlow.5985f570786edef4eac93455f7a07978c0daf54e1371660bfd56a4c16b6aaf79.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie anschließend <strong>Add and configure</strong>.</p>
+<p><img alt="Hinzufügen und konfigurieren auswählen" src="../../../../../translated_images/3.2_49_AddAndConfigure.c2d6cccfa9e4bb23ff58b615ad16d0b3ade4ef867b73b9196a45df6990d8072f.de.png" /></p>
+</li>
+<li>
+<p>Im Abschnitt <strong>Inputs</strong> des Agentenflusses sind die drei Eingaben sichtbar, die wir zuvor im Agentenfluss konfiguriert haben. Standardmäßig ist die Konfiguration <strong>Fill using</strong> auf <strong>Dynamically fill with AI</strong> eingestellt. Wir behalten diese Einstellung bei, da die Eingabeaufforderung des Ereignisauslösers (in der letzten Aktion, <strong>Sends a prompt to the specified copilot for processing</strong> - dies sind die Schritte 38-44 von <strong>Lab 3.1 - Automate uploading resumes to Dataverse received by email</strong>) die Parameterwerte enthält, die von der KI extrahiert werden.</p>
+<p><img alt="Tool-Agentenfluss-Eingaben" src="../../../../../translated_images/3.2_50_Inputs.9fbb57b83b533d5a60f957505bb1e5430886ec9e6c70c10ed1c641d6b33fcc21.de.png" /></p>
+</li>
+<li>
+<p>Jetzt, da das Tool dem <strong>Application Intake Agent</strong> hinzugefügt wurde, müssen die Anweisungen des Agenten aktualisiert werden. Wählen Sie das <strong>Zurück-Pfeil</strong>-Symbol, um zur Liste der Agenten zurückzukehren.</p>
+<p><img alt="Zurück-Pfeil-Symbol auswählen" src="../../../../../translated_images/3.2_51_SelectBack.6a9a55176d931895777822d3f9276d5d12ffe379a8860dd521e1c895e8188bba.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie den <strong>Application Intake Agent</strong> im Tab <strong>Agents</strong> des <strong>Hiring Agent</strong> aus.</p>
+<p><img alt="Application Intake Agent auswählen" src="../../../../../translated_images/3.2_52_SelectApplicationIntakeAgent.039140313422e833389fd134b3a70a0eed11ba175ede5dbdc4abcce6004c7d2d.de.png" /></p>
+</li>
+<li>
+<p>Geben Sie im Feld <strong>Instructions</strong> eine neue Zeile nach den Anweisungen <code>2.Post-Upload</code> ein. Kopieren und fügen Sie die folgenden Anweisungen ein.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Prozess für Lebenslauf-Upload per E-Mail
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>1. Wenn Sie eine Nachricht erhalten, **Senden Sie [ResumeId (text)] = &quot;1680265f-5793-f011-b41b-7c1e525be9f7&quot; und [ResumeTitle (text_1)] = &quot;TAYLOR TESTPERSON (FIKTIV).pdf&quot; und [ResumeNumber (text_2)]= &quot;R01026&quot; an das Tool &quot;Notify Teams Applicant channel&quot;** im Unteragenten &quot;Application Intake Agent&quot;, rufen Sie [AGENT FLOW PLACEHOLDER] auf.
+</span></code></pre></div>
+<p><img alt="Anweisungen des Application Intake Agent aktualisieren" src="../../../../../translated_images/3.2_53_PasteCopiedInstructions.f24ed715e907cf023449a54b894354ca1252b198e9be694eec2875f7f647f9c2.de.png" /></p>
+</li>
+<li>
+<p>Markieren Sie den Text <code>[AGENT FLOW PLACEHOLDER</code>.</p>
+<p><img alt="Platzhalter markieren" src="../../../../../translated_images/3.2_54_HighlightPlaceholder.6c3fcac3c8f4fb6e5cce2dbd6b6548b84652d009e20fa4a01183a9a1b42b24fb.de.png" /></p>
+</li>
+<li>
+<p>Geben Sie das Zeichen für den Schrägstrich <code>/</code> ein und wählen Sie das Tool <strong>Notify Teams Applicant Channel</strong> aus.</p>
+<p><img alt="Tool Notify Teams Applicant Channel auswählen" src="../../../../../translated_images/3.2_55_NotifyTeamsApplicatnChannelTool.2e3dd1e9ee9b2dfe10e1f2feb7e3b74b08856ce3afb16dafae1f2c4b73da904f.de.png" />
+1. Der Agentenfluss wird nun gemäß den Anweisungen vom <strong>Application Intake Agent</strong> ausgelöst, nachdem die letzte Aktion (<strong>Sendet eine Eingabeaufforderung an den angegebenen Copilot zur Verarbeitung</strong>) im Ereignisauslöser die Eingabeaufforderung mit den Parameterwerten zurück an den Agenten sendet.</p>
+<p>Wählen Sie <strong>Speichern</strong>, um die aktualisierten Anweisungen für den <strong>Application Intake Agent</strong> zu speichern.</p>
+<p><img alt="Speichern auswählen" src="../../../../../translated_images/3.2_56_Save.6abb0131f96b20d3753b5990313eaea6a237bef2bf0e2103a2ee5ba570fd7c04.de.png" /></p>
+</li>
+<li>
+<p>Die Anweisungen werden nun aktualisiert, sobald der Agent gespeichert wurde.</p>
+<p><img alt="Anweisungen aktualisiert" src="../../../../../translated_images/3.2_57_InstructionsUpdated.5bfbfe2ca1da16284358a9917246bd8676cd6c095839ed1c69361d992cacd2b3.de.png" /></p>
+</li>
+<li>
+<p>Jetzt müssen wir den <strong>Hiring Agent</strong> <strong>veröffentlichen</strong>. Wählen Sie <strong>Veröffentlichen</strong> oben rechts aus, und wählen Sie im <em>Modal zum Veröffentlichen dieses Agenten</em> <strong>Veröffentlichen</strong>.</p>
+<p><img alt="Hiring Agent veröffentlichen" src="../../../../../translated_images/3.2_58_PublishAgent.e7ec81c81b735de0cd11516aa944c759ea510e2b0bc9acf9f00d42d788896991.de.png" /></p>
+</li>
+<li>
+<p>Nach der Veröffentlichung erscheint eine Bestätigungsmeldung, dass der Agent veröffentlicht wurde.</p>
+<p><img alt="Bestätigungsmeldung" src="../../../../../translated_images/3.2_59_AgentPublished.d15e01232544cf08943260dfbf61c92339dbd187620349e7c5a43add4796ed12.de.png" /></p>
+</li>
+</ol>
+<p>Wir können den Agenten jetzt testen!</p>
+<h3 id="lab-33-ereignisausloser-testen">Lab 3.3 - Ereignisauslöser testen<a class="headerlink" href="#lab-33-ereignisausloser-testen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Um den Ereignisauslöser auszuführen, muss eine E-Mail mit einer Lebenslauf-PDF-Datei gesendet werden. Verfassen Sie in Outlook eine neue E-Mail-Nachricht.</p>
+<table>
+<thead>
+<tr>
+<th>E-Mail-Komponente</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>An Empfänger</strong></td>
+<td>Verwenden Sie Ihr angemeldetes Benutzerkonto als Wert</td>
+</tr>
+<tr>
+<td><strong>Dateianhang</strong></td>
+<td>Laden Sie die Datei <a href="../../../../../docs/operative-preview/test-data/resumes/TAYLOR%20TESTPERSON%20(FICTITIOUS).pdf">TAYLOR TESTPERSON (FICTITIOUS)</a> hoch</td>
+</tr>
+<tr>
+<td><strong>Textkörper</strong></td>
+<td>Kopieren und fügen Sie den folgenden Text als E-Mail-Textkörper ein</td>
+</tr>
+</tbody>
+</table>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Sehr geehrte/r Personalverantwortliche/r,
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>ich möchte mein Interesse an der Position des Senior Power Platform Engineer in Ihrem Unternehmen bekunden. Mit über neun Jahren Erfahrung in der Bereitstellung sicherer und skalierbarer Lösungen auf Microsoft-Cloud-Plattformen bin ich überzeugt, dass ich effektiv zu Ihrem Team beitragen kann.
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>In meiner letzten Position als Lead Power Platform Engineer habe ich eine automatisierte Lebenslauf-Pipeline entwickelt, die die manuelle Bearbeitung reduziert und die Durchsuchbarkeit verbessert. Ich habe HR-Fallmanagement-Anwendungen geliefert, lösungsbewusste Flows eingeführt und PR-Checks implementiert, um die Bereitstellungszeiten zu verkürzen. Meine Expertise umfasst Power Apps, Power Automate, Power Pages, Dataverse und eine Reihe von Microsoft 365-Diensten sowie die Integration mit Graph/REST-APIs und Azure Functions.
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>Zuvor habe ich Genehmigungen in Teams mit adaptiven Karten entwickelt, wodurch Genehmigungszeiten auf denselben Tag verkürzt wurden, und robuste Fehlerbehandlungsframeworks erstellt. Mein Hintergrund umfasst auch die Migration von Legacy-Workflows zu Power Automate und den Aufbau von Self-Service-Portalen, die von Hunderten von Mitarbeitern genutzt werden.
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>Ich habe einen B.Sc. in Informatik und bin zertifiziert als Power Platform Developer (PL-400) und Solution Architect (PL-600). Außerdem engagiere ich mich leidenschaftlich für Mentoring und habe mich bei lokalen Maker-Gruppen ehrenamtlich engagiert.
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>Bitte finden Sie meinen Lebenslauf im Anhang zu Ihrer Prüfung. Ich würde mich freuen, die Möglichkeit zu haben, mit Ihnen zu besprechen, wie meine Fähigkeiten und Erfahrungen Ihren Anforderungen entsprechen.
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>Vielen Dank für Ihre Zeit und Aufmerksamkeit.
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>Mit freundlichen Grüßen,
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>Taylor Testperson
+</span></code></pre></div>
+<p><strong>Senden</strong> Sie die E-Mail, sobald sie verfasst ist.</p>
+<p><img alt="E-Mail mit PDF-Dateianhang verfassen" src="../../../../../translated_images/3.3_01_ComposeEmailWithAttachment.eccba1bbcc276b4373277b193a66d8818b712c6ab9468ee12902545522b670f7.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie im Power Automate Maker-Portal für den Ereignisauslöser-Flow das <strong>Aktualisieren</strong>-Symbol aus, um den Flow-Lauf anzuzeigen, der für die gesendete E-Mail erfolgreich war.</p>
+<p><img alt="Aktualisieren-Symbol auswählen, um Flow-Lauf anzuzeigen" src="../../../../../translated_images/3.3_02_FlowRun.0e99756ebc5fba371dc72719b0619736626934461e58db2dc153535cbabcc1e8.de.png" /></p>
+</li>
+<li>
+<p>Gehen Sie zurück zu Copilot Studio und wählen Sie im <strong>Hiring Agent</strong> die Registerkarte <strong>Aktivität</strong> aus.</p>
+<p><img alt="Registerkarte Aktivität auswählen" src="../../../../../translated_images/3.3_03_SelectActivity.11d78735a8a2a1f64443d285deb47f2bacc5bd53ded039791215f9465dbc3f76.de.png" /></p>
+</li>
+<li>
+<p>Die Registerkarte <strong>Aktivität</strong> wird geladen und zeigt alle Aktivitäten des <strong>Hiring Agent</strong> an. Es wird eine Aktivität mit dem Namen <strong>Automated</strong> und dem Status <strong>Complete</strong> angezeigt. Diese Aktivität repräsentiert den Ereignisauslöser und den ausgelösten Agentenfluss.</p>
+<p><img alt="Aktivität abgeschlossen" src="../../../../../translated_images/3.3_04_StatusComplete.dbe14ffb9414b0f4d869841426c4ca595d7a664bf13f4b5e2e29a4e251b9064c.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie die Aktivität aus und wählen Sie den Ereignisauslöser in der Aktivitätskarte. Im rechten Seitenbereich sehen Sie, wie die Eingabeparameter in der Eingabeaufforderung die Parameterwerte <code>Resume Id</code>, <code>Resume Title</code> und <code>Resume Number</code> aus der <strong>Dataverse</strong>-Zeile enthalten, die erstellt wurde. Dies stammt aus den dynamischen Inhaltswerten, die zuvor in den Schritten 18 - 27 von <strong>Lab 3.1 - Automatisches Hochladen von Lebensläufen in Dataverse, die per E-Mail empfangen wurden</strong> konfiguriert wurden.</p>
+<p><img alt="Ereignisauslöser" src="../../../../../translated_images/3.3_05_EventTrigger.cbd73cd43a79e88e782d1e47ac8ddacdbe30d582a4da61a31010f44a9dacdd12.de.png" /></p>
+</li>
+<li>
+<p>Navigieren Sie zurück zur modellgesteuerten App <strong>Hiring Hub</strong> und wählen Sie in der <strong>Resumes Systemansicht</strong> <strong>Aktualisieren</strong>, um die Ansicht zu aktualisieren. Die neu erstellte Zeile für den Lebenslauf, der per E-Mail gesendet wurde, wird nun angezeigt, da sie durch den Ereignisauslöser erstellt wurde.</p>
+<p><img alt="Lebenslaufzeile erstellt" src="../../../../../translated_images/3.3_06_ResumeRowCreated.9ab850d8d7c066aad8531409b00a4de5f214b4d8d209d39fa0d493d5c55e041d.de.png" /></p>
+</li>
+<li>
+<p>Navigieren Sie zurück zu Copilot Studio und wählen Sie den Agentenfluss <strong>Notify Teams Applicant Channel</strong> innerhalb des <strong>Application Intake Agent</strong> in der Aktivitätskarte aus. Im rechten Seitenbereich sehen Sie, wie die Eingaben Werte aus der Dataverse-Zeile enthalten. Dies stammt aus der Eingabeaufforderung, die von der letzten Aktion (<strong>Sendet eine Eingabeaufforderung an den angegebenen Copilot zur Verarbeitung</strong>) im Ereignisauslöser gesendet wurde und die Parameterwerte aus der neu erstellten Dataverse-Zeile enthält. So können wir Parameterwerte von Ereignisauslösern an Agentenflüsse übergeben.</p>
+<p><img alt="Agentenfluss auswählen" src="../../../../../translated_images/3.3_07_NotifyTeamsApplicantChannel.9b6c4654197efca9c88dde72cfb38812038ef5f6bdce8c309046c02643092bb6.de.png" /></p>
+</li>
+<li>
+<p>Schauen wir uns schließlich die adaptive Karte an, die im Kanal in <strong>Microsoft Teams</strong> gepostet wurde. Im Kanal sehen wir die adaptive Karte, die Informationen über die neu erstellte Lebenslaufzeile in Dataverse anzeigt. Bewegen Sie den Mauszeiger über den Hyperlink am Anfang der adaptiven Karte und beachten Sie, wie die URL die Resumes Systemansicht-URL ist, die wir zuvor in der JSON-Payload (Schritte 15 - 19 von <strong>Lab 3.2 - Benachrichtigen eines Teams-Kanals mit einer adaptiven Karte</strong>) der adaptiven Karte konfiguriert haben.</p>
+<p><img alt="Adaptive Karte Resumes Systemansicht-URL" src="../../../../../translated_images/3.3_08_AdaptiveCardResumeTableURL.5a59821d60c8698e5c9e4746806b975bbdf3c4400dc0bb02a53f350bdea569e9.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie den Hyperlink aus, und Sie werden zur Resumes Systemansicht in der modellgesteuerten App <strong>Hiring Hub</strong> in Ihrem Browser weitergeleitet.</p>
+<p><img alt="Resumes Systemansicht in der modellgesteuerten App Hiring Hub" src="../../../../../translated_images/3.3_09_ResumeTableSystemView.81f52ab85aadda7d9131ced31d024fb4b411ccf600dd230d9d7e931c476e271c.de.png" /></p>
+</li>
+<li>
+<p>Navigieren Sie zurück zur adaptiven Karte, die im Kanal in Microsoft Teams gepostet wurde. Bewegen Sie diesmal den Mauszeiger über <strong>Lebenslauf anzeigen</strong>, was die <code>Action.OpenURL</code>-Aktion der adaptiven Karte ist. Beachten Sie, wie die URL die Lebenslaufzeile ist, die wir zuvor in der JSON-Payload (Schritte 30 - 36 von <strong>Lab 3.2 - Benachrichtigen eines Teams-Kanals mit einer adaptiven Karte</strong>) der adaptiven Karte konfiguriert haben.</p>
+<p><img alt="Adaptive Karte Lebenslaufzeilen-URL" src="../../../../../translated_images/3.3_10_AdaptiveCardResumeRowURL.2063a075c2d4adec27dfcc2ea4c01a385d791e0c4fc127caba912bde14bf77d6.de.png" /></p>
+</li>
+<li>
+<p>Wählen Sie die Aktion aus, und Sie werden zum Formular der Lebenslaufzeile in der modellgesteuerten App <strong>Hiring Hub</strong> in Ihrem Browser weitergeleitet.</p>
+<p><img alt="Lebenslaufzeile in der modellgesteuerten App Hiring Hub" src="../../../../../translated_images/3.3_11_ResumeRow.6f051ed512d396712a04ee98319d6643516e0bbfbf8a9de07d3df7d264563b9c.de.png" /></p>
+</li>
+</ol>
+<h2 id="mission-abgeschlossen">✅ Mission abgeschlossen<a class="headerlink" href="#mission-abgeschlossen" title="Permanent link">&para;</a></h2>
+<p>Herzlichen Glückwunsch! 👏🏻 Hervorragende Arbeit, Operative/r.</p>
+<p>✅ Ereignisauslöser: Sie haben einen Ereignisauslöser erstellt, der Dataverse-Parameterwerte an einen Agentenfluss übergibt.<br />
+✅ Agentenfluss erstellt: Verarbeitet die Dataverse-Parameterwerte, um eine adaptive Karte in einem Kanal in Microsoft Teams zu posten und das HR-Rekrutierungsteam zu benachrichtigen.<br />
+✅ Anweisungen für untergeordnete Agenten aktualisiert: Um den Fluss auszulösen, sobald der Ereignisauslöser abgeschlossen ist.</p>
+<p>Dies ermöglicht es dem <strong>Hiring Agent</strong>, autonom zu arbeiten, wenn Lebensläufe als E-Mail-Anhänge empfangen werden, und das HR-Rekrutierungsteam für eine manuelle Überprüfung zu benachrichtigen.</p>
+<p>Dies ist das Ende von <strong>Lab 03 - Automatisierung von Bewerbungs-E-Mails</strong>, wählen Sie den untenstehenden Link, um zur nächsten Lektion zu gelangen.</p>
+<p>⏭️ <a href="../04-agent-instructions/">Zur Lektion <strong>Agentenanweisungen erstellen</strong> wechseln</a></p>
+<h2 id="taktische-ressourcen">📚 Taktische Ressourcen<a class="headerlink" href="#taktische-ressourcen" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/training/modules/autonomous-agents-online-workshop/?WT.mc_id=power-188561-ebenitez">Machen Sie Ihren Agenten autonom in Copilot Studio</a>  </p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-trigger-event?WT.mc_id=power-188561-ebenitez">Einen Ereignisauslöser hinzufügen</a>  </p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow?WT.mc_id=power-188561-ebenitez">Agentenflüsse mit Ihrem Agenten verwenden</a>  </p>
+<p>📖 <a href="https://learn.microsoft.com/power-automate/triggers-introduction?WT.mc_id=power-188561-ebenitez">Einführung in Power Automate-Auslöser</a>  </p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow-create?WT.mc_id=power-188561-ebenitez">Power Automate-Flows mit Agenten verwenden</a>  </p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/admin-data-loss-prevention?WT.mc_id=power-188561-ebenitez">Datenschutzrichtlinien für Copilot Studio</a>  </p>
+<hr />
+<p><strong>Haftungsausschluss</strong>:<br />
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a> übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

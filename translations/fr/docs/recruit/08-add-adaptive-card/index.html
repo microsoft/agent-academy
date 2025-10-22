@@ -1,0 +1,1072 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/fr/docs/recruit/08-add-adaptive-card/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-08-ameliorer-les-interactions-utilisateur-dans-les-sujets-avec-des-cartes-adaptatives" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nom-de-code-operation-amelioration-de-linterface" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ NOM DE CODE : OPÉRATION AMÉLIORATION DE L'INTERFACE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resume-de-la-mission" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Résumé de la mission
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objectifs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quest-ce-quune-carte-adaptative" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Qu'est-ce qu'une carte adaptative ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-est-il-une-personne" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐱 JSON est-il une personne ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#je-vois-une-autre-option-pour-creer-une-carte-adaptative-en-utilisant-une-formule" class="md-nav__link">
+    <span class="md-ellipsis">
+      👀 Je vois une autre option pour créer une carte adaptative en utilisant une formule
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#construire-avec-le-concepteur-de-cartes-adaptatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      👷🏻‍♀️ Construire avec le concepteur de cartes adaptatives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprendre-le-concepteur-de-cartes-adaptatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Comprendre le concepteur de cartes adaptatives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cas-dutilisation-courants" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌵 Cas d'utilisation courants
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meilleures-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⭐ Meilleures pratiques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-08-ajouter-des-cartes-adaptatives-et-ameliorer-les-capacites-des-sujets" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 08 - Ajouter des cartes adaptatives et améliorer les capacités des sujets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-accomplie" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Mission accomplie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ressources-tactiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Ressources tactiques
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "dcbcd9396b076da0a0f5d389e9ec1b12",
+  "translation_date": "2025-10-17T19:08:44+00:00",
+  "source_file": "docs/recruit/08-add-adaptive-card/README.md",
+  "language_code": "fr"
+}
+-->
+<h1 id="mission-08-ameliorer-les-interactions-utilisateur-dans-les-sujets-avec-des-cartes-adaptatives">🚨 Mission 08 : Améliorer les interactions utilisateur dans les sujets avec des cartes adaptatives<a class="headerlink" href="#mission-08-ameliorer-les-interactions-utilisateur-dans-les-sujets-avec-des-cartes-adaptatives" title="Permanent link">&para;</a></h1>
+<h2 id="nom-de-code-operation-amelioration-de-linterface">🕵️‍♂️ NOM DE CODE : <code>OPÉRATION AMÉLIORATION DE L'INTERFACE</code><a class="headerlink" href="#nom-de-code-operation-amelioration-de-linterface" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Durée de l'opération :</strong> <code>~45 minutes</code></p>
+</blockquote>
+<p>🎥 <strong>Regardez la vidéo explicative</strong></p>
+<p><a href="https://www.youtube.com/watch?v=RhIlzYHPCXo" title="Regardez la vidéo explicative sur YouTube"><img alt="Vignette vidéo des cartes adaptatives" src="../../../../../translated_images/video-thumbnail.3fb3463f411ef1f440a0fd0e67d217a67bcca1d39a98b2c2bff4e13cbc1b6f4e.fr.jpg" /></a></p>
+<h2 id="resume-de-la-mission">🎯 Résumé de la mission<a class="headerlink" href="#resume-de-la-mission" title="Permanent link">&para;</a></h2>
+<p>Agents, votre mission est d'infiltrer l'expérience utilisateur statique et de la remplacer par des cartes adaptatives riches, dynamiques et interactives. Vous allez déployer des charges utiles JSON et des formules Power Fx pour transformer les conversations dans Copilot Studio, passant d'un simple Q&amp;R à des interactions pleinement engageantes. Votre objectif est de recueillir des informations utilisateur, de présenter des données de manière attrayante et de diriger les conversations avec précision et style. Échouez à vous adapter, et vos utilisateurs pourraient se tourner vers des interfaces moins intelligentes.</p>
+<h2 id="objectifs">🔎 Objectifs<a class="headerlink" href="#objectifs" title="Permanent link">&para;</a></h2>
+<p>Dans cette mission, vous apprendrez :</p>
+<ol>
+<li>Comprendre ce que sont les cartes adaptatives et comment elles améliorent les interactions utilisateur dans Copilot Studio</li>
+<li>Apprendre à créer des cartes interactives en utilisant JSON et des formules Power Fx pour du contenu dynamique</li>
+<li>Explorer le concepteur de cartes adaptatives et ses composants clés pour la création visuelle de cartes</li>
+<li>Créer des formulaires riches et interactifs ainsi que des expériences de collecte de données dans les sujets des agents</li>
+<li>Mettre en œuvre les meilleures pratiques pour concevoir des cartes adaptatives réactives et conviviales</li>
+</ol>
+<h2 id="quest-ce-quune-carte-adaptative">🤔 Qu'est-ce qu'une carte adaptative ?<a class="headerlink" href="#quest-ce-quune-carte-adaptative" title="Permanent link">&para;</a></h2>
+<p>Une <strong>carte adaptative</strong> est un moyen de créer des éléments d'interface utilisateur interactifs et visuellement riches qui peuvent être intégrés dans des applications comme Microsoft Teams, Microsoft Outlook ou des agents. C'est un objet JSON structuré qui définit la mise en page et le contenu d'une carte :</p>
+<ul>
+<li>Quels éléments apparaissent sur la carte - texte, images, boutons</li>
+<li>Comment ces éléments sont organisés</li>
+<li>
+<p>Quelles actions les utilisateurs peuvent effectuer, comme soumettre un formulaire ou ouvrir un lien</p>
+<p><img alt="Carte adaptative" src="../../../../../translated_images/8.0_01_AdaptiveCard.3ae99605ab7ef4b35ee0d00649ba0fc1a8166620183f82f20258c32fbef2bb3e.fr.png" /></p>
+</li>
+</ul>
+<h3 id="pourquoi-les-cartes-adaptatives-sont-importantes-dans-copilot-studio">Pourquoi les cartes adaptatives sont importantes dans Copilot Studio<a class="headerlink" href="#pourquoi-les-cartes-adaptatives-sont-importantes-dans-copilot-studio" title="Permanent link">&para;</a></h3>
+<p>Imaginez que vous construisez un agent qui demande aux utilisateurs leur nom, leur email ou leur avis. Si vous utilisez simplement du texte brut, la conversation peut sembler ennuyeuse ou difficile à suivre. C'est là que les cartes adaptatives interviennent !</p>
+<ol>
+<li>
+<p><strong>Rend les conversations interactives</strong> - au lieu d'envoyer du texte comme messages à l'utilisateur, vous pouvez afficher des boutons, des formulaires, des images et plus encore.</p>
+<ul>
+<li>Exemple : une carte peut demander à l'utilisateur de remplir son nom et son email dans un formulaire clair.</li>
+</ul>
+</li>
+<li>
+<p><strong>S'adapte partout</strong> - Les cartes adaptatives s'adaptent automatiquement au style de l'application dans laquelle elles se trouvent, comme le chat Microsoft 365 Copilot ou Microsoft Teams. Vous n'avez pas à vous soucier du mode sombre, des polices ou des mises en page - elles s'adaptent.</p>
+</li>
+<li>
+<p><strong>Facile à construire avec JSON</strong> - vous définissez la carte en utilisant du code JSON (pensez à une <em>recette</em> pour l'interface utilisateur). Copilot Studio vous aide à prévisualiser votre carte avant de l'ajouter au sujet.</p>
+</li>
+<li>
+<p><strong>Collecter et utiliser des données</strong> - vous pouvez utiliser la carte pour poser des questions, recueillir des réponses et utiliser ces données dans le flux de conversation.</p>
+<ul>
+<li>Exemple : Demandez le numéro de téléphone d'un utilisateur, puis affichez une carte de confirmation avec son numéro de téléphone.</li>
+</ul>
+</li>
+<li>
+<p><strong>Améliorer l'expérience utilisateur</strong> - les cartes rendent votre agent plus interactif. C'est une interface plus propre, cliquable et conviviale.</p>
+</li>
+</ol>
+<h2 id="json-est-il-une-personne">🐱 JSON est-il une personne ?<a class="headerlink" href="#json-est-il-une-personne" title="Permanent link">&para;</a></h2>
+<p>Prononcé "Jason", ce n'est pas une personne 😅</p>
+<p>JSON, également connu sous le nom de <em>JavaScript Object Notation</em>, est un format léger utilisé pour structurer des données. Il est facile à lire et à écrire, et ressemble à une série de paires clé-valeur entre accolades {}.</p>
+<p>C'est l'une des options à utiliser lors de l'ajout d'une carte adaptative à votre sujet.</p>
+<p><img alt="Propriétés du nœud de carte adaptative" src="../../../../../translated_images/8.0_02_AdaptiveCardPropertiesPane.cf6bde2350f83ac84bf3fe5c077b2b01ee707af19a8d2f417b1ecc658318fe45.fr.png" /></p>
+<h2 id="je-vois-une-autre-option-pour-creer-une-carte-adaptative-en-utilisant-une-formule">👀 Je vois une autre option pour créer une carte adaptative en utilisant une <em>formule</em><a class="headerlink" href="#je-vois-une-autre-option-pour-creer-une-carte-adaptative-en-utilisant-une-formule" title="Permanent link">&para;</a></h2>
+<p>Vous vous souvenez de ce que nous avons appris sur Power Fx dans <a href="../07-add-new-topic-with-trigger/#what-power-fx-can-do-in-topics">Mission 07 - Utiliser Power Fx dans vos nœuds</a> ? La même chose peut être appliquée dans les cartes adaptatives au sein de Copilot Studio.</p>
+<p>En résumé,</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Power Fx est un langage de programmation low-code utilisé pour ajouter de la logique et un comportement dynamique à votre agent. C'est le même langage utilisé dans Microsoft Power Apps, et il est conçu pour être simple et semblable à Excel, ce qui le rend facile pour les développeurs et les non-développeurs.</p>
+</div>
+<h3 id="comment-power-fx-fonctionne-dans-les-cartes-adaptatives">Comment Power Fx fonctionne dans les cartes adaptatives<a class="headerlink" href="#comment-power-fx-fonctionne-dans-les-cartes-adaptatives" title="Permanent link">&para;</a></h3>
+<p>Lorsque vous concevez une carte adaptative dans Copilot Studio, vous pouvez utiliser des formules Power Fx pour :</p>
+<ul>
+<li>Insérer dynamiquement des valeurs telles que des noms d'utilisateur, des dates ou des statuts.</li>
+<li>Formater du texte ou des nombres, comme afficher une devise ou arrondir des nombres.</li>
+<li>Afficher ou masquer des éléments en fonction de conditions.</li>
+<li>Personnaliser les réponses en fonction des entrées utilisateur, des variables, des résultats des nœuds de conversation.</li>
+</ul>
+<p>Par exemple,</p>
+<p>"<code>Bonjour</code>" &amp; <code>System.User.DisplayName</code></p>
+<p>Cette formule combine le mot "Bonjour" avec le nom de l'utilisateur de manière dynamique.</p>
+<h3 id="pourquoi-cest-utile">Pourquoi c'est utile<a class="headerlink" href="#pourquoi-cest-utile" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Personnalisation</strong></p>
+<p>Vous pouvez adapter les messages à chaque utilisateur, rendant les interactions plus naturelles et pertinentes.</p>
+</li>
+<li>
+<p><strong>Contenu dynamique</strong></p>
+<p>Les cartes peuvent afficher des données réelles provenant de variables et de résultats des nœuds de conversation.</p>
+</li>
+<li>
+<p><strong>Logique intelligente</strong></p>
+<p>Vous pouvez contrôler ce que les utilisateurs voient ou avec quoi ils interagissent en fonction de conditions, améliorant ainsi l'utilisabilité et réduisant les erreurs.</p>
+</li>
+<li>
+<p><strong>Facile à utiliser pour les non-développeurs</strong></p>
+<p>Power Fx est un langage de programmation low-code. Comme mentionné précédemment, il est lisible, intuitif et similaire aux formules Excel.</p>
+</li>
+</ol>
+<h2 id="construire-avec-le-concepteur-de-cartes-adaptatives">👷🏻‍♀️ Construire avec le concepteur de cartes adaptatives<a class="headerlink" href="#construire-avec-le-concepteur-de-cartes-adaptatives" title="Permanent link">&para;</a></h2>
+<p>Le <strong>concepteur de cartes adaptatives</strong> est un outil visuel qui vous permet de créer des cartes de messages interactives en utilisant des éléments glisser-déposer comme du texte, des images, des boutons et des champs de saisie. Son objectif est de vous aider à créer des messages riches et dynamiques sans écrire de code complexe, facilitant ainsi la conception d'interfaces conviviales.</p>
+<p>L'outil de conception vous aide à construire la carte visuellement, mais en coulisses, il génère l'objet JSON pour vous. Vous pouvez également passer à <em>formule</em>, ce qui permet d'utiliser des expressions Power Fx dans la carte pour afficher des données provenant d'autres sources.</p>
+<h2 id="comprendre-le-concepteur-de-cartes-adaptatives">🎨 Comprendre le concepteur de cartes adaptatives<a class="headerlink" href="#comprendre-le-concepteur-de-cartes-adaptatives" title="Permanent link">&para;</a></h2>
+<p><img alt="Concepteur de cartes adaptatives" src="../../../../../translated_images/8.0_03_AdaptiveCardPropertiesPane.e97dad10daf78959c15acb61ca17f0178f2716a75bb85c491c80866720cb1e99.fr.png" /></p>
+<h3 id="a-elements-de-la-carte">A) Éléments de la carte<a class="headerlink" href="#a-elements-de-la-carte" title="Permanent link">&para;</a></h3>
+<p>Ce sont les blocs de construction de votre carte adaptative. Vous pouvez glisser-déposer des éléments tels que :</p>
+<ul>
+<li><strong>TextBlock</strong> pour afficher du texte.</li>
+<li><strong>Image</strong> pour montrer des images.</li>
+<li><strong>FactSet</strong> pour des paires clé-valeur.</li>
+<li><strong>Champs de saisie</strong> pour afficher des zones de texte, des sélecteurs de date, des cases à cocher.</li>
+<li><strong>Actions</strong> pour afficher des boutons comme <em>Soumettre</em>, <em>Ouvrir une URL</em> ou <em>Afficher une carte</em>.</li>
+</ul>
+<p>Chaque élément a son propre rôle et peut être stylisé ou configuré.</p>
+<h3 id="b-visionneuse-de-carte">B) Visionneuse de carte<a class="headerlink" href="#b-visionneuse-de-carte" title="Permanent link">&para;</a></h3>
+<p>C'est la zone de <strong>prévisualisation</strong> où vous voyez à quoi ressemblera votre carte en temps réel. À mesure que vous ajoutez ou modifiez des éléments, la visionneuse se met à jour instantanément pour refléter les changements. Cela vous permet de faire des mises à jour itératives et de voir le résultat du design en même temps.</p>
+<h3 id="c-structure-de-la-carte">C) Structure de la carte<a class="headerlink" href="#c-structure-de-la-carte" title="Permanent link">&para;</a></h3>
+<p>Cela montre la <strong>hiérarchie et la mise en page</strong> de votre carte. Par exemple :</p>
+<ul>
+<li>Une carte peut commencer par un <strong>TextBlock</strong> pour le titre.</li>
+<li>Puis un <strong>ColumnSet</strong> avec une image d'un côté et du texte de l'autre.</li>
+<li>Suivi par un <strong>FactSet</strong> et quelques <strong>boutons d'action</strong>.</li>
+</ul>
+<p>Cela vous aide à comprendre comment les éléments sont imbriqués et organisés.</p>
+<h3 id="d-proprietes-des-elements">D) Propriétés des éléments<a class="headerlink" href="#d-proprietes-des-elements" title="Permanent link">&para;</a></h3>
+<p>Lorsque vous cliquez sur un élément de la carte, ce panneau vous permet de <strong>personnaliser ses paramètres</strong> :</p>
+<ul>
+<li>Modifier la taille, le poids ou la couleur du texte.</li>
+<li>Définir les URL des images ou le texte alternatif.</li>
+<li>Configurer les options de saisie comme le texte d'espace réservé ou les valeurs par défaut.</li>
+</ul>
+<p>C'est ici que vous affinez chaque élément.</p>
+<h3 id="e-editeur-de-charge-utile-de-la-carte">E) Éditeur de charge utile de la carte<a class="headerlink" href="#e-editeur-de-charge-utile-de-la-carte" title="Permanent link">&para;</a></h3>
+<p>C'est le <strong>code JSON brut</strong> derrière votre carte. Les utilisateurs avancés peuvent l'éditer directement pour :</p>
+<ul>
+<li>Utiliser des fonctionnalités de modélisation.</li>
+<li>Copier/coller des définitions de cartes.</li>
+</ul>
+<p>Même si vous débutez avec le concepteur de cartes adaptatives, il est utile de voir comment le design visuel se traduit en code.</p>
+<div class="admonition tip">
+<p class="admonition-title">Astuce - Consultez les exemples de cartes adaptatives</p>
+<ol>
+<li>Accédez à <a href="https://adaptivecards.microsoft.com/designer">https://adaptivecards.microsoft.com/designer</a>.</li>
+<li>Sélectionnez <strong>Nouvelle carte</strong> pour voir une liste d'exemples que vous pouvez choisir et modifier.</li>
+<li>Notez que ce concepteur est externe (basé sur le web). Lorsque vous créez votre carte dans le concepteur de cartes adaptatives basé sur le web, copiez le JSON depuis l'éditeur de charge utile de la carte.</li>
+<li>Collez le JSON dans votre carte adaptative dans votre agent dans Copilot Studio.</li>
+</ol>
+<p><img alt="Exemples de concepteur de cartes adaptatives" src="../../../../../translated_images/8.0_04_AdaptiveCardDesignerSamples.c003b545de5ccfd72ca0c5fa4607addb19d265e8f7105393c652249182754ba9.fr.png" /></p>
+</div>
+<h2 id="cas-dutilisation-courants">🌵 Cas d'utilisation courants<a class="headerlink" href="#cas-dutilisation-courants" title="Permanent link">&para;</a></h2>
+<p>Voici quelques cas d'utilisation courants des cartes adaptatives dans Copilot Studio lorsqu'elles sont utilisées dans les nœuds <strong>Envoyer un message</strong> ou <strong>Poser une question</strong>.</p>
+<ol>
+<li>
+<p><strong>Formulaires et collecte de données</strong></p>
+<p>Utilisez des cartes adaptatives pour recueillir des informations structurées auprès des utilisateurs, telles que :</p>
+<ul>
+<li>Demandes de congé</li>
+<li>Formulaires de feedback</li>
+<li>Informations de contact</li>
+<li>Planification de rendez-vous</li>
+</ul>
+</li>
+<li>
+<p><strong>Affichage d'informations dynamiques</strong></p>
+<p>Affichez aux utilisateurs des données personnalisées ou en temps réel dans un format clair et lisible provenant de sources d'entreprise telles que ServiceNow, SAP, Dynamics 365, SharePoint, etc.</p>
+<ul>
+<li>Résumés de commandes</li>
+<li>Soldes de comptes</li>
+<li>Statut de ticket ou de dossier</li>
+<li>Événements ou échéances à venir</li>
+</ul>
+</li>
+<li>
+<p><strong>Choix interactifs</strong></p>
+<p>Permettez aux utilisateurs de faire des sélections directement dans la conversation :</p>
+<ul>
+<li>Choisir parmi une liste d'options, par exemple des catégories de produits, des sujets de support.</li>
+<li>Confirmer ou annuler une action.</li>
+<li>Évaluer un service ou une expérience.</li>
+</ul>
+</li>
+<li>
+<p><strong>Déclenchement d'actions</strong></p>
+<p>Incluez des boutons qui déclenchent des étapes supplémentaires dans la conversation, en interne ou en externe.</p>
+<ul>
+<li>"Soumettre une demande"</li>
+<li>"Voir les détails"</li>
+</ul>
+</li>
+</ol>
+<h2 id="meilleures-pratiques">⭐ Meilleures pratiques<a class="headerlink" href="#meilleures-pratiques" title="Permanent link">&para;</a></h2>
+<p>Voici quelques meilleures pratiques pour créer des cartes adaptatives pour les agents dans Copilot Studio.</p>
+<ol>
+<li>
+<p><strong>Restez simple et ciblé</strong></p>
+<ul>
+<li>Concevez des cartes avec un objectif clair, ne les surchargez pas avec trop d'éléments.</li>
+<li>Utilisez un texte concis et des mises en page intuitives pour guider les utilisateurs dans l'interaction.</li>
+</ul>
+</li>
+<li>
+<p><strong>Soyez intentionnel avec les champs de saisie</strong></p>
+<ul>
+<li>Incluez uniquement les éléments de saisie nécessaires tels que le texte, les choix de date, pour éviter de submerger les utilisateurs.</li>
+<li>Utilisez des étiquettes pour rendre les champs de saisie faciles à comprendre.</li>
+</ul>
+</li>
+<li>
+<p><strong>Structurez pour la lisibilité</strong></p>
+<ul>
+<li>Utilisez des <strong>TextBlocks</strong> pour les titres et les instructions.</li>
+<li>Regroupez les éléments liés en utilisant des <strong>Containers</strong> ou des <strong>ColumnSets</strong> pour améliorer le flux visuel.</li>
+</ul>
+</li>
+<li>
+<p><strong>Rendez les éléments d'action clairs</strong></p>
+<ul>
+<li>Utilisez <strong>Action.Submit</strong> et/ou <strong>Action.OpenUrl</strong> avec des titres de boutons clairs comme "Soumettre une demande" ou "Voir les détails".</li>
+<li>Évitez les étiquettes vagues comme "Cliquez ici".</li>
+</ul>
+</li>
+<li>
+<p><strong>Concevez pour l'adaptabilité</strong></p>
+<ul>
+<li>Supposez que la carte peut être vue sur différents formats d'écran.</li>
+<li>Évitez les largeurs fixes et utilisez des mises en page flexibles comme <strong>ColumnSets</strong> pour la réactivité.</li>
+</ul>
+</li>
+<li>
+<p><strong>Utilisez du contenu dynamique autant que possible</strong></p>
+<ul>
+<li>Liez les éléments de la carte à des variables ou des résultats de nœuds en utilisant Power Fx pour personnaliser l'expérience utilisateur.</li>
+<li>Par exemple, affichez le nom de l'utilisateur ou le statut actuel de manière dynamique.</li>
+</ul>
+</li>
+</ol>
+<h2 id="lab-08-ajouter-des-cartes-adaptatives-et-ameliorer-les-capacites-des-sujets">🧪 Lab 08 - Ajouter des cartes adaptatives et améliorer les capacités des sujets<a class="headerlink" href="#lab-08-ajouter-des-cartes-adaptatives-et-ameliorer-les-capacites-des-sujets" title="Permanent link">&para;</a></h2>
+<p>Nous allons maintenant apprendre à améliorer notre sujet avec des cartes adaptatives et en utilisant des fonctionnalités avancées des sujets et des nœuds.</p>
+<ul>
+<li><a href="../../../../../docs/recruit/08-add-adaptive-card">8.1 Créer un nouveau sujet avec une carte adaptative pour que l'utilisateur soumette sa demande</a></li>
+<li><a href="../../../../../docs/recruit/08-add-adaptive-card">8.2 Mettre à jour les instructions de l'agent pour invoquer le sujet Demande de dispositif</a></li>
+</ul>
+<h3 id="cas-dutilisation">✨ Cas d'utilisation<a class="headerlink" href="#cas-dutilisation" title="Permanent link">&para;</a></h3>
+<p><strong>En tant que</strong> employé</p>
+<p><strong>Je veux</strong> demander un dispositif</p>
+<p><strong>Afin de</strong> pouvoir demander un dispositif parmi la liste des dispositifs disponibles</p>
+<p>Commençons !</p>
+<h3 id="prerequis">Prérequis<a class="headerlink" href="#prerequis" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Liste SharePoint</strong></p>
+<p>Nous utiliserons la liste <strong>Devices</strong> de SharePoint issue de <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Leçon 00 - Configuration du cours - Étape 3 : Créer un nouveau site SharePoint</a>.</p>
+<p>Si vous n'avez pas configuré la liste <strong>Devices</strong> de SharePoint, veuillez revenir à <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Leçon 00 - Configuration du cours - Étape 3 : Créer un nouveau site SharePoint</a>.</p>
+</li>
+<li>
+<p><strong>Contoso Helpdesk Copilot</strong></p>
+<p>Nous allons utiliser le même agent créé précédemment dans <a href="../06-create-agent-from-conversation/">Leçon 06 - Créer un agent personnalisé en utilisant le langage naturel avec Copilot et en le reliant à vos données</a>.</p>
+</li>
+</ol>
+<h3 id="81-creer-un-nouveau-sujet-avec-une-carte-adaptative-pour-que-lutilisateur-soumette-sa-demande">8.1 Créer un nouveau sujet avec une carte adaptative pour que l'utilisateur soumette sa demande<a class="headerlink" href="#81-creer-un-nouveau-sujet-avec-une-carte-adaptative-pour-que-lutilisateur-soumette-sa-demande" title="Permanent link">&para;</a></h3>
+<p>Nous allons créer un nouveau sujet qui gérera la demande de dispositif d'un utilisateur. Ce nouveau sujet contiendra un nœud <strong>Demander avec une carte adaptative</strong> pour permettre l'interaction utilisateur avec l'agent.</p>
+<p>Commençons !</p>
+<ol>
+<li>
+<p>Sélectionnez l'onglet <strong>Sujets</strong>, puis sélectionnez <strong>+ Ajouter un sujet à partir de zéro</strong>.</p>
+<p><img alt="Sélectionner l'onglet Sujets" src="../../../../../translated_images/8.1_01_NewTopic.f16b94d274f8a7f561f257d9e15483fa56f6fc451a194f26bed03fceb24beb14.fr.png" /></p>
+</li>
+<li>
+<p>Nommez le sujet comme suit,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Request device
+</span></code></pre></div>
+<p>Entrez la description suivante pour le déclencheur.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>This topic helps users request a device when they answer yes to the question that asks the user if they would like to request one of these devices.
+</span></code></pre></div>
+<p><img alt="Nom du sujet et description du déclencheur" src="../../../../../translated_images/8.1_02_TopicNameAndTriggerDescription.3cdbb3ea9a3a480b8cdb23faa47d3a607273c79cbd406ae82dbb100603233879.fr.png" />
+1. Ensuite, ajoutez un nœud <strong>Demander avec carte adaptative</strong>. Ce nœud affichera une carte interactive permettant à l'utilisateur de sélectionner l'appareil qu'il souhaite demander.</p>
+<p><img alt="Sélectionner le nœud Demander avec carte adaptative" src="../../../../../translated_images/8.1_03_AddAskWithAdaptiveCard.4b8e29223fbce16e4440152c0e7f6827fb88097e2a819a489878cf6254f215a4.fr.png" /></p>
+</li>
+<li>
+<p>Sélectionnez le nœud et le volet <strong>Propriétés du nœud de carte adaptative</strong> apparaîtra. Nous allons maintenant modifier le JSON. Sélectionnez <strong>Modifier la carte adaptative</strong>.</p>
+<p><img alt="Modifier la carte adaptative" src="../../../../../translated_images/8.1_04_EditAdaptiveCard.40d31318a2300d467838b0126d72d336a9abb58ba5fd6f62f51170dfb9760992.fr.png" /></p>
+</li>
+<li>
+<p>Voici le <strong>Concepteur de carte adaptative</strong> où vous pouvez concevoir votre carte et voir le design en temps réel.</p>
+<p>Essayez de glisser-déposer les éléments de carte <strong>TextBlock</strong> et <strong>FactSet</strong> sur la zone de création, la zone de visualisation de la carte. Remarquez comment la structure de la carte et l'éditeur de payload de la carte se mettent à jour lorsque les deux éléments de carte sont ajoutés. Vous pouvez également mettre à jour directement l'éditeur de payload de la carte et le volet des propriétés des éléments.</p>
+<p><img alt="Glisser-déposer des éléments de carte" src="../../../../../translated_images/8.1_05_DragAndDropCardElements.a9fea2dcf7ec6d235ef7b4f717bdc4fee6536a04a3bdb26fb458678fba79acb9.fr.png" /></p>
+</li>
+<li>
+<p>Sélectionnez <strong>Aperçu</strong> pour voir la carte dans différentes largeurs.</p>
+<p><img alt="Sélectionner aperçu" src="../../../../../translated_images/8.1_06_PreviewAdaptiveCard.647091529c1fd44ed5eff21738c780bc3bf07e1cbe6434695d206a4aca9b4b25.fr.png" /></p>
+</li>
+<li>
+<p>L'aperçu se chargera et vous verrez différents rendus de la carte selon la largeur.</p>
+<p><img alt="Aperçu de la carte à différentes largeurs" src="../../../../../translated_images/8.1_07_PreviewCardWidths.bf9059b79ef07c1c108308e904bbfaa6742db99fcb30cb18004086f3c7fed086.fr.png" /></p>
+</li>
+<li>
+<p>Quittez l'aperçu en sélectionnant l'icône <strong>x</strong> et sélectionnez <strong>Annuler</strong> dans le concepteur pour supprimer les deux éléments de carte ajoutés précédemment.</p>
+<p><img alt="Annuler" src="../../../../../translated_images/8.1_08_Undo.ddcce9dbb87d876e47a932c73229d4fdc98e182d602af256275e2456cd9054eb.fr.png" /></p>
+</li>
+<li>
+<p>Cliquez dans l'éditeur de payload de la carte et sélectionnez toutes les lignes en utilisant le raccourci clavier Windows <em>Ctrl + A</em> ou le raccourci Mac <em>Command + A</em>, puis supprimez les lignes. <strong>Collez</strong> le JSON du fichier <a href="../../../../../docs/recruit/08-add-adaptive-card/assets/8.1_RequestDevice.json">Request devices .JSON file</a>.</p>
+<p><img alt="Effacer l'éditeur de payload de la carte" src="../../../../../translated_images/8.1_09_SelectAll.6aaf936d81c3356870679a7ae5b6fd1298812cc492ca3250fa01179164483e1e.fr.png" /></p>
+</li>
+<li>
+<p>Remarquez comment l'aperçu de la carte inclut maintenant des éléments affichant du texte et une liste d'appareils disponibles.</p>
+<p>Ce JSON est actuellement un modèle et un aperçu de ce que nous utiliserons comme base pour notre carte, mais sous forme de formule plutôt que de JSON, car nous allons référencer la <strong>variable globale</strong>, <code>Global.VarDevices.value</code>, qui stocke la réponse de l'action du connecteur SharePoint <strong>Obtenir des éléments</strong>.</p>
+<p>Sélectionnez <strong>Enregistrer</strong> et <strong>Fermer</strong> pour quitter la fenêtre modale du concepteur de carte adaptative.</p>
+<p><img alt="Sélectionner Enregistrer" src="../../../../../translated_images/8.1_10_DeviceRequestCard.711ce0bdfbfecf2f221cb7fc4c6aecdefd7467afcfad43f2414e8230fc0d8470.fr.png" /></p>
+</li>
+<li>
+<p>Fermez le panneau <strong>Propriétés du nœud de carte adaptative</strong> en sélectionnant l'icône <strong>X</strong>.</p>
+<p><img alt="Fermer le panneau des propriétés du nœud de carte adaptative" src="../../../../../translated_images/8.1_11_ExitAdaptiveCardNodeProperties.fe8760d8df1c22f9a73b7860e9473a4f350e0cb0d83824e9f55a143593ca9c58.fr.png" /></p>
+</li>
+<li>
+<p>Dans la zone de création du sujet, vous verrez la carte adaptative.</p>
+<p><img alt="Carte adaptative de demande d'appareil" src="../../../../../translated_images/8.1_12_DeviceRequestCard.f4e3961a0fd282aeb37017f8cb49018c839805d375e2fc5a1220321156012b48.fr.png" /></p>
+</li>
+<li>
+<p>Faites défiler jusqu'en bas du nœud et vous verrez les variables de sortie. Les <code>commentsId</code> et <code>deviceSelectionId</code> ont été définis dans les propriétés des éléments. Ces deux variables stockeront les valeurs des éléments de la carte avec lesquels les utilisateurs interagissent. Ces valeurs seront utilisées plus tard dans le sujet, ce que nous apprendrons dans le prochain laboratoire de la leçon.</p>
+<p><img alt="Sorties des variables du nœud" src="../../../../../translated_images/8.1_13_DeviceRequestCardOutputs.d4580e9384b74e4273f83b52e1fd256a893c49b0cf398e33ac244906edd44b35.fr.png" /></p>
+</li>
+<li>
+<p>Mettons maintenant à jour la carte du JSON à la formule, car nous utiliserons à nouveau Power Fx pour parcourir les éléments retournés dans l'action du connecteur SharePoint <strong>Obtenir des éléments</strong>, stockés dans la <strong>variable globale</strong>, <code>Global.VarDevices.value</code>, via la propriété <code>value</code> de la réponse JSON.</p>
+<blockquote>
+<p>Nous avons créé cette variable globale dans <a href="../07-add-new-topic-with-trigger/#73-add-a-tool-using-a-connector">Lab 07 - Ajouter un nouveau sujet avec des nœuds de conversation, 7.3 Ajouter un outil en utilisant un connecteur</a>.</p>
+</blockquote>
+<p>Sélectionnez la carte dans le nœud <strong>Demander avec carte adaptative</strong>, puis sélectionnez l'icône <strong>chevron</strong> et choisissez <strong>Formule</strong>.</p>
+<p><img alt="Changer en formule" src="../../../../../translated_images/8.1_14_ChangeToFormula.03acaccb20320557926f0854e006a2e6a6475eb06ecdb031f429e50d0303f0cf.fr.png" /></p>
+</li>
+<li>
+<p>Cliquez sur l'icône <strong>agrandir</strong> pour agrandir le champ de formule.</p>
+<p><img alt="Cliquer sur l'icône agrandir" src="../../../../../translated_images/8.1_15_SelectExpand.65dcefe6ec10e6b8c9741c254d303a47f5c0fae7bf586facbf768f820786c839.fr.png" /></p>
+</li>
+<li>
+<p>Cliquez dans l'éditeur de payload de la carte et sélectionnez toutes les lignes en utilisant le raccourci clavier Windows <em>Ctrl + A</em> ou le raccourci Mac <em>Command + A</em>, puis supprimez les lignes.</p>
+<p><img alt="Cliquer dans l'éditeur de payload de la carte" src="../../../../../translated_images/8.1_16_SelectAll.689cea259e1541f21e87df32ce271bb478c7f88f8e96ba7e02329cc0015a037c.fr.png" /></p>
+<p>Collez la formule du fichier <a href="../../../../../docs/recruit/08-add-adaptive-card/assets/8.1_RequestDeviceFormula.txt">Request Devices formula file</a>.</p>
+</li>
+<li>
+<p>Dans la formule, nous parcourrons chaque élément de la liste SharePoint en utilisant la fonction <code>For All</code> pour afficher les valeurs de <code>Model</code> dans le titre de l'option de choix, et l'élément <code>ID</code> de SharePoint est référencé comme valeur. Nous enveloppons également les valeurs avec les fonctions <code>If(IsBlank()</code> car la formule attend une valeur pour rendre la carte adaptative dans la zone de création du sujet. Sinon, un message apparaîtra : "La propriété ne peut pas être nulle".</p>
+<p><strong>Fermez</strong> la fenêtre modale de la carte.</p>
+<p><img alt="Formule Power Fx" src="../../../../../translated_images/8.1_17_PowerFxFormula.c68848b0af594819636bf70aa6b03c7ec8f4190b285e798fdcb02232be0ca146.fr.png" /></p>
+</li>
+<li>
+<p><strong>Fermez</strong> le panneau <strong>Propriétés du nœud de carte adaptative</strong>.</p>
+</li>
+<li>
+<p><strong>Enregistrez</strong> le sujet.</p>
+<p><img alt="Enregistrer le sujet" src="../../../../../translated_images/8.1_18_SaveTopic.da41cfc240e80d46f7f1379f271be8dafa0c3060868b862535bb4bec87591f6c.fr.png" /></p>
+</li>
+</ol>
+<h3 id="82-mettre-a-jour-les-instructions-de-lagent-pour-invoquer-le-sujet-demande-dappareil">8.2 Mettre à jour les instructions de l'agent pour invoquer le sujet Demande d'appareil<a class="headerlink" href="#82-mettre-a-jour-les-instructions-de-lagent-pour-invoquer-le-sujet-demande-dappareil" title="Permanent link">&para;</a></h3>
+<p>Maintenant que nous avons créé le nouveau sujet qui gère les demandes d'appareils, nous devons mettre à jour les <strong>instructions de l'agent</strong> pour invoquer le sujet.</p>
+<ol>
+<li>
+<p>Sélectionnez l'onglet <strong>Aperçu</strong> et dans les <strong>instructions de l'agent</strong>, sélectionnez <strong>Modifier</strong>.</p>
+<p><img alt="Modifier les instructions" src="../../../../../translated_images/8.2_01_EditInstructions.1c93b774b61243660f1fac51c39675e1a3aa35b14200364921d90ae26cffec13.fr.png" /></p>
+</li>
+<li>
+<p>Ajoutez une nouvelle ligne sous l'instruction précédente de <a href="../07-add-new-topic-with-trigger/#73-add-a-tool-using-a-connector">Lab 07 - Ajouter un nouveau sujet avec des nœuds de conversation, 7.3 Ajouter un outil en utilisant un connecteur</a>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>- If the user answers yes to the question of requesting a device, trigger [Request device]. Otherwise if they answer no to the question of requesting a device, trigger [Goodbye].
+</span></code></pre></div>
+<p>Sélectionnez l'ensemble du sujet de remplacement entre crochets et supprimez le remplacement.</p>
+<p><img alt="Remplacer le remplacement de demande d'appareil" src="../../../../../translated_images/8.2_02_ReplaceRequestDevicePlaceholder.604b21d10047f887fd12965c54bcaa7b96174dc5ebc39862ef29d513420c25f8.fr.png" /></p>
+</li>
+<li>
+<p>Tapez <code>/Req</code> et sélectionnez le sujet <strong>Demande d'appareils</strong>.</p>
+<p><img alt="Sujet Demande d'appareils" src="../../../../../translated_images/8.2_03_ReferenceRequestDeviceTopic.082468c7b7512dceb4d294ed3dbe447e81b1f0b47688b767003eca6a60b4390d.fr.png" /></p>
+</li>
+<li>
+<p>Répétez les mêmes étapes pour le prochain remplacement de sujet, <strong>[Au revoir]</strong>. Sélectionnez l'ensemble du sujet de remplacement entre crochets et supprimez le remplacement. Tapez <code>/Goodbye</code> et sélectionnez le sujet <strong>Au revoir</strong>.</p>
+<ul>
+<li>
+<p>Lorsque l'utilisateur répond <strong>Oui</strong> à la question de l'agent lui demandant s'il souhaite demander un appareil, l'agent redirigera du sujet <strong>Appareils disponibles</strong> vers le sujet <strong>Demande d'appareils</strong>.</p>
+</li>
+<li>
+<p>Sinon, si l'utilisateur répond <strong>Non</strong>, l'agent redirigera du sujet <strong>Appareils disponibles</strong> vers le sujet <strong>Au revoir</strong>.</p>
+</li>
+</ul>
+<p><strong>Enregistrez</strong> les instructions mises à jour.</p>
+<p><img alt="Rediriger vers le sujet Demande d'appareils" src="../../../../../translated_images/8.2_04_ReferenceGoodbyeTopic.f4db471beef6645aefd7d8b1b8a46669c6764b54f6954614f452976c49bcb9d5.fr.png" /></p>
+</li>
+<li>
+<p>Testons maintenant la redirection du sujet <em>Appareils disponibles</em> vers le sujet <em>Demande d'appareils</em>. Sélectionnez <strong>Tester</strong> pour charger le panneau de test et sélectionnez <strong>Actualiser</strong>.</p>
+<p>Ensuite, sélectionnez l'icône <strong>Carte d'activité</strong> dans le panneau de test, puis activez <strong>Suivi entre les sujets</strong>. Cela nous permettra de voir que le sujet <em>Appareils disponibles</em> a redirigé vers le sujet <em>Demande d'appareils</em>.</p>
+<p>OK, nous sommes prêts à tester ! Entrez ce qui suit dans le panneau de test.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>I need a laptop
+</span></code></pre></div>
+<p><img alt="Tester l'agent" src="../../../../../translated_images/8.2_05_TestAgent.21b4ed7f831866736edc0b35def2856066bf61082487a6d63952e8635eae8c99.fr.png" /></p>
+</li>
+<li>
+<p>L'agent répondra avec la liste des appareils disponibles, suivie de la question demandant à l'utilisateur s'il souhaite demander un appareil. Copiez et collez ce qui suit,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>yes please
+</span></code></pre></div>
+<p><img alt="Tester le sujet Demande d'appareils" src="../../../../../translated_images/8.2_06_TestRequestDeviceTopic.60f161f89dc2793bc4b40a6d29a06a7cffe156c50e8517de242f1dacbadf5682.fr.png" /></p>
+</li>
+<li>
+<p>Nous verrons ensuite que l'agent a redirigé vers le sujet <strong>Demande d'appareils</strong>. L'agent a invoqué ce sujet conformément aux instructions que nous avons ajoutées.</p>
+<p>La carte adaptative avec les éléments interactifs sera maintenant affichée comme message à l'utilisateur.</p>
+<p><img alt="Nœud de question" src="../../../../../translated_images/8.2_07_AdaptiveCardQuestion.f07775130cfea9a75c5842c48a56bf506e0b5967e4349571b682266c85c02748.fr.png" /></p>
+</li>
+<li>
+<p>Nous avons maintenant testé avec succès 😄 la redirection du sujet <em>Appareils disponibles</em> vers le sujet <em>Demande d'appareils</em>. Nous ajouterons plus d'améliorations à ce sujet dans le prochain laboratoire de la leçon.</p>
+<p>Actualisez le panneau de test.</p>
+<p><img alt="Actualiser le panneau de test" src="../../../../../translated_images/8.2_08_RefreshTestPane.84d8c1174a9e6cc28a87f2663fb72838e8c6fd216df46153bd4f995b8527227a.fr.png" /></p>
+</li>
+</ol>
+<h2 id="mission-accomplie">✅ Mission accomplie<a class="headerlink" href="#mission-accomplie" title="Permanent link">&para;</a></h2>
+<p>Félicitations ! 👏🏻 Vous avez appris à ajouter des cartes adaptatives en utilisant des formules Power Fx pour afficher des données provenant de variables, et vous avez également appris à rediriger d'un sujet à un autre. Créer des sujets concis rend votre agent plus organisé, mais aide également à guider les utilisateurs à travers différentes parties du flux de conversation avec l'agent.</p>
+<p>C'est la fin de <strong>Lab 08 - Améliorer les interactions utilisateur avec les cartes adaptatives</strong>, sélectionnez le lien ci-dessous pour passer à la leçon suivante. Nous développerons le cas d'utilisation de ce laboratoire dans le laboratoire de la leçon suivante.</p>
+<p>⏭️ <a href="../09-add-an-agent-flow/">Passer à la leçon <strong>Ajouter un flux d'agent à votre sujet pour l'automatisation</strong></a></p>
+<h2 id="ressources-tactiques">📚 Ressources tactiques<a class="headerlink" href="#ressources-tactiques" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/guidance/adaptive-cards-overview?WT.mc_id=power-172619-ebenitez">Utilisation des cartes adaptatives dans Copilot Studio</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-send-message#add-an-adaptive-card?WT.mc_id=power-172619-ebenitez">Ajouter une carte adaptative dans le nœud Envoyer un message</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-power-fx?WT.mc_id=power-172619-ebenitez">Créer des expressions en utilisant Power Fx</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep8">Créer des cartes adaptatives avec Power FX</a></p>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/08-add-adaptive-card" alt="Analytics" /></p>
+<hr />
+<p><strong>Avertissement</strong> :<br />
+Ce document a été traduit à l'aide du service de traduction automatique <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction humaine professionnelle. Nous ne sommes pas responsables des malentendus ou des interprétations erronées résultant de l'utilisation de cette traduction.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

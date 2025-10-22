@@ -1,0 +1,941 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/fi/docs/recruit/04-creating-a-solution/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tehtava-04-ratkaisun-luominen-agentillesi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kayttokoodi-operation-ctrl-alt-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ KÄYTTÖKOODI: OPERATION CTRL-ALT-PACKAGE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tehtavan-kuvaus" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Tehtävän kuvaus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tavoitteet" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Tavoitteet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mika-on-ratkaisu" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵🏻‍♀️ Mikä on ratkaisu?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miksi-pitaisi-kayttaa-ratkaisua-agentilleni" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Miksi pitäisi käyttää ratkaisua agentilleni?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ratkaisujen-julkaisijoiden-ymmartaminen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪪 Ratkaisujen julkaisijoiden ymmärtäminen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-platform-ratkaisun-elinkaari" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 Power Platform -ratkaisun elinkaari
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorio-04-luo-uusi-ratkaisu" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Laboratorio 04: Luo uusi ratkaisu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tehtava-suoritettu" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Tehtävä suoritettu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taktiset-resurssit" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Taktiset resurssit
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "0c51aabca81d6256990caf4c015e6195",
+  "translation_date": "2025-10-17T01:29:11+00:00",
+  "source_file": "docs/recruit/04-creating-a-solution/README.md",
+  "language_code": "fi"
+}
+-->
+<h1 id="tehtava-04-ratkaisun-luominen-agentillesi">🚨 Tehtävä 04: Ratkaisun luominen agentillesi<a class="headerlink" href="#tehtava-04-ratkaisun-luominen-agentillesi" title="Permanent link">&para;</a></h1>
+<h2 id="kayttokoodi-operation-ctrl-alt-package">🕵️‍♂️ KÄYTTÖKOODI: <code>OPERATION CTRL-ALT-PACKAGE</code><a class="headerlink" href="#kayttokoodi-operation-ctrl-alt-package" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operaatioaika:</strong> <code>~45 minuuttia</code></p>
+</blockquote>
+<p>🎥 <strong>Katso opastusvideo</strong></p>
+<p><a href="https://www.youtube.com/watch?v=1iATbkgfcpU" title="Katso opastus YouTubessa"><img alt="Ratkaisun luomisen videon pikkukuva" src="../../../../../translated_images/video-thumbnail.3d68c6292e459541326e2cadf916f09488731b3cfbcd01de909c4bca9b53b49a.fi.jpg" /></a></p>
+<h2 id="tehtavan-kuvaus">🎯 Tehtävän kuvaus<a class="headerlink" href="#tehtavan-kuvaus" title="Permanent link">&para;</a></h2>
+<p>Agentin luoja, tervetuloa seuraavaan taktiseen operaatioon. Tässä tehtävässä opit kokoamaan ratkaisun – virallisen käyttöönottoalustan IT-tukipalveluagentillesi, joka on rakennettu Microsoft Copilot Studiossa. Ajattele tätä digitaalisena salkkuna, joka sisältää agenttisi ja sen artefaktit.</p>
+<p>Jokainen agentti tarvitsee hyvin rakennetun kodin. Juuri sitä Power Platform -ratkaisu tarjoaa – järjestystä, siirrettävyyttä ja valmiutta tuotantoon.</p>
+<p>Aloitetaan pakkaaminen.</p>
+<h2 id="tavoitteet">🔎 Tavoitteet<a class="headerlink" href="#tavoitteet" title="Permanent link">&para;</a></h2>
+<p>Tässä tehtävässä opit:</p>
+<ol>
+<li>Ymmärtämään, mitä Power Platform -ratkaisut ovat ja niiden roolin agenttien kehityksessä</li>
+<li>Oppimaan ratkaisujen käytön hyödyt agenttien organisoinnissa ja käyttöönotossa</li>
+<li>Tutustumaan ratkaisujen julkaisijoihin ja niiden merkitykseen komponenttien hallinnassa</li>
+<li>Ymmärtämään Power Platform -ratkaisun elinkaarta kehityksestä tuotantoon</li>
+<li>Luomaan oman ratkaisun julkaisijan ja mukautetun ratkaisun IT-tukipalveluagentillesi</li>
+</ol>
+<h2 id="mika-on-ratkaisu">🕵🏻‍♀️ Mikä on ratkaisu?<a class="headerlink" href="#mika-on-ratkaisu" title="Permanent link">&para;</a></h2>
+<p>Microsoft Power Platformissa ratkaisut ovat kuin säiliöitä tai paketteja, jotka sisältävät kaikki sovellustesi tai agenttiesi osat – nämä voivat olla taulukoita, lomakkeita, työnkulkuja ja mukautettua logiikkaa. Ratkaisut ovat välttämättömiä sovellusten elinkaaren hallinnassa (ALM), sillä niiden avulla voit hallita sovellustasi ja agenttejasi ideasta kehitykseen, testaukseen, käyttöönottoon ja päivityksiin.</p>
+<p>Copilot Studiossa jokainen luomasi agentti tallennetaan Power Platform -ratkaisuun. Oletuksena agentit luodaan oletusratkaisuun, ellei luoda uutta mukautettua ratkaisua agentin luomista varten. Tätä opimme 🤓 tässä oppitunnissa ja käytännön laboratoriossa.</p>
+<p>Ratkaisut on perinteisesti luotu <strong>Power Apps -kehittäjäportaalissa</strong> – verkkopohjaisessa käyttöliittymässä, jossa voit rakentaa ja mukauttaa sovelluksia, Dataverse-taulukoita, työnkulkuja, tutkia tekoälykomponentteja ja paljon muuta.</p>
+<p><img alt="Ratkaisut" src="../../../../../translated_images/4.0_01_Solutions.4ab938830cdfc6d1b33fc88a172e2043ab713046e174855f866dc072bbeff4dd.fi.png" /></p>
+<p>Copilot Studiossa on nyt <strong>Solution Explorer</strong>, jossa voit hallita ratkaisuja suoraan. Sinun ei enää tarvitse siirtyä Power Apps -kehittäjäportaaliin hallitaksesi ratkaisuja, vaan se onnistuu suoraan Copilot Studiossa 🪄</p>
+<p>Tämä tarkoittaa, että voit tehdä tavallisia ratkaisuihin liittyviä tehtäviä:</p>
+<ul>
+<li><strong>Luo ratkaisu</strong> – mukautetut ratkaisut mahdollistavat agenttien viennin ja tuonnin ympäristöjen välillä.</li>
+<li><strong>Aseta suosikkiratkaisu</strong> – valitse ratkaisu, johon agentit, sovellukset jne. luodaan oletuksena.</li>
+<li><strong>Lisää tai poista komponentteja</strong> – agenttisi voi viitata muihin komponentteihin, kuten ympäristömuuttujiin tai pilvityönkulkuihin. Näin ollen nämä komponentit on sisällytettävä ratkaisuun.</li>
+<li><strong>Vie ratkaisuja</strong> – siirrä ratkaisuja toiseen kohdeympäristöön.</li>
+<li><strong>Tuo ratkaisuja</strong> – tuo muualla luotuja ratkaisuja, mukaan lukien ratkaisujen päivittäminen tai päivittäminen.</li>
+<li><strong>Luo ja hallitse ratkaisuputkia</strong> – automatisoi ratkaisujen käyttöönotto ympäristöjen välillä.</li>
+<li><strong>Git-integraatio</strong> – mahdollistaa kehittäjien yhdistää ratkaisut Git-repositorioihin versionhallintaa, yhteistyötä ja ALM:ää varten. Tarkoitettu käytettäväksi vain kehitysympäristöissä.</li>
+</ul>
+<p><img alt="Ratkaisut" src="../../../../../translated_images/4.0_02_CopilotStudioSolutionExplorer.042184a894b65fc5b73c91579d9b19a86cd7ca4341c1553c972270dd15852677.fi.png" /></p>
+<p>Ratkaisuja on kahdenlaisia:</p>
+<ul>
+<li><strong>Hallitsemattomat ratkaisut</strong> – käytetään kehityksen aikana. Voit vapaasti muokata ja mukauttaa tarpeen mukaan.</li>
+<li><strong>Hallitut ratkaisut</strong> – käytetään, kun sovellus on valmis testaukseen tai tuotantoon. Nämä ovat lukittuja estämään tahattomat muutokset.</li>
+</ul>
+<h2 id="miksi-pitaisi-kayttaa-ratkaisua-agentilleni">🤔 Miksi <em>pitäisi</em> käyttää ratkaisua agentilleni?<a class="headerlink" href="#miksi-pitaisi-kayttaa-ratkaisua-agentilleni" title="Permanent link">&para;</a></h2>
+<p>Ajattele ratkaisuja <em>työkalupakkina</em>. Kun sinun täytyy korjata tai rakentaa jotain (agentti) eri sijainnissa (ympäristö), keräät kaikki tarvittavat työkalut (komponentit) ja laitat ne työkalupakkiin (ratkaisu). Voit sitten kuljettaa tämän työkalupakin uuteen sijaintiin (ympäristöön) ja käyttää työkaluja (komponentteja) työsi suorittamiseen tai lisätä uusia työkaluja (komponentteja) mukauttaaksesi agenttiasi tai projektiasi.</p>
+<div class="admonition quote">
+<p class="admonition-title">Elaiza, ystävällinen pilvilähettiläsi, täällä jakamassa ajatuksia 🙋🏻‍♀️:</p>
+<p>Meillä Uudessa-Seelannissa on sanonta "Ole siisti kiivi!", joka kehottaa Uuden-Seelannin asukkaita 🥝 huolehtimaan ympäristöstään heittämällä roskat asianmukaisesti ja pitämällä julkiset tilat siisteinä. Voimme käyttää samaa ajatusta agenteille pitämällä kaikki agenttiisi liittyvä järjestettynä ja siirrettävänä, mikä auttaa sinua ylläpitämään siistiä ympäristöä.</p>
+</div>
+<p>On hyvä käytäntö luoda agentti omassa ratkaisussa lähdeympäristössä (kehittäjäympäristössä). Tässä syitä, miksi ratkaisut ovat arvokkaita:</p>
+<p>🧩 <strong>Järjestelmällinen kehitys</strong></p>
+<ul>
+<li>
+<p>Pidät agenttisi erillään oletusratkaisusta, joka sisältää kaiken ympäristössä. Kaikki agenttisi komponentit ovat yhdessä paikassa 🎯</p>
+</li>
+<li>
+<p>Kaikki, mitä tarvitset agentillesi, on ratkaisussa, mikä tekee sen viemisestä ja tuomisesta kohdeympäristöön helpompaa 👉🏻 tämä on terveellinen ALM-tapa.</p>
+</li>
+</ul>
+<p>🧩 <strong>Turvallinen käyttöönotto</strong></p>
+<ul>
+<li>Voit viedä sovelluksesi tai agenttisi hallittuna ratkaisuna ja ottaa sen käyttöön muissa kohdeympäristöissä (kuten testauksessa tai tuotannossa) ilman riskiä tahattomista muokkauksista.</li>
+</ul>
+<p>🧩 <strong>Versionhallinta</strong></p>
+<ul>
+<li>
+<p>Voit luoda korjauksia (kohdennettuja korjauksia), päivityksiä (laajempia muutoksia) tai päivityksiä (ratkaisun korvaaminen – yleensä suuria muutoksia ja uusien ominaisuuksien lisäämistä).</p>
+</li>
+<li>
+<p>Auttaa ottamaan muutokset käyttöön hallitusti.</p>
+</li>
+</ul>
+<p>🧩 <strong>Riippuvuuksien hallinta</strong></p>
+<ul>
+<li>Ratkaisut seuraavat, mitkä osat ovat riippuvaisia toisistaan. Tämä estää sinua rikkomasta asioita, kun teet muutoksia.</li>
+</ul>
+<p>🧩 <strong>Tiimityö</strong></p>
+<ul>
+<li>Kehittäjät ja tekijät voivat työskennellä yhdessä hallitsemattomien ratkaisujen parissa kehitysvaiheessa ja siirtää sitten hallitun ratkaisun käyttöönottoa varten.</li>
+</ul>
+<h2 id="ratkaisujen-julkaisijoiden-ymmartaminen">🪪 Ratkaisujen julkaisijoiden ymmärtäminen<a class="headerlink" href="#ratkaisujen-julkaisijoiden-ymmartaminen" title="Permanent link">&para;</a></h2>
+<p>Power Platformin ratkaisujen julkaisija on kuin etiketti tai brändi, joka tunnistaa, kuka on luonut tai omistaa ratkaisun. Se on pieni mutta tärkeä osa sovellusten, agenttien ja työnkulkujen mukautusten hallintaa, erityisesti tiimityössä tai ympäristöjen välillä.</p>
+<p>Kun luot ratkaisun, sinun täytyy valita julkaisija. Tämä julkaisija määrittää:</p>
+<ul>
+<li>
+<p>Etuliitteen, joka lisätään kaikkiin mukautettuihin komponentteihin (kuten taulukot, kentät ja työnkulut).</p>
+</li>
+<li>
+<p>Nimen ja yhteystiedot organisaatiolle tai henkilölle, joka omistaa ratkaisun.</p>
+</li>
+</ul>
+<h3 id="miksi-se-on-tarkeaa">🤔 Miksi se on tärkeää?<a class="headerlink" href="#miksi-se-on-tarkeaa" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Helppo tunnistus</strong> – etuliite (esim. <code>new_</code> tai <code>abc_</code>) auttaa nopeasti tunnistamaan, mitkä komponentit kuuluvat mihinkin ratkaisuun tai tiimiin.</p>
+</li>
+<li>
+<p><strong>Välttää ristiriidat</strong> – jos kaksi tiimiä luo sarakkeen nimeltä status, niiden etuliitteet (<code>teamA_status</code>, <code>teamB_status</code>) estävät nimien törmäykset.</p>
+</li>
+<li>
+<p><strong>Tukee ALM:ää</strong> – kun ratkaisuja siirretään ympäristöjen välillä (Kehitys → Testaus → Tuotanto), julkaisija auttaa seuraamaan omistajuutta ja ylläpitämään johdonmukaisuutta.</p>
+</li>
+</ol>
+<h3 id="esimerkki">✨ Esimerkki<a class="headerlink" href="#esimerkki" title="Permanent link">&para;</a></h3>
+<p>Oletetaan, että luot julkaisijan nimeltä Contoso Solutions, jonka etuliite on <code>cts_</code>.</p>
+<p>Jos lisäät mukautetun sarakkeen nimeltä <em>Priority</em>, se tallennetaan nimellä <code>cts_Priority</code> ratkaisuun.</p>
+<p>Kuka tahansa, joka näkee sarakkeen ratkaisutasolla riippumatta siitä, missä ympäristössä he ovat, voi helposti tunnistaa sen sarakkeeksi, joka liittyy Contoso Solutionsiin.</p>
+<h2 id="power-platform-ratkaisun-elinkaari">🧭 Power Platform -ratkaisun elinkaari<a class="headerlink" href="#power-platform-ratkaisun-elinkaari" title="Permanent link">&para;</a></h2>
+<p>Nyt kun ymmärrät ratkaisun tarkoituksen, opitaan seuraavaksi sen elinkaari.</p>
+<p><strong>1. Luo ratkaisu kehitysympäristössä</strong> – aloita luomalla uusi ratkaisu kehitysympäristössäsi.</p>
+<p><strong>2. Lisää komponentteja</strong> – lisää sovelluksia, työnkulkuja, taulukoita ja muita elementtejä ratkaisuusi.</p>
+<p><strong>3. Vie hallittuna ratkaisuna</strong> – pakkaa ratkaisusi käyttöönottoa varten viemällä se hallittuna ratkaisuna.</p>
+<p><strong>4. Tuo testausympäristöön</strong> – testaa ratkaisusi erillisessä testausympäristössä varmistaaksesi, että kaikki toimii odotetusti.</p>
+<p><strong>5. Tuo tuotantoympäristöön</strong> – ota testattu ratkaisu käyttöön live-tuotantoympäristössä.</p>
+<p><strong>6. Tee korjauksia, päivityksiä tai päivityksiä</strong> – paranna tai korjaa ratkaisua korjauksilla, päivityksillä tai päivityksillä. 🔁 Toista sykli!</p>
+<h3 id="esimerkki_1">✨ Esimerkki<a class="headerlink" href="#esimerkki_1" title="Permanent link">&para;</a></h3>
+<p>Kuvittele, että rakennat IT-tukipalveluagenttia auttamaan työntekijöitä ongelmissa, kuten laiteongelmissa, verkon vianetsinnässä, tulostimen asennuksessa ja muussa.</p>
+<ul>
+<li>
+<p>Aloitat kehitysympäristössä käyttämällä hallitsematonta ratkaisua.</p>
+</li>
+<li>
+<p>Kun se on valmis, viet sen hallittuna ratkaisuna ja tuot sen kohdeympäristöön, kuten järjestelmätestaukseen tai käyttäjähyväksyntätestaukseen (UAT).</p>
+</li>
+<li>
+<p>Testauksen jälkeen siirrät sen tuotantoympäristöön – koskematta alkuperäiseen kehitysversioon.</p>
+</li>
+</ul>
+<h2 id="laboratorio-04-luo-uusi-ratkaisu">🧪 Laboratorio 04: Luo uusi ratkaisu<a class="headerlink" href="#laboratorio-04-luo-uusi-ratkaisu" title="Permanent link">&para;</a></h2>
+<p>Nyt opimme</p>
+<ul>
+<li><a href="../../../../../docs/recruit/04-creating-a-solution">4.1 Kuinka luoda ratkaisun julkaisija</a></li>
+<li><a href="../../../../../docs/recruit/04-creating-a-solution">4.2 Kuinka luoda ratkaisu</a></li>
+</ul>
+<p>Pysymme aiemmassa esimerkissä, jossa luomme ratkaisun omistetussa Copilot Studio -ympäristössä IT-tukipalveluagentin rakentamista varten.</p>
+<p>Aloitetaan!</p>
+<h3 id="esivaatimukset">Esivaatimukset<a class="headerlink" href="#esivaatimukset" title="Permanent link">&para;</a></h3>
+<h4 id="turvarooli">Turvarooli<a class="headerlink" href="#turvarooli" title="Permanent link">&para;</a></h4>
+<p>Copilot Studiossa se, mitä <em>voit tehdä</em> ratkaisunhallinnassa, riippuu käyttäjän turvaroolista.
+Jos sinulla ei ole lupaa hallita ratkaisuja Power Apps -hallintakeskuksessa, et voi tehdä näitä tehtäviä Copilot Studiossa.</p>
+<p>Varmista, että sinulla on oikeat turvaroolit ja luvat, jotta kaikki sujuu sujuvasti. Jos et hallinnoi ympäristöjä organisaatiossasi, kysy IT-järjestelmänvalvojalta (tai vastaavalta) tiimiltä, joka hallinnoi vuokraajaa/ympäristöjä.</p>
+<p>Seuraavat turvaroolit mahdollistavat käyttäjien luoda ratkaisun ympäristössään.</p>
+<table>
+<thead>
+<tr>
+<th>Turvarooli</th>
+<th>Kuvaus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ympäristön luoja</td>
+<td>Tarjoaa tarvittavat luvat resurssien luomiseen, mukauttamiseen ja hallintaan tietyssä ympäristössä, mukaan lukien ratkaisut</td>
+</tr>
+<tr>
+<td>Järjestelmän mukauttaja</td>
+<td>Laajemmat oikeudet kuin ympäristön luojalla, mukaan lukien ympäristön mukauttaminen ja turvaroolien hallinta</td>
+</tr>
+<tr>
+<td>Järjestelmänvalvoja</td>
+<td>Korkein taso oikeuksia ja voi hallita kaikkia ympäristön osa-alueita, mukaan lukien turvaroolien luominen ja määrittäminen</td>
+</tr>
+</tbody>
+</table>
+<h4 id="kehittajaymparisto">Kehittäjäympäristö<a class="headerlink" href="#kehittajaymparisto" title="Permanent link">&para;</a></h4>
+<p>Varmista, että vaihdat omistettuun kehittäjäympäristöösi. Katso <a href="../00-course-setup/#step-3-create-new-developer-environment">Oppitunti 00 - Kurssin aloitus - Vaihe 3: Luo uusi kehittäjäympäristö</a>.</p>
+<ol>
+<li>
+<p>Valitse oikeasta yläkulmasta <strong>hammasratas</strong>-kuvake ja vaihda oletusympäristöstä omaan ympäristöösi, esimerkiksi <strong>Adele Vancen ympäristöön</strong>.</p>
+<p><img alt="Kehittäjäympäristö" src="../../../../../translated_images/4.0_03_DeveloperEnvironment.07770f8ffb55e0f76dc7f8a5247154e66ac22a5ac3a00c7a025e1b0e1f43f43e.fi.png" /></p>
+</li>
+</ol>
+<h3 id="41-luo-ratkaisun-julkaisija">4.1 Luo ratkaisun julkaisija<a class="headerlink" href="#41-luo-ratkaisun-julkaisija" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Käytä samaa Copilot Studio -ympäristöä kuin edellisessä oppitunnissa. Valitse <strong>kolmen pisteen kuvake (. . .)</strong> Copilot Studion vasemmanpuoleisesta valikosta. Valitse <strong>Ratkaisut</strong> <strong>Tutki</strong>-otsikon alta.</p>
+<p><img alt="Ratkaisut" src="../../../../../translated_images/4.1_01_Solutions.1db0ad61bec0859dc3bdd673df996059405a2ab29bed5e4a0f58435d8732fa38.fi.png" /></p>
+</li>
+<li>
+<p><strong>Ratkaisunhallinta</strong> Copilot Studiossa latautuu. Valitse <strong>+ Uusi ratkaisu</strong></p>
+<p><img alt="Ratkaisut" src="../../../../../translated_images/4.1_02_NewSolution.a0beb3ae63cbd368567ecac7ca483ce90ab1082fbb7ec4722faf20cb69ec2f59.fi.png" /></p>
+</li>
+<li>
+<p><strong>Uusi ratkaisu</strong> -paneeli ilmestyy, jossa voimme määritellä ratkaisumme tiedot. Ensin meidän täytyy luoda uusi julkaisija. Valitse <strong>+ Uusi julkaisija</strong>.</p>
+<p><img alt="Ratkaisut" src="../../../../../translated_images/4.1_03_NewPublisher.af7ad3f00b1d01bfa741dec8c9f47ca2d1ddaed5af0b292211916fc9fa24a323.fi.png" />  </p>
+</li>
+<li>
+<p><strong>Uusi julkaisija</strong> -paneelin <strong>Ominaisuudet</strong>-välilehti ilmestyy, jossa on täytettävä pakolliset ja ei-pakolliset kentät. Tässä voimme määritellä julkaisijan tiedot, joita käytetään ratkaisun luojan tai omistajan tunnistamiseen.</p>
+<table>
+<thead>
+<tr>
+<th>Ominaisuus</th>
+<th>Kuvaus</th>
+<th style="text-align: center;">Pakollinen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Näyttönimi</td>
+<td>Julkaisijan näyttönimi</td>
+<td style="text-align: center;">Kyllä</td>
+</tr>
+<tr>
+<td>Nimi</td>
+<td>Julkaisijan yksilöllinen nimi ja skeemanimi</td>
+<td style="text-align: center;">Kyllä</td>
+</tr>
+<tr>
+<td>Kuvaus</td>
+<td>Kuvaa ratkaisun tarkoituksen</td>
+<td style="text-align: center;">Ei</td>
+</tr>
+<tr>
+<td>Etuliite</td>
+<td>Julkaisijan etuliite, joka lisätään uusiin komponentteihin</td>
+<td style="text-align: center;">Kyllä</td>
+</tr>
+<tr>
+<td>Valintavaihtoehdon etuliite</td>
+<td>Generoi numeron julkaisijan etuliitteen perusteella. Tätä numeroa käytetään, kun lisäät vaihtoehtoja valintoihin, ja se osoittaa, mikä ratkaisu lisäsi vaihtoehdon.</td>
+<td style="text-align: center;">Kyllä</td>
+</tr>
+</tbody>
+</table>
+<p>Kopioi ja liitä seuraava <strong>Näyttönimeksi</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Contoso Solutions
+</span></code></pre></div>
+<p>Kopioi ja liitä seuraava <strong>Nimeksi</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ContosoSolutions
+</span></code></pre></div>
+<p>Kopioi ja liitä seuraava <strong>Kuvaukseksi</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Copilot Studio Agent Academy
+</span></code></pre></div>
+<p>Kopioi ja liitä seuraava <strong>Etuliitteeksi</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cts
+</span></code></pre></div>
+<p>Oletuksena <strong>Valintavaihtoehdon</strong> etuliite näyttää kokonaislukuarvon. Päivitä tämä kokonaisluku lähimpään tuhanteen. Esimerkiksi, jos kuvassani arvo oli alun perin <code>77074</code>, päivitä se arvoon <code>77000</code>.</p>
+<p><img alt="Ratkaisut" src="../../../../../translated_images/4.1_04_PublisherProperties.b6cbbe7bc0f51446f273bf9a8a06b163c2061a575dab0fc4a5f42007ac01a82c.fi.png" />  </p>
+</li>
+<li>
+<p>Jos haluat antaa ratkaisun yhteystiedot, valitse <strong>Yhteystiedot</strong>-välilehti ja täytä näytetyt sarakkeet.</p>
+<p><img alt="Ratkaisut" src="../../../../../translated_images/4.1_05_Contact.fc0b65c96cc1ef06a1bd173f21920516e123fab76d13f592eab8745f529df3ef.fi.png" /></p>
+</li>
+<li>
+<p>Valitse <strong>Ominaisuudet</strong>-välilehti ja valitse <strong>Tallenna</strong> luodaksesi julkaisijan.</p>
+<p><img alt="Ratkaisut" src="../../../../../translated_images/4.1_06_SavePublisher.4aabbd20a051b55eab9d5d961761c1fae61d5c0cef07f696c5eaa030f4a5c356.fi.png" />
+1. Uusi julkaisijan paneeli sulkeutuu ja sinut ohjataan takaisin <strong>Uusi ratkaisu</strong> -paneeliin, jossa juuri luotu julkaisija on valittuna.</p>
+<p><img alt="Ratkaisut" src="../../../../../translated_images/4.1_07_PublisherSelected.5d88b1212348c15841b5f57e78554649d4ed080d10dccaece30e826b6e359132.fi.png" />  </p>
+</li>
+</ol>
+<p>Hyvä juttu, olet nyt luonut ratkaisujulkaisijan! 🙌🏻 Seuraavaksi opimme, kuinka luodaan uusi mukautettu ratkaisu.</p>
+<h3 id="42-luo-uusi-ratkaisu">4.2 Luo uusi ratkaisu<a class="headerlink" href="#42-luo-uusi-ratkaisu" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Nyt kun olemme luoneet julkaisijan, voimme täyttää loput <strong>Uusi ratkaisu</strong> -paneelin lomakkeesta.</p>
+<p>Kopioi ja liitä seuraava <strong>Näyttönimeksi</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Contoso Helpdesk Agent
+</span></code></pre></div>
+<p>Kopioi ja liitä seuraava <strong>Nimeksi</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ContosoHelpdeskAgent
+</span></code></pre></div>
+<p>Koska luomme uuden ratkaisun, <a href="https://learn.microsoft.com/power-apps/maker/data-platform/update-solutions#understanding-version-numbers-for-updates/?WT.mc_id=power-172615-ebenitez"><strong>Versio</strong>-numero</a> on oletuksena <code>1.0.0.0</code>.</p>
+<p>Valitse <strong>Aseta oletusratkaisuksi</strong> -valintaruutu.</p>
+<p><img alt="Ratkaisut" src="../../../../../translated_images/4.2_01_SolutionDetails_.ce2945385f3544846ca9e62f209c96a673a2540ea6e20404cd5f1b224d8b5321.fi.png" />  </p>
+</li>
+<li>
+<p>Laajenna <strong>Lisäasetukset</strong> nähdäksesi lisätiedot, jotka voidaan antaa ratkaisussa.</p>
+<p><img alt="Ratkaisut" src="../../../../../translated_images/4.2_02_MoreOptions.3c4b95d2fe119f8a8d8be783f5beba0a3b6c36fb83055cae80eaa45891aea73b.fi.png" /></p>
+</li>
+<li>
+<p>Näet seuraavat tiedot:</p>
+<ul>
+<li>
+<p><strong>Asennettu</strong> - päivämäärä, jolloin ratkaisu asennettiin.</p>
+</li>
+<li>
+<p><strong>Konfigurointisivu</strong> - kehittäjät määrittävät HTML-verkkoresurssin, joka auttaa käyttäjiä vuorovaikuttamaan sovelluksensa, agenttinsa tai työkalunsa kanssa. Se näkyy verkkosivuna Tietosivulla ohjeiden tai painikkeiden kanssa. Tätä käyttävät yleensä yritykset tai kehittäjät, jotka rakentavat ja jakavat ratkaisuja muille.</p>
+</li>
+<li>
+<p><strong>Kuvaus</strong> - kuvaa ratkaisua tai antaa yleiskuvan konfigurointisivusta.</p>
+</li>
+</ul>
+<p>Jätämme nämä tyhjiksi tässä harjoituksessa.</p>
+<p>Valitse <strong>Luo</strong>.</p>
+<p><img alt="Ratkaisut" src="../../../../../translated_images/4.2_03_Create.afd1bc27593062dfd945d4a0aa6fb05d87e0b02b0f45d01eaad8810f67a5f295.fi.png" /></p>
+</li>
+<li>
+<p>Contoso Helpdesk Agent -ratkaisu on nyt luotu. Siinä ei ole komponentteja, ennen kuin luomme agentin Copilot Studiossa.</p>
+<p>Valitse <strong>takaisin nuoli</strong> -kuvake palataksesi Ratkaisunhallintaan.</p>
+<p><img alt="Ratkaisut" src="../../../../../translated_images/4.2_04_SolutionCreated.f5f543303fd58856f93bfc1d4d6e9a27fd338a82e77b15258bb54f03b9b5f631.fi.png" /></p>
+</li>
+<li>
+<p>Huomaa, kuinka Contoso Helpdesk Agent näkyy nyt <strong>Nykyisenä oletusratkaisuna</strong>, koska valitsimme aiemmin <strong>Aseta oletusratkaisuksi</strong> -valintaruudun.</p>
+<p><img alt="Ratkaisut" src="../../../../../translated_images/4.2_05_CurrentPreferredSolutionSelected.fde1fa6c013f41f445c2b8721af8bc172a6a8bf98c4f5b8e946f87b4d5ec7823.fi.png" /></p>
+</li>
+</ol>
+<h2 id="tehtava-suoritettu">✅ Tehtävä suoritettu<a class="headerlink" href="#tehtava-suoritettu" title="Permanent link">&para;</a></h2>
+<p>Onnittelut! 👏🏻 Olet luonut julkaisijan ja käyttänyt sitä juuri luodussa ratkaisussa agenttisi rakentamiseen!</p>
+<p>Hienoa työtä, Agent Maker. Siisti digitaalinen jalanjälki on ensimmäinen askel kohti skaalautuvaa toimivuutta. Nyt sinulla on työkalut ja ajattelutapa kestävään, yritystason agenttikehitykseen.</p>
+<p>Tämä oli <strong>Lab 04 - Ratkaisun luominen</strong> loppu, valitse alla oleva linkki siirtyäksesi seuraavaan oppituntiin. Tässä laboratoriossa luomaasi ratkaisua käytetään seuraavan oppitunnin laboratoriossa.</p>
+<p>⏭️ <a href="../05-using-prebuilt-agents/">Siirry <strong>Aloita nopeasti valmiiden agenttien avulla</strong> -oppituntiin</a></p>
+<h2 id="taktiset-resurssit">📚 Taktiset resurssit<a class="headerlink" href="#taktiset-resurssit" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/power-apps/maker/data-platform/create-solution/?WT.mc_id=power-172615-ebenitez">Luo ratkaisu</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-solutions-overview/?WT.mc_id=power-172615-ebenitez">Ratkaisujen luominen ja hallinta Copilot Studiossa</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/admin-share-bots/?WT.mc_id=power-172615-ebenitez">Jaa agentteja muiden käyttäjien kanssa</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-platform/admin/database-security#summary-of-resources-available-to-predefined-security-roles/?WT.mc_id=power-172615-ebenitez">Yhteenveto ennalta määritettyjen suojausroolien käytettävissä olevista resursseista</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-apps/maker/data-platform/update-solutions/?WT.mc_id=power-172615-ebenitez">Ratkaisun päivittäminen tai päivittäminen</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-platform/alm/pipelines/?WT.mc_id=power-172615-ebenitez">Yleiskatsaus Power Platformin putkistoihin</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-platform/alm/git-integration/overview/?WT.mc_id=power-172615-ebenitez">Yleiskatsaus Git-integraatioon Power Platformissa</a></p>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/04-creating-a-solution" alt="Analytiikka" /></p>
+<hr />
+<p><strong>Vastuuvapauslauseke</strong>:<br />
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

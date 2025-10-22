@@ -1,0 +1,1122 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/es/docs/recruit/06-create-agent-from-conversation/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mision-06-crear-un-agente-personalizado-usando-lenguaje-natural-con-copilot-y-conectandolo-con-tus-datos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nombre-clave-operacion-forja-de-agentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ NOMBRE CLAVE: OPERACIÓN FORJA DE AGENTES
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-la-mision" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Resumen de la Misión
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Objetivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-agente-personalizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 ¿Qué es un agente personalizado?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usa-lenguaje-natural-para-crear-agentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗣️ Usa lenguaje natural para crear agentes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pero-soy-nuevo-en-describir-lo-que-quiero-que-hago" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌱 Pero soy nuevo en "describir lo que quiero" - ¿qué hago?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ok-he-creado-mi-agente-como-lo-conecto-con-conocimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔮 OK, he creado mi agente... ¿cómo lo conecto con conocimiento?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-fuentes-de-conocimiento-que-se-pueden-agregar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de fuentes de conocimiento que se pueden agregar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nota-sobre-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔒 Nota sobre seguridad
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mejorando-las-respuestas-de-tu-agente-en-copilot-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mejorando las respuestas de tu agente en Copilot Studio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laboratorio-06-crear-un-agente-personalizado-en-copilot-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Laboratorio 06: Crear un agente personalizado en Copilot Studio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mision-completa" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Misión Completa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-tacticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Recursos Tácticos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "180f9cc0b40527f61be092c9b0f72aba",
+  "translation_date": "2025-10-17T19:10:42+00:00",
+  "source_file": "docs/recruit/06-create-agent-from-conversation/README.md",
+  "language_code": "es"
+}
+-->
+<h1 id="mision-06-crear-un-agente-personalizado-usando-lenguaje-natural-con-copilot-y-conectandolo-con-tus-datos">🚨 Misión 06: Crear un agente personalizado usando lenguaje natural con Copilot y conectándolo con tus datos<a class="headerlink" href="#mision-06-crear-un-agente-personalizado-usando-lenguaje-natural-con-copilot-y-conectandolo-con-tus-datos" title="Permanent link">&para;</a></h1>
+<h2 id="nombre-clave-operacion-forja-de-agentes">🕵️‍♂️ NOMBRE CLAVE: <code>OPERACIÓN FORJA DE AGENTES</code><a class="headerlink" href="#nombre-clave-operacion-forja-de-agentes" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Ventana de Tiempo de la Operación:</strong> <code>~75 minutos</code></p>
+</blockquote>
+<p>🎥 <strong>Mira la Guía</strong></p>
+<p><a href="https://www.youtube.com/watch?v=qZTtQVncGFg" title="Mira la guía en YouTube"><img alt="Miniatura del video para crear un agente personalizado" src="../../../../../translated_images/video-thumbnail.9d5fddc1190fd4a04537488795821ac2f88fdcfe00e017f6e575a33f724e39cb.es.jpg" /></a></p>
+<h2 id="resumen-de-la-mision">🎯 Resumen de la Misión<a class="headerlink" href="#resumen-de-la-mision" title="Permanent link">&para;</a></h2>
+<p>Bienvenido de nuevo, Creador de Agentes. Esta misión te pone al mando de la capacidad más poderosa de Copilot Studio: crear un agente personalizado desde cero usando solo lenguaje natural… y potenciándolo con tus propios datos.</p>
+<p>Esto no es solo otro chatbot. Estás construyendo un compañero digital con conocimiento, capaz de razonar, responder y referirse a información real de la empresa.</p>
+<p>¿Tu herramienta principal? Lenguaje natural. ¿Tu misión? Diseñar, entrenar y probar un agente de soporte técnico completamente personalizado que responda preguntas de TI utilizando SharePoint, archivos cargados o URLs de la empresa.</p>
+<p>Construyamos tu agente desde cero.</p>
+<h2 id="objetivos">🔎 Objetivos<a class="headerlink" href="#objetivos" title="Permanent link">&para;</a></h2>
+<p>En esta misión, aprenderás:</p>
+<ol>
+<li>Entender qué son los agentes personalizados y cómo se diferencian de las plantillas predefinidas.</li>
+<li>Crear agentes usando indicaciones en lenguaje natural y diseño conversacional con Copilot.</li>
+<li>Conectar agentes con fuentes de conocimiento empresarial, incluyendo SharePoint, documentos y sitios web.</li>
+<li>Aprender sobre orquestación generativa y cómo los agentes buscan y responden dinámicamente utilizando múltiples fuentes de datos.</li>
+<li>Construir y probar un agente de soporte técnico funcional que pueda responder preguntas utilizando tus propios datos.</li>
+</ol>
+<h2 id="que-es-un-agente-personalizado">🤔 ¿Qué es un agente <em>personalizado</em>?<a class="headerlink" href="#que-es-un-agente-personalizado" title="Permanent link">&para;</a></h2>
+<p>Un agente personalizado es un chatbot o asistente virtual que creas y diseñas en Copilot Studio para ayudar a los usuarios con tareas o preguntas específicas. Se llama personalizado porque:</p>
+<ul>
+<li><strong>Tú decides el propósito</strong> - ayudar a los usuarios a solicitar vacaciones, verificar el estado de pedidos, brindar asistencia con preguntas relacionadas con TI.</li>
+<li><strong>Tú defines la conversación</strong> - lo que el agente dice y cómo debe responder.</li>
+<li><strong>Lo conectas con tus propios datos</strong> - enlaza con tus datos empresariales a través de los recursos de conocimiento integrados.</li>
+<li><strong>Lo conectas con tus propios sistemas o aplicaciones</strong> - elige entre conectores, flujos, APIs REST y servidores de protocolo de contexto de modelos.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Piensa en esto: estás construyendo tu propio ayudante digital que puede hablar con los usuarios y completar tareas para ellos, como responder preguntas, recopilar información requerida por un proceso o conectarse con tus datos empresariales.</p>
+</div>
+<h3 id="que-puede-hacer-un-agente-personalizado">🤖 ¿Qué puede hacer un agente personalizado?<a class="headerlink" href="#que-puede-hacer-un-agente-personalizado" title="Permanent link">&para;</a></h3>
+<p>Un agente personalizado puede realizar lo siguiente:</p>
+<ul>
+<li>Pedir información a los usuarios, como nombres, fechas o preferencias.</li>
+<li>Guardar esa información en una base de datos o tabla.</li>
+<li>Buscar datos según las preguntas realizadas y responderlas.</li>
+<li>Trabajar de manera autónoma sin que los usuarios interactúen directamente con el agente.</li>
+<li>Activar acciones ya sea bajo demanda mediante interacción directa del usuario o de forma autónoma, como enviar correos electrónicos o crear registros.</li>
+</ul>
+<h3 id="por-que-usar-un-agente-personalizado">👩🏻‍💻 ¿Por qué usar un agente personalizado?<a class="headerlink" href="#por-que-usar-un-agente-personalizado" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ahorra tiempo automatizando tareas repetitivas.</li>
+<li>Ofrece a los usuarios una experiencia amigable y guiada.</li>
+<li>Se adapta a las necesidades de tu negocio o proyecto.</li>
+</ul>
+<h3 id="ejemplo">✨ Ejemplo<a class="headerlink" href="#ejemplo" title="Permanent link">&para;</a></h3>
+<p>Creas un agente personalizado que ayuda a los empleados a solicitar permisos de vacaciones.</p>
+<p>El agente pide su nombre, las fechas de inicio y fin de sus vacaciones, y el nombre de su gerente, luego guarda la información en el sistema designado para gestionar solicitudes de vacaciones, como una lista de SharePoint.</p>
+<p>Ahora, en lugar de navegar a la lista de SharePoint y crear un nuevo elemento, los empleados simplemente conversan con el agente.</p>
+<h2 id="usa-lenguaje-natural-para-crear-agentes">🗣️ Usa lenguaje natural para crear agentes<a class="headerlink" href="#usa-lenguaje-natural-para-crear-agentes" title="Permanent link">&para;</a></h2>
+<p>Anteriormente aprendiste cómo construir rápidamente agentes en Copilot Studio usando plantillas predefinidas en <a href="../05-using-prebuilt-agents/">Lección 05 - Comienza rápidamente con agentes predefinidos</a>. En esta lección, profundizaremos en la experiencia de creación conversacional con Copilot. Copilot Studio facilita la creación de agentes conversando con Copilot, como si tuvieras una conversación.</p>
+<p>En Copilot Studio, no necesitas escribir código para crear un agente. En su lugar, describes lo que quieres que haga tu agente en lenguaje sencillo, y Copilot te ayuda a construirlo paso a paso a través de una experiencia similar a un chat.</p>
+<h2 id="pero-soy-nuevo-en-describir-lo-que-quiero-que-hago">🌱 Pero soy nuevo en "describir lo que quiero" - ¿qué hago?<a class="headerlink" href="#pero-soy-nuevo-en-describir-lo-que-quiero-que-hago" title="Permanent link">&para;</a></h2>
+<p>Describir en lenguaje natural para crear un agente personalizado puede ser un concepto nuevo para ti. Cada vez que usas Copilot en productos y servicios de Microsoft, estás utilizando lenguaje natural en forma de un <em>prompt</em>.</p>
+<p>Un prompt es el mensaje o instrucción que le das a un agente de IA para decirle lo que quieres que haga. Piensa en ello como dar instrucciones a un asistente. Cuanto más claras sean tus instrucciones, más fácil será para tu asistente entender y actuar en consecuencia.</p>
+<h3 id="por-que-los-prompts-son-importantes">🪄 Por qué los Prompts son importantes<a class="headerlink" href="#por-que-los-prompts-son-importantes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Guían el comportamiento del agente.</li>
+<li>Ayudan al agente a entender qué tipo de conversación debe tener.</li>
+<li>Un buen prompt hace que el agente sea más útil y preciso.</li>
+</ul>
+<h3 id="consejos-para-escribir-un-buen-prompt">📝 Consejos para escribir un buen prompt<a class="headerlink" href="#consejos-para-escribir-un-buen-prompt" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sé claro y específico - di exactamente lo que quieres que haga el agente.</li>
+<li>Piensa como el usuario - ¿qué dirá el usuario? ¿Qué debería responder el agente?</li>
+<li>Incluye ejemplos - si es posible, proporciona una interacción de muestra.</li>
+</ul>
+<h3 id="ejemplo_1">✨ Ejemplo<a class="headerlink" href="#ejemplo_1" title="Permanent link">&para;</a></h3>
+<p>Supongamos que el equipo de Recursos Humanos necesita un agente para ayudar con solicitudes de vacaciones.</p>
+<p>El prompt podría ser:</p>
+<div class="language-text highlight"><pre><span></span><code>“Quiero construir un agente que ayude a los usuarios a enviar una solicitud de vacaciones. Cuando un usuario diga que quiere pedir tiempo libre, el agente debería pedir su nombre, la fecha de inicio de sus vacaciones, la fecha de fin de sus vacaciones y el nombre de su gerente. Una vez que el usuario proporcione esta información, el agente debería guardarla en una lista de SharePoint llamada ‘Solicitudes de Vacaciones’ y publicar una notificación en un canal dedicado de Microsoft Teams.”
+</code></pre></div>
+<p>Por qué este prompt funciona:</p>
+<ul>
+<li><strong>Establece claramente el objetivo</strong> - enviar una solicitud de vacaciones.</li>
+<li><strong>Describe la interacción del usuario</strong> - lo que dice el usuario y lo que debería preguntar el agente.</li>
+<li><strong>Enumera los datos requeridos</strong> - nombre, fecha de inicio, fecha de fin, gerente.</li>
+<li><strong>Menciona dónde van los datos</strong> - una lista de SharePoint llamada Solicitudes de Vacaciones.</li>
+</ul>
+<h2 id="ok-he-creado-mi-agente-como-lo-conecto-con-conocimiento">🔮 OK, he creado mi agente... ¿cómo lo conecto con conocimiento?<a class="headerlink" href="#ok-he-creado-mi-agente-como-lo-conecto-con-conocimiento" title="Permanent link">&para;</a></h2>
+<p>En Copilot Studio, las fuentes de conocimiento son lugares donde tu agente puede encontrar información para dar mejores respuestas. Cuando agregas estas fuentes, tu agente puede incorporar datos empresariales de lugares como Power Platform, Dynamics 365, sitios web y otros sistemas o servicios que utiliza tu empresa.</p>
+<p>Estas fuentes trabajan junto con la IA para ayudar a tu agente a responder con mayor precisión a las preguntas de los usuarios, esto se logra mediante lo que se conoce como <strong>orquestación generativa</strong>.</p>
+<h3 id="que-es-la-orquestacion-generativa-en-el-contexto-de-los-agentes">🌿 ¿Qué es la orquestación generativa en el contexto de los agentes?<a class="headerlink" href="#que-es-la-orquestacion-generativa-en-el-contexto-de-los-agentes" title="Permanent link">&para;</a></h3>
+<p>La orquestación generativa significa que el agente utiliza IA para decidir dinámicamente cómo responder a una pregunta combinando sus habilidades lingüísticas integradas con información de las fuentes de conocimiento que has agregado.</p>
+<p>Cuando un usuario hace una pregunta, el agente:</p>
+<ul>
+<li>Entiende la pregunta usando IA.</li>
+<li>Puede pedir información faltante a los usuarios generando preguntas en el momento.</li>
+<li>Selecciona las fuentes de conocimiento más relevantes.</li>
+<li>Busca respuestas en esas fuentes.</li>
+<li>Genera una respuesta natural y útil utilizando la información encontrada.</li>
+</ul>
+<h3 id="por-que-las-fuentes-de-conocimiento-son-importantes">🏦 ¿Por qué las fuentes de conocimiento son importantes?<a class="headerlink" href="#por-que-las-fuentes-de-conocimiento-son-importantes" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Respuestas más inteligentes</strong> - cuando agregas fuentes de conocimiento, tu agente puede dar respuestas mejores y más precisas utilizando datos reales de tu organización.</p>
+</li>
+<li>
+<p><strong>Menos trabajo manual</strong> - no tienes que escribir cada posible respuesta. El agente puede buscar en las fuentes agregadas y responder automáticamente.</p>
+</li>
+<li>
+<p><strong>Usa información confiable</strong> - tu agente puede obtener respuestas de sistemas que ya utilizas, como Dataverse, SharePoint o sitios web de la empresa, para que los usuarios tengan información confiable de una fuente oficial.</p>
+</li>
+<li>
+<p><strong>Funciona con IA generativa</strong> - las fuentes de conocimiento y la IA ayudan a tu agente a entender preguntas y responder de manera natural, incluso si la pregunta no fue preprogramada o agregada como un prompt inicial.</p>
+</li>
+<li>
+<p><strong>Flexible y expandible</strong> - puedes agregar fuentes de conocimiento en cualquier momento durante la configuración o más adelante, tu agente se vuelve más inteligente a medida que cambian tus necesidades.</p>
+</li>
+</ol>
+<h3 id="ejemplo_2">✨ Ejemplo<a class="headerlink" href="#ejemplo_2" title="Permanent link">&para;</a></h3>
+<p>Imagina que creas un agente para ayudar a los empleados con preguntas de Recursos Humanos. Agregas el documento de políticas de recursos humanos de tu empresa y el sitio de SharePoint como fuentes de conocimiento.</p>
+<p>Cuando un empleado pregunta, <em>“¿Cuántos días de vacaciones me corresponden?”</em>, el agente utiliza la orquestación generativa para buscar en esas fuentes y responder con la política correcta sin que tengas que escribir esa respuesta manualmente. Esto te ahorra tiempo al no tener que prever cada posible pregunta que un empleado pueda hacer sobre sus derechos.</p>
+<h2 id="tipos-de-fuentes-de-conocimiento-que-se-pueden-agregar">Tipos de fuentes de conocimiento que se pueden agregar<a class="headerlink" href="#tipos-de-fuentes-de-conocimiento-que-se-pueden-agregar" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Sitios web públicos</strong></p>
+<ul>
+<li><strong>Qué hace:</strong> Busca en sitios web específicos (como el sitio de tu empresa) usando Bing.</li>
+<li><strong>Por qué es útil:</strong> Ideal para obtener información pública como preguntas frecuentes o detalles de productos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Documentos</strong></p>
+<ul>
+<li><strong>Qué hace:</strong> Utiliza documentos que cargas directamente en tu agente, como archivos PDF o Word. Estos archivos cargados se almacenan de forma segura en Dataverse.</li>
+<li><strong>Por qué es útil:</strong> Permite que tu agente responda preguntas basadas en guías internas, manuales o políticas.</li>
+</ul>
+</li>
+<li>
+<p><strong>SharePoint</strong></p>
+<ul>
+<li><strong>Qué hace:</strong> Se conecta a carpetas o archivos de SharePoint usando Microsoft Graph Search.</li>
+<li><strong>Por qué es útil:</strong> Ideal para acceder a documentos del equipo, políticas de recursos humanos o archivos de proyectos almacenados en SharePoint.</li>
+</ul>
+</li>
+<li>
+<p><strong>Dataverse</strong></p>
+<ul>
+<li><strong>Qué hace:</strong> Utiliza datos estructurados de las tablas y filas de tu entorno Dataverse, y puede aplicar sinónimos y definiciones de glosarios para tablas y columnas para mejorar las respuestas del agente.</li>
+<li><strong>Por qué es útil:</strong> Cuando necesitas buscar datos empresariales almacenados en Dataverse, como información de clientes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Conocimiento en tiempo real con conectores</strong></p>
+<ul>
+<li><strong>Qué hace:</strong> Permite que tu agente acceda a datos en vivo de otros sistemas empresariales como Salesforce, ServiceNow, Dynamics 365, AzureSQL, Databricks y más durante una conversación, utilizando los permisos del usuario.</li>
+<li><strong>Por qué es útil:</strong> Proporciona respuestas actualizadas, seguras y precisas sin almacenar ni duplicar datos, haciendo que tu agente sea más inteligente y seguro.</li>
+</ul>
+</li>
+<li>
+<p><strong>Azure AI Search</strong></p>
+<ul>
+<li><strong>Qué hace:</strong> Permite que tu agente busque en grandes conjuntos de documentos almacenados en Azure utilizando búsqueda semántica y vectorial para entender las preguntas de los usuarios.</li>
+<li><strong>Por qué es útil:</strong> Ofrece respuestas precisas y confiables de fuentes de datos complejas, admite citas y escala bien para colecciones grandes de documentos con controles de acceso seguros.</li>
+</ul>
+</li>
+</ol>
+<h2 id="nota-sobre-seguridad">🔒 Nota sobre seguridad<a class="headerlink" href="#nota-sobre-seguridad" title="Permanent link">&para;</a></h2>
+<h3 id="autenticacion-de-fuentes-de-conocimiento">Autenticación de fuentes de conocimiento<a class="headerlink" href="#autenticacion-de-fuentes-de-conocimiento" title="Permanent link">&para;</a></h3>
+<p>Algunas fuentes como SharePoint y Dataverse requieren autenticación de usuario. Esto significa que el agente solo hará referencia a datos en su respuesta que el usuario tenga permiso para ver. Otras fuentes pueden requerir configuraciones adicionales para que el agente se conecte, como Azure AI Search, que requiere una cuenta de Azure y especificar un tipo de autenticación.</p>
+<h2 id="mejorando-las-respuestas-de-tu-agente-en-copilot-studio">Mejorando las respuestas de tu agente en Copilot Studio<a class="headerlink" href="#mejorando-las-respuestas-de-tu-agente-en-copilot-studio" title="Permanent link">&para;</a></h2>
+<p>Después de que tu agente sea creado a partir de la experiencia de creación conversacional, querrás probarlo contra las instrucciones que Copilot generó a partir de tu prompt. Mejorar las respuestas de tu agente en Copilot Studio se trata de asegurarte de que entiende claramente tus objetivos y tiene la información correcta para trabajar.</p>
+<ol>
+<li>
+<p><strong>Refina las instrucciones del agente</strong> - aquí es donde le dices a tu agente cómo debe comportarse. Usa un lenguaje claro y específico.</p>
+<p>Por ejemplo:</p>
+<p>✅ “Actúa como un agente de soporte al cliente amigable que explica las cosas de manera sencilla.”</p>
+<p>❌ “Sé útil.” (Demasiado vago)</p>
+</li>
+<li>
+<p><strong>Revisa el tono y el lenguaje</strong> - asegúrate de que el tono del agente coincida con tu audiencia.</p>
+<p>Puedes configurarlo para que sea:</p>
+<ul>
+<li>Amigable y casual.</li>
+<li>Profesional y conciso.</li>
+<li>Solidario y paciente.</li>
+</ul>
+</li>
+<li>
+<p><strong>Agrega o actualiza fuentes de conocimiento</strong> - si tu agente necesita responder preguntas sobre un tema, asegúrate de que tenga acceso a la información correcta.</p>
+<ul>
+<li>Agrega enlaces a sitios web, documentos o preguntas frecuentes.</li>
+<li>Mantén el contenido actualizado.</li>
+<li>Usa información clara y bien estructurada.</li>
+</ul>
+</li>
+<li>
+<p><strong>Usa Temas y Disparadores</strong> - Si tu agente necesita manejar tareas o conversaciones específicas, puedes crear temas con frases disparadoras. Esto ayuda a guiar la conversación de manera más precisa. Aprenderemos más sobre esto en la siguiente lección.</p>
+</li>
+<li>
+<p><strong>Prueba con preguntas reales</strong> - intenta hacerle a tu agente las preguntas que los usuarios podrían hacer.</p>
+<p>Si las respuestas no son buenas:</p>
+<ul>
+<li>Ajusta las instrucciones del sistema.</li>
+<li>Agrega más ejemplos o conocimiento.</li>
+<li>Reformula tus preguntas para ver cómo responde.</li>
+</ul>
+</li>
+<li>
+<p><strong>Revisa e itera</strong> - ¡mejorar un agente es un proceso continuo!</p>
+<p>Después de publicar:</p>
+<ul>
+<li>Recoge comentarios de los usuarios.</li>
+<li>Observa preguntas comunes o confusiones.</li>
+<li>Sigue refinando la configuración del agente.</li>
+</ul>
+</li>
+</ol>
+<h2 id="laboratorio-06-crear-un-agente-personalizado-en-copilot-studio">🧪 Laboratorio 06: Crear un agente personalizado en Copilot Studio<a class="headerlink" href="#laboratorio-06-crear-un-agente-personalizado-en-copilot-studio" title="Permanent link">&para;</a></h2>
+<p>Ahora vamos a aprender cómo crear un agente personalizado que pueda conversar sobre tus datos.</p>
+<ul>
+<li><a href="../../../../../docs/recruit/06-create-agent-from-conversation">6.1 Usa lenguaje natural para crear un agente con Copilot</a></li>
+<li><a href="../../../../../docs/recruit/06-create-agent-from-conversation">6.2 Agrega una fuente de conocimiento interna usando un sitio de SharePoint</a></li>
+<li><a href="../../../../../docs/recruit/06-create-agent-from-conversation">6.3 Agrega una fuente de conocimiento interna cargando un documento</a></li>
+<li><a href="../../../../../docs/recruit/06-create-agent-from-conversation">6.4 Prueba el agente</a></li>
+</ul>
+<h3 id="caso-de-uso">✨ Caso de uso<a class="headerlink" href="#caso-de-uso" title="Permanent link">&para;</a></h3>
+<p>Usaremos el mismo caso práctico de <a href="../03-create-a-declarative-agent-for-M365Copilot/#use-case-scenario">Lección 03 - Crear un agente declarativo para Microsoft 365 Copilot</a></p>
+<p><strong>Como</strong> empleado</p>
+<p><strong>Quiero</strong> obtener ayuda rápida y precisa del agente de soporte técnico de TI para problemas como problemas con dispositivos, solución de problemas de red, configuración de impresoras</p>
+<p><strong>Para que pueda</strong> mantenerme productivo y resolver problemas técnicos sin demoras</p>
+<p>¡Comencemos!</p>
+<h3 id="requisitos-previos">✨ Requisitos previos<a class="headerlink" href="#requisitos-previos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Sitio de SharePoint</strong></li>
+</ul>
+<p>Usaremos el sitio de SharePoint <strong>Contoso IT</strong> de <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Lección 00 - Configuración del curso - Paso 3: Crear un nuevo sitio de SharePoint</a>.</p>
+<p>Si no has configurado el sitio de SharePoint <strong>Contoso IT</strong>, por favor regresa a <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Lección 00 - Configuración del curso - Paso 3: Crear un nuevo sitio de SharePoint</a>.</p>
+<ul>
+<li><strong>Solución</strong></li>
+</ul>
+<p>Usaremos la solución <strong>Contoso Helpdesk Agent</strong> de <a href="../04-creating-a-solution/#41-create-a-solution-publisher">Lección 04 - Crear una solución para tu agente</a>.</p>
+<p>Si no has configurado la solución <strong>Contoso Agent</strong>, por favor regresa a <a href="../04-creating-a-solution/#41-create-a-solution-publisher">Lección 04 - Crear una solución para tu agente</a>.</p>
+<h3 id="61-usar-lenguaje-natural-para-crear-un-agente-con-copilot">6.1 Usar lenguaje natural para crear un agente con Copilot<a class="headerlink" href="#61-usar-lenguaje-natural-para-crear-un-agente-con-copilot" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Las preguntas de Copilot pueden variar entre sesiones</p>
+<p>La experiencia de creación conversacional de Copilot puede variar cada vez, donde las preguntas proporcionadas como guía pueden ser ligeramente diferentes a las anteriores.</p>
+</div>
+<ol>
+<li>
+<p>Navega a la página de inicio de Copilot Studio y en el campo, ingresa el siguiente mensaje que describe al agente de soporte técnico de TI. El mensaje incluye el objetivo del agente, el contexto, las tareas esperadas y el formato de la respuesta del agente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are an IT help desk agent. Your goal is to assist users with their IT issues. You can access information from our company&#39;s knowledge base at https://support.microsoft.com/en-us. Your responses should be polite and helpful. If a user reports a slow computer, ask about the age of the device, current software versions, and if they&#39;ve recently installed any new programs. If a user is experiencing trouble logging into their email, guide them through password reset procedures. You should be concise and informative, using step-by-step instructions with bullet points when appropriate.
+</span></code></pre></div>
+<p><img alt="Ingresar mensaje" src="../../../../../translated_images/6.1_01_Prompt.c4be2ff2cac9fde3659f2e7016e48f01860b55523d3320b3b8450ef2fcb1f51a.es.png" /></p>
+</li>
+<li>
+<p>A continuación, se cargará la experiencia de creación conversacional con Copilot. Verás que Copilot está en proceso de responderte.</p>
+<p><img alt="Experiencia de creación conversacional de Copilot" src="../../../../../translated_images/6.1_02_ConversationalCreationExperienceLoads.115eaf4e5a15c1b60bc0d25c97a0d97d462d6c740cfed5de369b2bd8fd1cc8bc.es.png" /></p>
+</li>
+<li>
+<p>Copilot confirma que el agente ha sido configurado con las instrucciones proporcionadas y está solicitando confirmación sobre el nombre del agente. Le pediremos a Copilot que nombre a nuestro agente como:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Contoso Helpdesk Agent
+</span></code></pre></div>
+<p><img alt="Renombrar el agente" src="../../../../../translated_images/6.1_03_AgentName.a848acea10cd1d3d6ba68fea2b0e094ecbd130a124413e3c8134198c81654833.es.png" /></p>
+</li>
+<li>
+<p>Copilot realiza la solicitud y veremos que el nombre del agente se ha actualizado en el panel del agente. A continuación, Copilot nos pide que refinemos las instrucciones. Está preguntando cómo deberíamos responder a problemas específicos y solicitaremos que reconozca el problema, proporcione ejemplos de temas a responder y formatee la respuesta en forma de viñetas.</p>
+<p>Copia y pega lo siguiente y envía la solicitud a Copilot.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Prioriza solicitudes urgentes. Ejemplos de problemas o escenarios de TI para ayudar: problemas con dispositivos, conectividad de red, problemas de inicio de sesión. Al solucionar problemas, primero reconoce su problema y responde con empatía, luego proporciona una guía paso a paso usando viñetas y pregunta si necesitan más ayuda.
+</span></code></pre></div>
+<p><img alt="Refinar instrucciones del agente" src="../../../../../translated_images/6.1_04_RefineInstructions.9575407dbc12e0399691068d20e0d0252bb8b8f839cf53ee9d715fe2c16afa70.es.png" /></p>
+</li>
+<li>
+<p>Las instrucciones del agente se actualizarán después de que Copilot haya recibido la solicitud. Observa cómo en el panel del lado derecho ahora aparecen mensajes iniciales. Estos se formaron en base a nuestras instrucciones.</p>
+<p>A continuación, Copilot está solicitando sitios web públicos para fundamentar el conocimiento del agente.</p>
+<p>Copia y pega lo siguiente y envía la solicitud a Copilot.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>https://support.microsoft.com
+</span></code></pre></div>
+<p><img alt="Agregar sitio web accesible públicamente" src="../../../../../translated_images/6.1_05_KnowledgeSource.3aec8d869b73d273f88c62cf99bb2f731df83a83c1ca54d92d6e96b86a570637.es.png" /></p>
+</li>
+<li>
+<p>El sitio web público se agregará como fuente de conocimiento. Copilot pregunta si se deben agregar fuentes de conocimiento adicionales. No necesitamos agregar sitios web públicos adicionales.</p>
+<p>Copia y pega lo siguiente y envía la solicitud a Copilot.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Proceed with setup
+</span></code></pre></div>
+<p><img alt="Continuar con la configuración" src="../../../../../translated_images/6.1_06_ProceedWithSetup.11ceb9ccccccd19418711681d42b602ee223ebd017d6bf300088de84d1d35f1d.es.png" /></p>
+</li>
+<li>
+<p>Copilot confirma que la configuración de nuestro Contoso Helpdesk Agent está completa, pero haremos una modificación más. Vamos a solicitar que nuestro agente no responda preguntas relacionadas con recursos humanos. Esto le indica a nuestro agente que no debe responder preguntas relacionadas con recursos humanos que los usuarios puedan hacer.</p>
+<p>Copia y pega lo siguiente y envía la solicitud a Copilot.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>No proporciones asistencia para preguntas relacionadas con recursos humanos, ejemplos son: ¿Cuál es mi saldo de días de vacaciones? ¿Cuántos días de enfermedad tengo? ¿Cuál es la URL de nuestro portal de nómina?
+</span></code></pre></div>
+<p><img alt="No responder preguntas relacionadas con recursos humanos" src="../../../../../translated_images/6.1_07_DoNotTalkAbout.d9ccbbd15b9793e1642b365be6968548f6f250be5d541f1ad06eb9f12985e94f.es.png" /></p>
+</li>
+<li>
+<p>Las instrucciones se actualizarán para no proporcionar asistencia con preguntas relacionadas con recursos humanos. No necesitamos hacer más actualizaciones, nuestro agente está listo para ser creado.</p>
+<p><img alt="Instrucciones del agente actualizadas" src="../../../../../translated_images/6.1_08_AgentInstructionsUpdated.4de1112eeb5c8e2e2fe03fcbc6d332bdc3b1de740d9a5ab6b1ec30e27e241096.es.png" /></p>
+</li>
+<li>
+<p>Antes de crear nuestro agente, hagamos un par de cosas.</p>
+<p>Primero, selecciona la pestaña <strong>Configurar</strong> para ver los detalles del agente definidos en nuestra conversación con Copilot. Aquí es donde verás el Nombre, Descripción, Instrucciones, Conocimiento y Mensajes sugeridos/iniciales.</p>
+<p><img alt="Ver detalles del agente" src="../../../../../translated_images/6.1_09_ViewAgentDetails.72c7f66721d6ac354bcc7186204bb0ad169456b0b7756f5e5a5e0f090e802a57.es.png" /></p>
+</li>
+<li>
+<p>En segundo lugar, probemos nuestro agente. Copia y pega lo siguiente y envía la pregunta a nuestro agente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>¿Cómo puedo verificar el estado de garantía de mi Surface?
+</span></code></pre></div>
+<p><img alt="Probar agente" src="../../../../../translated_images/6.1_10_TestAgent.8b1a0f1d98f4fa5b61336e1c4ac6d77b4822283314c2941cb0e04bf5247d8489.es.png" /></p>
+</li>
+<li>
+<p>La respuesta a la pregunta se mostrará donde las respuestas están en formato de guía paso a paso usando viñetas. ¡Genial, nuestro agente funciona! 🙌🏻</p>
+<p><img alt="Respuesta del agente" src="../../../../../translated_images/6.1_11_AgentResponse.c5fb305335b8e9b456b0f75ec9e237d4abbc3e9a1a6976e14bb656f1adffb14a.es.png" /></p>
+</li>
+<li>
+<p>Por último, verificaremos que la solución en la que se creará nuestro agente sea la solución que creamos y seleccionamos como solución preferida en <a href="../04-creating-a-solution/#42-create-a-new-solution">Lección 04 - Crear una nueva solución</a>.</p>
+<p>Selecciona el <strong>icono de elipsis (...)</strong> y selecciona <strong>Actualizar configuración avanzada</strong>.</p>
+<p><img alt="Actualizar configuración avanzada" src="../../../../../translated_images/6.1_12_UpdateAdvancedSettings.5943949ae7c9f492fb90779b0284283deb4186f14cd6588c46920f8e50d8d6d0.es.png" /></p>
+</li>
+<li>
+<p>Aparecerá el modal de <strong>Configuración avanzada</strong> y podemos ver que nuestra solución creada anteriormente está seleccionada por defecto. Esto se debe a que seleccionamos nuestra solución como solución preferida en <a href="../04-creating-a-solution/#42-create-a-new-solution">Lección 04 - Crear una nueva solución</a>.</p>
+<p>Selecciona <strong>Cancelar.</strong></p>
+<p><img alt="Vista de configuración avanzada" src="../../../../../translated_images/6.1_13_AdvancedSettings.fff0861831346d5bef4e7731fed83073aca6d17aa940633040f65b1f300aee15.es.png" /></p>
+</li>
+<li>
+<p>¡Ahora vamos a crear nuestro agente personalizado! Selecciona <strong>Crear</strong>.</p>
+<p><img alt="Seleccionar Crear" src="../../../../../translated_images/6.1_14_CreateAgent.7330a5fbe44a0664f35c5b5502e499f6dd3bad55d13094ef6c22608e8f8831b1.es.png" /></p>
+</li>
+<li>
+<p>Copilot Studio comenzará a aprovisionar nuestro agente.</p>
+<p><img alt="Configurando agente" src="../../../../../translated_images/6.1_15_SettingUpAgent.34028a37bc2922eae13d0a18bb468bd738608b4de948192d89c3a2680fff2496.es.png" /></p>
+</li>
+<li>
+<p>Una vez que nuestro agente haya sido aprovisionado, podemos ver los detalles del agente reflejando lo que solicitamos durante nuestra experiencia de creación conversacional con Copilot. Desplázate hacia abajo para revisar el agente donde verás el nombre, descripción, instrucciones, las fuentes de conocimiento y los mensajes sugeridos. El modo de orquestación está habilitado por defecto y el modelo predeterminado se utiliza para el modelo de respuesta del agente.</p>
+<p><img alt="Agente creado" src="../../../../../translated_images/6.1_16_AgentCreated.91edb1939b33d158930cd385c0d97c320958504e224ffc163ed5030b0cdc72a7.es.png" /></p>
+<p><img alt="Fuentes de conocimiento" src="../../../../../translated_images/6.1_17_KnowledgeSources.00f1ed0b7f405e4820971834fb75e39a80659cf1b9eeeee42d861bfc4656240f.es.png" /></p>
+<p><img alt="Mensajes sugeridos" src="../../../../../translated_images/6.1_18_SuggestedPrompts.20b84b9420858de8485460cc50a8e73798b08bb2022c946899adcbf9b484e0f0.es.png" /></p>
+</li>
+<li>
+<p>Ahora probemos nuestro agente recién creado. En el panel <strong>Prueba</strong> en el lado derecho, selecciona el icono <strong>Mapa de actividad</strong>.</p>
+<p><img alt="Seleccionar Mapa de Actividad" src="../../../../../translated_images/6.1_19_ActivityMap.b2e6c77c69fd953818dc73b4dbe2e6d46529cf105d7a4a18c590d15c0b717cf4.es.png" /></p>
+</li>
+<li>
+<p>Ingresa la siguiente pregunta en el panel <strong>Prueba</strong>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>¿Cómo encuentro mi clave de producto de Windows 11?
+</span></code></pre></div>
+<p><img alt="Probar agente recién creado" src="../../../../../translated_images/6.1_20_TestAgent.a9d3a761477c9b79facd132c173ec886d808320ad2cbc0347066a20c0f9dd669.es.png" /></p>
+</li>
+<li>
+<p>El mapa de actividad se cargará y nos mostrará en tiempo real qué camino está procesando el agente. En este escenario, nuestro agente ha entendido la pregunta y está buscando en las fuentes de conocimiento. Actualmente tenemos una fuente que es el sitio web público que agregamos anteriormente usando Copilot, que es lo que el agente está revisando.</p>
+<p><img alt="Revisando fuentes de conocimiento" src="../../../../../translated_images/6.1_21_ReviewingSources.78068042898e2960667393c931e120dbe80f6b74c9af222b79446f7a82d5c757.es.png" /></p>
+</li>
+<li>
+<p>Nuestro agente responde con respuestas que están delineadas como viñetas, tal como se definió en las instrucciones. La respuesta tiene referencias a las páginas web de las que el agente formó su respuesta. Esto permite a los usuarios verificar la fuente de la respuesta.</p>
+<p><img alt="Referencias en la respuesta" src="../../../../../translated_images/6.1_22_Response.44a088e80f2a9fac74bcd364571f1ebb900b43e9e647089ef51d39b809b0f0e9.es.png" /></p>
+</li>
+<li>
+<p>También puedes revisar la respuesta y sus fuentes desplazándote hacia abajo en el <strong>modal de Conocimiento</strong> en el mapa de actividad.</p>
+<p><img alt="Fuentes referenciadas" src="../../../../../translated_images/6.1_23_ReferencedSources.ca8e41855284446d121a34fd9d8d667e05016f5eda741adcf7f356ac2c59c559.es.png" /></p>
+</li>
+</ol>
+<p>¡Felicidades! Has creado tu primer agente personalizado con Copilot en Copilot Studio 🙌🏻</p>
+<h3 id="62-agregar-una-fuente-de-conocimiento-interna-usando-un-sitio-de-sharepoint">6.2 Agregar una fuente de conocimiento interna usando un sitio de SharePoint<a class="headerlink" href="#62-agregar-una-fuente-de-conocimiento-interna-usando-un-sitio-de-sharepoint" title="Permanent link">&para;</a></h3>
+<p>Anteriormente con Copilot, agregamos un sitio web público como fuente de conocimiento externa para nuestro agente durante la experiencia de creación conversacional. Ahora vamos a agregar una fuente de conocimiento interna usando un sitio de SharePoint. Este será el sitio de SharePoint que creaste durante <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Lección 00 - Configuración del curso</a>.</p>
+<ol>
+<li>
+<p>Selecciona <strong>+ Agregar conocimiento</strong>.</p>
+<p><img alt="Seleccionar Agregar conocimiento" src="../../../../../translated_images/6.2_01_AddKnowledge.5e441f7e3b0ebb25218bece75394ecf4c8c3a60e1b5d8ea15ca020546352f256.es.png" /></p>
+</li>
+<li>
+<p>Selecciona <strong>SharePoint</strong>.</p>
+<p><img alt="Seleccionar SharePoint" src="../../../../../translated_images/6.2_02_SelectSharePoint.5bd29d31cc76f581db3eef474731fc2dfce4ef1dab86d9cc11716323ba726408.es.png" /></p>
+</li>
+<li>
+<p>Pega la <strong>dirección del sitio de SharePoint</strong> creado en <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Lección 00 - Configuración del curso</a> en el campo de URL de SharePoint y selecciona <strong>Agregar</strong>.</p>
+<p><img alt="Ingresar URL del sitio de SharePoint" src="../../../../../translated_images/6.2_03_AddSharePointURL.974c251d9690524a8bfa4c9dd930af3d834245749fb9f1fda508c3b1f9773827.es.png" /></p>
+</li>
+<li>
+<p>Actualiza el <strong>nombre</strong> del sitio de SharePoint a <code>Contoso IT</code> y selecciona <strong>Agregar</strong>.</p>
+<p><img alt="Actualizar nombre del sitio de SharePoint y agregar al agente" src="../../../../../translated_images/6.2_04_UpdateNameAddToAgent.46a814c09586fe135bffb77814ba13d0593f25feaaa989174c97e80345f03866.es.png" /></p>
+</li>
+<li>
+<p>El sitio de SharePoint ahora se ha agregado como una fuente de conocimiento con un estado de <em>Listo</em>. La columna de Estado mostrará si la fuente de conocimiento se ha cargado/conectado exitosamente o si hay algún problema.</p>
+<p><img alt="Estado del sitio de SharePoint" src="../../../../../translated_images/6.2_05_SharePointStatus.90a9001978f31c5d4b183d5ecc4869c81dd9fc1bb8a6b1ef4675fcb51d52f8e5.es.png" /></p>
+</li>
+</ol>
+<h3 id="63-agregar-una-fuente-de-conocimiento-interna-subiendo-un-documento">6.3 Agregar una fuente de conocimiento interna subiendo un documento<a class="headerlink" href="#63-agregar-una-fuente-de-conocimiento-interna-subiendo-un-documento" title="Permanent link">&para;</a></h3>
+<p>Ahora agregaremos otra fuente de conocimiento interna subiendo un documento directamente a nuestro agente.</p>
+<ol>
+<li>
+<p>Selecciona <strong>Agregar conocimiento</strong>.</p>
+<p><img alt="Seleccionar Agregar conocimiento" src="../../../../../translated_images/6.3_01_AddKnowledge.d93caa805efb7e2a433d9777f8eb1789dc5daf4f9ebe95da2a74a2b57cffdd33.es.png" /></p>
+</li>
+<li>
+<p>Selecciona <strong>Subir archivo</strong> o <strong>Seleccionar para buscar</strong>.</p>
+<p><img alt="Seleccionar subir archivos" src="../../../../../translated_images/6.3_02_UploadFile.662de4f3916bfa3f34a6699a9a45846e64e71a70dfecbc656fb5b511792de6b6.es.png" /></p>
+</li>
+<li>
+<p>Descarga este <a href="../../../../../docs/recruit/06-create-agent-from-conversation/assets/Contoso_Guest_WiFi_Connection_Guide.docx" title="descargar">archivo de ejemplo</a> y selecciónalo en tu explorador de archivos. Selecciona <strong>Abrir</strong>.</p>
+<p><img alt="Seleccionar documento" src="../../../../../translated_images/6.3_03_SelectFile.077d73491dc6ff1f6114d259261ee68334c4da182c3b55233468637d1989f14c.es.png" /></p>
+</li>
+<li>
+<p>El archivo ha sido seleccionado para subir. Selecciona <strong>Agregar al agente</strong> a continuación.</p>
+<p><img alt="Seleccionar Agregar al Agente" src="../../../../../translated_images/6.3_04_AddToAgent.1eec469d6d28c22959c8d7f3ad39aa0df5e07adfdb85ce1e21c0c4fe31c27db5.es.png" /></p>
+</li>
+<li>
+<p>El documento estará en proceso de ser agregado al agente. Espera hasta que la carga se haya completado, no cierres la ventana del navegador. El estado del documento inicialmente mostrará <em>En progreso</em>, espera hasta que el estado se haya actualizado a <strong>Listo</strong> antes de probar tu agente.</p>
+<p><img alt="Estado del archivo" src="../../../../../translated_images/6.3_05_FileStatus.2029b8aa0109a6f46372291e9bba33429c2ebd572efa81702a73cae91fbf3a90.es.png" /></p>
+</li>
+</ol>
+<p>¡Ahora probemos nuestro agente!</p>
+<h3 id="64-probar-agente">6.4 Probar agente<a class="headerlink" href="#64-probar-agente" title="Permanent link">&para;</a></h3>
+<p>Probaremos nuestras tres fuentes de conocimiento haciendo preguntas a nuestro Contoso Helpdesk Agent.</p>
+<ol>
+<li>
+<p>Selecciona el <strong>icono de actualizar</strong> en el panel de prueba, seguido de seleccionar el <strong>icono del mapa de actividad</strong>.</p>
+<p><img alt="Icono de actualizar" src="../../../../../translated_images/6.4_01_RefreshAndActivityMap.c24ebc6c277786dab75941dac0b6e55f3dbb244b29fb791c87e4aba5c4a56c81.es.png" /></p>
+</li>
+<li>
+<p>Ingresa la siguiente pregunta para probar nuestra fuente de conocimiento del sitio web público (externa).</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>How can I find the serial number on my Surface device?
+</span></code></pre></div>
+<p><img alt="Ingresar mensaje para probar fuente de conocimiento del sitio web" src="../../../../../translated_images/6.4_02_TestQuestion1.3a5aeaaa72a9578a05edd4575275e1ba60ecaf8c7377ab13872619580e0309f9.es.png" /></p>
+</li>
+<li>
+<p>A continuación, verás al agente revisando las fuentes de conocimiento y proporcionando una respuesta usando la fuente de conocimiento del sitio web.
+<img alt="Página web referenciada en la respuesta" src="../../../../../translated_images/6.4_03_ReviewingSources.a56742505402eab51b423b543c814242728ff7947e443360740b3e5dac82ba65.es.png" /></p>
+</li>
+<li>
+<p>Se devolverá una respuesta y notarás cómo hay referencias a la página web de la que se formó la respuesta. Si desplazas hacia abajo el modal de conocimiento en el mapa de actividad, verás las otras fuentes de conocimiento que el agente buscó, que son el sitio de SharePoint y el archivo cargado.</p>
+<p>Sin embargo, estas no se utilizaron, ya que en la sección <strong>Fuentes referenciadas</strong>, solo se hizo referencia a la fuente de conocimiento del sitio web. La respuesta se fundamentó utilizando la fuente de conocimiento del sitio web. Si seleccionas las referencias, serás dirigido a la página web.</p>
+</li>
+</ol>
+<p><img alt="Fuentes de conocimiento referenciadas y buscadas" src="../../../../../translated_images/6.4_04_ReferencedSources.2fb91e8ed7cac8196c3cc1e43006512d4138adb4f240bdab66cd2af5fd1ec7c6.es.png" /></p>
+<ol>
+<li>
+<p>Ahora probemos tanto nuestra fuente de conocimiento del sitio de SharePoint como la fuente de conocimiento del documento en un solo mensaje. Ingresa la siguiente pregunta.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>How can I access our company Contoso VPN? How do guests connect to the Contoso Guest wifi?
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="Probar fuentes de conocimiento de SharePoint y documento" src="../../../../../translated_images/6.4_05_TestQuestion2.f77ce87578b59386ec5491716996aff9247c5e5ad458a51226276238adb282f3.es.png" /></p>
+<ol>
+<li>
+<p>Una vez más, verás al agente revisando las tres fuentes de conocimiento para generar una respuesta a las preguntas de nuestro único mensaje. El agente responde a ambas preguntas en un solo mensaje y hace referencia por separado a la página de SharePoint y al documento de donde generó su respuesta.</p>
+<p>En el modal de conocimiento en el mapa de actividad, verás el sitio de SharePoint y el documento utilizados como fuentes de referencia. Tienes total visibilidad de qué fuentes de conocimiento se utilizaron para responder ambas preguntas.</p>
+</li>
+</ol>
+<p><img alt="Fuentes de conocimiento referenciadas" src="../../../../../translated_images/6.4_06_ReferencedSources.caf049dac28b4317c39b074b481f5d7d5b1b92fd792fc4b796fec0c1575f9581.es.png" /></p>
+<ol>
+<li>Siempre es bueno verificar que la respuesta generada sea correcta. Selecciona la referencia del sitio de SharePoint y se cargará la página de preguntas frecuentes de SharePoint donde puedes desplazarte hacia abajo para revisar las instrucciones de VPN.</li>
+</ol>
+<p><img alt="Revisar página de SharePoint" src="../../../../../translated_images/6.4_07_VerifySharePoint.6ee48515fedf37a62564ddc388c2452751ed5777cda321d887c315c2de78d293.es.png" /></p>
+<ol>
+<li>A continuación, selecciona la referencia del documento y aparecerá un modal con el texto del documento que refleja la respuesta.</li>
+</ol>
+<p><img alt="Revisar documento" src="../../../../../translated_images/6.4_08_VerifyDocument.0f0680b63e6bdd0b558eb287e85965b87ab820e12b25b1e0965f8ebbde795222.es.png" /></p>
+<p>El agente puede responder múltiples preguntas en un solo mensaje, buscar en las fuentes de conocimiento y referenciar dichas fuentes en su respuesta. Asegúrate siempre de verificar que la respuesta sea correcta revisando las referencias.</p>
+<h2 id="mision-completa">✅ Misión Completa<a class="headerlink" href="#mision-completa" title="Permanent link">&para;</a></h2>
+<p>¡Felicidades! 👏🏻 Has aprendido cómo usar lenguaje natural para crear tu propio agente personalizado que puede conversar sobre tus datos provenientes de tres diferentes fuentes de conocimiento 🙌🏻</p>
+<p>Este es el final de <strong>Laboratorio 06 - Crear un agente con Copilot</strong>, selecciona el enlace a continuación para pasar a la siguiente lección. El agente personalizado que creaste en este laboratorio será utilizado en el laboratorio de la próxima lección.</p>
+<p>⏭️ <a href="../07-add-new-topic-with-trigger/">Pasar a la lección <strong>Agregar un nuevo tema con activador</strong></a></p>
+<p>Bienvenido a la élite. Ahora sabes cómo crear agentes digitales que hablan tu idioma, referencian tus datos y apoyan a tu equipo. Sigue adelante—tu misión apenas comienza.</p>
+<h2 id="recursos-tacticos">📚 Recursos Tácticos<a class="headerlink" href="#recursos-tacticos" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/fundamentals-get-started?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext/?WT.mc_id=power-172617-ebenitez">Inicio rápido: Crear y desplegar un agente</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-first-bot?WT.mc_id=power-172617-ebenitez">Crear y eliminar agentes</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-fundamentals/?WT.mc_id=power-172617-ebenitez">Conceptos clave - Creación de agentes</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep1">Crear un agente personalizado usando lenguaje natural</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep2">Agregar conocimiento a tus agentes</a></p>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/06-create-agent-from-conversation" alt="Analítica" /></p>
+<hr />
+<p><strong>Descargo de responsabilidad</strong>:<br />
+Este documento ha sido traducido utilizando el servicio de traducción automática <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Aunque nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1122 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/translations/nl/docs/recruit/06-create-agent-from-conversation/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Index - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#missie-06-maak-een-aangepaste-agent-met-natuurlijke-taal-met-copilot-en-verbind-deze-met-je-eigen-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../../../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Recruit
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operative (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander (Coming Soon)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codenaam-operatie-agent-forge" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕵️‍♂️ CODENAAM: OPERATIE AGENT FORGE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missieoverzicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Missieoverzicht
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doelstellingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Doelstellingen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wat-is-een-aangepaste-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤔 Wat is een aangepaste agent?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gebruik-natuurlijke-taal-om-agents-te-maken" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗣️ Gebruik natuurlijke taal om agents te maken
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maar-ik-ben-nieuw-in-beschrijven-wat-ik-wil-wat-moet-ik-doen" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌱 Maar ik ben nieuw in "beschrijven wat ik wil" - wat moet ik doen?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oke-ik-heb-mijn-agent-gemaakt-hoe-verbind-ik-deze-vervolgens-met-kennis" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔮 Oké, ik heb mijn agent gemaakt... hoe verbind ik deze vervolgens met kennis?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soorten-kennisbronnen-die-kunnen-worden-toegevoegd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soorten kennisbronnen die kunnen worden toegevoegd
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opmerking-over-beveiliging" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔒 Opmerking over beveiliging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#het-verbeteren-van-de-reacties-van-je-agent-in-copilot-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Het verbeteren van de reacties van je agent in Copilot Studio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-06-maak-een-aangepaste-agent-in-copilot-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Lab 06: Maak een aangepaste agent in Copilot Studio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missie-voltooid" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Missie Voltooid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactische-bronnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Tactische Bronnen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "180f9cc0b40527f61be092c9b0f72aba",
+  "translation_date": "2025-10-17T01:35:00+00:00",
+  "source_file": "docs/recruit/06-create-agent-from-conversation/README.md",
+  "language_code": "nl"
+}
+-->
+<h1 id="missie-06-maak-een-aangepaste-agent-met-natuurlijke-taal-met-copilot-en-verbind-deze-met-je-eigen-data">🚨 Missie 06: Maak een aangepaste agent met natuurlijke taal met Copilot en verbind deze met je eigen data<a class="headerlink" href="#missie-06-maak-een-aangepaste-agent-met-natuurlijke-taal-met-copilot-en-verbind-deze-met-je-eigen-data" title="Permanent link">&para;</a></h1>
+<h2 id="codenaam-operatie-agent-forge">🕵️‍♂️ CODENAAM: <code>OPERATIE AGENT FORGE</code><a class="headerlink" href="#codenaam-operatie-agent-forge" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operatietijd:</strong> <code>~75 minuten</code></p>
+</blockquote>
+<p>🎥 <strong>Bekijk de Uitleg</strong></p>
+<p><a href="https://www.youtube.com/watch?v=qZTtQVncGFg" title="Bekijk de uitleg op YouTube"><img alt="Thumbnail van video over het maken van een aangepaste agent" src="../../../../../translated_images/video-thumbnail.9d5fddc1190fd4a04537488795821ac2f88fdcfe00e017f6e575a33f724e39cb.nl.jpg" /></a></p>
+<h2 id="missieoverzicht">🎯 Missieoverzicht<a class="headerlink" href="#missieoverzicht" title="Permanent link">&para;</a></h2>
+<p>Welkom terug, Agent Maker. Deze missie plaatst je in de commandostoel van de krachtigste functie in Copilot Studio - het creëren van een aangepaste agent vanaf nul met alleen natuurlijke taal... en deze versterken met je eigen data.</p>
+<p>Dit is niet zomaar een chatbot. Je bouwt een kennisgedreven digitale collega - een die kan redeneren, reageren en echte bedrijfsinformatie kan raadplegen.</p>
+<p>Je wapen? Natuurlijke taal. Je missie? Ontwerp, train en test een volledig aangepaste helpdeskagent die IT-vragen beantwoordt met behulp van SharePoint, geüploade bestanden of bedrijfs-URL's.</p>
+<p>Laten we je agent vanaf de basis opbouwen.</p>
+<h2 id="doelstellingen">🔎 Doelstellingen<a class="headerlink" href="#doelstellingen" title="Permanent link">&para;</a></h2>
+<p>In deze missie leer je:</p>
+<ol>
+<li>Begrijpen wat aangepaste agents zijn en hoe ze verschillen van vooraf gebouwde sjablonen.</li>
+<li>Agents maken met natuurlijke taal prompts en conversatieontwerp met Copilot.</li>
+<li>Agents verbinden met bedrijfskennisbronnen zoals SharePoint, documenten en websites.</li>
+<li>Meer leren over generatieve orkestratie en hoe agents dynamisch zoeken en reageren met meerdere databronnen.</li>
+<li>Een volledig functionele IT-helpdeskagent bouwen en testen die vragen kan beantwoorden met je eigen data.</li>
+</ol>
+<h2 id="wat-is-een-aangepaste-agent">🤔 Wat is een <em>aangepaste</em> agent?<a class="headerlink" href="#wat-is-een-aangepaste-agent" title="Permanent link">&para;</a></h2>
+<p>Een aangepaste agent is een chatbot of virtuele assistent die je in Copilot Studio maakt en ontwerpt om gebruikers te helpen met specifieke taken of vragen. Het wordt aangepast genoemd omdat:</p>
+<ul>
+<li><strong>Jij bepaalt het doel</strong> - gebruikers helpen met vakantieaanvragen, orderstatus controleren, hulp bieden bij IT-gerelateerde vragen.</li>
+<li><strong>Jij definieert de conversatie</strong> - wat de agent zegt en hoe deze moet reageren.</li>
+<li><strong>Jij verbindt het met je eigen data</strong> - verbinding maken met je bedrijfsdata via de ingebouwde ondersteunde kennisbronnen.</li>
+<li><strong>Jij koppelt het aan je eigen systemen of applicaties</strong> - kies uit connectors, flows, REST API's en model context protocol servers.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Zie het zo: je bouwt je eigen digitale helper die met gebruikers kan praten en taken voor hen kan uitvoeren, zoals vragen beantwoorden, informatie verzamelen die nodig is voor een proces, of verbinding maken met je bedrijfsdata.</p>
+</div>
+<h3 id="wat-kan-een-aangepaste-agent-doen">🤖 Wat kan een aangepaste agent doen?<a class="headerlink" href="#wat-kan-een-aangepaste-agent-doen" title="Permanent link">&para;</a></h3>
+<p>Een aangepaste agent kan het volgende doen:</p>
+<ul>
+<li>Gebruikers om informatie vragen, zoals namen, datums of voorkeuren.</li>
+<li>Die informatie opslaan in een database of tabel.</li>
+<li>Data opzoeken op basis van gestelde vragen en antwoorden geven.</li>
+<li>Autonoom werken zonder dat gebruikers direct met de agent interageren.</li>
+<li>Acties uitvoeren, zowel op aanvraag via directe gebruikersinteractie als autonoom, zoals e-mails verzenden of records aanmaken.</li>
+</ul>
+<h3 id="waarom-een-aangepaste-agent-gebruiken">👩🏻‍💻 Waarom een aangepaste agent gebruiken?<a class="headerlink" href="#waarom-een-aangepaste-agent-gebruiken" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Bespaart tijd door repetitieve taken te automatiseren.</li>
+<li>Biedt gebruikers een vriendelijke, begeleide ervaring.</li>
+<li>Kan worden afgestemd op de behoeften van je bedrijf of project.</li>
+</ul>
+<h3 id="voorbeeld">✨ Voorbeeld<a class="headerlink" href="#voorbeeld" title="Permanent link">&para;</a></h3>
+<p>Je bouwt een aangepaste agent die werknemers helpt bij het aanvragen van vakantiedagen.</p>
+<p>De agent vraagt om hun naam, vakantiedata en de naam van hun manager, en slaat deze informatie op in het aangewezen systeem dat vakantieverzoeken beheert, zoals een SharePoint-lijst.</p>
+<p>Nu hoeven werknemers niet meer naar de SharePoint-lijst te navigeren en een nieuw item aan te maken; ze kunnen gewoon met de agent chatten.</p>
+<h2 id="gebruik-natuurlijke-taal-om-agents-te-maken">🗣️ Gebruik natuurlijke taal om agents te maken<a class="headerlink" href="#gebruik-natuurlijke-taal-om-agents-te-maken" title="Permanent link">&para;</a></h2>
+<p>Eerder heb je geleerd hoe je snel agents kunt bouwen in Copilot Studio met vooraf gebouwde agentsjablonen in <a href="../05-using-prebuilt-agents/">Les 05 - Snel aan de slag met vooraf gebouwde agents</a>. In deze les duiken we in de conversatiegerichte creatie-ervaring met Copilot. Copilot Studio maakt het eenvoudig om agents te bouwen door met Copilot te chatten, net alsof je een gesprek voert.</p>
+<p>In Copilot Studio hoef je geen code te schrijven om een agent te maken. In plaats daarvan beschrijf je wat je wilt dat je agent doet in gewone taal, en Copilot helpt je stap voor stap bij het bouwen via een chatachtige ervaring.</p>
+<h2 id="maar-ik-ben-nieuw-in-beschrijven-wat-ik-wil-wat-moet-ik-doen">🌱 Maar ik ben nieuw in "beschrijven wat ik wil" - wat moet ik doen?<a class="headerlink" href="#maar-ik-ben-nieuw-in-beschrijven-wat-ik-wil-wat-moet-ik-doen" title="Permanent link">&para;</a></h2>
+<p>Het beschrijven in natuurlijke taal om een aangepaste agent te maken kan een nieuw concept voor je zijn. Telkens wanneer je Copilot gebruikt in Microsoft-producten en -diensten, gebruik je natuurlijke taal in de vorm van een <em>prompt</em>.</p>
+<p>Een prompt is het bericht of de instructie die je aan een AI-agent geeft om te vertellen wat je wilt dat deze doet. Zie het als het geven van aanwijzingen aan een assistent. Hoe duidelijker je instructies zijn, hoe gemakkelijker het is voor je assistent om ze te begrijpen en uit te voeren.</p>
+<h3 id="waarom-prompts-belangrijk-zijn">🪄 Waarom prompts belangrijk zijn<a class="headerlink" href="#waarom-prompts-belangrijk-zijn" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ze sturen het gedrag van de agent.</li>
+<li>Ze helpen de agent begrijpen wat voor soort gesprek er moet plaatsvinden.</li>
+<li>Een goede prompt maakt de agent behulpzamer en nauwkeuriger.</li>
+</ul>
+<h3 id="tips-voor-het-schrijven-van-een-goede-prompt">📝 Tips voor het schrijven van een goede prompt<a class="headerlink" href="#tips-voor-het-schrijven-van-een-goede-prompt" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Wees duidelijk en specifiek - zeg precies wat je wilt dat de agent doet.</li>
+<li>Denk als de gebruiker - wat zal de gebruiker zeggen? Wat moet de agent antwoorden?</li>
+<li>Voeg voorbeelden toe - geef indien mogelijk een voorbeeldinteractie.</li>
+</ul>
+<h3 id="voorbeeld_1">✨ Voorbeeld<a class="headerlink" href="#voorbeeld_1" title="Permanent link">&para;</a></h3>
+<p>Stel dat het HR-team een agent nodig heeft om te helpen met vakantieaanvragen.</p>
+<p>De prompt kan zijn:</p>
+<div class="language-text highlight"><pre><span></span><code>“Ik wil een agent bouwen die gebruikers helpt een vakantieaanvraag in te dienen. Wanneer een gebruiker zegt dat ze vrij willen nemen, moet de agent vragen naar hun naam, de startdatum van hun vakantie, de einddatum van hun vakantie en de naam van hun manager. Zodra de gebruiker deze informatie heeft verstrekt, moet de agent deze opslaan in een SharePoint-lijst genaamd ‘Vakantieaanvragen’ en een melding plaatsen in een speciale Microsoft Teams-kanaal.”
+</code></pre></div>
+<p>Waarom deze prompt werkt:</p>
+<ul>
+<li><strong>Geeft duidelijk het doel aan</strong> - een vakantieaanvraag indienen.</li>
+<li><strong>Beschrijft de gebruikersinteractie</strong> - wat de gebruiker zegt en wat de agent moet vragen.</li>
+<li><strong>Lijst de benodigde gegevens op</strong> - naam, startdatum, einddatum, manager.</li>
+<li><strong>Vermeldt waar de gegevens naartoe gaan</strong> - een SharePoint-lijst genaamd Vakantieaanvragen.</li>
+</ul>
+<h2 id="oke-ik-heb-mijn-agent-gemaakt-hoe-verbind-ik-deze-vervolgens-met-kennis">🔮 Oké, ik heb mijn agent gemaakt... hoe verbind ik deze vervolgens met kennis?<a class="headerlink" href="#oke-ik-heb-mijn-agent-gemaakt-hoe-verbind-ik-deze-vervolgens-met-kennis" title="Permanent link">&para;</a></h2>
+<p>In Copilot Studio zijn kennisbronnen plekken waar je agent informatie kan vinden om betere antwoorden te geven. Wanneer je deze bronnen toevoegt, kan je agent bedrijfsdata ophalen uit plekken zoals Power Platform, Dynamics 365, websites en andere systemen of diensten die je bedrijf gebruikt.</p>
+<p>Deze bronnen werken samen met AI om je agent te helpen nauwkeuriger te reageren op gebruikersvragen, dit wordt bereikt door wat bekend staat als <strong>generatieve orkestratie</strong>.</p>
+<h3 id="wat-is-generatieve-orkestratie-in-de-context-van-agents">🌿 Wat is generatieve orkestratie in de context van agents?<a class="headerlink" href="#wat-is-generatieve-orkestratie-in-de-context-van-agents" title="Permanent link">&para;</a></h3>
+<p>Generatieve orkestratie betekent dat de agent AI gebruikt om dynamisch te beslissen hoe een vraag te beantwoorden door zijn ingebouwde taalvaardigheden te combineren met informatie uit je toegevoegde kennisbronnen.</p>
+<p>Wanneer een gebruiker een vraag stelt, doet de agent het volgende:</p>
+<ul>
+<li>Begrijpt de vraag met behulp van AI.</li>
+<li>Kan gebruikers om ontbrekende informatie vragen door vragen ter plekke te genereren.</li>
+<li>Selecteert de meest relevante kennisbronnen.</li>
+<li>Zoekt in die bronnen naar antwoorden.</li>
+<li>Genereert een natuurlijke, behulpzame reactie met behulp van de gevonden informatie.</li>
+</ul>
+<h3 id="waarom-kennisbronnen-belangrijk-zijn">🏦 Waarom kennisbronnen belangrijk zijn?<a class="headerlink" href="#waarom-kennisbronnen-belangrijk-zijn" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Slimmere antwoorden</strong> - wanneer je kennisbronnen toevoegt, kan je agent betere, nauwkeurigere antwoorden geven met echte data van je organisatie.</p>
+</li>
+<li>
+<p><strong>Minder handmatig werk</strong> - je hoeft niet elk mogelijk antwoord te schrijven. De agent kan door je toegevoegde bronnen zoeken en automatisch reageren.</p>
+</li>
+<li>
+<p><strong>Gebruik betrouwbare informatie</strong> - je agent kan antwoorden halen uit systemen die je al gebruikt, zoals Dataverse, SharePoint of bedrijfswebsites, zodat gebruikers betrouwbare informatie krijgen uit een bron van waarheid.</p>
+</li>
+<li>
+<p><strong>Werkt met generatieve AI</strong> - kennisbronnen en AI helpen je agent vragen te begrijpen en natuurlijk te reageren, zelfs als de vraag niet vooraf is geprogrammeerd of als startprompt is toegevoegd.</p>
+</li>
+<li>
+<p><strong>Flexibel en uitbreidbaar</strong> - je kunt kennisbronnen op elk moment toevoegen tijdens de setup of later, je agent wordt slimmer naarmate je behoeften veranderen.</p>
+</li>
+</ol>
+<h3 id="voorbeeld_2">✨ Voorbeeld<a class="headerlink" href="#voorbeeld_2" title="Permanent link">&para;</a></h3>
+<p>Stel je voor dat je een agent bouwt om werknemers te helpen met HR-vragen. Je voegt het HR-beleid van je bedrijf en de SharePoint-site toe als kennisbronnen.</p>
+<p>Wanneer een werknemer vraagt, <em>“Hoeveel vakantiedagen heb ik recht op?”</em>, gebruikt de agent generatieve orkestratie om die bronnen te doorzoeken en te antwoorden met het juiste beleid zonder dat je dat antwoord handmatig hoeft te schrijven. Dit bespaart je tijd omdat je niet voor elke mogelijke vraag een antwoord hoeft te bedenken.</p>
+<h2 id="soorten-kennisbronnen-die-kunnen-worden-toegevoegd">Soorten kennisbronnen die kunnen worden toegevoegd<a class="headerlink" href="#soorten-kennisbronnen-die-kunnen-worden-toegevoegd" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Publieke websites</strong></p>
+<ul>
+<li><strong>Wat het doet:</strong> Doorzoekt specifieke websites (zoals de site van je bedrijf) met Bing.</li>
+<li><strong>Waarom het nuttig is:</strong> Ideaal voor het ophalen van openbare informatie zoals veelgestelde vragen of productdetails.</li>
+</ul>
+</li>
+<li>
+<p><strong>Documenten</strong></p>
+<ul>
+<li><strong>Wat het doet:</strong> Gebruikt documenten die je direct naar je agent uploadt, zoals PDF's of Word-bestanden. Deze geüploade bestanden worden veilig opgeslagen in Dataverse.</li>
+<li><strong>Waarom het nuttig is:</strong> Maakt het mogelijk dat je agent vragen beantwoordt op basis van interne handleidingen, handleidingen of beleidsdocumenten.</li>
+</ul>
+</li>
+<li>
+<p><strong>SharePoint</strong></p>
+<ul>
+<li><strong>Wat het doet:</strong> Verbindt met SharePoint-mappen of bestanden via Microsoft Graph Search.</li>
+<li><strong>Waarom het nuttig is:</strong> Ideaal voor toegang tot teamdocumenten, HR-beleid of projectbestanden die zijn opgeslagen in SharePoint.</li>
+</ul>
+</li>
+<li>
+<p><strong>Dataverse</strong></p>
+<ul>
+<li><strong>Wat het doet:</strong> Gebruikt gestructureerde data uit je Dataverse-omgeving, zoals tabellen en rijen, en kan synoniemen en woordenlijsten toepassen voor tabellen en kolommen om de reacties van de agent te verbeteren.</li>
+<li><strong>Waarom het nuttig is:</strong> Wanneer je bedrijfsdata nodig hebt die is opgeslagen in Dataverse, zoals klantinformatie.</li>
+</ul>
+</li>
+<li>
+<p><strong>Realtime kennis met connectors</strong></p>
+<ul>
+<li><strong>Wat het doet:</strong> Laat je agent toegang krijgen tot live data van andere bedrijfssystemen zoals Salesforce, ServiceNow, Dynamics 365, AzureSQL, Databricks en meer tijdens een gesprek, met behulp van de eigen machtigingen van de gebruiker.</li>
+<li><strong>Waarom het nuttig is:</strong> Het biedt actuele, veilige en nauwkeurige antwoorden zonder data op te slaan of te dupliceren, waardoor je agent slimmer en veiliger wordt.</li>
+</ul>
+</li>
+<li>
+<p><strong>Azure AI Search</strong></p>
+<ul>
+<li><strong>Wat het doet:</strong> Laat je agent grote sets documenten doorzoeken die in Azure zijn opgeslagen met semantische en vectorzoekopdrachten om gebruikersvragen te begrijpen.</li>
+<li><strong>Waarom het nuttig is:</strong> Levert nauwkeurige, betrouwbare antwoorden uit complexe databronnen, ondersteunt citaten en schaalt goed voor grote documentcollecties met beveiligde toegangscontroles.</li>
+</ul>
+</li>
+</ol>
+<h2 id="opmerking-over-beveiliging">🔒 Opmerking over beveiliging<a class="headerlink" href="#opmerking-over-beveiliging" title="Permanent link">&para;</a></h2>
+<h3 id="authenticatie-van-kennisbronnen">Authenticatie van kennisbronnen<a class="headerlink" href="#authenticatie-van-kennisbronnen" title="Permanent link">&para;</a></h3>
+<p>Sommige bronnen, zoals SharePoint en Dataverse, vereisen gebruikersauthenticatie. Dit betekent dat de agent alleen data in zijn antwoord zal opnemen die de gebruiker mag zien. Andere bronnen kunnen aanvullende configuratie vereisen voor de agent om verbinding te maken, zoals Azure AI Search, waarvoor een Azure-account en een specifieke authenticatietype nodig zijn.</p>
+<h2 id="het-verbeteren-van-de-reacties-van-je-agent-in-copilot-studio">Het verbeteren van de reacties van je agent in Copilot Studio<a class="headerlink" href="#het-verbeteren-van-de-reacties-van-je-agent-in-copilot-studio" title="Permanent link">&para;</a></h2>
+<p>Nadat je agent is aangemaakt via de conversatiegerichte creatie-ervaring, wil je je agent testen aan de hand van de instructies die Copilot heeft gegenereerd op basis van je prompt. Het verbeteren van de reacties van je agent in Copilot Studio draait om ervoor zorgen dat deze je doelen duidelijk begrijpt en over de juiste informatie beschikt.</p>
+<ol>
+<li>
+<p><strong>Verfijn de instructies van de agent</strong> - hier vertel je je agent hoe deze zich moet gedragen. Gebruik duidelijke, specifieke taal.</p>
+<p>Bijvoorbeeld:</p>
+<p>✅ “Gedraag je als een vriendelijke klantenserviceagent die dingen eenvoudig uitlegt.”</p>
+<p>❌ “Wees behulpzaam.” (Te vaag)</p>
+</li>
+<li>
+<p><strong>Controleer de toon en taal</strong> - zorg ervoor dat de toon van de agent past bij je doelgroep.</p>
+<p>Je kunt deze instellen als:</p>
+<ul>
+<li>Vriendelijk en informeel.</li>
+<li>Professioneel en beknopt.</li>
+<li>Ondersteunend en geduldig.</li>
+</ul>
+</li>
+<li>
+<p><strong>Voeg kennisbronnen toe of werk ze bij</strong> - als je agent vragen over een onderwerp moet beantwoorden, zorg er dan voor dat deze toegang heeft tot de juiste informatie.</p>
+<ul>
+<li>Voeg links toe naar websites, documenten of veelgestelde vragen.</li>
+<li>Houd de inhoud up-to-date.</li>
+<li>Gebruik duidelijke, goed gestructureerde informatie.</li>
+</ul>
+</li>
+<li>
+<p><strong>Gebruik onderwerpen en triggers</strong> - Als je agent specifieke taken of gesprekken moet afhandelen, kun je onderwerpen maken met triggerzinnen. Dit helpt om het gesprek nauwkeuriger te sturen. Hier leren we meer over in de volgende les.</p>
+</li>
+<li>
+<p><strong>Test met echte vragen</strong> - probeer je agent de soorten vragen te stellen die gebruikers zouden kunnen stellen.</p>
+<p>Als de antwoorden niet goed zijn:</p>
+<ul>
+<li>Pas de systeeminstructies aan.</li>
+<li>Voeg meer voorbeelden of kennis toe.</li>
+<li>Herschrijf je vragen om te zien hoe de agent reageert.</li>
+</ul>
+</li>
+<li>
+<p><strong>Evalueer en verbeter</strong> - het verbeteren van een agent is een doorlopend proces!</p>
+<p>Na publicatie:</p>
+<ul>
+<li>Verzamel feedback van gebruikers.</li>
+<li>Let op veelgestelde vragen of verwarring.</li>
+<li>Blijf de instellingen van de agent verfijnen.</li>
+</ul>
+</li>
+</ol>
+<h2 id="lab-06-maak-een-aangepaste-agent-in-copilot-studio">🧪 Lab 06: Maak een aangepaste agent in Copilot Studio<a class="headerlink" href="#lab-06-maak-een-aangepaste-agent-in-copilot-studio" title="Permanent link">&para;</a></h2>
+<p>We gaan nu leren hoe je een aangepaste agent maakt die kan chatten over je data.</p>
+<ul>
+<li><a href="../../../../../docs/recruit/06-create-agent-from-conversation">6.1 Gebruik natuurlijke taal om een agent te maken met Copilot</a></li>
+<li><a href="../../../../../docs/recruit/06-create-agent-from-conversation">6.2 Voeg een interne kennisbron toe via een SharePoint-site</a></li>
+<li><a href="../../../../../docs/recruit/06-create-agent-from-conversation">6.3 Voeg een interne kennisbron toe door een document te uploaden</a></li>
+<li><a href="../../../../../docs/recruit/06-create-agent-from-conversation">6.4 Test de agent</a></li>
+</ul>
+<h3 id="gebruiksscenario">✨ Gebruiksscenario<a class="headerlink" href="#gebruiksscenario" title="Permanent link">&para;</a></h3>
+<p>We gebruiken hetzelfde gebruiksscenario als in <a href="../03-create-a-declarative-agent-for-M365Copilot/#use-case-scenario">Les 03 - Een declaratieve agent maken voor Microsoft 365 Copilot</a></p>
+<p><strong>Als een</strong> medewerker</p>
+<p><strong>Wil ik</strong> snel en nauwkeurige hulp krijgen van de IT-helpdeskagent voor problemen zoals apparaatproblemen, netwerkstoringen, printerinstallatie</p>
+<p><strong>Zodat ik</strong> productief kan blijven en technische problemen zonder vertraging kan oplossen</p>
+<p>Laten we beginnen!</p>
+<h3 id="vereisten">✨ Vereisten<a class="headerlink" href="#vereisten" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>SharePoint-site</strong></li>
+</ul>
+<p>We gebruiken de <strong>Contoso IT</strong> SharePoint-site uit <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Les 00 - Cursusinstelling - Stap 3: Nieuwe SharePoint-site maken</a>.</p>
+<p>Als je de <strong>Contoso IT</strong> SharePoint-site nog niet hebt ingesteld, ga dan terug naar <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Les 00 - Cursusinstelling - Stap 3: Nieuwe SharePoint-site maken</a>.</p>
+<ul>
+<li><strong>Oplossing</strong></li>
+</ul>
+<p>We gebruiken de <strong>Contoso Helpdesk Agent</strong>-oplossing uit <a href="../04-creating-a-solution/#41-create-a-solution-publisher">Les 04 - Een oplossing maken voor je agent</a>.</p>
+<p>Als je de <strong>Contoso Agent</strong>-oplossing nog niet hebt ingesteld, ga dan terug naar <a href="../04-creating-a-solution/#41-create-a-solution-publisher">Les 04 - Een oplossing maken voor je agent</a>.</p>
+<h3 id="61-gebruik-natuurlijke-taal-om-een-agent-te-maken-met-copilot">6.1 Gebruik natuurlijke taal om een agent te maken met Copilot<a class="headerlink" href="#61-gebruik-natuurlijke-taal-om-een-agent-te-maken-met-copilot" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Copilot-vragen kunnen per sessie verschillen</p>
+<p>De conversatie-ervaring van Copilot kan elke keer variëren, waarbij de verstrekte vragen voor begeleiding enigszins kunnen verschillen van eerder.</p>
+</div>
+<ol>
+<li>
+<p>Navigeer naar de startpagina van Copilot Studio en voer in het veld de volgende prompt in die de IT-helpdeskagent beschrijft. De prompt bevat het doel van de agent, de context, de verwachte taken en het formaat van de reactie van de agent.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are an IT help desk agent. Your goal is to assist users with their IT issues. You can access information from our company&#39;s knowledge base at https://support.microsoft.com/en-us. Your responses should be polite and helpful. If a user reports a slow computer, ask about the age of the device, current software versions, and if they&#39;ve recently installed any new programs. If a user is experiencing trouble logging into their email, guide them through password reset procedures. You should be concise and informative, using step-by-step instructions with bullet points when appropriate.
+</span></code></pre></div>
+<p><img alt="Voer prompt in" src="../../../../../translated_images/6.1_01_Prompt.c4be2ff2cac9fde3659f2e7016e48f01860b55523d3320b3b8450ef2fcb1f51a.nl.png" /></p>
+</li>
+<li>
+<p>De conversatie-ervaring met Copilot wordt vervolgens geladen. Je ziet dat Copilot bezig is met reageren.</p>
+<p><img alt="Conversatie-ervaring met Copilot" src="../../../../../translated_images/6.1_02_ConversationalCreationExperienceLoads.115eaf4e5a15c1b60bc0d25c97a0d97d462d6c740cfed5de369b2bd8fd1cc8bc.nl.png" /></p>
+</li>
+<li>
+<p>Copilot bevestigt dat de agent is ingesteld met de verstrekte instructies en vraagt om bevestiging van de naam van de agent. We vragen Copilot om onze agent de naam te geven:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Contoso Helpdesk Agent
+</span></code></pre></div>
+<p><img alt="Agent hernoemen" src="../../../../../translated_images/6.1_03_AgentName.a848acea10cd1d3d6ba68fea2b0e094ecbd130a124413e3c8134198c81654833.nl.png" /></p>
+</li>
+<li>
+<p>Copilot voert het verzoek uit en we zien dat de naam van de agent is bijgewerkt in het agentpaneel. Copilot vraagt ons vervolgens om de instructies te verfijnen. Het vraagt hoe we moeten reageren op specifieke problemen en we verzoeken dat het het probleem erkent, voorbeelden van onderwerpen geeft om te beantwoorden en de reactie in de vorm van opsommingstekens formatteert.</p>
+<p>Kopieer en plak het volgende en dien het verzoek in bij Copilot.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Geef prioriteit aan dringende verzoeken. Voorbeelden van IT-problemen of scenario&#39;s om mee te helpen: apparaatproblemen, netwerkconnectiviteit, inlogproblemen. Bij het oplossen van problemen, erken eerst hun probleem en reageer met empathie, geef vervolgens stapsgewijze begeleiding met behulp van opsommingstekens en vraag of ze verdere hulp nodig hebben.
+</span></code></pre></div>
+<p><img alt="Agentinstructies verfijnen" src="../../../../../translated_images/6.1_04_RefineInstructions.9575407dbc12e0399691068d20e0d0252bb8b8f839cf53ee9d715fe2c16afa70.nl.png" /></p>
+</li>
+<li>
+<p>De instructies van de agent worden bijgewerkt nadat Copilot het verzoek heeft ontvangen. Let op hoe in het rechterpaneel nu startprompts zijn verschenen. Deze zijn gevormd op basis van onze instructies.</p>
+<p>Vervolgens vraagt Copilot om openbare websites om de kennis van de agent te onderbouwen.</p>
+<p>Kopieer en plak het volgende en dien het verzoek in bij Copilot.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>https://support.microsoft.com
+</span></code></pre></div>
+<p><img alt="Voeg openbaar toegankelijke website toe" src="../../../../../translated_images/6.1_05_KnowledgeSource.3aec8d869b73d273f88c62cf99bb2f731df83a83c1ca54d92d6e96b86a570637.nl.png" /></p>
+</li>
+<li>
+<p>De openbare website wordt toegevoegd als kennisbron. Copilot vraagt of er aanvullende kennisbronnen moeten worden toegevoegd. We hoeven geen extra openbare websites toe te voegen.</p>
+<p>Kopieer en plak het volgende en dien het verzoek in bij Copilot.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Proceed with setup
+</span></code></pre></div>
+<p><img alt="Ga verder met instellen" src="../../../../../translated_images/6.1_06_ProceedWithSetup.11ceb9ccccccd19418711681d42b602ee223ebd017d6bf300088de84d1d35f1d.nl.png" /></p>
+</li>
+<li>
+<p>Copilot bevestigt dat de setup van onze Contoso Helpdesk Agent is voltooid, maar we voegen nog een wijziging toe: we gaan verzoeken dat onze agent geen vragen over HR beantwoordt. Dit laat onze agent weten dat het geen HR-gerelateerde vragen van gebruikers moet beantwoorden.</p>
+<p>Kopieer en plak het volgende en dien het verzoek in bij Copilot.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Geef geen hulp bij vragen met betrekking tot HR, voorbeelden zijn: Wat is mijn saldo voor vakantiedagen? Hoeveel ziektedagen heb ik? Wat is de URL van ons payrollportaal?
+</span></code></pre></div>
+<p><img alt="Beantwoord geen HR-gerelateerde vragen" src="../../../../../translated_images/6.1_07_DoNotTalkAbout.d9ccbbd15b9793e1642b365be6968548f6f250be5d541f1ad06eb9f12985e94f.nl.png" /></p>
+</li>
+<li>
+<p>De instructies worden bijgewerkt om geen hulp te bieden bij HR-gerelateerde vragen. We hoeven geen verdere updates te maken, onze agent is klaar om te worden gemaakt.</p>
+<p><img alt="Agentinstructies bijgewerkt" src="../../../../../translated_images/6.1_08_AgentInstructionsUpdated.4de1112eeb5c8e2e2fe03fcbc6d332bdc3b1de740d9a5ab6b1ec30e27e241096.nl.png" /></p>
+</li>
+<li>
+<p>Voordat we onze agent maken, doen we een paar dingen.</p>
+<p>Selecteer eerst het tabblad <strong>Configureren</strong> om de agentdetails te bekijken die zijn gedefinieerd vanuit ons gesprek met Copilot. Hier zie je de naam, beschrijving, instructies, kennis en voorgestelde/startprompts.</p>
+<p><img alt="Bekijk agentdetails" src="../../../../../translated_images/6.1_09_ViewAgentDetails.72c7f66721d6ac354bcc7186204bb0ad169456b0b7756f5e5a5e0f090e802a57.nl.png" /></p>
+</li>
+<li>
+<p>Ten tweede testen we onze agent. Kopieer en plak het volgende en dien de vraag in bij onze agent.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Hoe kan ik de garantie van mijn Surface controleren?
+</span></code></pre></div>
+<p><img alt="Test agent" src="../../../../../translated_images/6.1_10_TestAgent.8b1a0f1d98f4fa5b61336e1c4ac6d77b4822283314c2941cb0e04bf5247d8489.nl.png" /></p>
+</li>
+<li>
+<p>Het antwoord op de vraag wordt vervolgens weergegeven, waarbij de antwoorden zijn geformuleerd als een stapsgewijze handleiding met opsommingstekens. Geweldig, onze agent werkt! 🙌🏻</p>
+<p><img alt="Reactie van agent" src="../../../../../translated_images/6.1_11_AgentResponse.c5fb305335b8e9b456b0f75ec9e237d4abbc3e9a1a6976e14bb656f1adffb14a.nl.png" /></p>
+</li>
+<li>
+<p>Tot slot controleren we nog een keer of de oplossing waarin onze agent wordt gemaakt, de oplossing is die we hebben gemaakt en geselecteerd als de voorkeursoplossing in <a href="../04-creating-a-solution/#42-create-a-new-solution">Les 04 - Maak een nieuwe oplossing</a>.</p>
+<p>Selecteer het <strong>ellipsis-pictogram (...)</strong> en selecteer <strong>Geavanceerde instellingen bijwerken</strong>.</p>
+<p><img alt="Geavanceerde instellingen bijwerken" src="../../../../../translated_images/6.1_12_UpdateAdvancedSettings.5943949ae7c9f492fb90779b0284283deb4186f14cd6588c46920f8e50d8d6d0.nl.png" /></p>
+</li>
+<li>
+<p>De <strong>Geavanceerde instellingen</strong>-modal verschijnt en we kunnen zien dat onze eerder gemaakte oplossing standaard is geselecteerd. Dit komt doordat we onze oplossing als voorkeursoplossing hebben geselecteerd in <a href="../04-creating-a-solution/#42-create-a-new-solution">Les 04 - Maak een nieuwe oplossing</a>.</p>
+<p>Selecteer <strong>Annuleren.</strong></p>
+<p><img alt="Weergave van geavanceerde instellingen" src="../../../../../translated_images/6.1_13_AdvancedSettings.fff0861831346d5bef4e7731fed83073aca6d17aa940633040f65b1f300aee15.nl.png" /></p>
+</li>
+<li>
+<p>Laten we nu onze aangepaste agent maken! Selecteer <strong>Maken</strong>.</p>
+<p><img alt="Selecteer Maken" src="../../../../../translated_images/6.1_14_CreateAgent.7330a5fbe44a0664f35c5b5502e499f6dd3bad55d13094ef6c22608e8f8831b1.nl.png" /></p>
+</li>
+<li>
+<p>Copilot Studio begint met het inrichten van onze agent.</p>
+<p><img alt="Agent instellen" src="../../../../../translated_images/6.1_15_SettingUpAgent.34028a37bc2922eae13d0a18bb468bd738608b4de948192d89c3a2680fff2496.nl.png" /></p>
+</li>
+<li>
+<p>Zodra onze agent is ingericht, kunnen we de details van de agent zien die overeenkomen met wat we hebben gevraagd tijdens onze conversatie-ervaring met Copilot. Scroll naar beneden om de agent te bekijken, waar je de naam, beschrijving, instructies, de kennisbronnen en de voorgestelde prompts ziet. De orkestratiemodus is standaard ingeschakeld en het standaardmodel wordt gebruikt voor het responsmodel van de agent.</p>
+<p><img alt="Agent gemaakt" src="../../../../../translated_images/6.1_16_AgentCreated.91edb1939b33d158930cd385c0d97c320958504e224ffc163ed5030b0cdc72a7.nl.png" /></p>
+<p><img alt="Kennisbronnen" src="../../../../../translated_images/6.1_17_KnowledgeSources.00f1ed0b7f405e4820971834fb75e39a80659cf1b9eeeee42d861bfc4656240f.nl.png" /></p>
+<p><img alt="Voorgestelde prompts" src="../../../../../translated_images/6.1_18_SuggestedPrompts.20b84b9420858de8485460cc50a8e73798b08bb2022c946899adcbf9b484e0f0.nl.png" /></p>
+</li>
+<li>
+<p>Laten we nu onze nieuw gemaakte agent testen. Selecteer in het <strong>Test</strong>-paneel aan de rechterkant het pictogram <strong>Activiteitenkaart</strong>.</p>
+<p><img alt="Selecteer Activiteitenkaart" src="../../../../../translated_images/6.1_19_ActivityMap.b2e6c77c69fd953818dc73b4dbe2e6d46529cf105d7a4a18c590d15c0b717cf4.nl.png" /></p>
+</li>
+<li>
+<p>Voer de volgende vraag in het <strong>Test</strong>-paneel in.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Hoe vind ik mijn Windows 11 productcode?
+</span></code></pre></div>
+<p><img alt="Test nieuw gemaakte agent" src="../../../../../translated_images/6.1_20_TestAgent.a9d3a761477c9b79facd132c173ec886d808320ad2cbc0347066a20c0f9dd669.nl.png" /></p>
+</li>
+<li>
+<p>De activiteitenkaart wordt vervolgens geladen, die ons in realtime laat zien welk pad de agent aan het verwerken is. In dit scenario heeft onze agent de vraag begrepen en zoekt in de kennisbronnen. Momenteel hebben we één bron, namelijk de openbare website die we eerder hebben toegevoegd met Copilot, en dat is wat de agent aan het bekijken is.</p>
+<p><img alt="Kennisbronnen bekijken" src="../../../../../translated_images/6.1_21_ReviewingSources.78068042898e2960667393c931e120dbe80f6b74c9af222b79446f7a82d5c757.nl.png" /></p>
+</li>
+<li>
+<p>Onze agent reageert vervolgens met antwoorden die zijn geformuleerd als opsommingstekens, zoals gedefinieerd in de instructies. De reactie bevat verwijzingen naar de webpagina's waaruit de agent zijn antwoord heeft gevormd. Dit stelt gebruikers in staat om de bron van het antwoord te verifiëren.</p>
+<p><img alt="Verwijzingen in reactie" src="../../../../../translated_images/6.1_22_Response.44a088e80f2a9fac74bcd364571f1ebb900b43e9e647089ef51d39b809b0f0e9.nl.png" /></p>
+</li>
+<li>
+<p>Je kunt de reactie en de bronnen ook bekijken door naar beneden te scrollen in de <strong>Kennis-modal</strong> in de activiteitenkaart.</p>
+<p><img alt="Verwezen bronnen" src="../../../../../translated_images/6.1_23_ReferencedSources.ca8e41855284446d121a34fd9d8d667e05016f5eda741adcf7f356ac2c59c559.nl.png" /></p>
+</li>
+</ol>
+<p>Gefeliciteerd! Je hebt je eerste aangepaste agent gebouwd met Copilot in Copilot Studio 🙌🏻</p>
+<h3 id="62-voeg-een-interne-kennisbron-toe-met-een-sharepoint-site">6.2 Voeg een interne kennisbron toe met een SharePoint-site<a class="headerlink" href="#62-voeg-een-interne-kennisbron-toe-met-een-sharepoint-site" title="Permanent link">&para;</a></h3>
+<p>Eerder met Copilot hebben we een openbare website toegevoegd als externe kennisbron voor onze agent tijdens de conversatie-ervaring. We gaan nu een interne kennisbron toevoegen met een SharePoint-site. Dit zal de SharePoint-site zijn die je hebt gemaakt tijdens <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Les 00 - Cursusinstelling</a>.</p>
+<ol>
+<li>
+<p>Selecteer <strong>+ Kennis toevoegen</strong>.</p>
+<p><img alt="Selecteer Kennis toevoegen" src="../../../../../translated_images/6.2_01_AddKnowledge.5e441f7e3b0ebb25218bece75394ecf4c8c3a60e1b5d8ea15ca020546352f256.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer <strong>SharePoint</strong>.</p>
+<p><img alt="Selecteer SharePoint" src="../../../../../translated_images/6.2_02_SelectSharePoint.5bd29d31cc76f581db3eef474731fc2dfce4ef1dab86d9cc11716323ba726408.nl.png" /></p>
+</li>
+<li>
+<p>Plak het <strong>adres van de SharePoint-site</strong> die is gemaakt in <a href="../00-course-setup/#step-4-create-new-sharepoint-site">Les 00 - Cursusinstelling</a> in het SharePoint-URL-veld en selecteer <strong>Toevoegen</strong>.</p>
+<p><img alt="Voer SharePoint-site-URL in" src="../../../../../translated_images/6.2_03_AddSharePointURL.974c251d9690524a8bfa4c9dd930af3d834245749fb9f1fda508c3b1f9773827.nl.png" /></p>
+</li>
+<li>
+<p>Werk de <strong>naam</strong> van de SharePoint-site bij naar <code>Contoso IT</code> en selecteer <strong>Toevoegen</strong>.</p>
+<p><img alt="Werk SharePoint-site-naam bij en voeg toe aan agent" src="../../../../../translated_images/6.2_04_UpdateNameAddToAgent.46a814c09586fe135bffb77814ba13d0593f25feaaa989174c97e80345f03866.nl.png" /></p>
+</li>
+<li>
+<p>De SharePoint-site is nu toegevoegd als een kennisbron met de status <em>Klaar</em>. De statuskolom geeft aan of de kennisbron succesvol is geladen/verbonden, of dat er een probleem is.</p>
+<p><img alt="SharePoint-site status" src="../../../../../translated_images/6.2_05_SharePointStatus.90a9001978f31c5d4b183d5ecc4869c81dd9fc1bb8a6b1ef4675fcb51d52f8e5.nl.png" /></p>
+</li>
+</ol>
+<h3 id="63-voeg-een-interne-kennisbron-toe-door-een-document-te-uploaden">6.3 Voeg een interne kennisbron toe door een document te uploaden<a class="headerlink" href="#63-voeg-een-interne-kennisbron-toe-door-een-document-te-uploaden" title="Permanent link">&para;</a></h3>
+<p>We voegen nu een andere interne kennisbron toe door een document rechtstreeks naar onze agent te uploaden.</p>
+<ol>
+<li>
+<p>Selecteer <strong>Kennis toevoegen</strong>.</p>
+<p><img alt="Selecteer Kennis toevoegen" src="../../../../../translated_images/6.3_01_AddKnowledge.d93caa805efb7e2a433d9777f8eb1789dc5daf4f9ebe95da2a74a2b57cffdd33.nl.png" /></p>
+</li>
+<li>
+<p>Selecteer <strong>Bestand uploaden</strong> of <strong>Selecteer om te bladeren</strong>.</p>
+<p><img alt="Selecteer bestanden uploaden" src="../../../../../translated_images/6.3_02_UploadFile.662de4f3916bfa3f34a6699a9a45846e64e71a70dfecbc656fb5b511792de6b6.nl.png" /></p>
+</li>
+<li>
+<p>Download dit <a href="../../../../../docs/recruit/06-create-agent-from-conversation/assets/Contoso_Guest_WiFi_Connection_Guide.docx" title="download">voorbeeldbestand</a> en selecteer het in je Verkenner. Selecteer <strong>Openen</strong>.</p>
+<p><img alt="Selecteer document" src="../../../../../translated_images/6.3_03_SelectFile.077d73491dc6ff1f6114d259261ee68334c4da182c3b55233468637d1989f14c.nl.png" /></p>
+</li>
+<li>
+<p>Het bestand is geselecteerd voor uploaden. Selecteer vervolgens <strong>Toevoegen aan agent</strong>.</p>
+<p><img alt="Selecteer Toevoegen aan Agent" src="../../../../../translated_images/6.3_04_AddToAgent.1eec469d6d28c22959c8d7f3ad39aa0df5e07adfdb85ce1e21c0c4fe31c27db5.nl.png" /></p>
+</li>
+<li>
+<p>Het document wordt toegevoegd aan de agent. Wacht tot de upload is voltooid, sluit het browservenster niet. De status van het document toont aanvankelijk <em>Bezig</em>, wacht tot de status is bijgewerkt naar <strong>Klaar</strong> voordat je je agent test.</p>
+<p><img alt="Bestandsstatus" src="../../../../../translated_images/6.3_05_FileStatus.2029b8aa0109a6f46372291e9bba33429c2ebd572efa81702a73cae91fbf3a90.nl.png" /></p>
+</li>
+</ol>
+<p>Laten we nu onze agent testen!</p>
+<h3 id="64-test-agent">6.4 Test agent<a class="headerlink" href="#64-test-agent" title="Permanent link">&para;</a></h3>
+<p>We testen onze drie kennisbronnen door vragen te stellen aan onze Contoso Helpdesk Agent.</p>
+<ol>
+<li>
+<p>Selecteer het <strong>ververs</strong>-pictogram in het testpaneel, gevolgd door het <strong>activiteitenkaart</strong>-pictogram.</p>
+<p><img alt="Ververs-pictogram" src="../../../../../translated_images/6.4_01_RefreshAndActivityMap.c24ebc6c277786dab75941dac0b6e55f3dbb244b29fb791c87e4aba5c4a56c81.nl.png" /></p>
+</li>
+<li>
+<p>Voer de volgende vraag in om onze openbare website (externe) kennisbron te testen.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>How can I find the serial number on my Surface device?
+</span></code></pre></div>
+<p><img alt="Voer prompt in om website kennisbron te testen" src="../../../../../translated_images/6.4_02_TestQuestion1.3a5aeaaa72a9578a05edd4575275e1ba60ecaf8c7377ab13872619580e0309f9.nl.png" /></p>
+</li>
+<li>
+<p>Je ziet vervolgens dat de agent de kennisbronnen bekijkt en een reactie geeft op basis van de website kennisbron.
+<img alt="Webpagina waarnaar wordt verwezen in de reactie" src="../../../../../translated_images/6.4_03_ReviewingSources.a56742505402eab51b423b543c814242728ff7947e443360740b3e5dac82ba65.nl.png" /></p>
+</li>
+<li>
+<p>Er wordt een reactie teruggestuurd en let op hoe er verwijzingen zijn naar de webpagina waaruit het antwoord is gevormd. Als je naar beneden scrolt in de kennismodal in de activiteitenkaart, zie je de andere kennisbronnen die de agent heeft doorzocht, namelijk de SharePoint-site en het geüploade bestand.</p>
+<p>Deze zijn echter niet gebruikt, want in de sectie <strong>Gerefereerde bronnen</strong> is alleen de websitekennisbron genoemd. Het antwoord is gebaseerd op de websitekennisbron. Als je de verwijzingen selecteert, word je naar de webpagina geleid.</p>
+</li>
+</ol>
+<p><img alt="Gerefereerde en doorzochte kennisbronnen" src="../../../../../translated_images/6.4_04_ReferencedSources.2fb91e8ed7cac8196c3cc1e43006512d4138adb4f240bdab66cd2af5fd1ec7c6.nl.png" /></p>
+<ol>
+<li>
+<p>Laten we nu zowel onze SharePoint-sitekennisbron als documentkennisbron testen in één bericht. Voer de volgende vraag in.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>How can I access our company Contoso VPN? How do guests connect to the Contoso Guest wifi?
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="Test SharePoint- en documentkennisbronnen" src="../../../../../translated_images/6.4_05_TestQuestion2.f77ce87578b59386ec5491716996aff9247c5e5ad458a51226276238adb282f3.nl.png" /></p>
+<ol>
+<li>
+<p>Opnieuw zie je dat de agent de drie kennisbronnen doorneemt om een antwoord te genereren op de vragen in ons enkele bericht. De agent beantwoordt beide vragen in één bericht en verwijst afzonderlijk naar de SharePoint-pagina en het document waaruit het antwoord is gegenereerd.</p>
+<p>In de kennismodal in de activiteitenkaart zie je dat de SharePoint-site en het document zijn gebruikt als gerefereerde bronnen. Je hebt volledige zichtbaarheid van welke kennisbronnen zijn gebruikt om beide vragen te beantwoorden.</p>
+</li>
+</ol>
+<p><img alt="Gerefereerde kennisbronnen" src="../../../../../translated_images/6.4_06_ReferencedSources.caf049dac28b4317c39b074b481f5d7d5b1b92fd792fc4b796fec0c1575f9581.nl.png" /></p>
+<ol>
+<li>Het is altijd goed om te controleren of het gegenereerde antwoord correct is. Selecteer de SharePoint-siteverwijzing en de FAQ-pagina van SharePoint wordt geladen, waar je naar beneden kunt scrollen om de VPN-instructies te bekijken.</li>
+</ol>
+<p><img alt="Controleer SharePoint-pagina" src="../../../../../translated_images/6.4_07_VerifySharePoint.6ee48515fedf37a62564ddc388c2452751ed5777cda321d887c315c2de78d293.nl.png" /></p>
+<ol>
+<li>Selecteer vervolgens de documentverwijzing en er verschijnt een modal met de tekst uit het document die het antwoord weerspiegelt.</li>
+</ol>
+<p><img alt="Controleer document" src="../../../../../translated_images/6.4_08_VerifyDocument.0f0680b63e6bdd0b558eb287e85965b87ab820e12b25b1e0965f8ebbde795222.nl.png" /></p>
+<p>De agent kan meerdere vragen in één bericht beantwoorden, de kennisbronnen doorzoeken en de kennisbronnen in zijn antwoord vermelden. Zorg er altijd voor dat je het antwoord controleert door de verwijzingen te bekijken.</p>
+<h2 id="missie-voltooid">✅ Missie Voltooid<a class="headerlink" href="#missie-voltooid" title="Permanent link">&para;</a></h2>
+<p>Gefeliciteerd! 👏🏻 Je hebt geleerd hoe je natuurlijke taal kunt gebruiken om je eigen aangepaste agent te maken die kan chatten over je data uit drie verschillende kennisbronnen 🙌🏻</p>
+<p>Dit is het einde van <strong>Lab 06 - Maak een agent met Copilot</strong>, selecteer de onderstaande link om door te gaan naar de volgende les. Je aangepaste agent die in dit lab is gemaakt, zal worden gebruikt in het lab van de volgende les.</p>
+<p>⏭️ <a href="../07-add-new-topic-with-trigger/">Ga naar de les <strong>Een nieuw onderwerp met trigger toevoegen</strong></a></p>
+<p>Welkom bij de elite. Je weet nu hoe je digitale agents kunt creëren die jouw taal spreken, jouw data gebruiken en jouw team ondersteunen. Blijf doorgaan—je missie is nog maar net begonnen.</p>
+<h2 id="tactische-bronnen">📚 Tactische Bronnen<a class="headerlink" href="#tactische-bronnen" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/fundamentals-get-started?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext/?WT.mc_id=power-172617-ebenitez">Quickstart: Een agent maken en implementeren</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-first-bot?WT.mc_id=power-172617-ebenitez">Agents maken en verwijderen</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-fundamentals/?WT.mc_id=power-172617-ebenitez">Belangrijke concepten - Agents maken</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep1">Een aangepaste agent maken met natuurlijke taal</a></p>
+<p>📺 <a href="https://aka.ms/ai-in-action/copilot-studio/ep2">Kennis toevoegen aan je agents</a></p>
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/06-create-agent-from-conversation" alt="Analytics" /></p>
+<hr />
+<p><strong>Disclaimer</strong>:<br />
+Dit document is vertaald met behulp van de AI-vertalingsservice <a href="https://github.com/Azure/co-op-translator">Co-op Translator</a>. Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
