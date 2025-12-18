@@ -1,4 +1,4 @@
-# Collecting feedback from users
+# 🚨 Mission 11: Collecting feedback from users
 
 --8<-- "disclaimer.md"
 
@@ -8,7 +8,7 @@
 
 ## 🎯 Mission Brief
 
-Welcome back, Agent. In [Mission 10](../11-interview-meetings/README.md), you learned how to setup your agent to create meetings via an Model Context Protocol (MCP) server.
+Welcome back, Agent. In [Mission 10](../10-interview-meetings/README.md), you learned how to setup your agent to create meetings via an Model Context Protocol (MCP) server.
 
 Your assignment, should you choose to accept it, is **Operation Echo**, a critical intelligence-gathering mission focused on extracting actionable feedback from your deployed AI agents. In the shadowy world of conversational intelligence, user satisfaction data is more valuable than gold. This mission will teach you two primary methods of intelligence collection:
 

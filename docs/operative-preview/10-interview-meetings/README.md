@@ -1,4 +1,4 @@
-# Setup Interview Meetings via Model Context Protocol (MCP)
+# 🚨 Mission 10: Setup Interview Meetings via Model Context Protocol (MCP)
 
 --8<-- "disclaimer.md"
 
@@ -63,6 +63,6 @@ Congratulations! 👏🏻 Excellent work, Operative.
 
 This is the end of **Lab 11 - Setup Interview Meetings via Model Context Protocol (MCP)**, select the link below to move to the next lesson.
 
-⏭️ [Move to **Collecting feedback from users** lesson](../12-obtain-user-feedback/README.md)
+⏭️ [Move to **Collecting feedback from users** lesson](../11-obtain-user-feedback/README.md)
 
 ## 📚 Tactical Resources

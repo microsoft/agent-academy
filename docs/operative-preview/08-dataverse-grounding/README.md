@@ -434,7 +434,7 @@ Your enhanced system can now create Job Applications and is ready for further co
 
 🚀 **Next up:** In your next mission, you'll learn how to implement deep reasoning capabilities that help your agents make complex decisions and provide detailed explanations for their recommendations.
 
-⏩ [Move to Mission 09: Deep reasoning](../09-deep-reasoning/README.md)
+⏩ [Move to Mission 09: Generate Candidate Specific Interview Docs with Prompts](../09-generate-documents/README.md)
 
 ## 📚 Tactical Resources
 
