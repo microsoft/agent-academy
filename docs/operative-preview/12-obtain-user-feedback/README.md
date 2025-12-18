@@ -8,7 +8,7 @@
 
 ## 🎯 Mission Brief
 
-Welcome back, Agent. In [Mission 10](../04-agent-instructions/README.md), you learned how to build an effective prompt to generate documents.
+Welcome back, Agent. In [Mission 10](../11-interview-meetings/README.md), you learned how to setup your agent to create meetings via an Model Context Protocol (MCP) server.
 
 Your assignment, should you choose to accept it, is **Operation Echo**, a critical intelligence-gathering mission focused on extracting actionable feedback from your deployed AI agents. In the shadowy world of conversational intelligence, user satisfaction data is more valuable than gold. This mission will teach you two primary methods of intelligence collection:
 
@@ -174,7 +174,7 @@ Ultimately, for most scenarios using one method at a time is clearer. If you opt
 |------------|------------|
 | Enable built-in 👍🏻/👎🏻 reactions to rapidly gauge user satisfaction on each answer. This yields instant analytics (no coding) and helps identify trouble spots early. | Use adaptive cards for feedback when you need more than a `yes/no`. You can ask tailored questions and route feedback into your own data stores or workflows for deeper analysis and action. |
 
-## 🧪 Lab 11 - Provide feedback using built-in interactions vs adaptive cards (custom)
+## 🧪 Lab 12 - Provide feedback using built-in interactions vs adaptive cards (custom)
 
 We're now going to provide feedback as a user using the following methods,
 
@@ -185,7 +185,7 @@ We're now going to provide feedback as a user using the following methods,
 
 For the built-in interactions to be captured in the Analytics page of the agent, the agent must be published. Ensure the **Interview Agent** is published.
 
-### 11.1 User feedback through built-in interactions
+### 12.1 User feedback through built-in interactions
 
 1. In Microsoft Teams, load the Interview Agent and start asking it questions.
 
@@ -235,7 +235,7 @@ For the built-in interactions to be captured in the Analytics page of the agent,
 
 1. Repeat until you have submitted several reactions with written feedback.
 
-### 11.2 Reviewing built-in analytics
+### 12.2 Reviewing built-in analytics
 
 We're now going to review the feedback submitted in the **Analytics** page of the agent.
 
@@ -246,7 +246,7 @@ We're now going to review the feedback submitted in the **Analytics** page of th
 
        ![Submitted reactions and written feedback](assets/11.2_01_Reactions.png)
 
-### 11.3 Build adaptive card to collect custom feedback
+### 12.3 Build adaptive card to collect custom feedback
 
 In this exercise we're going to implement a process in the **Hiring Agent** to collect custom feedback in response to the built-in CSAT survey. When the user has responded with 1 star or 2 stars for the CSAT survey, we want to collect additional feedback to understand why they were dissatisfied. This will also give you hands-on learning on how to modify existing system topics.
 
@@ -257,7 +257,7 @@ The following is what you'll learn:
 
 Let's go!
 
-#### 11.3.1 Create a new custom topic
+#### 12.3.1 Create a new custom topic
 
 1. In the **Hiring Agent**, browse to the **Topics** tab. Select **+Add a topic** and select **From blank**.
 
@@ -299,7 +299,7 @@ Let's go!
 
        ![Add new topic from blank](assets/11.3.1_09_CardOutputs.png)
 
-#### 11.3.2 Modify End of Conversation system topic
+#### 12.3.2 Modify End of Conversation system topic
 
 We're now going to update the **End of Conversation** system topic to redirect to the **Capture CSAT dissatisfied feedback** custom topic created previously.
 
@@ -464,7 +464,7 @@ We're now going to update the **End of Conversation** system topic to redirect t
 
 Great work! 🙌🏻 You've added a custom topic with an adaptive card that handles written feedback to CSAT ratings below `3`. Let's take this further by logging this as an event in **Azure Application Insights** next.
 
-### 11.4 BONUS: Logging telemetry to Azure Application Insights
+### 12.4 BONUS: Logging telemetry to Azure Application Insights
 
 In this exercise you'll learn how to utilize the **Log custom telemetry event** node to log an event in **Azure Application Insights**.
 
