@@ -1,0 +1,248 @@
+{
+    "type": "AdaptiveCard",
+    "speak": "New Resume Uploaded",
+    "body": [
+        {
+            "inlines": [
+                {
+                    "type": "TextRun",
+                    "size": "Small",
+                    "text": "Resume table updated",
+                    "selectAction": {
+                        "url": "https://adaptivecards.io",
+                        "type": "Action.OpenUrl"
+                    }
+                }
+            ],
+            "type": "RichTextBlock"
+        },
+        {
+            "columns": [
+                {
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Icon",
+                            "name": "DocumentArrowUp",
+                            "color": "Accent"
+                        }
+                    ],
+                    "type": "Column"
+                },
+                {
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "size": "Large",
+                            "text": "New Resume Uploaded",
+                            "weight": "Bolder",
+                            "wrap": true,
+                            "type": "TextBlock"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "spacing": "Small",
+                    "type": "Column"
+                }
+            ],
+            "spacing": "Small",
+            "type": "ColumnSet"
+        },
+        {
+            "type": "Table",
+            "targetWidth": "AtLeast:Narrow",
+            "columns": [
+                {
+                    "width": 1
+                },
+                {
+                    "width": 2
+                }
+            ],
+            "rows": [
+                {
+                    "type": "TableRow",
+                    "cells": [
+                        {
+                            "type": "TableCell",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Resume Number",
+                                    "wrap": true,
+                                    "weight": "Bolder"
+                                }
+                            ],
+                            "verticalContentAlignment": "Center"
+                        },
+                        {
+                            "type": "TableCell",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "RESUME NUMBER PLACEHOLDER",
+                                    "wrap": true
+                                }
+                            ],
+                            "verticalContentAlignment": "Center"
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRow",
+                    "cells": [
+                        {
+                            "type": "TableCell",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Name",
+                                    "wrap": true,
+                                    "weight": "Bolder"
+                                }
+                            ],
+                            "verticalContentAlignment": "Center"
+                        },
+                        {
+                            "type": "TableCell",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "RESUME NAME PLACEHOLDER",
+                                    "wrap": true
+                                }
+                            ],
+                            "verticalContentAlignment": "Center"
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRow",
+                    "cells": [
+                        {
+                            "type": "TableCell",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Status",
+                                    "wrap": true,
+                                    "weight": "Bolder"
+                                }
+                            ],
+                            "verticalContentAlignment": "Center"
+                        },
+                        {
+                            "type": "TableCell",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Waiting for Review",
+                                    "wrap": true
+                                }
+                            ],
+                            "verticalContentAlignment": "Center"
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRow",
+                    "cells": [
+                        {
+                            "type": "TableCell",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Due Date",
+                                    "wrap": true,
+                                    "weight": "Bolder"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TableCell",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "May 21, 2023",
+                                    "wrap": true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRow",
+                    "cells": [
+                        {
+                            "type": "TableCell",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Priority",
+                                    "wrap": true,
+                                    "weight": "Bolder"
+                                }
+                            ],
+                            "verticalContentAlignment": "Center"
+                        },
+                        {
+                            "type": "TableCell",
+                            "items": [
+                                {
+                                    "type": "ColumnSet",
+                                    "columns": [
+                                        {
+                                            "type": "Column",
+                                            "width": "auto",
+                                            "items": [
+                                                {
+                                                    "type": "Icon",
+                                                    "name": "Flag",
+                                                    "color": "Attention",
+                                                    "size": "xSmall",
+                                                    "horizontalAlignment": "Center"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Column",
+                                            "width": "stretch",
+                                            "items": [
+                                                {
+                                                    "color": "Attention",
+                                                    "text": "Important",
+                                                    "wrap": true,
+                                                    "spacing": "Small",
+                                                    "type": "TextBlock"
+                                                }
+                                            ],
+                                            "spacing": "Small"
+                                        }
+                                    ],
+                                    "spacing": "Small"
+                                }
+                            ],
+                            "verticalContentAlignment": "Center"
+                        }
+                    ]
+                }
+            ],
+            "firstRowAsHeaders": false,
+            "showGridLines": false
+        },
+        {
+            "actions": [
+                {
+                    "title": "View Resume",
+                    "type": "Action.OpenUrl",
+                    "url": "https://adaptivecards.io/"
+                }
+            ],
+            "type": "ActionSet",
+            "targetWidth": "AtLeast:Narrow",
+            "spacing": "ExtraLarge"
+        }
+    ],
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5"
+}
