@@ -1,0 +1,290 @@
+{
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "body": [
+        {
+            "backgroundImage": {
+                "url": "https://msftstories.thesourcemediaassets.com/2022/02/surface-pro-8-with-type-cover_-768x432.jpg",
+                "verticalAlignment": "Bottom"
+            },
+            "items": [
+                {
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch"
+                        },
+                        {
+                            "items": [
+                                {
+                                    "items": [
+                                        {
+                                            "maxLines": 0,
+                                            "size": "ExtraLarge",
+                                            "text": "We'd love to hear from you",
+                                            "type": "TextBlock",
+                                            "weight": "Bolder",
+                                            "wrap": true
+                                        }
+                                    ],
+                                    "roundedCorners": true,
+                                    "style": "default",
+                                    "type": "Container"
+                                }
+                            ],
+                            "type": "Column",
+                            "width": "190px"
+                        }
+                    ],
+                    "targetWidth": "AtLeast:Standard",
+                    "type": "ColumnSet"
+                }
+            ],
+            "minHeight": "200px",
+            "roundedCorners": true,
+            "style": "emphasis",
+            "targetWidth": "AtLeast:Standard",
+            "type": "Container",
+            "verticalContentAlignment": "Bottom"
+        },
+        {
+            "backgroundImage": {
+                "verticalAlignment": "Bottom",
+                "url": "https://msftstories.thesourcemediaassets.com/2022/02/surface-pro-8-with-type-cover_-768x432.jpg"
+            },
+            "items": [
+                {
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch"
+                        },
+                        {
+                            "type": "Column",
+                            "width": "150px"
+                        }
+                    ],
+                    "type": "ColumnSet"
+                }
+            ],
+            "minHeight": "140px",
+            "roundedCorners": true,
+            "style": "emphasis",
+            "targetWidth": "Narrow",
+            "type": "Container",
+            "verticalContentAlignment": "Bottom"
+        },
+        {
+            "style": "RoundedCorners",
+            "targetWidth": "VeryNarrow",
+            "type": "Image",
+            "url": "https://msftstories.thesourcemediaassets.com/2022/02/surface-pro-8-with-type-cover_-768x432.jpg"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Give us your feedback",
+                            "wrap": true,
+                            "weight": "Bolder",
+                            "color": "Accent"
+                        },
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": "auto"
+                                },
+                                {
+                                    "type": "Column",
+                                    "width": "stretch",
+                                    "spacing": "ExtraSmall"
+                                }
+                            ],
+                            "spacing": "ExtraSmall"
+                        }
+                    ]
+                }
+            ],
+            "spacing": "Medium",
+            "targetWidth": "AtMost:Narrow"
+        },
+        {
+            "columns": [
+                {
+                    "items": [
+                        {
+                            "color": "Accent",
+                            "text": "Give us your feedback",
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "wrap": true,
+                            "size": "Large"
+                        }
+                    ],
+                    "type": "Column",
+                    "verticalContentAlignment": "Center",
+                    "width": "auto"
+                },
+                {
+                    "spacing": "Small",
+                    "targetWidth": "AtLeast:Narrow",
+                    "type": "Column",
+                    "width": "auto",
+                    "verticalContentAlignment": "Center"
+                },
+                {
+                    "spacing": "Small",
+                    "targetWidth": "AtLeast:Narrow",
+                    "type": "Column",
+                    "verticalContentAlignment": "Center",
+                    "width": "auto"
+                },
+                {
+                    "spacing": "Small",
+                    "targetWidth": "AtLeast:Narrow",
+                    "type": "Column",
+                    "verticalContentAlignment": "Center",
+                    "width": "stretch"
+                }
+            ],
+            "spacing": "Medium",
+            "type": "ColumnSet",
+            "targetWidth": "AtLeast:Standard"
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "label": "We want to understand your dissatisfaction of your interaction with the Interview Agent ",
+            "choices": [
+                {
+                    "title": "The agent didn't understand my responses or questions accurately",
+                    "value": "Difficulty in understanding"
+                },
+                {
+                    "title": "The process was confusing or difficult to navigate",
+                    "value": "Process is difficult"
+                },
+                {
+                    "title": "I had technical issues during the interaction (e.g., errors, delays)",
+                    "value": "Technical issues"
+                },
+                {
+                    "title": "All of the above",
+                    "value": "Encountered all of the issues"
+                }
+            ],
+            "placeholder": "Placeholder text",
+            "style": "expanded",
+            "id": "ratingId"
+        },
+        {
+            "columns": [
+                {
+                    "items": [
+                        {
+                            "inlines": [
+                                {
+                                    "selectAction": {
+                                        "targetElements": [
+                                            "notesId",
+                                            "chevronUp",
+                                            "chevronDown"
+                                        ],
+                                        "type": "Action.ToggleVisibility"
+                                    },
+                                    "text": "Add comment",
+                                    "type": "TextRun"
+                                }
+                            ],
+                            "targetWidth": "AtLeast:Narrow",
+                            "type": "RichTextBlock"
+                        },
+                        {
+                            "inlines": [
+                                {
+                                    "selectAction": {
+                                        "targetElements": [
+                                            "notesId",
+                                            "chevronUp",
+                                            "chevronDown"
+                                        ],
+                                        "type": "Action.ToggleVisibility"
+                                    },
+                                    "text": "Add comment",
+                                    "type": "TextRun"
+                                }
+                            ],
+                            "spacing": "None",
+                            "targetWidth": "VeryNarrow",
+                            "type": "RichTextBlock"
+                        }
+                    ],
+                    "type": "Column",
+                    "verticalContentAlignment": "Center",
+                    "width": "auto"
+                },
+                {
+                    "items": [
+                        {
+                            "color": "Accent",
+                            "id": "chevronDown",
+                            "name": "ChevronDown",
+                            "size": "xxSmall",
+                            "type": "Icon"
+                        },
+                        {
+                            "color": "Accent",
+                            "id": "chevronUp",
+                            "isVisible": false,
+                            "name": "ChevronUp",
+                            "size": "xxSmall",
+                            "spacing": "None",
+                            "type": "Icon"
+                        }
+                    ],
+                    "selectAction": {
+                        "targetElements": [
+                            "notesId",
+                            "chevronUp",
+                            "chevronDown"
+                        ],
+                        "type": "Action.ToggleVisibility"
+                    },
+                    "spacing": "Small",
+                    "type": "Column",
+                    "verticalContentAlignment": "Center",
+                    "width": "auto"
+                }
+            ],
+            "spacing": "Medium",
+            "type": "ColumnSet"
+        },
+        {
+            "id": "notesId",
+            "isMultiline": true,
+            "isVisible": false,
+            "placeholder": "Enter any additional comments you'd like to share",
+            "spacing": "Small",
+            "type": "Input.Text"
+        },
+        {
+            "actions": [
+                {
+                    "style": "positive",
+                    "title": "Submit",
+                    "type": "Action.Submit"
+                }
+            ],
+            "separator": true,
+            "spacing": "Medium",
+            "type": "ActionSet"
+        }
+    ],
+    "type": "AdaptiveCard",
+    "version": "1.5"
+}

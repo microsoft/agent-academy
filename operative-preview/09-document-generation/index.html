@@ -1,0 +1,1034 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/operative-preview/09-document-generation/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Mission 09: Generate a Candidate Interview Questions Document - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-09-generate-a-candidate-interview-questions-document" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mission 09: Generate a Candidate Interview Questions Document
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recruit
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operative (Coming Soon)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commander (Coming Soon)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-doc-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🕵️‍♂️ CODENAME: OPERATION DOC ASSEMBLY
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Mission Brief
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔎 Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-9-generating-an-interview-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lab 9: Generating an Interview Document
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎉 Mission Complete
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactical-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Tactical Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="mission-09-generate-a-candidate-interview-questions-document">Mission 09: Generate a Candidate Interview Questions Document<a class="headerlink" href="#mission-09-generate-a-candidate-interview-questions-document" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="codename-operation-doc-assembly">🕵️‍♂️ CODENAME: <code>OPERATION DOC ASSEMBLY</code><a class="headerlink" href="#codename-operation-doc-assembly" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operation Time Window:</strong> <code>~45 minutes</code></p>
+</blockquote>
+<h2 id="mission-brief">🎯 Mission Brief<a class="headerlink" href="#mission-brief" title="Permanent link">&para;</a></h2>
+<p>Welcome, Operative. Your previous missions have shown you the power of prompts. You learned about multimodal document analysis and grounding your prompts with Dataverse data. Now you'll unlock another prompt capability: <strong>document generation</strong>.</p>
+<p>Your assignment, should you choose to accept it, is <strong>Operation Doc Assembly</strong>. In this operation you'll be creating a word document of interview prep questions from a prompt and calling that from an agent.</p>
+<h2 id="objectives">🔎 Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
+<p>In this mission, you'll learn:</p>
+<ol>
+<li>How to configure prompts to output to a Word document</li>
+<li>How to format a Word template to be used in a prompt</li>
+<li>How to execute a prompt from an agent</li>
+</ol>
+<h2 id="lab-9-generating-an-interview-document">Lab 9: Generating an Interview Document<a class="headerlink" href="#lab-9-generating-an-interview-document" title="Permanent link">&para;</a></h2>
+<p>When a job application is added, you want to automate the process of preparing a detailed interview document. This should be a Word document that summarizes the applications key information (name, current role, experience, etc), the role information (job title, requirements) and creates unique specific interview questions based on the applicant background and role they are applying for.</p>
+<h3 id="prerequisites-to-complete-this-mission">Prerequisites to complete this mission<a class="headerlink" href="#prerequisites-to-complete-this-mission" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Before starting this mission you need to:</p>
+<ul>
+<li><strong>Have completed <a href="../08-dataverse-grounding/">Mission 08</a></strong> and have the agent ready and a good understanding of Dataverse grounding</li>
+</ul>
+</li>
+</ol>
+<h3 id="91-create-the-prompt">9.1 Create the prompt<a class="headerlink" href="#91-create-the-prompt" title="Permanent link">&para;</a></h3>
+<p>Your first objective: create a prompt capable of analyzing a job description and candidate profile to create tailored interview questions.</p>
+<ol>
+<li>
+<p>Sign in to <a href="https://copilotstudio.microsoft.com">Copilot Studio</a> and select <strong>Tools</strong> from the left navigation.
+    <img alt="Tools Select" src="assets/ToolsSelect.png" /></p>
+</li>
+<li>
+<p>Select <strong>+ New tool</strong> button
+    <img alt="New Tool" src="assets/NewToolBtn.png" /></p>
+</li>
+<li>
+<p>Select <strong>Prompt</strong>
+    <img alt="New Prompt" src="assets/NewPromptBtn.png" /></p>
+</li>
+<li>
+<p><strong>Rename</strong> the prompt from the default timestamp name (E.g. <em>Custom prompt 09/04/2025, 04:59:11 PM</em>) to <code>Interview Question Document Prep</code>.</p>
+<p><img alt="Rename" src="assets/PromptName.png" /></p>
+</li>
+<li>
+<p>In the Instructions field, add this prompt:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>You are tasked with evaluating a candidate’s resume against a specific job listing description and generating a targeted set of interview questions to support structured candidate screening.
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>### Instructions
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>1. **Extract Candidate Details:**
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    - Identify and extract the candidate’s full name.
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    - Extract contact information, specifically the email address.
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    - Identify the candidate’s current or most recent job title.
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    - Extract location if present.
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    - Estimate total years of experience only if supported by resume dates.
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2. **Analyze the Job Listing Description:**
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    - Review the job description to identify:
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    - Must-have requirements
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    - Nice-to-have requirements
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    - Key responsibilities
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    - Required tools and technologies
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    - Treat must-have requirements as the highest priority for evaluation.
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>3. **Evaluate Resume Against Job Requirements:**
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    - Compare the resume content against each must-have requirement.
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    - For each requirement, determine:
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        - Evidence level: Strong, Moderate, Weak, or Missing
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        - A confidence score from 0–100
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        - Supporting evidence using short phrases grounded in the resume text only
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    - Do not infer or invent experience.
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>4. **Assess Overall Candidate Fit:**
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    - Identify:
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>        - Top strengths (up to 5)
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>        - Key gaps (up to 5)
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>        - Risks or concerns only when supported by missing or unclear evidence
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>        - Provide a concise one-paragraph summary suitable for recruiter review.
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>5. **Generate Interview Questions (Exactly 10):**
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>    - Generate exactly 10 interview questions based on the job requirements and resume evaluation.
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    - Distribute the questions as follows:
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>        - 5 Core Requirement Questions focused on the most critical must-have requirements.
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>        - 3 Gap or Clarification Questions targeting weak, missing, or ambiguous areas.
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>        - 2 Scenario-Based Questions derived directly from key job responsibilities.
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>    - Avoid generic or culture-only questions unless explicitly required by the job description.
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>**Interview Question Requirements:**
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>    - Each question must include:
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>        - The interview question
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>        - The job requirement it maps to
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>     - Questions must be specific, non-duplicative, and grounded in the provided inputs.
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>     - Produce questions in numbered format (1, 2, 3)
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>### Input Data
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>Application Number:  /ApplicationNumber
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>Candidate Details (Name, Email): /CandidateDetails
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>Resume Details: /Resume Details
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>Job Details (Job Number, Title, Description and Requirements): /JobDetails
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>Evaluation Criteria (Weighting, Evaluation Criteria): /Criteria
+</span></code></pre></div>
+</li>
+<li>
+<p>In a new tab, go to make.powerapps.com and find the <strong>Job Application</strong> table. Take note of one of the job application numbers in that table that you want to use for testing.</p>
+<p><img alt="Job App Table" src="assets/JobAppTable.png" /></p>
+</li>
+<li>
+<p>Go back to your prompt and scroll down to the <strong>input data</strong> section of the prompt. Find the <strong>/ApplicationNumber</strong> text. Delete that and type a <strong>forward slash (/)</strong> to open up the add input panel and configure the input as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Type</th>
+<th>Sample Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ApplicationNumber</td>
+<td>Text</td>
+<td>Enter a job application number you copied from the step previous step</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Now that we have an input to pass in the Job Application number, we want to get other relevant information for this prompt from Dataverse using Dataverse Grounding.</p>
+<p>!!! tip "Tip" If you want to get an in-depth understanding of Dataverse Grounding, be sure to go through <a href="../08-dataverse-grounding/">module 8</a>.</p>
+<p>To configure Dataverse grounding for our prompt, find the remaining forward slashes in the <strong>Input Data</strong> section of the prompt and replace according to the table below:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Table</th>
+<th>Columns</th>
+<th>Filter attribute</th>
+<th>Filter value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CandidateDetails</td>
+<td>Dataverse -&gt; Job Application -&gt; Candidate (Candidate)</td>
+<td>Candidate Name, Email</td>
+<td>Application Number</td>
+<td>Add Value -&gt; Application Number</td>
+</tr>
+<tr>
+<td>ResumeDetails</td>
+<td>Dataverse -&gt; Job Application -&gt; Resume (Resume)</td>
+<td>Cover Letter, Resume Number, Resume Title, Summary</td>
+<td>Application Number</td>
+<td>Add Value -&gt; Application Number</td>
+</tr>
+<tr>
+<td>JobDetails</td>
+<td>Dataverse -&gt; Job Application -&gt; Job Role (Job Role)</td>
+<td>Description, Job Role Number, Job Title</td>
+<td>Application Number</td>
+<td>Add Value -&gt; Application Number</td>
+</tr>
+<tr>
+<td>Evaluation Criteria</td>
+<td>Dataverse -&gt; Job Application -&gt; Job Role (Job Role) -&gt; Job Role (Evaluation Criteria)</td>
+<td>Criteria Name, Description, Weighting</td>
+<td>Application Number</td>
+<td>Add Value -&gt; Application Number</td>
+</tr>
+</tbody>
+</table>
+<p>The completed input section should look like the screenshot below</p>
+<p><img alt="Filled Prompt" src="assets/PromptFIlled.png" /></p>
+</li>
+<li>
+<p>It's always a good idea to test as you go along. Select <strong>Test</strong> to see the initial text output from your prompt and confirm it is pulling the correct information from Dataverse.<br />
+<img alt="First Test" src="assets/FirstTest.png" /></p>
+</li>
+<li>
+<p>Because we want to have this prompt generate a document, we need to change the model the prompt is using to one that supports multi-modal inputs and outputs. To do this, select the <strong>model dropdown</strong> and change it to <strong>GPT-4.1</strong>
+    <img alt="Model Select" src="assets/ModelSelect.png" /></p>
+</li>
+<li>
+<p>In order to have the prompt populate a Word document as the output, you need a Word template for it to fill. We have provided a template for you to use.  <a href="assets/Interview_Questions_Template.docx">Download the template file here</a> and open it.</p>
+<blockquote>
+<p><strong>NOTE:</strong> The template itself is a basic Word document. The key thing you need to know is how to add the placeholders for where the prompt will insert the text. Anywhere that you want the prompt to insert text, you need to put the necessary placeholder text for what you want to fill it with and wrap that in <strong>double curly brackets {{JobTitle}}</strong> as shown below.</p>
+</blockquote>
+<p><img alt="Template" src="assets/Template.png" /></p>
+</li>
+<li>
+<p>So far we have a prompt that generates a text output. To make it generate a Word document output, select the <strong>Output</strong> dropdown in the upper right hand corner of the results panel and choose the <strong>Document (preview)</strong> option.
+    <img alt="Output Select" src="assets/OutputSelect.png" /></p>
+</li>
+<li>
+<p>To associate the template file with your prompt, select the <strong>Document settings</strong> button and either drag and drop the file you downloaded in or choose select to browse.
+    <img alt="Document Settings" src="assets/DocumentSettings.png" /></p>
+</li>
+<li>
+<p>After you upload the file it should recognize that there are 19 identified fields (identified by looking for all those curly bracket placeholders). Select the <strong>test</strong> button again to see if the prompt outputs to the Word document.
+    <img alt="Document Test" src="assets/DocTest.png" /></p>
+</li>
+<li>
+<p>You should see a response similar to the following. You'll see a link at the top to download the document. Select that and confirm that it was filled out correctly.
+    <img alt="Document Output Test" src="assets/DocOutputBtn.png" />
+    <img alt="Document Filled" src="assets/DocFilled.png" /></p>
+</li>
+<li>
+<p>Click <strong>Save</strong> to save your new prompt
+    <img alt="Save" src="assets/SavePrompt.png" /></p>
+</li>
+</ol>
+<p><img alt="Publish" src="assets/Publish.png" /></p>
+<h3 id="92-create-an-agent-flow-to-call-the-prompt">9.2 Create an agent flow to call the prompt<a class="headerlink" href="#92-create-an-agent-flow-to-call-the-prompt" title="Permanent link">&para;</a></h3>
+<p>Now we need to connect the prompt to our agent. To do this, we need to add an agent flow to call the prompt and return the file to the agent.</p>
+<p>You might be wondering why we have to do this step rather than calling the prompt directly in the agent. The reason is because currently, we can't get the contentbytes of a file (aka the actual file content) and have that reliably return a file item in the agent alone. The agent flow ensures that we can predictably extract out the file and return it to our agent.</p>
+<p>With that out of the way, let's create the agent flow.</p>
+<ol>
+<li>
+<p>In Copilot Studio, select the <strong>Tools</strong> tab
+    <img alt="Tools Tab" src="assets/ToolsTab.png" /></p>
+</li>
+<li>
+<p>Select the <strong>New tool</strong> button
+    <img alt="New tool" src="assets/NewTool.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Agent Flow</strong> option
+    <img alt="Agent Flow Button" src="assets/AgentFlowBtn.png" /></p>
+</li>
+<li>
+<p>Click on the <strong>When an agent calls the flow</strong> trigger to expand it and select the <strong>Add an input</strong> button</p>
+<p><img alt="Add Input" src="assets/AddInputBtn.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Text</strong> user input type</p>
+<p><img alt="Select Input Type" src="assets/SelectInputType.png" /></p>
+</li>
+<li>
+<p>Name the input <strong>ApplicationNumber</strong> and put <strong>What's the job application number</strong> as the description</p>
+<p><img alt="Input Property" src="assets/TriggerInputFilled.png" /></p>
+</li>
+<li>
+<p>Select the <strong>+ plus button</strong> below the when an agent calls the flow trigger and select the <strong>Run a prompt</strong> action</p>
+<p><img alt="Add Action" src="assets/AddAction.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Interview Question Document Prep</strong> prompt from the dropdown list</p>
+<p><img alt="Select the prompt" src="assets/SelectPromptName.png" /></p>
+</li>
+<li>
+<p>Click into the <strong>ApplicationNumber</strong> input and select the <strong>lightning bolt icon</strong></p>
+<p><img alt="Lightning bolt icon" src="assets/inputlightningbolt.png" /></p>
+</li>
+<li>
+<p>Select the <strong>ApplicationNumber</strong> input that we created earlier</p>
+<p><img alt="Map Input" src="assets/MapInput.png" /></p>
+</li>
+<li>
+<p>Click to expand the <strong>Respond to the agent</strong> action and select <strong>Add an output</strong></p>
+<p><img alt="Add Output" src="assets/AddOutput.png" /></p>
+</li>
+<li>
+<p>Select <strong>File</strong> from the list of output types</p>
+<p><img alt="File Type" src="assets/FileType.png" /></p>
+</li>
+<li>
+<p>Name the property <strong>InterviewFile</strong>. For the value, click the <strong>fx icon</strong> and enter the following formula then click <strong>Add</strong></p>
+<p><code>text
+        binary(outputs('Run_a_prompt')?['body/responsev2/predictionOutput/documentOutput/contentBytes'])</code></p>
+<p><img alt="Formula" src="assets/Formula.png" /></p>
+<blockquote>
+<p><strong>Note:</strong> This formula is necessary to properly extract the file from the output so we can return it to our agent.</p>
+</blockquote>
+</li>
+<li>
+<p>Select <strong>Save Draft</strong> to save the flow</p>
+<p><img alt="Save draft" src="assets/SaveDraft.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Overview</strong> tab</p>
+<p><img alt="Overview tab" src="assets/OverviewTab.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Edit</strong> button next to Details</p>
+<p><img alt="Edit Name" src="assets/EditName.png" /></p>
+</li>
+<li>
+<p>Put <strong>Doc Prep</strong> in the Flow name and <strong>Creates an interview prep document and returns to the agent</strong> in the description. Then slick <strong>Save</strong></p>
+<p><img alt="Flow Name" src="assets/FlowName.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Designer</strong> tab</p>
+<p><img alt="Designer tab" src="assets/Designer.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Publish</strong> button to publish your flow</p>
+<p><img alt="Publish" src="assets/PublishFlowBtn.png" /></p>
+</li>
+</ol>
+<h3 id="93-create-the-topic">9.3 Create the topic<a class="headerlink" href="#93-create-the-topic" title="Permanent link">&para;</a></h3>
+<p>Now we will tie all of this together with our agent by adding a topic.</p>
+<p>A topic is required rather than adding it to the agent instructions because currently, it is the only way to ensure that a file object is returned every time.</p>
+<p>Let's create the topic:</p>
+<ol>
+<li>
+<p>Click the <strong>Agents</strong> tab in Copilot Studio and select the <strong>Interview Agent</strong>. Select the <strong>Topics</strong> tab
+    <img alt="Topics Tab" src="assets/SelectTopicsTab.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Add a Topic</strong> button and the <strong>From blank</strong> option
+    <img alt="Add topic" src="assets/AddTopic.png" /></p>
+</li>
+<li>
+<p>Change the name of the Topic by replacing the "Untitled" name with <strong>Generate Interview Doc</strong>
+    <img alt="Topic Name" src="assets/RenameTopic.png" /></p>
+</li>
+<li>
+<p>In the Topic Trigger, enter the following for the <strong>description</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>This topic generates an interview prep document with applicant details, role details and interview questions.
+</span></code></pre></div>
+<p><img alt="Topic Description" src="assets/TopicDescription.png" /></p>
+</li>
+<li>
+<p>We need to be able to pass the Job Application Number we want to create the interview prep file for into our topic. To do that, we will use an AI feature in Copilot Studio called slot filling. This allows the generative orchestration of the language model to identify the values to bring into the topic.</p>
+<p>To do this, select the <strong>Details</strong> button in your topic
+        <img alt="Details" src="assets/DetailsBTN.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Input</strong> tab in the details panel and select the <strong>Create a new variable</strong> button
+    <img alt="Select Input" src="assets/InputNewVariable.png" /></p>
+</li>
+<li>
+<p>For the <strong>Variable name</strong> change it to <strong>VarApplicationNumber</strong>. For the <strong>Description</strong> put in</p>
+<p><code>text
+    Fill with the Job Application Number referenced in the chat. The number always starts with a J followed by at least 4 digits.</code></p>
+<p>Keep all the other properties the same.
+ <img alt="Input Filled" src="assets/InputFilled.png" /></p>
+</li>
+<li>
+<p>Select the <strong>+ plus icon</strong> after the trigger then select <strong>Add a Tool</strong> and locate and select the <strong>Doc Prep</strong> flow from the list that we created earlier</p>
+<p><img alt="Select the flow" src="assets/SelectFlow.png" /></p>
+</li>
+<li>
+<p>Click into the <strong>ApplicationNumber</strong> input in the action, click the <strong>... three dots</strong> and choose the <strong>VarApplicationNumber</strong> variable to map that to the input</p>
+<p><img alt="Map Input" src="assets/MapVariable.png" /></p>
+</li>
+<li>
+<p>Now we need to add a message node to return the file to the user. To do this, click the <strong>+ plus icon</strong> below the action you added and select the <strong>Send a message</strong> action</p>
+<p><img alt="Add Message Node" src="assets/AddMessageNode.png" /></p>
+</li>
+<li>
+<p>In the textbox, type <strong>Here is your interview prep file:</strong>. Then click the <strong>Add</strong> button and choose the <strong>File</strong> option.</p>
+<p><img alt="Fill out message" src="assets/MessageFill.png" /></p>
+</li>
+<li>
+<p>Click in the <strong>Content</strong> input, select the <strong>... three dots</strong> and choose the <strong>InterviewFile</strong> property</p>
+<p><img alt="Select File" src="assets/MapFile.png" /></p>
+</li>
+<li>
+<p>Click in the <strong>Name</strong> input, select the <strong>... three dots</strong> and select the <strong>Formula</strong> tab</p>
+<p><img alt="Formula tab" src="assets/SelectNameInput.png" /></p>
+</li>
+<li>
+<p>In the formula window type the following formula and select the <strong>Insert</strong> button</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Topic.VarApplicationNumber&amp;&quot;InterviewPrep.docx&quot;
+</span></code></pre></div>
+<p><img alt="Formula" src="assets/InsertNameFormula.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Save</strong> button to save the topic</p>
+<p><img alt="Save Topic" src="assets/SaveTopic.png" /></p>
+</li>
+<li>
+<p>Now let's test and make sure our new topic is working. Open up the test panel and type in the following (replace the J1000 number with a relevant job application number in your Job Application table):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Create an interview prep file for job application J1000
+</span></code></pre></div>
+<p>Press <strong>Enter</strong></p>
+<p><img alt="Test" src="assets/TestPanel.png" /></p>
+</li>
+<li>
+<p>Notice how it calls the topic, passes in the application number in, calls the flow and returns the file. Click on the document link and notice how it downloads the interview prep document to your hard drive.</p>
+<p><img alt="Test Result" src="assets/TestResult.png" /></p>
+</li>
+<li>
+<p>Open up the document and make sure that it is filled in correctly</p>
+<p><img alt="Document" src="assets/OutputTest.png" /></p>
+</li>
+</ol>
+<p>Congratulations! You just successfully added document generation capabilities to your agent!</p>
+<h2 id="mission-complete">🎉 Mission Complete<a class="headerlink" href="#mission-complete" title="Permanent link">&para;</a></h2>
+<p>Great work, Operative! <strong>Operation Doc Assembly</strong> is now complete. You've successfully enhanced your agent with document generating capabilities!</p>
+<p>🚀 <strong>Next up:</strong> In your next mission, you'll learn how to use the power of MCP servers to help add interview meeting scheduling and planning capabilities.</p>
+<p>⏩ <a href="../10-mcp/">Move to Mission 10: Integrating with MCP</a></p>
+<h2 id="tactical-resources">📚 Tactical Resources<a class="headerlink" href="#tactical-resources" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/generate-document-output-prompt?WT.mc_id=power-182762-apdunnam">Document output in prompts</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/use-your-own-prompt-data?WT.mc_id=power-182762-apdunnam">Use your own data in a prompt</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/create-a-custom-prompt?WT.mc_id=power-182762-apdunnam">Create a custom prompt</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/knowledge-add-dataverse?WT.mc_id=power-182762-apdunnam">Work with Dataverse in Copilot Studio</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/prompts-overview?WT.mc_id=power-182762-apdunnam">AI Builder custom prompts overview</a></p>
+<p>📖 <a href="https://learn.microsoft.com/training/modules/ai-builder-grounded-prompts/?WT.mc_id=power-182762-apdunnam">Training: Create AI Builder prompts using your own Dataverse data</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1275 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/operative-preview/08-dataverse-grounding/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>🚨 Mission 08: Enhanced prompts with Dataverse grounding - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-08-enhanced-prompts-with-dataverse-grounding" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🚨 Mission 08: Enhanced prompts with Dataverse grounding
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recruit
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operative (Coming Soon)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commander (Coming Soon)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-grounding-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🕵️‍♂️ CODENAME: OPERATION GROUNDING CONTROL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Mission Brief
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔎 Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-dataverse-grounding-for-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Understanding Dataverse grounding for prompts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-dedicated-prompts-vs-agent-conversations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Why dedicated prompts vs agent conversations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-record-retrieval-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚙️ Understanding record retrieval settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-8-add-dataverse-grounding-to-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Lab 8: Add Dataverse grounding to prompts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎉 Mission Complete
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactical-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Tactical Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="mission-08-enhanced-prompts-with-dataverse-grounding">🚨 Mission 08: Enhanced prompts with Dataverse grounding<a class="headerlink" href="#mission-08-enhanced-prompts-with-dataverse-grounding" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="codename-operation-grounding-control">🕵️‍♂️ CODENAME: <code>OPERATION GROUNDING CONTROL</code><a class="headerlink" href="#codename-operation-grounding-control" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operation Time Window:</strong> <code>~60 minutes</code></p>
+</blockquote>
+<h2 id="mission-brief">🎯 Mission Brief<a class="headerlink" href="#mission-brief" title="Permanent link">&para;</a></h2>
+<p>Welcome back, Operative. Your multi-agent hiring system is operational, but there's a critical enhancement needed for <strong>data grounding</strong> - your AI models need real-time access to your organization's structured data to make intelligent decisions.</p>
+<p>Currently, your Summarize Resume prompt operates with static knowledge. But what if it could dynamically access your job roles database to provide accurate, up-to-date matches? What if it understood your evaluation criteria without you having to hardcode them?</p>
+<p>In this mission, you'll enhance your custom prompt with <strong>Dataverse grounding</strong> - connecting your prompts directly to live data sources. This transforms your agents from static responders to dynamic, data-driven systems that adapt to changing business needs.</p>
+<p>Your mission: integrate real-time job role and evaluation criteria data into your resume analysis workflow, creating a self-updating system that stays current with your organization's hiring requirements.</p>
+<h2 id="objectives">🔎 Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
+<p>In this mission, you'll learn:</p>
+<ol>
+<li>How <strong>Dataverse grounding</strong> enhances custom prompts</li>
+<li>When to use data grounding vs static instructions</li>
+<li>Designing prompts that dynamically incorporate live data</li>
+<li>Enhancing the Summarize Resume flow with job role matching</li>
+</ol>
+<h2 id="understanding-dataverse-grounding-for-prompts">🧠 Understanding Dataverse grounding for prompts<a class="headerlink" href="#understanding-dataverse-grounding-for-prompts" title="Permanent link">&para;</a></h2>
+<p><strong>Dataverse grounding</strong> allows your custom prompts to access live data from your Dataverse tables when processing requests. Instead of static instructions, your prompts can incorporate real-time information to make informed decisions.</p>
+<h3 id="why-dataverse-grounding-matters">Why Dataverse grounding matters<a class="headerlink" href="#why-dataverse-grounding-matters" title="Permanent link">&para;</a></h3>
+<p>Traditional prompts work with fixed instructions:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Match this candidate to these job roles: Developer, Manager, Analyst
+</span></code></pre></div>
+<p>With Dataverse grounding, your prompt accesses current data:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Match this candidate to available job roles from the Job Roles table, 
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>considering current evaluation criteria and requirements
+</span></code></pre></div>
+<p>This approach provides several key benefits:</p>
+<ul>
+<li><strong>Dynamic updates:</strong> Job roles and criteria change without prompt modifications</li>
+<li><strong>Consistency:</strong> All agents use the same current data sources</li>
+<li><strong>Scalability:</strong> New roles and criteria are automatically available</li>
+<li><strong>Accuracy:</strong> Real-time data ensures decisions reflect current needs</li>
+</ul>
+<h3 id="how-dataverse-grounding-works">How Dataverse grounding works<a class="headerlink" href="#how-dataverse-grounding-works" title="Permanent link">&para;</a></h3>
+<p>When you enable Dataverse grounding for a custom prompt:</p>
+<ol>
+<li><strong>Data selection:</strong> Choose specific Dataverse tables and columns to include. You can also select related tables that the system will filter based on the parent records retrieved.</li>
+<li><strong>Context injection:</strong> The prompt automatically includes the retrieved data in the prompt context</li>
+<li><strong>Intelligent filtering:</strong> The system includes only data relevant to the current request if you provide any filtering.</li>
+<li><strong>Structured output:</strong> Your prompt can reference the retrieved data and reason about the records retrieved to create the output.</li>
+</ol>
+<h3 id="from-static-to-dynamic-the-grounding-advantage">From static to dynamic: The grounding advantage<a class="headerlink" href="#from-static-to-dynamic-the-grounding-advantage" title="Permanent link">&para;</a></h3>
+<p>Let's examine your current Summarize Resume flow from Mission 07 and see how Dataverse grounding transforms it from static to dynamic intelligence.</p>
+<p><strong>Current static approach:</strong>
+Your existing prompt included hardcoded evaluation criteria and predetermined matching logic. This approach works but requires manual updates whenever you add new job roles, change evaluation criteria, or shift company priorities.</p>
+<p><strong>Dataverse grounding transformation:</strong>
+By adding Dataverse grounding, your Summarize Resume flow will:</p>
+<ul>
+<li><strong>Access current job roles</strong> from your Job Roles table</li>
+<li><strong>Use live evaluation criteria</strong> instead of static descriptions  </li>
+<li><strong>Provide accurate matches</strong> based on real-time requirements</li>
+</ul>
+<h2 id="why-dedicated-prompts-vs-agent-conversations">🎯 Why dedicated prompts vs agent conversations<a class="headerlink" href="#why-dedicated-prompts-vs-agent-conversations" title="Permanent link">&para;</a></h2>
+<p>In Mission 02, you experienced how the Interview Agent could match candidates to job roles, but required complex user prompts like:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Upload this resume, then show me open job roles,
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>each with a description of the evaluation criteria, 
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>then use this to match the resume to at least one suitable
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>job role even if not a perfect match.
+</span></code></pre></div>
+<p>While this worked, dedicated prompts with Dataverse grounding offer significant advantages for specific tasks:</p>
+<h3 id="key-advantages-of-dedicated-prompts">Key advantages of dedicated prompts<a class="headerlink" href="#key-advantages-of-dedicated-prompts" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Agent Conversations</th>
+<th>Dedicated Prompts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Consistency</strong></td>
+<td>Results vary based on user's prompt crafting skills</td>
+<td>Standardized processing every time</td>
+</tr>
+<tr>
+<td><strong>Specialization</strong></td>
+<td>General-purpose reasoning may miss business nuances</td>
+<td>Purpose-built with optimized business logic</td>
+</tr>
+<tr>
+<td><strong>Automation</strong></td>
+<td>Requires human interaction and interpretation</td>
+<td>Triggers automatically with structured JSON output</td>
+</tr>
+</tbody>
+</table>
+<h2 id="understanding-record-retrieval-settings">⚙️ Understanding record retrieval settings<a class="headerlink" href="#understanding-record-retrieval-settings" title="Permanent link">&para;</a></h2>
+<p>When configuring Dataverse grounding for your prompts, it's critical to understand the <strong>Record Retrieval</strong> setting, which controls how much data is made available to your AI model.</p>
+<h3 id="what-is-record-retrieval">What is record retrieval?<a class="headerlink" href="#what-is-record-retrieval" title="Permanent link">&para;</a></h3>
+<p>Record retrieval determines the maximum number of records that the prompt can retrieve from your Dataverse knowledge sources (tables) and include in the prompt context sent to the AI model.</p>
+<h3 id="configuring-record-retrieval-finding-the-right-balance">Configuring record retrieval: Finding the right balance<a class="headerlink" href="#configuring-record-retrieval-finding-the-right-balance" title="Permanent link">&para;</a></h3>
+<p>While you can retrieve up to 1,000 records from Dataverse, understanding when and how to adjust this setting is critical for optimal prompt performance. The default limit is 30 records and the maximum is 1000, which is suitable for most scenarios with proper filtering. Each record you retrieve consumes tokens from your model's context window, directly impacting cost, processing time, and response quality.</p>
+<p>Dataverse grounding is not designed to process large datasets directly in the prompt. Even increasing the limit to 1,000 may not be the right answer if you're working with thousands of records. The key is to use <strong>filtering strategically</strong> to narrow your dataset before it reaches the AI model. Always filter by status, date ranges, categories, or other relevant criteria to ensure only the most pertinent records are included.</p>
+<h2 id="lab-8-add-dataverse-grounding-to-prompts">🧪 Lab 8: Add Dataverse grounding to prompts<a class="headerlink" href="#lab-8-add-dataverse-grounding-to-prompts" title="Permanent link">&para;</a></h2>
+<p>Time to upgrade your resume analysis capabilities! You'll enhance the existing Summarize Resume flow with dynamic job role matching.</p>
+<h3 id="prerequisites-to-complete-this-mission">Prerequisites to complete this mission<a class="headerlink" href="#prerequisites-to-complete-this-mission" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>You'll need to:</p>
+<ul>
+<li><strong>Have completed <a href="../07-multimodal-prompts/">Mission 07</a></strong> and have your resume analysis system ready</li>
+<li>Have downloaded sample resume documents from <a href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/operative/sample-data/resumes&amp;filename=operative_sampledata">test Resumes</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="81-add-dataverse-grounding-to-your-prompt">8.1 Add Dataverse grounding to your prompt<a class="headerlink" href="#81-add-dataverse-grounding-to-your-prompt" title="Permanent link">&para;</a></h3>
+<p>You'll build on the Summarize Resume prompt that you created in Mission 07. Currently it simply summarizes the resume, but now you'll ground it with the job roles as they currently exist in Dataverse, keeping it always current.</p>
+<p>First, let's examine the Dataverse tables you'll be grounding with:</p>
+<ol>
+<li>
+<p><strong>Navigate</strong> to <a href="https://make.powerapps.com">Power Apps</a> and select your environment using the <strong>Environment switcher</strong> on the top right of the navigation bar.</p>
+</li>
+<li>
+<p>Select <strong>Tables</strong> and locate the <strong>Job Roles</strong> table</p>
+</li>
+<li>
+<p>Review the key columns you'll use for grounding:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Job Role Number</strong></td>
+<td>Unique identifier for role matching</td>
+</tr>
+<tr>
+<td><strong>Job Title</strong></td>
+<td>Display name for the role</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Detailed role requirements</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Similarly, review the other tables such as the <strong>Evaluation Criteria</strong> table.</p>
+</li>
+</ol>
+<h3 id="82-add-dataverse-grounding-data-to-your-prompt">8.2 Add Dataverse grounding data to your prompt<a class="headerlink" href="#82-add-dataverse-grounding-data-to-your-prompt" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Navigate</strong> to Copilot Studio, and select your environment using the <strong>Environment switcher</strong> on the top right of the navigation bar.</p>
+</li>
+<li>
+<p>Select <strong>Tools</strong> from the left-hand navigation.</p>
+</li>
+<li>
+<p>Choose <strong>Prompt</strong> and locate your <strong>Summarize Resume</strong> prompt from Mission 07.<br />
+<img alt="Select Prompt" src="assets/8-select-prompt.png" /></p>
+</li>
+<li>
+<p>Select <strong>Edit</strong> to modify the prompt, and replace with the enhanced version below:</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Ensure the Resume and Cover Letter parameters remain intact as parameters.</p>
+</div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>You are tasked with extracting key candidate information from a resume and cover letter to facilitate matching with open job roles and creating a summary for application review.
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>### Instructions:
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>1. **Extract Candidate Details:**
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>   - Identify and extract the candidate&#39;s full name.
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>   - Extract contact information, specifically the email address.
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2. **Analyze Resume and Cover Letter:**
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>   - Review the resume content to identify relevant skills, experience, and qualifications.
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>   - Review the cover letter to understand the candidate&#39;s motivation and suitability for the roles.
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>3. **Match Against Open Job Roles:**
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>   - Compare the extracted candidate information with the requirements and descriptions of the provided open job roles.
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>   - Use the job descriptions to assess potential fit.
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>   - Identify all roles that align with the candidate&#39;s cover letter and profile. You don&#39;t need to assess perfect suitability.
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>   - Provide reasoning for each match based on the specific job requirements.
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>4. **Create Candidate Summary:**
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>   - Summarize the candidate&#39;s profile as multiline text with the following sections:
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>      - Candidate name
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>      - Role(s) applied for if present
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>      - Contact and location
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>      - One-paragraph summary
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>      - Top skills (8–10)
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>      - Experience snapshot (last 2–3 roles with outcomes)
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>      - Key projects (1–3 with metrics)
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>      - Education and certifications
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>      - Availability and work authorization
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>### Output Format
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>Provide the output in valid JSON format with the following structure:
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>{
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>  &quot;CandidateName&quot;: &quot;string&quot;,
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>  &quot;Email&quot;: &quot;string&quot;,
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>  &quot;MatchedRoles&quot;: [
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>    {
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>      &quot;JobRoleNumber&quot;: &quot;ppa_jobrolenumber from grounded data&quot;,
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>      &quot;RoleName&quot;: &quot;ppa_jobtitle from grounded data&quot;,
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>      &quot;Reasoning&quot;: &quot;Detailed explanation based on job requirements&quot;
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>    }
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>  ],
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>  &quot;Summary&quot;: &quot;string&quot;
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>}
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>### Guidelines
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>- Extract information only from the provided resume and cover letter documents.
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>- Ensure accuracy in identifying contact details.
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>- Use the available job role data for matching decisions.
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>- The summary should be concise but informative, suitable for quick application review.
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>- If no suitable matches are found, indicate an empty list for MatchedRoles and explain briefly in the summary.
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>### Input Data
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>Open Job Roles (ppa_jobrolenumber, ppa_jobtitle): /Job Role 
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>Resume: {Resume}
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>Cover Letter: {CoverLetter}
+</span></code></pre></div>
+</li>
+<li>
+<p>In the prompt editor, replace <code>/Job Role</code> by selecting <strong>+ Add content</strong>,  selecting <strong>Dataverse</strong> → <strong>Job Role</strong> and select the following columns, and then select <strong>Add</strong>:</p>
+<ol>
+<li>
+<p><strong>Job Role Number</strong></p>
+</li>
+<li>
+<p><strong>Job Title</strong></p>
+</li>
+<li>
+<p><strong>Description</strong></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can type the table name to search.</p>
+</div>
+</li>
+<li>
+<p>In the <strong>Job Role</strong> dialog, select <strong>Filter</strong> attribute, select <strong>Status</strong>, and then type <strong>Active</strong> as the <strong>Filter</strong> value.<br />
+<img alt="Add Dataverse Grounding" src="assets/8-add-grounding.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can use <strong>Add value</strong> here to add in an input parameter as well - for example if you had a prompt to summarize an existing record, you could provide the Resume Number as a parameter to filter by.</p>
+</div>
+</li>
+<li>
+<p>Next, you'll add the related Dataverse table <strong>Evaluation Criteria</strong>, by again selecting <strong>+ Add content</strong>, finding <strong>Job Roles</strong>, and instead of selecting the columns on Job Role, expand <strong>Job Role (Evaluation Criteria)</strong> and select the following columns, and then select <strong>Add</strong>:</p>
+<ol>
+<li>
+<p><strong>Criteria Name</strong></p>
+</li>
+<li>
+<p><strong>Description</strong><br />
+<img alt="Add related evaluation criteria" src="assets/8-add-eval-criteria.png" /></p>
+<p><img alt="Completed Prompt parameters and grounding" src="assets/8-all-prompt-parameters.png" /></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It is important to select the related Evaluation Criteria by first selecting the Job Role, and then navigating in the menu to Job Role (Evaluation Criteria). This will ensure that only the related records for the Job Role will be loaded.</p>
+</div>
+</li>
+<li>
+<p>Select the three dots (...) in the Instructions pane and select <strong>Settings</strong>. Adjust the <strong>Record retrieval</strong> to 1000 - this will allow the maximum Job Roles and Evaluation criteria to be included in your prompt.<br />
+<img alt="Prompt Settings" src="assets/8-prompt-settings.png" /></p>
+</li>
+</ol>
+<h3 id="83-test-the-enhanced-prompt">8.3 Test the enhanced prompt<a class="headerlink" href="#83-test-the-enhanced-prompt" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Select the <strong>Resume</strong> parameter, and upload a sample resume that you used in Mission 07.</li>
+<li>Select <strong>Test</strong>.</li>
+<li>Once the test has run, notice that the JSON output now includes the <strong>Matched Roles</strong>.</li>
+<li>Select the <strong>Knowledge used</strong> tab, to see the Dataverse data that merged with your prompt before execution.</li>
+<li><strong>Save</strong> your updated prompt. The system will now automatically include this Dataverse data with your prompt when the existing Summarize Resume Agent Flow calls it.<br />
+<img alt="Matched roles in JSON" src="assets/8-matched-roles-json.png" /></li>
+</ol>
+<h3 id="84-add-job-application-agent-flow">8.4 Add Job Application Agent Flow<a class="headerlink" href="#84-add-job-application-agent-flow" title="Permanent link">&para;</a></h3>
+<p>To allow our Application Intake Agent to create Job Roles based on the suggested roles, we need to create an Agent Flow. The agent will call this tool for each of the suggested job roles that the candidate is interested in.</p>
+<div class="admonition tip">
+<p class="admonition-title">Agent Flow Expressions</p>
+<p>It is very important that you follow the instructions for naming your nodes and entering expressions exactly because the expressions refer to the previous nodes using their name! Refer to the <a href="../../recruit/09-add-an-agent-flow/#you-mentioned-expressions-what-are-expressions">Agent Flow mission in Recruit</a> for a quick refresher!</p>
+</div>
+<ol>
+<li>
+<p>Inside the <strong>Hiring Agent,</strong> select the <strong>Agents</strong> tab, and open the <strong>Application Intake Agent</strong> child agent.</p>
+</li>
+<li>
+<p>Inside the <strong>Tools</strong> panel, select <strong>+ Add</strong> → <strong>+ New tool</strong> → <strong>Agent Flow</strong></p>
+</li>
+<li>
+<p>Select the <strong>When an agent calls the flow</strong> node, use <strong>+ Add an input</strong> to add the following parameter:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text</td>
+<td><code>ResumeNumber</code></td>
+<td>Be sure to only use the [ResumeNumber] - it MUST start with the letter R</td>
+</tr>
+<tr>
+<td>Text</td>
+<td><code>JobRoleNumber</code></td>
+<td>Be sure to only use the [JobRoleNumber] - it MUST start with the letter J</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="When an agent calls the flow" src="assets/8-add-application-1.png" /></p>
+</li>
+<li>
+<p>Select the <strong>+</strong> Insert action icon below the first node, search for <strong>Dataverse</strong>, select <strong>See more</strong>, and then locate the <strong>List rows</strong> action.</p>
+</li>
+<li>
+<p><strong>Rename</strong> the node as <code>Get Resume</code>, and then set the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>How to Set</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Table name</strong></td>
+<td>Select</td>
+<td>Resumes</td>
+</tr>
+<tr>
+<td><strong>Filter rows</strong></td>
+<td>Dynamic data (thunderbolt icon)</td>
+<td><code>ppa_resumenumber eq 'ResumeNumber'</code> Select and replace <strong>ResumeNumber</strong> with <strong>When an agent calls the flow</strong> → <strong>ResumeNumber</strong></td>
+</tr>
+<tr>
+<td><strong>Row count</strong></td>
+<td>Enter</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Get Resume" src="assets/8-add-application-2.png" /></p>
+</li>
+<li>
+<p>Now, select the <strong>+</strong> Insert action icon below <strong>Get Resume</strong>, search for <strong>Dataverse</strong>, select <strong>See more</strong>, and then locate the <strong>List rows</strong> action.</p>
+</li>
+<li>
+<p><strong>Rename</strong> the node as <code>Get Job Role</code>, and then set the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>How to Set</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Table name</strong></td>
+<td>Select</td>
+<td>Job Roles</td>
+</tr>
+<tr>
+<td><strong>Filter rows</strong></td>
+<td>Dynamic data (thunderbolt icon)</td>
+<td><code>ppa_jobrolenumber eq 'JobRoleNumber'</code> Select and replace <strong>JobRoleNumber</strong> with <strong>When an agent calls the flow</strong> → <strong>JobRoleNumber</strong></td>
+</tr>
+<tr>
+<td><strong>Row count</strong></td>
+<td>Enter</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Get Job Role" src="assets/8-add-application-3.png" /></p>
+</li>
+<li>
+<p>Now, select the <strong>+</strong> Insert action icon below Get Job Role, search for <strong>Dataverse</strong>, select <strong>See more</strong>, and then locate the <strong>Add a new row</strong> action.</p>
+</li>
+<li>
+<p><strong>Rename</strong> the node as <code>Add Application</code>, and then set the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>How to Set</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Table name</strong></td>
+<td>Select</td>
+<td>Job Applications</td>
+</tr>
+<tr>
+<td><strong>Candidate (Candidates)</strong></td>
+<td>Expression (fx icon)</td>
+<td><code>concat('ppa_candidates/',first(outputs('Get_Resume')?['body/value'])?['_ppa_candidate_value'])</code></td>
+</tr>
+<tr>
+<td><strong>Job Role (Job Roles)</strong></td>
+<td>Expression (fx icon)</td>
+<td><code>concat('ppa_jobroles/',first(outputs('Get_Job_Role')?['body/value'])?['ppa_jobroleid'])</code></td>
+</tr>
+<tr>
+<td><strong>Resume (Resumes)</strong></td>
+<td>Expression (fx icon)</td>
+<td><code>concat('ppa_resumes/', first(outputs('Get_Resume')?['body/value'])?['ppa_resumeid'])</code></td>
+</tr>
+<tr>
+<td><strong>Application Date</strong> (use <strong>Show all</strong>)</td>
+<td>Expression (fx icon)</td>
+<td><code>utcNow()</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Add Application" src="assets/8-add-application-4.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Respond to the agent node</strong>, and then select <strong>+ Add an output</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>How to Set</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>Select</td>
+<td><code>Text</code></td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>Enter</td>
+<td><code>ApplicationNumber</code></td>
+</tr>
+<tr>
+<td><strong>Value</strong></td>
+<td>Dynamic data (thunderbolt icon)</td>
+<td><em>Add Application → See More → Application Number</em></td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Enter</td>
+<td><code>The [ApplicationNumber] of the Job Application created</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Respond to the agent" src="assets/8-add-application-5.png" /></p>
+</li>
+<li>
+<p>Select <strong>Save draft</strong> on the top right</p>
+</li>
+<li>
+<p>Select the <strong>Overview</strong> tab, Select <strong>Edit</strong> on the <strong>Details</strong> panel</p>
+<ul>
+<li><strong>Flow name</strong>:<code>Create Job Application</code></li>
+<li><strong>Description</strong>:<code>Creates a new job application when given [ResumeNumber] and [JobRoleNumber]</code></li>
+<li><strong>Save</strong></li>
+</ul>
+</li>
+<li>
+<p>Select the <strong>Designer</strong> tab again, and select <strong>Publish</strong>.</p>
+</li>
+</ol>
+<h3 id="85-add-create-job-application-to-agent">8.5 Add Create Job Application to agent<a class="headerlink" href="#85-add-create-job-application-to-agent" title="Permanent link">&para;</a></h3>
+<p>Now you'll connect the published flow to your Application Intake Agent.</p>
+<ol>
+<li>
+<p>Navigate back to the <strong>Hiring Agent</strong> and select the <strong>Agents</strong> tab. Open the <strong>Application Intake Agent</strong>, and then locate the <strong>Tools</strong> panel.</p>
+</li>
+<li>
+<p>Select <strong>+ Add</strong></p>
+</li>
+<li>
+<p>Select the <strong>Flow</strong> filter, and search for <code>Create Job Application</code>. Select the <strong>Create Job Application</strong> flow, and then <strong>Add and configure</strong>.</p>
+</li>
+<li>
+<p>Set the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td><code>Creates a new job application when given [ResumeNumber] and [JobRoleNumber]</code></td>
+</tr>
+<tr>
+<td><strong>Additional details → When this tool may be used</strong></td>
+<td><code>Only when referenced by topics or agents</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Select <strong>Save</strong><br />
+<img alt="Add Agent Flow to Agent" src="assets/8-add-application-6.png" /></p>
+</li>
+</ol>
+<h3 id="86-define-agent-instructions">8.6 Define agent instructions<a class="headerlink" href="#86-define-agent-instructions" title="Permanent link">&para;</a></h3>
+<p>To create job applications, you need to tell the agent when to use the new tool. In this case, you'll ask the user to confirm which suggested job roles to apply to, and instruct the agent to run the tool for each role.</p>
+<ol>
+<li>
+<p>Move back in to the <strong>Application Intake Agent</strong>, and then locate the <strong>Instructions</strong> panel.</p>
+</li>
+<li>
+<p>In the <strong>Instructions</strong> field, <strong>add</strong> the following clear guidance for your child agent to the <strong>end of the existing</strong> instructions:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>3. Post Resume Upload
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>   - Respond with a formatted bullet list of [SuggestedJobRoles] the candidate could apply for.  
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>   - Use the format: [JobRoleNumber] - [RoleDescription]
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>   - Ask the user to confirm which Job Roles to create applications for the candidate.
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>   - When the user has confirmed a set of [JobRoleNumber]s, move to the next step.
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>4. Post Upload - Application Creation
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    - After the user confirms which [SuggestedJobRoles] for a specific [ResumeNumber]:
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    E.g. &quot;Apply [ResumeNumber] for the Job Roles [JobRoleNumber], [JobRoleNumber], [JobRoleNumber]
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    E.g. &quot;apply to all suggested job roles&quot; - this implies use all the [JobRoleNumbers] 
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>     - Loop over each [JobRoleNumber] and send with [ResumeNumber] to /Create Job Application   
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>     - Summarize the Job Applications Created
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>Strict Rules (that must never be broken)
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>You must always follow these rules and never break them:
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>1. The only valid identifiers are:
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>  - ResumeNumber (ppa_resumenumber)→ format R#####
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>  - CandidateNumber (ppa_candidatenumber)→ format C#####
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>  - ApplicationNumber (ppa_applicationnumber)→ format A#####
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>  - JobRoleNumber (ppa_jobrolenumber)→ format J#####
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>2. Never guess or invent these values.
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>3. Always extract identifiers from the current context (conversation, data, or system output). 
+</span></code></pre></div>
+</li>
+<li>
+<p>Where the instructions include a forward slash (/), select the text following the / and select the <strong>Create Job Application</strong> tool.</p>
+</li>
+<li>
+<p>Select <strong>Save</strong><br />
+<img alt="Create Job Application Instructions" src="assets/8-add-application-7.png" /></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Iterating over multiple items in Generative Orchestration</p>
+<p>These instructions use generative orchestration's ability to iterate over multiple rows when making decisions about which steps and tools to use. The Matched Job Roles will be automatically read and the Application Intake Agent will run for each row. Welcome to the magical world of generative orchestration!</p>
+</div>
+<h3 id="87-test-your-agent">8.7 Test your agent<a class="headerlink" href="#87-test-your-agent" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Open your <strong>Hiring Agent</strong> in Copilot Studio.</p>
+</li>
+<li>
+<p><strong>Upload</strong> a sample resume into the chat, and type:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>This is a new resume for the Power Platform Developer Role.
+</span></code></pre></div>
+</li>
+<li>
+<p>Notice how the agent provides a list of Suggested Job Roles - each with a Job Role number.<br />
+<img alt="Test results with suggested roles" src="assets/8-test-1.png" /></p>
+</li>
+<li>
+<p>You can then provide which of these you would like the Resume to be added as a job application for.
+    <strong>Examples:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>&quot;Apply for all of those job roles&quot;
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>&quot;Apply for the J10009 Power Platform Developer role&quot;
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>&quot;Apply for the Developer and Architect roles&quot;
+</span></code></pre></div>
+<p><img alt="Test results creating job applications" src="assets/8-test-2.png" /></p>
+</li>
+<li>
+<p>The <strong>Create Job Application tool</strong> will then be run for each job role you specified. Inside the Activity map, you will see the Create Job Application tool run for each of the Job Roles you asked to create an application for:<br />
+<img alt="Create Job Application in Activity Map" src="assets/8-create-job-application-activity-map.png" /></p>
+</li>
+</ol>
+<h2 id="mission-complete">🎉 Mission Complete<a class="headerlink" href="#mission-complete" title="Permanent link">&para;</a></h2>
+<p>Outstanding work, Operative! <strong>Operation Grounding Control</strong> is now complete. You've successfully enhanced your AI capabilities with dynamic data grounding, creating a truly intelligent hiring system.</p>
+<p>Here's what you've accomplished in this mission:</p>
+<p><strong>✅ Dataverse grounding mastery</strong><br />
+You now understand how to connect custom prompts to live data sources for dynamic intelligence.</p>
+<p><strong>✅ Enhanced resume analysis</strong><br />
+Your Summarize Resume flow now accesses real-time job role data and evaluation criteria for accurate matching.</p>
+<p><strong>✅ Data-driven decision making</strong><br />
+Your hiring agents can now adapt automatically to changing job requirements without manual prompt updates.</p>
+<p><strong>✅ Job Application Creation</strong><br />
+Your enhanced system can now create Job Applications and is ready for further complex workflow orchestration.</p>
+<p>🚀 <strong>Next up:</strong> In your next mission, you'll learn how to expand your prompt skills to enable document generation.</p>
+<p>⏩ <a href="../09-document-generation/">Move to Mission 09: Document generation</a></p>
+<h2 id="tactical-resources">📚 Tactical Resources<a class="headerlink" href="#tactical-resources" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/use-your-own-prompt-data?WT.mc_id=power-182762-scottdurow">Use your own data in a prompt</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/create-a-custom-prompt?WT.mc_id=power-182762-scottdurow">Create a custom prompt</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/knowledge-add-dataverse?WT.mc_id=power-182762-scottdurow">Work with Dataverse in Copilot Studio</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/prompts-overview?WT.mc_id=power-182762-scottdurow">AI Builder custom prompts overview</a></p>
+<p>📖 <a href="https://learn.microsoft.com/ai-builder/?WT.mc_id=power-182762-scottdurow">Power Platform AI Builder documentation</a></p>
+<p>📖 <a href="https://learn.microsoft.com/training/modules/ai-builder-grounded-prompts/?WT.mc_id=power-182762-scottdurow">Training: Create AI Builder prompts using your own Dataverse data</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
