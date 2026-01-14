@@ -1,0 +1,1754 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/operative-preview/04-automate-triggers/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Mission 04: Add Event Triggers to act autonomously - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-04-add-event-triggers-to-act-autonomously" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mission 04: Add Event Triggers to act autonomously
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recruit
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operative (Coming Soon)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commander (Coming Soon)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-signal-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🕵️‍♂️ CODENAME: OPERATION SIGNAL POINT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Mission Brief
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔎 Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-event-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤔 What is an Event trigger?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-agent-vs-autonomous-agent-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏓 Interactive agent vs Autonomous agent - comparison
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-tips-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Developer tips &amp; gotchas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-04-automating-candidate-application-emails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Lab 04 - Automating candidate application emails
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Mission Complete
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactical-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Tactical Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="mission-04-add-event-triggers-to-act-autonomously">Mission 04: Add Event Triggers to act autonomously<a class="headerlink" href="#mission-04-add-event-triggers-to-act-autonomously" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="codename-operation-signal-point">🕵️‍♂️ CODENAME: <code>OPERATION SIGNAL POINT</code><a class="headerlink" href="#codename-operation-signal-point" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operation Time Window:</strong> <code>~45 minutes</code></p>
+</blockquote>
+<h2 id="mission-brief">🎯 Mission Brief<a class="headerlink" href="#mission-brief" title="Permanent link">&para;</a></h2>
+<p>Welcome back, Agent. In <a href="../03-multi-agent/">Mission 03</a> - you learned how to build an Application Intake child agent and an Interview Prep connected agent to broaden your main Hiring Agent's capabilities.</p>
+<p>Your assignment, should you choose to accept it, is <strong>Operation Signal Point</strong> - diving deeper into <strong>event triggers</strong> - elevating your agent system from reactive to <strong>autonomous operation</strong>. You'll transform your agents from waiting for human input to proactively responding to external events and taking intelligent action without supervision.</p>
+<p>Think of it as upgrading from agents that <em>answer questions</em> to agents that <em>anticipate needs</em> and <em>act independently</em>. Through event triggers and automated workflows, your Hiring Agent will detect incoming resume emails, process attachments automatically, store data in Dataverse, and notify your HR recruitment team via Microsoft Teams - all while you focus on higher-value tasks.</p>
+<p>Welcome to the world where automation meets intelligence.</p>
+<h2 id="objectives">🔎 Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
+<p>In this mission, you'll learn:</p>
+<ol>
+<li>How event triggers enable autonomous agent behavior without user interaction</li>
+<li>The differences between interactive and autonomous agents in Copilot Studio</li>
+<li>How to create event triggers that automatically process email attachments and upload files to Dataverse</li>
+<li>How to build agent flows that post adaptive cards to Teams channels for notifications</li>
+<li>How to pass data between event triggers and agent flows for end-to-end automation</li>
+</ol>
+<h2 id="what-is-an-event-trigger">🤔 What is an Event trigger?<a class="headerlink" href="#what-is-an-event-trigger" title="Permanent link">&para;</a></h2>
+<p>Previously in <a href="../../recruit/10-add-event-triggers/">Recruit</a>, we learned about event triggers. Let's do a quick recap on this in case you missed it.</p>
+<p><strong>Event triggers</strong> let an agent <em>act</em> on <em>its</em> own when something happens in another system - no user message required. When the configured event fires - such as “new SharePoint item,” “new email,” “Planner task assigned,” or even a time‑based recurrence, a connector sends a trigger payload to your agent. The agent then follows your instructions to decide which actions or topics to call.</p>
+<h3 id="key-characteristics">Key characteristics<a class="headerlink" href="#key-characteristics" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Autonomous activation:</strong></p>
+<ul>
+<li>Unlike topic triggers that start when a user types to the agent, event triggers fire from external events, enabling proactive behavior.</li>
+</ul>
+</li>
+<li>
+<p><strong>Payload-driven:</strong></p>
+<ul>
+<li>Each event delivers a payload (variables + optional instructions) through a connector. The agent uses your defined instructions and the payload to choose what to do next.</li>
+<li>For example, <em>call a topic</em> or <em>execute actions defined by Tools</em>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Examples out-of-the-box:</strong></p>
+<ul>
+<li>SharePoint/OneDrive file or item created</li>
+<li>Planner task completed/assigned</li>
+<li>Microsoft Forms response submitted</li>
+<li>Recurrence/schedule</li>
+</ul>
+<p>Availability depends on your organization’s data policies configured in Power Automate.</p>
+</li>
+<li>
+<p><strong>Requires generative orchestration:</strong></p>
+<ul>
+<li>Event triggers are available only when generative orchestration is enabled for the agent.</li>
+</ul>
+</li>
+<li>
+<p><strong>Billing/usage:</strong></p>
+<ul>
+<li>Each trigger delivery counts as a message toward Copilot Studio capacity.</li>
+<li>For example a 10‑minute recurrence sends a message every 10 minutes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Auth model and setup:</strong></p>
+<ul>
+<li>You add triggers within the agent Overview, under <em>Triggers</em>. Authentication for the trigger connector uses the agent maker’s account (“agent author authentication”).</li>
+<li>You can edit trigger parameters and payload in the Power Automate maker portal.</li>
+</ul>
+</li>
+<li>
+<p><strong>Testing &amp; observability:</strong></p>
+<ul>
+<li>You can test triggers from the agent's test pane and inspect behavior with the activity map before publishing.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">TL;DR for developers</p>
+<p>Think of event triggers as <strong>webhook-like signals</strong> that push a structured payload into your agent, letting it <em>initiate</em> work and chain actions across systems - without waiting for a user to ask.</p>
+</div>
+<h3 id="topic-triggers-how-they-differ">Topic triggers - how they differ<a class="headerlink" href="#topic-triggers-how-they-differ" title="Permanent link">&para;</a></h3>
+<p>Previously you learned about topic triggers in <a href="../../recruit/07-add-new-topic-with-trigger/">Recruit</a>, however you might still be wondering how <em>Topic</em> triggers differ from <em>Event</em> triggers, and why that distinction matters for understanding what makes an agent autonomous.</p>
+<p>Topic triggers control <em>when a topic runs</em>, usually in response to a user message.</p>
+<ul>
+<li>In generative orchestration, the default trigger is <strong>By agent</strong> - the planner chooses a topic whose name/description best matches the user’s message.</li>
+<li>In classic orchestration, the default is <strong>Phrases</strong> - the planner chooses a topic when one or several trigger phrases best match the user's message.</li>
+</ul>
+<p>Other trigger types include <code>Message received</code>, <code>Event received</code>, <code>Activity received</code>, <code>Conversation update</code>, <code>Invoke received</code>, <code>On redirect</code>, <code>Inactivity</code>, and <code>Plan complete</code>.</p>
+<div class="admonition info">
+<p class="admonition-title">Core difference</p>
+<p>Topic triggers are <em>conversation activity</em> starters inside the chat.</p>
+<p>Event triggers are system <em>event</em> starters delivered via connectors that can run the agent without any conversation at all.</p>
+</div>
+<h3 id="quick-guide-of-topic-trigger-vs-event-trigger">Quick guide of Topic trigger vs Event trigger<a class="headerlink" href="#quick-guide-of-topic-trigger-vs-event-trigger" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Topic trigger:</strong> User (or chat activity) said/did X ➡️ run Topic T.</li>
+<li><strong>Event trigger:</strong> SharePoint/Planner/Email/Timer fired with payload P ➡️ agent evaluates instructions ➡️ call Actions/Topics accordingly.</li>
+</ul>
+<h2 id="interactive-agent-vs-autonomous-agent-comparison">🏓 Interactive agent vs Autonomous agent - comparison<a class="headerlink" href="#interactive-agent-vs-autonomous-agent-comparison" title="Permanent link">&para;</a></h2>
+<p>Now that you know the difference between event triggers and topics triggers, let's next learn about the difference between an interactive agent vs an autonomous agent.</p>
+<p>In Copilot Studio terms, "interactive" maps to agents that primarily engage via <strong>topics</strong> in a chat or channel. "Autonomous" maps to agents that also leverage <strong>event triggers</strong> to run without user input.</p>
+<p>The following table summarizes their differences and similarities.</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Interactive agent</th>
+<th>Autonomous agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>How it starts</td>
+<td>User (or chat activity) triggers a topic. Example: By agent, Phrases, Message received.</td>
+<td>External event trigger sends a payload via connector to the agent. Example: SharePoint, Planner, email, schedule, etc.</td>
+</tr>
+<tr>
+<td>Primary use</td>
+<td>Q&amp;A, guided workflows, request-driven actions in chat - Teams, web, etc.</td>
+<td>Proactive operations and background automation - react to system changes and then notify, file, or orchestrate tasks.</td>
+</tr>
+<tr>
+<td>Trigger surface</td>
+<td>Topic triggers: By agent / Phrases / Message received / Activity types / Invoke / Inactivity / Plan complete</td>
+<td>Event triggers library via connectors; payload includes event data + optional instructions.</td>
+</tr>
+<tr>
+<td>Planner (generative orchestration)</td>
+<td>Strongly leveraged for By agent and Plan complete triggers to select/sequence topics.</td>
+<td>Required for event triggers; the agent uses instructions + payload to decide which actions/topics to call.</td>
+</tr>
+<tr>
+<td>Typical example</td>
+<td>User asks "What's our refund policy?" → Topic runs, queries knowledge, response.</td>
+<td>New Planner task assigned → Event trigger fires → Agent posts a Teams message, updates a record, or calls a topic.</td>
+</tr>
+<tr>
+<td>Setup path</td>
+<td>Create topics, define trigger type, author dialog/actions; publish to channels.</td>
+<td>Add event trigger (Overview → Triggers), authenticate connector with agent author credentials, configure payload/instructions; test via test pane; publish.</td>
+</tr>
+<tr>
+<td>Auth and governance</td>
+<td>Runs under channel/auth context; topic triggers respond to chat activities in allowed channels.</td>
+<td>Trigger availability depends on Power Automate data policies; connectors run under the agent maker’s account.</td>
+</tr>
+<tr>
+<td>Observability</td>
+<td>Test topics within Copilot Studio, inspect conversation transcripts/activities.</td>
+<td>Use Test trigger and activity map to validate execution before publishing, monitor activity after publishing.</td>
+</tr>
+<tr>
+<td>Capacity impact</td>
+<td>Each user message/agent response is a message consuming capacity.</td>
+<td>Each event delivery is also a message, plus any subsequent actions. Example: a 10‑minute recurrence = 6 messages/hour</td>
+</tr>
+</tbody>
+</table>
+<h3 id="when-to-use-which">When to use which?<a class="headerlink" href="#when-to-use-which" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Choose <strong>topic triggers (interactive)</strong> when users initiate the agent conversation - FAQ, guided intake, or command‑style tasks inside chat. The planner’s By agent trigger reduces manual phrase curation.</li>
+<li>Add <strong>event triggers (autonomous)</strong> when the agent should start the conversation or take action itself - on updates in SharePoint/Dataverse, incoming email, or on a schedule. This moves you from reactive to proactive operations.</li>
+</ul>
+<h2 id="developer-tips-gotchas">Developer tips &amp; gotchas<a class="headerlink" href="#developer-tips-gotchas" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Enable generative orchestration</strong> for any agent you want to make autonomous. Event triggers won’t show up otherwise.</p>
+</li>
+<li>
+<p><strong>Model the payload early.</strong> Decide what minimal fields your agent needs from the trigger such as <code>itemId</code>, <code>assignedTo</code>, <code>dueDate</code> and add concise instructions that tell the agent which action/topic to call based on payload values.</p>
+</li>
+<li>
+<p><strong>Auth scope matters.</strong> Triggers authenticate using the agent maker’s account. Ensure that account has the right connector permissions and complies with Power Automate data policies.</p>
+</li>
+<li>
+<p><strong>Control cost and noise.</strong> High‑frequency recurrences or highly chatty sources can rack up message consumption quickly - throttle where possible or add conditions in the trigger to filter events.</p>
+</li>
+<li>
+<p><strong>Test before publishing.</strong> Use <strong>Test trigger</strong> and the activity map to watch the plan and called actions - iterate on instructions/payload until behavior is stable.</p>
+</li>
+</ol>
+<h2 id="lab-04-automating-candidate-application-emails">🧪 Lab 04 - Automating candidate application emails<a class="headerlink" href="#lab-04-automating-candidate-application-emails" title="Permanent link">&para;</a></h2>
+<p>We're next going to add an event trigger to the <strong>Hiring Agent</strong> and build an agent flow in the child <strong>Application Intake Agent</strong> to handle further processing for autonomy.</p>
+<h3 id="use-case-scenario">✨ Use case scenario<a class="headerlink" href="#use-case-scenario" title="Permanent link">&para;</a></h3>
+<p><strong>As an</strong> HR Recruiter</p>
+<p><strong>I want to</strong> be notified when an email with a resume arrives in my Inbox and is automatically uploaded to Dataverse</p>
+<p><strong>So that I can</strong> stay notified of resumes sent by email for applications automatically uploaded to Dataverse</p>
+<p>We'll be achieving this using two techniques</p>
+<ol>
+<li>
+<p>An event trigger for when the email arrives,</p>
+<ol>
+<li>Check the <code>contentType</code> of the file equals <code>PDF</code> as the format type.</li>
+<li>Extract the file and upload to Dataverse using actions through the Dataverse connector.</li>
+<li>Then send a prompt to the agent for further processing by passing input parameters from the Dataverse actions.</li>
+</ol>
+</li>
+<li>
+<p>An agent flow will be added to the child <strong>Application Intake Agent</strong> which is invoked by the prompt in the event trigger.</p>
+<ol>
+<li>Use the input parameters passed from the prompt of the event trigger in an adaptive card posted to a channel in Microsoft Teams to notify the HR Recruitment team. The adaptive card will have a link to the Dataverse row which can be viewed in the <strong>Hiring Agent</strong>.</li>
+</ol>
+</li>
+</ol>
+<p>Let's begin!</p>
+<h3 id="prerequisites-to-complete-this-mission">✨ Prerequisites to complete this mission<a class="headerlink" href="#prerequisites-to-complete-this-mission" title="Permanent link">&para;</a></h3>
+<p>To complete this lab you will need to:</p>
+<ul>
+<li><strong>Have completed <a href="../01-get-started/">Mission 01</a> and <a href="../03-multi-agent/">Mission 03</a></strong> and have your Hiring Agent ready.</li>
+<li>You'll also need access to <strong>Microsoft Teams</strong> to complete the second lab exercise of posting an adaptive card to Microsoft Teams.</li>
+</ul>
+<h3 id="lab-41-automate-uploading-resumes-to-dataverse-received-by-email">🧪 Lab 4.1 - Automate uploading resumes to Dataverse received by email<a class="headerlink" href="#lab-41-automate-uploading-resumes-to-dataverse-received-by-email" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>In the Hiring Agent, scroll down in the <strong>Overview tab</strong> to the <strong>Triggers and Channels</strong> section and select <strong>+ Add</strong>.</p>
+<p><img alt="Add trigger to agent" src="assets/03_addTrigger.png" /></p>
+</li>
+<li>
+<p>A list of triggers will appear. Select <strong>When a new email arrives (V3)</strong> and select <strong>Next</strong>.</p>
+<p><img alt="Select When a new email arrives (V3) trigger" src="assets/03_selectTrigger.png" /></p>
+</li>
+<li>
+<p>We'll now see the <strong>Trigger name</strong> and the <strong>Sign in</strong> connection references for the apps listed. Rename the trigger name to the following:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>When a new email arrives from an applicant
+</span></code></pre></div>
+<p>NOTE: Make sure you see a green check by each of the connection references for the apps listed. If you don't see a green check, sign in through the ellipsis (...) and select <strong>+ New connection reference</strong> to create a new connection reference.</p>
+<p><img alt="Update details for trigger name and check connection references" src="assets/03_triggerName.png" /></p>
+</li>
+<li>
+<p>The final step is to set the input properties of the trigger. Update the following properties to the following,</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>How to Set</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Include Attachments (Optional)</strong></td>
+<td>Dropdown</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Subject Filter (Optional)</strong></td>
+<td>Type/Enter with keyboard</td>
+<td>Application</td>
+</tr>
+<tr>
+<td><strong>Only with Attachments (Optional)</strong></td>
+<td>Dropdown</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p>Select <strong>Create trigger</strong>.</p>
+<p><img alt="Configure trigger inputs" src="assets/03_triggerSettings.png" /></p>
+</li>
+<li>
+<p>Once created, a confirmation message will appear that the trigger has been added to the agent. Select <strong>Close</strong> and the trigger will be listed in the <strong>Triggers</strong> section.</p>
+</li>
+<li>
+<p>We're now going to update the event trigger to add some more automation capabilities. Select the <strong>ellipsis (...)</strong> by the trigger and select <strong>Edit in Power Automate</strong>.</p>
+<p><img alt="Select Edit in Power Automate" src="assets/03_editInPowerAutomate.png" /></p>
+</li>
+<li>
+<p>The trigger will then load as a flow in the Power Automate maker portal. It will open to the flow designer where we can add further logic and actions for more automation. The trigger will appear at the top, followed by <strong>Sends a prompt to the specified copilot for processing</strong> as the last action in the flow.</p>
+<p><img alt="Flow designer in Power Automate maker portal" src="assets/3.1_06_EditInPowerAutomate.png" /></p>
+</li>
+<li>
+<p>By default, the <strong>When a new email arrives</strong> trigger in Power Automate may process multiple emails together if several arrive at once, running the flow only once for the batch.</p>
+<p>To ensure the flow runs separately for each email, enable the <strong>Split On</strong> setting in the trigger’s settings and select <code>@triggerOutputs()?['body/value']</code> in the dropdown array field.</p>
+<p>With <strong>Split On</strong> turned on and the array field set to <code>@triggerOutputs()?['body/value']</code>, the flow will run individually for each message, even if many arrive simultaneously.</p>
+<p><img alt="Turn on Split On settings in the trigger" src="assets/3.1_07_UpdateTriggerSettings.png" /></p>
+</li>
+<li>
+<p>Let's next add some logic to check the file type of the attachment, we only want to upload .PDF file attachments and not images (these could come from email signatures). Select the <strong>+</strong> icon below the trigger and select <strong>Control</strong> under the <strong>Built in tools</strong> section.</p>
+<p><img alt="Select Control" src="assets/3.1_08_Control.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Condition</strong> action.</p>
+<p><img alt="Select Condition action" src="assets/3.1_09_AddConditionAction.png" /></p>
+</li>
+<li>
+<p>Now we configure the condition to check if the file attachment’s type is .PDF. In the <strong>Choose a value</strong> field on the left, select the <strong>lightning bolt icon</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Search</strong> field type the following,</p>
+<div class="language-text highlight"><pre><span></span><code>  ```text
+  content type
+  ```
+</code></pre></div>
+</li>
+<li>
+<p>Then select the <strong>Attachments Content-Type</strong> parameter from the trigger.</p>
+<p><img alt="Condition" src="assets/03_flowconditionval.png" /></p>
+</li>
+<li>
+<p>Let's pause here for a moment, you probably noticed that the <strong>For each</strong> action automatically appeared.</p>
+<p><img alt="For each" src="assets/03_flowforeach.png" /></p>
+<p>This action represents looping through each attachment in the email, since the <strong>Attachments Content-Type</strong> parameter is tied to each attachment.</p>
+<p>Underneath the hood, it's an array and that's why the <strong>For each</strong> action was automatically added when we selected the <strong>Attachments Content-Type</strong> parameter in the <strong>Condition</strong> action.</p>
+<p>To learn more about this, expand the following additional learning block.</p>
+<details class="info">
+<summary>Additional Learning: For each action automatically appearing</summary>
+<p>🤔 <strong>Why does "Apply to each" or "For each" Automatically Appear?</strong></p>
+<p>When you select a parameter (dynamic content) that represents a list or array of items - for example, a list of attachments, emails, or rows - Power Automate recognizes that you might want to process each item individually.</p>
+<p>To help you do this, Power Automate automatically adds an <strong>“Apply to each”</strong> (or <strong>For each</strong>) loop around your action. This ensures that your action will run once for every item in the list, rather than trying to process the whole list at once (which could cause errors).</p>
+<p>🦋 <strong>Example</strong></p>
+<ul>
+<li>If you select "Attachments" from a previous action (which is an array), and try to use it in an action that expects a single file, Power Automate wraps your action in an <strong>"Apply to each"</strong> (or <strong>For each</strong>) loop. </li>
+<li>This way, your action will run for <strong>each attachment</strong> - one at a time.</li>
+</ul>
+<p>💡 <strong>Key Points</strong></p>
+<ul>
+<li><strong>Automatic:</strong> The loop appears automatically to help you process each item in a collection.</li>
+<li><strong>Prevents errors:</strong> Without the loop, your action might fail because it can't handle multiple items at once.</li>
+<li><strong>Visual cue:</strong> It's a visual way to show that your flow will repeat the action for every item in the list.</li>
+</ul>
+</details>
+<p><img alt="For Each action explained" src="assets/3.1_11_ForEach.png" /></p>
+</li>
+<li>
+<p>Next, in the other <strong>Choose a value</strong> field to the right in the <strong>Condition</strong> block, type the following,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>application/pdf
+</span></code></pre></div>
+<p>This will ensure that for each file attachment, it will check the file extension format is .PDF.</p>
+<p><img alt="EqualToValue" src="assets/3.1_12_EqualToValue.png" /></p>
+</li>
+<li>
+<p>Now we'll configure the <strong>True</strong> path to extract the file from the email and upload it into the <strong>Resume</strong> Dataverse table.</p>
+<p>Add a new action below in the <strong>True</strong> path and search for <code>html to text</code>. Select the <strong>Html to text</strong> action.</p>
+<p>To learn more about the <strong>Html to text</strong> action, expand the following additional learning block.</p>
+<details class="info">
+<summary>Additional Learning: Html to text action</summary>
+<p>🤔 <strong>What is the "HTML to text" Action?</strong></p>
+<p>The <strong>HTML to text</strong> action in Power Automate is used to convert HTML-formatted content into plain text. This is especially useful when you receive data (like emails, web content, or API responses) that contains HTML tags, and you want to extract just the readable text without any formatting or code.</p>
+<p>⚙️ <strong>How does it work?</strong></p>
+<ul>
+<li><strong>Input:</strong> You provide a string of HTML content (for example, the body of an email).</li>
+<li><strong>Output:</strong> The action removes all HTML tags and returns only the plain text.</li>
+</ul>
+<p>👍🏻 <strong>When should you use it?</strong></p>
+<ul>
+<li>When you want to extract readable text from emails, web pages, or API responses that contain HTML.</li>
+<li>Before sending content to systems that don’t support HTML formatting (like SMS, Teams messages, or databases).</li>
+<li>To clean up data for further processing or analysis.</li>
+</ul>
+<p>🔭 <strong>Where to find it?</strong></p>
+<ul>
+<li>In Agent Flows, search for the action called <code>HTML to text</code>. It's under the <strong>Data Operations</strong> connector.</li>
+</ul>
+<p>💡 <strong>Key Points</strong></p>
+<ul>
+<li>It removes all HTML tags and leaves only the text.</li>
+<li>It does not interpret or execute scripts/styles - just strips tags.</li>
+<li>Useful for data cleaning and preparing content for plain-text outputs.    </li>
+</ul>
+</details>
+<p><img alt="Add HTML to text action" src="assets/3.1_13_AddHTMLToTextAction.png" /></p>
+</li>
+<li>
+<p>Next, we need to create a new connection reference for the <strong>Html to text</strong> action by selecting <strong>Create new</strong>.</p>
+<p><img alt="Add new connection reference" src="assets/03_createnewhtmlconnection.png" /></p>
+</li>
+<li>
+<p>The action can now be configured. Let's add the <strong>Body</strong> parameter from the trigger. In the <strong>Content</strong> field, select the <strong>lightning bolt icon</strong> or <strong>fx icon</strong> to the right.</p>
+<p><img alt="Add Dynamic Content" src="assets/3.1_15_AddDynamicContent.png" /></p>
+</li>
+<li>
+<p>In the <strong>Dynamic content</strong> tab, search for <code>body</code> and select the <strong>Body</strong> parameter, followed by selecting <strong>Add</strong>.</p>
+<p><img alt="Add Body parameter" src="assets/3.1_16_AddDynamicContent.png" /></p>
+</li>
+<li>
+<p>We've completed configuring this action so let's exit from the action by selecting the two angle brackets («) pointing to the left to collapse the panel.</p>
+<p><img alt="Collapse action panel" src="assets/3.1_17_CollapseAction.png" /></p>
+</li>
+<li>
+<p>We'll add a new action by selecting the <strong>+ icon</strong> underneath the <strong>Html to text</strong> action which will load the panel to add actions. Search for <strong>Dataverse add</strong>.Select the <strong>Add a new row</strong> action.</p>
+<p><img alt="Add a new row action" src="assets/3.1_19_AddANewRow.png" /></p>
+</li>
+<li>
+<p>Rename the action by pasting the following as the name in the upper left hand corner of the properties panel,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Add a new Resume row
+</span></code></pre></div>
+<p>For the <strong>Table name</strong> parameter, search for <code>res</code> and select the <strong>Resumes</strong> table.</p>
+<p><img alt="Rename action and configure Table name parameter" src="assets/3.1_20_RenameAndSelectResumesTable.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Resume Title</strong> field next and select the <strong>fx icon</strong> to the right.</p>
+<p><img alt="Configure Resume Title parameter" src="assets/3.1_21_AddDynamicContent.png" /></p>
+</li>
+<li>
+<p>In the <strong>Function tab</strong>, enter the following expression that uses the <code>item()</code> function.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>item()?[&#39;name&#39;]
+</span></code></pre></div>
+<p>Select <strong>Add</strong> to add the expression to the <strong>Resume Title</strong> parameter.</p>
+<p>To learn more about the <code>item ()</code> function, expand the following additional learning block.</p>
+<details class="info">
+<summary>Additional Learning: <code>item()</code> function</summary>
+<p>🤔 <strong>What is the <code>item()</code> function?</strong></p>
+<ul>
+<li>When you use an <strong>Apply to each</strong> action, Power Automate goes through each element in a collection (array).</li>
+<li>It’s most often used inside actions like <strong>Apply to each</strong> (or <strong>For each</strong>), <strong>Select</strong>, or <strong>Filter array</strong>.</li>
+</ul>
+<p>⚙️ <strong>How does it work?</strong></p>
+<ul>
+<li><code>item()</code> is a function that returns the current item being processed in a loop or array operation.</li>
+<li>Inside that loop, <code>item()</code> refers to the <em>current element</em> being processed.</li>
+</ul>
+<p>📌 <strong>Where do you use it?</strong></p>
+<ul>
+<li><strong>Apply to each:</strong> to access properties of the current item.</li>
+<li><strong>Select:</strong> to transform each item in an array.</li>
+<li><strong>Filter array:</strong> to reference the current item being evaluated.</li>
+</ul>
+<p>🦋 <strong>Example</strong></p>
+<ul>
+<li>Expression inside a loop:<ul>
+<li><code>item()?['Email']</code></li>
+</ul>
+</li>
+<li>This gets the <code>Email</code> property of the current item.</li>
+</ul>
+<p>💡 <strong>Key Points</strong></p>
+<ul>
+<li><code>item()</code> is <em>context-sensitive</em>: it always refers to the current item in the loop or array operation you're in.</li>
+<li>If you nest loops, you can use <code>items('LoopName')</code> to refer to items in a specific loop.      </li>
+</ul>
+</details>
+<p><img alt="Add expression for Resume Title parameter" src="assets/3.1_22_ResumeTitleParameter.png" /></p>
+</li>
+<li>
+<p>We still need to configure several more parameters, select <strong>Show all</strong> and in the <strong>Cover Letter</strong> field, select the <strong>fx icon</strong> to the right.</p>
+<p>In the <strong>Function tab</strong>, enter the following expression that uses the same expression in the previous <a href="../03-multi-agent/">mission</a>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>if(greater(length(body(&#39;Html_to_text&#39;)), 2000), substring(body(&#39;Html_to_text&#39;), 0, 2000), body(&#39;Html_to_text&#39;))
+</span></code></pre></div>
+<p>This expression checks if the <em>text</em> from the <strong>Html to text</strong> action is longer than 2000 characters, and if so, returns only the first 2000 characters; otherwise, it returns the full text.</p>
+<p><img alt="Add expression for Cover Letter parameter" src="assets/3.1_23_CoverLetterParameter.png" /></p>
+</li>
+<li>
+<p>The expression will now be added to the <strong>Cover Letter</strong> field.</p>
+<p><img alt="Expression added to the Cover Letter parameter" src="assets/3.1_24_ExpressionForCoverLetter.png" /></p>
+</li>
+<li>
+<p>For the <strong>Source Email Address</strong> field, select the <strong>lightning bolt icon</strong> and search for <code>from</code> and select the <strong>From</strong> parameter from the trigger as this contains the email address value.</p>
+<p><img alt="Source Email Address parameter" src="assets/3.1_25_FromParameter.png" /></p>
+</li>
+<li>
+<p>For the <strong>Upload Date</strong> field, select the <strong>fx icon</strong> to the right. In the <strong>Function tab</strong>, enter the following expression that uses the <code>utcNow()</code> function.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>utcNow()
+</span></code></pre></div>
+<p>To learn more about the <code>utcNow</code> function, expand the following additional learning block.</p>
+<details class="info">
+<summary>Additional Learning: <code>utcNow</code> function</summary>
+<p>🤔 <strong>What is the <code>utcNow()</code> function?</strong></p>
+<ul>
+<li>The utcnow() function in Power Automate returns the current date and time in Coordinated Universal Time (UTC) in an ISO 8601 format, like: <code>2025-09-23T04:32:14Z</code></li>
+</ul>
+<p>🦋 <strong>Example</strong></p>
+<ul>
+<li>Expression:<ul>
+<li><code>concat('Report generated on ', utcnow())</code></li>
+</ul>
+</li>
+<li>Output is:<ul>
+<li>Report generated on <code>2025-09-23T04:32:14Z</code></li>
+</ul>
+</li>
+</ul>
+<p>💡 <strong>Key Points</strong></p>
+<ul>
+<li><strong>No arguments (input parameters) required:</strong> it always gives the current UTC timestamp.</li>
+<li><strong>Use cases</strong><ul>
+<li>Adding timestamps to logs or file names</li>
+<li>Comparing current time with other dates</li>
+<li>Scheduling or time-based conditions</li>
+</ul>
+</li>
+</ul>
+</details>
+<p><img alt="Upload Date Parameter" src="assets/3.1_26_UploadDateParameter.png" /></p>
+</li>
+<li>
+<p>We've now completed configuring the <strong>Add a new Resume row</strong> action so let's exit from the panel by collapsing it.</p>
+<p><img alt="Exit from action panel" src="assets/3.1_27_CollapseAction.png" /></p>
+</li>
+<li>
+<p>We'll add a new action by selecting the <strong>+ icon</strong> underneath the <strong>Add a new Resume row</strong> action which will load the panel to add actions. Search for <strong>Dataverse Upload</strong>. Select the <strong>Upload a file or an image</strong> action.</p>
+<p><img alt="Add the Upload a file or an image action" src="assets/3.1_29_AddUploadAFileOrAnImage.png" /></p>
+</li>
+<li>
+<p>Rename the action by pasting the following as the name,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Upload Resume File
+</span></code></pre></div>
+<p><img alt="Rename action" src="assets/3.1_30_RenameAction.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Content name</strong> field next and select the <strong>fx icon</strong> to the right.</p>
+<p>In the <strong>Function tab</strong>, enter the following expression that uses the <code>item ()</code> function. This gets the <code>name</code> property of the current item (the attachment file).</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>item()?[&#39;name&#39;]
+</span></code></pre></div>
+<p><img alt="Configure Content name parameter" src="assets/3.1_31_ContentNameParameter.png" /></p>
+</li>
+<li>
+<p>For the <strong>Table name</strong> parameter, search for <code>resumes</code> and select the <strong>Resumes</strong> table.</p>
+<p><img alt="Configure Table name parameter" src="assets/3.1_32_SelectResumesTable.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Row ID</strong> field next and select the <strong>lightning bolt icon</strong> to the right.</p>
+<p>Search for <code>ID</code> and select the <strong>Resume</strong> parameter from the <em>Add a new row</em> Dataverse action as this contains the ID value of the row to upload the PDF file to.</p>
+<p>Select <strong>Add</strong>.</p>
+<p><img alt="Select Row ID" src="assets/3.1_33_RowIDParameter.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Column name</strong> field and select the <strong>Resume PDF</strong> option.</p>
+<p><img alt="Configure Column name parameter" src="assets/3.1_34_ColumnNameParameter.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Content</strong> field and select the <strong>fx icon</strong> to the right.</p>
+<p>In the <strong>Function tab</strong>, enter the following expression that uses the <code>item ()</code> function. This gets the <code>contentBytes</code> property of the current item (the attachment file). <code>contentBytes</code> refers to the raw binary data of a file or attachment, encoded as a Base64 string.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>item()?[&#39;contentBytes&#39;]
+</span></code></pre></div>
+</li>
+<li>
+<p>We've completed configuring this action so let's exit from the action by selecting the two angle brackets («) pointing to the left to collapse the panel.</p>
+<p><img alt="Collapse action panel" src="assets/3.1_36_CollapseAction.png" /></p>
+</li>
+<li>
+<p>Next, select the <strong>Sends a prompt to the specified copilot for processing</strong>, then drag and drop this action to be below the <strong>Upload Resume File</strong> action in the <em>True</em> path of the condition.</p>
+<p><img alt="Drag and drop action in True path" src="assets/3.1_37_DragAndDropAction.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Sends a prompt to the specified copilot for processing</strong> to configure it.</p>
+<p><img alt="Select action" src="assets/3.1_38_SelectAction.png" /></p>
+</li>
+<li>
+<p>In the <strong>Body/message</strong> field, select all of the field content and clear/delete it.</p>
+<p><img alt="Clear Body parameter" src="assets/3.1_39_ClearBodyParameter.png" /></p>
+</li>
+<li>
+<p>Copy and paste the following text into the <strong>Body/message</strong> field and highlight the <code>RESUME ID PLACEHOLDER</code>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Send [ResumeId (text)] = &quot;RESUME ID PLACEHOLDER&quot; and [ResumeTitle (text_1)] = &quot;RESUME TITLE PLACEHOLDER&quot; and [ResumeNumber (text_2)]= &quot;RESUME NUMBER PLACEHOLDER&quot; to the Tool &quot;Notify Teams Applicant channel&quot; in the child agent &quot;Application Intake Agent&quot;
+</span></code></pre></div>
+<p><img alt="Replace Resume ID Placeholder text" src="assets/3.1_40_ReplaceResumeIDPlaceholder.png" /></p>
+</li>
+<li>
+<p>Select the <strong>lightning bolt icon</strong>  to the right.</p>
+<p>Search for <code>resume</code> and select the <strong>Resume</strong> parameter from the <em>Add a new row Dataverse</em> action as this contains the <code>ID</code> value of the Resume row created.</p>
+<p>Select <strong>Add</strong>.</p>
+<p><img alt="Select Resume parameter" src="assets/3.1_41_SelectResumeParameter.png" /></p>
+</li>
+<li>
+<p>Highlight the <code>RESUME TITLE PLACEHOLDER</code>. Select the <strong>lightning bolt icon</strong> to the right.</p>
+<p>Search for <code>title</code> and select the <strong>Resume Title</strong> parameter from the <em>Add a new row Dataverse</em> action as this contains the <code>resume title</code> value of the Resume row created.</p>
+<p>Select <strong>Add</strong>.</p>
+<p><img alt="Select Resume parameter" src="assets/3.1_42_SelectResumeTitleParameter.png" /></p>
+</li>
+<li>
+<p>Highlight the <code>RESUME NUMBER PLACEHOLDER</code>. Select the <strong>lightning bolt icon</strong> to the right.</p>
+<p>Search for <code>resume number</code> and select the <strong>Resume Number</strong> parameter from the <em>Add a new row Dataverse</em> action as this contains the <code>Resume Number</code> value of the Resume row created.</p>
+<p>Select <strong>Add</strong>.</p>
+<p><img alt="Select Resume parameter" src="assets/3.1_43_SelectResumeNumberParameter.png" /></p>
+</li>
+<li>
+<p>We've completed configuring this action and our agent flow 🙌🏻 You're doing great! Now let's save our event trigger flow by selecting <strong>Save</strong>.</p>
+<p><img alt="Save" src="assets/03_saveTriggerFlow.png" /></p>
+</li>
+<li>
+<p>We now need to edit the details of the agent flow, select <strong>Back</strong>.</p>
+<p><img alt="Select Back" src="assets/3.1_45_Back.png" /></p>
+</li>
+<li>
+<p>Select <strong>Edit</strong> in the <strong>Details</strong> section and update the <strong>Plan</strong> to the <strong>Copilot Studio</strong> option.</p>
+<p>Select <strong>Save</strong>.</p>
+<p><img alt="Change Copilot Studio plan" src="assets/3.1_46_ChangePlanDetails.png" /></p>
+</li>
+<li>
+<p>A modal will appear to ask you to confirm to switch to Copilot Studio plan. Select <strong>Confirm</strong>.</p>
+<p><img alt="Confirm Copilot Studio plan change" src="assets/3.1_47_ConfirmCopilotStudioPlan.png" /></p>
+</li>
+<li>
+<p>The plan is now updated to <strong>Copilot Studio</strong>. Select <strong>Edit</strong> as we need to publish the event trigger flow for our agent.</p>
+<p><img alt="Edit flow" src="assets/3.1_48_PlanChangedAndEdit.png" /></p>
+</li>
+<li>
+<p>Select <strong>Publish</strong>.</p>
+<p><img alt="Publish" src="assets/3.1_49_Publish.png" /></p>
+<p>Hooray! The event trigger flow is now Published 😃</p>
+<p><img alt="Published" src="assets/3.1_50_Published.png" /></p>
+</li>
+</ol>
+<p>Let's proceed in creating a new agent flow that will be invoked by the child <strong>Intake Application Agent</strong>.</p>
+<h3 id="lab-42-notify-a-teams-channel-using-an-adaptive-card">Lab 4.2 - Notify a Teams channel using an adaptive card<a class="headerlink" href="#lab-42-notify-a-teams-channel-using-an-adaptive-card" title="Permanent link">&para;</a></h3>
+<p>We're now going to create a new agent flow for the child <strong>Intake Application Agent</strong> that uses the values passed by the event trigger, to post an adaptive card to a Teams channel. This adaptive card will alert the HR recruitment team about the PDF that was automatically uploaded so that they can review it.</p>
+<p>Let's begin!</p>
+<ol>
+<li>
+<p>In the <strong>Hiring Agent</strong> select the <strong>Agents</strong> tab and select the <strong>Application Intake Agent</strong></p>
+<p><img alt="Select Application Intake Agent" src="assets/03_selectAppIntakeAgent.png" /></p>
+</li>
+<li>
+<p>Scroll down to <strong>Tools</strong> and select <strong>+ Add</strong>.</p>
+<p><img alt="Add Tool" src="assets/03_addToolHiring.png" /></p>
+</li>
+<li>
+<p>The <strong>Add tool</strong> modal will appear. Select <strong>+ New tool</strong>.</p>
+<p><img alt="Select New Tool" src="assets/03_newToolbtn.png" /></p>
+</li>
+<li>
+<p>Select <strong>Agent flow</strong>.</p>
+<p><img alt="Select Agent flow" src="assets/03_agentflowselect.png" /></p>
+</li>
+<li>
+<p>The <strong>agent flow designer</strong> will next load. In the <strong>When an agent calls the flow</strong> trigger, select <strong>+ Add an input</strong>.</p>
+<p><img alt="Select add an input" src="assets/3.2_05_SelectAddAnInput.png" /></p>
+</li>
+<li>
+<p>Select <strong>Text</strong> as the type of user input.</p>
+<p><img alt="Select Text" src="assets/3.2_06_SelectText.png" /></p>
+</li>
+<li>
+<p>In the input text field, copy and paste the following for the input parameter name.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ResumeId
+</span></code></pre></div>
+<p><img alt="ResumeId input" src="assets/3.2_07_ResumeIdInput.png" /></p>
+</li>
+<li>
+<p>Repeat the same steps to add a second text input. Copy and paste the following for the input parameter name.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>ResumeTitle
+</span></code></pre></div>
+<p><img alt="ResumeTitle input" src="assets/3.2_08_ResumeTitleInput.png" /></p>
+</li>
+<li>
+<p>Repeat the same steps to add a third text input. Copy and paste the following for the input parameter name.</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>ResumeNumber
+</span></code></pre></div>
+<img alt="ResumeNumber input" src="assets/3.2_09_ResumeNumberInput.png" /></p>
+</li>
+<li>
+<p>Remember how in <a href="../../recruit/08-add-adaptive-card/#81-create-a-new-topic-with-an-adaptive-card-for-user-to-submit-their-request">Recruit</a> we added an adaptive card within a Topic for our agent? This time round, we're going to add an adaptive card in an agent flow. We're now going to add another action to our agent flow that will post an adaptive card to a Teams channel.</p>
+<p>Select the <strong>+ icon</strong> below the trigger.</p>
+<p><img alt="Add new action" src="assets/3.2_10_AddNewAction.png" /></p>
+</li>
+<li>
+<p>Search for <strong>Microsoft Teams post</strong> and select the <strong>Post card in a chat or channel</strong> action.</p>
+<p><img alt="Select post card in a chat or channel action" src="assets/3.2_11_SelectPostCardInAChatOrChannel.png" /></p>
+</li>
+<li>
+<p>A connection reference to Microsoft Teams needs to be created with your signed in user account. Select <strong>Sign in</strong>.</p>
+<p><img alt="Select sign in" src="assets/3.2_12_SignInToCreateConnectionReference.png" /></p>
+</li>
+<li>
+<p>Select your user account and then select <strong>Allow access</strong>.</p>
+<p><img alt="Select Allow access" src="assets/3.2_13_AllowAccess.png" /></p>
+</li>
+<li>
+<p>Configure according to the following input parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>How to Set</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Post as</strong></td>
+<td>Dropdown</td>
+<td>Select the <code>Flow bot</code> option</td>
+</tr>
+<tr>
+<td><strong>Post in</strong></td>
+<td>Dropdown</td>
+<td>Select the <code>Channel</code> option</td>
+</tr>
+<tr>
+<td><strong>Team</strong></td>
+<td>Dropdown</td>
+<td>Select a team that's available in your environment that you have access to for the purpose of completing this lab exercise</td>
+</tr>
+<tr>
+<td><strong>Team</strong></td>
+<td>Dropdown</td>
+<td>Select a channel that's available in your environment that you have access to for the purpose of completing this lab exercise</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Configure input parameters" src="assets/3.2_14_ConfigureParameters.png" /></p>
+</li>
+<li>
+<p>Next, we'll configure the <strong>Adaptive Card</strong> field. Select the <strong>Adaptive Card</strong> field.</p>
+<p><img alt="Select Adaptive Card field" src="assets/3.2_15_SelectAdaptiveCardParameter.png" /></p>
+</li>
+<li>
+<p>Open the <a href="assets/3.2_ResumeTableUpdated.json">Resume Table Updated JSON file</a>, copy its entire contents, and paste them into the Adaptive Card field.</p>
+<p><img alt="Copy and paste JSON" src="assets/3.2_16_JSON.png" /></p>
+</li>
+<li>
+<p>Similar to what we did in <a href="../../recruit/08-add-adaptive-card/#81-create-a-new-topic-with-an-adaptive-card-for-user-to-submit-their-request">Recruit</a>, we're going to replace existing values in the JSON payload with actual values or dynamic content.</p>
+<p>First, let's update the URL for the <code>url</code> property within the <code>selectAction</code> property. This URL will be replaced with the URL of the Resumes system view in the <strong>Hiring Hub</strong> model-driven app. This will allow the Recruiter to select the action and be directed to the Resumes system view in the model-driven app.</p>
+<p>Highlight the current URL value and delete it.</p>
+<p><img alt="Select URL value" src="assets/3.2_17_SystemViewURL.png" /></p>
+</li>
+<li>
+<p>In the <strong>Hiring Hub</strong> model-driven app, navigate to the <strong>Resumes</strong> system view using the left hand side menu and copy the URL. Then navigate back to the agent flow, and paste the copied URL into the <strong>url</strong> property of the within the <code>selectAction property</code>.</p>
+<p><img alt="Copy Resumes system view URL" src="assets/3.2_18_CopyResumesSystemViewURL.png" /></p>
+</li>
+<li>
+<p>You should see the following where highlighted in Yellow is your environment details of the <strong>Hiring Hub</strong> model-driven app.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Organization URI</strong></td>
+<td>GUID</td>
+<td>The Dataverse/Dynamics 365 environment organization URL</td>
+</tr>
+<tr>
+<td><strong>appid</strong></td>
+<td>GUID</td>
+<td>To open a specific model-driven app, the query parameter of either appid or appname is used. In this case, the appid is used</td>
+</tr>
+<tr>
+<td><strong>viewid</strong></td>
+<td>GUID</td>
+<td>The query parameter which is the id of the view</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Paste URL" src="assets/3.2_19_PasteURL.png" /></p>
+</li>
+<li>
+<p>Next, we'll add dynamic content values for several properties. Let's start with the text that will display the Resume Number reference of the row that was created by the event trigger autonomously.</p>
+<p>Select the <strong>panel</strong> icon to load the action panel.</p>
+<p><img alt="Select panel icon" src="assets/3.2_20_SelectPannelIcon.png" /></p>
+</li>
+<li>
+<p>Scroll down to the line where you see the <code>text</code> property for <code>RESUME NUMBER PLACEHOLDER</code>. Highlight the placeholder value and delete it.</p>
+<p><img alt="Delete placeholder" src="assets/3.2_21_DeleteResumeNumberPlaceholder.png" /></p>
+</li>
+<li>
+<p>Click in-between the double quotation marks and select the <strong>lightning bolt icon</strong> or <strong>fx icon</strong> to the right.</p>
+<p>In the <strong>Dynamic Content</strong> tab select the <strong>ResumeNumber</strong> parameter and select <strong>Add</strong>.</p>
+<p><img alt="SAdd ResumeNumber parameter" src="assets/3.2_22_SelectResumeNumberParameter.png" /></p>
+</li>
+<li>
+<p>The <strong>ResumeNumber</strong> parameter will now be added as dynamic content to the <code>text</code> property.</p>
+<p><img alt="ResumeNumber dynamic content" src="assets/3.2_23_ResumeNumberDynamicContent.png" /></p>
+</li>
+<li>
+<p>We'll repeat the same steps for the <code>RESUME NAME PLACEHOLDER</code>. Scroll down to the line where you see the <code>text</code> property for <code>RESUME NAME PLACEHOLDER</code>. Highlight the placeholder value and delete it.</p>
+<p><img alt="Resume Name Placeholder" src="assets/3.2_24_ResumeNamePlaceholder.png" /></p>
+</li>
+<li>
+<p>Click in-between the double quotation marks and select the select the <strong>lightning bolt icon</strong> or <strong>fx icon</strong> to the right.</p>
+<p>In the <strong>Dynamic Content</strong> tab select the <strong>ResumeTitle</strong> parameter and select <strong>Add</strong>.</p>
+<p><img alt="SAdd ResumeNumber parameter" src="assets/3.2_25_SelectResumeTitleParameter.png" /></p>
+</li>
+<li>
+<p>The <strong>ResumeTitle</strong> parameter will now be added as dynamic content to the <code>text</code> property.</p>
+<p><img alt="ResumeNumber dynamic content" src="assets/3.2_26_ResumeTitleDynamicContent.png" /></p>
+</li>
+<li>
+<p>We'll repeat the same steps for the <strong>Due Date</strong> value that represents when a recruiter should review the resume by. Scroll down to the line where you see the <code>text</code> property for <code>May 21, 2023</code>.</p>
+<p><img alt="Select Allow access" src="assets/3.2_27_DueDatePlaceholder.png" /></p>
+</li>
+<li>
+<p>Delete this date placeholder value and click in-between the double quotation marks.</p>
+<p><img alt="Delete" src="assets/3.2_28_DeleteDueDatePlaceholder.png" /></p>
+</li>
+<li>
+<p>Select the <strong>lightning bolt icon</strong> or <strong>fx icon</strong> to the right and in the <strong>Function</strong> tab, enter the following expression and select <strong>Add</strong>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>addDays(utcNow(), 3, &#39;MMM dd, yyyy&#39;)
+</span></code></pre></div>
+<p>This expression utilizes two functions.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>addDays</strong></td>
+<td>Adds a specified number of days to a given date and returns the resulting date in string format</td>
+</tr>
+<tr>
+<td><strong>utcNow</strong></td>
+<td>Returns the current date and time in Coordinated Universal Time (UTC) format as a string.</td>
+</tr>
+</tbody>
+</table>
+<p>For the utcNow value, we are formatting the date to be month and date, followed by the year.</p>
+<p><img alt="Expression Due Date" src="assets/3.2_29_01_ExpressionDueDate.png" /></p>
+<p>The expression will now be added to the <code>text</code> property.</p>
+<p><img alt="Expression Due Date" src="assets/3.2_29_02_ExpressionDueDate.png" /></p>
+</li>
+<li>
+<p>Lastly, we'll update the URL for the <code>url</code> property within the <code>actions</code> array property at the bottom of the JSON payload. This current placeholder URL will be replaced with the URL of the Resume row in the <strong>Hiring Hub</strong> model-driven app. This will allow the Recruiter to select the <code>Action.OpenURL</code> action of the adaptive card and be directed to the Resume in the model-driven app.</p>
+<p><img alt="Delete View Resume URL placeholder" src="assets/3.2_30_ViewResumeURLPlaceholder.png" /></p>
+</li>
+<li>
+<p>In the <strong>Hiring Hub</strong> model-driven app, open a row in the <strong>Resumes</strong> system view using the left hand side menu. The resume row will load as a form in the model-driven app.</p>
+<p>Copy the URL for the Resume row.</p>
+<details class="info">
+<summary>How to navigate back to the <strong>Hiring Hub</strong> model-driven app in case you exited/closed it</summary>
+</details>
+<ol>
+<li>
+<p>Browse to <a href="https://make.powerapps.com">https://make.powerapps.com</a> and make sure you are in your developer environment that you're using for these lab exercises, otherwise switch to it.</p>
+<p><img alt="Browse to make.powerapps.com" src="assets/3.2_31_Note_01_BrowseToURL.png" /></p>
+</li>
+<li>
+<p>Select <strong>Apps</strong> in the left hand side menu pane and for the <strong>Hiring Hub</strong> model-driven app, select the <strong>Play</strong> icon to load it in your browser.</p>
+<p><img alt="Select Hiring Hub model-driven app" src="assets/3.2_31_Note_02_HiringHubApp.png" /></p>
+<p><img alt="Copy Resume row URL" src="assets/3.2_31_CopyResumeURL.png" /></p>
+</li>
+</ol>
+</li>
+<li>
+<p>Then navigate back to the agent flow, highlight the current placeholder URL value and delete it.</p>
+<p><img alt="Delete Resume row URL placeholder" src="assets/3.2_32_SelectResumeURLPlaceHolder.png" /></p>
+</li>
+<li>
+<p>Then paste the copied URL into the <strong>url</strong> property of the within the <code>url property</code>.</p>
+<p><img alt="Paste the copied Resume row URL" src="assets/3.2_33_PasteResumeRowURL.png" /></p>
+</li>
+<li>
+<p>You should see the following. Delete the <code>GUID</code> id value at the end. We'll replace this dynamic content - the <strong>ResumeId</strong> parameter.</p>
+<p><img alt="Delete View Resume URL placeholder" src="assets/3.2_34_DeleteViewResumePlaceholderURL.png" /></p>
+</li>
+<li>
+<p>Select the <strong>lightning bolt icon</strong> or <strong>fx icon</strong> to the right.</p>
+<p>In the <strong>Dynamic Content</strong> tab select the <strong>ResumeId</strong> parameter and select <strong>Add</strong>..</p>
+<p><img alt="ResumeId parameter" src="assets/3.2_35_ResumeIdParameter.png" /></p>
+</li>
+<li>
+<p>The <strong>ResumeId</strong> will be added as dynamic content. The following highlighted in Yellow is your environment details of the <strong>Hiring Hub</strong> model-driven app.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Organization URI</strong></td>
+<td>GUID</td>
+<td>The Dataverse/Dynamics 365 environment organization URL</td>
+</tr>
+<tr>
+<td><strong>appid</strong></td>
+<td>GUID</td>
+<td>To open a specific model-driven app, the query parameter of either appid or appname is used. In this case, the appid is used</td>
+</tr>
+<tr>
+<td><strong>id</strong></td>
+<td>GUID</td>
+<td>The query parameter which is the id of the Resume row</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="ResumeId dynamic content" src="assets/3.2_36_ResumeIdDynamicContent.png" /></p>
+</li>
+<li>
+<p>We've completed configuring the <strong>Post card in a chat or channel</strong> action 👏🏻 Exit from the action configuration panel by selecting the <strong>x</strong> icon.</p>
+<p><img alt="Close panel" src="assets/3.2_37_CloseActionPanel.png" /></p>
+</li>
+<li>
+<p>Finally, we'll configure the last action, <strong>Respond to the agent</strong> by sending a text back to the agent to end the processing.</p>
+<p>In the <strong>Respond to the agent</strong> action, select <strong>+Add an output</strong>.</p>
+<p><img alt="Select Add an output" src="assets/3.2_38_AddAnOutput.png" /></p>
+</li>
+<li>
+<p>Select <strong>Text</strong> as the type of output.</p>
+<p><img alt="Select test as the type output" src="assets/3.2_39_SelectText.png" /></p>
+</li>
+<li>
+<p>Enter the following as the following as the name of the output: <code>EndConversation</code></p>
+<p><img alt="End Conversation Output" src="assets/3.2_40_EndConversationOutput.png" /></p>
+</li>
+<li>
+<p>Enter the following as the value for the output.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Finished
+</span></code></pre></div>
+<p><img alt="End Conversation Output value" src="assets/3.2_41_EndConversationOutputValue.png" /></p>
+</li>
+<li>
+<p>We've now completed configuring the agent flow. Select <strong>Save draft</strong> to save the agent flow. A confirmation message will appear once saved.</p>
+<p><img alt="Save draft" src="assets/3.2_42_SaveDraft.png" /></p>
+</li>
+<li>
+<p>Before publishing the agent flow, we need to update the details for the agent flow. Select the <strong>Overview</strong> tab and select <strong>Edit</strong>.</p>
+<p>In the flow name field, enter the following.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Notify Teams Applicant channel
+</span></code></pre></div>
+<p>Afterwards, select the <strong>Refresh</strong> icon to update the description of the agent flow using AI.</p>
+<p>Then select <strong>Save</strong> to save the updated details for the agent flow.</p>
+<p><img alt="Edit and save details" src="assets/3.2_43_EditDetails.png" /></p>
+</li>
+<li>
+<p>Navigate back to the <strong>Designer</strong> tab and select <strong>Publish</strong> to publish the agent flow. A confirmation message will appear once saved.</p>
+<p><img alt="Publish agent flow" src="assets/3.2_44_PublishAgentFlow.png" /></p>
+</li>
+<li>
+<p>The agent flow now needs to be added as a tool in the <strong>Application Intake Agent</strong>. Navigate back to the <strong>Hiring Agent</strong> and select the <strong>Agents</strong> tab, then select the <strong>Application Intake Agent</strong>.</p>
+<p><img alt="Select Application Intake Agent" src="assets/3.2_45_ApplicationIntakeAgent.png" /></p>
+</li>
+<li>
+<p>In the <strong>Details</strong> section of the agent, we'll update the <strong>Description</strong> field. Copy the following and paste and the end of the description text.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>and also notifies the Teams Applicant channel
+</span></code></pre></div>
+<p><img alt="Update Agent Description" src="assets/3.2_46_UpdateAgentDescription.png" /></p>
+</li>
+<li>
+<p>Next, we'll add the agent flow as a tool. Scroll down to the <strong>tools</strong> section and select <strong>+ Add</strong>.</p>
+<p><img alt="Select Add" src="assets/3.2_47_AddTools.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Flow</strong> tab and choose the agent flow created earlier, <strong>Notify Teams Applicant Channel</strong>.</p>
+<p><img alt="Select agent flow" src="assets/3.2_48_NotifyTeamsApplicantChannelAgentFlow.png" /></p>
+</li>
+<li>
+<p>Select <strong>Add and configure</strong> next.</p>
+<p><img alt="Select Add and configure" src="assets/03_addAndConfig.png" /></p>
+</li>
+<li>
+<p>In the <strong>Inputs</strong> section, the three inputs we configured earlier in the agent flow are visible. By default, the <strong>Fill using</strong> configuration is set to <strong>Dynamically fill with AI</strong>. We'll keep this setting as-is as the prompt from the event trigger (in the last action, <strong>Sends a prompt to the specified copilot for processing</strong> - this is steps 38 - 44 of <strong>Lab 4.1 - Automate uploading resumes to Dataverse received by email</strong>) will contain the parameter values that AI will extract.</p>
+<p><img alt="Tool agent flow inputs" src="assets/3.2_50_Inputs.png" /></p>
+</li>
+<li>
+<p>Now that the tool has been added to the <strong>Application Intake Agent</strong>, the instructions of the agent needs to be updated. Select the <strong>back arrow</strong> icon to return to the list of agents.</p>
+<p><img alt="Select back arrow icon" src="assets/3.2_51_SelectBack.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Application Intake Agent</strong> in the <strong>Agents</strong> tab of the <strong>Hiring Agent</strong>.</p>
+<p><img alt="Select Application Intake Agent" src="assets/3.2_52_SelectApplicationIntakeAgent.png" /></p>
+</li>
+<li>
+<p>In the <strong>Instructions</strong> field, enter a new line after <code>2.Post-Upload</code> instructions. Copy and paste the following instructions.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Process for Resume Upload via Email
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>1. When you receive a message, **Send [ResumeId (text)] = &quot;1680265f-5793-f011-b41b-7c1e525be9f7&quot; and [ResumeTitle (text_1)] = &quot;TAYLOR TESTPERSON (FICTITIOUS).pdf&quot; and [ResumeNumber (text_2)]= &quot;R01026&quot; to the Tool &quot;Notify Teams Applicant channel&quot;** in the child agent &quot;Application Intake Agent&quot;, call [AGENT FLOW PLACEHOLDER]
+</span></code></pre></div>
+<p><img alt="Update instructions of Application Intake Agent" src="assets/3.2_53_PasteCopiedInstructions.png" /></p>
+</li>
+<li>
+<p>Highlight the <code>[AGENT FLOW PLACEHOLDER</code> text.</p>
+<p><img alt="Highlight placeholder" src="assets/3.2_54_HighlightPlaceholder.png" /></p>
+</li>
+<li>
+<p>Enter the forward slash character, <code>/</code>, and select the <strong>Notify Teams Applicant Channel</strong> tool.</p>
+<p><img alt="Select Notify Teams Applicant Channel tool" src="assets/3.2_55_NotifyTeamsApplicatnChannelTool.png" /></p>
+</li>
+<li>
+<p>The agent flow will now be invoked by the <strong>Application Intake Agent</strong> as per the instructions, after the last action (<strong>Sends a prompt to the specified copilot for processing</strong>) in the event trigger sends the prompt that contains the parameter values back to the agent.</p>
+<p>Select <strong>Save</strong> to save the updated instructions for the <strong>Application Intake Agent</strong>.</p>
+<p><img alt="Select Save" src="assets/3.2_56_Save.png" /></p>
+</li>
+<li>
+<p>The instructions will now be updated once the agent has been saved.</p>
+<p><img alt="Instructions updated" src="assets/3.2_57_InstructionsUpdated.png" /></p>
+</li>
+<li>
+<p>We now need to <strong>Publish</strong> the <strong>Hiring Agent</strong>. Select <strong>Publish</strong> on the upper right, and in the <em>Publish this agent modal</em> that appears select <strong>Publish</strong>.</p>
+<p><img alt="Publish Hiring Agent" src="assets/3.2_58_PublishAgent.png" /></p>
+</li>
+<li>
+<p>Once published, a confirmation message will appear that the agent has been published.</p>
+<p><img alt="Confirmation message" src="assets/3.2_59_AgentPublished.png" /></p>
+</li>
+</ol>
+<p>We can now test the agent!</p>
+<h3 id="lab-43-test-event-trigger">Lab 4.3 - Test event trigger<a class="headerlink" href="#lab-43-test-event-trigger" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>To execute the event trigger, an email needs to be sent with a Resume pdf file. In Outlook, compose a new email message.</p>
+<table>
+<thead>
+<tr>
+<th>Email Component</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>To recipient</strong></td>
+<td>Use your signed in user account as the value</td>
+</tr>
+<tr>
+<td><strong>File attachment</strong></td>
+<td>Upload the <a href="../test-data/resumes/TAYLOR%20TESTPERSON%20%28FICTITIOUS%29.pdf">TAYLOR TESTPERSON (FICTITIOUS)</a> file</td>
+</tr>
+<tr>
+<td><strong>Subject</strong></td>
+<td>Job Application</td>
+</tr>
+<tr>
+<td><strong>Body</strong></td>
+<td>Copy and paste the following below as the body of the email</td>
+</tr>
+</tbody>
+</table>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Dear Hiring Manager,
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>I am writing to express my interest in the Senior Power Platform Engineer position at your organization. With over nine years of experience delivering secure and scalable solutions on Microsoft cloud platforms, I am confident in my ability to contribute effectively to your team.
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>In my most recent role as Lead Power Platform Engineer, I developed an automated resume-intake pipeline, reducing manual triage and improving searchability. I have delivered HR case management applications, introduced solution-aware flows, and implemented PR checks to enhance deployment lead times. My expertise includes Power Apps, Power Automate, Power Pages, Dataverse, and a range of Microsoft 365 services, as well as integration with Graph/REST APIs and Azure Functions.
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>Previously, I developed Teams approvals with adaptive cards, cutting approval times to the same day, and created robust error-handling frameworks. My background also includes migrating legacy workflows to Power Automate and building self-service portals adopted by hundreds of employees.
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>I hold a B.Sc. in Computer Science and am certified as a Power Platform Developer (PL-400) and Solution Architect (PL-600). I am also passionate about mentoring and have volunteered with local maker groups.
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>Please find my CV attached for your consideration. I would welcome the opportunity to discuss how my skills and experience align with your needs.
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>Thank you for your time and consideration.
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>Kind regards,
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>Taylor Testperson
+</span></code></pre></div>
+<p><strong>Send</strong> the email once composed.</p>
+<p><img alt="Compose email with PDF file attachment" src="assets/3.3_01_ComposeEmailWithAttachment.png" /></p>
+</li>
+<li>
+<p>In the <a href="https://make.powerautomate.com/">Power Automate maker portal</a> for the event trigger flow, select the <strong>Refresh</strong> icon to view the flow run that succeeded for the sent email.</p>
+<p><img alt="Select refresh icon to view flow run" src="assets/3.3_02_FlowRun.png" /></p>
+</li>
+<li>
+<p>Back in Copilot Studio in the <strong>Hiring Agent</strong> select the <strong>Activity</strong> tab.</p>
+<p><img alt="Select Activity tab" src="assets/3.3_03_SelectActivity.png" /></p>
+</li>
+<li>
+<p>The <strong>Activity</strong> tab will load which will display all the activities of the <strong>Hiring Agent</strong>. There will be an activity with the name value of <strong>Automated</strong> that has a status of <strong>Complete</strong>. This activity represents the event trigger and the agent flow that was invoked.</p>
+<p><img alt="Activity completed" src="assets/3.3_04_StatusComplete.png" /></p>
+</li>
+<li>
+<p>Select the activity, and select the event trigger in the activity map. On the right hand side panel, notice how the input parameters in the prompt contain the <code>Resume Id</code>, <code>Resume Title</code> and <code>Resume Number</code> parameter values from the <strong>Dataverse</strong> row that was created. This was from the dynamic content values configured earlier in steps 38 - 44 of <strong>Lab 4.1 - Automate uploading resumes to Dataverse received by email</strong>.</p>
+<p><img alt="Event trigger" src="assets/3.3_05_EventTrigger.png" /></p>
+</li>
+<li>
+<p>Navigate back to the <strong>Hiring Hub</strong> model-driven app and in the <strong>Resumes system view</strong>, select <strong>Refresh</strong> to refresh the view. The newly created row for the resume that was sent by email will now be listed as it was created through the event trigger.</p>
+<p><img alt="Resume row created" src="assets/3.3_06_ResumeRowCreated.png" /></p>
+</li>
+<li>
+<p>Navigate back to Copilot Studio and select the <strong>Notify Teams Applicant Channel</strong> agent flow within the <strong>Application Intake Agent</strong> in the activity map. On the right hand side panel, notice how the inputs have values from the Dataverse row. This was from the prompt sent by the last action (<strong>Sends a prompt to the specified copilot for processing</strong>) in the event trigger that contains the parameter values from the newly created Dataverse row. This is how we can pass parameter values from event triggers to agent flows.</p>
+<p><img alt="Select agent flow" src="assets/3.3_07_NotifyTeamsApplicantChannel.png" /></p>
+</li>
+<li>
+<p>Finally, let's take a look at the adaptive card posted to the channel in <strong>Microsoft Teams</strong>. In the channel, we'll see the adaptive card that displays the information about the newly created Resume row in Dataverse. Hover over the hyperlink at the start of the adaptive card, notice how the URL is the Resumes system view URL that we configured earlier in the JSON (steps 15 - 19 of <strong>Lab 4.2 - Notify a Teams channel using an adaptive card</strong>) payload of the adaptive card.</p>
+<p><img alt="Adaptive Card Resume Table system view URL" src="assets/3.3_08_AdaptiveCardResumeTableURL.png" /></p>
+</li>
+<li>
+<p>Select the hyperlink, and you'll be directed to the Resumes system view in the <strong>Hiring Hub</strong> model-driven app on your browser.</p>
+<p><img alt="Resume system view in Hiring Hub model-driven app" src="assets/3.3_09_ResumeTableSystemView.png" /></p>
+</li>
+<li>
+<p>Navigate back to the adaptive card posted to the channel in Microsoft Teams. This time, hover over <strong>View Resume</strong> which is the <code>Action.OpenURL</code> action of the adaptive card. Notice how the URL is the Resumes row that we configured earlier in the JSON (steps 30 - 36 of <strong>Lab 4.2 - Notify a Teams channel using an adaptive card</strong>) payload of the adaptive card.</p>
+<p><img alt="Adaptive Card Resume row URL" src="assets/3.3_10_AdaptiveCardResumeRowURL.png" /></p>
+</li>
+<li>
+<p>Select the action, and you'll be directed to the Resume row form in the <strong>Hiring Hub</strong> model-driven app on your browser.</p>
+<p><img alt="Resume row in Hiring Hub model-driven app" src="assets/3.3_11_ResumeRow.png" /></p>
+</li>
+</ol>
+<h2 id="mission-complete">✅ Mission Complete<a class="headerlink" href="#mission-complete" title="Permanent link">&para;</a></h2>
+<p>Congratulations! 👏🏻 Excellent work, Operative.</p>
+<p>✅ Event trigger: you've created an event trigger that passes Dataverse parameter values to an agent flow.
+✅ Built an agent flow: consumes the Dataverse parameter values to post an adaptive card to a channel in Microsoft Teams to alert the HR recruitment team.
+✅ Updated child agent instructions: to invoke the flow once the event trigger has completed.</p>
+<p>This enables the <strong>Hiring Agent</strong> to work autonomously whenever resumes are received as email attachments and notify the HR recruitment team for manual review.</p>
+<p>This is the end of <strong>Lab 04 - Automating candidate application emails</strong>, select the link below to move to the next lesson.</p>
+<p>⏭️ <a href="../05-model-selection/">Move to <strong>Understanding Agent Models</strong> lesson</a></p>
+<h2 id="tactical-resources">📚 Tactical Resources<a class="headerlink" href="#tactical-resources" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/training/modules/autonomous-agents-online-workshop/?WT.mc_id=power-188561-ebenitez">Make your agent autonomous in Copilot Studio</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-trigger-event?WT.mc_id=power-188561-ebenitez">Add an event trigger</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow?WT.mc_id=power-188561-ebenitez">Use agent flows with your agent</a></p>
+<p>📖 <a href="https://learn.microsoft.com/power-automate/triggers-introduction?WT.mc_id=power-188561-ebenitez">Power Automate triggers introduction</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow-create?WT.mc_id=power-188561-ebenitez">Using Power Automate flows with agents</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/admin-data-loss-prevention?WT.mc_id=power-188561-ebenitez">Data loss prevention for Copilot Studio</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1509 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/operative-preview/11-obtain-user-feedback/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Collecting feedback from users - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#collecting-feedback-from-users" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Collecting feedback from users
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recruit
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operative (Coming Soon)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commander (Coming Soon)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-echo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🕵️‍♂️ CODENAME: OPERATION ECHO
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Mission Brief
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔎 Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-importance-of-user-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐿️ The importance of user feedback
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-thumbs-updown-reactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💬 Built-in thumbs up/down reactions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purpose-and-value-of-thumbs-reactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🪣 Purpose and value of thumbs reactions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-and-interpreting-feedback-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Viewing and interpreting feedback analytics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-the-reactions-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📒 Managing the reactions feature
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collecting-feedback-via-adaptive-cards-custom-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📇 Collecting feedback via Adaptive Cards - custom approach
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-adaptive-cards-for-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🦜 Why use Adaptive Cards for feedback
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-adaptive-card-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⭐ Best practices for Adaptive Card feedback
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-summary-thumbs-reactions-vs-adaptive-card-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧇 Comparison summary: thumbs reactions vs Adaptive Card feedback
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrapping-it-up-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎀 Wrapping it up (summary)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-11-provide-feedback-using-built-in-interactions-vs-adaptive-cards-custom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Lab 11 - Provide feedback using built-in interactions vs adaptive cards (custom)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Mission Complete
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 What’s Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-step-deploy-earn-your-badge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏁 Final Step: Deploy &amp; Earn Your Badge
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactical-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Tactical Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="collecting-feedback-from-users">Collecting feedback from users<a class="headerlink" href="#collecting-feedback-from-users" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="codename-operation-echo">🕵️‍♂️ CODENAME: <code>OPERATION ECHO</code><a class="headerlink" href="#codename-operation-echo" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operation Time Window:</strong> <code>~45 minutes</code></p>
+</blockquote>
+<h2 id="mission-brief">🎯 Mission Brief<a class="headerlink" href="#mission-brief" title="Permanent link">&para;</a></h2>
+<p>Welcome back, Agent. In <a href="../10-mcp/">Mission 10</a>, you learned how to integrate with MCP servers to extend your agent.</p>
+<p>Your assignment, should you choose to accept it, is <strong>Operation Echo</strong>, a critical intelligence-gathering mission focused on extracting actionable feedback from your deployed AI agents. In the world of conversational intelligence, user satisfaction data is valuable. This mission will teach you two primary methods of intelligence collection:</p>
+<p><strong>Phase 1: Surveillance</strong> - Deploy built-in reaction mechanisms (👍🏻/👎🏻) to conduct monitoring of user sentiment.</p>
+<p><strong>Phase 2: Active Engagement</strong> - Implement custom Adaptive Card feedback systems for targeted intelligence gathering when deeper insights are required.</p>
+<p><em>Listen, analyze, adapt</em> - this is the operative's creed when processing user intelligence.</p>
+<h2 id="objectives">🔎 Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
+<p>In this mission, you'll learn:</p>
+<ol>
+<li>How to use built-in thumbs up/down reactions to collect feedback from users</li>
+<li>How to analyze feedback data using Copilot Studio's Analytics dashboard</li>
+<li>How to create custom feedback collection using Adaptive Cards</li>
+<li>How to implement conditional feedback flows based on CSAT ratings</li>
+<li>How to log custom telemetry events to Azure Application Insights for advanced feedback tracking</li>
+</ol>
+<h2 id="the-importance-of-user-feedback">🐿️ The importance of user feedback<a class="headerlink" href="#the-importance-of-user-feedback" title="Permanent link">&para;</a></h2>
+<p>Collecting user feedback is critical for improving a conversational agent's performance and user satisfaction. In Microsoft Copilot Studio, there are two primary mechanisms to gather feedback from users after they receive an AI-generated response:</p>
+<ul>
+<li><strong>Built-in thumbs up/down reactions</strong> - a default, out-of-the-box feature where users can click 👍🏻 or 👎🏻 on each response.</li>
+<li><strong>Custom feedback via Adaptive Cards</strong> - a customizable approach where developers insert an Adaptive Card in the conversation to solicit feedback (e.g. a rating or comment).</li>
+</ul>
+<h3 id="why-gather-feedback">Why gather feedback?<a class="headerlink" href="#why-gather-feedback" title="Permanent link">&para;</a></h3>
+<p>Collecting user feedback after agent responses is important for continuous improvement. It helps quantify satisfaction, identify knowledge gaps, and directly informs how you can refine your Copilot agent's answers. By analyzing feedback trends and comments, you can prioritize enhancements that lead to a better user experience.</p>
+<h2 id="built-in-thumbs-updown-reactions">💬 Built-in thumbs up/down reactions<a class="headerlink" href="#built-in-thumbs-updown-reactions" title="Permanent link">&para;</a></h2>
+<p>Copilot Studio provides a built-in reactions feature that lets end-users react to each agent response with a thumbs-up or thumbs-down. This feature is enabled by default for all new and existing Copilot Studio custom agents, and appears across the common channels where your agent is used:</p>
+<ul>
+<li>Test Chat (in Copilot Studio’s authoring canvas)</li>
+<li>Web (demo or embedded website)</li>
+<li>Microsoft Teams (if the agent is deployed as a Teams app)</li>
+<li>Custom Web chat SDK integrations</li>
+<li>Power Apps/Dynamics 365 channels (e.g. a live chat widget)</li>
+</ul>
+<p>After each AI response, users will see a small UI with 👍🏻/👎🏻 icons. They can simply click either of these icons to give feedback. Optionally, after reacting, the user is prompted to add a comment explaining their rating (for example, why they gave a thumbs down). These comments provide qualitative insight and are stored in the conversation transcripts (Dataverse) for review.</p>
+<ul>
+<li>The Copilot Studio Analytics page aggregates total reactions and the breakdown of positive vs. negative feedback.</li>
+<li>If a user provides a comment with their rating, it's saved to the conversation transcript. You can view these comments for context (for example, what was "not useful") via the analytics UI or directly from Dataverse records (via the <code>conversationtranscript</code> table).</li>
+</ul>
+<h2 id="purpose-and-value-of-thumbs-reactions">🪣 Purpose and value of thumbs reactions<a class="headerlink" href="#purpose-and-value-of-thumbs-reactions" title="Permanent link">&para;</a></h2>
+<p>The thumbs up/down system's primary purpose is to measure user satisfaction at the response level. It provides immediate, granular feedback on whether each answer fulfilled the user's needs or not. Key benefits include:</p>
+<ul>
+<li><strong>Quick Sentiment Signal</strong>: A thumbs-up means the user was satisfied, while thumbs-down flags dissatisfaction. This binary signal is easy for users to provide and easy for developers to interpret at scale.</li>
+<li><strong>Aggregated “Satisfaction” Metric</strong>: In <em>Copilot Studio Analytics</em>, a "Reactions" section (under the broader Satisfaction analytics) tallies all feedback received. You can quickly see how many responses were marked positive or negative over time. This serves as a satisfaction scorecard for your agent's responses.</li>
+<li><strong>Identify Improvement Areas</strong>: By filtering or reviewing thumbs-down instances and their comments, developers can spot patterns. For example, specific topics or questions that often get negative feedback. These are prime candidates for improving your knowledge base or refining your prompts.</li>
+<li><strong>No Coding Required</strong>: Since it's built-in, makers do not need to configure anything to start collecting this feedback (the setting is on by default). The data is automatically available in the Copilot Studio analytics dashboard.</li>
+</ul>
+<h3 id="why-it-matters">Why it matters<a class="headerlink" href="#why-it-matters" title="Permanent link">&para;</a></h3>
+<p>This reaction mechanism gives immediate, objective insight into how well the agent is performing from the user's perspective. Reviewing user feedback helps identify new user scenarios and issues, and make improvements based on what users are asking for. In short, thumbs up/down feedback is a quick pulse-check on each answer's usefulness.</p>
+<h2 id="viewing-and-interpreting-feedback-analytics">📊 Viewing and interpreting feedback analytics<a class="headerlink" href="#viewing-and-interpreting-feedback-analytics" title="Permanent link">&para;</a></h2>
+<p>Copilot Studio provides a dedicated analytics view to make sense of the collected reactions:</p>
+<ul>
+<li><strong>Reactions Chart</strong>: On the agent's <strong>Analytics</strong> tab, the <strong>Satisfaction</strong> section includes a <strong>Reactions</strong> chart counting how many times users clicked 👍🏻 vs 👎🏻 for the selected time period. This gives an at-a-glance ratio of positive to negative feedback. For example, you might see that out of 100 total reactions, 78 were thumbs-up and 22 thumbs-down, indicating a 78% per-response satisfaction rate.</li>
+<li><strong>Filter and Details</strong>: You can drill down by selecting "See details" on the Reactions chart. This typically lets you filter feedback by type (all/thumbs-up/thumbs-down) and view the list of user comments associated with each feedback. Comments are extremely useful - a thumbs-down by itself signals a problem, but the user's comment might explain why <code>"The answer was incorrect"</code> or <code>"Didn't address my question"</code> etc.</li>
+<li><strong>Trend Over Time</strong>: The analytics can be viewed for different date ranges (last 7 days, 30 days, etc., up to 90 days). Monitoring trends helps see if recent changes to the agent improved satisfaction - for example, an increase in thumbs-up percentage after adding a new knowledge source.</li>
+<li><strong>Session CSAT vs Per-Response Reactions</strong>: The <strong>Satisfaction</strong> analytics also include a <strong>Survey results</strong> section for end-of-session customer satisfaction (CSAT) surveys. Don't confuse this with the per-response thumbs reactions:<ul>
+<li><em>Reactions</em>: feedback on individual answers (our focus here)</li>
+<li><em>Survey Results</em>: an optional overall rating at the end of a conversation (a 1-5 star survey). Both appear under <strong>Satisfaction</strong> analytics, but thumbs reactions specifically populate the <strong>Reactions</strong> chart.</li>
+</ul>
+</li>
+</ul>
+<p>Interpreting the data: A high ratio of 👍🏻 vs 👎🏻 means most answers are on target. A spike in 👎🏻 for certain questions might reveal a knowledge gap or a misunderstanding by the AI. For instance, if many users give a thumbs down after asking about "pricing" it signals the agent's answer on pricing is unsatisfactory - perhaps outdated or incomplete. Developers should investigate those chat transcripts and improve content for that topic.</p>
+<div class="admonition tip">
+<p class="admonition-title">Best Practice</p>
+<p>Regularly review thumbs-down feedback comments. They often contain direct clues <code>"The agent gave the wrong definition"</code> or <code>"It didn't cite a source"</code> that you can address by updating your knowledge base or refining prompts.</p>
+</div>
+<h2 id="managing-the-reactions-feature">📒 Managing the reactions feature<a class="headerlink" href="#managing-the-reactions-feature" title="Permanent link">&para;</a></h2>
+<p>Because this feature is on by default, makers should be aware of how to manage it:</p>
+<ul>
+<li>You can disable user feedback reactions in case you don't want to gather this data (or during testing phases). In the agent's <strong>Generative AI Settings</strong>, under <strong>User feedback</strong>, there is a toggle <code>Collect user reactions to agent messages</code> which can be turned <code>Off</code> or <code>On</code>. By default it's <code>On</code>.</li>
+<li>
+<p>You can also provide a <strong>disclaimer</strong> to users about feedback usage. For example, you might add a note like <code>"Your feedback will be used to improve the service. Please do not include sensitive information in comments."</code> This is especially important in a public-facing agent for transparency and compliance.</p>
+<p><img alt="User Feedback Settings" src="assets/11.0_01_UserFeedbackSettings.png" /></p>
+</li>
+<li>
+<p><strong>Data Storage</strong>: All feedback records including any user comments are stored in the agent's Dataverse environment, tied to conversation sessions. If needed, advanced users can query the Dataverse table, <code>conversationtranscript</code>, directly - for instance, to export all feedback data for offline analysis. For most purposes, however, the built-in analytics UI is sufficient.</p>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Best Practice</p>
+<p>If your agent is public or customer-facing, definitely keep the feedback feature <code>On</code> - it provides invaluable insight. If your agent is in a limited trial or internal-only, you might temporarily turn it off to avoid confusing testers, then re-enable for real users. Always abide by user feedback privacy guidelines (hence the optional disclaimer).</p>
+</div>
+<h2 id="collecting-feedback-via-adaptive-cards-custom-approach">📇 Collecting feedback via Adaptive Cards - custom approach<a class="headerlink" href="#collecting-feedback-via-adaptive-cards-custom-approach" title="Permanent link">&para;</a></h2>
+<p>An alternative to the built-in feature is building a custom feedback prompt using an Adaptive Card. We covered adaptive cards previously in <a href="../../recruit/10-add-event-triggers/">Recruit</a>. As a reminder: Adaptive Cards are essentially UI panels defined in JSON that you can embed in an agent's conversation to collect input or display information. In this context, you design a card that asks the user for feedback - for example, <code>"Please rate this answer"</code> with an <strong>Input.ChoiceSet element</strong> that displays a dropdown or radio buttons of feedback values for the user to select from, and the user's response is sent back to the agent as structured data.</p>
+<p>Unlike the built-in reactions, this method requires the developer or maker to configure the agent's topics to insert the card and handle the responses. Copilot Studio allows adding an Adaptive Card in the following nodes within a topic:</p>
+<ul>
+<li><strong>Ask a question</strong></li>
+<li><strong>Ask with adaptive card</strong></li>
+<li><strong>Send a message</strong></li>
+</ul>
+<p>This means after the agent generates an answer, you can immediately follow up with a custom adaptive card asking for feedback before the conversation continues.</p>
+<h3 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Generate the answer and store it</strong>: First, ensure you have the agent's answer available to include in the card. For example, the Copilot Studio guidance suggests using a <strong>Generative Answers</strong> node to produce the answer and save it to a variable (example: <code>Global.VarStoreAnswer</code>). This variable can hold the AI's response text.</p>
+</li>
+<li>
+<p><strong>Show Adaptive Card with feedback options</strong>: Immediately after the answer, add a node that supports Adaptive Cards to display the answer text and ask for feedback. The adaptive card's JSON defines what the user sees - the answer text, a prompt like <code>"Was this answer helpful?"</code>, and two action buttons (perhaps one for 👍🏻 "Useful" and one for 👎🏻 "Not useful"). You could also design other input types, like a 5-star rating, a text box for comments, or multiple-choice options. Adaptive Cards are very flexible, so you can tailor the feedback question format to your needs.</p>
+</li>
+<li>
+<p><strong>User selects an Option</strong>: When the user clicks a button or submits the card, that action returns a payload to the agent. Typically, the card's buttons use <code>Action.Submit</code> with some custom data. For instance, one button might return a value <code>{ "Feedback": "Useful" }</code> and the other returns <code>{ "Feedback": "NotUseful" }</code>. In the <a href="https://learn.microsoft.com/microsoft-copilot-studio/guidance/adaptive-card-add-feedback-for-every-response">example</a> provided by Microsoft, the card's JSON has <code>selectAction</code> data set to a string like <code>"This generated answer was useful"</code> or <code>"wasn't useful"</code> for the two icons. This data comes back as the user's response.</p>
+</li>
+<li>
+<p><strong>Agent handles the feedback data</strong>: Now it's up to your agent's logic to do something with that feedback. This can be achieved using a topic or trigger to catch the submitted response. For example, you might configure the conversation such that if the user's input (from the adaptive card) equals "This generated answer wasn't useful", it triggers a particular topic - perhaps asking an additional question like <code>"Sorry to hear that. Could you tell me what was wrong?"</code>. Or more simply, you might just log it in a datasource and acknowledge <code>"Thanks for your feedback!"</code> without further interaction.</p>
+</li>
+<li>
+<p><strong>(Optional) Store or forward the feedback</strong>: The feedback collected via Adaptive Card is not automatically saved to the Analytics like the built-in reactions. If you want to persist this data for analysis, you should explicitly store it. For example, you could call a Power Automate flow or an API to record the feedback in a database or SharePoint list, including context like which question it was for. Alternatively, since the feedback appears as part of the conversation transcript (the user's selection is essentially a message from the user), it will be saved in Dataverse conversations. But it will be in a raw text/JSON form, you'd have to extract it for reporting.</p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Best Practice</p>
+<p>Adaptive Cards in Copilot Studio are supported in all channels that the agent supports, but be mindful of Adaptive Card schema version differences. Copilot Studio uses Adaptive Cards v1.6 in the web test chat, but Microsoft Teams and some other channels support up to <strong>v1.5</strong>. In practice, this means if you design your card with features only in 1.6, it <em>might not</em> render in Microsoft Teams. Best practice is to stick to v1.5 features for broad compatibility, or test your card in each channel. The good news is the typical feedback card (text, buttons) is basic and works fine in all channels.</p>
+</div>
+<h2 id="why-use-adaptive-cards-for-feedback">🦜 Why use Adaptive Cards for feedback<a class="headerlink" href="#why-use-adaptive-cards-for-feedback" title="Permanent link">&para;</a></h2>
+<p>Using an Adaptive Card for feedback requires additional effort to set up, but it offers greater flexibility and control. Some reasons you might choose this approach:</p>
+<ul>
+<li><strong>Custom questions and UI</strong>: You're not limited to a simple thumbs up/down. You could ask the user to rate on a scale of 1 - 5, choose a category for why they liked/disliked the answer, give them a range of answers to select (multiple-choice) or even ask an open-ended question for detailed comments. You design the card's content to suit your scenario.</li>
+<li><strong>Contextual or conditional feedback</strong>: You might not want to request feedback after every single response (to avoid annoying the user). With your own logic, you could decide to ask only after certain types of answers - for example, only after a long explanation, or only if the session is about to end. You could also tailor the wording: if the answer was an error message, the card could specifically ask, <code>"Sorry I couldn't help - was this error explanation useful?"</code> This level of nuance is not possible with the generic thumbs UI.</li>
+<li><strong>Integrated workflows</strong>: With custom feedback data, you can integrate directly into other processes. For example, if a user indicates an answer was not useful, you could automatically create a ticket for a human expert to review that query later. Or log the feedback to an <strong>Azure Application Insights telemetry</strong> for advanced analytics. Essentially, adaptive card feedback can plug into your own analytics or DevOps cycle more readily. The built-in thumbs data is somewhat siloed in the Copilot analytics dashboard, whereas custom-collected data is yours to route anywhere.</li>
+<li><strong>Branding and tone</strong>: You can format the feedback card to match your agent's personality or your organization's branding (within the Adaptive Card design limits). Even the text can be changed - for example, <code>"Rate this response"</code> or using emoji on buttons  giving a consistent user experience.</li>
+<li><strong>Additional feedback gathering</strong>: The card could ask for more than just a sentiment. For instance, a single card could both ask <code>"Was this helpful? (Yes/No)"</code> and if <code>"No"</code>, also include a quick text box saying <code>"What was missing?"</code>. All that could be submitted together. This is more advanced but illustrates the flexibility.</li>
+</ul>
+<p>In summary, Adaptive Cards for feedback are ideal when you need more than a binary signal or want to handle the feedback in custom ways. It's often used by developers who want to experiment with feedback collection beyond the basics.</p>
+<h2 id="best-practices-for-adaptive-card-feedback">⭐ Best practices for Adaptive Card feedback<a class="headerlink" href="#best-practices-for-adaptive-card-feedback" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Keep it brief and unobtrusive</strong>: Users may get annoyed if after every message they have to fill out a survey. Make the card simple - usually a quick question with two buttons or a small rating scale. The <a href="https://learn.microsoft.com/microsoft-copilot-studio/guidance/adaptive-card-add-feedback-for-every-response">example</a> in Microsoft's guidance shows the agent's answer in the card followed by a subtle prompt <code>"Generated answer, please rate it."</code>. The prompt is small and polite, which is good. Avoid very large or complex cards for routine feedback.</p>
+</li>
+<li>
+<p><strong>Handle the response gracefully</strong>: When the user clicks feedback, you might simply thank them silently (no need to always say <code>"Thanks for your feedback"</code> every time). In a support scenario, if someone says the answer wasn't useful, you might follow up to help: <code>"Sorry about that. Let me clarify or escalate your question."</code> This turns a negative feedback into an opportunity to recover the user's satisfaction.</p>
+</li>
+<li>
+<p><strong>Data Handling and Privacy</strong>: The feedback data from the adaptive card is just part of the conversation in terms of storage. It will <em>not</em> show up in the Copilot Studio Analytics dashboard (since that only tracks the built-in feedback reaction mechanism). It also won't automatically appear in any compliance audits (those typically log that a user message was sent, but not the content of an Adaptive Card submission specifically). So, if analyzing this feedback is important, plan to capture it. You can create an agent flow triggered by the conversation to write each feedback entry to a separate Dataverse table or external storage along with relevant info (user ID, question asked, etc.). This way you can do your own reporting on it.</p>
+</li>
+<li>
+<p><strong>Disable built-in reactions to avoid duplication</strong>: If you are fully relying on a custom feedback card for every answer, it might be wise to turn off the default thumbs feedback in the agent settings. Otherwise, users will see two feedback requests (the thumbs UI and your adaptive card) for the same response, which is confusing and overkill. Most implementations choose either one method or the other in production. However, you could still use both in different contexts - for example, maybe you keep thumbs enabled for Teams users, but on a custom website you use a tailored card. In any case, ensure the user isn't bombarded with redundant feedback prompts.</p>
+</li>
+<li>
+<p><strong>Test on all channels</strong>: Because Adaptive Cards can render a bit differently in Teams vs. web chat, test your feedback cycle in each deployed channel. Make sure the card looks as intended and the submission is received by the agent. For instance, if using Teams, ensure the card's schema is <em>less than or equal to 1.5</em> as noted earlier. Also verify that on mobile versions of Teams or web chat, the adaptive card is still easily usable.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p>In the Copilot Studio documentation <a href="https://learn.microsoft.com/microsoft-copilot-studio/guidance/adaptive-card-add-feedback-for-every-response">example</a>, once the adaptive card feedback was set up, they provided a YAML snippet indicating how the agent can route the "useful/not useful" responses to a specific handling topic. This is a hint at the implementation: essentially treat the feedback like an intent that triggers either a follow-up or just completes. Implementing this means editing your agent's topics (or code) to catch those JSON responses.</p>
+</div>
+<h2 id="comparison-summary-thumbs-reactions-vs-adaptive-card-feedback">🧇 Comparison summary: thumbs reactions vs Adaptive Card feedback<a class="headerlink" href="#comparison-summary-thumbs-reactions-vs-adaptive-card-feedback" title="Permanent link">&para;</a></h2>
+<p>Both feedback collection methods aim to improve your Copilot agent via user input, but they serve different needs. Here's a side-by-side comparison to help understand when to use each:</p>
+<table>
+<thead>
+<tr>
+<th>Feature/aspect</th>
+<th>Built-in thumbs up/down reactions</th>
+<th>Custom feedback via Adaptive Card</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Setup and effort</strong></td>
+<td>Zero setup required - enabled by default for all agents. Simply deploy your agent, and users will see 👍🏻/👎🏻 on each response.</td>
+<td>Requires configuration: you must add an Adaptive Card node to your topics and define its JSON, then handle the submitted data. Moderate effort for developers.</td>
+</tr>
+<tr>
+<td><strong>Feedback format</strong></td>
+<td>Binary sentiment (Positive or Negative). Users can optionally add a text comment with their rating</td>
+<td>Fully customizable. Could be binary as well, or multi-choice, rating scale, text input, or any combination. The card's JSON defines the format</td>
+</tr>
+<tr>
+<td><strong>User experience</strong></td>
+<td>Simple and unobtrusive: one click for thumbs up/down. The option is presented uniformly on all channels (icon buttons).</td>
+<td>Potential for richer interaction, but if overused can be intrusive. You control the wording and look. Make sure the card is concise so it doesn't overwhelm the chat UI</td>
+</tr>
+<tr>
+<td><strong>Data captured</strong></td>
+<td>Reaction (+ optional comment). Example: <code>"thumbs down (with comment: 'irrelevant answer')"</code>. No structured category beyond up/down.</td>
+<td>Whatever data you design. Example: you might capture <code>"Rating: 3 stars"</code> or <code>"FeedbackChoice: NotUseful + Reason: Outdated info"</code>. The card submission is received as a JSON payload (key-value pairs) which you can parse</td>
+</tr>
+<tr>
+<td><strong>Analytics and visibility</strong></td>
+<td>Automatically aggregated in Copilot Studio <strong>Analytics</strong> in <strong>Satisfaction</strong> section. Shows total count of 👍🏻 vs 👎🏻, and allows filtering/viewing comments</td>
+<td>Not shown in Copilot Studio Analytics by default. These responses are essentially part of the conversation flow (stored in transcripts) and do not feed the out-of-box dashboards. You need to create your own reporting mechanism if you want to summarize this feedback.</td>
+</tr>
+<tr>
+<td><strong>Extensibility</strong></td>
+<td>Limited (thumbs UI is fixed). Can't change the question or add more options to built-in mechanism. You can turn it off or on, that's it.</td>
+<td>Extensible. You craft the adaptive card and can evolve it. Example: adding a third option <code>"Partially helpful"</code>, or asking a follow-up question if they respond negatively. Also, you decide when to invoke it (doesn't have to be every turn).</td>
+</tr>
+<tr>
+<td><strong>Ideal use cases</strong></td>
+<td>General satisfaction monitoring for your agent's answers. Best when you want a quick gauge of every response's quality and a simple success metric to track over time. Great for initial deployments to gather broad feedback with minimal effort.</td>
+<td>Deep feedback or custom workflows. Useful when specific insights are needed, Example: which of several answers is better, or when integrating feedback into other systems (like creating bug reports, triggering human review). Also valuable if you want to collect feedback in a specific format such as <em>category tags</em> that the built-in reactions mechanism doesn't support.</td>
+</tr>
+</tbody>
+</table>
+<p>As a rule of thumb (no pun intended 😆), <strong>start with the built-in thumbs feedback</strong> for any new agent - it's easy and provides immediate value in understanding user satisfaction. As your solution matures, if you find the need for more nuanced feedback, you can experiment with an Adaptive Card approach.</p>
+<p>Some advanced implementations even use both: for example, keeping thumbs up/down <em>enabled</em>, but also asking a targeted question via an adaptive card at the end of a session (like a mini survey). In that case, you'd get per-response sentiment (via reactions) and an overall session rating or comment (via your card). However keep in mind that the built-in CSAT is also covered by the Copilot Studio Analytics as highlighted earlier. Therefore as we learnt in this mission, record responses from adaptive cards to build your own custom reporting.</p>
+<p>Ultimately, for most scenarios using one method at a time is clearer. If you opt for custom adaptive cards, it often makes sense to disable the default reactions to provide a single, cohesive feedback channel to the user.</p>
+<h2 id="wrapping-it-up-summary">🎀 Wrapping it up (summary)<a class="headerlink" href="#wrapping-it-up-summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>⚡ <strong>Built-in reactions: quick wins</strong></th>
+<th>🛠️ <strong>Adaptive cards: custom fit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enable built-in 👍🏻/👎🏻 reactions to rapidly gauge user satisfaction on each answer. This yields instant analytics (no coding) and helps identify trouble spots early.</td>
+<td>Use adaptive cards for feedback when you need more than a <code>yes/no</code>. You can ask tailored questions and route feedback into your own data stores or workflows for deeper analysis and action.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lab-11-provide-feedback-using-built-in-interactions-vs-adaptive-cards-custom">🧪 Lab 11 - Provide feedback using built-in interactions vs adaptive cards (custom)<a class="headerlink" href="#lab-11-provide-feedback-using-built-in-interactions-vs-adaptive-cards-custom" title="Permanent link">&para;</a></h2>
+<p>We're now going to provide feedback as a user using the following methods,</p>
+<ol>
+<li>Built-in user interactions and review them using the Analytics page of the agent.</li>
+<li>Build a custom adaptive card to collect feedback when the user has responded as dissatisfied with a 1 star or 2 stars for the CSAT survey. Bonus exercise of logging this as a telemetry event in Azure Application Insights.</li>
+</ol>
+<h3 id="prerequisites-to-complete-this-mission">✨ Prerequisites to complete this mission<a class="headerlink" href="#prerequisites-to-complete-this-mission" title="Permanent link">&para;</a></h3>
+<p>For the built-in interactions to be captured in the Analytics page of the agent, the agent must be published. Ensure the <strong>Interview Agent</strong> is published.</p>
+<h3 id="111-user-feedback-through-built-in-interactions">11.1 User feedback through built-in interactions<a class="headerlink" href="#111-user-feedback-through-built-in-interactions" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>In Microsoft Teams, load the Interview Agent and start asking it questions.</p>
+</li>
+<li>
+<p>In the responses, select the <strong>thumbs up</strong> icon by the message to provide positive feedback with a comment, or select the <strong>thumbs down</strong> to provide negative feedback with a comment.</p>
+<ol>
+<li>
+<p>Positive feedback comment examples</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Clear and Concise: The response was easy to understand and well-structured.
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Accurate and Relevant: The information provided was correct and directly addressed the question.
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Helpful and Actionable: The response included practical steps or examples that I could apply.
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Comprehensive: The answer covered all aspects of the question without leaving gaps.
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Engaging and Professional Tone: The response was friendly, respectful, and appropriate for the context.
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Adapted to Context: The response considered the specific scenario and provided tailored guidance.
+</span></code></pre></div>
+</li>
+<li>
+<p>Negative feedback comment examples</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Incomplete or Vague: The response lacked detail or didn’t fully answer the question.
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Inaccurate or Misleading: The information provided was incorrect or not relevant to the query.
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Overly Complex or Hard to Follow: The explanation was confusing or used unnecessary jargon.
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="Submit Positive feedback with written comment" src="assets/11.1_01_SubmitPositiveFeedback.png" /></p>
+</li>
+<li>
+<p>Repeat until you have submitted several reactions with written feedback.</p>
+</li>
+</ol>
+<h3 id="112-reviewing-built-in-analytics">11.2 Reviewing built-in analytics<a class="headerlink" href="#112-reviewing-built-in-analytics" title="Permanent link">&para;</a></h3>
+<p>We're now going to review the feedback submitted in the <strong>Analytics</strong> page of the agent.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The submitted reactions and written feedback may take some time to show up in the Analytics page so if you're not seeing it immediately, check it occasionally.</p>
+</div>
+<ol>
+<li>
+<p>Navigate to the <strong>Analytics</strong> tab of the agent and scroll down to the <strong>Satisfaction</strong> section. In the <strong>Reactions</strong> section, select <strong>See details</strong>. This will load the <strong>Reactions</strong> pane where you can view all the thumbs up and thumbs down for the period and the written feedback.</p>
+<p><img alt="Submitted reactions and written feedback" src="assets/11.2_01_Reactions.png" /></p>
+</li>
+</ol>
+<h3 id="113-build-adaptive-card-to-collect-custom-feedback">11.3 Build adaptive card to collect custom feedback<a class="headerlink" href="#113-build-adaptive-card-to-collect-custom-feedback" title="Permanent link">&para;</a></h3>
+<p>In this exercise we're going to implement a process in the <strong>Hiring Agent</strong> to collect custom feedback in response to the built-in CSAT survey. When the user has responded with 1 star or 2 stars for the CSAT survey, we want to collect additional feedback to understand why they were dissatisfied. This will also give you hands-on learning on how to modify existing system topics.</p>
+<p>The following is what you'll learn:</p>
+<ol>
+<li>Create a new custom topic that contains the custom adaptive card to capture feedback.</li>
+<li>Modify an existing System topic, <strong>End of conversation</strong>, where a condition will route to the new custom topic that handles the custom feedback.</li>
+</ol>
+<p>Let's go!</p>
+<h4 id="1131-create-a-new-custom-topic">11.3.1 Create a new custom topic<a class="headerlink" href="#1131-create-a-new-custom-topic" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>In the <strong>Hiring Agent</strong>, browse to the <strong>Topics</strong> tab. Select <strong>+Add a topic</strong> and select <strong>From blank</strong>.</p>
+<p><img alt="Add new topic from blank" src="assets/11.3.1_01_AddTopicFromBlank.png" /></p>
+</li>
+<li>
+<p>Name the topic as the following,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Capture CSAT dissatisfied feedback
+</span></code></pre></div>
+<p>In the Trigger node, select the <strong>Change trigger</strong> arrows icon and select <strong>It's redirected to</strong>.  This new topic will be triggered when it's explicitly called from an existing topic through the <strong>Go to another topic</strong> node.</p>
+<p><img alt="Rename topic and configure trigger" src="assets/11.3.1_02_RenameTopicAndConfigureTrigger.png" /></p>
+</li>
+<li>
+<p>Next, we'll add a new node that will display the custom adaptive card to the user. This custom adaptive card will collect their dissatisfaction feedback based on their CSAT survey response. Select the <strong>+ icon</strong> and select the <strong>Ask with adaptive card</strong> node.</p>
+<p><img alt="Add Ask with Adaptive Card node" src="assets/11.3.1_03_AskWithAdaptiveCardNode.png" /></p>
+</li>
+<li>
+<p>Now it's time to configure the adaptive card 😊 Select the node and the <strong>Adaptive Card Node properties</strong> pane will appear. We're now going to edit the JSON. Select <strong>Edit adaptive card</strong>.</p>
+<p><img alt="Add new topic from blank" src="assets/11.3.1_04_EditAdaptiveCard.png" /></p>
+</li>
+<li>
+<p>This is the <strong>Adaptive Card Designer</strong> where you can design your card and see the card design in-real time. Click into the <strong>Card payload editor</strong> and select all lines using the Windows keyboard shortcut of <em>Ctrl + A</em> or using the Mac keyboard shortcut of <em>Command + A</em>, followed by deleting the lines. <strong>Paste</strong> the JSON from the <a href="assets/11.3.1_CSATFeedback.json">CSAT Feedback JSON file</a>.</p>
+<p><img alt="Clear default JSON value and paste from CSATFeedback.json file" src="assets/11.3.1_05_UpdateJSON.png" /></p>
+</li>
+<li>
+<p>Notice how the <strong>Card Preview</strong> now includes elements that display some text and a list of available devices. Select <strong>Save</strong>.</p>
+<p><img alt="Card updated" src="assets/11.3.1_06_CardUpdated.png" /></p>
+</li>
+<li>
+<p>Select <strong>Preview</strong> to view the card in different widths. The preview will load where you'll see different card outputs by width. The JSON accounts for responsive design so narrow widths will show different layout compared to the standard width.</p>
+<p><img alt="Preview card widths" src="assets/11.3.1_08_PreviewCardWidths.png" /></p>
+</li>
+<li>
+<p>Exit out of <strong>Preview</strong> by selecting the <strong>x icon</strong> or <strong>Close</strong>. Then close the <strong>Adaptive Card Node properties</strong> panel by selecting <strong>X Close</strong>.</p>
+</li>
+<li>
+<p>In the authoring canvas of the topic, you'll see the adaptive card. Scroll to the bottom of the node and you'll see output variables. The <code>notesId</code> and the <code>ratingId</code> were defined in the element properties. These two variables will store values from the card elements the users interact with. These values will be used in the bonus exercise of this lab.</p>
+<p><img alt="Add new topic from blank" src="assets/11.3.1_09_CardOutputs.png" /></p>
+</li>
+</ol>
+<h4 id="1132-modify-end-of-conversation-system-topic">11.3.2 Modify End of Conversation system topic<a class="headerlink" href="#1132-modify-end-of-conversation-system-topic" title="Permanent link">&para;</a></h4>
+<p>We're now going to update the <strong>End of Conversation</strong> system topic to redirect to the <strong>Capture CSAT dissatisfied feedback</strong> custom topic created previously.</p>
+<ol>
+<li>
+<p>Navigate to the <strong>Topics</strong> tab. Select <strong>System</strong> and select the <strong>End of Conversation</strong> system topic.</p>
+<p><img alt="Select End of Conversation system topic" src="assets/11.3.2_01_SelectEndOfConversationTopic.png" /></p>
+</li>
+<li>
+<p>Scroll down to the <strong>Condition</strong> node that checks the <code>SurveyResponse</code> variable. Select the <strong>+ icon</strong> below the node and select <strong>Add node</strong>.</p>
+<p><img alt="Add node" src="assets/11.3.2_02_AddNode.png" /></p>
+</li>
+<li>
+<p>Select <strong>Variable management</strong> and select <strong>Set a variable value</strong>.</p>
+<p><img alt="Select Set a variable value node" src="assets/11.3.2_03_SelectSetAVariableValue.png" /></p>
+</li>
+<li>
+<p>Select <strong>Create a new variable</strong>. This is to declare a variable that will store the user's response to the CSAT question node.</p>
+<p><img alt="Select create a new variable node" src="assets/11.3.2_04_SelectCreateANewVariable.png" /></p>
+</li>
+<li>
+<p>Select the variable and update the variable name to the following in the <strong>Variable properties</strong> pane.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>VarCSATRating
+</span></code></pre></div>
+<p>In the <strong>To value</strong> field, enter <code>0</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Purpose of the <strong>To value</strong> field</p>
+<p>This is a numeric variable that will store the CSAT rating.</p>
+</div>
+<p><img alt="Configure Variable properties" src="assets/11.3.2_05_ConfigureVariableProperties.png" /></p>
+</li>
+<li>
+<p>In the <strong>CSAT Question</strong> node select the <strong>... ellipsis</strong> icon and select <strong>Properties</strong>.</p>
+<p><img alt="Select properties of CSAT Question node" src="assets/11.3.2_06_CSATQuestionProperties.png" /></p>
+</li>
+<li>
+<p>In the <strong>CSAT Question properties</strong> panel, there will be a field displayed where you can reference the variable to save the response rating selected by the end user. Enter the following which references the variable created earlier.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Topic.VarCSATRating
+</span></code></pre></div>
+<p><img alt="Reference variable in CSAT Question properties" src="assets/11.3.2_07_CSATQuestionProperties.png" /></p>
+</li>
+<li>
+<p>Next, we'll add logic to the topic to redirect to the <strong>Capture CSAT dissatisfied feedback</strong> custom topic when the user responds with a 1 star or 2 stars. Select the <strong>+ icon</strong> below the <strong>CSAT Question</strong> node and select <strong>Add a condition</strong>.</p>
+<p><img alt="Add a Condition node" src="assets/11.3.2_08_AddAConditionNode.png" /></p>
+</li>
+<li>
+<p>The <strong>Condition</strong> node is now added to the system topic.</p>
+<div class="admonition note">
+<p class="admonition-title">The logic to be applied to the Condition node</p>
+<ul>
+<li>If the user's CSAT rating is <code>3</code>, <code>4</code>, or <code>5</code>, the conversation flow will follow the branch connected to this condition. This will act as a positive (satisfied) feedback path for ratings <code>3</code> and above.</li>
+<li>If the rating is <code>1</code> or <code>2</code>, the conversation flow will go to the <strong>All other conditions</strong> branch. This will act as a negative (dissatisfied) feedback path for ratings below <code>3</code>.</li>
+</ul>
+</div>
+<p>In the <strong>Condition</strong> node select the <strong>greater than</strong> icon to define the variable.</p>
+<p><img alt="Select a variable" src="assets/11.3.2_09_SelectAVariable.png" /></p>
+</li>
+<li>
+<p>Select the <strong>VarCSATRating</strong> variable.</p>
+<p><img alt="Select VarCSATRating variable" src="assets/11.3.2_10_SelectVarCSATRating.png" /></p>
+</li>
+<li>
+<p>For the condition <strong>operator</strong>, select <code>is greater or equal to</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">The significance of the operator in a condition</p>
+<p>This checks if the value of VarCSATRating meets or exceeds a specified threshold.</p>
+</div>
+<p>For <strong>Value</strong>, enter the following integer,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>3
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">The significance of the Value</p>
+<p>This is the threshold number. The condition will be <code>true</code> if VarCSATRating is greater or equal to <code>3</code>.</p>
+</div>
+<p><img alt="Add integer value" src="assets/11.3.2_11_AddIntegerValue.png" /></p>
+</li>
+<li>
+<p>Now let's complete the logic for when the rating is below <code>3</code> (when the user responds with a 1 star or 2 stars). In the <strong>All other conditions</strong> branch, select the <strong>+ icon</strong> to add a new node. Select <strong>Topic management</strong> and then select <strong>Go to another topic &gt;</strong>.</p>
+<p><img alt="Add new node in Other Conditions path" src="assets/11.3.2_12_AddNodeInOtherConditionsPath.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Capture CSAT dissatisfied</strong> custom topic created earlier.</p>
+<p><img alt="Select Capture CSAT dissatisfied custom topic" src="assets/11.3.2_13_SelectCaptureCSATDissatisfiedFeedbackTopic.png" /></p>
+</li>
+<li>
+<p>The topic will now be added to the branch. The <strong>End of Conversation</strong> topic will now explicitly call the <strong>Capture CSAT dissatisfied</strong> custom topic when the user responds to the CSAT question with a 1 star or 2 stars rating.</p>
+<p><img alt="Redirect to Capture CSAT dissatisfied custom topic" src="assets/11.3.2_14_RedirectNodeAdded.png" /></p>
+</li>
+<li>
+<p><strong>Save</strong> the topic.</p>
+</li>
+<li>
+<p>Let's now test the agent by selecting the <strong>new test session</strong> icon and enter a question. Any question will do, the purpose of this test is to submit a CSAT response to collect feedback for the rating below 3 stars.</p>
+<p><img alt="New test session and ask question" src="assets/11.3.2_15_NewTestAndAskQuestion.png" /></p>
+</li>
+<li>
+<p>The agent will return a response.</p>
+<p><img alt="Agent response" src="assets/11.3.2_16_AgentResponse.png" /></p>
+</li>
+<li>
+<p>To trigger the system topic of <strong>End of Conversation</strong>, enter the following</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>end conversation
+</span></code></pre></div>
+<p><img alt="Trigger end of conversation system topic" src="assets/11.3.2_17_EndConversation.png" /></p>
+</li>
+<li>
+<p>The <strong>End of Conversation</strong> topic will now be triggered as we see the text (question) from the <strong>Ask a question node</strong> of the topic. Select <strong>Yes</strong> to the question asked about ending the conversation.</p>
+<p><img alt="Yes end conversation" src="assets/11.3.2_18_YesEndConversation.png" /></p>
+</li>
+<li>
+<p>Next, we'll see the next question from the system topic about whether our question has been answered. Select <strong>Yes</strong>.</p>
+<p><img alt="Yes the question has been answered" src="assets/11.3.2_19_YesToAnsweringQuestion.png" /></p>
+</li>
+<li>
+<p>We will now see the CSAT question. Select 1 star or 2 stars as the rating.</p>
+<p><img alt="CSAT rating" src="assets/11.3.2_20_CSATSurvey.png" /></p>
+</li>
+<li>
+<p>Since the CSAT rating submitted is below 3, we'll now see that the <strong>End of Conversation</strong> topic has redirected to the <strong>Capture CSAT dissatisfied feedback</strong> custom topic. Select either of the options.</p>
+<p><img alt="Redirect to Capture CSAT dissatisfied custom topic" src="assets/11.3.2_21_RedirectToTopicForCustomFeedback.png" /></p>
+</li>
+<li>
+<p>Select <strong>Add comment</strong> or the <strong>^ caret</strong> icon to add written feedback. The following are sample feedback comments for each of the selected reasons.</p>
+<ul>
+<li>
+<p>The agent didn't understand my responses or questions accurately</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>I tried to explain my situation clearly, but the agent kept giving irrelevant answers. It felt like it wasn’t interpreting my input correctly.
+</span></code></pre></div>
+</li>
+<li>
+<p>The process was confusing or difficult to navigate</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>I wasn’t sure what to do next during the interaction. The conversation flow wasn’t intuitive, and I had to guess how to proceed.
+</span></code></pre></div>
+</li>
+<li>
+<p>I had technical issues during the interaction (e.g., errors, delays)</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>The agent froze midway and didn’t respond for a while. I also experienced delays and had to refresh the page to continue.
+</span></code></pre></div>
+</li>
+<li>
+<p>All of the above</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>The experience was frustrating overall. The agent misunderstood my questions, the interface was hard to follow, and I ran into multiple technical glitches.
+</span></code></pre></div>
+</li>
+</ul>
+<p>Next, select <strong>Submit</strong>.</p>
+<p><img alt="Written feedback and submit" src="assets/11.3.2_22_WrittenFeedbackAndSubmit.png" /></p>
+</li>
+<li>
+<p>The agent will resume the <strong>End of Conversation</strong> topic since the activity of the <strong>Capture CSAT dissatisfied</strong> topic has been completed. It proceeds with the question of asking the user if it can be of further assistance. Select <strong>No</strong>.</p>
+<p><img alt="Resumes End of Conversation system topic" src="assets/11.3.2_23_ResumesEndOfConversationTopic.png" /></p>
+</li>
+<li>
+<p>The last node sends a final message and the <strong>End of Conversation</strong> topic has been completed.</p>
+<p><img alt="End of Conversation system topic completed" src="assets/11.3.2_24_EndOfConversationTopicCompleted.png" /></p>
+</li>
+</ol>
+<p>Great work! 🙌🏻 You've added a custom topic with an adaptive card that handles written feedback to CSAT ratings below <code>3</code>. Let's take this further by logging this as an event in <strong>Azure Application Insights</strong> next.</p>
+<h3 id="114-bonus-logging-telemetry-to-azure-application-insights">11.4 BONUS: Logging telemetry to Azure Application Insights<a class="headerlink" href="#114-bonus-logging-telemetry-to-azure-application-insights" title="Permanent link">&para;</a></h3>
+<p>In this exercise you'll learn how to utilize the <strong>Log custom telemetry event</strong> node to log an event in <strong>Azure Application Insights</strong>.</p>
+<h4 id="prerequisite">Prerequisite<a class="headerlink" href="#prerequisite" title="Permanent link">&para;</a></h4>
+<ul>
+<li>You need to have an <a href="https://learn.microsoft.com/en-us/azure/azure-monitor/app/create-workspace-resource?tabs=portal#create-an-application-insights-resource">Application Insights resource</a> set up in <strong>Azure</strong>.</li>
+<li>You also need to be able to access the Application Insights resource to obtain the <strong>Connection string</strong> value.</li>
+</ul>
+<p>Let's begin!</p>
+<ol>
+<li>
+<p>Navigate to the <strong>Capture CSAT dissatisfied</strong> custom topic and select the <strong>+ icon</strong> below the <strong>Ask with adaptive card</strong> node.</p>
+<p>Select <strong>Advanced</strong> and select <strong>Log a custom telemetry event</strong>.</p>
+<p><img alt="Add Log a Custom Telemetry Event node" src="assets/11.4_01_AddLogACustomTelemetryEvent.png" /></p>
+</li>
+<li>
+<p>Select the <strong>... ellipsis</strong> and select <strong>Properties</strong>.</p>
+<p><img alt="Select properties" src="assets/11.4_02_SelecProperties.png" /></p>
+</li>
+<li>
+<p>We'll now define the Event name as the following,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>CSAT Dissatisfied
+</span></code></pre></div>
+<p>For the Properties, we'll next use a Power Fx formula that references the rating and the written feedback. Select the <strong>... ellipsis</strong> icon.</p>
+<p>To learn more about this, expand the following additional learning block.</p>
+<details class="info">
+<summary>Additional Learning: Event name and Properties</summary>
+<p>🏷️ <strong>Event name</strong></p>
+<ul>
+<li>This is the <strong>identifier</strong> for the telemetry event you want to log. </li>
+<li>Think of it as the "label" for the event, so you can easily recognize and filter it later in your analytics or monitoring tools.</li>
+</ul>
+<p>🦋 <strong>Example</strong></p>
+<ul>
+<li>If you want to track when a user submits negative feedback, you might name the event <code>CSAT Dissatisfied</code>. </li>
+</ul>
+<p>🌿 <strong>Properties</strong></p>
+<ul>
+<li>The properties to track - specific data related to the event, such as variables, user input, or error details.</li>
+</ul>
+<p>🦋 <strong>Example</strong></p>
+<ul>
+<li>This could be a combination of values submitted through the adaptive card.</li>
+</ul>
+</details>
+<p><img alt="Log custom telemetry event properties" src="assets/11.4_03_EnterEventName.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Formula</strong> tab and enter the following Power Fx formula.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>&quot;Feedback: &quot; &amp; Text(Topic.ratingId) &amp; &quot;, &quot; &amp; &quot;Comment: &quot; &amp; If(IsBlank(Topic.notesId), &quot;NA&quot;, Topic.notesId)
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Understanding the formula</p>
+<ol>
+<li><code>"Feedback: "</code><ul>
+<li>Adds the label <code>"Feedback: "</code> at the start.</li>
+</ul>
+</li>
+<li><code>Text(Topic.ratingId):</code><ul>
+<li>Converts the value of <code>Topic.ratingId</code> (the user's rating, e.g., a number from 1 to 5) to text and appends it.</li>
+</ul>
+</li>
+<li><code>", "</code><ul>
+<li>Adds a comma and space for separation.</li>
+</ul>
+</li>
+<li><code>"Comment: "</code><ul>
+<li>Adds the label "Comment: ".</li>
+</ul>
+</li>
+<li><code>If(IsBlank(Topic.notesId), "NA", Topic.notesId)</code><ul>
+<li>Checks if <code>Topic.notesId</code> (the user's written comment) is blank. If it is, it adds <code>"NA"</code> (not available); otherwise, it adds the actual comment.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example</strong></p>
+<ul>
+<li>If the user gave a rating of 2 and wrote "Too slow", the result would be <code>Feedback: 2, Comment: Too slow</code></li>
+</ul>
+<p><strong>Summary</strong></p>
+<ul>
+<li>This formula is used to log or display both the numeric feedback and any written comment in a clear, combined format, handling cases where the comment might be missing.</li>
+</ul>
+</div>
+<p><img alt="Enter formula" src="assets/11.4_04_EnterFormula.png" /></p>
+</li>
+<li>
+<p><strong>Save</strong> the topic.</p>
+</li>
+<li>
+<p>Next, we'll link the agent to the Application Insights resource. Select <strong>Settings</strong>.</p>
+<p><img alt="Agent settings" src="assets/11.4_05_AgentSettings.png" /></p>
+</li>
+<li>
+<p>Select <strong>Advanced</strong> and select <strong>Application Insights</strong>.</p>
+<p><img alt="Application Insights settings" src="assets/11.4_06_ApplicationInsightSettings.png" /></p>
+</li>
+<li>
+<p>Open your Application Insights resource in a new browser and under <strong>Overview</strong>, in the <strong>Connection string</strong> field select the copy icon. This will copy the value of the connection string.</p>
+<p><img alt="Copy Connection string value" src="assets/11.4_07_CopyConnectionStringValue.png" /></p>
+</li>
+<li>
+<p>Navigate back to Copilot Studio and paste the copied connection string value into the <strong>Connection string</strong> field.</p>
+<p><strong>Save</strong> the updated settings.</p>
+<p><img alt="Paste connection string and save." src="assets/11.4_08_PasteConnectionStringAndSave.png" /></p>
+</li>
+<li>
+<p>We can now test the telemetry event is logged into Application Insights when the CSAT rating is 1 star or 2 stars. We'll repeat the same steps earlier by asking the agent a question and after the agent has responded, enter the following to trigger the <strong>End of conversation</strong> topic.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>end conversation
+</span></code></pre></div>
+<p><img alt="Trigger end of conversation system topic" src="assets/11.3.2_17_EndConversation.png" /></p>
+</li>
+<li>
+<p>Select <strong>Yes</strong> to the question asked about ending the conversation.</p>
+<p><img alt="Yes end conversation" src="assets/11.3.2_18_YesEndConversation.png" /></p>
+</li>
+<li>
+<p>Next, we'll see the next question from the system topic about whether our question has been answered. Select <strong>Yes</strong>.</p>
+<p><img alt="Yes the question has been answered" src="assets/11.3.2_19_YesToAnsweringQuestion.png" /></p>
+</li>
+<li>
+<p>We will now see the CSAT question. Select 1 star or 2 stars as the rating.</p>
+<p><img alt="CSAT rating" src="assets/11.3.2_20_CSATSurvey.png" /></p>
+</li>
+<li>
+<p>The <strong>End of Conversation</strong> topic has redirected to the <strong>Capture CSAT dissatisfied feedback</strong> custom topic.</p>
+<p>Select either of the options and add written feedback by selecting <strong>Add comment</strong> or the <strong>^ caret</strong> icon.</p>
+<p>Next, select <strong>Submit</strong>.</p>
+<p><img alt="Written feedback and submit" src="assets/11.4_14_SubmitFeedback.png" /></p>
+</li>
+<li>
+<p>The agent will resume the <strong>End of Conversation</strong> topic since the activity of the <strong>Capture CSAT dissatisfied</strong> topic has been completed. It proceeds with the question of asking the user if it can be of further assistance. Select <strong>No</strong>.</p>
+<p><img alt="Resumes End of Conversation system topic" src="assets/11.3.2_23_ResumesEndOfConversationTopic.png" /></p>
+</li>
+<li>
+<p>The last node sends a final message and the <strong>End of Conversation</strong> topic has been completed.</p>
+<p><img alt="End of Conversation system topic completed" src="assets/11.3.2_24_EndOfConversationTopicCompleted.png" /></p>
+</li>
+<li>
+<p>Let's now check out the custom event logged in Application Insights!</p>
+<p>Navigate back to your browser that has your Application Insights resource and select <strong>Events</strong> on the left hand-side menu. Select <code>Any Custom Event</code> in the <strong>Who used</strong> dropdown field and in the <strong>Events</strong> dropdown field select our event, <strong>CSAT Dissatisfied</strong>, which we created in Copilot Studio earlier. This will only show custom events with the event name of <strong>CSAT Dissatisfied</strong>.</p>
+<p><img alt="Application Insights Events" src="assets/11.4_17_Events.png" /></p>
+</li>
+<li>
+<p>Scroll down and select <strong>View More Insights</strong>.</p>
+<p><img alt="View more insights" src="assets/11.4_18_ViewMoreInsights.png" /></p>
+</li>
+<li>
+<p>This is where you can see more information about the custom event logged by the agent.</p>
+<div class="admonition info">
+<p class="admonition-title">How this custom event links back to the agent</p>
+<p>Our <strong>CSAT Dissatisfied</strong> custom event corresponds to a telemetry signal indicating the user reported dissatisfaction in the CSAT survey after they submitted their feedback through the adaptive card. By logging a custom telemetry event in Application Insights, it helps track specific user actions or feedback signals from agents built in Copilot Studio.</p>
+</div>
+<p>Scroll down to the <strong>Event Statistics</strong> section and select <strong>CSAT Dissatisfied</strong>.</p>
+<p><img alt="View Event Insights" src="assets/11.4_19_ViewEventInsights.png" /></p>
+</li>
+<li>
+<p>We're now viewing <strong>end-to-end transaction details</strong> which provides a deep dive into telemetry for the event. It shows that 1 Event is logged in the Traces &amp; events tab.</p>
+<ul>
+<li>the left <strong>Event Summary</strong> panel displays the local time, type and event details. The Details column typically references the <code>event name</code> and its associated <code>customDimensions</code> (metadata).</li>
+<li>the right <strong>Event Properties</strong> panel displays a breakdown of the event. The <strong>Custom properties</strong> are custom dimensions sent with the event.<ul>
+<li>the <code>SerializedData</code> property stores the actual feedback message, which includes technical issues and user comments.</li>
+<li>other properties like <code>DesignMode</code>, <code>channelId</code>, and <code>conversationId</code> provide context about where and how the event occurred.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Custom event information" src="assets/11.4_20_CustomEventInformation.png" /></p>
+</li>
+<li>
+<p>Now let's learn about another way to query events logged in Application Insights. Over time, you could have a large data set of events logged in Application Insights from different services. To query events, we can perform a Kusto query (a query language) on app insights data.</p>
+<p>On the left hand-side menu, select <strong>Logs</strong> and the <strong>Queries hub</strong> dialog automatically loads. Exit by selecting the <strong>X icon</strong>.</p>
+<p><img alt="Exit from the Queries hub dialog" src="assets/11.4_21_QueryLogs.png" /></p>
+</li>
+<li>
+<p>By default, you'll see a list of Queries executed previously. To query data, select <strong>Select a table</strong>.</p>
+<p><img alt="Select a table to query" src="assets/11.4_22_SelectATable.png" /></p>
+</li>
+<li>
+<p>Select the <code>customEvents</code> table and select <strong>Run</strong>. This will now run a query on the <code>customEvents</code> table.</p>
+<p><img alt="Run customEvents query" src="assets/11.4_23_RunCustomEvents.png" /></p>
+</li>
+<li>
+<p>The results of the query will be displayed. By default it will display events from the last <em>24 hours</em> and show only <em>1000 results</em>.</p>
+<p><img alt="customEvents results" src="assets/11.4_24_customEventsResults.png" /></p>
+</li>
+<li>
+<p>The view that is currently displayed is <strong>Simple mode</strong>. Let's change it to <strong>KQL mode</strong> so that we can apply a Kusto query.</p>
+<p><img alt="Select KQL mode" src="assets/11.4_25_SelectKQLmode.png" /></p>
+</li>
+<li>
+<p>For our Kusto query, enter the following</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>customEvents
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>| extend FeedbackData = customDimensions[&#39;SerializedData&#39;]
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>| where name == &quot;CSAT Dissatisfied&quot;
+</span></code></pre></div>
+<p><strong>Run</strong> the query.</p>
+<div class="admonition info">
+<p class="admonition-title">Explanation</p>
+<ul>
+<li>
+<p><code>customEvents</code></p>
+<ul>
+<li>Refers to the table in Application Insights that stores all custom telemetry events.</li>
+</ul>
+</li>
+<li>
+<p><code>| extend FeedbackData = customDimensions['SerializedData']</code></p>
+<ul>
+<li>Adds a new column called <code>FeedbackData</code> to each row, extracting the value from the <code>SerializedData</code> field inside the <code>customDimensions</code> property (which is a dictionary of custom data attached to the event).</li>
+</ul>
+</li>
+<li>
+<p><code>| where name == "CSAT Dissatisfied"</code></p>
+<ul>
+<li>Filters the results to only include events where the event name is exactly "CSAT Dissatisfied" (i.e., only feedback events for dissatisfied CSAT ratings).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Summary</strong></p>
+<p>This query retrieves all custom telemetry events named "CSAT Dissatisfied" and extracts the serialized feedback data for further analysis. It’s useful for reviewing negative feedback submitted by users.</p>
+</div>
+<p><img alt="Kusto query" src="assets/11.4_26_KustoQuery.png" /></p>
+</li>
+<li>
+<p>The results of the query will be displayed. Expand one of the results.</p>
+<p><img alt="Query results" src="assets/11.4_27_Results.png" /></p>
+</li>
+<li>
+<p>Scroll down and you'll see the new FeedbackData column defined in the Kusto query.</p>
+<p><img alt="FeedbackData column" src="assets/11.4_28_ExtendSerializedData.png" /></p>
+</li>
+</ol>
+<h2 id="mission-complete">✅ Mission Complete<a class="headerlink" href="#mission-complete" title="Permanent link">&para;</a></h2>
+<p>Congratulations! 👏🏻 Excellent work, Operative.</p>
+<p>In this final mission, you’ve learned how to close the feedback loop for your agents:</p>
+<p><strong>✅ Built-in feedback</strong>
+You learned how to provide user feedback and where to review the feedback analytics.</p>
+<p><strong>✅ Adaptive cards (custom)</strong>
+You learned how to collect feedback using an adaptive card and log telemetry to Azure Application Insights.</p>
+<p>Feedback is paramount to iterative improvements to your agents! It's not optional. It's how good agents become great ones.</p>
+<h2 id="whats-next">🎯 What’s Next<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
+<p>You now have everything you need to take your agent <strong>from prototype to production</strong>.</p>
+<p>We won’t walk you through publishing again here as you already mastered that skill in the <strong>Recruit</strong> course. The same steps apply:</p>
+<ul>
+<li>Publish your agent to <strong>Microsoft Teams</strong></li>
+<li>Share it with real users</li>
+<li>Start collecting feedback</li>
+<li>Iterate</li>
+</ul>
+<p>If you need a refresher, revisit the <a href="../../recruit/11-publish-your-agent/">Recruit publishing module</a> then come right back and finish strong.</p>
+<blockquote>
+<p>[!IMPORTANT]
+If you are using a trial license to complete the course, you will not be able to publish.Publishing is not required to get a badge for this lab.</p>
+</blockquote>
+<h2 id="final-step-deploy-earn-your-badge">🏁 Final Step: Deploy &amp; Earn Your Badge<a class="headerlink" href="#final-step-deploy-earn-your-badge" title="Permanent link">&para;</a></h2>
+<p>🚀 <strong>Publish your agent</strong><br />
+📊 <strong>Verify feedback is flowing</strong><br />
+🏅 <strong>Claim your Operative badge</strong></p>
+<p>You’ve completed Agent Academy: Operative and know how to build a real-world multi-agent system.</p>
+<p>The field is yours.</p>
+<p>👉 <strong><a href="//docs/operative-preview/course-completion-badges-operative/README.md">Claim your Operative badge</a></strong>  </p>
+<h2 id="tactical-resources">📚 Tactical Resources<a class="headerlink" href="#tactical-resources" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://learn.microsoft.com/en-us/power-platform/release-plan/2025wave1/microsoft-copilot-studio/collect-thumbs-up-or-down-feedback-comments-agents?source=recommendations?WT.mc_id=power-188561-ebenitez">Collect thumbs up or down feedback and comments for your agents</a></p>
+<p>📖 <a href="https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-feedback?WT.mc_id=power-188561-ebenitez">Enable enhanced user feedback for Copilot and related experiences</a></p>
+<p>📖 <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-improve-agent-effectiveness?WT.mc_id=power-188561-ebenitez">Analyze conversational agent effectiveness</a></p>
+<p>📖 <a href="https://learn.microsoft.com/en-us/dynamics365/guidance/resources/copilot-studio-appinsights?WT.mc_id=power-188561-ebenitez">Application Insights telemetry with Microsoft Copilot Studio</a></p>
+<p>📖 <a href="https://learn.microsoft.com/en-gb/microsoft-copilot-studio/guidance/adaptive-card-add-feedback-for-every-response?WT.mc_id=power-188561-ebenitez">Obtain feedback for every response</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,101 @@
+{
+  type: "AdaptiveCard",
+  '$schema': "https://adaptivecards.io/schemas/adaptive-card.json",
+  version: "1.5",
+  backgroundImage: {
+    url: "https://adaptivecards.io/content/backgroundImage.png",
+    verticalAlignment: "Center"
+  },
+  body: [
+    {
+      type: "Container",
+      style: "emphasis",
+      bleed: true,
+      items: [
+        {
+          type: "TextBlock",
+          text: "Device selection",
+          weight: "Bolder",
+          size: "Large",
+          wrap: true
+        }
+      ]
+    },
+    {
+      type: "Container",
+      style: "default",
+      items: [
+        {
+          type: "TextBlock",
+          text: "Please select which device you would like to request:",
+          wrap: true,
+          size: "Medium"
+        }
+      ],
+      spacing: "None"
+    },
+    {
+      type: "Container",
+      spacing: "None",
+      items: [
+        {
+          type: "Input.ChoiceSet",
+          id: "deviceSelectionId",
+          style: "expanded",
+          choices: ForAll(Global.VarDevices.value,
+            {
+              title: If(IsBlank(Model), "NA", Model),
+              value: If(IsBlank(ID), "NA", ID)
+            }
+          )
+        }
+      ]
+    },
+    {
+      type: "Container",
+      spacing: "None",
+      style: "emphasis",
+      items: [
+        {
+          type: "TextBlock",
+          text: "Additional Information",
+          wrap: true
+        },
+        {
+          type: "Input.Text",
+          id: "commentsId",
+          placeholder: "Please provide any specific requirements or comments",
+          isMultiline: true,
+          spacing: "Small"
+        }
+      ]
+    },
+    {
+      type: "Container",
+      spacing: "Medium",
+      items: [
+        {
+          type: "FactSet",
+          facts: [
+            {
+              title: "Request type:",
+              value: "New Device"
+            },
+            {
+              title: "Response time:",
+              value: "3-5 Business Days"
+            }
+          ],
+          spacing: "Small"
+        }
+      ]
+    }
+  ],
+  actions: [
+    {
+      type: "Action.Submit",
+      title: "Submit Request",
+      id: "deviceSubmittedId"
+    }
+  ]
+}

@@ -1,0 +1,1181 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/operative-preview/05-model-selection/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Understanding Agent Models - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#understanding-agent-models" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Understanding Agent Models
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recruit
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operative (Coming Soon)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commander (Coming Soon)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-archetype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🕵️‍♂️ CODENAME: OPERATION ARCHETYPE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Mission Brief
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔎 Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-agent-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤔 What is the Agent Model?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-updates-and-retired-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📶 Model updates and retired models
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin-controls-for-ai-model-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔐 Admin controls for AI model selection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔠 Response Formatting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-formatting-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🖌️ Available formatting options
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-formatting-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⭐ Best practices for formatting responses
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-05-model-selection-for-the-interview-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Lab 05 - Model selection for the Interview Agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Mission Complete
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactical-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Tactical Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="understanding-agent-models">Understanding Agent Models<a class="headerlink" href="#understanding-agent-models" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="codename-operation-archetype">🕵️‍♂️ CODENAME: <code>OPERATION ARCHETYPE</code><a class="headerlink" href="#codename-operation-archetype" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operation Time Window:</strong> <code>~45 minutes</code></p>
+</blockquote>
+<h2 id="mission-brief">🎯 Mission Brief<a class="headerlink" href="#mission-brief" title="Permanent link">&para;</a></h2>
+<p>Welcome back, Agent. In <a href="../02-agent-instructions/">Mission 02</a>,you learned how strong instructions shape agent behavior.</p>
+<p>Now it’s time to choose the brain.</p>
+<p>In <strong>Operation Archetype</strong>, you’ll learn how to select the right AI model for your agent and how to test model changes to see the impact on response quality, structure, and depth. Different models can respond faster or slower, be more concise or more detailed, and handle complex reasoning differently.</p>
+<p>By the end of this mission, you’ll be able to confidently choose a model based on your scenario and validate that choice by comparing results.</p>
+<h2 id="objectives">🔎 Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
+<p>In this mission, you'll learn:</p>
+<ol>
+<li>How to understand and select the optimal AI model for your agent's use case</li>
+<li>How to compare different model capabilities and performance characteristics</li>
+<li>How to switch your agent’s model</li>
+<li>How to test and evaluate differences in output when you change models</li>
+</ol>
+<h2 id="what-is-the-agent-model">🤔 What is the Agent Model?<a class="headerlink" href="#what-is-the-agent-model" title="Permanent link">&para;</a></h2>
+<p>The <em>agent model</em> is the underlying generative AI engine powering your Copilot agent’s responses. Copilot Studio lets you select which model your agent uses, enabling you to leverage different strengths (speed, output quality, cost, etc.) depending on your scenario. The model you choose determines how your agent thinks and responds, for example, one model may respond faster, another may produce more detailed answers, while another might excel at complex reasoning.</p>
+<h3 id="why-it-matters">🎭 Why it matters<a class="headerlink" href="#why-it-matters" title="Permanent link">&para;</a></h3>
+<p>Selecting the appropriate model ensures your agent performs optimally for your use case. Each available model has distinct capabilities and specializations, so aligning the model with your requirements (such as quick replies vs. deep analysis) can improve user satisfaction and manage costs.</p>
+<h3 id="available-models">🪁 Available models<a class="headerlink" href="#available-models" title="Permanent link">&para;</a></h3>
+<p>Copilot Studio supports OpenAI models and Anthropic models. Each model will have a category tag and an availability tag.</p>
+<h4 id="model-use-categories">Model use categories<a class="headerlink" href="#model-use-categories" title="Permanent link">&para;</a></h4>
+<p>Different models are designed for specific tasks. Selecting the right model improves your agent’s performance. For instance, use a Deep model for complex decision-making or a General model for broad, conversational topics.</p>
+<p>The table below outlines model tags, their strengths, and key considerations - <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-select-agent-model#model-use-categories">source</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+<th>Strengths</th>
+<th>Latency</th>
+<th>Cost</th>
+<th>Reasoning depth</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Deep</strong></td>
+<td>Optimized for deliberate, multi-step reasoning and tool-supported workflows.</td>
+<td>Complex analytics, multi-hop reasoning, policy and contract analysis, troubleshooting with multi-system steps, and synthesis of long documents with citations</td>
+<td>Highest</td>
+<td>Highest</td>
+<td>Multi-step, tool-rich</td>
+</tr>
+<tr>
+<td><strong>Auto</strong></td>
+<td>Optimized for coverage across mixed workloads; routes queries dynamically.</td>
+<td>Helpdesk and employee agents with mixed intents, blending knowledge and actions, and tier‑0 customer support with unpredictable complexity</td>
+<td>Variable</td>
+<td>Variable</td>
+<td>Multi-step, tool-rich</td>
+</tr>
+<tr>
+<td><strong>General</strong></td>
+<td>Optimized for speed and cost on everyday chat and light grounding.</td>
+<td>Drafting, rewriting, summarizing, and translation, FAQ-style grounded answers, and simple action automation</td>
+<td>Lowest</td>
+<td>Lowest</td>
+<td>Shallow-to-moderate</td>
+</tr>
+</tbody>
+</table>
+<h4 id="model-availability">Model availability<a class="headerlink" href="#model-availability" title="Permanent link">&para;</a></h4>
+<p>Models are released in stages. You can explore cutting-edge options like Experimental or Preview models, or stick with a stable, fully tested Generally Available model.</p>
+<p>The table below explains the availability tags - <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-select-agent-model#model-use-categories">source</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Experimental</strong></td>
+<td>Used for experimentation, and not recommended for production use. Subject to preview terms, and can have limitations on availability and quality. See <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-select-agent-model#limitations-of-experimental-and-preview-models">Limitations of experimental and preview models.</a></td>
+</tr>
+<tr>
+<td><strong>Preview</strong></td>
+<td>Will eventually become a generally available model, but currently not recommended for production use. Subject to preview terms, and can have limitations on availability and quality. See <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-select-agent-model#limitations-of-experimental-and-preview-models">Limitations of experimental and preview models.</a></td>
+</tr>
+<tr>
+<td><strong>No tag</strong></td>
+<td>Generally available. You can use this model for scaled and production use. In most cases, generally available models have no limitations on availability and quality, but some might still have some limitations, like regional availability.</td>
+</tr>
+<tr>
+<td><strong>Default</strong></td>
+<td>The default model for all agents, and usually the best performing generally available model. The default model is periodically upgraded as new, more capable models become generally available. Agents also use the default model as a fallback if a selected model is turned off or unavailable.</td>
+</tr>
+<tr>
+<td><strong>Retired</strong></td>
+<td>When a new model becomes the default model, the old default model is retired. You can still use the retired model for up to one month after retirement. For more information, see <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-retired-model">Continue using a retired AI model</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="openai-models">OpenAI models<a class="headerlink" href="#openai-models" title="Permanent link">&para;</a></h4>
+<p>AI capabilities evolve rapidly, and Copilot Studio keeps up by offering a range of Azure OpenAI models. As of 2025, the primary models to choose from include OpenAI's GPT-4.1, and the latest GPT-5 previews. The following table summarizes the main choices and what each is best suited for:</p>
+<table>
+<thead>
+<tr>
+<th>Model Version</th>
+<th>Category</th>
+<th>Availability</th>
+<th>Key Strengths</th>
+<th>Ideal Use Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GPT‑4o</strong></td>
+<td>General</td>
+<td>Retired</td>
+<td>Fast, versatile responses; supports text and image input; cost-effective balance of speed and accuracy.</td>
+<td>Routine Q&A; summarizing support chats or calls; quick content drafts; tasks combining text with visuals.</td>
+</tr>
+<tr>
+<td><strong>GPT-4.1</strong></td>
+<td>General</td>
+<td>Default</td>
+<td>Higher accuracy and reasoning than GPT-4o; excellent at complex text analysis (text-only model).</td>
+<td>Analyzing detailed documents (policies, reports); complex knowledge-base Q&A; scenarios where precision is critical.</td>
+</tr>
+<tr>
+<td><strong>GPT‑5 Chat</strong></td>
+<td>General</td>
+<td>Preview</td>
+<td>Advanced conversational abilities with strong context retention; produces human-like dialogue.</td>
+<td>Employee self-service chatbots; IT/HR helpdesk assistants; interactive agents requiring natural, human-like responses.</td>
+</tr>
+<tr>
+<td><strong>GPT‑5 Auto</strong></td>
+<td>Auto</td>
+<td>General</td>
+<td>Optimized for orchestrating multi-step workflows; can automate actions across systems (not just chit-chat).</td>
+<td>End-to-end process automation (e.g. ticket creation to resolution); multi-step task sequences across apps; "digital project manager" scenarios.</td>
+</tr>
+<tr>
+<td><strong>GPT‑5 Reasoning</strong></td>
+<td>Deep</td>
+<td>Preview</td>
+<td>- Latest model optimized for complex reasoning (trained up to Oct 2024) - High scores in document understanding and response accuracy</td>
+<td>Advanced reasoning tasks where top-tier analytical capability is required (such as extensive planning, interpreting complex data). Again, use cautiously in testing since it’s a preview model.</td>
+</tr>
+<tr>
+<td><strong>GPT‑5.1 Chat</strong></td>
+<td>General</td>
+<td>Experimental</td>
+<td>Latest experimental conversational model with broad task proficiency; improves on context awareness and responsiveness.</td>
+<td>General-purpose Q&amp;A and dialogue tasks leveraging the newest model’s capabilities; versatile chatbot scenarios where enhanced performance is beneficial.</td>
+</tr>
+<tr>
+<td><strong>GPT‑5.1 Reasoning</strong></td>
+<td>Deep</td>
+<td>Experimental</td>
+<td>Experimental top-tier reasoning model offering maximum depth and accuracy for complex tasks.</td>
+<td>Ultra-complex analytical queries or decision support requiring the highest precision (e.g. intricate strategic planning, high-stakes data analysis).</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>Warning</strong></p>
+<ul>
+<li>Experimental/preview models (like GPT-5 Chat) are accessible for testing new capabilities before they’re production-ready. They may have limited testing and higher variability in performance.</li>
+<li>They are not recommended for production use because of possible instability (variable quality, latency, or even time-outs). Always review any <em>Preview</em> model’s limitations and consider using them only in non-critical environments. Use them in <em>Sandbox</em> or <em>Developer</em> environments. If you do publish an agent with an experimental model, usage will still be billed at that model’s established rate.</li>
+</ul>
+</blockquote>
+<h4 id="anthropic-models-external">Anthropic models (external)<a class="headerlink" href="#anthropic-models-external" title="Permanent link">&para;</a></h4>
+<p>Currently there are two Anthropic models which are currently under Preview, they are accessible in early release environments.</p>
+<ul>
+<li><strong>Claude Sonnet 4.5</strong> is Anthropic's newest, coding and agent-focused model.</li>
+<li><strong>Claude Opus 4.1</strong> is a reasoning-focused model.</li>
+</ul>
+<p>OpenAI remains as the default model for new agents in Copilot Studio and you have the flexibility in selecting either of these models.</p>
+<p>Both are available in Microsoft Copilot Studio as opt-in preview (Frontier Program) models rather than General Availability (GA), meaning they’re for early experimental use only. The table below compares their status, strengths, and ideal use cases in the Copilot Studio context:</p>
+<table>
+<thead>
+<tr>
+<th>Model Version</th>
+<th>Status</th>
+<th>Key Strengths</th>
+<th>Ideal Use Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claude Sonnet 4.5</strong></td>
+<td>Experimental</td>
+<td>Excels at code-related tasks and complex “agent” workflows; strong at tool use and step-by-step reasoning.</td>
+<td>Advanced software development assistance (code generation &amp; debugging); building multi-step autonomous agents; tasks requiring integration with external tools or systems.</td>
+</tr>
+<tr>
+<td><strong>Claude Opus 4.1</strong></td>
+<td>Experimental</td>
+<td>Specialized for intensive analysis and structured problem-solving.</td>
+<td>In-depth data analysis and research projects; complex reasoning scenarios (e.g. compliance auditing, elaborate planning) where thoroughness is paramount.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>Warning</strong></p>
+<ul>
+<li>It's important to note that these are external models. Anthropic models are hosted outside Microsoft and are subject to Anthropic terms and data handling, which need to be reviewed and accepted before makers can use them. These models are available before an official release so that you can get early access and <a href="https://community.powerplatform.com/forums/thread/?groupid=db8f53c2-767d-47d6-a1ae-fe4c828a6553">provide feedback</a>. Therefore, it is not recommended to use these models for Production purposes.</li>
+<li>Please note that you could also experience slowdowns or timeouts due to limited capacity and availability, and these models might not be supported in the future. Admins can control access to this feature (more of this soon as you progress from here!).</li>
+</ul>
+</blockquote>
+<h4 id="context-length-and-data-training">🔢 Context length and data training<a class="headerlink" href="#context-length-and-data-training" title="Permanent link">&para;</a></h4>
+<p>All the above models are capable with large context windows. For instance, GPT-4.1 supports up to 128K tokens of context. They are all trained on data up to mid-2024 (GPT-5 on slightly later data). This means they <em>know</em> information up to those cut-off dates, which is useful for understanding their knowledge limitations when they generate answers.</p>
+<h3 id="changing-and-updating-the-model-of-your-agent">🔧 Changing and updating the model of your agent<a class="headerlink" href="#changing-and-updating-the-model-of-your-agent" title="Permanent link">&para;</a></h3>
+<p>By default, a new Copilot agent starts on the GPT-4o model, which is optimized as a balanced choice for most scenarios.</p>
+<p>You can switch the agent’s primary model anytime via the agent’s <strong>Settings</strong> page ➡️ <strong>Model</strong> section in the <strong>Generative AI</strong> tab, using a simple dropdown to pick from available models.</p>
+<p><img alt="Agent models available" src="assets/5.0_01_AgentModels.png" /></p>
+<p>This flexibility allows you to experiment with different models even after your agent is built. For example, switching to an experimental model to evaluate if it improves answer quality for your use case.</p>
+<h2 id="model-updates-and-retired-models">📶 Model updates and retired models<a class="headerlink" href="#model-updates-and-retired-models" title="Permanent link">&para;</a></h2>
+<p>Microsoft periodically upgrades the available models to newer versions. Notably, in November 2025, several models were made available:</p>
+<ul>
+<li>GPT-5.1 Chat</li>
+<li>GPT-5.1 Reasoning</li>
+</ul>
+<div class="admonition note">
+<p>Refer to <a href="https://learn.microsoft.com/en-us/ai-builder/prompt-modelsettings#model-updates">Model updates</a> periodically to understand model updates made by Microsoft.</p>
+</div>
+<p>If your agent was using the retired GPT-4o model, it would have been transparently moved to <strong>GPT-4.1</strong> which is the default OpenAI model.</p>
+<h3 id="why-might-you-continue-using-a-retired-model">🧶 Why might you continue using a "Retired" model?<a class="headerlink" href="#why-might-you-continue-using-a-retired-model" title="Permanent link">&para;</a></h3>
+<p>With AI model upgrades happening automatically, Copilot Studio provides a safety valve for continuity. You may have cases where you need to stick with the previous model for a short time, even after an upgrade.</p>
+<p>For example, to maintain compatibility, to meet compliance requirements, or simply because your solution’s behavior with the new model needs evaluation before fully switching over. Microsoft recognizes this and allows makers to continue using a retired model for up to <strong>30 days</strong> after an automatic upgrade.</p>
+<ul>
+<li>
+<p><strong>Compatibility</strong>: Perhaps the new model’s outputs differ in format or content. If your downstream systems or prompts expect the old model’s style, you might need time to adjust your logic. The grace period lets you run on the known model while you update and test your agent with the new model in a controlled way. You can make adjustments without disrupting users.</p>
+</li>
+<li>
+<p><strong>Compliance &amp; Data Policies</strong>: Some organizations have strict vetting for AI models. An experimental new model might not yet be approved for use, or it might handle data in a different way (for example, the new model might use data centres in different regions). If that’s a concern, an admin might decide to delay the switch until compliance checks are done.</p>
+</li>
+<li>
+<p><strong>Specific Business Needs</strong>: You might have a mission-critical event (product launch, demo) where stability is more important than getting new features quickly. Sticking with the older model ensures no surprises during that period.</p>
+</li>
+</ul>
+<h3 id="how-to-use-a-retired-model">🌳 How to use a retired model<a class="headerlink" href="#how-to-use-a-retired-model" title="Permanent link">&para;</a></h3>
+<p>On your agent’s <strong>Settings</strong> page, in the <strong>Model</strong> section in the <strong>Generative AI</strong> tab, there is a toggle option labeled <strong>"Continue using retired models"</strong>. This becomes available when a model update is rolled out.</p>
+<p><img alt="Setting for Continue using retired models" src="assets/5.0_02_ContinueUsingRetiredModels.png" /></p>
+<p>If you switch this on, your agent will remain on the previous model version for that 30-day window. During that window, you can toggle between the old and new model to compare responses and gradually roll over. After 30 days, the old model is fully removed from service, so you should plan to move to the new model by then. In practice, this feature offers a buffer to support a smooth transition.</p>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
+<p>Suppose your agent was using GPT-4o and it got upgraded to GPT-4.1. If you notice the AI’s tone changed or it uses slightly different phrasing that doesn’t align with your established conversational style, you could toggle on “use retired model” to temporarily revert to GPT-4o.</p>
+<p>You then have a few weeks to update your prompts/instructions to suit GPT-4.1’s style (maybe adding an instruction like “keep responses brief”) and test thoroughly. Test your agent on GPT-4.1 in a safe environment, and then disable the retired model toggle once confident. This way, your end users have a consistent experience during the transition.</p>
+<h2 id="admin-controls-for-ai-model-selection">🔐 Admin controls for AI model selection<a class="headerlink" href="#admin-controls-for-ai-model-selection" title="Permanent link">&para;</a></h2>
+<p>It’s worth noting that not every copilot environment allows all model choices by default. There are organization-level settings that tenant administrators control. This is especially relevant for experimental models. Organizations may want to restrict who can use preview AI models (since they might process data in non-standard ways or outside certain regions).</p>
+<p>Here are the key admin controls affecting which models a maker/developer can select for an agent:</p>
+<ul>
+<li><strong>Enable Anthropic models to be used within your organization</strong>: An admin with the <strong>Global administrator</strong> role needs to enable (allow) anthropic models in the Microsoft 365 Admin Center. If this setting is disabled, only OpenAI models will be available to select.</li>
+</ul>
+<p><img alt="Allow Anthropic provider setting in Microsoft 365 admin center" src="assets/5.0_05_AllowAnthropicProvider.png" /></p>
+<ul>
+<li>
+<p><strong>Allow Preview (Experimental) models to be used in Copilot Studio environments</strong>: An admin can toggle whether preview and experimental AI models are available in a given environment. If this is turned <strong>off</strong>, makers/developers will only see generally-available models (like GPT-4o) in the dropdown.</p>
+<p>To use GPT-5 or any future preview, the admin must turn this setting <strong>on</strong> for that specific environment.</p>
+</li>
+</ul>
+<p><img alt="Enable external model setting" src="assets/5.0_03_EnableExternalModelsSetting.png" /></p>
+<ul>
+<li>
+<p><strong>Move data across regions</strong>: Because experimental models may not run in the same regional data centers as standard models, enabling them often requires allowing cross-region data movement. In the Power Platform admin center (environment settings), there is a setting called <strong>Move data across regions</strong>. This must be turned on by the admin if you want to permit experimental model usage. It acknowledges that data processed by these models may leave your organization's geographic boundaries.</p>
+<p>For example, if your environment is in <em>Europe</em> and an experimental model is only hosted in <em>US</em> datacenters, this setting needs to be enabled to let that data flow happen. If it’s disabled, Copilot won’t use those models.</p>
+</li>
+</ul>
+<p><img alt="Move data across regions settings" src="assets/5.0_04_MoveDataAcrossRegions.png" /></p>
+<p>These admin settings ensure that <strong>organizations stay in control</strong> of sensitive aspects like data residency and feature stability. As a developer building an agent, if you find that the option for GPT-5 preview models are missing or you see a warning about generative AI not being available, it could be that your admin has disabled experimental models or hasn’t enabled cross-region data movement. In such cases, you’d need to contact your tenant admin to adjust the environment settings if experimental features are desired.</p>
+<p>For a quick reference, here’s a summary of the admin controls related to model selection:</p>
+<table>
+<thead>
+<tr>
+<th>Admin Setting</th>
+<th>Effect on Model selection</th>
+<th>Setting location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Allow Anthropic models</strong></td>
+<td>When <strong>Allowed</strong>, users can connect to the Anthropic external models for agents built in Copilot Studio. When <strong>disabled</strong>, only OpenAI models are available.</td>
+<td>Microsoft 365 Admin Center</td>
+</tr>
+<tr>
+<td><strong>Allow Preview &amp; Experimental Models</strong></td>
+<td>When <strong>ON</strong>, makers can choose preview/experimental AI models (for example GPT-5 Chat) for their agents. When <strong>OFF</strong>, only production-ready models are available.</td>
+<td>Power Platform admin center</td>
+</tr>
+<tr>
+<td><strong>Move Data Across Regions</strong></td>
+<td>Required to be <strong>ON</strong> if experimental models are enabled. It permits data from the agent to be processed and stored outside the home region. If this is OFF, any model that would require cross-region data flow will be blocked, leading to the agent's generative AI features being unavailable. Managed in the Power Platform admin centre by a tenant administrator.</td>
+<td>Power Platform admin center</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>If you’re an <strong>admin</strong> concerned about data compliance, disable the use of Anthropic models + keep the preview models off and cross-region data moving off.</li>
+<li>If you’re a <strong>developer</strong> in a highly regulated industry environment, you may need to stick to General Availability (GA) models unless you get clearance to use preview models (OpenAI) or external preview models (Anthropic).</li>
+</ul>
+</div>
+<h2 id="response-formatting">🔠 Response Formatting<a class="headerlink" href="#response-formatting" title="Permanent link">&para;</a></h2>
+<p>Once you’ve sorted out <em>what</em> your agent will say by picking the right model and providing good instructions, the next focus is <em>how</em> the answer should look when delivered to the user.</p>
+<p><strong>Response Formatting</strong> in Copilot Studio refers to defining the style and structure of the AI’s replies - such as whether text should be bold or italic, if links can be included, or if any dynamic content/expressions should be inserted.</p>
+<h3 id="why-response-formatting-matters">🖼️ Why Response Formatting matters<a class="headerlink" href="#why-response-formatting-matters" title="Permanent link">&para;</a></h3>
+<p>It’s all about readability and user experience. Even the most correct answer can confuse or frustrate a user if it’s a blob of unstructured text. By applying consistent formatting, you ensure key information stands out and the answer is easy to scan.</p>
+<p>For example,</p>
+<ul>
+<li><strong>bold</strong> text can highlight an important number or term</li>
+<li><strong>lists</strong> can break complex instructions into steps</li>
+<li><strong>hyperlinks</strong> can point the user to additional resources without overcrowding the answer</li>
+</ul>
+<p>Additionally, your brand’s style or tone should be reflected in formatting choices. For instance, a formal agent might avoid emojis and use bold text for emphasis, while a playful one might use italics to highlight lighthearted or humorous comments.</p>
+<p>In Copilot Studio’s generative answer node, you can allow or disallow certain formatting in the responses. Let’s go through what options exist and how to use them effectively.</p>
+<h2 id="available-formatting-options">🖌️ Available formatting options<a class="headerlink" href="#available-formatting-options" title="Permanent link">&para;</a></h2>
+<p>Copilot Studio generative answers support a subset of Markdown for rich text. Here are the main formatting elements you can leverage in the AI’s responses, and what they do:</p>
+<table>
+<thead>
+<tr>
+<th>Formatting Option</th>
+<th>Purpose and Effect</th>
+<th>Example Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bold</strong></td>
+<td>Makes important words or phrases stand out. Use bold to highlight key information or critical values.</td>
+<td><strong>"Your account balance is $1,250."</strong> - The amount is bold so it's immediately noticeable.</td>
+</tr>
+<tr>
+<td><em>Italics</em></td>
+<td>Adds subtle emphasis or denotes special terms. Commonly used for document titles, or to highlight a <em>phrase</em> in a softer way than bold.</td>
+<td><em>"Please provide additional details for verification."</em> - The words “additional details” are italicized to indicate a prompt or placeholder.</td>
+</tr>
+<tr>
+<td>Hyperlinks</td>
+<td>Inserts clickable links in the response text. Useful for directing users to external articles, internal knowledge base, or any detailed reference.</td>
+<td>"Refer to our <a href="https://www.microsoft.com/surface/business/warranty-protection-plans-and-support">Microsoft Surface Warranty and Protection Plans</a> for more details." - The text "Microsoft Surface Warranty and Protection Plans" is a hyperlink to the web page.</td>
+</tr>
+<tr>
+<td>Power Fx expressions</td>
+<td>Embeds dynamic content or logic-driven text in the response. Power Fx can pull in variables, do calculations, or enforce formatting (even with regex for validation). This allows parts of the answer to be determined by real-time data or conditions.</td>
+<td>"Today is <code>${Text(Now(), "dddd, mmmm d, yyyy")}</code>." - This uses a Power Fx formula to insert the current date in a long format, <code>Friday, October 3, 2025</code>. You could also use expressions to format numbers, or ensure an output meets a pattern (using regex).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Always test your response formatting using the testing pane in Copilot Studio. Try out sample user questions. See if the agent’s answer is coming through with the formatting you expect. If something is not right, such as the response shows markdown syntax in text instead of formatting it, you may need to adjust the instructions. Sometimes the model might not be sure it’s allowed to use formatting and will “play safe” by showing the markdown syntax such as raw asterisks. Clarify in the formatting instructions and repeat testing till you're satisfied.</p>
+</div>
+<h2 id="best-practices-for-formatting-responses">⭐ Best practices for formatting responses<a class="headerlink" href="#best-practices-for-formatting-responses" title="Permanent link">&para;</a></h2>
+<p>Now that we know what we <em>can</em> do, let’s talk about what we <em>should</em> do to make the AI’s answers clear and effective. Here are some best practices, aimed at developers crafting the agent’s behavior:</p>
+<ul>
+<li>
+<p><strong>Be consistent with style</strong>: Establish a consistent format for similar types of responses.</p>
+<p>For example, you might provide the following instructions: <code>Term in bold, followed by a colon, then the definition in regular text.</code></p>
+<p>Do that every time for a definition.</p>
+<p>Or if the agent is listing multiple options, always use a bulleted list rather than sometimes bullets, sometimes a paragraph.</p>
+<p>Consistency helps users quickly understand the structure of the answer. You can enforce this by specifying it in instructions: <code>"Always answer with bullet points when listing options."</code></p>
+</li>
+<li>
+<p><strong>Use emphasis sparingly but meaningfully</strong>: Apply <strong>bold</strong> to the most crucial information only - typically one or two words or a short phrase that the user should not miss. Avoid bolding entire paragraphs or large chunks, as that defeats the purpose.</p>
+<p>Use <em>italics</em> for secondary emphasis or to denote something like an example input or a note. For instance, italicizing error messages or user-provided text can differentiate it from the rest of the agent’s output.</p>
+</li>
+<li>
+<p><strong>Leverage lists for structure</strong>: When an answer contains multiple pieces of information or a step-by-step process, don’t bury it in a sentence. If it’s naturally a sequence, use a numbered list (1, 2, 3, …). If it’s an unordered collection, like features of a product, use bullet points.</p>
+</li>
+<li>
+<p><strong>Mind the tone along with format</strong>: The formatting should complement the agent’s tone. If your agent’s persona is very formal, you might avoid using exclamation marks or casual emphasis. If it’s friendly, maybe an occasional bold “Great choice!” is fine. The tone is primarily set by language, but formatting can amplify it. A friendly chatty agent might even use emoticons or emojis (if appropriate) - though use those sparingly and only if they fit the use case.</p>
+</li>
+<li>
+<p><strong>Check hyperlink texts</strong>: When including hyperlinks in answers, make sure the link text is descriptive of what it leads to. This not only looks more professional but also aids accessibility.</p>
+<p>For example, <code>"download the report here"</code> is not as good as <code>"download the Quarterly Report"</code> where <em>"Quarterly Report"</em> is the hyperlink. Ensure the URLs are correct and the user has permission to access them if they are internal sites.</p>
+</li>
+<li>
+<p><strong>Utilize Power Fx for dynamic formatting</strong>: A powerful aspect for developers is that you can combine the generative answer with Power Fx expressions to refine the output.</p>
+<p>For instance, suppose the initial response is <code>"Your order total is 1250 usd.”</code> You could use a Power Fx formula to format that number as US currency and replace <code>"usd"</code> with the dollar symbol, resulting in <code>"$1,250.00"</code>.</p>
+<p>You might do this with a formula like: <code>"$" &amp; Text(ThisItem.OrderTotal, "[$-en-US]#,##0.00")</code></p>
+<p>This formula ensures the number is formatted with commas and two decimal places, following US conventions.</p>
+<p>Similarly, if generative AI provides a date in an undesirable format, a Power Fx expression could re-format it. Essentially, you can post-process the AI’s text to enforce any strict patterns.</p>
+</li>
+<li>
+<p><strong>Validate and extract text using regex</strong>: TBC</p>
+</li>
+<li>
+<p><strong>Aim for readability</strong>: After applying all the above, always put yourself in the user’s perspective and read the output. Is it easy to find the main point? Is the response unnecessarily long? Often, less is more. If the AI tends to be very verbose, consider instructing it to be concise or limiting the scope of answers.</p>
+<p>On the other hand, if the answer is too short or lacks detail, you might want to add instructions asking for more explanation or examples.</p>
+<p>The format can only do so much - the content quality must be there. A good balance is a short answer that addresses the query, followed by a hyperlink or an option to get more info. For instance, <code>"Your password was reset successfully. You will receive a confirmation email shortly. If you did not request this, please head to [https://support.example.com](https://support.microsoft.com)."</code> - This is clear, and the additional info (contact support) is given via a hyperlink rather than a big paragraph about what to do.</p>
+</li>
+</ul>
+<p>In summary, use formatting to enhance clarity, not distract. The user should be able to glance at the agent’s answer and grasp the needed information quickly. As a developer, utilize the <strong>Response Formatting</strong> in the <strong>Generative AI</strong> tab under the <strong>Settings</strong> of your agent to ensure the output is polished. Always test a variety of questions to see how the formatting holds up, and adjust your instructions as needed.</p>
+<h2 id="lab-05-model-selection-for-the-interview-agent">🧪 Lab 05 - Model selection for the Interview Agent<a class="headerlink" href="#lab-05-model-selection-for-the-interview-agent" title="Permanent link">&para;</a></h2>
+<p>In this lab, you’ll compare responses from two different models by asking the same questions and observing differences in:</p>
+<div class="language-text highlight"><pre><span></span><code> - Depth
+ - Structure
+ - Tone
+ - Specificity
+</code></pre></div>
+<p>Let's compare the responses of the GPT-4.1 default model with the GPT 5.1 Chat experimental model.</p>
+<ol>
+<li>
+<p>Start a new test session in the <strong>Hiring Agent</strong> and enter the following question below. Use a <strong>Resume Number</strong> value from your existing active resumes in the <strong>Hiring Hub</strong> model-driven app.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Summarize resume RXXXXX
+</span></code></pre></div>
+<p><img alt="Enter first question for GPT-4.1 default model" src="assets/5.1_01_GPT-4.1DefaultModel.png" /></p>
+</li>
+<li>
+<p>A summary of the resume will next be displayed and we can see it's in the output of bullet points by headings. There's also a reference to the Dataverse row for the <strong>Active Resumes</strong> system view.</p>
+<p><img alt="Question 1 response" src="assets/5.1_02_01_Question1Response.png" /></p>
+<p><img alt="Question 1 response" src="assets/5.1_02_02_Question1Response.png" /></p>
+</li>
+<li>
+<p>We'll ask another question for suggestions of interview questions to ask based on the evaluation criteria of a job role, and provide what the potential answers are. Enter the question below.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Can you provide suggestions of questions to ask in an interview for the Power Platform developer role (Job role number J1004) based on its associated evaluation criteria? Can you also please provide what the answers may be for each question?
+</span></code></pre></div>
+<p><img alt="Question 2" src="assets/5.1_03_Question2.png" /></p>
+</li>
+<li>
+<p>The returned response lists interview questions in numbered format. Each question is followed by a <code>Model Answer</code>. Notice how the answer is in the point of view of the candidate, the model refers to the answers in first-person writing.</p>
+<p><img alt="Question 2 response" src="assets/5.1_04_01_Question2Response.png" /></p>
+<p><img alt="Question 2 response" src="assets/5.1_04_02_Question2Response.png" /></p>
+</li>
+<li>
+<p>Let's now change the agent's model. In the <strong>Overview</strong> tab select the <strong>chevron</strong> icon and from the list of <strong>OpenAI</strong> models, select <strong>GPT-5.1 Chat</strong>.</p>
+<p><img alt="Select GPT-5.1 Chat" src="assets/5.1_05_SelectGPT-5.1Chat.png" /></p>
+</li>
+<li>
+<p>A confirmation message will appear shortly to inform you that the agent model has been updated. Let's now test the responses of this model by starting a new test session.</p>
+<p><img alt="New test session" src="assets/5.1_06_NewTestSession.png" /></p>
+</li>
+<li>
+<p>Enter the following question below. Use a <strong>Resume Number</strong> value from your existing active resumes in the <strong>Hiring Hub</strong> model-driven app.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Summarize resume RXXXXX
+</span></code></pre></div>
+<p><img alt="Question 1" src="assets/5.1_07_Question1.png" /></p>
+</li>
+<li>
+<p>A response with the summarized resume is returned. Notice how it is shorter and more concise compared to the previous model's response.</p>
+<p><img alt="Question 1 response" src="assets/5.1_08_Question1Response.png" /></p>
+</li>
+<li>
+<p>We'll ask the same second question for a list of interview questions based on the evaluation criteria of a job role, and provide what the potential answers are. Enter the question below.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Can you provide suggestions of questions to ask in an interview for the Power Platform developer role (Job role number J1004) based on its associated evaluation criteria? Can you also please provide what the answers may be for each question?
+</span></code></pre></div>
+<p><img alt="Question 2" src="assets/5.1_09_Question2.png" /></p>
+</li>
+<li>
+<p>A response with the suggested list of interview questions is returned with the potential answers a candidate can provide during the interview. Notice how this time,</p>
+<ul>
+<li>The response is organized under a <strong>main header</strong> and <strong>subsections</strong><ul>
+<li><strong>Question Header</strong>: 15. Environment Strategy<ul>
+<li>This indicates the interview question being evaluated<ul>
+<li>How do you structure environments for enterprise deployments?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Strong Answer Indicators</strong>:<ul>
+<li>This subsection lists key points that the agent considers strong or desirable in a candidate's response.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Question 2 response" src="assets/5.1_10_01_Question2Response.png" /></p>
+<p><img alt="Question 2 response" src="assets/5.1_10_02_Question2Response.png" /></p>
+</li>
+</ol>
+<h2 id="mission-complete">✅ Mission Complete<a class="headerlink" href="#mission-complete" title="Permanent link">&para;</a></h2>
+<p>Congratulations! 👏🏻 Excellent work, Operative.</p>
+<p>You learned about the differences in the available models and how it affects your agent output. This enables the <strong>Interview Agent</strong> to be equipped in answering questions and inquiries using the power of the selected model.</p>
+<p>This is the end of <strong>Lab 05 - Understanding Agent Models</strong>, select the link below to move to the next lesson.</p>
+<p>⏭️ <a href="../06-ai-safety/">Move to <strong>AI Safety and Content Moderation</strong> lesson</a></p>
+<h2 id="tactical-resources">📚 Tactical Resources<a class="headerlink" href="#tactical-resources" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://www.microsoft.com/microsoft-copilot/blog/copilot-studio/multi-agent-orchestration-maker-controls-and-more-microsoft-copilot-studio-announcements-at-microsoft-build-2025/#copilot-studio-enhancements">Multi-agent orchestration and more: Copilot Studio announcements</a></p>
+<p>📖 <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-select-external-response-model?WT.mc_id=power-188561-ebenitez">Choose an external model as the primary AI model</a></p>
+<p>📖 <a href="https://learn.microsoft.com/en-us/copilot/microsoft-365/connect-to-ai-models?WT.mc_id=power-188561-ebenitez">Connect to Anthropic's AI models</a></p>
+<p>📖 <a href="https://learn.microsoft.com/en-us/power-platform/admin/allow-llm-generative-responses?WT.mc_id=power-188561-ebenitez">Allow external large language models (LLMs) for generative responses</a></p>
+<p>📖 <a href="https://learn.microsoft.com/en-us/power-platform/admin/geographical-availability-copilot?tabs=new#copilots-and-generative-ai-features-that-depend-on-data-movement-across-regions?WT.mc_id=power-188561-ebenitez">Move data across regions for Copilots and generative AI features</a></p>
+<p>📖 <a href="https://community.powerplatform.com/forums/thread/?groupid=db8f53c2-767d-47d6-a1ae-fe4c828a6553">Provide feedback on Anthropic models</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

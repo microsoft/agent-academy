@@ -1,0 +1,893 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/operative-preview/10-mcp/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Mission 10: Integrate with MCP Servers - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-10-integrate-with-mcp-servers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mission 10: Integrate with MCP Servers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../recruit/" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../recruit/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recruit
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operative (Coming Soon)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commander (Coming Soon)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-mcp-rendezvous" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🕵️‍♂️ CODENAME: OPERATION MCP RENDEZVOUS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Mission Brief
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔎 Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-mcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔌 What is MCP?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-does-agent-365-come-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Where does Agent 365 come in?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-10-add-mcp-servers-to-arrange-an-interview-prep-meeting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Lab 10: Add MCP Servers to arrange an interview prep-meeting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎉 Mission Complete
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactical-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Tactical Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="mission-10-integrate-with-mcp-servers">Mission 10: Integrate with MCP Servers<a class="headerlink" href="#mission-10-integrate-with-mcp-servers" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable-next-line MD041 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This course is still in development. That means that the quality is not up to par yet or that it doesn't work as intended.</p>
+</div>
+<h2 id="codename-operation-mcp-rendezvous">🕵️‍♂️ CODENAME: <code>OPERATION MCP RENDEZVOUS</code><a class="headerlink" href="#codename-operation-mcp-rendezvous" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operation Time Window:</strong> <code>~45 minutes</code></p>
+</blockquote>
+<h2 id="mission-brief">🎯 Mission Brief<a class="headerlink" href="#mission-brief" title="Permanent link">&para;</a></h2>
+<p>Welcome, Operative. Your previous missions have shown you the power of prompts. You learned about multimodal document analysis, grounding your prompts with Dataverse data and document generation. Now you'll unlock another advanced capability: <strong>Model Context Protocol (MCP) server integration</strong>.</p>
+<p>Your assignment, should you choose to accept it, is <strong>Operation MCP Rendezvous</strong>. In this operation you'll be connecting your agent to external MCP servers to extend its capabilities, enabling it to arrange interview prep meetings.</p>
+<h2 id="objectives">🔎 Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
+<p>In this mission, you'll learn:</p>
+<ol>
+<li>How to understand and work with the Model Context Protocol (MCP) standard</li>
+<li>How to use Agent 365 to integrate MCP servers with your Copilot Studio agents</li>
+<li>How to connect your Copilot Studio agent to MCP servers</li>
+<li>How to leverage MCP server capabilities within your agents</li>
+</ol>
+<h2 id="what-is-mcp">🔌 What is MCP?<a class="headerlink" href="#what-is-mcp" title="Permanent link">&para;</a></h2>
+<p><strong>Model Context Protocol (MCP)</strong> is an open standard that enables AI assistants to securely connect to external data sources and tools. Think of MCP as the <strong>USB-C of AI integration</strong> – just as USB-C provides a universal connector for various devices and peripherals, MCP provides a standardized way for AI systems to connect to different services, databases, and applications.</p>
+<p>Before USB-C, every device had its own proprietary connector (remember all those different charger cables?). Similarly, before MCP, connecting AI agents to external systems required custom integrations for each service. MCP solves this by providing a universal "plug-and-play" protocol.</p>
+<h3 id="key-benefits-of-mcp">✨ Key benefits of MCP<a class="headerlink" href="#key-benefits-of-mcp" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Universal connectivity</strong>: One standard protocol works across different AI platforms and data sources</li>
+<li><strong>Secure access</strong>: Built-in authentication and permission controls protect your data</li>
+<li><strong>Extensibility</strong>: Easily add new capabilities to your agents without rewriting core logic</li>
+<li><strong>Interoperability</strong>: MCP servers can work with multiple AI assistants and applications</li>
+</ul>
+<p>In this mission, you'll use MCP to connect your Copilot Studio agent to external services, dramatically expanding what your agent can do beyond its built-in capabilities.</p>
+<h2 id="where-does-agent-365-come-in">🛠️ Where does Agent 365 come in?<a class="headerlink" href="#where-does-agent-365-come-in" title="Permanent link">&para;</a></h2>
+<p><strong>Agent 365</strong> is Microsoft's comprehensive platform for managing and extending AI agents at enterprise scale. It gives each AI agent its own <strong>Microsoft Entra Agent ID</strong> for identity, lifecycle, and access management, while providing the infrastructure to safely connect agents to business systems through MCP servers.</p>
+<p>Think of Agent 365 as the <strong>enterprise control plane</strong> for your AI agents - it handles security, governance, and observability while enabling agents to interact with Microsoft 365 and business applications through standardized MCP tooling servers.</p>
+<h3 id="how-agent-365-serves-different-roles">👥 How Agent 365 serves different roles<a class="headerlink" href="#how-agent-365-serves-different-roles" title="Permanent link">&para;</a></h3>
+<p>Agent 365 addresses the needs of everyone involved in the agent ecosystem:</p>
+<ul>
+<li><strong>IT Administrators</strong>: Monitor agent activity, enforce policies, and manage threats through the Microsoft 365 admin center</li>
+<li><strong>Security Teams</strong>: Apply enterprise-grade controls for identity, authentication, and compliance with Microsoft Purview and Defender integration</li>
+<li><strong>Developers</strong>: Build and extend agents using unified SDKs, pre-built MCP servers, and frameworks in Copilot Studio or Azure AI Foundry</li>
+<li><strong>Business Decision Makers</strong>: Deploy agents securely and measure their impact on productivity and business outcomes</li>
+<li><strong>Information Workers</strong>: Collaborate with agents seamlessly to amplify productivity</li>
+</ul>
+<h3 id="agent-365-tooling-servers-for-mcp-integration">🔧 Agent 365 tooling servers for MCP integration<a class="headerlink" href="#agent-365-tooling-servers-for-mcp-integration" title="Permanent link">&para;</a></h3>
+<p>Agent 365 provides <strong>enterprise-grade MCP servers</strong> that give your agents safe, governed access to business systems, including:</p>
+<p><strong>Pre-built MCP servers</strong> for Microsoft 365 and business applications:</p>
+<ul>
+<li><strong>Outlook Calendar</strong>: Create, update, and manage calendar events</li>
+<li><strong>Outlook Mail</strong>: Send, read, and search emails  </li>
+<li><strong>Teams</strong>: Create chats, post messages, and manage channels</li>
+<li><strong>SharePoint &amp; OneDrive</strong>: Upload files, manage lists, and search documents</li>
+<li><strong>Word</strong>: Create and edit documents, add comments</li>
+<li><strong>Dataverse &amp; Dynamics 365</strong>: Perform CRUD operations on business data</li>
+<li><strong>User Profile</strong>: Access user information, managers, and direct reports</li>
+<li><strong>Copilot Search</strong>: Chat with Microsoft 365 Copilot and ground responses with files</li>
+</ul>
+<p><strong>Enterprise security and governance</strong>:</p>
+<ul>
+<li><strong>Centralized control</strong>: Manage all MCP servers through the Microsoft 365 admin center - allow or block servers organization-wide</li>
+<li><strong>Scoped permissions</strong>: Agents only access the resources they need based on Microsoft Entra scopes</li>
+<li><strong>Full observability</strong>: Monitor and audit all tool calls using Microsoft Defender Advanced Hunting</li>
+<li><strong>Policy enforcement</strong>: Apply DLP, MIP, rate limits, and security scans at runtime</li>
+<li><strong>Threat protection</strong>: Detect and remediate attacks targeting agents with Microsoft Defender integration</li>
+</ul>
+<p><strong>Custom MCP server creation</strong>:</p>
+<ul>
+<li>Build scenario-specific servers using the <strong>MCP Management Server</strong> - an API-first tool for creating custom MCP servers</li>
+<li>Connect to <strong>1,500+ Power Platform connectors</strong> (ServiceNow, JIRA, etc.)</li>
+<li>Integrate <strong>Microsoft Graph APIs</strong>, <strong>REST APIs</strong>, and <strong>Dataverse custom APIs</strong></li>
+<li>Publish and certify custom servers for your organization</li>
+<li>Enable ISVs to build and publish certified servers</li>
+</ul>
+<p><strong>Developer experience</strong>:</p>
+<ul>
+<li>Available in both <strong>Copilot Studio</strong> (low-code) and <strong>Azure AI Foundry</strong> (pro-code)</li>
+<li>Built into the <strong>Agent 365 SDK</strong> for seamless integration</li>
+<li><strong>Visual Studio Code</strong> integration for creating and testing custom MCP servers</li>
+<li>Consistent, standardized interfaces across all tooling servers</li>
+</ul>
+<h3 id="why-this-matters-for-your-agents">💡 Why this matters for your agents<a class="headerlink" href="#why-this-matters-for-your-agents" title="Permanent link">&para;</a></h3>
+<p>Agent 365 transforms MCP from an open standard into an enterprise-ready platform. Your agents get:</p>
+<ul>
+<li><strong>Deterministic, auditable actions</strong> - every tool call is tracked and governed</li>
+<li><strong>Production-grade reliability</strong> - all MCP servers undergo rigorous testing for accuracy, latency, and reliability  </li>
+<li><strong>Security by default</strong> - enterprise controls are built-in, not bolted on</li>
+<li><strong>Rapid development</strong> - pre-built servers for common scenarios, easy customization for specialized needs</li>
+<li><strong>Unified management</strong> - one control plane for all agents, regardless of where they're built</li>
+</ul>
+<h3 id="what-youll-focus-on-in-this-mission">🎯 What you'll focus on in this mission<a class="headerlink" href="#what-youll-focus-on-in-this-mission" title="Permanent link">&para;</a></h3>
+<p>While Agent 365 offers a comprehensive platform for agent management, governance, and custom MCP server development, <strong>this mission focuses specifically on using pre-built MCP servers</strong> in Copilot Studio.</p>
+<p>You'll learn how to connect your agent to ready-made tooling servers (like Outlook Calendar and Teams) and enable real actions in Microsoft 365 applications - without building custom integrations. Think of this as learning to use the tools already in the toolbox before building your own.</p>
+<h2 id="lab-10-add-mcp-servers-to-arrange-an-interview-prep-meeting">🧪 Lab 10: Add MCP Servers to arrange an interview prep-meeting<a class="headerlink" href="#lab-10-add-mcp-servers-to-arrange-an-interview-prep-meeting" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>[!IMPORTANT]
+For this lab, you need to make sure that you are part of the <a href="https://adoption.microsoft.com/copilot/frontier-program/">Frontier preview program</a> to get early access to Microsoft Agent 365. Frontier connects you directly with Microsoft’s latest AI innovations. Frontier previews are subject to the existing preview terms of your customer agreements. As these features are still in development, their availability and capabilities may change over time.</p>
+</blockquote>
+<h3 id="add-mcp-servers-to-the-interview-agent">Add MCP servers to the Interview Agent<a class="headerlink" href="#add-mcp-servers-to-the-interview-agent" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>[!WARNING]
+In this lab, you will learn how to add two MCP servers: the <em>Microsoft 365 User Profile MCP server</em> and the <em>Microsoft Outlook Calendar MCP</em>. For the lab to work, you will need to configure the following in your tenant ahead of time:</p>
+<ul>
+<li>Have a manager configured for your user which can be configured in the M365 Admin Center</li>
+<li>Have an appointment on your calendar in the upcoming 24 hours - this is because you will test the MCP server by asking "Get my meetings for today"</li>
+<li>Have an extra user created on your tenant, so that you can invite that user for the interview prep-meeting (<a href="#-tactical-resources">How to create a user in M365</a>)</li>
+<li>For that extra user, the mailbox needs to be provisioned and it would be good to set the working days / hours</li>
+</ul>
+</blockquote>
+<p>To add MCP servers to your agent you only have to add one tool per MCP server. This is different to connector tools which require you to add a tool for every connector action. This ability to add a single tool that handles multiple actions is one of the things that makes MCP Servers a lot easier to work with.</p>
+<h4 id="add-the-microsoft-365-user-profile-mcp-server">Add the Microsoft 365 User Profile MCP server<a class="headerlink" href="#add-the-microsoft-365-user-profile-mcp-server" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Open <a href="https://copilotstudio.microsoft.com">Copilot Studio</a> and <strong>open</strong> the previously created Interview Agent</li>
+<li>
+<p>Select <strong>Tools</strong> in the top navigation</p>
+<p><img alt="Tools navigation" src="assets/tools.png" /></p>
+</li>
+<li>
+<p>Select <strong>Add a tool</strong> to start adding the MCP Server</p>
+<p><img alt="Add a tool" src="assets/add-a-tool.png" /></p>
+</li>
+<li>
+<p>Select <strong>Model Context Protocol</strong> in the filters to filter the tools down to only MCP Servers</p>
+<p><img alt="Filter the tools to only MCP Servers" src="assets/filter-mcp.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Microsoft 365 User Profile MCP server</strong> from the tools list</p>
+<p><img alt="Select the User Profile MCP Server from the tools list" src="assets/select-user-profile-mcp.png" /></p>
+</li>
+<li>
+<p>Select <strong>Create new connection</strong> from the connection dropdown</p>
+<p><img alt="Creation dropdown - create a connection" src="assets/create-new-connection.png" /></p>
+</li>
+<li>
+<p>Select <strong>Create</strong> to start the create a connection process</p>
+<p><img alt="Create connection process start" src="assets/create-connection-create.png" /></p>
+</li>
+<li>
+<p>Select <strong>your account</strong> in the pick your account popup to create the connection</p>
+</li>
+<li>
+<p>After picking your account, you will see the following screen. Select <strong>Add and configure</strong> to add the Microsoft 365 User Profile MCP server to the Interview Agent</p>
+<p><img alt="Add and configure User Profile MCP server" src="assets/add-and-configure.png" /></p>
+</li>
+<li>
+<p>If you scroll down on the tool overview page, you can find the MCP tools that are part of the MCP server:</p>
+<p><img alt="Tools overview" src="assets/user-profile-mcp-tools.png" /></p>
+</li>
+<li>
+<p>Next, select <strong>Test</strong> to test out the newly added tool</p>
+</li>
+<li>
+<p>Send the following prompt to the agent in the test pane:</p>
+<p><code>Who is my manager?</code></p>
+</li>
+<li>
+<p>Select <strong>Allow</strong> to consent that you are OK with the MCP server using your data. This consent card will only show once for the agent and this MCP server combination, after you have allowed it for this agent it will not prompt again (unless you add another MCP server that uses the same connector).</p>
+<p><img alt="Consent card" src="assets/user-profile-manager-test-allow.png" /></p>
+<p>Next, you will see the response from the agent. If all goes well, you will see something like this:</p>
+<p><img alt="Who is my manager test" src="assets/user-profile-manager-test.png" /></p>
+<p>If you look on the left of the <em>Test your agent</em> pane, you will see that the agent initialized the MCP server, and it triggered the <em>getMyManager</em> MCP tool. You can also see the details of what the agent sent and received from the MCP tool.</p>
+<p><img alt="Debug MCP tool" src="assets/user-profile-manager-test-debug.png" /></p>
+</li>
+</ol>
+<p>The first part of the lab is done, you can now ask questions about users on your tenant. This enables you to ask questions like:</p>
+<div class="language-text highlight"><pre><span></span><code>- Who is my manager?
+- Who are my direct reports?
+- What is the job role of Daniel Laskewitz?
+- And much much more...
+</code></pre></div>
+<p>You can now try out other tools if you want to as well. If you're ready, lets get the other MCP server added too.</p>
+<h4 id="add-the-microsoft-outlook-calendar-mcp-server">Add the Microsoft Outlook Calendar MCP server<a class="headerlink" href="#add-the-microsoft-outlook-calendar-mcp-server" title="Permanent link">&para;</a></h4>
+<p>In the last section, you have added the User Profile MCP server, which makes it possible for you to work with user details on your tenant. This is very helpful when you want to for instance plan meetings, because users of your agent usually don't send a prompt that includes an email / user principal name when they want to plan a meeting. Instead, they will send a prompt like the following:</p>
+<div class="language-text highlight"><pre><span></span><code>`meeting with Daniel Laskewitz tomorrow`
+</code></pre></div>
+<p>To add capabilities like this, we need to add another MCP server: the Microsoft Outlook Calendar MCP server. Bear with us: the following steps are a lot like the previous section.</p>
+<ol>
+<li>Select <strong>Tools</strong> at the top navigation</li>
+<li>Select <strong>Add a tool</strong></li>
+<li>Filter the tools by selecting <strong>Model Context Protocol</strong></li>
+<li>
+<p>Scroll down and select the <strong>Microsoft Outlook Calendar MCP Server</strong></p>
+<p><img alt="Add Microsoft Outlook Calendar MCP Server" src="assets/select-outlook-calendar-mcp.png" /></p>
+</li>
+<li>
+<p>Select <strong>Add and configure</strong></p>
+</li>
+</ol>
+<p>Now, you can scroll to the bottom again to see the tools in the Microsoft Outlook Calendar MCP server:</p>
+<p><img alt="Microsoft Outlook Calendar MCP Server tools" src="assets/outlook-calendar-mcp-tools.png" /></p>
+<p>Let's test out this MCP server.</p>
+<ol>
+<li>
+<p>Enter the following prompt:</p>
+<p><code>Get my meetings for today</code></p>
+</li>
+<li>
+<p>The agent will respond with the consent card again, because we added another MCP server. Select <strong>Allow</strong> to consent with the MCP server using your data</p>
+<p><img alt="Consent card" src="assets/outlook-calendar-test-allow.png" /></p>
+</li>
+<li>
+<p>Now you will get a response with the meetings you have on your calendar for today:</p>
+<p><img alt="Get my meetings for today response" src="assets/outlook-calendar-test-output.png" /></p>
+</li>
+</ol>
+<h3 id="plan-an-interview-prep-meeting">Plan an interview prep-meeting<a class="headerlink" href="#plan-an-interview-prep-meeting" title="Permanent link">&para;</a></h3>
+<p>Now, we know both the MCP servers work. We want to plan an interview prep-meeting though. So, let's see if that works too!</p>
+<ol>
+<li>
+<p>Select <strong>New test session</strong> to start a new test session</p>
+<p><img alt="New test session" src="assets/new-test-session.png" /></p>
+</li>
+<li>
+<p>Enter the following prompt:</p>
+<p><code>Can you find 3 meeting times for a 30 minute meeting with Jane Doe for an interview prep-meeting?</code></p>
+<p>This will trigger the <em>findMeetingTimes</em> MCP tool and it will look at the calendars of both the user of the agent and the Jane Doe and figure out which times work based on their availability. It will then respond with three options for meetings:</p>
+<p><img alt="Find meeting times output" src="assets/outlook-calendar-meeting-test-output.png" /></p>
+<p>And you will be able to figure out what tools have been called in the testing pane:</p>
+<p><img alt="Debug" src="assets/outlook-calendar-test-debug.png" /></p>
+<p>To plan the actual meeting you still have to respond to the agent.</p>
+</li>
+<li>
+<p>Enter the following prompt (replace the time with one of the suggested meeting slots you got from the agent):</p>
+<p><code>Please schedule the one on 10:30 AM UTC</code></p>
+<p>This will trigger the <em>createEvent</em> MCP tool and schedule the meeting.</p>
+<p><img alt="Schedule meeting" src="assets/outlook-calendar-meeting-create-event.png" /></p>
+<p>It will show the following meeting request in Jane Doe's mailbox:</p>
+<p><img alt="Meeting Request" src="assets/outlook-calendar-meeting-schedule-meeting-request.png" /></p>
+</li>
+</ol>
+<p>Now we're done with this lab. Hopefully this gave you a good overview of how MCP servers can help you in your agents!</p>
+<h2 id="mission-complete">🎉 Mission Complete<a class="headerlink" href="#mission-complete" title="Permanent link">&para;</a></h2>
+<p>Great work, Operative! <strong>Operation MCP Rendezvous</strong> is now complete. You've successfully integrated external MCP servers with your Copilot Studio agent, unlocking powerful new capabilities for extending your agent's functionality!</p>
+<p>🚀 <strong>Next up:</strong> In your next mission, you'll learn how to collect and analyze user feedback to continuously improve your agent's performance.</p>
+<p>⏩ <a href="../11-obtain-user-feedback/">Move to Mission 11: Collecting feedback from users</a></p>
+<h2 id="tactical-resources">📚 Tactical Resources<a class="headerlink" href="#tactical-resources" title="Permanent link">&para;</a></h2>
+<p>📖 <a href="https://aka.ms/mcsmcp/lab">Microsoft Copilot Studio ❤️ MCP Lab</a></p>
+<p>📖 <a href="https://modelcontextprotocol.io/docs/getting-started/intro">Model Context Protocol - Getting Started</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-copilot-studio/agent-extend-action-mcp">Extend agents with MCP in Copilot Studio</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-agent-365/overview">Microsoft Agent 365 Overview</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-agent-365/tooling-servers-overview">Microsoft Agent 365 Tooling Servers Overview</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-agent-365/mcp-server-reference/me">Microsoft 365 User Profile MCP Server</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-agent-365/mcp-server-reference/calendar">Microsoft Outlook Calendar MCP Server</a></p>
+<p>📖 <a href="https://learn.microsoft.com/microsoft-365/admin/add-users/add-users?view=o365-worldwide">Add users and assign licenses</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

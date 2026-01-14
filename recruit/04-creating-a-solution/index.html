@@ -1,0 +1,1658 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/agent-academy/recruit/04-creating-a-solution/">
+      
+      
+        <link rel="prev" href="../03-create-a-declarative-agent-for-M365Copilot/">
+      
+      
+        <link rel="next" href="../05-using-prebuilt-agents/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Create a Solution - Copilot Studio Agent Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-04-creating-a-solution-for-your-agent" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-header__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Copilot Studio Agent Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Create a Solution
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Recruit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../operative/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Operative (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../commander/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Commander (Coming Soon)
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Copilot Studio Agent Academy" class="md-nav__button md-logo" aria-label="Copilot Studio Agent Academy" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Copilot Studio Agent Academy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/agent-academy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    microsoft/agent-academy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recruit
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Recruit
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-course-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction-to-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to Agents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-copilot-studio-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copilot Studio Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-create-a-declarative-agent-for-M365Copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create Declarative Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create a Solution
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create a Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-ctrl-alt-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🕵️‍♂️ CODENAME: OPERATION CTRL-ALT-PACKAGE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Mission Brief
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔎 Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution-whats-that" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🕵🏻‍♀️ Solution? What's that?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-should-i-use-a-solution-for-my-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤔 Why should I use a Solution for my agent?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-solution-publishers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🪪 Understanding Solution Publishers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-platform-solution-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 Power Platform Solution lifecycle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-04-create-a-new-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Lab 04: Create a new Solution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Mission Complete
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactical-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Tactical Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-using-prebuilt-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Prebuilt Agents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-create-agent-from-conversation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create Agent from Conversation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-add-new-topic-with-trigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Add New Topic with Trigger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-add-adaptive-card/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Add Adaptive Card
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-add-an-agent-flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Add Agent Flow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-add-event-triggers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Add Event Triggers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-publish-your-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publish Your Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-understanding-licensing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Understanding Licensing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../course-completion-badges-recruit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secure Your Badge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operative (Coming Soon)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commander/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commander (Coming Soon)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codename-operation-ctrl-alt-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🕵️‍♂️ CODENAME: OPERATION CTRL-ALT-PACKAGE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Mission Brief
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔎 Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution-whats-that" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🕵🏻‍♀️ Solution? What's that?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-should-i-use-a-solution-for-my-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤔 Why should I use a Solution for my agent?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-solution-publishers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🪪 Understanding Solution Publishers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-platform-solution-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 Power Platform Solution lifecycle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-04-create-a-new-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Lab 04: Create a new Solution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Mission Complete
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tactical-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Tactical Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Recruit
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="mission-04-creating-a-solution-for-your-agent">🚨 Mission 04: Creating a Solution for Your Agent<a class="headerlink" href="#mission-04-creating-a-solution-for-your-agent" title="Permanent link">&para;</a></h1>
+<h2 id="codename-operation-ctrl-alt-package">🕵️‍♂️ CODENAME: <code>OPERATION CTRL-ALT-PACKAGE</code><a class="headerlink" href="#codename-operation-ctrl-alt-package" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>⏱️ Operation Time Window:</strong> <code>~45 minutes</code></p>
+</blockquote>
+<p>🎥 <strong>Watch the Walkthrough</strong></p>
+<p><a href="https://www.youtube.com/watch?v=1iATbkgfcpU" title="Watch the walkthrough on YouTube"><img alt="Create a solution video thumbnail" src="assets/video-thumbnail.jpg" /></a></p>
+<h2 id="mission-brief">🎯 Mission Brief<a class="headerlink" href="#mission-brief" title="Permanent link">&para;</a></h2>
+<p>Agent Maker, welcome to your next tactical operation. In this mission, you’ll learn to assemble a Solution - the official deployment vehicle for your IT Helpdesk Agent built with Microsoft Copilot Studio. Think of this as creating a digital briefcase that holds your agent and it's artifacts.</p>
+<p>Every agent needs a well-structured home. That’s what a Power Platform solution provides - order, portability, and readiness for production.</p>
+<p>Let’s pack up.</p>
+<h2 id="objectives">🔎 Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
+<p>In this mission, you’ll learn:</p>
+<ol>
+<li>Understanding what Power Platform solutions are and their role in agent development</li>
+<li>Learning the benefits of using solutions for organizing and deploying agents</li>
+<li>Exploring solution publishers and their importance in component management</li>
+<li>Understanding the Power Platform solution lifecycle from development to production</li>
+<li>Creating your own solution publisher and custom solution for your IT Helpdesk Agent</li>
+</ol>
+<h2 id="solution-whats-that">🕵🏻‍♀️ Solution? What's that?<a class="headerlink" href="#solution-whats-that" title="Permanent link">&para;</a></h2>
+<p>In Microsoft Power Platform, solutions are like containers or packages that hold all the parts of your apps or agents - these could be tables, forms, flows, and custom logic. Solutions are essential for Application Lifecycle Management (ALM), they enable you to manage your app and agents from idea to development, testing, deployment, and updates.</p>
+<p>In Copilot Studio, every agent you create is stored in a Power Platform solution. By default, agents are created in the Default solution, unless you create a new custom solution to create your agent in. This is what we'll learn 🤓 in this lesson and in the hands-on lab.</p>
+<p>Solutions traditionally have been created in the <strong>Power Apps maker portal</strong> - a web based interface where you can build and customize apps, Dataverse, flows, explore AI components and more.</p>
+<p><img alt="Solutions" src="assets/4.0_01_Solutions.png" /></p>
+<p>In Copilot Studio, there is now the <strong>Solution Explorer</strong> where you can manage your solutions directly. You no longer need to switch to the Power Apps maker portal to manage your solutions, it can be done right inside Copilot Studio 🪄</p>
+<p>This means you can do the usual solution-related tasks:</p>
+<ul>
+<li><strong>Create a solution</strong> - custom solutions enable agents to be exported and imported between environments.</li>
+<li><strong>Set your preferred solution</strong> - choose the solution agents, apps, etc will be created in by default.</li>
+<li><strong>Add or remove components</strong> - your agent could be referencing other components such as environment variables or cloud flows. Therefore these components needed to be included in the solution.</li>
+<li><strong>Export solutions</strong> - to move solutions to another target environment.</li>
+<li><strong>Import solutions</strong> - import solutions created elsewhere, including upgrading or updating solutions.</li>
+<li><strong>Create and manage solution pipelines</strong> - automate the deployment of solutions between environments.</li>
+<li><strong>Git integration</strong> - enables developers to connect solutions with Git repositories for version control, collaboration and ALM. Intended to be used in developer environments only.</li>
+</ul>
+<p><img alt="Solutions" src="assets/4.0_02_CopilotStudioSolutionExplorer.png" /></p>
+<p>There are two types of solutions:</p>
+<ul>
+<li><strong>Unmanaged solutions</strong> - used during development. You can freely edit and customize as needed.</li>
+<li><strong>Managed solutions</strong> - used when you're ready to deploy your app to testing or production. These are locked down to prevent accidental changes.</li>
+</ul>
+<h2 id="why-should-i-use-a-solution-for-my-agent">🤔 Why <em>should</em> I use a Solution for my agent?<a class="headerlink" href="#why-should-i-use-a-solution-for-my-agent" title="Permanent link">&para;</a></h2>
+<p>Think of Solutions as a <em>toolbox</em>. When you need to fix or build something (an agent) in a different location (environment), you gather all the necessary tools (components) and put them in your toolbox (Solution). You can then carry this toolbox to the new location (environment) and use the tools (components) to complete your work, or add new tools (components) to customize your agent or project you're building.</p>
+<div class="admonition quote">
+<p class="admonition-title">Elaiza, your friendly cloud advocate popping in here 🙋🏻‍♀️ to share some words:</p>
+<p>We have a saying in New Zealand, "Be a tidy Kiwi!" which is a call to action for New Zealanders 🥝 to take responsibility for their environment by disposing of litter properly and keeping public spaces clean. We can use the same context for agents by keeping everything related to your agent organized and portable, and it'll help you maintain a tidy environment.</p>
+</div>
+<p>It's good practice to create an agent in a dedicated solution in your source (developer) environment. Here's why solutions are valuable:</p>
+<p>🧩 <strong>Organized development</strong></p>
+<ul>
+<li>
+<p>You're keeping your agent separate from the Default solution which contains everything in the environment. All your agent components are in one place 🎯</p>
+</li>
+<li>
+<p>Everything you need for your agent is in a solution, making it easier to export and import to a target environment 👉🏻 this is a healthy habit of ALM.</p>
+</li>
+</ul>
+<p>🧩 <strong>Safe deployment</strong></p>
+<ul>
+<li>You can export your app or agent as a managed solution and deploy it to other target environments (such as testing or production) without risking accidental edits.</li>
+</ul>
+<p>🧩 <strong>Version control</strong></p>
+<ul>
+<li>
+<p>You can create patches (target fixes), updates (a more comprehensive change) or upgrades (replacing a solution - usually major changes and introducing new features).</p>
+</li>
+<li>
+<p>Helps you roll out changes in a controlled way.</p>
+</li>
+</ul>
+<p>🧩 <strong>Dependency management</strong></p>
+<ul>
+<li>Solutions track which parts depend on others. This prevents you from breaking things when you make changes.</li>
+</ul>
+<p>🧩 <strong>Team collaboration</strong></p>
+<ul>
+<li>Developers and makers can work together using unmanaged solutions in development, then hand off a managed solution for deployment.</li>
+</ul>
+<h2 id="understanding-solution-publishers">🪪 Understanding Solution Publishers<a class="headerlink" href="#understanding-solution-publishers" title="Permanent link">&para;</a></h2>
+<p>A Solution Publisher in Power Platform is like a label or brand that identifies who created or owns a solution. It’s a small but important part of managing your apps, agents and flow customizations, especially when working in teams or across environments.</p>
+<p>When you create a solution, you must choose a publisher. This publisher defines:</p>
+<ul>
+<li>
+<p>A prefix that gets added to all custom components (think tables, fields, and flows).</p>
+</li>
+<li>
+<p>A name and contact info for the organization or person who owns the solution.</p>
+</li>
+</ul>
+<h3 id="why-is-it-important">🤔 Why is it important?<a class="headerlink" href="#why-is-it-important" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Easy identification</strong> - the prefix (Example - <code>new_</code> or <code>abc_</code>) helps you quickly identify which components belong to which solution or team.</p>
+</li>
+<li>
+<p><strong>Avoids conflicts</strong> - if two teams create a column called status, their prefixes (<code>teamA_status</code>, <code>teamB_status</code>) prevent naming collisions.</p>
+</li>
+<li>
+<p><strong>Supports ALM</strong> - when moving solutions between environments (Dev → Test → Prod), the publisher helps track ownership and maintain consistency.</p>
+</li>
+</ol>
+<h3 id="example">✨ Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<p>Let’s say you create a publisher called Contoso Solutions with the prefix <code>cts_</code>.</p>
+<p>If you add a custom column called <em>Priority</em>, it will be stored as <code>cts_Priority</code> in the solution.</p>
+<p>Anyone who comes across the column at a solution level regardless of what environment they're in, they can easily identify it as a column that's associated to Contoso Solutions.</p>
+<h2 id="power-platform-solution-lifecycle">🧭 Power Platform Solution lifecycle<a class="headerlink" href="#power-platform-solution-lifecycle" title="Permanent link">&para;</a></h2>
+<p>So now you understand the purpose of a Solution, let's next learn about the lifecycle.</p>
+<p><strong>1. Create Solution in Development environment</strong> - start by creating a new solution in your Development environment.</p>
+<p><strong>2. Add Components</strong> - add apps, flows, tables, and other elements to your solution.</p>
+<p><strong>3. Export as Managed solution</strong> - package your solution for deployment by exporting it as a Managed solution.</p>
+<p><strong>4. Import to Test environment</strong> - test your solution in a separate Test environment to ensure everything works as expected.</p>
+<p><strong>5. Import to Production environment</strong> - deploy the tested solution to your live Production environment.</p>
+<p><strong>6. Apply Patches, Updates or Upgrades</strong> - make improvements or fixes using patches, updated, or upgrades. 🔁 Repeat the cycle!</p>
+<h3 id="example_1">✨ Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
+<p>Imagine you're building an IT helpdesk agent to help employees with issues such as device problems, network troubleshooting, printer setup and more.</p>
+<ul>
+<li>
+<p>You start in a Development environment using an unmanaged solution.</p>
+</li>
+<li>
+<p>Once it's ready, you export it as a managed solution and import it into a target environment such as a System Test or User Acceptance Testing (UAT) environment.</p>
+</li>
+<li>
+<p>After testing, you move it to the Production environment - all without touching the original development version.</p>
+</li>
+</ul>
+<h2 id="lab-04-create-a-new-solution">🧪 Lab 04: Create a new Solution<a class="headerlink" href="#lab-04-create-a-new-solution" title="Permanent link">&para;</a></h2>
+<p>We're now going to learn</p>
+<ul>
+<li><a href="#41-create-a-solution-publisher">4.1 How to create a Solution publisher</a></li>
+<li><a href="#42-create-a-new-solution">4.2 How to create a Solution</a></li>
+</ul>
+<p>We're going to stick with the example from earlier, where we're going to create a solution in the dedicated Copilot Studio environment to build our IT helpdesk agent in.</p>
+<p>Let's begin!</p>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<h4 id="security-role">Security role<a class="headerlink" href="#security-role" title="Permanent link">&para;</a></h4>
+<p>In Copilot Studio, what you <em>can do</em> in the solution explorer depends on your user security role.
+If you don’t have permission to manage solutions in the Power Apps admin center, you won’t be able to do those tasks in Copilot Studio either.</p>
+<p>To make sure everything works smoothly, check that you have the right security roles and permissions. Or if you don't manage environments in your organization, ask your IT administrator (or the equivalent) team who manages your tenant/environments.</p>
+<p>The following are the security roles that enables users to create a solution in their environment.</p>
+<table>
+<thead>
+<tr>
+<th>Security role</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Environment Maker</td>
+<td>Provides the necessary permissions to create, customize, and manage resources within a specific environment, including solutions</td>
+</tr>
+<tr>
+<td>System Customizer</td>
+<td>Wider permissions than Environment Maker, including the ability to customize the environment and manage security roles</td>
+</tr>
+<tr>
+<td>System Administrator</td>
+<td>Highest level of permissions and can manage all aspects of the environment, including creating and assigning security roles</td>
+</tr>
+</tbody>
+</table>
+<h4 id="developer-environment">Developer environment<a class="headerlink" href="#developer-environment" title="Permanent link">&para;</a></h4>
+<p>Make sure you switch to your dedicated developer environment, refer to <a href="../00-course-setup/#step-3-create-new-developer-environment">Lesson 00 - Course Setup - Step 3: Create new developer</a>.</p>
+<ol>
+<li>
+<p>On the upper right, select the <strong>Cog wheel</strong> icon and switch from the default environment to your environment, for example <strong>Adele Vance's environment</strong>.</p>
+<p><img alt="Developer environment" src="assets/4.0_03_DeveloperEnvironment.png" /></p>
+</li>
+</ol>
+<h3 id="41-create-a-solution-publisher">4.1 Create a Solution publisher<a class="headerlink" href="#41-create-a-solution-publisher" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Using the same Copilot Studio environment used in the previous lesson, select the <strong>ellipsis icon (. . .)</strong> on the left hand side menu in Copilot Studio. Select <strong>Solutions</strong> under the <strong>Explore</strong> header.</p>
+<p><img alt="Solutions" src="assets/4.1_01_Solutions.png" /></p>
+</li>
+<li>
+<p>The <strong>Solution Explorer</strong> in Copilot Studio will load. Select <strong>+ New solution</strong></p>
+<p><img alt="Solutions" src="assets/4.1_02_NewSolution.png" /></p>
+</li>
+<li>
+<p>The <strong>New solution</strong> pane will appear where we can define the details of our solution. First, we need to create a new publisher. Select <strong>+ New publisher</strong>.</p>
+<p><img alt="Solutions" src="assets/4.1_03_NewPublisher.png" />  </p>
+</li>
+<li>
+<p>The <strong>Properties</strong> tab of the <strong>New publisher</strong> pane will appear with required and non-required fields to be populated in the <strong>Properties</strong> tab. This is where we can outline the details of the publisher which will be used as the label or brand that identifies who created or owns the solution.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Display name</td>
+<td>Display name for the publisher</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>The unique name and schema name for the publisher</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Outlines the purpose of the solution</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Prefix</td>
+<td>Publisher prefix which will be applied to newly created components</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td>Choice value prefix</td>
+<td>Generates a number based on the publisher prefix. This number is used when you add options to choices and provides an indicator of which solution was used to add the option.</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+</tbody>
+</table>
+<p>Copy and paste the following as the <strong>Display name</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Contoso Solutions
+</span></code></pre></div>
+<p>Copy and paste the following as the <strong>Name</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ContosoSolutions
+</span></code></pre></div>
+<p>Copy and paste the following as the <strong>Description</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Copilot Studio Agent Academy
+</span></code></pre></div>
+<p>Copy and paste the following for the <strong>Prefix</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cts
+</span></code></pre></div>
+<p>By default, the <strong>Choice value</strong> prefix will display an integer value. Update this integer value to the nearest thousand. For example, in my screenshot below, it was initially <code>77074</code>. Update this from <code>77074</code> to <code>77000</code>.</p>
+<p><img alt="Solutions" src="assets/4.1_04_PublisherProperties.png" />  </p>
+</li>
+<li>
+<p>If you want to provide the contact details for the Solution, select the <strong>Contact</strong> tab and populate the following columns displayed.</p>
+<p><img alt="Solutions" src="assets/4.1_05_Contact.png" /></p>
+</li>
+<li>
+<p>Select the <strong>Properties</strong> tab and select <strong>Save</strong> to create the Publisher.</p>
+<p><img alt="Solutions" src="assets/4.1_06_SavePublisher.png" /></p>
+</li>
+<li>
+<p>The New publisher pane will close and you'll be brought back to the <strong>New solution</strong> pane with the newly created Publisher selected.</p>
+<p><img alt="Solutions" src="assets/4.1_07_PublisherSelected.png" />  </p>
+</li>
+</ol>
+<p>High five, you've now created a Solution Publisher! 🙌🏻 We'll next learn how to create a new custom solution.</p>
+<h3 id="42-create-a-new-solution">4.2 Create a new Solution<a class="headerlink" href="#42-create-a-new-solution" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Now that we've created our solutions, we can now complete the rest of the form in the <strong>New solution</strong> pane.</p>
+<p>Copy and paste the following as the <strong>Display name</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Contoso Helpdesk Agent
+</span></code></pre></div>
+<p>Copy and paste the following as the <strong>Name</strong>,</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ContosoHelpdeskAgent
+</span></code></pre></div>
+<p>Since we're creating a new solution, the <a href="https://learn.microsoft.com/power-apps/maker/data-platform/update-solutions#understanding-version-numbers-for-updates/?WT.mc_id=power-172615-ebenitez"><strong>Version</strong> number</a> by default will be <code>1.0.0.0</code>.</p>
+<p>Tick the <strong>Set as your preferred solution</strong> checkbox.</p>
+<p><img alt="Solutions" src="assets/4.2_01_SolutionDetails_.png" />  </p>
+</li>
+<li>
+<p>Expand the <strong>More options</strong> to see additional details that can be provided in a solution.</p>
+<p><img alt="Solutions" src="assets/4.2_02_MoreOptions.png" /></p>
+</li>
+<li>
+<p>You'll see the following,</p>
+<ul>
+<li>
+<p><strong>Installed on</strong> - the date of when the Solution was installed.</p>
+</li>
+<li>
+<p><strong>Configuration page</strong> - developers set up an HTML web resource to help users interact with their app, agent or tool where it'll appear as a web page in the Information section with instructions or buttons. It’s mostly used by companies or developers who build and share solutions with others.</p>
+</li>
+<li>
+<p><strong>Description</strong> - describes the solution or a high level description of the configuration page.</p>
+</li>
+</ul>
+<p>We'll leave these blank for this lab.</p>
+<p>Select <strong>Create</strong>.</p>
+<p><img alt="Solutions" src="assets/4.2_03_Create.png" /></p>
+</li>
+<li>
+<p>The solution for Contoso Helpdesk Agent has now been created. There will be zero components until we create an agent in Copilot Studio.</p>
+<p>Select the <strong>back arrow</strong> icon to return to the Solution Explorer.</p>
+<p><img alt="Solutions" src="assets/4.2_04_SolutionCreated.png" /></p>
+</li>
+<li>
+<p>Notice how the Contoso Helpdesk Agent now displays as the <strong>Current preferred solution</strong> since we ticked the <strong>Set as your preferred solution</strong> checkbox earlier.</p>
+<p><img alt="Solutions" src="assets/4.2_05_CurrentPreferredSolutionSelected.png" /></p>
+</li>
+</ol>
+<h2 id="mission-complete">✅ Mission Complete<a class="headerlink" href="#mission-complete" title="Permanent link">&para;</a></h2>
+<p>Congratulations! 👏🏻 You've created a Publisher and used it in your newly created Solution to build your agent in!</p>
+<p>Well done, Agent Maker. A tidy digital footprint is the first step toward operability at scale. Now you have the tools and the mindset for sustainable, enterprise-ready agent development.</p>
+<p>This is the end of <strong>Lab 04 - Creating a Solution</strong>, select the link below to move to the next lesson. Your solution created in this lab will be used in the next lesson's lab.</p>
+<p>⏭️ <a href="../05-using-prebuilt-agents/">Move to <strong>Get started quickly with pre-built agents</strong> lesson</a></p>
+<h2 id="tactical-resources">📚 Tactical Resources<a class="headerlink" href="#tactical-resources" title="Permanent link">&para;</a></h2>
+<p>🔗 <a href="https://learn.microsoft.com/power-apps/maker/data-platform/create-solution/?WT.mc_id=power-172615-ebenitez">Create a solution</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/authoring-solutions-overview/?WT.mc_id=power-172615-ebenitez">Create and manage solutions in Copilot Studio</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/microsoft-copilot-studio/admin-share-bots/?WT.mc_id=power-172615-ebenitez">Share agents with other users</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-platform/admin/database-security#summary-of-resources-available-to-predefined-security-roles/?WT.mc_id=power-172615-ebenitez">Summary of resources available to predefined security roles</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-apps/maker/data-platform/update-solutions/?WT.mc_id=power-172615-ebenitez">Upgrade or update a solution</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-platform/alm/pipelines/?WT.mc_id=power-172615-ebenitez">Overview of pipelines in Power Platform</a></p>
+<p>🔗 <a href="https://learn.microsoft.com/power-platform/alm/git-integration/overview/?WT.mc_id=power-172615-ebenitez">Overview of Git integration in Power Platform</a></p>
+<!-- markdownlint-disable-next-line MD033 -->
+<p><img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/04-creating-a-solution" alt="Analytics" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../03-create-a-declarative-agent-for-M365Copilot/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Create Declarative Agent">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Create Declarative Agent
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../05-using-prebuilt-agents/" class="md-footer__link md-footer__link--next" aria-label="Next: Use Prebuilt Agents">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Use Prebuilt Agents
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.footer", "navigation.instant", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.tabs.link", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
