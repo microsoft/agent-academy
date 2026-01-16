@@ -264,6 +264,21 @@ To complete this lab you will need to:
 
     ![For Each action explained](assets/3.1_11_ForEach.png)
 
+    ::: details Additional Learning: Use Trigger Conditions instead of Conditional Control Logic
+    **Trigger conditions extend the trigger itself with the ability to selectively fire**
+    💡 As a performant alternative to doing the branching logic inside the flow, triggers in Power Automate can also contain trigger conditions themselves.
+    Trigger conditions can access the triggers payload. In our case the attachments are in an array inside the trigger body called ```` attachments```
+    The following expression will check if the attachments array is not empty **AND** if the first item`s content type is ```application/pdf```.
+    
+    ```powerfx
+        @and(not(empty(triggerOutputs()?['body/attachments'])),equals(toLower(first(triggerOutputs()?['body/attachments'])?['contentType']),'application/pdf'))
+    ```
+    
+    This conditiion can be specified in the *Settings* tab when selecting the trigger
+    ![Trigger Conditions](assets/3.1.11.1_triggercondition.png)
+
+    :::   
+
 1. Next, in the other **Choose a value** field to the right in the **Condition** block, type the following,
 
     ```text
