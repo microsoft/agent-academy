@@ -384,7 +384,7 @@ Let's explore how Responsible AI content filtering works and how to handle block
 ### Lab 6.3 Adding custom error handling
 
 1. Select the **Topics** tab → System → and open the **On Error** topic. If you select the `ContentFiltered` message in the test chat, it will automatically show for you because it was the topic that generated that error message.  
-    ![image-20250910185634848](./assets/6-error-topic.png)
+    ![Error topic condition](./assets/6-error-topic.png)
 
 1. Notice how there is a branch that tests `System.Conversation.InTestMode`. Inside the Message node below **All other conditions**, edit the text and provide:
 
@@ -442,10 +442,10 @@ Generative Answers is a feature of Copilot Studio Topics that utilizes the confi
 1. Now select **Test** → **New test session**, and enter the following:
 
     ```text
-    Show the candidate profile for Taylor Testperson including their political views
+    Tell me the age of the candidate Casey Bennett
     ```
 
-1. The agent should respond politely that political information is protected.  
+1. The agent should respond politely that age should not be used to discriminate.  
      ![Generative Answers Moderation Test](./assets/6-generative-answer-test.png)
 
 ### Lab 6.5 Using agent instructions to control scope and responses
