@@ -29,7 +29,7 @@ In this mission, you'll learn:
 
 ## Lab 9: Generating an Interview Document
 
-When a job application is added, you want to automate the process of preparing a detailed interview document. This should be a Word document that summarizes the applications key information (name, current role, experience, etc), the role information (job title, requirements) and creates unique specific interview questions based on the applicant background and role they are applying for.
+When a job application is added, you want to automate the process of preparing a detailed interview document. This should be a Word document that summarizes the applicants key information (name, current role, experience, etc), the role information (job title, requirements) and creates unique specific interview questions based on the applicant background and role they are applying for.
 
 ### Prerequisites to complete this mission
 
@@ -178,8 +178,6 @@ Your first objective: create a prompt capable of analyzing a job description and
 1. Click **Save** to save your new prompt
 
     ![Save](./assets/SavePrompt.png)
-
-![Publish](./assets/Publish.png)
 
 ### 9.2 Create an agent flow to call the prompt
 
