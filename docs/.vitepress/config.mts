@@ -133,6 +133,7 @@ export default defineConfig({
         ],
       },
       { text: "Commander (Coming Soon)", link: "/commander/" },
+      { text: "Special Ops (Coming Soon)", link: "/special-ops/" },
     ],
 
     sidebar: [
@@ -260,6 +261,7 @@ export default defineConfig({
         ],
       },
       { text: "Commander (Coming Soon)", link: "/commander/" },
+      { text: "Special Ops (Coming Soon)", link: "/special-ops/" },
     ],
     socialLinks: [
       {
