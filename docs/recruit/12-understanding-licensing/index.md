@@ -44,7 +44,7 @@ Think of credits like metered usage, similar to minutes on a phone plan or miles
 - Every topic invocation, tool call, grounding operation, and custom skill consumes Copilot Credits.
 - More complex behavior uses more credits than simple answers
 
-Every time your agent does real work behind the scenes, it uses Copilot Credits.
+With the exception of testing an agent in the embedded test chat, every time your agent does real work behind the scenes, it uses Copilot Credits. 
 
 Copilot Credits replace the older “message” concept. Instead of counting interactions, you now count credits, which map more directly to work done by the agent (including actions and advanced tooling).
 
