@@ -1,12 +1,12 @@
-# Contributing to MCS Agent Academy
+# Contributing to Microsoft Copilot Studio Agent Academy
 
-Thank you for your interest in contributing to the MCS Agent Academy! This guide will help you set up your development environment and understand our documentation standards.
+Thank you for your interest in contributing to the Microsoft Copilot Studio Agent Academy! This guide will help you set up your development environment and understand our documentation standards.
 
 ## Documentation Standards
 
 We follow Microsoft's documentation standards to ensure consistent, high-quality content. For comprehensive guidance on writing effective documentation, please refer to:
 
-📖 **[Microsoft Docs Authoring Pack](https://learn.microsoft.com/en-us/contribute/content/how-to-write-docs-auth-pack)** - Complete guide to writing documentation that follows Microsoft's style and standards.
+📖 **[Microsoft Docs Authoring Pack](https://learn.microsoft.com/contribute/content/how-to-write-docs-auth-pack)** - Complete guide to writing documentation that follows Microsoft's style and standards.
 
 This resource covers:
 
@@ -216,74 +216,54 @@ This is much faster than manually editing the configuration file for individual 
 1. **Fix typos rather than ignoring**: When possible, fix actual spelling errors rather than adding them to the word list
 1. **Use consistent terminology**: Stick to established product names and technical terms
 
-## Local Documentation Preview with MkDocs
+## Local Documentation Preview with VitePress
 
-We use MkDocs with the Material theme to generate our documentation site. You can run it locally to preview your changes before submitting a pull request.
+We use VitePress to generate our documentation site. You can run it locally to preview your changes before submitting a pull request.
 
-📖 **Learn more**: [MkDocs Documentation](https://www.mkdocs.org/) | [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
+📖 **Learn more**:
 
-### Setting up Python Environment in VS Code
+- [VitePress Documentation](https://vitepress.dev/)
+- [Getting Started](https://vitepress.dev/guide/getting-started)
+- [Site Config](https://vitepress.dev/reference/site-config)
+- [Markdown Extensions](https://vitepress.dev/guide/markdown)
 
-We recommend using a virtual environment to isolate dependencies for this project. VS Code makes this process seamless and will handle Python installation if needed.
+### Prerequisites
 
-> **GitHub Codespaces**: These instructions work perfectly in GitHub Codespaces, which comes with Python pre-installed and the VS Code environment ready to use.
+- **Node.js**: Version 18 or higher is required
+- **npm**: Comes bundled with Node.js
 
-📖 **Learn more**: [Python in VS Code](https://code.visualstudio.com/docs/languages/python) | [Python environments in VS Code](https://code.visualstudio.com/docs/python/environments)
+> **GitHub Codespaces**: These instructions work perfectly in GitHub Codespaces, which comes with Node.js pre-installed and the VS Code environment ready to use.
 
-#### Prerequisites
+### Installing dependencies
 
-**Install Python Extension**: Install the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) by Microsoft from the VS Code marketplace if you haven't already.
-
-#### Setup in VS Code
-
-1. **Create a virtual environment**:
-   - Open Command Palette (`Ctrl+Shift+P` on Windows/Linux, `Cmd+Shift+P` on Mac)
-   - Type "Python: Create Environment" and select it
-   - Choose "Venv" (virtual environment)
-   - If no Python interpreters are available, VS Code will guide you through installing Python
-   - Select your Python interpreter (Python 3.8+)
-   - VS Code will create `.venv` folder and automatically activate it
-
-2. **Verify setup**:
-   - Open a new integrated terminal (`` Ctrl+Shift+` `` on Windows/Linux, `` Cmd+Shift+` `` on Mac, or `View > Terminal`)
-   - You should see `(.venv)` in the terminal prompt
-   - Run: `python --version` to verify
-
-> **Note**: Opening a new terminal ensures the Python environment is properly activated. If you prefer to use an existing Python environment instead of creating a new virtual environment, you can use "Python: Select Interpreter" from the Command Palette and choose your preferred environment.
-
-### Installing MkDocs in VS Code
-
-With your Python environment set up in VS Code, install MkDocs and the Material theme:
-
-1. **Open VS Code's integrated terminal** (`Ctrl+`` ` or `View > Terminal`)
-2. **Ensure your virtual environment is active** (you should see `(.venv)` in the prompt)
-3. **Install the packages**:
+1. **Open VS Code's integrated terminal** (`` Ctrl+` `` or `View > Terminal`)
+2. **Install the packages**:
 
    ```bash
-   pip install mkdocs mkdocs-material
+   npm install
    ```
 
-### Running MkDocs in VS Code
+### Running VitePress locally
 
 To start the local development server with hot reload:
 
 1. **In VS Code's integrated terminal**, run:
 
    ```bash
-   mkdocs serve
+   npm run docs:dev
    ```
 
-2. **The site will be available at**: `http://127.0.0.1:8000/agent-academy/`
+2. **The site will be available at**: `http://localhost:5173/agent-academy/`
 
 ### Preview in VS Code Simple Browser
 
 For the best development experience without leaving VS Code:
 
-1. **Start MkDocs server** in the integrated terminal (as shown above)
+1. **Start VitePress server** in the integrated terminal (as shown above)
 2. **Open Simple Browser**:
    - **Method 1**: Open Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`)
    - Type "Simple Browser: Show" and select it
-   - Enter URL: `http://127.0.0.1:8000/agent-academy/`
+   - Enter URL: `http://localhost:5173/agent-academy/`
 
    - **Method 2**: Right-click on the URL in the terminal output and select "Follow Link"
 
@@ -296,43 +276,40 @@ For the best development experience without leaving VS Code:
 Working entirely within VS Code provides these advantages:
 
 - **Integrated terminal**: No need to switch between applications
-- **Side-by-side preview**: Edit markdown and see changes simultaneously  
+- **Side-by-side preview**: Edit markdown and see changes simultaneously
 - **Link navigation**: Click terminal URLs directly to open Simple Browser
-- **Extension integration**: Python, markdownlint, and cSpell extensions work together
+- **Extension integration**: markdownlint and cSpell extensions work together
 - **Git integration**: Built-in source control panel for commits and pull requests
 
 ### Hot reload features
 
-When running `mkdocs serve`, you get:
+When running `npm run docs:dev`, you get:
 
 - **Auto-refresh**: Changes to any `.md` file in the `docs/` folder automatically reload the browser
-- **Configuration updates**: Changes to `mkdocs.yml` also trigger rebuilds
+- **Configuration updates**: Changes to VitePress config also trigger rebuilds
 - **Real-time preview**: See your formatting, links, and content changes instantly
-- **Link validation**: MkDocs will warn you about broken internal links
+- **Fast startup**: VitePress leverages Vite for lightning-fast development experience
 
-### Useful MkDocs commands in VS Code
+### Useful VitePress commands
 
 Run these commands in VS Code's integrated terminal:
 
 ```bash
 # Start development server
-mkdocs serve
+npm run docs:dev
 
 # Build static site (for production)
-mkdocs build
+npm run docs:build
 
-# Serve with strict mode (treats warnings as errors)
-mkdocs serve --strict
-
-# Show version
-mkdocs --version
+# Preview the production build locally
+npm run docs:preview
 ```
 
 > **Tip:** To preview the documentation locally with all dependencies checked, use the `scripts/serve-docs.ps1` PowerShell script.
 
 ### Benefits of local preview
 
-- **Immediate feedback**: See how your markdown renders with the Material theme
+- **Immediate feedback**: See how your markdown renders with the VitePress theme
 - **Link validation**: Catch broken links before they go live
 - **Navigation testing**: Verify your content appears in the correct sections
 - **Mobile preview**: Test how your content looks on different screen sizes

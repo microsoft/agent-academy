@@ -1,0 +1,28 @@
+{
+    "name": "Agent Academy",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+    "features": {
+        "ghcr.io/devcontainers/features/github-cli:1": { }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "streetsidesoftware.code-spell-checker",
+                "davidanson.vscode-markdownlint",
+                "bierner.markdown-mermaid",
+                "ms-vscode.vscode-json"
+            ],
+            "settings": {
+                "editor.formatOnSave": true
+            }
+        }
+    },
+    "postCreateCommand": "npm install",
+    "forwardPorts": [ 5173 ],
+    "portsAttributes": {
+        "5173": {
+            "label": "VitePress Dev Server",
+            "onAutoForward": "openPreview"
+        }
+    }
+}

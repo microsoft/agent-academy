@@ -3,7 +3,7 @@
 # This script runs markdownlint and cSpell on all markdown files
 
 Write-Host "Running markdownlint validation..." -ForegroundColor Cyan
-markdownlint-cli2 "**/*.md" "!.venv" "!.github"
+markdownlint-cli2 "**/*.md" "!.venv" "!.github" "!node_modules"
 
 Write-Host ""
 Write-Host "Running spell check..." -ForegroundColor Cyan

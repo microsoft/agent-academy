@@ -1,7 +1,7 @@
 // Configuration for markdownlint
 // See https://github.com/DavidAnson/markdownlint/blob/v0.32.1/schema/.markdownlint.jsonc
 {
-  
+
   // Default state for all rules
   "default": true,
 
@@ -16,12 +16,17 @@
     "siblings_only": true
   },
 
+  // MD029/ol-prefix : Ordered list item prefix : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md029.md
   "MD029": {
     "style": "one"
   },
 
   // MD046/code-block-style : Code block style : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md046.md
   // Justification: Code blocks are used for text
-  "MD046": false
+  "MD046": false,
+
+  // MD060/table-column-style : Table column style : https://github.com/DavidAnson/markdownlint/blob/v0.40.0/doc/md060.md
+  // Justification: Mixed table styles are used throughout
+  "MD060": false
 
 }

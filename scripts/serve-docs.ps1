@@ -1,69 +1,59 @@
 #!/usr/bin/env pwsh
-# Simple MkDocs Server Script
+# Simple VitePress Server Script
 # This script checks dependencies and serves the documentation site
 
-Write-Host "MkDocs Documentation Server" -ForegroundColor Cyan
+Write-Host "VitePress Documentation Server" -ForegroundColor Cyan
 Write-Host "================================" -ForegroundColor Cyan
 Write-Host ""
 
-# Check if Python is available
-Write-Host "Checking Python..." -ForegroundColor Yellow
+# Check if Node.js is available
+Write-Host "Checking Node.js..." -ForegroundColor Yellow
 try {
-    $pythonVersion = python --version 2>$null
+    $nodeVersion = node --version 2>$null
     if ($LASTEXITCODE -eq 0) {
-        Write-Host "✓ $pythonVersion" -ForegroundColor Green
+        Write-Host "✓ Node.js $nodeVersion" -ForegroundColor Green
     } else {
-        throw "Python not found"
+        throw "Node.js not found"
     }
 } catch {
-    Write-Host "❌ Python not found. Please install Python 3.8+ or activate your virtual environment." -ForegroundColor Red
+    Write-Host "❌ Node.js not found. Please install Node.js 18+ from https://nodejs.org/" -ForegroundColor Red
     exit 1
 }
 
-# Check if MkDocs is installed
-Write-Host "Checking MkDocs..." -ForegroundColor Yellow
+# Check if npm is available
+Write-Host "Checking npm..." -ForegroundColor Yellow
 try {
-    $mkdocsVersion = mkdocs --version 2>$null
+    $npmVersion = npm --version 2>$null
     if ($LASTEXITCODE -eq 0) {
-        Write-Host "✓ $mkdocsVersion" -ForegroundColor Green
+        Write-Host "✓ npm $npmVersion" -ForegroundColor Green
     } else {
-        throw "MkDocs not found"
+        throw "npm not found"
     }
 } catch {
-    Write-Host "❌ MkDocs not found. Installing..." -ForegroundColor Yellow
-    pip install mkdocs
-    if ($LASTEXITCODE -ne 0) {
-        Write-Host "❌ Failed to install MkDocs" -ForegroundColor Red
-        exit 1
-    }
-    Write-Host "✓ MkDocs installed" -ForegroundColor Green
+    Write-Host "❌ npm not found. Please install Node.js which includes npm." -ForegroundColor Red
+    exit 1
 }
 
-# Check if Material theme is installed
-Write-Host "Checking Material theme..." -ForegroundColor Yellow
-try {
-    python -c "import material" 2>$null
-    if ($LASTEXITCODE -eq 0) {
-        Write-Host "✓ Material theme available" -ForegroundColor Green
-    } else {
-        throw "Material theme not found"
-    }
-} catch {
-    Write-Host "❌ Material theme not found. Installing..." -ForegroundColor Yellow
-    pip install mkdocs-material
+# Check if node_modules exists, if not run npm install
+Write-Host "Checking dependencies..." -ForegroundColor Yellow
+if (-not (Test-Path "node_modules")) {
+    Write-Host "❌ Dependencies not found. Installing..." -ForegroundColor Yellow
+    npm install
     if ($LASTEXITCODE -ne 0) {
-        Write-Host "❌ Failed to install Material theme" -ForegroundColor Red
+        Write-Host "❌ Failed to install dependencies" -ForegroundColor Red
         exit 1
     }
-    Write-Host "✓ Material theme installed" -ForegroundColor Green
+    Write-Host "✓ Dependencies installed" -ForegroundColor Green
+} else {
+    Write-Host "✓ Dependencies available" -ForegroundColor Green
 }
 
 Write-Host ""
-Write-Host "🚀 Starting MkDocs server..." -ForegroundColor Green
-Write-Host "📖 Documentation will be available at: http://127.0.0.1:8000/agent-academy/" -ForegroundColor Cyan
+Write-Host "🚀 Starting VitePress server..." -ForegroundColor Green
+Write-Host "📖 Documentation will be available at: http://localhost:5173/agent-academy/" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "Press Ctrl+C to stop the server" -ForegroundColor Yellow
 Write-Host ""
 
-# Start the MkDocs server
-mkdocs serve
+# Start the VitePress server
+npm run docs:dev
