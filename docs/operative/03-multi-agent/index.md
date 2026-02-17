@@ -658,6 +658,11 @@ Now let's create our connected agent for interview preparation and add it to you
 
     ![Publish](./assets/02_connectedAgentPublish.png)
 
+    > [!WARNING] Unable to publish
+    > If the Publish button is disabled refer to [Step 4: Enable Ability to Publish with the Copilot Studio Trial](../../recruit/00-course-setup/index.md#step-4-enable-ability-to-publish-with-the-copilot-studio-trial) in [Recruit - Course Setup](../../recruit/00-course-setup/index.md).
+    >
+    >![Publish issue](./assets/2-publish-issue.png)
+
 ### 3.2.3 Connect the Interview Prep Agent to your Hiring Agent
 
 1. Navigate back to your **Hiring Agent**

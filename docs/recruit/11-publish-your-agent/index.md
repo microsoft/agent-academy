@@ -139,7 +139,7 @@ Now that all our work on the agent is done, we have to make sure all our work is
 
     ![Publish confirmation](./assets/publish-popup.png)
 
-1. Select **Publish** to confirm publishing your agent
+1. Select **Publish** to confirm publishing your agent.
 
     Now a message shows that your agent is publishing. You don't have to keep that popup open. You get notified when the agent is published.
 
@@ -148,6 +148,11 @@ Now that all our work on the agent is done, we have to make sure all our work is
     When the agent is done publishing, you see the notification at the top of the agent page.
 
     ![Notification publish done](./assets/publish-notification.png)
+
+    > [!WARNING] Unable to publish
+    > If the Publish button is disabled refer to [Step 4: Enable Ability to Publish with the Copilot Studio Trial](../../recruit/00-course-setup/index.md#step-4-enable-ability-to-publish-with-the-copilot-studio-trial) in [Recruit - Course Setup](../../recruit/00-course-setup/index.md).
+    >
+    >![Publish issue](../../operative/03-multi-agent/assets/2-publish-issue.png)
 
 But - we only published the agent, we didn't add it to a channel yet, so lets fix that now!
 
