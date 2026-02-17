@@ -247,7 +247,7 @@ This node lets your agent send non-message actions to external systems or channe
 
 In Copilot Studio, Power Fx is a low-code programming language used to add logic and dynamic behavior to your agent. It's the same language used in Microsoft Power Apps, and it's designed to be simple and Excel-like, making it easy for developers and non-developers.
 
-![Power Fx expression](assets/7.3_13_EnterFormula.png)
+![Power Fx expression](assets/7.3_09_EnterFormula.png)
 
 ### What Power Fx can do in topics
 
@@ -282,7 +282,7 @@ This allows you to build custom conversation flows from scratch, and you can add
 - You can customize logic using variables, Power Fx, and conditions.
 - It’s perfect for building tailored experiences for specific business needs.
 
-### 2. Create with Copilot
+### 2. Add from description with Copilot
 
 This allows you to describe what you want using natural language, and Copilot will build the conversation for you. Same applies when editing your topic, use natural language and Copilot will review and modify the topic for you.
 
@@ -484,15 +484,13 @@ Let's begin!
     Available devices
     ```
 
-    ![Name the topic](assets/7.1_03_TopicName.png)
-
-1. Enter a trigger description that outlines what the topic does. Copy and paste the following.
+    Enter a trigger description that outlines what the topic does. Copy and paste the following.
 
     ```text
     This topic helps users find devices that are available from our SharePoint Devices list. User can ask to see available devices and it will return a list of devices that are available which can include laptops, smartphones, accessories and more.
     ```
 
-    ![Enter a name and description for trigger](assets/7.1_04_TriggerDescription.png)
+    ![Enter a name and description for trigger](assets/7.1_03_TopicNameAndDescription.png)
 
 ### 7.2 Define the trigger inputs and outputs
 
@@ -578,31 +576,13 @@ Let's begin!
 
     ![Select get items](assets/7.3_02_GetItems.png)
 
-1. A new connection needs to be created for the connector. Select the **chevron** icon and select **Create new connection**.
+1. Your user credentials will be used for the Connector as you'll see a green tick icon. Otherwise create a new connection if needed.
 
-    ![Add a tool](assets/7.3_03_CreateNewConnection.png)
-
-1. Two options will be displayed that allows you to connect directly to SharePoint Online or to an on-premises SharePoint. By default the **Connect directly (cloud-services)** option will be selected, which is what we'll use for our connection.
-
-    Select **Create**.
-
-    ![Select Create](assets/7.3_04_SelectCreate.png)
-
-1. Select your signed in user account.
-
-    ![Select signed in user account](assets/7.3_05_SelectSignedInUserAccount.png)
-
-1. Next, you need to confirm your user account can be used for the connection to the SharePoint connector. Select **Allow access**.
-
-    ![Select allow access](assets/7.3_06_AllowAccess.png)
-
-1. Select **Submit** for the **Get items** SharePoint connector action to be added as a node to the topic.
-
-    ![Submit](assets/7.3_07_ConnectedSelectSubmit.png)
+    Select **Submit** for the **Get items** SharePoint connector action to be added as a node to the topic.
 
 1. The **Get items** SharePoint connector action is now added to the topic. We can now begin configuring the inputs of the action. Select the **ellipsis (...) icon** and select **Properties**.
 
-    ![Select Properties](assets/7.3_08_GetItemsProperties.png)
+    ![Select Properties](assets/7.3_04_GetItemsProperties.png)
 
 1. The **Get items** configuration pane will appear and by default, you'll see the **Inputs** tab. Select the **Initiation** tab and enter a description in the **Usage Description** field. Copy and paste the following.
 
@@ -613,11 +593,11 @@ Let's begin!
     > [!NOTE]
     > This will come in handy when we view the _Manage your connections_ page of our agent. We'll return to this shortly.
 
-    ![Get items description](assets/7.3_09_UpdateDescription.png)
+    ![Get items description](assets/7.3_05_UpdateDescription.png)
 
 1. Select the **Inputs** tab and select the **Contoso IT** site and the **Devices** list that you setup in [Lesson 00 - Course Setup - Step 3: Create new SharePoint site](../00-course-setup/index.md#step-4-create-new-sharepoint-site).
 
-    ![Configure Get items inputs](assets/7.3_10_GetItemsInputs.png)
+    ![Configure Get items inputs](assets/7.3_06_GetItemsInputs.png)
 
 1. Now, to only display devices from the SharePoint list based on
     - the selected value,
@@ -625,11 +605,11 @@ Let's begin!
 
     we need to apply a filter. This is achieved by entering a filter query with the help of Power Fx. Select the **ellipsis (...) icon**.
 
-    ![Select ellipsis icon](assets/7.3_11_SelectVariable.png)
+    ![Select ellipsis icon](assets/7.3_07_SelectVariable.png)
 
 1. By default, you'll be in the **Custom** tab. Select the **Formula** tab.
 
-    ![Select Formula tab](assets/7.3_12_SelectFormula.png)
+    ![Select Formula tab](assets/7.3_08_SelectFormula.png)
 
 1. Select the **expand** icon to enlarge the **Formula** field. Copy and paste the following Power Fx expression.
 
@@ -643,15 +623,15 @@ Let's begin!
 
     Select **Insert**.
 
-    ![Enter Power Fx expression and select insert](assets/7.3_13_EnterFormula.png)
+    ![Enter Power Fx expression and select insert](assets/7.3_09_EnterFormula.png)
 
 1. The Power Fx expression will now be applied in the Filter Query input parameter of the **Get items** action. Next, select the **All items** view in the **Limit Columns by View**. This will only retrieve the columns in the list based on the selected view.
 
-    ![List Columns by View](assets/7.3_14_LimitColumnsByView.png)
+    ![List Columns by View](assets/7.3_10_LimitColumnsByView.png)
 
 1. Next, we'll update the name of the variable for the output. Select the **Outputs** tab and select the `GetItems` variable.
 
-    ![Update variable](assets/7.3_15_ConfigureOutputs.png)
+    ![Update variable](assets/7.3_11_ConfigureOutputs.png)
 
 1. Update the name to the following.
 
@@ -659,57 +639,73 @@ Let's begin!
     VarDevices
     ```
 
-    ![Update variable name](assets/7.3_16_RenameVariable.png)
+    ![Update variable name](assets/7.3_12_RenameVariable.png)
 
 1. Scroll down and in the **Usage** section, select **Global**. This will make the variable accessible by any topic.
 
-    ![Update to Global variable](assets/7.3_17_UpdateToGlobalVariable.png)
+    ![Update to Global variable](assets/7.3_13_UpdateToGlobalVariable.png)
 
 1. **Close** the **Variable properties** pane.
 
-    ![Close Variable properties pane](assets/7.3_18_ExitVariablePropertiesPane.png)
+    ![Close Variable properties pane](assets/7.3_14_ExitVariablePropertiesPane.png)
 
 1. Select the **plus +** icon to insert a new node, select **Variable management** followed by selecting **Set a variable value**.
 
-    ![Add Set a variable value node](assets/7.3_19_AddSetAVariableValueNode.png)
+    ![Add Set a variable value node](assets/7.3_15_AddSetAVariableValueNode.png)
 
 1. Select the **greater than** icon for the **Set variable** input parameter.
 
-    ![Set variable](assets/7.3_20_SelectAVariable.png)
+    ![Set variable](assets/7.3_16_SelectAVariable.png)
 
 1. Select the Topic output created earlier as the variable, **VarAvailableDevices**.
 
-    ![Save topic](assets/7.3_21_SelectVarAvailableDevicesOutput.png)
+    ![Save topic](assets/7.3_17_SelectVarAvailableDevices.png)
 
 1. Next, select the **ellipsis (...) icon** to define the value of the variable.
 
-    ![Select variable value](assets/7.3_22_SelectVariable.png)
+    ![Select variable value](assets/7.3_18_SelectVariable.png)
+
+1. Select the **Formula** tab and select the **expand** icon to enlarge the **Formula** field.
+
+    ![Select Formula tab and select expand icon](assets/7.3_19_SelectFormulaTab.png)
 
 1. We'll now use a PowerFx expression to set the variable value as the `value` property returned in the **Get items** response, and make the [scope of the variable](https://learn.microsoft.com/microsoft-copilot-studio/advanced-power-fx?WT.mc_id=power-172618-ebenitez) global by adding the prefix of `Global`.
 
-    Select **Insert** and **save** the topic.
+    Select **Insert**.
 
-    ![Power Fx formula for variable value](assets/7.3_23_PowerFxFormula.png)
+    ![Power Fx formula for variable value](assets/7.3_20_EnterFormula.png)
+
+1. You'll now see the **To value** field set to the Power Fx formula.
+
+    ![To value field](assets/7.3_21_Formula.png)
 
 1. Next we need to update the agent instructions. Select the **Overview** tab and select **Edit**.
 
-    ![Edit instructions](assets/7.3_24_EditInstructions.png)
+    ![Edit instructions](assets/7.3_22_EditInstructions.png)
 
-1. Add the a new line in the instructions, copy and paste the following.
+1. Highlight the following instructions and delete them.
+
+    ![Add instructions](assets/7.3_23_ClearInstructions.png)
+
+1. Add a new line in the instructions, copy and paste the following.
 
     ```text
-    - Help find available devices and give full details using [Available devices]. Always extract the VarDeviceType from the inputs. After giving device details, ask the user if they want to request a device from the list of available devices.
+    1. Help find available devices and give full details using [Available devices]. Always extract the VarDeviceType from the inputs. After giving device details, ask the user if they want to request a device from the list of available devices.
     ```
 
-    This instruction will guide generative AI to invoke the **Available devices** trigger to display the list of available devices from the **Devices** Sharepoint list. Select the entire topic placeholder in square brackets.
+    This instruction will guide generative AI to invoke the **Available devices** trigger to display the list of available devices from the **Devices** Sharepoint list.
 
-    ![Add instructions](assets/7.3_25_AddInstructions.png)
+    ![Update instructions](assets/7.3_24_UpdateInstructions.png)
+
+1. Select the entire topic placeholder in square brackets.
+
+    ![Highlight placeholder](assets/7.3_25_HighlightPlaceholder.png)
 
 1. Type in the forward slash character `/` and the list of topics will appear. Select the **Available devices** topic.
 
     ![Reference trigger](assets/7.3_26_SelectAvailableDevicesTopic.png)
 
-1. **Save** the updated instructions.
+1. The topic will now be invoked by the agent when asked about available devices. **Save** the updated instructions.
 
     ![Save instructions](assets/7.3_27_SaveUpdatedInstructions.png)
 
@@ -719,7 +715,7 @@ Let's begin!
     I need a laptop
     ```
 
-    ![Test](assets/7.3_28_Test.png)
+    ![Test](assets/7.3_28_NewTestSession.png)
 
 1. Before the agent can proceed, the user needs to verify their connection can be used. Select **Allow**.
 
