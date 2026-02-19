@@ -298,7 +298,7 @@ Let's begin!
 
     ![Select Ask with adaptive card node](assets/8.1_03_AddAskWithAdaptiveCard.png)
 
-1. Select the node and the **Adaptive Card Node properties** pane will appear. We're now going to edit the JSON. Select **Edit adaptive card**. Select **Edit adaptive card**.
+1. Select the node and the **Adaptive Card Node properties** pane will appear. We're now going to edit the JSON. Select **Edit adaptive card**.
 
     ![Edit adaptive card](assets/8.1_04_EditAdaptiveCard.png)
 
@@ -395,7 +395,7 @@ Now that we created the new topic that handles the device requests, we need to u
 
 1. Type in `/Req` and select the **Request devices** topic.
 
-    ![Request devices topic](assets/8.2_03_ReferenceRequestDeviceTopic.png)
+    ![Redirect to Request devices topic](assets/8.2_03_ReferenceRequestDeviceTopic.png)
 
 1. Repeat the same steps for the next topic placeholder, **[Goodbye]**. Select the entire topic placeholder in square brackets and delete the placeholder. Type in `/Goodbye` and select the **Goodbye** topic.
 
@@ -405,9 +405,9 @@ Now that we created the new topic that handles the device requests, we need to u
 
     **Save** the updated instructions.
 
-    ![Redirect to Request device topic](assets/8.2_04_ReferenceGoodbyeTopic.png)
+    ![Redirect to Goodbye topic](assets/8.2_04_ReferenceGoodbyeTopic.png)
 
-1. Let's now test our the redirection from the _Available devices_ topic to the _Request devices_ topic. Select the **Test** to load the testing pane select **Refresh**.
+1. Let's now test our the redirection from the _Available devices_ topic to the _Request devices_ topic. Select the **Test** to load the testing pane and select **Refresh**.
 
     Then select the **Activity map** icon in the test pane, followed by enabling **Track between topics**. This will allow us to see the _Available devices_ topic has redirected to the _Request devices_ topic.
 
