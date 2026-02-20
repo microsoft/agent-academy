@@ -334,3 +334,6 @@ This field report demonstrates the operational value of combining Power Platform
 - [Adding an MCP server in Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers)
 - [Power Platform CLI Documentation](https://learn.microsoft.com/power-platform/developer/cli/introduction)
 - [GitHub Discussion: PAC CLI MCP Preview](https://github.com/microsoft/powerplatform-build-tools/discussions/1182)
+
+<!-- markdownlint-disable-next-line MD033 -->
+<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/special-ops/pac-cli-mcp" alt="Analytics" />
