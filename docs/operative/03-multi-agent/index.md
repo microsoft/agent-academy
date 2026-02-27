@@ -13,6 +13,10 @@ next:
 
 > **⏱️ Operation Time Window:** `~45 minutes`
 
+🎥 **Watch the Walkthrough**
+
+[![Multi-Agent Systems](./assets/03-multi-agent-thumbnail.png)](https://www.youtube.com/watch?v=X-nyqdk6tcc "Watch the walkthrough on YouTube")
+
 ## 🎯 Mission Brief
 
 Welcome back, Agent. In Mission 01, you built your main Hiring Agent giving you a solid foundation for managing recruitment workflows. But one agent can only do so much.

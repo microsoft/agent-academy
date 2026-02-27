@@ -13,6 +13,10 @@ next:
 
 > **⏱️ Operation Time Window:** `~45 minutes`
 
+🎥 **Watch the Walkthrough**
+
+[![Get started with the Hiring Agent](./assets/01-get-started-thumbnail.png)](https://www.youtube.com/watch?v=VaEy6ux2sQs "Watch the walkthrough on YouTube")
+
 ## 🎯 Mission Brief
 
 Welcome, Agent. Your first assignment is **Operation Talent Scout** - establishing the foundational infrastructure for an AI-powered recruitment system that will transform how organizations identify and hire top talent.
