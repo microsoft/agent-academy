@@ -13,6 +13,8 @@ next:
 
 > **⏱️ Operation Time Window:** `~45 minutes`
 
+[![Model-Selection](./assets/05-model-selection_Thumbnail.png)](https://youtu.be/c5rqNQt2Mmc?si=zrJ7nQYoto9UlHFj "Watch the walkthrough on YouTube")
+
 ## 🎯 Mission Brief
 
 Welcome back, Agent. In [Mission 02](../02-agent-instructions/index.md), you learned how strong instructions shape agent behavior.
