@@ -335,5 +335,18 @@ This field report demonstrates the operational value of combining Power Platform
 - [Power Platform CLI Documentation](https://learn.microsoft.com/power-platform/developer/cli/introduction)
 - [GitHub Discussion: PAC CLI MCP Preview](https://github.com/microsoft/powerplatform-build-tools/discussions/1182)
 
+## 🏅 Claim your completion badge
+
+Congrats, agent - mission accomplished! Now it's time to claim your badge.
+
+Simply submit the badge request form and answer all required questions:
+
+[https://aka.ms/agent-academy-special-ops/cli-mcp/form](https://aka.ms/agent-academy-special-ops/cli-mcp/form)
+
+Once your submission is reviewed, you will receive an email from Global AI Community with instructions to claim your badge.
+
+> [!TIP]
+> If you do not see the email, check your spam or junk folder.
+
 <!-- markdownlint-disable-next-line MD033 -->
 <img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/special-ops/pac-cli-mcp" alt="Analytics" />
