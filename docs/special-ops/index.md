@@ -4,11 +4,19 @@ lastUpdated: false
 
 # Special Ops
 
-Special Ops are covert missions designed to expand your tactical skills in specific operational areas. Unlike full training programs, these focused assignments allow you to dive deep into classified topics at your own pace. Each mission covers a distinct technology or feature—choose your targets wisely.
+Special Ops are focused, one-off missions designed to sharpen your skills in a specific area.
+
+If you want comprehensive, end-to-end training, explore the Courses sections first. Courses are full programs where each mission builds on the previous one, helping you develop deep, connected understanding over time.
+
+Special Ops missions are different by design: they are standalone labs for targeted learning. A mission might focus on a specific tool (for example, MCP), a practical integration pattern, or an industry-specific scenario.
+
+Use Special Ops when you need fast, practical training on a defined topic.
 
 ## Special Ops Missions
 
-- Microsoft Copilot Studio ❤️ MCP ([lab](./mcs-mcp/index.md))
-- Power Platform CLI MCP ([lab](./pac-cli-mcp/index.md))
+| Mission | Badge | Difficulty |
+| --- | --- | --- |
+| [Microsoft Copilot Studio ❤️ MCP](./mcs-mcp/index.md) | ![MCP Badge](./assets/MCP_Joker_Badge.png) | ⭐⭐⭐☆☆ |
+| [Power Platform CLI MCP Server](./pac-cli-mcp/index.md) | ![Command Line Badge](./assets/CommandLine_Badge.png) | ⭐⭐⭐⭐☆ |
 
 More Special Ops missions will be added here soon!

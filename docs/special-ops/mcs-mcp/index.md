@@ -337,5 +337,18 @@ This command will show you the resources that will be deleted and then ask you t
 
 ![resources deleted](./assets/azd-down-confirmation.png)
 
+## 🏅 Claim your completion badge
+
+Congrats, agent - mission accomplished! Now it's time to claim your badge.
+
+Simply submit the badge request form and answer all required questions:
+
+[https://aka.ms/agent-academy-special-ops/mcsmcp/form](https://aka.ms/agent-academy-special-ops/mcsmcp/form)
+
+Once your submission is reviewed, you will receive an email from Global AI Community with instructions to claim your badge.
+
+> [!TIP]
+> If you do not see the email, check your spam or junk folder.
+
 <!-- markdownlint-disable-next-line MD033 -->
 <img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/special-ops/mcs-mcp" alt="Analytics" />
