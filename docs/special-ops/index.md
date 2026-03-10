@@ -16,7 +16,7 @@ Use Special Ops when you need fast, practical training on a defined topic.
 
 | Mission | Badge | Difficulty |
 | --- | --- | --- |
-| [Microsoft Copilot Studio ❤️ MCP](./mcs-mcp/index.md) | ![MCP Badge](./assets/MCP_Joker_Badge.png) | ⭐⭐⭐ |
-| [Power Platform CLI MCP Server](./pac-cli-mcp/index.md) | ![Command Line Badge](./assets/CommandLine_Badge.png) | ⭐⭐⭐ |
+| [Microsoft Copilot Studio ❤️ MCP](./mcs-mcp/index.md) | <img src="./assets/MCP_Joker_Badge.png" alt="MCP Badge" width="150" /> | ⭐⭐⭐ |
+| [Power Platform CLI MCP Server](./pac-cli-mcp/index.md) | <img src="./assets/CommandLine_Badge.png" alt="Command Line Badge" width="150" /> | ⭐⭐⭐ |
 
 More Special Ops missions will be added here soon!
