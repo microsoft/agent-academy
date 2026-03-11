@@ -1,5 +1,8 @@
 # ⚡ Power Platform CLI MCP Server
 
+<!-- markdownlint-disable-next-line MD033 -->
+<p align="center"><img src="../assets/CommandLine_Badge.png" alt="Command Line Badge" width="220" /></p>
+
 Welcome, agent. Your mission — should you choose to accept it — is to establish a **secure command channel** between the Power Platform CLI and your AI copilot using the **Model Context Protocol (MCP)**. Forget memorizing cryptic command syntax. You'll be issuing orders in plain language while your AI handler translates them into precision strikes across environments, tenant settings, and governance policies. 🎯
 
 **Mission objectives:**
@@ -336,6 +339,9 @@ This field report demonstrates the operational value of combining Power Platform
 - [GitHub Discussion: PAC CLI MCP Preview](https://github.com/microsoft/powerplatform-build-tools/discussions/1182)
 
 ## 🏅 Claim your completion badge
+
+<!-- markdownlint-disable-next-line MD033 -->
+<p align="center"><img src="../assets/CommandLine_Badge.png" alt="Command Line Badge" width="220" /></p>
 
 Congrats, agent - mission accomplished! Now it's time to claim your badge.
 

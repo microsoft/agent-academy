@@ -5,6 +5,9 @@ tags:
 ---
 # Microsoft Copilot Studio ❤️ MCP
 
+<!-- markdownlint-disable-next-line MD033 -->
+<p align="center"><img src="../assets/MCP_Joker_Badge.png" alt="MCP Joker Badge" width="220" /></p>
+
 Welcome, agent. Your mission — should you choose to accept it — is to deploy an **MCP Server** behind enemy lines and wire it up to **Microsoft Copilot Studio**. Expect turbulence. Trust the protocol. Leave no endpoint unconfigured. 🎯
 
 ## ❓ What is MCP?
@@ -338,6 +341,8 @@ This command will show you the resources that will be deleted and then ask you t
 ![resources deleted](./assets/azd-down-confirmation.png)
 
 ## 🏅 Claim your completion badge
+<!-- markdownlint-disable-next-line MD033 -->
+<p align="center"><img src="../assets/MCP_Joker_Badge.png" alt="MCP Joker Badge" width="220" /></p>
 
 Congrats, agent - mission accomplished! Now it's time to claim your badge.
 
