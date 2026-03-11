@@ -2,6 +2,7 @@
 next:
   text: 'Course Setup'
   link: '/recruit/00-course-setup'
+lastUpdated: false
 ---
 
 # Welcome Recruit

@@ -154,8 +154,8 @@ Below, we’ll define each building block and show how they work together to mak
 - Each topic is connected to one or more actions or data retrieval steps.  
 - When the AI chooses a topic, it guides the conversation through the sequence you defined (ask follow-up questions, call actions, return results).
 
-!!! example
-    If a user says, "I need help setting up my new laptop," the AI might match that intent to the "Submit IT Ticket" topic. The agent then asks for laptop model, user details, and pushes a ticket into the helpdesk system automatically
+> [!NOTE] Example
+> If a user says, "I need help setting up my new laptop," the AI might match that intent to the "Submit IT Ticket" topic. The agent then asks for laptop model, user details, and pushes a ticket into the helpdesk system automatically
 
 ### 4. Instructions
 

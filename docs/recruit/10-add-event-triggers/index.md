@@ -224,12 +224,14 @@ Before starting this lab, ensure you have:
 
 ### 10.1 Enable Generative AI and create a SharePoint item creation trigger
 
-1. Open your **IT Help Desk agent** in **Copilot Studio**
+1. Open your **Contoso Helpdesk agent** in **Copilot Studio**
 
 1. First, ensure **Generative AI** is enabled for your agent:
-   - Navigate to the **Overview** tab
-   - Under the Orchestration section, Toggle **Generative orchestration** to **On** if it's not already enabled  
+   - Select **Settings**
+   - Under the **Orchestration** section, select **Yes** under **Use generative AI orchestration for your agent's responses?** if it's not already enabled  
      ![Enable Generative AI](./assets/10_EnableGenerativeAI.png)
+
+1. Select **Save** if required, or close **Settings** if no changes were needed
 
 1. Navigate to the **Overview** tab and locate the **Triggers** section
 
@@ -275,6 +277,8 @@ Before starting this lab, ensure you have:
 1. Select **Edit in Power Automate**  
    ![Edit trigger in Power Automate](./assets/10_EditTriggerInPowerAutomate.png)
 
+1. Ensure you have the **New designer** toggle selected
+
 1. Select the **Sends a prompt to the specified copilot for processing** node
 
 1. In the **Body/message** field, remove the Body content, **press the forward slash key** (/) and select **Insert Expression**  
@@ -299,7 +303,7 @@ Before starting this lab, ensure you have:
 
 1. Click **+ Add a tool** and select **Connector**
 
-1. Search for and select **Send an email (V2)** connector  
+1. Search for and select **Send an email (V2)** - **Office 365 Output** connector  
     ![Select Outlook Connector](./assets/10_SelectOutlookConnector.png)
 
 1. Wait for the connection to configure, and then select **Add and configure**
@@ -339,7 +343,8 @@ Before starting this lab, ensure you have:
 1. Return to **Copilot Studio** and monitor the **Test your trigger** panel for the trigger activation. Use the **Refresh** icon to load the trigger event, this may take a few minutes.  
     ![Monitor Trigger Test](./assets/10_MonitorTriggerTest.png)
 1. Once the trigger appears, select **Start testing**
-1. Select the **Activity Map icon** at the top of the **Test your agent** panel
+1. The Activity Map panel will now show, and the agent will process the test event. When asked **Connect to continue**, select **Allow**  
+    ![Allow Connector](./assets/10_AllowConnector.png)
 1. Verify that your agent:
    - Received the trigger payload
    - Called the "Acknowledge SharePoint ticket" tool  

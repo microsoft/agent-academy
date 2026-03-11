@@ -13,6 +13,8 @@ next:
 
 > **⏱️ Operation Time Window:** `~45 minutes`
 
+[![Safety](./assets/06-ai-safety-thumbnail.png)](https://youtu.be/2IjDV_D3Jb0?si=Aqp3TVRt5QnpKxsr "Watch the walkthrough on YouTube")
+
 ## 🎯 Mission Brief
 
 Welcome back, Operative. Your agents have become sophisticated, but with great power comes great responsibility. As your agents handle sensitive hiring data and interact with candidates, ensuring AI safety becomes critical.
