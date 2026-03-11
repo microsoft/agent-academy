@@ -15,7 +15,7 @@ next:
 
 🎥 **Watch the Walkthrough**
 
-[![Multi-Agent Systems](./assets/03-multi-agent-thumbnail.png)](https://www.youtube.com/watch?v=X-nyqdk6tcc "Watch the walkthrough on YouTube")
+[![Multi-Agent Systems](./assets/03-multi-agent-thumbnail_PlayButton.png)](https://www.youtube.com/watch?v=X-nyqdk6tcc "Watch the walkthrough on YouTube")
 
 ## 🎯 Mission Brief
 
