@@ -15,7 +15,7 @@ next:
 
 🎥 **Watch the Walkthrough**
 
-[![Automate-Triggers](./assets/04-automate-triggers_thumbnail.png)](https://youtu.be/lXdlj4DjR28?si=32nUxgFNUv2VVmTD "Watch the walkthrough on YouTube")
+[![Automate-Triggers](./assets/04-automate-triggers_thumbnail_PlayButton.png)](https://youtu.be/lXdlj4DjR28?si=32nUxgFNUv2VVmTD "Watch the walkthrough on YouTube")
 
 ## 🎯 Mission Brief
 

@@ -13,7 +13,7 @@ next:
 
 > **⏱️ Operation Time Window:** `~45 minutes`
 
-[![Safety](./assets/06-ai-safety-thumbnail.png)](https://youtu.be/2IjDV_D3Jb0?si=Aqp3TVRt5QnpKxsr "Watch the walkthrough on YouTube")
+[![Safety](./assets/06-ai-safety-thumbnail_PlayButton.png)](https://youtu.be/2IjDV_D3Jb0?si=Aqp3TVRt5QnpKxsr "Watch the walkthrough on YouTube")
 
 ## 🎯 Mission Brief
 
