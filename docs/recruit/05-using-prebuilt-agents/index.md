@@ -86,10 +86,6 @@ This will create a new agent in your environment based on the Safe Travels confi
 
 Now that the agent is created, let’s tailor it to your organization:
 
-1. Select **Enabled generative AI** to turn on the generative AI feature so that it can use the instructions provided in the template.
-
-    ![Enable Generative Answers](./images/gen-answers.png)
-
 1. Now we'll equip the agent with an additional knowledge source so it can answer questions about Europe travel. To do this, scroll down to the **knowledge** section and select **Add knowledge**
 
     ![Add Knowledge](./images/knowledge.png)
