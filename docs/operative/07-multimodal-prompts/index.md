@@ -13,6 +13,8 @@ next:
 
 > **⏱️ Operation Time Window:** `~45 minutes`
 
+[![Grounding](./assets/07-multi-modal-prompts-thumbnail.png)](https://youtu.be/icP_qH8LFK8?si=VJjtdVi-ytUq0ymg "Watch the walkthrough on YouTube")
+
 ## 🎯 Mission Brief
 
 Welcome, Operative. Your previous missions have equipped you with powerful agent orchestration skills, but now it's time to unlock a game-changing capability: **multimodal document analysis**.

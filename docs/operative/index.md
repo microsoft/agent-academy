@@ -2,6 +2,7 @@
 next:
   text: 'Get started with the Hiring Agent'
   link: '/operative/01-get-started'
+lastUpdated: false
 ---
 
 # Welcome Operative

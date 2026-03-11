@@ -26,12 +26,13 @@ concurrency:
 jobs:
     # Build job
     build:
+        if: github.repository_owner == 'microsoft'
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
               uses: actions/checkout@v4
               with:
-                  fetch-depth: 0 # Not needed if lastUpdated is not enabled
+                  fetch-depth: 0
             # - uses: pnpm/action-setup@v3 # Uncomment this block if you're using pnpm
             #   with:
             #     version: 9 # Not needed if you've set "packageManager" in package.json

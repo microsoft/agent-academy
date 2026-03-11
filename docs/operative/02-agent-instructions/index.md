@@ -13,6 +13,10 @@ next:
 
 > **⏱️ Operation Time Window:** `~20 minutes – intel only, no fieldwork required`
 
+🎥 **Watch the Walkthrough**
+
+[![Authoring Agent Instructions video thumbnail](./assets/02-instructions-thumbnail.png)](https://www.youtube.com/watch?v=h_pgKSKHlIU "Watch the walkthrough on YouTube")
+
 ## 🎯 Mission Brief
 
 Agent, your next assignment is **Operation Secret Directive**, a focused training mission on agent communication and control.

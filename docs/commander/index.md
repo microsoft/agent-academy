@@ -1,6 +1,5 @@
 ---
-hide:
-- navigation
+lastUpdated: false
 ---
 
 # Commander (Coming soon)

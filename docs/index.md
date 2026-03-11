@@ -1,3 +1,7 @@
+---
+lastUpdated: false
+---
+
 # Copilot Studio Agent Academy
 
 **Welcome to Copilot Studio Agent Academy.**  
@@ -17,6 +21,12 @@ The **Copilot Studio Agent Academy** is a multi-phase training program designed 
 | 🟡 **Commander** | •••   | Coming Soon                                              | ![Commander Badge](./images/mcs-agent-academy-commander-badge.png){ width="300" } |
 
 Each level builds on the last. Finish your Recruit mission, and stay tuned to level up your agent credentials.
+
+## 🎯 Special Ops
+
+Beyond the core ranks, the Academy also offers **Special Ops** — standalone, one-off missions that focus on a specific topic or integration. These don't require completing any rank and can be tackled at any time, in any order. Think of them as side missions to sharpen a particular skill.
+
+🚀 [View Special Ops](./special-ops/index.md)
 
 ## ⚠️ Before You Begin
 
@@ -66,7 +76,9 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 > - [Microsoft Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)
 > - Contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with questions or concerns
 
-[⭐️ Star our repo](https://github.com/microsoft/agent-academy){ .md-button .md-button--primary }
+## ⭐️ Star our repo
+
+Star our repository by going to our GitHub [repository](https://github.com/microsoft/agent-academy).
 
 <!-- markdownlint-disable-next-line MD033 -->
 <img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/index" alt="Analytics" />

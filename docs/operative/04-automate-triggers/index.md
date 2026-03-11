@@ -13,6 +13,10 @@ next:
 
 > **⏱️ Operation Time Window:** `~45 minutes`
 
+🎥 **Watch the Walkthrough**
+
+[![Automate-Triggers](./assets/04-automate-triggers_thumbnail.png)](https://youtu.be/lXdlj4DjR28?si=32nUxgFNUv2VVmTD "Watch the walkthrough on YouTube")
+
 ## 🎯 Mission Brief
 
 Welcome back, Agent. In [Mission 03](../03-multi-agent/index.md) - you learned how to build an Application Intake child agent and an Interview Prep connected agent to broaden your main Hiring Agent's capabilities.
