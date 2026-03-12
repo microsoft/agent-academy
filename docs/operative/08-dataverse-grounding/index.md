@@ -13,6 +13,8 @@ next:
 
 > **⏱️ Operation Time Window:** `~60 minutes`
 
+[![Grounding](./assets/08-dataverse-grounding-thumbnail_PlayButton.png)](https://youtu.be/-cHP29cIu-U?si=RMi0Q5tieMltOvo6 "Watch the walkthrough on YouTube")
+
 ## 🎯 Mission Brief
 
 Welcome back, Operative. Your multi-agent hiring system is operational, but there's a critical enhancement needed for **data grounding** - your AI models need real-time access to your organization's structured data to make intelligent decisions.
