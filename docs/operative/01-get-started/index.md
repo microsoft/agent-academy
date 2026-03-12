@@ -15,7 +15,7 @@ next:
 
 🎥 **Watch the Walkthrough**
 
-[![Get started with the Hiring Agent](./assets/01-get-started-thumbnail.png)](https://www.youtube.com/watch?v=VaEy6ux2sQs "Watch the walkthrough on YouTube")
+[![Get started with the Hiring Agent](./assets/01-get-started-thumbnail_PlayButton.png)](https://www.youtube.com/watch?v=VaEy6ux2sQs "Watch the walkthrough on YouTube")
 
 ## 🎯 Mission Brief
 
