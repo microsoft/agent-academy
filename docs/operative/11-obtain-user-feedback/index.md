@@ -13,6 +13,8 @@ next:
 
 > **⏱️ Operation Time Window:** `~45 minutes`
 
+[![Feedback](./assets/11-collecting-feedback_Thumbnail_PlayButton.png)](https://youtu.be/QRBimOsgKEQ?si=05sjJwz6tv4MO6Z6 "Watch the walkthrough on YouTube")
+
 ## 🎯 Mission Brief
 
 Welcome back, Agent. In [Mission 10](../10-mcp/index.md), you learned how to integrate with MCP servers to extend your agent.

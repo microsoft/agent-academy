@@ -13,7 +13,7 @@ next:
 
 > **⏱️ Operation Time Window:** `~45 minutes`
 
-[![Grounding](./assets/07-multi-modal-prompts-thumbnail.png)](https://youtu.be/icP_qH8LFK8?si=VJjtdVi-ytUq0ymg "Watch the walkthrough on YouTube")
+[![MultiModal](./assets/07-multi-modal-prompts-thumbnail.png)](https://youtu.be/icP_qH8LFK8?si=VJjtdVi-ytUq0ymg "Watch the walkthrough on YouTube")
 
 ## 🎯 Mission Brief
 
