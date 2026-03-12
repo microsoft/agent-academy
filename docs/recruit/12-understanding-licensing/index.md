@@ -132,7 +132,6 @@ So the question is not "what feature is being used?" but "who is using the agent
 A single agent interaction can hit multiple billing lines at once. For example, [an agent grounded in a tenant graph could use 12 Copilot Credits (10 for tenant graph grounding and 2 for a generative answer) to respond to a single complex prompt.](https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management)
 
 > **Note on reasoning models:** When an agent uses a reasoning-capable model, [billing applies two meters: the standard feature rate for the action performed, plus the premium AI tools rate (100 credits per 10 responses) for the additional compute required for deep reasoning and multi-step inference.](https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management)
-
 > **Note on bring-your-own models:** Azure Foundry (custom) models are billed separately and are not covered by these rates.
 
 ## ⚠️ Overage Enforcement
