@@ -23,7 +23,7 @@ Welcome, agent. Your mission — should you choose to accept it — is **Operati
 
 ## Prerequisites
 
-- Microsoft Copilot Studio trial or paid account. If you don't have an account, check out the [course setup](/docs/recruit/00-course-setup/index.md) instructions to see how to get a free trial.
+- Microsoft Copilot Studio trial or paid account. If you don't have an account, check out the [course setup](https://microsoft.github.io/agent-academy/recruit/00-course-setup/) instructions to see how to get a free trial.
 
 > [!NOTE]
 > No local tooling required. The Microsoft Learn MCP Server is a **remote, hosted server**. This is one of the easiest ways to get started with MCP in Copilot Studio.
