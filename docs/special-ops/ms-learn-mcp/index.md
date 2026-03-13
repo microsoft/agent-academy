@@ -18,7 +18,7 @@ Welcome, agent. Your mission — should you choose to accept it — is **Operati
 ## What You'll Build
 
 - A Copilot Studio agent connected to the hosted Microsoft Learn MCP Server
-- A working MCP connection that surfaces `learn_search` and related tools to your agent
+- A working MCP connection that surfaces `microsoft_docs_search` and related tools to your agent
 - An agent capable of accurately answering questions about any Microsoft product using live documentation
 
 ## Prerequisites
@@ -42,7 +42,7 @@ It implements the Model Context Protocol (MCP), an open standard that gives AI m
 
 ### What can it do?
 
-Once connected, the server exposes tools your agent can invoke during a conversation. The primary tool is `learn_search`, which queries the full Microsoft Learn documentation index and returns relevant content. Your agent can use this to:
+Once connected, the server exposes tools your agent can invoke during a conversation. The primary tool is `microsoft_docs_search`, which queries the full Microsoft Learn documentation index and returns relevant content. Your agent can use this to:
 
 - Answer questions about Power Platform, Azure, Microsoft 365, and more
 - Return links to official, up-to-date documentation pages
@@ -190,8 +190,16 @@ Time to see your documentation-powered agent in action.
 
 1. Confirm that the agent again searches Microsoft Learn and returns accurate, cited content.
 
-> [!NOTE]
-> You may notice a brief pause while the agent calls the MCP tool. This is expected — the agent is making a live HTTP call to the Microsoft Learn MCP Server and returning real results.
+    > [!NOTE]
+    > You may notice a brief pause while the agent calls the MCP tool. This is expected — the agent is making a live HTTP call to the Microsoft Learn MCP Server and returning real results.
+
+1. Start a new test session and send the following message:
+
+    ``Find a good code sample for creating a PCF control``
+
+1. Notice how this time, it calls a different tool in the MCP Server, the microsoft code sample search tool to find a relevant code sample.
+
+    ![Test Result](./assets/test-code-sample.png)
 
 ### Lab 1.5: Test the fallback behavior
 
