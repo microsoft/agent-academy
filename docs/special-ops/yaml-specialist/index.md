@@ -14,7 +14,7 @@ difficulty: 3
 
 > **Difficulty**: ⭐⭐⭐ | **Time**: ~60 min
 
-Welcome, agent. Your mission - should you choose to accept it - is to become a **YAML Specialist** - an operative who builds and extends Microsoft Copilot Studio agents entirely from Visual Studio Code using the Copilot Studio YAML agent definition language. Forget the drag-and-drop canvas. You're going deep cover: cloning agents, writing topics in raw YAML, wiring up knowledge sources, and pushing changes back to the cloud - all from your local command center. With GitHub Copilot as your handler, you'll iterate at speeds the web UI can't match. 🎯
+Welcome, agent. Your mission - should you choose to accept it - is to become a **YAML Specialist** - an operative who builds and extends Microsoft Copilot Studio agents entirely from Visual Studio Code using the Copilot Studio YAML agent definition language. You're going deep cover: cloning agents, writing topics in raw YAML, wiring up knowledge sources, and pushing changes back to the cloud - all from your local command center. With GitHub Copilot as your handler, you'll iterate at speeds the web UI can't match. 🎯
 
 **Mission objectives:**
 
