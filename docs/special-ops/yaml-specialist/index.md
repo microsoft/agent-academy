@@ -37,7 +37,6 @@ This mission assumes you have completed the [Operative course](/operative/) and 
 > [!TIP]
 > If you already have VS Code installed, you can install the GitHub Copilot and Copilot Studio extensions later during the hands-on labs. The labs walk you through each extension installation step by step.
 
-
 ## ❓ What is YAML Authoring for Copilot Studio?
 
 > [!INFO] What is YAML?
@@ -410,6 +409,7 @@ You'll use GitHub Copilot with the Copilot Studio skills to generate a `Conversa
         ![image-20260313152254044](./assets/review-changes.png)
 
 1. You can select **Keep** or **Undo** to accept or reject the changes made by the agent. Here is an example of the content that might have been generated
+
     ```yaml
     # Name: Conversation Init
     # This system topic runs on the first user message to confirm the user's country for travel advice.
@@ -501,8 +501,6 @@ You'll use GitHub Copilot with the Copilot Studio skills to generate a `Conversa
           activity: Thanks. I'll use {Global.UserCountry} to tailor travel advice in this conversation.
     ```
 
-    
-
 1. Check the **Problems** pane (`Ctrl+Shift+M`) for any YAML validation errors. You can ignore any errors in the skills-for-copilot-studio folder. Only concentrate on the files that are edited by the agent
 
 1. Fix any errors flagged by the extension. These will be usually underlined in a squiggly red line. You can simply ask GitHub Copilot to fix the errors.  
@@ -562,16 +560,15 @@ The Copilot Studio extension provides three synchronization operations:
 
 1. In the **Agent Changes** pane, select **Preview** to check for any remote changes made since you cloned  
     ![Preview remote changes](./assets/preview-changes.png)
-    
+
 1. The extension will eventually report **Successfully completed previewing changes**. If remote changes exist, select **Get** to download them and resolve any conflicts before proceeding.
 
 1. Review your local changes listed under **Local Changes** - you should see the new topic file, updated agent instructions, and knowledge source changes
 
 1. Select **Apply changes**, and then select your agent name. This will upload your local changes to Copilot Studio  
     ![Apply Changes](./assets/apply-changes.png)
-    
-1. Wait for the apply operation to complete - a success notification confirms your changes are live: **Successfully completed applying changes**
 
+1. Wait for the apply operation to complete - a success notification confirms your changes are live: **Successfully completed applying changes**
 
 > [!IMPORTANT]
 > The **Apply** operation uploads your changes to the live agent definition but does **not** publish the agent. You can test changes in the Copilot Studio test pane immediately after applying. To make the agent available to end users on channels, you still need to **Publish** from Copilot Studio.
@@ -591,7 +588,7 @@ The Copilot Studio extension provides three synchronization operations:
     ```text
     I'm planning a business trip to Tokyo next month. What should I know about safety and cultural etiquette?
     ```
-    
+
 1. Verify the agent provides destination-specific advice, cites sources, and respects the guardrails  
     ![Test pane showing travel advice response with sources](./assets/travel-advice.png)
 
