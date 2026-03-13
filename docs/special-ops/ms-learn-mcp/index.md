@@ -237,7 +237,7 @@ Congrats, agent - mission accomplished! Now it's time to claim your badge.
 
 Simply submit the badge request form and answer all required questions:
 
-[https://aka.ms/agent-academy-special-ops/ms-learn-mcp/form](https://aka.ms/agent-academy-special-ops/mcs-learn-mcp/form)
+[https://aka.ms/agent-academy-special-ops/ms-learn-mcp/form](https://aka.ms/agent-academy-special-ops/ms-learn-mcp/form)
 
 Once your submission is reviewed, you will receive an email from Global AI Community with instructions to claim your badge.
 
