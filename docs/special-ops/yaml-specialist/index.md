@@ -364,7 +364,8 @@ The [skills-for-copilot-studio](https://github.com/microsoft/skills-for-copilot-
 1. Enter the following path as the **Item** and set the **Value** to `true`:
 
     ```text
-    ..\skills-for-copilot-studio
+    ../skills-for-copilot-studio   (macOS/Linux)
+    ..\skills-for-copilot-studio   (Windows)
     ```
 
 1. Verify the skills are loaded by opening the **Extensions** panel, selecting the filter icon, and choosing **Agent Plugins** - you should see the `skills-for-copilot-studio` entry  
