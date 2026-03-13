@@ -13,11 +13,11 @@ difficulty: 1
 
 > **Difficulty**: ⭐ | **Time**: ~20 min | **Type**: Special Ops
 
-Welcome, agent. Your mission — should you choose to accept it — is **Operation Open Book**: connect the **Microsoft Learn MCP Server** to a Copilot Studio agent, giving it real-time access to the entire Microsoft Learn documentation library. No more agents responding with outdated or hallucinated product information. Your agent is about to become the most well-read operative in the field. 📖🎯
+Welcome, agent. Your mission — should you choose to accept it — is **Operation Open Book**: connect the **Microsoft Learn Docs MCP Server** to a Copilot Studio agent, giving it real-time access to the entire Microsoft Learn documentation library. No more agents responding with outdated or hallucinated product information. Your agent is about to become the most well-read operative in the field. 📖🎯
 
 ## What You'll Build
 
-- A Copilot Studio agent connected to the hosted Microsoft Learn MCP Server
+- A Copilot Studio agent connected to the hosted Microsoft Learn Docs MCP Server
 - A working MCP connection that surfaces `microsoft_docs_search` and related tools to your agent
 - An agent capable of accurately answering questions about any Microsoft product using live documentation
 
@@ -48,19 +48,19 @@ Once connected, the server exposes tools your agent can invoke during a conversa
 - Return links to official, up-to-date documentation pages
 - Reduce hallucinations by grounding responses in real Microsoft content
 
+There is also a `microsoft_code_sample_search` tool which browses Learn for relevant sample code to use.
+
 ### Why this matters
 
 Without external grounding, agents rely on model memory, which can be outdated. But even adding the Microsoft Learn root URL as static knowledge has limits: it depends on periodic indexing, may miss deep or newly published pages, and does not perform live, intent-based retrieval for each question. The Microsoft Learn MCP Server solves that by letting your agent run real-time documentation searches at response time, so answers are based on the latest relevant pages, including newly released guidance and product updates.
 
-If MCP is the "USB-C of AI integration" (a single universal connector), then the Microsoft Learn MCP Server is less like a cached bookmark and more like a live research desk: your agent asks a question and gets fresh results from the source in real time.
-
 ## The Scenario
 
-Contoso IT is building an internal helpdesk agent to support employees with Microsoft 365, Azure, and Power Platform questions. Rather than manually curating a knowledge base of Microsoft product docs, the team wants their agent to pull answers directly from Microsoft Learn in real time — always accurate, always current. You are the agent builder tasked with wiring this up.
+Zava is building an internal agent to support employees with Microsoft 365, Azure, and Power Platform questions. Rather than manually curating a knowledge base of Microsoft product docs, the team wants their agent to pull answers directly from Microsoft Learn in real time — always accurate, always current. You are the agent builder tasked with wiring this up.
 
 ---
 
-## Lab 1.1: Create the Helpdesk Agent
+## Lab 1.1: Create the Support Agent
 
 The first step is to create a new Copilot Studio agent that will serve as the foundation for your Microsoft Learn-powered helpdesk.
 
@@ -92,17 +92,17 @@ The first step is to create a new Copilot Studio agent that will serve as the fo
 
 ---
 
-## Lab 1.2: Connect the Microsoft Learn MCP Server
+## Lab 1.2: Connect the Microsoft Learn Docs MCP Server
 
-Next, you'll add the Microsoft Learn MCP Server as a tool in Copilot Studio, making its tools available to your agent.
+Next, you'll add the Microsoft Learn Docs MCP Server as a tool in Copilot Studio, making its tools available to your agent.
 
 1. Click the **Add tool** button in the Tools section.
 
     ![Add Tool](./assets/add-tool.png)
 
-1. Search for `Microsoft Learn` and select the **Microsoft Learn Docs MCP Server** from the list of options.
+1. Select the **Model Context Protocol** tab and search for `Microsoft Learn`. Select the **Microsoft Learn Docs MCP Server** from the list of options.
 
-    ![Select MCP](./assets/select-mcp.png)
+    ![Select MCP](./assets/tool-search.png)
 
 1. Click on the dropdown next to **Connection** and select **Create new connection** to create a new connection to the MCP server.
 
@@ -133,15 +133,15 @@ Now that we have the Learn MCP server added, we need to add instructions for the
 1. Enter the following in the **Instructions** field:
 
     ```text
-    You are a helpful Microsoft documentation assistant. When a user asks a question about any Microsoft product, service, or technology, use the learn_search tool to find relevant, accurate information from Microsoft Learn. Always cite the source documentation URL in your response. If the search does not return a relevant result, tell the user and suggest they visit https://learn.microsoft.com directly.
+    You are a helpful Microsoft documentation assistant. When a user asks a question about any Microsoft product, service, or technology, use the microsoft_docs_search tool to find relevant, accurate information from Microsoft Learn. If a user asks a question about a code sample, use the microsoft_code_sample_search tool to find a relevant code sample. Always cite the source documentation URL in your response. If the search does not return a relevant result, tell the user and suggest they visit https://learn.microsoft.com directly.
     ```
 
 > [!TIP]
-> Strong instructions are critical when using MCP tools. The instruction to "use the learn_search tool" explicitly tells the agent to invoke the MCP tool rather than relying on any built-in knowledge you might have added.
+> Strong instructions are critical when using MCP tools. The instruction to "use the microsoft_docs_search tool" explicitly tells the agent to invoke the MCP tool rather than relying on any built-in knowledge you might have added.
 
 1. Select **Save**
 
-    ![Save](./assets/save-instruction.png)
+    ![Save](./assets/save-instruction2.png)
 
 ---
 
@@ -197,13 +197,29 @@ Time to see your documentation-powered agent in action.
 
     ``Find a good code sample for creating a PCF control``
 
-1. Notice how this time, it calls a different tool in the MCP Server, the microsoft code sample search tool to find a relevant code sample.
+1. Notice how this time, it calls a different tool in the MCP Server, the `microsoft code sample search tool` to find a relevant code sample.
 
     ![Test Result](./assets/test-code-sample.png)
 
 ### Lab 1.5: Test the fallback behavior
 
-1. Send the following message to test your fallback instruction:
+In our instructions, we defined what's called "fallback behavior", meaning, what should happen if the agent can't find an answer. We did this by adding this line to the instruction: ``If the search does not return a relevant result, tell the user and suggest they visit https://learn.microsoft.com directly.``.
+
+Instructions are one way to limit the scope of what your agent should and shouldn't do. We can also adjust the agent settings to control this further. Every agent includes out-of-the-box knowledge from the model that it's using as well as the ability to use information from the web. This can be useful when you want your agent to have vast general knowledge and to perform basic chit chat. But, when you want to make sure your agent is only pulling from the explicit knowledge sources and tools that you configure, this capability could lead to hallucinations and incorrect answers.
+
+Let's take a look at how we can fine tune these settings so that the agent only uses the knowledge and tools we give it.
+
+1. In the **Overview** tab, select the **Settings** button.
+
+    ![Settings Button](./assets/settings-btn.png)
+
+1. Scroll down to the **Knowledge** section and toggle the **Use general knowledge** and **Use information from the web** options off.
+
+    ![Settings Configuration](./assets/settings-knowledge.png)
+
+1. Click the **X** in the upper right hand corner to close out of the settings screen.
+
+1. Now it's time to test that these settings and are fallback logic is working. Send the following message to test your fallback instruction:
 
     ```text
     What is the recipe for chocolate cake?
@@ -212,9 +228,6 @@ Time to see your documentation-powered agent in action.
 1. Confirm that the agent responds appropriately — either indicating no relevant Microsoft Learn result was found or redirecting the user to search Microsoft Learn directly.
 
     ![Fallback Test](./assets/test-invalid.png)
-
-> [!TIP]
-> Fallback behavior is governed by your agent's instructions. If the agent's off-topic response isn't ideal, refine the instructions in the agent configuration.
 
 ---
 
