@@ -94,7 +94,7 @@ In the context of Copilot Studio, the term **agent** can refer to multiple flavo
 1. **Visual Agent Designer:** A drag and drop canvas to build, test and deploy your agents.
 1. **Model (LLM) Selection:** Select from various AI models (OpenAI, Anthropic, Custom Models) to choose the best LLM for your agent scenario.  
 1. **Knowledge:** Use out-of-the-box integrations for SharePoint, OneDrive, Dataverse, etc, enabling RAG out of the box.  
-1. **Tools:** Hook into external tools or APIs to enable your agent to perform actions (e.g., call a Power Automate flow, send calendar invites, manipulate data in Dataverse)
+1. **Tools:** Hook into external tools or APIs to enable your agent to perform actions (e.g., call a Power Automate flow, send calendar invites, manipulate data in Dataverse).
 1. **Multi-Modal Support:** Copilot studio agents support file uploads and speech conversations.
 1. **Publishing & Distribution:** Once your agent is ready, you can publish it to Microsoft 365 Copilot, embed it on your website or choose from several other deployment channels.
 
