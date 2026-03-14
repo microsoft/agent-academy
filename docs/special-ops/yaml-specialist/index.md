@@ -52,7 +52,7 @@ This mission assumes you have completed the [Operative course](/operative/) and 
 >     - cultural-advice
 > ```
 >
-> Notice how `settings` is indented under the main level, and `greeting` and `topics` are indented further inside `settings`. That's really all there is to it - **names on the left, values on the right, separated by a colon, with indentation showing structure**. YAML files use the `.yaml` or `.yml` extension. In Copilot Studio, every part of your agent - topics, tools, triggers, and settings - is stored in YAML files.
+> Notice how `settings` is indented under the main level, and `greeting` and `topics` are indented further inside `settings`. That's really all there is to it - **names on the left, values on the right, separated by a colon, with indentation showing structure**. YAML files use the `.yml` or `.yml` extension. In Copilot Studio, every part of your agent - topics, tools, triggers, and settings - is stored in YAML files.
 
 Every Copilot Studio agent has a definition - a set of YAML files that describe its personality, topics, tools, knowledge sources, and triggers. When you build an agent in the Copilot Studio web UI, you're really editing these YAML files behind the scenes. The web canvas provides a visual representation, but the **source of truth** is always YAML.
 
@@ -93,17 +93,17 @@ my-agent/
 │   ├── DevOpsAction.mcs.yml
 │   └── GetItems.mcs.yml
 ├── knowledge/files/               # Uploaded knowledge documents
-│   ├── source1.yaml
-│   └── source2.yaml
+│   ├── source1.yml
+│   └── source2.yml
 ├── topics/                        # Conversation topics (YAML)
-│   ├── greeting.mcs.yaml
-│   ├── help.mcs.yaml
-│   └── escalate.mcs.yaml
+│   ├── greeting.mcs.yml
+│   ├── help.mcs.yml
+│   └── escalate.mcs.yml
 ├── workflows/                     # Power Automate flows
 │   └── GetDevOpsItems/
-│       ├── metadata.yaml
+│       ├── metadata.yml
 │       └── workflow.json
-├── agent.mcs.yaml                 # Main agent definition
+├── agent.mcs.yml                 # Main agent definition
 ├── icon.png                       # Agent icon
 └── settings.mcs.yml               # Configuration settings
 ```
@@ -112,8 +112,8 @@ my-agent/
 
 | File / Folder | Purpose |
 | --- | --- |
-| `agent.mcs.yaml` | Main agent definition - name, description, instructions, and schema |
-| `topics/` | Each `.mcs.yaml` file is a topic with triggers, actions, and conversation logic |
+| `agent.mcs.yml` | Main agent definition - name, description, instructions, and schema |
+| `topics/` | Each `.mcs.yml` file is a topic with triggers, actions, and conversation logic |
 | `actions/` | Tool definitions - connectors, REST APIs, MCP servers |
 | `knowledge/files/` | Uploaded knowledge documents |
 | `settings.mcs.yml` | Agent configuration and orchestration settings |
@@ -297,7 +297,7 @@ Now clone your agent to a local folder so you can work with the YAML files direc
 1. Wait for the cloning process to complete - a progress notification appears, followed by a success message: **Agent Cloned successfully**  
     ![Cloning Agent](./assets/cloning-agent.png)
 
-1. Verify the cloned file structure in the VS Code **Explorer** panel - you should see `agent.mcs.yaml`, the `topics/` folder, and other definition files  
+1. Verify the cloned file structure in the VS Code **Explorer** panel - you should see `agent.mcs.yml`, the `topics/` folder, and other definition files  
     ![The cloned agent YAML file will be shown in the folder](./assets/cloned-agent-yaml.png)
 
 > [!NOTE]
@@ -307,9 +307,9 @@ Now clone your agent to a local folder so you can work with the YAML files direc
 
 Before making changes, take a look at what was cloned.
 
-1. Open `agent.mcs.yaml` in the Explorer - this is the main agent definition containing the name, description, and instructions
+1. Open `agent.mcs.yml` in the Explorer - this is the main agent definition containing the name, description, and instructions
 
-1. Review the `topics/` folder - each `.mcs.yaml` file represents a conversation topic
+1. Review the `topics/` folder - each `.mcs.yml` file represents a conversation topic
 
 1. Open any existing topic file and examine the YAML structure - notice the `kind`, `id`, and `actions` properties
 
@@ -394,7 +394,7 @@ You'll use GitHub Copilot with the Copilot Studio skills to generate a `Conversa
     {Global.UserCountry} for tailored travel advice. Be sure to initialize the value of Global.UserCountry to be DEFAULT inside the ConversationStart Topic.
     ```
 
-1. Wait for GitHub Copilot to generate the YAML - it creates a new `.mcs.yaml` file in the `topics/` folder, and likely edit the `agent.mcs.yml` and add a new variable definition  
+1. Wait for GitHub Copilot to generate the YAML - it creates a new `.mcs.yml` file in the `topics/` folder, and likely edit the `agent.mcs.yml` and add a new variable definition  
     ![Chat will edit your agent yaml](./assets/chat-results.png)
 
 1. At various points during the chat process, you will see GitHub Copilot reading both the current workspace files, and the Copilot Studio Skills in order to learn about how to perform the task you have given it. You can select the file references to view the skill instructions that are being used. Each file is in Markdown format (`SKILL.md`)  
@@ -407,7 +407,7 @@ You'll use GitHub Copilot with the Copilot Studio skills to generate a `Conversa
     - Use of `AnswerQuestionWithAI` to infer the country from the timezone
     - A `Question` node asking the user to confirm or correct the detected country
     - Storage of the result in `Global.UserCountry`  
-        ![image-20260313152254044](./assets/review-changes.png)
+        ![Review changes made by GitHub Copilot](./assets/review-changes.png)
 
 1. You can select **Keep** or **Undo** to accept or reject the changes made by the agent. Here is an example of the content that might have been generated
 
@@ -512,9 +512,9 @@ You'll use GitHub Copilot with the Copilot Studio skills to generate a `Conversa
 
 ### 🔎 3.2 Review the Updated Agent Instructions
 
-GitHub Copilot should also have updated the `agent.mcs.yaml` file to reference `{Global.UserCountry}` in the instructions (or something similar)
+GitHub Copilot should also have updated the `agent.mcs.yml` file to reference `{Global.UserCountry}` in the instructions (or something similar)
 
-1. Open `agent.mcs.yaml` in the Explorer
+1. Open `agent.mcs.yml` in the Explorer
 1. Locate the `instructions` section and look for references to `{Global.UserCountry}`
 1. This is a reference to a variable to ensure that the instructions are specific to the current user's location.
 
@@ -541,7 +541,7 @@ A travel agent is only as good as its intel. In this section, you'll use GitHub 
 
 1. Verify the knowledge sources appear in the agent definition or knowledge folder, and select **Keep**
 
-1. Open `agent.mcs.yaml` and confirm that guardrails have been added to the instructions
+1. Open `agent.mcs.yml` and confirm that guardrails have been added to the instructions
 
 ## 💪 5. Apply Changes and Test
 
@@ -604,9 +604,9 @@ Here are some practical tips for YAML agent development.
 
 **Files:**
 
-- Use kebab-case: `conversation-init.topic.mcs.yaml`
-- Be descriptive: `travel-safety-check.topic.mcs.yaml` not `topic1.yaml`
-- Use the type suffix: `.topic.yaml`, `.tool.yaml`, `.trigger.yaml`
+- Use kebab-case: `conversation-init.topic.mcs.yml`
+- Be descriptive: `travel-safety-check.topic.mcs.yml` not `topic1.yml`
+- Use the type suffix: `.topic.yml`, `.tool.yml`, `.trigger.yml`
 
 **IDs and variables:**
 
@@ -639,25 +639,25 @@ Here are some practical tips for YAML agent development.
 
 ## 📚 Further Intel
 
-📖 [Overview of the Copilot Studio VS Code Extension](https://learn.microsoft.com/microsoft-copilot-studio/visual-studio-code-extension-overview?WT.mc_id=power-XXXXXX-scottdurow)
+📖 [Overview of the Copilot Studio VS Code Extension](https://learn.microsoft.com/microsoft-copilot-studio/visual-studio-code-extension-overview?WT.mc_id=power-221594-scottdurow)
 
-📖 [Install and Configure the VS Code Extension](https://learn.microsoft.com/microsoft-copilot-studio/visual-studio-code-extension-install-configure?WT.mc_id=power-XXXXXX-scottdurow)
+📖 [Install and Configure the VS Code Extension](https://learn.microsoft.com/microsoft-copilot-studio/visual-studio-code-extension-install-configure?WT.mc_id=power-221594-scottdurow)
 
-📖 [Clone Your Agent in VS Code](https://learn.microsoft.com/microsoft-copilot-studio/visual-studio-code-extension-clone-agent?WT.mc_id=power-XXXXXX-scottdurow)
+📖 [Clone Your Agent in VS Code](https://learn.microsoft.com/microsoft-copilot-studio/visual-studio-code-extension-clone-agent?WT.mc_id=power-221594-scottdurow)
 
-📖 [Edit Agent Components in VS Code](https://learn.microsoft.com/microsoft-copilot-studio/visual-studio-code-extension-edit-agent-components?WT.mc_id=power-XXXXXX-scottdurow)
+📖 [Edit Agent Components in VS Code](https://learn.microsoft.com/microsoft-copilot-studio/visual-studio-code-extension-edit-agent-components?WT.mc_id=power-221594-scottdurow)
 
-📖 [Synchronize Your Changes](https://learn.microsoft.com/microsoft-copilot-studio/visual-studio-code-extension-synchronization?WT.mc_id=power-XXXXXX-scottdurow)
+📖 [Synchronize Your Changes](https://learn.microsoft.com/microsoft-copilot-studio/visual-studio-code-extension-synchronization?WT.mc_id=power-221594-scottdurow)
 
-📖 [Use the Code Editor for YAML in Topics](https://learn.microsoft.com/microsoft-copilot-studio/guidance/topics-code-editor?WT.mc_id=power-XXXXXX-scottdurow)
+📖 [Use the Code Editor for YAML in Topics](https://learn.microsoft.com/microsoft-copilot-studio/guidance/topics-code-editor?WT.mc_id=power-221594-scottdurow)
 
-📖 [Add a Public Website as a Knowledge Source](https://learn.microsoft.com/microsoft-copilot-studio/knowledge-add-public-website?WT.mc_id=power-XXXXXX-scottdurow)
+📖 [Add a Public Website as a Knowledge Source](https://learn.microsoft.com/microsoft-copilot-studio/knowledge-add-public-website?WT.mc_id=power-221594-scottdurow)
 
-📖 [Safe Travels Agent Template](https://learn.microsoft.com/microsoft-copilot-studio/template-safe-travels?WT.mc_id=power-XXXXXX-scottdurow)
+📖 [Safe Travels Agent Template](https://learn.microsoft.com/microsoft-copilot-studio/template-safe-travels?WT.mc_id=power-221594-scottdurow)
 
-📖 [Topics Overview in Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/guidance/topics-overview?WT.mc_id=power-XXXXXX-scottdurow)
+📖 [Topics Overview in Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/guidance/topics-overview?WT.mc_id=power-221594-scottdurow)
 
-📖 [Create and Edit Topics](https://learn.microsoft.com/microsoft-copilot-studio/authoring-create-edit-topics?WT.mc_id=power-XXXXXX-scottdurow)
+📖 [Create and Edit Topics](https://learn.microsoft.com/microsoft-copilot-studio/authoring-create-edit-topics?WT.mc_id=power-221594-scottdurow)
 
 🔗 [Copilot Studio VS Code Extension - GitHub Issues](https://github.com/microsoft/vscode-copilotstudio/issues)
 
