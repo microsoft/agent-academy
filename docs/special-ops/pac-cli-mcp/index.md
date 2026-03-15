@@ -36,10 +36,15 @@ Time to gear up. The .NET Tool installation method enables you to deploy Power P
 
 Before arming yourself with the Power Platform CLI, ensure you have:
 
-- **.NET 8.0 or later (preferably install the latest version)** installed on your system ([Download .NET](https://dotnet.microsoft.com/download))
+- **.NET 10.0 or later (preferably install the latest version)** installed on your system ([Download .NET](https://dotnet.microsoft.com/download))
 - An **internet connection** for downloading the NuGet package
 
 ### 🚀 Installation Steps
+
+There are a couple of ways to use the Power Platform CLI MCP server:
+
+- You can install the CLI globally on your system, which allows you to run `pac` commands from any directory in your command prompt or PowerShell
+- Alternatively, you can run the MCP server directly without a global installation by using the `dnx` command, but for the full operational experience, we recommend installing the CLI globally.
 
 1. **Deploy the CLI globally** using the .NET tool install command:
 
@@ -57,7 +62,7 @@ Before arming yourself with the Power Platform CLI, ensure you have:
 
    ```text
    Microsoft PowerPlatform CLI
-   Version: 1.30.3+g0f0e0b9
+   Version: 2.4.1+g3799f3e (.NET 10.0.0)
    ```
 
 ### 🔧 Managing Your Arsenal
@@ -110,30 +115,19 @@ The MCP server currently supports **20+ Power Platform CLI commands** in its ars
 
 ### ⚙️ Setting Up PAC CLI MCP
 
-#### 1. Locate the MCP Executable
-
-After deploying Power Platform CLI via the .NET tool, the MCP server executable is stationed at:
-
-```text
-%USERPROFILE%\.dotnet\tools\.store\microsoft.powerapps.cli.tool\[version]\microsoft.powerapps.cli.tool\[version]\tools\net8.0\any\pac-mcp.exe
-```
-
-**Quick way to locate the asset:**
-
-```bash
-pac copilot mcp
-```
-
-This command will reveal the exact path to your `pac-mcp.exe` file. Copy the path — you'll need it for the next phase of the operation.
-
-#### 2. Establish the MCP Connection in Visual Studio Code
+#### Establish the MCP Connection in Visual Studio Code
 
 To wire up the Power Platform CLI MCP server in Visual Studio Code:
 
 1. Open Visual Studio Code command palette (`ctrl` + `shift` + `P` on Windows/Linux or `cmd` + `shift` + `P` on Mac)
 1. Search for "MCP" and select `MCP: Add Server`
 1. Select `Command (stdio)`
-1. Paste the full path to `pac-mcp.exe` that you acquired from the `pac copilot mcp` command in step 1
+1. Paste the following command:
+
+    ```text
+    pac copilot mcp --run
+    ```
+
 1. Name the server something like for instance:
 
     ```text
