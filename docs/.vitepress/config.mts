@@ -32,6 +32,7 @@ export default defineConfig({
         items: [
           { text: "Overview", link: "/special-ops/" },
           { text: "MCS ❤️ MCP", link: "/special-ops/mcs-mcp/" },
+          { text: "Microsoft Learn Docs MCP", link: "/special-ops/ms-learn-mcp/" },
           { text: "Power Platform CLI MCP", link: "/special-ops/pac-cli-mcp/" },
         ],
       },
@@ -162,7 +163,7 @@ export default defineConfig({
               },
               {
                 text: "Course Completion Badge Operative",
-                link: "/operative/course-completion-badges-operative",
+                link: "/operative/course-completion-badges-operative/",
               },
             ],
           },
@@ -175,6 +176,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: "MCS ❤️ MCP", link: "/special-ops/mcs-mcp/" },
+          { text: "Microsoft Learn Docs MCP", link: "/special-ops/ms-learn-mcp/" },
           { text: "Power Platform CLI MCP", link: "/special-ops/pac-cli-mcp/" },
         ],
       },
