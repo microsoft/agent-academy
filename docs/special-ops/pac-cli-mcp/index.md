@@ -335,7 +335,7 @@ This field report demonstrates the operational value of combining Power Platform
 > [!WARNING]
 > While the generated plan may require refinement and validation against your specific organizational requirements, it provides a tactical foundation that would typically require hours of research, documentation review, and strategic planning. This demonstrates how AI can compress governance planning from days to minutes.
 
-## Related Content
+## 📚 Tactical Resources
 
 - [Power Platform Governance Plan Example](./power-platform-plan/index.md) — Field report: strategic governance improvement plan generated using AI
 - 📖 [Adding an MCP server in Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers)

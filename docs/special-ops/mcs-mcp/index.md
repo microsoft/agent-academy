@@ -358,7 +358,7 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 > [!TIP]
 > If you do not see the email, check your spam or junk folder.
 
-## Related Content
+## 📚 Tactical Resources
 
 - 📖 [Microsoft Copilot Studio MCP announcement blog](https://aka.ms/mcsmcp)
 - 📖 [Microsoft Copilot Studio MCP docs](http://aka.ms/mcsmcpdocs)
