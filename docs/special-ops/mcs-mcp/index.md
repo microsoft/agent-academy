@@ -2,11 +2,14 @@
 tags: 
     - MCP
     - Copilot Studio
+difficulty: 3
 ---
-# Microsoft Copilot Studio ❤️ MCP
+# 🤖 Microsoft Copilot Studio ❤️ MCP
 
 <!-- markdownlint-disable-next-line MD033 -->
-<p align="center"><img src="../assets/MCP_Joker_Badge.png" alt="MCP Joker Badge" width="220" /></p>
+<p align="center"><img src="./assets/MCP_Joker_Badge.png" alt="MCP Joker Badge" width="220" /></p>
+
+> **Difficulty**: ⭐⭐⭐ | **Time**: ~30 min
 
 Welcome, agent. Your mission — should you choose to accept it — is to deploy an **MCP Server** behind enemy lines and wire it up to **Microsoft Copilot Studio**. Expect turbulence. Trust the protocol. Leave no endpoint unconfigured. 🎯
 
@@ -342,7 +345,7 @@ This command will show you the resources that will be deleted and then ask you t
 
 ## 🏅 Claim your completion badge
 <!-- markdownlint-disable-next-line MD033 -->
-<p align="center"><img src="../assets/MCP_Joker_Badge.png" alt="MCP Joker Badge" width="220" /></p>
+<p align="center"><img src="./assets/MCP_Joker_Badge.png" alt="MCP Joker Badge" width="220" /></p>
 
 Congrats, agent - mission accomplished! Now it's time to claim your badge.
 
@@ -354,6 +357,12 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 
 > [!TIP]
 > If you do not see the email, check your spam or junk folder.
+
+## 📚 Tactical Resources
+
+- 📖 [Microsoft Copilot Studio MCP announcement blog](https://aka.ms/mcsmcp)
+- 📖 [Microsoft Copilot Studio MCP docs](http://aka.ms/mcsmcpdocs)
+- 📖 [Model Context Protocol overview](https://modelcontextprotocol.io/introduction)
 
 <!-- markdownlint-disable-next-line MD033 -->
 <img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/special-ops/mcs-mcp" alt="Analytics" />
