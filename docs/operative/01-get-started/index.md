@@ -38,7 +38,7 @@ In this mission, you'll learn:
 Before embarking on this mission, ensure you have:
 
 - Copilot Studio license
-- Access to a Microsoft Power Platform environment
+- Access to a Microsoft Power Platform environment that is **not** a managed environment
 - Administrative permissions to create solutions and agents
 
 > [!TIP] Prerequisites help:
