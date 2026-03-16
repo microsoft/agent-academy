@@ -2,11 +2,14 @@
 tags: 
     - MCP
     - Copilot Studio
+difficulty: 3
 ---
 # Microsoft Copilot Studio ❤️ MCP
 
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="../assets/MCP_Joker_Badge.png" alt="MCP Joker Badge" width="220" /></p>
+
+> **Difficulty**: ⭐⭐⭐ | **Time**: ~30 min
 
 Welcome, agent. Your mission — should you choose to accept it — is to deploy an **MCP Server** behind enemy lines and wire it up to **Microsoft Copilot Studio**. Expect turbulence. Trust the protocol. Leave no endpoint unconfigured. 🎯
 
