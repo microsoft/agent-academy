@@ -665,8 +665,8 @@ Let's begin!
     |----------|------------|---------|
     | **Post as** | Dropdown | Select the `Flow bot` option |
     | **Post in** | Dropdown | Select the `Channel` option |
-    | **Channel** | Dropdown | Select a channel that's available in your environment that you have access to for the purpose of completing this lab exercise |
     | **Team** | Dropdown | Select a team that's available in your environment that you have access to for the purpose of completing this lab exercise |
+    | **Channel** | Dropdown | Select a channel that's available in your environment that you have access to for the purpose of completing this lab exercise |
 
     ![Configure input parameters](assets/3.2_14_ConfigureParameters.png)
 
