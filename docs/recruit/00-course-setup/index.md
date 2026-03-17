@@ -224,9 +224,15 @@ A new SharePoint site needs to be created  which will be used in [Lesson 06](../
 
 We will use the **Devices** list for in Mission 07.
 
+![Devices list](./images/devices-list.png)
+
 ### Add new column
 
-Scroll to the far right in the list and select the **+ Add column** button.  Choose the **hyperlink** type, enter **Image** for the column name, and select add.
+Scroll to the far right in the list and select the **+ Add column** button.  
+
+![Add column](./images/add-column.png)
+
+Choose the **hyperlink** type, enter **Image** for the column name, and select add.
 
 ### Create sample data in Devices SharePoint list
 
