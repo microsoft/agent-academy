@@ -43,6 +43,9 @@ export default defineConfig({
         dateStyle: 'long'
       }
     },
+    search: {
+      provider: "local",
+    },
     sidebar: [
       { text: "Home", link: "/" },
       { text: "Our Team", link: "/our-team/" },
