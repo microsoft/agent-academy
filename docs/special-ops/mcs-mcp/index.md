@@ -343,12 +343,6 @@ This command will show you the resources that will be deleted and then ask you t
 
 ![resources deleted](./assets/azd-down-confirmation.png)
 
-## 📚 Tactical Resources
-
-- 📖 [Microsoft Copilot Studio MCP announcement blog](https://aka.ms/mcsmcp)
-- 📖 [Microsoft Copilot Studio MCP docs](http://aka.ms/mcsmcpdocs)
-- 📖 [Model Context Protocol overview](https://modelcontextprotocol.io/introduction)
-
 ## 🏅 Claim your completion badge
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="./assets/MCP_Joker_Badge.png" alt="MCP Joker Badge" width="220" /></p>
@@ -363,6 +357,12 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 
 > [!TIP]
 > If you do not see the email, check your spam or junk folder.
+
+## 📚 Tactical Resources
+
+- 📖 [Microsoft Copilot Studio MCP announcement blog](https://aka.ms/mcsmcp)
+- 📖 [Microsoft Copilot Studio MCP docs](http://aka.ms/mcsmcpdocs)
+- 📖 [Model Context Protocol overview](https://modelcontextprotocol.io/introduction)
 
 <!-- markdownlint-disable-next-line MD033 -->
 <img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/special-ops/mcs-mcp" alt="Analytics" />

@@ -236,14 +236,6 @@ In this mission, you accomplished:
 ✅ **Tool Activation**: Enabled MCP-exposed tools on a Copilot Studio agent  
 ✅ **Instruction Engineering**: Crafted agent instructions that direct MCP tool use and control fallback responses
 
-## 📚 Tactical Resources
-
-- [Microsoft Copilot Studio ❤️ MCP](../mcs-mcp/index.md) — Build and deploy your own custom MCP server and connect it to Copilot Studio
-- [Power Platform CLI MCP Server](../pac-cli-mcp/index.md) — Use MCP to control your Power Platform tenant with natural language
-- 📖 [Microsoft Learn MCP Server docs](https://learn.microsoft.com/microsoft-copilot-studio/connections-mcp)
-- 📖 [Model Context Protocol overview](https://modelcontextprotocol.io/introduction)
-- 📖 [Copilot Studio MCP connections](https://learn.microsoft.com/microsoft-copilot-studio/connections-mcp)
-
 ## 🏅 Claim your completion badge
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="../assets/Academy_LearnMCP.png" alt="Learn MCP Badge" width="220" /></p>
@@ -258,6 +250,14 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 
 > [!TIP]
 > If you do not see the email, check your spam or junk folder.
+
+## 📚 Tactical Resources
+
+- [Microsoft Copilot Studio ❤️ MCP](../mcs-mcp/index.md) — Build and deploy your own custom MCP server and connect it to Copilot Studio
+- [Power Platform CLI MCP Server](../pac-cli-mcp/index.md) — Use MCP to control your Power Platform tenant with natural language
+- 📖 [Microsoft Learn MCP Server docs](https://learn.microsoft.com/microsoft-copilot-studio/connections-mcp)
+- 📖 [Model Context Protocol overview](https://modelcontextprotocol.io/introduction)
+- 📖 [Copilot Studio MCP connections](https://learn.microsoft.com/microsoft-copilot-studio/connections-mcp)
 
 <!-- markdownlint-disable-next-line MD033 -->
 <img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/special-ops/ms-learn-mcp" alt="Analytics" />
