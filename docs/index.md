@@ -59,7 +59,7 @@ If a module requires a capability you don't have access to, you can **skip it** 
 Looking to go deeper or explore related topics? Here are some recommended next steps:
 
 - **Want to learn about other ways to build agents for Microsoft 365?** Check out [Copilot Developer Camp](https://microsoft.github.io/copilot-camp/), which covers building declarative agents, custom engine agents, and other extensibility patterns for Microsoft 365 Copilot.
-- **Want to dive deeper into the Model Context Protocol (MCP)?** Explore [Model Context Protocol (MCP) for Beginners](https://github.com/microsoft/mcp-for-beginners) for a comprehensive introduction, or try the [Microsoft Copilot Studio <3 MCP Lab](https://aka.ms/mcsmcplab) for a hands-on walkthrough of connecting MCP servers to Copilot Studio.
+- **Want to dive deeper into the Model Context Protocol (MCP)?** Explore [Model Context Protocol (MCP) for Beginners](https://github.com/microsoft/mcp-for-beginners) for a comprehensive introduction.
 - **Interested in the foundations of AI agents?** [AI Agents for Beginners](https://microsoft.github.io/ai-agents-for-beginners/) covers core concepts like agent design patterns, multi-agent systems, and agentic RAG from a broader, platform-agnostic perspective.
 
 ## 🚑 Issues
