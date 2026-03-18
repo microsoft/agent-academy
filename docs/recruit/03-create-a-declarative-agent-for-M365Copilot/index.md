@@ -524,7 +524,7 @@ Let's now publish our declarative agent 😃
 
     ![Select one of suggested prompts](assets/3.4_08_SelectStarterPrompt.png)
 
-1. Select **Always allow** to give your declarative agent permission to invoke the IT Expert prompt.
+1. Select **Allow** to give your declarative agent permission to invoke the IT Expert prompt.
 
     ![Select always allow](assets/3.4_09_AlwaysAllow.png)
 
