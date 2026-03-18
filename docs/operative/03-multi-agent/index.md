@@ -429,6 +429,9 @@ We're using **Agent Flow tools** rather than Topics for the *Upload Resume* step
 
 Now you'll connect the published flow to your Application Intake Agent.
 
+> [!NOTE]
+> If you are using a **managed environment**, adding the flow as a tool may fail with a generic error. This is caused by the **Solution-aware cloud flows** sharing restriction being disabled. To fix this, go to Power Platform Admin Center → **Environments** → your environment → **Edit Managed Environments** → **Manage Sharing** → **Power Automate** → enable **Solution-aware cloud flows**, then save.
+
 1. Navigate back to the **Hiring Agent** and select the **Agents** tab. Open the **Application Intake Agent**, and then locate the **Tools** panel.  
     ![Add agent flow to agent](./assets/2-add-agent-flow-to-agent.png)
 
