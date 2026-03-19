@@ -260,5 +260,96 @@ You'll need two different email addresses to complete this lab:
 
     ![Web Form showing as Active](assets/1.1_26_ActiveWebForm.png)
 
+### 1.2 Create Document Templates
+
+A Document Template is a reusable setup for sending agreements that lets you pre‑define documents, recipient roles, routing order, and messages, so you can quickly create and send consistent envelopes without starting from scratch each time.
+
+In this lab exercise, we'll create two Document Templates
+
+1. An employment agreement - [download the sample employment agreement](assets/Sample%20Employment%20Agreement.docx)
+1. An employee offer letter - [download the sample offer letter](assets/Sample%20Offer%20Letter.docx)
+
+These document templates will be used in the next lab exercise when we create a Maestro workflow.
+
+Let's begin!!! ⤵️
+
+1. Navigate to **Templates** and select **Document Templates** in the left hand side menu pane. Select **Create**.
+
+    ![Create new Document Template](assets/1.2_01_SelectDocumentTemplates.png)
+
+1. We can now select files to upload. Select **Upload**.
+
+    ![Select Upload](assets/1.2_02_SelectUpload.png)
+
+1. Select the Sample Employment Agreement file. [Download the Sample Employment Agreement](assets/Sample%20Employment%20Agreement.docx) if you haven't already.
+
+    ![Select Sample Employment Agreement files](assets/1.2_03_SelectSampleEmploymentAgreement.png)
+
+1. The **Name** field is automatically populated with the file name. In the **Agreement Type** field, select the **chevron icon** and scroll down to the **Human Resources** list of values, select **Offer Letter**.
+
+    ![Select Offer Letter as the agreement type value](assets/1.2_04_AgreementType.png)
+
+1. Next we'll define the roles for the document template. On the left hand side menu, select the **chevron icon** and select **Edit recipients**.
+
+    ::: info What is a "Role" in a template? :thinking:
+    A role is a placeholder in a template that represents an individual who will act on the document, such as signing or approving. Roles define _who_ is involved and _what action_ they take, while allowing the actual recipient to be assigned when the template is used.
+
+    🐦 **What roles are used for**
+
+    - Define who participates in the agreement
+    - Enable reusability of templates across multiple envelopes
+    - Allow documents and fields to be prepared without knowing the final recipients
+
+    When someone uses the template, they assign real people (name and email) to each predefined role before sending.
+    :::
+
+    ![Edit recipients](assets/1.2_05_EditRecipients.png)
+
+1. Rename the **Signer 1** role to,
+
+    ```text
+    Hiring Manager
+    ```
+
+    Add a new recipient and name the role as,
+
+    ```text
+    Employee
+    ```
+
+    ![Edit and Add Recipients](assets/1.2_06_EditAndAddRecipients.png)
+
+1. Next, we'll replace placeholders in the document with fields. We'll start by switching to the **Sender** role.
+
+    ::: info What is a "Field" in a template? :thinking:
+    A field is an interactive element added to a document that captures or displays information for a recipient. Fields are placed on documents so recipients can take action, such as signing or entering data when the envelope is sent.
+
+    🐦 **What fields are used for**
+
+    - Collect recipient input (for example, signatures or entered information)
+    - Assign actions to specific recipients or roles (fields are tied to the individual who must act)
+    - Pre‑fill information in documents when setting up a template
+
+    In short:
+    Fields define where and how recipients interact with the document during the signing process.
+
+    The two fields types we'll be using in this lab exercise are,
+
+    - Standard Fields: Displays the set of primary, out-of-the-box fields that you can add to your document.
+    - Custom Fields: User-defined fields created to capture specific data not covered by standard options.
+    :::
+
+    ![Select Sender role to add fields](assets/1.2_07_SelectSender.png)
+
+1. Each of the sample documents have blue colored text to easily identify the placeholders of where we'll be adding fields to the template. This is for the purpose of learning and completing the lab exercise so keep in mind you wouldn't have colored text in _Production-used_ templates.
+
+    Highlight the first placeholder `{EffectiveDate}` and select the standard field, **Effective Date**, on the left hand side menu.
+
+    ![Effective Date field](assets/1.2_08_EffectiveDate.png)
+
+1. Once selected, the **Effective Date** field will now be added to the template.
+
+    ![Effective Date added](assets/1.2_09_EffectiveDateAdded.png)
+
 > [!NOTE]
 > 🚧 This mission is under construction. Check back soon for the full walkthrough.
