@@ -26,14 +26,15 @@ Do not proceed with the rest of the skill until both checks pass.
 ## 🛠️ Skill Flow
 
 1. Verify the `gh` CLI is installed and authenticated (see Prerequisites above).
-2. Fetch the full list of stargazers for the `microsoft/agent-academy` repository using the GitHub API via the `gh` CLI.
-3. Save the list to `temp/stargazers.json` in the repository root.
+2. Fetch the full list of stargazers for the `microsoft/agent-academy` repository using `gh api` with the `--paginate` flag to automatically retrieve all pages (the API returns at most 100 results per page, so pagination is required for repos with more than 100 stargazers). Use `--jq` to select only the `login`, `type`, and `url` fields from each stargazer object.
+3. Save the filtered list to `temp/stargazers.json` in the repository root.
 4. Tell the user how many stargazers were found and that the list was saved to `temp/stargazers.json`.
 5. If the user provided a GitHub username, check whether that username appears in the stargazer list and tell the user the result (e.g., "✅ @username has starred the repo" or "❌ @username has not starred the repo").
 
 ## 📜 Rules
 
-- Always use the GitHub API (via `gh api`) to fetch stargazers for `microsoft/agent-academy`.
+- Always use `gh api --paginate` to fetch stargazers for `microsoft/agent-academy`, ensuring all pages are retrieved (use `per_page=100` for efficiency).
+- Always use `--jq '[.[] | {login, type, url}]'` to limit the response to only the `login`, `type`, and `url` fields. Do not store any other fields.
 - Always save the result to `temp/stargazers.json` relative to the repository root, creating the `temp` directory if it does not exist.
 - Always fetch fresh data from GitHub — never rely on previously fetched results or conversation history.
 - If the `gh` CLI is not installed, install it using the appropriate package manager for the user's OS (e.g., `brew install gh` on macOS) before proceeding.
