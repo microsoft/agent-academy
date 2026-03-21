@@ -72,7 +72,7 @@ You'll need two different email addresses to complete this lab:
 ### 1.1 Create a Docusign Web Form
 
 > [!IMPORTANT]
-> You need a Docusign developer account to complete these Docusign lab exercises. Sign up for free at [https://developers.docusign.com](https://developers.docusign.com)
+> You need a Docusign developer account to complete these Docusign lab exercises. Follow the steps outlined in the above **Prerequisites** section.
 
 1. From the Home page of Docusign developers portal, select **Templates**.
 
@@ -289,7 +289,7 @@ Let's begin!!! ⤵️
 
     ![Select Offer Letter as the agreement type value](assets/1.2_04_AgreementType.png)
 
-1. Next we'll define the roles for the document template. On the left hand side menu, select the **chevron icon** and select **Edit recipients**.
+1. Next we'll define the roles for the document template. On the **Fields** left hand side pane, select the **chevron icon** by **Sender 1** and select **Edit recipients**.
 
     ::: info What is a "Role" in a template? :thinking:
     A role is a placeholder in a template that represents an individual who will act on the document, such as signing or approving. Roles define _who_ is involved and _what action_ they take, while allowing the actual recipient to be assigned when the template is used.
@@ -341,7 +341,7 @@ Let's begin!!! ⤵️
 
     ![Select Sender role to add fields](assets/1.2_07_SelectSender.png)
 
-1. Each of the sample documents have blue colored text to easily identify the placeholders of where we'll be adding fields to the template. This is for the purpose of learning and completing the lab exercise so keep in mind you wouldn't have colored text in _Production-used_ templates.
+1. Each of the sample documents have blue colored text to easily identify the placeholders of where we'll be adding fields to the template. This is for the purpose of learning and completing the lab exercise so keep in mind you would not have colored text in _Production-used_ templates.
 
     Highlight the first placeholder `{EffectiveDate}` and select the standard field, **Effective Date**, on the left hand side menu.
 
@@ -350,6 +350,84 @@ Let's begin!!! ⤵️
 1. Once selected, the **Effective Date** field will now be added to the template.
 
     ![Effective Date added](assets/1.2_09_EffectiveDateAdded.png)
+
+1. The next field we'll add is a custom field. Highlight the `{EmployeeFullName}`placeholder and select the **+ icon** in the **Fields** pane. Select **Field**.
+
+    ![Add custom field for Effective Full Name](assets/1.2_10_AddedEmployeeFullNameCustomField.png)
+
+1. In the field attribute fly-out pane, enter the following in the **Field Name**.
+
+    ```text
+    Employee Full Name
+    ```
+
+    As you type a value into **Field Name**, the template designer searches for an existing field with the same name. If no results are found, you’ll have the option to create a new custom field using the entered value.
+
+    Select the **plus icon** to create a new custom field for Employee Full Name.
+
+    ![Create new custom field for Employee Full Name](assets/1.2_11_CreateEmployeeFullNameCustomField.png)
+
+1. Let's now configure the rest of the attributes. Enter the following in the **Field Description**,
+
+    ```text
+    The full name of the employee
+    ```
+
+    Enable the **Required Field** option to ensure this field must be completed.
+
+    By default the **Field type** is **Text**. We'll keep as **Text**.
+
+    ![Configure the Employee Full Name field](assets/1.2_12_ConfigureEmployeeFullNameCustomField.png)
+
+1. **Save** the **Employee Full Name** custom field.
+
+    ![Save Employee Full name](assets/1.2_13_SaveEmployeeFullNameCustomField.png)
+
+1. Repeat the same steps to add the remaining custom fields, using them in place of the Sender role placeholders.
+
+    | Placeholder              | Field name             | Field description                      | Required field | API reference name         |
+    |--------------------------|------------------------|----------------------------------------|----------------|----------------------------|
+    | **{EmployeePosition}**   | `Employee Position`    | `Position the employee is fulfilling`  | Yes            | Text                       |
+    | **{EmployeeStartDate}**  | `Employee Start Date`  | `The start date of the employee`       | Yes            | Text                       |
+    | **{SalaryAmount}**       | `Salary`               | `The salary of the employee`           | Yes            | Text                       |
+
+    ![Create remaining custom fields](assets/1.2_14_CreateRemainingCustomFields.png)
+
+1. Next, we'll add the **Employee Full Name** field to the _**16. Signatures**_ section of the template. Highlight the `{EmployeeFullName}` placeholder and select the corresponding field in the **Fields** left hand side pane.
+
+    ![Add Employee Full Name Field](assets/1.2_15_AddEmployeeFullNameField.png)
+
+1. We'll now switch to the **Hiring Manager** role to define the fields that this recipient should complete.  On the **Fields** left hand side pane, select the **chevron icon** by **Sender** and select **Hiring Manager**.
+
+    ![Select Hiring Manager role](assets/1.2_16_SwitchToHiringManagerRole.png)
+
+1. Highlight the `{ManagerSignature}` placeholder and select **Signature** in the **Fields** left hand side pane.
+
+    ![Select Signature field for the Manager Signature placeholder](assets/1.2_17_AddSignatureField.png)
+
+1. The **Signature** field will now be added.
+
+    ![Signature field added](assets/1.2_18_SignatureFieldAdded.png)
+
+1. Repeat the same steps to add the remaining fields for the **Hiring Manager** role and the **Employee** role.
+
+    ::: tip :computer_mouse: Don't forget to switch roles
+    Remember to switch to the Employee role using the chevron icon in the Fields left hand side pane.
+
+    ![Switch to Employee Role](assets/1.2_19_SwitchToEmployeeRole.png)
+    :::
+
+    | Role            | Placeholder                          | Field       |
+    |-----------------|--------------------------------------|-------------|
+    | Hiring Manager  | **{ManagerFullNameSignature}**       | Name        |
+    | Hiring Manager  | **{ManagerSignedDateSignature}**     | Date Signed |
+    | Employee        | **{EmployeeSignature}**              | Signature   |
+    | Employee        | **{EmployeeFullNameSignature}**      | Name        |
+    | Employee        | **{EmployeeSignedDateSignature}**    | Date Signed |
+
+1. The Template should now look like the following after the fields for the **Hiring Manager** and **Employee** roles have been added.
+
+    ![Fields added for all roles](assets/1.2_20_FieldsAddedForRoles.png)
 
 > [!NOTE]
 > 🚧 This mission is under construction. Check back soon for the full walkthrough.
