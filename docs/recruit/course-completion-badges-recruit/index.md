@@ -153,7 +153,7 @@ More missions are coming.
 🎖 Congratulations, Recruit.  
 You didn’t just watch content—you *built something*.
 
-Next up: **[Operative training](../../operative)**.
+Next up: **[Operative training](../../operative/)**.
 
 ## 📚 Tactical Resources
 
