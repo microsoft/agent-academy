@@ -33,6 +33,7 @@ export default defineConfig({
           { text: "Overview", link: "/special-ops/" },
           { text: "MCS ❤️ MCP", link: "/special-ops/mcs-mcp/" },
           { text: "Power Platform CLI MCP", link: "/special-ops/pac-cli-mcp/" },
+          { text: "YAML Specialist", link: "/special-ops/yaml-specialist/" },
         ],
       },
     ],
@@ -176,6 +177,7 @@ export default defineConfig({
         items: [
           { text: "MCS ❤️ MCP", link: "/special-ops/mcs-mcp/" },
           { text: "Power Platform CLI MCP", link: "/special-ops/pac-cli-mcp/" },
+          { text: "YAML Specialist", link: "/special-ops/yaml-specialist/" },
         ],
       },
     ],

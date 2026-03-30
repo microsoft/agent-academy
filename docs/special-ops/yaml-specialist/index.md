@@ -14,7 +14,7 @@ difficulty: 3
 
 > **Difficulty**: ⭐⭐⭐ | **Time**: ~60 min
 
-Welcome, agent. Your mission - should you choose to accept it - is to become a **YAML Specialist** - an operative who builds and extends Microsoft Copilot Studio agents entirely from Visual Studio Code using the Copilot Studio YAML agent definition language. You're going deep cover: cloning agents, writing topics in raw YAML, wiring up knowledge sources, and pushing changes back to the cloud - all from your local command center. With GitHub Copilot as your handler, you'll iterate at speeds the web UI can't match. 🎯
+Welcome, agent. Your mission - should you choose to accept it - is to become a **YAML Specialist** - an operative who builds and extends Microsoft Copilot Studio agents entirely from Visual Studio Code using the Copilot Studio YAML agent definition language. You're going deep cover: cloning agents, writing topics in raw YAML, wiring up knowledge sources, and pushing changes back to the cloud - all from your local command center. With GitHub Copilot as your handler, you'll iterate at speeds the web UI can't match.
 
 **Mission objectives:**
 
@@ -23,15 +23,12 @@ Welcome, agent. Your mission - should you choose to accept it - is to become a *
 - Write and edit YAML topics by hand with IntelliSense validation
 - Leverage GitHub Copilot Agent Mode with specialized skills to generate and refine agent YAML
 - Synchronize local changes back to Copilot Studio and test the agent in the cloud
-- Add public website knowledge sources and guardrails to harden the agent
 
 ## ⚙️ Prerequisites
 
 This mission assumes you have completed the [Operative course](/operative/) and have a working Copilot Studio environment. In addition, make sure you have the following installed:
 
 - **Visual Studio Code** - Download and install from [code.visualstudio.com](https://code.visualstudio.com/). Select the installer for your operating system (Windows, macOS, or Linux).
-- **GitHub Copilot extension for VS Code** - The free tier works for this mission. Install from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) or search for **GitHub Copilot** in the VS Code Extensions panel (`Ctrl+Shift+X`). Sign in with your GitHub account when prompted.
-- **GitHub CLI** - Download and install from [cli.github.com](https://cli.github.com/). On Windows, use the MSI installer. Verify the install by opening a terminal and running `gh --version`.
 - **Node.js (LTS)** - Required by the Copilot Studio VS Code extension. Download from [nodejs.org](https://nodejs.org/). Choose the **LTS** version. Verify with `node --version` in a terminal.
 
 > [!TIP]
@@ -52,7 +49,7 @@ This mission assumes you have completed the [Operative course](/operative/) and 
 >     - cultural-advice
 > ```
 >
-> Notice how `settings` is indented under the main level, and `greeting` and `topics` are indented further inside `settings`. That's really all there is to it - **names on the left, values on the right, separated by a colon, with indentation showing structure**. YAML files use the `.yml` or `.yml` extension. In Copilot Studio, every part of your agent - topics, tools, triggers, and settings - is stored in YAML files.
+> Notice how `settings` is indented under the main level, and `greeting` and `topics` are indented further inside `settings`. That's really all there is to it - **names on the left, values on the right, separated by a colon, with indentation showing structure**. YAML files use the `.yaml` or `.yml` extension. In Copilot Studio, every part of your agent - topics, tools, triggers, and settings - is stored in YAML files.
 
 Every Copilot Studio agent has a definition - a set of YAML files that describe its personality, topics, tools, knowledge sources, and triggers. When you build an agent in the Copilot Studio web UI, you're really editing these YAML files behind the scenes. The web canvas provides a visual representation, but the **source of truth** is always YAML.
 
@@ -74,7 +71,6 @@ This is how professional agent developers work - treating agent definitions as c
 | --- | --- | --- |
 | **Best for** | Visual exploration, quick prototyping | Large-scale development, team collaboration |
 | **Editing speed** | Point-and-select, one node at a time | Full-text search, bulk edits across files |
-| **Version control** | Manual snapshots via solutions | Full Git integration with diffs and PRs |
 | **AI assistance** | Copilot in the canvas | GitHub Copilot Agent Mode with specialized skills |
 | **Collaboration** | One author at a time per topic | Multiple developers via Git branches |
 | **Testing** | Built-in test pane | Apply changes, then test in Copilot Studio |
@@ -89,23 +85,31 @@ When you clone a Copilot Studio agent, the extension creates a structured direct
 
 ```text
 my-agent/
-├── actions/                       # Connectors and tools
-│   ├── DevOpsAction.mcs.yml
-│   └── GetItems.mcs.yml
-├── knowledge/files/               # Uploaded knowledge documents
-│   ├── source1.yml
-│   └── source2.yml
-├── topics/                        # Conversation topics (YAML)
+├── actions/                  # Connectors
+│   ├── DevOpsAction.mcs.yml  
+│   └── GetItems.mcs.yml      
+├── knowledge/files/               # Knowledge sources
+│   ├── source1.mcs.yml
+│   └── source2.mcs.yml
+├── topics/                   # Conversation topics
 │   ├── greeting.mcs.yml
 │   ├── help.mcs.yml
 │   └── escalate.mcs.yml
-├── workflows/                     # Power Automate flows
-│   └── GetDevOpsItems/
-│       ├── metadata.yml
+├── variables/                # Global variable definitions
+│   └── UserCountry.mcs.yml
+├── workflows/                    # Agent tools and actions
+│   └── GetDevOpsItems
+│       ├── metadata.yaml
 │       └── workflow.json
+│   └── GetMeetings
+│       ├── metadata.yaml
+│       └── workflow.json
+├── trigger/                 # Event triggers
+│   └── welcometrigger.mcs.yml
 ├── agent.mcs.yml                 # Main agent definition
-├── icon.png                       # Agent icon
-└── settings.mcs.yml               # Configuration settings
+├── icon.png                      # Icon used for the agent, visible in test panel and in supported channels
+├── settings.mcs.yml              # Configuration settings for the agent
+└── connectionreferences.mcs.yml  # Connection References used by Connectors and other actions
 ```
 
 **Key files to know:**
@@ -114,11 +118,13 @@ my-agent/
 | --- | --- |
 | `agent.mcs.yml` | Main agent definition - name, description, instructions, and schema |
 | `topics/` | Each `.mcs.yml` file is a topic with triggers, actions, and conversation logic |
-| `actions/` | Tool definitions - connectors, REST APIs, MCP servers |
+| `actions/` | Connector tool definitions - connectors, REST APIs, MCP servers |
 | `knowledge/files/` | Uploaded knowledge documents |
+| `variables/` | Global variable definitions used across topics |
 | `settings.mcs.yml` | Agent configuration and orchestration settings |
-| `workflows/` | Power Automate cloud flows used as tools |
+| `workflows/` | Agent flows used as tools |
 | `trigger/` | Event-based triggers (schedules, conditions) |
+| `connectionreferences.mcs.yml` | Connection References used by Connectors and other actions |
 
 ## 🔧 YAML Topic Anatomy
 
@@ -182,11 +188,22 @@ beginDialog:
 > [!NOTE]
 > Power Fx expressions in conditions must be prefixed with `=`. This tells the YAML parser that the value is an expression, not a literal string.
 
-## 💪 1. Set Up Your Arsenal
+### Topic Trigger Types
+
+Topics use different trigger types depending on when they should fire:
+
+- **`OnConversationStart`** - Fires once automatically when the conversation begins. Used for greeting messages.
+- **`OnRecognizedIntent`** - Fires when the user says something that matches a trigger phrase.
+- **`OnActivity`** - Fires on specific activity types (e.g., `Message`). Can include a `condition` property with a Power Fx expression to control when it activates. This is useful for topics that should run on every message but only when certain conditions are met.
+
+> [!TIP]
+> Use `OnActivity` with a `condition` when you need a topic to fire based on runtime state (like checking a global variable) rather than based on what the user said.
+
+## ⚙️ 1. Set Up and Clone Your Agent
 
 In this section, you'll create a Travel Agent in Copilot Studio and clone it to your local machine using the VS Code extension.
 
-### ⚙️ 1.1 Create a Solution and Agent in Copilot Studio
+### 1.1 Create a Solution and Agent in Copilot Studio
 
 First, create a dedicated solution and a blank Travel Agent. This gives you a real agent to work with throughout the mission.
 
@@ -259,27 +276,28 @@ First, create a dedicated solution and a blank Travel Agent. This gives you a re
 1. Select **Save**  
      ![Update the name and instructions](./assets/agent-details.png)
 
-### 💾 1.2 Install the Copilot Studio VS Code Extension
+### 1.2 Install the Copilot Studio VS Code Extension
 
 Next, install the Copilot Studio extension for VS Code.
 
 1. Open **Visual Studio Code** (download from [code.visualstudio.com](https://code.visualstudio.com/) if not installed)
 1. Select the **Extensions** icon in the Activity Bar on the left side (or press `Ctrl+Shift+X`)
-1. In the search bar, type **Copilot Studio**
+1. In the search bar, type **ms-copilotstudio.vscode-copilotstudio**
 1. Locate the extension published by **Microsoft** and select **Install**  
-    ![Install the Copilot Studio VSCode extension](./assets/install-mcs-extension.png)
+    ![Install the Copilot Studio Extension](./assets/install-copilot-studio-extension.png)
 1. Wait for the installation to complete - VS Code may prompt you to reload
 1. Select the **Copilot Studio** icon that now appears in the Activity Bar
-1. Select **Allow** when prompted in the popup notification asking "The extension 'Copilot Studio' wants to sign in using Microsoft"
+1. Select **Allow** when prompted in the popup notification asking "The extension 'Copilot Studio' wants to sign in using Microsoft"  
+    ![Sign in to Copilot Studio](./assets/sign-in-copilot-studio.png)
 1. Select your account to sign in with, and enter your credentials and complete any multi-factor authentication
 1. Return to VS Code - inside the **Copilot studio** panel, collapse the **Getting Started** section and expand the **Agents** section
 1. Your environments and agents should now be listed after a short loading delay  
-    ![Copilot Studio extension showing environments and agents](./assets/environment-list.png)
+    ![List of Environments](./assets/environment-list.png)
 
 > [!IMPORTANT]
 > You need read and write access to the Copilot Studio environment where your Travel Agent lives. If you don't see your agent in the Agents pane, verify you're signed in with the correct account and select the right environment from the dropdown.
 
-### 🤖 1.3 Clone the Travel Agent to Your Local Machine
+### 1.3 Clone the Travel Agent to Your Local Machine
 
 Now clone your agent to a local folder so you can work with the YAML files directly.
 
@@ -287,27 +305,30 @@ Now clone your agent to a local folder so you can work with the YAML files direc
 
 1. Locate the **Travel Agent** (or the name you gave your agent) in the agent list
 
+    > [!TIP]
+    > The environment and agent tree can sometimes time out while loading. If the list appears empty or stops loading, select the **Refresh** button at the top of the Agents pane and try expanding the tree again.
+
 1. Right-click on the agent name and select **Clone agent**  
-    ![Right-click context menu showing Clone agent option](./assets/clone-agent.png)
+    ![Clone Agent](./assets/clone-agent.png)
 
 1. In the file picker dialog, navigate to an appropriate folder (or create a new folder like `travel-agent`)
 
 1. Select the **Select Folder** button
 
-1. Wait for the cloning process to complete - a progress notification appears, followed by a success message: **Agent Cloned successfully**  
+1. Wait for the cloning process to complete - a progress notification appears, followed by a success message: **Agent Cloned successfully**. VS Code will automatically open the folder you selected.  
     ![Cloning Agent](./assets/cloning-agent.png)
 
-1. Verify the cloned file structure in the VS Code **Explorer** panel - you should see `agent.mcs.yml`, the `topics/` folder, and other definition files  
-    ![The cloned agent YAML file will be shown in the folder](./assets/cloned-agent-yaml.png)
+1. Verify the cloned file structure in the VS Code **Explorer** panel - you should see `agent.mcs.yml`, the `topics/` folder, and other definition files
 
 > [!NOTE]
 > The clone operation downloads the full agent definition - topics, actions, knowledge, workflows, triggers, and configuration. This is your local working copy. Changes you make here won't affect the cloud agent until you explicitly **Apply** them.
 
-### 👨‍💻 1.4 Explore the Agent Definition
+### 1.4 Explore the Agent Definition
 
 Before making changes, take a look at what was cloned.
 
-1. Open `agent.mcs.yml` in the Explorer - this is the main agent definition containing the name, description, and instructions
+1. Open `agent.mcs.yml` in the Explorer - this is the main agent definition containing the name, description, and instructions  
+    ![Cloned agent YAML](./assets/agent-cloned.png)
 
 1. Review the `topics/` folder - each `.mcs.yml` file represents a conversation topic
 
@@ -324,65 +345,60 @@ Before making changes, take a look at what was cloned.
 
 ## 💪 2. Enable GitHub Copilot with Copilot Studio Skills
 
-GitHub Copilot is a powerful ally, but out of the box it doesn't know the Copilot Studio YAML schema. By installing specialized **agent skills**, you give GitHub Copilot deep knowledge of the YAML agent definition language - enabling it to generate valid topics, actions, and configurations on demand.
+GitHub Copilot is a powerful AI coding assistant, but out of the box it doesn't know the Copilot Studio YAML schema. By installing specialized **agent skills**, you give GitHub Copilot deep knowledge of the YAML agent definition language — enabling it to generate valid topics, actions, and configurations on demand. In this section, you'll set up the GitHub Copilot CLI inside VS Code and install the Copilot Studio skills.
 
-### 🤖 2.1 Enable GitHub Copilot
+### 2.1 Install and Open GitHub Copilot CLI
 
-1. Ensure you have a [GitHub Copilot subscription](https://docs.github.com/en/copilot/get-started/quickstart?tool=vscode) - the free tier works for this mission
+1. Ensure you have a [GitHub Copilot subscription](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot). The **free tier** (no credit card required) works for this mission — it includes Agent mode, Copilot CLI, and 50 chat/agent requests per month. This mission uses approximately 5-10 requests, so the free allocation is plenty. If you've already used your monthly requests, you'll need to wait for them to reset or upgrade to [Copilot Pro](https://github.com/features/copilot/plans) which includes unlimited chat with GPT-5 mini and 300 premium requests. Verified students and teachers get Copilot Pro for free.
 
-1. Open VS Code and verify the **GitHub Copilot Chat** extension is installed (check the Extensions panel or press `Ctrl+Shift+X` and search for **GitHub Copilot**)
+1. Open VS Code, select the **Extensions** icon in the Activity Bar (or press `Ctrl+Shift+X`), search for **github.copilot-chat**, and select **Install** if it is not already installed  
+    ![Install GitHub Copilot Chat](./assets/install-github-copilot.png)
 
-1. Sign in to GitHub if prompted
+1. **Sign in** to GitHub if prompted
 
-1. Open the **Chat** panel by selecting the Chat icon in the Activity Bar or pressing `Ctrl+Alt+I`  
-    ![Install the GitHub Copilot Chat extension](./assets/github-copilot-extension.png)
+1. Open a terminal in VS Code (**Terminal** → **New Terminal** from the menu bar, or `` Ctrl+` ``), select the **+** dropdown arrow next to the terminal tabs, and choose **GitHub Copilot CLI**. If the CLI is not yet installed, VS Code will prompt you to install it — follow the prompts to complete the installation. See [Installing GitHub Copilot in the CLI](https://docs.github.com/en/copilot/github-copilot-in-the-cli/installing-github-copilot-in-the-cli) for more details.  
+    ![Open GitHub Copilot CLI](./assets/open-cli.png)
 
-1. Verify you are in **Agent** mode by checking the mode selector at the top of the chat panel - select **Agent** if a different mode is shown  
-    ![Select Agent Mode](./assets/select-agent-mode.png)
-    Agent mode allows GitHub Copilot to use tools, read files, run terminal commands, and interact with extensions. This is the mode required for the Copilot Studio skills to function.
+1. You can select the full screen icon on the terminal to expand the GitHub Copilot CLI  
+    ![Expand the GitHub Copilot CLI](./assets/expand-cli.png)
 
-### 💾 2.2 Install the Copilot Studio Skills
+### 2.2 Install the Copilot Studio Skills
 
 The [skills-for-copilot-studio](https://github.com/microsoft/skills-for-copilot-studio) repository from Microsoft contains specialized skills that teach GitHub Copilot how to author valid Copilot Studio YAML. The skills cover creating and editing topics, actions, knowledge sources, and global variables.
 
-1. Open a terminal in VS Code (press `` Ctrl+` ``)
-
-1. Clone the skills repository to a folder **relative to your agent project**:
-
-    ```bash
-    gh repo clone microsoft/skills-for-copilot-studio "../skills-for-copilot-studio"
-    ```
-
-    ![Clone the skills repo](./assets/clone-repo.png)
-
-1. Open VS Code **Settings** (`Ctrl+,`)
-
-1. Search for **chat.pluginLocations**
-
-1. Select **Add Item**
-
-1. Enter the following path as the **Item** and set the **Value** to `true`:
+1. In the **GitHub Copilot CLI** terminal you opened in section 2.1, add the skills package from the marketplace:
 
     ```text
-    ../skills-for-copilot-studio   (macOS/Linux)
-    ..\skills-for-copilot-studio   (Windows)
+    /plugin marketplace add microsoft/skills-for-copilot-studio
     ```
 
-1. Verify the skills are loaded by opening the **Extensions** panel, selecting the filter icon, and choosing **Agent Plugins** - you should see the `skills-for-copilot-studio` entry  
-    ![Add the skills plugin folder](./assets/add-skills-folder.png)
+1. Install the skills:
+
+    ```text
+    /plugin install copilot-studio@skills-for-copilot-studio
+    ```
+
+1. Verify the skills are available by typing `/plugin list` in the CLI terminal — you should see `copilot-studio@skills-for-copilot-studio`
 
 > [!TIP]
-> When you use GitHub Copilot in Agent mode, it can now invoke the Copilot Studio skills to produce schema-compliant YAML. The skills understand the full agent definition language including topics, variables, entities, conditions, Power Fx functions, and more.
+> See the full [Setup Guide](https://github.com/microsoft/skills-for-copilot-studio/blob/main/SETUP_GUIDE.md) for additional options including cloning, pushing, testing, and troubleshooting via slash commands.
+> You can also open GitHub Copilot CLI outside VS Code by navigating to your agent project folder in any terminal and running `copilot`.
 
-## 💪 3. Build a ConversationInit Topic with AI
+## 🤖 3. Build a ConversationInit Topic with AI
 
 You'll use GitHub Copilot with the Copilot Studio skills to generate a `ConversationInit` topic. This topic detects the user's country from their timezone and personalizes the travel experience.
 
-### 🤖 3.1 Generate the ConversationInit Topic
+### 3.1 Generate the ConversationInit Topic
 
-1. Open the **GitHub Copilot Chat** panel (`Ctrl+Alt+I`). You can use the **Maximize Secondary Side Bar** icon to maximize the chat window.
+1. In the **GitHub Copilot CLI** terminal you opened in section 2.1, enter the following prompt. If you closed the CLI, open a new terminal (**Terminal** → **New Terminal**, or `` Ctrl+` ``) and select **+ GitHub Copilot CLI** from the dropdown again.
 
-1. Verify you are in **Agent** mode
+    ```text
+    /agents
+    ```
+
+1. GitHub Copilot will ask you to **Select Agent**. Select the **Copilot Studio Author**.
+
+1. When making changes, GitHub Copilot will ask you to confirm when it creates and accesses files, if you would like to run in Autopilot mode you can use `shift + tab` to toggle through into **Autopilot**
 
 1. Enter the following prompt:
 
@@ -394,137 +410,97 @@ You'll use GitHub Copilot with the Copilot Studio skills to generate a `Conversa
     {Global.UserCountry} for tailored travel advice. Be sure to initialize the value of Global.UserCountry to be DEFAULT inside the ConversationStart Topic.
     ```
 
-1. Wait for GitHub Copilot to generate the YAML - it creates a new `.mcs.yml` file in the `topics/` folder, and likely edit the `agent.mcs.yml` and add a new variable definition  
-    ![Chat will edit your agent yaml](./assets/chat-results.png)
+1. GitHub Copilot will ask you to trust the folder that you are in. Select **Yes, and add these directories to the allowed list**  
+    ![Trust Directory](./assets/trust-directory.png)
 
-1. At various points during the chat process, you will see GitHub Copilot reading both the current workspace files, and the Copilot Studio Skills in order to learn about how to perform the task you have given it. You can select the file references to view the skill instructions that are being used. Each file is in Markdown format (`SKILL.md`)  
-    ![GitHub Copilot reading the skills](./assets/reading-skills.png)
+1. If you selected autopilot mode you will also be prompted to enable all permissions  
+    ![Enable autopilot mode](./assets/enable-autopilot.png)
 
-1. Select the Copilot Studio extension that should show the number of changes made by GitHub Copilot. Review the generated topic file and verify the structure:
+1. Wait for GitHub Copilot to generate the YAML - it creates a new `.mcs.yml` file in the `topics/` folder, and likely edit the `agent.mcs.yml` and add a new variable definition.
+    ![Completed Agent with edited files](./assets/agent-complete.png)
 
-    - A `kind: AdaptiveDialog` at the top
-    - An appropriate trigger (e.g., `OnActivity`)
-    - Use of `AnswerQuestionWithAI` to infer the country from the timezone
-    - A `Question` node asking the user to confirm or correct the detected country
-    - Storage of the result in `Global.UserCountry`  
-        ![Review changes made by GitHub Copilot](./assets/review-changes.png)
+1. Select the Copilot Studio extension that should show the number of changes made by GitHub Copilot. Review the generated topic file and verify the structure:  
+    ![Review the changes](./assets/review-changes.png)
 
-1. You can select **Keep** or **Undo** to accept or reject the changes made by the agent. Here is an example of the content that might have been generated
+1. Here is an example of the content that might have been generated
 
     ```yaml
-    # Name: Conversation Init
-    # This system topic runs on the first user message to confirm the user's country for travel advice.
+    mcs.metadata:
+      componentName: Conversation Init
+      description: Detects user's country from timezone using AI and confirms with the user. Fires once per conversation on first message.
     kind: AdaptiveDialog
     modelDescription: null
     beginDialog:
       kind: OnActivity
       id: main
       type: Message
-      condition: =Or(IsBlank(Global.UserCountry), Global.UserCountry = "DEFAULT")
+      condition: =Global.UserCountry = "DEFAULT" || IsBlank(Global.UserCountry)
       actions:
+        # Step 1: Use AI to detect country from timezone
         - kind: AnswerQuestionWithAI
-          id: answerQuestion_L9f2Qs
+          id: answerWithAI_Jk7mPq
+          userInput: ="The user's local timezone is " & System.Conversation.LocalTimeZone & ". Based on this timezone, what country is the user most likely located in? Respond with ONLY the country name, nothing else."
           autoSend: false
-          variable: init:Topic.InferredCountry
-          userInput: '=Concatenate("Infer the single most likely country from this timezone identifier: ", System.Conversation.LocalTimeZone)'
-          additionalInstructions: |-
-            Return only a single country name in plain text.
-            If the timezone could map to multiple countries or the value is missing, return Unknown.
-            Do not include any explanation or punctuation.
+          variable: Topic.DetectedCountry
+          additionalInstructions: Respond with only the country name. No explanation, no punctuation, no extra text. For example, if the timezone is America/New_York respond with United States.
     
-        - kind: ConditionGroup
-          id: conditionGroup_9mY2La
-          conditions:
-            - id: conditionItem_2wJ7Pr
-              condition: =Topic.InferredCountry = "Unknown"
-              actions:
-                - kind: SendActivity
-                  id: sendMessage_1rNd8V
-                  activity: I couldn't confidently infer your country from your timezone. Please tell me your country or region.
-    
-                - kind: Question
-                  id: question_6xQm4C
-                  alwaysPrompt: true
-                  interruptionPolicy:
-                    allowInterruption: false
-                  variable: Topic.UnknownCountryResponse
-                  prompt: What country or region should I use for your travel advice?
-                  entity: StringPrebuiltEntity
-    
-                - kind: AnswerQuestionWithAI
-                  id: answerQuestion_7mHg2P
-                  autoSend: false
-                  variable: Topic.UnknownCountryNormalized
-                  userInput: '=Concatenate("Extract the country name from this user response: ", Topic.UnknownCountryResponse)'
-                  additionalInstructions: |-
-                    Return only a single country name in plain text.
-                    If no country is provided, return Unknown.
-                    Do not include any explanation or punctuation.
-    
-                - kind: SetVariable
-                  id: setVariable_3pTk7M
-                  variable: Global.UserCountry
-                  value: =If(Topic.UnknownCountryNormalized = "Unknown", "DEFAULT", Topic.UnknownCountryNormalized)
-    
-          elseActions:
-            - kind: SendActivity
-              id: sendMessage_5bHv2N
-              activity: I inferred that your country is {Topic.InferredCountry} based on your timezone. Is that correct?
-    
-            - kind: Question
-              id: question_8cLs5D
-              alwaysPrompt: true
-              interruptionPolicy:
-                allowInterruption: false
-              variable: Topic.CountryConfirmationResponse
-              prompt: Is that correct? Reply with yes, or provide the country I should use instead.
-              entity: StringPrebuiltEntity
-    
-            - kind: AnswerQuestionWithAI
-              id: answerQuestion_3qRt6Y
-              autoSend: false
-              variable: Topic.ConfirmedCountry
-              userInput: '=Concatenate("Inferred country: ", Topic.InferredCountry, ". User response: ", Topic.CountryConfirmationResponse)'
-              additionalInstructions: |-
-                Decide the final country to use.
-                If the user confirms, return the inferred country exactly.
-                If the user provides a correction, return only the corrected country name.
-                If unclear, return Unknown.
-                Return plain text only with no punctuation.
-    
-            - kind: SetVariable
-              id: setVariable_6dXp9J
-              variable: Global.UserCountry
-              value: =If(Topic.ConfirmedCountry = "Unknown", Topic.InferredCountry, Topic.ConfirmedCountry)
-    
+        # Step 2: Show detected country to user
         - kind: SendActivity
-          id: sendMessage_4vJc6X
-          activity: Thanks. I'll use {Global.UserCountry} to tailor travel advice in this conversation.
+          id: sendMessage_Xn4wBt
+          activity:
+            text:
+              - "Based on your timezone ({System.Conversation.LocalTimeZone}), I believe you're located in {Topic.DetectedCountry}."
+    
+        # Step 3: Ask user to confirm or correct
+        - kind: Question
+          id: question_Rm8kLp
+          variable: init:Topic.UserResponse
+          prompt: Is this correct? If not, please tell me your actual country.
+          entity: StringPrebuiltEntity
+          interruptionPolicy:
+            allowInterruption: false
+    
+        # Step 4: Use AI to interpret user's confirmation or correction
+        - kind: AnswerQuestionWithAI
+          id: answerWithAI_Wt5nRs
+          userInput: ="I detected the user's country as " & Topic.DetectedCountry & ". The user responded: " & Topic.UserResponse & ". If the user confirmed (e.g. yes, correct, right, that is right), respond with exactly: " & Topic.DetectedCountry & ". If the user provided a different country name, respond with that country name only. Respond with ONLY the country name, nothing else."
+          autoSend: false
+          variable: Topic.ConfirmedCountry
+          additionalInstructions: Respond with only the country name. No explanation, no punctuation, no extra text.
+    
+        # Step 5: Store confirmed country in global variable
+        - kind: SetVariable
+          id: setVariable_Hp6jKw
+          variable: Global.UserCountry
+          value: =Topic.ConfirmedCountry
+    
+        # Step 6: Confirm to user
+        - kind: SendActivity
+          id: sendMessage_Qv9dNw
+          activity:
+            text:
+              - "Great! I'll tailor my travel advice for {Global.UserCountry}. How can I help you today?"
+    
     ```
 
-1. Check the **Problems** pane (`Ctrl+Shift+M`) for any YAML validation errors. You can ignore any errors in the skills-for-copilot-studio folder. Only concentrate on the files that are edited by the agent
+1. Check the **Problems** pane (`Ctrl+Shift+M`) for any YAML validation errors. If there any errors found, you can simply ask GitHub Copilot to fix the errors.
 
-1. Fix any errors flagged by the extension. These will be usually underlined in a squiggly red line. You can simply ask GitHub Copilot to fix the errors.  
-    ![Use GitHub Copilot to help fix errors](./assets/fix-errors.png)
-
-> [!WARNING]
-> AI-generated YAML may contain errors. Always validate the output using the Problems pane before applying changes. If you see errors, paste the error message into the chat and ask GitHub Copilot to fix them.
-
-### 🔎 3.2 Review the Updated Agent Instructions
+### 3.2 Review the Updated Agent Instructions
 
 GitHub Copilot should also have updated the `agent.mcs.yml` file to reference `{Global.UserCountry}` in the instructions (or something similar)
 
 1. Open `agent.mcs.yml` in the Explorer
 1. Locate the `instructions` section and look for references to `{Global.UserCountry}`
-1. This is a reference to a variable to ensure that the instructions are specific to the current user's location.
+1. This is a reference to a variable to ensure that the instructions are specific to the current user's location.  
+    ![Updated agent instructions](./assets/agent-instructions-updated.png)
 
-## 💪 4. Add Knowledge Sources and Guardrails
+## 🔎 4. Add Knowledge Sources and Guardrails
 
 A travel agent is only as good as its intel. In this section, you'll use GitHub Copilot to add public website knowledge sources and safety guardrails.
 
-### 🤖 4.1 Add Knowledge Sources via AI
+### 4.1 Add Knowledge Sources via AI
 
-1. Open the **GitHub Copilot Chat** panel
+1. In the **GitHub Copilot CLI** terminal you used in section 3 (reopen it if closed — see section 2.1), select the **Copilot Studio Author** agent again using `/agents`
 
 1. Enter the following prompt:
 
@@ -536,18 +512,16 @@ A travel agent is only as good as its intel. In this section, you'll use GitHub 
     advice, cite sources for safety information.
     ```
 
-1. Review the changes GitHub Copilot proposes - it should modify knowledge configuration files and update the agent instructions  
-    ![The Knowledge sources will be added. Select Keep](./assets/knowledge-sources-added.png)
+1. Once the agent is completed, review the changes GitHub Copilot proposes - it should modify knowledge configuration files and update the agent instructions  
+   ![Knowledge Added](./assets/knowledge-added.png)
 
-1. Verify the knowledge sources appear in the agent definition or knowledge folder, and select **Keep**
+1. Browse the changes to the agent `yaml` to see the changes made
 
-1. Open `agent.mcs.yml` and confirm that guardrails have been added to the instructions
-
-## 💪 5. Apply Changes and Test
+## 🧪 5. Apply Changes and Test
 
 In this section, you'll upload your local changes to Copilot Studio and test the agent.
 
-### 🚀 5.1 Preview and Apply Changes
+### 5.1 Preview and Apply Changes
 
 The Copilot Studio extension provides three synchronization operations:
 
@@ -558,23 +532,27 @@ The Copilot Studio extension provides three synchronization operations:
 | **Apply** | Local → Cloud | Upload local changes to Copilot Studio (does not publish) |
 
 1. Select the **Copilot Studio** icon in the Activity Bar
-
 1. In the **Agent Changes** pane, select **Preview** to check for any remote changes made since you cloned  
-    ![Preview remote changes](./assets/preview-changes.png)
-
+    ![Preview changes](./assets/preview-changes.png)
 1. The extension will eventually report **Successfully completed previewing changes**. If remote changes exist, select **Get** to download them and resolve any conflicts before proceeding.
-
-1. Review your local changes listed under **Local Changes** - you should see the new topic file, updated agent instructions, and knowledge source changes
-
 1. Select **Apply changes**, and then select your agent name. This will upload your local changes to Copilot Studio  
-    ![Apply Changes](./assets/apply-changes.png)
-
+    ![Apply changes](./assets/apply-changes.png)
 1. Wait for the apply operation to complete - a success notification confirms your changes are live: **Successfully completed applying changes**
 
 > [!IMPORTANT]
 > The **Apply** operation uploads your changes to the live agent definition but does **not** publish the agent. You can test changes in the Copilot Studio test pane immediately after applying. To make the agent available to end users on channels, you still need to **Publish** from Copilot Studio.
+>
+> **Alternative: Push via GitHub Copilot CLI** — Instead of using the VS Code extension, you can push changes from the **GitHub Copilot CLI** terminal:
+>
+> 1. Open the GitHub Copilot CLI terminal (see section 2.1)
+> 1. Type `/agents` and press **Enter**
+> 1. When prompted to **Select Agent**, choose **Copilot Studio Manage Agent**
+> 1. Type `push` and press **Enter** to upload your local changes
+> 1. A browser window may open for sign-in on first use — tokens are cached after that
+>
+> This is equivalent to the **Apply** operation in the VS Code extension. After pushing, you still need to **Publish** from the Copilot Studio web UI to make changes live.
 
-### 🧪 5.2 Test the Agent in Copilot Studio
+### 5.2 Test the Agent in Copilot Studio
 
 1. Navigate to [Copilot Studio](https://copilotstudio.microsoft.com)
 
@@ -591,51 +569,24 @@ The Copilot Studio extension provides three synchronization operations:
     ```
 
 1. Verify the agent provides destination-specific advice, cites sources, and respects the guardrails  
-    ![Test pane showing travel advice response with sources](./assets/travel-advice.png)
+    ![Test updated agent](./assets/test-agent.png)
 
 > [!TIP]
-> If the agent doesn't behave as expected, return to VS Code, adjust the YAML, and **Apply** again. This rapid iterate-and-test cycle of multiple related source files in one go, is one of the key tactical advantages of YAML authoring - precise edits in code with results in seconds.
+> If the agent doesn't behave as expected, return to VS Code, adjust the YAML, and **Apply** again. This rapid iterate-and-test cycle of multiple related source files in one go, is one of the key tactical advantages of YAML authoring.
 
-## 💡 YAML Authoring Best Practices
+## ✅ Mission Accomplished
 
-Here are some practical tips for YAML agent development.
+Congrats, agent — you've completed **Operation YAML Specialist**! You now have mastered the following skills:
 
-### Naming Conventions
+✅ **Local Agent Development**: Cloned a Copilot Studio agent to your local machine and worked with the YAML definition files directly in VS Code
 
-**Files:**
+✅ **YAML Authoring**: Understood the agent definition file structure — topics, actions, knowledge, variables, triggers, and configuration
 
-- Use kebab-case: `conversation-init.topic.mcs.yml`
-- Be descriptive: `travel-safety-check.topic.mcs.yml` not `topic1.yml`
-- Use the type suffix: `.topic.yml`, `.tool.yml`, `.trigger.yml`
+✅ **AI-Assisted Authoring**: Used GitHub Copilot with Copilot Studio skills to generate and refine agent YAML at speed
 
-**IDs and variables:**
+✅ **Knowledge & Guardrails**: Added public website knowledge sources and safety guardrails to shape agent behavior
 
-- Use camelCase: `userCountry`, `travelDestination`
-- Be descriptive: `checkTravelAdvisory` not `check1`
-- Avoid abbreviations: `destinationCountry` not `dest`
-
-### Comments for Complex Logic
-
-```yaml
-# Check if user confirmed their country or provided a correction
-# If confirmed, proceed with the detected country
-# If corrected, update the Global.UserCountry variable
-- kind: ConditionGroup
-  id: condition_countryConfirm
-  conditions:
-    - id: condition_confirmed
-      condition: =Topic.CountryConfirmed = true
-```
-
-### Troubleshooting YAML
-
-| Pitfall | Symptom | Fix |
-| --- | --- | --- |
-| Wrong indentation | Validation errors, broken topics | Use 2-space indentation consistently |
-| Missing `id` on nodes | Apply fails or duplicate IDs | Give every node a unique `id` |
-| Missing `=` prefix on conditions | Condition treated as literal string | Always prefix Power Fx expressions with `=` |
-| Using tabs instead of spaces | Parser errors | Configure VS Code to insert spaces for YAML files |
-| Periods in topic names | Solution export fails | Avoid `.` in topic display names |
+✅ **Synchronization Workflow**: Applied local changes back to Copilot Studio and tested the agent end-to-end
 
 ## 📚 Further Intel
 
