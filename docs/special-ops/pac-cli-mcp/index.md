@@ -1,7 +1,17 @@
+---
+tags: 
+    - MCP
+    - GitHub Copilot
+    - Visual Studio Code
+    - Power Platform CLI
+difficulty: 3
+---
 # ⚡ Power Platform CLI MCP Server
 
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="../assets/CommandLine_Badge.png" alt="Command Line Badge" width="220" /></p>
+
+> **Difficulty**: ⭐⭐⭐ | **Time**: ~30 min
 
 Welcome, agent. Your mission — should you choose to accept it — is to establish a **secure command channel** between the Power Platform CLI and your AI copilot using the **Model Context Protocol (MCP)**. Forget memorizing cryptic command syntax. You'll be issuing orders in plain language while your AI handler translates them into precision strikes across environments, tenant settings, and governance policies. 🎯
 
@@ -36,10 +46,15 @@ Time to gear up. The .NET Tool installation method enables you to deploy Power P
 
 Before arming yourself with the Power Platform CLI, ensure you have:
 
-- **.NET 8.0 or later (preferably install the latest version)** installed on your system ([Download .NET](https://dotnet.microsoft.com/download))
+- **.NET 10.0 or later (preferably install the latest version)** installed on your system ([Download .NET](https://dotnet.microsoft.com/download))
 - An **internet connection** for downloading the NuGet package
 
 ### 🚀 Installation Steps
+
+There are a couple of ways to use the Power Platform CLI MCP server:
+
+- You can install the CLI globally on your system, which allows you to run `pac` commands from any directory in your command prompt or PowerShell
+- Alternatively, you can run the MCP server directly without a global installation by using the `dnx` command, but for the full operational experience, we recommend installing the CLI globally.
 
 1. **Deploy the CLI globally** using the .NET tool install command:
 
@@ -57,7 +72,7 @@ Before arming yourself with the Power Platform CLI, ensure you have:
 
    ```text
    Microsoft PowerPlatform CLI
-   Version: 1.30.3+g0f0e0b9
+   Version: 2.4.1+g3799f3e (.NET 10.0.0)
    ```
 
 ### 🔧 Managing Your Arsenal
@@ -110,30 +125,19 @@ The MCP server currently supports **20+ Power Platform CLI commands** in its ars
 
 ### ⚙️ Setting Up PAC CLI MCP
 
-#### 1. Locate the MCP Executable
-
-After deploying Power Platform CLI via the .NET tool, the MCP server executable is stationed at:
-
-```text
-%USERPROFILE%\.dotnet\tools\.store\microsoft.powerapps.cli.tool\[version]\microsoft.powerapps.cli.tool\[version]\tools\net8.0\any\pac-mcp.exe
-```
-
-**Quick way to locate the asset:**
-
-```bash
-pac copilot mcp
-```
-
-This command will reveal the exact path to your `pac-mcp.exe` file. Copy the path — you'll need it for the next phase of the operation.
-
-#### 2. Establish the MCP Connection in Visual Studio Code
+#### Establish the MCP Connection in Visual Studio Code
 
 To wire up the Power Platform CLI MCP server in Visual Studio Code:
 
 1. Open Visual Studio Code command palette (`ctrl` + `shift` + `P` on Windows/Linux or `cmd` + `shift` + `P` on Mac)
 1. Search for "MCP" and select `MCP: Add Server`
 1. Select `Command (stdio)`
-1. Paste the full path to `pac-mcp.exe` that you acquired from the `pac copilot mcp` command in step 1
+1. Paste the following command:
+
+    ```text
+    pac copilot mcp --run
+    ```
+
 1. Name the server something like for instance:
 
     ```text
@@ -331,17 +335,10 @@ This field report demonstrates the operational value of combining Power Platform
 > [!WARNING]
 > While the generated plan may require refinement and validation against your specific organizational requirements, it provides a tactical foundation that would typically require hours of research, documentation review, and strategic planning. This demonstrates how AI can compress governance planning from days to minutes.
 
-### 📚 Further Intel
-
-- [Power Platform Governance Plan Example](./power-platform-plan/index.md) - Field report: strategic governance improvement plan generated using AI
-- [Adding an MCP server in Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers)
-- [Power Platform CLI Documentation](https://learn.microsoft.com/power-platform/developer/cli/introduction)
-- [GitHub Discussion: PAC CLI MCP Preview](https://github.com/microsoft/powerplatform-build-tools/discussions/1182)
-
 ## 🏅 Claim your completion badge
 
 <!-- markdownlint-disable-next-line MD033 -->
-<p align="center"><img src="../assets/CommandLine_Badge.png" alt="Command Line Badge" width="220" /></p>
+<p align="center"><img src="./assets/CommandLine_Badge.png" alt="Command Line Badge" width="220" /></p>
 
 Congrats, agent - mission accomplished! Now it's time to claim your badge.
 
@@ -353,6 +350,13 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 
 > [!TIP]
 > If you do not see the email, check your spam or junk folder.
+
+## 📚 Tactical Resources
+
+- 🧪 [Power Platform Governance Plan Example](./power-platform-plan/index.md) — Field report: strategic governance improvement plan generated using AI
+- 📖 [Adding an MCP server in Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers)
+- 📖 [Power Platform CLI Documentation](https://learn.microsoft.com/power-platform/developer/cli/introduction)
+- 📖 [GitHub Discussion: PAC CLI MCP Preview](https://github.com/microsoft/powerplatform-build-tools/discussions/1182)
 
 <!-- markdownlint-disable-next-line MD033 -->
 <img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/special-ops/pac-cli-mcp" alt="Analytics" />

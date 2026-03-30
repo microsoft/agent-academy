@@ -103,6 +103,8 @@ Using the same Microsoft 365 tenant in Step 1, sign up for a Power Apps Develope
 
 > [!NOTE]
 > If you are using an existing Microsoft 365 account and did not create one in Step 1, for example - using your own account in your work organization, your IT administrator (or the equivalent) team who manages your tenant/environments might have turned off the sign up process. In this case, please contact your administrator, or create a test tenant as per Step 1.
+>
+> If you are using an existing environment from your organization, ensure it is **not** a managed environment. Managed environment restrictions can prevent certain features — such as adding Power Automate flows as agent tools — from working correctly.
 
 ## Step 4: Enable Ability to Publish with the Copilot Studio Trial
 
@@ -224,9 +226,15 @@ A new SharePoint site needs to be created  which will be used in [Lesson 06](../
 
 We will use the **Devices** list for in Mission 07.
 
+![Devices list](./images/devices-list.png)
+
 ### Add new column
 
-Scroll to the far right in the list and select the **+ Add column** button.  Choose the **hyperlink** type, enter **Image** for the column name, and select add.
+Scroll to the far right in the list and select the **+ Add column** button.  
+
+![Add column](./images/add-column.png)
+
+Choose the **hyperlink** type, enter **Image** for the column name, and select add.
 
 ### Create sample data in Devices SharePoint list
 
