@@ -483,7 +483,7 @@ You'll use GitHub Copilot with the Copilot Studio skills to generate a `Conversa
     
     ```
 
-1. Check the **Problems** pane (`Ctrl+Shift+M`) for any YAML validation errors. If there any errors found, you can simply ask GitHub Copilot to fix the errors.
+1. Check the **Problems** pane (`Ctrl+Shift+M`) for any YAML validation errors. If there are any errors found, you can simply ask GitHub Copilot to fix the errors.
 
 ### 3.2 Review the Updated Agent Instructions
 
