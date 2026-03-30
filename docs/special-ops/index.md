@@ -20,6 +20,6 @@ Use Special Ops when you need fast, practical training on a defined topic.
 | [Microsoft Copilot Studio ❤️ MCP](./mcs-mcp/index.md) | <img src="./mcs-mcp/assets/MCP_Joker_Badge.png" alt="MCP Badge" width="150" /> | ⭐⭐⭐ | ~30 min |
 | [Microsoft Learn Docs MCP](./ms-learn-mcp/index.md) | <img src="./ms-learn-mcp/assets/Academy_LearnMCP.png" alt="Learn MCP Badge" width="150" /> | ⭐ | ~15 min |
 | [Power Platform CLI MCP Server](./pac-cli-mcp/index.md) | <img src="./pac-cli-mcp/assets/CommandLine_Badge.png" alt="Command Line Badge" width="150" /> | ⭐⭐⭐ | ~30 min |
-| [YAML Specialist](./yaml-specialist/index.md) | <img src="./assets/YAML_Specialist_Badge.png" alt="YAML Specialist Badge" width="150" /> | ⭐⭐⭐ | ~30 min |
+| [YAML Specialist](./yaml-specialist/index.md) | <img src="./assets/YAML_Specialist_Badge.png" alt="YAML Specialist Badge" width="150" /> | ⭐⭐⭐ | ~60 min |
 <!-- markdownlint-enable MD033 -->
 More Special Ops missions will be added here soon!
