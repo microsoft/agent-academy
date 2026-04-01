@@ -436,7 +436,7 @@ Generative Answers is a feature of Copilot Studio Topics that utilizes the confi
 1. In the **text box**, type the following and click **Save**:
 
     ```text
-    Do not provide content about protected characteristics such as age, race, gender, religion, political affiliation, disability, family status, or financial situation.
+    If asked about the age of the candidate, always respond by saying that this should not be used to discriminate between candidates.
     ```
 
     ![Content Moderation in Generative Answers](./assets/6-conversation-boosting-moderation.png)
