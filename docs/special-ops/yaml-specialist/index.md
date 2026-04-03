@@ -393,7 +393,7 @@ You'll use GitHub Copilot with the Copilot Studio skills to generate a `Conversa
 1. In the **GitHub Copilot CLI** terminal you opened in section 2.1, enter the following prompt. If you closed the CLI, open a new terminal (**Terminal** → **New Terminal**, or `` Ctrl+` ``) and select **+ GitHub Copilot CLI** from the dropdown again.
 
     ```text
-    /agents
+    /agent
     ```
 
 1. GitHub Copilot will ask you to **Select Agent**. Select the **Copilot Studio Author**.
