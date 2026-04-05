@@ -1,19 +1,25 @@
 ---
 prev:
-  text: 'Get started with the Hiring Agent'
-  link: '/operative/01-get-started'
+  text: Get started with the Hiring Agent
+  link: /operative/01-get-started
 next:
-  text: 'Multi-Agent Systems'
-  link: '/operative/03-multi-agent'
-short-description: 'Master precise agent communication and behavior control'
+  text: Multi-Agent Systems
+  link: /operative/03-multi-agent
+short-description: Master precise agent communication and behavior control
 difficulty: 2
+codename: OPERATION SECRET DIRECTIVE
+time: 20
+tags:
+  - instructions
+  - prompting
+products:
+  - copilot-studio
 ---
-
 # 🕵️‍♂️ Mission 02: Authoring Agent Instructions {#mission-02-authoring-agent-instructions}
 
-## 🕵️‍♂️ CODENAME: `OPERATION SECRET DIRECTIVE` {#codename-operation-secret-directive}
-
-> **⏱️ Operation Time Window:** `~20 minutes – intel only, no fieldwork required`
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**
 

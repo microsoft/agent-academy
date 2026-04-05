@@ -1,6 +1,32 @@
 <template>
   <div class="missions-container">
-    <h2 v-if="title">{{ title }}</h2>
+    <div v-if="filterable && (availableTags.length || availableProducts.length)" class="missions-filters">
+      <div v-if="availableTags.length" class="filter-group">
+        <span class="filter-label">Tags</span>
+        <div class="filter-pills">
+          <button
+            v-for="t in availableTags"
+            :key="t.slug"
+            class="filter-pill"
+            :class="{ active: activeTag === t.slug }"
+            @click="activeTag = activeTag === t.slug ? null : t.slug"
+          >{{ t.label }}</button>
+        </div>
+      </div>
+      <div v-if="availableProducts.length" class="filter-group">
+        <span class="filter-label">Product</span>
+        <div class="filter-pills">
+          <button
+            v-for="p in availableProducts"
+            :key="p.slug"
+            class="filter-pill"
+            :class="{ active: activeProduct === p.slug }"
+            @click="activeProduct = activeProduct === p.slug ? null : p.slug"
+          >{{ p.label }}</button>
+        </div>
+      </div>
+    </div>
+    <p v-if="filteredMissions.length === 0" class="missions-empty">No missions match the selected filters.</p>
     <div ref="gridRef" class="missions-grid">
       <a
         v-for="mission in pagedMissions"
@@ -63,18 +89,23 @@
 import { computed, ref, onMounted, onUnmounted, nextTick, watch } from "vue";
 import { withBase } from "vitepress";
 import { missions } from "virtual:missions-data";
+import tagsData from "../../data/tags.json";
+import productsData from "../../data/products.json";
 
 const props = withDefaults(
   defineProps<{
-    title: string;
     section?: string;
     sort?: "alphabetical" | "last-updated" | "level" | "first-added";
     order?: "ascending" | "descending";
     maxRows?: number;
+    filterable?: boolean;
+    tag?: string;
+    product?: string;
   }>(),
   {
     sort: "alphabetical",
     order: "ascending",
+    filterable: true,
   }
 );
 
@@ -143,6 +174,39 @@ const sortedMissions = computed(() => {
   return filtered;
 });
 
+// Filters
+const activeTag = ref<string | null>(null);
+const activeProduct = ref<string | null>(null);
+
+// Only show tag filter when not already scoped by a tag prop, and tags exist in this set
+const availableTags = computed(() => {
+  if (props.tag) return [];
+  const slugsInUse = new Set(sortedMissions.value.flatMap((m) => m.tags ?? []));
+  return tagsData.filter((t) => slugsInUse.has(t.slug));
+});
+
+// Only show product filter when not already scoped by a product prop
+const availableProducts = computed(() => {
+  if (props.product) return [];
+  const slugsInUse = new Set(sortedMissions.value.flatMap((m) => m.products ?? []));
+  return productsData.filter((p) => slugsInUse.has(p.slug));
+});
+
+const filteredMissions = computed(() => {
+  return sortedMissions.value.filter((m) => {
+    // prop-level filters (page context — always applied)
+    if (props.tag && !(m.tags ?? []).includes(props.tag)) return false;
+    if (props.product && !(m.products ?? []).includes(props.product)) return false;
+    // pill-level filters (inline filter bar)
+    if (activeTag.value && !(m.tags ?? []).includes(activeTag.value)) return false;
+    if (activeProduct.value && !(m.products ?? []).includes(activeProduct.value)) return false;
+    return true;
+  });
+});
+
+// Reset page when filters change
+watch([activeTag, activeProduct], () => { page.value = 1; });
+
 // Pagination based on max-rows and detected column count
 const gridRef = ref<HTMLElement | null>(null);
 const columns = ref(1);
@@ -176,7 +240,7 @@ const itemsPerPage = computed(() => {
 
 const totalPages = computed(() => {
   if (!props.maxRows) return 1;
-  return Math.max(1, Math.ceil(sortedMissions.value.length / itemsPerPage.value));
+  return Math.max(1, Math.ceil(filteredMissions.value.length / itemsPerPage.value));
 });
 
 watch(totalPages, (tp) => {
@@ -184,9 +248,9 @@ watch(totalPages, (tp) => {
 });
 
 const pagedMissions = computed(() => {
-  if (!props.maxRows) return sortedMissions.value;
+  if (!props.maxRows) return filteredMissions.value;
   const start = (page.value - 1) * itemsPerPage.value;
-  return sortedMissions.value.slice(start, start + itemsPerPage.value);
+  return filteredMissions.value.slice(start, start + itemsPerPage.value);
 });
 
 type PageItem = { type: "page"; page: number; key: string } | { type: "ellipsis"; page?: undefined; key: string };
@@ -374,5 +438,74 @@ const visiblePages = computed<PageItem[]>(() => {
   .missions-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Filter bar */
+.missions-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg-soft);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.filter-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--vp-c-text-2);
+  white-space: nowrap;
+  min-width: 4rem;
+}
+
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.filter-pill {
+  font-size: 0.78rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-2);
+  cursor: pointer;
+  transition: all 0.15s;
+  line-height: 1.5;
+}
+
+.filter-pill:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+
+.filter-pill.active {
+  background: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+  color: #fff;
+}
+
+:root.dark .filter-pill.active {
+  background: var(--vp-c-brand-2, #5468d4);
+  border-color: var(--vp-c-brand-2, #5468d4);
+}
+
+.missions-empty {
+  color: var(--vp-c-text-2);
+  font-size: 0.9rem;
+  padding: 1.5rem 0;
+  text-align: center;
 }
 </style>

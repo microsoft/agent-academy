@@ -16,6 +16,8 @@ const EXCLUDED_DIRS = new Set([
   "data",
   "commander-preview",
   "recent-changes",
+  "tags",
+  "products",
 ]);
 
 const COURSE_BADGES: Record<string, string> = {
@@ -31,6 +33,7 @@ interface MissionData {
   badge: string | null;
   difficulty: number;
   tags: string[];
+  products: string[];
   lastUpdated: number;
   createdAt: number;
 }
@@ -164,6 +167,7 @@ function loadMissions(docsDir: string): MissionData[] {
         badge,
         difficulty: Math.min(Math.max(Number(frontmatter.difficulty) || 0, 0), 5),
         tags: frontmatter.tags ?? [],
+        products: frontmatter.products ?? [],
         lastUpdated: getContentTimestamp(indexPath, repoRoot),
         createdAt: getMergedAt(indexPath, repoRoot),
       });

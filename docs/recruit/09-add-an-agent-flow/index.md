@@ -1,19 +1,25 @@
 ---
 prev:
-  text: 'Enhance user interactions in Topics with Adaptive Cards'
-  link: '/recruit/08-add-adaptive-card'
+  text: Enhance user interactions in Topics with Adaptive Cards
+  link: /recruit/08-add-adaptive-card
 next:
-  text: 'Add Event Triggers'
-  link: '/recruit/10-add-event-triggers'
-short-description: 'Use Adaptive Card input to trigger back-end flows'
+  text: Add Event Triggers
+  link: /recruit/10-add-event-triggers
+short-description: Use Adaptive Card input to trigger back-end flows
 difficulty: 1
+codename: OPERATION AUTOMATION POWERHOUSE
+time: 30
+tags:
+  - automation
+products:
+  - copilot-studio
+  - power-automate
 ---
-
 # 🚨 Mission 09: Add an agent flow to your Topic for automation {#mission-09-add-an-agent-flow-to-your-topic-for-automation}
 
-## 🕵️‍♂️ CODENAME: `OPERATION AUTOMATION POWERHOUSE` {#codename-operation-automation-powerhouse}
-
-> **⏱️ Operation Time Window:** `~30 minutes`  
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**
 

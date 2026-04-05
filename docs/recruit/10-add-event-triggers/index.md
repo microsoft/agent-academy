@@ -1,19 +1,26 @@
 ---
 prev:
-  text: 'Add an agent flow to your Topic for automation'
-  link: '/recruit/09-add-an-agent-flow'
+  text: Add an agent flow to your Topic for automation
+  link: /recruit/09-add-an-agent-flow
 next:
-  text: 'Publish your agent'
-  link: '/recruit/11-publish-your-agent'
-short-description: 'Enable your agent to act autonomously using event-based logic'
+  text: Publish your agent
+  link: /recruit/11-publish-your-agent
+short-description: Enable your agent to act autonomously using event-based logic
 difficulty: 1
+codename: OPERATION GHOST ROUTINE
+time: 45
+tags:
+  - automation
+  - triggers
+products:
+  - copilot-studio
+  - power-automate
 ---
-
 # 🚨 Mission 10: Add Event Triggers - Enable autonomous agent capabilities {#mission-10-add-event-triggers-enable-autonomous-agent-capabilities}
 
-## 🕵️‍♂️ CODENAME: `OPERATION GHOST ROUTINE` {#codename-operation-ghost-routine}
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**
 

@@ -1,0 +1,33 @@
+name: Validate frontmatter
+permissions:
+  contents: read
+
+on:
+  pull_request:
+    branches-ignore:
+      - gh-pages
+
+jobs:
+  frontmatter-check:
+    name: Check mission frontmatter
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run frontmatter validation
+        continue-on-error: false
+        id: frontmatter-check
+        run: node scripts/validate-frontmatter.mjs
+
+      - name: Report frontmatter check results
+        if: steps.frontmatter-check.outcome == 'failure'
+        run: |
+          echo "::warning::Mission frontmatter issues found. Each mission page in special-ops/ and cowork-collective/ must have: difficulty (1–5), time (minutes as a number), and description (min 10 characters)."

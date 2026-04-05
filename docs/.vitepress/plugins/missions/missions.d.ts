@@ -6,6 +6,7 @@ declare module "virtual:missions-data" {
     badge: string | null;
     difficulty: number;
     tags: string[];
+    products: string[];
     lastUpdated: number;
     createdAt: number;
   }

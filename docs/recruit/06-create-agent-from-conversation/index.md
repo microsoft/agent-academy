@@ -1,19 +1,24 @@
 ---
 prev:
-  text: 'Using a Pre-Built Agent'
-  link: '/recruit/05-using-prebuilt-agents'
+  text: Using a Pre-Built Agent
+  link: /recruit/05-using-prebuilt-agents
 next:
-  text: 'Add new topic with trigger and nodes'
-  link: '/recruit/07-add-new-topic-with-trigger'
-short-description: 'Create a new agent grounded in knowledge sources'
+  text: Add new topic with trigger and nodes
+  link: /recruit/07-add-new-topic-with-trigger
+short-description: Create a new agent grounded in knowledge sources
 difficulty: 1
+codename: OPERATION AGENT FORGE
+time: 75
+tags:
+  - declarative-agents
+products:
+  - copilot-studio
 ---
-
 # 🚨 Mission 06: Create a custom agent using natural language with AI and grounding it with your data {#mission-06-create-a-custom-agent-using-natural-language-with-ai-and-grounding-it-with-your-data}
 
-## 🕵️‍♂️ CODENAME: `OPERATION AGENT FORGE` {#codename-operation-agent-forge}
-
-> **⏱️ Operation Time Window:** `~75 minutes`
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**
 

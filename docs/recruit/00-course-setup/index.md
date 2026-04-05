@@ -1,19 +1,27 @@
 ---
 prev:
-  text: 'Recruit overview'
-  link: '/recruit'
+  text: Recruit overview
+  link: /recruit
 next:
-  text: 'Introduction to Agents'
-  link: '/recruit/01-introduction-to-agents'
+  text: Introduction to Agents
+  link: /recruit/01-introduction-to-agents
 short-description: 'Set up your dev environment, Copilot Studio trial, and SharePoint site'
 difficulty: 1
+codename: OPERATION DEPLOYMENT READY
+time: 30
+tags:
+  - setup
+products:
+  - copilot-studio
+  - sharepoint
+  - microsoft-365
 ---
 
 # 🚨 Mission 00: Course Setup {#mission-00-course-setup}
 
-## 🕵️‍♂️ CODENAME: `OPERATION DEPLOYMENT READY` {#codename-operation-deployment-ready}
-
-> **⏱️ Operation Time Window:** `~30 minutes`  
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 ## 🎯 Mission Brief {#mission-brief}
 

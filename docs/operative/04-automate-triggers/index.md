@@ -1,19 +1,26 @@
 ---
 prev:
-  text: 'Multi-Agent Systems'
-  link: '/operative/03-multi-agent'
+  text: Multi-Agent Systems
+  link: /operative/03-multi-agent
 next:
-  text: 'Understanding Agent Models'
-  link: '/operative/05-model-selection'
-short-description: 'Implement autonomous agent behaviors with event-driven triggers'
+  text: Understanding Agent Models
+  link: /operative/05-model-selection
+short-description: Implement autonomous agent behaviors with event-driven triggers
 difficulty: 2
+codename: OPERATION SIGNAL POINT
+time: 45
+tags:
+  - automation
+  - triggers
+products:
+  - copilot-studio
+  - power-automate
 ---
-
 # Mission 04: Add Event Triggers to act autonomously
 
-## 🕵️‍♂️ CODENAME: `OPERATION SIGNAL POINT` {#codename-operation-signal-point}
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**
 

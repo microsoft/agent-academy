@@ -1,19 +1,25 @@
 ---
 prev:
-  text: 'AI Safety and Content Moderation'
-  link: '/operative/06-ai-safety'
+  text: AI Safety and Content Moderation
+  link: /operative/06-ai-safety
 next:
-  text: 'Dataverse Grounding'
-  link: '/operative/08-dataverse-grounding'
-short-description: 'Process documents and images with advanced AI capabilities'
+  text: Dataverse Grounding
+  link: /operative/08-dataverse-grounding
+short-description: Process documents and images with advanced AI capabilities
 difficulty: 2
+codename: DOCUMENT RESUME RECON
+time: 45
+tags:
+  - multimodal
+  - prompting
+products:
+  - copilot-studio
 ---
-
 # 🚨 Mission 07: Extracting Resume Contents with Multimodal Prompts {#mission-07-extracting-resume-contents-with-multimodal-prompts}
 
-## 🕵️‍♂️ CODENAME: `DOCUMENT RESUME RECON` {#codename-document-resume-recon}
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 [![MultiModal](./assets/07-multi-modal-prompts-thumbnail.png)](https://youtu.be/icP_qH8LFK8?si=VJjtdVi-ytUq0ymg "Watch the walkthrough on YouTube")
 

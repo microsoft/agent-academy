@@ -1,18 +1,25 @@
 ---
 tags:
-    - MCP
-    - Microsoft Learn
-    - Copilot Studio
+  - mcp
 difficulty: 1
+time: 15
+description: >-
+  Connect the Microsoft Learn Docs MCP Server to a Copilot Studio agent for
+  real-time documentation access.
 badge: ./assets/Academy_LearnMCP.png
+products:
+  - copilot-studio
+  - microsoft-learn
 ---
 
 # 📚 Microsoft Learn MCP Server {#microsoft-learn-mcp-server}
 
+<!-- markdownlint-disable MD033 -->
+<mission-meta />
+<!-- markdownlint-enable MD033 -->
+
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="./assets/Academy_LearnMCP.png" alt="Microsoft Learn MCP Badge" width="220" /></p>
-
-> **Difficulty**: ⭐ | **Time**: ~15 min
 
 Welcome, agent. Your mission — should you choose to accept it — is **Operation Open Book**: connect the **Microsoft Learn Docs MCP Server** to a Copilot Studio agent, giving it real-time access to the entire Microsoft Learn documentation library. No more agents responding with outdated or hallucinated product information. Your agent is about to become the most well-read operative in the field. 📖🎯
 

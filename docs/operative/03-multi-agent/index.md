@@ -1,19 +1,24 @@
 ---
 prev:
-  text: 'Authoring Agent Instructions'
-  link: '/operative/02-agent-instructions'
+  text: Authoring Agent Instructions
+  link: /operative/02-agent-instructions
 next:
-  text: 'Add Event Triggers'
-  link: '/operative/04-automate-triggers'
-short-description: 'Transform single agent into coordinated multi-agent system'
+  text: Add Event Triggers
+  link: /operative/04-automate-triggers
+short-description: Transform single agent into coordinated multi-agent system
 difficulty: 2
+codename: OPERATION SYMPHONY
+time: 45
+tags:
+  - multi-agent
+products:
+  - copilot-studio
 ---
-
 # 🚨 Mission 03: Multi-Agent Systems {#mission-03-multi-agent-systems}
 
-## 🕵️‍♂️ CODENAME: `OPERATION SYMPHONY` {#codename-operation-symphony}
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**
 

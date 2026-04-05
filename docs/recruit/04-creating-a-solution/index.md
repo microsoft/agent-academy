@@ -1,19 +1,25 @@
 ---
 prev:
-  text: 'Deploy a Declarative Agent for Microsoft 365 Copilot'
-  link: '/recruit/03-create-a-declarative-agent-for-M365Copilot'
+  text: Deploy a Declarative Agent for Microsoft 365 Copilot
+  link: /recruit/03-create-a-declarative-agent-for-M365Copilot
 next:
-  text: 'Using a Pre-Built Agent'
-  link: '/recruit/05-using-prebuilt-agents'
-short-description: 'Package your agent into a reusable solution for environment management'
+  text: Using a Pre-Built Agent
+  link: /recruit/05-using-prebuilt-agents
+short-description: Package your agent into a reusable solution for environment management
 difficulty: 1
+codename: OPERATION CTRL-ALT-PACKAGE
+time: 45
+tags:
+  - solutions
+products:
+  - copilot-studio
+  - power-platform
 ---
-
 # 🚨 Mission 04: Creating a Solution for Your Agent {#mission-04-creating-a-solution-for-your-agent}
 
-## 🕵️‍♂️ CODENAME: `OPERATION CTRL-ALT-PACKAGE` {#codename-operation-ctrl-alt-package}
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**
 

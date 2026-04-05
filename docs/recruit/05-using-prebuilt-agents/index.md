@@ -1,19 +1,26 @@
 ---
 prev:
-  text: 'Creating a Solution for Your Agent'
-  link: '/recruit/04-creating-a-solution'
+  text: Creating a Solution for Your Agent
+  link: /recruit/04-creating-a-solution
 next:
-  text: 'Create a custom agent using natural language with AI'
-  link: '/recruit/06-create-agent-from-conversation'
-short-description: 'Use and customize a template agent to accelerate setup'
+  text: Create a custom agent using natural language with AI
+  link: /recruit/06-create-agent-from-conversation
+short-description: Use and customize a template agent to accelerate setup
 difficulty: 1
+codename: OPERATION SAFE TRAVELS
+time: 30
+tags:
+  - prebuilt-agents
+products:
+  - copilot-studio
+  - microsoft-365
+  - teams
 ---
-
 # 🧰 Mission 05: Using a Pre-Built Agent   {#mission-05-using-a-pre-built-agent}
 
-## 🕵️‍♂️ CODENAME: `OPERATION SAFE TRAVELS` {#codename-operation-safe-travels}
-
-> **⏱️ Operation Time Window:** `~30 minutes`
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**
 

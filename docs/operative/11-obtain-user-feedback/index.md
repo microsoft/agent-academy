@@ -1,19 +1,25 @@
 ---
 prev:
-  text: 'Integrate with MCP Servers'
-  link: '/operative/10-mcp'
+  text: Integrate with MCP Servers
+  link: /operative/10-mcp
 next:
-  text: 'Securing Your Operative Badge'
-  link: '/operative/course-completion-badges-operative'
-short-description: 'Collect and process user feedback for continuous improvement'
+  text: Securing Your Operative Badge
+  link: /operative/course-completion-badges-operative
+short-description: Collect and process user feedback for continuous improvement
 difficulty: 2
+codename: OPERATION ECHO
+time: 45
+tags:
+  - feedback
+  - adaptive-cards
+products:
+  - copilot-studio
 ---
-
 # Collecting feedback from users
 
-## 🕵️‍♂️ CODENAME: `OPERATION ECHO` {#codename-operation-echo}
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 [![Feedback](./assets/11-collecting-feedback_Thumbnail_PlayButton.png)](https://youtu.be/QRBimOsgKEQ?si=05sjJwz6tv4MO6Z6 "Watch the walkthrough on YouTube")
 

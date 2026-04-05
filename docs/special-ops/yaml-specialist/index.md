@@ -1,19 +1,26 @@
 ---
 tags:
-    - YAML
-    - Copilot Studio
-    - VS Code
-    - GitHub Copilot
+  - yaml
 difficulty: 3
+time: 60
+description: >-
+  Build and extend Copilot Studio agents entirely from VS Code using the YAML
+  agent definition language.
 badge: ../assets/YAML_Specialist_Badge.png
+products:
+  - copilot-studio
+  - visual-studio-code
+  - github-copilot
 ---
 
 # 🧬 YAML Specialist {#yaml-specialist}
 
+<!-- markdownlint-disable MD033 -->
+<mission-meta />
+<!-- markdownlint-enable MD033 -->
+
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="../assets/YAML_Specialist_Badge.png" alt="YAML Specialist Badge" width="220" /></p>
-
-> **Difficulty**: ⭐⭐⭐ | **Time**: ~60 min
 
 Welcome, agent. Your mission - should you choose to accept it - is to become a **YAML Specialist** - an operative who builds and extends Microsoft Copilot Studio agents entirely from Visual Studio Code using the Copilot Studio YAML agent definition language. You're going deep cover: cloning agents, writing topics in raw YAML, wiring up knowledge sources, and pushing changes back to the cloud - all from your local command center. With GitHub Copilot as your handler, you'll iterate at speeds the web UI can't match.
 

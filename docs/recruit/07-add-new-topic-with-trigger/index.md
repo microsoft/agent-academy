@@ -1,19 +1,25 @@
 ---
 prev:
-  text: 'Create a custom agent using natural language with AI'
-  link: '/recruit/06-create-agent-from-conversation'
+  text: Create a custom agent using natural language with AI
+  link: /recruit/06-create-agent-from-conversation
 next:
-  text: 'Enhance user interactions in Topics with Adaptive Cards'
-  link: '/recruit/08-add-adaptive-card'
-short-description: 'Use Topics to define custom question/answer paths'
+  text: Enhance user interactions in Topics with Adaptive Cards
+  link: /recruit/08-add-adaptive-card
+short-description: Use Topics to define custom question/answer paths
 difficulty: 1
+codename: OPERATION STAY ON TOPIC
+time: 60
+tags:
+  - topics
+  - triggers
+products:
+  - copilot-studio
 ---
-
 # 🚨 Mission 07: Add new topic with trigger and nodes {#mission-07-add-new-topic-with-trigger-and-nodes}
 
-## 🕵️‍♂️ CODENAME: `OPERATION STAY ON TOPIC` {#codename-operation-stay-on-topic}
-
-> **⏱️ Operation Time Window:** `~60 minutes`
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**
 

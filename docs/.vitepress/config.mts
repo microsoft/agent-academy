@@ -49,6 +49,15 @@ export default defineConfig({
           { text: "YAML Specialist", link: "/special-ops/yaml-specialist/" },
         ],
       },
+      {
+        text: "Cowork Collective",
+        items: [
+          { text: "Overview", link: "/cowork-collective/" },
+          { text: "Badge Check", link: "/cowork-collective/badge-check/" },
+          { text: "Compliance Packet", link: "/cowork-collective/compliance-packet/" },
+          { text: "Out of Office Vacation Handoff", link: "/cowork-collective/out-of-office-prep/" },
+        ],
+      },
     ],
     lastUpdated: {
       text: 'Last updated at',
@@ -196,6 +205,16 @@ export default defineConfig({
           { text: "Microsoft Learn Docs MCP", link: "/special-ops/ms-learn-mcp/" },
           { text: "Power Platform CLI MCP", link: "/special-ops/pac-cli-mcp/" },
           { text: "YAML Specialist", link: "/special-ops/yaml-specialist/" },
+        ],
+      },
+      {
+        text: "Cowork Collective",
+        link: "/cowork-collective/",
+        collapsed: true,
+        items: [
+          { text: "Badge Check", link: "/cowork-collective/badge-check/" },
+          { text: "Compliance Packet", link: "/cowork-collective/compliance-packet/" },
+          { text: "Out of Office Vacation Handoff", link: "/cowork-collective/out-of-office-prep/" },
         ],
       },
     ],

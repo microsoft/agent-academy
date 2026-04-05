@@ -1,19 +1,24 @@
 ---
 prev:
-  text: 'Add new topic with trigger and nodes'
-  link: '/recruit/07-add-new-topic-with-trigger'
+  text: Add new topic with trigger and nodes
+  link: /recruit/07-add-new-topic-with-trigger
 next:
-  text: 'Add an agent flow to your Topic for automation'
-  link: '/recruit/09-add-an-agent-flow'
-short-description: 'Build an Adaptive Card using Power Fx and SharePoint'
+  text: Add an agent flow to your Topic for automation
+  link: /recruit/09-add-an-agent-flow
+short-description: Build an Adaptive Card using Power Fx and SharePoint
 difficulty: 1
+codename: OPERATION INTERFACE UPLIFT
+time: 45
+tags:
+  - adaptive-cards
+products:
+  - copilot-studio
 ---
-
 # 🚨 Mission 08: Enhance user interactions in Topics with Adaptive Cards {#mission-08-enhance-user-interactions-in-topics-with-adaptive-cards}
 
-## 🕵️‍♂️ CODENAME: `OPERATION INTERFACE UPLIFT` {#codename-operation-interface-uplift}
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**
 

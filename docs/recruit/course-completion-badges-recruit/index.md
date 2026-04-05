@@ -1,19 +1,24 @@
 ---
 prev:
-  text: 'Understanding Licensing'
-  link: '/recruit/12-understanding-licensing'
+  text: Understanding Licensing
+  link: /recruit/12-understanding-licensing
 next:
-  text: 'Operative Overview'
-  link: '/operative'
-short-description: 'Claim your badge and mark your achievement!'
+  text: Operative Overview
+  link: /operative
+short-description: Claim your badge and mark your achievement!
 difficulty: 1
+codename: OPERATION COURSE COMPLETION
+time: 5
+tags:
+  - completion
+products:
+  - copilot-studio
 ---
-
 # 🚨 Final Mission: Securing Your Recruit Badge {#final-mission-securing-your-recruit-badge}
 
-## 🕵️‍♂️ CODENAME: `OPERATION COURSE COMPLETION` {#codename-operation-course-completion}
-
-> **⏱️ Operation Time Window:** `~5 minutes`  
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 ## 🎯 Mission Brief {#mission-brief}
 
