@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build docs",
+      "type": "npm",
+      "script": "docs:build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Dev server",
+      "type": "npm",
+      "script": "docs:dev",
+      "isBackground": true,
+      "problemMatcher": {
+        "pattern": {
+          "regexp": "^$"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "vitepress",
+          "endsPattern": "Local:\\s+http"
+        }
+      }
+    }
+  ]
+}
