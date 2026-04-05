@@ -263,9 +263,9 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 
 - [Microsoft Copilot Studio ❤️ MCP](../mcs-mcp/index.md) — Build and deploy your own custom MCP server and connect it to Copilot Studio
 - [Power Platform CLI MCP Server](../pac-cli-mcp/index.md) — Use MCP to control your Power Platform tenant with natural language
-- 📖 [Microsoft Learn MCP Server docs](https://learn.microsoft.com/microsoft-copilot-studio/connections-mcp)
-- 📖 [Model Context Protocol overview](https://modelcontextprotocol.io/introduction)
-- 📖 [Copilot Studio MCP connections](https://learn.microsoft.com/microsoft-copilot-studio/connections-mcp)
+📖 [Microsoft Learn MCP Server docs](https://learn.microsoft.com/microsoft-copilot-studio/connections-mcp)  
+📖 [Model Context Protocol overview](https://modelcontextprotocol.io/introduction)  
+📖 [Copilot Studio MCP connections](https://learn.microsoft.com/microsoft-copilot-studio/connections-mcp)
 
 <!-- markdownlint-disable-next-line MD033 -->
 <img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/special-ops/ms-learn-mcp" alt="Analytics" />

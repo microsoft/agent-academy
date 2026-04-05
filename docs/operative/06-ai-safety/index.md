@@ -576,37 +576,37 @@ In your next mission, you'll enhance your agents with multimodal capabilities to
 
 ### Content moderation & safety
 
-- 📖 [Content moderation in Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/knowledge-copilot-studio?WT.mc_id=power-182762-scottdurow#content-moderation)
+📖 [Content moderation in Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/knowledge-copilot-studio?WT.mc_id=power-182762-scottdurow#content-moderation)
 
-- 📖 [Topic-level content moderation with generative answers](https://learn.microsoft.com/microsoft-copilot-studio/nlu-boost-node?WT.mc_id=power-182762-scottdurow#content-moderation)
+📖 [Topic-level content moderation with generative answers](https://learn.microsoft.com/microsoft-copilot-studio/nlu-boost-node?WT.mc_id=power-182762-scottdurow#content-moderation)
 
-- 📖 [Azure AI Content Safety overview](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=power-182762-scottdurow)
+📖 [Azure AI Content Safety overview](https://learn.microsoft.com/azure/ai-services/content-safety/overview?WT.mc_id=power-182762-scottdurow)
 
-- 📖 [Troubleshoot agent response filtered by Responsible AI](https://learn.microsoft.com/microsoft-copilot-studio/troubleshoot-agent-response-filtered-by-responsible-ai?WT.mc_id=power-182762-scottdurow)
+📖 [Troubleshoot agent response filtered by Responsible AI](https://learn.microsoft.com/microsoft-copilot-studio/troubleshoot-agent-response-filtered-by-responsible-ai?WT.mc_id=power-182762-scottdurow)
 
 ### Prompt modification & custom instructions
 
-- 📖 [Prompt modification for custom instructions](https://learn.microsoft.com/microsoft-copilot-studio/nlu-generative-answers-prompt-modification?WT.mc_id=power-182762-scottdurow)
+📖 [Prompt modification for custom instructions](https://learn.microsoft.com/microsoft-copilot-studio/nlu-generative-answers-prompt-modification?WT.mc_id=power-182762-scottdurow)
 
-- 📖 [Generative answers FAQ](https://learn.microsoft.com/microsoft-copilot-studio/faqs-generative-answers?WT.mc_id=power-182762-scottdurow)
+📖 [Generative answers FAQ](https://learn.microsoft.com/microsoft-copilot-studio/faqs-generative-answers?WT.mc_id=power-182762-scottdurow)
 
 ### Security & threat detection
 
-- 📖 [External threat detection for Copilot Studio agents](https://learn.microsoft.com/microsoft-copilot-studio/external-security-provider?WT.mc_id=power-182762-scottdurow)
+📖 [External threat detection for Copilot Studio agents](https://learn.microsoft.com/microsoft-copilot-studio/external-security-provider?WT.mc_id=power-182762-scottdurow)
 
-- 📖 [Agent runtime protection status](https://learn.microsoft.com/microsoft-copilot-studio/security-agent-runtime-view?WT.mc_id=power-182762-scottdurow)
+📖 [Agent runtime protection status](https://learn.microsoft.com/microsoft-copilot-studio/security-agent-runtime-view?WT.mc_id=power-182762-scottdurow)
 
-- 📖 [Prompt Shields and jailbreak detection](https://learn.microsoft.com/azure/ai-services/content-safety/concepts/jailbreak-detection?WT.mc_id=power-182762-scottdurow)
+📖 [Prompt Shields and jailbreak detection](https://learn.microsoft.com/azure/ai-services/content-safety/concepts/jailbreak-detection?WT.mc_id=power-182762-scottdurow)
 
 ### Responsible AI principles
 
-- 📖 [Responsible AI principles at Microsoft](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=power-182762-scottdurow)
+📖 [Responsible AI principles at Microsoft](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=power-182762-scottdurow)
 
-- 📖 [Microsoft 365 Copilot Transparency Note](https://learn.microsoft.com/copilot/microsoft-365/microsoft-365-copilot-transparency-note?WT.mc_id=power-182762-scottdurow)
+📖 [Microsoft 365 Copilot Transparency Note](https://learn.microsoft.com/copilot/microsoft-365/microsoft-365-copilot-transparency-note?WT.mc_id=power-182762-scottdurow)
 
-- 📖 [Responsible AI considerations for intelligent applications](https://learn.microsoft.com/power-platform/well-architected/intelligent-application/responsible-ai?WT.mc_id=power-182762-scottdurow)
+📖 [Responsible AI considerations for intelligent applications](https://learn.microsoft.com/power-platform/well-architected/intelligent-application/responsible-ai?WT.mc_id=power-182762-scottdurow)
 
-- 📖 [Microsoft Responsible AI Standard](https://www.microsoft.com/insidetrack/blog/responsible-ai-why-it-matters-and-how-were-infusing-it-into-our-internal-ai-projects-at-microsoft/?WT.mc_id=power-182762-scottdurow)
+📖 [Microsoft Responsible AI Standard](https://www.microsoft.com/insidetrack/blog/responsible-ai-why-it-matters-and-how-were-infusing-it-into-our-internal-ai-projects-at-microsoft/?WT.mc_id=power-182762-scottdurow)
 
 <!-- markdownlint-disable-next-line MD033 -->
 <img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/06-ai-safety" alt="Analytics" />

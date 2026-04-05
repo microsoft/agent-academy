@@ -36,7 +36,7 @@ Success means building agents that initiate value - not just respond to it.
 
 ## 🔎 Objectives {#objectives}
 
-- 📖 This lesson will cover:
+📖 This lesson will cover:
 
 - Understanding Event Triggers and how they enable autonomous agent behavior
 - Learning the difference between event triggers and topic triggers, including trigger workflows and payloads

@@ -363,9 +363,9 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 ## 📚 Tactical Resources {#tactical-resources}
 
 - 🧪 [Power Platform Governance Plan Example](./power-platform-plan/index.md) — Field report: strategic governance improvement plan generated using AI
-- 📖 [Adding an MCP server in Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers)
-- 📖 [Power Platform CLI Documentation](https://learn.microsoft.com/power-platform/developer/cli/introduction)
-- 📖 [GitHub Discussion: PAC CLI MCP Preview](https://github.com/microsoft/powerplatform-build-tools/discussions/1182)
+📖 [Adding an MCP server in Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers)  
+📖 [Power Platform CLI Documentation](https://learn.microsoft.com/power-platform/developer/cli/introduction)  
+📖 [GitHub Discussion: PAC CLI MCP Preview](https://github.com/microsoft/powerplatform-build-tools/discussions/1182)
 
 <!-- markdownlint-disable-next-line MD033 -->
 <img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/special-ops/pac-cli-mcp" alt="Analytics" />

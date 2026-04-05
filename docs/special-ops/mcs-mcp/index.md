@@ -367,9 +367,9 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 
 ## 📚 Tactical Resources {#tactical-resources}
 
-- 📖 [Microsoft Copilot Studio MCP announcement blog](https://aka.ms/mcsmcp)
-- 📖 [Microsoft Copilot Studio MCP docs](http://aka.ms/mcsmcpdocs)
-- 📖 [Model Context Protocol overview](https://modelcontextprotocol.io/introduction)
+📖 [Microsoft Copilot Studio MCP announcement blog](https://aka.ms/mcsmcp)  
+📖 [Microsoft Copilot Studio MCP docs](http://aka.ms/mcsmcpdocs)  
+📖 [Model Context Protocol overview](https://modelcontextprotocol.io/introduction)
 
 <!-- markdownlint-disable-next-line MD033 -->
 <img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/special-ops/mcs-mcp" alt="Analytics" />
