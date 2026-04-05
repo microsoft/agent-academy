@@ -40,7 +40,7 @@ export default defineConfig({
         ],
       },
       {
-        text: "Special Ops (Missions)",
+        text: "Special Ops",
         items: [
           { text: "Overview", link: "/special-ops/" },
           { text: "MCS ❤️ MCP", link: "/special-ops/mcs-mcp/" },
@@ -188,7 +188,7 @@ export default defineConfig({
         ],
       },
       {
-        text: "Special Ops (Missions)",
+        text: "Special Ops",
         link: "/special-ops/",
         collapsed: true,
         items: [
