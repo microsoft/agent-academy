@@ -2,8 +2,8 @@
   <div v-if="hasAnything" class="mission-meta">
     <span v-if="difficulty" class="meta-item">
       <span class="meta-label">Difficulty</span>
-      <span class="meta-stars" :aria-label="`${difficulty} out of 5`">
-        <svg v-for="i in 5" :key="i" class="meta-star" :class="{ filled: i <= difficulty }" viewBox="0 0 16 16" aria-hidden="true">
+      <span class="meta-stars" :aria-label="`${difficulty} out of 3`">
+        <svg v-for="i in 3" :key="i" class="meta-star" :class="{ filled: i <= difficulty }" viewBox="0 0 16 16" aria-hidden="true">
           <path d="M8 1l1.9 3.9 4.3.6-3.1 3 .7 4.3L8 10.7l-3.8 2 .7-4.3-3.1-3 4.3-.6z"/>
         </svg>
       </span>
@@ -40,7 +40,7 @@ const { frontmatter } = useData();
 
 const difficulty = computed(() => {
   const d = Number(frontmatter.value.difficulty);
-  return d >= 1 && d <= 5 ? d : 0;
+  return d >= 1 && d <= 3 ? d : 0;
 });
 
 const time = computed(() => {
