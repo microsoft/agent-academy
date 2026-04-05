@@ -9,9 +9,9 @@ short-description: 'Build an Adaptive Card using Power Fx and SharePoint'
 difficulty: 1
 ---
 
-# 🚨 Mission 08: Enhance user interactions in Topics with Adaptive Cards
+# 🚨 Mission 08: Enhance user interactions in Topics with Adaptive Cards {#mission-08-enhance-user-interactions-in-topics-with-adaptive-cards}
 
-## 🕵️‍♂️ CODENAME: `OPERATION INTERFACE UPLIFT`
+## 🕵️‍♂️ CODENAME: `OPERATION INTERFACE UPLIFT` {#codename-operation-interface-uplift}
 
 > **⏱️ Operation Time Window:** `~45 minutes`
 
@@ -19,11 +19,11 @@ difficulty: 1
 
 [![Adaptive cards video thumbnail](./assets/video-thumbnail.jpg)](https://www.youtube.com/watch?v=RhIlzYHPCXo "Watch the walkthrough on YouTube")
 
-## 🎯  Mission Brief
+## 🎯  Mission Brief {#mission-brief}
 
 Agents, your mission is to infiltrate the static user experience and replace it with rich, dynamic, and actionable Adaptive Cards. You’ll deploy JSON payloads and Power Fx formulas to transform Copilot Studio conversations from basic Q&A into fully interactive engagements. Your goal is to gather user input, present data beautifully, and direct conversations with precision and style. Fail to adapt, and your users may defect to less intelligent interfaces.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you’ll learn:
 
@@ -33,7 +33,7 @@ In this mission, you’ll learn:
 1. Creating rich, interactive forms and data collection experiences within agent topics
 1. Implementing best practices for designing responsive and user-friendly adaptive cards
 
-## 🤔 What is an Adaptive Card?
+## 🤔 What is an Adaptive Card? {#what-is-an-adaptive-card}
 
 An **Adaptive Card** is way to create interactive, visually rich UI elements that can be embedded in apps like Microsoft Teams, Microsoft Outlook or agents. It is a structured JSON object that defines the layout and content of a card:
 
@@ -59,7 +59,7 @@ Imagine you're building an agent that asks users for their name, email, or feedb
 
 1. **Boost user experience** - cards make your agent feel more interactive. It's a more clean, clickable, and user-friendly type of interface.
 
-## 🐱 Is _JSON_ a person?
+## 🐱 Is _JSON_ a person? {#is-json-a-person}
 
 Pronounced as "Jason," it's not a person 😅
 
@@ -69,7 +69,7 @@ This is one of the options to use when adding an adaptive card to your topic.
 
 ![Adaptive card node properties](assets/8.0_02_AdaptiveCardPropertiesPane.png)
 
-## 👀 I see another option for building an adaptive card using _formula_
+## 👀 I see another option for building an adaptive card using _formula_ {#i-see-another-option-for-building-an-adaptive-card-using-formula}
 
 Remember how we learnt about Power Fx in [Mission 07 - Using Power Fx in your nodes](../07-add-new-topic-with-trigger/index.md#what-power-fx-can-do-in-topics) The same can be applied in Adaptive Cards within Copilot Studio.
 
@@ -111,13 +111,13 @@ This formula combines the word "Hello" with the user's name dynamically.
 
     Power Fx is a low-code programming language. As mentioned earlier, it's readable, intuitive and similar to Excel formulas.
 
-## 👷🏻‍♀️ Building with the Adaptive Card Designer
+## 👷🏻‍♀️ Building with the Adaptive Card Designer {#building-with-the-adaptive-card-designer}
 
 The **Adaptive Card Designer** is a visual tool that lets you build interactive message cards using drag-and-drop elements like text, images, buttons, and inputs. Its purpose is to help you create rich, dynamic messages without writing complex code, making it easier to design user-friendly interfaces.
 
 The designer tool helps you build the card visually, but behind the scenes, it’s generating the JSON object for you. You can also switch to _formula_ which enables Power Fx expressions to be used in the card to display data from else where.
 
-## 🎨 Understanding the Adaptive Card Designer
+## 🎨 Understanding the Adaptive Card Designer {#understanding-the-adaptive-card-designer}
 
 ![Adaptive Card Designer](assets/8.0_03_AdaptiveCardPropertiesPane.png)
 
@@ -175,7 +175,7 @@ Even if you're new to the Adaptive Card designer, it's helpful to see how the vi
 
 ![Adaptive Card Designer Samples](assets/8.0_04_AdaptiveCardDesignerSamples.png)
 
-## 🌵 Common use cases
+## 🌵 Common use cases {#common-use-cases}
 
 The following are common use cases for Adaptive Cards in Copilot Studio when used in the **Send a message** or **Ask a question** nodes.
 
@@ -212,7 +212,7 @@ The following are common use cases for Adaptive Cards in Copilot Studio when use
     - "Submit request"
     - "View details"
 
-## ⭐ Best practices
+## ⭐ Best practices {#best-practices}
 
 Here are some best practices for creating Adaptive Cards for agents in Copilot Studio.
 
@@ -246,11 +246,11 @@ Here are some best practices for creating Adaptive Cards for agents in Copilot S
     - Bind card elements to variables or outputs from nodes using Power Fx to personalize the user experience.
     - For example, show the user's name or current status dynamically.
 
-## 🧪 Lab 08 - Add adaptive cards and enhance topic capabilities
+## 🧪 Lab 08 - Add adaptive cards and enhance topic capabilities {#lab-08-add-adaptive-cards-and-enhance-topic-capabilities}
 
 We're now going to learn how to enhance our topic with adaptive cards and using advanced functionality of topics and nodes.
 
-### ✨ Use case
+### ✨ Use case {#use-case}
 
 **As an** employee
 
@@ -272,7 +272,7 @@ Let's begin!
 
     We're going to use the same agent created previously in [Lesson 06 - Create a custom agent using natural language with AI and grounding it with your data](../06-create-agent-from-conversation/index.md).
 
-### 8.1 Create a new topic with an adaptive card for user to submit their request
+### 8.1 Create a new topic with an adaptive card for user to submit their request {#create-a-new-topic-with-an-adaptive-card-for-user-to-submit-their-request}
 
 We'll create a new topic that will handle a user's device request. This new topic will contain an **Ask with adaptive card** node to enable user interaction with the agent.
 
@@ -441,7 +441,7 @@ Now that we created the new topic that handles the device requests, we need to u
 
     ![Refresh test pane](assets/8.2_08_RefreshTestPane.png)
 
-## ✅ Mission Complete
+## ✅ Mission Complete {#mission-complete}
 
 Congratulations! 👏🏻 You've learnt how to add adaptive cards using Power Fx formulas to display data from variables, and you also learnt how to redirect from one topic to another. Creating bite sized topics makes your agent more organized, but also helps guide users through different parts of the conversation flow with the agent.
 
@@ -449,7 +449,7 @@ This is the end of **Lab 08 - Enhance user interactions with Adaptive Cards**, s
 
 ⏭️ [Move to **Add an agent flow to your Topic for automation** lesson](../09-add-an-agent-flow/index.md)
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 🔗 [Using Adaptive Cards in Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/guidance/adaptive-cards-overview?WT.mc_id=power-172619-ebenitez)
 

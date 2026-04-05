@@ -11,19 +11,19 @@ difficulty: 2
 
 # Mission 10: Integrate with MCP Servers
 
-## 🕵️‍♂️ CODENAME: `OPERATION MCP RENDEZVOUS`
+## 🕵️‍♂️ CODENAME: `OPERATION MCP RENDEZVOUS` {#codename-operation-mcp-rendezvous}
 
 > **⏱️ Operation Time Window:** `~45 minutes`
 
 [![MCP](./assets/10-mcp-thumbnail_PlayButton.png)](https://youtu.be/kW2f8Z8fzBw?si=rDg7uFQCIDUe_Q_H "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome, Operative. Your previous missions have shown you the power of prompts. You learned about multimodal document analysis, grounding your prompts with Dataverse data and document generation. Now you'll unlock another advanced capability: **Model Context Protocol (MCP) server integration**.
 
 Your assignment, should you choose to accept it, is **Operation MCP Rendezvous**. In this operation you'll be connecting your agent to external MCP servers to extend its capabilities, enabling it to arrange interview prep meetings.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -32,13 +32,13 @@ In this mission, you'll learn:
 1. How to connect your Copilot Studio agent to MCP servers
 1. How to leverage MCP server capabilities within your agents
 
-## 🔌 What is MCP?
+## 🔌 What is MCP? {#what-is-mcp}
 
 **Model Context Protocol (MCP)** is an open standard that enables AI assistants to securely connect to external data sources and tools. Think of MCP as the **USB-C of AI integration** – just as USB-C provides a universal connector for various devices and peripherals, MCP provides a standardized way for AI systems to connect to different services, databases, and applications.
 
 Before USB-C, every device had its own proprietary connector (remember all those different charger cables?). Similarly, before MCP, connecting AI agents to external systems required custom integrations for each service. MCP solves this by providing a universal "plug-and-play" protocol.
 
-### ✨ Key benefits of MCP
+### ✨ Key benefits of MCP {#key-benefits-of-mcp}
 
 - **Universal connectivity**: One standard protocol works across different AI platforms and data sources
 - **Secure access**: Built-in authentication and permission controls protect your data
@@ -47,13 +47,13 @@ Before USB-C, every device had its own proprietary connector (remember all those
 
 In this mission, you'll use MCP to connect your Copilot Studio agent to external services, dramatically expanding what your agent can do beyond its built-in capabilities.
 
-## 🛠️ Where does Agent 365 come in?
+## 🛠️ Where does Agent 365 come in? {#where-does-agent-365-come-in}
 
 **Agent 365** is Microsoft's comprehensive platform for managing and extending AI agents at enterprise scale. It gives each AI agent its own **Microsoft Entra Agent ID** for identity, lifecycle, and access management, while providing the infrastructure to safely connect agents to business systems through MCP servers.
 
 Think of Agent 365 as the **enterprise control plane** for your AI agents - it handles security, governance, and observability while enabling agents to interact with Microsoft 365 and business applications through standardized MCP tooling servers.
 
-### 👥 How Agent 365 serves different roles
+### 👥 How Agent 365 serves different roles {#how-agent-365-serves-different-roles}
 
 Agent 365 addresses the needs of everyone involved in the agent ecosystem:
 
@@ -63,7 +63,7 @@ Agent 365 addresses the needs of everyone involved in the agent ecosystem:
 - **Business Decision Makers**: Deploy agents securely and measure their impact on productivity and business outcomes
 - **Information Workers**: Collaborate with agents seamlessly to amplify productivity
 
-### 🔧 Agent 365 tooling servers for MCP integration
+### 🔧 Agent 365 tooling servers for MCP integration {#agent-365-tooling-servers-for-mcp-integration}
 
 Agent 365 provides **enterprise-grade MCP servers** that give your agents safe, governed access to business systems, including:
 
@@ -101,7 +101,7 @@ Agent 365 provides **enterprise-grade MCP servers** that give your agents safe, 
 - **Visual Studio Code** integration for creating and testing custom MCP servers
 - Consistent, standardized interfaces across all tooling servers
 
-### 💡 Why this matters for your agents
+### 💡 Why this matters for your agents {#why-this-matters-for-your-agents}
 
 Agent 365 transforms MCP from an open standard into an enterprise-ready platform. Your agents get:
 
@@ -111,13 +111,13 @@ Agent 365 transforms MCP from an open standard into an enterprise-ready platform
 - **Rapid development** - pre-built servers for common scenarios, easy customization for specialized needs
 - **Unified management** - one control plane for all agents, regardless of where they're built
 
-### 🎯 What you'll focus on in this mission
+### 🎯 What you'll focus on in this mission {#what-youll-focus-on-in-this-mission}
 
 While Agent 365 offers a comprehensive platform for agent management, governance, and custom MCP server development, **this mission focuses specifically on using pre-built MCP servers** in Copilot Studio.
 
 You'll learn how to connect your agent to ready-made tooling servers (like Outlook Calendar and Teams) and enable real actions in Microsoft 365 applications - without building custom integrations. Think of this as learning to use the tools already in the toolbox before building your own.
 
-## 🧪 Lab 10: Add MCP Servers to arrange an interview prep-meeting
+## 🧪 Lab 10: Add MCP Servers to arrange an interview prep-meeting {#lab-10-add-mcp-servers-to-arrange-an-interview-prep-meeting}
 
 > [!IMPORTANT]
 > For this lab, you need to make sure that you are part of the [Frontier preview program](https://adoption.microsoft.com/copilot/frontier-program/) to get early access to Microsoft Agent 365. Frontier connects you directly with Microsoft’s latest AI innovations. Frontier previews are subject to the existing preview terms of your customer agreements. As these features are still in development, their availability and capabilities may change over time.
@@ -280,7 +280,7 @@ Now, we know both the MCP servers work. We want to plan an interview prep-meetin
 
 Now we're done with this lab. Hopefully this gave you a good overview of how MCP servers can help you in your agents!
 
-## 🎉 Mission Complete
+## 🎉 Mission Complete {#mission-complete}
 
 Great work, Operative! **Operation MCP Rendezvous** is now complete. You've successfully integrated external MCP servers with your Copilot Studio agent, unlocking powerful new capabilities for extending your agent's functionality!
 
@@ -288,7 +288,7 @@ Great work, Operative! **Operation MCP Rendezvous** is now complete. You've succ
 
 ⏩ Move to [Mission 11](../11-obtain-user-feedback/index.md): Collecting feedback from users
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 📖 [Microsoft Copilot Studio ❤️ MCP Lab](https://aka.ms/mcsmcp/lab)
 

@@ -9,9 +9,9 @@ short-description: 'Deploy your agent to Microsoft Teams and Microsoft 365 Copil
 difficulty: 1
 ---
 
-# 🚨 Mission 11: Publish Your Agent
+# 🚨 Mission 11: Publish Your Agent {#mission-11-publish-your-agent}
 
-## 🕵️‍♂️ CODENAME: `OPERATION PUBLISH PUBLISH PUBLISH`
+## 🕵️‍♂️ CODENAME: `OPERATION PUBLISH PUBLISH PUBLISH` {#codename-operation-publish-publish-publish}
 
 > **⏱️ Operation Time Window:** `~30 minutes`  
 
@@ -19,7 +19,7 @@ difficulty: 1
 
 [![Publish agent video thumbnail](./assets/video-thumbnail.jpg)](https://www.youtube.com/watch?v=eVZmljhYlSI "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 After completing a series of challenging modules, Agent Maker, you're now ready for your most critical step yet: publishing your agent. It’s time to make your creation available to users across Microsoft Teams and Microsoft 365 Copilot.
 
@@ -27,7 +27,7 @@ Your agent—equipped with a clear mission, powerful tools, and access to key kn
 
 Let’s launch your agent into action.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 📖 This lesson covers:
 
@@ -37,7 +37,7 @@ Let’s launch your agent into action.
 1. How to add the agent in Microsoft Teams
 1. How to make the agent available in Microsoft Teams for your whole organization
 
-## 🚀 Publish an agent
+## 🚀 Publish an agent {#publish-an-agent}
 
 Every time you work on an agent in Copilot Studio you might update it by adding knowledge or tools. When you're ready with all the changes, and you tested thoroughly, you're ready to publish it. Publishing ensures that the latest updates are live. When you update your agent with new tools, and you don't hit the publish button, it's not available yet for end users.
 
@@ -46,7 +46,7 @@ Make sure to always hit the publish button when you want to push the updates to 
 !!! important
     ❗ There was a recent change to Copilot Studio Trial environments that prohibits the publishing of agents. If you are in a trial environment you will not be able to complete this module to publish your agent. It will require a paid environment to publish an agent. Publishing of the agent is not required to receive a badge.
 
-## ⚙️ Configure channels
+## ⚙️ Configure channels {#configure-channels}
 
 Channels determine where your users can access and interact with your agent. After you publish your agent, you can make it available in multiple channels. Each channel may display your agent's content differently.
 
@@ -65,7 +65,7 @@ To add a channel, navigate to the **Channels** tab in your agent and select the 
 
 ![Channels tab in agent](./assets/channels.png)
 
-## 📺 Channel experiences
+## 📺 Channel experiences {#channel-experiences}
 
 Different channels have different user experiences. When building an agent for multiple channels, make sure to be aware of the differences per channel. It's always a good strategy to test your agent in multiple channels to see if it really does what you intended.
 
@@ -96,9 +96,9 @@ Different channels have different user experiences. When building an agent for m
 >
 > Henry Jammes shared an example of how to show a different adaptive card when the channel is Microsoft Teams. ([Link to example](https://github.com/pnp/powerplatform-snippets/blob/main/copilot-studio/multiple-topics-matched-topic/source/multiple-topics-matched.yaml#L40))
 
-## 🧪 Lab 11: Publish your agent to Teams and Microsoft 365 Copilot
+## 🧪 Lab 11: Publish your agent to Teams and Microsoft 365 Copilot {#lab-11-publish-your-agent-to-teams-and-microsoft-365-copilot}
 
-### 🎯 Use case
+### 🎯 Use case {#use-case}
 
 Your Contoso IT Help Desk agent is now fully configured with powerful capabilities—it can access SharePoint knowledge sources, create support tickets, send proactive notifications, and respond intelligently to user queries. However, all these features are currently only available in the development environment where you built them.
 
@@ -237,13 +237,13 @@ Now we have published the agent to work for you in Microsoft Teams, but you migh
 
 There are even more possibilities here. Your admin can change the global setup policy and auto install the Contoso Helpdesk Agent for everyone in the tenant. On top of that - you are able to pin the Contoso Helpdesk Agent to the left rail so that everyone has easy access to it.
 
-## ✅ Mission Complete
+## ✅ Mission Complete {#mission-complete}
 
 🎉 **Congratulations!** You successfully published your agent and added it to Teams and Microsoft 365 Copilot! Next up is the last mission of the course: Understanding licensing.
 
 ⏭️ [Move to the **Understanding licensing** mission](../12-understanding-licensing/index.md)
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 🔗 [Publish channels documentation](https://learn.microsoft.com/microsoft-copilot-studio/publication-fundamentals-publish-channels)
 

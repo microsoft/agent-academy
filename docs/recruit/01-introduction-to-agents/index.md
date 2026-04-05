@@ -9,9 +9,9 @@ short-description: 'Understand conversational AI concepts, LLMs, and autonomous 
 difficulty: 1
 ---
 
-# 🚨 Mission 01: Introduction to Agents
+# 🚨 Mission 01: Introduction to Agents {#mission-01-introduction-to-agents}
 
-## 🕵️‍♂️ CODENAME: `OPERATION AI AGENT DECODE`
+## 🕵️‍♂️ CODENAME: `OPERATION AI AGENT DECODE` {#codename-operation-ai-agent-decode}
 
 > **⏱️ Operation Time Window:** `~30 minutes – intel only, no fieldwork required`
 
@@ -19,11 +19,11 @@ difficulty: 1
 
 [![Introduction to Agents video thumbnail](./images/video-thumbnail.jpg)](https://www.youtube.com/watch?v=BhPz_zicUnM "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome, Recruit. Before we dive into building agents, you need a firm grasp of the AI concepts that power them. This mission will equip you with foundational knowledge of conversational AI, large language models (LLMs), retrieval-augmented generation (RAG), and the types of agents you can create in Copilot Studio.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you’ll learn:
 
@@ -100,7 +100,7 @@ In the context of Copilot Studio, the term **agent** can refer to multiple flavo
 1. **Multi-Modal Support:** Copilot studio agents support file uploads and speech conversations.
 1. **Publishing & Distribution:** Once your agent is ready, you can publish it to Microsoft 365 Copilot, embed it on your website or choose from several other deployment channels.
 
-## 🎉 Mission Complete
+## 🎉 Mission Complete {#mission-complete}
 
 You’ve now completed your introduction to agents and foundational AI concepts. You understand:
 
@@ -119,7 +119,7 @@ Next up, you'll explore the [fundamentals of Copilot Studio](../02-copilot-studi
 
 Stay sharp, Recruit - your AI journey is just beginning!
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 🔗 [Copilot Studio Documentation Home](https://learn.microsoft.com/microsoft-copilot-studio/)
 

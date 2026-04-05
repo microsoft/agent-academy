@@ -11,19 +11,19 @@ difficulty: 2
 
 # Mission 09: Generate a Candidate Interview Questions Document
 
-## 🕵️‍♂️ CODENAME: `OPERATION DOC ASSEMBLY`
+## 🕵️‍♂️ CODENAME: `OPERATION DOC ASSEMBLY` {#codename-operation-doc-assembly}
 
 > **⏱️ Operation Time Window:** `~45 minutes`
 
 [![Doc Gen](./assets/09-doc-gen_thumbnail_PlayButton.png)](https://youtu.be/GYSEI0jbCvk?si=lYPZ4cmlxZ8-XBmi "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome, Operative. Your previous missions have shown you the power of prompts. You learned about multimodal document analysis and grounding your prompts with Dataverse data. Now you'll unlock another prompt capability: **document generation**.
 
 Your assignment, should you choose to accept it, is **Operation Doc Assembly**. In this operation you'll be creating a word document of interview prep questions from a prompt and calling that from an agent.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -373,7 +373,7 @@ Let's create the topic:
 
 Congratulations! You just successfully added document generation capabilities to your agent!
 
-## 🎉 Mission Complete
+## 🎉 Mission Complete {#mission-complete}
 
 Great work, Operative! **Operation Doc Assembly** is now complete. You've successfully enhanced your agent with document generating capabilities!
 
@@ -381,7 +381,7 @@ Great work, Operative! **Operation Doc Assembly** is now complete. You've succes
 
 ⏩ Move to [Mission 10](../10-mcp/index.md): Integrating with MCP
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 📖 [Document output in prompts](https://learn.microsoft.com/microsoft-copilot-studio/generate-document-output-prompt?WT.mc_id=power-182762-apdunnam)
 

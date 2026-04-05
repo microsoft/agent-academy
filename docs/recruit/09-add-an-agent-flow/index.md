@@ -9,9 +9,9 @@ short-description: 'Use Adaptive Card input to trigger back-end flows'
 difficulty: 1
 ---
 
-# 🚨 Mission 09: Add an agent flow to your Topic for automation
+# 🚨 Mission 09: Add an agent flow to your Topic for automation {#mission-09-add-an-agent-flow-to-your-topic-for-automation}
 
-## 🕵️‍♂️ CODENAME: `OPERATION AUTOMATION POWERHOUSE`
+## 🕵️‍♂️ CODENAME: `OPERATION AUTOMATION POWERHOUSE` {#codename-operation-automation-powerhouse}
 
 > **⏱️ Operation Time Window:** `~30 minutes`  
 
@@ -19,13 +19,13 @@ difficulty: 1
 
 [![Agent flow video thumbnail](./assets/video-thumbnail.jpg)](https://www.youtube.com/watch?v=vtLZJT3eBXg "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Your agent can now converse with users and provide information, but true operational excellence requires your agent to take action. This mission will transform your conversational agent into an automation powerhouse by equipping it with agent flows.
 
 By mission's end, you'll have created an end-to-end device request automation that captures user input through an adaptive card, retrieves data from SharePoint, sends notifications to managers via email, and provides seamless user feedback - all orchestrated by your agent through intelligent workflow automation.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you’ll learn:
 
@@ -34,7 +34,7 @@ In this mission, you’ll learn:
 1. Exploring the agent flow designer and how to use expressions for dynamic data handling
 1. Creating a complete device request automation that integrates SharePoint data and email notifications
 
-## 🤔 What is an agent flow?
+## 🤔 What is an agent flow? {#what-is-an-agent-flow}
 
 Agent flows are a powerful way to automate repetitive tasks and integrate your apps and services. Think of them as structured, step-by-step workflows that your agent can execute to automate tasks or connect with other applications and services. You can think of them as mini workflows that help your agent do things like send notifications, update records, or respond to events.
 
@@ -45,11 +45,11 @@ In simple terms:
 - They help your agent _do things_, not just _say things_ to users.
 - They're reusable across topics and agents, and can be triggered by user messages, events, or other applications and services.
 
-## 🙋🏽 Yes, but how is it different to Power Automate cloud flows?
+## 🙋🏽 Yes, but how is it different to Power Automate cloud flows? {#yes-but-how-is-it-different-to-power-automate-cloud-flows}
 
 Both agent flows and Power Automate cloud flows help automate tasks. They're designed for different purposes and work in different ways.
 
-### 🤖 Agent flows in Copilot Studio
+### 🤖 Agent flows in Copilot Studio {#agent-flows-in-copilot-studio}
 
 **What they're for:**
 
@@ -68,7 +68,7 @@ Both agent flows and Power Automate cloud flows help automate tasks. They're des
 - Agent flows are only visible and usable within Copilot Studio.
 - Currently, event triggers for agents can be edited in the Power Automate maker portal.
 
-### ☁️ Power Automate cloud flows
+### ☁️ Power Automate cloud flows {#power-automate-cloud-flows}
 
 **What they're for:**
 
@@ -85,14 +85,14 @@ Both agent flows and Power Automate cloud flows help automate tasks. They're des
 
 - You need a Power Automate license to use them.
 
-### 📗 Summary
+### 📗 Summary {#summary}
 
 | Use this | When you want to |
 | :- | :- |
 | Agent flows | Automate tasks inside an agent, use AI, and keep everything in Copilot Studio |  
 | Power Automate cloud flows | Automate across apps and services, or build workflows outside of agents |
 
-## 👍🏻 Why use agent flows
+## 👍🏻 Why use agent flows {#why-use-agent-flows}
 
 Agent flows always follow a fixed path - they do the same thing every time when given the same input.
 
@@ -111,7 +111,7 @@ Other benefits are:
 - **No-code or low-code** - you can build flows using natural language or a visual designer.
 - **All-in-one-platform** - you can design, test and deploy agent flows in one place - Copilot Studio. No need to switch between platforms.
 
-## 🏄🏻‍♂️ How do agent flows enhance your agent?
+## 🏄🏻‍♂️ How do agent flows enhance your agent? {#how-do-agent-flows-enhance-your-agent}
 
 Agent flows expand what your agent can do beyond "chatting" with users. They allow it to take action and interact with systems.
 
@@ -136,7 +136,7 @@ This saves time, reduces mistakes and makes the whole process much smoother.
 - It's easy to build and update flows as your business needs change.
 - You can scale automation across teams.
 
-## 🔌 Key features that make agent flows powerful
+## 🔌 Key features that make agent flows powerful {#key-features-that-make-agent-flows-powerful}
 
 1. **Natural language authoring**
     - You can describe what you want the flow to do in plain English.
@@ -163,7 +163,7 @@ This saves time, reduces mistakes and makes the whole process much smoother.
     - Add approval steps where a person needs to review or confirm something.
     - [Advanced approvals](https://learn.microsoft.com/microsoft-copilot-studio/flows-advanced-approvals?WT.mc_id=power-172621-ebenitez) supports reminders, delegation, and multi-stage approvals.
 
-## ⚙️ How they work
+## ⚙️ How they work {#how-they-work}
 
 1. **Trigger**
 
@@ -173,12 +173,12 @@ This saves time, reduces mistakes and makes the whole process much smoother.
 
     These are steps that the agent follows next - send an email, call an API, update a ticket in ServiceNow.
 
-## 🧶 How to create an agent flow
+## 🧶 How to create an agent flow {#how-to-create-an-agent-flow}
 
 1. **Natural language**: describe what you want the agent to do, and Copilot builds it for you.
 1. **Designer canvas**: drag and drop actions, conditions, and loops in the agent flow designer to build your agent flow.
 
-## 🎨 What is the agent flow designer?
+## 🎨 What is the agent flow designer? {#what-is-the-agent-flow-designer}
 
 It's a visual tool in Copilot Studio that helps you build, edit, and manage agent flows that provide step-by-step instructions your agent follows to complete tasks. It's designed to be straightforward to use, even if you're new to agent flows.
 
@@ -215,7 +215,7 @@ It's a visual tool in Copilot Studio that helps you build, edit, and manage agen
 - **Safe to experiment** - version history lets you undo changes.
 - **Built-in testing** - helps you make sure everything works before going live.
 
-## 🔤 You mentioned _expressions_ - what are expressions?
+## 🔤 You mentioned _expressions_ - what are expressions? {#you-mentioned-expressions-what-are-expressions}
 
 Expressions are small formulas or commands that help your agent flow work with data. You use them to calculate values, format text, make decisions, or pull specific information from inputs.
 
@@ -253,7 +253,7 @@ Using functions makes your agent flows:
 
 The following are common functions used in agent flows. For the full list of functions, head to the [reference guide](https://learn.microsoft.com/azure/logic-apps/workflow-definition-language-functions-reference?WT.mc_id=power-172621-ebenitez).
 
-#### 🔡 Text
+#### 🔡 Text {#text}
 
 - `concat()` - Joins two or more pieces of text together.
       - Example: `concat('Hello ', firstName)` → “Hello John”
@@ -266,12 +266,12 @@ The following are common functions used in agent flows. For the full list of fun
 
 - `trim()` - Removes spaces from the beginning and end of text.
 
-#### 🔢 Math and number
+#### 🔢 Math and number {#math-and-number}
 
 - `add()`, `sub()`, `mul()`, `div()` - Basic math operations.
       - Example: `add(5, 3)` - the output is 8
 
-#### 📅 Date and time
+#### 📅 Date and time {#date-and-time}
 
 - `utcNow()` - Gets the current date and time in UTC.
       - Great for timestamps.
@@ -282,7 +282,7 @@ The following are common functions used in agent flows. For the full list of fun
 - `formatDateTime()` - Formats a date into a readable string.
       - Example: Monday, July 7, 2025
 
-#### ✅ Logical
+#### ✅ Logical {#logical}
 
 - `if()` - Runs one value if true, another if false.
       - Example: `if(score > 50, 'Pass', 'Fail')`
@@ -291,7 +291,7 @@ The following are common functions used in agent flows. For the full list of fun
 
 - `and()`, `or()`, `not()` - Combine multiple conditions.
 
-#### 🪣 Other handy functions
+#### 🪣 Other handy functions {#other-handy-functions}
 
 - `coalesce()` - Returns the first non-empty value.
       - Useful for fallback/default values.
@@ -301,7 +301,7 @@ The following are common functions used in agent flows. For the full list of fun
 
 - `length()` - Counts how many characters or items are in a string or array.
 
-## ⭐ Best practices
+## ⭐ Best practices {#best-practices}
 
 Here are some best practices for building agent flows in Copilot Studio.
 
@@ -339,11 +339,11 @@ Here are some best practices for building agent flows in Copilot Studio.
 
     - If you add an action and later decide you don't need it, remove it to keep your flow clean.
 
-## 🧪 Lab 09 - Add an agent flow for automation and enhance topic capabilities
+## 🧪 Lab 09 - Add an agent flow for automation and enhance topic capabilities {#lab-09-add-an-agent-flow-for-automation-and-enhance-topic-capabilities}
 
 We're now going to learn how to enhance our topic with adaptive cards and using advanced functionality of topics and nodes.
 
-### ✨ Use case
+### ✨ Use case {#use-case}
 
 **As a** manager of an employee
 
@@ -1054,7 +1054,7 @@ Let's test the final scenario which is to not request a device, and the **Goodby
 
     ![Goodbye topic invoked](./assets/9.4_18_Goodbye.png)
 
-## ✅ Mission Complete
+## ✅ Mission Complete {#mission-complete}
 
 Congratulations! 👏🏻 You've learnt how to build your agent flow and add it to our existing **Request device** topic, and how to redirect the agent to another topic.
 
@@ -1062,7 +1062,7 @@ This is the end of **Lab 09 - Add an agent flow for automation and enhance topic
 
 ⏭️ [Move to **Add Event Triggers - Enable autonomous agent capabilities** lesson](../10-add-event-triggers/index.md)
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 🔗 [Introducing agent flows: Transforming automation with AI-first workflows](https://www.microsoft.com/microsoft-copilot/blog/copilot-studio/introducing-agent-flows-transforming-automation-with-ai-first-workflows/)
 

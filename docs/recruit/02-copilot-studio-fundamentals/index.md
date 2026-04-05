@@ -9,9 +9,9 @@ short-description: 'Learn the building blocks: knowledge, skills, autonomy'
 difficulty: 1
 ---
 
-# 🚨 Mission 02: Copilot Studio Fundamentals
+# 🚨 Mission 02: Copilot Studio Fundamentals {#mission-02-copilot-studio-fundamentals}
 
-## 🕵️‍♂️ CODENAME: `OPERATION CORE PROTOCOL`
+## 🕵️‍♂️ CODENAME: `OPERATION CORE PROTOCOL` {#codename-operation-core-protocol}
 
 > **⏱️ Operation Time Window:** `~30 minutes – intel only, no fieldwork required`  
 
@@ -19,13 +19,13 @@ difficulty: 1
 
 [![Copilot Studio fundamentals video thumbnail](./assets/video-thumbnail.jpg)](https://www.youtube.com/watch?v=x4OCwDRGeLE "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome, Recruit. This mission will equip you with foundational intel to understand how Copilot Studio works, and how to build intelligent agents that deliver real business value.
 
 Before building your first agent, you need to understand the four key components that make up every custom AI agent: Knowledge, Tools, Topics, and Instructions. You’ll also learn how these elements work together in the Copilot Studio orchestrator.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you will:
 
@@ -223,7 +223,7 @@ sequenceDiagram
 
 ---
 
-## 🎉 Mission Complete
+## 🎉 Mission Complete {#mission-complete}
 
 You’ve successfully completed your fundamentals briefing. You’ve now learned the four essential building blocks of any agent in Copilot Studio:
 

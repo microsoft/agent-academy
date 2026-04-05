@@ -9,9 +9,9 @@ short-description: 'Use and customize a template agent to accelerate setup'
 difficulty: 1
 ---
 
-# 🧰 Mission 05: Using a Pre-Built Agent  
+# 🧰 Mission 05: Using a Pre-Built Agent   {#mission-05-using-a-pre-built-agent}
 
-## 🕵️‍♂️ CODENAME: `OPERATION SAFE TRAVELS`
+## 🕵️‍♂️ CODENAME: `OPERATION SAFE TRAVELS` {#codename-operation-safe-travels}
 
 > **⏱️ Operation Time Window:** `~30 minutes`
 
@@ -19,7 +19,7 @@ difficulty: 1
 
 [![Pre-built agent video thumbnail](./images/video-thumbnail.jpg)](https://www.youtube.com/watch?v=NmXsx8WjWuM "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome to your next mission in the Copilot Studio Agent Academy. You're about to explore the world of **pre-built agents**—intelligent, purpose-driven agents created by Microsoft to accelerate your deployment and reduce time to value.
 
@@ -27,7 +27,7 @@ Rather than building from scratch, pre-built agents (also called **agent templat
 
 In this mission, you’ll deploy the **Safe Travels** agent—an agent that helps your users prepare for business travel, understand company policies, and streamline planning.
 
-## 🧭 Objectives
+## 🧭 Objectives {#objectives}
 
 Your goals for this mission are:
 
@@ -36,7 +36,7 @@ Your goals for this mission are:
 1. Customize the agent’s responses and content  
 1. Test and publish the agent  
 
-## 🧠 What Are Pre-Built Agents?
+## 🧠 What Are Pre-Built Agents? {#what-are-pre-built-agents}
 
 Pre-built agents are turnkey AI agents created by Microsoft that:
 
@@ -46,7 +46,7 @@ Pre-built agents are turnkey AI agents created by Microsoft that:
 
 These agents are perfect for getting started quickly or learning how agents are structured.
 
-## 🧪 Lab 05: Quickly get started with a pre-built agent
+## 🧪 Lab 05: Quickly get started with a pre-built agent {#lab-05-quickly-get-started-with-a-pre-built-agent}
 
 We're now going to learn how to select a pre-built agent and customize it.
 
@@ -130,7 +130,7 @@ Now that the agent is created, let’s tailor it to your organization:
 > [!NOTE] 🧳 Bonus Objective
 > Try grounding the Safe Travels agent with a SharePoint site or FAQ file to make it more relevant to your company’s travel policies.
 
-## ✅ Mission Complete
+## ✅ Mission Complete {#mission-complete}
 
 You've now successfully:
 

@@ -9,15 +9,15 @@ short-description: 'Ground agents in enterprise data for accurate responses'
 difficulty: 2
 ---
 
-# 🚨 Mission 08: Enhanced prompts with Dataverse grounding
+# 🚨 Mission 08: Enhanced prompts with Dataverse grounding {#mission-08-enhanced-prompts-with-dataverse-grounding}
 
-## 🕵️‍♂️ CODENAME: `OPERATION GROUNDING CONTROL`
+## 🕵️‍♂️ CODENAME: `OPERATION GROUNDING CONTROL` {#codename-operation-grounding-control}
 
 > **⏱️ Operation Time Window:** `~60 minutes`
 
 [![Grounding](./assets/08-dataverse-grounding-thumbnail_PlayButton.png)](https://youtu.be/-cHP29cIu-U?si=RMi0Q5tieMltOvo6 "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome back, Operative. Your multi-agent hiring system is operational, but there's a critical enhancement needed for **data grounding** - your AI models need real-time access to your organization's structured data to make intelligent decisions.
 
@@ -27,7 +27,7 @@ In this mission, you'll enhance your custom prompt with **Dataverse grounding** 
 
 Your mission: integrate real-time job role and evaluation criteria data into your resume analysis workflow, creating a self-updating system that stays current with your organization's hiring requirements.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -36,7 +36,7 @@ In this mission, you'll learn:
 1. Designing prompts that dynamically incorporate live data
 1. Enhancing the Summarize Resume flow with job role matching
 
-## 🧠 Understanding Dataverse grounding for prompts
+## 🧠 Understanding Dataverse grounding for prompts {#understanding-dataverse-grounding-for-prompts}
 
 **Dataverse grounding** allows your custom prompts to access live data from your Dataverse tables when processing requests. Instead of static instructions, your prompts can incorporate real-time information to make informed decisions.
 
@@ -85,7 +85,7 @@ By adding Dataverse grounding, your Summarize Resume flow will:
 - **Use live evaluation criteria** instead of static descriptions  
 - **Provide accurate matches** based on real-time requirements
 
-## 🎯 Why dedicated prompts vs agent conversations
+## 🎯 Why dedicated prompts vs agent conversations {#why-dedicated-prompts-vs-agent-conversations}
 
 In Mission 03, you experienced how the Interview Agent could match candidates to job roles, but required complex user prompts like:
 
@@ -106,7 +106,7 @@ While this worked, dedicated prompts with Dataverse grounding offer significant 
 | **Specialization** | General-purpose reasoning may miss business nuances | Purpose-built with optimized business logic |
 | **Automation** | Requires human interaction and interpretation | Triggers automatically with structured JSON output |
 
-## ⚙️ Understanding record retrieval settings
+## ⚙️ Understanding record retrieval settings {#understanding-record-retrieval-settings}
 
 When configuring Dataverse grounding for your prompts, it's critical to understand the **Record Retrieval** setting, which controls how much data is made available to your AI model.
 
@@ -120,7 +120,7 @@ While you can retrieve up to 1,000 records from Dataverse, understanding when an
 
 Dataverse grounding is not designed to process large datasets directly in the prompt. Even increasing the limit to 1,000 may not be the right answer if you're working with thousands of records. The key is to use **filtering strategically** to narrow your dataset before it reaches the AI model. Always filter by status, date ranges, categories, or other relevant criteria to ensure only the most pertinent records are included.
 
-## 🧪 Lab 8: Add Dataverse grounding to prompts
+## 🧪 Lab 8: Add Dataverse grounding to prompts {#lab-8-add-dataverse-grounding-to-prompts}
 
 Time to upgrade your resume analysis capabilities! You'll enhance the existing Summarize Resume flow with dynamic job role matching.
 
@@ -435,7 +435,7 @@ To create job applications, you need to tell the agent when to use the new tool.
 1. The **Create Job Application tool** will then be run for each job role you specified. Inside the Activity map, you will see the Create Job Application tool run for each of the Job Roles you asked to create an application for:  
     ![Create Job Application in Activity Map](./assets/8-create-job-application-activity-map.png)
 
-## 🎉 Mission Complete
+## 🎉 Mission Complete {#mission-complete}
 
 Outstanding work, Operative! **Operation Grounding Control** is now complete. You've successfully enhanced your AI capabilities with dynamic data grounding, creating a truly intelligent hiring system.
 
@@ -457,7 +457,7 @@ Your enhanced system can now create Job Applications and is ready for further co
 
 ⏩ Move to [Mission 09](../09-document-generation/index.md): Document generation
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 📖 [Use your own data in a prompt](https://learn.microsoft.com/ai-builder/use-your-own-prompt-data?WT.mc_id=power-182762-scottdurow)
 

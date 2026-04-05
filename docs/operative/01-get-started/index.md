@@ -9,9 +9,9 @@ short-description: 'Deploy foundational infrastructure and create your central o
 difficulty: 2
 ---
 
-# 🚨 Mission 01: Get started with the Hiring Agent
+# 🚨 Mission 01: Get started with the Hiring Agent {#mission-01-get-started-with-the-hiring-agent}
 
-## 🕵️‍♂️ CODENAME: `OPERATION TALENT SCOUT`
+## 🕵️‍♂️ CODENAME: `OPERATION TALENT SCOUT` {#codename-operation-talent-scout}
 
 > **⏱️ Operation Time Window:** `~45 minutes`
 
@@ -19,7 +19,7 @@ difficulty: 2
 
 [![Get started with the Hiring Agent](./assets/01-get-started-thumbnail_PlayButton.png)](https://www.youtube.com/watch?v=VaEy6ux2sQs "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome, Agent. Your first assignment is **Operation Talent Scout** - establishing the foundational infrastructure for an AI-powered recruitment system that will transform how organizations identify and hire top talent.
 
@@ -27,7 +27,7 @@ Your mission, should you choose to accept it, is to deploy and configure a compr
 
 This initial deployment establishes the solution that you'll enhance throughout the Agent Academy Operative course. Consider this your base of operations - the foundation upon which you'll build an entire network of specialized agents in subsequent missions.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -35,7 +35,7 @@ In this mission, you'll learn:
 1. How to successfully import and configure the fundamentals of a hiring management system
 1. How to build a hiring agent that is the start of the scenario you're going to build as an Agent Academy Operative
 
-## 🔍 Prerequisites
+## 🔍 Prerequisites {#prerequisites}
 
 Before embarking on this mission, ensure you have:
 
@@ -46,7 +46,7 @@ Before embarking on this mission, ensure you have:
 > [!TIP] Prerequisites help:
 > If you need help getting a Copilot Studio license, please reference the [Recruit Course Setup lab](./../../recruit/00-course-setup/index.md) which walks you through setting up a Power Platform environment with a Copilot Studio trial.
 
-## 🏢 Understanding the Hiring Automation Scenario
+## 🏢 Understanding the Hiring Automation Scenario {#understanding-the-hiring-automation-scenario}
 
 This scenario demonstrates how a company can use Microsoft Copilot Studio full to improve and automate its hiring process. It introduces a system of agents that work together to handle tasks like reviewing resumes, recommending job roles, preparing interview materials, and evaluating candidates.
 
@@ -69,11 +69,11 @@ The solution helps HR teams save time and make better decisions by:
 
 This scenario is ideal for organizations looking to modernize their recruitment workflows using AI-powered automation, while maintaining transparency, fairness, and efficiency.
 
-## 🧪 Lab 1: Setup the Hiring Agent
+## 🧪 Lab 1: Setup the Hiring Agent {#lab-1-setup-the-hiring-agent}
 
 In this hands-on lab, you'll establish the foundation for your hiring automation system. You'll begin by importing a pre-configured solution that contains all the necessary Dataverse tables and data structure for managing candidates, job positions, and hiring workflows. Next, you'll populate these tables with sample data that will support your learning throughout this module and provide realistic scenarios for testing. Finally, you'll create the Hiring Agent in Copilot Studio, setting up the basic conversational interface that will serve as the cornerstone for all the other features you'll add in future missions.
 
-### 🧪 Lab 1.1: Import solution
+### 🧪 Lab 1.1: Import solution {#lab-11-import-solution}
 
 1. Go to **[Copilot Studio](https://copilotstudio.microsoft.com)**
 1. Select the **...** in the left navigation and select **Solutions**
@@ -119,7 +119,7 @@ As the last task for this lab, Select the **Publish all customizations** button 
 
 ![Publish Customizations](./assets/01-pubcustomizations.png)
 
-### 🧪 Lab 1.2: Import sample data
+### 🧪 Lab 1.2: Import sample data {#lab-12-import-sample-data}
 
 In this lab, you will add sample data to some of the tables that you imported in lab 1.1.
 
@@ -204,7 +204,7 @@ This can take a little while, but you can hit the **Refresh** button to see if t
 
 ![Evaluation Criteria import successful](./assets/evaluation-criteria-import-successful.png)
 
-### 🧪 Lab 1.3: Create the hiring agent
+### 🧪 Lab 1.3: Create the hiring agent {#lab-13-create-the-hiring-agent}
 
 Now you are done with the setup of the prerequisites, it's time for the actual work! Let's add our Hiring Agent first!
 
@@ -245,7 +245,7 @@ Now you are done with the setup of the prerequisites, it's time for the actual w
 
 This agent you will use in other missions in the Operative course!
 
-## 🎉 Mission Complete
+## 🎉 Mission Complete {#mission-complete}
 
 Mission 01 is completed! You now have mastered the following skills:
 
@@ -255,7 +255,7 @@ Mission 01 is completed! You now have mastered the following skills:
 
 Next up is [Mission 02](../02-agent-instructions/index.md): Agent Instructions
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 📖 [Microsoft Copilot Studio - Create an agent](https://learn.microsoft.com/microsoft-copilot-studio/authoring-first-bot)  
 📖 [Microsoft Dataverse Documentation](https://learn.microsoft.com/power-apps/maker/data-platform)

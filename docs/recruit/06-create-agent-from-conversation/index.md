@@ -9,9 +9,9 @@ short-description: 'Create a new agent grounded in knowledge sources'
 difficulty: 1
 ---
 
-# 🚨 Mission 06: Create a custom agent using natural language with AI and grounding it with your data
+# 🚨 Mission 06: Create a custom agent using natural language with AI and grounding it with your data {#mission-06-create-a-custom-agent-using-natural-language-with-ai-and-grounding-it-with-your-data}
 
-## 🕵️‍♂️ CODENAME: `OPERATION AGENT FORGE`
+## 🕵️‍♂️ CODENAME: `OPERATION AGENT FORGE` {#codename-operation-agent-forge}
 
 > **⏱️ Operation Time Window:** `~75 minutes`
 
@@ -19,7 +19,7 @@ difficulty: 1
 
 [![Create custom agent video thumbnail](./assets/video-thumbnail.jpg)](https://www.youtube.com/watch?v=qZTtQVncGFg "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome back, Agent Maker. This mission puts you in the command seat of the most powerful capability in Copilot Studio - creating a custom agent from scratch using only natural language… and supercharging it with your own data.
 
@@ -29,7 +29,7 @@ Your weapon of choice? Natural language. Your mission? Design, train, and test a
 
 Let’s build your agent from the ground up.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you’ll learn:
 
@@ -39,7 +39,7 @@ In this mission, you’ll learn:
 1. Learning about generative orchestration and how agents dynamically search and respond using multiple data sources
 1. Building and testing a fully functional IT helpdesk agent that can answer questions from your own data
 
-## 🤔 What is a _custom_ agent?
+## 🤔 What is a _custom_ agent? {#what-is-a-custom-agent}
 
 A custom agent is a chatbot or virtual assistant that you create and design in Copilot Studio to help users with specific tasks or questions. It's called custom because:
 
@@ -51,7 +51,7 @@ A custom agent is a chatbot or virtual assistant that you create and design in C
 > [!NOTE]
 > Think of it this way: you are building your own digital helper that can talk to users and complete tasks for them such as answering questions, collecting information required by a process, or connecting to your enterprise data.
 
-### 🤖 What can a custom agent do?
+### 🤖 What can a custom agent do? {#what-can-a-custom-agent-do}
 
 A custom agent can fulfill the following:
 
@@ -61,13 +61,13 @@ A custom agent can fulfill the following:
 - Work autonomously without users directly interacting with the agent.
 - Trigger actions either on-demand through direct user interaction or autonomously such as sending emails or creating records.
 
-### 👩🏻‍💻  Why use a custom agent?
+### 👩🏻‍💻  Why use a custom agent? {#why-use-a-custom-agent}
 
 - Saves time by automating repetitive tasks.
 - Gives users a friendly, guided experience.
 - Tailor it to your business or project needs.
 
-### ✨ Example
+### ✨ Example {#example}
 
 You build a custom agent that helps employees request vacation leave.
 
@@ -75,25 +75,25 @@ It asks for their name, vacation dates, and their manager’s name, then saves t
 
 Now, instead of navigating to the SharePoint list and creating a new item, employees simply chat with the agent instead.
 
-## 🗣️ Use natural language to create agents
+## 🗣️ Use natural language to create agents {#use-natural-language-to-create-agents}
 
 Previously you learnt how to quickly build agents in Copilot Studio using prebuilt agent templates in [Lesson 05 - Get started quickly with pre-built agents](../05-using-prebuilt-agents/index.md). In this lesson, we'll dive into the conversational authoring experience with AI. In Copilot Studio, you don’t need to write code to create an agent. Copilot Studio makes it easy to build agents by starting with a description in your own words (natural language).
 
 When you start by describing your agent in natural language, the AI automatically generates the agent’s name, description, and instructions. It also proposes triggers, channels, knowledge sources, and tools. You can accept or ignore these suggestions, but they only last for the current session and won’t be saved.
 
-## 🌱 But I'm new to "describing what I want" - what do I do?
+## 🌱 But I'm new to "describing what I want" - what do I do? {#but-im-new-to-describing-what-i-want-what-do-i-do}
 
 Describing in natural language to create a custom agent might be a new concept for you. Whenever you use Copilot across Microsoft products and services, you are using natural language in the form of a _prompt_.
 
 A prompt is the message or instruction you give to an AI agent to tell it what you want it to do. Think of it as giving directions to an assistant. The clearer your instructions are, the easier it is for AI to understand and act on them.
 
-### 🪄 Why Prompts matter
+### 🪄 Why Prompts matter {#why-prompts-matter}
 
 - They guide the agent’s behavior.
 - They help the agent understand what kind of conversation to have.
 - A good prompt makes the agent more helpful and accurate.
 
-### 📝 Tips for writing a good prompt
+### 📝 Tips for writing a good prompt {#tips-for-writing-a-good-prompt}
 
 - Be clear and specific - say exactly what you want the agent to do.
 - Think like the user - what will the user say? What should the agent reply?
@@ -114,13 +114,13 @@ A prompt is the message or instruction you give to an AI agent to tell it what y
 > - **Lists the required data** - name, start date, end date, manager
 > - **Mentions where the data goes** - a SharePoint list called Vacation Requests
 
-## 🔮 OK, I've created my agent... how do I next ground it with knowledge?
+## 🔮 OK, I've created my agent... how do I next ground it with knowledge? {#ok-ive-created-my-agent-how-do-i-next-ground-it-with-knowledge}
 
 In Copilot Studio, knowledge sources are places where your agent can find information to give better answers. When you add these sources, your agent can pull in your enterprise data from places like Power Platform, Dynamics 365, websites, and other systems or services your company uses.
 
 These sources work together with AI to help your agent respond more accurately to user questions, this is achieved through what is known as **generative orchestration**.
 
-### 🌿 What is generative orchestration in the context of agents?
+### 🌿 What is generative orchestration in the context of agents? {#what-is-generative-orchestration-in-the-context-of-agents}
 
 Generative orchestration means the agent uses AI to dynamically decide how to answer a question by combining its built-in language skills with information from your added knowledge sources.
 
@@ -132,7 +132,7 @@ When a user asks a question, the agent:
 - Searches those sources for answers.
 - Generates a natural, helpful response using the information it found.
 
-### 🏦 Why knowledge sources matter?
+### 🏦 Why knowledge sources matter? {#why-knowledge-sources-matter}
 
 1. **Smarter answers** - when you add knowledge sources, your agent can give better, more accurate answers using real data from your organization.
 
@@ -176,7 +176,7 @@ When a user asks a question, the agent:
     - **What it does:** Allows your agent to search through large sets of documents stored in Azure using semantic and vector search to understand user questions.
     - **Why it's useful:** Delivers accurate, trustworthy answers from complex data sources, supports citations, and scales well for large document collections with secure access controls.
 
-## 🔒 Note on security
+## 🔒 Note on security {#note-on-security}
 
 ### Knowledge source authentication
 
@@ -226,11 +226,11 @@ After your agent is provisioned from the conversational authoring experience, yo
     - Watch for common questions or confusion.
     - Keep refining the agent’s setup.
 
-## 🧪 Lab 06: Create a custom agent in Copilot Studio
+## 🧪 Lab 06: Create a custom agent in Copilot Studio {#lab-06-create-a-custom-agent-in-copilot-studio}
 
 We're now going to learn how to create a custom agent that can chat over your data
 
-### ✨ Use case
+### ✨ Use case {#use-case}
 
 We'll use the same use case from [Lesson 03 - Create a declarative agent for Microsoft 365 Copilot](../03-create-a-declarative-agent-for-M365Copilot/index.md#use-case-scenario)
 
@@ -242,7 +242,7 @@ We'll use the same use case from [Lesson 03 - Create a declarative agent for Mic
 
 Let's begin!
 
-### ✨ Prerequisites
+### ✨ Prerequisites {#prerequisites}
 
 - **SharePoint site**
 
@@ -480,7 +480,7 @@ We'll test our four knowledge sources by asking questions to our Contoso Helpdes
 
 The agent can answer multiple questions in a single message, and search the knowledge sources + reference the knowledge sources in its response. Make sure to always verify the response is correct by reviewing the references.
 
-## ✅ Mission Complete
+## ✅ Mission Complete {#mission-complete}
 
 Congratulations! 👏🏻 You've learnt how to create your own custom agent by starting with a description. Your custom agent can chat over your data from four different knowledge sources 🙌🏻
 
@@ -490,7 +490,7 @@ This is the end of **Lab 06 - Create an agent with AI**, select the link below t
 
 Welcome to the elite. You now know how to forge digital agents that speak your language, reference your data, and support your team. Keep going—your mission’s just getting started.
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 🔗 [Quickstart: Create and deploy an agent](https://learn.microsoft.com/microsoft-copilot-studio/fundamentals-get-started?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext/?WT.mc_id=power-172617-ebenitez)
 

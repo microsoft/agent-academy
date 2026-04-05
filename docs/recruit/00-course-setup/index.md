@@ -9,20 +9,20 @@ short-description: 'Set up your dev environment, Copilot Studio trial, and Share
 difficulty: 1
 ---
 
-# 🚨 Mission 00: Course Setup
+# 🚨 Mission 00: Course Setup {#mission-00-course-setup}
 
-## 🕵️‍♂️ CODENAME: `OPERATION DEPLOYMENT READY`
+## 🕵️‍♂️ CODENAME: `OPERATION DEPLOYMENT READY` {#codename-operation-deployment-ready}
 
 > **⏱️ Operation Time Window:** `~30 minutes`  
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome to the first mission of your training as a Copilot Studio Agent.  
 Before you can start building your first AI agent, you need to establish your **field-ready development environment**.
 
 This briefing outlines the systems, access credentials, and setup steps required to successfully operate in the Microsoft 365 ecosystem.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 Your mission includes:
 
@@ -36,7 +36,7 @@ Your mission includes:
 > **Already have access to Microsoft 365, Power Platform, and Copilot Studio?**
 > Steps 1–4 below walk you through creating a **new trial environment from scratch**. If you already have a Microsoft 365 business tenant with access to Power Platform and Copilot Studio, you can **skip directly to [Step 5: Create new SharePoint site](#step-5-create-new-sharepoint-site)**. Steps 1–4 are only needed if you want to set up a dedicated trial environment to test these capabilities.
 
-## 🔍 Prerequisites
+## 🔍 Prerequisites {#prerequisites}
 
 Before you begin, ensure you have:
 
@@ -47,7 +47,7 @@ Before you begin, ensure you have:
 
 ---
 
-## 🧪 Trial Environment Setup (Steps 1–4)
+## 🧪 Trial Environment Setup (Steps 1–4) {#trial-environment-setup-steps-14}
 
 ## Step 1: Get a Microsoft 365 Account
 
@@ -174,7 +174,7 @@ First, you need a security group to hold everyone you want to be able to publish
 
 ---
 
-## 🔧 Required Setup (Everyone)
+## 🔧 Required Setup (Everyone) {#required-setup-everyone}
 
 The following steps are required regardless of whether you're using a trial or an existing environment.
 
@@ -264,7 +264,7 @@ When adding sample data, make sure that the following fields are filled out:
 | Surface Pro | [https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Pro-12.png](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Pro-12.png) |
 | Surface Studio | [https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Studio.png](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Studio.png) |
 
-## ✅ Mission Complete
+## ✅ Mission Complete {#mission-complete}
 
 You’ve successfully:
 
