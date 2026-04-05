@@ -62,63 +62,6 @@ export const productIcons: Record<string, string> = {
     `<path fill="currentColor" d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z"/>`,
 };
 
-  "copilot-cowork":
-    `<circle cx="7" cy="5.5" r="2.5" fill="currentColor"/>
-     <circle cx="13" cy="5.5" r="2.5" fill="currentColor"/>
-     <path fill="currentColor" d="M1 16c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6H1z"/>`,
-
-  "copilot-studio":
-    `<path fill="currentColor" d="M10 2l1.8 5.2L17 9l-5.2 1.8L10 16l-1.8-5.2L3 9l5.2-1.8L10 2z"/>`,
-
-  "dataverse":
-    `<ellipse cx="10" cy="5" rx="7" ry="2.5" fill="currentColor"/>
-     <path fill="currentColor" d="M3 5v10c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V5c0 1.4-3.1 2.5-7 2.5S3 6.4 3 5z"/>
-     <ellipse cx="10" cy="10" rx="7" ry="2.5" fill="currentColor" opacity=".4"/>`,
-
-  "github-copilot":
-    `<circle cx="10" cy="9" r="7" fill="currentColor" opacity=".15"/>
-     <circle cx="10" cy="9" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/>
-     <circle cx="7.5" cy="8" r="1.2" fill="currentColor"/>
-     <circle cx="12.5" cy="8" r="1.2" fill="currentColor"/>
-     <path fill="currentColor" d="M7 12c0-1.7 1.3-3 3-3s3 1.3 3 3H7z"/>
-     <path fill="currentColor" d="M6 16v-2c0-.6.4-1 1-1h6c.6 0 1 .4 1 1v2H6z"/>`,
-
-  "microsoft-365":
-    `<rect x="2" y="2" width="7" height="7" rx="1.5" fill="#f25022"/>
-     <rect x="11" y="2" width="7" height="7" rx="1.5" fill="#7fba00"/>
-     <rect x="2" y="11" width="7" height="7" rx="1.5" fill="#00a4ef"/>
-     <rect x="11" y="11" width="7" height="7" rx="1.5" fill="#ffb900"/>`,
-
-  "microsoft-365-copilot":
-    `<rect x="2" y="2" width="7" height="7" rx="1.5" fill="#f25022"/>
-     <rect x="11" y="2" width="7" height="7" rx="1.5" fill="#7fba00"/>
-     <rect x="2" y="11" width="7" height="7" rx="1.5" fill="#00a4ef"/>
-     <rect x="11" y="11" width="7" height="7" rx="1.5" fill="#ffb900"/>
-     <circle cx="16" cy="4" r="4" fill="white"/>
-     <path fill="#5c6bc0" d="M16 1.5l.9 2.6 2.6.9-2.6.9L16 8.5l-.9-2.6-2.6-.9 2.6-.9L16 1.5z"/>`,
-
-  "microsoft-learn":
-    `<path fill="currentColor" d="M10 2L2 6l8 4 8-4-8-4zM2 10l8 4 8-4M2 14l8 4 8-4"/>
-     <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-       d="M10 2L2 6l8 4 8-4-8-4zM2 10l8 4 8-4M2 14l8 4 8-4"/>`,
-
-  "outlook":
-    `<rect x="2" y="4" width="16" height="13" rx="2" fill="currentColor" opacity=".15"/>
-     <rect x="2" y="4" width="16" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
-     <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M2 7l8 5 8-5"/>
-     <circle cx="7" cy="10" r="3" fill="currentColor"/>
-     <circle cx="7" cy="10" r="1.5" fill="white"/>`,
-
-  "power-automate":
-    `<path fill="currentColor" d="M15 9a5 5 0 01-5 5V17l-5-5 5-5v3a2 2 0 100-4 2 2 0 010-4 6 6 0 015 6z"/>`,
-
-  "power-platform":
-    `<path fill="currentColor" d="M10 2a8 8 0 100 16A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"/>
-     <path fill="currentColor" d="M10 6a4 4 0 100 8 4 4 0 000-8zm0 2a2 2 0 110 4 2 2 0 010-4z"/>`,
-
-  "sharepoint":
-};
-
 export const tagIcons: Record<string, string> = {
   "adaptive-cards":
     `<rect x="2" y="4" width="16" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
