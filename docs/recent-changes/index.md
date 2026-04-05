@@ -10,10 +10,10 @@ Stay up to date with the latest activity across all missions.
 
 ## 🕐 Recently Updated {#recently-updated}
 
-<missions title="" sort="last-updated" order="descending" :max-rows="3" />
+<missions sort="last-updated" order="descending" :max-rows="3" :filterable="false" />
 
 ## 🆕 Recently Added {#recently-added}
 
-<missions title="" sort="first-added" order="descending" :max-rows="3" />
+<missions sort="first-added" order="descending" :max-rows="3" :filterable="false" />
 
 <!-- markdownlint-enable MD033 -->

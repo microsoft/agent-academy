@@ -1,18 +1,25 @@
 ---
-tags: 
-    - MCP
-    - GitHub Copilot
-    - Visual Studio Code
-    - Power Platform CLI
+tags:
+  - mcp
 difficulty: 3
+time: 30
+description: >-
+  Connect the Power Platform CLI to GitHub Copilot using MCP so you can issue
+  commands in plain language.
 badge: ./assets/CommandLine_Badge.png
+products:
+  - github-copilot
+  - visual-studio-code
+  - power-platform
 ---
 # ⚡ Power Platform CLI MCP Server {#power-platform-cli-mcp-server}
 
+<!-- markdownlint-disable MD033 -->
+<mission-meta />
+<!-- markdownlint-enable MD033 -->
+
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="../assets/CommandLine_Badge.png" alt="Command Line Badge" width="220" /></p>
-
-> **Difficulty**: ⭐⭐⭐ | **Time**: ~30 min
 
 Welcome, agent. Your mission — should you choose to accept it — is to establish a **secure command channel** between the Power Platform CLI and your AI copilot using the **Model Context Protocol (MCP)**. Forget memorizing cryptic command syntax. You'll be issuing orders in plain language while your AI handler translates them into precision strikes across environments, tenant settings, and governance policies. 🎯
 

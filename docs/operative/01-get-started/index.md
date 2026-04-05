@@ -1,19 +1,24 @@
 ---
 prev:
-  text: 'Operative Overview'
-  link: '/operative'
+  text: Operative Overview
+  link: /operative
 next:
-  text: 'Authoring Agent Instructions'
-  link: '/operative/02-agent-instructions'
-short-description: 'Deploy foundational infrastructure and create your central orchestrator agent'
+  text: Authoring Agent Instructions
+  link: /operative/02-agent-instructions
+short-description: Deploy foundational infrastructure and create your central orchestrator agent
 difficulty: 2
+codename: OPERATION TALENT SCOUT
+time: 45
+tags:
+  - fundamentals
+products:
+  - copilot-studio
 ---
-
 # 🚨 Mission 01: Get started with the Hiring Agent {#mission-01-get-started-with-the-hiring-agent}
 
-## 🕵️‍♂️ CODENAME: `OPERATION TALENT SCOUT` {#codename-operation-talent-scout}
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**
 

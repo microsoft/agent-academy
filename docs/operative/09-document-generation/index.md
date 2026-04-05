@@ -1,19 +1,24 @@
 ---
 prev:
-  text: 'Dataverse Grounding'
-  link: '/operative/08-dataverse-grounding'
+  text: Dataverse Grounding
+  link: /operative/08-dataverse-grounding
 next:
-  text: 'Integrate with MCP Servers'
-  link: '/operative/10-mcp'
-short-description: 'Implement document generation in AI prompts'
+  text: Integrate with MCP Servers
+  link: /operative/10-mcp
+short-description: Implement document generation in AI prompts
 difficulty: 2
+codename: OPERATION DOC ASSEMBLY
+time: 45
+tags:
+  - document-generation
+products:
+  - copilot-studio
 ---
-
 # Mission 09: Generate a Candidate Interview Questions Document
 
-## 🕵️‍♂️ CODENAME: `OPERATION DOC ASSEMBLY` {#codename-operation-doc-assembly}
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 [![Doc Gen](./assets/09-doc-gen_thumbnail_PlayButton.png)](https://youtu.be/GYSEI0jbCvk?si=lYPZ4cmlxZ8-XBmi "Watch the walkthrough on YouTube")
 

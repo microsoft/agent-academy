@@ -1,19 +1,25 @@
 ---
 prev:
-  text: 'Copilot Studio Fundamentals'
-  link: '/recruit/02-copilot-studio-fundamentals'
+  text: Copilot Studio Fundamentals
+  link: /recruit/02-copilot-studio-fundamentals
 next:
-  text: 'Creating a Solution for Your Agent'
-  link: '/recruit/04-creating-a-solution'
+  text: Creating a Solution for Your Agent
+  link: /recruit/04-creating-a-solution
 short-description: 'Add your own agent to the Microsoft 365 Copilot, grounded in a prompt'
 difficulty: 1
+codename: OPERATION COPILOT EXTENSION
+time: 60
+tags:
+  - declarative-agents
+products:
+  - copilot-studio
+  - microsoft-365
 ---
-
 # 🚨 Mission 03: Deploy a Declarative Agent for Microsoft 365 Copilot {#mission-03-deploy-a-declarative-agent-for-microsoft-365-copilot}
 
-## 🕵️‍♂️ CODENAME: `OPERATION COPILOT EXTENSION` {#codename-operation-copilot-extension}
-
-> **⏱️ Operation Time Window:** `~60 minutes`
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**
 

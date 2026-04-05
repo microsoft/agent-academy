@@ -1,19 +1,26 @@
 ---
 prev:
-  text: 'Add Event Triggers'
-  link: '/recruit/10-add-event-triggers'
+  text: Add Event Triggers
+  link: /recruit/10-add-event-triggers
 next:
-  text: 'Understanding Licensing'
-  link: '/recruit/12-understanding-licensing'
-short-description: 'Deploy your agent to Microsoft Teams and Microsoft 365 Copilot'
+  text: Understanding Licensing
+  link: /recruit/12-understanding-licensing
+short-description: Deploy your agent to Microsoft Teams and Microsoft 365 Copilot
 difficulty: 1
+codename: OPERATION PUBLISH PUBLISH PUBLISH
+time: 30
+tags:
+  - publishing
+products:
+  - copilot-studio
+  - microsoft-365
+  - teams
 ---
-
 # 🚨 Mission 11: Publish Your Agent {#mission-11-publish-your-agent}
 
-## 🕵️‍♂️ CODENAME: `OPERATION PUBLISH PUBLISH PUBLISH` {#codename-operation-publish-publish-publish}
-
-> **⏱️ Operation Time Window:** `~30 minutes`  
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**
 

@@ -1,19 +1,24 @@
 ---
 prev:
-  text: 'Introduction to Agents'
-  link: '/recruit/01-introduction-to-agents'
+  text: Introduction to Agents
+  link: /recruit/01-introduction-to-agents
 next:
-  text: 'Deploy a Declarative Agent for Microsoft 365 Copilot'
-  link: '/recruit/03-create-a-declarative-agent-for-M365Copilot'
+  text: Deploy a Declarative Agent for Microsoft 365 Copilot
+  link: /recruit/03-create-a-declarative-agent-for-M365Copilot
 short-description: 'Learn the building blocks: knowledge, skills, autonomy'
 difficulty: 1
+codename: OPERATION CORE PROTOCOL
+time: 30
+tags:
+  - fundamentals
+products:
+  - copilot-studio
 ---
-
 # 🚨 Mission 02: Copilot Studio Fundamentals {#mission-02-copilot-studio-fundamentals}
 
-## 🕵️‍♂️ CODENAME: `OPERATION CORE PROTOCOL` {#codename-operation-core-protocol}
-
-> **⏱️ Operation Time Window:** `~30 minutes – intel only, no fieldwork required`  
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**
 

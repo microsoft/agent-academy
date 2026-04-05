@@ -1,19 +1,25 @@
 ---
 prev:
-  text: 'Add Event Triggers'
-  link: '/operative/04-automate-triggers'
+  text: Add Event Triggers
+  link: /operative/04-automate-triggers
 next:
-  text: 'AI Safety and Content Moderation'
-  link: '/operative/06-ai-safety'
-short-description: 'Customize agent models for maximum impact and engagement'
+  text: AI Safety and Content Moderation
+  link: /operative/06-ai-safety
+short-description: Customize agent models for maximum impact and engagement
 difficulty: 2
+codename: OPERATION ARCHETYPE
+time: 45
+tags:
+  - models
+products:
+  - copilot-studio
+  - azure
 ---
-
 # Understanding Agent Models and Response Formatting
 
-## 🕵️‍♂️ CODENAME: `OPERATION ARCHETYPE` {#codename-operation-archetype}
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 [![Model-Selection](./assets/05-model-selection_Thumbnail_PlayButton.png)](https://youtu.be/c5rqNQt2Mmc?si=zrJ7nQYoto9UlHFj "Watch the walkthrough on YouTube")
 

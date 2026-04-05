@@ -1,16 +1,21 @@
 ---
 prev:
-  text: 'Collecting Feedback from Users'
-  link: '/operative/11-obtain-user-feedback'
-short-description: 'Claim your Operative badge and celebrate your achievement'
+  text: Collecting Feedback from Users
+  link: /operative/11-obtain-user-feedback
+short-description: Claim your Operative badge and celebrate your achievement
 difficulty: 2
+codename: OPERATION COURSE COMPLETION
+time: 5
+tags:
+  - completion
+products:
+  - copilot-studio
 ---
-
 # 🚨 Final Mission: Securing Your Operative Badge {#final-mission-securing-your-operative-badge}
 
-## 🕵️‍♂️ CODENAME: `OPERATION COURSE COMPLETION` {#codename-operation-course-completion}
-
-> **⏱️ Operation Time Window:** `~5 minutes`  
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 ## 🎯 Mission Brief {#mission-brief}
 

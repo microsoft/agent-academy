@@ -1,19 +1,24 @@
 ---
 prev:
-  text: 'Document Generation'
-  link: '/operative/09-document-generation'
+  text: Document Generation
+  link: /operative/09-document-generation
 next:
-  text: 'Collecting Feedback from Users'
-  link: '/operative/11-obtain-user-feedback'
-short-description: 'Integrate with out of the box MCP servers'
+  text: Collecting Feedback from Users
+  link: /operative/11-obtain-user-feedback
+short-description: Integrate with out of the box MCP servers
 difficulty: 2
+codename: OPERATION MCP RENDEZVOUS
+time: 45
+tags:
+  - mcp
+products:
+  - copilot-studio
 ---
-
 # Mission 10: Integrate with MCP Servers
 
-## 🕵️‍♂️ CODENAME: `OPERATION MCP RENDEZVOUS` {#codename-operation-mcp-rendezvous}
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 [![MCP](./assets/10-mcp-thumbnail_PlayButton.png)](https://youtu.be/kW2f8Z8fzBw?si=rDg7uFQCIDUe_Q_H "Watch the walkthrough on YouTube")
 

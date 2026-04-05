@@ -1,19 +1,25 @@
 ---
 prev:
-  text: 'Publish your agent'
-  link: '/recruit/11-publish-your-agent'
+  text: Publish your agent
+  link: /recruit/11-publish-your-agent
 next:
-  text: 'Securing Your Recruit Badge'
-  link: '/recruit/course-completion-badges-recruit'
-short-description: 'Learn how licensing and billing works with Copilot Studio'
+  text: Securing Your Recruit Badge
+  link: /recruit/course-completion-badges-recruit
+short-description: Learn how licensing and billing works with Copilot Studio
 difficulty: 1
+codename: OPERATION KNOW WHAT YOU OWE
+time: 15
+tags:
+  - licensing
+products:
+  - copilot-studio
+  - microsoft-365
 ---
-
 # 🚨 Mission 12: Understanding Licensing {#mission-12-understanding-licensing}
 
-## 🕵️‍♂️ CODENAME: `OPERATION KNOW WHAT YOU OWE` {#codename-operation-know-what-you-owe}
-
-> **⏱️ Operation Time Window:** `~15 minutes – intel only, no fieldwork required`  
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 ## 🎯 Mission Brief {#mission-brief}
 

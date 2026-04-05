@@ -1,19 +1,26 @@
 ---
 prev:
-  text: 'Course Setup'
-  link: '/recruit/00-course-setup'
+  text: Course Setup
+  link: /recruit/00-course-setup
 next:
-  text: 'Copilot Studio Fundamentals'
-  link: '/recruit/02-copilot-studio-fundamentals'
-short-description: 'Understand conversational AI concepts, LLMs, and autonomous vs. declarative agents'
+  text: Copilot Studio Fundamentals
+  link: /recruit/02-copilot-studio-fundamentals
+short-description: >-
+  Understand conversational AI concepts, LLMs, and autonomous vs. declarative
+  agents
 difficulty: 1
+codename: OPERATION AI AGENT DECODE
+time: 30
+tags:
+  - fundamentals
+products:
+  - copilot-studio
 ---
-
 # 🚨 Mission 01: Introduction to Agents {#mission-01-introduction-to-agents}
 
-## 🕵️‍♂️ CODENAME: `OPERATION AI AGENT DECODE` {#codename-operation-ai-agent-decode}
-
-> **⏱️ Operation Time Window:** `~30 minutes – intel only, no fieldwork required`
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**
 

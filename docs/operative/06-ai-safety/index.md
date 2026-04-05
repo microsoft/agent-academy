@@ -1,19 +1,24 @@
 ---
 prev:
-  text: 'Understanding Agent Models'
-  link: '/operative/05-model-selection'
+  text: Understanding Agent Models
+  link: /operative/05-model-selection
 next:
-  text: 'Multimodal Prompts'
-  link: '/operative/07-multimodal-prompts'
-short-description: 'Implement enterprise-grade safety and compliance measures'
+  text: Multimodal Prompts
+  link: /operative/07-multimodal-prompts
+short-description: Implement enterprise-grade safety and compliance measures
 difficulty: 2
+codename: OPERATION SAFE HARBOR
+time: 45
+tags:
+  - ai-safety
+products:
+  - copilot-studio
 ---
-
 # 🚨 Mission 06: AI Safety and Content Moderation {#mission-06-ai-safety-and-content-moderation}
 
-## 🕵️‍♂️ CODENAME: `OPERATION SAFE HARBOR` {#codename-operation-safe-harbor}
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<!-- markdownlint-disable MD033 -->
+<course-meta />
+<!-- markdownlint-enable MD033 -->
 
 [![Safety](./assets/06-ai-safety-thumbnail_PlayButton.png)](https://youtu.be/2IjDV_D3Jb0?si=Aqp3TVRt5QnpKxsr "Watch the walkthrough on YouTube")
 
