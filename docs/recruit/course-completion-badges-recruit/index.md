@@ -13,6 +13,8 @@ tags:
   - completion
 products:
   - copilot-studio
+created-date: 2026-01-14
+last-edited-date: 2026-03-27
 ---
 # 🚨 Final Mission: Securing Your Recruit Badge {#final-mission-securing-your-recruit-badge}
 
