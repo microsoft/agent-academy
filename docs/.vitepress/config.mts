@@ -1,5 +1,11 @@
 import { defineConfig } from "vitepress";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { mermaidPlugin } from "./plugins/vitepress-mermaid";
+import { missionsPlugin } from "./plugins/missions";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const docsDir = path.resolve(__dirname, "..");
 
 export default defineConfig({
   title: "Agent Academy",
@@ -197,5 +203,8 @@ export default defineConfig({
     config: (md) => {
       md.use(mermaidPlugin);
     },
+  },
+  vite: {
+    plugins: [missionsPlugin(docsDir)],
   },
 });

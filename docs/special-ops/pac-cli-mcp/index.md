@@ -5,6 +5,7 @@ tags:
     - Visual Studio Code
     - Power Platform CLI
 difficulty: 3
+badge: ./assets/CommandLine_Badge.png
 ---
 # ⚡ Power Platform CLI MCP Server
 

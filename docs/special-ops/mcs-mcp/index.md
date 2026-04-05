@@ -3,6 +3,7 @@ tags:
     - MCP
     - Copilot Studio
 difficulty: 3
+badge: ./assets/MCP_Joker_Badge.png
 ---
 # 🤖 Microsoft Copilot Studio ❤️ MCP
 

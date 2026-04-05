@@ -4,6 +4,7 @@ tags:
     - Microsoft Learn
     - Copilot Studio
 difficulty: 1
+badge: ./assets/Academy_LearnMCP.png
 ---
 
 # 📚 Microsoft Learn MCP Server
