@@ -45,8 +45,6 @@ Before you begin, ensure you have:
 1. Basic familiarity with Microsoft 365 (for example, signing into Office apps or Teams).  
 1. (Optional) A credit card or billing method if you plan to purchase paid licenses.
 
----
-
 ## 🧪 Trial Environment Setup (Steps 1–4) {#trial-environment-setup-steps-14}
 
 ## Step 1: Get a Microsoft 365 Account
@@ -171,8 +169,6 @@ First, you need a security group to hold everyone you want to be able to publish
 1. Verify your security group is there and click **Save**
 
     ![Save](images/pp-save.png)
-
----
 
 ## 🔧 Required Setup (Everyone) {#required-setup-everyone}
 

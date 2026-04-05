@@ -221,8 +221,6 @@ sequenceDiagram
     Agent-->>User: "Your current PTO balance is 12 days."
 ```
 
----
-
 ## 🎉 Mission Complete {#mission-complete}
 
 You’ve successfully completed your fundamentals briefing. You’ve now learned the four essential building blocks of any agent in Copilot Studio:
