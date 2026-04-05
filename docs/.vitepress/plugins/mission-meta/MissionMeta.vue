@@ -66,11 +66,10 @@ const hasAnything = computed(() => difficulty.value || time.value || products.va
 
 <style scoped>
 .mission-meta {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-  align-items: center;
-  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
   margin: 0.75rem 0 1.25rem;
   border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
