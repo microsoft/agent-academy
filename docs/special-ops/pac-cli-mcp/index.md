@@ -182,7 +182,7 @@ If things go sideways, here's your field manual:
 
 Time to go deeper, agent. Your tenant settings are the backbone of your organization's Power Platform security posture. In this mission, you'll use Visual Studio Code and GitHub Copilot combined with the Power Platform CLI MCP Server to run reconnaissance on your tenant and get strategic governance intel.
 
-### ✅ Prerequisites {#prerequisites}
+### ✅ Prerequisites {#lab-prerequisites}
 
 Before deploying into the field, ensure you have the following assets installed and configured:
 
