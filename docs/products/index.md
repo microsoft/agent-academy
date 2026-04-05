@@ -1,8 +1,8 @@
-<!-- markdownlint-disable-file MD041 -->
 ---
 aside: false
 ---
 
+<!-- markdownlint-disable-file MD041 -->
 <!-- markdownlint-disable MD033 -->
 <breadcrumb section="products" />
 <!-- markdownlint-enable MD033 -->
