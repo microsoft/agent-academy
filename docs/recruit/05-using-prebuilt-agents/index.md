@@ -15,7 +15,7 @@ products:
   - copilot-studio
   - microsoft-365
   - teams
-created-date: 2025-06-05
+created-date: 2026-01-14
 last-edited-date: 2026-03-11
 ---
 # 🧰 Mission 05: Using a Pre-Built Agent   {#mission-05-using-a-pre-built-agent}

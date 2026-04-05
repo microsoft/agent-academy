@@ -14,7 +14,7 @@ tags:
   - adaptive-cards
 products:
   - copilot-studio
-created-date: 2025-08-28
+created-date: 2025-08-20
 last-edited-date: 2026-03-11
 ---
 # Collecting feedback from users

@@ -15,7 +15,7 @@ tags:
   - fundamentals
 products:
   - copilot-studio
-created-date: 2025-06-04
+created-date: 2026-01-14
 last-edited-date: 2026-03-13
 ---
 # 🚨 Mission 01: Introduction to Agents {#mission-01-introduction-to-agents}

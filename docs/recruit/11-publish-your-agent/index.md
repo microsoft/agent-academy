@@ -15,7 +15,7 @@ products:
   - copilot-studio
   - microsoft-365
   - teams
-created-date: 2025-07-17
+created-date: 2026-01-14
 last-edited-date: 2026-01-14
 ---
 # 🚨 Mission 11: Publish Your Agent {#mission-11-publish-your-agent}

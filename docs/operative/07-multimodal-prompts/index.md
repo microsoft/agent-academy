@@ -14,7 +14,7 @@ tags:
   - prompting
 products:
   - copilot-studio
-created-date: 2025-08-28
+created-date: 2025-08-20
 last-edited-date: 2026-03-11
 ---
 # 🚨 Mission 07: Extracting Resume Contents with Multimodal Prompts {#mission-07-extracting-resume-contents-with-multimodal-prompts}
