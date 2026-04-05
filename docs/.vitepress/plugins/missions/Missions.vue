@@ -471,11 +471,10 @@ const visiblePages = computed<PageItem[]>(() => {
 }
 
 .filter-group {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.6rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
 
 .filter-label {
@@ -487,6 +486,7 @@ const visiblePages = computed<PageItem[]>(() => {
   white-space: nowrap;
   min-width: 3.5rem;
   flex-shrink: 0;
+  padding-top: 0.25rem;
 }
 
 .filter-pills {
