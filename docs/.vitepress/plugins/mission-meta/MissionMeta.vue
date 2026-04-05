@@ -2,7 +2,7 @@
   <div v-if="hasAnything" class="mission-meta">
     <span v-if="codename" class="meta-item">
       <span class="meta-label">🕵️ Codename</span>
-      <code class="meta-value">{{ codename }}</code>
+      <span class="meta-value">{{ codename }}</span>
     </span>
     <span v-if="difficulty" class="meta-item">
       <span class="meta-label">⭐ Difficulty</span>
