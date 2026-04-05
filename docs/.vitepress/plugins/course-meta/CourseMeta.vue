@@ -38,6 +38,7 @@ const time = computed(() => {
   background: var(--vp-c-bg-soft);
   font-size: 0.9rem;
   max-width: 100%;
+  width: 100%;
 }
 
 .course-meta-row {
