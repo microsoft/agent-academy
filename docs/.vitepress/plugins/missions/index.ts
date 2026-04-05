@@ -178,5 +178,17 @@ export function missionsPlugin(docsDir: string): Plugin {
       const missions = loadMissions(docsDir);
       return `export const missions = ${JSON.stringify(missions)};`;
     },
+    configureServer(server) {
+      // Invalidate virtual module when any markdown file changes
+      server.watcher.on("change", (file) => {
+        if (file.endsWith(".md")) {
+          const mod = server.moduleGraph.getModuleById(RESOLVED_ID);
+          if (mod) {
+            server.moduleGraph.invalidateModule(mod);
+            server.ws.send({ type: "full-reload" });
+          }
+        }
+      });
+    },
   };
 }
