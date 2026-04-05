@@ -464,42 +464,43 @@ const visiblePages = computed<PageItem[]>(() => {
 .missions-filters {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-  margin-bottom: 1rem;
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 8px;
-  background: var(--vp-c-bg-soft);
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--vp-c-divider);
 }
 
 .filter-group {
   display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
 }
 
 .filter-label {
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.72rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--vp-c-text-2);
+  letter-spacing: 0.07em;
+  color: var(--vp-c-text-3);
   white-space: nowrap;
-  min-width: 4rem;
+  min-width: 3.5rem;
+  flex-shrink: 0;
 }
 
 .filter-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem;
+  gap: 0.3rem;
 }
 
 .filter-pill {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   padding: 0.2rem 0.65rem;
   border-radius: 999px;
   border: 1px solid var(--vp-c-divider);
-  background: var(--vp-c-bg);
+  background: transparent;
   color: var(--vp-c-text-2);
   cursor: pointer;
   transition: all 0.15s;
@@ -509,6 +510,7 @@ const visiblePages = computed<PageItem[]>(() => {
 .filter-pill:hover {
   border-color: var(--vp-c-brand-1);
   color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
 }
 
 .filter-pill:focus-visible {
@@ -520,6 +522,12 @@ const visiblePages = computed<PageItem[]>(() => {
   background: var(--vp-c-brand-1);
   border-color: var(--vp-c-brand-1);
   color: #fff;
+}
+
+.filter-pill.active::before {
+  content: "✕ ";
+  font-size: 0.65rem;
+  opacity: 0.8;
 }
 
 :root.dark .filter-pill.active {
