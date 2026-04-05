@@ -16,7 +16,7 @@ products:
   - copilot-studio
   - power-automate
 created-date: 2025-07-11
-last-edited-date: 2026-04-05
+last-edited-date: 2026-02-19
 ---
 # 🚨 Mission 10: Add Event Triggers - Enable autonomous agent capabilities {#mission-10-add-event-triggers-enable-autonomous-agent-capabilities}
 

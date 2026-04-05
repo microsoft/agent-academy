@@ -15,7 +15,7 @@ tags:
 products:
   - copilot-studio
 created-date: 2025-06-19
-last-edited-date: 2026-04-05
+last-edited-date: 2026-02-19
 ---
 # 🚨 Mission 07: Add new topic with trigger and nodes {#mission-07-add-new-topic-with-trigger-and-nodes}
 

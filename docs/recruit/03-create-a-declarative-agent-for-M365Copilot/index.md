@@ -15,7 +15,7 @@ products:
   - copilot-studio
   - microsoft-365
 created-date: 2025-06-05
-last-edited-date: 2026-04-05
+last-edited-date: 2026-03-18
 ---
 # 🚨 Mission 03: Deploy a Declarative Agent for Microsoft 365 Copilot {#mission-03-deploy-a-declarative-agent-for-microsoft-365-copilot}
 

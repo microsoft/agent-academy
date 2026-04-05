@@ -16,7 +16,7 @@ products:
   - sharepoint
   - microsoft-365
 created-date: 2025-06-04
-last-edited-date: 2026-04-05
+last-edited-date: 2026-03-16
 ---
 
 # 🚨 Mission 00: Course Setup {#mission-00-course-setup}

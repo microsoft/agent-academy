@@ -16,7 +16,7 @@ tags:
 products:
   - copilot-studio
 created-date: 2025-06-04
-last-edited-date: 2026-04-05
+last-edited-date: 2026-03-13
 ---
 # 🚨 Mission 01: Introduction to Agents {#mission-01-introduction-to-agents}
 

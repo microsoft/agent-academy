@@ -15,7 +15,7 @@ products:
   - copilot-studio
   - power-platform
 created-date: 2025-06-05
-last-edited-date: 2026-04-05
+last-edited-date: 2026-01-14
 ---
 # 🚨 Mission 04: Creating a Solution for Your Agent {#mission-04-creating-a-solution-for-your-agent}
 

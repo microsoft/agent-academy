@@ -15,7 +15,7 @@ products:
   - copilot-studio
   - dataverse
 created-date: 2025-08-28
-last-edited-date: 2026-04-05
+last-edited-date: 2026-03-11
 ---
 # 🚨 Mission 08: Enhanced prompts with Dataverse grounding {#mission-08-enhanced-prompts-with-dataverse-grounding}
 

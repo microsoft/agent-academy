@@ -9,7 +9,7 @@ products:
   - copilot-studio
   - visual-studio-code
 created-date: 2026-02-20
-last-edited-date: 2026-04-05
+last-edited-date: 2026-03-17
 ---
 # 🤖 Microsoft Copilot Studio ❤️ MCP {#microsoft-copilot-studio-mcp}
 

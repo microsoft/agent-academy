@@ -14,7 +14,7 @@ tags:
 products:
   - copilot-studio
 created-date: 2025-06-27
-last-edited-date: 2026-04-05
+last-edited-date: 2026-02-19
 ---
 # 🚨 Mission 08: Enhance user interactions in Topics with Adaptive Cards {#mission-08-enhance-user-interactions-in-topics-with-adaptive-cards}
 

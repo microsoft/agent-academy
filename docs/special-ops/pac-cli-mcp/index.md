@@ -13,7 +13,7 @@ products:
   - visual-studio-code
   - power-platform
 created-date: 2026-02-20
-last-edited-date: 2026-04-05
+last-edited-date: 2026-03-17
 ---
 # ⚡ Power Platform CLI MCP Server {#power-platform-cli-mcp-server}
 
