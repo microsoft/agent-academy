@@ -10,13 +10,13 @@ badge: ./assets/Academy_LearnMCP.png
 products:
   - copilot-studio
   - microsoft-learn
+created-date: 2026-03-12
+last-edited-date: 2026-03-17
 ---
 
 # 📚 Microsoft Learn MCP Server {#microsoft-learn-mcp-server}
 
-<!-- markdownlint-disable MD033 -->
 <mission-meta />
-<!-- markdownlint-enable MD033 -->
 
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="./assets/Academy_LearnMCP.png" alt="Microsoft Learn MCP Badge" width="220" /></p>
@@ -263,9 +263,8 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 
 - [Microsoft Copilot Studio ❤️ MCP](../mcs-mcp/index.md) — Build and deploy your own custom MCP server and connect it to Copilot Studio
 - [Power Platform CLI MCP Server](../pac-cli-mcp/index.md) — Use MCP to control your Power Platform tenant with natural language
-- 📖 [Microsoft Learn MCP Server docs](https://learn.microsoft.com/microsoft-copilot-studio/connections-mcp)
-- 📖 [Model Context Protocol overview](https://modelcontextprotocol.io/introduction)
-- 📖 [Copilot Studio MCP connections](https://learn.microsoft.com/microsoft-copilot-studio/connections-mcp)
+📖 [Microsoft Learn MCP Server docs](https://learn.microsoft.com/microsoft-copilot-studio/connections-mcp)  
+📖 [Model Context Protocol overview](https://modelcontextprotocol.io/introduction)  
+📖 [Copilot Studio MCP connections](https://learn.microsoft.com/microsoft-copilot-studio/connections-mcp)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/special-ops/ms-learn-mcp" alt="Analytics" />
+<analytics-tag section="special-ops" mission="ms-learn-mcp" />

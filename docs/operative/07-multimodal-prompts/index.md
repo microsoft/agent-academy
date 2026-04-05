@@ -14,12 +14,12 @@ tags:
   - prompting
 products:
   - copilot-studio
+created-date: 2025-08-20
+last-edited-date: 2026-03-11
 ---
 # 🚨 Mission 07: Extracting Resume Contents with Multimodal Prompts {#mission-07-extracting-resume-contents-with-multimodal-prompts}
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 [![MultiModal](./assets/07-multi-modal-prompts-thumbnail.png)](https://youtu.be/icP_qH8LFK8?si=VJjtdVi-ytUq0ymg "Watch the walkthrough on YouTube")
 
@@ -529,5 +529,4 @@ Your enhanced document analysis capabilities are now ready for the advanced data
 
 📺 [AI Builder: JSON outputs in prompt builder](https://www.youtube.com/watch?v=F0fGnWrRY_I)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/07-multimodal-prompts" alt="Analytics" />
+<analytics-tag section="operative" mission="07-multimodal-prompts" />

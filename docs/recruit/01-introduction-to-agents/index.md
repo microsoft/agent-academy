@@ -15,12 +15,12 @@ tags:
   - fundamentals
 products:
   - copilot-studio
+created-date: 2026-01-14
+last-edited-date: 2026-03-13
 ---
 # 🚨 Mission 01: Introduction to Agents {#mission-01-introduction-to-agents}
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
@@ -130,5 +130,4 @@ Stay sharp, Recruit - your AI journey is just beginning!
 
 🔗 [Copilot Studio Documentation Home](https://learn.microsoft.com/microsoft-copilot-studio/)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/01-introduction-to-agents" alt="Analytics" />
+<analytics-tag section="recruit" mission="01-introduction-to-agents" />

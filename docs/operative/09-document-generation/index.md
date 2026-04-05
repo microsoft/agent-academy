@@ -13,12 +13,12 @@ tags:
   - document-generation
 products:
   - copilot-studio
+created-date: 2025-08-20
+last-edited-date: 2026-03-11
 ---
 # Mission 09: Generate a Candidate Interview Questions Document
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 [![Doc Gen](./assets/09-doc-gen_thumbnail_PlayButton.png)](https://youtu.be/GYSEI0jbCvk?si=lYPZ4cmlxZ8-XBmi "Watch the walkthrough on YouTube")
 
@@ -400,5 +400,4 @@ Great work, Operative! **Operation Doc Assembly** is now complete. You've succes
 
 📖 [Training: Create AI Builder prompts using your own Dataverse data](https://learn.microsoft.com/training/modules/ai-builder-grounded-prompts/?WT.mc_id=power-182762-apdunnam)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/09-document-generation" alt="Analytics" />
+<analytics-tag section="operative" mission="09-document-generation" />

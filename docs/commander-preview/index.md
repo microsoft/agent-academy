@@ -47,5 +47,4 @@ This academy is structured as a progressive series of advanced operations. Each 
 | `12` | 🚀 [Deploy Agents with Solutions & Pipelines](./12-deploy-solutions-pipelines/index.md) | Environment strategies, solutions, component collections, connections, sharing controls, and Pipelines |
 | `13` | 🏁 [Next Steps and Best Practices](./13-next-steps-best-practices/index.md) | Apply implementation guides, Power CAT tools, and the Well-Architected Framework |
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/commander-preview" alt="Analytics" />
+<analytics-tag section="commander-preview" />

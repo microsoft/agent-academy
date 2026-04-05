@@ -15,12 +15,12 @@ products:
   - copilot-studio
   - microsoft-365
   - teams
+created-date: 2026-01-14
+last-edited-date: 2026-01-14
 ---
 # 🚨 Mission 11: Publish Your Agent {#mission-11-publish-your-agent}
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
@@ -254,5 +254,4 @@ There are even more possibilities here. Your admin can change the global setup p
 
 🔗 [Publish channels documentation](https://learn.microsoft.com/microsoft-copilot-studio/publication-fundamentals-publish-channels)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/11-publish-your-agent" alt="Analytics" />
+<analytics-tag section="recruit" mission="11-publish-your-agent" />

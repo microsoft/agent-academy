@@ -3,6 +3,8 @@ next:
   text: 'Course Setup'
   link: '/recruit/00-course-setup'
 lastUpdated: false
+created-date: 2026-01-14
+last-edited-date: 2026-02-16
 ---
 
 # Welcome Recruit
@@ -66,5 +68,4 @@ This academy is broken into progressive lessons—each one designed as a field m
 > ✅ Completing this curriculum earns you the **Recruit** badge.  
 > 🔓 **Operative** and **Commander** will be unlocked in future phases.
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit" alt="Analytics" />
+<analytics-tag section="recruit" />

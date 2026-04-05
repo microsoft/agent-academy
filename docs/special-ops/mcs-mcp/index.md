@@ -8,12 +8,12 @@ badge: ./assets/MCP_Joker_Badge.png
 products:
   - copilot-studio
   - visual-studio-code
+created-date: 2026-02-20
+last-edited-date: 2026-03-17
 ---
 # 🤖 Microsoft Copilot Studio ❤️ MCP {#microsoft-copilot-studio-mcp}
 
-<!-- markdownlint-disable MD033 -->
 <mission-meta />
-<!-- markdownlint-enable MD033 -->
 
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="./assets/MCP_Joker_Badge.png" alt="MCP Joker Badge" width="220" /></p>
@@ -367,9 +367,8 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 
 ## 📚 Tactical Resources {#tactical-resources}
 
-- 📖 [Microsoft Copilot Studio MCP announcement blog](https://aka.ms/mcsmcp)
-- 📖 [Microsoft Copilot Studio MCP docs](http://aka.ms/mcsmcpdocs)
-- 📖 [Model Context Protocol overview](https://modelcontextprotocol.io/introduction)
+📖 [Microsoft Copilot Studio MCP announcement blog](https://aka.ms/mcsmcp)  
+📖 [Microsoft Copilot Studio MCP docs](http://aka.ms/mcsmcpdocs)  
+📖 [Model Context Protocol overview](https://modelcontextprotocol.io/introduction)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/special-ops/mcs-mcp" alt="Analytics" />
+<analytics-tag section="special-ops" mission="mcs-mcp" />

@@ -13,12 +13,12 @@ tags:
   - ai-safety
 products:
   - copilot-studio
+created-date: 2025-08-20
+last-edited-date: 2026-03-31
 ---
 # 🚨 Mission 06: AI Safety and Content Moderation {#mission-06-ai-safety-and-content-moderation}
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 [![Safety](./assets/06-ai-safety-thumbnail_PlayButton.png)](https://youtu.be/2IjDV_D3Jb0?si=Aqp3TVRt5QnpKxsr "Watch the walkthrough on YouTube")
 
@@ -608,5 +608,4 @@ In your next mission, you'll enhance your agents with multimodal capabilities to
 
 📖 [Microsoft Responsible AI Standard](https://www.microsoft.com/insidetrack/blog/responsible-ai-why-it-matters-and-how-were-infusing-it-into-our-internal-ai-projects-at-microsoft/?WT.mc_id=power-182762-scottdurow)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/06-ai-safety" alt="Analytics" />
+<analytics-tag section="operative" mission="06-ai-safety" />

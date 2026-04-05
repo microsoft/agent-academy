@@ -13,12 +13,12 @@ tags:
   - adaptive-cards
 products:
   - copilot-studio
+created-date: 2026-01-14
+last-edited-date: 2026-02-19
 ---
 # 🚨 Mission 08: Enhance user interactions in Topics with Adaptive Cards {#mission-08-enhance-user-interactions-in-topics-with-adaptive-cards}
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
@@ -464,5 +464,4 @@ This is the end of **Lab 08 - Enhance user interactions with Adaptive Cards**, s
 
 📺 [Building Adaptive Cards with Power FX](https://aka.ms/ai-in-action/copilot-studio/ep8)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/08-add-adaptive-card" alt="Analytics" />
+<analytics-tag section="recruit" mission="08-add-adaptive-card" />

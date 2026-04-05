@@ -1,5 +1,7 @@
 ---
 lastUpdated: false
+created-date: 2026-01-20
+last-edited-date: 2026-03-29
 ---
 
 # Special Ops
@@ -12,10 +14,8 @@ Special Ops missions are different by design: they are standalone labs for targe
 
 Use Special Ops when you need fast, practical training on a defined topic.
 
-<!-- markdownlint-disable MD033 -->
 ## Special Ops Missions
 
 <missions section="special-ops" sort="first-added" order="descending" />
-<!-- markdownlint-enable MD033 -->
 
 More Special Ops missions will be added here soon!

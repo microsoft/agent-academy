@@ -14,12 +14,12 @@ tags:
   - adaptive-cards
 products:
   - copilot-studio
+created-date: 2025-08-20
+last-edited-date: 2026-03-11
 ---
 # Collecting feedback from users
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 [![Feedback](./assets/11-collecting-feedback_Thumbnail_PlayButton.png)](https://youtu.be/QRBimOsgKEQ?si=05sjJwz6tv4MO6Z6 "Watch the walkthrough on YouTube")
 
@@ -760,5 +760,4 @@ The field is yours.
 
 📖 [Obtain feedback for every response](https://learn.microsoft.com/microsoft-copilot-studio/guidance/adaptive-card-add-feedback-for-every-response?WT.mc_id=power-188561-ebenitez)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/11-obtain-user-feedback" alt="Analytics" />
+<analytics-tag section="operative" mission="11-obtain-user-feedback" />

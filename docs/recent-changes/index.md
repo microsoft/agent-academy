@@ -6,7 +6,6 @@ lastUpdated: false
 
 Stay up to date with the latest activity across all missions.
 
-<!-- markdownlint-disable MD033 -->
 
 ## 🕐 Recently Updated {#recently-updated}
 
@@ -16,4 +15,3 @@ Stay up to date with the latest activity across all missions.
 
 <missions sort="first-added" order="descending" :max-rows="3" :filterable="false" />
 
-<!-- markdownlint-enable MD033 -->

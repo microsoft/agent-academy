@@ -3,6 +3,8 @@ next:
   text: 'Get started with the Hiring Agent'
   link: '/operative/01-get-started'
 lastUpdated: false
+created-date: 2025-08-20
+last-edited-date: 2026-02-13
 ---
 
 # Welcome Operative
@@ -72,5 +74,4 @@ This academy is structured as a progressive series of field operations—each mi
 > ✅ Completing this curriculum earns you the **Operative** badge.  
 > 🔓 **Commander** will be unlocked in future phases.
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative" alt="Analytics" />
+<analytics-tag section="operative" />

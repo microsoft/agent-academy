@@ -13,12 +13,12 @@ tags:
   - multi-agent
 products:
   - copilot-studio
+created-date: 2025-08-20
+last-edited-date: 2026-03-16
 ---
 # 🚨 Mission 03: Multi-Agent Systems {#mission-03-multi-agent-systems}
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
@@ -768,5 +768,4 @@ Your enhanced hiring system is now ready for the advanced features we'll add in 
 
 📺 [Agent-to-agent collaboration in Copilot Studio](https://youtu.be/d-oD3pApHAg?si=rwIHKhJTkjSvhTHw)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/03-multi-agent" alt="Analytics" />
+<analytics-tag section="operative" mission="03-multi-agent" />

@@ -14,12 +14,12 @@ tags:
   - triggers
 products:
   - copilot-studio
+created-date: 2026-01-14
+last-edited-date: 2026-02-19
 ---
 # 🚨 Mission 07: Add new topic with trigger and nodes {#mission-07-add-new-topic-with-trigger-and-nodes}
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
@@ -774,5 +774,4 @@ This is the end of **Lab 07 - Add a new topic with conversation nodes**, select 
 
 📺 [Add actions to agents using connectors](https://aka.ms/ai-in-action/copilot-studio/ep4)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/07-add-new-topic-with-trigger" alt="Analytics" />
+<analytics-tag section="recruit" mission="07-add-new-topic-with-trigger" />

@@ -168,8 +168,12 @@ function loadMissions(docsDir: string): MissionData[] {
         difficulty: Math.min(Math.max(Number(frontmatter.difficulty) || 0, 0), 5),
         tags: frontmatter.tags ?? [],
         products: frontmatter.products ?? [],
-        lastUpdated: getContentTimestamp(indexPath, repoRoot),
-        createdAt: getMergedAt(indexPath, repoRoot),
+        lastUpdated: frontmatter["last-edited-date"]
+          ? new Date(frontmatter["last-edited-date"]).getTime()
+          : getContentTimestamp(indexPath, repoRoot),
+        createdAt: frontmatter["created-date"]
+          ? new Date(frontmatter["created-date"]).getTime()
+          : getMergedAt(indexPath, repoRoot),
       });
     }
   }
