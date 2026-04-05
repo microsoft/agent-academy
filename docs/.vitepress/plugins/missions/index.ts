@@ -196,5 +196,28 @@ export function missionsPlugin(docsDir: string): Plugin {
         }
       });
     },
+    writeBundle(options) {
+      const outDir = options.dir;
+      if (!outDir) return;
+
+      const missions = loadMissions(docsDir);
+      const badgePaths = new Set<string>();
+
+      for (const mission of missions) {
+        if (!mission.badge) continue;
+        // badge is a root-relative path like /images/foo.png or /cowork-collective/assets/foo.png
+        badgePaths.add(mission.badge);
+      }
+
+      for (const badgePath of badgePaths) {
+        const srcFile = path.join(docsDir, badgePath.replace(/\//g, path.sep));
+        if (!fs.existsSync(srcFile)) continue;
+
+        const destFile = path.join(outDir, badgePath.replace(/\//g, path.sep));
+        const destDir = path.dirname(destFile);
+        fs.mkdirSync(destDir, { recursive: true });
+        fs.copyFileSync(srcFile, destFile);
+      }
+    },
   };
 }
