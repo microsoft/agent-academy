@@ -31,13 +31,15 @@
         aria-label="Previous page"
         @click="page--"
       >‹</button>
-      <button
-        v-for="p in totalPages"
-        :key="p"
-        class="pager-pill"
-        :class="{ active: p === page }"
-        @click="page = p"
-      >{{ p }}</button>
+      <template v-for="item in visiblePages" :key="item.key">
+        <span v-if="item.type === 'ellipsis'" class="pager-ellipsis">…</span>
+        <button
+          v-else
+          class="pager-pill"
+          :class="{ active: item.page === page }"
+          @click="page = item.page!"
+        >{{ item.page }}</button>
+      </template>
       <button
         :disabled="page >= totalPages"
         class="pager-arrow"
@@ -183,6 +185,33 @@ const pagedMissions = computed(() => {
   const start = (page.value - 1) * itemsPerPage.value;
   return sortedMissions.value.slice(start, start + itemsPerPage.value);
 });
+
+type PageItem = { type: "page"; page: number; key: string } | { type: "ellipsis"; page?: undefined; key: string };
+
+const visiblePages = computed<PageItem[]>(() => {
+  const tp = totalPages.value;
+  if (tp <= 7) {
+    return Array.from({ length: tp }, (_, i) => ({
+      type: "page" as const,
+      page: i + 1,
+      key: `p${i + 1}`,
+    }));
+  }
+
+  const items: PageItem[] = [];
+  const curr = page.value;
+  const pages = new Set([1, tp, curr - 1, curr, curr + 1].filter(p => p >= 1 && p <= tp));
+  const sorted = [...pages].sort((a, b) => a - b);
+
+  for (let i = 0; i < sorted.length; i++) {
+    if (i > 0 && sorted[i] - sorted[i - 1] > 1) {
+      items.push({ type: "ellipsis", key: `e${sorted[i]}` });
+    }
+    items.push({ type: "page", page: sorted[i], key: `p${sorted[i]}` });
+  }
+
+  return items;
+});
 </script>
 
 <style scoped>
@@ -314,6 +343,12 @@ const pagedMissions = computed(() => {
 .pager-arrow:disabled {
   opacity: 0.3;
   cursor: not-allowed;
+}
+
+.pager-ellipsis {
+  font-size: 0.85rem;
+  color: var(--vp-c-text-3);
+  padding: 0 0.15rem;
 }
 
 @media (max-width: 480px) {
