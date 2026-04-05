@@ -25,6 +25,19 @@
   // Justification: Code blocks are used for text
   "MD046": false,
 
+  // MD033/no-inline-html : Inline HTML : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md033.md
+  // Justification: VitePress pages use Vue script setup and custom components
+  "MD033": {
+    "allowed_elements": ["script", "breadcrumb", "missions", "products-index", "tags-index"]
+  },
+
+  // MD022/blanks-around-headings — frontmatter end (---) is not a blank line
+  // Justification: VitePress frontmatter is immediately followed by content
+  "MD022": false,
+
+  // MD003/heading-style — not enforced; allow both atx (#) and setext (---) styles
+  "MD003": false,
+
   // MD060/table-column-style : Table column style : https://github.com/DavidAnson/markdownlint/blob/v0.40.0/doc/md060.md
   // Justification: Mixed table styles are used throughout
   "MD060": false

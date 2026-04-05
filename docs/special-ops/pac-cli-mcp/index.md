@@ -1,6 +1,7 @@
 ---
 tags:
   - mcp
+  - pac-cli
 difficulty: 3
 time: 30
 description: >-

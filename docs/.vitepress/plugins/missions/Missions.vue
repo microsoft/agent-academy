@@ -43,6 +43,7 @@
         <div v-if="mission.badge" class="mission-badge">
           <img :src="withBase(mission.badge)" :alt="mission.title" />
         </div>
+        <div v-else class="mission-badge mission-badge--placeholder"></div>
         <div class="mission-title">{{ mission.title }}</div>
         <span v-if="displayDate(mission)" class="mission-date">{{ displayDate(mission) }}</span>
       </a>
@@ -339,6 +340,7 @@ const visiblePages = computed<PageItem[]>(() => {
   align-items: center;
   justify-content: center;
   margin-bottom: 0.75rem;
+  flex-shrink: 0;
 }
 
 .mission-badge img {
@@ -353,9 +355,21 @@ const visiblePages = computed<PageItem[]>(() => {
   font-size: 0.95rem;
   text-align: center;
   line-height: 1.4;
-  height: calc(1.4em * 3);
-  display: flex;
-  align-items: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: calc(1.4em * 3);
+}
+
+.mission-badge--placeholder {
+  background: var(--vp-c-default-soft);
+  border-radius: 8px;
+}
+
+.mission-card:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
 }
 
 .mission-date {
@@ -406,6 +420,12 @@ const visiblePages = computed<PageItem[]>(() => {
 .pager-arrow:hover:not(:disabled) {
   border-color: var(--vp-c-brand-1);
   color: var(--vp-c-brand-1);
+}
+
+.pager-pill:focus-visible,
+.pager-arrow:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
 }
 
 .pager-pill.active {
@@ -489,6 +509,11 @@ const visiblePages = computed<PageItem[]>(() => {
 .filter-pill:hover {
   border-color: var(--vp-c-brand-1);
   color: var(--vp-c-brand-1);
+}
+
+.filter-pill:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
 }
 
 .filter-pill.active {
