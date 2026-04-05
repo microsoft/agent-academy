@@ -96,7 +96,7 @@ Don't worry - this error message is nothing to be worried about!
 ### 🌎 Deploy to Azure {#deploy-to-azure}
 
 > [!IMPORTANT]
-> As listed in the [prerequisites](#️-prerequisites), the [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd) needs to be installed on your machine for this part.
+> As listed in the [prerequisites](#prerequisites), the [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd) needs to be installed on your machine for this part.
 
 Make sure to login to Azure Developer CLI if you haven't done that yet.
 
@@ -105,7 +105,7 @@ azd auth login
 ```
 
 > [!WARNING]  
-> After running `azd up`, you will have an MCP Server running on Azure that is publicly available. Ideally, you don't want that. Make sure to run `azd down` after finishing the lab to delete all the resources from your Azure subscription. Learn how to run `azd down` by going to [this section](#-remove-the-azure-resources).
+> After running `azd up`, you will have an MCP Server running on Azure that is publicly available. Ideally, you don't want that. Make sure to run `azd down` after finishing the lab to delete all the resources from your Azure subscription. Learn how to run `azd down` by going to [this section](#remove-the-azure-resources).
 
 Run the following command in the terminal:
 

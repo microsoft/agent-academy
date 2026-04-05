@@ -188,7 +188,7 @@ Before deploying into the field, ensure you have the following assets installed 
 
 #### Required Equipment
 
-- **Power Platform CLI (version 1.44+)** - Follow the deployment steps in the [Installing Power Platform CLI with .NET Tool](#-installing-power-platform-cli-with-net-tool) section above
+- **Power Platform CLI (version 1.44+)** - Follow the deployment steps in the [Installing Power Platform CLI with .NET Tool](#installing-power-platform-cli-with-net-tool) section above
 - **Visual Studio Code** - Download from [code.visualstudio.com](https://code.visualstudio.com/)
 - **GitHub Copilot extension** - Install from the VS Code Extensions marketplace
 
@@ -199,7 +199,7 @@ Before deploying into the field, ensure you have the following assets installed 
 
 #### MCP Configuration
 
-- **Power Platform CLI MCP Server** - Follow the complete setup instructions in the [⚙️ Setting Up PAC CLI MCP](#️-setting-up-pac-cli-mcp) section above to:
+- **Power Platform CLI MCP Server** - Follow the complete setup instructions in the [⚙️ Setting Up PAC CLI MCP](#setting-up-pac-cli-mcp) section above to:
   - Locate your `pac-mcp.exe` executable path
   - Wire the MCP server into Visual Studio Code
   - Verify the server is active and operational
