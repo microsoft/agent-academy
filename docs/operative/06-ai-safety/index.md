@@ -13,7 +13,7 @@ tags:
   - ai-safety
 products:
   - copilot-studio
-created-date: 2025-08-20
+created-date: 2026-01-14
 last-edited-date: 2026-03-31
 ---
 # 🚨 Mission 06: AI Safety and Content Moderation {#mission-06-ai-safety-and-content-moderation}

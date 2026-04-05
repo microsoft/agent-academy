@@ -13,7 +13,7 @@ tags:
   - declarative-agents
 products:
   - copilot-studio
-created-date: 2026-01-14
+created-date: 2025-08-20
 last-edited-date: 2026-02-19
 ---
 # 🚨 Mission 06: Create a custom agent using natural language with AI and grounding it with your data {#mission-06-create-a-custom-agent-using-natural-language-with-ai-and-grounding-it-with-your-data}

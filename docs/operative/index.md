@@ -3,7 +3,7 @@ next:
   text: 'Get started with the Hiring Agent'
   link: '/operative/01-get-started'
 lastUpdated: false
-created-date: 2025-08-20
+created-date: 2026-01-14
 last-edited-date: 2026-02-13
 ---
 
