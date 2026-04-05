@@ -15,17 +15,22 @@ import { withBase } from "vitepress";
 
 const props = defineProps<{
   section: "products" | "tags";
-  label: string;
+  label?: string;
 }>();
 
 const sectionLabel = props.section === "products" ? "Products" : "Tags";
 const sectionHref = withBase(`/${props.section}/`);
 
-const crumbs = [
-  { label: "Home", href: withBase("/") },
-  { label: sectionLabel, href: sectionHref },
-  { label: props.label },
-];
+const crumbs = props.label
+  ? [
+      { label: "Home", href: withBase("/") },
+      { label: sectionLabel, href: sectionHref },
+      { label: props.label },
+    ]
+  : [
+      { label: "Home", href: withBase("/") },
+      { label: sectionLabel },
+    ];
 </script>
 
 <style scoped>
