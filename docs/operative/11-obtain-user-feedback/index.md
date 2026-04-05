@@ -750,15 +750,15 @@ The field is yours.
 
 ## 📚 Tactical Resources {#tactical-resources}
 
-📖 [Collect thumbs up or down feedback and comments for your agents](https://learn.microsoft.com/power-platform/release-plan/2025wave1/microsoft-copilot-studio/collect-thumbs-up-or-down-feedback-comments-agents?source=recommendations?WT.mc_id=power-188561-ebenitez)
+- 📖 [Collect thumbs up or down feedback and comments for your agents](https://learn.microsoft.com/power-platform/release-plan/2025wave1/microsoft-copilot-studio/collect-thumbs-up-or-down-feedback-comments-agents?source=recommendations?WT.mc_id=power-188561-ebenitez)
 
-📖 [Enable enhanced user feedback for Copilot and related experiences](https://learn.microsoft.com/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-feedback?WT.mc_id=power-188561-ebenitez)
+- 📖 [Enable enhanced user feedback for Copilot and related experiences](https://learn.microsoft.com/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-feedback?WT.mc_id=power-188561-ebenitez)
 
-📖 [Analyze conversational agent effectiveness](https://learn.microsoft.com/microsoft-copilot-studio/analytics-improve-agent-effectiveness?WT.mc_id=power-188561-ebenitez)
+- 📖 [Analyze conversational agent effectiveness](https://learn.microsoft.com/microsoft-copilot-studio/analytics-improve-agent-effectiveness?WT.mc_id=power-188561-ebenitez)
 
-📖 [Application Insights telemetry with Microsoft Copilot Studio](https://learn.microsoft.com/dynamics365/guidance/resources/copilot-studio-appinsights?WT.mc_id=power-188561-ebenitez)
+- 📖 [Application Insights telemetry with Microsoft Copilot Studio](https://learn.microsoft.com/dynamics365/guidance/resources/copilot-studio-appinsights?WT.mc_id=power-188561-ebenitez)
 
-📖 [Obtain feedback for every response](https://learn.microsoft.com/microsoft-copilot-studio/guidance/adaptive-card-add-feedback-for-every-response?WT.mc_id=power-188561-ebenitez)
+- 📖 [Obtain feedback for every response](https://learn.microsoft.com/microsoft-copilot-studio/guidance/adaptive-card-add-feedback-for-every-response?WT.mc_id=power-188561-ebenitez)
 
 <!-- markdownlint-disable-next-line MD033 -->
 <img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/11-obtain-user-feedback" alt="Analytics" />

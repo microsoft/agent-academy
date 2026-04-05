@@ -36,7 +36,7 @@ Let’s launch your agent into action.
 
 ## 🔎 Objectives {#objectives}
 
-📖 This lesson covers:
+- 📖 This lesson covers:
 
 1. Why it's important to publish your agent
 1. What happens when you publish your agent
