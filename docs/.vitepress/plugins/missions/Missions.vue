@@ -350,6 +350,11 @@ const visiblePages = computed<PageItem[]>(() => {
   color: #fff;
 }
 
+:root.dark .pager-pill.active {
+  background: var(--vp-c-brand-2, #5468d4);
+  border-color: var(--vp-c-brand-2, #5468d4);
+}
+
 .pager-arrow {
   font-size: 1.1rem;
 }
@@ -361,7 +366,7 @@ const visiblePages = computed<PageItem[]>(() => {
 
 .pager-ellipsis {
   font-size: 0.85rem;
-  color: var(--vp-c-text-3);
+  color: var(--vp-c-text-2);
   padding: 0 0.15rem;
 }
 
