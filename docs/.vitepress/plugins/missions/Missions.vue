@@ -15,6 +15,7 @@
           <img :src="withBase(mission.badge)" :alt="mission.title" />
         </div>
         <div class="mission-title">{{ mission.title }}</div>
+        <span v-if="displayDate(mission)" class="mission-date">{{ displayDate(mission) }}</span>
       </a>
     </div>
     <nav v-if="totalPages > 1" class="missions-pager" aria-label="Pagination">
@@ -67,8 +68,34 @@ const SECTION_LABELS: Record<string, string> = {
   "cowork-collective": "Cowork Collective",
 };
 
+function timeAgo(timestamp: number): string {
+  const seconds = Math.floor((Date.now() - timestamp) / 1000);
+  const intervals: [number, string][] = [
+    [31536000, "year"],
+    [2592000, "month"],
+    [86400, "day"],
+    [3600, "hour"],
+    [60, "minute"],
+  ];
+  for (const [secs, label] of intervals) {
+    const count = Math.floor(seconds / secs);
+    if (count >= 1) return `${count} ${label}${count > 1 ? "s" : ""} ago`;
+  }
+  return "just now";
+}
+
 function sectionLabel(section: string): string {
   return SECTION_LABELS[section] ?? section;
+}
+
+function displayDate(mission: { lastUpdated: number; createdAt: number }): string | null {
+  if (props.sort === "first-added" && mission.createdAt) {
+    return "Added " + timeAgo(mission.createdAt);
+  }
+  if (mission.lastUpdated) {
+    return "Updated " + timeAgo(mission.lastUpdated);
+  }
+  return null;
 }
 
 const sortedMissions = computed(() => {
@@ -149,7 +176,7 @@ const pagedMissions = computed(() => {
 <style scoped>
 .missions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   margin-top: 1rem;
 }
@@ -212,6 +239,12 @@ const pagedMissions = computed(() => {
   align-items: center;
 }
 
+.mission-date {
+  font-size: 0.75rem;
+  color: var(--vp-c-text-3);
+  margin-top: 0.25rem;
+}
+
 /* Section pill colors */
 .pill-special-ops { background: #fef3c7; color: #92400e; }
 .pill-recruit { background: #d1fae5; color: #065f46; }
@@ -269,5 +302,17 @@ const pagedMissions = computed(() => {
 .pager-arrow:disabled {
   opacity: 0.3;
   cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .missions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .missions-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

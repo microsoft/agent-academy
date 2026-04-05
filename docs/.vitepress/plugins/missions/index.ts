@@ -35,13 +35,58 @@ interface MissionData {
   createdAt: number;
 }
 
-function getGitTimestamp(filePath: string): number {
+function stripFrontmatter(raw: string): string {
+  return raw.replace(/^---[\r\n][\s\S]*?[\r\n]---[\r\n]?/, "");
+}
+
+function getFileAtCommit(
+  hash: string,
+  relPath: string,
+  repoRoot: string
+): string {
   try {
-    const stdout = execSync(`git log -1 --format=%ct "${filePath}"`, {
-      cwd: path.dirname(filePath),
+    return execSync(`git show ${hash}:"${relPath}"`, {
+      cwd: repoRoot,
       encoding: "utf-8",
-    }).trim();
-    return stdout ? parseInt(stdout, 10) * 1000 : 0;
+    });
+  } catch {
+    return "";
+  }
+}
+
+function getContentTimestamp(filePath: string, repoRoot: string): number {
+  try {
+    const relPath = path
+      .relative(repoRoot, filePath)
+      .replace(/\\/g, "/");
+
+    const log = execSync(
+      `git log -10 --format=%H:%ct -- "${relPath}"`,
+      { cwd: repoRoot, encoding: "utf-8" }
+    ).trim();
+
+    if (!log) return 0;
+
+    const commits = log.split(/\r?\n/).map((line) => {
+      const sep = line.indexOf(":");
+      return {
+        hash: line.substring(0, sep),
+        timestamp: parseInt(line.substring(sep + 1), 10) * 1000,
+      };
+    });
+
+    // Walk from newest to oldest, comparing content without frontmatter
+    for (let i = 0; i < commits.length - 1; i++) {
+      const curr = getFileAtCommit(commits[i].hash, relPath, repoRoot);
+      const prev = getFileAtCommit(commits[i + 1].hash, relPath, repoRoot);
+
+      if (stripFrontmatter(curr) !== stripFrontmatter(prev)) {
+        return commits[i].timestamp;
+      }
+    }
+
+    // Fallback to oldest commit in our window (likely initial creation)
+    return commits[commits.length - 1].timestamp;
   } catch {
     return 0;
   }
@@ -66,6 +111,7 @@ function extractH1(content: string): string {
 }
 
 function loadMissions(docsDir: string): MissionData[] {
+  const repoRoot = path.resolve(docsDir, "..");
   const missions: MissionData[] = [];
   const entries = fs.readdirSync(docsDir, { withFileTypes: true });
 
@@ -106,7 +152,7 @@ function loadMissions(docsDir: string): MissionData[] {
         badge,
         difficulty: frontmatter.difficulty ?? 0,
         tags: frontmatter.tags ?? [],
-        lastUpdated: getGitTimestamp(indexPath),
+        lastUpdated: getContentTimestamp(indexPath, repoRoot),
         createdAt: getGitCreatedAt(indexPath),
       });
     }
