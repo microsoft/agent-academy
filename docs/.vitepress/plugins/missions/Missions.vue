@@ -11,6 +11,9 @@
         <span class="mission-section-pill" :class="'pill-' + mission.section">
           {{ sectionLabel(mission.section) }}
         </span>
+        <span v-if="mission.difficulty" class="mission-difficulty-pill">
+          {{ '⭐'.repeat(mission.difficulty) }}
+        </span>
         <div v-if="mission.badge" class="mission-badge">
           <img :src="withBase(mission.badge)" :alt="mission.title" />
         </div>
@@ -252,6 +255,17 @@ const visiblePages = computed<PageItem[]>(() => {
   border-radius: 999px;
   background: var(--vp-c-default-soft);
   color: var(--vp-c-text-2);
+}
+
+.mission-difficulty-pill {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: var(--vp-c-default-soft);
 }
 
 .mission-badge {
