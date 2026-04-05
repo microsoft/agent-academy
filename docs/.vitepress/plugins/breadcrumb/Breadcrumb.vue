@@ -36,17 +36,18 @@ const crumbs = [
 .breadcrumb ol {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: baseline;
   gap: 0.25rem;
   list-style: none;
   margin: 0;
   padding: 0;
   font-size: 0.85rem;
+  line-height: 1.5;
 }
 
 .breadcrumb li {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 0.25rem;
 }
 
