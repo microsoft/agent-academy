@@ -92,11 +92,17 @@ function getContentTimestamp(filePath: string, repoRoot: string): number {
   }
 }
 
-function getGitCreatedAt(filePath: string): number {
+function getMergedAt(filePath: string, repoRoot: string): number {
   try {
+    const relPath = path
+      .relative(repoRoot, filePath)
+      .replace(/\\/g, "/");
+
+    // --first-parent follows only the main branch line, --diff-filter=A
+    // finds the merge commit that introduced the file on main
     const stdout = execSync(
-      `git log --reverse --format=%ct "${filePath}"`,
-      { cwd: path.dirname(filePath), encoding: "utf-8" }
+      `git log --first-parent --reverse --format=%ct -- "${relPath}"`,
+      { cwd: repoRoot, encoding: "utf-8" }
     ).trim();
     const first = stdout.split(/\r?\n/)[0];
     return first ? parseInt(first, 10) * 1000 : 0;
@@ -153,7 +159,7 @@ function loadMissions(docsDir: string): MissionData[] {
         difficulty: frontmatter.difficulty ?? 0,
         tags: frontmatter.tags ?? [],
         lastUpdated: getContentTimestamp(indexPath, repoRoot),
-        createdAt: getGitCreatedAt(indexPath),
+        createdAt: getMergedAt(indexPath, repoRoot),
       });
     }
   }
