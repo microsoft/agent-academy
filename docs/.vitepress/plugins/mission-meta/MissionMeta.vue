@@ -104,11 +104,12 @@ const hasAnything = computed(() => codename.value || difficulty.value || timeMin
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: baseline;
-  gap: 0.35rem 0.75rem;
+  gap: 0.4rem 1rem;
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1.1rem;
   margin: 0.75rem 0 1.25rem;
   border: 1px solid var(--vp-c-divider);
+  border-left: 3px solid var(--vp-c-brand-1);
   border-radius: 8px;
   background: var(--vp-c-bg-soft);
   font-size: 0.9rem;
@@ -125,18 +126,18 @@ const hasAnything = computed(() => codename.value || difficulty.value || timeMin
 .meta-label {
   font-weight: 600;
   color: var(--vp-c-text-2);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.07em;
   white-space: nowrap;
   align-self: baseline;
-  padding-top: 0.1rem;
+  padding-top: 0.15rem;
 }
 
 .meta-stars {
   display: flex;
   align-items: center;
-  gap: 0.15rem;
+  gap: 0.2rem;
 }
 
 .meta-star {
@@ -178,11 +179,15 @@ const hasAnything = computed(() => codename.value || difficulty.value || timeMin
 }
 
 .meta-value {
-  color: var(--vp-c-text-1);
-  background: var(--vp-c-default-soft);
-  padding: 0.15rem 0.5rem;
+  display: inline-block;
+  width: fit-content;
+  color: var(--vp-c-yellow-1, #92400e);
+  background: var(--vp-c-yellow-soft, #fef3c7);
+  padding: 0.15rem 0.6rem;
   border-radius: 4px;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
 }
 
 .meta-pills {
