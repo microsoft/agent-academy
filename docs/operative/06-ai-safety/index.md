@@ -608,5 +608,4 @@ In your next mission, you'll enhance your agents with multimodal capabilities to
 
 📖 [Microsoft Responsible AI Standard](https://www.microsoft.com/insidetrack/blog/responsible-ai-why-it-matters-and-how-were-infusing-it-into-our-internal-ai-projects-at-microsoft/?WT.mc_id=power-182762-scottdurow)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/06-ai-safety" alt="Analytics" />
+<analytics-tag section="operative" mission="06-ai-safety" />

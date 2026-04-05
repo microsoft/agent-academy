@@ -774,5 +774,4 @@ This is the end of **Lab 07 - Add a new topic with conversation nodes**, select 
 
 📺 [Add actions to agents using connectors](https://aka.ms/ai-in-action/copilot-studio/ep4)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/07-add-new-topic-with-trigger" alt="Analytics" />
+<analytics-tag section="recruit" mission="07-add-new-topic-with-trigger" />

@@ -8,6 +8,7 @@ import ProductsIndex from "../plugins/products-index/ProductsIndex.vue";
 import TagsIndex from "../plugins/tags-index/TagsIndex.vue";
 import Breadcrumb from "../plugins/breadcrumb/Breadcrumb.vue";
 import PageDates from "../plugins/page-dates/PageDates.vue";
+import AnalyticsTag from "../plugins/analytics-tag/AnalyticsTag.vue";
 import "./custom.css";
 
 export default {
@@ -24,5 +25,6 @@ export default {
     app.component("products-index", ProductsIndex);
     app.component("tags-index", TagsIndex);
     app.component("breadcrumb", Breadcrumb);
+    app.component("analytics-tag", AnalyticsTag);
   },
 } satisfies Theme;

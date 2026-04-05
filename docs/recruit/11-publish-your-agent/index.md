@@ -254,5 +254,4 @@ There are even more possibilities here. Your admin can change the global setup p
 
 🔗 [Publish channels documentation](https://learn.microsoft.com/microsoft-copilot-studio/publication-fundamentals-publish-channels)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/11-publish-your-agent" alt="Analytics" />
+<analytics-tag section="recruit" mission="11-publish-your-agent" />

@@ -529,5 +529,4 @@ Your enhanced document analysis capabilities are now ready for the advanced data
 
 📺 [AI Builder: JSON outputs in prompt builder](https://www.youtube.com/watch?v=F0fGnWrRY_I)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/07-multimodal-prompts" alt="Analytics" />
+<analytics-tag section="operative" mission="07-multimodal-prompts" />

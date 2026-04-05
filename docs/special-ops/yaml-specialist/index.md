@@ -640,5 +640,4 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 > [!TIP]
 > If you do not see the email, check your spam or junk folder.
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/special-ops/yaml-specialist" alt="Analytics" />
+<analytics-tag section="special-ops" mission="yaml-specialist" />

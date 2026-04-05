@@ -80,5 +80,4 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 
 Star our repository by going to our GitHub [repository](https://github.com/microsoft/agent-academy).
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/index" alt="Analytics" />
+<analytics-tag section="index" />

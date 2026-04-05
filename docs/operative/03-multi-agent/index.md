@@ -768,5 +768,4 @@ Your enhanced hiring system is now ready for the advanced features we'll add in 
 
 📺 [Agent-to-agent collaboration in Copilot Studio](https://youtu.be/d-oD3pApHAg?si=rwIHKhJTkjSvhTHw)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/03-multi-agent" alt="Analytics" />
+<analytics-tag section="operative" mission="03-multi-agent" />

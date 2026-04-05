@@ -367,5 +367,4 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 📖 [Power Platform CLI Documentation](https://learn.microsoft.com/power-platform/developer/cli/introduction)  
 📖 [GitHub Discussion: PAC CLI MCP Preview](https://github.com/microsoft/powerplatform-build-tools/discussions/1182)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/special-ops/pac-cli-mcp" alt="Analytics" />
+<analytics-tag section="special-ops" mission="pac-cli-mcp" />

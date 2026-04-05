@@ -130,5 +130,4 @@ Stay sharp, Recruit - your AI journey is just beginning!
 
 🔗 [Copilot Studio Documentation Home](https://learn.microsoft.com/microsoft-copilot-studio/)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/01-introduction-to-agents" alt="Analytics" />
+<analytics-tag section="recruit" mission="01-introduction-to-agents" />

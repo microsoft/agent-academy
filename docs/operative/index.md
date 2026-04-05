@@ -74,5 +74,4 @@ This academy is structured as a progressive series of field operations—each mi
 > ✅ Completing this curriculum earns you the **Operative** badge.  
 > 🔓 **Commander** will be unlocked in future phases.
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative" alt="Analytics" />
+<analytics-tag section="operative" />

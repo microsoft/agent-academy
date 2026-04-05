@@ -335,5 +335,4 @@ This is the end of **Lab 04 - Creating a Solution**, select the link below to mo
 
 🔗 [Overview of Git integration in Power Platform](https://learn.microsoft.com/power-platform/alm/git-integration/overview/?WT.mc_id=power-172615-ebenitez)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/04-creating-a-solution" alt="Analytics" />
+<analytics-tag section="recruit" mission="04-creating-a-solution" />

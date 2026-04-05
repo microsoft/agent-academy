@@ -265,5 +265,4 @@ Next up is [Mission 02](../02-agent-instructions/index.md): Agent Instructions
 📖 [Microsoft Copilot Studio - Create an agent](https://learn.microsoft.com/microsoft-copilot-studio/authoring-first-bot)    
 📖 [Microsoft Dataverse Documentation](https://learn.microsoft.com/power-apps/maker/data-platform)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/01-get-started" alt="Analytics" />
+<analytics-tag section="operative" mission="01-get-started" />

@@ -1043,5 +1043,4 @@ This is the end of **Lab 04 - Automating candidate application emails**, select 
 
 📖 [Data loss prevention for Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/admin-data-loss-prevention?WT.mc_id=power-188561-ebenitez)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/04-automate-triggers" alt="Analytics" />
+<analytics-tag section="operative" mission="04-automate-triggers" />

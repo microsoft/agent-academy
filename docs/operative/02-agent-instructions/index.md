@@ -141,5 +141,4 @@ Next up is [Mission 03](../03-multi-agent/index.md): Building multi-agent system
 📖 [Microsoft Copilot Studio - Authoring Instructions](https://learn.microsoft.com/microsoft-copilot-studio/authoring-instructions)  
 📖 [Guidance for Generative Mode](https://learn.microsoft.com/microsoft-copilot-studio/guidance/generative-mode-guidance)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/02-agent-instructions" alt="Analytics" />
+<analytics-tag section="operative" mission="02-agent-instructions" />

@@ -51,12 +51,6 @@ export default defineConfig({
         ],
       },
     ],
-    lastUpdated: {
-      text: 'Last updated at',
-      formatOptions: {
-        dateStyle: 'long'
-      }
-    },
     search: {
       provider: "local",
     },

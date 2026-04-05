@@ -521,5 +521,4 @@ This is the end of **Lab 05 - Understanding Agent Models**, select the link belo
 
 📖 [Provide feedback on Anthropic models](https://community.powerplatform.com/forums/thread/?groupid=db8f53c2-767d-47d6-a1ae-fe4c828a6553)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/05-model-selection" alt="Analytics" />
+<analytics-tag section="operative" mission="05-model-selection" />

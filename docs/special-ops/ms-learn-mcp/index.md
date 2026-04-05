@@ -267,5 +267,4 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 📖 [Model Context Protocol overview](https://modelcontextprotocol.io/introduction)  
 📖 [Copilot Studio MCP connections](https://learn.microsoft.com/microsoft-copilot-studio/connections-mcp)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/special-ops/ms-learn-mcp" alt="Analytics" />
+<analytics-tag section="special-ops" mission="ms-learn-mcp" />

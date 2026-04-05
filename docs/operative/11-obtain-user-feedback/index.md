@@ -760,5 +760,4 @@ The field is yours.
 
 📖 [Obtain feedback for every response](https://learn.microsoft.com/microsoft-copilot-studio/guidance/adaptive-card-add-feedback-for-every-response?WT.mc_id=power-188561-ebenitez)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/11-obtain-user-feedback" alt="Analytics" />
+<analytics-tag section="operative" mission="11-obtain-user-feedback" />

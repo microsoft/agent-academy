@@ -311,5 +311,4 @@ Great work, Operative! **Operation MCP Rendezvous** is now complete. You've succ
 
 📖 [Add users and assign licenses](https://learn.microsoft.com/microsoft-365/admin/add-users/add-users?view=o365-worldwide&WT.mc_id=power-215684-dlaskewitz)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/10-mcp" alt="Analytics" />
+<analytics-tag section="operative" mission="10-mcp" />

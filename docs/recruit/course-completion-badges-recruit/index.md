@@ -166,5 +166,4 @@ Learn more about Power Platform Advocacy:
 
 ⚡ [Power Platform Advocacy Hub](https://aka.ms/power-advocates)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/final-mission" alt="Analytics" />
+<analytics-tag section="recruit" mission="final-mission" />

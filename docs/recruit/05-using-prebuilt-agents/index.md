@@ -147,5 +147,4 @@ You've now successfully:
 
 ⏭️ [Move to **Creating a custom agent from scratch** lesson](../06-create-agent-from-conversation/index.md).
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/05-using-prebuilt-agents" alt="Analytics" />
+<analytics-tag section="recruit" mission="05-using-prebuilt-agents" />

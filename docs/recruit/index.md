@@ -68,5 +68,4 @@ This academy is broken into progressive lessons—each one designed as a field m
 > ✅ Completing this curriculum earns you the **Recruit** badge.  
 > 🔓 **Operative** and **Commander** will be unlocked in future phases.
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit" alt="Analytics" />
+<analytics-tag section="recruit" />

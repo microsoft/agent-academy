@@ -400,5 +400,4 @@ Great work, Operative! **Operation Doc Assembly** is now complete. You've succes
 
 📖 [Training: Create AI Builder prompts using your own Dataverse data](https://learn.microsoft.com/training/modules/ai-builder-grounded-prompts/?WT.mc_id=power-182762-apdunnam)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/09-document-generation" alt="Analytics" />
+<analytics-tag section="operative" mission="09-document-generation" />
