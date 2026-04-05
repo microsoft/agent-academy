@@ -6,6 +6,8 @@
       :href="withBase(`/tags/${item.slug}`)"
       class="taxonomy-card"
     >
+      <!-- safe: icon content is hardcoded in icons.ts, not user input -->
+      <svg v-if="icons[item.slug]" class="taxonomy-icon" viewBox="0 0 20 20" aria-hidden="true" v-html="icons[item.slug]" />
       <span class="taxonomy-label">{{ item.label }}</span>
       <span class="taxonomy-count">{{ missionCount(item.slug) }} mission{{ missionCount(item.slug) === 1 ? '' : 's' }}</span>
     </a>
@@ -16,6 +18,7 @@
 import { withBase } from "vitepress";
 import { missions } from "virtual:missions-data";
 import tagData from "../../data/tags.json";
+import { tagIcons as icons } from "../../data/icons";
 
 const items = tagData.filter(t =>
   missions.some(m => (m.tags ?? []).includes(t.slug))
@@ -37,8 +40,9 @@ function missionCount(slug: string): number {
 .taxonomy-card {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  padding: 0.75rem 1rem;
+  align-items: flex-start;
+  gap: 0.3rem;
+  padding: 0.85rem 1rem;
   border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
   background: var(--vp-c-bg-soft);
@@ -55,6 +59,13 @@ function missionCount(slug: string): number {
 .taxonomy-card:focus-visible {
   outline: 2px solid var(--vp-c-brand-1);
   outline-offset: 2px;
+}
+
+.taxonomy-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--vp-c-text-1);
+  margin-bottom: 0.25rem;
 }
 
 .taxonomy-label {
