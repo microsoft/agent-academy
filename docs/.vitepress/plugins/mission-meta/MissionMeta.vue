@@ -78,7 +78,7 @@ const products = computed(() =>
   (frontmatter.value.products ?? []).map((slug: string) => ({
     slug,
     label: PRODUCT_LABELS[slug] ?? slug,
-    href: withBase(`/products/${slug}`),
+    href: withBase(`/products/${slug}/`),
   }))
 );
 
@@ -86,7 +86,7 @@ const tags = computed(() =>
   (frontmatter.value.tags ?? []).map((slug: string) => ({
     slug,
     label: TAG_LABELS[slug] ?? slug,
-    href: withBase(`/tags/${slug}`),
+    href: withBase(`/tags/${slug}/`),
   }))
 );
 

@@ -3,7 +3,7 @@
     <a
       v-for="item in items"
       :key="item.slug"
-      :href="withBase(`/products/${item.slug}`)"
+      :href="withBase(`/products/${item.slug}/`)"
       class="taxonomy-card"
     >
       <img v-if="fileIcons[item.slug]" :src="withBase(fileIcons[item.slug])" :alt="item.label" class="taxonomy-icon taxonomy-icon--img" />

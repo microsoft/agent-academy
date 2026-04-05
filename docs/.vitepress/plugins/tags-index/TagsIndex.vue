@@ -3,7 +3,7 @@
     <a
       v-for="item in items"
       :key="item.slug"
-      :href="withBase(`/tags/${item.slug}`)"
+      :href="withBase(`/tags/${item.slug}/`)"
       class="taxonomy-card"
     >
       <!-- safe: icon content is hardcoded in icons.ts, not user input -->
