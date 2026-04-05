@@ -14,7 +14,14 @@ const EXCLUDED_DIRS = new Set([
   "includes",
   "our-team",
   "data",
+  "commander-preview",
 ]);
+
+const COURSE_BADGES: Record<string, string> = {
+  recruit: "/images/mcs-agent-academy-recruit-badge.png",
+  operative: "/images/mcs-agent-academy-operative-badge.png",
+  commander: "/images/mcs-agent-academy-commander-badge.png",
+};
 
 interface MissionData {
   title: string;
@@ -68,12 +75,13 @@ function loadMissions(docsDir: string): MissionData[] {
 
       let badge: string | null = null;
       if (frontmatter.badge) {
-        // Resolve relative badge path to URL path
         const badgeFsPath = path.resolve(
           path.dirname(indexPath),
           frontmatter.badge
         );
         badge = "/" + path.relative(docsDir, badgeFsPath).replace(/\\/g, "/");
+      } else if (COURSE_BADGES[sectionName]) {
+        badge = COURSE_BADGES[sectionName];
       }
 
       missions.push({
