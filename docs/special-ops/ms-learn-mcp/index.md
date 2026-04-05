@@ -10,6 +10,8 @@ badge: ./assets/Academy_LearnMCP.png
 products:
   - copilot-studio
   - microsoft-learn
+created-date: 2026-03-12
+last-edited-date: 2026-04-05
 ---
 
 # 📚 Microsoft Learn MCP Server {#microsoft-learn-mcp-server}

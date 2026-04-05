@@ -11,6 +11,8 @@ products:
   - copilot-studio
   - visual-studio-code
   - github-copilot
+created-date: 2026-03-13
+last-edited-date: 2026-04-05
 ---
 
 # 🧬 YAML Specialist {#yaml-specialist}

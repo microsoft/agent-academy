@@ -15,6 +15,8 @@ tags:
 products:
   - copilot-studio
   - power-automate
+created-date: 2025-08-28
+last-edited-date: 2026-04-05
 ---
 # Mission 04: Add Event Triggers to act autonomously
 

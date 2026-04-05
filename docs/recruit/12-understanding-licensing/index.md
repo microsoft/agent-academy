@@ -14,6 +14,8 @@ tags:
 products:
   - copilot-studio
   - microsoft-365
+created-date: 2025-07-10
+last-edited-date: 2026-04-05
 ---
 # 🚨 Mission 12: Understanding Licensing {#mission-12-understanding-licensing}
 

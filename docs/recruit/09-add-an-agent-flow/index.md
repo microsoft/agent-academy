@@ -14,6 +14,8 @@ tags:
 products:
   - copilot-studio
   - power-automate
+created-date: 2025-07-04
+last-edited-date: 2026-04-05
 ---
 # 🚨 Mission 09: Add an agent flow to your Topic for automation {#mission-09-add-an-agent-flow-to-your-topic-for-automation}
 

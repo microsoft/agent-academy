@@ -13,6 +13,8 @@ tags:
   - mcp
 products:
   - copilot-studio
+created-date: 2026-01-07
+last-edited-date: 2026-04-05
 ---
 # Mission 10: Integrate with MCP Servers
 

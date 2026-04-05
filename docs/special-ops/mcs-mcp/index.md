@@ -8,6 +8,8 @@ badge: ./assets/MCP_Joker_Badge.png
 products:
   - copilot-studio
   - visual-studio-code
+created-date: 2026-02-20
+last-edited-date: 2026-04-05
 ---
 # 🤖 Microsoft Copilot Studio ❤️ MCP {#microsoft-copilot-studio-mcp}
 

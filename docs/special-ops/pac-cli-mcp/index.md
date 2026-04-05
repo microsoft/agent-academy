@@ -12,6 +12,8 @@ products:
   - github-copilot
   - visual-studio-code
   - power-platform
+created-date: 2026-02-20
+last-edited-date: 2026-04-05
 ---
 # ⚡ Power Platform CLI MCP Server {#power-platform-cli-mcp-server}
 

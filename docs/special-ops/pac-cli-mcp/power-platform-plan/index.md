@@ -3,6 +3,8 @@ prev:
   text: 'Power Platform CLI MCP'
   link: '/special-ops/pac-cli-mcp'
 aside: false
+created-date: 2026-02-20
+last-edited-date: 2026-04-05
 ---
 # 🎯 Power Platform Tenant Governance Strategic Improvement Plan {#power-platform-tenant-governance-strategic-improvement-plan}
 

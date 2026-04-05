@@ -13,6 +13,8 @@ tags:
   - fundamentals
 products:
   - copilot-studio
+created-date: 2025-06-04
+last-edited-date: 2026-04-05
 ---
 # 🚨 Mission 02: Copilot Studio Fundamentals {#mission-02-copilot-studio-fundamentals}
 

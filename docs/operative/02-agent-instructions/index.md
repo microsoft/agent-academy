@@ -14,6 +14,8 @@ tags:
   - prompting
 products:
   - copilot-studio
+created-date: 2025-08-28
+last-edited-date: 2026-04-05
 ---
 # 🕵️‍♂️ Mission 02: Authoring Agent Instructions {#mission-02-authoring-agent-instructions}
 

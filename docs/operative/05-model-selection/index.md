@@ -14,6 +14,8 @@ tags:
 products:
   - copilot-studio
   - azure
+created-date: 2025-08-28
+last-edited-date: 2026-04-05
 ---
 # Understanding Agent Models and Response Formatting
 

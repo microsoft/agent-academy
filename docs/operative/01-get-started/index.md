@@ -13,6 +13,8 @@ tags:
   - fundamentals
 products:
   - copilot-studio
+created-date: 2025-08-28
+last-edited-date: 2026-04-05
 ---
 # 🚨 Mission 01: Get started with the Hiring Agent {#mission-01-get-started-with-the-hiring-agent}
 

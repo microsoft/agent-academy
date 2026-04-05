@@ -13,6 +13,8 @@ tags:
   - document-generation
 products:
   - copilot-studio
+created-date: 2026-01-07
+last-edited-date: 2026-04-05
 ---
 # Mission 09: Generate a Candidate Interview Questions Document
 
