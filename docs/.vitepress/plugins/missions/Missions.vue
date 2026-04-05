@@ -176,7 +176,7 @@ const pagedMissions = computed(() => {
 <style scoped>
 .missions-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.25rem;
   margin-top: 1rem;
 }
@@ -302,12 +302,6 @@ const pagedMissions = computed(() => {
 .pager-arrow:disabled {
   opacity: 0.3;
   cursor: not-allowed;
-}
-
-@media (max-width: 768px) {
-  .missions-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 480px) {

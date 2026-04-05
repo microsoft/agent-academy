@@ -8,12 +8,12 @@ Stay up to date with the latest activity across all missions.
 
 <!-- markdownlint-disable MD033 -->
 
-## Recently Updated
+## 🕐 Recently Updated
 
-<missions title="" sort="last-updated" order="descending" :max-rows="2" />
+<missions title="" sort="last-updated" order="descending" :max-rows="3" />
 
-## Recently Added
+## 🆕 Recently Added
 
-<missions title="" sort="first-added" order="descending" :max-rows="2" />
+<missions title="" sort="first-added" order="descending" :max-rows="3" />
 
 <!-- markdownlint-enable MD033 -->
