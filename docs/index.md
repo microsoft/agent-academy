@@ -28,6 +28,12 @@ Beyond the core ranks, the Academy also offers **Special Ops** — standalone, o
 
 🚀 [View Special Ops](./special-ops/index.md)
 
+## 🕐 Recently Updated
+
+<!-- markdownlint-disable MD033 -->
+<missions sort="last-updated" order="descending" />
+<!-- markdownlint-enable MD033 -->
+
 ## ⚠️ Before You Begin
 
 ### Progressive Difficulty

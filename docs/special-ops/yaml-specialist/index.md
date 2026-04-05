@@ -5,6 +5,7 @@ tags:
     - VS Code
     - GitHub Copilot
 difficulty: 3
+badge: ../assets/YAML_Specialist_Badge.png
 ---
 
 # 🧬 YAML Specialist
