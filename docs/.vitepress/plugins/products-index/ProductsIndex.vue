@@ -6,8 +6,9 @@
       :href="withBase(`/products/${item.slug}`)"
       class="taxonomy-card"
     >
+      <img v-if="fileIcons[item.slug]" :src="withBase(fileIcons[item.slug])" :alt="item.label" class="taxonomy-icon taxonomy-icon--img" />
       <!-- safe: icon content is hardcoded in icons.ts, not user input -->
-      <svg v-if="icons[item.slug]" class="taxonomy-icon" viewBox="0 0 20 20" aria-hidden="true" v-html="icons[item.slug]" />
+      <svg v-else-if="icons[item.slug]" class="taxonomy-icon" viewBox="0 0 24 24" aria-hidden="true" v-html="icons[item.slug]" />
       <span class="taxonomy-label">{{ item.label }}</span>
       <span class="taxonomy-count">{{ missionCount(item.slug) }} mission{{ missionCount(item.slug) === 1 ? '' : 's' }}</span>
     </a>
@@ -19,6 +20,15 @@ import { withBase } from "vitepress";
 import { missions } from "virtual:missions-data";
 import productData from "../../data/products.json";
 import { productIcons as icons } from "../../data/icons";
+
+// Products that have an official SVG file in /public/product-icons/
+const fileIcons: Record<string, string> = {
+  "copilot-studio":   "/product-icons/copilot-studio.svg",
+  "copilot-cowork":   "/product-icons/copilot-cowork.svg",
+  "dataverse":        "/product-icons/dataverse.svg",
+  "power-automate":   "/product-icons/power-automate.svg",
+  "power-platform":   "/product-icons/power-platform.svg",
+};
 
 const items = productData.filter(p =>
   missions.some(m => (m.products ?? []).includes(p.slug))
@@ -66,6 +76,10 @@ function missionCount(slug: string): number {
   height: 28px;
   color: var(--vp-c-text-1);
   margin-bottom: 0.25rem;
+}
+
+.taxonomy-icon--img {
+  object-fit: contain;
 }
 
 .taxonomy-label {
