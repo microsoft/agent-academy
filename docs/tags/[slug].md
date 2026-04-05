@@ -2,8 +2,10 @@
 aside: false
 ---
 
+<!-- markdownlint-disable MD033 -->
+<breadcrumb section="tags" :label="$params.label" />
+
 # {{ $params.label }}
 
-<!-- markdownlint-disable MD033 -->
 <missions :tag="$params.slug" :filterable="false" sort="alphabetical" />
 <!-- markdownlint-enable MD033 -->

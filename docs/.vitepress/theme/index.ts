@@ -6,6 +6,7 @@ import MissionMeta from "../plugins/mission-meta/MissionMeta.vue";
 import CourseMeta from "../plugins/course-meta/CourseMeta.vue";
 import ProductsIndex from "../plugins/products-index/ProductsIndex.vue";
 import TagsIndex from "../plugins/tags-index/TagsIndex.vue";
+import Breadcrumb from "../plugins/breadcrumb/Breadcrumb.vue";
 import "./custom.css";
 
 export default {
@@ -17,5 +18,6 @@ export default {
     app.component("course-meta", CourseMeta);
     app.component("products-index", ProductsIndex);
     app.component("tags-index", TagsIndex);
+    app.component("breadcrumb", Breadcrumb);
   },
 } satisfies Theme;
