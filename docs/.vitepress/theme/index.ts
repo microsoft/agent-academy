@@ -4,6 +4,8 @@ import VitePressMermaid from "../plugins/vitepress-mermaid/index.vue";
 import Missions from "../plugins/missions/Missions.vue";
 import MissionMeta from "../plugins/mission-meta/MissionMeta.vue";
 import CourseMeta from "../plugins/course-meta/CourseMeta.vue";
+import ProductsIndex from "../plugins/products-index/ProductsIndex.vue";
+import TagsIndex from "../plugins/tags-index/TagsIndex.vue";
 import "./custom.css";
 
 export default {
@@ -13,5 +15,7 @@ export default {
     app.component("missions", Missions);
     app.component("mission-meta", MissionMeta);
     app.component("course-meta", CourseMeta);
+    app.component("products-index", ProductsIndex);
+    app.component("tags-index", TagsIndex);
   },
 } satisfies Theme;
