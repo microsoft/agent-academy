@@ -37,6 +37,7 @@ const time = computed(() => {
   border-radius: 8px;
   background: var(--vp-c-bg-soft);
   font-size: 0.9rem;
+  max-width: 100%;
 }
 
 .course-meta-row {
@@ -62,7 +63,7 @@ const time = computed(() => {
 .course-meta-value {
   color: var(--vp-c-text-1);
   background: var(--vp-c-default-soft);
-  padding: 0.1rem 0.4rem;
+  padding: 0.15rem 0.5rem;
   border-radius: 4px;
   font-size: 0.85rem;
 }
