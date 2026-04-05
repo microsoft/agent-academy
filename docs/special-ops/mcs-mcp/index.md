@@ -7,6 +7,7 @@ description: Deploy an MCP Server and wire it up to Microsoft Copilot Studio.
 badge: ./assets/MCP_Joker_Badge.png
 products:
   - copilot-studio
+  - visual-studio-code
 ---
 # 🤖 Microsoft Copilot Studio ❤️ MCP {#microsoft-copilot-studio-mcp}
 
