@@ -22,6 +22,12 @@
       <button
         :disabled="page <= 1"
         class="pager-arrow"
+        aria-label="First page"
+        @click="page = 1"
+      >«</button>
+      <button
+        :disabled="page <= 1"
+        class="pager-arrow"
         aria-label="Previous page"
         @click="page--"
       >‹</button>
@@ -38,6 +44,12 @@
         aria-label="Next page"
         @click="page++"
       >›</button>
+      <button
+        :disabled="page >= totalPages"
+        class="pager-arrow"
+        aria-label="Last page"
+        @click="page = totalPages"
+      >»</button>
     </nav>
   </div>
 </template>
