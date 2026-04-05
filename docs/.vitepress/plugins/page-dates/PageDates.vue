@@ -36,9 +36,8 @@ function formatDate(raw: string | undefined): string {
 
 <style scoped>
 .page-dates {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--vp-c-divider);
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   font-size: 0.85rem;
   color: var(--vp-c-text-2);
   display: flex;
