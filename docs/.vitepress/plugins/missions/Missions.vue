@@ -11,6 +11,9 @@
         <div v-if="mission.badge" class="mission-badge">
           <img :src="withBase(mission.badge)" :alt="mission.title" />
         </div>
+        <span class="mission-section-pill" :class="'pill-' + mission.section">
+          {{ sectionLabel(mission.section) }}
+        </span>
         <div class="mission-title">{{ mission.title }}</div>
       </a>
     </div>
@@ -34,6 +37,17 @@ const props = withDefaults(
     order: "ascending",
   }
 );
+
+const SECTION_LABELS: Record<string, string> = {
+  "special-ops": "Special Ops",
+  recruit: "Recruit",
+  operative: "Operative",
+  "cowork-collective": "Cowork Collective",
+};
+
+function sectionLabel(section: string): string {
+  return SECTION_LABELS[section] ?? section;
+}
 
 const sortedMissions = computed(() => {
   let filtered = props.section
@@ -108,5 +122,56 @@ const sortedMissions = computed(() => {
   font-size: 0.95rem;
   text-align: center;
   line-height: 1.4;
+}
+
+.mission-section-pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.5rem;
+  background: var(--vp-c-default-soft);
+  color: var(--vp-c-text-2);
+}
+
+.pill-special-ops {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.pill-recruit {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.pill-operative {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.pill-cowork-collective {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+:root.dark .pill-special-ops {
+  background: #78350f;
+  color: #fef3c7;
+}
+
+:root.dark .pill-recruit {
+  background: #064e3b;
+  color: #d1fae5;
+}
+
+:root.dark .pill-operative {
+  background: #1e3a5f;
+  color: #dbeafe;
+}
+
+:root.dark .pill-cowork-collective {
+  background: #4c1d95;
+  color: #ede9fe;
 }
 </style>
