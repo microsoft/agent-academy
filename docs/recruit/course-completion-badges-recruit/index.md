@@ -17,7 +17,7 @@ products:
 # 🚨 Final Mission: Securing Your Recruit Badge {#final-mission-securing-your-recruit-badge}
 
 <!-- markdownlint-disable MD033 -->
-<course-meta />
+<mission-meta />
 <!-- markdownlint-enable MD033 -->
 
 ## 🎯 Mission Brief {#mission-brief}

@@ -18,7 +18,7 @@ products:
 # 🚨 Mission 09: Add an agent flow to your Topic for automation {#mission-09-add-an-agent-flow-to-your-topic-for-automation}
 
 <!-- markdownlint-disable MD033 -->
-<course-meta />
+<mission-meta />
 <!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**

@@ -19,7 +19,7 @@ products:
 # 🚨 Mission 11: Publish Your Agent {#mission-11-publish-your-agent}
 
 <!-- markdownlint-disable MD033 -->
-<course-meta />
+<mission-meta />
 <!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**

@@ -17,7 +17,7 @@ products:
 # Mission 10: Integrate with MCP Servers
 
 <!-- markdownlint-disable MD033 -->
-<course-meta />
+<mission-meta />
 <!-- markdownlint-enable MD033 -->
 
 [![MCP](./assets/10-mcp-thumbnail_PlayButton.png)](https://youtu.be/kW2f8Z8fzBw?si=rDg7uFQCIDUe_Q_H "Watch the walkthrough on YouTube")

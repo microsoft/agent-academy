@@ -18,7 +18,7 @@ products:
 # 🚨 Mission 07: Extracting Resume Contents with Multimodal Prompts {#mission-07-extracting-resume-contents-with-multimodal-prompts}
 
 <!-- markdownlint-disable MD033 -->
-<course-meta />
+<mission-meta />
 <!-- markdownlint-enable MD033 -->
 
 [![MultiModal](./assets/07-multi-modal-prompts-thumbnail.png)](https://youtu.be/icP_qH8LFK8?si=VJjtdVi-ytUq0ymg "Watch the walkthrough on YouTube")

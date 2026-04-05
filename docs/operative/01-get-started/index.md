@@ -17,7 +17,7 @@ products:
 # 🚨 Mission 01: Get started with the Hiring Agent {#mission-01-get-started-with-the-hiring-agent}
 
 <!-- markdownlint-disable MD033 -->
-<course-meta />
+<mission-meta />
 <!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**

@@ -19,7 +19,7 @@ products:
 # 🧰 Mission 05: Using a Pre-Built Agent   {#mission-05-using-a-pre-built-agent}
 
 <!-- markdownlint-disable MD033 -->
-<course-meta />
+<mission-meta />
 <!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**

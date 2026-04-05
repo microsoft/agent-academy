@@ -18,7 +18,7 @@ products:
 # Understanding Agent Models and Response Formatting
 
 <!-- markdownlint-disable MD033 -->
-<course-meta />
+<mission-meta />
 <!-- markdownlint-enable MD033 -->
 
 [![Model-Selection](./assets/05-model-selection_Thumbnail_PlayButton.png)](https://youtu.be/c5rqNQt2Mmc?si=zrJ7nQYoto9UlHFj "Watch the walkthrough on YouTube")

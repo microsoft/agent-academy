@@ -18,7 +18,7 @@ products:
 # Collecting feedback from users
 
 <!-- markdownlint-disable MD033 -->
-<course-meta />
+<mission-meta />
 <!-- markdownlint-enable MD033 -->
 
 [![Feedback](./assets/11-collecting-feedback_Thumbnail_PlayButton.png)](https://youtu.be/QRBimOsgKEQ?si=05sjJwz6tv4MO6Z6 "Watch the walkthrough on YouTube")

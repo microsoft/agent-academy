@@ -17,7 +17,7 @@ products:
 # 🚨 Mission 08: Enhance user interactions in Topics with Adaptive Cards {#mission-08-enhance-user-interactions-in-topics-with-adaptive-cards}
 
 <!-- markdownlint-disable MD033 -->
-<course-meta />
+<mission-meta />
 <!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**

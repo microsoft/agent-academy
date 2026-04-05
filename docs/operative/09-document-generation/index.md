@@ -17,7 +17,7 @@ products:
 # Mission 09: Generate a Candidate Interview Questions Document
 
 <!-- markdownlint-disable MD033 -->
-<course-meta />
+<mission-meta />
 <!-- markdownlint-enable MD033 -->
 
 [![Doc Gen](./assets/09-doc-gen_thumbnail_PlayButton.png)](https://youtu.be/GYSEI0jbCvk?si=lYPZ4cmlxZ8-XBmi "Watch the walkthrough on YouTube")

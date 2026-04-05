@@ -14,7 +14,6 @@ export default {
     app.component("vitepress-mermaid", VitePressMermaid);
     app.component("missions", Missions);
     app.component("mission-meta", MissionMeta);
-    app.component("course-meta", MissionMeta);
     app.component("products-index", ProductsIndex);
     app.component("tags-index", TagsIndex);
     app.component("breadcrumb", Breadcrumb);
