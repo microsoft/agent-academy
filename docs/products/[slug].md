@@ -4,9 +4,9 @@ aside: false
 
 <script setup>
 import { useData } from 'vitepress'
-import { useHead } from '@unhead/vue'
+import { onMounted } from 'vue'
 const { params } = useData()
-useHead({ title: params.value.label + ' | Agent Academy' })
+onMounted(() => { document.title = params.value.label + ' | Agent Academy' })
 </script>
 
 <!-- markdownlint-disable MD033 -->
