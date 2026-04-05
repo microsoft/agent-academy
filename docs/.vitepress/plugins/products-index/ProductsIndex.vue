@@ -24,7 +24,6 @@ import { productIcons as icons } from "../../data/icons";
 // Products that have an official SVG file in /public/product-icons/
 const fileIcons: Record<string, string> = {
   "azure":                  "/product-icons/azure.svg",
-  "copilot-cowork":         "/product-icons/copilot-cowork.svg",
   "copilot-studio":         "/product-icons/copilot-studio.svg",
   "dataverse":              "/product-icons/dataverse.svg",
   "github-copilot":         "/product-icons/github-copilot.svg",
