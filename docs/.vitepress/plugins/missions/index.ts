@@ -1,7 +1,7 @@
 import type { Plugin } from "vite";
 import path from "node:path";
 import fs from "node:fs";
-import { execSync } from "node:child_process";
+import { execFileSync } from "node:child_process";
 import matter from "gray-matter";
 
 const VIRTUAL_MODULE_ID = "virtual:missions-data";
@@ -45,7 +45,7 @@ function getFileAtCommit(
   repoRoot: string
 ): string {
   try {
-    return execSync(`git show ${hash}:"${relPath}"`, {
+    return execFileSync("git", ["show", `${hash}:${relPath}`], {
       cwd: repoRoot,
       encoding: "utf-8",
     });
@@ -60,8 +60,8 @@ function getContentTimestamp(filePath: string, repoRoot: string): number {
       .relative(repoRoot, filePath)
       .replace(/\\/g, "/");
 
-    const log = execSync(
-      `git log -10 --format=%H:%ct -- "${relPath}"`,
+    const log = execFileSync(
+      "git", ["log", "-10", "--format=%H:%ct", "--", relPath],
       { cwd: repoRoot, encoding: "utf-8" }
     ).trim();
 
@@ -100,8 +100,8 @@ function getMergedAt(filePath: string, repoRoot: string): number {
 
     // --first-parent follows only the main branch line, --diff-filter=A
     // finds the merge commit that introduced the file on main
-    const stdout = execSync(
-      `git log --first-parent --reverse --format=%ct -- "${relPath}"`,
+    const stdout = execFileSync(
+      "git", ["log", "--first-parent", "--reverse", "--format=%ct", "--", relPath],
       { cwd: repoRoot, encoding: "utf-8" }
     ).trim();
     const first = stdout.split(/\r?\n/)[0];
@@ -146,7 +146,12 @@ function loadMissions(docsDir: string): MissionData[] {
           path.dirname(indexPath),
           frontmatter.badge
         );
-        badge = "/" + path.relative(docsDir, badgeFsPath).replace(/\\/g, "/");
+        // Prevent path traversal outside docsDir
+        if (!badgeFsPath.startsWith(docsDir + path.sep) && badgeFsPath !== docsDir) {
+          badge = null;
+        } else {
+          badge = "/" + path.relative(docsDir, badgeFsPath).replace(/\\/g, "/");
+        }
       } else if (COURSE_BADGES[sectionName]) {
         badge = COURSE_BADGES[sectionName];
       }
@@ -156,7 +161,7 @@ function loadMissions(docsDir: string): MissionData[] {
         section: sectionName,
         url: `/${sectionName}/${sub.name}/`,
         badge,
-        difficulty: frontmatter.difficulty ?? 0,
+        difficulty: Math.min(Math.max(Number(frontmatter.difficulty) || 0, 0), 5),
         tags: frontmatter.tags ?? [],
         lastUpdated: getContentTimestamp(indexPath, repoRoot),
         createdAt: getMergedAt(indexPath, repoRoot),
