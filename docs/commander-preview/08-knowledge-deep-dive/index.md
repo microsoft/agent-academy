@@ -7,15 +7,15 @@ next:
   link: '/commander-preview/09-handoff-to-human'
 ---
 
-# 📚 Mission 08: Knowledge Deep Dive
+# 📚 Mission 08: Knowledge Deep Dive {#mission-08-knowledge-deep-dive}
 
-## 🕵️‍♂️ **CLASSIFIED**
+## 🕵️‍♂️ **CLASSIFIED** {#classified}
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Optimize websites for agent ingestion, connect SharePoint and OneDrive content while understanding limitations and how your agent reasons over information. Use Bing Search for dynamic external knowledge retrieval. Understand security and identity topics on how information is accessed and used.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -25,7 +25,7 @@ In this mission, you'll learn:
 1. How to use Bing Search for dynamic external knowledge retrieval
 1. How security and identity govern knowledge access and usage
 
-## 📖 References
+## 📖 References {#references}
 
 - [Knowledge sources](https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio)
 - [Guidance for public websites](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-ai-public-websites)

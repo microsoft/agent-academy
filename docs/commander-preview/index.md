@@ -17,7 +17,7 @@ Your elite mission, should you choose to accept it, is to master the most advanc
 
 This advanced training takes you beyond multi-agent orchestration into the cutting edge of agent development: from computer-using agents and code interpretation to voice-enabled experiences, governance, and deployment at scale.
 
-## 🧬 Who This Is For
+## 🧬 Who This Is For {#who-this-is-for}
 
 This elite course is ideal for:
 
@@ -27,7 +27,7 @@ This elite course is ideal for:
 - **AI specialists** extending Copilot Studio with Azure AI and custom models
 - Anyone ready to **command** the full breadth of Copilot Studio capabilities
 
-## 🧭 Curriculum Overview
+## 🧭 Curriculum Overview {#curriculum-overview}
 
 This academy is structured as a progressive series of advanced operations. Each mission deepens your mastery of enterprise agent capabilities.
 

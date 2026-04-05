@@ -14,7 +14,7 @@ Your advanced mission—should you choose to accept it—is to master the art of
 
 This intensive training takes you beyond basic agent creation into the sophisticated world of **multi-agent orchestration**: from hiring automation to AI safety, you'll learn to build, coordinate, and deploy intelligent agent ecosystems using real-world enterprise scenarios.
 
-## 🎯 Mission Objective
+## 🎯 Mission Objective {#mission-objective}
 
 By completing the Agent Academy Operative program, you'll be able to:
 
@@ -24,7 +24,7 @@ By completing the Agent Academy Operative program, you'll be able to:
 - Build **multi-modal prompts** for document processing, creation and analysis
 - Configure **governance and testing**
 
-## 🧪 Prerequisites
+## 🧪 Prerequisites {#prerequisites}
 
 Before starting this mission, you'll need:
 
@@ -39,7 +39,7 @@ Before starting this mission, you'll need:
 >
 > If you already have a Microsoft 365 business tenant with Power Platform and Copilot Studio access, you're good to go.
 
-## 🧬 Who This Is For
+## 🧬 Who This Is For {#who-this-is-for}
 
 This advanced course is ideal for:
 
@@ -49,7 +49,7 @@ This advanced course is ideal for:
 - **Business analysts** creating complex automation workflows
 - Anyone ready to **level up** from basic agents to enterprise systems
 
-## 🧭 Curriculum Overview
+## 🧭 Curriculum Overview {#curriculum-overview}
 
 This academy is structured as a progressive series of field operations—each mission builds upon the previous to create a comprehensive hiring automation system.
 

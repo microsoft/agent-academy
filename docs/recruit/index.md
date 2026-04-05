@@ -14,7 +14,7 @@ Your mission—should you choose to accept it—is to master the art of building
 
 This hands-on training is your entry point into the **world of agents**: from grounded prompts to Adaptive Cards and agent flows, you'll learn how to build, scale, and deploy intelligent agents using real-world tools and use cases.
 
-## 🎯 Mission Objective
+## 🎯 Mission Objective {#mission-objective}
 
 By completing the Agent Academy, you'll be able to:
 
@@ -24,7 +24,7 @@ By completing the Agent Academy, you'll be able to:
 - Enhance agents with **Topics**, **Adaptive Cards**, and **Agent Flows**
 - Deploy agents to **Microsoft Teams** and **Microsoft 365 Copilot**
 
-## 🧪 Prerequisites
+## 🧪 Prerequisites {#prerequisites}
 
 To complete all missions, you’ll need:
 
@@ -32,7 +32,7 @@ To complete all missions, you’ll need:
 - Access to **Microsoft Copilot Studio** (trial or licensed)
 - Optional: Basic knowledge of SharePoint, Power Platform, or Power Fx
 
-## 🧬 Who This Is For
+## 🧬 Who This Is For {#who-this-is-for}
 
 This course is ideal for:
 
@@ -41,7 +41,7 @@ This course is ideal for:
 - Power Platform enthusiasts who want to **level up** with intelligent agents
 - Anyone who prefers to learn by **doing**
 
-## 🧭 Curriculum Overview
+## 🧭 Curriculum Overview {#curriculum-overview}
 
 This academy is broken into progressive lessons—each one designed as a field mission to level up your agent-building skills.
 

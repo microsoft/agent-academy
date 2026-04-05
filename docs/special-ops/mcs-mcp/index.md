@@ -5,7 +5,7 @@ tags:
 difficulty: 3
 badge: ./assets/MCP_Joker_Badge.png
 ---
-# 🤖 Microsoft Copilot Studio ❤️ MCP
+# 🤖 Microsoft Copilot Studio ❤️ MCP {#microsoft-copilot-studio-mcp}
 
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="./assets/MCP_Joker_Badge.png" alt="MCP Joker Badge" width="220" /></p>
@@ -14,7 +14,7 @@ badge: ./assets/MCP_Joker_Badge.png
 
 Welcome, agent. Your mission — should you choose to accept it — is to deploy an **MCP Server** behind enemy lines and wire it up to **Microsoft Copilot Studio**. Expect turbulence. Trust the protocol. Leave no endpoint unconfigured. 🎯
 
-## ❓ What is MCP?
+## ❓ What is MCP? {#what-is-mcp}
 
 [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) is an open protocol that standardizes how applications provide context to LLMs, defined by [Anthropic](https://www.anthropic.com/). MCP provides a standardized way to connect AI models to different data sources and tools. MCP allows makers to seamlessly integrate existing knowledge servers and APIs directly into Copilot Studio.
 
@@ -26,7 +26,7 @@ MCP servers are made available to Copilot Studio using connector infrastructure,
 
 So, MCP and connectors are really **better together**.
 
-## ⚙️ Prerequisites
+## ⚙️ Prerequisites {#prerequisites}
 
 - Visual Studio Code installed ([download](https://code.visualstudio.com/download))
 - Node v22 (ideally installed via [nvm for Windows](https://github.com/coreybutler/nvm-windows) or [nvm](https://github.com/nvm-sh/nvm))
@@ -35,7 +35,7 @@ So, MCP and connectors are really **better together**.
 - Azure Subscription (with payment method added)
 - Copilot Studio trial or developer account
 
-## ⚖️ Choice: Run the server locally or deploy to Azure
+## ⚖️ Choice: Run the server locally or deploy to Azure {#choice-run-the-server-locally-or-deploy-to-azure}
 
 Now you have a choice! You either run the server locally - or you can deploy it to Azure.
 
@@ -49,7 +49,7 @@ There are a couple of steps that you need to do for both:
 
 1. Open the terminal in Visual Studio Code by pressing `ctrl` + `` ` `` (Windows/Linux) or `cmd` + `` ` `` (Mac)
 
-### 🏃‍♀️ Run the MCP Server Locally
+### 🏃‍♀️ Run the MCP Server Locally {#run-the-mcp-server-locally}
 
 1. Run the following command to install the dependencies:
 
@@ -93,7 +93,7 @@ If all went well, you will see the following error message:
 
 Don't worry - this error message is nothing to be worried about!
 
-### 🌎 Deploy to Azure
+### 🌎 Deploy to Azure {#deploy-to-azure}
 
 > [!IMPORTANT]
 > As listed in the [prerequisites](#️-prerequisites), the [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd) needs to be installed on your machine for this part.
@@ -123,7 +123,7 @@ You should again see the following error:
 {"jsonrpc":"2.0","error":{"code":-32000,"message":"Method not allowed."},"id":null}
 ```
 
-## 👨‍💻 Use the Jokes MCP Server in Visual Studio Code / GitHub Copilot
+## 👨‍💻 Use the Jokes MCP Server in Visual Studio Code / GitHub Copilot {#use-the-jokes-mcp-server-in-visual-studio-code-github-copilot}
 
 To use the Jokes MCP Server, you need to use the URL of your server (can be either your devtunnel URL or your deployed Azure Container App) with the `/mcp` part at the end and add it as an MCP Server in Visual Studio Code.
 
@@ -164,7 +164,7 @@ This should give you a response like this:
 
 Now you have added the `JokesMCP` server to Visual Studio Code!
 
-## 👨‍💻 Use the Jokes MCP Server in Microsoft Copilot Studio
+## 👨‍💻 Use the Jokes MCP Server in Microsoft Copilot Studio {#use-the-jokes-mcp-server-in-microsoft-copilot-studio}
 
 To use the Jokes MCP Server in Microsoft Copilot Studio, you need to create an agent and then add it as an MCP server.
 
@@ -332,7 +332,7 @@ To use the Jokes MCP Server in Microsoft Copilot Studio, you need to create an a
 
 And that was the Jokes MCP Server working in Microsoft Copilot Studio.
 
-## ❌ Remove the Azure resources
+## ❌ Remove the Azure resources {#remove-the-azure-resources}
 
 If you have deployed the MCP server to Azure, don't forget to remove the Azure resources. To remove the Azure resources after finishing the lab, run the following command in the terminal:
 
@@ -344,7 +344,7 @@ This command will show you the resources that will be deleted and then ask you t
 
 ![resources deleted](./assets/azd-down-confirmation.png)
 
-## 🏅 Claim your completion badge
+## 🏅 Claim your completion badge {#claim-your-completion-badge}
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="./assets/MCP_Joker_Badge.png" alt="MCP Joker Badge" width="220" /></p>
 
@@ -359,7 +359,7 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 > [!TIP]
 > If you do not see the email, check your spam or junk folder.
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 - 📖 [Microsoft Copilot Studio MCP announcement blog](https://aka.ms/mcsmcp)
 - 📖 [Microsoft Copilot Studio MCP docs](http://aka.ms/mcsmcpdocs)

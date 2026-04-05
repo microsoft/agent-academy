@@ -7,15 +7,15 @@ next:
   link: '/commander-preview/08-knowledge-deep-dive'
 ---
 
-# 🧠 Mission 07: Extend with Azure AI & BYOM
+# 🧠 Mission 07: Extend with Azure AI & BYOM {#mission-07-extend-with-azure-ai-byom}
 
-## 🕵️‍♂️ **CLASSIFIED**
+## 🕵️‍♂️ **CLASSIFIED** {#classified}
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Use Azure AI Search for enterprise data retrieval, Azure AI Foundry for bring-your-own-data copilots, and BYOM to run custom or fine-tuned models. Add prompts as reusable tools inside topics to extend agent capabilities.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -24,7 +24,7 @@ In this mission, you'll learn:
 1. How to bring your own models (BYOM) with custom or fine-tuned models
 1. How to add prompts as reusable tools inside topics
 
-## 📖 References
+## 📖 References {#references}
 
 - [Azure AI Search](https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-azure-ai-search)
 - [Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/use-your-data)

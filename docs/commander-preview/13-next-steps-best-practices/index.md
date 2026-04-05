@@ -4,15 +4,15 @@ prev:
   link: '/commander-preview/12-deploy-solutions-pipelines'
 ---
 
-# 🏁 Mission 13: Next Steps and Best Practices
+# 🏁 Mission 13: Next Steps and Best Practices {#mission-13-next-steps-and-best-practices}
 
-## 🕵️‍♂️ **CLASSIFIED**
+## 🕵️‍♂️ **CLASSIFIED** {#classified}
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Apply the Copilot Studio Implementation Guide for real-world deployments. Use Power CAT tools, monitoring dashboards, and the Well-Architected Framework for long-term governance and operational excellence.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -21,7 +21,7 @@ In this mission, you'll learn:
 1. How to set up monitoring and governance dashboards
 1. How to use the Well-Architected Framework for long-term operational excellence
 
-## 📖 References
+## 📖 References {#references}
 
 - [Copilot Studio Implementation Guide](https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/new-microsoft-copilot-studio-implementation-guide/)
 - [Well-Architected Framework](https://learn.microsoft.com/en-us/power-platform/well-architected/operational-excellence/tools-processes)

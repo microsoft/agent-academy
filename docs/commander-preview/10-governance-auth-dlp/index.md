@@ -7,15 +7,15 @@ next:
   link: '/commander-preview/11-test-monitor-debug'
 ---
 
-# 🔐 Mission 10: Governance Essentials with Authentication, Channels & DLP
+# 🔐 Mission 10: Governance Essentials with Authentication, Channels & DLP {#mission-10-governance-essentials-with-authentication-channels-dlp}
 
-## 🕵️‍♂️ **CLASSIFIED**
+## 🕵️‍♂️ **CLASSIFIED** {#classified}
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Secure agent access using Single Sign-On with Entra ID and manual authentication for APIs. Compare Streaming API vs Direct Line for embedding agents in custom apps. Prevent anonymous access using DLP policies.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -24,7 +24,7 @@ In this mission, you'll learn:
 1. How to compare Streaming API vs Direct Line for custom app embedding
 1. How to prevent anonymous access using DLP policies
 
-## 📖 References
+## 📖 References {#references}
 
 - [Single Sign-On](https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-sso)
 - [Manual authentication](https://learn.microsoft.com/en-us/microsoft-copilot-studio/configuration-end-user-authentication)

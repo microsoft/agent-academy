@@ -7,15 +7,15 @@ next:
   link: '/commander-preview/06-localization'
 ---
 
-# 🎙️ Mission 05: Voice-enabled Agents
+# 🎙️ Mission 05: Voice-enabled Agents {#mission-05-voice-enabled-agents}
 
-## 🕵️‍♂️ **CLASSIFIED**
+## 🕵️‍♂️ **CLASSIFIED** {#classified}
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Build agents with interactive voice response (IVR) capabilities using the Voice template. Handle phone calls with speech and dual-tone multi-frequency (DTMF) input. DTMF allows your agent users to use their phone keypad to select options or provide information. Configure barge-in so users can interrupt, set up silence detection and timeouts, customize your agent's voice with Speech Synthesis Markup Language (SSML), and manage call flow with call transfer and termination. Use Azure Communication Services to provision phone numbers for your agent.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -25,7 +25,7 @@ In this mission, you'll learn:
 1. How to manage call flow with latency messages, call transfer, and termination
 1. How to provision phone numbers with Azure Communication Services
 
-## 📖 References
+## 📖 References {#references}
 
 - [Voice overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/voice-overview)
 - [Voice template](https://learn.microsoft.com/en-us/microsoft-copilot-studio/voice-build-from-template)

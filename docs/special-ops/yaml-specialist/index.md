@@ -8,7 +8,7 @@ difficulty: 3
 badge: ../assets/YAML_Specialist_Badge.png
 ---
 
-# 🧬 YAML Specialist
+# 🧬 YAML Specialist {#yaml-specialist}
 
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="../assets/YAML_Specialist_Badge.png" alt="YAML Specialist Badge" width="220" /></p>
@@ -25,7 +25,7 @@ Welcome, agent. Your mission - should you choose to accept it - is to become a *
 - Leverage GitHub Copilot Agent Mode with specialized skills to generate and refine agent YAML
 - Synchronize local changes back to Copilot Studio and test the agent in the cloud
 
-## ⚙️ Prerequisites
+## ⚙️ Prerequisites {#prerequisites}
 
 This mission assumes you have completed the [Operative course](/operative/) and have a working Copilot Studio environment. In addition, make sure you have the following installed:
 
@@ -35,7 +35,7 @@ This mission assumes you have completed the [Operative course](/operative/) and 
 > [!TIP]
 > If you already have VS Code installed, you can install the GitHub Copilot and Copilot Studio extensions later during the hands-on labs. The labs walk you through each extension installation step by step.
 
-## ❓ What is YAML Authoring for Copilot Studio?
+## ❓ What is YAML Authoring for Copilot Studio? {#what-is-yaml-authoring-for-copilot-studio}
 
 > [!INFO] What is YAML?
 > YAML is a simple text format for storing structured information. Think of it like a well-organized outline - instead of using curly braces or angle brackets, YAML uses **indentation** (spaces) to show how things are nested. This makes it easy to read even if you've never seen it before. For example:
@@ -80,7 +80,7 @@ This is how professional agent developers work - treating agent definitions as c
 > [!TIP]
 > You don't have to choose one or the other. Many teams use the web UI for initial prototyping and switch to YAML authoring for production-grade development. Changes made in the web UI can be pulled down with a **Get** operation, and local YAML changes can be pushed up with **Apply**.
 
-## 📁 The Agent Definition File Structure
+## 📁 The Agent Definition File Structure {#the-agent-definition-file-structure}
 
 When you clone a Copilot Studio agent, the extension creates a structured directory on your machine. Understanding this structure is important:
 
@@ -127,7 +127,7 @@ my-agent/
 | `trigger/` | Event-based triggers (schedules, conditions) |
 | `connectionreferences.mcs.yml` | Connection References used by Connectors and other actions |
 
-## 🔧 YAML Topic Anatomy
+## 🔧 YAML Topic Anatomy {#yaml-topic-anatomy}
 
 Topics are the conversation building blocks of your agent. Each topic is an `AdaptiveDialog` written in YAML. Here's the anatomy of a simple greeting topic:
 
@@ -200,7 +200,7 @@ Topics use different trigger types depending on when they should fire:
 > [!TIP]
 > Use `OnActivity` with a `condition` when you need a topic to fire based on runtime state (like checking a global variable) rather than based on what the user said.
 
-## ⚙️ 1. Set Up and Clone Your Agent
+## ⚙️ 1. Set Up and Clone Your Agent {#1-set-up-and-clone-your-agent}
 
 In this section, you'll create a Travel Agent in Copilot Studio and clone it to your local machine using the VS Code extension.
 
@@ -344,7 +344,7 @@ Before making changes, take a look at what was cloned.
 > [!TIP]
 > Use `Ctrl+F` to search across your entire agent definition. This is much faster than navigating between topics in the web UI, especially for agents with dozens of topics and tools.
 
-## 💪 2. Enable GitHub Copilot with Copilot Studio Skills
+## 💪 2. Enable GitHub Copilot with Copilot Studio Skills {#2-enable-github-copilot-with-copilot-studio-skills}
 
 GitHub Copilot is a powerful AI coding assistant, but out of the box it doesn't know the Copilot Studio YAML schema. By installing specialized **agent skills**, you give GitHub Copilot deep knowledge of the YAML agent definition language — enabling it to generate valid topics, actions, and configurations on demand. In this section, you'll set up the GitHub Copilot CLI inside VS Code and install the Copilot Studio skills.
 
@@ -385,7 +385,7 @@ The [skills-for-copilot-studio](https://github.com/microsoft/skills-for-copilot-
 > See the full [Setup Guide](https://github.com/microsoft/skills-for-copilot-studio/blob/main/SETUP_GUIDE.md) for additional options including cloning, pushing, testing, and troubleshooting via slash commands.
 > You can also open GitHub Copilot CLI outside VS Code by navigating to your agent project folder in any terminal and running `copilot`.
 
-## 🤖 3. Build a ConversationInit Topic with AI
+## 🤖 3. Build a ConversationInit Topic with AI {#3-build-a-conversationinit-topic-with-ai}
 
 You'll use GitHub Copilot with the Copilot Studio skills to generate a `ConversationInit` topic. This topic detects the user's country from their timezone and personalizes the travel experience.
 
@@ -495,7 +495,7 @@ GitHub Copilot should also have updated the `agent.mcs.yml` file to reference `{
 1. This is a reference to a variable to ensure that the instructions are specific to the current user's location.  
     ![Updated agent instructions](./assets/agent-instructions-updated.png)
 
-## 🔎 4. Add Knowledge Sources and Guardrails
+## 🔎 4. Add Knowledge Sources and Guardrails {#4-add-knowledge-sources-and-guardrails}
 
 A travel agent is only as good as its intel. In this section, you'll use GitHub Copilot to add public website knowledge sources and safety guardrails.
 
@@ -518,7 +518,7 @@ A travel agent is only as good as its intel. In this section, you'll use GitHub 
 
 1. Browse the changes to the agent `yaml` to see the changes made
 
-## 🧪 5. Apply Changes and Test
+## 🧪 5. Apply Changes and Test {#5-apply-changes-and-test}
 
 In this section, you'll upload your local changes to Copilot Studio and test the agent.
 
@@ -575,7 +575,7 @@ The Copilot Studio extension provides three synchronization operations:
 > [!TIP]
 > If the agent doesn't behave as expected, return to VS Code, adjust the YAML, and **Apply** again. This rapid iterate-and-test cycle of multiple related source files in one go, is one of the key tactical advantages of YAML authoring.
 
-## ✅ Mission Accomplished
+## ✅ Mission Accomplished {#mission-accomplished}
 
 Congrats, agent — you've completed **Operation YAML Specialist**! You now have mastered the following skills:
 
@@ -589,7 +589,7 @@ Congrats, agent — you've completed **Operation YAML Specialist**! You now have
 
 ✅ **Synchronization Workflow**: Applied local changes back to Copilot Studio and tested the agent end-to-end
 
-## 📚 Further Intel
+## 📚 Further Intel {#further-intel}
 
 📖 [Overview of the Copilot Studio VS Code Extension](https://learn.microsoft.com/microsoft-copilot-studio/visual-studio-code-extension-overview?WT.mc_id=power-221594-scottdurow)
 
@@ -617,7 +617,7 @@ Congrats, agent — you've completed **Operation YAML Specialist**! You now have
 
 🔗 [Copilot Studio Extension - VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-CopilotStudio.vscode-copilotstudio)
 
-## 🏅 Claim your completion badge
+## 🏅 Claim your completion badge {#claim-your-completion-badge}
 
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="../assets/YAML_Specialist_Badge.png" alt="YAML Specialist Badge" width="220" /></p>

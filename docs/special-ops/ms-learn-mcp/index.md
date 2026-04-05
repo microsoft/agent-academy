@@ -7,7 +7,7 @@ difficulty: 1
 badge: ./assets/Academy_LearnMCP.png
 ---
 
-# 📚 Microsoft Learn MCP Server
+# 📚 Microsoft Learn MCP Server {#microsoft-learn-mcp-server}
 
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="./assets/Academy_LearnMCP.png" alt="Microsoft Learn MCP Badge" width="220" /></p>
@@ -237,7 +237,7 @@ In this mission, you accomplished:
 ✅ **Tool Activation**: Enabled MCP-exposed tools on a Copilot Studio agent  
 ✅ **Instruction Engineering**: Crafted agent instructions that direct MCP tool use and control fallback responses
 
-## 🏅 Claim your completion badge
+## 🏅 Claim your completion badge {#claim-your-completion-badge}
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="../assets/Academy_LearnMCP.png" alt="Learn MCP Badge" width="220" /></p>
 
@@ -252,7 +252,7 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 > [!TIP]
 > If you do not see the email, check your spam or junk folder.
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 - [Microsoft Copilot Studio ❤️ MCP](../mcs-mcp/index.md) — Build and deploy your own custom MCP server and connect it to Copilot Studio
 - [Power Platform CLI MCP Server](../pac-cli-mcp/index.md) — Use MCP to control your Power Platform tenant with natural language
