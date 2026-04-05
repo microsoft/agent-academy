@@ -6,6 +6,7 @@ next:
   text: 'Collecting Feedback from Users'
   link: '/operative/11-obtain-user-feedback'
 short-description: 'Integrate with out of the box MCP servers'
+difficulty: 2
 ---
 
 # Mission 10: Integrate with MCP Servers

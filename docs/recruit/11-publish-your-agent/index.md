@@ -6,6 +6,7 @@ next:
   text: 'Understanding Licensing'
   link: '/recruit/12-understanding-licensing'
 short-description: 'Deploy your agent to Microsoft Teams and Microsoft 365 Copilot'
+difficulty: 1
 ---
 
 # 🚨 Mission 11: Publish Your Agent

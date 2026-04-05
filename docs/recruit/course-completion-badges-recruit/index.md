@@ -6,6 +6,7 @@ next:
   text: 'Operative Overview'
   link: '/operative'
 short-description: 'Claim your badge and mark your achievement!'
+difficulty: 1
 ---
 
 # 🚨 Final Mission: Securing Your Recruit Badge

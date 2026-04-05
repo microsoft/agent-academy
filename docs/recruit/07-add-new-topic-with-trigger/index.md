@@ -6,6 +6,7 @@ next:
   text: 'Enhance user interactions in Topics with Adaptive Cards'
   link: '/recruit/08-add-adaptive-card'
 short-description: 'Use Topics to define custom question/answer paths'
+difficulty: 1
 ---
 
 # 🚨 Mission 07: Add new topic with trigger and nodes

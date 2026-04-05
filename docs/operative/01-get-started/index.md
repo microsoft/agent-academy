@@ -6,6 +6,7 @@ next:
   text: 'Authoring Agent Instructions'
   link: '/operative/02-agent-instructions'
 short-description: 'Deploy foundational infrastructure and create your central orchestrator agent'
+difficulty: 2
 ---
 
 # 🚨 Mission 01: Get started with the Hiring Agent

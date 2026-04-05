@@ -3,6 +3,7 @@ prev:
   text: 'Collecting Feedback from Users'
   link: '/operative/11-obtain-user-feedback'
 short-description: 'Claim your Operative badge and celebrate your achievement'
+difficulty: 2
 ---
 
 # 🚨 Final Mission: Securing Your Operative Badge

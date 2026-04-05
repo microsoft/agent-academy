@@ -6,6 +6,7 @@ next:
   text: 'Add new topic with trigger and nodes'
   link: '/recruit/07-add-new-topic-with-trigger'
 short-description: 'Create a new agent grounded in knowledge sources'
+difficulty: 1
 ---
 
 # 🚨 Mission 06: Create a custom agent using natural language with AI and grounding it with your data

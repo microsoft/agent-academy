@@ -6,6 +6,7 @@ next:
   text: 'Dataverse Grounding'
   link: '/operative/08-dataverse-grounding'
 short-description: 'Process documents and images with advanced AI capabilities'
+difficulty: 2
 ---
 
 # 🚨 Mission 07: Extracting Resume Contents with Multimodal Prompts

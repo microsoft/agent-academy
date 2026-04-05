@@ -6,6 +6,7 @@ next:
   text: 'Add an agent flow to your Topic for automation'
   link: '/recruit/09-add-an-agent-flow'
 short-description: 'Build an Adaptive Card using Power Fx and SharePoint'
+difficulty: 1
 ---
 
 # 🚨 Mission 08: Enhance user interactions in Topics with Adaptive Cards

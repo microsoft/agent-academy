@@ -6,6 +6,7 @@ next:
   text: 'Add Event Triggers'
   link: '/operative/04-automate-triggers'
 short-description: 'Transform single agent into coordinated multi-agent system'
+difficulty: 2
 ---
 
 # 🚨 Mission 03: Multi-Agent Systems

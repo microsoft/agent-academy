@@ -6,6 +6,7 @@ next:
   text: 'Securing Your Recruit Badge'
   link: '/recruit/course-completion-badges-recruit'
 short-description: 'Learn how licensing and billing works with Copilot Studio'
+difficulty: 1
 ---
 
 # 🚨 Mission 12: Understanding Licensing

@@ -6,6 +6,7 @@ next:
   text: 'Securing Your Operative Badge'
   link: '/operative/course-completion-badges-operative'
 short-description: 'Collect and process user feedback for continuous improvement'
+difficulty: 2
 ---
 
 # Collecting feedback from users

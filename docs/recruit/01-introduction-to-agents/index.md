@@ -6,6 +6,7 @@ next:
   text: 'Copilot Studio Fundamentals'
   link: '/recruit/02-copilot-studio-fundamentals'
 short-description: 'Understand conversational AI concepts, LLMs, and autonomous vs. declarative agents'
+difficulty: 1
 ---
 
 # 🚨 Mission 01: Introduction to Agents

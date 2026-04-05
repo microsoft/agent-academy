@@ -6,6 +6,7 @@ next:
   text: 'Create a custom agent using natural language with AI'
   link: '/recruit/06-create-agent-from-conversation'
 short-description: 'Use and customize a template agent to accelerate setup'
+difficulty: 1
 ---
 
 # 🧰 Mission 05: Using a Pre-Built Agent  
