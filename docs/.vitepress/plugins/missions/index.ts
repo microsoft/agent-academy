@@ -113,7 +113,8 @@ function getMergedAt(filePath: string, repoRoot: string): number {
 
 function extractH1(content: string): string {
   const match = content.match(/^#\s+(.+)$/m);
-  return match ? match[1].trim() : "";
+  if (!match) return "";
+  return match[1].replace(/\s*\{#[^}]+\}\s*$/, "").trim();
 }
 
 function loadMissions(docsDir: string): MissionData[] {
