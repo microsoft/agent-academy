@@ -131,7 +131,7 @@ You'll learn how to connect your agent to ready-made tooling servers (like Outlo
 >
 > - Have a manager configured for your user which can be configured in the M365 Admin Center
 > - Have an appointment on your calendar in the upcoming 24 hours - this is because you will test the MCP server by asking "Get my meetings for today"
-> - Have an extra user created on your tenant, so that you can invite that user for the interview prep-meeting ([How to create a user in M365](#-tactical-resources))
+> - Have an extra user created on your tenant, so that you can invite that user for the interview prep-meeting ([How to create a user in M365](#tactical-resources))
 > - For that extra user, the mailbox needs to be provisioned and it would be good to set the working days / hours
 
 To add MCP servers to your agent you only have to add one tool per MCP server. This is different to connector tools which require you to add a tool for every connector action. This ability to add a single tool that handles multiple actions is one of the things that makes MCP Servers a lot easier to work with.
