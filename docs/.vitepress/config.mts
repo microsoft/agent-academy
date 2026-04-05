@@ -24,8 +24,13 @@ export default defineConfig({
     logo: "/logo.png",
     nav: [
       { text: "Home", link: "/" },
-      { text: "Our Team", link: "/our-team/" },
-      { text: "Recent Changes", link: "/recent-changes/" },
+      {
+        text: "About",
+        items: [
+          { text: "Our Team", link: "/our-team/" },
+          { text: "Recent Changes", link: "/recent-changes/" },
+        ],
+      },
       {
         text: "Courses",
         items: [
