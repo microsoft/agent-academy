@@ -5,6 +5,7 @@ prev:
 next:
   text: 'Add Event Triggers'
   link: '/recruit/10-add-event-triggers'
+short-description: 'Use Adaptive Card input to trigger back-end flows'
 ---
 
 # 🚨 Mission 09: Add an agent flow to your Topic for automation

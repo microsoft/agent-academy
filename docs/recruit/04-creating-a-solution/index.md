@@ -5,6 +5,7 @@ prev:
 next:
   text: 'Using a Pre-Built Agent'
   link: '/recruit/05-using-prebuilt-agents'
+short-description: 'Package your agent into a reusable solution for environment management'
 ---
 
 # 🚨 Mission 04: Creating a Solution for Your Agent

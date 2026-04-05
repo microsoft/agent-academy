@@ -5,6 +5,7 @@ prev:
 next:
   text: 'Understanding Agent Models'
   link: '/operative/05-model-selection'
+short-description: 'Implement autonomous agent behaviors with event-driven triggers'
 ---
 
 # Mission 04: Add Event Triggers to act autonomously

@@ -5,6 +5,7 @@ prev:
 next:
   text: 'Deploy a Declarative Agent for Microsoft 365 Copilot'
   link: '/recruit/03-create-a-declarative-agent-for-M365Copilot'
+short-description: 'Learn the building blocks: knowledge, skills, autonomy'
 ---
 
 # 🚨 Mission 02: Copilot Studio Fundamentals

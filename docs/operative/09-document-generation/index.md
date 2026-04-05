@@ -5,6 +5,7 @@ prev:
 next:
   text: 'Integrate with MCP Servers'
   link: '/operative/10-mcp'
+short-description: 'Implement document generation in AI prompts'
 ---
 
 # Mission 09: Generate a Candidate Interview Questions Document

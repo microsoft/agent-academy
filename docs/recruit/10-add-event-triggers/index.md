@@ -5,6 +5,7 @@ prev:
 next:
   text: 'Publish your agent'
   link: '/recruit/11-publish-your-agent'
+short-description: 'Enable your agent to act autonomously using event-based logic'
 ---
 
 # 🚨 Mission 10: Add Event Triggers - Enable autonomous agent capabilities

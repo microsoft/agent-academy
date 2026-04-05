@@ -5,6 +5,7 @@ prev:
 next:
   text: 'Multimodal Prompts'
   link: '/operative/07-multimodal-prompts'
+short-description: 'Implement enterprise-grade safety and compliance measures'
 ---
 
 # 🚨 Mission 06: AI Safety and Content Moderation

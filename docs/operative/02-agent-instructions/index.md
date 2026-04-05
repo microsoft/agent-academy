@@ -5,6 +5,7 @@ prev:
 next:
   text: 'Multi-Agent Systems'
   link: '/operative/03-multi-agent'
+short-description: 'Master precise agent communication and behavior control'
 ---
 
 # 🕵️‍♂️ Mission 02: Authoring Agent Instructions

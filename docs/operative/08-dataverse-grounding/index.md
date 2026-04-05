@@ -5,6 +5,7 @@ prev:
 next:
   text: 'Document Generation'
   link: '/operative/09-document-generation'
+short-description: 'Ground agents in enterprise data for accurate responses'
 ---
 
 # 🚨 Mission 08: Enhanced prompts with Dataverse grounding

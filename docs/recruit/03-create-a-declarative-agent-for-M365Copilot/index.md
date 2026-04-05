@@ -5,6 +5,7 @@ prev:
 next:
   text: 'Creating a Solution for Your Agent'
   link: '/recruit/04-creating-a-solution'
+short-description: 'Add your own agent to the Microsoft 365 Copilot, grounded in a prompt'
 ---
 
 # 🚨 Mission 03: Deploy a Declarative Agent for Microsoft 365 Copilot

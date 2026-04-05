@@ -5,6 +5,7 @@ prev:
 next:
   text: 'Introduction to Agents'
   link: '/recruit/01-introduction-to-agents'
+short-description: 'Set up your dev environment, Copilot Studio trial, and SharePoint site'
 ---
 
 # 🚨 Mission 00: Course Setup

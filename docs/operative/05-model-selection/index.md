@@ -5,6 +5,7 @@ prev:
 next:
   text: 'AI Safety and Content Moderation'
   link: '/operative/06-ai-safety'
+short-description: 'Customize agent models for maximum impact and engagement'
 ---
 
 # Understanding Agent Models and Response Formatting
