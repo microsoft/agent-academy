@@ -99,8 +99,7 @@ const hasAnything = computed(() => difficulty.value || timeMinutes.value || prod
   grid-template-columns: auto 1fr;
   align-items: baseline;
   gap: 0.35rem 0.75rem;
-  width: fit-content;
-  max-width: 100%;
+  width: 100%;
   padding: 0.75rem 1rem;
   margin: 0.75rem 0 1.25rem;
   border: 1px solid var(--vp-c-divider);
