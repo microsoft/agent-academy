@@ -1,7 +1,11 @@
 <template>
   <div v-if="hasAnything" class="mission-meta">
+    <span v-if="codename" class="meta-item">
+      <span class="meta-label">🕵️ Codename</span>
+      <code class="meta-value">{{ codename }}</code>
+    </span>
     <span v-if="difficulty" class="meta-item">
-      <span class="meta-label">Difficulty</span>
+      <span class="meta-label">⭐ Difficulty</span>
       <span class="meta-stars" :aria-label="`${difficulty} out of 3`">
         <svg v-for="i in 3" :key="i" class="meta-star" :class="{ filled: i <= difficulty }" viewBox="0 0 16 16" aria-hidden="true">
           <path d="M8 1l1.9 3.9 4.3.6-3.1 3 .7 4.3L8 10.7l-3.8 2 .7-4.3-3.1-3 4.3-.6z"/>
@@ -9,7 +13,7 @@
       </span>
     </span>
     <span v-if="timeMinutes" class="meta-item">
-      <span class="meta-label">Time</span>
+      <span class="meta-label">⏱️ Time</span>
       <span class="meta-time">
         <svg class="time-pie" viewBox="0 0 16 16" role="img" :aria-label="`${timeMinutes} minutes`">
           <circle cx="8" cy="8" r="6" class="pie-bg" />
@@ -21,13 +25,13 @@
       </span>
     </span>
     <span v-if="products.length" class="meta-item meta-item--pills">
-      <span class="meta-label">Products</span>
+      <span class="meta-label">🧩 Products</span>
       <span class="meta-pills">
         <a v-for="p in products" :key="p.slug" :href="p.href" class="meta-pill meta-pill--product">{{ p.label }}</a>
       </span>
     </span>
     <span v-if="tags.length" class="meta-item meta-item--pills">
-      <span class="meta-label">Tags</span>
+      <span class="meta-label">🏷️ Tags</span>
       <span class="meta-pills">
         <a v-for="t in tags" :key="t.slug" :href="t.href" class="meta-pill meta-pill--tag">{{ t.label }}</a>
       </span>
@@ -45,6 +49,8 @@ const PRODUCT_LABELS = Object.fromEntries(productData.map((p) => [p.slug, p.labe
 const TAG_LABELS = Object.fromEntries(tagData.map((t) => [t.slug, t.label]));
 
 const { frontmatter } = useData();
+
+const codename = computed(() => frontmatter.value.codename ?? null);
 
 const difficulty = computed(() => {
   const d = Number(frontmatter.value.difficulty);
@@ -90,7 +96,7 @@ const tags = computed(() =>
   }))
 );
 
-const hasAnything = computed(() => difficulty.value || timeMinutes.value || products.value.length > 0 || tags.value.length > 0);
+const hasAnything = computed(() => codename.value || difficulty.value || timeMinutes.value || products.value.length > 0 || tags.value.length > 0);
 </script>
 
 <style scoped>
@@ -173,6 +179,10 @@ const hasAnything = computed(() => difficulty.value || timeMinutes.value || prod
 
 .meta-value {
   color: var(--vp-c-text-1);
+  background: var(--vp-c-default-soft);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
 }
 
 .meta-pills {
