@@ -13,7 +13,7 @@ tags:
   - multi-agent
 products:
   - copilot-studio
-created-date: 2025-08-20
+created-date: 2026-01-14
 last-edited-date: 2026-03-16
 ---
 # 🚨 Mission 03: Multi-Agent Systems {#mission-03-multi-agent-systems}
