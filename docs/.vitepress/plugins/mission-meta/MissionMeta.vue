@@ -8,9 +8,16 @@
         </svg>
       </span>
     </span>
-    <span v-if="time" class="meta-item">
+    <span v-if="timeMinutes" class="meta-item">
       <span class="meta-label">Time</span>
-      <span class="meta-value">{{ time }}</span>
+      <span class="meta-time">
+        <svg class="time-pie" viewBox="0 0 16 16" :aria-label="`${timeMinutes} minutes`">
+          <circle cx="8" cy="8" r="6" class="pie-bg" />
+          <circle v-if="timeIcon.full" cx="8" cy="8" r="6" class="pie-fill" />
+          <path v-else :d="timeIcon.d" class="pie-fill" />
+        </svg>
+        {{ timeMinutes }} min
+      </span>
     </span>
     <span v-if="products.length" class="meta-item meta-item--pills">
       <span class="meta-label">Products</span>
@@ -43,10 +50,27 @@ const difficulty = computed(() => {
   return d >= 1 && d <= 3 ? d : 0;
 });
 
-const time = computed(() => {
+const timeMinutes = computed(() => {
   const t = frontmatter.value.time;
-  if (!t) return null;
-  return `~${t} min`;
+  const n = Number(t);
+  return t && !isNaN(n) && n > 0 ? n : null;
+});
+
+const timeIcon = computed(() => {
+  const minutes = timeMinutes.value;
+  if (!minutes) return { full: false, d: '' };
+  const pct = Math.min(minutes / 60, 1);
+  const angle = pct * 360;
+  if (angle >= 359.9) return { full: true, d: '' };
+  const cx = 8, cy = 8, r = 6;
+  const rad = (angle - 90) * (Math.PI / 180);
+  const ex = cx + r * Math.cos(rad);
+  const ey = cy + r * Math.sin(rad);
+  const largeArc = angle > 180 ? 1 : 0;
+  return {
+    full: false,
+    d: `M ${cx} ${cy} L ${cx} ${cy - r} A ${r} ${r} 0 ${largeArc} 1 ${ex.toFixed(3)} ${ey.toFixed(3)} Z`,
+  };
 });
 
 const products = computed(() =>
@@ -65,7 +89,7 @@ const tags = computed(() =>
   }))
 );
 
-const hasAnything = computed(() => difficulty.value || time.value || products.value.length > 0 || tags.value.length > 0);
+const hasAnything = computed(() => difficulty.value || timeMinutes.value || products.value.length > 0 || tags.value.length > 0);
 </script>
 
 <style scoped>
@@ -118,6 +142,28 @@ const hasAnything = computed(() => difficulty.value || time.value || products.va
 
 .meta-star.filled {
   fill: #f59e0b;
+}
+
+.meta-time {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--vp-c-text-1);
+}
+
+.time-pie {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.pie-bg {
+  fill: var(--vp-c-divider);
+}
+
+.pie-fill {
+  fill: var(--vp-c-brand-1);
 }
 
 .meta-value {
