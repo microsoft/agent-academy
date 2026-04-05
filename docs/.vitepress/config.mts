@@ -10,6 +10,7 @@ const docsDir = path.resolve(__dirname, "..");
 export default defineConfig({
   title: "Agent Academy",
   base: "/agent-academy/",
+  cleanUrls: true,
   head: [
     ["link", { rel: "icon", href: "/agent-academy/logo.png" }],
     [
