@@ -1,6 +1,6 @@
 <template>
   <div class="missions-container">
-    <h2>{{ title }}</h2>
+    <h2 v-if="title">{{ title }}</h2>
     <div class="missions-grid">
       <a
         v-for="mission in sortedMissions"
