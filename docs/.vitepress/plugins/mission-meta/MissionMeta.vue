@@ -11,8 +11,9 @@
     <span v-if="timeMinutes" class="meta-item">
       <span class="meta-label">Time</span>
       <span class="meta-time">
-        <svg class="time-pie" viewBox="0 0 16 16" :aria-label="`${timeMinutes} minutes`">
+        <svg class="time-pie" viewBox="0 0 16 16" role="img" :aria-label="`${timeMinutes} minutes`">
           <circle cx="8" cy="8" r="6" class="pie-bg" />
+          <circle cx="8" cy="8" r="6" class="pie-border" />
           <circle v-if="timeIcon.full" cx="8" cy="8" r="6" class="pie-fill" />
           <path v-else :d="timeIcon.d" class="pie-fill" />
         </svg>
@@ -152,18 +153,23 @@ const hasAnything = computed(() => difficulty.value || timeMinutes.value || prod
 }
 
 .time-pie {
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
-  vertical-align: middle;
 }
 
 .pie-bg {
-  fill: var(--vp-c-divider);
+  fill: var(--vp-c-bg);
+}
+
+.pie-border {
+  fill: none;
+  stroke: var(--vp-c-divider);
+  stroke-width: 1;
 }
 
 .pie-fill {
-  fill: var(--vp-c-brand-1);
+  fill: var(--vp-c-text-2);
 }
 
 .meta-value {
