@@ -13,9 +13,7 @@ products:
 ---
 # 🚨 Final Mission: Securing Your Operative Badge {#final-mission-securing-your-operative-badge}
 
-<!-- markdownlint-disable MD033 -->
 <mission-meta />
-<!-- markdownlint-enable MD033 -->
 
 ## 🎯 Mission Brief {#mission-brief}
 

@@ -18,9 +18,7 @@ products:
 ---
 # 🚨 Mission 10: Add Event Triggers - Enable autonomous agent capabilities {#mission-10-add-event-triggers-enable-autonomous-agent-capabilities}
 
-<!-- markdownlint-disable MD033 -->
 <mission-meta />
-<!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**
 

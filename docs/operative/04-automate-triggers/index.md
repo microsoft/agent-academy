@@ -18,9 +18,7 @@ products:
 ---
 # Mission 04: Add Event Triggers to act autonomously
 
-<!-- markdownlint-disable MD033 -->
 <mission-meta />
-<!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**
 

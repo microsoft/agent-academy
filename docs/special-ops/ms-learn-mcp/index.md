@@ -14,9 +14,7 @@ products:
 
 # 📚 Microsoft Learn MCP Server {#microsoft-learn-mcp-server}
 
-<!-- markdownlint-disable MD033 -->
 <mission-meta />
-<!-- markdownlint-enable MD033 -->
 
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="./assets/Academy_LearnMCP.png" alt="Microsoft Learn MCP Badge" width="220" /></p>

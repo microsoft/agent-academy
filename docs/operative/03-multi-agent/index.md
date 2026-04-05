@@ -16,9 +16,7 @@ products:
 ---
 # 🚨 Mission 03: Multi-Agent Systems {#mission-03-multi-agent-systems}
 
-<!-- markdownlint-disable MD033 -->
 <mission-meta />
-<!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**
 

@@ -15,9 +15,7 @@ products:
 ---
 # ⚡ Power Platform CLI MCP Server {#power-platform-cli-mcp-server}
 
-<!-- markdownlint-disable MD033 -->
 <mission-meta />
-<!-- markdownlint-enable MD033 -->
 
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="../assets/CommandLine_Badge.png" alt="Command Line Badge" width="220" /></p>

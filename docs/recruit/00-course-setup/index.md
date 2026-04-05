@@ -19,9 +19,7 @@ products:
 
 # 🚨 Mission 00: Course Setup {#mission-00-course-setup}
 
-<!-- markdownlint-disable MD033 -->
 <mission-meta />
-<!-- markdownlint-enable MD033 -->
 
 ## 🎯 Mission Brief {#mission-brief}
 

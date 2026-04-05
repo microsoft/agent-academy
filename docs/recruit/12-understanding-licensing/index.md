@@ -17,9 +17,7 @@ products:
 ---
 # 🚨 Mission 12: Understanding Licensing {#mission-12-understanding-licensing}
 
-<!-- markdownlint-disable MD033 -->
 <mission-meta />
-<!-- markdownlint-enable MD033 -->
 
 ## 🎯 Mission Brief {#mission-brief}
 

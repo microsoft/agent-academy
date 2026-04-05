@@ -18,9 +18,7 @@ products:
 ---
 # 🚨 Mission 01: Introduction to Agents {#mission-01-introduction-to-agents}
 
-<!-- markdownlint-disable MD033 -->
 <mission-meta />
-<!-- markdownlint-enable MD033 -->
 
 🎥 **Watch the Walkthrough**
 
