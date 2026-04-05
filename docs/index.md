@@ -10,7 +10,7 @@ Your mission—should you choose to accept it—is to master the art of building
 
 This hands-on training is your entry point into the **world of agents**: from grounded prompts to Adaptive Cards and agent flows, you'll learn how to build, scale, and deploy intelligent agents using real-world tools and use cases.
 
-## 🏅 Rank Progression
+## 🏅 Rank Progression {#rank-progression}
 
 The **Copilot Studio Agent Academy** is a multi-phase training program designed to build your skills across three agent ranks. Each level includes a badge and increasing responsibilities:
 
@@ -22,13 +22,13 @@ The **Copilot Studio Agent Academy** is a multi-phase training program designed 
 
 Each level builds on the last. Finish your Recruit mission, and stay tuned to level up your agent credentials.
 
-## 🎯 Special Ops
+## 🎯 Special Ops {#special-ops}
 
 Beyond the core ranks, the Academy also offers **Special Ops** — standalone, one-off missions that focus on a specific topic or integration. These don't require completing any rank and can be tackled at any time, in any order. Think of them as side missions to sharpen a particular skill.
 
 🚀 [View Special Ops](./special-ops/index.md)
 
-## ⚠️ Before You Begin
+## ⚠️ Before You Begin {#before-you-begin}
 
 ### Progressive Difficulty
 
@@ -54,7 +54,7 @@ For example:
 
 If a module requires a capability you don't have access to, you can **skip it** and move on, but keep in mind that many modules **build on previous ones**. Skipping a module may mean you're missing a dependency (like a solution, agent, or data) that later modules expect to be in place. You may be able to work around this, but in some cases it could block your progress on subsequent modules.
 
-## 🎒 Other Courses
+## 🎒 Other Courses {#other-courses}
 
 Looking to go deeper or explore related topics? Here are some recommended next steps:
 
@@ -62,11 +62,11 @@ Looking to go deeper or explore related topics? Here are some recommended next s
 - **Want to dive deeper into the Model Context Protocol (MCP)?** Explore [Model Context Protocol (MCP) for Beginners](https://github.com/microsoft/mcp-for-beginners) for a comprehensive introduction.
 - **Interested in the foundations of AI agents?** [AI Agents for Beginners](https://microsoft.github.io/ai-agents-for-beginners/) covers core concepts like agent design patterns, multi-agent systems, and agentic RAG from a broader, platform-agnostic perspective.
 
-## 🚑 Issues
+## 🚑 Issues {#issues}
 
 We really appreciate your feedback! Please use the [issues list](https://github.com/microsoft/agent-academy/issues) to share your comments and issues. Thanks!
 
-## 📜 Code of Conduct
+## 📜 Code of Conduct {#code-of-conduct}
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 
@@ -76,7 +76,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 > - [Microsoft Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)
 > - Contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with questions or concerns
 
-## ⭐️ Star our repo
+## ⭐️ Star our repo {#star-our-repo}
 
 Star our repository by going to our GitHub [repository](https://github.com/microsoft/agent-academy).
 
