@@ -25,6 +25,7 @@ export default defineConfig({
     nav: [
       { text: "Home", link: "/" },
       { text: "Our Team", link: "/our-team/" },
+      { text: "Recent Changes", link: "/recent-changes/" },
       {
         text: "Courses",
         items: [
@@ -56,6 +57,7 @@ export default defineConfig({
     sidebar: [
       { text: "Home", link: "/" },
       { text: "Our Team", link: "/our-team/" },
+      { text: "Recent Changes", link: "/recent-changes/" },
       {
         text: "Courses",
         items: [

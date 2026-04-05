@@ -7,6 +7,7 @@ declare module "virtual:missions-data" {
     difficulty: number;
     tags: string[];
     lastUpdated: number;
+    createdAt: number;
   }
 
   export const missions: MissionData[];

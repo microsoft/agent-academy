@@ -15,6 +15,7 @@ const EXCLUDED_DIRS = new Set([
   "our-team",
   "data",
   "commander-preview",
+  "recent-changes",
 ]);
 
 const COURSE_BADGES: Record<string, string> = {
@@ -31,6 +32,7 @@ interface MissionData {
   difficulty: number;
   tags: string[];
   lastUpdated: number;
+  createdAt: number;
 }
 
 function getGitTimestamp(filePath: string): number {
@@ -40,6 +42,19 @@ function getGitTimestamp(filePath: string): number {
       encoding: "utf-8",
     }).trim();
     return stdout ? parseInt(stdout, 10) * 1000 : 0;
+  } catch {
+    return 0;
+  }
+}
+
+function getGitCreatedAt(filePath: string): number {
+  try {
+    const stdout = execSync(
+      `git log --reverse --format=%ct "${filePath}"`,
+      { cwd: path.dirname(filePath), encoding: "utf-8" }
+    ).trim();
+    const first = stdout.split(/\r?\n/)[0];
+    return first ? parseInt(first, 10) * 1000 : 0;
   } catch {
     return 0;
   }
@@ -92,6 +107,7 @@ function loadMissions(docsDir: string): MissionData[] {
         difficulty: frontmatter.difficulty ?? 0,
         tags: frontmatter.tags ?? [],
         lastUpdated: getGitTimestamp(indexPath),
+        createdAt: getGitCreatedAt(indexPath),
       });
     }
   }

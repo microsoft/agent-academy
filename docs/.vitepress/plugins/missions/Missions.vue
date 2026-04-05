@@ -1,9 +1,9 @@
 <template>
   <div class="missions-container">
     <h2 v-if="title">{{ title }}</h2>
-    <div class="missions-grid">
+    <div ref="gridRef" class="missions-grid">
       <a
-        v-for="mission in sortedMissions"
+        v-for="mission in pagedMissions"
         :key="mission.url"
         :href="withBase(mission.url)"
         class="mission-card"
@@ -17,11 +17,16 @@
         <div class="mission-title">{{ mission.title }}</div>
       </a>
     </div>
+    <div v-if="totalPages > 1" class="missions-pager">
+      <button :disabled="page <= 1" class="pager-btn" @click="page--">← Prev</button>
+      <span class="pager-info">Page {{ page }} of {{ totalPages }}</span>
+      <button :disabled="page >= totalPages" class="pager-btn" @click="page++">Next →</button>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, ref, onMounted, onUnmounted, nextTick, watch } from "vue";
 import { withBase } from "vitepress";
 import { missions } from "virtual:missions-data";
 
@@ -29,8 +34,9 @@ const props = withDefaults(
   defineProps<{
     title: string;
     section?: string;
-    sort?: "alphabetical" | "last-updated" | "level";
+    sort?: "alphabetical" | "last-updated" | "level" | "first-added";
     order?: "ascending" | "descending";
+    maxRows?: number;
   }>(),
   {
     sort: "alphabetical",
@@ -60,6 +66,9 @@ const sortedMissions = computed(() => {
       case "last-updated":
         cmp = a.lastUpdated - b.lastUpdated;
         break;
+      case "first-added":
+        cmp = a.createdAt - b.createdAt;
+        break;
       case "level":
         cmp = a.difficulty - b.difficulty;
         break;
@@ -72,6 +81,52 @@ const sortedMissions = computed(() => {
   });
 
   return filtered;
+});
+
+// Pagination based on max-rows and detected column count
+const gridRef = ref<HTMLElement | null>(null);
+const columns = ref(1);
+const page = ref(1);
+
+function detectColumns() {
+  if (!gridRef.value) return;
+  const style = getComputedStyle(gridRef.value);
+  const cols = style.gridTemplateColumns.split(" ").length;
+  if (cols > 0) columns.value = cols;
+}
+
+let resizeObserver: ResizeObserver | null = null;
+
+onMounted(() => {
+  nextTick(detectColumns);
+  if (gridRef.value) {
+    resizeObserver = new ResizeObserver(detectColumns);
+    resizeObserver.observe(gridRef.value);
+  }
+});
+
+onUnmounted(() => {
+  resizeObserver?.disconnect();
+});
+
+const itemsPerPage = computed(() => {
+  if (!props.maxRows) return Infinity;
+  return props.maxRows * columns.value;
+});
+
+const totalPages = computed(() => {
+  if (!props.maxRows) return 1;
+  return Math.max(1, Math.ceil(sortedMissions.value.length / itemsPerPage.value));
+});
+
+watch(totalPages, (tp) => {
+  if (page.value > tp) page.value = tp;
+});
+
+const pagedMissions = computed(() => {
+  if (!props.maxRows) return sortedMissions.value;
+  const start = (page.value - 1) * itemsPerPage.value;
+  return sortedMissions.value.slice(start, start + itemsPerPage.value);
 });
 </script>
 
@@ -122,6 +177,9 @@ const sortedMissions = computed(() => {
   font-size: 0.95rem;
   text-align: center;
   line-height: 1.4;
+  height: calc(1.4em * 3);
+  display: flex;
+  align-items: center;
 }
 
 .mission-section-pill {
@@ -173,5 +231,38 @@ const sortedMissions = computed(() => {
 :root.dark .pill-cowork-collective {
   background: #4c1d95;
   color: #ede9fe;
+}
+
+.missions-pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.pager-btn {
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.pager-btn:hover:not(:disabled) {
+  border-color: var(--vp-c-brand-1);
+}
+
+.pager-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pager-info {
+  font-size: 0.85rem;
+  color: var(--vp-c-text-2);
 }
 </style>
