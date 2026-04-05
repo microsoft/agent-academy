@@ -8,11 +8,17 @@
       <span class="meta-label">Time</span>
       <span class="meta-value">{{ time }}</span>
     </span>
-    <span v-if="products.length" class="meta-item meta-item--products">
+    <span v-if="products.length" class="meta-item meta-item--pills">
       <span class="meta-label">Products</span>
-      <span class="meta-products">
-          <a v-for="p in products" :key="p.slug" :href="p.href" class="meta-product-pill">{{ p.label }}</a>
-        </span>
+      <span class="meta-pills">
+        <a v-for="p in products" :key="p.slug" :href="p.href" class="meta-pill">{{ p.label }}</a>
+      </span>
+    </span>
+    <span v-if="tags.length" class="meta-item meta-item--pills">
+      <span class="meta-label">Tags</span>
+      <span class="meta-pills">
+        <a v-for="t in tags" :key="t.slug" :href="t.href" class="meta-pill">{{ t.label }}</a>
+      </span>
     </span>
   </div>
 </template>
@@ -21,8 +27,10 @@
 import { computed } from "vue";
 import { useData, withBase } from "vitepress";
 import productData from "../../data/products.json";
+import tagData from "../../data/tags.json";
 
 const PRODUCT_LABELS = Object.fromEntries(productData.map((p) => [p.slug, p.label]));
+const TAG_LABELS = Object.fromEntries(tagData.map((t) => [t.slug, t.label]));
 
 const { frontmatter } = useData();
 
@@ -45,7 +53,15 @@ const products = computed(() =>
   }))
 );
 
-const hasAnything = computed(() => difficulty.value || time.value || products.value.length > 0);
+const tags = computed(() =>
+  (frontmatter.value.tags ?? []).map((slug: string) => ({
+    slug,
+    label: TAG_LABELS[slug] ?? slug,
+    href: withBase(`/tags/${slug}`),
+  }))
+);
+
+const hasAnything = computed(() => difficulty.value || time.value || products.value.length > 0 || tags.value.length > 0);
 </script>
 
 <style scoped>
@@ -68,7 +84,7 @@ const hasAnything = computed(() => difficulty.value || time.value || products.va
   gap: 0.4rem;
 }
 
-.meta-item--products {
+.meta-item--pills {
   align-items: baseline;
 }
 
@@ -86,13 +102,13 @@ const hasAnything = computed(() => difficulty.value || time.value || products.va
   color: var(--vp-c-text-1);
 }
 
-.meta-products {
+.meta-pills {
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem;
 }
 
-.meta-product-pill {
+.meta-pill {
   font-size: 0.75rem;
   padding: 0.15rem 0.5rem;
   border-radius: 999px;
@@ -103,7 +119,7 @@ const hasAnything = computed(() => difficulty.value || time.value || products.va
   transition: background 0.15s, color 0.15s;
 }
 
-.meta-product-pill:hover {
+.meta-pill:hover {
   background: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1);
 }
