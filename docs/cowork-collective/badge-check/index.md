@@ -48,7 +48,7 @@ By the end of this mission, Cowork will have:
 
 ## 🤝 What is Copilot Cowork? {#what-is-copilot-cowork}
 
-Copilot Cowork is an AI agent built into Microsoft 365 Copilot. You describe what you need and it works across your Microsoft 365 environment to get it done.
+Copilot Cowork is a new way to delegate work to Copilot. You describe what you need and it works across your Microsoft 365 environment to get it done.
 
 It comes with 13 built-in skills:
 
