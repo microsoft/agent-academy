@@ -11,7 +11,9 @@ products:
   - copilot-studio
   - visual-studio-code
   - github-copilot
-created-date: 2026-03-13
+industries:
+  - it
+created-date: 2026-03-30
 last-edited-date: 2026-04-02
 ---
 
@@ -207,11 +209,11 @@ Topics use different trigger types depending on when they should fire:
 > [!TIP]
 > Use `OnActivity` with a `condition` when you need a topic to fire based on runtime state (like checking a global variable) rather than based on what the user said.
 
-## ⚙️ 1. Set Up and Clone Your Agent {#1-set-up-and-clone-your-agent}
+## 🧪 Lab 1.1 - Set Up and Clone Your Agent {#lab-1-1-set-up-and-clone-your-agent}
 
 In this section, you'll create a Travel Agent in Copilot Studio and clone it to your local machine using the VS Code extension.
 
-### 1.1 Create a Solution and Agent in Copilot Studio
+### Lab 1.1: Create a Solution and Agent in Copilot Studio
 
 First, create a dedicated solution and a blank Travel Agent. This gives you a real agent to work with throughout the mission.
 
@@ -284,7 +286,7 @@ First, create a dedicated solution and a blank Travel Agent. This gives you a re
 1. Select **Save**  
      ![Update the name and instructions](./assets/agent-details.png)
 
-### 1.2 Install the Copilot Studio VS Code Extension
+### Lab 1.2: Install the Copilot Studio VS Code Extension
 
 Next, install the Copilot Studio extension for VS Code.
 
@@ -305,7 +307,7 @@ Next, install the Copilot Studio extension for VS Code.
 > [!IMPORTANT]
 > You need read and write access to the Copilot Studio environment where your Travel Agent lives. If you don't see your agent in the Agents pane, verify you're signed in with the correct account and select the right environment from the dropdown.
 
-### 1.3 Clone the Travel Agent to Your Local Machine
+### Lab 1.3: Clone the Travel Agent to Your Local Machine
 
 Now clone your agent to a local folder so you can work with the YAML files directly.
 
@@ -331,7 +333,7 @@ Now clone your agent to a local folder so you can work with the YAML files direc
 > [!NOTE]
 > The clone operation downloads the full agent definition - topics, actions, knowledge, workflows, triggers, and configuration. This is your local working copy. Changes you make here won't affect the cloud agent until you explicitly **Apply** them.
 
-### 1.4 Explore the Agent Definition
+### Lab 1.4: Explore the Agent Definition
 
 Before making changes, take a look at what was cloned.
 
@@ -351,11 +353,11 @@ Before making changes, take a look at what was cloned.
 > [!TIP]
 > Use `Ctrl+F` to search across your entire agent definition. This is much faster than navigating between topics in the web UI, especially for agents with dozens of topics and tools.
 
-## 💪 2. Enable GitHub Copilot with Copilot Studio Skills {#2-enable-github-copilot-with-copilot-studio-skills}
+## 🧪 Lab 2.1 - Enable GitHub Copilot with Copilot Studio Skills {#lab-2-1-enable-github-copilot-with-copilot-studio-skills}
 
 GitHub Copilot is a powerful AI coding assistant, but out of the box it doesn't know the Copilot Studio YAML schema. By installing specialized **agent skills**, you give GitHub Copilot deep knowledge of the YAML agent definition language — enabling it to generate valid topics, actions, and configurations on demand. In this section, you'll set up the GitHub Copilot CLI inside VS Code and install the Copilot Studio skills.
 
-### 2.1 Install and Open GitHub Copilot CLI
+### Lab 2.1: Install and Open GitHub Copilot CLI
 
 1. Ensure you have a [GitHub Copilot subscription](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot). The **free tier** (no credit card required) works for this mission — it includes Agent mode, Copilot CLI, and 50 chat/agent requests per month. This mission uses approximately 5-10 requests, so the free allocation is plenty. If you've already used your monthly requests, you'll need to wait for them to reset or upgrade to [Copilot Pro](https://github.com/features/copilot/plans) which includes unlimited chat with GPT-5 mini and 300 premium requests. Verified students and teachers get Copilot Pro for free.
 
@@ -370,7 +372,7 @@ GitHub Copilot is a powerful AI coding assistant, but out of the box it doesn't 
 1. You can select the full screen icon on the terminal to expand the GitHub Copilot CLI  
     ![Expand the GitHub Copilot CLI](./assets/expand-cli.png)
 
-### 2.2 Install the Copilot Studio Skills
+### Lab 2.2: Install the Copilot Studio Skills
 
 The [skills-for-copilot-studio](https://github.com/microsoft/skills-for-copilot-studio) repository from Microsoft contains specialized skills that teach GitHub Copilot how to author valid Copilot Studio YAML. The skills cover creating and editing topics, actions, knowledge sources, and global variables.
 
@@ -392,11 +394,11 @@ The [skills-for-copilot-studio](https://github.com/microsoft/skills-for-copilot-
 > See the full [Setup Guide](https://github.com/microsoft/skills-for-copilot-studio/blob/main/SETUP_GUIDE.md) for additional options including cloning, pushing, testing, and troubleshooting via slash commands.
 > You can also open GitHub Copilot CLI outside VS Code by navigating to your agent project folder in any terminal and running `copilot`.
 
-## 🤖 3. Build a ConversationInit Topic with AI {#3-build-a-conversationinit-topic-with-ai}
+## 🧪 Lab 3.1 - Build a ConversationInit Topic with AI {#lab-3-1-build-a-conversationinit-topic-with-ai}
 
 You'll use GitHub Copilot with the Copilot Studio skills to generate a `ConversationInit` topic. This topic detects the user's country from their timezone and personalizes the travel experience.
 
-### 3.1 Generate the ConversationInit Topic
+### Lab 3.1: Generate the ConversationInit Topic
 
 1. In the **GitHub Copilot CLI** terminal you opened in section 2.1, enter the following prompt. If you closed the CLI, open a new terminal (**Terminal** → **New Terminal**, or `` Ctrl+` ``) and select **+ GitHub Copilot CLI** from the dropdown again.
 
@@ -493,7 +495,7 @@ You'll use GitHub Copilot with the Copilot Studio skills to generate a `Conversa
 
 1. Check the **Problems** pane (`Ctrl+Shift+M`) for any YAML validation errors. If there are any errors found, you can simply ask GitHub Copilot to fix the errors.
 
-### 3.2 Review the Updated Agent Instructions
+### Lab 3.2: Review the Updated Agent Instructions
 
 GitHub Copilot should also have updated the `agent.mcs.yml` file to reference `{Global.UserCountry}` in the instructions (or something similar)
 
@@ -502,11 +504,11 @@ GitHub Copilot should also have updated the `agent.mcs.yml` file to reference `{
 1. This is a reference to a variable to ensure that the instructions are specific to the current user's location.  
     ![Updated agent instructions](./assets/agent-instructions-updated.png)
 
-## 🔎 4. Add Knowledge Sources and Guardrails {#4-add-knowledge-sources-and-guardrails}
+## 🧪 Lab 4.1 - Add Knowledge Sources and Guardrails {#lab-4-1-add-knowledge-sources-and-guardrails}
 
 A travel agent is only as good as its intel. In this section, you'll use GitHub Copilot to add public website knowledge sources and safety guardrails.
 
-### 4.1 Add Knowledge Sources via AI
+### Lab 4.1: Add Knowledge Sources via AI
 
 1. In the **GitHub Copilot CLI** terminal you used in section 3 (reopen it if closed — see section 2.1), select the **Copilot Studio Author** agent again using `/agents`
 
@@ -525,11 +527,11 @@ A travel agent is only as good as its intel. In this section, you'll use GitHub 
 
 1. Browse the changes to the agent `yaml` to see the changes made
 
-## 🧪 5. Apply Changes and Test {#5-apply-changes-and-test}
+## 🧪 Lab 5.1 - Apply Changes and Test {#lab-5-1-apply-changes-and-test}
 
 In this section, you'll upload your local changes to Copilot Studio and test the agent.
 
-### 5.1 Preview and Apply Changes
+### Lab 5.1: Preview and Apply Changes
 
 The Copilot Studio extension provides three synchronization operations:
 
@@ -560,7 +562,7 @@ The Copilot Studio extension provides three synchronization operations:
 >
 > This is equivalent to the **Apply** operation in the VS Code extension. After pushing, you still need to **Publish** from the Copilot Studio web UI to make changes live.
 
-### 5.2 Test the Agent in Copilot Studio
+### Lab 5.2: Test the Agent in Copilot Studio
 
 1. Navigate to [Copilot Studio](https://copilotstudio.microsoft.com)
 
@@ -596,7 +598,7 @@ Congrats, agent — you've completed **Operation YAML Specialist**! You now have
 
 ✅ **Synchronization Workflow**: Applied local changes back to Copilot Studio and tested the agent end-to-end
 
-## 📚 Further Intel {#further-intel}
+## 📚 Tactical Resources {#tactical-resources}
 
 📖 [Overview of the Copilot Studio VS Code Extension](https://learn.microsoft.com/microsoft-copilot-studio/visual-studio-code-extension-overview?WT.mc_id=power-221594-scottdurow)
 

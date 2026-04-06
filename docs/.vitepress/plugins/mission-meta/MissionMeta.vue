@@ -36,6 +36,12 @@
         <a v-for="t in tags" :key="t.slug" :href="t.href" class="meta-pill meta-pill--tag">{{ t.label }}</a>
       </span>
     </span>
+    <span v-if="industries.length" class="meta-item meta-item--pills">
+      <span class="meta-label">🏭 Industries</span>
+      <span class="meta-pills">
+        <a v-for="i in industries" :key="i.slug" :href="i.href" class="meta-pill meta-pill--industry">{{ i.label }}</a>
+      </span>
+    </span>
   </div>
 </template>
 
@@ -44,9 +50,11 @@ import { computed } from "vue";
 import { useData, withBase } from "vitepress";
 import productData from "../../data/products.json";
 import tagData from "../../data/tags.json";
+import industryData from "../../data/industries.json";
 
 const PRODUCT_LABELS = Object.fromEntries(productData.map((p) => [p.slug, p.label]));
 const TAG_LABELS = Object.fromEntries(tagData.map((t) => [t.slug, t.label]));
+const INDUSTRY_LABELS = Object.fromEntries(industryData.map((i) => [i.slug, i.label]));
 
 const { frontmatter } = useData();
 
@@ -96,7 +104,15 @@ const tags = computed(() =>
   }))
 );
 
-const hasAnything = computed(() => codename.value || difficulty.value || timeMinutes.value || products.value.length > 0 || tags.value.length > 0);
+const industries = computed(() =>
+  (frontmatter.value.industries ?? []).map((slug: string) => ({
+    slug,
+    label: INDUSTRY_LABELS[slug] ?? slug,
+    href: withBase(`/industries/${slug}/`),
+  }))
+);
+
+const hasAnything = computed(() => codename.value || difficulty.value || timeMinutes.value || products.value.length > 0 || tags.value.length > 0 || industries.value.length > 0);
 </script>
 
 <style scoped>
@@ -222,6 +238,16 @@ const hasAnything = computed(() => codename.value || difficulty.value || timeMin
 
 .meta-pill--tag:hover {
   background: var(--vp-c-yellow-2, #f59e0b);
+  color: #fff;
+}
+
+.meta-pill--industry {
+  background: var(--vp-c-green-soft, #d1fae5);
+  color: var(--vp-c-green-1, #065f46);
+}
+
+.meta-pill--industry:hover {
+  background: var(--vp-c-green-2, #10b981);
   color: #fff;
 }
 

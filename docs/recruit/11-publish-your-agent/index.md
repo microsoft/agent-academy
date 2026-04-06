@@ -15,6 +15,8 @@ products:
   - copilot-studio
   - microsoft-365
   - teams
+industries:
+  - it
 created-date: 2025-08-20
 last-edited-date: 2026-01-14
 ---

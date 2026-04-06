@@ -14,6 +14,8 @@ tags:
   - prompting
 products:
   - copilot-studio
+industries:
+  - hr
 created-date: 2026-01-14
 last-edited-date: 2026-03-11
 ---
@@ -148,7 +150,7 @@ JSON output is essential for:
 - **Error handling**: Plan for documents that can't be processed
 - **Monitor costs**: Different models consume different amounts of AI Builder credits
 
-## 🧪 Lab 7: Building a resume extraction system {#lab-7-building-a-resume-extraction-system}
+## 🧪 Lab 7 - Building a resume extraction system {#lab-7-building-a-resume-extraction-system}
 
 Time to put your multimodal knowledge into practice. You'll build a comprehensive resume extraction system that analyzes candidate documents and transforms them into structured data for your hiring workflow.
 

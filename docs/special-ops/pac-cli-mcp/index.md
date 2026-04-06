@@ -12,6 +12,8 @@ products:
   - github-copilot
   - visual-studio-code
   - power-platform
+industries:
+  - it
 created-date: 2026-02-20
 last-edited-date: 2026-03-17
 ---
@@ -47,7 +49,7 @@ Every agent needs a trusty sidearm. The Microsoft Power Platform CLI is your com
 
 The CLI provides a consistent interface on Windows — an essential tool in every Power Platform operative's arsenal.
 
-## 💾 Installing Power Platform CLI with .NET Tool {#installing-power-platform-cli-with-net-tool}
+## 🧪 Lab 1.1 - Install the Power Platform CLI {#lab-1-1-install-the-power-platform-cli}
 
 Time to gear up. The .NET Tool installation method enables you to deploy Power Platform CLI commands within PowerShell and CMD shells on Windows.
 
@@ -106,7 +108,7 @@ The Power Platform CLI executable is deployed to:
 
 This location is automatically added to your system PATH, allowing you to run `pac` commands from any directory.
 
-## 🤖 Power Platform CLI MCP {#power-platform-cli-mcp}
+## 🧪 Lab 2.1 - Configure the Power Platform CLI MCP Server {#lab-2-1-configure-the-power-platform-cli-mcp-server}
 
 Here's where things get interesting, agent. The Power Platform CLI (version 1.44+) includes a built-in **Model Context Protocol (MCP) server** — your direct comm link between AI assistants and Power Platform environments. This integration allows you to issue orders using natural language in supported AI tools like VS Code Copilot, Visual Studio, and other MCP-compatible applications.
 
@@ -186,7 +188,7 @@ If things go sideways, here's your field manual:
    - Check the Output window in VS Code for MCP-related messages
    - Verify tool permissions in MCP server configuration
 
-## 💪 Mission: Get advice about best practices for tenant settings {#mission-get-advice-about-best-practices-for-tenant-settings}
+## 🧪 Lab 3.1 - Get Advice About Best Practices for Tenant Settings {#lab-3-1-get-advice-about-best-practices-for-tenant-settings}
 
 Time to go deeper, agent. Your tenant settings are the backbone of your organization's Power Platform security posture. In this mission, you'll use Visual Studio Code and GitHub Copilot combined with the Power Platform CLI MCP Server to run reconnaissance on your tenant and get strategic governance intel.
 
@@ -196,7 +198,7 @@ Before deploying into the field, ensure you have the following assets installed 
 
 #### Required Equipment
 
-- **Power Platform CLI (version 1.44+)** - Follow the deployment steps in the [Installing Power Platform CLI with .NET Tool](#installing-power-platform-cli-with-net-tool) section above
+- **Power Platform CLI (version 1.44+)** - Follow the deployment steps in the [Installing Power Platform CLI with .NET Tool](#lab-1-1-install-the-power-platform-cli) section above
 - **Visual Studio Code** - Download from [code.visualstudio.com](https://code.visualstudio.com/)
 - **GitHub Copilot extension** - Install from the VS Code Extensions marketplace
 
@@ -344,6 +346,20 @@ This field report demonstrates the operational value of combining Power Platform
 > [!WARNING]
 > While the generated plan may require refinement and validation against your specific organizational requirements, it provides a tactical foundation that would typically require hours of research, documentation review, and strategic planning. This demonstrates how AI can compress governance planning from days to minutes.
 
+## ✅ Mission Accomplished {#mission-accomplished}
+
+Congrats, agent — mission complete! You've established a secure command channel between the Power Platform CLI and GitHub Copilot using the Model Context Protocol.
+
+In this mission, you accomplished:
+
+✅ **CLI Deployment**: Installed and configured the Power Platform CLI as a .NET global tool
+
+✅ **MCP Integration**: Wired the Power Platform CLI MCP server into Visual Studio Code for natural language operations
+
+✅ **Tenant Reconnaissance**: Used AI-powered commands to analyze tenant settings and environment configurations
+
+✅ **Governance Strategy**: Leveraged AI to generate comprehensive governance improvement plans from real tenant data
+
 ## 🏅 Claim your completion badge {#claim-your-completion-badge}
 
 <!-- markdownlint-disable-next-line MD033 -->
@@ -362,9 +378,12 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 
 ## 📚 Tactical Resources {#tactical-resources}
 
-- 🧪 [Power Platform Governance Plan Example](./power-platform-plan/index.md) — Field report: strategic governance improvement plan generated using AI
-📖 [Adding an MCP server in Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers)  
-📖 [Power Platform CLI Documentation](https://learn.microsoft.com/power-platform/developer/cli/introduction)  
+🧪 [Power Platform Governance Plan Example](./power-platform-plan/index.md) — Field report: strategic governance improvement plan generated using AI
+
+📖 [Adding an MCP server in Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers)
+
+📖 [Power Platform CLI Documentation](https://learn.microsoft.com/power-platform/developer/cli/introduction)
+
 📖 [GitHub Discussion: PAC CLI MCP Preview](https://github.com/microsoft/powerplatform-build-tools/discussions/1182)
 
 <analytics-tag section="special-ops" mission="pac-cli-mcp" />

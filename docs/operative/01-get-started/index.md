@@ -13,6 +13,8 @@ tags:
   - fundamentals
 products:
   - copilot-studio
+industries:
+  - hr
 created-date: 2026-01-14
 last-edited-date: 2026-03-16
 ---
@@ -74,11 +76,11 @@ The solution helps HR teams save time and make better decisions by:
 
 This scenario is ideal for organizations looking to modernize their recruitment workflows using AI-powered automation, while maintaining transparency, fairness, and efficiency.
 
-## 🧪 Lab 1: Setup the Hiring Agent {#lab-1-setup-the-hiring-agent}
+## 🧪 Lab 1 - Setup the Hiring Agent {#lab-1-setup-the-hiring-agent}
 
 In this hands-on lab, you'll establish the foundation for your hiring automation system. You'll begin by importing a pre-configured solution that contains all the necessary Dataverse tables and data structure for managing candidates, job positions, and hiring workflows. Next, you'll populate these tables with sample data that will support your learning throughout this module and provide realistic scenarios for testing. Finally, you'll create the Hiring Agent in Copilot Studio, setting up the basic conversational interface that will serve as the cornerstone for all the other features you'll add in future missions.
 
-### 🧪 Lab 1.1: Import solution {#lab-11-import-solution}
+### 🧪 Lab 1.1 - Import solution {#lab-11-import-solution}
 
 1. Go to **[Copilot Studio](https://copilotstudio.microsoft.com)**
 1. Select the **...** in the left navigation and select **Solutions**
@@ -124,7 +126,7 @@ As the last task for this lab, Select the **Publish all customizations** button 
 
 ![Publish Customizations](./assets/01-pubcustomizations.png)
 
-### 🧪 Lab 1.2: Import sample data {#lab-12-import-sample-data}
+### 🧪 Lab 1.2 - Import sample data {#lab-12-import-sample-data}
 
 In this lab, you will add sample data to some of the tables that you imported in lab 1.1.
 
@@ -209,7 +211,7 @@ This can take a little while, but you can hit the **Refresh** button to see if t
 
 ![Evaluation Criteria import successful](./assets/evaluation-criteria-import-successful.png)
 
-### 🧪 Lab 1.3: Create the hiring agent {#lab-13-create-the-hiring-agent}
+### 🧪 Lab 1.3 - Create the hiring agent {#lab-13-create-the-hiring-agent}
 
 Now you are done with the setup of the prerequisites, it's time for the actual work! Let's add our Hiring Agent first!
 
@@ -262,7 +264,8 @@ Next up is [Mission 02](../02-agent-instructions/index.md): Agent Instructions
 
 ## 📚 Tactical Resources {#tactical-resources}
 
-📖 [Microsoft Copilot Studio - Create an agent](https://learn.microsoft.com/microsoft-copilot-studio/authoring-first-bot)    
+📖 [Microsoft Copilot Studio - Create an agent](https://learn.microsoft.com/microsoft-copilot-studio/authoring-first-bot)  
+  
 📖 [Microsoft Dataverse Documentation](https://learn.microsoft.com/power-apps/maker/data-platform)
 
 <analytics-tag section="operative" mission="01-get-started" />

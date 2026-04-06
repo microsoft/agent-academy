@@ -6,6 +6,7 @@ import Missions from "../plugins/missions/Missions.vue";
 import MissionMeta from "../plugins/mission-meta/MissionMeta.vue";
 import ProductsIndex from "../plugins/products-index/ProductsIndex.vue";
 import TagsIndex from "../plugins/tags-index/TagsIndex.vue";
+import IndustriesIndex from "../plugins/industries-index/IndustriesIndex.vue";
 import Breadcrumb from "../plugins/breadcrumb/Breadcrumb.vue";
 import PageDates from "../plugins/page-dates/PageDates.vue";
 import AnalyticsTag from "../plugins/analytics-tag/AnalyticsTag.vue";
@@ -24,6 +25,7 @@ export default {
     app.component("mission-meta", MissionMeta);
     app.component("products-index", ProductsIndex);
     app.component("tags-index", TagsIndex);
+    app.component("industries-index", IndustriesIndex);
     app.component("breadcrumb", Breadcrumb);
     app.component("analytics-tag", AnalyticsTag);
   },

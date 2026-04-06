@@ -1,6 +1,6 @@
 <template>
   <div class="missions-container">
-    <div v-if="filterable && (availableTags.length || availableProducts.length)" class="missions-filters">
+    <div v-if="filterable && (availableTags.length || availableProducts.length || availableIndustries.length)" class="missions-filters">
       <div v-if="availableTags.length" class="filter-group">
         <span class="filter-label">Tags</span>
         <div class="filter-pills">
@@ -23,6 +23,18 @@
             :class="{ active: activeProduct === p.slug }"
             @click="activeProduct = activeProduct === p.slug ? null : p.slug"
           >{{ p.label }}</button>
+        </div>
+      </div>
+      <div v-if="availableIndustries.length" class="filter-group">
+        <span class="filter-label">Industry</span>
+        <div class="filter-pills">
+          <button
+            v-for="i in availableIndustries"
+            :key="i.slug"
+            class="filter-pill"
+            :class="{ active: activeIndustry === i.slug }"
+            @click="activeIndustry = activeIndustry === i.slug ? null : i.slug"
+          >{{ i.label }}</button>
         </div>
       </div>
     </div>
@@ -92,6 +104,7 @@ import { withBase } from "vitepress";
 import { missions } from "virtual:missions-data";
 import tagsData from "../../data/tags.json";
 import productsData from "../../data/products.json";
+import industriesData from "../../data/industries.json";
 
 const props = withDefaults(
   defineProps<{
@@ -102,6 +115,7 @@ const props = withDefaults(
     filterable?: boolean;
     tag?: string;
     product?: string;
+    industry?: string;
   }>(),
   {
     sort: "alphabetical",
@@ -118,19 +132,21 @@ const SECTION_LABELS: Record<string, string> = {
 };
 
 function timeAgo(timestamp: number): string {
-  const seconds = Math.floor((Date.now() - timestamp) / 1000);
-  const intervals: [number, string][] = [
-    [31536000, "year"],
-    [2592000, "month"],
-    [86400, "day"],
-    [3600, "hour"],
-    [60, "minute"],
-  ];
-  for (const [secs, label] of intervals) {
-    const count = Math.floor(seconds / secs);
-    if (count >= 1) return `${count} ${label}${count > 1 ? "s" : ""} ago`;
-  }
-  return "just now";
+  const now = new Date();
+  const then = new Date(timestamp);
+  const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+  const diff = todayStart - new Date(then.getFullYear(), then.getMonth(), then.getDate()).getTime();
+  const days = Math.round(diff / 86400000);
+
+  if (days <= 0) return "today";
+  if (days === 1) return "yesterday";
+  if (days < 30) return `${days} days ago`;
+
+  const months = Math.floor(days / 30);
+  if (months < 12) return `${months} month${months > 1 ? "s" : ""} ago`;
+
+  const years = Math.floor(days / 365);
+  return `${years} year${years > 1 ? "s" : ""} ago`;
 }
 
 function sectionLabel(section: string): string {
@@ -178,6 +194,7 @@ const sortedMissions = computed(() => {
 // Filters
 const activeTag = ref<string | null>(null);
 const activeProduct = ref<string | null>(null);
+const activeIndustry = ref<string | null>(null);
 
 // Only show tag filter when not already scoped by a tag prop, and tags exist in this set
 const availableTags = computed(() => {
@@ -193,20 +210,28 @@ const availableProducts = computed(() => {
   return productsData.filter((p) => slugsInUse.has(p.slug));
 });
 
+const availableIndustries = computed(() => {
+  if (props.industry) return [];
+  const slugsInUse = new Set(sortedMissions.value.flatMap((m) => m.industries ?? []));
+  return industriesData.filter((i) => slugsInUse.has(i.slug));
+});
+
 const filteredMissions = computed(() => {
   return sortedMissions.value.filter((m) => {
     // prop-level filters (page context — always applied)
     if (props.tag && !(m.tags ?? []).includes(props.tag)) return false;
     if (props.product && !(m.products ?? []).includes(props.product)) return false;
+    if (props.industry && !(m.industries ?? []).includes(props.industry)) return false;
     // pill-level filters (inline filter bar)
     if (activeTag.value && !(m.tags ?? []).includes(activeTag.value)) return false;
     if (activeProduct.value && !(m.products ?? []).includes(activeProduct.value)) return false;
+    if (activeIndustry.value && !(m.industries ?? []).includes(activeIndustry.value)) return false;
     return true;
   });
 });
 
 // Reset page when filters change
-watch([activeTag, activeProduct], () => { page.value = 1; });
+watch([activeTag, activeProduct, activeIndustry], () => { page.value = 1; });
 
 // Pagination based on max-rows and detected column count
 const gridRef = ref<HTMLElement | null>(null);

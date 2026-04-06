@@ -13,6 +13,8 @@ tags:
   - multi-agent
 products:
   - copilot-studio
+industries:
+  - hr
 created-date: 2026-01-14
 last-edited-date: 2026-03-16
 ---
@@ -233,7 +235,7 @@ The Interview Prep Agent works better as a connected agent because:
 - Different hiring managers might want to customize its behavior for their teams
 - It could be reused for internal positions, not just external hiring
 
-## 🧪 Lab 3.1: Adding the Application Intake Agent {#lab-31-adding-the-application-intake-agent}
+## 🧪 Lab 3.1 - Adding the Application Intake Agent {#lab-31-adding-the-application-intake-agent}
 
 Ready to put theory into practice? Let's add our first child agent to your existing Hiring Agent.
 
@@ -584,7 +586,7 @@ Now let's verify that our agent is working correctly by calling our child agent 
 1. Navigate to **Resumes**, and check that the resume file is uploaded and the cover letter is set accordingly.  
     ![Resume uploaded to Dataverse](./assets/2-resume-uploade.png)
 
-## 🧪Lab 3.2: Adding the Interview Prep connected agent {#lab-32-adding-the-interview-prep-connected-agent}
+## 🧪 Lab 3.2 - Adding the Interview Prep connected agent {#lab-32-adding-the-interview-prep-connected-agent}
 
 Now let's create our connected agent for interview preparation and add it to your existing Hiring Agent.
 

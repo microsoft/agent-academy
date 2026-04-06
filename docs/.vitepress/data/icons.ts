@@ -200,3 +200,35 @@ export const tagIcons: Record<string, string> = {
     `<path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
        d="M4 4h3l3 5 3-5h3M10 9v7M6 17h8"/>`,
 };
+
+export const industryIcons: Record<string, string> = {
+  "facilities":
+    `<path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"
+       d="M3 18V8l7-5 7 5v10H3z"/>
+     <rect x="7" y="11" width="6" height="7" fill="currentColor" opacity=".4"/>
+     <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M10 14v4"/>`,
+
+  "financial-services":
+    `<circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+     <text x="10" y="14" text-anchor="middle" font-size="10" font-weight="700" fill="currentColor" font-family="sans-serif">$</text>`,
+
+  "general":
+    `<circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+     <circle cx="10" cy="10" r="3" fill="currentColor" opacity=".5"/>`,
+
+  "hr":
+    `<circle cx="10" cy="5" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+     <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M4 18c0-3.3 2.7-6 6-6s6 2.7 6 6"/>`,
+
+  "it":
+    `<rect x="2" y="4" width="16" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+     <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M7 19h6"/>
+     <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M10 16v3"/>
+     <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M7 9l2 2-2 2M11 13h3"/>`,
+
+  "security":
+    `<path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"
+       d="M10 2l7 3v5c0 4-3 7-7 8C6 17 3 14 3 10V5l7-3z"/>
+     <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+       d="M7 10l2 2 4-4"/>`,
+};

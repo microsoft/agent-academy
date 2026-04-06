@@ -14,6 +14,8 @@ tags:
 products:
   - copilot-studio
   - dataverse
+industries:
+  - hr
 created-date: 2026-01-14
 last-edited-date: 2026-03-11
 ---
@@ -126,7 +128,7 @@ While you can retrieve up to 1,000 records from Dataverse, understanding when an
 
 Dataverse grounding is not designed to process large datasets directly in the prompt. Even increasing the limit to 1,000 may not be the right answer if you're working with thousands of records. The key is to use **filtering strategically** to narrow your dataset before it reaches the AI model. Always filter by status, date ranges, categories, or other relevant criteria to ensure only the most pertinent records are included.
 
-## 🧪 Lab 8: Add Dataverse grounding to prompts {#lab-8-add-dataverse-grounding-to-prompts}
+## 🧪 Lab 8 - Add Dataverse grounding to prompts {#lab-8-add-dataverse-grounding-to-prompts}
 
 Time to upgrade your resume analysis capabilities! You'll enhance the existing Summarize Resume flow with dynamic job role matching.
 

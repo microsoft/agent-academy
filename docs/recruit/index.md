@@ -3,8 +3,6 @@ next:
   text: 'Course Setup'
   link: '/recruit/00-course-setup'
 lastUpdated: false
-created-date: 2025-08-20
-last-edited-date: 2026-02-16
 ---
 
 # Welcome Recruit
