@@ -3,12 +3,12 @@ lastUpdated: false
 ---
 # Cowork Collective
 
-Cowork Collective missions are hands-on labs focused on **Microsoft 365 Copilot Cowork** — a new way to delegate work to Copilot so it can take action on your behalf across your Microsoft 365 environment.
+Cowork Collective missions are hands-on labs focused on **Copilot Cowork** — a new way to delegate work to Copilot so it can take action on your behalf across your Microsoft 365 environment.
 
 > [!NOTE]
-> Cowork is currently available through the [Microsoft 365 Frontier preview program](https://adoption.microsoft.com/en-us/copilot/frontier-program/). You'll need Frontier access to complete these labs. Cowork also relies on Anthropic models — ask your admin to enable them in the [Microsoft 365 admin center](https://admin.microsoft.com/) if they aren't already.
+> Copilot Cowork is currently available through the [Microsoft 365 Frontier preview program](https://adoption.microsoft.com/en-us/copilot/frontier-program/). You'll need Frontier access to complete these labs. Copilot Cowork also relies on Anthropic models — ask your admin to enable them in the [Microsoft 365 admin center](https://admin.microsoft.com/) if they aren't already.
 
-You describe a task, Cowork breaks it into steps, and you approve each action before it happens — sending emails, scheduling meetings, creating documents, posting in Teams, and more.
+You describe a task, Copilot Cowork breaks it into steps, and you approve each action before it happens — sending emails, scheduling meetings, creating documents, posting in Teams, and more.
 
 ## Cowork Collective Missions
 
