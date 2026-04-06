@@ -39,7 +39,7 @@ Compliance prep is document-heavy and cross-referential. You need to reconcile i
 
 ## 📋 What You'll Produce {#what-youll-produce}
 
-By the end of this mission, Cowork will have created:
+By the end of this mission, Copilot Cowork will have created:
 
 - ✅ An **executive summary** (Word) synthesizing Zava's compliance posture across all four source files
 - ✅ A **gap analysis** (Excel) mapping open risk register findings to audit checklist items, sorted by risk level
@@ -48,17 +48,17 @@ By the end of this mission, Cowork will have created:
 
 ## ⚙️ Prerequisites {#prerequisites}
 
-- Active **Microsoft 365 Copilot** license with Cowork enabled
+- Active **Microsoft 365 Copilot** license with Copilot Cowork enabled
 - The four sample files from this lab's `/assets/sample-files` folder downloaded to your device
 
 > [!WARNING]
-> Cowork requires Frontier enrollment for **both your user account and your tenant**. If Cowork isn't visible when you navigate to [m365.cloud.microsoft](https://m365.cloud.microsoft), ask your admin to check enrollment under **Copilot → Settings → Frontier** in the Microsoft 365 Admin Center.
+> Copilot Cowork requires Frontier enrollment for **both your user account and your tenant**. If Copilot Cowork isn't visible when you navigate to [m365.cloud.microsoft](https://m365.cloud.microsoft), ask your admin to check enrollment under **Copilot → Settings → Frontier** in the Microsoft 365 Admin Center.
 >
-> Before starting, open and skim all four sample files so you know what Cowork is working with.
+> Before starting, open and skim all four sample files so you know what Copilot Cowork is working with.
 
 ## 🎯 The Scenario {#the-scenario}
 
-You are a compliance analyst at **Zava Financial Services**, a mid-size financial services firm based in Chicago. An external audit by **Hartwell & Associates LLP** is scheduled for **October 14–18, 2026**, covering ISO 27001 and SOC 2 Type II controls. Your CISO (Chief Information Security Officer) needs a complete audit package ready for leadership review by end of week. You have four internal documents that describe Zava's current compliance posture. Your job: turn them into a professional audit package in a single Cowork session that you can use to brief leadership.
+You are a compliance analyst at **Zava Financial Services**, a mid-size financial services firm based in Chicago. An external audit by **Hartwell & Associates LLP** is scheduled for **October 14–18, 2026**, covering ISO 27001 and SOC 2 Type II controls. Your CISO (Chief Information Security Officer) needs a complete audit package ready for leadership review by end of week. You have four internal documents that describe Zava's current compliance posture. Your job: turn them into a professional audit package in a single Copilot Cowork session that you can use to brief leadership.
 
 ## 📁 Lab Assets {#lab-assets}
 
@@ -71,7 +71,7 @@ This mission provides all four source documents.
 | `zava-risk-register.csv` | 12 open/partial risk findings (R-001 through R-012), each with Risk Level, Owner, Status, and remediation notes | [download](https://raw.githubusercontent.com/microsoft/agent-academy/main/docs/cowork-collective/compliance-packet/assets/sample-files/zava-risk-register.csv) |
 | `zava-audit-checklist.csv` | 15 audit checklist items mapped to ISO 27001 and SOC 2 controls, each with a Readiness Status (Ready / In Progress / Not Ready) | [download](https://raw.githubusercontent.com/microsoft/agent-academy/main/docs/cowork-collective/compliance-packet/assets/sample-files/zava-audit-checklist.csv) |
 
-## 🧪 Lab 1.1 - Open Cowork and Attach Your Files {#lab-1-1}
+## 🧪 Lab 1.1 - Open Copilot Cowork and Attach Your Files {#lab-1-1}
 
 One habit worth building early: **attach files before you send your first message**. Files attached at the start are available to every step in the conversation. Files added later only apply from that point forward.
 
@@ -91,7 +91,7 @@ One habit worth building early: **attach files before you send your first messag
 
 ## 🧪 Lab 1.2 - Send the Prompt {#lab-1-2}
 
-With all four files attached, describe the complete job in one message. Tell Cowork what you want, and let it figure out how.
+With all four files attached, describe the complete job in one message. Tell Copilot Cowork what you want, and let it figure out how.
 
 1. Copy and paste the following prompt, then send it:
 
@@ -145,17 +145,17 @@ Please produce three documents and one email draft:
 ![Prompt](./assets/send-prompt.png)
 
 > [!TIP]
-> The phrase "Use these as your only source of truth — do not add findings or owners that aren't in the attached files" is important. It's the instruction that keeps Cowork from pattern-matching to generic compliance content. Use this pattern any time accuracy is non-negotiable.
+> The phrase "Use these as your only source of truth — do not add findings or owners that aren't in the attached files" is important. It's the instruction that keeps Copilot Cowork from pattern-matching to generic compliance content. Use this pattern any time accuracy is non-negotiable.
 
 ## 🧪 Lab 1.3 - Watch the Side Panel and Review Documents {#lab-1-3}
 
-After sending, open the **side panel** and watch the **Progress** section update in real time. You'll see the skills Cowork activates appear as chips in the **Skills** section.
+After sending, open the **side panel** and watch the **Progress** section update in real time. You'll see the skills Copilot Cowork activates appear as chips in the **Skills** section.
 
-As Cowork completes each document, it will show them in the Outputs folder.
+As Copilot Cowork completes each document, it will show them in the Outputs folder.
 
 ![Outputs](./assets/details-panel-shown.png)
 
-1. Click on the **Executive Summary** Output to open a preview directly in Cowork so you can review. Check against the source files and confirm the following:
+1. Click on the **Executive Summary** Output to open a preview directly in Copilot Cowork so you can review. Check against the source files and confirm the following:
 
     - Does it reference specific Risk IDs (R-001 through R-012)?
     - Are the readiness counts correct?
@@ -163,7 +163,7 @@ As Cowork completes each document, it will show them in the Outputs folder.
 
     ![Exec summary](./assets/exec-summary-doc.png)
 
-1. Open the **Gap Analysis** Output to open a preview directly in Cowork so you can review. Check against the source files and confirm the following:
+1. Open the **Gap Analysis** Output to open a preview directly in Copilot Cowork so you can review. Check against the source files and confirm the following:
 
     - Are all risk register findings represented?
     - Is it sorted Critical → High → Medium?
@@ -172,7 +172,7 @@ As Cowork completes each document, it will show them in the Outputs folder.
 
     ![Gap Analysis](./assets/gap-analysis-doc.png)
 
-1. Open the **Cover Letter** Output to open a preview directly in Cowork so you can review. Check against the source files and confirm the following:
+1. Open the **Cover Letter** Output to open a preview directly in Copilot Cowork so you can review. Check against the source files and confirm the following:
 
     - Correct addressee (Hartwell & Associates LLP)
     - Both signatories present (Dana Olufsen and Priya Nair)
@@ -182,11 +182,11 @@ As Cowork completes each document, it will show them in the Outputs folder.
     ![Cover Letter](./assets/cover-letter-doc.png)
 
 > [!NOTE]
-> If something is wrong, fix it in the same conversation, don't start over. Use a targeted correction like: `"The gap analysis is missing R-012. Please add it mapped to audit checklist item #7, Risk Level High"` Cowork will update the file and show you the revised version.
+> If something is wrong, fix it in the same conversation, don't start over. Use a targeted correction like: `"The gap analysis is missing R-012. Please add it mapped to audit checklist item #7, Risk Level High"` Copilot Cowork will update the file and show you the revised version.
 
 ## 🧪 Lab 1.4 - Review and Approve the Email {#lab-1-4}
 
-After the three documents are complete, Cowork will present the leadership briefing email draft for your review.
+After the three documents are complete, Copilot Cowork will present the leadership briefing email draft for your review.
 
 1. Read the email carefully before doing anything else:
 
@@ -195,23 +195,23 @@ After the three documents are complete, Cowork will present the leadership brief
     - Is the **call to action** clear (a 30-minute alignment call this week)?
     - Does it reference the **correct audit date** (October 14)?
 
-1. If the email looks right, enter the following prompt asking Cowork to send the email:
+1. If the email looks right, enter the following prompt asking Copilot Cowork to send the email:
 
     ```text
     Can you send this email and files to <insert your email here>
     ```
 
     > [!NOTE]
-    > If anything needs changing, select **Reject** and tell Cowork what to fix
+    > If anything needs changing, select **Reject** and tell Copilot Cowork what to fix
 
-1. Cowork will draft a new email inline with the files attached that you can review before sending. Review the email then press **Send**
+1. Copilot Cowork will draft a new email inline with the files attached that you can review before sending. Review the email then press **Send**
 
     ![Review Email](./assets/send-email-card.png)
 
     > [!WARNING]
-    > Once you **Approve**, the email is sent from your Outlook account to those recipients. For testing, please instruct Cowork to send the email to yourself so you can see the output and test that it was sent.
+    > Once you **Approve**, the email is sent from your Outlook account to those recipients. For testing, please instruct Copilot Cowork to send the email to yourself so you can see the output and test that it was sent.
 
-1. You'll get a confirmation in Cowork that the email was sent
+1. You'll get a confirmation in Copilot Cowork that the email was sent
 
     ![Email Confirmation](./assets/email-sent.png)
 
@@ -221,13 +221,13 @@ After the three documents are complete, Cowork will present the leadership brief
 
 ## 🏆 Mission Accomplished {#mission-accomplished}
 
-**Operation By the Book is complete.** Four audit deliverables from one Cowork conversation.
+**Operation By the Book is complete.** Four audit deliverables from one Copilot Cowork conversation.
 
 What you saw in action:
 
-✅ **Grounded output**: Cowork referenced actual Risk IDs, real policy versions, and named parties from your files.
+✅ **Grounded output**: Copilot Cowork referenced actual Risk IDs, real policy versions, and named parties from your files.
 
-✅ **One prompt, multiple documents**: You described the job once. Cowork handled cross-document coherence.
+✅ **One prompt, multiple documents**: You described the job once. Copilot Cowork handled cross-document coherence.
 
 ✅ **You approve before anything sends**: The email didn't go out until you read it, verified the Risk IDs, confirmed the recipients, and said go.
 

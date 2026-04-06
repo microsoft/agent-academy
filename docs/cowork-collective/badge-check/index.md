@@ -33,7 +33,7 @@ Building security depends on accurate badge data, but employees forget to badge 
 
 ## 📋 What You'll Produce {#what-youll-produce}
 
-By the end of this mission, Cowork will have:
+By the end of this mission, Copilot Cowork will have:
 
 - ✅ Analyzed a badge scan CSV and identified employees who forgot to check out
 - ✅ Sent you a summary report via email
@@ -44,7 +44,7 @@ By the end of this mission, Cowork will have:
 - **Microsoft 365 Copilot license**: required to access Copilot Cowork ([learn more](https://learn.microsoft.com/copilot/microsoft-365/microsoft-365-copilot-licensing))
 - **Microsoft 365 license**: required for Outlook (to receive the email report) and OneDrive (to store custom skills)
 - **Anthropic models enabled on your tenant**: Copilot Cowork relies on Anthropic models. Ensure your admin has enabled them in the [Microsoft 365 admin center](https://admin.microsoft.com/)
-- **Microsoft 365 Copilot Cowork access** via the [Microsoft 365 Frontier program](https://adoption.microsoft.com/copilot/frontier-program/)
+- **Copilot Cowork access** via the [Microsoft 365 Frontier program](https://adoption.microsoft.com/copilot/frontier-program/)
 
 ## 🤝 What is Copilot Cowork? {#what-is-copilot-cowork}
 
@@ -84,12 +84,12 @@ In this first lab, upload the badge scan file and ask Copilot Cowork to identify
 
     ![Microsoft 365 Copilot left sidebar showing Agents section with Cowork (Frontier) highlighted in a red box](./assets/select-cowork.png)
 
-    You'll land on the Cowork homepage. From here you can type a new task at the top, try one of the "Get to work" samples, or pick up where you left off from the recent tasks list.
+    You'll land on the Copilot Cowork homepage. From here you can type a new task at the top, try one of the "Get to work" samples, or pick up where you left off from the recent tasks list.
 
     ![Cowork homepage showing the input field, four Get to work sample cards (Organize my inbox, Organize my week, Prep for a meeting, Research a company), and an empty Tasks section with No recent tasks](./assets/cowork-home.png)
 
     > [!NOTE]
-    > Your Cowork homepage may look slightly different depending on when you access it.
+    > Your Copilot Cowork homepage may look slightly different depending on when you access it.
 
 1. Drag and drop the **badge_check.csv** file into the conversation
 
@@ -122,7 +122,7 @@ In this first lab, upload the badge scan file and ask Copilot Cowork to identify
     - Columns for Badge ID and Offices Affected
 
     > [!TIP]
-    > If the report is missing employees or the counts look wrong, don't start over. Send a follow-up in the same conversation, like: *"The report is missing Ian Wright — can you recheck and resend?"* Cowork will correct and resend without regenerating everything.
+    > If the report is missing employees or the counts look wrong, don't start over. Send a follow-up in the same conversation, like: *"The report is missing Ian Wright — can you recheck and resend?"* Copilot Cowork will correct and resend without regenerating everything.
 
 You now have a working report in your inbox. Lab 2 builds on this with a formatted HTML report using a custom skill.
 
@@ -159,7 +159,7 @@ In this mission, you'll create a **frontend-design** skill that instructs Copilo
 
 1. Download the [SKILL.md](https://raw.githubusercontent.com/microsoft/agent-academy/main/docs/cowork-collective/badge-check/assets/SKILL.md) file and save it to your device
 
-    The skill tells Cowork how to format HTML output: pick real fonts instead of system defaults, use a consistent color scheme, and make layouts work on both desktop and mobile. It also has guardrails against generic-looking output (no purple-on-white gradients, no cookie-cutter tables). The result is a report that actually looks like someone designed it.
+    The skill tells Copilot Cowork how to format HTML output: pick real fonts instead of system defaults, use a consistent color scheme, and make layouts work on both desktop and mobile. It also has guardrails against generic-looking output (no purple-on-white gradients, no cookie-cutter tables). The result is a report that actually looks like someone designed it.
 
 1. Open **OneDrive** and navigate to `Documents`
 
@@ -229,7 +229,7 @@ In this mission, you'll create a **frontend-design** skill that instructs Copilo
 Open both emails side by side. The first one is a plain text table with all 12 employees. The second has styled rows, actual typography, and color coding for the worst offenders. Same CSV, same agent. The only difference is the skill file you added to OneDrive.
 
 > [!TIP]
-> Want to tweak the report? In the same conversation, try: *"Change the red highlight threshold from 50% to 30% and add a column showing each person's most frequent office."* Cowork will update the report and resend it.
+> Want to tweak the report? In the same conversation, try: *"Change the red highlight threshold from 50% to 30% and add a column showing each person's most frequent office."* Copilot Cowork will update the report and resend it.
 
 ## 🏆 Mission Accomplished {#mission-accomplished}
 
@@ -237,11 +237,11 @@ Open both emails side by side. The first one is a plain text table with all 12 e
 
 What you saw in action:
 
-✅ **One conversation, full workflow**: You described the job. Cowork analyzed the data, built the report, and emailed it.
+✅ **One conversation, full workflow**: You described the job. Copilot Cowork analyzed the data, built the report, and emailed it.
 
 ✅ **Custom skills change the output**: The same CSV went from a plain text table to a styled HTML report because of one skill file.
 
-✅ **Nothing sends without your approval**: Cowork drafted the email and waited for you to review it first.
+✅ **Nothing sends without your approval**: Copilot Cowork drafted the email and waited for you to review it first.
 
 ## 🏅 Claim your Badge Bandit badge {#claim-your-badge}
 
