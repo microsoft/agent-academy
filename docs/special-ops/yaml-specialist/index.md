@@ -1,4 +1,4 @@
-﻿---
+---
 tags:
   - yaml
 difficulty: 3
@@ -209,7 +209,7 @@ Topics use different trigger types depending on when they should fire:
 > [!TIP]
 > Use `OnActivity` with a `condition` when you need a topic to fire based on runtime state (like checking a global variable) rather than based on what the user said.
 
-## 🧪 Lab 1: Set Up and Clone Your Agent {#lab-1-set-up-and-clone-your-agent}
+## 🧪 Lab 1.1 - Set Up and Clone Your Agent {#lab-1-1-set-up-and-clone-your-agent}
 
 In this section, you'll create a Travel Agent in Copilot Studio and clone it to your local machine using the VS Code extension.
 
@@ -353,7 +353,7 @@ Before making changes, take a look at what was cloned.
 > [!TIP]
 > Use `Ctrl+F` to search across your entire agent definition. This is much faster than navigating between topics in the web UI, especially for agents with dozens of topics and tools.
 
-## 🧪 Lab 2: Enable GitHub Copilot with Copilot Studio Skills {#lab-2-enable-github-copilot-with-copilot-studio-skills}
+## 🧪 Lab 2.1 - Enable GitHub Copilot with Copilot Studio Skills {#lab-2-1-enable-github-copilot-with-copilot-studio-skills}
 
 GitHub Copilot is a powerful AI coding assistant, but out of the box it doesn't know the Copilot Studio YAML schema. By installing specialized **agent skills**, you give GitHub Copilot deep knowledge of the YAML agent definition language — enabling it to generate valid topics, actions, and configurations on demand. In this section, you'll set up the GitHub Copilot CLI inside VS Code and install the Copilot Studio skills.
 
@@ -394,7 +394,7 @@ The [skills-for-copilot-studio](https://github.com/microsoft/skills-for-copilot-
 > See the full [Setup Guide](https://github.com/microsoft/skills-for-copilot-studio/blob/main/SETUP_GUIDE.md) for additional options including cloning, pushing, testing, and troubleshooting via slash commands.
 > You can also open GitHub Copilot CLI outside VS Code by navigating to your agent project folder in any terminal and running `copilot`.
 
-## 🧪 Lab 3: Build a ConversationInit Topic with AI {#lab-3-build-a-conversationinit-topic-with-ai}
+## 🧪 Lab 3.1 - Build a ConversationInit Topic with AI {#lab-3-1-build-a-conversationinit-topic-with-ai}
 
 You'll use GitHub Copilot with the Copilot Studio skills to generate a `ConversationInit` topic. This topic detects the user's country from their timezone and personalizes the travel experience.
 
@@ -504,7 +504,7 @@ GitHub Copilot should also have updated the `agent.mcs.yml` file to reference `{
 1. This is a reference to a variable to ensure that the instructions are specific to the current user's location.  
     ![Updated agent instructions](./assets/agent-instructions-updated.png)
 
-## 🧪 Lab 4: Add Knowledge Sources and Guardrails {#lab-4-add-knowledge-sources-and-guardrails}
+## 🧪 Lab 4.1 - Add Knowledge Sources and Guardrails {#lab-4-1-add-knowledge-sources-and-guardrails}
 
 A travel agent is only as good as its intel. In this section, you'll use GitHub Copilot to add public website knowledge sources and safety guardrails.
 
@@ -527,7 +527,7 @@ A travel agent is only as good as its intel. In this section, you'll use GitHub 
 
 1. Browse the changes to the agent `yaml` to see the changes made
 
-## 🧪 Lab 5: Apply Changes and Test {#lab-5-apply-changes-and-test}
+## 🧪 Lab 5.1 - Apply Changes and Test {#lab-5-1-apply-changes-and-test}
 
 In this section, you'll upload your local changes to Copilot Studio and test the agent.
 

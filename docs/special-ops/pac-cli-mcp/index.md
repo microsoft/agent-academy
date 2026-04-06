@@ -49,7 +49,7 @@ Every agent needs a trusty sidearm. The Microsoft Power Platform CLI is your com
 
 The CLI provides a consistent interface on Windows — an essential tool in every Power Platform operative's arsenal.
 
-## 🧪 Lab 1: Install the Power Platform CLI {#lab-1-install-the-power-platform-cli}
+## 🧪 Lab 1.1 - Install the Power Platform CLI {#lab-1-1-install-the-power-platform-cli}
 
 Time to gear up. The .NET Tool installation method enables you to deploy Power Platform CLI commands within PowerShell and CMD shells on Windows.
 
@@ -108,7 +108,7 @@ The Power Platform CLI executable is deployed to:
 
 This location is automatically added to your system PATH, allowing you to run `pac` commands from any directory.
 
-## 🧪 Lab 2: Configure the Power Platform CLI MCP Server {#lab-2-configure-the-power-platform-cli-mcp-server}
+## 🧪 Lab 2.1 - Configure the Power Platform CLI MCP Server {#lab-2-1-configure-the-power-platform-cli-mcp-server}
 
 Here's where things get interesting, agent. The Power Platform CLI (version 1.44+) includes a built-in **Model Context Protocol (MCP) server** — your direct comm link between AI assistants and Power Platform environments. This integration allows you to issue orders using natural language in supported AI tools like VS Code Copilot, Visual Studio, and other MCP-compatible applications.
 
@@ -188,7 +188,7 @@ If things go sideways, here's your field manual:
    - Check the Output window in VS Code for MCP-related messages
    - Verify tool permissions in MCP server configuration
 
-## 🧪 Lab 3: Get Advice About Best Practices for Tenant Settings {#lab-3-get-advice-about-best-practices-for-tenant-settings}
+## 🧪 Lab 3.1 - Get Advice About Best Practices for Tenant Settings {#lab-3-1-get-advice-about-best-practices-for-tenant-settings}
 
 Time to go deeper, agent. Your tenant settings are the backbone of your organization's Power Platform security posture. In this mission, you'll use Visual Studio Code and GitHub Copilot combined with the Power Platform CLI MCP Server to run reconnaissance on your tenant and get strategic governance intel.
 
@@ -198,7 +198,7 @@ Before deploying into the field, ensure you have the following assets installed 
 
 #### Required Equipment
 
-- **Power Platform CLI (version 1.44+)** - Follow the deployment steps in the [Installing Power Platform CLI with .NET Tool](#lab-1-install-the-power-platform-cli) section above
+- **Power Platform CLI (version 1.44+)** - Follow the deployment steps in the [Installing Power Platform CLI with .NET Tool](#lab-1-1-install-the-power-platform-cli) section above
 - **Visual Studio Code** - Download from [code.visualstudio.com](https://code.visualstudio.com/)
 - **GitHub Copilot extension** - Install from the VS Code Extensions marketplace
 
