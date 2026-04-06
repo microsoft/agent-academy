@@ -8,7 +8,15 @@ Please visit Copilot Studio Agent Academy at [https://aka.ms/agent-academy](http
 
 ## Contributing
 
-For detailed information on how to contribute to this project, including our documentation standards, markdown linting guidelines, and spell checking requirements, please see our [Contributing Guide](CONTRIBUTING.md).
+For detailed information on how to contribute to this project, including our documentation standards, markdown linting guidelines, and spell checking requirements, please see our [Contributing Guide](CONTRIBUTING-GENERAL.md).
+
+We also have section-specific contributing guides:
+
+- [Contributing to Courses](CONTRIBUTING-COURSES.md) - Recruit, Operative, and Commander course missions
+- [Contributing to Special Ops](CONTRIBUTING-SPECIAL-OPS.md) - Standalone Special Ops missions
+- [Contributing to Cowork Collective](CONTRIBUTING-COWORK-COLLECTIVE.md) - Copilot Cowork missions
+
+For a reference of all custom components available in our markdown files, see the [Custom Components Guide](CUSTOM-COMPONENTS.md).
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
