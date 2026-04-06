@@ -14,12 +14,12 @@ tags:
 products:
   - copilot-studio
   - power-platform
+created-date: 2025-08-20
+last-edited-date: 2026-01-14
 ---
 # 🚨 Mission 04: Creating a Solution for Your Agent {#mission-04-creating-a-solution-for-your-agent}
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
@@ -335,5 +335,4 @@ This is the end of **Lab 04 - Creating a Solution**, select the link below to mo
 
 🔗 [Overview of Git integration in Power Platform](https://learn.microsoft.com/power-platform/alm/git-integration/overview/?WT.mc_id=power-172615-ebenitez)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/04-creating-a-solution" alt="Analytics" />
+<analytics-tag section="recruit" mission="04-creating-a-solution" />

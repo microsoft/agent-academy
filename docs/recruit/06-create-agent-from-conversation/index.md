@@ -13,12 +13,12 @@ tags:
   - declarative-agents
 products:
   - copilot-studio
+created-date: 2025-08-20
+last-edited-date: 2026-02-19
 ---
 # 🚨 Mission 06: Create a custom agent using natural language with AI and grounding it with your data {#mission-06-create-a-custom-agent-using-natural-language-with-ai-and-grounding-it-with-your-data}
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
@@ -507,5 +507,4 @@ Welcome to the elite. You now know how to forge digital agents that speak your l
 
 📺 [Add knowledge to your agents](https://aka.ms/ai-in-action/copilot-studio/ep2)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/06-create-agent-from-conversation" alt="Analytics" />
+<analytics-tag section="recruit" mission="06-create-agent-from-conversation" />

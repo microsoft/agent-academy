@@ -13,12 +13,12 @@ tags:
   - fundamentals
 products:
   - copilot-studio
+created-date: 2025-08-20
+last-edited-date: 2026-02-20
 ---
 # 🚨 Mission 02: Copilot Studio Fundamentals {#mission-02-copilot-studio-fundamentals}
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
@@ -239,5 +239,4 @@ With these components in place, you can build a basic agent that answers questio
 
 Up next: You'll build your [first declarative agent for M365 Copilot](../03-create-a-declarative-agent-for-M365Copilot/index.md).
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/02-copilot-studio-fundamentals" alt="Analytics" />
+<analytics-tag section="recruit" mission="02-copilot-studio-fundamentals" />

@@ -11,13 +11,13 @@ products:
   - copilot-studio
   - visual-studio-code
   - github-copilot
+created-date: 2026-03-13
+last-edited-date: 2026-04-02
 ---
 
 # 🧬 YAML Specialist {#yaml-specialist}
 
-<!-- markdownlint-disable MD033 -->
 <mission-meta />
-<!-- markdownlint-enable MD033 -->
 
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="../assets/YAML_Specialist_Badge.png" alt="YAML Specialist Badge" width="220" /></p>
@@ -640,5 +640,4 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 > [!TIP]
 > If you do not see the email, check your spam or junk folder.
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/special-ops/yaml-specialist" alt="Analytics" />
+<analytics-tag section="special-ops" mission="yaml-specialist" />

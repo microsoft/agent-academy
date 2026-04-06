@@ -15,13 +15,13 @@ products:
   - copilot-studio
   - sharepoint
   - microsoft-365
+created-date: 2025-08-20
+last-edited-date: 2026-03-16
 ---
 
 # 🚨 Mission 00: Course Setup {#mission-00-course-setup}
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 ## 🎯 Mission Brief {#mission-brief}
 
@@ -279,5 +279,4 @@ You’ve successfully:
 
 You're officially cleared to begin your **Recruit-level agent training** in [Lesson 01](../01-introduction-to-agents/index.md).  
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/00-course-setup" alt="Analytics" />
+<analytics-tag section="recruit" mission="00-course-setup" />

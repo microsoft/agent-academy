@@ -14,12 +14,12 @@ tags:
 products:
   - copilot-studio
   - dataverse
+created-date: 2026-01-14
+last-edited-date: 2026-03-11
 ---
 # 🚨 Mission 08: Enhanced prompts with Dataverse grounding {#mission-08-enhanced-prompts-with-dataverse-grounding}
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 [![Grounding](./assets/08-dataverse-grounding-thumbnail_PlayButton.png)](https://youtu.be/-cHP29cIu-U?si=RMi0Q5tieMltOvo6 "Watch the walkthrough on YouTube")
 
@@ -477,5 +477,4 @@ Your enhanced system can now create Job Applications and is ready for further co
 
 📖 [Training: Create AI Builder prompts using your own Dataverse data](https://learn.microsoft.com/training/modules/ai-builder-grounded-prompts/?WT.mc_id=power-182762-scottdurow)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/08-dataverse-grounding" alt="Analytics" />
+<analytics-tag section="operative" mission="08-dataverse-grounding" />

@@ -13,12 +13,12 @@ tags:
   - mcp
 products:
   - copilot-studio
+created-date: 2026-01-14
+last-edited-date: 2026-03-11
 ---
 # Mission 10: Integrate with MCP Servers
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 [![MCP](./assets/10-mcp-thumbnail_PlayButton.png)](https://youtu.be/kW2f8Z8fzBw?si=rDg7uFQCIDUe_Q_H "Watch the walkthrough on YouTube")
 
@@ -311,5 +311,4 @@ Great work, Operative! **Operation MCP Rendezvous** is now complete. You've succ
 
 📖 [Add users and assign licenses](https://learn.microsoft.com/microsoft-365/admin/add-users/add-users?view=o365-worldwide&WT.mc_id=power-215684-dlaskewitz)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/10-mcp" alt="Analytics" />
+<analytics-tag section="operative" mission="10-mcp" />

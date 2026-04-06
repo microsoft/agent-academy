@@ -14,12 +14,12 @@ tags:
 products:
   - copilot-studio
   - azure
+created-date: 2026-01-14
+last-edited-date: 2026-03-11
 ---
 # Understanding Agent Models and Response Formatting
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 [![Model-Selection](./assets/05-model-selection_Thumbnail_PlayButton.png)](https://youtu.be/c5rqNQt2Mmc?si=zrJ7nQYoto9UlHFj "Watch the walkthrough on YouTube")
 
@@ -521,5 +521,4 @@ This is the end of **Lab 05 - Understanding Agent Models**, select the link belo
 
 📖 [Provide feedback on Anthropic models](https://community.powerplatform.com/forums/thread/?groupid=db8f53c2-767d-47d6-a1ae-fe4c828a6553)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/05-model-selection" alt="Analytics" />
+<analytics-tag section="operative" mission="05-model-selection" />

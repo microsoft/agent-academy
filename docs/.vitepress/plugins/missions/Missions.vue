@@ -43,6 +43,7 @@
         <div v-if="mission.badge" class="mission-badge">
           <img :src="withBase(mission.badge)" :alt="mission.title" />
         </div>
+        <div v-else class="mission-badge mission-badge--placeholder"></div>
         <div class="mission-title">{{ mission.title }}</div>
         <span v-if="displayDate(mission)" class="mission-date">{{ displayDate(mission) }}</span>
       </a>
@@ -339,6 +340,7 @@ const visiblePages = computed<PageItem[]>(() => {
   align-items: center;
   justify-content: center;
   margin-bottom: 0.75rem;
+  flex-shrink: 0;
 }
 
 .mission-badge img {
@@ -353,9 +355,21 @@ const visiblePages = computed<PageItem[]>(() => {
   font-size: 0.95rem;
   text-align: center;
   line-height: 1.4;
-  height: calc(1.4em * 3);
-  display: flex;
-  align-items: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: calc(1.4em * 3);
+}
+
+.mission-badge--placeholder {
+  background: var(--vp-c-default-soft);
+  border-radius: 8px;
+}
+
+.mission-card:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
 }
 
 .mission-date {
@@ -408,6 +422,12 @@ const visiblePages = computed<PageItem[]>(() => {
   color: var(--vp-c-brand-1);
 }
 
+.pager-pill:focus-visible,
+.pager-arrow:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
 .pager-pill.active {
   background: var(--vp-c-brand-1);
   border-color: var(--vp-c-brand-1);
@@ -444,42 +464,43 @@ const visiblePages = computed<PageItem[]>(() => {
 .missions-filters {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-  margin-bottom: 1rem;
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 8px;
-  background: var(--vp-c-bg-soft);
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--vp-c-divider);
 }
 
 .filter-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
 
 .filter-label {
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.72rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--vp-c-text-2);
+  letter-spacing: 0.07em;
+  color: var(--vp-c-text-3);
   white-space: nowrap;
-  min-width: 4rem;
+  min-width: 3.5rem;
+  flex-shrink: 0;
+  padding-top: 0.25rem;
 }
 
 .filter-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem;
+  gap: 0.3rem;
 }
 
 .filter-pill {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   padding: 0.2rem 0.65rem;
   border-radius: 999px;
   border: 1px solid var(--vp-c-divider);
-  background: var(--vp-c-bg);
+  background: transparent;
   color: var(--vp-c-text-2);
   cursor: pointer;
   transition: all 0.15s;
@@ -489,12 +510,24 @@ const visiblePages = computed<PageItem[]>(() => {
 .filter-pill:hover {
   border-color: var(--vp-c-brand-1);
   color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+}
+
+.filter-pill:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
 }
 
 .filter-pill.active {
   background: var(--vp-c-brand-1);
   border-color: var(--vp-c-brand-1);
   color: #fff;
+}
+
+.filter-pill.active::before {
+  content: "✕ ";
+  font-size: 0.65rem;
+  opacity: 0.8;
 }
 
 :root.dark .filter-pill.active {

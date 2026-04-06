@@ -13,12 +13,12 @@ tags:
   - fundamentals
 products:
   - copilot-studio
+created-date: 2026-01-14
+last-edited-date: 2026-03-16
 ---
 # 🚨 Mission 01: Get started with the Hiring Agent {#mission-01-get-started-with-the-hiring-agent}
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
@@ -262,8 +262,7 @@ Next up is [Mission 02](../02-agent-instructions/index.md): Agent Instructions
 
 ## 📚 Tactical Resources {#tactical-resources}
 
-📖 [Microsoft Copilot Studio - Create an agent](https://learn.microsoft.com/microsoft-copilot-studio/authoring-first-bot)  
+📖 [Microsoft Copilot Studio - Create an agent](https://learn.microsoft.com/microsoft-copilot-studio/authoring-first-bot)    
 📖 [Microsoft Dataverse Documentation](https://learn.microsoft.com/power-apps/maker/data-platform)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/01-get-started" alt="Analytics" />
+<analytics-tag section="operative" mission="01-get-started" />

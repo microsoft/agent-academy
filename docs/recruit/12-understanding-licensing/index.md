@@ -14,12 +14,12 @@ tags:
 products:
   - copilot-studio
   - microsoft-365
+created-date: 2025-08-20
+last-edited-date: 2026-03-11
 ---
 # 🚨 Mission 12: Understanding Licensing {#mission-12-understanding-licensing}
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 ## 🎯 Mission Brief {#mission-brief}
 
@@ -197,5 +197,4 @@ With this in place, you can design agents with cost in mind from the start, not 
 - 📘 [Power Platform Licensing Guide (November 2025)](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/bade/documents/products-and-services/en-us/bizapps/Power-Platform-Licensing-Guide-November-2025.pdf?WT.mc_id=power-170631-apdunnam)
 - 📊 [Message Management & Capacity Monitoring](https://learn.microsoft.com/power-platform/admin/manage-copilot-studio-messages-capacity?WT.mc_id=power-170631-apdunnam)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/12-understanding-licensing" alt="Analytics" />
+<analytics-tag section="recruit" mission="12-understanding-licensing" />

@@ -13,12 +13,12 @@ tags:
   - completion
 products:
   - copilot-studio
+created-date: 2025-08-20
+last-edited-date: 2026-03-27
 ---
 # 🚨 Final Mission: Securing Your Recruit Badge {#final-mission-securing-your-recruit-badge}
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 ## 🎯 Mission Brief {#mission-brief}
 
@@ -168,5 +168,4 @@ Learn more about Power Platform Advocacy:
 
 ⚡ [Power Platform Advocacy Hub](https://aka.ms/power-advocates)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/final-mission" alt="Analytics" />
+<analytics-tag section="recruit" mission="final-mission" />

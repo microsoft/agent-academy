@@ -14,12 +14,12 @@ tags:
 products:
   - copilot-studio
   - microsoft-365
+created-date: 2025-08-20
+last-edited-date: 2026-03-18
 ---
 # 🚨 Mission 03: Deploy a Declarative Agent for Microsoft 365 Copilot {#mission-03-deploy-a-declarative-agent-for-microsoft-365-copilot}
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
@@ -654,5 +654,4 @@ Until next time, stay sharp. The future of enterprise work runs through agents�
 
 📺 [Build prompts for your agent](https://aka.ms/ai-in-action/copilot-studio/ep3)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/03-create-a-declarative-agent-for-M365Copilot" alt="Analytics" />
+<analytics-tag section="recruit" mission="03-create-a-declarative-agent-for-M365Copilot" />

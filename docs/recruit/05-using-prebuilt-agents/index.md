@@ -15,12 +15,12 @@ products:
   - copilot-studio
   - microsoft-365
   - teams
+created-date: 2025-08-20
+last-edited-date: 2026-03-11
 ---
 # 🧰 Mission 05: Using a Pre-Built Agent   {#mission-05-using-a-pre-built-agent}
 
-<!-- markdownlint-disable MD033 -->
-<course-meta />
-<!-- markdownlint-enable MD033 -->
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
@@ -147,5 +147,4 @@ You've now successfully:
 
 ⏭️ [Move to **Creating a custom agent from scratch** lesson](../06-create-agent-from-conversation/index.md).
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/05-using-prebuilt-agents" alt="Analytics" />
+<analytics-tag section="recruit" mission="05-using-prebuilt-agents" />
