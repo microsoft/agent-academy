@@ -1,7 +1,5 @@
 ---
 lastUpdated: false
-created-date: 2026-01-20
-last-edited-date: 2026-03-29
 ---
 
 # Special Ops
