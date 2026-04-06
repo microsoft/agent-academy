@@ -248,7 +248,7 @@ In this mission, you accomplished:
 
 ## 🏅 Claim your completion badge {#claim-your-completion-badge}
 <!-- markdownlint-disable-next-line MD033 -->
-<p align="center"><img src="./assets/Academy_LearnMCP.png" alt="Learn MCP Badge" width="220" /></p>
+<p align="center"><img src="./assets/Academy_LearnMCP_Badge.png" alt="Learn MCP Badge" width="220" /></p>
 
 Congrats, agent - mission accomplished! Now it's time to claim your badge.
 
