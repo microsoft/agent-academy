@@ -45,7 +45,7 @@ These badges are:
 - Shareable (LinkedIn, resumes, portfolios)
 - Tied to real technical work, not just attendance
 
-![Recruit Badge](./assets/recruitbadge.png)
+![Recruit Badge](../../images/mcs-agent-academy-recruit-badge.png)
 To ensure badges remain meaningful, we follow a **strict validation protocol**.
 
 > [!IMPORTANT]
