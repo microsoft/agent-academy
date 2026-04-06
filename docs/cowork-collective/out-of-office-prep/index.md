@@ -74,7 +74,7 @@ You're a project manager at **Zava**, a mid-size technology consulting firm. You
 
 You're going to hand the entire departure checklist to Cowork and walk out the door.
 
-## 🌱 Lab 1.1 - Seed Your M365 Environment {#lab-1-seed-environment}
+## 🧪 Lab 1.1 - Seed Your M365 Environment {#lab-1-seed-environment}
 
 > [!NOTE]
 > **Skip this task and go straight to Task 2 if you have real in-flight work and data to use.**
@@ -157,7 +157,7 @@ This is the event Cowork's scheduled automation will eventually detect.
 - **Date:** Next Monday through Friday (all day, marked as Out of Office)
 - **Notes:** Returning [following Monday]. Will not have access to email.
 
-## 🔎 Lab 2 - Cowork Discovery {#lab-2-cowork-discovery}
+## 🧪 Lab 2.1 - Cowork Discovery {#lab-2-cowork-discovery}
 
 Here, you're not telling Cowork what your projects are. You're asking it to look across your M365 data and find out. Start with a discovery of what you need to wrap up before you go out of office.
 
@@ -205,7 +205,7 @@ Cowork will come back with a structured risk report organized across your three 
 > [!TIP]
 > Did Cowork find something you forgot about? The discovery pass catches things that slip through the cracks because they're scattered across too many places. If something is missing, prompt Cowork to look again.
 
-## ▶️ Lab 3.1 - Execution {#lab-3-execution}
+## 🧪 Lab 3.1 - Execution {#lab-3-execution}
 
 Now that you have the full picture, it's time to hand Cowork the action items.
 
@@ -250,7 +250,7 @@ Now that you have the full picture, it's time to hand Cowork the action items.
 
     ![Overview Actions](./assets/overview-actions.png)
 
-## ⭐ Bonus lab: Set Up the Automatic Two-Day Check {#bonus-lab-automated-check}
+## 🧪 Bonus Lab - Set Up the Automatic Two-Day Check {#bonus-lab-automated-check}
 
 Now you can set it up to run on a schedule. Cowork checks your calendar every Monday morning. If it finds a PTO block starting within two business days, it kicks off the discovery pass and brings you the report.
 

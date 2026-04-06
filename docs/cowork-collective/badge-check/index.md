@@ -74,7 +74,7 @@ This mission uses one source file.
 
 📥 **Download lab assets:** [badge_check.csv](https://raw.githubusercontent.com/microsoft/agent-academy/main/docs/cowork-collective/badge-check/assets/badge_check.csv)
 
-## 🕵️ Lab 1 - Find the Offenders {#lab1-find-the-offenders}
+## 🧪 Lab 1.1 - Find the Offenders {#lab1-find-the-offenders}
 
 In this first lab, upload the badge scan file and ask Copilot Cowork to identify who hasn't checked out.
 
@@ -126,7 +126,7 @@ In this first lab, upload the badge scan file and ask Copilot Cowork to identify
 
 You now have a working report in your inbox. Lab 2 builds on this with a formatted HTML report using a custom skill.
 
-## ✨ Lab 2 - Upgrade with a Custom Skill {#lab2-upgrade-with-a-custom-skill}
+## 🧪 Lab 1.2 - Upgrade with a Custom Skill {#lab2-upgrade-with-a-custom-skill}
 
 Copilot Cowork supports custom skills stored in your OneDrive. A skill is a `SKILL.md` file with instructions for a specific task. Copilot Cowork discovers your custom skills automatically at the start of each conversation and loads them as needed.
 
