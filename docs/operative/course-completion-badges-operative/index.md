@@ -42,7 +42,7 @@ These badges are:
 - Shareable (LinkedIn, resumes, portfolios)
 - Tied to real technical work, not just attendance
 
-![Operative Badge](./assets/operativebadge.png)
+![Operative Badge](../../images/mcs-agent-academy-operative-badge.png)
 
 To ensure badges remain meaningful, we follow a **strict validation protocol**.
 
