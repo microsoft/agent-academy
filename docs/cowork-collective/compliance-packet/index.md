@@ -71,7 +71,7 @@ This mission provides all four source documents.
 | `zava-risk-register.csv` | 12 open/partial risk findings (R-001 through R-012), each with Risk Level, Owner, Status, and remediation notes | [download](https://raw.githubusercontent.com/microsoft/agent-academy/main/docs/cowork-collective/compliance-packet/assets/sample-files/zava-risk-register.csv) |
 | `zava-audit-checklist.csv` | 15 audit checklist items mapped to ISO 27001 and SOC 2 controls, each with a Readiness Status (Ready / In Progress / Not Ready) | [download](https://raw.githubusercontent.com/microsoft/agent-academy/main/docs/cowork-collective/compliance-packet/assets/sample-files/zava-audit-checklist.csv) |
 
-## 🚀 Task 1: Open Cowork and Attach Your Files {#task-1}
+## 🧪 Lab 1.1 - Open Cowork and Attach Your Files {#lab-1-1}
 
 One habit worth building early: **attach files before you send your first message**. Files attached at the start are available to every step in the conversation. Files added later only apply from that point forward.
 
@@ -89,7 +89,7 @@ One habit worth building early: **attach files before you send your first messag
 > [!NOTE]
 > If you don't see Cowork in your left navigation, select **All agents** and search for it. If it still doesn't appear, your account may not have Frontier access (ask your admin)
 
-## 💬 Task 2: Send the Prompt {#task-2}
+## 🧪 Lab 1.2 - Send the Prompt {#lab-1-2}
 
 With all four files attached, describe the complete job in one message. Tell Cowork what you want, and let it figure out how.
 
@@ -147,7 +147,7 @@ Please produce three documents and one email draft:
 > [!TIP]
 > The phrase "Use these as your only source of truth — do not add findings or owners that aren't in the attached files" is important. It's the instruction that keeps Cowork from pattern-matching to generic compliance content. Use this pattern any time accuracy is non-negotiable.
 
-## 👀 Task 3: Watch the Side Panel and Review Documents {#task-3}
+## 🧪 Lab 1.3 - Watch the Side Panel and Review Documents {#lab-1-3}
 
 After sending, open the **side panel** and watch the **Progress** section update in real time. You'll see the skills Cowork activates appear as chips in the **Skills** section.
 
@@ -184,7 +184,7 @@ As Cowork completes each document, it will show them in the Outputs folder.
 > [!NOTE]
 > If something is wrong, fix it in the same conversation, don't start over. Use a targeted correction like: `"The gap analysis is missing R-012. Please add it mapped to audit checklist item #7, Risk Level High"` Cowork will update the file and show you the revised version.
 
-## ✅ Task 4: Review and Approve the Email {#task-4}
+## 🧪 Lab 1.4 - Review and Approve the Email {#lab-1-4}
 
 After the three documents are complete, Cowork will present the leadership briefing email draft for your review.
 

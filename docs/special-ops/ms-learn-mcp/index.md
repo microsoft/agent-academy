@@ -68,7 +68,7 @@ Without external grounding, agents rely on model memory, which can be outdated. 
 
 Zava is building an internal agent to support employees with Microsoft 365, Azure, and Power Platform questions. Rather than manually curating a knowledge base of Microsoft product docs, the team wants their agent to pull answers directly from Microsoft Learn in real time — always accurate, always current. You are the agent builder tasked with wiring this up.
 
-## 🧪 Lab 1.1: Create the Support Agent {#lab-11-create-the-support-agent}
+## 🧪 Lab 1.1 - Create the Support Agent {#lab-11-create-the-support-agent}
 
 The first step is to create a new Copilot Studio agent that will serve as the foundation for your Microsoft Learn-powered helpdesk.
 
@@ -98,7 +98,7 @@ The first step is to create a new Copilot Studio agent that will serve as the fo
 
     ![Save](./assets/save-details.png)
 
-## 🧪 Lab 1.2: Connect the Microsoft Learn Docs MCP Server {#lab-12-connect-the-microsoft-learn-docs-mcp-server}
+## 🧪 Lab 1.2 - Connect the Microsoft Learn Docs MCP Server {#lab-12-connect-the-microsoft-learn-docs-mcp-server}
 
 Next, you'll add the Microsoft Learn Docs MCP Server as a tool in Copilot Studio, making its tools available to your agent.
 
@@ -126,7 +126,7 @@ Next, you'll add the Microsoft Learn Docs MCP Server as a tool in Copilot Studio
 
     ![Tools](./assets/observe-tools.png)
 
-## 🧪 Lab 1.3: Add Instructions {#lab-13-add-instructions}
+## 🧪 Lab 1.3 - Add Instructions {#lab-13-add-instructions}
 
 Now that we have the Learn MCP server added, we need to add instructions for the agent so it knows what it's supposed to do.
 
@@ -149,7 +149,7 @@ Now that we have the Learn MCP server added, we need to add instructions for the
 
     ![Save](./assets/save-instruction2.png)
 
-## 🧪 Lab 1.4: Test Your Agent {#lab-14-test-your-agent}
+## 🧪 Lab 1.4 - Test Your Agent {#lab-14-test-your-agent}
 
 Time to see your documentation-powered agent in action.
 
@@ -207,7 +207,7 @@ Time to see your documentation-powered agent in action.
 
     ![Test Result](./assets/test-code-sample.png)
 
-## 🧪 Lab 1.5: Test the fallback behavior {#lab-15-test-the-fallback-behavior}
+## 🧪 Lab 1.5 - Test the fallback behavior {#lab-15-test-the-fallback-behavior}
 
 In our instructions, we defined what's called "fallback behavior", meaning, what should happen if the agent can't find an answer. We did this by adding this line to the instruction: ``If the search does not return a relevant result, tell the user and suggest they visit https://learn.microsoft.com directly.``.
 

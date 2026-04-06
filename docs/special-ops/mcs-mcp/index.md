@@ -44,7 +44,7 @@ So, MCP and connectors are really **better together**.
 - Azure Subscription (with payment method added)
 - Copilot Studio trial or developer account
 
-## 🧪 Lab 1.1: Set Up the MCP Server {#lab-11-set-up-the-mcp-server}
+## 🧪 Lab 1.1 - Set Up the MCP Server {#lab-11-set-up-the-mcp-server}
 
 Now you have a choice! You either run the server locally - or you can deploy it to Azure.
 
@@ -132,7 +132,7 @@ You should again see the following error:
 {"jsonrpc":"2.0","error":{"code":-32000,"message":"Method not allowed."},"id":null}
 ```
 
-## 🧪 Lab 1.2: Use the Jokes MCP Server in Visual Studio Code {#lab-12-use-the-jokes-mcp-server-in-visual-studio-code}
+## 🧪 Lab 1.2 - Use the Jokes MCP Server in Visual Studio Code {#lab-12-use-the-jokes-mcp-server-in-visual-studio-code}
 
 To use the Jokes MCP Server, you need to use the URL of your server (can be either your devtunnel URL or your deployed Azure Container App) with the `/mcp` part at the end and add it as an MCP Server in Visual Studio Code.
 
@@ -173,7 +173,7 @@ This should give you a response like this:
 
 Now you have added the `JokesMCP` server to Visual Studio Code!
 
-## 🧪 Lab 1.3: Use the Jokes MCP Server in Microsoft Copilot Studio {#lab-13-use-the-jokes-mcp-server-in-microsoft-copilot-studio}
+## 🧪 Lab 1.3 - Use the Jokes MCP Server in Microsoft Copilot Studio {#lab-13-use-the-jokes-mcp-server-in-microsoft-copilot-studio}
 
 To use the Jokes MCP Server in Microsoft Copilot Studio, you need to create an agent and then add it as an MCP server.
 
@@ -341,7 +341,7 @@ To use the Jokes MCP Server in Microsoft Copilot Studio, you need to create an a
 
 And that was the Jokes MCP Server working in Microsoft Copilot Studio.
 
-## 🧪 Lab 1.4: Remove the Azure Resources {#lab-14-remove-the-azure-resources}
+## 🧪 Lab 1.4 - Remove the Azure Resources {#lab-14-remove-the-azure-resources}
 
 If you have deployed the MCP server to Azure, don't forget to remove the Azure resources. To remove the Azure resources after finishing the lab, run the following command in the terminal:
 
