@@ -31,6 +31,10 @@ The component renders only when at least one of these fields is present. Label l
 
 **When to use:** Place immediately after the H1 title on every mission page (courses, Special Ops, and Cowork Collective).
 
+**Preview:**
+
+![Mission meta component showing difficulty, time, and taxonomy pills](./assets/component-mission-meta.png)
+
 ---
 
 ### `<missions />`
@@ -71,6 +75,10 @@ Show all missions with pagination (4 rows per page):
 ```
 
 **When to use:** On section landing pages (`docs/special-ops/index.md`, `docs/cowork-collective/index.md`, etc.) and any taxonomy pages that list missions.
+
+**Preview:**
+
+![Missions grid with filter pills and mission cards](./assets/component-missions.png)
 
 ---
 
@@ -122,6 +130,10 @@ Renders a breadcrumb navigation trail on taxonomy pages (products, tags, industr
 
 **When to use:** At the top of taxonomy detail pages (for example `docs/tags/[slug].md`).
 
+**Preview:**
+
+![Breadcrumb navigation trail on a taxonomy page](./assets/component-breadcrumb.png)
+
 ---
 
 ### `<page-dates />`
@@ -139,6 +151,10 @@ The component renders only when at least one of these fields exists. Dates are f
 
 **When to use:** This component is injected automatically by the custom VitePress theme into the doc footer slot. You do not need to add it manually.
 
+**Preview:**
+
+![Page dates footer showing created and last updated dates](./assets/component-page-dates.png)
+
 ---
 
 ### `<products-index />`
@@ -154,6 +170,10 @@ Renders a grid of all products from `docs/.vitepress/data/products.json` with ic
 ```
 
 **When to use:** On the products overview page (`docs/products/index.md`).
+
+**Preview:**
+
+![Products index grid with icons and mission counts](./assets/component-products-index.png)
 
 ---
 
@@ -171,6 +191,10 @@ Renders a grid of all tags from `docs/.vitepress/data/tags.json` with hardcoded 
 
 **When to use:** On the tags overview page (`docs/tags/index.md`).
 
+**Preview:**
+
+![Tags index grid with icons and mission counts](./assets/component-tags-index.png)
+
 ---
 
 ### `<industries-index />`
@@ -186,6 +210,10 @@ Renders a grid of all industries from `docs/.vitepress/data/industries.json` wit
 ```
 
 **When to use:** On the industries overview page (`docs/industries/index.md`).
+
+**Preview:**
+
+![Industries index grid with icons and mission counts](./assets/component-industries-index.png)
 
 ---
 
