@@ -14,7 +14,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const docsDir = path.resolve(__dirname, "../docs");
 
 const MISSION_DIRS = ["special-ops", "cowork-collective"];
-const REQUIRED_FIELDS = ["difficulty", "time", "description"];
+const REQUIRED_FIELDS = ["difficulty", "time", "description", "created-date", "last-edited-date"];
 
 // Index pages for the section itself (not missions)
 const SECTION_INDEX_NAMES = new Set(MISSION_DIRS.map((d) => path.join(docsDir, d, "index.md")));
@@ -60,6 +60,13 @@ for (const sectionName of MISSION_DIRS) {
       if (typeof fm.description !== "string" || fm.description.trim().length < 10) {
         console.error(`Error: ${rel} — "description" must be a non-empty string of at least 10 characters`);
         errors++;
+      }
+      for (const dateField of ["created-date", "last-edited-date"]) {
+        const raw = fm[dateField];
+        if (isNaN(new Date(raw).getTime())) {
+          console.error(`Error: ${rel} — "${dateField}" must be a valid date (got: ${JSON.stringify(raw)})`);
+          errors++;
+        }
       }
     }
   }

@@ -1,7 +1,6 @@
 import type { Plugin } from "vite";
 import path from "node:path";
 import fs from "node:fs";
-import { execFileSync } from "node:child_process";
 import matter from "gray-matter";
 
 const VIRTUAL_MODULE_ID = "virtual:missions-data";
@@ -34,84 +33,9 @@ interface MissionData {
   difficulty: number;
   tags: string[];
   products: string[];
+  industries: string[];
   lastUpdated: number;
   createdAt: number;
-}
-
-function stripFrontmatter(raw: string): string {
-  return raw.replace(/^---[\r\n][\s\S]*?[\r\n]---[\r\n]?/, "");
-}
-
-function getFileAtCommit(
-  hash: string,
-  relPath: string,
-  repoRoot: string
-): string {
-  try {
-    return execFileSync("git", ["show", `${hash}:${relPath}`], {
-      cwd: repoRoot,
-      encoding: "utf-8",
-    });
-  } catch {
-    return "";
-  }
-}
-
-function getContentTimestamp(filePath: string, repoRoot: string): number {
-  try {
-    const relPath = path
-      .relative(repoRoot, filePath)
-      .replace(/\\/g, "/");
-
-    const log = execFileSync(
-      "git", ["log", "-10", "--format=%H:%ct", "--", relPath],
-      { cwd: repoRoot, encoding: "utf-8" }
-    ).trim();
-
-    if (!log) return 0;
-
-    const commits = log.split(/\r?\n/).map((line) => {
-      const sep = line.indexOf(":");
-      return {
-        hash: line.substring(0, sep),
-        timestamp: parseInt(line.substring(sep + 1), 10) * 1000,
-      };
-    });
-
-    // Walk from newest to oldest, comparing content without frontmatter
-    for (let i = 0; i < commits.length - 1; i++) {
-      const curr = getFileAtCommit(commits[i].hash, relPath, repoRoot);
-      const prev = getFileAtCommit(commits[i + 1].hash, relPath, repoRoot);
-
-      if (stripFrontmatter(curr) !== stripFrontmatter(prev)) {
-        return commits[i].timestamp;
-      }
-    }
-
-    // Fallback to oldest commit in our window (likely initial creation)
-    return commits[commits.length - 1].timestamp;
-  } catch {
-    return 0;
-  }
-}
-
-function getMergedAt(filePath: string, repoRoot: string): number {
-  try {
-    const relPath = path
-      .relative(repoRoot, filePath)
-      .replace(/\\/g, "/");
-
-    // --first-parent follows only the main branch line, --diff-filter=A
-    // finds the merge commit that introduced the file on main
-    const stdout = execFileSync(
-      "git", ["log", "--first-parent", "--reverse", "--format=%ct", "--", relPath],
-      { cwd: repoRoot, encoding: "utf-8" }
-    ).trim();
-    const first = stdout.split(/\r?\n/)[0];
-    return first ? parseInt(first, 10) * 1000 : 0;
-  } catch {
-    return 0;
-  }
 }
 
 function extractH1(content: string): string {
@@ -121,7 +45,6 @@ function extractH1(content: string): string {
 }
 
 function loadMissions(docsDir: string): MissionData[] {
-  const repoRoot = path.resolve(docsDir, "..");
   const missions: MissionData[] = [];
   const entries = fs.readdirSync(docsDir, { withFileTypes: true });
 
@@ -168,12 +91,13 @@ function loadMissions(docsDir: string): MissionData[] {
         difficulty: Math.min(Math.max(Number(frontmatter.difficulty) || 0, 0), 5),
         tags: frontmatter.tags ?? [],
         products: frontmatter.products ?? [],
+        industries: frontmatter.industries ?? [],
         lastUpdated: frontmatter["last-edited-date"]
           ? new Date(frontmatter["last-edited-date"]).getTime()
-          : getContentTimestamp(indexPath, repoRoot),
+          : 0,
         createdAt: frontmatter["created-date"]
           ? new Date(frontmatter["created-date"]).getTime()
-          : getMergedAt(indexPath, repoRoot),
+          : 0,
       });
     }
   }

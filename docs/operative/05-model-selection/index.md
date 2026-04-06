@@ -14,10 +14,12 @@ tags:
 products:
   - copilot-studio
   - azure
+industries:
+  - hr
 created-date: 2026-01-14
 last-edited-date: 2026-03-11
 ---
-# Understanding Agent Models and Response Formatting
+# 🚨 Mission 05: Understanding Agent Models and Response Formatting {#mission-05-understanding-agent-models-and-response-formatting}
 
 <mission-meta />
 
@@ -296,7 +298,7 @@ Now that we know what we _can_ do, let’s talk about what we _should_ do to mak
 
 In summary, use formatting to enhance clarity, not distract. The user should be able to glance at the agent’s answer and grasp the needed information quickly. As a developer, utilize the **Response Formatting** in the **Generative AI** tab under the **Settings** of your agent to ensure the output is polished. Always test a variety of questions to see how the formatting holds up, and adjust your instructions as needed.
 
-## 🧪 Lab 05 - Model selection for the Interview Agent {#lab-05-model-selection-for-the-interview-agent}
+## 🧪 Lab 5 - Model selection for the Interview Agent {#lab-05-model-selection-for-the-interview-agent}
 
 In this lab, you’ll compare responses, including the formatting, from three different models by asking the same questions and observing differences in:
 
@@ -305,7 +307,7 @@ In this lab, you’ll compare responses, including the formatting, from three di
      - Tone
      - Specificity
 
-### Lab 5.1 - Response formatting of the Interview Agent
+### 🧪 Lab 5.1 - Response formatting of the Interview Agent
 
 1. In the **Interview Agent's Settings**, scroll down to the **Response formatting** section to update the instructions. Use the following as the formatting instructions.
 
@@ -338,7 +340,7 @@ In this lab, you’ll compare responses, including the formatting, from three di
 
 1. Exit from **Settings**.
 
-### Lab 5.2 - Compare model responses and formatting
+### 🧪 Lab 5.2 - Compare model responses and formatting
 
 Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat preview model and the Claude Sonnet 4.5 experimental model.
 

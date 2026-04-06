@@ -2,6 +2,7 @@
 tags:
   - compliance
   - finance
+  - document-generation
 difficulty: 1
 time: 25
 description: >-
@@ -12,12 +13,16 @@ badge: ../assets/AuditAce-badge.png
 products:
   - microsoft-365-copilot
   - copilot-cowork
+  - excel
+  - word
+industries:
+  - financial-services
+created-date: 2026-04-06
+last-edited-date: 2026-04-06
 ---
 # 🔒 The Compliance Packet
 
-<!-- markdownlint-disable MD033 -->
 <mission-meta />
-<!-- markdownlint-enable MD033 -->
 
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="../assets/AuditAce-badge.png" alt="Audit Ace Badge" width="220" /></p>
@@ -236,16 +241,10 @@ Congrats, agent — mission accomplished! If you'd like to claim your badge for 
 
 Once reviewed, you'll receive an email from Global AI Community with instructions to claim your badge.
 
-## 🏷️ Tags {#tags}
-
-**Technology**: copilot-cowork, microsoft-365, document-generation, excel, word, approval-workflow  
-**Industry**: financial-services, compliance  
-**Difficulty**: ⭐ (1 star — Beginner)
-
 ## 📚 Related Content {#related-content}
 
 - 📖 [Copilot Cowork overview — Microsoft Learn](https://learn.microsoft.com/copilot/microsoft-365/cowork/)
 - 🚀 [Join the Microsoft 365 Copilot Frontier program](https://adoption.microsoft.com/copilot/frontier-program/)
 
 <!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/cowork-collective/compliance-packet" alt="Analytics" />
+<analytics-tag section="cowork-collective" mission="compliance-packet" />

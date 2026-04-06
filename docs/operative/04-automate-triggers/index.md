@@ -15,10 +15,12 @@ tags:
 products:
   - copilot-studio
   - power-automate
+industries:
+  - hr
 created-date: 2026-01-14
 last-edited-date: 2026-03-17
 ---
-# Mission 04: Add Event Triggers to act autonomously
+# 🚨 Mission 04: Add Event Triggers to act autonomously {#mission-04-add-event-triggers-to-act-autonomously}
 
 <mission-meta />
 
@@ -146,7 +148,7 @@ The following table summarizes their differences and similarities.
 
 1. **Test before publishing.** Use **Test trigger** and the activity map to watch the plan and called actions - iterate on instructions/payload until behavior is stable.
 
-## 🧪 Lab 04 - Automating candidate application emails {#lab-04-automating-candidate-application-emails}
+## 🧪 Lab 4 - Automating candidate application emails {#lab-04-automating-candidate-application-emails}
 
 We're next going to add an event trigger to the **Hiring Agent** and build an agent flow in the child **Application Intake Agent** to handle further processing for autonomy.
 
@@ -596,7 +598,7 @@ To complete this lab you will need to:
 
 Let's proceed in creating a new agent flow that will be invoked by the child **Intake Application Agent**.
 
-### Lab 4.2 - Notify a Teams channel using an adaptive card
+### 🧪 Lab 4.2 - Notify a Teams channel using an adaptive card
 
 We're now going to create a new agent flow for the child **Intake Application Agent** that uses the values passed by the event trigger, to post an adaptive card to a Teams channel. This adaptive card will alert the HR recruitment team about the PDF that was automatically uploaded so that they can review it.
 
@@ -941,7 +943,7 @@ Let's begin!
 
 We can now test the agent!
 
-### Lab 4.3 - Test event trigger
+### 🧪 Lab 4.3 - Test event trigger
 
 1. To execute the event trigger, an email needs to be sent with a Resume pdf file. In Outlook, compose a new email message.
 

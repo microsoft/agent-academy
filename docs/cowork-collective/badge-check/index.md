@@ -11,12 +11,16 @@ badge: ../assets/BadgeBandit-badge.png
 products:
   - microsoft-365-copilot
   - copilot-cowork
+  - onedrive
+industries:
+  - facilities
+  - security
+created-date: 2026-04-06
+last-edited-date: 2026-04-06
 ---
 # 🏢 Badge Check
 
-<!-- markdownlint-disable MD033 -->
 <mission-meta />
-<!-- markdownlint-enable MD033 -->
 
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="../assets/BadgeBandit-badge.png" alt="Badge Bandit Badge" width="220" /></p>
@@ -33,7 +37,7 @@ By the end of this mission, Cowork will have:
 
 - ✅ Analyzed a badge scan CSV and identified employees who forgot to check out
 - ✅ Sent you a summary report via email
-- ✅ (With a custom skill) Sent a polished, self-contained HTML report with styled tables and red highlights for the worst offenders
+- ✅ (With a custom skill) Sent a styled HTML report with color-coded tables that flag the worst offenders
 
 ## ⚙️ Prerequisites {#prerequisites}
 
@@ -41,20 +45,6 @@ By the end of this mission, Cowork will have:
 - **Microsoft 365 license**: required for Outlook (to receive the email report) and OneDrive (to store custom skills)
 - **Anthropic models enabled on your tenant**: Copilot Cowork relies on Anthropic models. Ensure your admin has enabled them in the [Microsoft 365 admin center](https://admin.microsoft.com/)
 - **Microsoft 365 Copilot Cowork access** via the [Microsoft 365 Frontier program](https://adoption.microsoft.com/copilot/frontier-program/)
-
-## 🎯 The Scenario {#the-scenario}
-
-You work in facilities security at a company with offices in multiple cities. Every employee badges in and out of their building, but some people forget to badge out at the end of the day. Your manager wants a report identifying repeat offenders so the security team can follow up. You've been handed a CSV export from the badge system and need to find out who keeps forgetting to check out, then email the results.
-
-## 📁 Lab Assets {#lab-assets}
-
-This mission uses one source file.
-
-| File | What it contains |
-| --- | --- |
-| `badge_check.csv` | Building access records with employee names, badge IDs, office locations, and entry/exit timestamps. A missing `ExitDateTime` means the employee forgot to check out. |
-
-📥 **Download lab assets:** [badge_check.csv](https://raw.githubusercontent.com/microsoft/agent-academy/main/docs/cowork-collective/badge-check/assets/badge_check.csv)
 
 ## 🤝 What is Copilot Cowork? {#what-is-copilot-cowork}
 
@@ -70,7 +60,21 @@ It comes with 13 built-in skills:
 
 You can also add custom skills stored in OneDrive. It asks for your approval before taking any action.
 
-## 🕵️ Lab 1.1 - Find the Offenders {#lab1-1-find-the-offenders}
+## 🎯 The Scenario {#the-scenario}
+
+You work in facilities security at a company with offices in multiple cities. Every employee badges in and out of their building, but some people forget to badge out at the end of the day. Your manager wants a report identifying repeat offenders so the security team can follow up. You've been handed a CSV export from the badge system and need to find out who keeps forgetting to check out, then email the results.
+
+## 📁 Lab Assets {#lab-assets}
+
+This mission uses one source file.
+
+| File | What it contains |
+| --- | --- |
+| `badge_check.csv` | Building access records with employee names, badge IDs, office locations, and entry/exit timestamps. A missing `ExitDateTime` means the employee forgot to check out. |
+
+📥 **Download lab assets:** [badge_check.csv](https://raw.githubusercontent.com/microsoft/agent-academy/main/docs/cowork-collective/badge-check/assets/badge_check.csv)
+
+## 🕵️ Lab 1 - Find the Offenders {#lab1-find-the-offenders}
 
 In this first lab, upload the badge scan file and ask Copilot Cowork to identify who hasn't checked out.
 
@@ -83,6 +87,9 @@ In this first lab, upload the badge scan file and ask Copilot Cowork to identify
     You'll land on the Cowork homepage. From here you can type a new task at the top, try one of the "Get to work" samples, or pick up where you left off from the recent tasks list.
 
     ![Cowork homepage showing the input field, four Get to work sample cards (Organize my inbox, Organize my week, Prep for a meeting, Research a company), and an empty Tasks section with No recent tasks](./assets/cowork-home.png)
+
+    > [!NOTE]
+    > Your Cowork homepage may look slightly different depending on when you access it.
 
 1. Drag and drop the **badge_check.csv** file into the conversation
 
@@ -104,12 +111,22 @@ In this first lab, upload the badge scan file and ask Copilot Cowork to identify
 
 1. Go to [outlook.office.com](https://outlook.office.com) and check your inbox. You should have an email from Copilot Cowork with a summary table of all employees, their badge IDs, missing checkout counts, and which offices were affected.
 
-    ![Outlook email titled Badge Checkout Summary Report with a Summary by Employee table showing 12 employees, their badge IDs, missing checkouts, and offices affected](./assets/first-email-dark.png){.dark-only}
-    ![Outlook email titled Badge Checkout Summary Report with a Summary by Employee table showing 12 employees, their badge IDs, missing checkouts, and offices affected](./assets/first-email-light.png){.light-only}
+    ![Outlook email titled Badge Checkout Summary Report with a Summary by Employee table showing 12 employees, their badge IDs, missing checkouts, and offices affected (dark mode)](./assets/first-email-dark.png){.dark-only}
+    ![Outlook email titled Badge Checkout Summary Report with a Summary by Employee table showing 12 employees, their badge IDs, missing checkouts, and offices affected (light mode)](./assets/first-email-light.png){.light-only}
 
-You now have a working report in your inbox. Lab 1.2 builds on this with a formatted HTML report using a custom skill.
+    Verify the email contains:
 
-## ✨ Lab 1.2 - Upgrade with a Custom Skill {#lab1-2-upgrade-with-a-custom-skill}
+    - **12 employees** listed in the summary table
+    - **164 total** missing checkout incidents
+    - **John Doe** at the top with the highest count (38)
+    - Columns for Badge ID and Offices Affected
+
+    > [!TIP]
+    > If the report is missing employees or the counts look wrong, don't start over. Send a follow-up in the same conversation, like: *"The report is missing Ian Wright — can you recheck and resend?"* Cowork will correct and resend without regenerating everything.
+
+You now have a working report in your inbox. Lab 2 builds on this with a formatted HTML report using a custom skill.
+
+## ✨ Lab 2 - Upgrade with a Custom Skill {#lab2-upgrade-with-a-custom-skill}
 
 Copilot Cowork supports custom skills stored in your OneDrive. A skill is a `SKILL.md` file with instructions for a specific task. Copilot Cowork discovers your custom skills automatically at the start of each conversation and loads them as needed.
 
@@ -141,6 +158,8 @@ In this mission, you'll create a **frontend-design** skill that instructs Copilo
 > [Skills.sh](https://skills.sh) is a community site with skills you can use with AI tools like Copilot Cowork. Most are development-focused, but there are others worth browsing. Each skill goes through security checks, so you can review whether a skill has passed before using it.
 
 1. Download the [SKILL.md](https://raw.githubusercontent.com/microsoft/agent-academy/main/docs/cowork-collective/badge-check/assets/SKILL.md) file and save it to your device
+
+    The skill tells Cowork how to format HTML output: pick real fonts instead of system defaults, use a consistent color scheme, and make layouts work on both desktop and mobile. It also has guardrails against generic-looking output (no purple-on-white gradients, no cookie-cutter tables). The result is a report that actually looks like someone designed it.
 
 1. Open **OneDrive** and navigate to `Documents`
 
@@ -185,6 +204,11 @@ In this mission, you'll create a **frontend-design** skill that instructs Copilo
     > [!NOTE]
     > When you paste the prompt, the formatting might look a bit off. You can clean it up by adding or removing any extra newlines.
 
+    <!-- markdownlint-disable-next-line MD028 -->
+
+    > [!TIP]
+    > This prompt uses a pattern you can reuse for any data analysis: (1) describe the data format and columns, (2) define the analysis, (3) specify the output format and skill, (4) set the delivery method. Swap the file and analysis and the same structure works for any dataset.
+
 1. Remove the `[file]` placeholder
 
 1. Add the **badge_check.csv** file from last time by selecting `+` > `Upload images and files` > `select the file on your computer`
@@ -197,8 +221,15 @@ In this mission, you'll create a **frontend-design** skill that instructs Copilo
 
 1. Go to [outlook.office.com](https://outlook.office.com) and check your inbox. You should now have a styled HTML report with the top 10 results, miss rates, and red highlights for anyone above 50%.
 
-![Email from Cowork in Outlook with styled HTML report showing top 10 checkout offenders](./assets/second-email-dark.png){.dark-only}
-![Email from Cowork in Outlook with styled HTML report showing top 10 checkout offenders](./assets/second-email-light.png){.light-only}
+![Email from Cowork in Outlook with styled HTML report showing top 10 checkout offenders (dark mode)](./assets/second-email-dark.png){.dark-only}
+![Email from Cowork in Outlook with styled HTML report showing top 10 checkout offenders (light mode)](./assets/second-email-light.png){.light-only}
+
+### What Changed?
+
+Open both emails side by side. The first one is a plain text table with all 12 employees. The second has styled rows, actual typography, and color coding for the worst offenders. Same CSV, same agent. The only difference is the skill file you added to OneDrive.
+
+> [!TIP]
+> Want to tweak the report? In the same conversation, try: *"Change the red highlight threshold from 50% to 30% and add a column showing each person's most frequent office."* Cowork will update the report and resend it.
 
 ## 🏆 Mission Accomplished {#mission-accomplished}
 
@@ -206,11 +237,11 @@ In this mission, you'll create a **frontend-design** skill that instructs Copilo
 
 What you saw in action:
 
-✅ **Full workflow in one place**: You described the job, Cowork analyzed the data, built the report, and sent the email.
+✅ **One conversation, full workflow**: You described the job. Cowork analyzed the data, built the report, and emailed it.
 
-✅ **Custom skills change the output**: The same data went from a plain text summary to a styled HTML report with one skill file.
+✅ **Custom skills change the output**: The same CSV went from a plain text table to a styled HTML report because of one skill file.
 
-✅ **You approve before anything sends**: Nothing left your inbox until you reviewed it.
+✅ **Nothing sends without your approval**: Cowork drafted the email and waited for you to review it first.
 
 ## 🏅 Claim your Badge Bandit badge {#claim-your-badge}
 
@@ -223,12 +254,6 @@ Congrats, agent — mission accomplished! If you'd like to claim your badge for 
 
 Once reviewed, you'll get an email from Global AI Community with instructions to claim your badge.
 
-## 🏷️ Tags {#tags}
-
-**Technology**: copilot-cowork, microsoft-365, custom-skills, csv-analysis, email-reporting
-**Industry**: facilities, security
-**Difficulty**: ⭐ (1 star — Beginner)
-
 ## 📚 Related Content {#related-content}
 
 - 📖 [Copilot Cowork overview — Microsoft Learn](https://learn.microsoft.com/copilot/microsoft-365/cowork/)
@@ -237,5 +262,4 @@ Once reviewed, you'll get an email from Global AI Community with instructions to
 - 🚀 [Join the Microsoft 365 Copilot Frontier program](https://adoption.microsoft.com/copilot/frontier-program/)
 - 📖 [Frontend Design skill (skills.sh)](https://skills.sh/anthropics/skills/frontend-design)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/cowork-collective/badge-check" alt="Analytics" />
+<analytics-tag section="cowork-collective" mission="badge-check" />

@@ -10,6 +10,8 @@ badge: ./assets/Academy_LearnMCP.png
 products:
   - copilot-studio
   - microsoft-learn
+industries:
+  - it
 created-date: 2026-03-12
 last-edited-date: 2026-03-17
 ---
@@ -23,13 +25,13 @@ last-edited-date: 2026-03-17
 
 Welcome, agent. Your mission — should you choose to accept it — is **Operation Open Book**: connect the **Microsoft Learn Docs MCP Server** to a Copilot Studio agent, giving it real-time access to the entire Microsoft Learn documentation library. No more agents responding with outdated or hallucinated product information. Your agent is about to become the most well-read operative in the field. 📖🎯
 
-## What You'll Build
+## 🔧 What You'll Build {#what-youll-build}
 
 - A Copilot Studio agent connected to the hosted Microsoft Learn Docs MCP Server
 - A working MCP connection that surfaces `microsoft_docs_search` and related tools to your agent
 - An agent capable of accurately answering questions about any Microsoft product using live documentation
 
-## Prerequisites
+## ⚙️ Prerequisites {#prerequisites}
 
 - Microsoft Copilot Studio trial or paid account. If you don't have an account, check out the [course setup](https://microsoft.github.io/agent-academy/recruit/00-course-setup/) instructions to see how to get a free trial.
 
@@ -62,11 +64,11 @@ There is also a `microsoft_code_sample_search` tool which browses Learn for rele
 
 Without external grounding, agents rely on model memory, which can be outdated. But even adding the Microsoft Learn root URL as static knowledge has limits: it depends on periodic indexing, may miss deep or newly published pages, and does not perform live, intent-based retrieval for each question. The Microsoft Learn MCP Server solves that by letting your agent run real-time documentation searches at response time, so answers are based on the latest relevant pages, including newly released guidance and product updates.
 
-## The Scenario
+## 🎯 The Scenario {#the-scenario}
 
 Zava is building an internal agent to support employees with Microsoft 365, Azure, and Power Platform questions. Rather than manually curating a knowledge base of Microsoft product docs, the team wants their agent to pull answers directly from Microsoft Learn in real time — always accurate, always current. You are the agent builder tasked with wiring this up.
 
-## Lab 1.1: Create the Support Agent
+## 🧪 Lab 1.1: Create the Support Agent {#lab-11-create-the-support-agent}
 
 The first step is to create a new Copilot Studio agent that will serve as the foundation for your Microsoft Learn-powered helpdesk.
 
@@ -92,15 +94,15 @@ The first step is to create a new Copilot Studio agent that will serve as the fo
     An agent that answers questions about Microsoft products by searching live Microsoft Learn documentation.
     ```
 
-1. Click **Save**
+1. Select **Save**
 
     ![Save](./assets/save-details.png)
 
-## Lab 1.2: Connect the Microsoft Learn Docs MCP Server
+## 🧪 Lab 1.2: Connect the Microsoft Learn Docs MCP Server {#lab-12-connect-the-microsoft-learn-docs-mcp-server}
 
 Next, you'll add the Microsoft Learn Docs MCP Server as a tool in Copilot Studio, making its tools available to your agent.
 
-1. Click the **Add tool** button in the Tools section.
+1. Select the **Add tool** button in the Tools section.
 
     ![Add Tool](./assets/add-tool.png)
 
@@ -108,7 +110,7 @@ Next, you'll add the Microsoft Learn Docs MCP Server as a tool in Copilot Studio
 
     ![Select MCP](./assets/tool-search.png)
 
-1. Click on the dropdown next to **Connection** and select **Create new connection** to create a new connection to the MCP server.
+1. Select the dropdown next to **Connection** and select **Create new connection** to create a new connection to the MCP server.
 
     ![Create Connection](./assets/create-connection.png)
 
@@ -124,13 +126,13 @@ Next, you'll add the Microsoft Learn Docs MCP Server as a tool in Copilot Studio
 
     ![Tools](./assets/observe-tools.png)
 
-## Lab 1.3: Add Instructions
+## 🧪 Lab 1.3: Add Instructions {#lab-13-add-instructions}
 
 Now that we have the Learn MCP server added, we need to add instructions for the agent so it knows what it's supposed to do.
 
-1. Click on the **Overview** tab to go back to the overview screen for your agent.
+1. Select the **Overview** tab to go back to the overview screen for your agent.
 
-1. Click **Edit** next to the Instructions section.
+1. Select **Edit** next to the Instructions section.
 
     ![Edit Instructions](./assets/edit-instructions.png)
 
@@ -147,7 +149,7 @@ Now that we have the Learn MCP server added, we need to add instructions for the
 
     ![Save](./assets/save-instruction2.png)
 
-## Lab 1.4: Test Your Agent
+## 🧪 Lab 1.4: Test Your Agent {#lab-14-test-your-agent}
 
 Time to see your documentation-powered agent in action.
 
@@ -205,7 +207,7 @@ Time to see your documentation-powered agent in action.
 
     ![Test Result](./assets/test-code-sample.png)
 
-## Lab 1.5: Test the fallback behavior
+## 🧪 Lab 1.5: Test the fallback behavior {#lab-15-test-the-fallback-behavior}
 
 In our instructions, we defined what's called "fallback behavior", meaning, what should happen if the agent can't find an answer. We did this by adding this line to the instruction: ``If the search does not return a relevant result, tell the user and suggest they visit https://learn.microsoft.com directly.``.
 
@@ -221,7 +223,7 @@ Let's take a look at how we can fine tune these settings so that the agent only 
 
     ![Settings Configuration](./assets/settings-knowledge.png)
 
-1. Click the **X** in the upper right hand corner to close out of the settings screen.
+1. Select the **X** in the upper right hand corner to close out of the settings screen.
 
 1. Now it's time to test that these settings and are fallback logic is working. Send the following message to test your fallback instruction:
 
@@ -233,7 +235,7 @@ Let's take a look at how we can fine tune these settings so that the agent only 
 
     ![Fallback Test](./assets/test-invalid.png)
 
-## Mission Accomplished
+## ✅ Mission Accomplished {#mission-accomplished}
 
 Congrats, agent — **Operation Open Book** is complete! Your Copilot Studio agent is now wired to the full Microsoft Learn documentation library through a live MCP connection.
 
@@ -246,7 +248,7 @@ In this mission, you accomplished:
 
 ## 🏅 Claim your completion badge {#claim-your-completion-badge}
 <!-- markdownlint-disable-next-line MD033 -->
-<p align="center"><img src="../assets/Academy_LearnMCP.png" alt="Learn MCP Badge" width="220" /></p>
+<p align="center"><img src="./assets/Academy_LearnMCP.png" alt="Learn MCP Badge" width="220" /></p>
 
 Congrats, agent - mission accomplished! Now it's time to claim your badge.
 
@@ -261,10 +263,14 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 
 ## 📚 Tactical Resources {#tactical-resources}
 
-- [Microsoft Copilot Studio ❤️ MCP](../mcs-mcp/index.md) — Build and deploy your own custom MCP server and connect it to Copilot Studio
-- [Power Platform CLI MCP Server](../pac-cli-mcp/index.md) — Use MCP to control your Power Platform tenant with natural language
-📖 [Microsoft Learn MCP Server docs](https://learn.microsoft.com/microsoft-copilot-studio/connections-mcp)  
-📖 [Model Context Protocol overview](https://modelcontextprotocol.io/introduction)  
+🔗 [Microsoft Copilot Studio ❤️ MCP](../mcs-mcp/index.md) — Build and deploy your own custom MCP server and connect it to Copilot Studio
+
+🔗 [Power Platform CLI MCP Server](../pac-cli-mcp/index.md) — Use MCP to control your Power Platform tenant with natural language
+
+📖 [Microsoft Learn MCP Server docs](https://learn.microsoft.com/microsoft-copilot-studio/connections-mcp)
+
+📖 [Model Context Protocol overview](https://modelcontextprotocol.io/introduction)
+
 📖 [Copilot Studio MCP connections](https://learn.microsoft.com/microsoft-copilot-studio/connections-mcp)
 
 <analytics-tag section="special-ops" mission="ms-learn-mcp" />

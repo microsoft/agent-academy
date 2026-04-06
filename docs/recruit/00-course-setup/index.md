@@ -15,6 +15,8 @@ products:
   - copilot-studio
   - sharepoint
   - microsoft-365
+industries:
+  - it
 created-date: 2025-08-20
 last-edited-date: 2026-03-16
 ---

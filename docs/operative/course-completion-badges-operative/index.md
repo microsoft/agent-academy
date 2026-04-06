@@ -10,6 +10,8 @@ tags:
   - completion
 products:
   - copilot-studio
+industries:
+  - hr
 created-date: 2026-01-14
 last-edited-date: 2026-02-02
 ---

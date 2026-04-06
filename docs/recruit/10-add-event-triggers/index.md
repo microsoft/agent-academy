@@ -15,6 +15,8 @@ tags:
 products:
   - copilot-studio
   - power-automate
+industries:
+  - it
 created-date: 2025-08-20
 last-edited-date: 2026-02-19
 ---

@@ -14,6 +14,8 @@ tags:
   - prompting
 products:
   - copilot-studio
+industries:
+  - hr
 created-date: 2026-01-14
 last-edited-date: 2026-03-11
 ---

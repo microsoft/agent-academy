@@ -14,11 +14,16 @@
 import { withBase } from "vitepress";
 
 const props = defineProps<{
-  section: "products" | "tags";
+  section: "products" | "tags" | "industries";
   label?: string;
 }>();
 
-const sectionLabel = props.section === "products" ? "Products" : "Tags";
+const SECTION_MAP: Record<string, string> = {
+  products: "Products",
+  tags: "Tags",
+  industries: "Industries",
+};
+const sectionLabel = SECTION_MAP[props.section] ?? props.section;
 const sectionHref = withBase(`/${props.section}/`);
 
 const crumbs = props.label

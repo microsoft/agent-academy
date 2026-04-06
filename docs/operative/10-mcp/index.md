@@ -13,10 +13,12 @@ tags:
   - mcp
 products:
   - copilot-studio
+industries:
+  - hr
 created-date: 2026-01-14
 last-edited-date: 2026-03-11
 ---
-# Mission 10: Integrate with MCP Servers
+# 🚨 Mission 10: Integrate with MCP Servers {#mission-10-integrate-with-mcp-servers}
 
 <mission-meta />
 
@@ -122,7 +124,7 @@ While Agent 365 offers a comprehensive platform for agent management, governance
 
 You'll learn how to connect your agent to ready-made tooling servers (like Outlook Calendar and Teams) and enable real actions in Microsoft 365 applications - without building custom integrations. Think of this as learning to use the tools already in the toolbox before building your own.
 
-## 🧪 Lab 10: Add MCP Servers to arrange an interview prep-meeting {#lab-10-add-mcp-servers-to-arrange-an-interview-prep-meeting}
+## 🧪 Lab 10 - Add MCP Servers to arrange an interview prep-meeting {#lab-10-add-mcp-servers-to-arrange-an-interview-prep-meeting}
 
 > [!IMPORTANT]
 > For this lab, you need to make sure that you are part of the [Frontier preview program](https://adoption.microsoft.com/copilot/frontier-program/) to get early access to Microsoft Agent 365. Frontier connects you directly with Microsoft’s latest AI innovations. Frontier previews are subject to the existing preview terms of your customer agreements. As these features are still in development, their availability and capabilities may change over time.

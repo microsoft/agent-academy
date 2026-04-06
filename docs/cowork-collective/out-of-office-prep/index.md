@@ -12,6 +12,10 @@ products:
   - microsoft-365-copilot
   - copilot-cowork
   - outlook
+industries:
+  - general
+created-date: 2026-04-06
+last-edited-date: 2026-04-06
 ---
 # 🏖️ Out of Office Vacation Handoff
 
@@ -313,16 +317,10 @@ Congrats, agent — mission accomplished! If you'd like to receive a badge, plea
 
 [https://aka.ms/cowork-collective/ooo-prep/form](https://aka.ms/cowork-collective/ooo-prep/form)
 
-## 🏷️ Tags {#tags}
-
-**Technology**: copilot-cowork, microsoft-365
-**Industry**: general  
-**Difficulty**: ⭐ (1 star — Beginner)
-
 ## 📚 Related Content {#related-content}
 
 - 📖 [Copilot Cowork overview — Microsoft Learn](https://learn.microsoft.com/copilot/microsoft-365/cowork/)
 - 🚀 [Join the Microsoft 365 Copilot Frontier program](https://adoption.microsoft.com/copilot/frontier-program/)
 
 <!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/cowork-collective/out-of-office-prep" alt="Analytics" />
+<analytics-tag section="cowork-collective" mission="out-of-office-prep" />

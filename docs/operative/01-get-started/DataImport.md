@@ -4,7 +4,7 @@ If you are importing one of the starter solutions for modules 2 or later, follow
 
 ---
 
-## 🧪 Lab 1.2: Import sample data {#lab-12-import-sample-data}
+## 🧪 Lab 1.2 - Import sample data {#lab-12-import-sample-data}
 
 In this lab, you will add sample data to some of the tables that you imported in your starter solution.
 

@@ -13,10 +13,12 @@ tags:
   - document-generation
 products:
   - copilot-studio
+industries:
+  - hr
 created-date: 2026-01-14
 last-edited-date: 2026-03-11
 ---
-# Mission 09: Generate a Candidate Interview Questions Document
+# 🚨 Mission 09: Generate a Candidate Interview Questions Document {#mission-09-generate-a-candidate-interview-questions-document}
 
 <mission-meta />
 
@@ -36,7 +38,7 @@ In this mission, you'll learn:
 1. How to format a Word template to be used in a prompt
 1. How to execute a prompt from an agent
 
-## Lab 9: Generating an Interview Document
+## 🧪 Lab 9 - Generating an Interview Document
 
 When a job application is added, you want to automate the process of preparing a detailed interview document. This should be a Word document that summarizes the applicants key information (name, current role, experience, etc), the role information (job title, requirements) and creates unique specific interview questions based on the applicant background and role they are applying for.
 

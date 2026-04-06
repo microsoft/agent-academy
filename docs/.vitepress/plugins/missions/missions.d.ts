@@ -7,6 +7,7 @@ declare module "virtual:missions-data" {
     difficulty: number;
     tags: string[];
     products: string[];
+    industries: string[];
     lastUpdated: number;
     createdAt: number;
   }

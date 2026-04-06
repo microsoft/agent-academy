@@ -24,18 +24,22 @@ import { productIcons as icons } from "../../data/icons";
 // Products that have an official SVG file in /public/product-icons/
 const fileIcons: Record<string, string> = {
   "azure":                  "/product-icons/azure.svg",
+  "copilot-cowork":         "/product-icons/copilot-cowork.svg",
   "copilot-studio":         "/product-icons/copilot-studio.svg",
   "dataverse":              "/product-icons/dataverse.svg",
+  "excel":                  "/product-icons/excel.svg",
   "github-copilot":         "/product-icons/github-copilot.svg",
   "microsoft-365":          "/product-icons/microsoft-365.svg",
   "microsoft-365-copilot":  "/product-icons/microsoft-365-copilot.svg",
   "microsoft-learn":        "/product-icons/microsoft-learn.svg",
+  "onedrive":               "/product-icons/onedrive.svg",
   "outlook":                "/product-icons/outlook.svg",
   "power-automate":         "/product-icons/power-automate.svg",
   "power-platform":         "/product-icons/power-platform.svg",
   "sharepoint":             "/product-icons/sharepoint.svg",
   "teams":                  "/product-icons/teams.svg",
   "visual-studio-code":     "/product-icons/visual-studio-code.svg",
+  "word":                   "/product-icons/word.svg",
 };
 
 const items = productData.filter(p =>
