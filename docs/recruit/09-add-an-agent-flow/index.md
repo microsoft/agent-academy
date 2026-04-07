@@ -11,9 +11,7 @@ codename: OPERATION AUTOMATION POWERHOUSE
 time: 30
 tags:
   - automation
-products:
-  - copilot-studio
-  - power-automate
+products: [copilot-studio, power-automate, outlook, sharepoint]
 industries:
   - it
 created-date: 2025-08-20

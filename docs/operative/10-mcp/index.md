@@ -11,8 +11,7 @@ codename: OPERATION MCP RENDEZVOUS
 time: 45
 tags:
   - mcp
-products:
-  - copilot-studio
+products: [copilot-studio, outlook]
 industries:
   - hr
 created-date: 2026-01-14

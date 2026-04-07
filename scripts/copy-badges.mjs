@@ -12,6 +12,7 @@ import matter from "gray-matter";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const docsDir = path.resolve(__dirname, "../docs");
 const publicImagesDir = path.resolve(docsDir, "public/images");
+const COURSE_BADGE_PATTERN = /!\[[^\]]*\]\((?<badgePath>[^)]*mcs-agent-academy-[^)]+-badge\.(?:png|jpe?g|svg|webp))\)/g;
 
 const EXCLUDED_DIRS = new Set([
   ".vitepress", "public", "images", "includes",
@@ -21,6 +22,20 @@ const EXCLUDED_DIRS = new Set([
 fs.mkdirSync(publicImagesDir, { recursive: true });
 
 let copied = 0;
+const copiedDestinations = new Set();
+
+function copyBadge(badgeSrc) {
+  if (!fs.existsSync(badgeSrc)) return;
+
+  const destName = path.basename(badgeSrc);
+  const dest = path.join(publicImagesDir, destName);
+  if (copiedDestinations.has(dest)) return;
+
+  fs.copyFileSync(badgeSrc, dest);
+  copiedDestinations.add(dest);
+  copied++;
+  console.log(`Copied: ${path.relative(docsDir, badgeSrc)} -> public/images/${destName}`);
+}
 
 for (const sectionEntry of fs.readdirSync(docsDir, { withFileTypes: true })) {
   if (!sectionEntry.isDirectory() || EXCLUDED_DIRS.has(sectionEntry.name)) continue;
@@ -37,13 +52,23 @@ for (const sectionEntry of fs.readdirSync(docsDir, { withFileTypes: true })) {
     if (!frontmatter.badge) continue;
 
     const badgeSrc = path.resolve(path.dirname(indexPath), frontmatter.badge);
-    if (!fs.existsSync(badgeSrc)) continue;
-
-    const dest = path.join(publicImagesDir, path.basename(badgeSrc));
-    fs.copyFileSync(badgeSrc, dest);
-    copied++;
-    console.log(`Copied: ${path.relative(docsDir, badgeSrc)} → public/images/${path.basename(badgeSrc)}`);
+    copyBadge(badgeSrc);
   }
 }
 
-console.log(`\nDone — ${copied} badge image(s) synced to docs/public/images/`);
+for (const markdownPath of [
+  path.join(docsDir, "index.md"),
+  path.join(docsDir, "commander/index.md"),
+  path.join(docsDir, "commander-preview/index.md"),
+  path.join(docsDir, "recruit/course-completion-badges-recruit/index.md"),
+  path.join(docsDir, "operative/course-completion-badges-operative/index.md"),
+]) {
+  if (!fs.existsSync(markdownPath)) continue;
+
+  const content = fs.readFileSync(markdownPath, "utf-8");
+  for (const match of content.matchAll(COURSE_BADGE_PATTERN)) {
+    copyBadge(path.resolve(path.dirname(markdownPath), match.groups.badgePath));
+  }
+}
+
+console.log(`\nDone - ${copied} badge image(s) synced to docs/public/images/`);

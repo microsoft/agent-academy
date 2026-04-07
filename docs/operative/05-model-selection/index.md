@@ -11,9 +11,7 @@ codename: OPERATION ARCHETYPE
 time: 45
 tags:
   - models
-products:
-  - copilot-studio
-  - azure
+products: [copilot-studio, azure, dataverse]
 industries:
   - hr
 created-date: 2026-01-14

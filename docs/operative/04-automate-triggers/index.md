@@ -12,9 +12,7 @@ time: 45
 tags:
   - automation
   - triggers
-products:
-  - copilot-studio
-  - power-automate
+products: [copilot-studio, dataverse, power-automate, outlook, teams]
 industries:
   - hr
 created-date: 2026-01-14

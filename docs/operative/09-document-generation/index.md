@@ -11,8 +11,7 @@ codename: OPERATION DOC ASSEMBLY
 time: 45
 tags:
   - document-generation
-products:
-  - copilot-studio
+products: [copilot-studio, dataverse, word]
 industries:
   - hr
 created-date: 2026-01-14

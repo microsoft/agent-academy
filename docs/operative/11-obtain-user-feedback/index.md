@@ -12,8 +12,7 @@ time: 45
 tags:
   - feedback
   - adaptive-cards
-products:
-  - copilot-studio
+products: [copilot-studio, dataverse, teams]
 industries:
   - hr
 created-date: 2026-01-14

@@ -12,8 +12,9 @@ time: 60
 tags:
   - declarative-agents
 products:
-  - copilot-studio
-  - microsoft-365
+    - copilot-studio
+    - microsoft-365
+    - teams
 industries:
   - it
 created-date: 2025-08-20
