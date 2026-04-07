@@ -12,8 +12,7 @@ time: 45
 tags:
   - multimodal
   - prompting
-products:
-  - copilot-studio
+products: [copilot-studio, dataverse]
 industries:
   - hr
 created-date: 2026-01-14

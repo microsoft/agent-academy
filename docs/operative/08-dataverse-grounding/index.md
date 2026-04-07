@@ -11,9 +11,7 @@ codename: OPERATION GROUNDING CONTROL
 time: 60
 tags:
   - grounding
-products:
-  - copilot-studio
-  - dataverse
+products: [copilot-studio, dataverse]
 industries:
   - hr
 created-date: 2026-01-14

@@ -12,8 +12,7 @@ time: 60
 tags:
   - topics
   - triggers
-products:
-  - copilot-studio
+products: [copilot-studio, sharepoint]
 industries:
   - it
 created-date: 2025-08-20

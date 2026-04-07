@@ -11,8 +11,7 @@ codename: OPERATION AGENT FORGE
 time: 75
 tags:
   - declarative-agents
-products:
-  - copilot-studio
+products: [copilot-studio, sharepoint, microsoft-learn]
 industries:
   - it
 created-date: 2025-08-20

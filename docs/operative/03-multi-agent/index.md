@@ -11,8 +11,7 @@ codename: OPERATION SYMPHONY
 time: 45
 tags:
   - multi-agent
-products:
-  - copilot-studio
+products: [copilot-studio, dataverse, power-platform]
 industries:
   - hr
 created-date: 2026-01-14

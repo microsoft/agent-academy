@@ -8,10 +8,7 @@ description: >-
   and email a styled HTML report.
 section: cowork-collective
 badge: ../assets/BadgeBandit-badge.png
-products:
-  - microsoft-365-copilot
-  - copilot-cowork
-  - onedrive
+products: [microsoft-365-copilot, copilot-cowork, onedrive, outlook]
 industries:
   - facilities
   - security

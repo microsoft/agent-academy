@@ -12,9 +12,7 @@ time: 45
 tags:
   - automation
   - triggers
-products:
-  - copilot-studio
-  - power-automate
+products: [copilot-studio, power-automate, outlook, sharepoint, power-platform]
 industries:
   - it
 created-date: 2025-08-20

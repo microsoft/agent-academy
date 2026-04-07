@@ -12,6 +12,7 @@ products:
   - microsoft-365-copilot
   - copilot-cowork
   - outlook
+  - teams
 industries:
   - general
 created-date: 2026-04-06

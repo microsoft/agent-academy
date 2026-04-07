@@ -11,8 +11,7 @@ codename: OPERATION TALENT SCOUT
 time: 45
 tags:
   - fundamentals
-products:
-  - copilot-studio
+products: [copilot-studio, dataverse]
 industries:
   - hr
 created-date: 2026-01-14
