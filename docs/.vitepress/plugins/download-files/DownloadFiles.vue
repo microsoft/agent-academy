@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { ref, computed, onBeforeUnmount } from "vue";
+import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 import { useData } from "vitepress";
-import { bundles } from "virtual:download-bundles";
 import { allIcons } from "../../data/icons";
 import JSZip from "jszip";
 
@@ -17,6 +16,13 @@ const iconData = computed(() => (props.icon ? allIcons[props.icon] : undefined))
 
 const { site } = useData();
 
+const bundlesData = ref<Record<string, string[]>>({});
+
+onMounted(async () => {
+  const mod = await import("virtual:download-bundles");
+  bundlesData.value = mod.bundles;
+});
+
 const normalizedPath = computed(() =>
   props.path.replace(/^\.?\//, "").replace(/\/$/, "")
 );
@@ -26,7 +32,7 @@ const folderName = computed(() => {
   return parts[parts.length - 1] || "download";
 });
 
-const files = computed(() => bundles[normalizedPath.value] ?? []);
+const files = computed(() => bundlesData.value[normalizedPath.value] ?? []);
 
 const zipName = computed(() => `${folderName.value}.zip`);
 
@@ -65,10 +71,16 @@ async function download() {
   try {
     const zip = new JSZip();
     const base = site.value.base || "/";
+    const rawGitHub = "https://raw.githubusercontent.com/microsoft/agent-academy/main/docs/";
 
     const fetchPromises = files.value.map(async (fileName) => {
-      const url = `${base}${normalizedPath.value}/${fileName}`;
-      const response = await fetch(url);
+      const localUrl = `${base}${normalizedPath.value}/${fileName}`;
+      let response = await fetch(localUrl);
+      if (!response.ok) {
+        // Fall back to raw GitHub download URL
+        const ghUrl = `${rawGitHub}${normalizedPath.value}/${fileName}`;
+        response = await fetch(ghUrl);
+      }
       if (!response.ok) {
         throw new Error(`Failed to fetch ${fileName} (${response.status})`);
       }
