@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { mermaidPlugin } from "./plugins/vitepress-mermaid";
 import { missionsPlugin } from "./plugins/missions";
+import { downloadFilesPlugin } from "./plugins/download-files";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const docsDir = path.resolve(__dirname, "..");
@@ -226,6 +227,6 @@ export default defineConfig({
     },
   },
   vite: {
-    plugins: [missionsPlugin(docsDir)],
+    plugins: [missionsPlugin(docsDir), downloadFilesPlugin(docsDir)],
   },
 });

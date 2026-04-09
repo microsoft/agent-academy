@@ -10,8 +10,7 @@ In this lab, you will add sample data to some of the tables that you imported in
 
 ### Download the files to import
 
-1. **[Download](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/operative/01-get-started/assets/evaluation-criteria.csv)** the CSV-file with the evaluation criteria
-1. **[Download](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/operative/01-get-started/assets/job-roles.csv)** the CSV-file with the job roles
+<download-files path="operative/01-get-started/assets/sample-data" label="Download sample data" />
 
 #### Import the Job Role sample data
 

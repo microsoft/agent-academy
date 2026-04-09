@@ -1,40 +1,52 @@
 <template>
   <div class="missions-container">
-    <div v-if="filterable && (availableTags.length || availableProducts.length || availableIndustries.length)" class="missions-filters">
-      <div v-if="availableTags.length" class="filter-group">
-        <span class="filter-label">Tags</span>
-        <div class="filter-pills">
-          <button
-            v-for="t in availableTags"
-            :key="t.slug"
-            class="filter-pill"
-            :class="{ active: activeTag === t.slug }"
-            @click="activeTag = activeTag === t.slug ? null : t.slug"
-          >{{ t.label }}</button>
-        </div>
-      </div>
-      <div v-if="availableProducts.length" class="filter-group">
-        <span class="filter-label">Product</span>
-        <div class="filter-pills">
-          <button
-            v-for="p in availableProducts"
-            :key="p.slug"
-            class="filter-pill"
-            :class="{ active: activeProduct === p.slug }"
-            @click="activeProduct = activeProduct === p.slug ? null : p.slug"
-          >{{ p.label }}</button>
-        </div>
-      </div>
-      <div v-if="availableIndustries.length" class="filter-group">
-        <span class="filter-label">Industry</span>
-        <div class="filter-pills">
-          <button
-            v-for="i in availableIndustries"
-            :key="i.slug"
-            class="filter-pill"
-            :class="{ active: activeIndustry === i.slug }"
-            @click="activeIndustry = activeIndustry === i.slug ? null : i.slug"
-          >{{ i.label }}</button>
+    <div v-if="filterable && (availableTags.length || availableProducts.length || availableIndustries.length)" class="missions-filters" :class="{ 'filters-open': filtersOpen }">
+      <button class="filters-toggle" :aria-expanded="filtersOpen" aria-controls="missions-filters-body" @click="filtersOpen = !filtersOpen">
+        <svg class="filters-toggle-icon" :class="{ expanded: filtersOpen }" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Filters
+        <span v-if="activeFilterCount > 0 && !filtersOpen" class="filters-badge">{{ activeFilterCount }}</span>
+      </button>
+      <div id="missions-filters-body" class="filters-body" :class="{ 'filters-body--open': filtersOpen }">
+        <div class="filters-body-inner">
+          <div v-if="availableTags.length" class="filter-group">
+            <span class="filter-label">Tags</span>
+            <div class="filter-pills">
+              <button
+                v-for="t in availableTags"
+                :key="t.slug"
+                class="filter-pill"
+                :class="{ active: activeTag === t.slug }"
+                :aria-pressed="activeTag === t.slug"
+                @click="activeTag = activeTag === t.slug ? null : t.slug"
+              >{{ t.label }}</button>
+            </div>
+          </div>
+          <div v-if="availableProducts.length" class="filter-group">
+            <span class="filter-label">Product</span>
+            <div class="filter-pills">
+              <button
+                v-for="p in availableProducts"
+                :key="p.slug"
+                class="filter-pill"
+                :class="{ active: activeProduct === p.slug }"
+                :aria-pressed="activeProduct === p.slug"
+                @click="activeProduct = activeProduct === p.slug ? null : p.slug"
+              >{{ p.label }}</button>
+            </div>
+          </div>
+          <div v-if="availableIndustries.length" class="filter-group">
+            <span class="filter-label">Industry</span>
+            <div class="filter-pills">
+              <button
+                v-for="i in availableIndustries"
+                :key="i.slug"
+                class="filter-pill"
+                :class="{ active: activeIndustry === i.slug }"
+                :aria-pressed="activeIndustry === i.slug"
+                @click="activeIndustry = activeIndustry === i.slug ? null : i.slug"
+              >{{ i.label }}</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -113,6 +125,7 @@ const props = withDefaults(
     order?: "ascending" | "descending";
     maxRows?: number;
     filterable?: boolean;
+    filtersExpanded?: boolean;
     tag?: string;
     product?: string;
     industry?: string;
@@ -121,6 +134,7 @@ const props = withDefaults(
     sort: "alphabetical",
     order: "ascending",
     filterable: true,
+    filtersExpanded: true,
   }
 );
 
@@ -192,9 +206,14 @@ const sortedMissions = computed(() => {
 });
 
 // Filters
+const filtersOpen = ref(props.filtersExpanded);
 const activeTag = ref<string | null>(null);
 const activeProduct = ref<string | null>(null);
 const activeIndustry = ref<string | null>(null);
+
+const activeFilterCount = computed(() =>
+  [activeTag.value, activeProduct.value, activeIndustry.value].filter(Boolean).length
+);
 
 // Only show tag filter when not already scoped by a tag prop, and tags exist in this set
 const availableTags = computed(() => {
@@ -456,12 +475,12 @@ const visiblePages = computed<PageItem[]>(() => {
 .pager-pill.active {
   background: var(--vp-c-brand-1);
   border-color: var(--vp-c-brand-1);
-  color: #fff;
+  color: var(--vp-c-white, #fff);
 }
 
 :root.dark .pager-pill.active {
-  background: var(--vp-c-brand-2, #5468d4);
-  border-color: var(--vp-c-brand-2, #5468d4);
+  background: var(--vp-c-brand-3, #3e63dd);
+  border-color: var(--vp-c-brand-3, #3e63dd);
 }
 
 .pager-arrow {
@@ -487,12 +506,86 @@ const visiblePages = computed<PageItem[]>(() => {
 
 /* Filter bar */
 .missions-filters {
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+}
+
+.missions-filters.filters-open {
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.filters-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-2);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.filters-toggle:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+}
+
+.filters-toggle:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
+.filters-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.15rem;
+  height: 1.15rem;
+  padding: 0 0.3rem;
+  border-radius: 999px;
+  background: var(--vp-c-brand-1);
+  color: var(--vp-c-white, #fff);
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.filters-toggle-icon {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s;
+}
+
+.filters-toggle-icon.expanded {
+  transform: rotate(180deg);
+}
+
+.filters-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s ease;
+  overflow: hidden;
+}
+
+.filters-body--open {
+  grid-template-rows: 1fr;
+}
+
+.filters-body-inner {
+  min-height: 0;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-bottom: 1.25rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--vp-c-divider);
+  overflow: hidden;
+}
+
+.filters-body--open .filters-body-inner {
+  margin-top: 0.6rem;
 }
 
 .filter-group {
@@ -507,7 +600,7 @@ const visiblePages = computed<PageItem[]>(() => {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  color: var(--vp-c-text-3);
+  color: var(--vp-c-text-2);
   white-space: nowrap;
   min-width: 3.5rem;
   flex-shrink: 0;
@@ -546,18 +639,18 @@ const visiblePages = computed<PageItem[]>(() => {
 .filter-pill.active {
   background: var(--vp-c-brand-1);
   border-color: var(--vp-c-brand-1);
-  color: #fff;
+  color: var(--vp-c-white, #fff);
 }
 
-.filter-pill.active::before {
-  content: "✕ ";
+.filter-pill.active::after {
+  content: " ✕";
   font-size: 0.65rem;
   opacity: 0.8;
 }
 
 :root.dark .filter-pill.active {
-  background: var(--vp-c-brand-2, #5468d4);
-  border-color: var(--vp-c-brand-2, #5468d4);
+  background: var(--vp-c-brand-3, #3e63dd);
+  border-color: var(--vp-c-brand-3, #3e63dd);
 }
 
 .missions-empty {

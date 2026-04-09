@@ -50,7 +50,9 @@ Now you have a choice! You either run the server locally - or you can deploy it 
 
 There are a couple of steps that you need to do for both:
 
-1. [Download](https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/docs/special-ops/mcs-mcp/source&filename=jokes-mcp-server) the Jokes MCP Server
+1. Download the Jokes MCP Server
+
+    <action-button href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/docs/special-ops/mcs-mcp/source&filename=jokes-mcp-server" label="Download Jokes MCP Server" icon="📦" />
 
 1. Unpack the zip-file
 

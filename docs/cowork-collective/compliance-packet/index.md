@@ -65,12 +65,14 @@ You are a compliance analyst at **Zava Financial Services**, a mid-size financia
 
 This mission provides all four source documents.
 
-| File | What it contains | Download |
-|------|------------------|----------|
-| `data-retention-policy.docx` | Zava's data retention policy, version 2.3, covering retention schedules and legal hold procedures | [download](https://raw.githubusercontent.com/microsoft/agent-academy/main/docs/cowork-collective/compliance-packet/assets/sample-files/data-retention-policy.docx) |
-| `access-control-policy.docx` | Zava's access control policy, version 3.1, covering IAM, MFA, and privileged access | [download](https://raw.githubusercontent.com/microsoft/agent-academy/main/docs/cowork-collective/compliance-packet/assets/sample-files/access-control-policy.docx) |
-| `zava-risk-register.csv` | 12 open/partial risk findings (R-001 through R-012), each with Risk Level, Owner, Status, and remediation notes | [download](https://raw.githubusercontent.com/microsoft/agent-academy/main/docs/cowork-collective/compliance-packet/assets/sample-files/zava-risk-register.csv) |
-| `zava-audit-checklist.csv` | 15 audit checklist items mapped to ISO 27001 and SOC 2 controls, each with a Readiness Status (Ready / In Progress / Not Ready) | [download](https://raw.githubusercontent.com/microsoft/agent-academy/main/docs/cowork-collective/compliance-packet/assets/sample-files/zava-audit-checklist.csv) |
+<download-files path="cowork-collective/compliance-packet/assets/sample-files" label="Download lab assets" />
+
+| File | What it contains |
+|------|------------------|
+| `data-retention-policy.docx` | Zava's data retention policy, version 2.3, covering retention schedules and legal hold procedures |
+| `access-control-policy.docx` | Zava's access control policy, version 3.1, covering IAM, MFA, and privileged access |
+| `zava-risk-register.csv` | 12 open/partial risk findings (R-001 through R-012), each with Risk Level, Owner, Status, and remediation notes |
+| `zava-audit-checklist.csv` | 15 audit checklist items mapped to ISO 27001 and SOC 2 controls, each with a Readiness Status (Ready / In Progress / Not Ready) |
 
 ## 🧪 Lab 1.1 - Open Copilot Cowork and Attach Your Files {#lab-1-1}
 

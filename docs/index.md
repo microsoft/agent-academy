@@ -14,19 +14,24 @@ This hands-on training is your entry point into the **world of agents**: from gr
 
 The **Copilot Studio Agent Academy** is a multi-phase training program designed to build your skills across three agent ranks. Each level includes a badge and increasing responsibilities:
 
-| Rank             | Level | Status                                                   | Visual                                                                            |
-|------------------|:-----:|----------------------------------------------------------|-----------------------------------------------------------------------------------|
-| 🟢 **Recruit**   | •     | [🚀 Get started](https://aka.ms/agent-academy-recruit)   | ![Recruit Badge](./images/mcs-agent-academy-recruit-badge.png){ width="300" }     |
-| 🔵 **Operative** | ••    | [🚀 Get started](https://aka.ms/agent-academy-operative) | ![Operative Badge](./images/mcs-agent-academy-operative-badge.png){ width="300" } |
-| 🟡 **Commander** | •••   | Coming Soon                                              | ![Commander Badge](./images/mcs-agent-academy-commander-badge.png){ width="300" } |
+| Rank             | Level | Status                                                                                         | Visual                                                                            |
+|------------------|:-----:|------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| 🟢 **Recruit**   | •     | <action-button href="https://aka.ms/agent-academy-recruit" label="Get started" icon="🚀" />   | ![Recruit Badge](./images/mcs-agent-academy-recruit-badge.png){ width="300" }     |
+| 🔵 **Operative** | ••    | <action-button href="https://aka.ms/agent-academy-operative" label="Get started" icon="🚀" /> | ![Operative Badge](./images/mcs-agent-academy-operative-badge.png){ width="300" } |
+| 🟡 **Commander** | •••   | Coming Soon                                                                                    | ![Commander Badge](./images/mcs-agent-academy-commander-badge.png){ width="300" } |
 
 Each level builds on the last. Finish your Recruit mission, and stay tuned to level up your agent credentials.
 
 ## 🎯 Special Ops {#special-ops}
 
 Beyond the core ranks, the Academy also offers **Special Ops** — standalone, one-off missions that focus on a specific topic or integration. These don't require completing any rank and can be tackled at any time, in any order. Think of them as side missions to sharpen a particular skill.
+<action-button href="./special-ops/" label="View Special Ops" icon="🚀" />
 
-🚀 [View Special Ops](./special-ops/index.md)
+## 🤝 Cowork Collective {#cowork-collective}
+
+The **Cowork Collective** is a set of hands-on labs focused on **Copilot Cowork** — a new way to delegate work to Copilot so it can take action on your behalf across your Microsoft 365 environment. These missions are independent from the rank progression and can be completed at any time.
+
+<action-button href="./cowork-collective/" label="View Cowork Collective" icon="🚀" />
 
 ## ⚠️ Before You Begin {#before-you-begin}
 
@@ -78,6 +83,8 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 
 ## ⭐️ Star our repo {#star-our-repo}
 
-Star our repository by going to our GitHub [repository](https://github.com/microsoft/agent-academy).
+If you find this training useful, star our repository on GitHub!
+
+<action-button href="https://github.com/microsoft/agent-academy" label="Star on GitHub" icon="⭐️" />
 
 <analytics-tag section="index" />

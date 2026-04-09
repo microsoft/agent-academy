@@ -250,7 +250,7 @@ You need to make sure you fill in this list with at least 4 sample data items an
 
 When adding sample data, make sure that the following fields are filled out:
 
-- Device photo - use the images from the [device images folder](https://github.com/microsoft/agent-academy/tree/main/docs/recruit/00-course-setup/images/device-images)
+- Device photo - use the device images below
 - Title
 - Status
 - Manufacturer
@@ -262,6 +262,8 @@ When adding sample data, make sure that the following fields are filled out:
 - Purchase Price,
 - Order #
 - Image - use the following links
+
+<download-files path="recruit/00-course-setup/assets/device-images" label="Download device images" />
 
 | Device | URL |
 | ------ | --- |

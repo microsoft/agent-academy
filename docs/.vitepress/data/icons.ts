@@ -232,3 +232,12 @@ export const industryIcons: Record<string, string> = {
      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
        d="M7 10l2 2 4-4"/>`,
 };
+
+// Merged icon registry for components that need a single lookup (e.g. DownloadFiles).
+// Each entry carries its SVG inner content and the correct viewBox.
+export const allIcons: Record<string, { svg: string; viewBox: string }> =
+  Object.fromEntries([
+    ...Object.entries(productIcons).map(([k, v]) => [k, { svg: v, viewBox: "0 0 24 24" }]),
+    ...Object.entries(tagIcons).map(([k, v]) => [k, { svg: v, viewBox: "0 0 20 20" }]),
+    ...Object.entries(industryIcons).map(([k, v]) => [k, { svg: v, viewBox: "0 0 20 20" }]),
+  ]);
