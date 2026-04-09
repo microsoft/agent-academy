@@ -50,6 +50,7 @@ Renders a filterable, paginated grid of mission cards. Each card shows the missi
 | `order` | string | `"ascending"` | Sort direction: `"ascending"` or `"descending"`. |
 | `maxRows` | number | — | Maximum rows per page. Enables pagination when set. |
 | `filterable` | boolean | `true` | Show filter pills for tags, products, and industries. |
+| `filtersExpanded` | boolean | `true` | Whether the filter panel starts expanded. When collapsed, an active-filter count badge is shown. |
 | `tag` | string | — | Pre-filter by a tag slug (for example `fundamentals`). |
 | `product` | string | — | Pre-filter by a product slug (for example `copilot-studio`). |
 | `industry` | string | — | Pre-filter by an industry slug (for example `it`). |
@@ -108,6 +109,82 @@ Track a specific mission:
 ```
 
 **When to use:** Place at the very end of every page, after all other content.
+
+---
+
+### `<action-button />`
+
+Renders a styled link button with brand colors. External links (`http`/`https`) automatically open in a new tab with `target="_blank"` and `rel="noopener noreferrer"`.
+
+**Props:**
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `href` | string | — | Link URL. Required. |
+| `label` | string | — | Button text. Required. |
+| `icon` | string | — | Optional emoji displayed before the label. |
+| `external` | boolean | — | Force external link behavior (new tab). When omitted, auto-detected from `href`. |
+
+**Examples:**
+
+Internal link (opens in same tab):
+
+```markdown
+<action-button href="./special-ops/" label="View Special Ops" icon="🚀" />
+```
+
+External link (opens in new tab automatically):
+
+```markdown
+<action-button href="https://github.com/microsoft/agent-academy" label="Star on GitHub" icon="⭐️" />
+```
+
+**When to use:** For prominent call-to-action links on landing pages, section pages, and anywhere a styled button is preferred over a plain markdown link.
+
+**Preview:**
+
+![Action button component with brand styling](./assets/component-action-button.png)
+
+---
+
+### `<download-files />`
+
+Bundles all files in a documentation folder into a zip and downloads it client-side using JSZip. Available as a button or an inline link.
+
+**Props:**
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `path` | string | — | Relative path to the folder to zip (for example `recruit/09-add-an-agent-flow/downloads`). Required. |
+| `label` | string | `"Download {folder}.zip"` | Custom button/link text. |
+| `variant` | `"button"` \| `"link"` | `"button"` | Render as a styled button or an inline text link. |
+| `icon` | string | — | Product icon slug from `docs/.vitepress/data/icons.ts` (for example `copilot-studio`). Displays the icon inside the button. |
+
+**Examples:**
+
+Button variant (default):
+
+```markdown
+<download-files path="recruit/09-add-an-agent-flow/downloads" />
+```
+
+Link variant with custom label:
+
+```markdown
+<download-files path="operative/08-dataverse-grounding/downloads" label="grab the sample data" variant="link" />
+```
+
+Button with a product icon:
+
+```markdown
+<download-files path="operative/04-automate-triggers/downloads" label="Download Solution" icon="copilot-studio" />
+```
+
+**When to use:** On mission pages where learners need to download starter files, solution zips, or sample data. The `path` must point to a folder under `docs/` whose files are collected at build time by the Vite virtual module plugin.
+
+**Preview:**
+
+![Download files button component](./assets/component-download-files.png)
 
 ---
 

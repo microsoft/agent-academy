@@ -64,6 +64,16 @@ const TARGETS = [
     path: "/industries/",
     selector: ".taxonomy-index",
   },
+  {
+    name: "action-button",
+    path: "/",
+    selector: ".action-button",
+  },
+  {
+    name: "download-files",
+    path: "/recruit/00-course-setup/",
+    selector: ".download-files",
+  },
 ];
 
 // ---------------------------------------------------------------------------

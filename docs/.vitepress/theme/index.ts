@@ -10,6 +10,8 @@ import IndustriesIndex from "../plugins/industries-index/IndustriesIndex.vue";
 import Breadcrumb from "../plugins/breadcrumb/Breadcrumb.vue";
 import PageDates from "../plugins/page-dates/PageDates.vue";
 import AnalyticsTag from "../plugins/analytics-tag/AnalyticsTag.vue";
+import DownloadFiles from "../plugins/download-files/DownloadFiles.vue";
+import ActionButton from "../plugins/action-button/ActionButton.vue";
 import "./custom.css";
 
 export default {
@@ -28,5 +30,7 @@ export default {
     app.component("industries-index", IndustriesIndex);
     app.component("breadcrumb", Breadcrumb);
     app.component("analytics-tag", AnalyticsTag);
+    app.component("download-files", DownloadFiles);
+    app.component("action-button", ActionButton);
   },
 } satisfies Theme;
