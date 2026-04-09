@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref, computed, onBeforeUnmount } from "vue";
 import { useData } from "vitepress";
 import { bundles } from "virtual:download-bundles";
 import { allIcons } from "../../data/icons";
@@ -36,6 +36,13 @@ type Status = "idle" | "loading" | "success" | "error";
 const status = ref<Status>("idle");
 const errorMessage = ref("");
 let successTimer: ReturnType<typeof setTimeout> | undefined;
+
+onBeforeUnmount(() => {
+  if (successTimer) {
+    clearTimeout(successTimer);
+    successTimer = undefined;
+  }
+});
 
 async function download() {
   if (status.value === "loading") return;
@@ -99,6 +106,7 @@ async function download() {
     <component
       :is="isLink ? 'a' : 'button'"
       :href="isLink ? '#' : undefined"
+      :type="isLink ? undefined : 'button'"
       :class="[
         isLink ? 'download-link' : 'download-btn',
         {
