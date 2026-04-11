@@ -35,7 +35,7 @@ def build_management_summary(data, workspace):
     course_stats = data['course_stats']
     records = data['records']
 
-    total_completions = len(records)
+    total_completions = sum(1 for r in records if r.get('source') != 'github_issue')
     total_feedback = summary['total_feedback']
     overall_grade = summary['overall_grade']
     pos_pct = round(summary['positive'] / total_feedback * 100)
@@ -261,9 +261,11 @@ All courses score between **{course_stats[lowest_course]['grade']}/10** and **{c
 
 
 def _monthly_table(items):
-    """Build a monthly submissions & sentiment table from feedback items."""
+    """Build a monthly submissions & sentiment table from feedback items (excludes non-badge GitHub issues)."""
     months = defaultdict(lambda: {'total': 0, 'positive': 0, 'neutral': 0, 'negative': 0})
     for r in items:
+        if r.get('source') == 'github_issue':
+            continue
         m = r.get('month')
         if not m:
             continue

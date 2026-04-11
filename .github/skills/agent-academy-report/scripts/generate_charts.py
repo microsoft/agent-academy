@@ -403,16 +403,18 @@ def main():
     records = data['records']
     course_stats = data['course_stats']
     feedback = [r for r in records if r['type'] == 'feedback']
+    # Submissions = actual course completions (Excel forms + GitHub badge submissions), not bug reports
+    submissions = [r for r in records if r.get('source') != 'github_issue']
 
     setup_style()
     print("Generating charts...")
-    chart_completions_over_time(records, charts_dir)
+    chart_completions_over_time(submissions, charts_dir)
     chart_sentiment_by_course(feedback, course_stats, charts_dir)
     chart_grades(course_stats, charts_dir)
-    chart_cumulative(records, charts_dir)
+    chart_cumulative(submissions, charts_dir)
     chart_sentiment_pie(feedback, charts_dir)
-    chart_monthly_feedback(records, charts_dir)
-    chart_per_course(records, charts_dir)
+    chart_monthly_feedback(submissions, charts_dir)
+    chart_per_course(submissions, charts_dir)
     print(f"\nAll charts saved to {charts_dir}")
 
 
