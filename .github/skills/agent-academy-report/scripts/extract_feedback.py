@@ -78,6 +78,7 @@ def extract_file(filepath):
                     'text': None,
                     'name': None,
                     'type': 'completion',
+                    'source': 'excel',
                 })
         wb.close()
         return records
@@ -103,6 +104,7 @@ def extract_file(filepath):
                 'text': text.strip(),
                 'name': name,
                 'type': 'feedback',
+                'source': 'excel',
             })
 
     wb.close()

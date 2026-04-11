@@ -162,9 +162,9 @@ All courses score between **{course_stats[lowest_course]['grade']}/10** and **{c
         else:
             grade_note = "Solid course, but a higher neutral/negative ratio pulls the grade down."
 
-        # Pick quotes proportional to grade (grade 9.1 → 91% positive → ~5 pos out of 5)
-        total_quotes = 5
-        num_pos_q = min(total_quotes, max(1, int(total_quotes * grade / 10 + 0.5)))
+        # Pick quotes proportional to grade (grade 8.0 → 80% positive → 8 pos out of 10)
+        total_quotes = 10
+        num_pos_q = min(total_quotes, max(1, round(total_quotes * grade / 10)))
         num_neg_q = total_quotes - num_pos_q
         # Ensure we don't exceed available quotes
         num_pos_q = min(num_pos_q, len(pos_items))
@@ -260,8 +260,169 @@ All courses score between **{course_stats[lowest_course]['grade']}/10** and **{c
     print(f"  Written: {path}")
 
 
+def _monthly_table(items):
+    """Build a monthly submissions & sentiment table from feedback items."""
+    months = defaultdict(lambda: {'total': 0, 'positive': 0, 'neutral': 0, 'negative': 0})
+    for r in items:
+        m = r.get('month')
+        if not m:
+            continue
+        months[m]['total'] += 1
+        s = r.get('sentiment', 'neutral')
+        if s in months[m]:
+            months[m][s] += 1
+
+    if not months:
+        return ""
+
+    rows = ["| Month | Submissions | 👍 Positive | ➖ Neutral | 👎 Negative | Grade |",
+            "|-------|----------:|------------:|-----------:|------------:|------:|"]
+    for m in sorted(months):
+        d = months[m]
+        t = d['total']
+        grade = round((d['positive'] * 10 + d['neutral'] * 6 + d['negative'] * 2) / t, 1) if t else 0
+        rows.append(
+            f"| {m} | {t} | {d['positive']} ({d['positive']*100//t}%) "
+            f"| {d['neutral']} ({d['neutral']*100//t}%) "
+            f"| {d['negative']} ({d['negative']*100//t}%) "
+            f"| {grade}/10 |"
+        )
+    return '\n'.join(rows) + '\n'
+
+
+def _pick_quotes(items, num=10, max_len=200, grade=None):
+    """Pick a balanced set of representative quotes, optionally grade-based."""
+    pos_items = [r for r in items if r.get('sentiment') == 'positive' and r.get('text')]
+    neg_items = [r for r in items if r.get('sentiment') == 'negative' and r.get('text')]
+
+    if grade is not None:
+        # Grade-based: grade 8/10 → 8 positive, 2 negative
+        num_pos = min(len(pos_items), max(1, round(num * grade / 10)))
+        num_neg = min(len(neg_items), num - num_pos)
+        num_pos = min(len(pos_items), num - num_neg)
+    else:
+        total = len(items) or 1
+        pos_ratio = len(pos_items) / total
+        num_pos = min(len(pos_items), max(1, round(num * pos_ratio)))
+        num_neg = min(len(neg_items), num - num_pos)
+        num_pos = min(len(pos_items), num - num_neg)  # fill remainder
+
+    def clean(text):
+        text = text.replace('\n', ' ').replace('\r', ' ')
+        text = re.sub(r'\*\*[^*]+\*\*\s*', '', text)
+        text = re.sub(r'#+\s+[^\n]+\s*', '', text)
+        text = re.sub(r'- \[.\][^-]*', '', text)
+        text = re.sub(r'^\s*-\s+', '', text)
+        text = re.sub(r'\s+-\s+', '. ', text)
+        text = re.sub(r'&#39;', "'", text)
+        text = re.sub(r'&amp;', '&', text)
+        text = re.sub(r'\s+', ' ', text).strip()
+        if len(text) > max_len:
+            cut = text[:max_len].rfind('.')
+            text = text[:cut + 1] if cut > 80 else text[:max_len].rsplit(' ', 1)[0] + '...'
+        return text
+
+    best_pos = sorted(pos_items, key=lambda r: abs(len(r['text']) - 250))[:num_pos]
+    best_neg = sorted(neg_items, key=lambda r: abs(len(r['text']) - 200))[:num_neg]
+
+    lines = []
+    for q in best_pos:
+        lines.append(f"> 👍 *\"{clean(q['text'])}\"* — {q.get('name') or 'Anonymous'}\n")
+    for q in best_neg:
+        lines.append(f"> 👎 *\"{clean(q['text'])}\"* — {q.get('name') or 'Anonymous'}\n")
+    return '\n'.join(lines)
+
+
+def _course_slug(course):
+    """Generate a filesystem-safe slug for a course name."""
+    return course.lower().replace(' ', '_').replace(':', '').replace('&', 'and')
+
+
+def _build_comparison_table(records):
+    """Build Recruit & Operative comparison: GitHub issues vs Excel forms vs badges."""
+    rows = ["## Recruit & Operative: Submission Pipeline\n"]
+    rows.append("| Metric | Recruit | Operative |")
+    rows.append("|--------|--------:|----------:|")
+
+    for metric, source_filter in [
+        ("GitHub Badge Submissions", lambda r: r.get('source') == 'github_completed'),
+        ("Excel Form Submissions", lambda r: r.get('source') == 'excel'),
+        ("Badges Awarded (Closed Issues)", lambda r: r.get('source') == 'github_completed' and r.get('is_closed')),
+        ("Other GitHub Issues", lambda r: r.get('source') == 'github_issue'),
+    ]:
+        recruit = sum(1 for r in records if r['course'] == 'Recruit' and source_filter(r))
+        operative = sum(1 for r in records if r['course'] == 'Operative' and source_filter(r))
+        if recruit or operative:
+            rows.append(f"| {metric} | {recruit:,} | {operative:,} |")
+
+    # Total row
+    recruit_total = sum(1 for r in records if r['course'] == 'Recruit')
+    operative_total = sum(1 for r in records if r['course'] == 'Operative')
+    rows.append(f"| **Total Records** | **{recruit_total:,}** | **{operative_total:,}** |")
+    rows.append("")
+    return '\n'.join(rows)
+
+
+def _generate_next_steps(course, stats, items):
+    """Generate up to 5 prioritized next steps for a course."""
+    steps = []
+    grade = stats['grade']
+    neg_pct = round(stats['negative'] / stats['total'] * 100) if stats['total'] else 0
+
+    # Identify top negative themes
+    neg_themes = defaultdict(int)
+    for r in items:
+        if r.get('sentiment') == 'negative':
+            for th in r.get('themes', []):
+                neg_themes[th] += 1
+    top_neg = sorted(neg_themes.items(), key=lambda x: -x[1])
+
+    advice_map = {
+        'Setup & Configuration Challenges': 'Simplify setup — provide a pre-configured environment or improved quick-start guide to reduce setup friction.',
+        'Errors & Technical Issues': 'Fix reported bugs — audit the most common failure points and add troubleshooting guidance.',
+        'Improvement Suggestions': 'Act on improvement suggestions — review and prioritize the most-requested changes from participants.',
+        'Clear Instructions & Documentation': 'Improve documentation clarity — review step-by-step guides for completeness and add screenshots where helpful.',
+        'VS Code Integration': 'Improve VS Code experience — ensure extensions and tooling work seamlessly with clear debugging guides.',
+        'MCP & Agent Development Skills': 'Strengthen MCP/agent content — review labs where participants reported MCP-related issues and clarify common pitfalls.',
+        'Valuable Learning Experience': 'Enhance learning depth — some participants felt the content could go deeper. Consider adding advanced optional sections.',
+        'Course Quality & Engagement': 'Refine course structure — address pacing and engagement issues reported by participants.',
+        'Hands-on & Practical Learning': 'Improve hands-on exercises — ensure lab environments are reliable and exercises match real-world scenarios.',
+        'Real-World Applicability': 'Add more real-world examples — participants want to see how skills apply to production scenarios.',
+    }
+
+    # Priority 1–2: Top negative themes (skip themes with fewer than 3 negative mentions)
+    for th, cnt in top_neg[:2]:
+        if cnt >= 3:
+            advice = advice_map.get(th, f'Address "{th}" — {cnt} negative mentions suggest this needs attention.')
+            steps.append(f'{advice} ({cnt} negative mentions)')
+
+    # Priority 3: Grade-based advice
+    if grade < 8.0:
+        steps.append(f'Boost course quality — current grade ({grade}/10) is below the 8.0 target. Focus on reducing the {neg_pct}% negative feedback rate.')
+    elif grade < 8.5:
+        steps.append(f'Target grade improvement — at {grade}/10, small refinements could push this above 8.5.')
+
+    # Priority 4: Leverage top positive theme
+    pos_themes = defaultdict(int)
+    for r in items:
+        if r.get('sentiment') == 'positive':
+            for th in r.get('themes', []):
+                pos_themes[th] += 1
+    top_pos = sorted(pos_themes.items(), key=lambda x: -x[1])
+    if top_pos:
+        steps.append(f'Double down on "{top_pos[0][0]}" — most praised aspect ({top_pos[0][1]} positive mentions). Ensure this remains strong.')
+
+    # Priority 5: Engagement / monitoring
+    if stats['total'] < 50:
+        steps.append(f'Increase feedback volume — only {stats["total"]} responses collected. Consider adding in-course feedback prompts.')
+    else:
+        steps.append('Continue monitoring — maintain the feedback loop and review sentiment trends monthly.')
+
+    return steps[:5]
+
+
 def build_feedback_analysis(data, workspace):
-    """Generate feedback-analysis.md with full detailed analysis."""
+    """Generate feedback-analysis.md — concise per-course analysis (max ~30 pages)."""
     summary = data['summary']
     course_stats = data['course_stats']
     records = data['records']
@@ -273,7 +434,7 @@ def build_feedback_analysis(data, workspace):
     neg = summary['negative']
 
     lines = []
-    lines.append(f"# Agent Academy Feedback Analysis\n")
+    lines.append(f"# Detailed Feedback Analysis\n")
     lines.append(f"**{total} feedback responses** across {len(course_stats)} courses\n")
     lines.append(f"| Sentiment | Count | Percentage |")
     lines.append(f"|-----------|------:|-----------:|")
@@ -301,7 +462,13 @@ def build_feedback_analysis(data, workspace):
 
     lines.append("\n---\n")
 
-    # Per-course sections
+    # Recruit & Operative comparison table (if source data available)
+    has_sources = any(r.get('source') for r in records)
+    if has_sources:
+        lines.append(_build_comparison_table(records))
+        lines.append("---\n")
+
+    # Per-course sections — monthly trend, chart, themes, 10 grade-based quotes, next steps
     for course in COURSE_ORDER:
         if course not in course_stats:
             continue
@@ -317,45 +484,50 @@ def build_feedback_analysis(data, workspace):
             f"· **Grade: {s['grade']}/10**\n"
         )
 
+        # Per-course submission chart
+        slug = _course_slug(course)
+        chart_path = os.path.join(workspace, "charts", f"course_{slug}.png")
+        if os.path.exists(chart_path):
+            lines.append(f"### Submissions Over Time\n")
+            lines.append(f"![{course} Submissions](../charts/course_{slug}.png)\n")
+
+        # Monthly trend table
+        lines.append("### Monthly Trend\n")
+        monthly = _monthly_table(items)
+        if monthly:
+            lines.append(monthly)
+        else:
+            lines.append("*No monthly data available.*\n")
+
         # Themes
         if s.get('themes'):
-            lines.append("### Common Themes\n")
-            pos_themes = [(th, cnt) for th, cnt in s['themes'].items()
-                          if any(r['sentiment'] == 'positive' and th in r.get('themes', []) for r in items)]
-            neg_themes = [(th, cnt) for th, cnt in s['themes'].items()
-                          if any(r['sentiment'] == 'negative' and th in r.get('themes', []) for r in items)]
+            lines.append("### Top Themes\n")
+            top_themes = sorted(s['themes'].items(), key=lambda x: -x[1])[:5]
+            for th, cnt in top_themes:
+                neg_count = sum(1 for r in items if r['sentiment'] == 'negative' and th in r.get('themes', []))
+                pos_count = sum(1 for r in items if r['sentiment'] == 'positive' and th in r.get('themes', []))
+                if neg_count > pos_count:
+                    lines.append(f"- 👎 {th} ({cnt} mentions)")
+                else:
+                    lines.append(f"- 👍 {th} ({cnt} mentions)")
+            lines.append("")
 
-            if pos_themes:
-                lines.append("**👍 Positive themes:**\n")
-                for th, cnt in sorted(s['themes'].items(), key=lambda x: -x[1]):
-                    lines.append(f"- {th} ({cnt} mentions)")
-            if neg_themes:
-                lines.append("\n**👎 Negative themes:**\n")
-                for th, _ in neg_themes:
-                    neg_count = sum(1 for r in items if r['sentiment'] == 'negative' and th in r.get('themes', []))
-                    lines.append(f"- {th} ({neg_count} mentions)")
+        # Representative quotes (10 per course, grade-based balance)
+        lines.append("### Representative Quotes\n")
+        quotes = _pick_quotes(items, num=10, grade=s['grade'])
+        if quotes:
+            lines.append(quotes)
+        else:
+            lines.append("*No feedback text available.*\n")
 
-        # Feedback items sorted: positive → neutral → negative
-        lines.append("\n### Feedback\n")
-        sort_order = {'positive': 0, 'neutral': 1, 'negative': 2}
-        sorted_items = sorted(items, key=lambda r: sort_order.get(r.get('sentiment', 'neutral'), 1))
+        # Next steps (up to 5 prioritized recommendations)
+        lines.append("### Next Steps\n")
+        next_steps = _generate_next_steps(course, s, items)
+        for i, step in enumerate(next_steps, 1):
+            lines.append(f"{i}. **{step.split(' — ')[0]}** — {' — '.join(step.split(' — ')[1:])}" if ' — ' in step else f"{i}. {step}")
+        lines.append("")
 
-        for i, r in enumerate(sorted_items):
-            text = r.get('text', '')
-            if not text:
-                continue
-
-            emoji = {'positive': '👍', 'neutral': '➖', 'negative': '👎'}.get(r.get('sentiment', 'neutral'), '➖')
-            name = r.get('name', 'Anonymous') or 'Anonymous'
-
-            # Format as blockquote (prefix every line with >)
-            quoted = '\n'.join(f'> {line}' for line in f'{emoji} "{text}" — {name}'.split('\n'))
-            lines.append(quoted)
-
-            if i < len(sorted_items) - 1:
-                lines.append("\n---\n")
-
-        lines.append("\n---\n")
+        lines.append("---\n")
 
     md_dir = os.path.join(workspace, "markdown")
     os.makedirs(md_dir, exist_ok=True)
@@ -366,7 +538,7 @@ def build_feedback_analysis(data, workspace):
 
 
 def build_positive_feedback(data, workspace):
-    """Generate feedback.md with curated positive-only feedback."""
+    """Generate feedback.md with curated positive-only feedback (max 5 per course)."""
     records = data['records']
     feedback = [r for r in records if r['type'] == 'feedback' and r.get('sentiment') == 'positive']
 
@@ -378,8 +550,19 @@ def build_positive_feedback(data, workspace):
             continue
         filtered.append(r)
 
+    # Group by course and pick best 5 per course (closest to 250 chars)
+    by_course = defaultdict(list)
+    for r in filtered:
+        by_course[r.get('course', 'Unknown')].append(r)
+
+    selected = []
+    for course in COURSE_ORDER:
+        items = by_course.get(course, [])
+        best = sorted(items, key=lambda r: abs(len(r.get('text', '')) - 250))[:5]
+        selected.extend(best)
+
     lines = ["# Agent Academy Feedback\n"]
-    for i, r in enumerate(filtered):
+    for i, r in enumerate(selected):
         text = r.get('text', '')
         name = r.get('name', 'Anonymous') or 'Anonymous'
         course = r.get('course', '')
@@ -387,7 +570,7 @@ def build_positive_feedback(data, workspace):
         quoted = '\n'.join(f'> {line}' for line in f'👍 "{text}" — {name} ({course})'.split('\n'))
         lines.append(quoted)
 
-        if i < len(filtered) - 1:
+        if i < len(selected) - 1:
             lines.append("\n---\n")
 
     md_dir = os.path.join(workspace, "markdown")
@@ -395,7 +578,7 @@ def build_positive_feedback(data, workspace):
     path = os.path.join(md_dir, "feedback.md")
     with open(path, 'w') as f:
         f.write('\n'.join(lines))
-    print(f"  Written: {path} ({len(filtered)} items)")
+    print(f"  Written: {path} ({len(selected)} items)")
 
 
 def main():

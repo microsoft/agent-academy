@@ -45,6 +45,7 @@ python3 <skill-path>/scripts/extract_feedback.py "<workspace-path>/report"
 ```
 
 This script:
+
 - Reads all `.xlsx` files from `<workspace>/report/data/`
 - Maps filenames to human-readable course names
 - Extracts feedback text, completion dates, and respondent names/emails
@@ -56,11 +57,13 @@ This script:
 After running the extract script, fetch feedback from GitHub issues. **Do not use `mcp_github_mcp_search_issues`** — the search API caps results at 1,000, which is insufficient for Recruit (1,390+ issues). Instead, use `mcp_github_mcp_list_issues` which supports full GraphQL cursor pagination:
 
 **Recruit issues:**
+
 ```
 owner: "microsoft", repo: "agent-academy", labels: ["recruit-completed"], state: "all", perPage: 100
 ```
 
 **Operative issues:**
+
 ```
 owner: "microsoft", repo: "agent-academy", labels: ["operative-completed"], state: "all", perPage: 100
 ```
@@ -68,6 +71,7 @@ owner: "microsoft", repo: "agent-academy", labels: ["operative-completed"], stat
 Paginate through **all** pages using the `endCursor` from each response until `hasNextPage` is false. The API returns max 100 per page — Recruit requires ~14 pages, Operative ~4 pages. Do not stop early; collect every issue.
 
 For each issue, parse the body for structured sections:
+
 - `### Key Learnings and Takeaways`
 - `### Challenges Faced`
 - `### Final Thoughts`
@@ -76,7 +80,48 @@ Combine these sections as the feedback text. The `name` field should be a plain 
 
 Save the combined data (Excel + GitHub) to `<workspace>/report/data/_all_feedback.json`.
 
-Each record should have: `{course, date, month, sentiment, text, name, type}`.
+Each record should have: `{course, date, month, sentiment, text, name, type, source, is_closed}`.
+
+- `source`: `"excel"` (set automatically by extract script), `"github_completed"` (badge submission issues), or `"github_issue"` (non-badge issues)
+- `is_closed`: `true`/`false` — for GitHub records only; indicates whether the issue is closed (closed = badge awarded for completed issues)
+
+### Non-Badge GitHub Issues
+
+After collecting badge submission issues, also fetch **all other open issues** that are NOT badge submissions. These are bug reports, questions, and general feedback that should be classified into the correct course.
+
+Fetch issues without the completed labels:
+
+```
+owner: "microsoft", repo: "agent-academy", state: "all", perPage: 100
+```
+
+Filter out issues that already have `recruit-completed` or `operative-completed` labels. For each remaining issue, classify it to a course using this keyword map (match against issue title and labels, case-insensitive):
+
+| Keywords in title/labels           | Course                                       |
+| ---------------------------------- | -------------------------------------------- |
+| `recruit`                          | Recruit                                      |
+| `operative`                        | Operative                                    |
+| `commander`                        | Commander                                    |
+| `yaml`, `yaml specialist`          | Special Ops: YAML Specialist                 |
+| `copilot studio` AND `mcp`         | Special Ops: Microsoft Copilot Studio MCP    |
+| `learn docs`, `learn mcp`          | Special Ops: Microsoft Learn Docs MCP Server |
+| `cli`, `power platform cli`, `pac` | Special Ops: Power Platform CLI MCP Server   |
+| `badge check`                      | Cowork Collective: Badge Check               |
+| `compliance`                       | Cowork Collective: Compliance Packet         |
+| `out of office`, `vacay`           | Cowork Collective: Out of Office             |
+
+If no match is found, skip the issue. Set `source: "github_issue"` and `type: "feedback"` for these records. Use the issue title + body as the feedback text.
+
+### Recruit & Operative Comparison Data
+
+The combined `_all_feedback.json` will contain records with different `source` values. The build script uses these to generate a **Submission Pipeline** comparison table for Recruit and Operative:
+
+| Metric                   | How to count                                                       |
+| ------------------------ | ------------------------------------------------------------------ |
+| GitHub Badge Submissions | Records where `source = "github_completed"`                        |
+| Excel Form Submissions   | Records where `source = "excel"`                                   |
+| Badges Awarded           | Records where `source = "github_completed"` AND `is_closed = true` |
+| Other GitHub Issues      | Records where `source = "github_issue"`                            |
 
 ---
 
@@ -89,6 +134,7 @@ python3 <skill-path>/scripts/analyze_sentiment.py "<workspace-path>/report"
 ```
 
 This script:
+
 - Reads `<workspace>/report/data/_all_feedback.json`
 - Scores each feedback item using keyword-based sentiment analysis
 - Detects common themes (Hands-on Learning, Setup Challenges, MCP Skills, etc.)
@@ -115,16 +161,27 @@ python3 <skill-path>/scripts/generate_charts.py "<workspace-path>/report"
 
 Requires `matplotlib` and `numpy`. Install if needed: `pip3 install matplotlib numpy`.
 
-This generates 6 charts in `<workspace>/report/charts/` at 180 DPI:
+This generates overview charts plus individual per-course charts in `<workspace>/report/charts/` at 180 DPI:
 
-| Chart | Filename | Description |
-|-------|----------|-------------|
-| Weekly completions | `completions_over_time.png` | Stacked area chart by course group |
-| Sentiment by course | `sentiment_by_course.png` | Horizontal stacked bar with positive/negative % labels |
-| Course grades | `grades_by_course.png` | Lollipop chart sorted by grade (best → worst) |
-| Cumulative completions | `cumulative_completions.png` | Line chart with gradient fills and endpoint markers |
-| Overall sentiment | `sentiment_pie.png` | Donut chart with total count in center |
-| Monthly feedback volume | `monthly_feedback.png` | Stacked bar by month and course group |
+### Overview Charts
+
+| Chart                   | Filename                     | Description                                            |
+| ----------------------- | ---------------------------- | ------------------------------------------------------ |
+| Weekly completions      | `completions_over_time.png`  | Stacked area chart by course group                     |
+| Sentiment by course     | `sentiment_by_course.png`    | Horizontal stacked bar with positive/negative % labels |
+| Course grades           | `grades_by_course.png`       | Lollipop chart sorted by grade (best → worst)          |
+| Cumulative completions  | `cumulative_completions.png` | Line chart with gradient fills and endpoint markers    |
+| Overall sentiment       | `sentiment_pie.png`          | Donut chart with total count in center                 |
+| Monthly feedback volume | `monthly_feedback.png`       | Stacked bar by month and course group                  |
+
+### Per-Course Charts
+
+For each course, a `course_{slug}.png` file is generated (e.g. `course_recruit.png`, `course_operative.png`, `course_special_ops_yaml_specialist.png`). Each shows:
+
+- **Weekly submissions** as an area chart (primary axis)
+- **Cumulative total** as a dashed line (secondary axis)
+
+The slug is the course name lowercased with spaces → underscores and colons removed.
 
 Color scheme (navy/teal theme matching cover): Blue (#3b82f6), Green (#22c55e), Red (#ef4444), Orange (#f59e0b), Purple (#a78bfa), Teal (#14b8a6). Charts use a consistent light background (#fafbfc), subtle grid (#e2e8f0), and navy (#111827) text.
 
@@ -141,6 +198,7 @@ python3 <skill-path>/scripts/build_markdown.py "<workspace-path>/report"
 This generates three markdown files in `<workspace>/report/markdown/`:
 
 ### management-summary.md
+
 - Title: "Management Summary"
 - Key metrics table (total completions, feedback count, courses, overall grade, sentiment percentages)
 - Highlights section
@@ -150,22 +208,27 @@ This generates three markdown files in `<workspace>/report/markdown/`:
   - Grade explanation (contextual note based on score range)
   - Top 3 themes with mention counts
   - Standout/watch area callout for notably high positive or negative rates
-  - Representative quotes — 5 total, split proportionally to the grade (e.g., grade 9.1 → 5 positive, 0 negative; grade 7.7 → 4 positive, 1 negative)
+  - Representative quotes — **10 total**, split proportionally to the grade (e.g., grade 8.0/10 → 8 positive, 2 negative)
 - Recommendations section
 
 ### feedback-analysis.md
+
 - Title: "Detailed Feedback Analysis"
 - Overall summary table (sentiment counts + percentages)
 - Course overview table (responses, sentiment breakdown, grade per course)
-- Per-course sections with:
+- **Recruit & Operative: Submission Pipeline** — comparison table showing GitHub badge submissions, Excel form submissions, badges awarded (closed issues), and other GitHub issues for Recruit and Operative
+- Per-course sections (multiple pages per course are fine) with:
   - Response counts and sentiment percentages
-  - Common themes (positive and negative)
-  - Individual feedback items sorted positive → neutral → negative
-  - Each item as a blockquote with sentiment emoji, quoted text, and attribution
-  - Horizontal rules between items
+  - **Submissions Over Time** chart (per-course chart reference)
+  - **Monthly trend table** showing submissions, sentiment breakdown, and grade per month
+  - **Top 5 themes** with mention counts and positive/negative indicator
+  - **10 representative quotes** — balanced on grade (e.g., grade 8/10 → 8 positive, 2 negative); each truncated to ~200 characters
+  - **Next Steps** — up to 5 prioritized, actionable recommendations sorted from most important to least, based on negative themes, grade, and engagement data
 
 ### feedback.md
+
 - Curated positive-only feedback (excludes error-mentioning entries)
+- **Max 5 quotes per course** (~45 total), selected for ideal length (~250 chars)
 - Each item as a blockquote: `> 👍 "text" — Name (Course)`
 
 ---
@@ -181,11 +244,12 @@ python3 <skill-path>/scripts/export_pdf.py "<workspace-path>/report" "<report-ti
 Example: `python3 scripts/export_pdf.py "/path/to/workspace/report" "Agent Academy - Report April 2026"`
 
 This script:
+
 1. Downloads badge images from `https://raw.githubusercontent.com/microsoft/agent-academy/main/docs/public/images/` to `<workspace>/report/badges/` (if not already present)
 2. Builds a single HTML file with:
    - **Cover page**: Blue gradient background, Agent Academy logo, report title, all badge images
    - **Management summary**: Converted from markdown with charts embedded as base64 images
-   - **Detailed analysis**: Full feedback analysis with all blockquotes and tables
+   - **Detailed analysis**: Concise per-course analysis with monthly trends, themes, and representative quotes
 3. Exports to PDF using headless Microsoft Edge:
    ```bash
    "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge" \
@@ -202,6 +266,7 @@ The output PDF lands in `<workspace>/report/pdf/`.
 ### Page Break Rules
 
 The HTML includes CSS rules to prevent content from splitting across pages:
+
 - Charts + their descriptions are wrapped in `.chart-block` divs with `page-break-inside: avoid`
 - Course spotlight sections (h3 + content) are wrapped in `.course-spotlight` divs
 - Headings (`h2`, `h3`, `h4`) use `page-break-after: avoid`
@@ -210,6 +275,7 @@ The HTML includes CSS rules to prevent content from splitting across pages:
 ### Badge Images
 
 Downloaded from `microsoft/agent-academy` repo at `docs/public/images/`:
+
 - `logo.png` — Cover page logo
 - `mcs-agent-academy-recruit-badge.png`, `mcs-agent-academy-operative-badge.png`, `mcs-agent-academy-commander-badge.png` — Level badges
 - `YAML_Specialist_Badge.png`, `Academy_LearnMCP_Badge.png`, `CommandLine_Badge.png` — Special Ops badges
@@ -218,6 +284,7 @@ Downloaded from `microsoft/agent-academy` repo at `docs/public/images/`:
 ### Edge Fallback
 
 If Microsoft Edge is not available at the default macOS path, check:
+
 - `/usr/bin/microsoft-edge` (Linux)
 - `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe` (Windows)
 - Google Chrome as an alternative (`/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`)
@@ -228,17 +295,17 @@ If Microsoft Edge is not available at the default macOS path, check:
 
 Excel filenames map to display names as follows:
 
-| Filename Pattern | Course Name |
-|-----------------|-------------|
-| `Agent Academy - Special Ops_ YAML Specialist` | Special Ops: YAML Specialist |
-| `Agent Academy - Special Ops_Microsoft Copilot Studio...MCP` | Special Ops: Microsoft Copilot Studio MCP |
+| Filename Pattern                                               | Course Name                                  |
+| -------------------------------------------------------------- | -------------------------------------------- |
+| `Agent Academy - Special Ops_ YAML Specialist`                 | Special Ops: YAML Specialist                 |
+| `Agent Academy - Special Ops_Microsoft Copilot Studio...MCP`   | Special Ops: Microsoft Copilot Studio MCP    |
 | `Agent Academy - Special Ops_ Microsoft Learn Docs MCP Server` | Special Ops: Microsoft Learn Docs MCP Server |
-| `Agent Academy - Special Ops_⚡ Power Platform CLI MCP Server` | Special Ops: Power Platform CLI MCP Server |
-| `Copilot Studio Agent Academy - Operative` | Operative |
-| `Copilot Studio Agent Academy - Recruit` | Recruit |
-| `Cowork Collective_ Badge Check` | Cowork Collective: Badge Check |
-| `Cowork Collective_ Compliance Packet` | Cowork Collective: Compliance Packet |
-| `Cowork Collective_ Out of Office` | Cowork Collective: Out of Office |
+| `Agent Academy - Special Ops_⚡ Power Platform CLI MCP Server` | Special Ops: Power Platform CLI MCP Server   |
+| `Copilot Studio Agent Academy - Operative`                     | Operative                                    |
+| `Copilot Studio Agent Academy - Recruit`                       | Recruit                                      |
+| `Cowork Collective_ Badge Check`                               | Cowork Collective: Badge Check               |
+| `Cowork Collective_ Compliance Packet`                         | Cowork Collective: Compliance Packet         |
+| `Cowork Collective_ Out of Office`                             | Cowork Collective: Out of Office             |
 
 Note: filenames may contain non-breaking spaces (`\xa0`) — normalize these to regular spaces before matching.
 
@@ -252,7 +319,10 @@ To generate a complete report in one go:
 # 1. Extract from Excel
 python3 <skill-path>/scripts/extract_feedback.py "<workspace>/report"
 
-# 2. (Manually fetch GitHub issues via MCP tools and append to _extracted.json → _all_feedback.json)
+# 2. Fetch GitHub issues via MCP tools:
+#    a. Badge submissions: recruit-completed + operative-completed labels (paginate ALL pages)
+#    b. Non-badge issues: all other issues, classified to courses by keyword
+#    c. Add source/is_closed fields, combine with Excel → _all_feedback.json
 
 # 3. Analyze sentiment
 python3 <skill-path>/scripts/analyze_sentiment.py "<workspace>/report"
