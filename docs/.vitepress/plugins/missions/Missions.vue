@@ -133,8 +133,9 @@ const props = withDefaults(
   {
     sort: "alphabetical",
     order: "ascending",
+    maxRows: 2,
     filterable: true,
-    filtersExpanded: true,
+    filtersExpanded: false,
   }
 );
 

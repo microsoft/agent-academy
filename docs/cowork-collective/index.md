@@ -10,7 +10,7 @@ Cowork Collective missions are hands-on labs focused on **Copilot Cowork** — a
 
 You describe a task, Copilot Cowork breaks it into steps, and you approve each action before it happens — sending emails, scheduling meetings, creating documents, posting in Teams, and more.
 
-## Cowork Collective Missions
+## Missions
 
 <!-- markdownlint-disable MD033 -->
 <missions section="cowork-collective" sort="first-added" order="descending" />

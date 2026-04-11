@@ -12,7 +12,7 @@ Special Ops missions are different by design: they are standalone labs for targe
 
 Use Special Ops when you need fast, practical training on a defined topic.
 
-## Special Ops Missions
+## Missions
 
 <missions section="special-ops" sort="first-added" order="descending" />
 
