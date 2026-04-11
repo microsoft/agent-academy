@@ -341,27 +341,43 @@ def _course_slug(course):
 
 
 def _build_comparison_table(records):
-    """Build Recruit & Operative comparison: GitHub issues vs Excel forms vs badges."""
+    """Build Recruit & Operative funnel-style comparison."""
     rows = ["## Recruit & Operative: Submission Pipeline\n"]
-    rows.append("| Metric | Recruit | Operative |")
-    rows.append("|--------|--------:|----------:|")
+    rows.append("| Stage | Recruit | Operative |")
+    rows.append("|-------|--------:|----------:|")
 
-    for metric, source_filter in [
-        ("GitHub Badge Submissions", lambda r: r.get('source') == 'github_completed'),
-        ("Excel Form Submissions", lambda r: r.get('source') == 'excel'),
-        ("Badges Awarded (Closed Issues)", lambda r: r.get('source') == 'github_completed' and r.get('is_closed')),
-        ("Other GitHub Issues", lambda r: r.get('source') == 'github_issue'),
-    ]:
-        recruit = sum(1 for r in records if r['course'] == 'Recruit' and source_filter(r))
-        operative = sum(1 for r in records if r['course'] == 'Operative' and source_filter(r))
-        if recruit or operative:
-            rows.append(f"| {metric} | {recruit:,} | {operative:,} |")
+    # Gather per-course numbers
+    data = {}
+    for course in ['Recruit', 'Operative']:
+        gh = sum(1 for r in records if r['course'] == course and r.get('source') == 'github_completed')
+        excel = sum(1 for r in records if r['course'] == course and r.get('source') == 'excel')
+        badges = sum(1 for r in records if r['course'] == course and r.get('source') == 'github_completed' and r.get('is_closed'))
+        issues = sum(1 for r in records if r['course'] == course and r.get('source') == 'github_issue')
+        data[course] = {'gh': gh, 'excel': excel, 'badges': badges, 'issues': issues}
 
-    # Total row
-    recruit_total = sum(1 for r in records if r['course'] == 'Recruit')
-    operative_total = sum(1 for r in records if r['course'] == 'Operative')
-    rows.append(f"| **Total Records** | **{recruit_total:,}** | **{operative_total:,}** |")
+    r, o = data['Recruit'], data['Operative']
+
+    # Funnel rows with indentation showing flow
+    rows.append(f"| **1. GitHub Badge Submissions** | **{r['gh']:,}** | **{o['gh']:,}** |")
+    rows.append(
+        f"| &nbsp;&nbsp;&nbsp;↳ Badges Awarded ✅ | {r['badges']:,} ({r['badges']*100//r['gh']}%) "
+        f"| {o['badges']:,} ({o['badges']*100//o['gh']}%) |"
+    )
+    r_open, o_open = r['gh'] - r['badges'], o['gh'] - o['badges']
+    rows.append(
+        f"| &nbsp;&nbsp;&nbsp;↳ Pending Review ⏳ | {r_open:,} ({r_open*100//r['gh']}%) "
+        f"| {o_open:,} ({o_open*100//o['gh']}%) |"
+    )
+    rows.append(f"| **2. Excel Survey Responses** | **{r['excel']:,}** | **{o['excel']:,}** |")
+    rows.append(f"| **3. Other GitHub Issues** | **{r['issues']:,}** | **{o['issues']:,}** |")
+
     rows.append("")
+    rows.append(
+        f"> **Note:** GitHub badge submissions and Excel survey responses are **independent channels**. "
+        f"Learners open a GitHub issue to claim their badge, and separately fill out a Forms survey. "
+        f"Not all badge recipients complete the survey, which is why Recruit has more badges awarded "
+        f"({r['badges']:,}) than Excel submissions ({r['excel']:,}).\n"
+    )
     return '\n'.join(rows)
 
 
