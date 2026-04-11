@@ -288,17 +288,20 @@ This generates three markdown files in `<workspace>/report/markdown/`:
   - **Total completions** excludes `source: "github_issue"` records (only counts actual submissions)
 - Highlights section (Recruit/Operative counts, highest/lowest rated courses)
 - Chart references (one per section with narrative text)
-- **Course Spotlights** section — for each course:
-  - Grade, response count, positive/negative percentages
-  - Grade explanation — contextual note based on score range:
-    - ≥ 9.0: "Exceptional satisfaction — one of the top-rated courses."
-    - ≥ 8.5: "Strong satisfaction with consistently positive feedback."
-    - ≥ 8.0: "Good satisfaction, though some participants encountered challenges."
-    - < 8.0: "Solid course, but a higher neutral/negative ratio pulls the grade down."
-  - Top 3 themes with mention counts
-  - **Standout callout** — appears when positive % ≥ 85%: highlights most-praised theme
-  - **Watch area callout** — appears when negative % ≥ 15%: highlights top negative theme
-  - Representative quotes — **10 total**, split proportionally to the grade using formula: `num_positive = round(10 × grade / 10)`. Grade 8.0/10 → 8 positive, 2 negative. Quotes are selected by closest to ideal length (positive: ~250 chars, negative: ~200 chars).
+- **4 main sections** — Recruit, Operative, Special Ops, Cowork Collective:
+  - **Single-course sections** (Recruit, Operative): spotlight content directly under the section heading
+  - **Multi-mission sections** (Special Ops, Cowork Collective): section-level summary first (combined grade, response count, cross-mission themes, section-level next steps), then individual mission spotlights as sub-sections with short names (e.g. "YAML Specialist" instead of "Special Ops: YAML Specialist")
+  - Each course/mission spotlight includes:
+    - Grade, response count, positive/negative percentages
+    - Grade explanation — contextual note based on score range:
+      - ≥ 9.0: "Exceptional satisfaction — one of the top-rated courses."
+      - ≥ 8.5: "Strong satisfaction with consistently positive feedback."
+      - ≥ 8.0: "Good satisfaction, though some participants encountered challenges."
+      - < 8.0: "Solid course, but a higher neutral/negative ratio pulls the grade down."
+    - Top 3 themes with mention counts
+    - **Standout callout** — appears when positive % ≥ 85%: highlights most-praised theme
+    - **Watch area callout** — appears when negative % ≥ 15%: highlights top negative theme
+    - Representative quotes — **10 total**, split proportionally to the grade using formula: `num_positive = round(10 × grade / 10)`. Grade 8.0/10 → 8 positive, 2 negative. Quotes are selected by closest to ideal length (positive: ~250 chars, negative: ~200 chars).
 - Recommendations section (4 static recommendations: address setup challenges, expand Cowork Collective, scale Special Ops, continue monitoring)
 
 #### Quote Cleaning
@@ -319,14 +322,19 @@ All quotes in the report go through a cleaning pipeline before display:
 - Title: "Detailed Feedback Analysis"
 - Overall summary table (sentiment counts + percentages)
 - Course overview table (responses, sentiment breakdown, grade per course)
-- **Recruit & Operative: Submission Pipeline** — comparison table showing GitHub badge submissions, Excel form submissions, badges awarded (closed issues), and other GitHub issues for Recruit and Operative
-- Per-course sections (multiple pages per course are fine) with:
-  - Response counts and sentiment percentages
-  - **Submissions Over Time** chart (per-course chart reference)
-  - **Monthly trend table** showing submissions, sentiment breakdown, and grade per month
-  - **Top 5 themes** with mention counts and positive/negative indicator
-  - **10 representative quotes** — balanced on grade using same formula as management summary (`round(10 × grade / 10)` positive, remainder negative); each cleaned by the quote pipeline (see above); positive truncated to ~200 chars, negative to ~180 chars
-  - **Next Steps** — up to 5 prioritized, actionable recommendations generated algorithmically:
+- **Recruit & Operative: Submission Pipeline** — funnel-style comparison table showing GitHub badge submissions, badges awarded/pending with percentages, Excel form submissions, and other GitHub issues. Includes a note explaining that GitHub and Excel are independent channels.
+- **4 main sections** — Recruit, Operative, Special Ops, Cowork Collective:
+  - **Single-course sections** (Recruit, Operative): analysis content directly under the `## Section` heading (h2), with subsections as h3
+  - **Multi-mission sections** (Special Ops, Cowork Collective):
+    - **Section-level summary** (under h2): combined response count + grade, cross-mission themes (top 5 with positive/negative indicators), section-level recommendations (up to 5 next steps based on aggregated data across all missions)
+    - **Per-mission blocks** (under h3): each mission gets its own analysis using the short name (e.g. "YAML Specialist", "Badge Check"), with sub-headings at h4 level
+  - Each course/mission block includes:
+    - Response counts and sentiment percentages
+    - **Submissions Over Time** chart (per-course chart reference)
+    - **Monthly trend table** showing submissions, sentiment breakdown, and grade per month
+    - **Top 5 themes** with mention counts and positive/negative indicator
+    - **10 representative quotes** — balanced on grade using same formula as management summary (`round(10 × grade / 10)` positive, remainder negative); each cleaned by the quote pipeline (see above); positive truncated to ~200 chars, negative to ~180 chars
+    - **Next Steps** — up to 5 prioritized, actionable recommendations generated algorithmically:
 
 #### Next Steps Algorithm
 
