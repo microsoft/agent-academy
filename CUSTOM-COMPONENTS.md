@@ -48,7 +48,7 @@ Renders a filterable, paginated grid of mission cards. Each card shows the missi
 | `section` | string | — | Filter missions by section: `recruit`, `operative`, `special-ops`, `cowork-collective`, `commander-preview`. |
 | `sort` | string | `"alphabetical"` | Sort field. Options: `"alphabetical"`, `"last-updated"`, `"level"`, `"first-added"`. |
 | `order` | string | `"ascending"` | Sort direction: `"ascending"` or `"descending"`. |
-| `maxRows` | number | — | Maximum rows per page. Enables pagination when set. |
+| `maxRows` | number | `2` | Maximum rows per page. Enables pagination when set. |
 | `filterable` | boolean | `true` | Show filter pills for tags, products, and industries. |
 | `filtersExpanded` | boolean | `true` | Whether the filter panel starts expanded. When collapsed, an active-filter count badge is shown. |
 | `tag` | string | — | Pre-filter by a tag slug (for example `fundamentals`). |
