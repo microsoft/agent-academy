@@ -247,7 +247,7 @@ def chart_sentiment_pie(feedback, charts_dir):
     total_neg = sum(1 for r in feedback if r['sentiment'] == 'negative')
     total = total_pos + total_neu + total_neg
 
-    fig, ax = plt.subplots(figsize=(3, 3))
+    fig, ax = plt.subplots(figsize=(4.5, 4.5))
     sizes = [total_pos, total_neu, total_neg]
     labels = ['Positive', 'Neutral', 'Negative']
     colors = [GREEN, SLATE_LIGHT, RED]
@@ -256,23 +256,23 @@ def chart_sentiment_pie(feedback, charts_dir):
         sizes, labels=None, colors=colors, autopct='%1.0f%%',
         startangle=90, pctdistance=0.82,
         wedgeprops=dict(width=0.35, edgecolor='white', linewidth=2),
-        textprops={'fontsize': 12, 'fontweight': 'bold'}
+        textprops={'fontsize': 10, 'fontweight': 'bold'}
     )
     for at in autotexts:
         at.set_color('white')
-        at.set_fontsize(12)
+        at.set_fontsize(10)
         at.set_fontweight('bold')
 
     # Center text
-    ax.text(0, 0.06, f'{total:,}', ha='center', va='center', fontsize=28, fontweight='bold', color=NAVY)
-    ax.text(0, -0.12, 'responses', ha='center', va='center', fontsize=11, color=SLATE)
+    ax.text(0, 0.06, f'{total:,}', ha='center', va='center', fontsize=20, fontweight='bold', color=NAVY)
+    ax.text(0, -0.14, 'responses', ha='center', va='center', fontsize=9, color=SLATE)
 
     # Legend
     legend_labels = [f'{l} ({s:,})' for l, s in zip(labels, sizes)]
-    ax.legend(wedges, legend_labels, loc='lower center', bbox_to_anchor=(0.5, -0.08),
-              framealpha=0.95, edgecolor=GRID_COLOR, fancybox=True, fontsize=11, ncol=3)
+    ax.legend(wedges, legend_labels, loc='lower center', bbox_to_anchor=(0.5, -0.06),
+              framealpha=0.95, edgecolor=GRID_COLOR, fancybox=True, fontsize=9, ncol=3)
 
-    ax.set_title('Overall Feedback Sentiment', fontsize=16, fontweight='bold', pad=15, color=NAVY)
+    ax.set_title('Overall Feedback Sentiment', fontsize=13, fontweight='bold', pad=10, color=NAVY)
     plt.tight_layout()
     plt.savefig(os.path.join(charts_dir, 'sentiment_pie.png'), dpi=180, bbox_inches='tight', facecolor='white')
     plt.close()
