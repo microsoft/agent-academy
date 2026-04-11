@@ -130,10 +130,10 @@ You'll learn how to connect your agent to ready-made tooling servers (like Outlo
 >
 > If you’re unable to gain access to the Frontier program, please feel free to skip this lab - you’ll still be able to earn the Operative badge.
 
-### Add MCP servers to the Interview Agent
+### Lab 10.1: Add MCP servers to the Interview Agent
 
 > [!WARNING]
-> In this lab, you will learn how to add two MCP servers: the *Microsoft 365 User Profile MCP server* and the *Microsoft Outlook Calendar MCP*. For the lab to work, you will need to configure the following in your tenant ahead of time:
+> In this lab, you will learn how to add two MCP servers: the *Work IQ User (Preview)* and the *Work IQ Calendar (Preview) MCP*. For the lab to work, you will need to configure the following in your tenant ahead of time:
 >
 > - Have a manager configured for your user which can be configured in the M365 Admin Center
 > - Have an appointment on your calendar in the upcoming 24 hours - this is because you will test the MCP server by asking "Get my meetings for today"
@@ -142,7 +142,7 @@ You'll learn how to connect your agent to ready-made tooling servers (like Outlo
 
 To add MCP servers to your agent you only have to add one tool per MCP server. This is different to connector tools which require you to add a tool for every connector action. This ability to add a single tool that handles multiple actions is one of the things that makes MCP Servers a lot easier to work with.
 
-#### Add the Microsoft 365 User Profile MCP server
+#### Add the Work IQ User (Preview) MCP Server
 
 1. Open [Copilot Studio](https://copilotstudio.microsoft.com) and **open** the previously created Interview Agent
 1. Select **Tools** in the top navigation
@@ -157,9 +157,9 @@ To add MCP servers to your agent you only have to add one tool per MCP server. T
 
     ![Filter the tools to only MCP Servers](./assets/filter-mcp.png)
 
-1. Select the **Microsoft 365 User Profile MCP server** from the tools list
+1. Select the **Work IQ User (Preview)** from the tools list
 
-    ![Select the User Profile MCP Server from the tools list](./assets/select-user-profile-mcp.png)
+    ![Select the Work IQ User (Preview) from the tools list](./assets/select-user-profile-mcp.png)
 
 1. Select **Create new connection** from the connection dropdown
 
@@ -171,9 +171,9 @@ To add MCP servers to your agent you only have to add one tool per MCP server. T
 
 1. Select **your account** in the pick your account popup to create the connection
 
-1. After picking your account, you will see the following screen. Select **Add and configure** to add the Microsoft 365 User Profile MCP server to the Interview Agent
+1. After picking your account, you will see the following screen. Select **Add and configure** to add the Work IQ User (Preview) to the Interview Agent
 
-    ![Add and configure User Profile MCP server](./assets/add-and-configure.png)
+    ![Add and configure Work IQ User (Preview)](./assets/add-and-configure.png)
 
 1. If you scroll down on the tool overview page, you can find the MCP tools that are part of the MCP server:
 
@@ -186,9 +186,17 @@ To add MCP servers to your agent you only have to add one tool per MCP server. T
     Who is my manager?
     ```
 
-1. Select **Allow** to consent that you are OK with the MCP server using your data. This consent card will only show once for the agent and this MCP server combination, after you have allowed it for this agent it will not prompt again (unless you add another MCP server that uses the same connector).
+1. The agent will prompt you to get connected first. Select **Open connection manager** to verify your credentials
 
-    ![Consent card](./assets/user-profile-manager-test-allow.png)
+    ![Select Open connection manager to verify your credentials](./assets/connection-manager.png)
+
+1. In the **Manage your connections** page, select **Connect** next to the **Work IQ User MCP** connection to establish it
+
+    ![Select Connect next to the Work IQ User MCP connection](./assets/connect-workiq-user-mcp.png)
+
+1. In the **Create or pick a connection** dialog, verify the Work IQ User MCP connection shows a green checkmark, and then select **Submit**. After submitting, go back to the test pane and select **Retry** to continue
+
+    ![Select Submit to confirm the connection](./assets/workiq-user-mcp-connection.png)
 
     Next, you will see the response from the agent. If all goes well, you will see something like this:
 
@@ -207,28 +215,40 @@ The first part of the lab is done, you can now ask questions about users on your
 
 You can now try out other tools if you want to as well. If you're ready, lets get the other MCP server added too.
 
-#### Add the Microsoft Outlook Calendar MCP server
+#### Add the Work IQ Calendar (Preview) MCP server
 
-In the last section, you have added the User Profile MCP server, which makes it possible for you to work with user details on your tenant. This is very helpful when you want to for instance plan meetings, because users of your agent usually don't send a prompt that includes an email / user principal name when they want to plan a meeting. Instead, they will send a prompt like the following:
+In the last section, you have added the Work IQ User (Preview), which makes it possible for you to work with user details on your tenant. This is very helpful when you want to for instance plan meetings, because users of your agent usually don't send a prompt that includes an email / user principal name when they want to plan a meeting. Instead, they will send a prompt like the following:
 
 ```text
 meeting with Daniel Laskewitz tomorrow
 ```
 
-To add capabilities like this, we need to add another MCP server: the Microsoft Outlook Calendar MCP server. Bear with us: the following steps are a lot like the previous section.
+To add capabilities like this, we need to add another MCP server: the Work IQ Calendar (Preview) MCP server. Bear with us: the following steps are a lot like the previous section.
 
 1. Select **Tools** at the top navigation
 1. Select **Add a tool**
 1. Filter the tools by selecting **Model Context Protocol**
-1. Scroll down and select the **Microsoft Outlook Calendar MCP Server**
+1. Scroll down and select the **Work IQ Calendar (Preview) MCP Server**
 
-    ![Add Microsoft Outlook Calendar MCP Server](./assets/select-outlook-calendar-mcp.png)
+    ![Add Work IQ Calendar (Preview) MCP Server](./assets/select-outlook-calendar-mcp.png)
 
-1. Select **Add and configure**
+1. Select **Create new connection** from the connection dropdown
 
-    Now, you can scroll to the bottom again to see the tools in the Microsoft Outlook Calendar MCP server:
+    ![Select Create new connection](./assets/create-new-connection-calendar.png)
 
-    ![Microsoft Outlook Calendar MCP Server tools](./assets/outlook-calendar-mcp-tools.png)
+1. Select **Create** to start the connection process
+
+    ![Select Create to start the connection process](./assets/create-new-connection-calendar-create.png)
+
+1. Select **your account** in the pick your account popup to create the connection
+
+1. Select **Add and configure** to add the Work IQ Calendar (Preview) MCP server to the Interview Agent
+
+    ![Select Add and configure](./assets/add-and-configure-calendar.png)
+
+    Now, you can scroll to the bottom again to see the tools in the Work IQ Calendar (Preview) MCP server:
+
+    ![Work IQ Calendar (Preview) MCP Server tools](./assets/outlook-calendar-mcp-tools.png)
 
     Let's test out this MCP server.
 
@@ -238,7 +258,7 @@ To add capabilities like this, we need to add another MCP server: the Microsoft 
     Get my meetings for today
     ```
 
-1. The agent will respond with the consent card again, because we added another MCP server. Select **Allow** to consent with the MCP server using your data
+1. The agent will respond with a consent card. Select **Allow** to consent with the MCP server using your data
 
     ![Consent card](./assets/outlook-calendar-test-allow.png)
 
@@ -246,7 +266,7 @@ To add capabilities like this, we need to add another MCP server: the Microsoft 
 
     ![Get my meetings for today response](./assets/outlook-calendar-test-output.png)
 
-### Plan an interview prep-meeting
+### Lab 10.2: Plan an interview prep-meeting
 
 Now, we know both the MCP servers work. We want to plan an interview prep-meeting though. So, let's see if that works too!
 
@@ -306,9 +326,9 @@ Great work, Operative! **Operation MCP Rendezvous** is now complete. You've succ
 
 📖 [Microsoft Agent 365 Tooling Servers Overview](https://learn.microsoft.com/microsoft-agent-365/tooling-servers-overview?WT.mc_id=power-215684-dlaskewitz)
 
-📖 [Microsoft 365 User Profile MCP Server](https://learn.microsoft.com/microsoft-agent-365/mcp-server-reference/me?WT.mc_id=power-215684-dlaskewitz)
+📖 [Work IQ User (Preview)](https://learn.microsoft.com/microsoft-agent-365/mcp-server-reference/me?WT.mc_id=power-215684-dlaskewitz)
 
-📖 [Microsoft Outlook Calendar MCP Server](https://learn.microsoft.com/microsoft-agent-365/mcp-server-reference/calendar?WT.mc_id=power-215684-dlaskewitz)
+📖 [Work IQ Calendar (Preview) MCP Server](https://learn.microsoft.com/microsoft-agent-365/mcp-server-reference/calendar?WT.mc_id=power-215684-dlaskewitz)
 
 📖 [Add users and assign licenses](https://learn.microsoft.com/microsoft-365/admin/add-users/add-users?view=o365-worldwide&WT.mc_id=power-215684-dlaskewitz)
 
