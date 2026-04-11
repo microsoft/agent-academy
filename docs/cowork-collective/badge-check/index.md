@@ -55,7 +55,10 @@ It comes with 13 built-in skills:
 - **Search**: Find information and people across your organisation, perform deep research
 - **Automation**: Run prompts on a schedule for recurring tasks
 
-You can also add custom skills stored in OneDrive. It asks for your approval before taking any action.
+You can also add custom skills stored in OneDrive. It asks for your approval before taking most actions.
+
+> [!NOTE]
+> Recent changes to Copilot Cowork have introduced auto-approve for emails sent to yourself. You will no longer be prompted to approve sending an email when the recipient is your own account.
 
 ## 🎯 The Scenario {#the-scenario}
 
@@ -238,7 +241,7 @@ What you saw in action:
 
 ✅ **Custom skills change the output**: The same CSV went from a plain text table to a styled HTML report because of one skill file.
 
-✅ **Nothing sends without your approval**: Copilot Cowork drafted the email and waited for you to review it first.
+✅ **Auto-approve for mail to self**: Copilot Cowork now auto-approves emails sent to your own account, so the report lands in your inbox without a manual approval step. Actions involving other recipients still require your approval.
 
 ## 🏅 Claim your Badge Bandit badge {#claim-your-badge}
 
