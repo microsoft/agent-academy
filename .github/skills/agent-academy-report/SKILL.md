@@ -24,13 +24,14 @@ If the user provides a workspace path, use it. Otherwise, ask for it.
 
 ## Overview
 
-The report generation has 5 phases:
+The report generation has 6 phases:
 
 1. **Extract feedback** from Excel files and GitHub issues
 2. **Analyze sentiment** using keyword-based scoring
 3. **Generate charts** with matplotlib
 4. **Build markdown** files (management summary + detailed analysis)
 5. **Export a single PDF** with cover page, management summary, and full analysis
+6. **Verify PDF formatting** — visually inspect and fix any layout issues
 
 Run the bundled Python scripts in order. Each script is self-contained and reads/writes to the folder structure above.
 
@@ -428,7 +429,63 @@ The script checks these browser paths in order and uses the first one found:
 
 ---
 
-## Course Name Mapping
+## Phase 6: Verify PDF Formatting
+
+After generating the PDF, **always** open and visually inspect it to check for formatting issues. Use the `view_image` tool or open the PDF to review each page.
+
+### Verification Checklist
+
+Check the following and fix any issues found:
+
+| Check                       | What to look for                                                                                 | Fix location                                                                      |
+| --------------------------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| **Cover page**              | Logo centered, title/subtitle readable, badges displayed in a row, no overflow                   | `export_pdf.py` CSS                                                               |
+| **Sentiment pie chart**     | Should be ~45% width, centered — NOT stretched full-width                                        | `export_pdf.py` `embed_md_images()` — use `max-width:45%` for `sentiment_pie`     |
+| **Per-course charts**       | Should be ~85% width, not full-width blowups                                                     | `export_pdf.py` `embed_md_images()` — use `max-width:85%` for `course_` charts    |
+| **h2 section starts**       | Each h2 (Recruit, Operative, Special Ops, Cowork Collective) should start on a new page in print | `export_pdf.py` `@media print` — `h2 { page-break-before: always }`               |
+| **First h2 after h1**       | Should NOT page-break (it follows right after the section title)                                 | `.content > h2:first-of-type { page-break-before: avoid }`                        |
+| **No orphan headings**      | h2/h3/h4 should not appear alone at bottom of a page                                             | `h2, h3, h4 { page-break-after: avoid }`                                          |
+| **Tables not split**        | Tables should not break across pages                                                             | `table { page-break-inside: avoid }`                                              |
+| **Blockquotes not split**   | Quotes should stay on one page                                                                   | `blockquote { page-break-inside: avoid }`                                         |
+| **Section-level summaries** | Cross-mission themes and next steps should use proper `###` headings, not bold inline text       | `build_markdown.py` — use `### Cross-Mission Themes` and `### Section Next Steps` |
+| **Line breaks**             | Stats line, themes, and next steps should be visually separated (not running together)           | `build_markdown.py` — ensure `\n\n` between sections                              |
+| **Funnel table**            | Submission pipeline table renders correctly with indented rows                                   | `build_markdown.py` `_build_comparison_table()`                                   |
+
+### Common Formatting Issues & Fixes
+
+**Chart too large / stretched:**
+The `embed_md_images()` function in `export_pdf.py` controls image sizing. It matches filenames to determine width:
+
+- `sentiment_pie` → `max-width:45%` (small donut chart)
+- `course_*` → `max-width:85%` (per-course charts)
+- Everything else → `max-width:100%` (overview charts)
+
+If a chart looks wrong, adjust the `SMALL_CHARTS` or `MEDIUM_CHARTS` lists and the corresponding `max-width` percentages.
+
+**Heading appears alone at page bottom:**
+This means `page-break-after: avoid` is not being respected (can happen with large content blocks). Wrap the heading + its following content in a `<div class="keep-together">` block in `md_to_html()`.
+
+**Content runs together without spacing:**
+The markdown-to-HTML converter treats `\n\n` as paragraph breaks (`<p>`). If content runs together, add an extra blank line in the markdown output (`build_markdown.py`). Use proper `###` headings instead of `**bold text:**` for visually distinct sections.
+
+**h2 doesn't start on new page:**
+Only works in `@media print`. The `:first-of-type` selector prevents the first h2 in each `.content` div from page-breaking. If ALL h2s page-break when they shouldn't, check that the CSS selector is scoped correctly.
+
+### Re-export After Fixes
+
+If any formatting issues are found and fixed in the Python scripts, re-run the affected steps:
+
+```bash
+# If build_markdown.py was changed:
+python3 <skill-path>/scripts/build_markdown.py "<workspace>/report"
+
+# Always re-export PDF after any fix:
+python3 <skill-path>/scripts/export_pdf.py "<workspace>/report" "<report-title>"
+```
+
+Then verify again until all checks pass.
+
+---
 
 Excel filenames map to display names as follows:
 
@@ -472,6 +529,10 @@ python3 <skill-path>/scripts/build_markdown.py "<workspace>/report"
 
 # 6. Export PDF
 python3 <skill-path>/scripts/export_pdf.py "<workspace>/report" "Agent Academy - Report April 2026"
+
+# 7. Verify PDF formatting
+#    Open the PDF and check: cover page, chart sizes, page breaks, spacing
+#    Fix any issues in export_pdf.py or build_markdown.py, then re-export
 ```
 
 Step 2 requires the GitHub MCP tools and should be done interactively by the agent between steps 1 and 3.

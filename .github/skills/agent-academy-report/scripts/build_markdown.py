@@ -248,12 +248,13 @@ All courses score between **{course_stats[lowest_course]['grade']}/10** and **{c
 
                 top_sec_themes = sorted(agg['themes'].items(), key=lambda x: -x[1])[:3]
                 if top_sec_themes:
-                    md += "**Cross-mission themes:** " + ", ".join(f"{th} ({cnt})" for th, cnt in top_sec_themes) + "\n\n"
+                    md += "### Cross-Mission Themes\n\n"
+                    md += ", ".join(f"{th} ({cnt})" for th, cnt in top_sec_themes) + "\n\n"
 
                 # Section-level next steps
                 sec_steps = _generate_next_steps(section_name, agg, agg['items'])
                 if sec_steps:
-                    md += f"**{section_name} Next Steps:**\n\n"
+                    md += f"### {section_name} Next Steps\n\n"
                     for i, step in enumerate(sec_steps, 1):
                         md += (f"{i}. **{step.split(' — ')[0]}** — {' — '.join(step.split(' — ')[1:])}\n" if ' — ' in step else f"{i}. {step}\n")
                     md += "\n"
@@ -277,12 +278,12 @@ All courses score between **{course_stats[lowest_course]['grade']}/10** and **{c
             md += _spotlight_course(course, s, items)
             md += "---\n\n"
 
-    md += """## Recommendations
+    md += f"""## Recommendations
 
-1. **Address Setup Challenges** — The most common negative theme across technical courses is setup difficulty. Consider providing pre-configured environments or improved setup documentation.
-2. **Expand Cowork Collective** — These courses have the highest satisfaction; consider adding more missions in this format.
-3. **Scale Special Ops** — Technical courses show strong engagement; the slightly lower grades present an opportunity for targeted improvements.
-4. **Continue Monitoring** — The feedback pipeline provides ongoing insights; consider monthly reviews to track sentiment trends.
+- **Address Setup Challenges** — The most common negative theme across technical courses is setup difficulty. Consider providing pre-configured environments or improved setup documentation.
+- **Expand Cowork Collective** — These courses have the highest satisfaction; consider adding more missions in this format.
+- **Scale Special Ops** — Technical courses show strong engagement; the slightly lower grades present an opportunity for targeted improvements.
+- **Continue Monitoring** — The feedback pipeline provides ongoing insights; consider monthly reviews to track sentiment trends.
 
 ---
 

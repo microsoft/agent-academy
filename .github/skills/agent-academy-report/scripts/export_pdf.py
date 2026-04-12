@@ -66,13 +66,24 @@ def download_badges(badges_dir):
 
 def embed_md_images(html, base_dir):
     """Replace markdown image refs with base64-embedded images."""
+    # Charts that should be rendered at a smaller size (not full width)
+    SMALL_CHARTS = ['sentiment_pie']
+    MEDIUM_CHARTS = ['course_']
+
     def replacer(match):
         alt = match.group(1)
         src = match.group(2)
         full = os.path.join(base_dir, src) if not os.path.isabs(src) else src
         if os.path.exists(full):
             b64 = img_to_b64(full)
-            return f'<img src="data:image/png;base64,{b64}" alt="{alt}" style="max-width:100%; margin:15px 0;">'
+            fname = os.path.basename(src)
+            if any(s in fname for s in SMALL_CHARTS):
+                style = 'max-width:45%; margin:15px auto;'
+            elif any(s in fname for s in MEDIUM_CHARTS):
+                style = 'max-width:85%; margin:15px auto;'
+            else:
+                style = 'max-width:100%; margin:15px 0;'
+            return f'<img src="data:image/png;base64,{b64}" alt="{alt}" style="{style}">'
         return match.group(0)
     return re.sub(r'!\[([^\]]*)\]\(([^)]+)\)', replacer, html)
 
@@ -371,6 +382,8 @@ h2 {{
     color: var(--brand-blue); margin-top: 35px; font-size: 22px;
     border-bottom: 1px solid #e2e8f0; padding-bottom: 6px;
 }}
+/* First h2 in management summary should NOT page-break (it's right after h1) */
+.content > h2:first-of-type {{ }}
 h3 {{ color: #1e293b; font-size: 17px; margin-top: 25px; font-weight: 600; }}
 h4 {{ color: #475569; font-size: 15px; font-weight: 600; }}
 table {{ border-collapse: collapse; margin: 15px 0; width: 100%; font-size: 13px; }}
@@ -395,7 +408,9 @@ a {{ color: var(--brand-blue); text-decoration: none; }}
 @media print {{
     .cover-page {{ height: 100vh; }}
     .content {{ padding: 30px 40px; }}
-    img {{ max-width: 100% !important; page-break-inside: avoid; break-inside: avoid; }}
+    img {{ page-break-inside: avoid; break-inside: avoid; }}
+    h2 {{ page-break-before: always; break-before: page; margin-top: 0; padding-top: 10px; }}
+    .content > h2:first-of-type {{ page-break-before: avoid; break-before: avoid; }}
     h2, h3, h4 {{ page-break-after: avoid; break-after: avoid; }}
     blockquote {{ page-break-inside: avoid; break-inside: avoid; }}
     table {{ page-break-inside: avoid; break-inside: avoid; }}
@@ -458,7 +473,7 @@ def main():
     print("Building combined HTML...")
     html = build_html(workspace, title)
 
-    html_path = os.path.join(workspace, "_report.html")
+    html_path = os.path.abspath(os.path.join(workspace, "_report.html"))
     with open(html_path, 'w') as f:
         f.write(html)
 
