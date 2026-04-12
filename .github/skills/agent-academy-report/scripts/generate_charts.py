@@ -247,7 +247,7 @@ def chart_sentiment_pie(feedback, charts_dir):
     total_neg = sum(1 for r in feedback if r['sentiment'] == 'negative')
     total = total_pos + total_neu + total_neg
 
-    fig, ax = plt.subplots(figsize=(6, 6))
+    fig, ax = plt.subplots(figsize=(4.5, 4.5))
     sizes = [total_pos, total_neu, total_neg]
     labels = ['Positive', 'Neutral', 'Negative']
     colors = [GREEN, SLATE_LIGHT, RED]
@@ -256,23 +256,23 @@ def chart_sentiment_pie(feedback, charts_dir):
         sizes, labels=None, colors=colors, autopct='%1.0f%%',
         startangle=90, pctdistance=0.82,
         wedgeprops=dict(width=0.35, edgecolor='white', linewidth=2),
-        textprops={'fontsize': 12, 'fontweight': 'bold'}
+        textprops={'fontsize': 10, 'fontweight': 'bold'}
     )
     for at in autotexts:
         at.set_color('white')
-        at.set_fontsize(12)
+        at.set_fontsize(10)
         at.set_fontweight('bold')
 
     # Center text
-    ax.text(0, 0.06, f'{total:,}', ha='center', va='center', fontsize=28, fontweight='bold', color=NAVY)
-    ax.text(0, -0.12, 'responses', ha='center', va='center', fontsize=11, color=SLATE)
+    ax.text(0, 0.06, f'{total:,}', ha='center', va='center', fontsize=20, fontweight='bold', color=NAVY)
+    ax.text(0, -0.14, 'responses', ha='center', va='center', fontsize=9, color=SLATE)
 
     # Legend
     legend_labels = [f'{l} ({s:,})' for l, s in zip(labels, sizes)]
-    ax.legend(wedges, legend_labels, loc='lower center', bbox_to_anchor=(0.5, -0.08),
-              framealpha=0.95, edgecolor=GRID_COLOR, fancybox=True, fontsize=11, ncol=3)
+    ax.legend(wedges, legend_labels, loc='lower center', bbox_to_anchor=(0.5, -0.06),
+              framealpha=0.95, edgecolor=GRID_COLOR, fancybox=True, fontsize=9, ncol=3)
 
-    ax.set_title('Overall Feedback Sentiment', fontsize=16, fontweight='bold', pad=15, color=NAVY)
+    ax.set_title('Overall Feedback Sentiment', fontsize=13, fontweight='bold', pad=10, color=NAVY)
     plt.tight_layout()
     plt.savefig(os.path.join(charts_dir, 'sentiment_pie.png'), dpi=180, bbox_inches='tight', facecolor='white')
     plt.close()
@@ -326,6 +326,63 @@ def chart_monthly_feedback(records, charts_dir):
     print("  monthly_feedback.png")
 
 
+def _course_slug(course):
+    """Generate a filesystem-safe slug for a course name."""
+    return course.lower().replace(' ', '_').replace(':', '').replace('&', 'and')
+
+
+def chart_per_course(records, charts_dir):
+    """Generate individual submission timeline charts for each course."""
+    for course in COURSE_ORDER:
+        course_records = [r for r in records if r['course'] == course and r.get('date')]
+        if not course_records:
+            continue
+
+        # Weekly aggregation
+        weekly = defaultdict(int)
+        for r in course_records:
+            dt = datetime.strptime(r['date'], '%Y-%m-%d')
+            week_start = dt - timedelta(days=dt.weekday())
+            weekly[week_start.strftime('%Y-%m-%d')] += 1
+
+        weeks_sorted = sorted(weekly.keys())
+        week_dates = [datetime.strptime(w, '%Y-%m-%d') for w in weeks_sorted]
+        counts = [weekly[w] for w in weeks_sorted]
+
+        # Determine color from course group
+        color = BLUE
+        for group, c in COURSE_GROUPS.items():
+            if course.startswith(group) or course == group:
+                color = c
+                break
+
+        fig, ax = plt.subplots(figsize=(10, 4))
+        ax.fill_between(week_dates, counts, alpha=0.15, color=color)
+        ax.plot(week_dates, counts, color=color, linewidth=2)
+
+        # Cumulative on second axis
+        ax2 = ax.twinx()
+        cum = list(np.cumsum(counts))
+        ax2.plot(week_dates, cum, color=NAVY, linewidth=1.5, linestyle='--', alpha=0.5)
+        ax2.set_ylabel('Cumulative', fontsize=10, color=SLATE)
+        ax2.spines['right'].set_color(SLATE_LIGHT)
+        ax2.spines['top'].set_visible(False)
+
+        short = SHORT_NAMES.get(course, course)
+        ax.set_title(f'{short} — Submissions Over Time', fontsize=14, fontweight='bold', pad=12, color=NAVY)
+        ax.set_ylabel('Weekly Submissions', fontsize=10, color=SLATE)
+        ax.xaxis.set_major_formatter(mdates.DateFormatter('%b %d'))
+        ax.xaxis.set_major_locator(mdates.WeekdayLocator(interval=2))
+        plt.xticks(rotation=45, ha='right')
+        ax.set_xlim(week_dates[0], week_dates[-1])
+
+        slug = _course_slug(course)
+        plt.tight_layout()
+        plt.savefig(os.path.join(charts_dir, f'course_{slug}.png'), dpi=180, bbox_inches='tight', facecolor='white')
+        plt.close()
+        print(f"  course_{slug}.png")
+
+
 def main():
     if len(sys.argv) < 2:
         print("Usage: python3 generate_charts.py <workspace-path>")
@@ -346,16 +403,19 @@ def main():
     records = data['records']
     course_stats = data['course_stats']
     feedback = [r for r in records if r['type'] == 'feedback']
+    # Submissions = actual course completions (Excel forms + GitHub badge submissions), not bug reports
+    submissions = [r for r in records if r.get('source') != 'github_issue']
 
     setup_style()
     print("Generating charts...")
-    chart_completions_over_time(records, charts_dir)
+    chart_completions_over_time(submissions, charts_dir)
     chart_sentiment_by_course(feedback, course_stats, charts_dir)
     chart_grades(course_stats, charts_dir)
-    chart_cumulative(records, charts_dir)
+    chart_cumulative(submissions, charts_dir)
     chart_sentiment_pie(feedback, charts_dir)
-    chart_monthly_feedback(records, charts_dir)
-    print(f"\nAll 6 charts saved to {charts_dir}")
+    chart_monthly_feedback(submissions, charts_dir)
+    chart_per_course(submissions, charts_dir)
+    print(f"\nAll charts saved to {charts_dir}")
 
 
 if __name__ == "__main__":
