@@ -317,7 +317,7 @@ Let's create the topic:
 1. For the **Variable name** change it to **VarApplicationNumber**. For the **Description** put in
 
     ```text
-    Fill with the Job Application Number referenced in the chat. The number always starts with a J followed by at least 4 digits.
+    Fill with the Job Application Number referenced in the chat. The number always starts with a A followed by at least 5 digits.
     ```
 
     Keep all the other properties the same.
@@ -362,7 +362,7 @@ Let's create the topic:
 1. Now let's test and make sure our new topic is working. Open up the test panel and type in the following (replace the J1000 number with a relevant job application number in your Job Application table):
 
     ```text
-    Create an interview prep file for job application J1000
+    Create an interview prep file for job application A01001
     ```
 
     Press **Enter**
