@@ -263,6 +263,8 @@ Before starting this lab, ensure you have:
 
    - **List Name**: Choose your "Tickets" list
 
+   - **Limit Columns by view (Optional)**: Leave this as `Select an Item`
+
    - **Additional instructions to the agent when it's invoked by the trigger:**
 
      ```text
