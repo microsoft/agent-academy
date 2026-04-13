@@ -1,27 +1,38 @@
 ---
 prev:
-  text: 'Course Setup'
-  link: '/recruit/00-course-setup'
+  text: Course Setup
+  link: /recruit/00-course-setup
 next:
-  text: 'Copilot Studio Fundamentals'
-  link: '/recruit/02-copilot-studio-fundamentals'
+  text: Copilot Studio Fundamentals
+  link: /recruit/02-copilot-studio-fundamentals
+short-description: >-
+  Understand conversational AI concepts, LLMs, and autonomous vs. declarative
+  agents
+difficulty: 1
+codename: OPERATION AI AGENT DECODE
+time: 30
+tags:
+  - fundamentals
+products:
+  - copilot-studio
+industries:
+  - it
+created-date: 2025-08-20
+last-edited-date: 2026-03-13
 ---
+# 🚨 Mission 01: Introduction to Agents {#mission-01-introduction-to-agents}
 
-# 🚨 Mission 01: Introduction to Agents
-
-## 🕵️‍♂️ CODENAME: `OPERATION AI AGENT DECODE`
-
-> **⏱️ Operation Time Window:** `~30 minutes – intel only, no fieldwork required`
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
 [![Introduction to Agents video thumbnail](./images/video-thumbnail.jpg)](https://www.youtube.com/watch?v=BhPz_zicUnM "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome, Recruit. Before we dive into building agents, you need a firm grasp of the AI concepts that power them. This mission will equip you with foundational knowledge of conversational AI, large language models (LLMs), retrieval-augmented generation (RAG), and the types of agents you can create in Copilot Studio.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you’ll learn:
 
@@ -98,7 +109,7 @@ In the context of Copilot Studio, the term **agent** can refer to multiple flavo
 1. **Multi-Modal Support:** Copilot studio agents support file uploads and speech conversations.
 1. **Publishing & Distribution:** Once your agent is ready, you can publish it to Microsoft 365 Copilot, embed it on your website or choose from several other deployment channels.
 
-## 🎉 Mission Complete
+## 🎉 Mission Complete {#mission-complete}
 
 You’ve now completed your introduction to agents and foundational AI concepts. You understand:
 
@@ -117,9 +128,8 @@ Next up, you'll explore the [fundamentals of Copilot Studio](../02-copilot-studi
 
 Stay sharp, Recruit - your AI journey is just beginning!
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 🔗 [Copilot Studio Documentation Home](https://learn.microsoft.com/microsoft-copilot-studio/)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/01-introduction-to-agents" alt="Analytics" />
+<analytics-tag section="recruit" mission="01-introduction-to-agents" />

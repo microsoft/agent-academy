@@ -7,15 +7,15 @@ next:
   link: '/commander-preview/02-computer-using-agents'
 ---
 
-# 🔌 Mission 01: Advanced MCP Server Usage
+# 🔌 Mission 01: Advanced MCP Server Usage {#mission-01-advanced-mcp-server-usage}
 
-## 🕵️‍♂️ **CLASSIFIED**
+## 🕵️‍♂️ **CLASSIFIED** {#classified}
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Go beyond basic MCP concepts and connect your Copilot Studio agent to MCP servers using the MCP onboarding wizard or a custom connector in Power Apps. Configure authentication (API key or OAuth 2.0 with dynamic discovery, dynamic, or manual flows). Add MCP server tools and resources to your agent and selectively enable or disable individual tools. Explore the built-in MCP servers catalog - including Dataverse, Dynamics 365, Fabric, and the Microsoft 365 MCP servers - and troubleshoot common integration issues.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -25,7 +25,7 @@ In this mission, you'll learn:
 1. How to use the built-in MCP servers catalog (Dataverse, Dynamics 365, and Fabric)
 1. How to troubleshoot common MCP integration issues and known limitations
 
-## 📖 References
+## 📖 References {#references}
 
 - [Create a new MCP server](https://learn.microsoft.com/en-us/microsoft-copilot-studio/mcp-create-new-server)
 

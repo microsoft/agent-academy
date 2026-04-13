@@ -158,13 +158,92 @@ Use active voice and present tense. Address learner as "you". Write in imperativ
 
 **Accessibility:** Use "Select" (not "click") for UI interactions and "Field" (not "textbox") for form inputs. Users may interact via keyboard, touch, or screen readers rather than mouse clicks.
 
-For markdown formatting standards, spell checking, and general style conventions, see [CONTRIBUTING.md](./CONTRIBUTING.md).
+For markdown formatting standards, spell checking, and general style conventions, see [CONTRIBUTING-GENERAL.md](./CONTRIBUTING-GENERAL.md).
 
 ## File Organization
 
 Each mission in numbered folder: `01-[mission-name]/` with `index.md` and `assets/` subfolder. All images and data files in assets folder. Use lowercase with hyphens for all filenames.
 
+## Special Ops Writing Style
+
+Special Ops missions are standalone — they don't follow sequential numbering and must be self-contained. Adapt the general writing style above with the following differences.
+
+### Mission intro
+
+Open with an agent-themed hook that draws the reader in. Address the learner directly and set the stakes.
+
+**Example:**
+> Welcome, agent. Your mission, should you choose to accept it, is to master YAML-based agent authoring — building and extending Copilot Studio agents entirely from Visual Studio Code.
+
+### No codename
+
+Special Ops missions do not use the `codename` frontmatter field or the OPERATION NAME convention. The mission title serves as the primary identifier.
+
+### Prerequisites section
+
+Because Special Ops missions are standalone, always include a dedicated `⚙️ Prerequisites` section listing every tool, account, license, and access requirement with direct links. Don't assume the reader has completed any prior missions.
+
+### Concept explanations
+
+Special Ops missions must explain all prerequisite concepts within the mission itself. Use `[!INFO]` callouts for quick definitions and comparison tables for decision points. Keep these concise — the reader is here for targeted learning, not a full course.
+
+### Badge claim section
+
+End every mission with a `🏅 Claim your completion badge` section showing the badge image at `width="200"` and a link to the completion form.
+
+## Cowork Collective Writing Style
+
+Cowork Collective missions focus on Copilot Cowork and follow a problem-driven narrative structure. They are standalone like Special Ops, but emphasize what the learner will produce rather than what they will learn.
+
+### Problem and scenario
+
+Start with a `🔍 The Problem` section that describes a relatable workplace frustration, followed by a `🎯 The Scenario` section that sets up the specific business situation the learner will solve.
+
+**Example:**
+> ## 🔍 The Problem
+>
+> Going on vacation should be relaxing, but the prep work is anything but. You need to reschedule meetings, write handoff emails, update your out-of-office reply, delegate tasks — all before you can close your laptop.
+
+### What You'll Produce
+
+Include a `📋 What You'll Produce` section with a checklist of concrete outcomes. Use action-oriented language focused on deliverables.
+
+**Example:**
+> ## 📋 What You'll Produce
+>
+> - ✅ An automated analysis of badge scan data identifying repeat offenders
+> - ✅ A styled HTML email report sent to your inbox
+> - ✅ A reusable Copilot Cowork custom skill for future scans
+
+### Prompt examples
+
+Since Copilot Cowork is prompt-driven, include full prompt text in fenced code blocks that learners can copy and paste. Write prompts in natural language — the way a user would actually talk to Copilot.
+
+**Example:**
+
+```text
+Analyze the attached badge_check.csv file. Find anyone who checked out
+after 11 PM more than once this month. Send me a summary email with
+their names, dates, and checkout times formatted in a clean table.
+```
+
+### Approval flow steps
+
+Copilot Cowork proposes actions and waits for approval. Document each approval interaction explicitly — tell the reader what to expect and what to approve.
+
+### Optional seeding labs
+
+When a mission needs sample data, offer an optional seeding lab that the learner can skip if they already have real data. Mark it clearly with a `[!NOTE]` callout that says the lab is optional.
+
+### Lab assets table
+
+When the mission uses sample data files, list them in a `📁 Lab Assets` table before the labs begin. Use a two-column table with `File` and `What it contains`.
+
 ## Additional Resources
 
-- [Contributing Guide](./CONTRIBUTING.md) - Markdown linting, spell checking, and general contribution standards
+- [Contributing Guide](./CONTRIBUTING-GENERAL.md) - Markdown linting, spell checking, and general contribution standards
+- [Contributing to Courses](./CONTRIBUTING-COURSES.md) - Course mission structure and requirements
+- [Contributing to Special Ops](./CONTRIBUTING-SPECIAL-OPS.md) - Special Ops mission structure and requirements
+- [Contributing to Cowork Collective](./CONTRIBUTING-COWORK-COLLECTIVE.md) - Cowork Collective mission structure and requirements
+- [Custom Components Reference](./CUSTOM-COMPONENTS.md) - All custom components available in markdown files
 - [Microsoft Writing Style Guide](https://learn.microsoft.com/style-guide/welcome/) - Official Microsoft style and terminology guide

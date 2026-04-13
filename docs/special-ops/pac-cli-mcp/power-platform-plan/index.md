@@ -3,10 +3,12 @@ prev:
   text: 'Power Platform CLI MCP'
   link: '/special-ops/pac-cli-mcp'
 aside: false
+created-date: 2026-02-20
+last-edited-date: 2026-02-20
 ---
-# 🎯 Power Platform Tenant Governance Strategic Improvement Plan
+# 🎯 Power Platform Tenant Governance Strategic Improvement Plan {#power-platform-tenant-governance-strategic-improvement-plan}
 
-## 1. 📊 Current Tenant Configuration Assessment
+## 1. 📊 Current Tenant Configuration Assessment {#1-current-tenant-configuration-assessment}
 
 ### Environment Overview
 
@@ -18,7 +20,7 @@ Your tenant shows a **development-focused organization** with:
 
 ### Current Settings Analysis Against Best Practices
 
-#### ✅ **Positive Configurations**
+#### ✅ **Positive Configurations** {#positive-configurations}
 
 - **Developer environments restricted** (`disableDeveloperEnvironmentCreationByNonAdminUsers: true`)
 - **Share with Everyone disabled** for Power Apps (`disableShareWithEveryone: true`)
@@ -26,7 +28,7 @@ Your tenant shows a **development-focused organization** with:
 - **Copilot feedback disabled** (privacy consideration)
 - **Guest making disabled** (`enableGuestsToMake: false`)
 
-#### ⚠️ **Areas of Concern**
+#### ⚠️ **Areas of Concern** {#areas-of-concern}
 
 - **Trial environments unrestricted** - Anyone can create trial environments
 - **General environment creation open** - Non-admins can create environments
@@ -37,9 +39,9 @@ Your tenant shows a **development-focused organization** with:
 
 ---
 
-## 2. 📋 Prioritized Settings Update Recommendations
+## 2. 📋 Prioritized Settings Update Recommendations {#2-prioritized-settings-update-recommendations}
 
-### 🔴 **CRITICAL Priority** (Implement within 2 weeks)
+### 🔴 **CRITICAL Priority** (Implement within 2 weeks) {#critical-priority-implement-within-2-weeks}
 
 #### Security & Access Control
 
@@ -50,7 +52,7 @@ Your tenant shows a **development-focused organization** with:
 | `disableCapacityAllocationByEnvironmentAdmins` | `false` | `true` | **Medium** |
 | `disablePortalsCreationByNonAdminUsers` | `false` | `true` | **Medium** |
 
-### 🟠 **HIGH Priority** (Implement within 4-6 weeks)
+### 🟠 **HIGH Priority** (Implement within 4-6 weeks) {#high-priority-implement-within-4-6-weeks}
 
 #### Enhanced Governance & Monitoring
 
@@ -61,7 +63,7 @@ Your tenant shows a **development-focused organization** with:
 | `enableDefaultEnvironmentRouting` | `false` | `true` | **Low** |
 | `disableConnectionSharingWithEveryone` | `false` | `true` | **Medium** |
 
-### 🟡 **MEDIUM Priority** (Implement within 8-12 weeks)
+### 🟡 **MEDIUM Priority** (Implement within 8-12 weeks) {#medium-priority-implement-within-8-12-weeks}
 
 #### Policy Management & Compliance
 
@@ -71,7 +73,7 @@ Your tenant shows a **development-focused organization** with:
 | `disableBillingPolicyCreationByNonAdminUsers` | `false` | `true` | **Low** |
 | `enableDeleteDisabledUserInAllEnvironments` | `false` | `true` | **Low** |
 
-### 🟢 **LOW Priority** (Implement within 3-6 months)
+### 🟢 **LOW Priority** (Implement within 3-6 months) {#low-priority-implement-within-3-6-months}
 
 #### User Experience & Analytics
 
@@ -82,9 +84,9 @@ Your tenant shows a **development-focused organization** with:
 
 ---
 
-## 3. 🗓️ Phased Implementation Roadmap
+## 3. 🗓️ Phased Implementation Roadmap {#3-phased-implementation-roadmap}
 
-### **Phase 1: Security Foundation** (Weeks 1-2) 🔴
+### **Phase 1: Security Foundation** (Weeks 1-2) 🔴 {#phase-1-security-foundation-weeks-1-2}
 
 **Objective**: Establish baseline security controls
 
@@ -99,7 +101,7 @@ Your tenant shows a **development-focused organization** with:
 - Admin center announcement
 - Update internal governance documentation
 
-### **Phase 2: Enhanced Monitoring** (Weeks 3-6) 🟠
+### **Phase 2: Enhanced Monitoring** (Weeks 3-6) 🟠 {#phase-2-enhanced-monitoring-weeks-3-6}
 
 **Objective**: Improve visibility and governance capabilities
 
@@ -113,7 +115,7 @@ Your tenant shows a **development-focused organization** with:
 - Training sessions for environment administrators
 - Updated reporting access documentation
 
-### **Phase 3: Policy Optimization** (Weeks 7-12) 🟡
+### **Phase 3: Policy Optimization** (Weeks 7-12) 🟡 {#phase-3-policy-optimization-weeks-7-12}
 
 **Objective**: Implement advanced policy management
 
@@ -122,13 +124,13 @@ Your tenant shows a **development-focused organization** with:
 1. **Week 7-9**: Desktop Flow data policy management
 1. **Week 10-12**: Billing policy restrictions and user management
 
-### **Phase 4: Analytics & Optimization** (Weeks 13-24) 🟢
+### **Phase 4: Analytics & Optimization** (Weeks 13-24) 🟢 {#phase-4-analytics-optimization-weeks-13-24}
 
 **Objective**: Fine-tune user experience and resource management
 
 ---
 
-## 4. 🔧 Specific CLI Commands for Implementation
+## 4. 🔧 Specific CLI Commands for Implementation {#4-specific-cli-commands-for-implementation}
 
 ### **Phase 1 Commands** (Critical - Week 1-2)
 
@@ -190,7 +192,7 @@ pac env list
 
 ---
 
-## 5. 📈 Key Monitoring Points Post-Implementation
+## 5. 📈 Key Monitoring Points Post-Implementation {#5-key-monitoring-points-post-implementation}
 
 ### **Immediate Monitoring** (First 30 days)
 
@@ -229,7 +231,7 @@ pac env list --filter "dev"
 
 ---
 
-## 🎯 Success Metrics & KPIs
+## 🎯 Success Metrics & KPIs {#success-metrics-kpis}
 
 ### **Security Metrics**
 
@@ -251,7 +253,7 @@ pac env list --filter "dev"
 
 ---
 
-## ⚠️ Risk Assessment & Mitigation
+## ⚠️ Risk Assessment & Mitigation {#risk-assessment-mitigation}
 
 ### **High Risk Items**
 
@@ -273,7 +275,7 @@ pac env list --filter "dev"
 
 ---
 
-## 📋 Implementation Checklist
+## 📋 Implementation Checklist {#implementation-checklist}
 
 ### **Pre-Implementation**
 
@@ -315,7 +317,7 @@ pac env list --filter "dev"
 
 ---
 
-## 📚 Additional Resources
+## 📚 Additional Resources {#additional-resources}
 
 ### **Microsoft Documentation**
 

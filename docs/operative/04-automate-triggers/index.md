@@ -1,23 +1,32 @@
 ---
 prev:
-  text: 'Multi-Agent Systems'
-  link: '/operative/03-multi-agent'
+  text: Multi-Agent Systems
+  link: /operative/03-multi-agent
 next:
-  text: 'Understanding Agent Models'
-  link: '/operative/05-model-selection'
+  text: Understanding Agent Models
+  link: /operative/05-model-selection
+short-description: Implement autonomous agent behaviors with event-driven triggers
+difficulty: 2
+codename: OPERATION SIGNAL POINT
+time: 45
+tags:
+  - automation
+  - triggers
+products: [copilot-studio, dataverse, power-automate, outlook, teams]
+industries:
+  - hr
+created-date: 2026-01-14
+last-edited-date: 2026-03-17
 ---
+# 🚨 Mission 04: Add Event Triggers to act autonomously {#mission-04-add-event-triggers-to-act-autonomously}
 
-# Mission 04: Add Event Triggers to act autonomously
-
-## 🕵️‍♂️ CODENAME: `OPERATION SIGNAL POINT`
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
 [![Automate-Triggers](./assets/04-automate-triggers_thumbnail_PlayButton.png)](https://youtu.be/lXdlj4DjR28?si=32nUxgFNUv2VVmTD "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome back, Agent. In [Mission 03](../03-multi-agent/index.md) - you learned how to build an Application Intake child agent and an Interview Prep connected agent to broaden your main Hiring Agent's capabilities.
 
@@ -27,7 +36,7 @@ Think of it as upgrading from agents that _answer questions_ to agents that _ant
 
 Welcome to the world where automation meets intelligence.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -37,7 +46,7 @@ In this mission, you'll learn:
 1. How to build agent flows that post adaptive cards to Teams channels for notifications
 1. How to pass data between event triggers and agent flows for end-to-end automation
 
-## 🤔 What is an Event trigger?
+## 🤔 What is an Event trigger? {#what-is-an-event-trigger}
 
 Previously in [Recruit](../../recruit/10-add-event-triggers/index.md), we learned about event triggers. Let's do a quick recap on this in case you missed it.
 
@@ -100,7 +109,7 @@ Other trigger types include `Message received`, `Event received`, `Activity rece
 - **Topic trigger:** User (or chat activity) said/did X ➡️ run Topic T.
 - **Event trigger:** SharePoint/Planner/Email/Timer fired with payload P ➡️ agent evaluates instructions ➡️ call Actions/Topics accordingly.
 
-## 🏓 Interactive agent vs Autonomous agent - comparison
+## 🏓 Interactive agent vs Autonomous agent - comparison {#interactive-agent-vs-autonomous-agent-comparison}
 
 Now that you know the difference between event triggers and topics triggers, let's next learn about the difference between an interactive agent vs an autonomous agent.
 
@@ -137,11 +146,11 @@ The following table summarizes their differences and similarities.
 
 1. **Test before publishing.** Use **Test trigger** and the activity map to watch the plan and called actions - iterate on instructions/payload until behavior is stable.
 
-## 🧪 Lab 04 - Automating candidate application emails
+## 🧪 Lab 4 - Automating candidate application emails {#lab-04-automating-candidate-application-emails}
 
 We're next going to add an event trigger to the **Hiring Agent** and build an agent flow in the child **Application Intake Agent** to handle further processing for autonomy.
 
-### ✨ Use case scenario
+### ✨ Use case scenario {#use-case-scenario}
 
 **As an** HR Recruiter
 
@@ -161,14 +170,14 @@ We'll be achieving this using two techniques
 
 Let's begin!
 
-### ✨ Prerequisites to complete this mission
+### ✨ Prerequisites to complete this mission {#prerequisites-to-complete-this-mission}
 
 To complete this lab you will need to:
 
 - **Have completed [Mission 01](../01-get-started/index.md) and [Mission 03](../03-multi-agent/index.md)** and have your Hiring Agent ready.
 - You'll also need access to **Microsoft Teams** to complete the second lab exercise of posting an adaptive card to Microsoft Teams.
 
-### 🧪 Lab 4.1 - Automate uploading resumes to Dataverse received by email
+### 🧪 Lab 4.1 - Automate uploading resumes to Dataverse received by email {#lab-41-automate-uploading-resumes-to-dataverse-received-by-email}
 
 1. In the Hiring Agent, scroll down in the **Overview tab** to the **Triggers and Channels** section and select **+ Add**.
 
@@ -587,7 +596,7 @@ To complete this lab you will need to:
 
 Let's proceed in creating a new agent flow that will be invoked by the child **Intake Application Agent**.
 
-### Lab 4.2 - Notify a Teams channel using an adaptive card
+### 🧪 Lab 4.2 - Notify a Teams channel using an adaptive card
 
 We're now going to create a new agent flow for the child **Intake Application Agent** that uses the values passed by the event trigger, to post an adaptive card to a Teams channel. This adaptive card will alert the HR recruitment team about the PDF that was automatically uploaded so that they can review it.
 
@@ -641,7 +650,7 @@ Let's begin!
 
     ![ResumeNumber input](assets/3.2_09_ResumeNumberInput.png)
 
-1. Remember how in [Recruit](../../recruit/08-add-adaptive-card/index.md#81-create-a-new-topic-with-an-adaptive-card-for-user-to-submit-their-request) we added an adaptive card within a Topic for our agent? This time round, we're going to add an adaptive card in an agent flow. We're now going to add another action to our agent flow that will post an adaptive card to a Teams channel.
+1. Remember how in [Recruit](../../recruit/08-add-adaptive-card/index.md#create-a-new-topic-with-an-adaptive-card-for-user-to-submit-their-request) we added an adaptive card within a Topic for our agent? This time round, we're going to add an adaptive card in an agent flow. We're now going to add another action to our agent flow that will post an adaptive card to a Teams channel.
 
     Select the **+ icon** below the trigger.
 
@@ -678,7 +687,7 @@ Let's begin!
 
     ![Copy and paste JSON](assets/3.2_16_JSON.png)
 
-1. Similar to what we did in [Recruit](../../recruit/08-add-adaptive-card/index.md#81-create-a-new-topic-with-an-adaptive-card-for-user-to-submit-their-request), we're going to replace existing values in the JSON payload with actual values or dynamic content.
+1. Similar to what we did in [Recruit](../../recruit/08-add-adaptive-card/index.md#create-a-new-topic-with-an-adaptive-card-for-user-to-submit-their-request), we're going to replace existing values in the JSON payload with actual values or dynamic content.
 
     First, let's update the URL for the `url` property within the `selectAction` property. This URL will be replaced with the URL of the Resumes system view in the **Hiring Hub** model-driven app. This will allow the Recruiter to select the action and be directed to the Resumes system view in the model-driven app.
 
@@ -932,7 +941,7 @@ Let's begin!
 
 We can now test the agent!
 
-### Lab 4.3 - Test event trigger
+### 🧪 Lab 4.3 - Test event trigger
 
 1. To execute the event trigger, an email needs to be sent with a Resume pdf file. In Outlook, compose a new email message.
 
@@ -1006,7 +1015,7 @@ We can now test the agent!
 
     ![Resume row in Hiring Hub model-driven app](assets/3.3_11_ResumeRow.png)
 
-## ✅ Mission Complete
+## ✅ Mission Complete {#mission-complete}
 
 Congratulations! 👏🏻 Excellent work, Operative.
 
@@ -1020,7 +1029,7 @@ This is the end of **Lab 04 - Automating candidate application emails**, select 
 
 ⏭️ Move to mission [**Understanding Agent Models and Response Formatting**](../05-model-selection/index.md)
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 📖 [Make your agent autonomous in Copilot Studio](https://learn.microsoft.com/training/modules/autonomous-agents-online-workshop/?WT.mc_id=power-188561-ebenitez)
 
@@ -1034,5 +1043,4 @@ This is the end of **Lab 04 - Automating candidate application emails**, select 
 
 📖 [Data loss prevention for Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/admin-data-loss-prevention?WT.mc_id=power-188561-ebenitez)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/04-automate-triggers" alt="Analytics" />
+<analytics-tag section="operative" mission="04-automate-triggers" />

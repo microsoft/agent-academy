@@ -7,15 +7,15 @@ next:
   link: '/commander-preview/13-next-steps-best-practices'
 ---
 
-# 🚀 Mission 12: Deploy Agents with Solutions & Pipelines
+# 🚀 Mission 12: Deploy Agents with Solutions & Pipelines {#mission-12-deploy-agents-with-solutions-pipelines}
 
-## 🕵️‍♂️ **CLASSIFIED**
+## 🕵️‍♂️ **CLASSIFIED** {#classified}
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Plan and execute enterprise application lifecycle management (ALM) for your agents. Understand environment strategies for dev, test, and production, and package agents in custom solutions with managed and unmanaged layers. Export and import solutions across environments, create reusable component collections, and configure agent connections with On-Behalf-Of (OBO) authentication. Control sharing with Editor and Viewer roles and deploy at scale using Power Platform Pipelines.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -25,7 +25,7 @@ In this mission, you'll learn:
 1. How to configure agent connections, On-Behalf-Of (OBO) authentication, and sharing with Editor and Viewer roles
 1. How to deploy solutions at scale using Power Platform Pipelines
 
-## 📖 References
+## 📖 References {#references}
 
 - [Environments overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/environments-first-run-experience)
 - [Solutions overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-overview)

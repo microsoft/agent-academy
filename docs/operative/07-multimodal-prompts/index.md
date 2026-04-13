@@ -1,21 +1,30 @@
 ---
 prev:
-  text: 'AI Safety and Content Moderation'
-  link: '/operative/06-ai-safety'
+  text: AI Safety and Content Moderation
+  link: /operative/06-ai-safety
 next:
-  text: 'Dataverse Grounding'
-  link: '/operative/08-dataverse-grounding'
+  text: Dataverse Grounding
+  link: /operative/08-dataverse-grounding
+short-description: Process documents and images with advanced AI capabilities
+difficulty: 2
+codename: DOCUMENT RESUME RECON
+time: 45
+tags:
+  - multimodal
+  - prompting
+products: [copilot-studio, dataverse]
+industries:
+  - hr
+created-date: 2026-01-14
+last-edited-date: 2026-03-11
 ---
+# 🚨 Mission 07: Extracting Resume Contents with Multimodal Prompts {#mission-07-extracting-resume-contents-with-multimodal-prompts}
 
-# 🚨 Mission 07: Extracting Resume Contents with Multimodal Prompts
-
-## 🕵️‍♂️ CODENAME: `DOCUMENT RESUME RECON`
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<mission-meta />
 
 [![MultiModal](./assets/07-multi-modal-prompts-thumbnail.png)](https://youtu.be/icP_qH8LFK8?si=VJjtdVi-ytUq0ymg "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome, Operative. Your previous missions have equipped you with powerful agent orchestration skills, but now it's time to unlock a game-changing capability: **multimodal document analysis**.
 
@@ -25,7 +34,7 @@ This mission will transform you from a text-only agent builder into a **multimod
 
 The techniques you learn here will be essential for the advanced data grounding operations in your next mission.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -35,7 +44,7 @@ In this mission, you'll learn:
 1. Best practices for prompt engineering with document analysis
 1. How to integrate multimodal prompts with Agent Flows
 
-## 🧠 Understanding multimodal prompts
+## 🧠 Understanding multimodal prompts {#understanding-multimodal-prompts}
 
 ### What makes a prompt "multimodal"?
 
@@ -68,7 +77,7 @@ Here are some examples of how multimodal prompts can be applied:
 | **Form analysis**       | Analyze this application form and extract all filled fields.                                                                              | Field Name (e.g., Applicant Name), Entered Value (e.g., John Doe), ...                                  |
 | **ID document verification** | Extract name, ID number, expiration date, and address from this identification document. Verify that all text is clearly readable and flag any unclear sections. | Full Name, Identification Number, Expiration Date, Address, Unclear Sections Flag                        |
 
-## ⚙️ Model selection in AI Builder
+## ⚙️ Model selection in AI Builder {#model-selection-in-ai-builder}
 
 AI Builder offers different models optimized for specific tasks. Understanding which model to use is crucial for success.
 
@@ -97,7 +106,7 @@ Temperature controls how creative or predictable your AI responses are:
 
 For document analysis, use **temperature 0** to ensure consistent data extraction.
 
-## 📊 Output formats: Text vs JSON
+## 📊 Output formats: Text vs JSON {#output-formats-text-vs-json}
 
 Choosing the right output format is critical for downstream processing.
 
@@ -140,7 +149,7 @@ JSON output is essential for:
 - **Error handling**: Plan for documents that can't be processed
 - **Monitor costs**: Different models consume different amounts of AI Builder credits
 
-## 🧪 Lab 7: Building a resume extraction system
+## 🧪 Lab 7 - Building a resume extraction system {#lab-7-building-a-resume-extraction-system}
 
 Time to put your multimodal knowledge into practice. You'll build a comprehensive resume extraction system that analyzes candidate documents and transforms them into structured data for your hiring workflow.
 
@@ -482,7 +491,7 @@ Although not part of this mission, to make this agent flow production ready you 
 1. **Updating existing Candidates** - The candidate is found using the email, then the name could be updated to match that on the resume.
 1. **Splitting the Resume summarization and the Candidate creation** - This functionality could be split into smaller agent flows to make them easier to maintain, and then the agent given instructions to use them in turn.
 
-## 🎉 Mission Complete
+## 🎉 Mission Complete {#mission-complete}
 
 Excellent work, Operative! **Document Resume Recon** is now complete. You've successfully mastered multimodal prompts and can now extract structured data from any document with precision.
 
@@ -507,7 +516,7 @@ Your enhanced document analysis capabilities are now ready for the advanced data
 
 ⏩ Move to [Mission 08](../08-dataverse-grounding/index.md): Enhanced prompts with Dataverse grounding
 
-## 📚 Tactical resources
+## 📚 Tactical resources {#tactical-resources}
 
 📖 [Create a prompt](https://learn.microsoft.com/ai-builder/create-a-custom-prompt?WT.mc_id=power-power-182762-scottdurow)
 
@@ -521,5 +530,4 @@ Your enhanced document analysis capabilities are now ready for the advanced data
 
 📺 [AI Builder: JSON outputs in prompt builder](https://www.youtube.com/watch?v=F0fGnWrRY_I)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/07-multimodal-prompts" alt="Analytics" />
+<analytics-tag section="operative" mission="07-multimodal-prompts" />

@@ -7,15 +7,15 @@ next:
   link: '/commander-preview/04-human-in-the-loop'
 ---
 
-# 🐍 Mission 03: Code Interpreter
+# 🐍 Mission 03: Code Interpreter {#mission-03-code-interpreter}
 
-## 🕵️‍♂️ **CLASSIFIED**
+## 🕵️‍♂️ **CLASSIFIED** {#classified}
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Enable Code Interpreter to generate and execute Python code in a sandbox for data preparation, statistical analysis, table joins, forecasting, charting, and file generation using structured data (CSV, Excel). Leverage deterministic, reproducible computation instead of best-effort LLM reasoning. Ingest data via user-uploaded files in chat or SharePoint Documents library knowledge sources. Combine with image generation and custom skills to extend agent capabilities. Query and update Dataverse using code.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -25,7 +25,7 @@ In this mission, you'll learn:
 1. How to ingest structured data via user-uploaded files or SharePoint knowledge sources
 1. How to extend capabilities with image generation, custom skills, and Dataverse code queries
 
-## 📖 References
+## 📖 References {#references}
 
 - [Code interpreter](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/code-interpreter)
 

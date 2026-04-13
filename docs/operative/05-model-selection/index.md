@@ -1,21 +1,29 @@
 ---
 prev:
-  text: 'Add Event Triggers'
-  link: '/operative/04-automate-triggers'
+  text: Add Event Triggers
+  link: /operative/04-automate-triggers
 next:
-  text: 'AI Safety and Content Moderation'
-  link: '/operative/06-ai-safety'
+  text: AI Safety and Content Moderation
+  link: /operative/06-ai-safety
+short-description: Customize agent models for maximum impact and engagement
+difficulty: 2
+codename: OPERATION ARCHETYPE
+time: 45
+tags:
+  - models
+products: [copilot-studio, azure, dataverse]
+industries:
+  - hr
+created-date: 2026-01-14
+last-edited-date: 2026-03-11
 ---
+# 🚨 Mission 05: Understanding Agent Models and Response Formatting {#mission-05-understanding-agent-models-and-response-formatting}
 
-# Understanding Agent Models and Response Formatting
-
-## 🕵️‍♂️ CODENAME: `OPERATION ARCHETYPE`
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<mission-meta />
 
 [![Model-Selection](./assets/05-model-selection_Thumbnail_PlayButton.png)](https://youtu.be/c5rqNQt2Mmc?si=zrJ7nQYoto9UlHFj "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome back, Agent. In [Mission 02](../02-agent-instructions/index.md), you learned how strong instructions shape agent behavior.
 
@@ -25,7 +33,7 @@ In **Operation Archetype**, you’ll learn how to select the right AI model for 
 
 By the end of this mission, you’ll be able to confidently choose a model based on your scenario and validate that choice by comparing results.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -35,15 +43,15 @@ In this mission, you'll learn:
 1. How to configure response formatting to enhance readability and user experience
 1. How to test and evaluate differences in output when you change models
 
-## 🤔 What is the Agent Model?
+## 🤔 What is the Agent Model? {#what-is-the-agent-model}
 
 The _agent model_ is the underlying generative AI engine powering your Copilot agent’s responses. Copilot Studio lets you select which model your agent uses, enabling you to leverage different strengths (speed, output quality, cost, etc.) depending on your scenario. The model you choose determines how your agent thinks and responds, for example, one model may respond faster, another may produce more detailed answers, while another might excel at complex reasoning.
 
-### 🎭 Why it matters
+### 🎭 Why it matters {#why-it-matters}
 
 Selecting the appropriate model ensures your agent performs optimally for your use case. Each available model has distinct capabilities and specializations, so aligning the model with your requirements (such as quick replies vs. deep analysis) can improve user satisfaction and manage costs.
 
-### 🪁 Available models
+### 🪁 Available models {#available-models}
 
 Copilot Studio supports OpenAI models and Anthropic models. Each model will have a category tag and an availability tag.
 
@@ -114,11 +122,11 @@ Both are available in Microsoft Copilot Studio as opt-in preview (Frontier Progr
 > - It's important to note that these are external models. Anthropic models are hosted outside Microsoft and are subject to Anthropic terms and data handling, which need to be reviewed and accepted before makers can use them. These models are available before an official release so that you can get early access and [provide feedback](https://community.powerplatform.com/forums/thread/?groupid=db8f53c2-767d-47d6-a1ae-fe4c828a6553). Therefore, it is not recommended to use these models for Production purposes.
 > - Please note that you could also experience slowdowns or timeouts due to limited capacity and availability, and these models might not be supported in the future. Admins can control access to this feature (more of this soon as you progress from here!).
 
-#### 🔢 Context length and data training
+#### 🔢 Context length and data training {#context-length-and-data-training}
 
 All the above models are capable with large context windows. For instance, GPT-4.1 supports up to 128K tokens of context. They are all trained on data up to mid-2024 (GPT-5 on slightly later data). This means they _know_ information up to those cut-off dates, which is useful for understanding their knowledge limitations when they generate answers.
 
-### 🔧 Changing and updating the model of your agent
+### 🔧 Changing and updating the model of your agent {#changing-and-updating-the-model-of-your-agent}
 
 By default, a new Copilot agent starts on the GPT-4.1 model, which is optimized as a balanced choice for most scenarios.
 
@@ -128,7 +136,7 @@ You can switch the agent’s primary model anytime via the agent’s **Overview*
 
 This flexibility allows you to experiment with different models even after your agent is built. For example, switching to an experimental model to evaluate if it improves answer quality for your use case.
 
-## 📶 Model updates and retired models
+## 📶 Model updates and retired models {#model-updates-and-retired-models}
 
 Microsoft periodically upgrades the available models to newer versions. Notably, in December 2025, several models were made available in early release cycle environments:
 
@@ -143,7 +151,7 @@ Agents that were running on GPT-5.1 were automatically moved to GPT-5.2. For mor
 
 If your agent was using the retired GPT-4o model, it would have been transparently moved to **GPT-4.1** which is the default OpenAI model.
 
-### 🧶 Why might you continue using a "Retired" model?
+### 🧶 Why might you continue using a "Retired" model? {#why-might-you-continue-using-a-retired-model}
 
 With AI model upgrades happening automatically, Copilot Studio provides a safety valve for continuity. You may have cases where you need to stick with the previous model for a short time, even after an upgrade.
 
@@ -155,7 +163,7 @@ For example, to maintain compatibility, to meet compliance requirements, or simp
 
 - **Specific Business Needs**: You might have a mission-critical event (product launch, demo) where stability is more important than getting new features quickly. Sticking with the older model ensures no surprises during that period.
 
-### 🌳 How to use a retired model
+### 🌳 How to use a retired model {#how-to-use-a-retired-model}
 
 On your agent’s **Settings** page, in the **Model** section in the **Generative AI** tab, there is a toggle option labeled **"Continue using retired models"**. This becomes available when a model update is rolled out.
 
@@ -169,7 +177,7 @@ Suppose your agent was using GPT-4o and it got upgraded to GPT-4.1. If you notic
 
 You then have a few weeks to update your prompts/instructions to suit GPT-4.1's style (maybe adding an instruction like “keep responses brief”) and test thoroughly. Test your agent on GPT-4.1 in a safe environment, and then disable the retired model toggle once confident. This way, your end users have a consistent experience during the transition.
 
-## 🔐 Admin controls for AI model selection
+## 🔐 Admin controls for AI model selection {#admin-controls-for-ai-model-selection}
 
 It’s worth noting that not every copilot environment allows all model choices by default. There are organization-level settings that tenant administrators control. This is especially relevant for experimental models. Organizations may want to restrict who can use preview AI models (since they might process data in non-standard ways or outside certain regions).
 
@@ -210,13 +218,13 @@ For a quick reference, here’s a summary of the admin controls related to model
 > - If you're an **admin** concerned about data compliance, disable the use of Anthropic models + keep the preview models off and cross-region data moving off.
 > - If you're a **developer** in a highly regulated industry environment, you may need to stick to General Availability (GA) models unless you get clearance to use preview models (OpenAI) or external preview models (Anthropic).
 
-## 🔠 Response Formatting
+## 🔠 Response Formatting {#response-formatting}
 
 Once you’ve sorted out _what_ your agent will say by picking the right model and providing good instructions, the next focus is _how_ the answer should look when delivered to the user.
 
 **Response Formatting** in Copilot Studio refers to defining the style and structure of the AI’s replies - such as whether text should be bold or italic, if links can be included, or if any dynamic content/expressions should be inserted.
 
-### 🖼️ Why Response Formatting matters
+### 🖼️ Why Response Formatting matters {#why-response-formatting-matters}
 
 It’s all about readability and user experience. Even the most correct answer can confuse or frustrate a user if it’s a blob of unstructured text. By applying consistent formatting, you ensure key information stands out and the answer is easy to scan.
 
@@ -230,7 +238,7 @@ Additionally, your brand’s style or tone should be reflected in formatting cho
 
 In Copilot Studio’s generative answer node, you can allow or disallow certain formatting in the responses. Let’s go through what options exist and how to use them effectively.
 
-## 🖌️ Available formatting options
+## 🖌️ Available formatting options {#available-formatting-options}
 
 Copilot Studio generative answers support a subset of Markdown for rich text. Here are the main formatting elements you can leverage in the AI’s responses, and what they do:
 
@@ -244,7 +252,7 @@ Copilot Studio generative answers support a subset of Markdown for rich text. He
 > [!TIP]
 > Always test your response formatting using the testing pane in Copilot Studio. Try out sample user questions. See if the agent's answer is coming through with the formatting you expect. If something is not right, such as the response shows markdown syntax in text instead of formatting it, you may need to adjust the instructions. Sometimes the model might not be sure it's allowed to use formatting and will "play safe" by showing the markdown syntax such as raw asterisks. Clarify in the formatting instructions and repeat testing till you're satisfied.
 
-## ⭐ Best practices for formatting responses
+## ⭐ Best practices for formatting responses {#best-practices-for-formatting-responses}
 
 Now that we know what we _can_ do, let’s talk about what we _should_ do to make the AI’s answers clear and effective. Here are some best practices, aimed at developers crafting the agent’s behavior:
 
@@ -288,7 +296,7 @@ Now that we know what we _can_ do, let’s talk about what we _should_ do to mak
 
 In summary, use formatting to enhance clarity, not distract. The user should be able to glance at the agent’s answer and grasp the needed information quickly. As a developer, utilize the **Response Formatting** in the **Generative AI** tab under the **Settings** of your agent to ensure the output is polished. Always test a variety of questions to see how the formatting holds up, and adjust your instructions as needed.
 
-## 🧪 Lab 05 - Model selection for the Interview Agent
+## 🧪 Lab 5 - Model selection for the Interview Agent {#lab-05-model-selection-for-the-interview-agent}
 
 In this lab, you’ll compare responses, including the formatting, from three different models by asking the same questions and observing differences in:
 
@@ -297,7 +305,7 @@ In this lab, you’ll compare responses, including the formatting, from three di
      - Tone
      - Specificity
 
-### Lab 5.1 - Response formatting of the Interview Agent
+### 🧪 Lab 5.1 - Response formatting of the Interview Agent
 
 1. In the **Interview Agent's Settings**, scroll down to the **Response formatting** section to update the instructions. Use the following as the formatting instructions.
 
@@ -330,7 +338,7 @@ In this lab, you’ll compare responses, including the formatting, from three di
 
 1. Exit from **Settings**.
 
-### Lab 5.2 - Compare model responses and formatting
+### 🧪 Lab 5.2 - Compare model responses and formatting
 
 Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat preview model and the Claude Sonnet 4.5 experimental model.
 
@@ -489,7 +497,7 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
     > [!NOTE] EXPLORE MODELS
     > Try experimenting with different models. Some perform better at reasoning, others at creativity, and models like Anthropic excel at following detailed response instructions. That’s why it's worth testing multiple models to find the best fit for your specific scenario.
 
-## ✅ Mission Complete
+## ✅ Mission Complete {#mission-complete}
 
 Congratulations! 👏🏻 Excellent work, Operative.
 
@@ -499,7 +507,7 @@ This is the end of **Lab 05 - Understanding Agent Models**, select the link belo
 
 ⏭️ Move to mission [**AI Safety and Content Moderation**](../06-ai-safety/index.md)
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 📖 [Multi-agent orchestration and more: Copilot Studio announcements](https://www.microsoft.com/microsoft-copilot/blog/copilot-studio/multi-agent-orchestration-maker-controls-and-more-microsoft-copilot-studio-announcements-at-microsoft-build-2025/#copilot-studio-enhancements)
 
@@ -513,5 +521,4 @@ This is the end of **Lab 05 - Understanding Agent Models**, select the link belo
 
 📖 [Provide feedback on Anthropic models](https://community.powerplatform.com/forums/thread/?groupid=db8f53c2-767d-47d6-a1ae-fe4c828a6553)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/05-model-selection" alt="Analytics" />
+<analytics-tag section="operative" mission="05-model-selection" />

@@ -1,9 +1,17 @@
 import { defineConfig } from "vitepress";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { mermaidPlugin } from "./plugins/vitepress-mermaid";
+import { missionsPlugin } from "./plugins/missions";
+import { downloadFilesPlugin } from "./plugins/download-files";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const docsDir = path.resolve(__dirname, "..");
 
 export default defineConfig({
   title: "Agent Academy",
   base: "/agent-academy/",
+  cleanUrls: true,
   head: [
     ["link", { rel: "icon", href: "/agent-academy/logo.png" }],
     [
@@ -18,7 +26,13 @@ export default defineConfig({
     logo: "/logo.png",
     nav: [
       { text: "Home", link: "/" },
-      { text: "Our Team", link: "/our-team/" },
+      {
+        text: "About",
+        items: [
+          { text: "Our Team", link: "/our-team/" },
+          { text: "Recent Changes", link: "/recent-changes/" },
+        ],
+      },
       {
         text: "Courses",
         items: [
@@ -28,24 +42,32 @@ export default defineConfig({
         ],
       },
       {
-        text: "Special Ops (Missions)",
+        text: "Special Ops",
         items: [
           { text: "Overview", link: "/special-ops/" },
           { text: "MCS ❤️ MCP", link: "/special-ops/mcs-mcp/" },
           { text: "Microsoft Learn Docs MCP", link: "/special-ops/ms-learn-mcp/" },
           { text: "Power Platform CLI MCP", link: "/special-ops/pac-cli-mcp/" },
+          { text: "YAML Specialist", link: "/special-ops/yaml-specialist/" },
+        ],
+      },
+      {
+        text: "Cowork Collective",
+        items: [
+          { text: "Overview", link: "/cowork-collective/" },
+          { text: "Badge Check", link: "/cowork-collective/badge-check/" },
+          { text: "The Compliance Packet", link: "/cowork-collective/compliance-packet/" },
+          { text: "Out of Office Vacation Handoff", link: "/cowork-collective/out-of-office-prep/" },
         ],
       },
     ],
-    lastUpdated: {
-      text: 'Last updated at',
-      formatOptions: {
-        dateStyle: 'long'
-      }
+    search: {
+      provider: "local",
     },
     sidebar: [
       { text: "Home", link: "/" },
       { text: "Our Team", link: "/our-team/" },
+      { text: "Recent Changes", link: "/recent-changes/" },
       {
         text: "Courses",
         items: [
@@ -171,13 +193,24 @@ export default defineConfig({
         ],
       },
       {
-        text: "Special Ops (Missions)",
+        text: "Special Ops",
         link: "/special-ops/",
         collapsed: true,
         items: [
           { text: "MCS ❤️ MCP", link: "/special-ops/mcs-mcp/" },
           { text: "Microsoft Learn Docs MCP", link: "/special-ops/ms-learn-mcp/" },
           { text: "Power Platform CLI MCP", link: "/special-ops/pac-cli-mcp/" },
+          { text: "YAML Specialist", link: "/special-ops/yaml-specialist/" },
+        ],
+      },
+      {
+        text: "Cowork Collective",
+        link: "/cowork-collective/",
+        collapsed: true,
+        items: [
+          { text: "Badge Check", link: "/cowork-collective/badge-check/" },
+          { text: "The Compliance Packet", link: "/cowork-collective/compliance-packet/" },
+          { text: "Out of Office Vacation Handoff", link: "/cowork-collective/out-of-office-prep/" },
         ],
       },
     ],
@@ -192,5 +225,8 @@ export default defineConfig({
     config: (md) => {
       md.use(mermaidPlugin);
     },
+  },
+  vite: {
+    plugins: [missionsPlugin(docsDir), downloadFilesPlugin(docsDir)],
   },
 });

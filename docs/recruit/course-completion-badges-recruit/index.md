@@ -1,19 +1,28 @@
 ---
 prev:
-  text: 'Understanding Licensing'
-  link: '/recruit/12-understanding-licensing'
+  text: Understanding Licensing
+  link: /recruit/12-understanding-licensing
 next:
-  text: 'Operative Overview'
-  link: '/operative'
+  text: Operative Overview
+  link: /operative
+short-description: Claim your badge and mark your achievement!
+difficulty: 1
+codename: OPERATION COURSE COMPLETION
+time: 5
+tags:
+  - completion
+products:
+  - copilot-studio
+industries:
+  - it
+created-date: 2025-08-20
+last-edited-date: 2026-03-27
 ---
+# 🚨 Final Mission: Securing Your Recruit Badge {#final-mission-securing-your-recruit-badge}
 
-# 🚨 Final Mission: Securing Your Recruit Badge
+<mission-meta />
 
-## 🕵️‍♂️ CODENAME: `OPERATION COURSE COMPLETION`
-
-> **⏱️ Operation Time Window:** `~5 minutes`  
-
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome, Recruit. You’ve completed your training. Now it’s time to **make it official**.
 
@@ -26,7 +35,7 @@ This final mission verifies that:
 Badges aren’t auto-issued. They’re validated by humans.  
 That’s why **every step below matters**.
 
-## 🏅 Secure Your Recruit Badge
+## 🏅 Secure Your Recruit Badge {#secure-your-recruit-badge}
 
 Every Agent Academy path, from **Recruit → Operative → Commander**, includes an official digital badge issued through the [Global AI Community](https://globalai.community/).
 
@@ -36,7 +45,7 @@ These badges are:
 - Shareable (LinkedIn, resumes, portfolios)
 - Tied to real technical work, not just attendance
 
-![Recruit Badge](./assets/recruitbadge.png)
+![Recruit Badge](../../images/mcs-agent-academy-recruit-badge.png)
 To ensure badges remain meaningful, we follow a **strict validation protocol**.
 
 > [!IMPORTANT]
@@ -46,12 +55,12 @@ To ensure badges remain meaningful, we follow a **strict validation protocol**.
 >
 > Your screenshots must clearly show the **IT Help Desk Agent** created by following the Recruit path instructions.
 
-### 🧭 Submission Protocol
+### 🧭 Submission Protocol {#submission-protocol}
 
 Please follow **each step exactly and in order**.  
 Missing or incomplete submissions are the #1 cause of badge delays.
 
-### 1. ⭐ Star the Agent Academy GitHub Repo
+### 1. ⭐ Star the Agent Academy GitHub Repo {#1-star-the-agent-academy-github-repo}
 
 👉 **[Agent Academy GitHub Repo](https://github.com/microsoft/agent-academy)**
 
@@ -63,7 +72,7 @@ Missing or incomplete submissions are the #1 cause of badge delays.
 
 Starring the repo is quick, free, and required for badge eligibility.
 
-### 2. 📤 Submit the Recruit Completion Form
+### 2. 📤 Submit the Recruit Completion Form {#2-submit-the-recruit-completion-form}
 
 👉 **[Recruit Completion Form](https://aka.ms/agent-academy-recruit/badge)**
 
@@ -96,7 +105,7 @@ Include **two screenshots**, clearly visible and unedited:
 
    ![Upload Image](./assets/uploadimage.png)
 
-### 3. 🧾 Complete the Badge Validation Form
+### 3. 🧾 Complete the Badge Validation Form {#3-complete-the-badge-validation-form}
 
 👉 **[Badge Validation Form](https://aka.ms/agent-academy-recruit/form)**
 
@@ -109,7 +118,7 @@ This form:
 Yes, it’s separate. Yes, it’s required.  
 This keeps the system scalable as participation grows.
 
-### 4. 🔐 Create & Log In to Your Global AI Community Account
+### 4. 🔐 Create & Log In to Your Global AI Community Account {#4-create-log-in-to-your-global-ai-community-account}
 
 👉 **[Global AI Community Account Log In](https://globalai.community/auth/login)**
 
@@ -122,7 +131,7 @@ If you don’t have an account:
 
 No account = no badge issuance (even with a valid submission).
 
-## ⏳ Badge Deployment Timeline
+## ⏳ Badge Deployment Timeline {#badge-deployment-timeline}
 
 Once all steps are completed correctly:
 
@@ -136,7 +145,7 @@ If any information is missing (screenshots, no badge form submission, etc), we w
 > Please don’t DM advocates or submit duplicate requests.  
 > Duplicate entries slow everyone down.
 
-## 🧠 Mission Intel
+## 🧠 Mission Intel {#mission-intel}
 
 Every submission is reviewed by a real human who wants you to succeed 💖  
 
@@ -148,18 +157,17 @@ Your participation:
 
 More missions are coming.
 
-## 📡 Stay Mission-Ready
+## 📡 Stay Mission-Ready {#stay-mission-ready}
 
 🎖 Congratulations, Recruit.  
 You didn’t just watch content—you *built something*.
 
-Next up: **Operative training**.
+Next up: **[Operative training](../../operative/)**.
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 Learn more about Power Platform Advocacy:
 
 ⚡ [Power Platform Advocacy Hub](https://aka.ms/power-advocates)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/final-mission" alt="Analytics" />
+<analytics-tag section="recruit" mission="final-mission" />

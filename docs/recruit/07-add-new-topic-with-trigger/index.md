@@ -1,23 +1,32 @@
 ---
 prev:
-  text: 'Create a custom agent using natural language with AI'
-  link: '/recruit/06-create-agent-from-conversation'
+  text: Create a custom agent using natural language with AI
+  link: /recruit/06-create-agent-from-conversation
 next:
-  text: 'Enhance user interactions in Topics with Adaptive Cards'
-  link: '/recruit/08-add-adaptive-card'
+  text: Enhance user interactions in Topics with Adaptive Cards
+  link: /recruit/08-add-adaptive-card
+short-description: Use Topics to define custom question/answer paths
+difficulty: 1
+codename: OPERATION STAY ON TOPIC
+time: 60
+tags:
+  - topics
+  - triggers
+products: [copilot-studio, sharepoint]
+industries:
+  - it
+created-date: 2025-08-20
+last-edited-date: 2026-02-19
 ---
+# 🚨 Mission 07: Add new topic with trigger and nodes {#mission-07-add-new-topic-with-trigger-and-nodes}
 
-# 🚨 Mission 07: Add new topic with trigger and nodes
-
-## 🕵️‍♂️ CODENAME: `OPERATION STAY ON TOPIC`
-
-> **⏱️ Operation Time Window:** `~60 minutes`
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
 [![Trigger video thumbnail](./assets/video-thumbnail.jpg)](https://www.youtube.com/watch?v=7iPAZaA8nJs "Watch the walkthrough on YouTube")
 
-## 🎯  Mission Brief
+## 🎯  Mission Brief {#mission-brief}
 
 You’ve built an agent. It listens, learns, and answers questions - but now it’s time to get more tactical. In this mission, you’ll go deep under the hood and teach your agent how to respond to specific prompts with precision.
 
@@ -33,7 +42,7 @@ With Topics and Triggers, your agent can:
 
 You’re not just building dialogue, you’re wiring up its decision making cortex. Welcome to the Neural Nexus.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you’ll learn:
 
@@ -43,11 +52,11 @@ In this mission, you’ll learn:
 1. Creating custom topics from scratch to handle specific user requests and tasks
 1. Building a functional topic that connects to SharePoint data using connectors and tools
 
-## 🤔 What is a Topic?
+## 🤔 What is a Topic? {#what-is-a-topic}
 
 A topic is a structured conversation that helps your agent respond to specific user questions or tasks. Think of a topic as a mini-conversation or task that your agent can handle. Each topic is designed to respond to a specific user question or request.
 
-### 🌌 Purpose of a topic
+### 🌌 Purpose of a topic {#purpose-of-a-topic}
 
 There are three common purposes for topics based on what users need:
 
@@ -72,7 +81,7 @@ There are three common purposes for topics based on what users need:
 
 You can also create topics for ambiguous questions like `I need help`, which ask users for more details before continuing.
 
-## 🐦 Why are topics useful?
+## 🐦 Why are topics useful? {#why-are-topics-useful}
 
 Topics help you,
 
@@ -82,7 +91,7 @@ Topics help you,
 
 - Solve user problems effectively.
 
-## 🪺 Types of topics
+## 🪺 Types of topics {#types-of-topics}
 
 1. **System topics** - these are built-in and handle common events such as:
     - Starting a conversation
@@ -97,11 +106,11 @@ Topics help you,
 
 ![Types of topics](assets/7.0_01_Topics.png)
 
-## 🧬 Anatomy of a topic
+## 🧬 Anatomy of a topic {#anatomy-of-a-topic}
 
 Each topic usually contains the following.
 
-### 🗣️ Trigger phrases
+### 🗣️ Trigger phrases {#trigger-phrases}
 
 These are words or sentences users might say to start the topic.
 
@@ -120,7 +129,7 @@ For a request device topic, trigger phrases could be
 - `Can I request a device?`
 - `Can you help me with a device request`
 
-### 💬 Conversation nodes
+### 💬 Conversation nodes {#conversation-nodes}
 
 A topic is made up of nodes which are steps the agent follows once the topic is triggered. You connect these steps to build a conversation flow that your agent follows when interacting with users.
 
@@ -243,7 +252,7 @@ This node lets your agent send non-message actions to external systems or channe
 > [!TIP]
 > Think of it as a "silent trigger" block that helps your agent do things behind the scenes or communicate with external tools without needing a user to say anything.
 
-## 🏋🏻‍♀️ Using Power Fx in your nodes
+## 🏋🏻‍♀️ Using Power Fx in your nodes {#using-power-fx-in-your-nodes}
 
 In Copilot Studio, Power Fx is a low-code programming language used to add logic and dynamic behavior to your agent. It's the same language used in Microsoft Power Apps, and it's designed to be simple and Excel-like, making it easy for developers and non-developers.
 
@@ -266,7 +275,7 @@ In Copilot Studio, Power Fx is a low-code programming language used to add logic
 
 - **Powerful:** it lets you personalize conversations, validate input, and control how your agent behaves based on user data.
 
-## 🏗️ How do I create and edit topics?
+## 🏗️ How do I create and edit topics? {#how-do-i-create-and-edit-topics}
 
 There are two ways you can create and edit topics for your agents.
 
@@ -300,7 +309,7 @@ This allows you to describe what you want using natural language, and Copilot wi
 - Lets you focus on logic and user experience instead of repetitive setup.
 - Makes it easier to iterate and improve conversation flows with minimal effort.
 
-#### ✨ Example prompts
+#### ✨ Example prompts {#example-prompts}
 
 - **Create a topic**
       - `Accept a user's name, age and date of birth and then repeat their responses back to them`
@@ -310,9 +319,9 @@ This allows you to describe what you want using natural language, and Copilot wi
       - `Add a question asking for the user’s date of birth`
       - `Summarize collected info in an Adaptive Card.`
 
-## 👩🏻‍🎨 OK, how do I design topics for my agent?
+## 👩🏻‍🎨 OK, how do I design topics for my agent? {#ok-how-do-i-design-topics-for-my-agent}
 
-### 🧙🏻‍♂️ Step 1 - understand what users need
+### 🧙🏻‍♂️ Step 1 - understand what users need {#step-1-understand-what-users-need}
 
 Start by identifying common questions or tasks users will ask your agent. These could be:
 
@@ -320,7 +329,7 @@ Start by identifying common questions or tasks users will ask your agent. These 
 - Common tasks users want to complete such as submitting a form
 - Problems users often face such as login issues
 
-### 📦 Step 2 - Group the scenarios
+### 📦 Step 2 - Group the scenarios {#step-2-group-the-scenarios}
 
 Organize the user needs into three categories based on what we learnt earlier - the purpose of a topic:
 
@@ -328,7 +337,7 @@ Organize the user needs into three categories based on what we learnt earlier - 
 - Task completion - the user wants to do something
 - Troubleshooting - the user needs help with resolving an issue
 
-### 🗺️ Step 3 - Map out the conversation
+### 🗺️ Step 3 - Map out the conversation {#step-3-map-out-the-conversation}
 
 Sketch a simple conversation flow of how the agent should respond
 
@@ -339,7 +348,7 @@ Sketch a simple conversation flow of how the agent should respond
 !!! tip
     Keep the conversation short and focused. Only ask what's necessary.
 
-### 🔀 Step 4 - Handle different conversation types
+### 🔀 Step 4 - Handle different conversation types {#step-4-handle-different-conversation-types}
 
 Design for both:
 
@@ -365,7 +374,7 @@ Example:
 
 - Agent: `Thanks for the details. I’ve submitted your leave request from July 15th to July 22nd for a family vacation. You’ll get a confirmation soon.`
 
-### 🤖 Step 5 - Use AI for unexpected questions
+### 🤖 Step 5 - Use AI for unexpected questions {#step-5-use-ai-for-unexpected-questions}
 
 Even if you've designed a topic for leave requests, users might ask questions that aren't directly covered. This is where AI features like the _Conversational boosting_ system topic come in handy.
 
@@ -391,7 +400,7 @@ If your agent is connected to your company's HR policy documents or internal web
 - AI can pull accurate answers from trusted knowledge sources.
 - It improves user experience by making the agent feel smarter and more responsive.
 
-### 🔬 Step 6 - Test the topic, the conversation flow
+### 🔬 Step 6 - Test the topic, the conversation flow {#step-6-test-the-topic-the-conversation-flow}
 
 Before publishing your topic:
 
@@ -401,14 +410,14 @@ Before publishing your topic:
 > [!TIP]
 > Apply improvements to your topic accordingly as you test, such as adding more nodes or removing nodes in-place of redirecting to another topic
 
-### ⚠️ Step 7 - Avoid duplicating website content
+### ⚠️ Step 7 - Avoid duplicating website content {#step-7-avoid-duplicating-website-content}
 
 Don't copy what's already on your website.
 
 - Focus on topics that users ask about often.
 - Add new topics based on chat history or support requests.
 
-### ✨ Example of conversation flow
+### ✨ Example of conversation flow {#example-of-conversation-flow}
 
 Below is an example of a topic that handles leave requests.
 
@@ -440,11 +449,11 @@ Agent responds with,
 
 `Your vacation leave request from August 5 to August 10 has been submitted. Your manager will review and get back to you shortly.`
 
-## 🧪 Lab 07 - Add a new topic with conversation nodes
+## 🧪 Lab 07 - Add a new topic with conversation nodes {#lab-07-add-a-new-topic-with-conversation-nodes}
 
 We're now going to learn how to add a new topic with a trigger and tools. This lab will cover creating a topic from blank so that you understand how to customize topics to your needs.
 
-### ✨ Use case
+### ✨ Use case {#use-case}
 
 **As an** employee
 
@@ -742,7 +751,7 @@ Let's begin!
 
 1. Go back to your browser tab with Copilot Studio and **refresh** the test pane to clear the test.
 
-## ✅ Mission Complete
+## ✅ Mission Complete {#mission-complete}
 
 Congratulations! 👏🏻 You've learnt how to add a new topic from scratch, how to add a tool which calls the Get items SharePoint connector action and use Power Fx to filter the response to only return devices where the status equals available and the device type equals laptop. 🙌🏻
 
@@ -750,7 +759,7 @@ This is the end of **Lab 07 - Add a new topic with conversation nodes**, select 
 
 ⏭️ [Move to **Enhance user interactions with Adaptive Cards** lesson](../08-add-adaptive-card/index.md)
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 🔗 [Use system topics](https://learn.microsoft.com/microsoft-copilot-studio/authoring-system-topics?mc_id=power-172618-ebenitez)
 
@@ -766,5 +775,4 @@ This is the end of **Lab 07 - Add a new topic with conversation nodes**, select 
 
 📺 [Add actions to agents using connectors](https://aka.ms/ai-in-action/copilot-studio/ep4)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/07-add-new-topic-with-trigger" alt="Analytics" />
+<analytics-tag section="recruit" mission="07-add-new-topic-with-trigger" />

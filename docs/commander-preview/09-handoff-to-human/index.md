@@ -7,15 +7,15 @@ next:
   link: '/commander-preview/10-governance-auth-dlp'
 ---
 
-# 🔄 Mission 09: Handoff to Human Agents
+# 🔄 Mission 09: Handoff to Human Agents {#mission-09-handoff-to-human-agents}
 
-## 🕵️‍♂️ **CLASSIFIED**
+## 🕵️‍♂️ **CLASSIFIED** {#classified}
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Configure your agent to hand off conversations to live human agents seamlessly and contextually. Understand how the Escalate system topic and Transfer conversation node work, and how handoff can be triggered implicitly (when a user asks for a human) or explicitly (within a topic flow). Learn how context variables such as conversation history, topics, and user-defined variables are passed to the engagement hub so the live agent can resume without the customer repeating themselves. Explore supported engagement hubs including Dynamics 365 Customer Service, ServiceNow, Salesforce, LivePerson, and generic hubs via custom adapters.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -25,7 +25,7 @@ In this mission, you'll learn:
 1. How to connect to supported engagement hubs: Dynamics 365 Customer Service, ServiceNow, Salesforce, LivePerson, and generic hubs
 1. How to customize agent behavior for escalation scenarios (greeting, escalate link, no-match messages)
 
-## 📖 References
+## 📖 References {#references}
 
 - [Customer engagement overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/customer-copilot-overview)
 - [Handoff pattern](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-hand-off)

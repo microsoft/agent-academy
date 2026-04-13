@@ -1,27 +1,36 @@
 ---
 prev:
-  text: 'Understanding Agent Models'
-  link: '/operative/05-model-selection'
+  text: Understanding Agent Models
+  link: /operative/05-model-selection
 next:
-  text: 'Multimodal Prompts'
-  link: '/operative/07-multimodal-prompts'
+  text: Multimodal Prompts
+  link: /operative/07-multimodal-prompts
+short-description: Implement enterprise-grade safety and compliance measures
+difficulty: 2
+codename: OPERATION SAFE HARBOR
+time: 45
+tags:
+  - ai-safety
+products:
+  - copilot-studio
+industries:
+  - hr
+created-date: 2026-01-14
+last-edited-date: 2026-03-31
 ---
+# 🚨 Mission 06: AI Safety and Content Moderation {#mission-06-ai-safety-and-content-moderation}
 
-# 🚨 Mission 06: AI Safety and Content Moderation
-
-## 🕵️‍♂️ CODENAME: `OPERATION SAFE HARBOR`
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<mission-meta />
 
 [![Safety](./assets/06-ai-safety-thumbnail_PlayButton.png)](https://youtu.be/2IjDV_D3Jb0?si=Aqp3TVRt5QnpKxsr "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome back, Operative. Your agents have become sophisticated, but with great power comes great responsibility. As your agents handle sensitive hiring data and interact with candidates, ensuring AI safety becomes critical.
 
 Your mission is **Operation Safe Harbor**: implement robust content moderation and AI safety controls for your Interview Agent. As your agents process resumes and conduct interviews, it's critical to prevent harmful content, uphold professional standards, and protect sensitive data. In this mission, you'll configure content filtering, set safety guardrails, and design custom responses for inappropriate input, using Microsoft Copilot Studio's enterprise-grade moderation features. By the end, your hiring system will balance powerful AI capabilities with responsible, legally compliant capabilities.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -49,7 +58,7 @@ While this mission focuses on **AI Safety** (responsible AI deployment, content 
   - Organizational controls and data loss prevention  
   - Regulatory compliance reporting  
 
-## 🛡️ Understanding AI safety in Copilot Studio
+## 🛡️ Understanding AI safety in Copilot Studio {#understanding-ai-safety-in-copilot-studio}
 
 Business agents handle sensitive scenarios daily:
 
@@ -101,7 +110,7 @@ Business agents must clearly communicate their AI nature because:
 > [!INFO] Learn more
 > These principles directly impact your hiring workflows by ensuring fair candidate treatment, protecting sensitive data, and maintaining professional standards. Learn more about Microsoft's [AI principles](https://www.microsoft.com/ai/responsible-ai) and [AI transparency requirements](https://learn.microsoft.com/copilot/microsoft-365/microsoft-365-copilot-transparency-note).
 
-## 👮‍♀️ Content moderation in Copilot Studio
+## 👮‍♀️ Content moderation in Copilot Studio {#content-moderation-in-copilot-studio}
 
 Copilot Studio provides built-in content moderation that operates on two levels: **input filtering** (what users send) and **output filtering** (what your agent responds).
 
@@ -182,7 +191,7 @@ This approach creates a more sophisticated safety system that provides helpful g
 > [!INFO] Troubleshooting Responsible AI Filtering
 > If your agent responses are being unexpectedly filtered or blocked, see the official troubleshooting guide: [Troubleshoot agent response filtered by Responsible AI](https://learn.microsoft.com/microsoft-copilot-studio/troubleshoot-agent-response-filtered-by-responsible-ai). This comprehensive guide covers common filtering scenarios, diagnostic steps, and solutions for content moderation issues.
 
-## 🎭 Advanced safety features
+## 🎭 Advanced safety features {#advanced-safety-features}
 
 ### Built-in security protections
 
@@ -218,7 +227,7 @@ All published agents automatically have threat detection enabled and display an 
 > [!TIP] Learn more
 > **Agent Runtime Protection Status** is primarily a **Security** and **Governance** feature that bridges into AI Safety concerns. While it monitors content moderation (AI Safety), its main focus is on threat detection, authentication controls, and policy compliance (Security/Governance). Learn more about [agent runtime protection](https://learn.microsoft.com/microsoft-copilot-studio/security-agent-runtime-view)
 
-## 🎛️ Copilot Control System: Enterprise governance framework
+## 🎛️ Copilot Control System: Enterprise governance framework {#copilot-control-system-enterprise-governance-framework}
 
 For organizations deploying AI agents at scale, Microsoft's **Copilot Control System (CCS)** provides comprehensive governance capabilities that extend beyond individual agent safety controls. CCS is an enterprise framework that integrates with familiar admin tools to provide centralized management, security, and oversight of Microsoft 365 Copilot and custom AI agents across your organization.
 
@@ -285,7 +294,7 @@ While this mission focuses on individual agent safety, organizations interested 
 > [!TIP] **Governance & Enterprise Scale**
 > **Copilot Control System** bridges AI Safety with enterprise **Governance** and **Security** at organizational scale. While this mission focuses on individual agent safety controls, CCS provides the enterprise framework for managing hundreds or thousands of agents across your organization. Learn more about [Copilot Control System overview](https://adoption.microsoft.com/copilot-control-system/)
 
-## 👀Human-in-the-loop concepts
+## 👀Human-in-the-loop concepts {#human-in-the-loop-concepts}
 
 While content moderation automatically blocks harmful content, agents can also [escalate complex conversations to human agents](https://learn.microsoft.com/microsoft-copilot-studio/advanced-hand-off) when needed. This human-in-the-loop approach ensures:
 
@@ -296,7 +305,7 @@ While content moderation automatically blocks harmful content, agents can also [
 
 Human escalation is different from content moderation - escalation actively transfers conversations to live agents with full context, while content moderation silently prevents harmful responses. These concepts will be covered in a future mission!
 
-## 🧪 Lab 6: AI safety in your Interview Agent
+## 🧪 Lab 6 - AI safety in your Interview Agent {#lab-6-ai-safety-in-your-interview-agent}
 
 Now let's explore how the three content blocking mechanisms work in practice and implement comprehensive safety controls.
 
@@ -307,7 +316,7 @@ Now let's explore how the three content blocking mechanisms work in practice and
     - **Have completed Mission 05** and have your Interview Agent ready.
     - Understanding of Copilot Studio topics and [Generative Answers nodes](https://learn.microsoft.com/microsoft-copilot-studio/nlu-boost-node?WT.mc_id=power-182762-scottdurow)
 
-### Lab 6.1 Adding AI safety disclosure to agent greeting
+### 🧪 Lab 6.1 - Adding AI safety disclosure to agent greeting
 
 Let's start by updating your Interview Agent's greeting to properly disclose its AI nature and safety measures.
 
@@ -336,7 +345,7 @@ Let's start by updating your Interview Agent's greeting to properly disclose its
 
 1. Select **Test** → **Refresh** to start new conversation, and then check that your new greeting is visible in the chat pane.
 
-### Lab 6.2 Understanding content moderation errors and custom messages
+### 🧪 Lab 6.2 - Understanding content moderation errors and custom messages
 
 Let's explore how Responsible AI content filtering works and how to handle blocked content.
 
@@ -383,7 +392,7 @@ Let's explore how Responsible AI content filtering works and how to handle block
     - **Filtered content**: Error messages like "ContentFiltered".
     - **Activity map:** When content moderation is triggered, you will see that there are no nodes shown on the activity map since the content was filtered as input.
 
-### Lab 6.3 Adding custom error handling
+### 🧪 Lab 6.3 - Adding custom error handling
 
 1. Select the **Topics** tab → System → and open the **On Error** topic. If you select the `ContentFiltered` message in the test chat, it will automatically show for you because it was the topic that generated that error message.  
     ![Error topic condition](./assets/6-error-topic.png)
@@ -401,7 +410,7 @@ Let's explore how Responsible AI content filtering works and how to handle block
 1. **Test the fallback** by trying the potentially filtered questions again and notice the response.  
     ![Content filtered in M365 Copilot](./assets/6-filtering-in-m365-copilot.png)
 
-### Lab 6.4 Generative Answers content moderation level and prompt modification
+### 🧪 Lab 6.4 - Generative Answers content moderation level and prompt modification
 
 Generative Answers is a feature of Copilot Studio Topics that utilizes the configured knowledge to answer specific questions. When not using Generative Orchestration or when Web Search is turned on, there is a built in Topic called *Conversation Boosting*, however since we do have Generative Orchestration turned on and Web Search is turned off, we shall create a custom topic to answer questions about Candidates using Generative Answers.
 
@@ -436,7 +445,7 @@ Generative Answers is a feature of Copilot Studio Topics that utilizes the confi
 1. In the **text box**, type the following and click **Save**:
 
     ```text
-    Do not provide content about protected characteristics such as age, race, gender, religion, political affiliation, disability, family status, or financial situation.
+    If asked about the age of the candidate, always respond by saying that this should not be used to discriminate between candidates.
     ```
 
     ![Content Moderation in Generative Answers](./assets/6-conversation-boosting-moderation.png)
@@ -450,7 +459,7 @@ Generative Answers is a feature of Copilot Studio Topics that utilizes the confi
 1. The agent should respond politely that age should not be used to discriminate.  
      ![Generative Answers Moderation Test](./assets/6-generative-answer-test.png)
 
-### Lab 6.5 Using agent instructions to control scope and responses
+### 🧪 Lab 6.5 - Using agent instructions to control scope and responses
 
 Let's see how agent instructions can deliberately restrict responses.
 
@@ -475,7 +484,7 @@ Let's see how agent instructions can deliberately restrict responses.
 
 1. Select **Save**
 
-### Lab 6.6 Testing instruction-based blocking
+### 🧪 Lab 6.6 - Testing instruction-based blocking
 
 Test these prompts and observe how instructions override content moderation:
 
@@ -507,7 +516,7 @@ Observe these behaviors:
 - **Instruction-based refusal**: Polite explanation with alternatives
 - **Unknown Intent**: "I'm not sure how to help with that" → fallback topic
 
-### Lab 6.7 Monitoring Security Threats with Agent Runtime Protection Status
+### 🧪 Lab 6.7 - Monitoring Security Threats with Agent Runtime Protection Status
 
 Learn to identify and analyze security threats using Copilot Studio's built-in monitoring.
 
@@ -522,7 +531,7 @@ Learn to identify and analyze security threats using Copilot Studio's built-in m
     ![Protection Status](./assets/6-protection-status.png)
 1. **Click on your agent's Protection Status** to view the protection summary dialog
 
-### Lab 6.8 Analyzing security data
+### 🧪 Lab 6.8 - Analyzing security data
 
 1. **Publish** your agent to Teams, and try the prompts above to trigger content moderation.
 1. After a short period of time, the content moderation tests you performed should be available in the **Threat detection** section.
@@ -537,7 +546,7 @@ Learn to identify and analyze security threats using Copilot Studio's built-in m
     - **Session Block Rate Trend**: Timeline showing when security events occurred  
     ![Protection Status Details](./assets/6-protection-status-details.png)
 
-## 🎉 Mission Complete
+## 🎉 Mission Complete {#mission-complete}
 
 Excellent work, Operative. You've successfully implemented comprehensive AI safety controls across your hiring agent system. Your agents now have enterprise-grade safety measures that protect both your organization and candidates while maintaining intelligent functionality.
 
@@ -565,7 +574,7 @@ In your next mission, you'll enhance your agents with multimodal capabilities to
 
 ⏩ [Move to Mission 07: Multi-Modal Prompts](../07-multimodal-prompts/index.md)
 
-## 📚 Tactical resources
+## 📚 Tactical resources {#tactical-resources}
 
 ### Content moderation & safety
 
@@ -601,5 +610,4 @@ In your next mission, you'll enhance your agents with multimodal capabilities to
 
 📖 [Microsoft Responsible AI Standard](https://www.microsoft.com/insidetrack/blog/responsible-ai-why-it-matters-and-how-were-infusing-it-into-our-internal-ai-projects-at-microsoft/?WT.mc_id=power-182762-scottdurow)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/06-ai-safety" alt="Analytics" />
+<analytics-tag section="operative" mission="06-ai-safety" />

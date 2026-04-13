@@ -1,21 +1,30 @@
 ---
 prev:
-  text: 'Integrate with MCP Servers'
-  link: '/operative/10-mcp'
+  text: Integrate with MCP Servers
+  link: /operative/10-mcp
 next:
-  text: 'Securing Your Operative Badge'
-  link: '/operative/course-completion-badges-operative'
+  text: Securing Your Operative Badge
+  link: /operative/course-completion-badges-operative
+short-description: Collect and process user feedback for continuous improvement
+difficulty: 2
+codename: OPERATION ECHO
+time: 45
+tags:
+  - feedback
+  - adaptive-cards
+products: [copilot-studio, dataverse, teams]
+industries:
+  - hr
+created-date: 2026-01-14
+last-edited-date: 2026-03-11
 ---
+# 🚨 Mission 11: Collecting feedback from users {#mission-11-collecting-feedback-from-users}
 
-# Collecting feedback from users
-
-## 🕵️‍♂️ CODENAME: `OPERATION ECHO`
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<mission-meta />
 
 [![Feedback](./assets/11-collecting-feedback_Thumbnail_PlayButton.png)](https://youtu.be/QRBimOsgKEQ?si=05sjJwz6tv4MO6Z6 "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome back, Agent. In [Mission 10](../10-mcp/index.md), you learned how to integrate with MCP servers to extend your agent.
 
@@ -27,7 +36,7 @@ Your assignment, should you choose to accept it, is **Operation Echo**, a critic
 
 *Listen, analyze, adapt* - this is the operative's creed when processing user intelligence.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -37,7 +46,7 @@ In this mission, you'll learn:
 1. How to implement conditional feedback flows based on CSAT ratings
 1. How to log custom telemetry events to Azure Application Insights for advanced feedback tracking
 
-## 🐿️ The importance of user feedback
+## 🐿️ The importance of user feedback {#the-importance-of-user-feedback}
 
 Collecting user feedback is critical for improving a conversational agent's performance and user satisfaction. In Microsoft Copilot Studio, there are two primary mechanisms to gather feedback from users after they receive an AI-generated response:
 
@@ -48,7 +57,7 @@ Collecting user feedback is critical for improving a conversational agent's perf
 
 Collecting user feedback after agent responses is important for continuous improvement. It helps quantify satisfaction, identify knowledge gaps, and directly informs how you can refine your Copilot agent's answers. By analyzing feedback trends and comments, you can prioritize enhancements that lead to a better user experience.
 
-## 💬 Built-in thumbs up/down reactions
+## 💬 Built-in thumbs up/down reactions {#built-in-thumbs-updown-reactions}
 
 Copilot Studio provides a built-in reactions feature that lets end-users react to each agent response with a thumbs-up or thumbs-down. This feature is enabled by default for all new and existing Copilot Studio custom agents, and appears across the common channels where your agent is used:
 
@@ -63,7 +72,7 @@ After each AI response, users will see a small UI with 👍🏻/👎🏻 icons. 
 - The Copilot Studio Analytics page aggregates total reactions and the breakdown of positive vs. negative feedback.
 - If a user provides a comment with their rating, it's saved to the conversation transcript. You can view these comments for context (for example, what was "not useful") via the analytics UI or directly from Dataverse records (via the `conversationtranscript` table).
 
-## 🪣 Purpose and value of thumbs reactions
+## 🪣 Purpose and value of thumbs reactions {#purpose-and-value-of-thumbs-reactions}
 
 The thumbs up/down system's primary purpose is to measure user satisfaction at the response level. It provides immediate, granular feedback on whether each answer fulfilled the user's needs or not. Key benefits include:
 
@@ -76,7 +85,7 @@ The thumbs up/down system's primary purpose is to measure user satisfaction at t
 
 This reaction mechanism gives immediate, objective insight into how well the agent is performing from the user's perspective. Reviewing user feedback helps identify new user scenarios and issues, and make improvements based on what users are asking for. In short, thumbs up/down feedback is a quick pulse-check on each answer's usefulness.
 
-## 📊 Viewing and interpreting feedback analytics
+## 📊 Viewing and interpreting feedback analytics {#viewing-and-interpreting-feedback-analytics}
 
 Copilot Studio provides a dedicated analytics view to make sense of the collected reactions:
 
@@ -92,7 +101,7 @@ Interpreting the data: A high ratio of 👍🏻 vs 👎🏻 means most answers a
 > [!TIP] Best Practice
 > Regularly review thumbs-down feedback comments. They often contain direct clues `"The agent gave the wrong definition"` or `"It didn't cite a source"` that you can address by updating your knowledge base or refining prompts.
 
-## 📒 Managing the reactions feature
+## 📒 Managing the reactions feature {#managing-the-reactions-feature}
 
 Because this feature is on by default, makers should be aware of how to manage it:
 
@@ -106,7 +115,7 @@ Because this feature is on by default, makers should be aware of how to manage i
 > [!TIP] Best Practice
 > If your agent is public or customer-facing, definitely keep the feedback feature `On` - it provides invaluable insight. If your agent is in a limited trial or internal-only, you might temporarily turn it off to avoid confusing testers, then re-enable for real users. Always abide by user feedback privacy guidelines (hence the optional disclaimer).
 
-## 📇 Collecting feedback via Adaptive Cards - custom approach
+## 📇 Collecting feedback via Adaptive Cards - custom approach {#collecting-feedback-via-adaptive-cards-custom-approach}
 
 An alternative to the built-in feature is building a custom feedback prompt using an Adaptive Card. We covered adaptive cards previously in [Recruit](../../recruit/10-add-event-triggers/index.md). As a reminder: Adaptive Cards are essentially UI panels defined in JSON that you can embed in an agent's conversation to collect input or display information. In this context, you design a card that asks the user for feedback - for example, `"Please rate this answer"` with an **Input.ChoiceSet element** that displays a dropdown or radio buttons of feedback values for the user to select from, and the user's response is sent back to the agent as structured data.
 
@@ -133,7 +142,7 @@ This means after the agent generates an answer, you can immediately follow up wi
 > [!TIP] Best Practice
 > Adaptive Cards in Copilot Studio are supported in all channels that the agent supports, but be mindful of Adaptive Card schema version differences. Copilot Studio uses Adaptive Cards v1.6 in the web test chat, but Microsoft Teams and some other channels support up to **v1.5**. In practice, this means if you design your card with features only in 1.6, it *might not* render in Microsoft Teams. Best practice is to stick to v1.5 features for broad compatibility, or test your card in each channel. The good news is the typical feedback card (text, buttons) is basic and works fine in all channels.
 
-## 🦜 Why use Adaptive Cards for feedback
+## 🦜 Why use Adaptive Cards for feedback {#why-use-adaptive-cards-for-feedback}
 
 Using an Adaptive Card for feedback requires additional effort to set up, but it offers greater flexibility and control. Some reasons you might choose this approach:
 
@@ -145,7 +154,7 @@ Using an Adaptive Card for feedback requires additional effort to set up, but it
 
 In summary, Adaptive Cards for feedback are ideal when you need more than a binary signal or want to handle the feedback in custom ways. It's often used by developers who want to experiment with feedback collection beyond the basics.
 
-## ⭐ Best practices for Adaptive Card feedback
+## ⭐ Best practices for Adaptive Card feedback {#best-practices-for-adaptive-card-feedback}
 
 1. **Keep it brief and unobtrusive**: Users may get annoyed if after every message they have to fill out a survey. Make the card simple - usually a quick question with two buttons or a small rating scale. The [example](https://learn.microsoft.com/microsoft-copilot-studio/guidance/adaptive-card-add-feedback-for-every-response) in Microsoft's guidance shows the agent's answer in the card followed by a subtle prompt `"Generated answer, please rate it."`. The prompt is small and polite, which is good. Avoid very large or complex cards for routine feedback.
 
@@ -160,7 +169,7 @@ In summary, Adaptive Cards for feedback are ideal when you need more than a bina
 > [!NOTE]
 > In the Copilot Studio documentation [example](https://learn.microsoft.com/microsoft-copilot-studio/guidance/adaptive-card-add-feedback-for-every-response), once the adaptive card feedback was set up, they provided a YAML snippet indicating how the agent can route the "useful/not useful" responses to a specific handling topic. This is a hint at the implementation: essentially treat the feedback like an intent that triggers either a follow-up or just completes. Implementing this means editing your agent's topics (or code) to catch those JSON responses.
 
-## 🧇 Comparison summary: thumbs reactions vs Adaptive Card feedback
+## 🧇 Comparison summary: thumbs reactions vs Adaptive Card feedback {#comparison-summary-thumbs-reactions-vs-adaptive-card-feedback}
 
 Both feedback collection methods aim to improve your Copilot agent via user input, but they serve different needs. Here's a side-by-side comparison to help understand when to use each:
 
@@ -180,20 +189,20 @@ Some advanced implementations even use both: for example, keeping thumbs up/down
 
 Ultimately, for most scenarios using one method at a time is clearer. If you opt for custom adaptive cards, it often makes sense to disable the default reactions to provide a single, cohesive feedback channel to the user.
 
-## 🎀 Wrapping it up (summary)
+## 🎀 Wrapping it up (summary) {#wrapping-it-up-summary}
 
 | ⚡ **Built-in reactions: quick wins** | 🛠️ **Adaptive cards: custom fit** |
 | ------------ | ------------ |
 | Enable built-in 👍🏻/👎🏻 reactions to rapidly gauge user satisfaction on each answer. This yields instant analytics (no coding) and helps identify trouble spots early. | Use adaptive cards for feedback when you need more than a `yes/no`. You can ask tailored questions and route feedback into your own data stores or workflows for deeper analysis and action. |
 
-## 🧪 Lab 11 - Provide feedback using built-in interactions vs adaptive cards (custom)
+## 🧪 Lab 11 - Provide feedback using built-in interactions vs adaptive cards (custom) {#lab-11-provide-feedback-using-built-in-interactions-vs-adaptive-cards-custom}
 
 We're now going to provide feedback as a user using the following methods,
 
 1. Built-in user interactions and review them using the Analytics page of the agent.
 1. Build a custom adaptive card to collect feedback when the user has responded as dissatisfied with a 1 star or 2 stars for the CSAT survey. Bonus exercise of logging this as a telemetry event in Azure Application Insights.
 
-### ✨ Prerequisites to complete this mission
+### ✨ Prerequisites to complete this mission {#prerequisites-to-complete-this-mission}
 
 For the built-in interactions to be captured in the Analytics page of the agent, the agent must be published. Ensure the **Interview Agent** is published.
 
@@ -698,7 +707,7 @@ Let's begin!
 
     ![FeedbackData column](assets/11.4_28_ExtendSerializedData.png)
 
-## ✅ Mission Complete
+## ✅ Mission Complete {#mission-complete}
 
 Congratulations! 👏🏻 Excellent work, Operative.
 
@@ -712,7 +721,7 @@ You learned how to collect feedback using an adaptive card and log telemetry to 
 
 Feedback is paramount to iterative improvements to your agents! It's not optional. It's how good agents become great ones.
 
-## 🎯 What’s Next
+## 🎯 What’s Next {#whats-next}
 
 You now have everything you need to take your agent **from prototype to production**.
 
@@ -728,7 +737,7 @@ If you need a refresher, revisit the [Recruit publishing module](../../recruit/1
 > [!IMPORTANT]
 > If you are using a trial license to complete the course, you will not be able to publish.Publishing is not required to get a badge for this lab.
 
-## 🏁 Final Step: Deploy & Earn Your Badge
+## 🏁 Final Step: Deploy & Earn Your Badge {#final-step-deploy-earn-your-badge}
 
 🚀 **Publish your agent**  
 📊 **Verify feedback is flowing**  
@@ -740,7 +749,7 @@ The field is yours.
 
 👉 **[Claim](./../course-completion-badges-operative/index.md) your Operative badge**  
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 📖 [Collect thumbs up or down feedback and comments for your agents](https://learn.microsoft.com/power-platform/release-plan/2025wave1/microsoft-copilot-studio/collect-thumbs-up-or-down-feedback-comments-agents?source=recommendations?WT.mc_id=power-188561-ebenitez)
 
@@ -752,5 +761,4 @@ The field is yours.
 
 📖 [Obtain feedback for every response](https://learn.microsoft.com/microsoft-copilot-studio/guidance/adaptive-card-add-feedback-for-every-response?WT.mc_id=power-188561-ebenitez)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/11-obtain-user-feedback" alt="Analytics" />
+<analytics-tag section="operative" mission="11-obtain-user-feedback" />

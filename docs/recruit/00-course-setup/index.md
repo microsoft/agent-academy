@@ -1,26 +1,38 @@
 ---
 prev:
-  text: 'Recruit overview'
-  link: '/recruit'
+  text: Recruit overview
+  link: /recruit
 next:
-  text: 'Introduction to Agents'
-  link: '/recruit/01-introduction-to-agents'
+  text: Introduction to Agents
+  link: /recruit/01-introduction-to-agents
+short-description: 'Set up your dev environment, Copilot Studio trial, and SharePoint site'
+difficulty: 1
+codename: OPERATION DEPLOYMENT READY
+time: 30
+tags:
+  - setup
+products:
+  - copilot-studio
+  - sharepoint
+  - microsoft-365
+industries:
+  - it
+created-date: 2025-08-20
+last-edited-date: 2026-03-16
 ---
 
-# 🚨 Mission 00: Course Setup
+# 🚨 Mission 00: Course Setup {#mission-00-course-setup}
 
-## 🕵️‍♂️ CODENAME: `OPERATION DEPLOYMENT READY`
+<mission-meta />
 
-> **⏱️ Operation Time Window:** `~30 minutes`  
-
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome to the first mission of your training as a Copilot Studio Agent.  
 Before you can start building your first AI agent, you need to establish your **field-ready development environment**.
 
 This briefing outlines the systems, access credentials, and setup steps required to successfully operate in the Microsoft 365 ecosystem.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 Your mission includes:
 
@@ -34,7 +46,7 @@ Your mission includes:
 > **Already have access to Microsoft 365, Power Platform, and Copilot Studio?**
 > Steps 1–4 below walk you through creating a **new trial environment from scratch**. If you already have a Microsoft 365 business tenant with access to Power Platform and Copilot Studio, you can **skip directly to [Step 5: Create new SharePoint site](#step-5-create-new-sharepoint-site)**. Steps 1–4 are only needed if you want to set up a dedicated trial environment to test these capabilities.
 
-## 🔍 Prerequisites
+## 🔍 Prerequisites {#prerequisites}
 
 Before you begin, ensure you have:
 
@@ -43,9 +55,7 @@ Before you begin, ensure you have:
 1. Basic familiarity with Microsoft 365 (for example, signing into Office apps or Teams).  
 1. (Optional) A credit card or billing method if you plan to purchase paid licenses.
 
----
-
-## 🧪 Trial Environment Setup (Steps 1–4)
+## 🧪 Trial Environment Setup (Steps 1–4) {#trial-environment-setup-steps-14}
 
 ## Step 1: Get a Microsoft 365 Account
 
@@ -103,6 +113,8 @@ Using the same Microsoft 365 tenant in Step 1, sign up for a Power Apps Develope
 
 > [!NOTE]
 > If you are using an existing Microsoft 365 account and did not create one in Step 1, for example - using your own account in your work organization, your IT administrator (or the equivalent) team who manages your tenant/environments might have turned off the sign up process. In this case, please contact your administrator, or create a test tenant as per Step 1.
+>
+> If you are using an existing environment from your organization, ensure it is **not** a managed environment. Managed environment restrictions can prevent certain features — such as adding Power Automate flows as agent tools — from working correctly.
 
 ## Step 4: Enable Ability to Publish with the Copilot Studio Trial
 
@@ -168,9 +180,7 @@ First, you need a security group to hold everyone you want to be able to publish
 
     ![Save](images/pp-save.png)
 
----
-
-## 🔧 Required Setup (Everyone)
+## 🔧 Required Setup (Everyone) {#required-setup-everyone}
 
 The following steps are required regardless of whether you're using a trial or an existing environment.
 
@@ -240,7 +250,7 @@ You need to make sure you fill in this list with at least 4 sample data items an
 
 When adding sample data, make sure that the following fields are filled out:
 
-- Device photo - use the images from the [device images folder](https://github.com/microsoft/agent-academy/tree/main/docs/recruit/00-course-setup/images/device-images)
+- Device photo - use the device images below
 - Title
 - Status
 - Manufacturer
@@ -253,6 +263,8 @@ When adding sample data, make sure that the following fields are filled out:
 - Order #
 - Image - use the following links
 
+<download-files path="recruit/00-course-setup/assets/device-images" label="Download device images" />
+
 | Device | URL |
 | ------ | --- |
 | Surface Laptop 13 | [https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Laptop-13.png](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Laptop-13.png) |
@@ -260,7 +272,7 @@ When adding sample data, make sure that the following fields are filled out:
 | Surface Pro | [https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Pro-12.png](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Pro-12.png) |
 | Surface Studio | [https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Studio.png](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Studio.png) |
 
-## ✅ Mission Complete
+## ✅ Mission Complete {#mission-complete}
 
 You’ve successfully:
 
@@ -271,5 +283,4 @@ You’ve successfully:
 
 You're officially cleared to begin your **Recruit-level agent training** in [Lesson 01](../01-introduction-to-agents/index.md).  
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/00-course-setup" alt="Analytics" />
+<analytics-tag section="recruit" mission="00-course-setup" />

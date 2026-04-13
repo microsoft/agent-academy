@@ -1,29 +1,38 @@
 ---
 prev:
-  text: 'Introduction to Agents'
-  link: '/recruit/01-introduction-to-agents'
+  text: Introduction to Agents
+  link: /recruit/01-introduction-to-agents
 next:
-  text: 'Deploy a Declarative Agent for Microsoft 365 Copilot'
-  link: '/recruit/03-create-a-declarative-agent-for-M365Copilot'
+  text: Deploy a Declarative Agent for Microsoft 365 Copilot
+  link: /recruit/03-create-a-declarative-agent-for-M365Copilot
+short-description: 'Learn the building blocks: knowledge, skills, autonomy'
+difficulty: 1
+codename: OPERATION CORE PROTOCOL
+time: 30
+tags:
+  - fundamentals
+products:
+  - copilot-studio
+industries:
+  - it
+created-date: 2025-08-20
+last-edited-date: 2026-02-20
 ---
+# 🚨 Mission 02: Copilot Studio Fundamentals {#mission-02-copilot-studio-fundamentals}
 
-# 🚨 Mission 02: Copilot Studio Fundamentals
-
-## 🕵️‍♂️ CODENAME: `OPERATION CORE PROTOCOL`
-
-> **⏱️ Operation Time Window:** `~30 minutes – intel only, no fieldwork required`  
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
 [![Copilot Studio fundamentals video thumbnail](./assets/video-thumbnail.jpg)](https://www.youtube.com/watch?v=x4OCwDRGeLE "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome, Recruit. This mission will equip you with foundational intel to understand how Copilot Studio works, and how to build intelligent agents that deliver real business value.
 
 Before building your first agent, you need to understand the four key components that make up every custom AI agent: Knowledge, Tools, Topics, and Instructions. You’ll also learn how these elements work together in the Copilot Studio orchestrator.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you will:
 
@@ -219,9 +228,7 @@ sequenceDiagram
     Agent-->>User: "Your current PTO balance is 12 days."
 ```
 
----
-
-## 🎉 Mission Complete
+## 🎉 Mission Complete {#mission-complete}
 
 You’ve successfully completed your fundamentals briefing. You’ve now learned the four essential building blocks of any agent in Copilot Studio:
 
@@ -234,5 +241,4 @@ With these components in place, you can build a basic agent that answers questio
 
 Up next: You'll build your [first declarative agent for M365 Copilot](../03-create-a-declarative-agent-for-M365Copilot/index.md).
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/02-copilot-studio-fundamentals" alt="Analytics" />
+<analytics-tag section="recruit" mission="02-copilot-studio-fundamentals" />

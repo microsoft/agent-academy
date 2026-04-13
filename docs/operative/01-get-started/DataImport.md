@@ -4,14 +4,13 @@ If you are importing one of the starter solutions for modules 2 or later, follow
 
 ---
 
-## 🧪 Lab 1.2: Import sample data
+## 🧪 Lab 1.2 - Import sample data {#lab-12-import-sample-data}
 
 In this lab, you will add sample data to some of the tables that you imported in your starter solution.
 
 ### Download the files to import
 
-1. **[Download](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/operative/01-get-started/assets/evaluation-criteria.csv)** the CSV-file with the evaluation criteria
-1. **[Download](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/operative/01-get-started/assets/job-roles.csv)** the CSV-file with the job roles
+<download-files path="operative/01-get-started/assets/sample-data" label="Download sample data" />
 
 #### Import the Job Role sample data
 

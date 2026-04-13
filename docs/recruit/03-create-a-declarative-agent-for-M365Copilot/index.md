@@ -1,23 +1,34 @@
 ---
 prev:
-  text: 'Copilot Studio Fundamentals'
-  link: '/recruit/02-copilot-studio-fundamentals'
+  text: Copilot Studio Fundamentals
+  link: /recruit/02-copilot-studio-fundamentals
 next:
-  text: 'Creating a Solution for Your Agent'
-  link: '/recruit/04-creating-a-solution'
+  text: Creating a Solution for Your Agent
+  link: /recruit/04-creating-a-solution
+short-description: 'Add your own agent to the Microsoft 365 Copilot, grounded in a prompt'
+difficulty: 1
+codename: OPERATION COPILOT EXTENSION
+time: 60
+tags:
+  - declarative-agents
+products:
+    - copilot-studio
+    - microsoft-365
+    - teams
+industries:
+  - it
+created-date: 2025-08-20
+last-edited-date: 2026-03-18
 ---
+# 🚨 Mission 03: Deploy a Declarative Agent for Microsoft 365 Copilot {#mission-03-deploy-a-declarative-agent-for-microsoft-365-copilot}
 
-# 🚨 Mission 03: Deploy a Declarative Agent for Microsoft 365 Copilot
-
-## 🕵️‍♂️ CODENAME: `OPERATION COPILOT EXTENSION`
-
-> **⏱️ Operation Time Window:** `~60 minutes`
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
 [![Create a Declarative Agent video thumbnail](./assets/video-thumbnail.jpg)](https://www.youtube.com/watch?v=BVNUmLXFCq8 "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome to your first field assignment, Agent Maker. You’ve been selected to design, equip, and deploy a Declarative Agent - a specialized operative embedded directly into Microsoft 365 Copilot and Microsoft Teams.
 
@@ -25,7 +36,7 @@ Unlike traditional agents, declarative agents operate with a defined mission (in
 
 Let’s go.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you’ll learn:
 
@@ -35,11 +46,11 @@ In this mission, you’ll learn:
 1. Adding AI prompts as tools to enhance your agent's specialized knowledge and problem-solving abilities
 1. Publishing and testing your declarative agent in Microsoft 365 Copilot and Microsoft Teams
 
-## 🕵🏻‍♀️ What is a declarative agent for Microsoft 365 Copilot?
+## 🕵🏻‍♀️ What is a declarative agent for Microsoft 365 Copilot? {#what-is-a-declarative-agent-for-microsoft-365-copilot}
 
 Declarative agents are tailored versions of Microsoft 365 Copilot. You can customize Microsoft 365 Copilot to meet specific business needs by providing it with instructions to support a particular process, ground it with enterprise knowledge, and leverage tools for wider extensibility. This allows organizations to create personalized experiences with greater functionality for their users.
 
-## 🤔 Why would I use Microsoft Copilot Studio to build a declarative agent?
+## 🤔 Why would I use Microsoft Copilot Studio to build a declarative agent? {#why-would-i-use-microsoft-copilot-studio-to-build-a-declarative-agent}
 
 As a maker, there's a chance you've already explored [Agent Builder in Microsoft 365 Copilot)](https://learn.microsoft.com/microsoft-365-copilot/extensibility/copilot-studio-agent-builder?WT.mc_id=power-172614-ebenitez) in Microsoft 365 Copilot and so you're probably wondering _why build a declarative agent in Microsoft Copilot Studio?_
 
@@ -99,18 +110,18 @@ Let's expand what we've learnt from the feature comparison table.
 
 In summary, declarative agents in Microsoft Copilot Studio allow customization of Microsoft 365 Copilot to suit business needs through integration of enterprise knowledge systems, tools to connect to external services or AI GPT models.
 
-## 🧪 Lab 03: Build a declarative agent in Microsoft Copilot Studio for Microsoft 365 Copilot
+## 🧪 Lab 03: Build a declarative agent in Microsoft Copilot Studio for Microsoft 365 Copilot {#lab-03-build-a-declarative-agent-in-microsoft-copilot-studio-for-microsoft-365-copilot}
 
 We'll next learn how to build a declarative agent for a "Business-to-Employee" use case which will act as an **IT helpdesk agent**.
 
 > [!NOTE]
 > This lab will outline steps to add a Prompt as a tool. The following lessons will dive into adding knowledge sources and adding other tools available. Keeping it simple for your learning 😊
 
-### 👩🏻‍💼 Understanding Business-to-Employee (B2E)
+### 👩🏻‍💼 Understanding Business-to-Employee (B2E) {#understanding-business-to-employee-b2e}
 
 Business-to-Employee (B2E) refers to the interactions and services that a business provides directly to its employees. In the context of an agent, it means using the advanced capabilities of Copilot Studio to support and enhance the work experience of employees within the organization.
 
-### ✨ Use case scenario
+### ✨ Use case scenario {#use-case-scenario}
 
 **As an** employee
 
@@ -524,7 +535,7 @@ Let's now publish our declarative agent 😃
 
     ![Select one of suggested prompts](assets/3.4_08_SelectStarterPrompt.png)
 
-1. Select **Always allow** to give your declarative agent permission to invoke the IT Expert prompt.
+1. Select **Allow** to give your declarative agent permission to invoke the IT Expert prompt.
 
     ![Select always allow](assets/3.4_09_AlwaysAllow.png)
 
@@ -624,7 +635,7 @@ Let's now publish our declarative agent 😃
 
 In a few minutes, you've learnt how to publish your declarative agent and test it in Microsoft 365 Copilot and in Microsoft Teams 😊
 
-## ✅ Mission Complete
+## ✅ Mission Complete {#mission-complete}
 
 Congratulations! 👏🏻 You've built a declarative agent in Copilot Studio where you added a Prompt, instructed the agent to use the Prompt and how to test + publish your agent to Microsoft 365 Copilot and Microsoft Teams.
 
@@ -636,7 +647,7 @@ This is the end of **Lab 03 - Build a declarative agent in Microsoft Copilot Stu
 
 Until next time, stay sharp. The future of enterprise work runs through agents—and now you know how to build one.
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 📖 [Build declarative agent in Microsoft Copilot Studio for Microsoft 365 Copilot](https://learn.microsoft.com/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext/?WT.mc_id=power-172614-ebenitez)
 
@@ -646,5 +657,4 @@ Until next time, stay sharp. The future of enterprise work runs through agents�
 
 📺 [Build prompts for your agent](https://aka.ms/ai-in-action/copilot-studio/ep3)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/03-create-a-declarative-agent-for-M365Copilot" alt="Analytics" />
+<analytics-tag section="recruit" mission="03-create-a-declarative-agent-for-M365Copilot" />

@@ -3,15 +3,26 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
+    "@fluentui/svg-icons": "^1.1.323",
+    "@playwright/test": "^1.59.1",
+    "gray-matter": "^4.0.3",
+    "jszip": "^3.10.1",
+    "markdownlint-cli2": "^0.22.0",
     "mermaid": "^11.12.3",
+    "simple-icons": "^16.15.0",
     "vitepress": "^2.0.0-alpha.12"
   },
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "copy-badges": "node scripts/copy-badges.mjs",
+    "docs:dev": "node scripts/copy-badges.mjs && vitepress dev docs",
+    "docs:build": "node scripts/copy-badges.mjs && vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "lint:md": "markdownlint-cli2 \"docs/**/*.md\" \"#docs/node_modules\""
   },
   "dependencies": {
     "mermaid": "^11.12.3"
+  },
+  "overrides": {
+    "lodash-es": "^4.18.1"
   }
 }

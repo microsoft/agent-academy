@@ -3,7 +3,6 @@ lastUpdated: false
 ---
 <!-- markdownlint-disable MD003 -->
 <!-- markdownlint-disable MD022 -->
-<!-- markdownlint-disable MD033 -->
 <!-- markdownlint-disable MD041 -->
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'

@@ -7,15 +7,15 @@ next:
   link: '/commander-preview/03-code-interpreter'
 ---
 
-# 🖥️ Mission 02: Computer Using Agents (CUA)
+# 🖥️ Mission 02: Computer Using Agents (CUA) {#mission-02-computer-using-agents-cua}
 
-## 🕵️‍♂️ **CLASSIFIED**
+## 🕵️‍♂️ **CLASSIFIED** {#classified}
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Use Computer Use to let agents automate apps and websites with virtual mouse and keyboard. Learn when to use CUA vs RPA, how to prompt effectively, how to store secure credentials using Azure Key Vault, how to allow CUA to request human assistance (HITL), how to provide inputs, and the different types of hosts.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -25,7 +25,7 @@ In this mission, you'll learn:
 1. How to store secure credentials with Azure Key Vault
 1. How to implement human-in-the-loop assistance, provide inputs, and select appropriate host types
 
-## 📖 References
+## 📖 References {#references}
 
 - [Computer Use](https://learn.microsoft.com/en-us/microsoft-copilot-studio/computer-use)
 

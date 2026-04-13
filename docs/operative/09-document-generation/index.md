@@ -1,27 +1,35 @@
 ---
 prev:
-  text: 'Dataverse Grounding'
-  link: '/operative/08-dataverse-grounding'
+  text: Dataverse Grounding
+  link: /operative/08-dataverse-grounding
 next:
-  text: 'Integrate with MCP Servers'
-  link: '/operative/10-mcp'
+  text: Integrate with MCP Servers
+  link: /operative/10-mcp
+short-description: Implement document generation in AI prompts
+difficulty: 2
+codename: OPERATION DOC ASSEMBLY
+time: 45
+tags:
+  - document-generation
+products: [copilot-studio, dataverse, word]
+industries:
+  - hr
+created-date: 2026-01-14
+last-edited-date: 2026-03-11
 ---
+# 🚨 Mission 09: Generate a Candidate Interview Questions Document {#mission-09-generate-a-candidate-interview-questions-document}
 
-# Mission 09: Generate a Candidate Interview Questions Document
-
-## 🕵️‍♂️ CODENAME: `OPERATION DOC ASSEMBLY`
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<mission-meta />
 
 [![Doc Gen](./assets/09-doc-gen_thumbnail_PlayButton.png)](https://youtu.be/GYSEI0jbCvk?si=lYPZ4cmlxZ8-XBmi "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome, Operative. Your previous missions have shown you the power of prompts. You learned about multimodal document analysis and grounding your prompts with Dataverse data. Now you'll unlock another prompt capability: **document generation**.
 
 Your assignment, should you choose to accept it, is **Operation Doc Assembly**. In this operation you'll be creating a word document of interview prep questions from a prompt and calling that from an agent.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -29,7 +37,7 @@ In this mission, you'll learn:
 1. How to format a Word template to be used in a prompt
 1. How to execute a prompt from an agent
 
-## Lab 9: Generating an Interview Document
+## 🧪 Lab 9 - Generating an Interview Document
 
 When a job application is added, you want to automate the process of preparing a detailed interview document. This should be a Word document that summarizes the applicants key information (name, current role, experience, etc), the role information (job title, requirements) and creates unique specific interview questions based on the applicant background and role they are applying for.
 
@@ -309,7 +317,7 @@ Let's create the topic:
 1. For the **Variable name** change it to **VarApplicationNumber**. For the **Description** put in
 
     ```text
-    Fill with the Job Application Number referenced in the chat. The number always starts with a J followed by at least 4 digits.
+    Fill with the Job Application Number referenced in the chat. The number always starts with a A followed by at least 5 digits.
     ```
 
     Keep all the other properties the same.
@@ -354,7 +362,7 @@ Let's create the topic:
 1. Now let's test and make sure our new topic is working. Open up the test panel and type in the following (replace the J1000 number with a relevant job application number in your Job Application table):
 
     ```text
-    Create an interview prep file for job application J1000
+    Create an interview prep file for job application A01001
     ```
 
     Press **Enter**
@@ -371,7 +379,7 @@ Let's create the topic:
 
 Congratulations! You just successfully added document generation capabilities to your agent!
 
-## 🎉 Mission Complete
+## 🎉 Mission Complete {#mission-complete}
 
 Great work, Operative! **Operation Doc Assembly** is now complete. You've successfully enhanced your agent with document generating capabilities!
 
@@ -379,7 +387,7 @@ Great work, Operative! **Operation Doc Assembly** is now complete. You've succes
 
 ⏩ Move to [Mission 10](../10-mcp/index.md): Integrating with MCP
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 📖 [Document output in prompts](https://learn.microsoft.com/microsoft-copilot-studio/generate-document-output-prompt?WT.mc_id=power-182762-apdunnam)
 
@@ -393,5 +401,4 @@ Great work, Operative! **Operation Doc Assembly** is now complete. You've succes
 
 📖 [Training: Create AI Builder prompts using your own Dataverse data](https://learn.microsoft.com/training/modules/ai-builder-grounded-prompts/?WT.mc_id=power-182762-apdunnam)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/09-document-generation" alt="Analytics" />
+<analytics-tag section="operative" mission="09-document-generation" />

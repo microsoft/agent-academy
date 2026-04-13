@@ -1,23 +1,31 @@
 ---
 prev:
-  text: 'Authoring Agent Instructions'
-  link: '/operative/02-agent-instructions'
+  text: Authoring Agent Instructions
+  link: /operative/02-agent-instructions
 next:
-  text: 'Add Event Triggers'
-  link: '/operative/04-automate-triggers'
+  text: Add Event Triggers
+  link: /operative/04-automate-triggers
+short-description: Transform single agent into coordinated multi-agent system
+difficulty: 2
+codename: OPERATION SYMPHONY
+time: 45
+tags:
+  - multi-agent
+products: [copilot-studio, dataverse, power-platform]
+industries:
+  - hr
+created-date: 2026-01-14
+last-edited-date: 2026-03-16
 ---
+# 🚨 Mission 03: Multi-Agent Systems {#mission-03-multi-agent-systems}
 
-# 🚨 Mission 03: Multi-Agent Systems
-
-## 🕵️‍♂️ CODENAME: `OPERATION SYMPHONY`
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
 [![Multi-Agent Systems](./assets/03-multi-agent-thumbnail_PlayButton.png)](https://www.youtube.com/watch?v=X-nyqdk6tcc "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome back, Agent. In Mission 01, you built your main Hiring Agent giving you a solid foundation for managing recruitment workflows. But one agent can only do so much.
 
@@ -25,7 +33,7 @@ Your assignment, should you choose to accept it, is **Operation Symphony** - tra
 
 Like a symphony orchestra where each musician plays their part in perfect harmony, you'll add two critical specialists to your existing Hiring Agent: an Application Intake Agent to process resumes automatically, and an Interview Prep Agent to create comprehensive interview materials. These agents will work together seamlessly under your main orchestrator.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -35,7 +43,7 @@ In this mission, you'll learn:
 1. Establishing **communication patterns** between agents
 1. Building the Application Intake Agent and Interview Prep Agent
 
-## 🧠 What are connected agents?
+## 🧠 What are connected agents? {#what-are-connected-agents}
 
 In Copilot Studio, you're not limited to building single, monolithic agents. You can create **multi-agent systems** - networks of specialized agents that work together to handle complex workflows.
 
@@ -59,11 +67,11 @@ Consider our hiring workflow - multiple agents might work together with the foll
 
 Rather than building one massive agent that tries to handle all these different skills, you can create specialized agents for each area and orchestrate them together.
 
-## 🔗 Child agents vs connected agents: The key difference
+## 🔗 Child agents vs connected agents: The key difference {#child-agents-vs-connected-agents-the-key-difference}
 
 Copilot Studio offers two ways to build multi-agent systems, each with distinct use cases:
 
-### ↘️ Child agents
+### ↘️ Child agents {#child-agents}
 
 Child agents are **lightweight specialists** that live within your main agent. Think of them as specialized teams within the same department.
 
@@ -88,7 +96,7 @@ Child agents are **lightweight specialists** that live within your main agent. T
 - Hardware troubleshooting  
 - Software installation guides
 
-### 🔀 Connected agents
+### 🔀 Connected agents {#connected-agents}
 
 Connected agents are **full-fledged, independent agents** that your main agent can collaborate with. Think of them as separate departments working together on a project.
 
@@ -114,7 +122,7 @@ Connected agents are **full-fledged, independent agents** that your main agent c
 > [!TIP]
 > You can mix both approaches! For example, your main agent could connect to external agents from other teams while also having its own child agents for specialized internal tasks.
 
-## 🎯 Multi-agent architecture patterns
+## 🎯 Multi-agent architecture patterns {#multi-agent-architecture-patterns}
 
 When designing multi-agent systems, several patterns emerge based on how agents interact:
 
@@ -127,7 +135,7 @@ When designing multi-agent systems, several patterns emerge based on how agents 
 > [!TIP]
 > You may even have a hybrid of two or more of these patterns.
 
-## 💬 Agent communication and context sharing
+## 💬 Agent communication and context sharing {#agent-communication-and-context-sharing}
 
 When agents work together, they need to share information effectively. Here's how this works in Copilot Studio:
 
@@ -149,7 +157,7 @@ Agents can return structured information back to the calling agent, allowing the
 
 For more complex scenarios, agents can share information through **Dataverse** or other data stores, allowing for persistent context sharing across multiple interactions.
 
-## ↘️ Child agent: Application Intake Agent
+## ↘️ Child agent: Application Intake Agent {#child-agent-application-intake-agent}
 
 Let's start building our multi-agent hiring system. Our first specialist will be the **Application Intake Agent** - a child agent responsible for processing incoming resumes and candidate information.
 
@@ -190,7 +198,7 @@ flowchart TB
     classDef data  fill:#f3f4f6,stroke:#6b7280,color:#111827
 ```
 
-### 🤝Application Intake Agent responsibilities
+### 🤝Application Intake Agent responsibilities {#application-intake-agent-responsibilities}
 
 - **Parse resume content** from PDFs provided via interactive chat (In a future mission you'll learn how to process resumes autonomously).
 - **Extract structured data** (name, skills, experience, education)
@@ -198,7 +206,7 @@ flowchart TB
 - **Store candidate information** in Dataverse for later processing
 - **Deduplicate applications** to avoid creating the same candidate twice, match to existing records using the email address extracted from the resume.
 
-### ⭐ Why this should be a child agent
+### ⭐ Why this should be a child agent {#why-this-should-be-a-child-agent}
 
 The Application Intake Agent fits perfectly as a child agent because:
 
@@ -207,17 +215,17 @@ The Application Intake Agent fits perfectly as a child agent because:
 - It's part of our overall hiring solution managed by the same team
 - It focuses on a specific trigger (new resume received) and is invoked from the Hiring Agent.
 
-## 🔀 Connected agent: Interview Prep Agent  
+## 🔀 Connected agent: Interview Prep Agent   {#connected-agent-interview-prep-agent}
 
 Our second specialist will be the **Interview Prep Agent** - a connected agent that helps create comprehensive interview materials and evaluates candidate responses.
 
-### 🤝 Interview Prep Agent responsibilities
+### 🤝 Interview Prep Agent responsibilities {#interview-prep-agent-responsibilities}
 
 - **Create interview packs** with company information, role requirements, and evaluation criteria
 - **Generate interview questions** tailored to specific roles and candidate backgrounds
 - **Answer general questions** about the job roles and applications for stakeholder communication
 
-### ⭐ Why this should be a connected agent
+### ⭐ Why this should be a connected agent {#why-this-should-be-a-connected-agent}
 
 The Interview Prep Agent works better as a connected agent because:
 
@@ -226,7 +234,7 @@ The Interview Prep Agent works better as a connected agent because:
 - Different hiring managers might want to customize its behavior for their teams
 - It could be reused for internal positions, not just external hiring
 
-## 🧪 Lab 3.1: Adding the Application Intake Agent
+## 🧪 Lab 3.1 - Adding the Application Intake Agent {#lab-31-adding-the-application-intake-agent}
 
 Ready to put theory into practice? Let's add our first child agent to your existing Hiring Agent.
 
@@ -429,6 +437,9 @@ We're using **Agent Flow tools** rather than Topics for the *Upload Resume* step
 
 Now you'll connect the published flow to your Application Intake Agent.
 
+> [!NOTE]
+> If you are using a **managed environment**, adding the flow as a tool may fail with a generic error. This is caused by the **Solution-aware cloud flows** sharing restriction being disabled. To fix this, go to Power Platform Admin Center → **Environments** → your environment → **Edit Managed Environments** → **Manage Sharing** → **Power Automate** → enable **Solution-aware cloud flows**, then save.
+
 1. Navigate back to the **Hiring Agent** and select the **Agents** tab. Open the **Application Intake Agent**, and then locate the **Tools** panel.  
     ![Add agent flow to agent](./assets/2-add-agent-flow-to-agent.png)
 
@@ -574,7 +585,7 @@ Now let's verify that our agent is working correctly by calling our child agent 
 1. Navigate to **Resumes**, and check that the resume file is uploaded and the cover letter is set accordingly.  
     ![Resume uploaded to Dataverse](./assets/2-resume-uploade.png)
 
-## 🧪Lab 3.2: Adding the Interview Prep connected agent
+## 🧪 Lab 3.2 - Adding the Interview Prep connected agent {#lab-32-adding-the-interview-prep-connected-agent}
 
 Now let's create our connected agent for interview preparation and add it to your existing Hiring Agent.
 
@@ -717,7 +728,7 @@ Now let's create our connected agent for interview preparation and add it to you
     Which active resumes are suitable for the Power Platform Developer role?
     ```
 
-## 🎉  Mission Complete
+## 🎉  Mission Complete {#mission-complete}
 
 Excellent work, Agent! **Operation Symphony** is now complete. You've successfully transformed your single Hiring Agent into a sophisticated multi-agent orchestra with specialized capabilities.
 
@@ -742,7 +753,7 @@ Your enhanced hiring system is now ready for the advanced features we'll add in 
 
 ⏩ Move to [Mission 04](../04-automate-triggers/index.md): Automate your agent with triggers
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 📖 [Add other agents (preview)](https://learn.microsoft.com/microsoft-copilot-studio/authoring-add-other-agents?WT.mc_id=power-182762-scottdurow)
 
@@ -758,5 +769,4 @@ Your enhanced hiring system is now ready for the advanced features we'll add in 
 
 📺 [Agent-to-agent collaboration in Copilot Studio](https://youtu.be/d-oD3pApHAg?si=rwIHKhJTkjSvhTHw)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/03-multi-agent" alt="Analytics" />
+<analytics-tag section="operative" mission="03-multi-agent" />

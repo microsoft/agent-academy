@@ -1,23 +1,32 @@
 ---
 prev:
-  text: 'Add an agent flow to your Topic for automation'
-  link: '/recruit/09-add-an-agent-flow'
+  text: Add an agent flow to your Topic for automation
+  link: /recruit/09-add-an-agent-flow
 next:
-  text: 'Publish your agent'
-  link: '/recruit/11-publish-your-agent'
+  text: Publish your agent
+  link: /recruit/11-publish-your-agent
+short-description: Enable your agent to act autonomously using event-based logic
+difficulty: 1
+codename: OPERATION GHOST ROUTINE
+time: 45
+tags:
+  - automation
+  - triggers
+products: [copilot-studio, power-automate, outlook, sharepoint, power-platform]
+industries:
+  - it
+created-date: 2025-08-20
+last-edited-date: 2026-02-19
 ---
+# 🚨 Mission 10: Add Event Triggers - Enable autonomous agent capabilities {#mission-10-add-event-triggers-enable-autonomous-agent-capabilities}
 
-# 🚨 Mission 10: Add Event Triggers - Enable autonomous agent capabilities
-
-## 🕵️‍♂️ CODENAME: `OPERATION GHOST ROUTINE`
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
 [![Event triggers video thumbnail](./assets/video-thumbnail.jpg)](https://www.youtube.com/watch?v=ZgwHL8PQ1nY "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 It's time to elevate your agent from conversational assistant to autonomous operative. Your mission is to enable your agent to act without being summoned - responding to signals from across your digital domain with precision and speed.
 
@@ -25,7 +34,7 @@ With Event Triggers, you'll train your agent to monitor external systems like Sh
 
 Success means building agents that initiate value - not just respond to it.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 📖 This lesson will cover:
 
@@ -35,7 +44,7 @@ Success means building agents that initiate value - not just respond to it.
 - Understanding authentication, security, and publishing considerations for event-driven agents
 - Building an autonomous IT Help Desk agent that responds to SharePoint events and sends email acknowledgments
 
-## 🤔 What is an Event Trigger?
+## 🤔 What is an Event Trigger? {#what-is-an-event-trigger}
 
 An **Event Trigger** is a mechanism that allows your agent to act autonomously in response to external events, without requiring direct user input. Think of it as making your agent "watch" for specific events and automatically take action when those events occur.
 
@@ -68,7 +77,7 @@ Event triggers transform your agent from a reactive assistant into a proactive, 
 1. **Data-driven actions** - use information from the triggering event to make smart decisions and take appropriate actions.
     - *Example:* Route urgent tickets to senior staff based on priority level in the trigger payload.
 
-## ⚙️ How do Event Triggers work?
+## ⚙️ How do Event Triggers work? {#how-do-event-triggers-work}
 
 Event triggers operate through a three-step workflow that enables your agent to respond autonomously to external events:
 
@@ -90,7 +99,7 @@ Understanding the difference between these two trigger types is crucial:
 | Run without user interaction | Require user to start conversation |
 | Examples: File created, email received | Example: "What's the weather?" |
 
-## 📦 Understanding trigger payloads
+## 📦 Understanding trigger payloads {#understanding-trigger-payloads}
 
 When an event occurs, the trigger sends a **payload** to your agent containing information about the event and instructions on how to respond.
 
@@ -128,7 +137,7 @@ You have two places to guide your agent's behavior with event triggers:
 
 💡 **Pro tip**: Avoid conflicting instructions between these two levels, as this can cause unexpected behavior.
 
-## 🎯 Common Event Trigger scenarios
+## 🎯 Common Event Trigger scenarios {#common-event-trigger-scenarios}
 
 Here are practical examples of how event triggers can enhance your agent:
 
@@ -157,7 +166,7 @@ Here are practical examples of how event triggers can enhance your agent:
 - **Trigger**: Calendar event created
 - **Action**: Send pre-meeting reminders and agenda, book resources
 
-## ⚠️ Publishing and authentication considerations
+## ⚠️ Publishing and authentication considerations {#publishing-and-authentication-considerations}
 
 Before your agent can use event triggers in production, you need to understand authentication and security implications.
 
@@ -179,7 +188,7 @@ To maintain security when publishing agents with event triggers:
 1. **Review payload data** - Ensure triggers don't expose sensitive information
 1. **Monitor usage** - Track trigger activity and resource consumption
 
-## ⚠️ Troubleshooting and limitations
+## ⚠️ Troubleshooting and limitations {#troubleshooting-and-limitations}
 
 Keep these important considerations in mind when working with event triggers:
 
@@ -200,9 +209,9 @@ Keep these important considerations in mind when working with event triggers:
 - Administrators can block event triggers entirely
 - Contact your admin if expected triggers aren't available
 
-## 🧪 Lab 10 - Add Event Triggers for autonomous agent behavior
+## 🧪 Lab 10 - Add Event Triggers for autonomous agent behavior {#lab-10-add-event-triggers-for-autonomous-agent-behavior}
 
-### 🎯 Use case
+### 🎯 Use case {#use-case}
 
 You'll enhance your IT Help Desk agent to automatically respond to new support requests. When someone creates a new item in your SharePoint support tickets list, your agent will:
 
@@ -353,7 +362,7 @@ Before starting this lab, ensure you have:
     ![Test email sent](./assets/10_TestEmailSent.png)
 1. Review the **Activity** tab in Copilot Studio to see the complete trigger and tool execution
 
-## ✅ Mission Complete
+## ✅ Mission Complete {#mission-complete}
 
 🎉 **Congratulations!** You've successfully implemented event triggers with connector tools that enable your agent to operate autonomously, automatically sending email acknowledgments and processing support tickets without user intervention. Once your agent is published, it will act autonomously on your behalf.
 
@@ -361,7 +370,7 @@ Before starting this lab, ensure you have:
 
 ⏭️ [Move to **Publish your agent** lesson](../11-publish-your-agent/index.md)
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 Ready to dive deeper into event triggers and autonomous agents? Check out these resources:
 
@@ -371,5 +380,4 @@ Ready to dive deeper into event triggers and autonomous agents? Check out these 
 - **Advanced Scenarios**: [Using Power Automate flows with agents](https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow-create?WT.mc_id=power-177340-scottdurow)
 - **Security**: [Data loss prevention for Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/admin-data-loss-prevention?WT.mc_id=power-177340-scottdurow)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/10-add-event-triggers" alt="Analytics" />
+<analytics-tag section="recruit" mission="10-add-event-triggers" />

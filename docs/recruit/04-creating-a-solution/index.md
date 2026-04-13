@@ -1,23 +1,33 @@
 ---
 prev:
-  text: 'Deploy a Declarative Agent for Microsoft 365 Copilot'
-  link: '/recruit/03-create-a-declarative-agent-for-M365Copilot'
+  text: Deploy a Declarative Agent for Microsoft 365 Copilot
+  link: /recruit/03-create-a-declarative-agent-for-M365Copilot
 next:
-  text: 'Using a Pre-Built Agent'
-  link: '/recruit/05-using-prebuilt-agents'
+  text: Using a Pre-Built Agent
+  link: /recruit/05-using-prebuilt-agents
+short-description: Package your agent into a reusable solution for environment management
+difficulty: 1
+codename: OPERATION CTRL-ALT-PACKAGE
+time: 45
+tags:
+  - solutions
+products:
+  - copilot-studio
+  - power-platform
+industries:
+  - it
+created-date: 2025-08-20
+last-edited-date: 2026-01-14
 ---
+# 🚨 Mission 04: Creating a Solution for Your Agent {#mission-04-creating-a-solution-for-your-agent}
 
-# 🚨 Mission 04: Creating a Solution for Your Agent
-
-## 🕵️‍♂️ CODENAME: `OPERATION CTRL-ALT-PACKAGE`
-
-> **⏱️ Operation Time Window:** `~45 minutes`
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
 [![Create a solution video thumbnail](./assets/video-thumbnail.jpg)](https://www.youtube.com/watch?v=1iATbkgfcpU "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Agent Maker, welcome to your next tactical operation. In this mission, you’ll learn to assemble a Solution - the official deployment vehicle for your IT Helpdesk Agent built with Microsoft Copilot Studio. Think of this as creating a digital briefcase that holds your agent and it's artifacts.
 
@@ -25,7 +35,7 @@ Every agent needs a well-structured home. That’s what a Power Platform solutio
 
 Let’s pack up.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you’ll learn:
 
@@ -35,7 +45,7 @@ In this mission, you’ll learn:
 1. Understanding the Power Platform solution lifecycle from development to production
 1. Creating your own solution publisher and custom solution for your IT Helpdesk Agent
 
-## 🕵🏻‍♀️ Solution? What's that?
+## 🕵🏻‍♀️ Solution? What's that? {#solution-whats-that}
 
 In Microsoft Power Platform, solutions are like containers or packages that hold all the parts of your apps or agents - these could be tables, forms, flows, and custom logic. Solutions are essential for Application Lifecycle Management (ALM), they enable you to manage your app and agents from idea to development, testing, deployment, and updates.
 
@@ -64,7 +74,7 @@ There are two types of solutions:
 - **Unmanaged solutions** - used during development. You can freely edit and customize as needed.
 - **Managed solutions** - used when you're ready to deploy your app to testing or production. These are locked down to prevent accidental changes.
 
-## 🤔 Why _should_ I use a Solution for my agent?
+## 🤔 Why _should_ I use a Solution for my agent? {#why-should-i-use-a-solution-for-my-agent}
 
 Think of Solutions as a _toolbox_. When you need to fix or build something (an agent) in a different location (environment), you gather all the necessary tools (components) and put them in your toolbox (Solution). You can then carry this toolbox to the new location (environment) and use the tools (components) to complete your work, or add new tools (components) to customize your agent or project you're building.
 
@@ -97,7 +107,7 @@ It's good practice to create an agent in a dedicated solution in your source (de
 
 - Developers and makers can work together using unmanaged solutions in development, then hand off a managed solution for deployment.
 
-## 🪪 Understanding Solution Publishers
+## 🪪 Understanding Solution Publishers {#understanding-solution-publishers}
 
 A Solution Publisher in Power Platform is like a label or brand that identifies who created or owns a solution. It’s a small but important part of managing your apps, agents and flow customizations, especially when working in teams or across environments.
 
@@ -107,7 +117,7 @@ When you create a solution, you must choose a publisher. This publisher defines:
 
 - A name and contact info for the organization or person who owns the solution.
 
-### 🤔 Why is it important?
+### 🤔 Why is it important? {#why-is-it-important}
 
 1. **Easy identification** - the prefix (Example - `new_` or `abc_`) helps you quickly identify which components belong to which solution or team.
 
@@ -123,7 +133,7 @@ When you create a solution, you must choose a publisher. This publisher defines:
 >
 > Anyone who comes across the column at a solution level regardless of what environment they're in, they can easily identify it as a column that's associated to Contoso Solutions.
 
-## 🧭 Power Platform Solution lifecycle
+## 🧭 Power Platform Solution lifecycle {#power-platform-solution-lifecycle}
 
 So now you understand the purpose of a Solution, let's next learn about the lifecycle.
 
@@ -149,7 +159,7 @@ So now you understand the purpose of a Solution, let's next learn about the life
 >
 > - After testing, you move it to the Production environment - all without touching the original development version.
 
-## 🧪 Lab 04: Create a new Solution
+## 🧪 Lab 04: Create a new Solution {#lab-04-create-a-new-solution}
 
 We're now going to learn
 
@@ -301,7 +311,7 @@ High five, you've now created a Solution Publisher! 🙌🏻 We'll next learn ho
 
     ![Solutions](./assets/4.2_05_CurrentPreferredSolutionSelected.png)
 
-## ✅ Mission Complete
+## ✅ Mission Complete {#mission-complete}
 
 Congratulations! 👏🏻 You've created a Publisher and used it in your newly created Solution to build your agent in!
 
@@ -311,7 +321,7 @@ This is the end of **Lab 04 - Creating a Solution**, select the link below to mo
 
 ⏭️ [Move to **Get started quickly with pre-built agents** lesson](../05-using-prebuilt-agents/index.md)
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 🔗 [Create a solution](https://learn.microsoft.com/power-apps/maker/data-platform/create-solution/?WT.mc_id=power-172615-ebenitez)
 
@@ -327,5 +337,4 @@ This is the end of **Lab 04 - Creating a Solution**, select the link below to mo
 
 🔗 [Overview of Git integration in Power Platform](https://learn.microsoft.com/power-platform/alm/git-integration/overview/?WT.mc_id=power-172615-ebenitez)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/04-creating-a-solution" alt="Analytics" />
+<analytics-tag section="recruit" mission="04-creating-a-solution" />

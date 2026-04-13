@@ -1,0 +1,16 @@
+declare module "virtual:missions-data" {
+  interface MissionData {
+    title: string;
+    section: string;
+    url: string;
+    badge: string | null;
+    difficulty: number;
+    tags: string[];
+    products: string[];
+    industries: string[];
+    lastUpdated: number;
+    createdAt: number;
+  }
+
+  export const missions: MissionData[];
+}

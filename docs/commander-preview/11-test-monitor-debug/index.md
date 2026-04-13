@@ -7,15 +7,15 @@ next:
   link: '/commander-preview/12-deploy-solutions-pipelines'
 ---
 
-# 🧪 Mission 11: Test, Monitor, Debug & Analytics
+# 🧪 Mission 11: Test, Monitor, Debug & Analytics {#mission-11-test-monitor-debug-analytics}
 
-## 🕵️‍♂️ **CLASSIFIED**
+## 🕵️‍♂️ **CLASSIFIED** {#classified}
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Use the built-in Test panel to walk through conversations, track between topics, and read the real-time Activity map during generative orchestration. Inspect variable values, save conversation snapshots for diagnostics, and flag issues for Microsoft support. Go beyond manual testing with agent evaluation: create test sets, run automated evaluations with user profiles, and compare scores across agent changes. Monitor production performance using Analytics dashboards for KPIs like session outcomes, CSAT scores, and topic trends. Configure custom telemetry with Azure Application Insights and build Power BI dashboards for advanced reporting.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -25,7 +25,7 @@ In this mission, you'll learn:
 1. How to interpret evaluation scores, drill into results, and compare runs across agent changes
 1. How to monitor production KPIs with Analytics dashboards and configure custom telemetry with Application Insights and Power BI
 
-## 📖 References
+## 📖 References {#references}
 
 - [Test your agent](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-test-bot)
 - [Agent evaluation overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-intro)

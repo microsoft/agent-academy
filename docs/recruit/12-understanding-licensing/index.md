@@ -1,19 +1,29 @@
 ---
 prev:
-  text: 'Publish your agent'
-  link: '/recruit/11-publish-your-agent'
+  text: Publish your agent
+  link: /recruit/11-publish-your-agent
 next:
-  text: 'Securing Your Recruit Badge'
-  link: '/recruit/course-completion-badges-recruit'
+  text: Securing Your Recruit Badge
+  link: /recruit/course-completion-badges-recruit
+short-description: Learn how licensing and billing works with Copilot Studio
+difficulty: 1
+codename: OPERATION KNOW WHAT YOU OWE
+time: 15
+tags:
+  - licensing
+products:
+  - copilot-studio
+  - microsoft-365
+industries:
+  - it
+created-date: 2025-08-20
+last-edited-date: 2026-03-11
 ---
+# 🚨 Mission 12: Understanding Licensing {#mission-12-understanding-licensing}
 
-# 🚨 Mission 12: Understanding Licensing
+<mission-meta />
 
-## 🕵️‍♂️ CODENAME: `OPERATION KNOW WHAT YOU OWE`
-
-> **⏱️ Operation Time Window:** `~15 minutes – intel only, no fieldwork required`  
-
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Welcome, Recruit. Before you deploy agents into production, you need more than working prompts and polished responses. You need a clear picture of how those agents are measured and billed. Licensing surprises tend to show up *after* an agent goes live, when usage scales and costs climb faster than expected.
 
@@ -21,7 +31,7 @@ This mission exists to prevent that moment. You'll learn how Copilot Studio usag
 
 Think of it as your cost-control briefing.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this lesson, you'll learn:
 
@@ -31,7 +41,7 @@ In this lesson, you'll learn:
 1. How different agent scenarios (internal, external, automated, and integrated) affect credit consumption
 1. How to plan, estimate, and monitor usage to avoid unexpected costs when deploying agents at scale
 
-## 🔎 What are Copilot Credits?
+## 🔎 What are Copilot Credits? {#what-are-copilot-credits}
 
 Copilot Credits are the **currency used to measure usage** in Copilot Studio. Think of them like a utility meter: the more work your agent does, the more the meter runs.
 
@@ -72,7 +82,7 @@ With the exception of testing in the embedded test chat, every time your agent d
 - Unused CCCUs **expire at the end of the annual term** (different from capacity packs, which expire monthly)
 - Best for large agent fleets or organizations that want simplified governance across multiple workloads
 
-## 📌 Copilot Studio User Licenses
+## 📌 Copilot Studio User Licenses {#copilot-studio-user-licenses}
 
 Even with capacity in place, your makers need the right access:
 
@@ -83,7 +93,7 @@ This separation lets admins control capacity while individual makers build agent
 
 > **Note for P3 customers:** When using the Pre-Purchase Plan, builder access is granted through the **Copilot Studio Author** setting in the Power Platform Admin Center. You create a security group in Azure/Entra, assign your makers to it, and then assign that group to the Copilot Studio Author setting. No individual user licenses are assigned.
 
-## 🧠 What Microsoft 365 Copilot Licenses Include
+## 🧠 What Microsoft 365 Copilot Licenses Include {#what-microsoft-365-copilot-licenses-include}
 
 Microsoft 365 Copilot ($30/user/month) gives licensed users:
 
@@ -113,7 +123,7 @@ So the question is not "what feature is being used?" but "who is using the agent
 - **M365 Copilot-licensed user, authenticated, internal channel** → no Copilot Studio credits (fair use applies)
 - **Unlicensed user, external channel, or autonomous trigger** → consumes Copilot Studio credits
 
-## 💰 Credit Billing Rates at a Glance
+## 💰 Credit Billing Rates at a Glance {#credit-billing-rates-at-a-glance}
 
 [The number of Copilot Credits an agent consumes depends on the design of the agent, how often customers interact with it, and the features they use.](https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management) Here is what each feature type costs:
 
@@ -134,7 +144,7 @@ A single agent interaction can hit multiple billing lines at once. For example, 
 > **Note on reasoning models:** When an agent uses a reasoning-capable model, [billing applies two meters: the standard feature rate for the action performed, plus the premium AI tools rate (100 credits per 10 responses) for the additional compute required for deep reasoning and multi-step inference.](https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management)
 > **Note on bring-your-own models:** Azure Foundry (custom) models are billed separately and are not covered by these rates.
 
-## ⚠️ Overage Enforcement
+## ⚠️ Overage Enforcement {#overage-enforcement}
 
 Capacity is enforced monthly. If you exceed your purchased credits:
 
@@ -145,7 +155,7 @@ Capacity is enforced monthly. If you exceed your purchased credits:
 
 The fix: reallocate existing tenant capacity, purchase more packs, or set up PAYGO as a safety net so overages are billed rather than blocked.
 
-## 📊 Capacity Planning Tips
+## 📊 Capacity Planning Tips {#capacity-planning-tips}
 
 Before you launch an agent:
 
@@ -158,7 +168,7 @@ Before you launch an agent:
 > [!TIP]
 > ✅ Run the Usage Estimator early in planning, then again after building your agent to compare projected vs. actual usage. The gap is usually instructive.
 
-## 🧠 Real-World Licensing Scenarios
+## 🧠 Real-World Licensing Scenarios {#real-world-licensing-scenarios}
 
 | Scenario | Licensing / Credits |
 | -------- | ------------------- |
@@ -171,7 +181,7 @@ Before you launch an agent:
 | Agent using a reasoning model | Uses standard feature rate + premium AI tools rate |
 | Maker building agents | Requires Copilot Studio User License (no cost) |
 
-## 🏁 Mission Complete
+## 🏁 Mission Complete {#mission-complete}
 
 You now understand:
 
@@ -182,12 +192,11 @@ You now understand:
 
 With this in place, you can design agents with cost in mind from the start, not after the bill arrives.
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
 - 📄 [Copilot Studio Licensing & Billing](https://learn.microsoft.com/microsoft-copilot-studio/billing-licensing?WT.mc_id=power-170631-apdunnam)
 - 📄 [Billing Rates and Management](https://learn.microsoft.com/microsoft-copilot-studio/requirements-messages-management?WT.mc_id=power-170631-apdunnam)
 - 📘 [Power Platform Licensing Guide (November 2025)](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/bade/documents/products-and-services/en-us/bizapps/Power-Platform-Licensing-Guide-November-2025.pdf?WT.mc_id=power-170631-apdunnam)
 - 📊 [Message Management & Capacity Monitoring](https://learn.microsoft.com/power-platform/admin/manage-copilot-studio-messages-capacity?WT.mc_id=power-170631-apdunnam)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/12-understanding-licensing" alt="Analytics" />
+<analytics-tag section="recruit" mission="12-understanding-licensing" />

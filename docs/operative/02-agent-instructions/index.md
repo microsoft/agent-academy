@@ -1,23 +1,33 @@
 ---
 prev:
-  text: 'Get started with the Hiring Agent'
-  link: '/operative/01-get-started'
+  text: Get started with the Hiring Agent
+  link: /operative/01-get-started
 next:
-  text: 'Multi-Agent Systems'
-  link: '/operative/03-multi-agent'
+  text: Multi-Agent Systems
+  link: /operative/03-multi-agent
+short-description: Master precise agent communication and behavior control
+difficulty: 2
+codename: OPERATION SECRET DIRECTIVE
+time: 20
+tags:
+  - instructions
+  - prompting
+products:
+  - copilot-studio
+industries:
+  - hr
+created-date: 2026-01-14
+last-edited-date: 2026-03-11
 ---
+# 🕵️‍♂️ Mission 02: Authoring Agent Instructions {#mission-02-authoring-agent-instructions}
 
-# 🕵️‍♂️ Mission 02: Authoring Agent Instructions
-
-## 🕵️‍♂️ CODENAME: `OPERATION SECRET DIRECTIVE`
-
-> **⏱️ Operation Time Window:** `~20 minutes – intel only, no fieldwork required`
+<mission-meta />
 
 🎥 **Watch the Walkthrough**
 
 [![Authoring Agent Instructions video thumbnail](./assets/02-instructions-thumbnail_PlayButton.png)](https://www.youtube.com/watch?v=h_pgKSKHlIU "Watch the walkthrough on YouTube")
 
-## 🎯 Mission Brief
+## 🎯 Mission Brief {#mission-brief}
 
 Agent, your next assignment is **Operation Secret Directive**, a focused training mission on agent communication and control.
 
@@ -27,7 +37,7 @@ Your objective is to understand how to author precise, actionable instructions a
 
 Think of this as advanced training in agent behavior and intent shaping. Just as a field operative relies on clear mission parameters, AI agents depend on carefully crafted instructions to act with clarity, consistency, and purpose in real-world scenarios.
 
-## 🔎 Objectives
+## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
@@ -35,7 +45,7 @@ In this mission, you'll learn:
 1. How to direct agents to use tools, knowledge sources, and collaborate with other agents
 1. How to ensure your agents act with precision, transparency, and efficiency
 
-## 📝 Writing Agent Instructions
+## 📝 Writing Agent Instructions {#writing-agent-instructions}
 
 Writing effective agent instructions is the key to successful agent behavior. Instructions are used by agents to:
 
@@ -81,7 +91,7 @@ You can reference specific tools, topics, variables, or Power Fx expressions usi
 - Limit what parameters should be used for tools (e.g., only email a specified list of individuals).
 - Use instructions to protect against unwanted behavior or content filtering issues.
 
-## ✍️ Authoring Descriptions for Tools, Topics, and Agents
+## ✍️ Authoring Descriptions for Tools, Topics, and Agents {#authoring-descriptions-for-tools-topics-and-agents}
 
 High-quality descriptions are essential for generative orchestration. Your agent uses these descriptions to select the right tools, topics, and agents to respond to user queries and triggers. Follow these best practices:
 
@@ -96,7 +106,7 @@ High-quality descriptions are essential for generative orchestration. Your agent
     **Good:** This topic provides weather information for any location in the world for the next day. It provides the temperature. It doesn't get the current weather for today.
     **Bad:** This tool can answer questions. *(Too vague)*
 
-## 🛠️ Best Practices for Instructions and Descriptions
+## 🛠️ Best Practices for Instructions and Descriptions {#best-practices-for-instructions-and-descriptions}
 
 To make your instructions and descriptions truly effective, keep these principles in mind:
 
@@ -106,7 +116,7 @@ To make your instructions and descriptions truly effective, keep these principle
 - Include keywords that match the user's intent and the tool or topic's functionality.
 - Ensure distinct names and descriptions for similar resources to avoid confusion and overlap.
 
-## 🗂️ Example Instruction Structure
+## 🗂️ Example Instruction Structure {#example-instruction-structure}
 
 When writing instructions, consider the following structure for clarity and completeness:
 
@@ -116,7 +126,7 @@ When writing instructions, consider the following structure for clarity and comp
 1. **Safety and Moderation**: Include any compliance or safety requirements
 1. **Feedback Loop**: Specify how the agent should collect feedback or escalate issues
 
-## 🎉 Mission Complete
+## 🎉 Mission Complete {#mission-complete}
 
 Mission 02 is completed! You now have:
 
@@ -128,10 +138,9 @@ You will put your new instruction skills to practice in the upcoming lessons.
 
 Next up is [Mission 03](../03-multi-agent/index.md): Building multi-agent systems.
 
-## 📚 Tactical Resources
+## 📚 Tactical Resources {#tactical-resources}
 
-📖 [Microsoft Copilot Studio - Authoring Instructions](https://learn.microsoft.com/microsoft-copilot-studio/authoring-instructions)
+📖 [Microsoft Copilot Studio - Authoring Instructions](https://learn.microsoft.com/microsoft-copilot-studio/authoring-instructions)  
 📖 [Guidance for Generative Mode](https://learn.microsoft.com/microsoft-copilot-studio/guidance/generative-mode-guidance)
 
-<!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/02-agent-instructions" alt="Analytics" />
+<analytics-tag section="operative" mission="02-agent-instructions" />
