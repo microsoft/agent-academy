@@ -429,5 +429,95 @@ Let's begin!!! ⤵️
 
     ![Fields added for all roles](assets/1.2_20_FieldsAddedForRoles.png)
 
+1. Select **Save as Draft** on the upper right which will redirect to the Document Templates web page with a confirmation message on the bottom left that the template has been saved as a draft. Next select the **ellipsis icon (...)** and select **Publish**.
+
+    ![Publish document template](assets/1.2_21_PublishDocumentTemplate.png)
+
+1. Another confirmation message on the bottom left will appear to let you know the Draft template has been Published.
+
+    We'll now create the second Document Template, using the [Sample Offer Letter file](assets/Sample%20Offer%20Letter.docx). We'll be following the same steps previously from when we created the first Document Template.
+
+    Select **+ Create new**.
+
+    ![Create a new document template](assets/1.2_22_CreateNewDocumentTemplate.png)
+
+1. Repeat the same steps previously by uploading the Sample Offer Letter file and selecting **Offer Letter** as the **Agreement Type**.
+
+    Select **Continue**.
+
+    ![Upload Sample Offer Letter file to create a new document template](assets/1.2_23_OfferLetterAgreementType.png)
+
+1. Repeat the same steps previously to create two new roles for the document template, Hiring Manager and Employee.
+
+    On the **Fields** left hand side pane, select the **chevron icon** by **Sender 1** and select **Edit recipients**.
+
+    Rename the **Signer 1** role to,
+
+    ```text
+    Hiring Manager
+    ```
+
+    Add a new recipient and name the role as,
+
+    ```text
+    Employee
+    ```
+
+    ![Add roles](assets/1.2_24_Roles.png)
+
+1. Next, we'll replace placeholders in the document with fields. We'll start by switching to the **Sender** role. Highlight the `{EmployeeFullName}`placeholder and select the Employee Full Name field on the left hand side menu. The field will now display instead of the placeholder.
+
+    ![Configure Sender fields](assets/1.2_25_ConfigureFields.png)
+
+1. Repeat the same steps for the remainder of the placeholders for the **Sender** role by selecting existing fields on the left hand side menu or creating new fields.
+
+    | Placeholder                   | Field name                   | Create New Field | Field description                          | Required field | API reference name |
+    |-------------------------------|------------------------------|------------------|--------------------------------------------|----------------|--------------------|
+    | **{EmployeeAddressLine1}**    | `Employee Address Line 1`    | Yes              | `Apt or House No. and street name`         | Yes            | Text               |
+    | **{EmployeeAddressLine2}**    | `Employee Address Line 2`    | Yes              | `Suburb`                                   | Yes            | Text               |
+    | **{EmployeeAddressCity}**     | `Employee Address City`      |                  | `City`                                     | Yes            | Text               |
+    | **{Employee AddressPostCode}**| `Employee Address Post Code` | Yes              | `Post code`                                | Yes            | Text               |
+    | **{EmployeePosition}**        | `Employee Position`          | No               |                                            |                |                    |
+    | **{EmployeeStartDate}**       | `Employee Start Date`        | No               |                                            |                |                    |
+    | **{DueDate}**                 | `Signed Due Date`            | Yes              | `Due date of signed agreement by employee` | Yes            | Date               |
+
+1. Next, we'll add the fields for the **Hiring Manager** and **Employee** roles using the same steps as last time.
+
+    ::: tip :computer_mouse: Don't forget to switch roles
+    Remember to switch to the Employee role using the chevron icon in the Fields left hand side pane.
+    :::
+
+    | Role            | Placeholder                          | Field       |
+    |-----------------|--------------------------------------|-------------|
+    | Hiring Manager  | **{ManagerSignature}**               | Signature   |
+    | Hiring Manager  | **{ManagerFullNameSignature}**       | Name        |
+    | Employee        | **{EmployeeSignature}**              | Signature   |
+    | Employee        | **{EmployeeFullNameSignature}**      | Name        |
+    | Employee        | **{EmployeeSignedDateSignature}**    | Date Signed |
+
+    Great, you've now finished configuring the second Document Template 👏🏻
+
+    You can also view the **Preview** mode for the Document Template by selecting **Preview** on the upper right.
+
+    ![All role fields configured](assets/1.2_28_FieldsConfigured.png)
+
+1. Enter in values in the fields to see it appear on the template viewer.
+
+    ![Select **Preview** to see the Document Template in preview mode](assets/1.2_29_PreviewMode.png)
+
+1. Exit from **Preview** mode by select the **X icon** on the upper left and select **Save As Draft**.
+
+    ![Select Save as Draft](assets/1.2_30_SaveAsDraft.png)
+
+1. A confirmation message on the bottom left that the template has been saved as a draft. Next select the **ellipsis icon (...)** and select **Publish**.
+
+    ![Publish Sampler Offer Letter document template](assets/1.2_31_Publish.png)
+
+1. The Sample Offer Letter document template is now published.
+
+    ![Sample Offer Letter document published](assets/1.2_32_Published.png)
+
+🏃🏻‍♀️‍➡️ Right, let's move on to creating the Docusign Maestro workflow!
+
 > [!NOTE]
 > 🚧 This mission is under construction. Check back soon for the full walkthrough.
