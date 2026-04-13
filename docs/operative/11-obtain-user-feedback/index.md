@@ -133,7 +133,7 @@ This means after the agent generates an answer, you can immediately follow up wi
 
 1. **Show Adaptive Card with feedback options**: Immediately after the answer, add a node that supports Adaptive Cards to display the answer text and ask for feedback. The adaptive card's JSON defines what the user sees - the answer text, a prompt like `"Was this answer helpful?"`, and two action buttons (perhaps one for 👍🏻 "Useful" and one for 👎🏻 "Not useful"). You could also design other input types, like a 5-star rating, a text box for comments, or multiple-choice options. Adaptive Cards are very flexible, so you can tailor the feedback question format to your needs.
 
-1. **User selects an Option**: When the user clicks a button or submits the card, that action returns a payload to the agent. Typically, the card's buttons use `Action.Submit` with some custom data. For instance, one button might return a value `{ "Feedback": "Useful" }` and the other returns `{ "Feedback": "NotUseful" }`. In the [example](https://learn.microsoft.com/microsoft-copilot-studio/guidance/adaptive-card-add-feedback-for-every-response) provided by Microsoft, the card's JSON has `selectAction` data set to a string like `"This generated answer was useful"` or `"wasn't useful"` for the two icons. This data comes back as the user's response.
+1. **User selects an Option**: When the user clicks a button or submits the card, that action returns a payload to the agent. Typically, the card's buttons use `Action.Submit` with some custom data. For instance, one button might return a value `{ "Feedback": "Useful" }` and the other returns `{ "Feedback": "NotUseful" }`. A common implementation pattern is to set explicit values in the submit payload such as `"This generated answer was useful"` or `"This generated answer wasn't useful"` so your topic logic can branch reliably. This data comes back as the user's response.
 
 1. **Agent handles the feedback data**: Now it's up to your agent's logic to do something with that feedback. This can be achieved using a topic or trigger to catch the submitted response. For example, you might configure the conversation such that if the user's input (from the adaptive card) equals "This generated answer wasn't useful", it triggers a particular topic - perhaps asking an additional question like `"Sorry to hear that. Could you tell me what was wrong?"`. Or more simply, you might just log it in a datasource and acknowledge `"Thanks for your feedback!"` without further interaction.
 
@@ -156,7 +156,7 @@ In summary, Adaptive Cards for feedback are ideal when you need more than a bina
 
 ## ⭐ Best practices for Adaptive Card feedback {#best-practices-for-adaptive-card-feedback}
 
-1. **Keep it brief and unobtrusive**: Users may get annoyed if after every message they have to fill out a survey. Make the card simple - usually a quick question with two buttons or a small rating scale. The [example](https://learn.microsoft.com/microsoft-copilot-studio/guidance/adaptive-card-add-feedback-for-every-response) in Microsoft's guidance shows the agent's answer in the card followed by a subtle prompt `"Generated answer, please rate it."`. The prompt is small and polite, which is good. Avoid very large or complex cards for routine feedback.
+1. **Keep it brief and unobtrusive**: Users may get annoyed if after every message they have to fill out a survey. Make the card simple - usually a quick question with two buttons or a small rating scale. A practical pattern is to show the generated answer and then add a subtle prompt such as `"Generated answer, please rate it."`. Keep the wording short and polite. Avoid very large or complex cards for routine feedback.
 
 1. **Handle the response gracefully**: When the user clicks feedback, you might simply thank them silently (no need to always say `"Thanks for your feedback"` every time). In a support scenario, if someone says the answer wasn't useful, you might follow up to help: `"Sorry about that. Let me clarify or escalate your question."` This turns a negative feedback into an opportunity to recover the user's satisfaction.
 
@@ -167,7 +167,7 @@ In summary, Adaptive Cards for feedback are ideal when you need more than a bina
 1. **Test on all channels**: Because Adaptive Cards can render a bit differently in Teams vs. web chat, test your feedback cycle in each deployed channel. Make sure the card looks as intended and the submission is received by the agent. For instance, if using Teams, ensure the card's schema is *less than or equal to 1.5* as noted earlier. Also verify that on mobile versions of Teams or web chat, the adaptive card is still easily usable.
 
 > [!NOTE]
-> In the Copilot Studio documentation [example](https://learn.microsoft.com/microsoft-copilot-studio/guidance/adaptive-card-add-feedback-for-every-response), once the adaptive card feedback was set up, they provided a YAML snippet indicating how the agent can route the "useful/not useful" responses to a specific handling topic. This is a hint at the implementation: essentially treat the feedback like an intent that triggers either a follow-up or just completes. Implementing this means editing your agent's topics (or code) to catch those JSON responses.
+> A useful implementation pattern is to route adaptive card values like "useful/not useful" to a specific handling topic. Treat feedback values like intent signals that can trigger a follow-up (for example, recovery or escalation) or simply complete the interaction. In practice, this means editing your agent's topics (or code) to catch and process those JSON responses.
 
 ## 🧇 Comparison summary: thumbs reactions vs Adaptive Card feedback {#comparison-summary-thumbs-reactions-vs-adaptive-card-feedback}
 
@@ -759,6 +759,6 @@ The field is yours.
 
 📖 [Application Insights telemetry with Microsoft Copilot Studio](https://learn.microsoft.com/dynamics365/guidance/resources/copilot-studio-appinsights?WT.mc_id=power-188561-ebenitez)
 
-📖 [Obtain feedback for every response](https://learn.microsoft.com/microsoft-copilot-studio/guidance/adaptive-card-add-feedback-for-every-response?WT.mc_id=power-188561-ebenitez)
+📖 [Ask with Adaptive Cards](https://learn.microsoft.com/microsoft-copilot-studio/authoring-ask-with-adaptive-card?WT.mc_id=power-188561-ebenitez)
 
 <analytics-tag section="operative" mission="11-obtain-user-feedback" />
