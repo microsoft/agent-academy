@@ -17,6 +17,7 @@ Thank you for your interest! This is a hackathon repository, so contributions ar
 ## 🐛 Reporting Issues
 
 Found a bug? [Open an issue](../../issues/new?template=general-question.md) with:
+
 - Clear description of the problem
 - Steps to reproduce
 - Expected vs actual behavior
@@ -35,11 +36,13 @@ Found a bug? [Open an issue](../../issues/new?template=general-question.md) with
 ## 📋 Pull Request Guidelines
 
 **Good PR titles:**
+
 - `Fix: Broken link in README`
 - `Docs: Clarify submission requirements`
 - `Fix: Typo in judging rubric`
 
 **In your PR description:**
+
 - What you changed
 - Why it's helpful
 - How you tested it
