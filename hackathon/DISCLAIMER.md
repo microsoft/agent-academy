@@ -16,7 +16,7 @@ The Agent Academy Live Hackathon is a developer challenge showcasing AI agent de
 
 Contributors must **never** upload confidential, proprietary, or sensitive information to this public repository.
 
-### Prohibited content includes:
+### Prohibited content includes
 
 - Company Confidential or Highly Confidential information
 - Company Internal engineering projects not approved for open source
@@ -160,4 +160,4 @@ If you have questions about this disclaimer or need to report a security concern
 
 *This disclaimer is subject to change. Contributors are responsible for reviewing the latest version before each submission.*
 
-*Last updated: April 2026*
+Last updated: April 2026

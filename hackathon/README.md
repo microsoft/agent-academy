@@ -1,12 +1,8 @@
-<div align="center">
-
 # Agent Academy Live Hackathon
 
-<img width="1200" alt="Agent Academy Live Hackathon Banner" src="https://github.com/microsoft/agent-academy/raw/main/assets/banner.png" />
+![Agent Academy Live Hackathon Banner](https://github.com/microsoft/agent-academy/raw/main/assets/banner.png)
 
-### Build real AI agents. Prove what you've learned. Win recognition.
-
-</div>
+## Build real AI agents, prove what you've learned, win recognition
 
 ---
 
@@ -18,15 +14,15 @@ Apply what you've learned from the [Agent Academy](https://github.com/microsoft/
 
 > 📚 Looking for the Agent Academy curriculum? Visit the [main README](../README.md).
 
-## What's the Agent Academy Live Hackathon?
+## What is the Agent Academy Live Hackathon
 
 A connected program that validates the Agent Academy curriculum by converting learning into real, working AI agents:
 
 1. **📚 Learn** — Engage with [Agent Academy](https://aka.ms/agent-academy) curriculum modules
-2. **📺 Live** — Agent Academy Live delivers structured instruction, demos, and inspiration
-3. **🔨 Build** — Apply what you learned to build real agents
-4. **📤 Share** — Submit demos and architectures for review
-5. **🔄 Improve** — Your feedback and insights inform curriculum and product evolution
+1. **📺 Live** — Agent Academy Live delivers structured instruction, demos, and inspiration
+1. **🔨 Build** — Apply what you learned to build real agents
+1. **📤 Share** — Submit demos and architectures for review
+1. **🔄 Improve** — Your feedback and insights inform curriculum and product evolution
 
 **Open to everyone** — all skill levels welcome! Choose a participation track that matches your experience.
 
@@ -89,6 +85,7 @@ Join **Agent Academy Live** for the official hackathon kickoff:
 Open a new issue in this repo using the [🏆 Project Submission template](../../issues/new?template=project.yml)
 
 ⚠️ **Before submitting**:
+
 - Read the [Disclaimer](./DISCLAIMER.md) — No confidential information allowed
 - Review the [Code of Conduct](../CODE_OF_CONDUCT.md)
 - Ensure your repository is public and includes a README
@@ -109,8 +106,7 @@ Each submission must include:
 
 All submissions are scored using category-specific rubrics (80%) plus a Track Adjustment (20%) that accounts for the participant's selected starting level.
 
-<details>
-<summary><strong>📋 Track Adjustment (20% — applies to all awards)</strong></summary>
+### 📋 Track Adjustment (20% — applies to all awards)
 
 | Score | Description |
 |-------|-------------|
@@ -121,26 +117,21 @@ All submissions are scored using category-specific rubrics (80%) plus a Track Ad
 | 1 | Does not meet expectations |
 
 **By track:**
+
 - **Recruit**: Simple scope done well; clear learning; a working end-to-end demo
 - **Operative**: Multi-pattern solution to a real problem; reasonable robustness; thoughtful tradeoffs
 - **Commander**: Production-minded decisions (integration, security/privacy, governance, monitoring/eval); clear enterprise constraints
 
-</details>
-
-<details>
-<summary><strong>🏅 Best Use of Agent Academy Patterns (80% category criteria)</strong></summary>
+### 🏅 Best Use of Agent Academy Patterns (80% category criteria)
 
 | Criteria | Weight | Scoring (1–5) |
 |----------|--------|---------------|
 | Pattern correctness and fidelity | 30% | 1=misapplied; 3=mostly correct; 5=clean, idiomatic, no unnecessary complexity |
 | Intentionality and rationale | 20% | 1=unclear; 3=some rationale; 5=clear tradeoffs and reasoning tied to the problem |
 | Composition and orchestration | 20% | 1=ad hoc; 3=basic flow; 5=coherent design with appropriate boundaries and handoffs |
-| Explainability / learning signal | 10% | 1=not explained; 3=some reflection; 5=clear takeaways and reusable guidance |
+| Clarity of learning signal | 10% | 1=not explained; 3=some reflection; 5=clear takeaways and reusable guidance |
 
-</details>
-
-<details>
-<summary><strong>🌍 Best Real-World Use Case (80% category criteria)</strong></summary>
+### 🌍 Best Real-World Use Case (80% category criteria)
 
 | Criteria | Weight | Scoring (1–5) |
 |----------|--------|---------------|
@@ -149,10 +140,7 @@ All submissions are scored using category-specific rubrics (80%) plus a Track Ad
 | Workflow fit and adoption path | 20% | 1=toy; 3=some fit; 5=clearly fits a real workflow with minimal friction |
 | Evidence in demo | 10% | 1=hard to follow; 3=partial; 5=clear end-to-end demo showing before/after |
 
-</details>
-
-<details>
-<summary><strong>⚙️ Best Technical Execution (80% category criteria)</strong></summary>
+### ⚙️ Best Technical Execution (80% category criteria)
 
 | Criteria | Weight | Scoring (1–5) |
 |----------|--------|---------------|
@@ -161,10 +149,7 @@ All submissions are scored using category-specific rubrics (80%) plus a Track Ad
 | Quality of implementation | 20% | 1=fragile; 3=adequate; 5=clean structure, readable, maintainable, minimal hacks |
 | Evaluation / testing approach | 15% | 1=none; 3=manual testing described; 5=repeatable tests, eval cases, or metrics |
 
-</details>
-
-<details>
-<summary><strong>🏢 Best Enterprise-Ready Design (80% category criteria)</strong></summary>
+### 🏢 Best Enterprise-Ready Design (80% category criteria)
 
 | Criteria | Weight | Scoring (1–5) |
 |----------|--------|---------------|
@@ -173,10 +158,7 @@ All submissions are scored using category-specific rubrics (80%) plus a Track Ad
 | Integration readiness | 20% | 1=standalone; 3=some integration; 5=credible integration design with clear interfaces |
 | Operational readiness | 15% | 1=not considered; 3=some notes; 5=clear operational plan and observable behavior |
 
-</details>
-
-<details>
-<summary><strong>🎨 Most Creative Solution (80% category criteria)</strong></summary>
+### 🎨 Most Creative Solution (80% category criteria)
 
 | Criteria | Weight | Scoring (1–5) |
 |----------|--------|---------------|
@@ -185,10 +167,7 @@ All submissions are scored using category-specific rubrics (80%) plus a Track Ad
 | Delight and clarity in demo/story | 15% | 1=confusing; 3=okay; 5=memorable demo that clearly communicates the idea |
 | Execution coherence | 15% | 1=breaks; 3=works sometimes; 5=working, coherent, and polished for its scope |
 
-</details>
-
-<details>
-<summary><strong>⭐ Judges' Choice (80% category criteria)</strong></summary>
+### ⭐ Judges' Choice (80% category criteria)
 
 | Criteria | Weight | Scoring (1–5) |
 |----------|--------|---------------|
@@ -196,8 +175,6 @@ All submissions are scored using category-specific rubrics (80%) plus a Track Ad
 | Distinctiveness / memorability | 20% | 1=standard; 3=somewhat unique; 5=stands out clearly among submissions |
 | Demonstrated value and usefulness | 20% | 1=unclear value; 3=plausible; 5=compelling and credible value |
 | Quality of presentation | 10% | 1=hard to follow; 3=clear enough; 5=crisp, persuasive, and easy to evaluate |
-
-</details>
 
 ## Key Dates
 
@@ -225,10 +202,6 @@ All submissions are scored using category-specific rubrics (80%) plus a Track Ad
 - **[Contributing Guidelines](./CONTRIBUTING.md)** — How to contribute to the hackathon
 - **[Security Policy](../SECURITY.md)** — How to report security issues
 
-<div align="center">
-
 ---
 
 [📚 Agent Academy Curriculum](https://aka.ms/agent-academy) • [📤 Submit Your Project](../../issues/new?template=project.yml) • [👀 Browse Submissions](../../issues?q=is%3Aissue+label%3Asubmission)
-
-</div>

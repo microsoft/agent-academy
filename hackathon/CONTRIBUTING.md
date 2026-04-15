@@ -26,9 +26,9 @@ Found a bug? [Open an issue](../../issues/new?template=general-question.md) with
 ### Documentation Fixes
 
 1. Fork this repository
-2. Make your changes
-3. Test that everything works
-4. Submit a Pull Request with:
+1. Make your changes
+1. Test that everything works
+1. Submit a Pull Request with:
    - **Title**: `Fix: [brief description]` or `Docs: [what you improved]`
    - **Description**: What you changed and why
 
@@ -47,15 +47,15 @@ Found a bug? [Open an issue](../../issues/new?template=general-question.md) with
 ### Review Process
 
 1. **Maintainer review**: Program team reviews your PR
-2. **Feedback**: Address any requested changes
-3. **Merge**: Once approved, we'll merge your contribution!
+1. **Feedback**: Address any requested changes
+1. **Merge**: Once approved, we'll merge your contribution!
 
 ## ⚖️ License & Code of Conduct
 
 - All contributions are licensed under the MIT License
 - Follow our [Code of Conduct](../CODE_OF_CONDUCT.md) — be respectful and inclusive
 
-## 📧 Questions?
+## 📧 Questions
 
 - Open an issue for discussion
 - Ask during Office Hours / AMAs during the build window
