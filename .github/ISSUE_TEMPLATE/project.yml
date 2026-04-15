@@ -37,7 +37,19 @@ body:
         **Submission Deadline**: May 30, 2026 (11:59 PM PT)
         
         ⚠️ **Important**: Before submitting, please read our [Disclaimer](https://github.com/microsoft/agent-academy/blob/main/hackathon/DISCLAIMER.md). Do NOT upload any confidential, proprietary, or sensitive information.
-        
+
+  
+  - type: dropdown
+    id: privacy
+    attributes:
+      label: I agree to allow Microsoft to contact me about my responses and Feedback
+      description: Agree 
+      options: I agree to allow Microsoft to contact me about my responses and Feedback
+        - Yes 
+        - No 
+    validations:
+      required: true
+      
   - type: dropdown
     id: track
     attributes:
@@ -46,7 +58,6 @@ body:
       options:
         - Recruit (Beginner)
         - Operative (Intermediate)
-        - Commander (Advanced)
     validations:
       required: true
 
