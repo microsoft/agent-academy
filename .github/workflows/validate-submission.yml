@@ -1,0 +1,282 @@
+name: Validate Submissions
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'submission')
+    
+    steps:
+      - name: Check submission issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            console.log('Validating submission issue #' + issue.number);
+            
+            const body = issue.body || '';
+            const errors = [];
+            const warnings = [];
+            
+            const extractField = (fieldName) => {
+              const regex = new RegExp(`### ${fieldName}\\s*\\n\\s*([\\s\\S]*?)(?=\\n### |$)`, 'i');
+              const match = body.match(regex);
+              if (!match) return null;
+              return match[1].trim();
+            };
+            
+            const hasContent = (value) => {
+              if (!value) return false;
+              const trimmed = value.trim();
+              if (trimmed === '' || trimmed === '_No response_') return false;
+              return true;
+            };
+            
+            // ========== REQUIRED FIELD VALIDATIONS ==========
+            
+            // 1. Participation Track (dropdown - required)
+            const track = extractField('Participation Track');
+            if (!hasContent(track)) {
+              errors.push('**Participation Track**: Please select a track (Recruit, Operative, or Commander)');
+            } else {
+              const validTracks = ['Recruit (Beginner)', 'Operative (Intermediate)', 'Commander (Advanced)'];
+              if (!validTracks.includes(track)) {
+                errors.push('**Participation Track**: Invalid track selected. Must be one of: Recruit, Operative, or Commander');
+              }
+            }
+            
+            // 2. Project Name (required)
+            const projectName = extractField('Project Name');
+            if (!hasContent(projectName)) {
+              errors.push('**Project Name**: Please provide your project name');
+            }
+            
+            // 3. GitHub Username (required)
+            const githubUsername = extractField('GitHub Username');
+            if (!hasContent(githubUsername)) {
+              errors.push('**GitHub Username**: Please provide your GitHub username');
+            }
+            
+            // 4. Repository URL (required + format validation)
+            const repoUrl = extractField('Repository URL');
+            if (!hasContent(repoUrl)) {
+              errors.push('**Repository URL**: Please provide your GitHub repository URL');
+            } else if (!repoUrl.match(/^https:\/\/github\.com\/[\w-]+\/[\w.-]+/)) {
+              errors.push('**Repository URL**: Invalid format. Must be: https://github.com/username/repo');
+            }
+            
+            // 5. Problem Statement (required)
+            const problemStatement = extractField('Problem Statement');
+            if (!hasContent(problemStatement)) {
+              errors.push('**Problem Statement**: Please describe the problem your agent solves');
+            }
+            
+            // 6. Agent Academy Modules or Concepts Used (required)
+            const modules = extractField('Agent Academy Modules or Concepts Used');
+            if (!hasContent(modules)) {
+              errors.push('**Agent Academy Modules or Concepts Used**: Please list which Agent Academy patterns you applied');
+            }
+            
+            // 7. Architecture Overview (required)
+            const architecture = extractField('Architecture Overview');
+            if (!hasContent(architecture)) {
+              errors.push('**Architecture Overview**: Please provide an architecture diagram or description');
+            }
+            
+            // 8. Demo Video (required)
+            const demoVideo = extractField('Demo Video \\(5 minutes or less\\)');
+            if (!hasContent(demoVideo)) {
+              errors.push('**Demo Video**: Please provide a link to your demo video');
+            }
+            
+            // 9. Primary Programming Language (dropdown - required)
+            const language = extractField('Primary Programming Language');
+            if (!hasContent(language)) {
+              errors.push('**Primary Programming Language**: Please select your primary programming language');
+            }
+            
+            // 10. Key Technologies Used (required)
+            const technologies = extractField('Key Technologies Used');
+            if (!hasContent(technologies)) {
+              errors.push('**Key Technologies Used**: Please list the key technologies used in your project');
+            }
+            
+            // 11. Submission Type (dropdown - required)
+            const submissionType = extractField('Submission Type');
+            if (!hasContent(submissionType)) {
+              errors.push('**Submission Type**: Please select Individual or Team');
+            }
+            
+            // 12. Curriculum feedback - what worked well (required)
+            const workedWell = extractField('What Worked Well Using the Agent Academy Curriculum');
+            if (!hasContent(workedWell)) {
+              errors.push('**Curriculum Feedback (What Worked Well)**: Please share what worked well in the curriculum');
+            }
+            
+            // 13. Curriculum feedback - what was unclear (required)
+            const unclear = extractField('What Was Unclear or Difficult in the Curriculum');
+            if (!hasContent(unclear)) {
+              errors.push('**Curriculum Feedback (What Was Unclear)**: Please share what was unclear or difficult');
+            }
+            
+            // 14. Quick Setup Summary (required)
+            const setupSummary = extractField('Quick Setup Summary');
+            if (!hasContent(setupSummary)) {
+              errors.push('**Quick Setup Summary**: Please provide setup instructions');
+            }
+            
+            // 15. Technical Highlights (required)
+            const highlights = extractField('Technical Highlights');
+            if (!hasContent(highlights)) {
+              errors.push('**Technical Highlights**: Please describe what you are most proud of');
+            }
+            
+            // 16. Country/Region (required)
+            const country = extractField('Country\\/Region');
+            if (!hasContent(country)) {
+              errors.push('**Country/Region**: Please provide your country or region for prize eligibility');
+            }
+            
+            // ========== CHECKBOX VALIDATIONS ==========
+            const requirements = extractField('Submission Requirements');
+            if (requirements) {
+              const requiredCheckboxes = [
+                { text: 'Agent Academy concepts or patterns', label: 'Agent Academy patterns confirmation' },
+                { text: 'comprehensive README.md', label: 'README confirmation' },
+                { text: 'hardcoded API keys', label: 'No hardcoded secrets confirmation' },
+                { text: 'demo video', label: 'Demo video confirmation' },
+                { text: 'my own work', label: 'Original work confirmation' },
+                { text: 'Code of Conduct', label: 'Code of Conduct agreement' },
+                { text: 'read and agree to the \\[Disclaimer\\]', label: 'Disclaimer agreement' },
+                { text: 'NOT contain any confidential', label: 'No confidential info confirmation' },
+                { text: 'rights to submit', label: 'Rights confirmation' }
+              ];
+              
+              for (const checkbox of requiredCheckboxes) {
+                const checkboxRegex = new RegExp(`\\[x\\].*${checkbox.text}`, 'i');
+                if (!checkboxRegex.test(requirements)) {
+                  errors.push(`**${checkbox.label}**: Required checkbox not checked`);
+                }
+              }
+            } else {
+              errors.push('**Submission Requirements**: All required checkboxes must be checked');
+            }
+            
+            // ========== OPTIONAL FIELD WARNINGS ==========
+            
+            if (submissionType && submissionType.includes('Team')) {
+              const teamMembers = extractField('Team Members');
+              if (!hasContent(teamMembers)) {
+                warnings.push('**Team Members**: You selected Team submission but did not list team members');
+              }
+            }
+            
+            // ========== REPORT RESULTS ==========
+            
+            if (errors.length > 0) {
+              const errorMessage = `❌ **Submission Validation Failed**\n\nPlease fix the following issues:\n\n${errors.map(e => `- ${e}`).join('\n')}${warnings.length > 0 ? `\n\n⚠️ **Warnings:**\n${warnings.map(w => `- ${w}`).join('\n')}` : ''}\n\nPlease edit your submission to address these issues.`;
+              
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: errorMessage
+              });
+              
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                labels: ['needs-revision']
+              });
+              return;
+            }
+            
+            // All validations passed
+            console.log('✓ All required fields validated');
+            
+            try {
+              await github.rest.issues.removeLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                name: 'needs-revision'
+              });
+            } catch (e) {
+              // Label might not exist, ignore
+            }
+            
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              labels: ['validated']
+            });
+            
+            let successMessage = `✅ **Submission Validated!**\n\nThank you for participating in the Agent Academy Live Hackathon! **${projectName}** has been received.\n\n**Track:** ${track}\n**Submission Type:** ${submissionType}\n\nJudges will review your project during the judging window (May 31 – June 9, 2026).`;
+            
+            if (warnings.length > 0) {
+              successMessage += `\n\n⚠️ **Recommendations:**\n${warnings.map(w => `- ${w}`).join('\n')}`;
+            }
+            
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              body: successMessage
+            });
+            
+      - name: Check repository accessibility
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const body = issue.body || '';
+            
+            const repoUrlMatch = body.match(/### Repository URL\s*\n\s*(.+)/i);
+            if (!repoUrlMatch) return;
+            
+            const repoUrl = repoUrlMatch[1].trim();
+            const repoMatch = repoUrl.match(/github\.com\/([\w-]+)\/([\w.-]+)/);
+            if (!repoMatch) return;
+            
+            const repoOwner = repoMatch[1];
+            const repoName = repoMatch[2].replace(/\.git$/, '');
+            
+            try {
+              const { data: repo } = await github.rest.repos.get({
+                owner: repoOwner,
+                repo: repoName
+              });
+              
+              console.log('✓ Repository is public and accessible');
+              
+              try {
+                await github.rest.repos.getContent({
+                  owner: repoOwner,
+                  repo: repoName,
+                  path: 'README.md'
+                });
+                console.log('✓ README.md found');
+              } catch (e) {
+                console.log('⚠️  README.md not found');
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  body: '⚠️ **Recommendation**: Your repository should include a comprehensive `README.md` file with setup instructions.'
+                });
+              }
+              
+            } catch (error) {
+              console.log('❌ Repository not accessible: ' + error.message);
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: '❌ **Error**: Could not access the repository. Please ensure:\n- The repository URL is correct\n- The repository is **public** (not private)\n- The repository exists'
+              });
+            }
