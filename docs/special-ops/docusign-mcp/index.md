@@ -1,7 +1,19 @@
 ---
-tags: 
-    - MCP
-    - Copilot Studio
+tags:
+  - mcp
+difficulty: 3
+time: 90
+description: >-
+  Connect the Docusign MCP Server to a Copilot Studio agent for
+  document workflow automation.
+badge: ./assets/PlaceholderBadge.png
+products:
+  - copilot-studio
+  - docusign
+industries:
+  - it
+created-date: 2026-03-17
+last-edited-date: 2026-04-20
 ---
 # Microsoft Copilot Studio ➕ Docusign MCP
 
