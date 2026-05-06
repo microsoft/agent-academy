@@ -1,4 +1,4 @@
-# Agent Academy Live Challenge Contest
+# Agent Academy Hackathon
 
 ![Agent Academy Live Hackathon Banner](./assets/banner.png)
 
@@ -18,10 +18,10 @@ Apply what you've learned from the [Agent Academy](https://github.com/microsoft/
 
 ## Contest Overview
 
-A connected program that validates the Agent Academy curriculum by converting learning into real, working AI agents:
+Agent Academy Hackathon lets you expand on what you learned in the Agent Academy curriculum and gives you an opportunity to convert your learning into real, working AI Agents:
 
-1. **📚 Learn** — Engage with [Agent Academy](https://aka.ms/agent-academy) curriculum modules
-1. **📺 Live** — Agent Academy Live delivers structured instruction, demos, and inspiration
+1. **📚 Learn** — Engage with the [Agent Academy](https://aka.ms/agent-academy) curriculum
+1. **📺 Live** — Attend Agent Academy Live to hear from the product teams building the tools and MVP and Community experts implementing them
 1. **🔨 Build** — Apply what you learned to build real agents
 1. **📤 Share** — Submit demos and architectures for review
 1. **🔄 Improve** — Your feedback and insights inform curriculum and product evolution
