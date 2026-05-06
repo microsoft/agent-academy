@@ -1,6 +1,6 @@
 # Agent Academy Live Challenge Contest
 
-![Agent Academy Live Hackathon Banner](https://github.com/microsoft/agent-academy/raw/main/assets/banner.png)
+![Agent Academy Live Hackathon Banner](./assets/banner.png)
 
 ## Build real AI agents, prove what you've learned, win recognition
 
@@ -9,6 +9,8 @@
 **A developer contest running May 12 – June 2, 2026, kicked off live during [Agent Academy Live](https://aka.ms/agent-academy) on May 12.**
 
 Apply what you've learned from the [Agent Academy](https://github.com/microsoft/agent-academy) curriculum to build real, working AI agents using Microsoft AI tools. Compete for $12,000 in prizes, earn recognition, and help shape the future of the Agent Academy curriculum.
+
+📜 **[Official Contest Rules](./OFFICIAL_RULES.md)** — Full legal terms and conditions
 
 ⚠️ **Important**: Before submitting, read our [Disclaimer](./DISCLAIMER.md) — do not upload confidential information.
 
