@@ -1,63 +1,81 @@
 name: "🏆 Project Submission"
-description: "Submit your Agent Academy Live Hackathon project to showcase your work and compete for recognition!"
+description: "Submit your Agent Academy Live Challenge Contest project to showcase your work and compete for recognition!"
 title: "Project: [Track] - [Your Project Name]"
 labels: ["submission"]
 body:
   - type: markdown
     attributes:
       value: |
-        ## 🎉 Thank you for participating in the Agent Academy Live Hackathon!
+        ## 🎉 Thank you for participating in the Agent Academy Live Challenge Contest!
 
-        
-        
-        PLEASE READ THOROUGHLY BEFORE ENTERING THE CONTEST 
-        
-        Open to any registered Event attendee 18 years of age or older . If you are 18 years of age or older but have not reached the age of majority in your legal place of residence, then you must have consent of a parent/legal guardian. 
-        
-        Employees and directors of Microsoft Corporation and its subsidiaries, affiliates, advertising agencies, and Contest Parties are eligible to SUBMIT but NOT eligible to WIN, nor are persons involved in the execution or administration of this promotion, or the family members of each above (parents, children, siblings, spouse/domestic partners, or individuals residing in the same household). 
-        
-        Not eligible in Cuba, Iran, North Korea, Sudan, Syria, Region of Crimea, Russia.
-        
-        For business/tradeshow events- If you are attending the Event in your capacity as an employee, it is your sole responsibility to comply with your employer’s gift policies. Microsoft will not be party to any disputes or actions related to this matter. 
-        
-        GOVERNMENT EMPLOYEES INCLUDING EDUCATORS- Microsoft is committed to complying with government gift and ethics rules and therefore government and public sector employees are not eligible for this promotion.   
-        
-        To be eligible, an entry must meet the following content/technical requirements: Your entry must be your own original work; and your entry cannot have been selected as a winner in this contest; and you must have obtained all consents, approvals, or licenses required for you to submit your entry; and · To the extent that entry requires the submission of user-generated content such as software, photos, videos, music, artwork, essays, etc., entrants warrant that their entry is their original work, has not been copied from others without permission or apparent rights, and does not violate the privacy, intellectual property rights, or other rights of any other person or entity. You may include Microsoft trademarks, logos, and designs, for which Microsoft grants you a limited license to use for the sole purposes of submitting an entry into this Contes if applicable; and · your entry may NOT contain, as determined by us in our sole and absolute discretion, any content that is obscene or offensive, violent, defamatory, disparaging or illegal, or that promotes alcohol, illegal drugs, tobacco or a particular political agenda, or that communicates messages that may reflect negatively on the goodwill of Microsoft.    
-        
-        Please contact poweradvocates@microsoft.com with questions. 
-        
-        **PRIVACY** Your privacy is important to us. Your personal data is never shared outside the company without your permission. For more information about Microsoft's Privacy Practices, see http://go.microsoft.com/fwlink/?LinkId=521839
-        
-        **Official Rules** Official game rules are available here- https://aka.ms/agentacademy/terms
+        ![Agent Academy Live Banner](https://github.com/microsoft/agent-academy/raw/hackathon/hackathon/assets/banner.png)
 
-        
-        
+        PLEASE READ THOROUGHLY BEFORE ENTERING THE CONTEST
+
+        **ELIGIBILITY**
+
+        Open to any registered attendee 18 years of age or older. If you are 18 years of age or older but have not reached the age of majority in your legal place of residence, then you must have consent of a parent/legal guardian.
+
+        Employees and directors of Microsoft Corporation and its subsidiaries, affiliates, advertising agencies, and Contest Parties are not eligible, nor are persons involved in the execution or administration of this Contest, or the family members of each above (parents, children, siblings, spouse/domestic partners, or individuals residing in the same household). Void in Cuba, Iran, North Korea, Sudan, Syria, Region of Crimea, Russia, and where otherwise prohibited by law.
+
+        **ENTRY REQUIREMENTS**
+
+        To be eligible, an entry must meet the following content/technical requirements:
+        - Your entry must be your own original work
+        - The demo video portion of your entry must be solely your own work
+        - Your entry cannot have been selected as a winner in any other contest
+        - You must have obtained all consents, approvals, or licenses required for you to submit your entry
+        - Entrants warrant that their entry is their original work, has not been copied from others without permission or apparent rights, and does not violate the privacy, intellectual property rights, or other rights of any other person or entity
+        - You may include Microsoft trademarks, logos, and designs, for which Microsoft grants you a limited license to use for the sole purposes of submitting an entry into this Contest
+        - Your entry may NOT contain any content that is obscene or offensive, violent, defamatory, disparaging, or illegal, or that promotes alcohol, illegal drugs, tobacco or a particular political agenda, or that communicates messages that may reflect negatively on the goodwill of Microsoft
+
+        **ENTRY LIMITS**
+
+        The entry limit is one (1) per Track and two (2) overall during the Entry Period. Any attempt to obtain more than the stated number of entries by using multiple/different accounts, email addresses, identities, registrations, logins, or any other methods will void your entries and you may be disqualified. Use of any automated system to participate is prohibited.
+
+        **MICROSOFT ECOSYSTEM REQUIREMENT**
+
+        Each agent must use at least one (1) of the following Microsoft products and services:
+        - Microsoft Copilot Studio
+        - Azure OpenAI Service
+        - Microsoft Graph API
+        - Power Automate
+
+        Please contact poweradvocates@microsoft.com with questions.
+
+        **PRIVACY** Personal data you provide while entering this Contest will be used by Microsoft and/or its agents only for the administration and operation of this Contest and in accordance with the [Microsoft Privacy Statement](https://privacy.microsoft.com/en-us/privacystatement).
+
+        **Official Rules** Official contest rules are available here: https://aka.ms/agentacademy/terms
+
+        ---
+
         Please fill out this form completely to submit your project. All fields marked as required must be completed for evaluation.
-        
+
         **Submission Deadline**: June 2, 2026 (11:59 PM PT)
-        
+
         ⚠️ **Important**: Before submitting, please read our [Disclaimer](https://github.com/microsoft/agent-academy/blob/main/hackathon/DISCLAIMER.md). Do NOT upload any confidential, proprietary, or sensitive information.
 
-  
   - type: dropdown
     id: privacy
     attributes:
       label: I agree to allow Microsoft to contact me about my responses and Feedback
-      description: I agree to allow Microsoft to contact me about my responses and Feedback 
-      options: 
-        - "Yes" 
-        - "No" 
+      description: I agree to allow Microsoft to contact me about my responses and Feedback
+      options:
+        - "Yes"
+        - "No"
     validations:
       required: true
-      
+
   - type: dropdown
     id: track
     attributes:
       label: Participation Track
-      description: Which starting level are you competing at?
+      description: "Which track are you competing in? Entry limit: 1 per Track, 2 overall."
       options:
-        - Recruit (Beginner)
-        - Operative (Intermediate)
+        - "Recruit (Beginner) — https://microsoft.github.io/agent-academy/recruit/"
+        - "Operative (Intermediate) — https://microsoft.github.io/agent-academy/operative/"
+        - "Special Ops (Advanced) — https://microsoft.github.io/agent-academy/special-ops/"
+        - "Cowork Collective (Collaborative) — https://microsoft.github.io/agent-academy/cowork-collective/"
     validations:
       required: true
 
@@ -126,10 +144,10 @@ body:
     id: demo-video
     attributes:
       label: Demo Video (5 minutes or less)
-      description: Provide a link to your demo video showing the agent in action
+      description: Provide a link to your demo video showing the agent in action. Video must be no longer than 5 minutes.
       placeholder: |
         Demo Video: https://youtu.be/your-video
-        
+
         Optional additional materials:
         Screenshots: https://github.com/username/project/tree/main/screenshots
         Live Demo: https://your-app.com
@@ -154,7 +172,7 @@ body:
     id: technologies
     attributes:
       label: Key Technologies Used
-      description: List the main technologies, frameworks, and services used in your project
+      description: "List the main technologies, frameworks, and services used. Must include at least one: Microsoft Copilot Studio, Azure OpenAI Service, Microsoft Graph API, or Power Automate."
       placeholder: |
         - Microsoft Copilot Studio
         - Azure OpenAI Service
@@ -215,17 +233,21 @@ body:
       options:
         - label: My project demonstrates one or more Agent Academy concepts or patterns
           required: true
+        - label: My agent uses at least one Microsoft product/service (Copilot Studio, Azure OpenAI, Graph API, or Power Automate)
+          required: true
         - label: My repository includes a comprehensive README.md with setup instructions
           required: true
         - label: My code does not contain hardcoded API keys or secrets
           required: true
         - label: I have included a demo video (5 minutes or less)
           required: true
-        - label: My project is my own work with proper attribution for any third-party code
+        - label: My project is my own original work with proper attribution for any third-party code
           required: true
         - label: I agree to the [Code of Conduct](https://github.com/microsoft/agent-academy/blob/main/CODE_OF_CONDUCT.md)
           required: true
         - label: I have read and agree to the [Disclaimer](https://github.com/microsoft/agent-academy/blob/main/hackathon/DISCLAIMER.md)
+          required: true
+        - label: I have read and agree to the [Official Contest Rules](https://aka.ms/agentacademy/terms)
           required: true
         - label: My submission does NOT contain any confidential, proprietary, or sensitive information
           required: true
@@ -270,10 +292,10 @@ body:
     id: contact
     attributes:
       label: Contact Information
-      description: Email or LinkedIn (optional, for winner notifications)
+      description: Email or LinkedIn (for winner notifications)
       placeholder: "email@example.com or linkedin.com/in/yourprofile"
     validations:
-      required: false
+      required: true
 
   - type: input
     id: country
@@ -288,11 +310,21 @@ body:
     attributes:
       value: |
         ---
-        
+
         ## 📋 What Happens Next?
-        
-        1. **Judging Window** (June 2 – June 14): Our judges will review and score your submission
-        2. **Winners Finalized**: June 15, 2026
-        3. **Winners Announced**: June 16, 2026
-        
+
+        1. **Judging Window**: Winners will be selected within 14 days following the Entry Period close (June 2, 2026)
+        2. **Winner Notification**: Within 7 days of judging
+        3. **Prizes Sent**: Within 28 days of winner selection
+
+        **Judging Criteria:**
+        - 25% — Accuracy & Relevance (meets challenge requirements)
+        - 25% — Technical Execution (clear problem-solving approach)
+        - 15% — Creativity & Originality (novel ideas or unexpected execution)
+        - 15% — User Experience & Presentation (clear, polished, demoable)
+        - 10% — Reliability & Safety (solid patterns, avoids obvious pitfalls)
+        - 10% — Use Case Impact (most impactful use case)
+
+        **Prizes per Track:** 🥇 $1,500 | 🥈 $1,000 | 🥉 $500 (Microsoft Store Gift Cards)
+
         **Good luck! 🚀**
