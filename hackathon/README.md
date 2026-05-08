@@ -67,12 +67,12 @@ Submit your agent and demo video via GitHub issues at: **[https://aka.ms/agentac
 
 Pick one of the following Tracks:
 
-| Track | Details |
-|-------|---------|
-| 🟢 **Recruit** | [https://microsoft.github.io/agent-academy/recruit/](https://microsoft.github.io/agent-academy/recruit/) |
-| 🟡 **Operative** | [https://microsoft.github.io/agent-academy/operative/](https://microsoft.github.io/agent-academy/operative/) |
-| 🔴 **Special Ops** | [https://microsoft.github.io/agent-academy/special-ops/](https://microsoft.github.io/agent-academy/special-ops/) |
-| 🤝 **Cowork Collective** | [https://microsoft.github.io/agent-academy/cowork-collective/](https://microsoft.github.io/agent-academy/cowork-collective/) |
+| Track | What We Expect |
+|-------|----------------|
+| **[Recruit](https://microsoft.github.io/agent-academy/recruit/)** | Build a beginner-friendly agent that demonstrates the core fundamentals of agent creation. Submissions should show a clear use case, well-defined instructions, relevant knowledge sources, and a working agent experience that helps a user complete a real task. This track is best for first-time agent builders or projects based on the Recruit learning path. |
+| **[Operative](https://microsoft.github.io/agent-academy/operative/)** | Build a more advanced agent solution that demonstrates orchestration across multiple agents, agent flows, and AI prompt integration. Submissions should show how agents can coordinate work, trigger or support business processes, use prompts to reason over information, and produce useful outcomes beyond a basic single-agent experience. This track is best for builders applying concepts from the Operative learning path. |
+| **[Special Ops](https://microsoft.github.io/agent-academy/special-ops/)** | Build an agent or agent capability that explores a focused advanced scenario, extension pattern, or specialized technique. Submissions may include areas like MCP, external systems, advanced actions, structured outputs, evaluation patterns, or other targeted agent-building concepts from Special Ops missions. |
+| **[Cowork Collective](https://microsoft.github.io/agent-academy/cowork-collective/)** | Build a solution that uses Copilot Cowork to complete or support delegated work. Submissions should show how Cowork can reason across a task, use available context and tools, produce a useful work product, and fit into a real workflow where a person reviews or acts on the result. |
 
 ### Entry Limits
 
