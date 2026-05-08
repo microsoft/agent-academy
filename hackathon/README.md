@@ -1,6 +1,6 @@
 # Agent Academy Hackathon
 
-![Agent Academy Live Hackathon Banner](./assets/banner.png)
+![Agent Academy Live Hackathon Banner](./assets/AgentAcademyHackBanner.png)
 
 ## Build real AI agents, prove what you've learned, win recognition
 
@@ -21,7 +21,7 @@ Apply what you've learned from the [Agent Academy](https://github.com/microsoft/
 Agent Academy Hackathon lets you expand on what you learned in the Agent Academy curriculum and gives you an opportunity to convert your learning into real, working AI Agents:
 
 1. **📚 Learn** — Engage with the [Agent Academy](https://aka.ms/agent-academy) curriculum
-1. **📺 Live** — Attend Agent Academy Live to hear from the product teams building the tools and MVP and Community experts implementing them
+1. **📺 Live** — Attend [Agent Academy Live](https://aka.ms/agent-academy-live) to hear from the product teams building the tools and MVP and Community experts implementing them
 1. **🔨 Build** — Apply what you learned to build real agents
 1. **📤 Share** — Submit demos and architectures for review
 1. **🔄 Improve** — Your feedback and insights inform curriculum and product evolution
@@ -49,14 +49,13 @@ Register at the official Agent Academy registration page: **[https://aka.ms/agen
 
 Follow the instructions and build an agent that meets **all** of the following criteria:
 
-- **Curriculum-aligned**: Must demonstrate one or more Agent Academy modules, patterns, or concepts that align with the Agent Academy curriculum for the applicable Track.
+- **Curriculum-aligned**: Must demonstrate one or more Agent Academy patterns, or concepts that align with the Agent Academy curriculum for the applicable Track.
 - **Problem-solving focused**: Each agent must address a real problem with a defined target user.
 - **Architected systems**: Submissions require an architecture overview with components, data flow, and integration points.
 - **Microsoft Ecosystem**: Each agent must use at least one (1) of the following Microsoft products and services:
   - Microsoft Copilot Studio
-  - Azure OpenAI Service
-  - Microsoft Graph API
-  - Power Automate
+  - Microsoft 365 Copilot
+  - Copilot Cowork
 
 ### 3. Create a Demo Video
 
@@ -64,7 +63,7 @@ Make a demo video featuring your agent in action. Your video may be **no longer 
 
 ### 4. Submit Your Entry
 
-Submit your agent and demo video via GitHub issues at: **[https://aka.ms/agentacademy/submit](https://aka.ms/agentacademy/submit)**
+Submit your agent and demo video via GitHub issues at: **[https://aka.ms/agentacademy/submit](https://aka.ms/agent-academy-hack/submit)**
 
 Pick one of the following Tracks:
 
