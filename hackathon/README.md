@@ -63,7 +63,7 @@ Make a demo video featuring your agent in action. Your video may be **no longer 
 
 ### 4. Submit Your Entry
 
-Submit your agent and demo video via GitHub issues at: **[https://aka.ms/agentacademy/submit](https://aka.ms/agent-academy-hack/submit)**
+Submit your agent and demo video via GitHub issues at: **[https://aka.ms/agent-academy-hack/submit](https://aka.ms/agent-academy-hack/submit)**
 
 Pick one of the following Tracks:
 
