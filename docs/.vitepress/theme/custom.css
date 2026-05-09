@@ -5,3 +5,54 @@ html.dark .light-only {
 html:not(.dark) .dark-only {
   display: none !important;
 }
+/* Speaker grid — used on events/live/index.md */
+.speaker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.speaker-card {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--vp-c-bg-soft);
+  transition: box-shadow 0.2s ease;
+}
+
+.speaker-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.speaker-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.speaker-info {
+  padding: 1rem;
+}
+
+.speaker-info h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.speaker-title {
+  font-size: 0.8rem;
+  color: var(--vp-c-text-2);
+  margin: 0 0 0.75rem;
+  font-weight: 500;
+}
+
+.speaker-info p:last-child {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--vp-c-text-1);
+  margin: 0;
+}
