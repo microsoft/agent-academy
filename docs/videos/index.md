@@ -1,5 +1,5 @@
 ---
-title: Videos
+lastUpdated: false
 ---
 
 # Videos

@@ -1,5 +1,5 @@
 ---
-title: Workshops
+lastUpdated: false
 ---
 
 # Workshops

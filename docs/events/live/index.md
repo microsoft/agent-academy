@@ -1,10 +1,10 @@
 ---
-title: Agent Academy Live
+lastUpdated: false
 ---
 
-![Banner](./assets/banner.png)
-
 # Agent Academy Live
+
+![Banner](./assets/banner.png)
 
 **May 12, 2026 | 8:30 AM – 2:30 PM PT**
 Virtual, Free

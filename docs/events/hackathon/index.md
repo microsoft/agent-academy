@@ -1,10 +1,10 @@
 ---
-title: Agent Academy Hackathon
+lastUpdated: false
 ---
 
-![Hackathon Banner](./assets/AgentAcademyHackBanner.png)
-
 # 🏆 Agent Academy Hackathon
+
+![Hackathon Banner](./assets/AgentAcademyHackBanner.png)
 
 **May 12 – June 2, 2026** · $12,000 in total prizes · Open to everyone
 
