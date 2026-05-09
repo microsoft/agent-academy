@@ -2,7 +2,7 @@
 title: Workshops
 ---
 
-## Workshops
+# Workshops
 
 Bring Agent Academy to your team or your stage.
 
