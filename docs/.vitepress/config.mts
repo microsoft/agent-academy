@@ -25,12 +25,13 @@ export default defineConfig({
   themeConfig: {
     logo: "/logo.png",
     nav: [
-      { text: "Home", link: "/" },
       {
-        text: "About",
+        text: "Home",
         items: [
+          { text: "Home", link: "/" },
           { text: "Our Team", link: "/our-team/" },
           { text: "Recent Changes", link: "/recent-changes/" },
+          { text: "Videos", link: "/videos/" },
         ],
       },
       {
@@ -41,22 +42,21 @@ export default defineConfig({
           { text: "Commander (Coming Soon)", link: "/commander/" },
         ],
       },
-        {
-    text: 'Labs',
-    items: [
-      { text: 'Special Ops', link: '/special-ops/' },
-      { text: 'Cowork Collective', link: '/cowork-collective/' },
-    ]
-  },
-  {
-    text: 'Events',
-    items: [
-      { text: 'Live Event', link: '/events/live/' },
-      { text: 'Hackathon', link: '/events/hackathon/' },
-      { text: 'Workshops', link: '/events/workshops/' },
-    ]
-  },
-   { text: 'Videos', link: '/videos/' },
+      {
+        text: 'Labs',
+        items: [
+          { text: 'Special Ops', link: '/special-ops/' },
+          { text: 'Cowork Collective', link: '/cowork-collective/' },
+        ],
+      },
+      {
+        text: 'Events',
+        items: [
+          { text: 'Live Event', link: '/events/live/' },
+          { text: 'Hackathon', link: '/events/hackathon/' },
+          { text: 'Workshops', link: '/events/workshops/' },
+        ],
+      },
     ],
     search: {
       provider: "local",
@@ -65,6 +65,7 @@ export default defineConfig({
   { text: 'Home', link: '/' },
   { text: 'Our Team', link: '/our-team/' },
   { text: 'Recent Changes', link: '/recent-changes/' },
+  { text: 'Videos', link: '/videos/' },
   {
     text: 'Courses',
     items: [
@@ -145,7 +146,6 @@ export default defineConfig({
       { text: 'Workshops', link: '/events/workshops/' },
     ],
   },
-  { text: 'Videos', link: '/videos/' },
     ],
     socialLinks: [
       {
