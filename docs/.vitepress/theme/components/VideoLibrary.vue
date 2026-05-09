@@ -155,6 +155,8 @@ const videos = [
   { youtubeId: 'QRBimOsgKEQ', track: 'operative', title: 'Collecting feedback from users', desc: 'Learn how to collect structured feedback from users inside your agent using built-in thumbs and custom feedback flows.', duration: '19:33', published: 'March 2026' },
   { youtubeId: 'CpgZo--FhaU', track: 'cowork', title: 'Copilot just got a major upgrade with Copilot Cowork', desc: 'Everything you need to know about Copilot Cowork — what it is, how it differs from regular Copilot, the 13 built-in skills, scheduled tasks, and how to create custom skills.', duration: '15:30', published: 'April 2026' },
   { youtubeId: 'osjHPVfNF3w', track: 'cowork', title: 'Copilot Cowork vs. Manual Presentation Redesign', desc: 'See how Copilot Cowork can help convert an existing presentation to use a template.', duration: '4:12', published: 'April 2026' },
+  { youtubeId: 'Ebwi_VF6EIc', track: 'special-ops', title: 'From CLI to Agent Magic with the Power Platform CLI MCP Server', desc: 'Learn how the Power Platform CLI MCP server turns complex CLI commands into natural language conversations', duration: '19:25', published: 'Feb 2026' },
+
 ]
 
 const filtered = computed(() => {
