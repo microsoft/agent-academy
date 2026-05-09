@@ -6,9 +6,13 @@ lastUpdated: false
 
 **Welcome to Copilot Studio Agent Academy.**  
 
-Your mission—should you choose to accept it—is to master the art of building agents using **Microsoft Copilot Studio**.
+Agent Academy is a free, open-source training program for anyone who wants to build with Microsoft Copilot Studio or get more done with AI agents like Copilot Cowork.
 
-This hands-on training is your entry point into the **world of agents**: from grounded prompts to Adaptive Cards and agent flows, you'll learn how to build, scale, and deploy intelligent agents using real-world tools and use cases.
+If you're starting from zero, the curriculum tracks take you from "I've never touched Copilot Studio" to building production-ready agents with MCP integrations, multi-agent orchestration, and real automation.
+
+If you already know the basics and want to go deep on something specific, the standalone labs let you jump straight to what matters, whether that's YAML, MCP servers, or Copilot Cowork use cases.
+
+No fluff. No made-up scenarios. Just real tools, real patterns, and real agents.
 
 ## 🏅 Rank Progression {#rank-progression}
 
@@ -20,16 +24,16 @@ The **Copilot Studio Agent Academy** is a multi-phase training program designed 
 | 🔵 **Operative** | ••    | <action-button href="https://aka.ms/agent-academy-operative" label="Get started" icon="🚀" /> | ![Operative Badge](./images/mcs-agent-academy-operative-badge.png){ width="300" } |
 | 🟡 **Commander** | •••   | Coming Soon                                                                                    | ![Commander Badge](./images/mcs-agent-academy-commander-badge.png){ width="300" } |
 
-Each level builds on the last. Finish your Recruit mission, and stay tuned to level up your agent credentials.
+Each level builds on the last. Finish your Recruit mission, and keep going to level up your agent credentials.
 
 ## 🎯 Special Ops {#special-ops}
 
-Beyond the core ranks, the Academy also offers **Special Ops** — standalone, one-off missions that focus on a specific topic or integration. These don't require completing any rank and can be tackled at any time, in any order. Think of them as side missions to sharpen a particular skill.
+**Special Ops** are standalone, one-off missions that focus on a specific topic or integration. These don't require completing any rank and can be tackled at any time, in any order. Think of them as side missions to sharpen a particular skill.
 <action-button href="./special-ops/" label="View Special Ops" icon="🚀" />
 
 ## 🤝 Cowork Collective {#cowork-collective}
 
-The **Cowork Collective** is a set of hands-on labs focused on **Copilot Cowork** — a new way to delegate work to Copilot so it can take action on your behalf across your Microsoft 365 environment. These missions are independent from the rank progression and can be completed at any time.
+The **Cowork Collective** is a set of hands-on labs focused on **Copilot Cowork** inside M365 Copilot. It provides a new way to delegate work to Copilot so it can take action on your behalf across your Microsoft 365 environment. These missions are independent from the rank progression and can be completed at any time.
 
 <action-button href="./cowork-collective/" label="View Cowork Collective" icon="🚀" />
 
@@ -58,6 +62,12 @@ For example:
 - Some modules require **administrative permissions** to create agents and configure settings.
 
 If a module requires a capability you don't have access to, you can **skip it** and move on, but keep in mind that many modules **build on previous ones**. Skipping a module may mean you're missing a dependency (like a solution, agent, or data) that later modules expect to be in place. You may be able to work around this, but in some cases it could block your progress on subsequent modules.
+
+::: tip 🚀 Want a more guided experience?
+Prefer not to deal with environment setup, trial licenses, or expiring tenants? The **Microsoft Power Up Program** offers the Agent Academy Recruit path on their platform with a pre-configured environment, office hours, and discussion forums if you get stuck. A great option whether you're an individual learner or running this as a team. Same curriculum, just on Power Up's platform.
+
+[👉 Try it on Power Up](https://aka.ms/powerup)
+:::
 
 ## 🎒 Other Courses {#other-courses}
 
