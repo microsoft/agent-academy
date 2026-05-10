@@ -27,7 +27,7 @@ const resources = [
     title: 'Video walkthroughs',
     desc: 'Mission-by-mission video walkthroughs you can use to supplement live delivery or share with participants for pre-work.',
     available: true,
-    link: '/videos/',
+    link: 'https://microsoft.github.io/agent-academy/videos/',
     linkText: 'Browse videos'
   },
   {

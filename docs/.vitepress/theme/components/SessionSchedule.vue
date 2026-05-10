@@ -219,7 +219,7 @@ const sessions = [
         name: 'Bas Brekelmans',
         title: 'CTO, Microsoft Copilot Studio | Microsoft',
         photo: 'https://vslive.com/events/redmond-2022/speakers/-/media/ECG/EventSpeakerPhotos/Brekelmans_Bas_388.jpg',
-        bio: 'Bas Brekelmans is CTO of Microsoft Copilot Studio and the software architect behind Microsoft\'s Conversational AI products. He is passionate about fusion team tooling, enabling software engineers to co-develop effectively with low-code developers, and making sophisticated AI capabilities accessible to all.',
+        bio: 'Founding architect of Copilot Cowork and past CTO of Copilot Studio, with deep expertise in distributed systems, scalable infrastructure, and AI‑driven developer tooling, shaping the evolution of Microsoft’s agentic AI platform.',
         linkedin: 'https://www.linkedin.com/in/basbrekelmans/',
       }
     ]
