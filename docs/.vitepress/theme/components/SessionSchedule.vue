@@ -213,7 +213,7 @@ const sessions = [
   {
     time: '1:40 PM',
     title: 'Inside Cowork — Vision, Roadmap & What\'s Next',
-    description: 'The CTO of Copilot Studio gives an inside look at Cowork — the vision, current capabilities, roadmap, and what\'s coming next for delegated work in the Microsoft 365 ecosystem.',
+    description: 'Get an inside look at Cowork from the founding architect — the vision, current capabilities, roadmap, and what\'s coming next for delegated work in the Microsoft 365 ecosystem.',
     speakers: [
       {
         name: 'Bas Brekelmans',
