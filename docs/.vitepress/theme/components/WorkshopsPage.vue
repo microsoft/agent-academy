@@ -5,7 +5,7 @@
       <div class="resource-body">
         <div class="resource-title">{{ r.title }}</div>
         <div class="resource-desc">{{ r.desc }}</div>
-        <a v-if="r.available && r.link" :href="r.link" :target="r.link.startsWith('http') ? '_blank' : undefined" rel="noopener" class="resource-link">{{ r.linkText }} →</a>
+        <a v-if="r.available && r.link" :href="r.link" :target="r.link.startsWith('http') ? '_blank' : undefined" rel="noopener noreferrer" class="resource-link">{{ r.linkText }} →</a>
         <span v-else class="coming-soon-label">Coming soon</span>
       </div>
     </div>
