@@ -10,6 +10,30 @@ Everything you need to deliver Agent Academy as a live workshop from timing plan
 Work through the full curriculum yourself before delivering it live. There's no substitute for having personally hit the friction points your participants will hit.
 :::
 
+## Using the slide decks
+
+You have a [presenter deck](./presentationMaterials.md) for each path.
+
+Each deck contains: title slide, welcome/agenda/setup/scenario, then for each module: a **divider slide**, a **concept slide** (the "brief presentation"), and a **walkthrough slide** (objectives + steps for the lab).
+
+**How to use them:**
+
+- Open on divider slide while learners settle in from a break
+- Show the concept slide as your "stand-and-deliver" intro (3–5 min)
+- Leave the walkthrough slide up on a side monitor during the lab
+- Recap + Resources slides for wrap-up
+
+## When instructor demos make sense
+
+| Demo when… | Skip the demo when… |
+|---|---|
+| The UI has > 5 clicks before the first meaningful action | The lab is short (< 15 min) and self-explanatory |
+| A failure mode is non-obvious (e.g., schema name conflicts, Frontier preview toggle) | Learners can recover from a wrong click in < 30 sec |
+| The output is invisible (background flows, triggers firing) | The lab is mostly text authoring (instructions, prompts) |
+| > 25% of learners get stuck at the same step in prior runs | Concept slide already shows the end state clearly |
+
+**Rule of thumb:** demo the *first 90 seconds* of any lab where the entry point is ambiguous (where do I click first?). After that, let them work.
+
 ## Environment prerequisites
 
 This is the most critical section. Environment issues are the number one reason workshops stall. Get this sorted before anyone arrives.
@@ -72,20 +96,20 @@ Covers: Full Recruit track minus licensing discussion.
 | Time | Activity | Module(s) |
 |------|----------|-----------|
 | 0:00 | Welcome, logistics, environment check | — |
-| 0:15 | Presentation: Introduction to Agents | 01 |
-| 0:35 | Presentation: Copilot Studio Fundamentals | 02 |
-| 0:55 | **Lab: Create a Declarative Agent** | 03 |
-| 1:25 | **Lab: Creating a Solution** | 04 |
-| 1:45 | **Lab: Using a Prebuilt Agent** | 05 |
+| 0:15 | Presentation: Introduction to Agents | [01](/recruit/01-introduction-to-agents/) |
+| 0:35 | Presentation: Copilot Studio Fundamentals | [02](/recruit/02-copilot-studio-fundamentals/) |
+| 0:55 | **Lab: Create a Declarative Agent** | [03](/recruit/03-create-a-declarative-agent-for-M365Copilot/) |
+| 1:25 | **Lab: Creating a Solution** | [04](/recruit/04-creating-a-solution/) |
+| 1:45 | **Lab: Using a Prebuilt Agent** | [05](/recruit/05-using-prebuilt-agents/) |
 | 2:00 | Break | — |
-| 2:15 | **Lab: Create Agent from Conversation** | 06 |
-| 2:55 | **Lab: Add a Topic with Trigger** | 07 |
+| 2:15 | **Lab: Create Agent from Conversation** | [06](/recruit/06-create-agent-from-conversation/) |
+| 2:55 | **Lab: Add a Topic with Trigger** | [07](/recruit/07-add-new-topic-with-trigger/) |
 | 3:35 | Lunch | — |
-| 4:05 | **Lab: Add Adaptive Cards** | 08 |
-| 4:45 | **Lab: Add an Agent Flow** | 09 |
+| 4:05 | **Lab: Add Adaptive Cards** | [08](/recruit/08-add-adaptive-card/) |
+| 4:45 | **Lab: Add an Agent Flow** | [09](/recruit/09-add-an-agent-flow/) |
 | 5:25 | Break | — |
-| 5:40 | **Lab: Add Event Triggers** | 10 |
-| 6:00 | **Lab: Publish Your Agent** | 11 |
+| 5:40 | **Lab: Add Event Triggers** | [10](/recruit/10-add-event-triggers/) |
+| 6:00 | **Lab: Publish Your Agent** | [11](/recruit/11-publish-your-agent/) |
 | 6:20 | Wrap-up, Q&A, badge submission | — |
 | 6:30 | End | — |
 
@@ -106,19 +130,19 @@ Covers: Full Operative track.
 | Time | Activity | Module(s) |
 |------|----------|-----------|
 | 0:00 | Welcome, environment check, solution import | — |
-| 0:20 | **Lab: Get started with the Hiring Agent** | 01 |
-| 0:50 | **Lab: Authoring Agent Instructions** | 02 |
-| 1:20 | **Lab: Multi-agent with Connected Agents** | 03 |
+| 0:20 | **Lab: Get started with the Hiring Agent** | [01](/operative/01-get-started/) |
+| 0:50 | **Lab: Authoring Agent Instructions** | [02](/operative/02-agent-instructions/) |
+| 1:20 | **Lab: Multi-agent with Connected Agents** | [03](/operative/03-multi-agent/) |
 | 2:00 | Break | — |
-| 2:15 | **Lab: Automate with Triggers** | 04 |
-| 2:55 | **Lab: Understanding Agent Models** | 05 |
-| 3:20 | **Lab: AI Safety and Content Moderation** | 06 |
+| 2:15 | **Lab: Automate with Triggers** | [04](/operative/04-automate-triggers/) |
+| 2:55 | **Lab: Understanding Agent Models** | [05](/operative/05-model-selection/) |
+| 3:20 | **Lab: AI Safety and Content Moderation** | [06](/operative/06-ai-safety/) |
 | 3:50 | Lunch | — |
-| 4:20 | **Lab: Extracting Resume Contents** | 07 |
-| 4:50 | **Lab: Dataverse Grounding** | 08 |
+| 4:20 | **Lab: Extracting Resume Contents** | [07](/operative/07-multimodal-prompts/) |
+| 4:50 | **Lab: Dataverse Grounding** | [08](/operative/08-dataverse-grounding/) |
 | 5:20 | Break | — |
-| 5:35 | **Lab: Generate an Interview Prep Document** | 09 |
-| 6:00 | **Lab: Integrate with MCP Servers** | 10 |
+| 5:35 | **Lab: Generate an Interview Prep Document** | [09](/operative/09-document-generation/) |
+| 6:00 | **Lab: Integrate with MCP Servers** | [10](/operative/10-mcp/) |
 | 6:20 | Wrap-up, Q&A, badge submission | — |
 | 6:30 | End | — |
 
@@ -131,15 +155,15 @@ Best for: Deep-dive training where participants want to complete the entire trac
 | Time | Activity | Module(s) |
 |------|----------|-----------|
 | 0:00 | Welcome, environment check | — |
-| 0:20 | **Lab: Get started with the Hiring Agent** | 01 |
-| 0:50 | **Lab: Authoring Agent Instructions** | 02 |
-| 1:30 | **Lab: Multi-agent with Connected Agents** | 03 |
+| 0:20 | **Lab: Get started with the Hiring Agent** | [01](/operative/01-get-started/) |
+| 0:50 | **Lab: Authoring Agent Instructions** | [02](/operative/02-agent-instructions/) |
+| 1:30 | **Lab: Multi-agent with Connected Agents** | [03](/operative/03-multi-agent/) |
 | 2:20 | Break | — |
-| 2:35 | **Lab: Automate with Triggers** | 04 |
-| 3:25 | **Lab: Understanding Agent Models** | 05 |
+| 2:35 | **Lab: Automate with Triggers** | [04](/operative/04-automate-triggers/) |
+| 3:25 | **Lab: Understanding Agent Models** | [05](/operative/05-model-selection/) |
 | 4:00 | Lunch | — |
-| 4:30 | **Lab: AI Safety and Content Moderation** | 06 |
-| 5:10 | **Lab: Extracting Resume Contents** | 07 |
+| 4:30 | **Lab: AI Safety and Content Moderation** | [06](/operative/06-ai-safety/) |
+| 5:10 | **Lab: Extracting Resume Contents** | [07](/operative/07-multimodal-prompts/) |
 | 5:50 | Wrap-up Day 1 | — |
 | 6:00 | End | — |
 
@@ -148,11 +172,11 @@ Best for: Deep-dive training where participants want to complete the entire trac
 | Time | Activity | Module(s) |
 |------|----------|-----------|
 | 0:00 | Day 2 welcome, recap | — |
-| 0:15 | **Lab: Dataverse Grounding** | 08 |
-| 0:55 | **Lab: Generate an Interview Prep Document** | 09 |
+| 0:15 | **Lab: Dataverse Grounding** | [08](/operative/08-dataverse-grounding/) |
+| 0:55 | **Lab: Generate an Interview Prep Document** | [09](/operative/09-document-generation/) |
 | 1:35 | Break | — |
-| 1:50 | **Lab: Integrate with MCP Servers** | 10 |
-| 2:40 | **Lab: Obtain User Feedback with Adaptive Cards** | 11 |
+| 1:50 | **Lab: Integrate with MCP Servers** | [10](/operative/10-mcp/) |
+| 2:40 | **Lab: Obtain User Feedback with Adaptive Cards** | [11](/operative/11-obtain-user-feedback/) |
 | 3:20 | Open lab / catch-up time | — |
 | 4:20 | Discussion: production patterns, what's next | — |
 | 5:00 | Badge submission, wrap-up | — |
