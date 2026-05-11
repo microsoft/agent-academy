@@ -13,6 +13,10 @@ Agent Academy Live is a one-day virtual conference designed to help developers, 
 
 <action-button href="https://aka.ms/agent-academy-live/register" label="Register Now" icon="👉" />
 
+::: tip Can't Attend Live?
+Register to get the recordings even if you can’t attend live.”
+:::
+
 ## 📺 Watch Live
 
 *The stream will be embedded here on May 12. Check back on event day to watch.*
@@ -21,7 +25,7 @@ Agent Academy Live is a one-day virtual conference designed to help developers, 
 <!--
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 1.5rem 0;">
   <iframe
-    src="https://www.youtube.com/embed/YOUR_STREAM_ID"
+    src="https://www.youtube.com/live/KHJfukNZFUg?si=mjBe7wy4RCIOhslZ"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
     frameborder="0"
     allowfullscreen>
