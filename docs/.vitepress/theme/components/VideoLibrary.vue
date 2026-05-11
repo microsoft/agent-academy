@@ -58,7 +58,6 @@
             :class="{ playing: activeVideo && activeVideo.youtubeId === v.youtubeId }"
             role="button"
             tabindex="0"
-            :aria-selected="activeVideo && activeVideo.youtubeId === v.youtubeId"
             :aria-label="`Play ${v.title}`"
             @click="selectVideo(v, track)"
             @keydown.enter.prevent="selectVideo(v, track)"
