@@ -47,6 +47,10 @@
 
 <script setup>
 import { ref } from 'vue'
+import donaPhoto from '../../../events/live/assets/dona.jpeg'
+import derahPhoto from '../../../events/live/assets/derah.jpeg'
+import shilpiPhoto from '../../../events/live/assets/shilpi.jpeg'
+import davidPhoto from '../../../events/live/assets/david.png'
 
 const openIndex = ref(null)
 
@@ -78,7 +82,7 @@ const sessions = [
       {
         name: 'Dona Sarkar',
         title: 'Chief Troublemaker, Microsoft AI and Copilot Extensibility Program | Microsoft',
-        photo: './assets/dona.jpeg',
+        photo: donaPhoto,
         bio: 'Dona believes that you are one experiment away from being your most powerful self at work — and in life. As Chief Troublemaker of the Microsoft AI and Copilot Extensibility Program, she runs 100 experiments with one goal: helping people all over the world use Microsoft\'s AI and Copilot programs to reason over their own data and make AI truly useful for their business. Dona is also a keynote speaker, multi-published author, owner of the ethical luxury fashion brand Prima Dona Studios, and a wine bar co-owner currently studying to become a sommelier. She\'s been named one of Fast Company\'s 100 Most Productive People and Cosmopolitan\'s Businessperson of the Year — and she is always ready to get on a plane and come see you.',
         linkedin: 'https://www.linkedin.com/in/donasarkar/'
       }
@@ -99,14 +103,14 @@ const sessions = [
       {
         name: 'Derah Onuorah',
         title: 'Product Manager II, Power Automate | Microsoft',
-        photo: './assets/derah.jpeg',
+        photo: derahPhoto,
         bio: 'Derah Onuorah is a Product Manager at Microsoft working on Power Automate within the Intelligent Automations Team. She builds AI-powered products and features that help customers automate and enhance their business processes, and is passionate about the potential of AI to transform how we work.',
         linkedin: 'https://www.linkedin.com/in/derah-onuorah/',
       },
       {
         name: 'Shilpi Sinha',
         title: 'Partner Director Group Product Manager | Microsoft',
-        photo: './assets/shilpi.jpeg',
+        photo: shilpiPhoto,
         bio: 'Shilpi Sinha is the product leader for the M365 Admin Center, focused on enabling experiences for the Copilot Control System including Copilot and Agent management, governance, and analytics within the Microsoft Admin Center.',
         linkedin: 'https://www.linkedin.com/in/shilpi-sinha-07740b26/',
       }
@@ -239,7 +243,7 @@ const sessions = [
       {
         name: 'David Abu',
         title: 'Product Manager | Microsoft',
-        photo: './assets/david.png',
+        photo: davidPhoto,
         bio: 'David Abu is a Senior Product Marketing Manager at Microsoft, focused on community building and product marketing for Copilot Studio.',
         linkedin: 'https://www.linkedin.com/in/davidabu/',
       }
