@@ -34,7 +34,7 @@ The hackathon is built around the Agent Academy learning tracks. You learn, buil
 
 Register at the official page to get the stream link for Agent Academy Live to kickoff your hackathon experience.
 
-<action-button href="https://aka.ms/agent-academy-live" label="Register Now" icon="👉" />
+<action-button href="https://aka.ms/agent-academy-live/register" label="Register Now" icon="👉" />
 
 ### Step 2 — Build and submit your project
 
