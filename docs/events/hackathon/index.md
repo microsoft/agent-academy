@@ -51,7 +51,7 @@ Your submission must include:
 
 ### Step 3 — Complete the Badge Validation Form
 
-If you would like to received a badge for participation in the hack, this is a separate required step. The submission form and the badge form are two different things.
+If you would like to receive a badge for participation in the hack, this is a separate required step. The submission form and the badge form are two different things.
 
 <action-button href="https://aka.ms/agent-academy-hack/badge" label="Complete the Badge Validation Form" icon="👉" />
 

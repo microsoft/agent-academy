@@ -213,11 +213,11 @@ const sessions = [
   {
     time: '1:40 PM',
     title: 'Inside Cowork — Vision, Roadmap & What\'s Next',
-    description: 'The CTO of Copilot Studio gives an inside look at Cowork — the vision, current capabilities, roadmap, and what\'s coming next for delegated work in the Microsoft 365 ecosystem.',
+    description: 'Get an inside look at Cowork from the founding architect — the vision, current capabilities, roadmap, and what\'s coming next for delegated work in the Microsoft 365 ecosystem.',
     speakers: [
       {
         name: 'Bas Brekelmans',
-        title: 'CTO, Microsoft Copilot Studio | Microsoft',
+        title: 'Partner, Software Engineer | Microsoft',
         photo: 'https://vslive.com/events/redmond-2022/speakers/-/media/ECG/EventSpeakerPhotos/Brekelmans_Bas_388.jpg',
         bio: 'Founding architect of Copilot Cowork and past CTO of Copilot Studio, with deep expertise in distributed systems, scalable infrastructure, and AI‑driven developer tooling, shaping the evolution of Microsoft’s agentic AI platform.',
         linkedin: 'https://www.linkedin.com/in/basbrekelmans/',

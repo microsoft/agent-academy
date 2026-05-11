@@ -14,7 +14,7 @@ These are structured to support live workshop delivery alongside the hands-on la
 
 | Track | Description | Download |
 |-------|-------------|----------|
-| 🟢 **Recruit** | Covers agent fundamentals through publishing — designed for half-day and full-day formats | [⬇️ Download Operative Workshop Deck](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/events/workshops/assets/Recruit-Workshop.pptx) |
+| 🟢 **Recruit** | Covers agent fundamentals through publishing — designed for half-day and full-day formats | [⬇️ Download Recruit Workshop Deck](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/events/workshops/assets/Recruit-Workshop.pptx) |
 | 🔵 **Operative** | Advanced agent patterns including multi-agent, MCP, and ALM — for audiences who've completed Recruit | [⬇️ Download Operative Workshop Deck](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/events/workshops/assets/Operative-Workshop.pptx) |
 
 ::: tip Using the decks
