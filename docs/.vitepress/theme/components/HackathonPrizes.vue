@@ -1,7 +1,7 @@
 <template>
   <div class="prizes">
     <div class="participant-row">
-      <img :src="withBase('/events/hackathon/assets/participant.png')" alt="Participant badge" class="participant-badge" />
+      <img :src="participantBadge" alt="Participant badge" class="participant-badge" />
       <div class="participant-text">
         <div class="participant-title">All participants</div>
         <div class="participant-desc">Every valid submission earns the official Agent Academy Hackathon participant badge — regardless of placement.</div>
@@ -17,7 +17,7 @@
         <div class="place-list">
           <div v-for="place in places" :key="place.rank" class="place-row">
             <img
-              :src="withBase(`/events/hackathon/assets/${place.rank}Place${track.badge}.png`)"
+              :src="badgeImages[`${place.rank}Place${track.badge}`]"
               :alt="`${place.label} - ${track.name}`"
               class="badge-img"
             />
@@ -33,7 +33,19 @@
 </template>
 
 <script setup>
-import { withBase } from 'vitepress'
+import participantBadge from '../../../events/hackathon/assets/participant.png'
+import firstRecruit from '../../../events/hackathon/assets/1stPlaceRecruit.png'
+import secondRecruit from '../../../events/hackathon/assets/2ndPlaceRecruit.png'
+import thirdRecruit from '../../../events/hackathon/assets/3rdPlaceRecruit.png'
+import firstOperative from '../../../events/hackathon/assets/1stPlaceOperative.png'
+import secondOperative from '../../../events/hackathon/assets/2ndPlaceOperative.png'
+import thirdOperative from '../../../events/hackathon/assets/3rdPlaceOperative.png'
+import firstSpecialOps from '../../../events/hackathon/assets/1stPlaceSpecialOps.png'
+import secondSpecialOps from '../../../events/hackathon/assets/2ndPlaceSpecialOps.png'
+import thirdSpecialOps from '../../../events/hackathon/assets/3rdPlaceSpecialOps.png'
+import firstCowork from '../../../events/hackathon/assets/1stPlaceCowork.png'
+import secondCowork from '../../../events/hackathon/assets/2ndPlaceCowork.png'
+import thirdCowork from '../../../events/hackathon/assets/3rdPlaceCowork.png'
 
 const tracks = [
   { id: 'recruit',    name: 'Recruit',          emoji: '🟢', badge: 'Recruit' },
@@ -47,6 +59,21 @@ const places = [
   { rank: '2nd', label: '🥈 Second place', prize: '$1,000 Microsoft Store Gift Card' },
   { rank: '3rd', label: '🥉 Third place',  prize: '$500 Microsoft Store Gift Card' },
 ]
+
+const badgeImages = {
+  '1stPlaceRecruit': firstRecruit,
+  '2ndPlaceRecruit': secondRecruit,
+  '3rdPlaceRecruit': thirdRecruit,
+  '1stPlaceOperative': firstOperative,
+  '2ndPlaceOperative': secondOperative,
+  '3rdPlaceOperative': thirdOperative,
+  '1stPlaceSpecialOps': firstSpecialOps,
+  '2ndPlaceSpecialOps': secondSpecialOps,
+  '3rdPlaceSpecialOps': thirdSpecialOps,
+  '1stPlaceCowork': firstCowork,
+  '2ndPlaceCowork': secondCowork,
+  '3rdPlaceCowork': thirdCowork,
+}
 </script>
 
 <style scoped>
