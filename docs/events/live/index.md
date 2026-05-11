@@ -11,7 +11,7 @@ Virtual, Free
 
 Agent Academy Live is a one-day virtual conference designed to help developers, builders, and architects move from their first agent to production-ready solutions. Join Microsoft engineers, product leaders, MVPs, and community members for practical sessions on real agent patterns, governance, and architecture.
 
-<action-button href="https://aka.ms/agent-academy-live" label="Register Now" icon="👉" />
+<action-button href="https://aka.ms/agent-academy-live/register" label="Register Now" icon="👉" />
 
 ## 📺 Watch Live
 
@@ -53,7 +53,7 @@ New to Copilot Studio agents? Get up to speed with the [Agent Academy curriculum
 
 Space is free and open to everyone. Register on Microsoft Reactor to get the stream link and event reminders.
 
-<action-button href="https://aka.ms/agent-academy-live" label="Register Now" icon="👉" />
+<action-button href="https://aka.ms/agent-academy-live/register" label="Register Now" icon="👉" />
 
 ::: tip Watch on Demand
 We understand that the timing might not work for everyone so the event will be available to watch on demand after it runs. Check back on this page for links to watch.
