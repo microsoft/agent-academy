@@ -14,24 +14,24 @@ Agent Academy Live is a one-day virtual conference designed to help developers, 
 <action-button href="https://aka.ms/agent-academy-live/register" label="Register Now" icon="👉" />
 
 ::: tip Can't Attend Live?
-Register to get the recordings even if you can’t attend live.”
+Register to get the recordings even if you can’t attend live.
 :::
 
 ## 📺 Watch Live
 
-*The stream will be embedded here on May 12. Check back on event day to watch.*
+*The stream will kick off at 8:30am PT, Tuesday, May 12th, 2026.*
 
-<!-- Replace YOUR_STREAM_ID with the YouTube live stream ID when available -->
-<!--
+<!-- markdownlint-disable -->
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 1.5rem 0;">
   <iframe
-    src="https://www.youtube.com/live/KHJfukNZFUg?si=mjBe7wy4RCIOhslZ"
+    src="https://www.youtube.com/embed/KHJfukNZFUg"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
     frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen>
   </iframe>
 </div>
--->
+<!-- markdownlint-enable -->
 
 ## Who Should Attend
 
@@ -40,7 +40,8 @@ This event is built for:
 - Builders and developers working with Microsoft Copilot Studio
 - Solution architects designing AI-powered systems
 - IT professionals evaluating agent platforms and governance
-- Anyone who wants practical, real-world guidance for building agents that can actually ship to production
+- Anyone who wants practical, real-world guidance for building agents
+  that can actually ship to production
 
 ## 📅 Schedule
 
@@ -51,14 +52,28 @@ All times Pacific Time (PT).
 
 ## Get Ready
 
-New to Copilot Studio agents? Get up to speed with the [Agent Academy curriculum](https://aka.ms/agent-academy) before the event so you can hit the ground running.
+New to Copilot Studio agents? Get up to speed with the
+[Agent Academy curriculum](https://aka.ms/agent-academy) before the event
+so you can hit the ground running.
 
 ## Register
 
-Space is free and open to everyone. Register on Microsoft Reactor to get the stream link and event reminders.
+Space is free and open to everyone. Register on Microsoft Reactor to
+get the stream link, event reminders, and links to watch on demand.
 
-<action-button href="https://aka.ms/agent-academy-live/register" label="Register Now" icon="👉" />
+<action-button
+  href="https://aka.ms/agent-academy-live/register"
+  label="Register Now"
+  icon="👉"
+/>
 
-::: tip Watch on Demand
-We understand that the timing might not work for everyone so the event will be available to watch on demand after it runs. Check back on this page for links to watch.
-:::
+## Hack
+
+Keep learning after the event and win prizes by participating in our
+Agent Academy Hackathon May 12th - June 2nd!
+
+<action-button
+  href="https://aka.ms/agent-academy-hack"
+  label="Learn More"
+  icon="👉"
+/>
