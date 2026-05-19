@@ -18,6 +18,13 @@ Apply what you've learned from Agent Academy to build real, working AI agents us
 - [Disclaimer](DISCLAMER.md)
 :::
 
+## Kickoff Video
+
+Watch the kickoff video to learn more about the hack and prizes!
+
+<!-- markdownlint-disable-next-line MD033 -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ijG4VPBn-Ls?si=1MMq-Ego4SppG_F2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## How it works
 
 The hackathon is built around the Agent Academy learning tracks. You learn, build, and submit and the best agents win.
@@ -30,13 +37,7 @@ The hackathon is built around the Agent Academy learning tracks. You learn, buil
 
 ## How to enter
 
-### Step 1 — Register
-
-Register at the official page to get the stream link for Agent Academy Live to kickoff your hackathon experience.
-
-<action-button href="https://aka.ms/agent-academy-live/register" label="Register Now" icon="👉" />
-
-### Step 2 — Build and submit your project
+### Step 1 — Build and submit your project
 
 Build your agent and submit your hackathon entry.
 
@@ -49,7 +50,7 @@ Your submission must include:
 - An architecture overview showing components, data flow, and integration points
 - A clear use case with a defined target user
 
-### Step 3 — Complete the Badge Validation Form
+### Step 2 — Complete the Badge Validation Form
 
 If you would like to receive a badge for participation in the hack, this is a separate required step. The submission form and the badge form are two different things.
 
@@ -61,7 +62,7 @@ This form:
 - Ensures we have the correct email to send your badge to
 - Allows you to agree to receiving a badge through the Global AI Community
 
-### Step 4 — Create a Global AI Community account
+### Step 3 — Create a Global AI Community account
 
 Badges are issued through the Global AI Community platform. You need an account to receive yours.
 
