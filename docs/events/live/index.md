@@ -17,9 +17,7 @@ Agent Academy Live is a one-day virtual conference designed to help developers, 
 Register to get the recordings even if you can’t attend live.
 :::
 
-## 📺 Watch Live
-
-*The stream will kick off at 8:30am PT, Tuesday, May 12th, 2026.*
+## 📺 Watch The Replay
 
 <!-- markdownlint-disable -->
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 1.5rem 0;">
@@ -32,6 +30,15 @@ Register to get the recordings even if you can’t attend live.
   </iframe>
 </div>
 <!-- markdownlint-enable -->
+
+## 🎬 Videos
+
+Looking for something specific? Check out the sessions.
+
+<!-- markdownlint-disable-next-line MD033 -->
+<VideoLibrary track="agent-academy-live" />
+
+<analytics-tag section="agent-academy-live" />
 
 ## Who Should Attend
 

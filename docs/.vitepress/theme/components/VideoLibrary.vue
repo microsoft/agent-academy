@@ -112,6 +112,7 @@ const tracks = [
   { id: 'operative', label: 'Operative' },
   { id: 'special-ops', label: 'Special Ops' },
   { id: 'cowork', label: 'Cowork Collective' },
+  { id: 'agent-academy-live', label: 'Agent Academy Live' },
 ]
 
 const trackLabel = {
@@ -119,9 +120,10 @@ const trackLabel = {
   operative: 'Operative',
   'special-ops': 'Special Ops',
   cowork: 'Cowork Collective',
+  'agent-academy-live': 'Agent Academy Live',
 }
 
-const trackOrder = ['recruit', 'operative', 'special-ops', 'cowork']
+const trackOrder = ['recruit', 'operative', 'special-ops', 'cowork', 'agent-academy-live']
 
 async function selectVideo(video, track) {
   if (activeVideo.value?.youtubeId === video.youtubeId) {
@@ -162,6 +164,17 @@ const videos = [
   { youtubeId: 'CpgZo--FhaU', track: 'cowork', title: 'Copilot just got a major upgrade with Copilot Cowork', desc: 'Everything you need to know about Copilot Cowork — what it is, how it differs from regular Copilot, the 13 built-in skills, scheduled tasks, and how to create custom skills.', duration: '15:30', published: 'April 2026' },
   { youtubeId: 'osjHPVfNF3w', track: 'cowork', title: 'Copilot Cowork vs. Manual Presentation Redesign', desc: 'See how Copilot Cowork can help convert an existing presentation to use a template.', duration: '4:12', published: 'April 2026' },
   { youtubeId: 'Ebwi_VF6EIc', track: 'special-ops', title: 'From CLI to Agent Magic with the Power Platform CLI MCP Server', desc: 'Learn how the Power Platform CLI MCP server turns complex CLI commands into natural language conversations', duration: '19:25', published: 'Feb 2026' },
+  { youtubeId: 'RqgccYQuFvo', track: 'agent-academy-live', title: 'How work gets done in the Age of Al: Copilot, Apps and Agents', desc: 'In this keynote, Ryan Cunningham will share how Microsoft Copilot, Copilot Studio, Power Apps, and Agent 365 come together to help makers build powerful agents and help IT teams deploy and govern them at scale. We will show how organizations can design, extend, and govern a new model for the intelligent workplace - connecting data, workflows, and systems into agents that move work forward.', duration: '45:38', published: 'May 2026' },
+  { youtubeId: 'ewtKKEkNdr4', track: 'agent-academy-live', title: 'Agent Flows: Build Agentic Automations You Can Trust', desc: 'In this session, we\'ll explore how agent flows let you design end-to-end automation that is reliable and predictable where it matters, and adaptive where it counts. We will share the latest updated in agent flows so you leave with a clear understanding of when and how to use agent flows to build agentic automation your organization can trust.', duration: '25:20', published: 'May 2026' },
+  { youtubeId: '-aeWWUDVVEY', track: 'agent-academy-live', title: 'Building Employee Experience Agents with Microsoft Copilot Studio and MCP Integration', desc: 'Join us for an in-depth session where we explore how to build intelligent AI agents that transform employee experience using Microsoft Copilot Studio, Power Platform and the Model Context Protocol (MCP). We will demonstrate how to create production-ready agents that go beyond simple Q&A to streamline workplace operations and boost productivity.', duration: '35:36', published: 'May 2026' },
+  { youtubeId: '5xSkNwATAz0', track: 'agent-academy-live', title: 'Agentic User Interfaces in Copilot and Power Platform', desc: 'In this session, you’ll explore the latest wave of innovations that are redefining how users interact with apps and AI. You’ll see demos of how Copilot can run inside Power Apps—and how Power Apps can be surfaced directly within Copilot—unlocking seamless, context-aware workflows across both environments. We’ll also showcase newly released MCP app UI capabilities and walk through how to design custom tools in Copilot with bespoke, purpose-built interfaces.', duration: '25:17', published: 'May 2026' },
+  { youtubeId: 'AXWPJN6xLY0', track: 'agent-academy-live', title: 'From Build to Operate: ALM Patterns for Production‑Ready Copilot Studio Agents', desc: 'In this session, we’ll walk through practical ALM patterns for Copilot Studio agents using solutions as the source of truth, environment variables, and connection references. You’ll see how these patterns remove hard‑coded values and enable the same agent to move safely from Dev to Test to Production using managed solutions and pipelines.', duration: '30:38', published: 'May 2026' },
+  { youtubeId: 'nDUwGsSzFwE', track: 'agent-academy-live', title: 'Your Platform, Now Agentic: How Power Platform Turns Existing Apps Into Frontier Firm Solutions', desc: 'In this session, Leon Welicki (VP & GM, Power Platform) lays out how every app you have already shipped becomes part of the agentic era. ', duration: '52:50', published: 'May 2026' },
+  { youtubeId: 'cKKg3pTPH2A', track: 'agent-academy-live', title: 'M365 Copilot and Work IQ: Powering Agent Business workflows', desc: 'Watch agents move from answering questions to completing workflows – reading, reasoning, and writing back to systems of record. Learn practical patterns for scaling intelligent agents across your data estate', duration: '25:01', published: 'May 2026' },
+  { youtubeId: 'XtZAdhiARAc', track: 'agent-academy-live', title: 'Trust but Verify: Testing Agents in Copilot Studio', desc: 'In this session, we’ll look at what it means to test agents in Microsoft Copilot Studio. Beyond just running through a few happy paths and hoping for the best. We’ll explore how agents behave when users don’t follow the script (because they won’t), and how to validate prompts, grounding, actions, and orchestration in a way that reflects reality.', duration: '32:33', published: 'May 2026' },
+  { youtubeId: 'Re9_ImKOub0', track: 'agent-academy-live', title: 'Inside Cowork — Vision, Roadmap and What’s Next', desc: 'Join Bas Brekelmans for an in-depth look at Cowork—where it is today and where it’s headed next. This session will walk through the product vision, key roadmap priorities, and the thinking behind major engineering and strategic decisions.', duration: '25:26', published: 'May 2026' },
+  { youtubeId: 'ijG4VPBn-Ls', track: 'agent-academy-live', title: 'Agent Hackathon Challenge Kickoff', desc: 'Join us as we share what the hackathon is all about, how you can participate, and what you can build using Copilot Studio and AI agents. Whether you are just getting started or already building advanced agentic solutions, this hackathon is your chance to learn, experiment, and showcase your ideas.', duration: '05:19', published: 'May 2026' },
+
 
 ]
 

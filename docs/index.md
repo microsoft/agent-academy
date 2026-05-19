@@ -14,6 +14,16 @@ If you already know the basics and want to go deep on something specific, the st
 
 No fluff. No made-up scenarios. Just real tools, real patterns, and real agents.
 
+## 🏆 Agent Academy Hackathon
+
+![Hackathon Banner](./events/hackathon/assets/AgentAcademyHackBanner.png)
+
+**May 12 – June 2, 2026** · $12,000 in total prizes · Open to everyone
+
+Apply what you've learned from Agent Academy to build real, working AI agents using Microsoft AI tools. Compete for prizes, earn recognition, and help shape the future of the Agent Academy curriculum.
+
+<action-button href="./events/hackathon" label="Learn More" icon="🚀" />
+
 ## 🏅 Rank Progression {#rank-progression}
 
 The **Copilot Studio Agent Academy** is a multi-phase training program designed to build your skills across three agent ranks. Each level includes a badge and increasing responsibilities:

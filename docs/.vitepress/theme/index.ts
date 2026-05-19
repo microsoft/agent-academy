@@ -12,7 +12,6 @@ import PageDates from "../plugins/page-dates/PageDates.vue";
 import AnalyticsTag from "../plugins/analytics-tag/AnalyticsTag.vue";
 import DownloadFiles from "../plugins/download-files/DownloadFiles.vue";
 import ActionButton from "../plugins/action-button/ActionButton.vue";
-import "./custom.css";
 import SessionSchedule from './components/SessionSchedule.vue';
 import VideoLibrary from './components/VideoLibrary.vue';
 import WorkshopsPage from './components/WorkshopsPage.vue';
