@@ -124,6 +124,7 @@ export default defineConfig({
           { text: 'Microsoft Learn Docs MCP', link: '/special-ops/ms-learn-mcp/' },
           { text: 'Power Platform CLI MCP', link: '/special-ops/pac-cli-mcp/' },
           { text: 'YAML Specialist', link: '/special-ops/yaml-specialist/' },
+          { text: 'Use Case Qualifier', link: '/special-ops/use-case-qualifier/' },
         ],
       },
       {
