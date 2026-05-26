@@ -7,7 +7,7 @@ COPY package*.json ./
 COPY tsconfig.json ./
 COPY src/ ./src/
 
-RUN --mount=type=cache,target=/root/.npm npm install
+RUN npm install
 
 RUN npm run build
 
