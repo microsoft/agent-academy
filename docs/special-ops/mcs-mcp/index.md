@@ -39,7 +39,6 @@ So, MCP and connectors are really **better together**.
 
 - Visual Studio Code installed ([download](https://code.visualstudio.com/download))
 - Node v22 (ideally installed via [nvm for Windows](https://github.com/coreybutler/nvm-windows) or [nvm](https://github.com/nvm-sh/nvm))
-- Docker installed ([download](http://aka.ms/azure-dev/docker-install))
 - Azure Developer CLI installed ([download](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd))
 - Azure Subscription (with payment method added)
 - Copilot Studio trial or developer account
