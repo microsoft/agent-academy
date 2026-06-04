@@ -270,6 +270,8 @@ Let's begin!
 
     ![Add suggested prompts for agent](assets/3.1_08_SuggestedPrompts.png)
 
+1. Select **Save**.
+
 1. Great! We're now done entering details for our agents so let's proceed with creating our declarative agent. Select **Create**.
 
     ![Create agent](assets/3.1_09_CreateDeclarativeAgent.png)
