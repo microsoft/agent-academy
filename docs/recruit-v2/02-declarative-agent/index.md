@@ -32,7 +32,7 @@ Microsoft 365 Copilot is powerful, but it answers everything. A **declarative ag
 
 Your weapon of choice? Natural language. Your mission? Design, test, and deploy an IT Help Desk assistant that answers questions using internal and external knowledge sources, all inside Copilot.
 
-In the next missions, you'll first learn Copilot Studio fundamentals, then copy this agent into Copilot Studio and update it for your scenario. Let's get started.
+Let's get started.
 
 ## 🔎 Objectives {#objectives}
 
@@ -265,7 +265,7 @@ Let's try a starter prompt.
 
 ## ✅ Mission Complete {#mission-complete}
 
-You forged a declarative agent that speaks your language, uses trusted knowledge, and runs right inside Copilot. Next up is **Mission 03: Copilot Studio Fundamentals**, where you'll learn the core concepts and interface. Then, in **Mission 04: Creating a Solution for Your Agent**, you'll copy this agent into Copilot Studio and evolve it for your scenario.
+You forged a declarative agent that speaks your language, uses trusted knowledge, and runs right inside Copilot. Next up is **Mission 03: Copilot Studio Fundamentals**, where you'll learn the core concepts and interface. Then, in **Mission 04: Creating a Solution for Your Agent**, you'll evolve this scenario to build a custom agent in Copilot Studio.
 
 ⏭️ [Move to the **Copilot Studio Fundamentals** mission](../03-copilot-studio-fundamentals/index.md)
 

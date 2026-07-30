@@ -6,7 +6,7 @@ prev:
   link: '/recruit-v2/02-declarative-agent'
 next:
   text: 'Creating a Solution'
-  link: '/recruit/04-creating-a-solution/'
+  link: '/recruit-v2/04-creating-a-solution/'
 ---
 
 # 🛠️ Mission 03: Copilot Studio Fundamentals
@@ -179,7 +179,7 @@ You've toured the Copilot Studio HQ. You can now:
 1. **Choose deterministic vs. generative** — workflows for the repeatable, orchestration for the ambiguous.
 1. **See the whole lifecycle** — channels, solutions, identity, governance, licensing.
 
-Time to stop reading and start building. Next: [**Creating a Solution**](/recruit/04-creating-a-solution/).
+Time to stop reading and start building. Next: [**Creating a Solution**](../04-creating-a-solution/index.md).
 
 Stay sharp, Recruit, the toolbox is yours now.
 

@@ -169,7 +169,7 @@ You now have the mental model. You can explain:
 1. **Agency is a spectrum** — set control boundaries before capabilities.
 1. **Declarative vs. custom** — start simple, move to Copilot Studio or pro-code paths when you need more control.
 
-Next up, you'll build your first **declarative agent in Microsoft 365 Copilot** and use **Copy to** to bring it into **Copilot Studio** as your launch point for the rest of the custom-agent track: [**Mission 02: Declarative Agent**](../02-declarative-agent/index.md).
+Next up, you'll build your first **declarative agent in Microsoft 365 Copilot**: [**Mission 02: Declarative Agent**](../02-declarative-agent/index.md).
 
 Stay sharp, Recruit because your AI journey is just beginning!
 
