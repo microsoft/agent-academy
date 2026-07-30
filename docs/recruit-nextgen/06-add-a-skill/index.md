@@ -3,10 +3,10 @@ hide: true
 preview: true
 prev:
   text: 'Build a Custom Agent'
-  link: '/recruit-v2/05-build-a-custom-agent'
+  link: '/recruit-nextgen/05-build-a-custom-agent'
 next:
   text: 'Add Tools'
-  link: '/recruit-v2/07-add-tools'
+  link: '/recruit-nextgen/07-add-tools'
 short-description: Use a Skill to give your helpdesk agent a consistent troubleshooting playbook
 difficulty: 1
 codename: OPERATION SKILL BOOST
@@ -321,7 +321,7 @@ The skill is read-only in Copilot Studio once saved. However, the `SKILL.md` fil
 
 1. Download the skill package using the button below.
 
-    <download-files path="recruit-v2/06-add-a-skill/assets/lab-skills/device-guidance-v1-0-1" />
+    <download-files path="recruit-nextgen/06-add-a-skill/assets/lab-skills/device-guidance-v1-0-1" />
 
     Download `device-guidance-v1-0-1.zip`, extract it, then upload the `SKILL.md` file into the agent.
 
@@ -373,7 +373,7 @@ The skill is read-only in Copilot Studio once saved. However, the `SKILL.md` fil
 
     Download the skill package using the button below.
 
-    <download-files path="recruit-v2/06-add-a-skill/assets/lab-skills/device-guidance-v1-0-2" />
+    <download-files path="recruit-nextgen/06-add-a-skill/assets/lab-skills/device-guidance-v1-0-2" />
 
     Download `device-guidance-v1-0-2.zip` and extract it.
 
@@ -415,7 +415,7 @@ The skill is read-only in Copilot Studio once saved. However, the `SKILL.md` fil
 
 1. Download the skill package using the button below.
 
-    <download-files path="recruit-v2/06-add-a-skill/assets/lab-skills/device-guidance-v1-0-3" />
+    <download-files path="recruit-nextgen/06-add-a-skill/assets/lab-skills/device-guidance-v1-0-3" />
 
     Download `device-guidance-v1-0-3.zip` and extract it.
 
@@ -461,4 +461,4 @@ You iteratively refined a reusable **Skill** so the agent can handle tool-input 
 
 🔗 [Write effective instructions](https://learn.microsoft.com/microsoft-copilot-studio/authoring-instructions?WT.mc_id=power-172619-ebenitez)
 
-<analytics-tag section="recruit-v2" mission="06-add-a-skill" />
+<analytics-tag section="recruit-nextgen" mission="06-add-a-skill" />

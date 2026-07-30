@@ -3,10 +3,10 @@ hide: true
 preview: true
 prev:
   text: 'Course Setup'
-  link: '/recruit-v2/00-course-setup'
+  link: '/recruit-nextgen/00-course-setup'
 next:
   text: 'Declarative Agents in M365 Copilot'
-  link: '/recruit-v2/02-declarative-agent'
+  link: '/recruit-nextgen/02-declarative-agent'
 
 ---
 

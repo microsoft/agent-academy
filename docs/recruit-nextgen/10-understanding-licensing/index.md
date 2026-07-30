@@ -3,10 +3,10 @@ hide: true
 preview: true
 prev:
   text: Publish your agent
-  link: /recruit-v2/09-publish-your-agent
+  link: /recruit-nextgen/09-publish-your-agent
 next:
   text: Securing Your Recruit Badge
-  link: /recruit-v2/course-completion-badges-recruit
+  link: /recruit-nextgen/course-completion-badges-recruit
 short-description: Learn how licensing and billing works with Copilot Studio
 difficulty: 1
 codename: OPERATION KNOW WHAT YOU OWE

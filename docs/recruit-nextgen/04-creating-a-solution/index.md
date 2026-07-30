@@ -3,10 +3,10 @@ hide: true
 preview: true
 prev:
   text: Copilot Studio fundamentals
-  link: /recruit-v2/03-copilot-studio-fundamentals
+  link: /recruit-nextgen/03-copilot-studio-fundamentals
 next:
   text: Build a custom engine agent
-  link: /recruit-v2/05-build-a-custom-agent
+  link: /recruit-nextgen/05-build-a-custom-agent
 short-description: Package your agent into a reusable solution for environment management
 difficulty: 1
 codename: OPERATION CTRL-ALT-PACKAGE

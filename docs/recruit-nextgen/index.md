@@ -2,7 +2,7 @@
 preview: true
 next:
   text: 'Course Setup'
-  link: '/recruit-v2/00-course-setup'
+  link: '/recruit-nextgen/00-course-setup'
 lastUpdated: false
 ---
 
@@ -11,7 +11,7 @@ lastUpdated: false
 ![Copilot Studio Agent Academy Recruit](../images/banner_recruit_nextgen.png)
 
 **Welcome, Recruit.**  
-Your mission—should you choose to accept it—is to master the art of building agents using the new **Microsoft Copilot Studio** experience.
+Your mission, should you choose to accept it, is to master the art of building agents using the new **Microsoft Copilot Studio** experience.
 
 This hands-on training is your entry point into the **world of agents** where you'll learn how to build, scale, and deploy intelligent agents using real-world tools and use cases.
 

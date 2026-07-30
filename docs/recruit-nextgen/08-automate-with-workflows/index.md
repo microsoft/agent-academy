@@ -3,10 +3,10 @@ hide: true
 preview: true
 prev:
   text: Add Tools
-  link: /recruit-v2/07-add-tools
+  link: /recruit-nextgen/07-add-tools
 next:
   text: Publish your agent
-  link: /recruit-v2/09-publish-your-agent
+  link: /recruit-nextgen/09-publish-your-agent
 short-description: Automate a device request with the new Workflows experience and call it from your agent
 difficulty: 1
 codename: OPERATION AUTOMATION POWERHOUSE
@@ -455,7 +455,7 @@ With the workflow added, update the device request procedure skill so the agent 
 
    Download the skill package using the button below.
 
-   <download-files path="recruit-v2/08-automate-with-workflows/assets/device-guidance-v1-0-4" />
+   <download-files path="recruit-nextgen/08-automate-with-workflows/assets/device-guidance-v1-0-4" />
 
     Download `device-guidance-v1-0-4.zip`, extract it, then upload the `SKILL.md` file into the agent.
 

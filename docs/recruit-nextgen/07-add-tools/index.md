@@ -3,10 +3,10 @@ hide: true
 preview: true
 prev:
   text: 'Add a Skill'
-  link: '/recruit-v2/06-add-a-skill'
+  link: '/recruit-nextgen/06-add-a-skill'
 next:
   text: 'Automate with Workflows'
-  link: '/recruit-v2/08-automate-with-workflows'
+  link: '/recruit-nextgen/08-automate-with-workflows'
 short-description: Add a SharePoint Get items tool so your agent can take action on real data
 difficulty: 1
 codename: OPERATION TOOL UP
@@ -190,4 +190,4 @@ In the next mission, you'll be testing the tool after one of the skills has been
 
 🔗 [Write effective agent instructions](https://learn.microsoft.com/microsoft-copilot-studio/authoring-instructions?WT.mc_id=power-172618-ebenitez)
 
-<analytics-tag section="recruit-v2" mission="07-add-tools" />
+<analytics-tag section="recruit-nextgen" mission="07-add-tools" />

@@ -3,10 +3,10 @@ hide: true
 preview: true
 prev:
   text: Creating a solution
-  link: /recruit-v2/04-creating-a-solution
+  link: /recruit-nextgen/04-creating-a-solution
 next:
   text: Add a skill
-  link: /recruit-v2/06-add-a-skill
+  link: /recruit-nextgen/06-add-a-skill
 short-description: Create a custom engine agent from scratch in Copilot Studio using AI-based authoring
 difficulty: 1
 codename: OPERATION ENGINE SHIFT
@@ -230,7 +230,7 @@ We'll now add another internal knowledge source by uploading a document directly
 
 1. Download the sample file by selecting the button below.
 
-    <download-files path="recruit-v2/05-build-a-custom-agent/assets/WordFile" />
+    <download-files path="recruit-nextgen/05-build-a-custom-agent/assets/WordFile" />
 
     Once downloaded, extract the `.zip` file to a folder on your device.
 

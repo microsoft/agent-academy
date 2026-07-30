@@ -3,10 +3,10 @@ hide: true
 preview: true
 prev:
   text: 'Declarative Agents in M365 Copilot'
-  link: '/recruit-v2/02-declarative-agent'
+  link: '/recruit-nextgen/02-declarative-agent'
 next:
   text: 'Creating a Solution'
-  link: '/recruit-v2/04-creating-a-solution/'
+  link: '/recruit-nextgen/04-creating-a-solution/'
 ---
 
 # 🛠️ Mission 03: Copilot Studio Fundamentals
@@ -194,4 +194,4 @@ Stay sharp, Recruit, the toolbox is yours now.
 🔗 [Connect an agent to Teams & Microsoft 365 Copilot](https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams)
 
 <!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit-v2/03-copilot-studio-fundamentals" alt="Analytics" />
+<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit-nextgen/03-copilot-studio-fundamentals" alt="Analytics" />

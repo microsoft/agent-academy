@@ -3,10 +3,10 @@ hide: true
 preview: true
 prev:
   text: Introduction to agents
-  link: /recruit-v2/01-introduction-to-agents
+  link: /recruit-nextgen/01-introduction-to-agents
 next:
   text: Copilot Studio fundamentals
-  link: /recruit-v2/03-copilot-studio-fundamentals
+  link: /recruit-nextgen/03-copilot-studio-fundamentals
 short-description: Build and deploy a declarative agent in Microsoft 365 Copilot using Agent Builder
 difficulty: 1
 codename: OPERATION AGENT DECLARE

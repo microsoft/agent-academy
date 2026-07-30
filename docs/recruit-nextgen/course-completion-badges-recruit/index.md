@@ -3,7 +3,7 @@ hide: true
 preview: true
 prev:
   text: Understanding Licensing
-  link: /recruit/12-understanding-licensing
+  link: /recruit-nextgen/10-understanding-licensing
 next:
   text: Operative Overview
   link: /operative

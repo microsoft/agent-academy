@@ -3,10 +3,10 @@ hide: true
 preview: true
 prev:
   text: Recruit overview
-  link: /recruit-v2
+  link: /recruit-nextgen
 next:
   text: Introduction to Agents
-  link: /recruit-v2/01-introduction-to-agents
+  link: /recruit-nextgen/01-introduction-to-agents
 short-description: 'Set up your dev environment, Copilot Studio trial, and SharePoint site'
 difficulty: 1
 codename: OPERATION DEPLOYMENT READY
@@ -240,7 +240,7 @@ A new SharePoint site is required for completing `Mission 05 - Mission 05: Build
 
 1. Download the following ZIP file, extract it, then upload `EmployeeAssets.xlsx` to the list by selecting **Open**.
 
-    <download-files path="recruit-v2/00-course-setup/assets/employee-assets" label="Download Excel .zip file for List" />
+    <download-files path="recruit-nextgen/00-course-setup/assets/employee-assets" label="Download Excel .zip file for List" />
 
     ![Select file](images/0.5_11_SelectFile.png)
 
