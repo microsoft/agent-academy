@@ -7,14 +7,24 @@ prev:
 next:
   text: 'Copilot Studio Fundamentals'
   link: '/recruit-nextgen/02-copilot-studio-fundamentals'
-
+short-description: 'Learn how agents reason, use knowledge and tools, and operate within defined boundaries'
+difficulty: 1
+codename: OPERATION AI AGENT DECODE
+time: 15
+tags:
+  - fundamentals
+products:
+  - copilot-studio
+  - microsoft-365-copilot
+industries:
+  - general
+created-date: 2026-06-23
+last-edited-date: 2026-08-04
 ---
 
 # 🚨 Mission 01: Introduction to Agents
 
-## 🕵️‍♂️ CODENAME: `OPERATION AI AGENT DECODE`
-
-> **⏱️ Operation Time Window:** `~15 minutes – intel only, no fieldwork required`
+<mission-meta />
 
 ## 🎯 Mission Brief
 
@@ -161,18 +171,21 @@ This course is focused on **building agents with Copilot Studio**. We'll go deep
 
 Concepts are universal, but in this course the agents you build **meet people where they already work**: in **Microsoft Teams** and the **Microsoft 365 Copilot** experience, grounded in Work IQ, acting through your connected tools, and bound by your organization's identity and permissions. An agent that's brilliant in isolation but invisible in the flow of work doesn't get used. That integration is the payoff and the subject of the rest of the curriculum.
 
-## 🎉 Mission Complete
+## ✅ Mission Complete {#mission-complete}
 
 You now have the mental model. You can explain:
 
-1. **Agent ≠ chatbot ≠ AI assistant** — an agent reasons, retrieves, uses tools, and may self-start when triggers are configured.
-1. **LLM = the brain**, steered by instructions and model choice.
-1. **RAG = the memory** — grounded, cited answers from *your* data (the knowledge layer).
-1. **Generative orchestration = the director** — a planner that composes tools and knowledge instead of a hand-drawn topic tree.
-1. **Agency is a spectrum** — set control boundaries before capabilities.
-1. **Harness choice matters** — use the Copilot chat harness for grounded M365 Copilot Chat extensions, the standard harness for rule-based experiences, and the GitHub Copilot harness for complex multi-step work.
+✅ **Distinguish agents from chatbots and AI assistants**: Explain how agents reason, retrieve information, use tools, and respond to triggers.
 
-Next up, you'll dig into **Copilot Studio** — what it is, how its harnesses work, and the building blocks you'll use for the rest of the GitHub Copilot harness track: [**Mission 02: Copilot Studio Fundamentals**](../02-copilot-studio-fundamentals/index.md).
+✅ **Describe the role of an LLM**: Explain how instructions and model choice steer an agent's reasoning.
+
+✅ **Explain grounded retrieval**: Describe how RAG connects an agent to trusted organizational data.
+
+✅ **Recognize generative orchestration**: Explain how an orchestrator selects and combines knowledge and tools.
+
+✅ **Choose an appropriate harness**: Match Copilot chat, standard, and GitHub Copilot harnesses to their intended scenarios.
+
+⏭️ [Move to **Copilot Studio Fundamentals**](../02-copilot-studio-fundamentals/index.md) to learn how its harnesses work and explore the building blocks you'll use throughout the course.
 
 > [!TIP] Want to explore Agent Builder?
 > This course focuses on the **GitHub Copilot harness** in Copilot Studio. If you'd like to build an agent that extends Microsoft 365 Copilot Chat, head over to Copilot Camp and work through the [**Declarative Agent Foundation with Agent Builder**](https://microsoft.github.io/copilot-camp/pages/extend-m365-copilot/01-first-agent-builder/) lab.
@@ -192,4 +205,4 @@ Stay sharp, Recruit because your AI journey is just beginning!
 🔗 [Apply generative orchestration capabilities](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-orchestration) — the concept, in Microsoft's words
 
 <!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit-nextgen/01-introduction-to-agents" alt="Analytics" />
+<analytics-tag section="recruit-nextgen" mission="01-introduction-to-agents" />

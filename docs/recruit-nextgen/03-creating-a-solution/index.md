@@ -19,7 +19,7 @@ products:
 industries:
   - it
 created-date: 2026-06-28
-last-edited-date: 2026-07-24
+last-edited-date: 2026-08-04
 ---
 # 🚨 Mission 03: Creating a Solution for Your Agent {#mission-03-creating-a-solution-for-your-agent}
 
@@ -31,145 +31,138 @@ Welcome back, Agent. In this mission, you'll create a Power Platform solution fo
 
 Every agent needs a well-structured home. A Power Platform solution provides organization, portability, and readiness for deployment.
 
-Let's establish the base.
+Starting in a custom solution also prevents the work you create throughout this course from becoming scattered across the default solution. As you add knowledge, tools, skills, and workflows in later missions, those related components need to travel together. A clear publisher and solution make ownership easier to recognize and give your team a controlled package for moving changes between environments.
+
+You'll start by creating the solution that will contain your agent.
 
 > [!NOTE] GitHub Copilot harness authoring surface
 >
-> In the current Copilot Studio UI, make sure the **New experience** toggle in the upper-right corner of the Home page is **on**. This selects the authoring surface used for agents powered by the GitHub Copilot harness and makes your screen match the screenshots in this mission.
+> In the current Copilot Studio UI, turn on the **New experience** toggle in the upper-right corner of the Home page. This selects the authoring surface used for agents powered by the GitHub Copilot harness and makes your screen match the screenshots in this mission.
 >
-> ![New experience](./assets/NewExperience.png)
+> ![Enable the new Copilot Studio experience](./assets/03-enable-the-new-copilot-studio-experience.png)
 
 ## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
-1. What Power Platform solutions are and how they support agent development
-1. How solutions organize components and support deployment across environments
-1. How solution publishers identify and manage custom components
-1. Understanding the Power Platform solution lifecycle from development to production
-1. Creating your own solution publisher and custom solution for your `Contoso IT Concierge` agent
+1. How solutions organize an agent and its related components
+1. Why custom solutions support deployment across environments
+1. How solution publishers identify custom components
+1. How solutions move from development to testing and production
+1. How to create a publisher and custom solution for your `Contoso IT Concierge` agent
 
-## 🕵🏻‍♀️ Solution? What's that? {#solution-whats-that}
+## 🕵🏻‍♀️ What is a solution? {#solution-whats-that}
 
-In Microsoft Power Platform, solutions are like containers or packages that hold all the parts of your apps or agents - these could be tables, forms, flows, and custom logic. Solutions are essential for Application Lifecycle Management (ALM), they enable you to manage your app and agents from idea to development, testing, deployment, and updates.
+In Microsoft Power Platform, a solution is a package that contains related components, such as agents, tables, flows, and custom logic.
 
-In Copilot Studio, every agent you create is stored in a Power Platform solution. By default, agents are created in the Default solution, unless you create a new custom solution to create your agent in. This is what we'll learn 🤓 in this lesson and in the hands-on lab.
+Solutions support **application lifecycle management (ALM)**. ALM is the process of managing a solution as it moves through development, testing, deployment, and future updates.
 
-Solutions traditionally have been created in the **Power Apps maker portal** - a web-based interface where you can build and customize apps, Dataverse, flows, explore AI components and more.
+Copilot Studio stores every agent in a Power Platform solution. By default, new agents are placed in the Default Solution. In this mission, you'll create a custom solution so the `Contoso IT Concierge` and its related components stay together.
 
-   ![Solutions](./assets/4.0_01_Solutions.png)
+Solutions have traditionally been managed in the **Power Apps maker portal**, where you can build and customize apps, Dataverse tables, flows, and other Power Platform components.
 
-In Copilot Studio, there is now the **Solution Explorer** where you can manage your solutions directly. You no longer need to switch to the Power Apps maker portal to manage your solutions, it can be done right inside Copilot Studio 🪄
+    ![Solutions available in Power Apps maker portal](./assets/03-solutions-available-in-power-apps-maker-portal.png)
 
-This means you can do the usual solution-related tasks:
+You can now manage solutions directly from **Solution Explorer** in Copilot Studio without switching to the Power Apps maker portal.
 
-- **Create a solution** - custom solutions enable agents to be exported and imported between environments.
-- **Set your preferred solution** - choose the solution agents, apps, etc will be created in by default.
-- **Add or remove components** - your agent could be referencing other components such as environment variables or cloud flows. Therefore these components need to be included in the solution.
-- **Export solutions** - to move solutions to another target environment.
-- **Import solutions** - import solutions created elsewhere, including upgrading or updating solutions.
-- **Create and manage solution pipelines** - automate the deployment of solutions between environments.
-- **Git integration** - enables developers to connect solutions with Git repositories for version control, collaboration and ALM. Intended to be used in developer environments only.
+From Solution Explorer, you can:
 
-   ![Solutions](./assets/4.0_02_CopilotStudioSolutionExplorer.png)
+- **Create a solution** to package an agent for movement between environments.
+- **Set your preferred solution** to control where new agents, apps, and other components are created by default.
+- **Add or remove components**, including related environment variables and cloud flows.
+- **Export and import solutions** to move them between environments or apply updates.
+- **Create and manage solution pipelines** to automate deployment between environments.
+- **Use Git integration** in developer environments for version control and collaboration.
+
+    ![Solution Explorer available in Copilot Studio](./assets/03-solution-explorer-available-in-copilot-studio.png)
 
 There are two types of solutions:
 
-- **Unmanaged solutions** - used during development. You can freely edit and customize as needed.
-- **Managed solutions** - used when you're ready to deploy your app to testing or production. These are locked down to prevent accidental changes.
+- **Unmanaged solutions** are used during development, where makers can edit and customize components.
+- **Managed solutions** are used for deployment to testing or production, where restrictions help prevent accidental changes.
 
-## 🤔 Why _should_ I use a Solution for my agent? {#why-should-i-use-a-solution-for-my-agent}
+## 🤔 Why use a solution for your agent? {#why-should-i-use-a-solution-for-my-agent}
 
-Think of Solutions as a _toolbox_. When you need to fix or build something (an agent) in a different location (environment), you gather all the necessary tools (components) and put them in your toolbox (Solution). You can then carry this toolbox to the new location (environment) and use the tools (components) to complete your work, or add new tools (components) to customize your agent or project you're building.
+A dedicated solution keeps your agent separate from unrelated components in the Default Solution. It also gives your team a controlled package for moving the agent between environments.
 
-It's good practice to create an agent in a dedicated solution in your source (developer) environment. Here's why solutions are valuable:
+Think back to the digital briefcase: when the agent moves, its related components move with it. This supports several parts of the agent lifecycle:
 
 🧩 **Organized development**
 
-- You're keeping your agent separate from the Default solution which contains everything in the environment. All your agent components are in one place 🎯
-
-- Everything you need for your agent is in a solution, making it easier to export and import to a target environment 👉🏻 this is a healthy habit of ALM.
+- Keep the agent separate from unrelated components in the Default Solution.
+- Store related agent components together so they can be exported and imported as one package.
 
 🧩 **Safe deployment**
 
-- You can export your app or agent as a managed solution and deploy it to other target environments (such as testing or production) without risking accidental edits.
+- Export the agent as a managed solution and deploy it to testing or production without exposing its components to accidental edits.
 
 🧩 **Version control**
 
-- You can create patches (target fixes), updates (a more comprehensive change) or upgrades (replacing a solution - usually major changes and introducing new features).
-
-- Helps you roll out changes in a controlled way.
+- Use patches for targeted fixes, updates for broader changes, or upgrades for major replacements and new features.
+- Roll out changes in a controlled way.
 
 🧩 **Dependency management**
 
-- Solutions track which parts depend on others. This prevents you from breaking things when you make changes.
+- Track relationships between components so you can assess the effect of a change.
 
 🧩 **Team collaboration**
 
-- Developers and makers can work together using unmanaged solutions in development, then hand off a managed solution for deployment.
+- Let developers and makers collaborate in an unmanaged solution, then hand off a managed solution for deployment.
 
 ## 🪪 Understanding Solution Publishers {#understanding-solution-publishers}
 
-A Solution Publisher in Power Platform is like a label or brand that identifies who created or owns a solution. It's a small but important part of managing your apps, agents and flow customizations, especially when working in teams or across environments.
+A solution publisher identifies who owns a solution and assigns a prefix to its custom components. The prefix helps teams recognize related components and avoid naming conflicts across solutions and environments.
 
 When you create a solution, you must choose a publisher. This publisher defines:
 
-- A prefix that gets added to all custom components (think tables, fields, and flows).
-
-- A name and contact info for the organization or person who owns the solution.
+- A prefix that is added to custom components, such as tables, columns, and flows.
+- The name and contact information for the organization or person that owns the solution.
 
 ### 🤔 Why is it important? {#why-is-it-important}
 
-1. **Easy identification** - the prefix (Example - `new_` or `abc_`) helps you quickly identify which components belong to which solution or team.
+1. **Clear identification** - a prefix such as `new_` or `abc_` helps you identify which components belong to a solution or team.
 
-1. **Avoids conflicts** - if two teams create a column called status, their prefixes (`teamA_status`, `teamB_status`) prevent naming collisions.
+1. **Fewer naming conflicts** - if two teams create a column called Status, prefixes such as `teamA_status` and `teamB_status` keep the schema names unique.
 
-1. **Supports ALM** - when moving solutions between environments (Dev → Test → Prod), the publisher helps track ownership and maintain consistency.
+1. **Consistent ownership** - as a solution moves from development to testing and production, its publisher information remains associated with its components.
 
 > [!TIP] ✨ Example
 >
-> Let's say you create a publisher called Contoso Solutions with the prefix `cts_`.
+> Suppose you create a publisher called Contoso Solutions with the prefix `cts_`.
 >
 > If you add a custom column called _Priority_, it will be stored as `cts_Priority` in the solution.
 >
-> Anyone who comes across the column at a solution level regardless of what environment they're in, they can easily identify it as a column that's associated to Contoso Solutions.
+> Anyone reviewing the component can recognize that it belongs to the Contoso solution, regardless of the environment.
 
 ## 🧭 Power Platform Solution lifecycle {#power-platform-solution-lifecycle}
 
-So now you understand the purpose of a Solution, let's next learn about the lifecycle.
+Next, follow how a solution moves from development to production.
 
-**1. Create Solution in Development environment** - start by creating a new solution in your Development environment.
+**1. Create a solution in the development environment** - start with an unmanaged solution that makers can edit.
 
-**2. Add Components** - add apps, flows, tables, and other elements to your solution.
+**2. Add components** - add agents, apps, flows, tables, and other related elements.
 
-**3. Export as Managed solution** - package your solution for deployment by exporting it as a Managed solution.
+**3. Export as a managed solution** - package the tested components for deployment.
 
-**4. Import to Test environment** - test your solution in a separate Test environment to ensure everything works as expected.
+**4. Import into the test environment** - validate the solution away from active production users.
 
-**5. Import to Production environment** - deploy the tested solution to your live Production environment.
+**5. Import into the production environment** - deploy the validated solution for live use.
 
-**6. Apply Patches, Updates or Upgrades** - make improvements or fixes using patches, updates, or upgrades. 🔁 Repeat the cycle!
+**6. Apply patches, updates, or upgrades** - improve the solution, test the changes, and deploy the next version.
 
 > [!TIP] ✨ Example
 >
-> Imagine you're building an IT helpdesk agent to help employees with issues such as device problems, network troubleshooting, printer setup and more.
+> Imagine you're building an IT helpdesk agent to help employees with device problems, network troubleshooting, and printer setup.
 >
-> - You start in a Development environment using an unmanaged solution.
+> - You start in a development environment with an unmanaged solution.
 >
-> - Once it's ready, you export it as a managed solution and import it into a target environment such as a System Test or User Acceptance Testing (UAT) environment.
+> - When the solution is ready, you export it as a managed solution and import it into a system test or user acceptance testing environment.
 >
-> - After testing, you move it to the Production environment - all without touching the original development version.
+> - After testing, you import it into production without changing the original development version.
 
 ## 🧪 Lab 03: Create a new Solution {#lab-03-create-a-new-solution}
 
-We're now going to learn
-
-- How to create a Solution publisher
-- How to create a Solution
-
-We're going to stick with the example from earlier, where we're going to create a solution in the dedicated Copilot Studio environment to build our IT helpdesk agent in.
-
-Let's begin!
+In this lab, you'll create a solution publisher and a custom solution in your dedicated Copilot Studio environment. The solution will provide the starting package for the `Contoso IT Concierge` agent.
 
 ### Prerequisites
 
@@ -178,14 +171,13 @@ Let's begin!
 - Administrative permissions to create solutions and agents
 
 > [!TIP] Prerequisites help:
-> If you need help getting a Copilot Studio license, please reference the [Recruit Course Setup lab](./../../recruit-nextgen/00-course-setup/index.md) which walks you through setting up a Power Platform environment with a Copilot Studio trial.
+> If you need a Copilot Studio license or test environment, follow the [Recruit Course Setup lab](../00-course-setup/index.md).
 
 #### Security role
 
-In Copilot Studio, what you _can do_ in the solution explorer depends on your user security role.
-If you don't have permission to manage solutions in the Power Apps admin center, you won't be able to do those tasks in Copilot Studio either.
+Your security role determines which tasks you can perform in Solution Explorer. If you can't manage solutions in the Power Apps maker portal, you also can't manage them in Copilot Studio.
 
-To make sure everything works smoothly, check that you have the right security roles and permissions. Or if you don't manage environments in your organization, ask your IT administrator (or the equivalent) team who manages your tenant/environments.
+Confirm that you have one of the following roles. If your organization manages your environment, ask your Power Platform administrator to confirm your access.
 
 The following are the security roles that enable users to create a solution in their environment.
 
@@ -203,23 +195,23 @@ Make sure you switch to your dedicated developer environment. For details, see [
 
 1. In Copilot Studio, from the left navigation, select the **environment** icon and switch from the default environment to your environment, for example **Adele Vance's environment**.
 
-    ![Developer environment](./assets/4.0_03_DeveloperEnvironment.png)
+    ![Select the Power Platform developer environment](./assets/03-select-the-power-platform-developer-environment.png)
 
 ### 3.1 Create a Solution publisher
 
 1. From the left navigation, select the **ellipsis** icon near the bottom, then under **Explore** select **Solutions**.
 
-    ![Select Solutions](./assets/4.1_01_Solutions.png)
+    ![Select Solutions in Copilot Studio navigation](./assets/03-select-solutions-in-copilot-studio-navigation.png)
 
-1. The **Solution Explorer** in Copilot Studio will load. Select **+ New solution**
+1. In **Solution Explorer**, select **+ New solution**.
 
-    ![Select New solution](./assets/4.1_02_NewSolution.png)
+    ![Select new solution in Solution Explorer](./assets/03-select-new-solution-in-solution-explorer.png)
 
-1. The **New solution** pane will appear where we can define the details of our solution. First, we need to create a new publisher. Select **+ New publisher**.
+1. In the **New solution** pane, select **+ New publisher**.
 
-    ![Select New publisher](./assets/4.1_03_NewPublisher.png)  
+    ![Select new publisher for the solution](./assets/03-select-new-publisher-for-the-solution.png)
 
-1. The **Properties** tab of the **New publisher** pane will appear with required and non-required fields to be populated in the **Properties** tab. This is where we can outline the details of the publisher which will be used as the label or brand that identifies who created or owns the solution.
+1. Review the required and optional fields on the **Properties** tab of the **New publisher** pane. These values identify the publisher and define the prefix for its custom components.
 
     |Property|Description|Required|
     |----------|----------|:----------:|
@@ -253,27 +245,27 @@ Make sure you switch to your dedicated developer environment. For details, see [
     cts
     ```
 
-    By default, the **Choice value** prefix will display an integer value. Update this integer value to the nearest thousand. For example, in my screenshot below, it was initially `77074`. Update this from `77074` to `77000`.
+    The **Choice value prefix** displays an automatically generated integer. Round this value down to the nearest thousand. For example, change `77074` to `77000`.
 
-    ![Define publisher properties](./assets/4.1_04_PublisherProperties.png)  
+    ![Configure the custom solution publisher properties](./assets/03-configure-the-custom-solution-publisher-properties.png)
 
-1. If you want to provide the contact details for the Solution, select the **Contact** tab and populate the following columns displayed.
+1. Optional: To provide contact details for the publisher, select the **Contact** tab and complete the available fields.
 
-    ![Contact details for the Solution](./assets/4.1_05_Contact.png)
+    ![Contact details for the Solution](./assets/03-contact-details-for-the-solution.png)
 
-1. Select the **Properties** tab and select **Save** to create the Publisher.
+1. Select the **Properties** tab, then select **Save** to create the publisher.
 
-    ![Save the Publisher](./assets/4.1_06_SavePublisher.png)
+    ![Save the configured solution publisher](./assets/03-save-the-configured-solution-publisher.png)
 
-1. The New publisher pane will close and you'll be brought back to the **New solution** pane with the newly created Publisher selected.
+1. Confirm that the **New publisher** pane closes and the new publisher is selected in the **New solution** pane.
 
-    ![Publisher selected](./assets/4.1_07_PublisherSelected.png)  
+    ![Custom publisher selected for new solution](./assets/03-custom-publisher-selected-for-new-solution.png)
 
-High five, you've now created a Solution Publisher! 🙌🏻 We'll next learn how to create a new custom solution.
+Your solution publisher is ready. Next, you'll use it to create the custom solution.
 
 ### 3.2 Create a new Solution
 
-1. Now that we've created our solution, we can now complete the rest of the form in the **New solution** pane.
+1. In the **New solution** pane, complete the remaining fields.
 
     Copy and paste the following as the **Display name**,
 
@@ -289,45 +281,49 @@ High five, you've now created a Solution Publisher! 🙌🏻 We'll next learn ho
 
     Since we're creating a new solution, the [**Version** number](https://learn.microsoft.com/power-apps/maker/data-platform/update-solutions#understanding-version-numbers-for-updates/?WT.mc_id=power-172615-ebenitez) by default will be `1.0.0.0`.
 
-    Tick the **Set as your preferred solution** checkbox.
+    Select the **Set as your preferred solution** checkbox.
 
-    ![Define solution](./assets/4.2_01_SolutionDetails.png)  
+    ![Configure the new solution details](./assets/03-configure-the-new-solution-details.png)
 
-1. Expand the **More options** to see additional details that can be provided in a solution.
+1. Expand **More options** to review the additional solution fields.
 
-    ![View more options](./assets/4.2_02_MoreOptions.png)
+    ![Expand additional options for the solution](./assets/03-expand-additional-options-for-the-solution.png)
 
-1. You'll see the following,
+1. Review the optional fields:
 
-    - **Installed on** - the date of when the Solution was installed.
+    - **Installed on** - the date when the solution was installed.
 
-    - **Configuration page** - developers set up an HTML web resource to help users interact with their app, agent or tool where it'll appear as a web page in the Information section with instructions or buttons. It's mostly used by companies or developers who build and share solutions with others.
+    - **Configuration page** - an optional HTML web resource that provides instructions or controls for people who install the solution.
 
-    - **Description** - describes the solution or a high level description of the configuration page.
+    - **Description** - a summary of the solution or its configuration page.
 
-    We'll leave these blank for this lab.
+    Leave these fields blank for this lab.
 
     Select **Create**.
 
-    ![Create Solution](./assets/4.2_03_Create.png)
+    ![Create the configured Power Platform solution](./assets/03-create-the-configured-power-platform-solution.png)
 
-1. The solution for Contoso IT Concierge Agent has now been created. There will be zero components until we create an agent in Copilot Studio.
+1. Confirm that the `Contoso IT Concierge Agent` solution opens. It has no components yet because you haven't created the agent.
 
     Select the **back arrow** icon to return to the Solution Explorer.
 
-    ![Return to Solution Explorer](./assets/4.2_04_SolutionCreated.png)
+    ![Return to Solution Explorer after creation](./assets/03-return-to-solution-explorer-after-creation.png)
 
-1. Notice how the `Contoso IT Concierge Agent` now displays as the **Current preferred solution** since we ticked the **Set as your preferred solution** checkbox earlier.
+1. Confirm that `Contoso IT Concierge Agent` appears as the **Current preferred solution**.
 
-    ![Preferred solution now the newly created solution](./assets/4.2_05_CurrentPreferredSolutionSelected.png)
+    ![Preferred solution now the newly created solution](./assets/03-preferred-solution-now-the-newly-created-solution.png)
 
 ## ✅ Mission Complete {#mission-complete}
 
 Mission accomplished, Recruit! You created a solution publisher and a custom Power Platform solution for the `Contoso IT Concierge` agent.
 
-Well done, Agent Maker. A tidy digital footprint is the first step toward operability at scale. Now you have the tools and the mindset for sustainable, enterprise-ready agent development.
+You can now:
 
-This is the end of **Lab 03 - Creating a Solution**, select the link below to move to the next mission. Your solution created in this lab will be used in the next mission's lab.
+✅ **Create a solution publisher**: Define the ownership details used by solution components.
+
+✅ **Create a Power Platform solution**: Package agent components for consistent lifecycle management.
+
+✅ **Set a preferred solution**: Ensure new components are created in the correct solution by default.
 
 ⏭️ [Move to **Build an agent with the GitHub Copilot harness** mission](../04-build-a-custom-agent/index.md)
 
@@ -345,4 +341,4 @@ This is the end of **Lab 03 - Creating a Solution**, select the link below to mo
 
 🔗 [Overview of Git integration in Power Platform](https://learn.microsoft.com/power-platform/alm/git-integration/overview/?WT.mc_id=power-172615-ebenitez)
 
-<analytics-tag section="recruit" mission="03-creating-a-solution" />
+<analytics-tag section="recruit-nextgen" mission="03-creating-a-solution" />

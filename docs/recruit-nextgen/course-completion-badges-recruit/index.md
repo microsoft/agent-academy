@@ -44,7 +44,7 @@ These badges are:
 - Shareable (LinkedIn, resumes, portfolios)
 - Tied to real technical work, not just attendance
 
-![Recruit Badge](../../images/mcs-agent-academy-recruit-badge.png)
+![Microsoft Copilot Studio Agent Academy Recruit badge](../../images/mcs-agent-academy-recruit-badge.png)
 To ensure badges remain meaningful, we follow a **strict validation protocol**.
 
 > [!IMPORTANT]
@@ -97,7 +97,7 @@ No account = no badge issuance (even with a valid submission).
 ## 📡 Stay Mission-Ready {#stay-mission-ready}
 
 🎖 Congratulations, Recruit.  
-You didn’t just watch content, you *built something*.
+You didn’t just read about a concept, you *built something*.
 
 Next up: **[Operative training](../../operative/)**.
 
@@ -107,4 +107,4 @@ Learn more about Power Platform Advocacy:
 
 ⚡ [Power Platform Advocacy Hub](https://aka.ms/power-advocates)
 
-<analytics-tag section="recruit" mission="final-mission" />
+<analytics-tag section="recruit-nextgen" mission="final-mission" />

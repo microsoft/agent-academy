@@ -13,7 +13,12 @@ lastUpdated: false
 **Welcome, Recruit.**  
 Your mission—should you choose to accept it—is to master the art of building agents powered by the **GitHub Copilot harness** in Microsoft Copilot Studio.
 
-This hands-on training focuses on Copilot Studio's most capable harness for reasoning-heavy, multi-step work. You'll learn how to build, extend, and deploy an agent using instructions, knowledge, skills, tools, and workflows.
+This beginner, hands-on course introduces the GitHub Copilot harness and its instruction-driven approach to agent building. You'll use a familiar IT support scenario so you can focus on how instructions, skills, tools, and workflows work together.
+
+> [!INFO] How this path differs from the original Recruit course
+> The [original Recruit course](../recruit/index.md) was created before the GitHub Copilot harness was available and introduces the standard, topic-based authoring experience. Recruit NextGen revisits a familiar business scenario using a different architecture: natural-language instructions, skills, tools, and workflows replace manually authored conversation paths.
+>
+> Reusing the scenario is intentional. It helps you compare the approaches without also learning a new business process. It doesn't mean every IT support agent requires the GitHub Copilot harness; the right harness depends on how the agent must behave.
 
 ## 🎯 Mission Objective {#mission-objective}
 
@@ -54,8 +59,8 @@ This academy is broken into progressive lessons—each one designed as a field m
 | `02` | 🛠️ [Copilot Studio Fundamentals](./02-copilot-studio-fundamentals/index.md) | Learn the building blocks |
 | `03` | 🧩 [Creating a Solution](./03-creating-a-solution/index.md) | Package your agent into a reusable solution for environment management |
 | `04` | ✍️ [Build with the GitHub Copilot Harness](./04-build-a-custom-agent/) | Create a reasoning-first agent grounded in knowledge sources |
-| `05` | 🧠 [Add a Skill](./05-add-a-skill/) | Use Skills to fine tune your agent |
-| `06` | 🪪 [Add a Tool](./06-add-tools/) | Add tools to extend with data integration |
+| `05` | 🪪 [Add a Tool](./05-add-tools/) | Add tools to extend with data integration |
+| `06` | 🧠 [Add Skills](./06-add-skills/) | Use Skills to fine-tune your agent |
 | `07` | 🔁 [Automate with Workflows](./07-automate-with-workflows/) | Add deterministic logic and automation to your agent |
 | `08` | 📢 [Publish Your Agent](./08-publish-your-agent/) | Deploy your agent to Microsoft Teams and Microsoft 365 Copilot |
 | `09` | 🪪 [Understanding Licensing](./09-understanding-licensing/index.md) | Learn how licensing and billing works with Copilot Studio |
@@ -64,4 +69,4 @@ This academy is broken into progressive lessons—each one designed as a field m
 > [!NOTE]
 > ✅ Completing this curriculum earns you the **Recruit** badge.  
 
-<analytics-tag section="recruit" />
+<analytics-tag section="recruit-nextgen" />

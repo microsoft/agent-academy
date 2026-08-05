@@ -5,16 +5,13 @@ prev:
   text: Creating a solution
   link: /recruit-nextgen/03-creating-a-solution
 next:
-  text: Add a skill
-  link: /recruit-nextgen/05-add-a-skill
+    text: Add Tools
+    link: /recruit-nextgen/05-add-tools
 short-description: Create an agent powered by the GitHub Copilot harness using AI-based authoring
 difficulty: 1
 codename: OPERATION ENGINE SHIFT
 time: 60
-tags:
-  - github-copilot-harness
-  - ai-authoring
-  - solutions
+tags: [fundamentals, solutions]
 products:
   - copilot-studio
   - power-platform
@@ -22,7 +19,7 @@ products:
 industries:
   - it
 created-date: 2026-06-28
-last-edited-date: 2026-07-24
+last-edited-date: 2026-08-04
 ---
 
 # 🚨 Mission 04: Build an Agent with the GitHub Copilot Harness {#mission-04-build-an-agent-with-the-github-copilot-harness}
@@ -39,7 +36,11 @@ Welcome back, Agent. In this mission, you'll build an agent powered by the GitHu
 
 You'll describe what your agent needs to do in natural language, let Copilot Studio generate the initial agent experience, then refine the result by updating the agent name and adding knowledge sources.
 
+The scenario is the `Contoso IT Concierge`, an internal support agent that will help employees troubleshoot common issues and request approved devices. At this stage, the goal isn't to automate every task. It's to establish a clear purpose, trustworthy grounding, and predictable baseline behavior before introducing tools, skills, and workflows. That sequence makes later changes easier to evaluate because you'll know how the agent behaved before each capability was added.
+
 Because you set the custom solution as your preferred solution in the previous mission, the agent and its components will be added to it automatically. You'll test the agent to establish a baseline for future missions, then review its components in the solution at the end of the lab.
+
+By the end, you'll have the core agent that carries the course scenario forward. Each remaining build mission extends this same agent instead of creating a disconnected example.
 
 ## 🔎 Objectives {#objectives}
 
@@ -75,7 +76,7 @@ Administrators can also use the Power Platform admin center and Microsoft Purvie
 
 Now that you understand why Copilot Studio is suited for building and governing more advanced agents, let's look at the runtime architecture you'll use. The [GitHub Copilot harness](https://learn.microsoft.com/microsoft-copilot-studio/harnesses-overview) is designed for reasoning-heavy, multi-step work. Instead of designing every conversation path manually, you describe the agent's purpose and behavior, then connect the knowledge and capabilities it needs.
 
-![AI-based authoring](./assets/5.0_01_AIBasedAuthoring.png)
+![AI-based authoring in Copilot Studio](./assets/04-ai-based-authoring-in-copilot-studio.png)
 
 The agent lifecycle follows a simple pattern: create, build, test, publish, and monitor. In this mission, you'll focus on creating, building, and testing your agent.
 
@@ -93,13 +94,16 @@ Copilot Studio gives you a faster path to a working GitHub Copilot harness agent
 
 The generated instructions provide a useful starting point, but authoring is iterative. After the agent is created, you can review and refine its instructions in the **Build** tab, test the results in **Preview**, and continue making adjustments to improve consistency and reliability.
 
+> [!TIP] Why this course uses manual configuration
+> You can build and refine GitHub Copilot harness agents through the conversational authoring experience, but AI-generated output can vary between sessions. To give every learner a consistent, repeatable result, this course shows the manual configuration steps in the **Build** tab. Natural-language authoring also consumes **Copilot Credits** during creation, while manual configuration in **Build** doesn't.
+
 ## 🛠️ Build your agent in one place {#build-your-agent-in-one-place}
 
 The [**Build** tab](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/build-overview) is the central place for defining who your agent is, what it knows, what it can do, and what limits it should follow.
 
 From this tab, you can refine the agent's instructions and connect components such as models, knowledge, tools, skills, connected agents, and memory. The orchestration runtime uses these instructions and components to decide how to respond and when to take action.
 
-![Build tab](./assets/5.0_02_BuildTab.png)
+![Build tab for configuring agent capabilities](./assets/04-build-tab-for-configuring-agent-capabilities.png)
 
 ## 🧪 Lab 04: Create an agent with the GitHub Copilot harness {#lab-04-create-an-agent-with-the-github-copilot-harness}
 
@@ -123,11 +127,14 @@ Before starting this lab, make sure you have:
 - The solution from [Mission 03 - Creating a solution](../03-creating-a-solution/index.md)
 - Your test knowledge source(s), for example the **Contoso IT** SharePoint site from [Mission 00 - Course setup](../00-course-setup/index.md#step-5-create-new-sharepoint-site)
 
+> [!WARNING] Copilot Credit consumption starts during creation
+> Agents built with the **GitHub Copilot harness** use consumption-based billing. The natural-language authoring, Preview, and Evaluation experiences consume **Copilot Credits** while you build and test; manual configuration in the **Build** and **Monitor** tabs doesn't consume credits. See [Mission 09 - Understanding Licensing](../09-understanding-licensing/index.md) for more guidance and the [Microsoft Copilot Credits Guide](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/bade/documents/products-and-services/en-us/ai/Microsoft-Copilot-Credits-Guide-August-2026.pdf) for current details.
+
 ### 4.1 Create a new agent with the GitHub Copilot harness
 
 1. Browse to [**Microsoft Copilot Studio**](https://copilotstudio.microsoft.com) and on the **Home** page, select the **Agent (GitHub Copilot)** tile.
 
-    ![Agent](./assets/4.1.01_NewAgent.png)
+    ![New agent created from the prompt](./assets/04-new-agent-created-from-the-prompt.png)
 
 1. Update the agent name to the following text,
 
@@ -135,7 +142,7 @@ Before starting this lab, make sure you have:
     Contoso IT Concierge
     ```
 
-    ![Rename agent](./assets/4.1.02_Rename.png)
+    ![Rename the Contoso IT Concierge agent](./assets/04-rename-the-contoso-it-concierge-agent.png)
 
 1. Copy and paste the following into the Instructions field.  Review the instructions closely. They help the agent stay safe, follow company rules, and stay focused on approved IT help desk tasks, making responses more reliable, secure, and easier to test.
 
@@ -165,21 +172,21 @@ Before starting this lab, make sure you have:
     - Do not respond to requests outside of this scope.
     ```
 
-    ![Paste Prompt](./assets/4.1.03_Instructions.png)
+    ![Paste the agent instructions prompt](./assets/04-paste-the-agent-instructions-prompt.png)
 
 ### 4.2 Add knowledge
 
-1. The **Build** view shows the agent **Instructions** on the left and a configuration panel on the right with **Tools**, **Knowledge**, **Skills**, and more. Let's provide the agent with **knowledge** so it knows where the source of truth is for IT related questions. Select the **Add Button** next to the **Instructions** section in the configuration panel.
+1. The **Build** view shows the agent **Instructions** on the left and a configuration panel on the right with **Tools**, **Knowledge**, **Skills**, and more. Let's provide the agent with **knowledge** so it knows where the source of truth is for IT-related questions. Select the **Add Button** next to the **Instructions** section in the configuration panel.
 
-    ![Add Knowledge](./assets/4.1.04_AddInstruction.png)
+    ![Add a new agent knowledge source](./assets/04-add-a-new-agent-knowledge-source.png)
 
 1. Select the **Public websites** option
 
-    ![Public Website](./assets/4.1.05_pubwebsite.png)
+    ![Select public website knowledge source](./assets/04-select-public-website-knowledge-source.png)
 
-1. You'll notice that everything is grayed out here. That's because the default behavior is to allow the agent to search all public websites. We want to limit it to only references the sites that we provide so we need to toggle the **Search all websites** setting to *off**.
+1. You'll notice that everything is grayed out here. That's because the default behavior is to allow the agent to search all public websites. We want to limit it to only references the sites that we provide so we need to toggle the **Search all websites** setting to **off**.
 
-    ![All websites off](./assets/4.1.06_allsitesoff.png)
+    ![Turn off search across all websites](./assets/04-turn-off-search-across-all-websites.png)
 
 1. Copy and paste the following text into the **add public websites** input then select **Add**
 
@@ -187,19 +194,19 @@ Before starting this lab, make sure you have:
     https://support.microsoft.com
     ```
 
-    ![Add](./assets/4.1.07_addpubsite.png)
+    ![Add the Microsoft support website URL](./assets/04-add-the-microsoft-support-website-url.png)
 
 1. Select **Add to Agent**
 
-    ![Add to agent](./assets/4.1.08_addtoagent.png)
+    ![Add public website to the agent](./assets/04-add-public-website-to-the-agent.png)
 
 1. Select the **Add Button** next to the **Instructions** section in the configuration panel.
 
-    ![Add Knowledge](./assets/4.1.09_addknowledge.png)
+    ![Add another agent knowledge source](./assets/04-add-another-agent-knowledge-source.png)
 
 1. Select the **Public websites** option
 
-    ![Public Website](./assets/4.1.05_pubwebsite.png)
+    ![Select public website knowledge source again](./assets/04-select-public-website-knowledge-source.png)
 
 1. Copy and paste the following text into the input then select **Add**. Make sure to update the SharePoint site with your site's URL.
 
@@ -207,19 +214,19 @@ Before starting this lab, make sure you have:
     https://learn.microsoft.com/troubleshoot
     ```
 
-    ![Add](./assets/4.1.10_add.png)
+    ![Add the additional public website URL](./assets/04-add-the-additional-public-website-url.png)
 
 1. Select **Add to Agent**
 
-    ![Add to agent](./assets/4.1.11_addtoagent.png)
+    ![Add second public website to agent](./assets/04-add-second-public-website-to-agent.png)
 
 1. Select the **Add Button** next to the **Instructions** section in the configuration panel one last time.
 
-    ![Add Knowledge](./assets/4.1.12_add.png)
+    ![Add SharePoint as a knowledge source](./assets/04-add-sharepoint-as-a-knowledge-source.png)
 
 1. Select the **SharePoint** option
 
-    ![Public Website](./assets/4.1.13_addsp.png)
+    ![Select SharePoint knowledge source option](./assets/04-select-sharepoint-knowledge-source-option.png)
 
 1. Copy and paste the following text into the input then select **Add**. Make sure to update the SharePoint site with your site's URL.
 
@@ -227,21 +234,21 @@ Before starting this lab, make sure you have:
     https://YOURSITE.sharepoint.com/sites/ContosoIT
     ```
 
-    ![Add](./assets/4.1.14_add.png)
+    ![Add the SharePoint site URL](./assets/04-add-the-sharepoint-site-url.png)
 
 1. Select **Add to Agent**
 
-    ![Add to agent](./assets/4.1.15_add.png)
+    ![Add SharePoint site to the agent](./assets/04-add-sharepoint-site-to-the-agent.png)
 
 Now, we'll now add another internal knowledge source by uploading a document directly to our agent.
 
 1. In the **Knowledge** section, select **Add+** icon.
 
-    ![Select plus icon to add knowledge](./assets/4.1.16_add.png)
+    ![Select plus icon to add knowledge](./assets/04-select-plus-icon-to-add-knowledge.png)
 
 1. Select **Click to upload**.
 
-    ![Select Click to upload](./assets/4.1.17_add.png)
+    ![Select Click to upload knowledge file](./assets/04-select-click-to-upload-knowledge-file.png)
 
 1. Download the sample file by selecting the button below.
 
@@ -251,31 +258,31 @@ Now, we'll now add another internal knowledge source by uploading a document dir
 
     In File Explorer, open the extracted folder, select `Contoso_Guest_WiFi_Connection_Guide.docx`, and then select **Open**.
 
-    ![Select document](./assets/5.3_04_SelectWordFile.png)
+    ![Select the Word knowledge document](./assets/04-select-the-word-knowledge-document.png)
 
 1. The file has been selected for upload. Select **Add to agent**.
 
-    ![Select Add to Agent](./assets/4.1.18_add.png)
+    ![Add uploaded document to the agent](./assets/04-add-uploaded-document-to-the-agent.png)
 
 1. The document is now available to the agent as a knowledge source. You'll test it alongside the other connected sources in the next section.
 
-    ![Word file added as knowledge source](./assets/5.3_06_WordFileAdded.png)
+    ![Word file added as knowledge source](./assets/04-word-file-added-as-knowledge-source.png)
 
 Now that the agent's knowledge sources are ready, let's review some settings before we test.
 
 ### 4.3 Review Agent settings
 
-1. Select the **three dots ...** in the upper right hand corner and select the **Settings** option.
+1. Select the **three dots ...** in the upper right-hand corner and select the **Settings** option.
 
-    ![Agent settings](./assets/4.2.01_threedots.png)
+    ![Open settings for the configured agent](./assets/04-open-settings-for-the-configured-agent.png)
 
 1. In the **Agent details** tab, review the **Solution** field. It displays the solution you created and set as preferred in the previous mission.
 
-    ![Review agent details under settings](./assets/4.2.02_solution.png)
+    ![Review agent details under settings](./assets/04-review-agent-details-under-settings.png)
 
 1. Next, select the **Greeting & prompts** tab. Copilot Studio automatically generated a greeting message during agent creation. Review the current message.
 
-    ![View Greeting message](./assets/5.2_04_GreetingMessage.png)
+    ![View the default agent greeting message](./assets/04-view-the-default-agent-greeting-message.png)
 
 1. To align the greeting with the agent's new name, replace the existing message with the following text:
 
@@ -283,7 +290,7 @@ Now that the agent's knowledge sources are ready, let's review some settings bef
     Welcome to Contoso IT Concierge. Whether you're experiencing a technical issue or looking for a device, I'll help you find the right solution or next step. How can I assist you today?
     ```
 
-    ![Update Greeting message](./assets/4.2.03_greeting.png)
+    ![Update the agent greeting message](./assets/04-update-the-agent-greeting-message.png)
 
     Exit from agent settings by selecting the **X** icon on the upper-right corner.
 
@@ -299,11 +306,11 @@ We'll now test our updated agent and how it answers questions using each connect
     How can I check the warranty status of my Surface?
     ```
 
-    ![Test website knowledge source](./assets/5.4_01_TestWebsiteKnowledgeSource.png)
+    ![Test the public website knowledge source](./assets/04-test-the-public-website-knowledge-source.png)
 
 1. The agent reviews the knowledge sources and responds using the website knowledge source. Notice the **Citations** reference the Microsoft Support web page it formed its answer from.
 
-    ![Citations](./assets/5.4_02_Citations.png)
+    ![Review citations in the agent response](./assets/04-review-citations-in-the-agent-response.png)
 
 1. Let's now test both our SharePoint site knowledge source and document knowledge source in a single message. Enter the following question.
 
@@ -311,11 +318,11 @@ We'll now test our updated agent and how it answers questions using each connect
     How can I access our company's Contoso VPN from my device? And what are the Guest Wi-Fi details?
     ```
 
-    ![Test SharePoint site and Word file knowledge sources](./assets/5.4_03_TestSharePointAndWordFileKnowledgeSources.png)
+    ![Test SharePoint site and Word file knowledge sources](./assets/04-test-sharepoint-site-and-word-file-knowledge-sources.png)
 
 1. Scroll through the response. The **Contoso VPN Access** section is grounded using the **Contoso IT** SharePoint site, and the **Contoso Guest Wi-Fi** section is grounded using the uploaded document. The **Citations** list both sources separately - `Frequently-asked-questions.aspx` (SharePoint) and `Contoso_Guest_WiFi_Connection_Guide.docx` (document).
 
-    ![Guest wifi response and citations](./assets/5.4_04_SharePointCitation.png)
+    ![Guest wifi response and citations](./assets/04-guest-wifi-response-and-citations.png)
 
 1. The agent can answer multiple questions in one message and cite the knowledge sources it uses. Review the citations to verify which source supports each part of the response. Select a web or SharePoint citation to open and confirm the source information.
 
@@ -325,25 +332,31 @@ Before moving to the next mission, take a look at the solution to see the agent 
 
 1. Select the **ellipsis** icon on the left-hand side menu and select **Solutions**.
 
-    ![Navigate to solutions](./assets/5.5_01_SelectSolutions.png)
+    ![Navigate to solutions in Copilot Studio](./assets/04-navigate-to-solutions-in-copilot-studio.png)
 
 1. Select the **Contoso IT Concierge Agent** solution.
 
-    ![Select solution](./assets/5.5_02_SelectSolution.png)
+    ![Select the Contoso IT Concierge solution](./assets/04-select-the-contoso-it-concierge-solution.png)
 
 1. The solution shows all components that belong to this agent in one place, and you'll see the uploaded Word file listed there as well. Think of a solution as your ALM package: it groups the agent and related components together so you can track changes, move them between environments (dev, test, production), and deploy consistently.
 
-    ![Solution components](./assets/4.6.01_solution.png)
+    ![Review agent components in the solution](./assets/04-review-agent-components-in-the-solution.png)
 
 ## ✅ Mission Complete {#mission-complete}
 
 Mission accomplished, Recruit! You created an agent powered by the GitHub Copilot harness, verified its instructions and knowledge, added it to your solution, and completed baseline preview tests.
 
-Well done, Agent Maker. You now have a working GitHub Copilot harness agent that you can extend with additional functionality in the missions ahead.
+You can now:
 
-This is the end of **Lab 04 - Build an Agent with the GitHub Copilot Harness**. Select the link below to move to the next mission. The agent created in this lab will be used in the next mission's lab.
+✅ **Create a GitHub Copilot harness agent**: Build an agent from an AI-authored starting point.
 
-⏭️ [Move to **Add a skill** mission](../05-add-a-skill/index.md)
+✅ **Configure instructions and knowledge**: Ground agent behavior in approved guidance and source material.
+
+✅ **Add an agent to a solution**: Keep the agent and its supporting components together for lifecycle management.
+
+✅ **Run baseline preview tests**: Verify the agent's core behavior before adding more capabilities.
+
+⏭️ [Move to **Add Tools** mission](../05-add-tools/index.md)
 
 ## 📚 Tactical Resources {#tactical-resources}
 
@@ -357,4 +370,4 @@ This is the end of **Lab 04 - Build an Agent with the GitHub Copilot Harness**. 
 
 🔗 [Knowledge overview for agents (preview)](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/knowledge-copilot-studio/?WT.mc_id=power-172617-ebenitez)
 
-<analytics-tag section="recruit" mission="04-custom-agent" />
+<analytics-tag section="recruit-nextgen" mission="04-build-a-custom-agent" />

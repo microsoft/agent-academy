@@ -20,7 +20,7 @@ products:
 industries:
   - it
 created-date: 2025-08-20
-last-edited-date: 2026-07-16
+last-edited-date: 2026-08-04
 ---
 
 # 🚨 Mission 00: Course Setup {#mission-00-course-setup}
@@ -66,7 +66,7 @@ Copilot Studio resides within Microsoft 365, so you need a Microsoft 365 account
 1. **Acquire a Paid Microsoft 365 Business Subscription**  
    1. Go to the [Microsoft 365 Business Plans and Pricing Page](https://www.microsoft.com/microsoft-365/business/microsoft-365-plans-and-pricing)
    1. The cheapest option to get you started is the Microsoft 365 Business Basic plan. Select `Try for free` and walk through the guided form to fill in your subscription and account details and payment information.
-   ![Microsoft 365 Signup](./images/m365-freetrial.png)
+    ![Microsoft 365 developer program signup page](./images/00-microsoft-365-developer-program-signup-page.png)
    1. Once you have your new account, log in.
 
 > [!TIP]
@@ -79,15 +79,15 @@ Once you have your Microsoft 365 tenant, you need to get access to Copilot Studi
 1. Navigate to [aka.ms/TryCopilotStudio](https://aka.ms/TryCopilotStudio).
 1. Enter the email address from the new account you configured in the previous step and select `Next`.  
 
-    ![Microsoft 365 Signup](./images/mcs-trial-screen.png)
+    ![Copilot Studio free trial welcome screen](./images/00-copilot-studio-free-trial-welcome-screen.png)
 
 1. It should recognize your account. Select `Sign In`.
 
-    ![Microsoft 365 Signup](./images/mcs-trial-signin.png)  
+    ![Microsoft account sign-in for Copilot Studio](./images/00-microsoft-account-sign-in-for-copilot-studio.png)
 
 1. Select `Start Free Trial`.
 
-    ![Microsoft 365 Signup](./images/mcs-start-trial.png)
+    ![Start free Copilot Studio trial page](./images/00-start-free-copilot-studio-trial-page.png)
 
 > [!INFO] Trial Notes
 >
@@ -107,7 +107,7 @@ Using the same Microsoft 365 tenant in Step 1, sign up for a Power Apps Develope
     - Tick the checkbox
     - Select **Start free**
 
-    ![Sign up for Power Apps Developer Plan](images/0.3_01_SignUp.png)
+    ![Sign up for Power Apps Developer Plan](images/00-sign-up-for-power-apps-developer-plan.png)
 
 1. After signing up for the Developer Plan, you'll be redirected to [Power Apps](https://make.powerapps.com/). The environment uses your name, for example **Adele Vance's environment**. If there's already an environment with that name, the new developer environment is named **Adele Vance's (1)** environment.
 
@@ -127,60 +127,60 @@ First, you need a security group to hold everyone you want to be able to publish
 1. Navigate to [admin.cloud.microsoft](https://admin.cloud.microsoft)
 1. Expand the **Teams & groups** tab and select **Active teams & groups**
 
-    ![Teams and groups](images/admin-teams-groups.png)
+    ![Teams and groups in admin center](images/00-teams-and-groups-in-admin-center.png)
 
 1. Select the **Security groups** tab and select **Add a security group**
 
-    ![Security Group](images/admin-securitygroup-tab.png)
+    ![Security groups tab in admin center](images/00-security-groups-tab-in-admin-center.png)
 
 1. Give the security group a name like **AgentCreators** and select the **Next** button.
 
-    ![Security Group Name](images/admin-securitygroup-name.png)
+    ![Enter a name for security group](images/00-enter-a-name-for-security-group.png)
 
 1. Verify the name and select **Create group**
 
-    ![Create group](images/admin-creategroup.png)
+    ![Create the configured security group](images/00-create-the-configured-security-group.png)
 
 1. Select your newly created security group from the list
 
-    ![Select group](images/admin-selectgroup.png)
+    ![Select the newly created security group](images/00-select-the-newly-created-security-group.png)
 
 1. Select the **members** tab and select **view all and manage members**
 
-    ![Add members](images/admin-viewmembers.png)
+    ![Open members for the security group](images/00-open-members-for-the-security-group.png)
 
 1. Select **add members**
 
-    ![Add members](images/admin-addmember.png)
+    ![Add members to the security group](images/00-add-members-to-the-security-group.png)
 
-1. Select your name from the list and click **Add** then **Add** again
+1. Select your name from the list and select **Add** then **Add** again
 
-    ![Select yourself](images/admin-selectname.png)
+    ![Select your account as group member](images/00-select-your-account-as-group-member.png)
 
 1. Navigate to **admin.powerplatform.com**
 1. Select the **manage** tab
 
-    ![Manage](images/pp-admin-managetab.png)
+    ![Manage tab in Power Platform admin center](images/00-manage-tab-in-power-platform-admin-center.png)
 
 1. Select the **tenant settings** tab
 
-    ![Tenant Settings](images/pp-admin-tenantsettings.png)
+    ![Tenant settings in Power Platform admin center](images/00-tenant-settings-in-power-platform-admin-center.png)
 
 1. Select the **Copilot Studio authors** option
 
-    ![Authors](images/pp-authors.png)
+    ![Copilot Studio authors security settings](images/00-copilot-studio-authors-security-settings.png)
 
 1. Select the **pencil icon**
 
-    ![Pencil](images/pp-pencil.png)
+    ![Edit Copilot Studio author security settings](images/00-edit-copilot-studio-author-security-settings.png)
 
-1. Select your security group from the list and click **Done**
+1. Select your security group from the list and select **Done**
 
-    ![Select Security Group](images/pp-securitygroup.png)
+    ![Select security group for Copilot Studio authors](images/00-select-security-group-for-copilot-studio-authors.png)
 
-1. Verify your security group is there and click **Save**
+1. Verify your security group is there and select **Save**
 
-    ![Save](images/pp-save.png)
+    ![Save Copilot Studio author security settings](images/00-save-copilot-studio-author-security-settings.png)
 
 ## 🔧 Required Setup (Everyone) {#required-setup-everyone}
 
@@ -192,21 +192,21 @@ A new SharePoint site is required for completing `Mission 04 - Build an agent wi
 
 1. Select the waffle icon in the top-left corner of [Power Apps](https://make.powerapps.com/) or the [Microsoft 365 admin center](https://admin.cloud.microsoft) to open the app menu, then select **SharePoint**.
 
-    ![Select SharePoint in Power Apps](images/0.5_01_PowerApps.png)
+    ![Select SharePoint in Power Apps](images/00-select-sharepoint-in-power-apps.png)
 
-    ![Select SharePoint in Microsoft 365 Admin Center](images/0.5_02_MAC.png)
+    ![Select SharePoint in Microsoft 365 Admin Center](images/00-select-sharepoint-in-microsoft-365-admin-center.png)
 
 1. After SharePoint loads, select **Build** in the left navigation menu, then select **Site** to create a new SharePoint site.
 
-    ![Create site](images/0.5_03_SelectSite.png)
+    ![Create a new SharePoint site](images/00-create-a-new-sharepoint-site.png)
 
 1. A dialog appears to guide site creation. Under the **Team site** option, select **IT help desk**.
 
-    ![Select IT help desk site template](images/0.5_04_SelectITHelpDeskSiteTemplate.png)
+    ![Select IT help desk site template](images/00-select-it-help-desk-site-template.png)
 
 1. Select **Use template** to create a new SharePoint site from the IT help desk template.
 
-    ![Use template](images/0.5_05_SelectUseTemplate.png)
+    ![Use the IT help desk template](images/00-use-the-it-help-desk-template.png)
 
 1. Enter your site details. Example:
 
@@ -218,35 +218,35 @@ A new SharePoint site is required for completing `Mission 04 - Build an agent wi
 
     Select **Create site**.
 
-    ![Set up your site](images/0.5_06_SetUpSite.png)
+    ![Configure the new SharePoint site details](images/00-configure-the-new-sharepoint-site-details.png)
 
 1. After selecting **Create site**, SharePoint may take a few seconds to finish provisioning. In the meantime, you can optionally add users by entering email addresses in the **Add members** field.
 
     Once you see confirmation that the site is ready, select **Go to site**.
 
-    ![Select go to site](images/0.5_07_SelectGoToSite.png)
+    ![Open the newly created SharePoint site](images/00-open-the-newly-created-sharepoint-site.png)
 
 1. Next, create a list to store device information. On the site's **Home** tab, select **+ New**, then select **List**.
 
-    ![Create new list](images/0.5_08_CreateNewList.png)
+    ![Create a new SharePoint list](images/00-create-a-new-sharepoint-list.png)
 
 1. Under the **Import from** section, select **Excel**.
 
-    ![Select Excel](images/0.5_09_ImportFromExcel.png)
+    ![Create SharePoint list from Excel](images/00-create-sharepoint-list-from-excel.png)
 
 1. Select **Upload file**.
 
-    ![Select upload file](images/0.5_10_UploadFile.png)
+    ![Upload the EmployeeAssets Excel file](images/00-upload-the-employeeassets-excel-file.png)
 
 1. Download the following ZIP file, extract it, then upload `EmployeeAssets.xlsx` to the list by selecting **Open**.
 
     <download-files path="recruit-nextgen/00-course-setup/assets/employee-assets" label="Download Excel .zip file for List" />
 
-    ![Select file](images/0.5_11_SelectFile.png)
+    ![Select the uploaded EmployeeAssets file](images/00-select-the-uploaded-employeeassets-file.png)
 
 1. Next, in the **Customize** step, select the `EmployeeAssets` table and review the detected column types. Most columns are automatically detected as `Single line of text`, which is common when importing an Excel file. Some column types need to be adjusted, so we'll do that next.
 
-    ![Customize column data types](images/0.5_12_CustomizeColumnTypes.png)
+    ![Customize the imported column data types](images/00-customize-the-imported-column-data-types.png)
 
 1. Change the following columns manually from `Single line of text` to `Choice` fields.
 
@@ -256,7 +256,7 @@ A new SharePoint site is required for completing `Mission 04 - Build an agent wi
     | Manufacturer | Choice       |
     | Asset Type   | Choice       |
 
-    ![Change column types to Choice](images/0.5_13_ChangeColumnTypes.png)
+    ![Change column types to Choice](images/00-change-column-types-to-choice.png)
 
 1. Change the following columns manually from `Single line of text` to `Choice`, `Date and time` and `Number` fields.
 
@@ -266,15 +266,15 @@ A new SharePoint site is required for completing `Mission 04 - Build an agent wi
     | Purchase Date  | Date and time |
     | Purchase Price | Number        |
 
-    ![Change column types to Choice](images/0.5_14_ChangeColumnTypes.png)
+    ![Change column types to Choice](images/00-change-column-types-to-choice-2.png)
 
 1. Enter `EmployeeAssets` as the list name, select the **Show list in site navigation** checkbox, then select **Create**.
 
-    ![Select Create](images/0.5_15_CreateList.png)
+    ![Create the configured EmployeeAssets list](images/00-create-the-configured-employeeassets-list.png)
 
 1. Add a new column with the type `Hyperlink`. Scroll across the list, select **+ Add column**, select **Hyperlink**, then select **Next**.
 
-    ![Add new hyperlink column](images/0.5_16_AddNewHyperlinkColumn.png)
+    ![Add a new hyperlink column](images/00-add-a-new-hyperlink-column.png)
 
 1. Enter the following information for the column and select **Save**.
 
@@ -283,33 +283,33 @@ A new SharePoint site is required for completing `Mission 04 - Build an agent wi
     | Name        | Image URL                           |
     | Description | The image URL of the employee asset |
 
-    ![Create a column](images/0.5_17_CreateAColumn.png)
+    ![Create the configured hyperlink column](images/00-create-the-configured-hyperlink-column.png)
 
 1. Copy each value from the **Image** column to the **Image URL** column. Select **Edit in grid view**.
 
-    ![Select Edit in Grid View](images/0.5_18_SelectEditInGridView.png)
+    ![Select Edit in Grid View](images/00-select-edit-in-grid-view.png)
 
 1. In the first row (the first item in the list), double-click the **Image** column and copy the value. Press the `Esc` key to exit editing.
 
-    ![Double click column](images/0.5_19_DoubleClickColumn.png)
+    ![Open the image URL column editor](images/00-open-the-image-url-column-editor.png)
 
 1. Double-click the corresponding **Image URL** column, paste the value in the **Link** field, then select the check mark icon to save.
 
-    ![Paste value into image URL column](images/0.5_20_PasteValueIntoImageURLColumn.png)
+    ![Paste value into image URL column](images/00-paste-value-into-image-url-column.png)
 
 1. Repeat the same steps for the remaining three rows in the list.
 
 1. Lastly, delete the Image `Single line of text` column. Select the column, then select **Column settings** followed by **Edit**.
 
-    ![Select Edit](images/0.5_21_EditColumnSettings.png)
+    ![Edit the unwanted SharePoint column](images/00-edit-the-unwanted-sharepoint-column.png)
 
 1. Select **Delete**.
 
-    ![Select Delete](images/0.5_22_SelectDelete.png)
+    ![Select delete in column settings](images/00-select-delete-in-column-settings.png)
 
 1. A confirmation dialog appears. Select **Delete** to confirm removing the column from the list.
 
-    ![Confirm Deletion](images/0.5_23_ConfirmDeletion.png)
+    ![Confirm deletion of the SharePoint column](images/00-confirm-deletion-of-the-sharepoint-column.png)
 
 ## ✅ Mission Complete {#mission-complete}
 
@@ -322,4 +322,4 @@ You’ve successfully:
 
 You're officially cleared to begin your **Recruit-level agent training** in [Lesson 01](../01-introduction-to-agents/index.md).  
 
-<analytics-tag section="recruit" mission="00-course-setup" />
+<analytics-tag section="recruit-nextgen" mission="00-course-setup" />
