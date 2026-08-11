@@ -213,8 +213,8 @@ A new page will show up, through which you can configure the data import process
 1. Configure your **Azure Blob Storage** section:
     1. **Subscription**: Your Azure subscription
     1. **Storage account**: the storage account you created before
-    1. **Blog container**: the new container that you just created and where you uploaded the resume files
-    1. **Blog folder**: you can leave it blank, unless you created a folder structure in the storage container
+    1. **Blob container**: the new container that you just created and where you uploaded the resume files
+    1. **Blob folder**: you can leave it blank, unless you created a folder structure in the storage container
     1. **Parsing mode**: use the **Default** value
     1. Move **Next**
 1. **Vectorize your text** section:
