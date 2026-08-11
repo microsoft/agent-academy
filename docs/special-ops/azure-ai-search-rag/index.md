@@ -196,41 +196,39 @@ Once the container has been created, you can upload the resume files following t
 ### Populate the vector index with integrated vectorization
 
 1. Return to the [Azure portal](https://portal.azure.com/) and open your Azure AI Search service.
-1. In the top command bar, select **Import data (new)**.
+2. In the top command bar, select **Import data (new)**.
 
     ![Open the Azure AI Search import wizard](./assets/azure-search-02.png)
-
-A new page will show up, through which you can configure the data import process. Select the Azure Blob Storage data source.
-
+3. A new page will show up, through which you can configure the data import process. Select the Azure Blob Storage data source.
     ![Select Azure Blob Storage as the data source](./assets/azure-search-03.png)
 
-1. Select **RAG** as the target scenario.
+4. Select **RAG** as the target scenario.
 
     ![Select RAG as the import scenario](./assets/azure-search-04.png)
 
-1. Configure **Azure Blob Storage** with these settings, then select **Next**:
+5. Configure **Azure Blob Storage** with these settings, then select **Next**:
 
-1. Configure your **Azure Blob Storage** section:
+6. Configure your **Azure Blob Storage** section:
     1. **Subscription**: Your Azure subscription
     1. **Storage account**: the storage account you created before
     1. **Blob container**: the new container that you just created and where you uploaded the resume files
     1. **Blob folder**: you can leave it blank, unless you created a folder structure in the storage container
     1. **Parsing mode**: use the **Default** value
     1. Move **Next**
-1. **Vectorize your text** section:
+7. **Vectorize your text** section:
     1. **Kind:** Azure OpenAI
     1. **Subscription:** your subscription
     1. **Azure OpenAI service:** your Azure OpenAI instance
     1. **Model deployment:** the `text-embeddings` model you deployed
     1. **Authentication type:** API Key (default)
     1. Check the box acknowledging that connecting to Azure OpenAI incurs additional cost, then select **Next**.
-1. **Vectorize your images** section:
+8. **Vectorize your images** section:
     1. In case you are willing to process images and text in images, you could configure specific settings
     1. Here you can simply move **Next**
-1. **Advanced ranking and relevancy** section:
+9. **Advanced ranking and relevancy** section:
     1. If you like you can schedule recurring updates of the index, on a timer based model. You can also choose whether to use the semantic ranker to get results also based on semantic and not only on lexical analysis. Last but not least, you can configure the fields that will be created in the target index
     1. Here you can simply move **Next**
-1. **Review and create** section:
+10. **Review and create** section:
     1. Here you can provide a prefix for the index, indexer, data source, and skill set that will be created. For example you can use the value resumes
     1. Review the settings and when you are ready select Create to create and feed the vector index
 
