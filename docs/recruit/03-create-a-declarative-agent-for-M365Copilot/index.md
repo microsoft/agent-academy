@@ -9,6 +9,7 @@ short-description: 'Add your own agent to the Microsoft 365 Copilot, grounded in
 difficulty: 1
 codename: OPERATION COPILOT EXTENSION
 time: 60
+harness: standard
 tags:
   - declarative-agents
 products:

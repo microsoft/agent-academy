@@ -9,6 +9,7 @@ short-description: Claim your badge and mark your achievement!
 difficulty: 1
 codename: OPERATION COURSE COMPLETION
 time: 5
+harness: standard
 tags:
   - completion
 products:

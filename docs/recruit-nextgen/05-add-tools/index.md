@@ -11,6 +11,7 @@ short-description: Add a SharePoint Get items tool so your agent can take action
 difficulty: 1
 codename: OPERATION TOOL UP
 time: 30
+harness: github-copilot
 credits: 0
 tags:
    - automation

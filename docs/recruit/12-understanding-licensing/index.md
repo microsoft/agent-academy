@@ -9,6 +9,7 @@ short-description: Learn how licensing and billing works with Copilot Studio
 difficulty: 1
 codename: OPERATION KNOW WHAT YOU OWE
 time: 15
+harness: standard
 tags:
   - licensing
 products:

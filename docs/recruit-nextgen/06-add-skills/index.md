@@ -11,6 +11,7 @@ short-description: Use a GitHub Copilot harness Skill to create a reusable devic
 difficulty: 1
 codename: OPERATION SKILL BOOST
 time: 30
+harness: github-copilot
 credits: [1000, 1800]
 tags:
     - custom-skills

@@ -9,6 +9,7 @@ short-description: 'Learn the building blocks: knowledge, skills, autonomy'
 difficulty: 1
 codename: OPERATION CORE PROTOCOL
 time: 30
+harness: standard
 tags:
   - fundamentals
 products:

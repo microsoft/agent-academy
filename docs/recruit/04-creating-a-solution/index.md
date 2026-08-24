@@ -9,6 +9,7 @@ short-description: Package your agent into a reusable solution for environment m
 difficulty: 1
 codename: OPERATION CTRL-ALT-PACKAGE
 time: 45
+harness: standard
 tags:
   - solutions
 products:

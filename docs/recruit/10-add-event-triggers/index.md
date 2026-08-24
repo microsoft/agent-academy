@@ -9,6 +9,7 @@ short-description: Enable your agent to act autonomously using event-based logic
 difficulty: 1
 codename: OPERATION GHOST ROUTINE
 time: 45
+harness: standard
 tags:
   - automation
   - triggers

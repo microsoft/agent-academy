@@ -9,6 +9,7 @@ short-description: Create a new agent grounded in knowledge sources
 difficulty: 1
 codename: OPERATION AGENT FORGE
 time: 75
+harness: standard
 tags:
   - declarative-agents
 products:

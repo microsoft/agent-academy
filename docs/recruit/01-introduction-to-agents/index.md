@@ -11,6 +11,7 @@ short-description: >-
 difficulty: 1
 codename: OPERATION AI AGENT DECODE
 time: 30
+harness: standard
 tags:
   - fundamentals
 products:

@@ -9,6 +9,7 @@ short-description: Use and customize a template agent to accelerate setup
 difficulty: 1
 codename: OPERATION SAFE TRAVELS
 time: 30
+harness: standard
 tags:
   - prebuilt-agents
 products:

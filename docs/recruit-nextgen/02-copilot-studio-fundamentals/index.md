@@ -11,6 +11,7 @@ short-description: 'Explore Copilot Studio harnesses, agent building blocks, wor
 difficulty: 1
 codename: OPERATION TOOLBOX
 time: 20
+harness: github-copilot
 credits: 0
 tags:
   - fundamentals

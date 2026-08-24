@@ -9,6 +9,7 @@ short-description: 'Set up your dev environment, Copilot Studio trial, and Share
 difficulty: 1
 codename: OPERATION DEPLOYMENT READY
 time: 30
+harness: standard
 tags:
   - setup
 products:

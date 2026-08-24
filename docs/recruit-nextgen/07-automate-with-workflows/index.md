@@ -11,6 +11,7 @@ short-description: Automate a device request with a workflow and call it from yo
 difficulty: 1
 codename: OPERATION AUTOMATION POWERHOUSE
 time: 60
+harness: github-copilot
 credits: [700, 1300]
 tags:
   - automation

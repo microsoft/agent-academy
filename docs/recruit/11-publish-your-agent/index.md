@@ -9,6 +9,7 @@ short-description: Deploy your agent to Microsoft Teams and Microsoft 365 Copilo
 difficulty: 1
 codename: OPERATION PUBLISH PUBLISH PUBLISH
 time: 30
+harness: standard
 tags:
   - publishing
 products:

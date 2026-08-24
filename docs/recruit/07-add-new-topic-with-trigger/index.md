@@ -9,6 +9,7 @@ short-description: Use Topics to define custom question/answer paths
 difficulty: 1
 codename: OPERATION STAY ON TOPIC
 time: 60
+harness: standard
 tags:
   - topics
   - triggers

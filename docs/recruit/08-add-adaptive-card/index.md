@@ -9,6 +9,7 @@ short-description: Build an Adaptive Card using Power Fx and SharePoint
 difficulty: 1
 codename: OPERATION INTERFACE UPLIFT
 time: 45
+harness: standard
 tags:
   - adaptive-cards
 products:

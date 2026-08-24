@@ -9,6 +9,7 @@ short-description: Use Adaptive Card input to trigger back-end flows
 difficulty: 1
 codename: OPERATION AUTOMATION POWERHOUSE
 time: 30
+harness: standard
 tags:
   - automation
 products:

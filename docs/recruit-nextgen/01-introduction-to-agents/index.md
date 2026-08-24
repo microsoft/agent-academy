@@ -11,6 +11,7 @@ short-description: 'Learn how agents reason, use knowledge and tools, and operat
 difficulty: 1
 codename: OPERATION AI AGENT DECODE
 time: 15
+harness: github-copilot
 credits: 0
 tags:
   - fundamentals

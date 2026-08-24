@@ -11,6 +11,7 @@ short-description: Learn how licensing and usage-based billing work for the GitH
 difficulty: 1
 codename: OPERATION KNOW WHAT YOU OWE
 time: 20
+harness: github-copilot
 credits: 0
 tags:
   - licensing
