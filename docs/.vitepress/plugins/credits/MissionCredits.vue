@@ -11,8 +11,7 @@
         <a href="#copilot-credits-estimate">See how this was calculated</a>.
       </template>
       <template v-else>
-        This mission only involves reading and manual configuration, which
-        doesn't consume Copilot Credits.
+        Nothing in this mission consumes Copilot Credits.
       </template>
     </p>
   </div>
@@ -21,20 +20,11 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useData } from "vitepress";
+import { parseCredits } from "./parseCredits";
 
 const { frontmatter } = useData();
 
-const credits = computed(() => {
-  const value = frontmatter.value.credits;
-  if (value === null || value === undefined || value === "") return null;
-
-  const nums = (Array.isArray(value) ? value : [value, value])
-    .map(Number)
-    .filter((n: number) => Number.isFinite(n) && n >= 0);
-
-  if (nums.length !== 2) return null;
-  return { min: Math.min(...nums), max: Math.max(...nums) };
-});
+const credits = computed(() => parseCredits(frontmatter.value.credits));
 
 const hasBreakdown = computed(() => (credits.value?.max ?? 0) > 0);
 

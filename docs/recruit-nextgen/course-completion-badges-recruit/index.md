@@ -20,7 +20,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-08-05
+last-edited-date: 2026-08-24
 ---
 # 🚨 Final Mission: Securing Your Recruit NextGen Badge {#final-mission-securing-your-recruit-nextgen-badge}
 

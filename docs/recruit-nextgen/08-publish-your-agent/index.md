@@ -22,7 +22,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-08-05
+last-edited-date: 2026-08-24
 ---
 
 # 🚨 Mission 08: Publish Your Agent {#mission-08-publish-your-agent}

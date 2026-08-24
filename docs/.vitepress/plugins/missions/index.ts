@@ -2,6 +2,7 @@ import type { Plugin } from "vite";
 import path from "node:path";
 import fs from "node:fs";
 import matter from "gray-matter";
+import { parseCredits, type CreditsRange } from "../credits/parseCredits";
 
 const VIRTUAL_MODULE_ID = "virtual:missions-data";
 const RESOLVED_ID = "\0" + VIRTUAL_MODULE_ID;
@@ -39,18 +40,7 @@ interface MissionData {
   lastUpdated: number;
   createdAt: number;
   preview: boolean;
-  credits: { min: number; max: number } | null;
-}
-
-function parseCredits(value: unknown): { min: number; max: number } | null {
-  if (value === null || value === undefined || value === "") return null;
-
-  const nums = (Array.isArray(value) ? value : [value, value])
-    .map(Number)
-    .filter((n) => Number.isFinite(n) && n >= 0);
-
-  if (nums.length !== 2) return null;
-  return { min: Math.min(...nums), max: Math.max(...nums) };
+  credits: CreditsRange | null;
 }
 
 function extractH1(content: string): string {
