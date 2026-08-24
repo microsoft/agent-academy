@@ -11,6 +11,7 @@ short-description: 'Explore Copilot Studio harnesses, agent building blocks, wor
 difficulty: 1
 codename: OPERATION TOOLBOX
 time: 20
+credits: 0
 tags:
   - fundamentals
 products:
@@ -25,6 +26,8 @@ last-edited-date: 2026-08-05
 # 🛠️ Mission 02: Copilot Studio Fundamentals
 
 <mission-meta />
+
+<mission-credits />
 
 ## 🎯 Mission Brief
 

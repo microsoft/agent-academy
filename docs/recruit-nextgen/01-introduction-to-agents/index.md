@@ -11,6 +11,7 @@ short-description: 'Learn how agents reason, use knowledge and tools, and operat
 difficulty: 1
 codename: OPERATION AI AGENT DECODE
 time: 15
+credits: 0
 tags:
   - fundamentals
 products:
@@ -25,6 +26,8 @@ last-edited-date: 2026-08-05
 # 🚨 Mission 01: Introduction to Agents
 
 <mission-meta />
+
+<mission-credits />
 
 ## 🎯 Mission Brief
 

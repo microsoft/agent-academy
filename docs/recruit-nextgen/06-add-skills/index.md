@@ -11,6 +11,7 @@ short-description: Use a GitHub Copilot harness Skill to create a reusable devic
 difficulty: 1
 codename: OPERATION SKILL BOOST
 time: 30
+credits: [1000, 1800]
 tags:
     - custom-skills
     - instructions
@@ -27,6 +28,8 @@ last-edited-date: 2026-08-05
 # 🚨 Mission 06: Add Skills {#mission-06-add-skills}
 
 <mission-meta />
+
+<mission-credits />
 
 > [!NOTE]
 > **Skills are unique to agents powered by the GitHub Copilot harness** in Copilot Studio. They aren't available to agents powered by the standard or Copilot chat harness.
@@ -617,6 +620,39 @@ You can now:
 ✅ **Define reliable outcomes**: Add validation rules, escalation paths, and success criteria that improve consistency.
 
 ⏭️ [Move to **Automate with Workflows**](../07-automate-with-workflows/index.md) to get started.
+
+## 🪙 Copilot Credits Estimate {#copilot-credits-estimate}
+
+The **1,000 - 1,800 credits** shown at the top of this mission is a planning estimate, not a bill. Here's where the range comes from.
+
+The [Copilot Credits Guide](https://aka.ms/CopilotCredits/LicensingGuide) publishes the figures we used, and two of its statements shape this entire mission:
+
+- **No credits for manual configuration.** Work performed in the **Build** and **Monitor** tabs is free, so pasting instructions, connecting knowledge, configuring tools, and changing settings cost nothing.
+- **Preview and Evaluation bill at runtime rates.** The conversations you run yourself while testing cost the same as a real user's conversations.
+
+So this mission's cost is essentially the cost of the agent tasks you run in **Preview**. The guide bands runtime usage by how much work a task involves:
+
+| Agent scenario | Shape of the task | Est. credits |
+| -------------- | ----------------- | ------------ |
+| Light | Few sources, light reasoning, one or fewer outputs | 100 - 300 |
+| Medium | Many sources, structured reasoning, two or more outputs | 300 - 500 |
+| Heavy | Broad aggregation, deep reasoning, many outputs | 500+ |
+
+We classified every task this mission asks you to run, then added up the low and high ends of each band. That's why the estimate is a range rather than a single figure.
+
+| What you run | Classification | Est. credits |
+| ------------ | -------------- | ------------ |
+| Uploading the skill packages and editing instructions | Build-tab configuration | 0 |
+| First device guidance test, before the skill is refined | Light. One SharePoint tool call returning a device list | 100 - 300 |
+| Second device guidance test, including the device selection | Medium. Tool call plus a structured selection summary | 300 - 500 |
+| Third device guidance test, including the additional requirement | Medium. Tool call plus a summary that carries the extra requirement | 300 - 500 |
+| Troubleshooting skill test in step 6.2 | Medium. Four turns of structured, knowledge-grounded diagnosis | 300 - 500 |
+| **Total** | | **1,000 - 1,800** |
+
+Where you land inside that range depends on how much work each task turns out to be. Going **over** the top of the range is entirely possible: repeating a test, asking extra follow-up questions, or redoing a lab after a configuration mistake each add another task on top of the ones counted here.
+
+> [!IMPORTANT] Estimates aren't a commitment
+> These numbers apply the guide's published bands to the steps in this mission. They aren't measured in your tenant, and both rates and product behavior can change. Use them to decide how much credit capacity to have available before you start, not to predict an invoice. [Mission 09](../09-understanding-licensing/index.md) explains what drives consumption and how to monitor it.
 
 ## 📚 Tactical Resources {#tactical-resources}
 

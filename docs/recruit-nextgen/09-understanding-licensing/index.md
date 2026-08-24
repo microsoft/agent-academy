@@ -11,6 +11,7 @@ short-description: Learn how licensing and usage-based billing work for the GitH
 difficulty: 1
 codename: OPERATION KNOW WHAT YOU OWE
 time: 20
+credits: 0
 tags:
   - licensing
 products:
@@ -26,6 +27,8 @@ last-edited-date: 2026-08-05
 
 <mission-meta />
 
+<mission-credits />
+
 ## 🎯 Mission Brief {#mission-brief}
 
 You've built and published the `Contoso IT Concierge`. Now it's time to step back from building and consider what operating it could mean for your organization.
@@ -37,7 +40,7 @@ The agent and workflow in this course use the **GitHub Copilot harness**. That m
 By the end, you'll be able to explain why harness choice affects billing, recognize the activities and design choices that drive usage, and discuss funding and monitoring with your platform administrators. You won't calculate a production budget or memorize rates.
 
 > [!IMPORTANT] Use the current guide as the source of truth
-> Licensing, rates, purchase options, and included entitlements can change. Use the [Microsoft Copilot Credits Guide - August 2026](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/bade/documents/products-and-services/en-us/ai/Microsoft-Copilot-Credits-Guide-August-2026.pdf) and applicable Microsoft Product Terms when making real licensing decisions. This mission explains the concepts; it doesn't replace those sources or advice from your Microsoft account team or partner.
+> Licensing, rates, purchase options, and included entitlements can change. Use the [Copilot Credits Guide](https://aka.ms/CopilotCredits/LicensingGuide) and applicable Microsoft Product Terms when making real licensing decisions. This mission explains the concepts; it doesn't replace those sources or advice from your Microsoft account team or partner.
 
 ## 🔎 Objectives {#objectives}
 
@@ -138,7 +141,7 @@ You can now:
 
 ## 📚 Tactical Resources {#tactical-resources}
 
-- 📘 [Microsoft Copilot Credits Guide - August 2026](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/bade/documents/products-and-services/en-us/ai/Microsoft-Copilot-Credits-Guide-August-2026.pdf)
+- 📘 [Copilot Credits Guide](https://aka.ms/CopilotCredits/LicensingGuide)
 
 - 🧭 [Choose a harness in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview)
 

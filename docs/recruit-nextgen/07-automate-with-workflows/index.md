@@ -11,6 +11,7 @@ short-description: Automate a device request with a workflow and call it from yo
 difficulty: 1
 codename: OPERATION AUTOMATION POWERHOUSE
 time: 60
+credits: [700, 1300]
 tags:
   - automation
   - triggers
@@ -25,6 +26,8 @@ last-edited-date: 2026-08-05
 # 🚨 Mission 07: Automate with Workflows {#mission-07-automate-with-workflows}
 
 <mission-meta />
+
+<mission-credits />
 
 > [!NOTE]
 > This lab uses an agent and workflows powered by the **GitHub Copilot harness**.
@@ -668,6 +671,38 @@ You can now:
 ✅ **Test workflow paths**: Validate requests with additional requirements, without additional requirements, and with cancellation.
 
 ⏭️ [Move to **Publish your agent** mission](../08-publish-your-agent/index.md)
+
+## 🪙 Copilot Credits Estimate {#copilot-credits-estimate}
+
+The **700 - 1,300 credits** shown at the top of this mission is a planning estimate, not a bill. Here's where the range comes from.
+
+The [Copilot Credits Guide](https://aka.ms/CopilotCredits/LicensingGuide) publishes the figures we used, and two of its statements shape this entire mission:
+
+- **No credits for manual configuration.** Work performed in the **Build** and **Monitor** tabs is free, so pasting instructions, connecting knowledge, configuring tools, and changing settings cost nothing.
+- **Preview and Evaluation bill at runtime rates.** The conversations you run yourself while testing cost the same as a real user's conversations.
+
+So this mission's cost is essentially the cost of the agent tasks you run in **Preview**. The guide bands runtime usage by how much work a task involves:
+
+| Agent scenario | Shape of the task | Est. credits |
+| -------------- | ----------------- | ------------ |
+| Light | Few sources, light reasoning, one or fewer outputs | 100 - 300 |
+| Medium | Many sources, structured reasoning, two or more outputs | 300 - 500 |
+| Heavy | Broad aggregation, deep reasoning, many outputs | 500+ |
+
+We classified every task this mission asks you to run, then added up the low and high ends of each band. That's why the estimate is a range rather than a single figure.
+
+| What you run | Classification | Est. credits |
+| ------------ | -------------- | ------------ |
+| Building the workflow in the designer and adding it as a tool | Build-tab configuration | 0 |
+| Test one: device request with additional requirements | Medium. Runs the workflow, reads SharePoint, and sends an email | 300 - 500 |
+| Test two: device request with no additional requirements | Medium. Same workflow path, different branch | 300 - 500 |
+| Test three: cancelling the request | Light. The agent ends the session without running the workflow | 100 - 300 |
+| **Total** | | **700 - 1,300** |
+
+Where you land inside that range depends on how much work each task turns out to be. Going **over** the top of the range is entirely possible: repeating a test, asking extra follow-up questions, or redoing a lab after a configuration mistake each add another task on top of the ones counted here.
+
+> [!IMPORTANT] Estimates aren't a commitment
+> These numbers apply the guide's published bands to the steps in this mission. They aren't measured in your tenant, and both rates and product behavior can change. Use them to decide how much credit capacity to have available before you start, not to predict an invoice. [Mission 09](../09-understanding-licensing/index.md) explains what drives consumption and how to monitor it.
 
 ## 📚 Tactical Resources {#tactical-resources}
 

@@ -11,6 +11,7 @@ short-description: Create an agent powered by the GitHub Copilot harness using A
 difficulty: 1
 codename: OPERATION ENGINE SHIFT
 time: 60
+credits: [200, 600]
 tags: [fundamentals, solutions]
 products:
   - copilot-studio
@@ -25,6 +26,8 @@ last-edited-date: 2026-08-05
 # 🚨 Mission 04: Build an Agent with the GitHub Copilot Harness {#mission-04-build-an-agent-with-the-github-copilot-harness}
 
 <mission-meta />
+
+<mission-credits />
 
 > [!NOTE]
 > This lab builds an agent powered by the **GitHub Copilot harness**.
@@ -128,7 +131,7 @@ Before starting this lab, make sure you have:
 - Your test knowledge source(s), for example the **Contoso IT** SharePoint site from [Mission 00 - Course setup](../00-course-setup/index.md#step-5-create-new-sharepoint-site)
 
 > [!WARNING] Copilot Credit consumption starts during creation
-> Agents built with the **GitHub Copilot harness** use consumption-based billing. The natural-language authoring, Preview, and Evaluation experiences consume **Copilot Credits** while you build and test; manual configuration in the **Build** and **Monitor** tabs doesn't consume credits. See [Mission 09 - Understanding Licensing](../09-understanding-licensing/index.md) for more guidance and the [Microsoft Copilot Credits Guide](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/bade/documents/products-and-services/en-us/ai/Microsoft-Copilot-Credits-Guide-August-2026.pdf) for current details.
+> Agents built with the **GitHub Copilot harness** use consumption-based billing. The natural-language authoring, Preview, and Evaluation experiences consume **Copilot Credits** while you build and test; manual configuration in the **Build** and **Monitor** tabs doesn't consume credits. See [Mission 09 - Understanding Licensing](../09-understanding-licensing/index.md) for more guidance and the [Copilot Credits Guide](https://aka.ms/CopilotCredits/LicensingGuide) for current details.
 
 ### 4.1 Create a new agent with the GitHub Copilot harness
 
@@ -345,6 +348,37 @@ You can now:
 ✅ **Run baseline preview tests**: Verify the agent's core behavior before adding more capabilities.
 
 ⏭️ [Move to **Add Tools** mission](../05-add-tools/index.md)
+
+## 🪙 Copilot Credits Estimate {#copilot-credits-estimate}
+
+The **200 - 600 credits** shown at the top of this mission is a planning estimate, not a bill. Here's where the range comes from.
+
+The [Copilot Credits Guide](https://aka.ms/CopilotCredits/LicensingGuide) publishes the figures we used, and two of its statements shape this entire mission:
+
+- **No credits for manual configuration.** Work performed in the **Build** and **Monitor** tabs is free, so pasting instructions, connecting knowledge, configuring tools, and changing settings cost nothing.
+- **Preview and Evaluation bill at runtime rates.** The conversations you run yourself while testing cost the same as a real user's conversations.
+
+So this mission's cost is essentially the cost of the agent tasks you run in **Preview**. The guide bands runtime usage by how much work a task involves:
+
+| Agent scenario | Shape of the task | Est. credits |
+| -------------- | ----------------- | ------------ |
+| Light | Few sources, light reasoning, one or fewer outputs | 100 - 300 |
+| Medium | Many sources, structured reasoning, two or more outputs | 300 - 500 |
+| Heavy | Broad aggregation, deep reasoning, many outputs | 500+ |
+
+We classified every task this mission asks you to run, then added up the low and high ends of each band. That's why the estimate is a range rather than a single figure.
+
+| What you run | Classification | Est. credits |
+| ------------ | -------------- | ------------ |
+| Naming the agent, pasting instructions, adding four knowledge sources, and setting the greeting | Build-tab configuration | 0 |
+| Preview test: checking Surface warranty status | Light. One public website source, one answer | 100 - 300 |
+| Preview test: VPN access and Guest Wi-Fi details | Light. Grounded in SharePoint and the uploaded document, still a single answer | 100 - 300 |
+| **Total** | | **200 - 600** |
+
+Where you land inside that range depends on how much work each task turns out to be. Going **over** the top of the range is entirely possible: repeating a test, asking extra follow-up questions, or redoing a lab after a configuration mistake each add another task on top of the ones counted here.
+
+> [!IMPORTANT] Estimates aren't a commitment
+> These numbers apply the guide's published bands to the steps in this mission. They aren't measured in your tenant, and both rates and product behavior can change. Use them to decide how much credit capacity to have available before you start, not to predict an invoice. [Mission 09](../09-understanding-licensing/index.md) explains what drives consumption and how to monitor it.
 
 ## 📚 Tactical Resources {#tactical-resources}
 

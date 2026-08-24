@@ -11,6 +11,7 @@ short-description: Claim your badge and mark your achievement!
 difficulty: 1
 codename: OPERATION COURSE COMPLETION
 time: 5
+credits: 0
 tags:
   - completion
 products:
@@ -23,6 +24,8 @@ last-edited-date: 2026-08-05
 # 🚨 Final Mission: Securing Your Recruit NextGen Badge {#final-mission-securing-your-recruit-nextgen-badge}
 
 <mission-meta />
+
+<mission-credits />
 
 ## 🎯 Mission Brief {#mission-brief}
 

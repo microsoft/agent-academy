@@ -11,6 +11,7 @@ short-description: Add a SharePoint Get items tool so your agent can take action
 difficulty: 1
 codename: OPERATION TOOL UP
 time: 30
+credits: 0
 tags:
    - automation
    - grounding
@@ -27,6 +28,8 @@ last-edited-date: 2026-08-05
 # 🚨 Mission 05: Add a Tool {#mission-05-add-a-tool}
 
 <mission-meta />
+
+<mission-credits />
 
 > [!NOTE]
 > This lab uses an agent powered by the **GitHub Copilot harness**.

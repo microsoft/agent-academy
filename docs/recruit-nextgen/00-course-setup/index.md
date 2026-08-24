@@ -11,6 +11,7 @@ short-description: 'Set up your dev environment, Copilot Studio trial, and Share
 difficulty: 1
 codename: OPERATION DEPLOYMENT READY
 time: 30
+credits: 0
 tags:
   - setup
 products:
@@ -26,6 +27,8 @@ last-edited-date: 2026-08-05
 # 🚨 Mission 00: Course Setup {#mission-00-course-setup}
 
 <mission-meta />
+
+<mission-credits />
 
 ## 🎯 Mission Brief {#mission-brief}
 
