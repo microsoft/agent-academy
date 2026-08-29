@@ -6,6 +6,7 @@ tags:
   - automation
 difficulty: 4
 time: 30
+harness: standard
 description: >-
   Build a Copilot Studio agent that qualifies AI use cases using a 4-P
   discovery framework, scores ideas out of 25 with 5 graded dimensions,
@@ -20,7 +21,7 @@ industries:
   - general
   - it
 created-date: 2026-05-24
-last-edited-date: 2026-05-24
+last-edited-date: 2026-08-29
 ---
 
 # Use Case Qualifier {#use-case-qualifier}
