@@ -12,6 +12,7 @@ difficulty: 1
 codename: OPERATION ROLL OUT
 time: 15
 harness: github-copilot
+credits: [200, 600]
 tags:
   - publishing
 products:
@@ -21,12 +22,14 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-08-05
+last-edited-date: 2026-08-24
 ---
 
 # 🚨 Mission 08: Publish Your Agent {#mission-08-publish-your-agent}
 
 <mission-meta />
+
+<mission-credits />
 
 ## 🎯 Mission Brief {#mission-brief}
 
@@ -203,6 +206,37 @@ You can now:
 ✅ **Validate the employee experience**: Install and test the published agent in Teams and Microsoft 365 Copilot
 
 ⏭️ [Move to **Understanding Licensing**](../09-understanding-licensing/index.md) to learn how GitHub Copilot harness usage is billed and managed.
+
+## 🪙 Copilot Credits Estimate {#copilot-credits-estimate}
+
+The **200 - 600 credits** shown at the top of this mission is a planning estimate, not a bill. Here's where the range comes from.
+
+The [Copilot Credits Guide](https://aka.ms/CopilotCredits/LicensingGuide) publishes the figures we used, and two of its statements shape this entire mission:
+
+- **No credits for manual configuration.** Work performed in the **Build** and **Monitor** tabs is free, so pasting instructions, connecting knowledge, configuring tools, and changing settings cost nothing.
+- **Preview and Evaluation bill at runtime rates.** The conversations you run yourself while testing cost the same as a real user's conversations.
+
+So this mission's cost is essentially the cost of the agent tasks you run in **Preview**. The guide bands runtime usage by how much work a task involves:
+
+| Agent scenario | Shape of the task | Est. credits |
+| -------------- | ----------------- | ------------ |
+| Light | Few sources, light reasoning, one or fewer outputs | 100 - 300 |
+| Medium | Many sources, structured reasoning, two or more outputs | 300 - 500 |
+| Heavy | Broad aggregation, deep reasoning, many outputs | 500+ |
+
+We classified every task this mission asks you to run, then added up the low and high ends of each band. That's why the estimate is a range rather than a single figure.
+
+| What you run | Classification | Est. credits |
+| ------------ | -------------- | ------------ |
+| Publishing the agent and configuring channels | Build-tab configuration | 0 |
+| Teams test in step 8.2 | Light. One troubleshooting request | 100 - 300 |
+| Microsoft 365 Copilot test in step 8.3 | Light. One troubleshooting request | 100 - 300 |
+| **Total** | | **200 - 600** |
+
+Where you land inside that range depends on how much work each task turns out to be. Going **over** the top of the range is entirely possible: repeating a test, asking extra follow-up questions, or redoing a lab after a configuration mistake each add another task on top of the ones counted here.
+
+> [!IMPORTANT] Estimates aren't a commitment
+> These numbers apply the guide's published bands to the steps in this mission. They aren't measured in your tenant, and both rates and product behavior can change. Use them to decide how much credit capacity to have available before you start, not to predict an invoice. [Mission 09](../09-understanding-licensing/index.md) explains what drives consumption and how to monitor it.
 
 ## 📚 Tactical Resources {#tactical-resources}
 

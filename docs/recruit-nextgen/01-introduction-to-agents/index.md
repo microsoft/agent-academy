@@ -12,6 +12,7 @@ difficulty: 1
 codename: OPERATION AI AGENT DECODE
 time: 15
 harness: github-copilot
+credits: 0
 tags:
   - fundamentals
 products:
@@ -20,12 +21,14 @@ products:
 industries:
   - general
 created-date: 2026-08-05
-last-edited-date: 2026-08-05
+last-edited-date: 2026-08-24
 ---
 
 # 🚨 Mission 01: Introduction to Agents
 
 <mission-meta />
+
+<mission-credits />
 
 ## 🎯 Mission Brief
 

@@ -2,6 +2,7 @@ import type { Plugin } from "vite";
 import path from "node:path";
 import fs from "node:fs";
 import matter from "gray-matter";
+import { parseCredits, type CreditsRange } from "../credits/parseCredits";
 
 const VIRTUAL_MODULE_ID = "virtual:missions-data";
 const RESOLVED_ID = "\0" + VIRTUAL_MODULE_ID;
@@ -39,6 +40,7 @@ interface MissionData {
   lastUpdated: number;
   createdAt: number;
   preview: boolean;
+  credits: CreditsRange | null;
 }
 
 function extractH1(content: string): string {
@@ -113,6 +115,7 @@ function loadMissions(docsDir: string): MissionData[] {
           frontmatter.preview === true ||
           (typeof frontmatter.preview === "string" &&
             frontmatter.preview.trim() !== ""),
+        credits: parseCredits(frontmatter.credits),
       });
     }
   }

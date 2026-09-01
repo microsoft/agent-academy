@@ -12,6 +12,7 @@ difficulty: 1
 codename: OPERATION DEPLOYMENT READY
 time: 30
 harness: github-copilot
+credits: 0
 tags:
   - setup
 products:
@@ -21,12 +22,14 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-08-05
+last-edited-date: 2026-08-24
 ---
 
 # 🚨 Mission 00: Course Setup {#mission-00-course-setup}
 
 <mission-meta />
+
+<mission-credits />
 
 ## 🎯 Mission Brief {#mission-brief}
 

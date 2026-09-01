@@ -11,6 +11,7 @@ declare module "virtual:missions-data" {
     lastUpdated: number;
     createdAt: number;
     preview: boolean;
+    credits: { min: number; max: number } | null;
   }
 
   export const missions: MissionData[];

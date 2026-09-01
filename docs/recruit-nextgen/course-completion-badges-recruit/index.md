@@ -12,6 +12,7 @@ difficulty: 1
 codename: OPERATION COURSE COMPLETION
 time: 5
 harness: github-copilot
+credits: 0
 tags:
   - completion
 products:
@@ -19,11 +20,13 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-08-05
+last-edited-date: 2026-08-24
 ---
 # 🚨 Final Mission: Securing Your Recruit NextGen Badge {#final-mission-securing-your-recruit-nextgen-badge}
 
 <mission-meta />
+
+<mission-credits />
 
 ## 🎯 Mission Brief {#mission-brief}
 
