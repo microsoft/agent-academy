@@ -307,6 +307,10 @@ export default defineConfig({
                 link: "/special-ops/mcp-oauth/",
               },
               {
+                text: "Use Case Qualifier",
+                link: "/special-ops/use-case-qualifier/",
+              },
+              {
                 text: "YAML Specialist",
                 link: "/special-ops/yaml-specialist/",
               },
