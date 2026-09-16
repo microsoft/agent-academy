@@ -1,4 +1,7 @@
 ---
+prev:
+  text: "Operative"
+  link: "/operative/"
 next:
   text: "Establish the Hiring Hub"
   link: "/operative-nextgen/01-get-started"
