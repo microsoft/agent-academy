@@ -5,7 +5,7 @@ prev:
 next:
   text: "Add a Connected Interview Agent"
   link: "/operative-nextgen/03-connected-agent"
-hide: true
+hide: false
 preview: true
 short-description: Author instructions and a reusable resume-intake skill that handles missing inputs and tool errors, then connect it to live Dataverse data
 difficulty: 2
@@ -28,9 +28,9 @@ last-edited-date: 2026-08-12
 
 ## 🎯 Mission Brief {#mission-brief}
 
-Agent, in this mission you'll learn about **agent instruction** best practices - how the always-on description of what an agent is for and how it should behave is written well.
+Welcome Operative, in this mission we'll learn how to write clear **agent instructions** that define the agent's purpose, scope, and behavior.
 
-You'll then package resume intake as a **skill**: a named set of steps the agent loads when a request matches it. Keeping intake in its own skill means the agent follows the same procedure every time, and you can change that procedure in one place.
+You'll then package resume intake as a **skill**: a named set of steps the agent loads when a request matches it. Keeping intake in its own skill gives you one place to maintain the procedure.
 
 A skill on its own only *describes* what to do with hiring records. To let the agent actually read and write them, you'll add the **Microsoft Dataverse MCP server**, which gives it search, read, create, and update actions over the hiring tables.
 
@@ -39,7 +39,7 @@ A skill on its own only *describes* what to do with hiring records. To let the a
 In this mission, you'll learn:
 
 1. How to write clear **agent instructions** that scope behavior and reference tools
-1. What **skills** are, when to use them, and the two ways to author them
+1. What **skills** are, when to use them, and the three ways to author them
 1. How to create a **skill from blank** that handles missing inputs, tool errors, and uploaded files
 1. How to add the **Microsoft Dataverse MCP server** so the agent can search, read, create, and update hiring records
 1. How to test live Dataverse access in **Preview** and establish a reusable evaluation set
@@ -53,7 +53,7 @@ Instructions are the agent's always-on system prompt. The following points are t
 - **Constrain identifiers and formats** - e.g. "Resume numbers start with R. Never invent them."
 - **Describe tone** - concise, professional, evidence-based.
 
-The **Hiring Agent** instructions below do all four - they set the orchestrator's role and scope, say when to hand interview work to the Interview Agent specialist, constrain the `R#####` / `C#####` / `A#####` / `J#####` identifiers, and set an evidence-based tone.
+By the end of the Operative missions, the **Hiring Agent** instructions will cover all four practices: defining the orchestrator's role and scope, specifying when to hand interview work to the Interview Agent specialist, constraining the `R#####` / `C#####` / `A#####` / `J####` identifiers, and setting an evidence-based tone.
 
 ## 🛠️ What are skills? {#what-are-skills}
 
@@ -186,8 +186,8 @@ To keep the hiring system maintainable, we need to build it as a small set of **
 
    ```text
    Use whenever a candidate resume is provided (uploaded in chat or received by
-   email). Reads the resume and creates or reuses the linked Candidate and
-   Resume records in Dataverse. Does not match roles or create Job Applications.
+   email). Reads the resume, creates or reuses the Candidate and creates a new
+   linked Resume record in Dataverse. Does not match roles or create Job Applications.
    ```
 
    ![Resume intake routing description entered](./assets/m02-2-1-4-resume-intake-description.png)
@@ -270,7 +270,7 @@ To keep the hiring system maintainable, we need to build it as a small set of **
 > routes to. Small, single-purpose skills are easier to write, test, and reuse - a workflow can later
 > invoke the agent to *"intake this resume"* without dragging in matching logic.
 
-Compare this description with the best practices described at the start of this mission - note how it spells out the error handling and observability rules, so the agent reports every record number it touches and stops rather than guessing when a tool fails. You'll test these paths in **Mission 05** and inspect them in **Monitor** in **Mission 10**.
+The **Description** identifies when to load the skill. The **Instructions** define the error-handling and reporting rules, including reporting each record number and stopping when a tool fails. We will test these paths in **Mission 05**.
 
 ### 2.2 Add the Dataverse MCP server
 
@@ -280,44 +280,44 @@ The skill now describes the intake procedure but still cannot reach a hiring rec
 
    ![Add tool control in the Tools building block](./assets/m02-2-2-1-tool-catalog-open.png)
 
-1. In the **Add a tool** dialog, select the **Model Context Protocol (MCP)** filter. The catalog lists the available MCP servers.
+1. In the **Add a tool** dialog, select the **Model Context Protocol (MCP)** filter. The catalog lists the available Model Context Protocol servers.
 
     ![Tool catalog filtered to Dataverse MCP servers](./assets/m02-2-2-2-build-04-mcp-list.png)
 
-1. Select **Microsoft Dataverse MCP Server**. Its detail panel opens (*"Provides Remote MCP Server access to Dataverse"*). Choose a **connection** - an existing Dataverse connection for your account shows a green check - then select **Add**.
+1. Select **Microsoft Dataverse MCP Server**. Its detail panel opens. Select **Add** to install the server. If connection setup appears, select or create a Dataverse connection for your account and complete the setup.
 
-    ![Connected Dataverse MCP server ready to add](./assets/m02-2-2-3-build-05-dataverse-mcp-detail.png)
+   ![Dataverse MCP server detail with Add highlighted](./assets/m02-2-2-3-build-05-dataverse-mcp-detail.png)
 
 1. Confirm the server now appears under **Tools** on the Build canvas.
 
     ![Dataverse MCP server added successfully](./assets/m02-2-2-4-build-06-dataverse-mcp-added.png)
 
-1. Select the **Microsoft Dataverse MCP Server** tool to review the actions it exposes - `read_query`, `create_table`, `update_table`, `delete_table`, `create_record`, `update_record`, and more - all switched on by default (**Enable all tools**). Note the **Authentication mode** is **User**, so the agent's data calls run as the **signed-in user**.
+1. Select the **Microsoft Dataverse MCP Server** tool. In **Edit Microsoft Dataverse MCP Server**, review the tools available. **Allow all** is on by default. Check that **Authentication mode** is **User**, so the agent's data calls run as the **signed-in user**.
 
-    ![Dataverse MCP actions and User authentication](./assets/m02-2-2-5-dataverse-mcp-tools.png)
+   ![Dataverse MCP actions and User authentication mode](./assets/m02-2-2-5-dataverse-mcp-tools.png)
 
-1. An agent should only ever hold the permissions it actually uses, so we need to restrict the actions to the ones the Hiring Agent needs. Turn **off** the master **Enable all tools** toggle at the top of the list, then switch **on** only the record and query actions the Hiring Agent uses - **`search`**, **`describe`**, **`read_query`**, **`create_record`**, and **`update_record`**. Leave the schema-level actions (**`create_table`**, **`update_table`**, **`delete_table`**) off - the agent reads and writes *records*, it never changes the data model.
+1. Turn **Allow all** off, then enable only **Search**, **Describe**, **Read query**, **Create record**, and **Update record**. Leave the schema-level actions (**Create table**, **Update table**, and **Delete table**) off. The Hiring Agent reads and writes records without changing the data model.
 
-   Set the tools in the order they appear in the dialog:
+   Scroll through the entire tool list and check every toggle against this table before selecting **Confirm**. The screenshot shows only part of the list. Rows can display the underscore identifiers shown in parentheses.
 
    | Tool | State |
    | --- | --- |
-   | `read_query` | ✅ |
-   | `create_table` | ❌ |
-   | `update_table` | ❌ |
-   | `delete_table` | ❌ |
-   | `create_record` | ✅ |
-   | `update_record` | ✅ |
-   | `delete_record` | ❌ |
-   | `search` | ✅ |
-   | `upsert_skill` | ❌ |
-   | `create_skill_resource` | ❌ |
-   | `delete_skill` | ❌ |
-   | `describe` | ✅ |
-   | `search_data` | ❌ |
-   | `init_file_upload` | ❌ |
-   | `commit_file_upload` | ❌ |
-   | `file_download` | ❌ |
+   | Read query (`read_query`) | ✅ |
+   | Create table (`create_table`) | ❌ |
+   | Update table (`update_table`) | ❌ |
+   | Delete table (`delete_table`) | ❌ |
+   | Create record (`create_record`) | ✅ |
+   | Update record (`update_record`) | ✅ |
+   | Delete record (`delete_record`) | ❌ |
+   | Search (`search`) | ✅ |
+   | Upsert skill (`upsert_skill`) | ❌ |
+   | Create skill resource (`create_skill_resource`) | ❌ |
+   | Delete skill (`delete_skill`) | ❌ |
+   | Describe (`describe`) | ✅ |
+   | Search data (`search_data`) | ❌ |
+   | Init file upload (`init_file_upload`) | ❌ |
+   | Commit file upload (`commit_file_upload`) | ❌ |
+   | File download (`file_download`) | ❌ |
 
     ![Restricted Dataverse MCP action selection](./assets/m02-2-2-6-dataverse-mcp-selected.png)
 
@@ -343,7 +343,7 @@ To check that the MCP connection returns current Dataverse records, ask the agen
    | Control | What it does |
    | --- | --- |
    | **New chat** | Clears the conversation and starts a fresh session, so nothing you asked earlier carries over into the next answer |
-   | **History** | Reopens earlier Preview conversations, which is how you go back and compare what the agent said before a change |
+   | **History** | Shows conversation history from Preview, evaluations, and the published agent |
    | **End user preview** | Switches between the builder's view and the published experience. Leave it **off** while you build and you see the agent's reasoning and every tool call; turn it **on** and you see only the reply, exactly as a real user would |
 
     ![Hiring Agent Preview session controls](./assets/m02-2-3-1-build-07-preview.png)
@@ -354,7 +354,7 @@ To check that the MCP connection returns current Dataverse records, ask the agen
    What job roles are currently open? List each job role number and title.
    ```
 
-1. The first time the agent invokes the MCP server, a **Permission Required** card appears (*"This agent is requesting permission to use shared_commondataserviceforapps to perform: InvokeMCP"*). Select **Allow**.
+1. When a **Permission Required** card names **Microsoft Dataverse MCP Server**, check the requested action and select **Allow**. Further cards may request permission for `search`, `describe`, or `read_query`; review and allow each action needed for this query.
 
     ![Agent invokes the MCP server](./assets/m02-2-3-2-build-08-mcp-test.png)
 
@@ -370,14 +370,14 @@ To check that the MCP connection returns current Dataverse records, ask the agen
    What can the resume-intake skill do for me?
    ```
 
-   The reply should explain that `resume-intake` reads an uploaded resume, creates or reuses the linked **Candidate** and **Resume** records in Dataverse, and reports their record numbers. This confirms that the skill is available to the Hiring Agent. We will run the complete intake procedure with a resume in Mission 05.
+   The reply should explain the file type and size checks, Candidate email deduplication, creation of a linked **Resume**, and reporting both record numbers and whether the Candidate was reused or created. It should stop at intake. This question checks the agent's explanation and does not execute the intake procedure. The earlier load trace checks skill activation; Mission 05 tests the complete procedure with a resume.
 
    ![Hiring Agent explains the resume-intake skill](./assets/m02-2-3-4-build-41-j1004-criteria.png)
 
    > [!TIP] End user preview
    > The **End user preview** toggle above the chat changes what Preview shows you. Leave it **off**
-   > while you build and you see the agent's reasoning and every tool call it makes - here `describe`
-   > and `read_query`. Turn it **on** and all of that is hidden, leaving just the reply, which is
+   > while you build and you see the agent's reasoning and every tool call it makes, such as `describe`
+   > and `read_query` in the preceding job-role query. Turn it **on** and all of that is hidden, leaving just the reply, which is
    > exactly what someone chatting with the published agent would see.
 
 ### 2.4 Adding evals to your agent
@@ -386,25 +386,49 @@ Now we can start adding evals to our agent. This first set is a **baseline** tha
 
 A **Connected user** profile can also run cases that use tools. For each one, record the required rows and starting state, the expected result, and how writes will be repeated safely and cleaned up. Mission 11 adds a read-only Dataverse MCP case using the stable sample data from Mission 01.
 
-1. **Publish** the Hiring Agent. AgentOps can create a set before an agent is published, but its **Evaluate** tab does not surface that set until the agent has a published runtime.
+1. On the Hiring Agent's command bar, select **Publish**.
 
-1. In the left navigation select **AgentOps**, then **Evaluation**. Select **New evaluation**, choose the **Hiring Agent**, choose **Single responses**, and choose to write the cases yourself.
+   ![Publish command on the Hiring Agent toolbar](./assets/m02-2-4-1-publish-command.png)
 
-   ![Manual conversation evaluation ready for test cases](./assets/m02-2-4-1-manual-evaluation-ready.png)
+1. In the publication dialog, select **Publish agent**.
+
+   ![Publish agent button in the publication dialog](./assets/m02-2-4-1-publish-confirmation.png)
+
+1. Wait for **Your agent is published**, then select **Done**.
+
+   ![Hiring Agent publication success dialog after completion](./assets/m02-2-4-1-publish-success.png)
+
+1. In the left navigation, select **AgentOps** to open **Operate**.
+
+1. Select **Evaluation**.
+
+   ![Operate Evaluation page with New evaluation highlighted](./assets/m02-2-4-1-manual-evaluation-ready.png)
+
+1. Select **New evaluation**.
+
+1. On the **Agents** tab in the dialog, select **Hiring Agent**, then select **Evaluate agent**.
+
+   ![Hiring Agent row in the evaluation chooser](./assets/m02-2-4-1-choose-hiring-agent.png)
+
+1. Under **Select data type**, select **Single responses**.
+
+   ![Single responses and manual question authoring controls](./assets/m02-2-4-1-single-responses.png)
+
+1. Select **Or, write some questions yourself**.
 
 1. Name the evaluation `Hiring Agent baseline`.
 
    ![AgentOps Single response evaluation named Hiring Agent baseline](./assets/m02-2-4-2-single-response-baseline.png)
 
-1. Open the **General quality** menu and select **Delete test method**.
+1. Open the **Answer quality** menu (shown as **General quality** in earlier versions) and select **Delete test method**.
 
-   ![General quality menu with Delete test method](./assets/m02-2-4-3-delete-general-quality.png)
+   ![Default quality menu with Delete test method](./assets/m02-2-4-3-delete-general-quality.png)
 
 1. Select **Add test method**, then select **Compare meaning**.
 
    ![Test method picker with Compare meaning](./assets/m02-2-4-4-compare-meaning-picker.png)
 
-1. Set **Pass score** to **70**, then select **Done**. Compare meaning scores how closely the agent's response matches the intent of the expected response, without requiring the same wording.
+1. Set **Pass score** to **70**, then select **OK**. Compare meaning scores how closely the agent's response matches the intent of the expected response, without requiring the same wording.
 
    ![Compare meaning pass score set to 70](./assets/m02-2-4-5-compare-meaning-score.png)
 
@@ -418,8 +442,8 @@ A **Connected user** profile can also run cases that use tools. For each one, re
    | --- | --- | --- |
    | 1 | Who are you, and what is your role in the hiring process? | I'm the Hiring Agent, the orchestrator for the recruitment process. I take in candidate resumes, match candidates to open job roles using each role's weighted evaluation criteria, create job applications, and prepare interviews. |
    | 2 | What kinds of tasks can you help me with, and what is outside your scope? | I help with candidate and resume intake, matching candidates to active job roles, creating job applications, and preparing interviews. I decline topics unrelated to the hiring process. |
-   | 3 | What are the identifier formats you use for candidates, resumes, job roles, and job applications? | Candidate numbers use C#####, Resume numbers use R#####, Job Role numbers use J#####, and Job Application numbers use A#####. |
-   | 4 | Describe the steps you take when I give you a new candidate's resume. | I read the resume, deduplicate the Candidate by email, create or reuse and link the Candidate and Resume records, then report the C##### and R##### numbers and whether the Candidate was reused or created. |
+   | 3 | What are the identifier formats you use for candidates, resumes, job roles, and job applications? | Candidate numbers use C#####, Resume numbers use R#####, Job Role numbers use J####, and Job Application numbers use A#####. |
+   | 4 | Describe the steps you take when I give you a new candidate's resume. | I check the file type and size before reading the resume, create or reuse the Candidate by email, create a new linked Resume record, and report the Resume number and Candidate number, stating whether the Candidate was reused or newly created. I stop after intake; matching to Job Roles is a separate request, and creating Job Applications requires confirmation for each role. |
 
    ![First Single response evaluation case](./assets/m02-2-4-7-first-evaluation-case.png)
 
@@ -433,9 +457,9 @@ A **Connected user** profile can also run cases that use tools. For each one, re
 
 1. Open the set and confirm **Compare meaning** and **Pass score: 70/100** persisted, then select **Manage**.
 
-   ![Saved test set with Evaluate ready to run](./assets/m02-2-4-10-evaluate-run-started.png)
+   ![Saved test set ready for an evaluation run](./assets/m02-2-4-10-evaluate-run-started.png)
 
-1. In **User**, choose your signed-in account and confirm its connection shows **Connected**.
+1. In **User**, choose your signed-in account and verify that the account has an active connection before saving.
 
    ![Connected account selected for the evaluation profile](./assets/m02-2-4-11-evaluation-profile-account.png)
 
@@ -443,7 +467,9 @@ A **Connected user** profile can also run cases that use tools. For each one, re
 
    ![Connected evaluation profile ready to save](./assets/m02-2-4-12-evaluation-profile-save.png)
 
-1. Select **Evaluate**, then read the result. All four cases should **Pass**, and the score must be at least **70%**. A semantic answer can pass without scoring exactly 100%:
+1. Select **Run**, then read the result. All four cases should **Pass**, giving a **100% pass rate**. Each case is judged against the saved **Compare meaning** threshold of **70**; the overall pass rate counts passing cases and is not their individual similarity score.
+
+   If a case fails, compare its response with the expected answer and the grader's explanation. Correct the identified issue and rerun the complete set. Responses and language-model grading can vary between runs.
 
    ![All four self-knowledge cases pass the Compare meaning threshold](./assets/m02-2-4-13-eval-live-20-hiring-100pass.png)
 
@@ -457,7 +483,7 @@ Mission 02 is complete. You can now:
 
 ✅ **A data layer**: You added the **Microsoft Dataverse MCP server** with search, read, create, and update actions.
 
-✅ **An executable skill**: You consented the connection, read live records in **Preview**, and confirmed the skill can now read and write Dataverse.
+✅ **Verified readiness**: You confirmed the skill loaded, consented the connection, and read live records in **Preview**. You will test intake writes in Mission 05.
 
 ⏭️ [Move to **Add a Connected Interview Agent** mission](../03-connected-agent/index.md)
 

@@ -5,7 +5,7 @@ prev:
 next:
   text: "Human Oversight and Handling Alternative Flows"
   link: "/operative-nextgen/09-human-oversight"
-hide: true
+hide: false
 preview: true
 short-description: Put agents inside a mostly deterministic workflow so it can read resumes, decide a role, and notify the recruiter
 difficulty: 3
@@ -29,9 +29,9 @@ last-edited-date: 2026-08-12
 
 Welcome back, Agent. The workflow you built files resumes, but it is mostly deterministic - the trigger fires, **Classify** uses AI to pick a branch, and the loop files each PDF. None of that can answer which of your five open roles a candidate actually fits, because answering it means reading the document and weighing what is in it.
 
-In this mission you'll add **agents** to that workflow. An **inline agent** reads each resume PDF and confirms the role, asking a human when the evidence conflicts. Your published **Hiring Agent** then does the scoring and the writes, reusing the skills you built in Missions 02, 05 and 06. You'll then read the agents' answers back out and post a record-linked **Adaptive Card** to Teams.
+In this mission you'll add **agents** to that workflow. An **inline agent** reads each resume PDF and confirms the role, asking a human when the evidence conflicts. Your published **Hiring Agent** then does the scoring and the writes, reusing the skills you built in Missions 02, 05 and 06. You'll then read the agents' answers back out and post an **Adaptive Card** to Teams with links to the Hiring Hub lists.
 
-By the end of this mission an email arrives and a recruiter gets a Teams card naming the candidate, the role, the score and a link straight to the records.
+By the end of this mission an email arrives and a recruiter gets a Teams card naming the candidate, the role, the score and links to the Resume and Job Application lists.
 
 ## 🔎 Objectives {#objectives}
 
@@ -41,7 +41,7 @@ In this mission, you'll learn:
 1. How to give a workflow agent tools and let it **ask a human** mid-task
 1. How to pass workflow data into an agent and read its answer back out
 1. Why the **Agents connection identity** decides whether a tool call succeeds
-1. How to post a record-linked **Adaptive Card** to Teams
+1. How to post an **Adaptive Card** to Teams with links to the Hiring Hub lists
 
 ## 🧠 Two kinds of agent node {#two-kinds-of-agent-node}
 
@@ -99,10 +99,15 @@ Before you start this lab you need:
 
 Let's add the reasoning. You'll build the two agent nodes in series after the attachment loop, so the loop finishes filing every attachment first and the agents then run once over all of them.
 
+<!-- markdownlint-disable-next-line MD033 -->
+<div class="course-diagram-scroll" tabindex="0" role="region" aria-label="Matching and Hiring Agent handoff workflow diagram">
+
 ```mermaid
 ---
 config:
-  look: neo
+   look: neo
+   flowchart:
+      useMaxWidth: false
 ---
 flowchart TB
   subgraph SCOPE["Process application · Scope"]
@@ -113,6 +118,8 @@ flowchart TB
     A2 --> N["Notify the recruiter in Teams<br/>Adaptive Card · Lab 8.4"]
   end
 ```
+
+</div>
 
 ### 8.1 Add the inline agent that reads the PDFs
 
@@ -160,12 +167,13 @@ flowchart TB
    STEP 3 - DECIDE THE ROLE. For each resume choose the single best-fitting OPEN
    role from the PDF.
 
-   STEP 4 - ASK A HUMAN WHEN AMBIGUOUS. If the best role is genuinely unclear -
-   two or more roles fit about equally, or the PDF points somewhere different
-   from the email - you MUST use Request for information ONCE to ask which open
-   role to use. Name the candidate, give the open roles as the choices, and say
-   in one line why you are unsure. Never ask about something you can settle
-   yourself, and never ask more than once.
+   STEP 4 - ASK A HUMAN WHEN AMBIGUOUS. A clear PDF match overrides the email without human assistance.
+   Read all PDFs before requesting help. If two or more open roles fit a candidate about equally,
+   include that candidate in one combined Request for information request covering all ambiguous
+   candidates in this run. Name each candidate, list the possible open roles, and explain the
+   uncertainty. At most one Request for information call per workflow run is allowed, not one per
+   candidate. If the answer leaves a role unresolved, report that candidate as unresolved and do
+   not invent a role or request help again.
 
    HARD LIMITS - obey these so the workflow cannot stall:
    - At most 8 tool calls in total.
@@ -268,6 +276,12 @@ The inline agent has decided *which* role each candidate fits. Now we'll hand th
 
 Next we will test the agent handling of PDF resumes received by email.
 
+1. Select **Save** on the workflow command bar.
+
+1. Select **Publish** and wait for publication to finish before sending the email. The email trigger runs the published workflow, so saving alone would test the previous version without the two agent nodes.
+
+   ![Saved workflow ready for publication before testing](./assets/m08-8-3-2-publish-workflow.png)
+
 1. Send **one** email to the monitored mailbox with **both** sample resume PDFs attached, using exactly this subject and body:
 
    ```text
@@ -285,7 +299,7 @@ Next we will test the agent handling of PDF resumes received by email.
 
    ![Email with both sample resume PDFs attached](./assets/m08-8-3-1-two-resumes-sent.png)
 
-1. Open the actionable card sent by **Microsoft Power Automate**. In the request for Avery, choose **J1003 Power Platform Consultant**, then select **Submit**.
+1. If the agent requests help, open the actionable card sent by **Microsoft Power Automate**. Choose **J1003 Power Platform Consultant** for Avery and **J1004 Power Platform Developer** for Taylor if those candidates are included, then select **Submit**. One request can include both candidates. If no request arrives and the node completes, continue to the output check.
 
    The card is sent to the mailbox of the account that owns the **Agents** connection. Check **Focused**, **Other** and **Junk**. If the controls do not respond, select **Show content** to trust the message. The workflow remains **Running** while it waits for the answer.
 
@@ -308,21 +322,21 @@ Next we will test the agent handling of PDF resumes received by email.
 
    ![The inline agent output block quoting PDF-only details](./assets/m08-8-3-3-agent-output-block.png)
 
-1. Confirm Avery came back **`ASKED A HUMAN: yes`**, while the second candidate came back **`ASKED A HUMAN: no`** and **J1004 Power Platform Developer**. Avery's email and PDF point to different roles. The second PDF's Lead Power Platform Engineer history, PL-400 certification and pro-code skills provide a direct match without a human question.
+1. Check each candidate's **ROLE**, **ASKED A HUMAN**, and **WHY** against the PDF and any human answer. A clear PDF match should override the email without a question. The language model may judge the role evidence differently between runs, so assistance is required only when the PDF leaves a genuine ambiguity. The illustrated output is Avery's result; verify Taylor's complete result in the same node output.
 
-   ![The completed run matching the second candidate without asking](./assets/m08-8-3-4-second-candidate-no-question.png)
+   ![Avery's confirmed role and human assistance result](./assets/m08-8-3-4-second-candidate-no-question.png)
 
 1. Open the **Job Applications** table in the Hiring Hub app (see [Mission 01](../01-get-started/index.md#lab-01-set-up-the-hiring-hub) if you need the route) and confirm the applications exist, and that both candidates were **matched** to existing Candidate records rather than duplicated.
 
    ![Job Applications created from both resumes](./assets/m08-8-3-5-job-applications.png)
 
-### 8.4 Notify the recruiter with a record-linked Teams card
+### 8.4 Notify the recruiter with a list-linked Teams card {#_8-4-notify-the-recruiter-with-a-record-linked-teams-card}
 
-Now tell the recruitment team - and make the alert *actionable* by carrying the **match result** and a **deep link straight to the records** in your model-driven app, so a recruiter can open the resume and the application.
+Next we will send the recruitment team the **match result** and links to the **Resumes** and **Job Applications** lists in Hiring Hub. The recruiter can locate the records by the numbers reported in the card.
 
-1. On the canvas, select the **+** below the **Agent** node on the **Application** branch.
+1. On the canvas, select **Add a step after Hand off to the Hiring Agent** inside the **Process application** scope.
 
-    ![Add a step control below the Agent node](./assets/m08-8-4-1-plus-after-handoff.png)
+   ![Add a step after the Hiring Agent handoff](./assets/m08-8-4-1-plus-after-handoff.png)
 
 1. In the **Add** panel's search box, type `post card`.
 
@@ -419,31 +433,31 @@ Now tell the recruitment team - and make the alert *actionable* by carrying the 
 
 1. On the command bar select **Save**. The *Needs setup* badge disappears from the node.
 
-    ![Saved Teams node with no Needs setup badge](./assets/m08-8-4-9-node-setup-complete.png)
+   ![Numbered execution order: Match, Hand off, Notify](./assets/m08-8-4-9-node-setup-complete.png)
 
 Now test it by posting a real card. Posting **sends a real message**, so use a recipient or channel you own.
 
-1. **Publish** the workflow, then email the monitored mailbox another application with a PDF attached. Now that an **Agent** node sits in the branch this run takes **4-6 minutes**, almost all of it inside the agent, and it stays at **Running** the whole time. That is normal - do not assume it has hung and start re-sending email.
+1. **Publish** the workflow, then email the monitored mailbox another application with only **Taylor's PDF** attached. This notification test processes one candidate; the two-candidate test is in Lab 8.3. Now that an **Agent** node sits in the branch this run takes **4-6 minutes**, almost all of it inside the agent, and it stays at **Running** the whole time. That is normal - do not assume it has hung and start re-sending email.
 
    ![The published workflow carrying the Teams notification](./assets/m08-8-4-10-workflow-published.png)
 
 1. Open the run in **Activity** and select the **Notify the recruiter in Teams** node. It returns a Teams **Message ID** and a **Message link** to the posted card.
 
-   ![The successful workflow run that posted the record-linked recruiter card](./assets/m08-8-4-11-teams-card-run-succeeded.png)
+   ![Successful workflow run with Teams message details](./assets/m08-8-4-11-teams-card-run-succeeded.png)
 
 1. Open the recipient's Teams **Workflows** chat. The card renders with the match facts and both buttons.
 
    ![The recruiter card posted to the Workflows chat](./assets/m08-8-4-12-teams-card-rendered.png)
 
-1. Review the **Role match** section and confirm it carries both PDF-grounded decisions, including whether the inline agent asked a person.
+1. Review the **Role match** section and confirm it carries Taylor's PDF-grounded decision, including whether the inline agent asked a person.
 
    ![The card's Role match section](./assets/m08-8-4-12-teams-card-role-match.png)
 
-1. Scroll to the bottom and confirm the Hiring Agent matched both existing candidates and the two deep-link buttons are present.
+1. Scroll to the bottom and confirm the Hiring Agent matched Taylor's existing Candidate record and the two list-link buttons are present.
 
-   ![The deep-link buttons at the foot of the card](./assets/m08-8-4-12-teams-card-deep-links.png)
+   ![Hiring Hub list buttons on the recruiter card](./assets/m08-8-4-12-teams-card-deep-links.png)
 
-1. Select **Open resumes in Hiring Hub**. The Hiring Hub **Resumes list** opens with the row you just filed at the top.
+1. Select **Open resumes in Hiring Hub**. Find the **Resume Number** reported in the card in the Hiring Hub **Resumes list**, and check its candidate and title.
 
    ![Newly filed resume in Hiring Hub](./assets/m08-8-4-13-resumes-list.png)
 
@@ -451,7 +465,7 @@ The successful run confirms that the workflow passed the PDF-grounded role match
 
 ## ✅ Mission Complete {#mission-complete}
 
-Your workflow now reads, decides, and tells someone about it - end to end, with nobody watching.
+Your workflow now processes resume PDFs, records the hiring results, and sends a Teams notification.
 
 You can now:
 
@@ -463,7 +477,7 @@ You can now:
 
 ✅ **Evidence over assertion**: You proved the agent read the resume PDF rather than the email body that contradicted it.
 
-✅ **Record-linked notifications**: You posted an Adaptive Card to Teams that links straight back to the Dataverse record.
+✅ **List-linked notifications**: You posted an Adaptive Card to Teams with links to the Resume and Job Application lists in Hiring Hub.
 
 ⏭️ [Move to **Human Oversight and Handling Alternative Flows** mission](../09-human-oversight/index.md)
 
@@ -473,7 +487,7 @@ You can now:
 
 🔗 [Adaptive Cards](https://adaptivecards.io/)
 
-🔗 [Adaptive Card designer](https://adaptivecards.io/designer/)
+🔗 [Adaptive Card designer](https://adaptivecards.microsoft.com/designer.html)
 
 🔗 [Microsoft Teams connector reference](https://learn.microsoft.com/connectors/teams/)
 

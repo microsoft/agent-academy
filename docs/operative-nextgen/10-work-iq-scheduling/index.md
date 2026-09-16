@@ -5,7 +5,7 @@ prev:
 next:
   text: "Evaluate, Publish, and Monitor Your Agent"
   link: "/operative-nextgen/11-publish-and-monitor"
-hide: true
+hide: false
 preview: true
 short-description: Turn on Work IQ so the Interview Agent can resolve colleagues, read calendars, and book a supervised interview-prep meeting
 difficulty: 2
@@ -45,7 +45,7 @@ In this mission, you'll learn:
 
 ## 🧠 Work IQ - one server per capability {#microsoft-iq}
 
-You already saw the "one server, all its actions" pattern with the Dataverse MCP server in [Mission 02](../02-instructions-skills-dataverse-mcp/index.md). **Work IQ** follows exactly the same pattern, except that it is published as a **family of servers** rather than one. Filter the tool catalog to **Model Context Protocol (MCP)** and you will see them listed individually:
+You already saw the "one server, all its actions" pattern with the Dataverse MCP server in [Mission 02](../02-instructions-skills-dataverse-mcp/index.md). **Work IQ** follows exactly the same pattern, except that it is published as a **family of servers** rather than one. Filter the tool catalog to **MCP** and you will see them listed individually:
 
 | The server | What it brings in |
 | --- | --- |
@@ -85,7 +85,7 @@ First we need to give the Interview Agent the two Work IQ servers scheduling nee
 
    ![The Interview Agent Build tab with its Tools section](./assets/m10-10-1-1-interview-agent-build-ready.png)
 
-1. Select **Model Context Protocol (MCP)** to filter the catalog to MCP servers.
+1. Select **MCP** to filter the catalog to MCP servers.
 
    The Work IQ servers are listed individually by capability - **Calendar**, **Mail**, **OneDrive**, **SharePoint**, **Teams** and **User** - so filtering is more useful here than searching.
 
@@ -93,21 +93,21 @@ First we need to give the Interview Agent the two Work IQ servers scheduling nee
 
 1. Select **User** and review its detail panel.
 
-   The agent reads people and calendars **as the identity on this connection**, so it inherits that person's permissions - it can see exactly what they can see, and nothing more. Use a controlled course identity for this connection rather than a personal or production account, so that the calendars the agent can reach are limited to the ones you intend it to use.
+   The **User** server resolves people using the permissions of its connection's identity. Select **Add** to open connection setup.
 
-   ![The User MCP detail panel showing its connection requirement](./assets/m10-10-1-3-user-connection.png)
+   ![The User MCP detail panel with Add available](./assets/m10-10-1-3-user-connection.png)
 
-1. Create or select the controlled **connection**, then select **Add**. Confirm **User** appears under **Tools**.
+1. In **Creating a connection to use User**, enter a display name and select **Create**. Sign in with the controlled course account that meets this lab's prerequisites. If an existing connection is offered, select the connection for that account. After connection setup completes, confirm **User** appears under **Tools**.
 
-   ![The User server installed under Tools](./assets/m10-10-1-4-user-connected.png)
+   ![User installed beside Dataverse before adding Calendar](./assets/m10-10-1-4-user-only-connected.png)
 
-1. Select **Add tool** again, filter to **Model Context Protocol (MCP)** once more, and select **Calendar**. Its description reads *"MCP server for Microsoft Outlook Calendar operations"*.
+1. Select **Add tool** again, filter to **MCP** once more, and select **Calendar**. Its description reads *"MCP server for Microsoft Outlook Calendar operations"*.
 
-   This is the server that actually writes to the calendar. Without it the agent can find times but cannot create the event.
+   The **User** server resolves people. The **Calendar** server supplies both availability lookups and event creation. Select **Add** to open Calendar connection setup.
 
    ![The Calendar MCP detail panel](./assets/m10-10-1-5-calendar-connection.png)
 
-1. Create or select the same controlled **connection**, select **Add**, and confirm both **User** and **Calendar** appear under **Tools**.
+1. In **Creating a connection to use Calendar**, enter a display name and select **Create**. Sign in with the controlled course account, or select its existing Calendar connection if offered. After connection setup completes, confirm both **User** and **Calendar** appear under **Tools**. The User and Calendar connections are configured independently, even when they use the same account.
 
    ![Both Work IQ servers installed under Tools](./assets/m10-10-1-6-calendar-connected.png)
 
@@ -140,12 +140,14 @@ Next we put those tools to work in **Preview**, where we can watch the availabil
 
    ```text
    Who is «interviewer», and find 3 times for a 30-minute interview prep meeting
-   with them this week.
+   with them in the next five business days. Do not create an event yet.
+   Reply with their name and a concise table of three mutually free dates,
+   times in the UTC time zone.
    ```
 
-   The first call to each new MCP server raises a **Permission Required** card and suspends the turn until you answer it. You will see one for the **Calendar** server and one for the **User** server. Select **Allow** on each.
+   When a **Permission Required** card appears, select **Allow** for the requested **User** or **Calendar** operation. The cards can arrive together or one at a time.
 
-   ![The Work IQ consent cards pausing the first calls](./assets/m10-10-2-1-consent-cards.png)
+   ![Work IQ permission requests with Allow available](./assets/m10-10-2-1-consent-cards.png)
 
 1. With both servers allowed, the turn resumes.
 
@@ -156,11 +158,16 @@ Next we put those tools to work in **Preview**, where we can watch the availabil
 1. Confirm one of the slots the agent actually offered, to create the event:
 
    ```text
-   Book the «time» option and title it "Interview prep - Power Platform
-   Developer".
+   I confirm «start date and time» to «end date and time» UTC with «interviewer».
+   Book this exact slot and title it "Interview prep - Power Platform Developer".
+   Do not substitute another time. Reuse an existing event only if its title,
+   start, end, organizer and attendee all match; otherwise create the event
+   and send the invitation. Read the event back from the calendar to verify
+   those fields and that it is not cancelled. Confirm briefly without join
+   links, meeting IDs or passcodes.
    ```
 
-   Replace `«time»` with one of the three times it returned - don't assume a particular slot, because the options depend on both calendars. The agent calls the *create event* action and confirms the meeting.
+   Replace the dates and times with one offered slot, and `«interviewer»` with the same colleague's email address. Check the returned event's start and end against your confirmation. An adjacent meeting with the same title is not a match, and a follow-up question about whether to create the event is not a completed booking.
 
    ![The agent confirming the booked interview prep meeting](./assets/m10-10-2-3-booking-confirmed.png)
 
@@ -172,9 +179,16 @@ Next we put those tools to work in **Preview**, where we can watch the availabil
 
 Next we will check that the published rules make the agent offer the meeting after preparing the interview, without creating an event before the user confirms a slot.
 
-1. In **Preview**, ask for interview questions for Avery Example's application for job role `J1004`. The agent should end its answer by offering to book the prep meeting, and still wait for your confirmation before it creates anything.
+1. Open **Job Applications** in Hiring Hub and locate Avery Example's application for **J1004 Power Platform Developer**. Check both the **Candidate** and **Job Role**, then copy its **Application Number**. Use the number from your environment, not a number from a screenshot.
 
-   Include the application number because `J1004` has more than one applicant. The application number identifies Taylor's record without making the agent ask which candidate you mean.
+1. In the Interview Agent's **Preview**, replace `«ApplicationNumber»` with that number and send:
+
+   ```text
+   Prepare interview questions for Avery Example's application «ApplicationNumber»
+   for job role J1004 Power Platform Developer. Do not book a meeting yet.
+   ```
+
+   The agent should end its answer by offering to book the prep meeting, and wait for your confirmation before creating an event.
 
    ![The agent offers the prep meeting without booking it](./assets/m10-10-3-4-scheduling-offer-preview.png)
 
@@ -194,7 +208,7 @@ Next we will add a scheduling case to the saved evaluation set, so the agent's s
 
    ![The scheduling case saved into the Interview Agent baseline set](./assets/m10-10-4-2-scheduling-evaluation-case.png)
 
-1. **Save** the test set and select **Evaluate** to run it. All five cases should pass and the score should remain at least **70%** because the agent explains its process without booking anything.
+1. **Save** the test set and select **Evaluate** to run it. Each case must meet the configured **Pass score of 70/100**. All five cases must pass, giving an overall **100% pass rate**, without booking anything.
 
    ![The five-case evaluation passing every case](./assets/m10-10-4-3-scheduling-evaluation-green.png)
 

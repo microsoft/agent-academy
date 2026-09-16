@@ -5,7 +5,7 @@ prev:
 next:
   text: "Add Agents to a Workflow"
   link: "/operative-nextgen/08-workflow-agents"
-hide: true
+hide: false
 preview: true
 short-description: Build an email-triggered workflow that screens the inbox and files resumes and their PDFs in Dataverse
 difficulty: 3
@@ -31,7 +31,7 @@ Welcome back, Agent. So far your agents respond to people. In this mission you'l
 
 When an applicant emails a resume, a **Workflow** screens out junk and automatic replies, then files the resume and its PDF in Dataverse - with nobody watching.
 
-A **Workflow** is an automation you build *inside* Copilot Studio. Unlike an agent, it doesn't chat or reason. It runs a fixed sequence of steps every time something **triggers** it, which here is an email arriving. Connector, branch, and loop nodes do the filing, and a **Classify** node reads the email and decides which branch to take.
+A **Workflow** is an automation you build *inside* Copilot Studio. It follows a configured graph of steps when something **triggers** it, which here is an email arriving. Connector, branch, and loop nodes do the filing, and a **Classify** node uses a language model to read the email and decide which branch to take.
 
 By the end of this mission an email lands in the mailbox and a resume appears in Dataverse with its PDF attached, unattended.
 
@@ -47,14 +47,14 @@ In this mission, you'll learn:
 
 ## 🧠 Workflows and their triggers {#workflows-and-their-triggers}
 
-A **Workflow** is a standalone, versioned automation - a graph of **nodes** that runs **deterministically**, the same way every time. It's the new home for the "**when X happens, do Y**" automation that used to live in **agent flows** and event-triggered **Power Automate**: you build, test, publish, and version it **inside Copilot Studio**.
+A **Workflow** is a standalone, versioned automation built as a graph of **nodes**. Its configured sequence, conditions, loops, and connector operations define how it executes, but a node can call a language model whose answer may vary. It's the new home for the "**when X happens, do Y**" automation that used to live in **agent flows** and event-triggered **Power Automate**: you build, test, publish, and version it **inside Copilot Studio**.
 
 The division of labor runs through the next two missions:
 
-- Use a **Workflow** for the **deterministic** work - a fixed sequence of steps, branching, loops, filing a record, sending mail, posting a card, or waiting for an approval.
+- Use a **Workflow** to orchestrate the steps - evaluate conditions, loop over attachments, file a record, send mail, post a card, or wait for an approval. These operations follow configured rules; a model-based node such as **Classify** makes a probabilistic decision within that graph.
 - Use an **agent** (called from a workflow **Agent** node) for the **reasoning** work - reading a resume, matching it to a role, deciding the best fit.
 
-This mission builds the deterministic half of that pipeline, covering the trigger, the routing, and the filing. [Mission 08](../08-workflow-agents/index.md) adds the reasoning on top of it.
+This mission builds the trigger, model-based email routing, and connector-driven filing. [Mission 08](../08-workflow-agents/index.md) adds agent reasoning for resume intake and matching.
 
 > [!INFO] Covered in Recruit
 > Revisit [Recruit Mission 07: Automate with Workflows](../../recruit-nextgen/07-automate-with-workflows/index.md) for how a workflow differs from a Power Automate cloud flow, and for the Health Center and version history you work with while building one.
@@ -93,6 +93,8 @@ This mission uses a **Connector event** trigger - *When a new email arrives* - s
 
 **Classify** is a lightweight AI **router**. It only *sorts* text into the named **categories** you define, drawing one branch per category on the canvas plus an automatic **Other**. It has no tools, knowledge, or memory - it just decides **which branch** to take. You use it in Lab 7.2.
 
+Classify's language-model decision is probabilistic: the same message can receive a different category across runs or models. Clear category descriptions and representative test messages help you assess routing quality; passing a few samples does not guarantee every future classification. Once a category is returned, the workflow follows the configured branch.
+
 ## 🔢 How expressions refer to other nodes {#expressions}
 
 [Recruit Mission 07](../../recruit-nextgen/07-automate-with-workflows/index.md#expressions-and-functions) introduced the expression editor and the functions used most often - `concat()`, `if()`, `empty()`, `coalesce()`, `length()`.
@@ -106,7 +108,7 @@ outputs('File_resume_in_Dataverse')?['body/ppa_resumeid']
 Read it from the outside in:
 
 - **`outputs('…')`** is the output of the node named inside the quotes. Some nodes use `body('…')` instead, which is the same idea one level deeper.
-- **The name in quotes is the node's name with every space and every piece of punctuation replaced by an underscore.** `Is it a PDF?` becomes `Is_it_a_PDF_`, and `Alert - filing failed` becomes `Alert_-_filing_failed`. This is why every lab tells you to rename a node *before* you write any expression that mentions it - rename it afterwards and your expression still points at the old name.
+- **The name in quotes is the node's expression identifier.** Use the verified identifiers shown in these labs: `Is it a PDF?` becomes `Is_it_a_PDF_`, and `Alert - filing failed` becomes `Alert_-_filing_failed`. In these examples, spaces and the question mark become underscores, but the hyphen is preserved. Rename a node *before* writing an expression that mentions it; a hand-written reference can still point at the old identifier after a rename.
 - **`?`** is safe navigation. It means "if this piece is missing, give me nothing rather than an error", which keeps a run from failing on an email that had no such field.
 - **`['body/field']`** selects one field out of that output.
 
@@ -131,7 +133,7 @@ Most fields in a node panel accept three different kinds of value, and the small
 **✨ Ask Copilot** writes an expression from a description of what you want. The labs give you every expression you need, so you will not need it here.
 
 ::: details 🔄 Coming from the classic Operative course?
-In classic **Mission 04: Add Event Triggers to act autonomously**, an event trigger handed the automation to **Power Automate**, where you assembled it from **Compose**, **Condition** and connector actions in a separate designer with its own publish cycle - which is still how the standard harness works. **Workflows** replace that: you build, test, publish and version the automation inside Copilot Studio, and **Variable** or **Function** takes the place of Compose while **If/Else** takes the place of Condition. That one classic mission is now **split in two** - this mission builds the deterministic pipeline, and [Mission 08](../08-workflow-agents/index.md) adds the reasoning. The genuinely new part here is **Classify**, an AI intent router that reads the email and picks a branch, work that classic solutions did with brittle keyword conditions or not at all. And you can test a single action inside the designer with **Run node**, instead of running the whole flow.
+In classic **Mission 04: Add Event Triggers to act autonomously**, an event trigger handed the automation to **Power Automate**, where you assembled it from **Compose**, **Condition** and connector actions in a separate designer with its own publish cycle - which is still how the standard harness works. **Workflows** replace that: you build, test, publish and version the automation inside Copilot Studio, and **Variable** or **Function** takes the place of Compose while **If/Else** takes the place of Condition. That one classic mission is now **split in two** - this mission builds the email routing and filing pipeline, and [Mission 08](../08-workflow-agents/index.md) adds resume-processing agents. The genuinely new part here is **Classify**, an AI intent router that reads the email and picks a branch, work that classic solutions did with brittle keyword conditions or not at all. And you can test a single action inside the designer with **Run node**, instead of running the whole flow.
 :::
 
 ## 🧪 Lab 07 - Build the autonomous intake {#lab-07-build-the-autonomous-intake}
@@ -144,14 +146,16 @@ Before you start this lab you need:
 - A mailbox you can send to and receive in, reachable with an **Office 365 Outlook** connection
 - The two sample resume PDFs used from Lab 7.6 onward - see the download in [Mission 05](../05-intake-matching-applications/index.md)
 
-Let's build the deterministic half of the pipeline. Work through the sub-labs in order, because later expressions refer to the names and outputs of earlier nodes, so a node renamed out of sequence breaks every expression that follows it.
+Let's build the email routing and filing workflow. Work through the sub-labs in order, because later expressions refer to the names and outputs of earlier nodes, so renaming a node can break references to it.
 
 This is the shape you are about to build - the email trigger, the **Classify** router and its four branches, and the filing steps that run inside the **Process application** Scope. Those steps sit three levels deep: Scope, then loop, then guard.
 
 ```mermaid
 ---
 config:
-  look: neo
+   look: neo
+   flowchart:
+   useMaxWidth: true
 ---
 flowchart TB
   T["When a new email arrives<br/>Outlook trigger"]
@@ -213,14 +217,14 @@ Next we are going to create the workflow itself and point it at the recruitment 
 
    ![The trigger Connection box showing your signed-in account](./assets/m07-7-1-8-trigger-connection.png)
 
-1. Below the connection, select **Show all** to reveal every trigger parameter. The count changes from *Showing 4 of 9* to *Showing 9 of 9*. Then fill in the trigger exactly as follows, and leave every other parameter empty.
+1. Below the connection, select **Show all** to reveal every trigger parameter. The count changes from *Showing 4 of 9* to *Showing 9 of 9*. Set the values below and preserve the other defaults, including **Importance** at **Any**. Leave unused optional filters empty.
 
    | Field | Value |
    | --- | --- |
    | **Folder** | `Inbox` *(already set by default - just check it)* |
    | **Subject Filter** | `Application` |
-   | **Include Attachments** | **Yes** - so the email's files come through with the trigger |
-   | **Only with Attachments** | **Yes** - so an email with no file never starts a run |
+   | **Include Attachments** | Enabled (**Yes** or `true`, depending on the editor) - so the email's files come through with the trigger |
+   | **Only with Attachments** | Enabled (**Yes** or `true`, depending on the editor) - so an email with no file never starts a run |
 
    ![Outlook email trigger configured with attachment filters](./assets/m07-7-1-9-trigger-configured.png)
 
@@ -283,10 +287,6 @@ Let's add that node and teach it the three kinds of mail this inbox receives.
 1. Collapse the full screen view, then on the command bar select **Save**. The canvas branch labels change from *Category 1/2/3* to **Application**, **OutOfOffice** and **Junk**, with **Other** still last.
 
    ![Configured Classify node ready to save](./assets/m07-7-2-7-save-classify.png)
-
-   After Save completes, the canvas shows the configured branch names.
-
-![Classify canvas branches with configured category names](./assets/m07-7-2-7-classify-branches.png)
 
 1. Wherever a node can be run on its own, test it there rather than waiting for a whole run. Open the **Sort the email** node again and select the **Run node** tab, next to **Configure**. It executes just the node you have selected against sample values you type in, so you get an answer in seconds instead of publishing the workflow and emailing the mailbox.
 
@@ -366,8 +366,9 @@ Next we are going to build that guard and a loop for each attachment. The attach
    > [!NOTE] A node's name is how expressions refer to it
    > Later steps read a node's output with an expression such as
    > `outputs('File_resume_in_Dataverse')?['body/ppa_resumeid']`. The name inside the quotes is the
-   > node's name with every space and every piece of punctuation replaced by an underscore, so
-   > `Is it a PDF?` becomes `Is_it_a_PDF_` and `Alert - filing failed` becomes `Alert_-_filing_failed`.
+   > verified expression identifier: `Is it a PDF?` becomes `Is_it_a_PDF_` and
+   > `Alert - filing failed` becomes `Alert_-_filing_failed`. Spaces and the question mark become
+   > underscores in these examples; the hyphen is preserved.
    >
    > Name each node exactly as these labs tell you, and *before* you write any expression that mentions
    > it. Then you can paste every expression that follows verbatim. Rename a node afterwards and any
@@ -449,26 +450,31 @@ As we go you will see a small ⚡ icon on many fields. That is the **dynamic con
 
    ![The second Dataverse action pointed at the Notes table](./assets/m07-7-5-8-note-table.png)
 
-1. Give the note the attachment's own file name:
+1. In **Title**, select ⚡ **Insert dynamic content**, search for `Name`, and choose **Name** *(Attachment name)*.
 
-   1. In **Title**, select ⚡ **Insert dynamic content**, search for `Name`, and choose **Name** *(Attachment name)*.
-   1. In **File Name**, insert the same **Name** token.
+   ![Note Title carrying the attachment Name token](./assets/m07-7-5-9-note-title.png)
 
-   ![Note Title and File Name carrying the attachment name](./assets/m07-7-5-9-note-names.png)
+1. In **File Name**, insert the same **Name** token.
 
-1. Set **Is Document** to **Yes**, then switch **Document** to **expression** mode - the `</>` button from [How to fill in a field](#field-editors) - and paste this expression:
+   ![Note File Name carrying the attachment Name token](./assets/m07-7-5-9-note-names.png)
+
+1. Configure the Note's file content:
+
+   1. Set **Is document** to **Yes**.
+   1. In **Mime type** (`MimeType`), select ⚡ **Insert dynamic content**, search for `Content-Type`, and choose **Content-Type** *(Attachment content type)*. The field shows a `contentType` chip.
+   1. Switch **Document** to **expression** mode - the `</>` button from [How to fill in a field](#field-editors) - and paste this expression:
 
    ```text
    base64ToString(base64(items('For_each_attachment')?['contentBytes']))
    ```
 
-   > [!NOTE] Why the Document expression is wrapped twice
-   > `contentBytes` arrives already base64-encoded, and `documentbody` also expects base64 - so passing
-   > the token through unchanged fails, and wrapping it in `base64()` on its own encodes it twice.
-   > `base64ToString(base64(...))` is the pair that decodes and re-encodes cleanly, leaving the bytes
-   > exactly as they arrived.
+   > [!NOTE] File content and encoding
+   > Base64 represents binary file content as text so it can travel in a JSON payload. Dataverse stores
+   > a Note's file content in `documentbody`; its file name and MIME type describe that content. Encoding
+   > changes the representation, not the file format. Use the demonstrated expression here, then verify
+   > the linked Note and open its downloaded PDF in Lab 7.6 to check the mapping end to end.
 
-   ![The Note Document field holding the decoded PDF bytes](./assets/m07-7-5-10-note-document.png)
+   ![The Note Document field with its configured expression](./assets/m07-7-5-10-note-document.png)
 
 1. Build the **Regarding (Resumes)** value:
 
@@ -477,12 +483,6 @@ As we go you will see a small ⚡ icon on many fields. That is the **dynamic con
    1. Type `)` after the chip to close the bracket.
 
    The field reads `/ppa_resumes(` **«Resume chip»** `)`. On the command bar select **Save**.
-
-   > [!TIP] What a stored PDF looks like
-   > After a run, the Note step's **Inputs** render `documentbody` as `%PDF-1.7` followed by what looks
-   > like corrupted text. That is the panel decoding base64 for display, and a correctly stored PDF is
-   > supposed to look like that. A value that does *not* begin `%PDF-` means the wrong token reached
-   > the field.
 
    ![The Note linked to the Resume row through Regarding](./assets/m07-7-5-11-note-regarding.png)
 
@@ -629,7 +629,7 @@ We can do the quick check without publishing anything and without sending any em
 
    ![Successful PDF filing workflow run](./assets/m07-7-6-8-filing-run-succeeded.png)
 
-1. Select the **Attach the resume as a note** node inside that run. Its **Inputs** show the attachment's file name and its decoded `%PDF-1.7…` bytes in **documentbody**, and its **Outputs** return an **annotationid** - so the PDF really was written to the **Notes** table and linked to the Resume row. Select **Remember this resume** and confirm it also shows **Succeeded**, because that step appended the Resume number, Note id, and file name to `ProcessedResumes` for the agent steps in the next mission.
+1. Select the **Attach the resume as a note** node inside that run. Inspect its **Inputs** for the attachment's file name, MIME type, **documentbody**, and Resume link, then inspect its **Outputs** for an **annotationid**. Confirm the resulting Note and readable PDF in the steps below. Select **Remember this resume** and confirm it also shows **Succeeded**, because that step appended the Resume number, Note id, and file name to `ProcessedResumes` for the agent steps in the next mission.
 
    ![The note step inputs and outputs inside the run](./assets/m07-7-6-9-note-run-details.png)
 
@@ -637,11 +637,11 @@ We can do the quick check without publishing anything and without sending any em
 
    ![The Resumes list with the newest row at the top](./assets/m07-7-6-10-hiring-hub-resumes-grid.png)
 
-1. Open that row. It holds the sender's address in **Source Email Address** and the email body in **Cover Letter**, and its **Resume Title** is the attachment's file name.
+1. Open that row. Confirm **Source Email Address** matches the sender and **Resume Title** matches the attachment's file name. **Cover Letter** stores the email body as HTML; the screenshot shows its opening markup. Scroll within the field to inspect the message text and compare it with the email you sent.
 
    ![The new Resume record created by the workflow](./assets/m07-7-6-11-hiring-hub-resume-record.png)
 
-1. Check the record's **All Notes** subgrid: the attached PDF is listed there as a note, named after the file.
+1. Check the record's **Attachments** subgrid: the attached PDF is listed there as a note, named after the file.
 
    ![Resume PDF listed in the Attachments subgrid](./assets/m07-7-6-12-resume-note-subgrid.png)
 

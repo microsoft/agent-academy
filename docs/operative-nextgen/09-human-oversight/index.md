@@ -5,7 +5,7 @@ prev:
 next:
   text: "Schedule Interviews with Work IQ"
   link: "/operative-nextgen/10-work-iq-scheduling"
-hide: true
+hide: false
 preview: true
 short-description: Add human review, alternate-flow handling and failure alerting to the autonomous intake workflow
 difficulty: 3
@@ -90,16 +90,10 @@ You end up with two ways to involve a human, and the difference is *who decides 
 
 Use the node when you can *name* the situation in advance, and the agent's request when you cannot. Avery's contradictory *Data Analyst* email is the second case, because no branch could have predicted it. Taylor's resume is neither, because its role history, PL-400 and pro-code skills map straight to Power Platform Developer with nothing to ask about.
 
-> [!IMPORTANT] Where the approval request lands
-> Both mechanisms email you an actionable card, but Focused Inbox does not place it consistently. Check
-> **Focused**, **Other** and **Junk** before concluding anything is stuck, because the run is
-> **waiting** and it will wait indefinitely. If the card's buttons do nothing select **Show content**
-> first - Outlook blocks the card's scripts until you do.
-
-<!-- Separate adjacent callouts for Markdownlint. -->
-**A waiting agent looks like a silent one.** An agent step publishes its activity log only once it **completes**, so an agent that is waiting on a
-human shows nothing at all. Do not cancel the run to "see what it's doing" - cancelling destroys the
-log you would need to diagnose it. Give it the answer it is waiting for instead.
+> [!NOTE] A working agent might make the workflow look like it is stuck!
+> An agent step publishes its activity log only once it **completes**, so an agent that is waiting on a
+> human shows nothing at all. Do not cancel the run to "see what it's doing" - cancelling destroys the
+> log you would need to diagnose it. Give it the answer it is waiting for instead.
 
 1. On the canvas, find the **Other** branch under the **Sort the email** node and select the **➕** button labeled **Add a step after Other**.
 
@@ -173,9 +167,9 @@ Right now the reviewer's answer is recorded and then thrown away - the run ends 
 
    ![The reviewer node with its add step control](./assets/m09-9-2-1-review-branch-plus.png)
 
-1. In the **Add** dialog, under **Actions**, select **If/Else**.
+1. In the **Add** dialog, search for `if`, then select **If/Else** under **Other**.
 
-   ![The Add dialog with If/Else listed under Actions](./assets/m09-9-2-1-add-dialog-ifelse.png)
+   ![The Add dialog searched for if with If/Else under Other](./assets/m09-9-2-1-add-dialog-ifelse.png)
 
 1. Select the new node, select its name at the top of the panel, and rename it to `Did the reviewer confirm it`. Press **Enter**.
 
@@ -185,14 +179,14 @@ Right now the reviewer's answer is recorded and then thrown away - the run ends 
 
    | Field | Value |
    | --- | --- |
-   | **Property** | Select ⚡ **Insert dynamic content** and choose the **Yes/No** output of **Triage an unclear email** |
+   | **Property** | Select ⚡ **Insert dynamic content** and choose the **Is this an application?** output of **Triage an unclear email** |
    | **Operator** | **Equals** *(leave as-is)* |
    | **Value** | `Yes` |
 
    ![The condition comparing the answer with the text Yes](./assets/m09-9-2-1-condition-expression.png)
 
    > [!IMPORTANT] Enter Yes, not true
-   > The output is *named* **Yes/No**, and the designer accepts a comparison against the boolean
+   > The input type is **Yes/No**, but its output is named **Is this an application?**. The designer accepts a comparison against the boolean
    > `true`. It looks right and publishes cleanly, but at runtime the node returns the **string**
    > `"Yes"` or `"No"`, so `equals(..., true)` is **always false** - including when the reviewer
    > answered Yes. Nothing errors, but the branch never fires and nothing tells you why. After a run,
@@ -222,11 +216,9 @@ So next we end those three branches deliberately, with an **End** node, so the r
    ![The Add dialog searched for End on the Else branch](./assets/m09-9-2-3-add-dialog-end.png)
 1. Leave **Run status** set to **Succeeded** - the default. Nothing went wrong, there was simply nothing to do.
 
-   ![The End node keeping its Succeeded run status](./assets/m09-9-2-3-end-run-status.png)
-
 1. Rename the node to `Stop - not an application`.
 
-   ![Stop node with Run status left as Succeeded](./assets/m09-9-2-3-end-succeeded.png)
+   ![Renamed Stop node and its Succeeded run status](./assets/m09-9-2-3-end-succeeded.png)
 
 1. Repeat those four steps twice more, on the **OutOfOffice** branch naming the node `Stop - auto-reply`, and on the **Junk** branch naming it `Stop - junk mail`.
 
@@ -239,7 +231,9 @@ All four branches now have somewhere to go:
 ```mermaid
 ---
 config:
-  look: neo
+   look: neo
+   flowchart:
+   useMaxWidth: true
 ---
 flowchart TB
   CL["Sort the email<br/>(Classify)"]
@@ -279,7 +273,7 @@ Next we answer **No** and watch the run stop, then we replay that run, answer **
 
 1. Open the mailbox you entered in **Assigned to** and find the *Request information* email. Check **Focused**, then **Other**, then **Junk**.
 
-   The card shows your **Title**, the **Message** with the sender and subject filled in, the heading **Yes/No**, two radio buttons and a **Submit** button.
+   The card shows your **Title**, the **Message** with the sender and subject filled in, the heading **Is this an application?**, two radio buttons and a **Submit** button.
 
 1. Select **No**, then select **Submit** on the card.
 
@@ -295,13 +289,19 @@ Next we answer **No** and watch the run stop, then we replay that run, answer **
 
 #### Now answer Yes
 
-1. On the **Activity** tab select **Select runs**.
+1. On the **Activity** tab, locate the run-selection checkboxes. **Select runs** selects every visible run, so leave it cleared.
+
+   ![Activity list with run selection controls](./assets/m09-9-3-3-select-runs.png)
 
 1. Tick **only** the run you just finished.
 
 1. Confirm the command reads **Resubmit 1 selected run**, then select it.
 
+   ![One original run selected for resubmission](./assets/m09-9-3-3-resubmit-selected.png)
+
    Resubmit replays the original trigger payload, attachments included, against the currently published definition - so you are testing the same email a second time.
+
+1. Open the new run and confirm **Triage an unclear email** is waiting for a response.
 
    ![The resubmitted run waiting on the reviewer again](./assets/m09-9-3-3-resubmitted-run.png)
 
@@ -394,9 +394,9 @@ First, look at the settings the connector already gives you. Every action has it
 
    ![The add control on the Process application failure edge](./assets/m09-9-5-2-process-application-plus.png)
 
-1. In the **Add** dialog, scroll the **Actions** group down past **If/Else**, **Switch** and **Loop**, and select **Scope**.
+1. In the **Add** dialog, search for `scope`, then select **Scope** under **Other**.
 
-   ![The Add dialog with Scope listed under Actions](./assets/m09-9-5-2-add-dialog-scope.png)
+   ![The Add dialog searched for scope with Scope under Other](./assets/m09-9-5-2-add-dialog-scope.png)
 
 1. Select the name **Scope** at the top of the panel, rename it to `Handle failure`, and press **Enter**.
 
@@ -455,9 +455,9 @@ Keep the catch as the **last** step on the branch. A step that runs after a **sk
 1. Catching the error is only half the job. You still want the run **recorded** as a failure, so it shows up in the Activity list, in run-history filters and in any monitoring built on run status.
 
    On the canvas, select **➕ Add a step after Alert - filing failed** - so the alert is sent *first*, and the run ends *after* it.
-1. In the **Add** dialog, under **Actions**, select **End**. The node is called **End**, not *Stop* or *Terminate* - searching for `terminate` returns only unrelated third-party connector actions.
+1. In the **Add** dialog, search for `end`, then select **End** under **Other**. The node is called **End**, not *Stop* or *Terminate* - searching for `terminate` returns only unrelated third-party connector actions.
 
-   ![The Add dialog with the End action selected](./assets/m09-9-5-5-add-dialog-end.png)
+   ![The Add dialog searched for end with End under Other](./assets/m09-9-5-5-add-dialog-end.png)
 
 1. Fill in the node as follows.
 
@@ -488,11 +488,13 @@ Now test the catch. You need a step inside **Process application** to fail while
    ![The Resume Title column before the catch test rewrites it](./assets/m09-9-5-1-resume-title-field.png)
 
 1. In **Resume Title**, remove the **Name** token, then select **Switch to expression mode** (`</>`).
-1. Enter the following expression and confirm it with **Add** or **Update**:
+1. Enter the following expression, then select **Switch to token picker** to commit it:
 
    ```text
    int('not-a-number')
    ```
+
+   ![Temporary Resume Title expression before committing the change](./assets/m09-9-5-5-temporary-expression.png)
 
    The expression is valid, so the designer saves and publishes it. At runtime, `not-a-number` cannot be converted to an integer. The filing action fails with `InvalidTemplate` before its Dataverse connector call begins.
 
@@ -504,9 +506,9 @@ Now test the catch. You need a step inside **Process application** to fail while
 
    The attachment is required because **Only with Attachments** is on - an email without a file never starts a run.
 
-   Do not describe the email as a test in the subject or body. **Sort the email** classifies what you write, and a body that announces itself as a test is classified as `Other`, which no branch handles - the run then sits on **Running** indefinitely instead of failing. The failure this lab is teaching comes from the expression above, not from the wording.
+   Use that application wording so **Sort the email** routes directly to **Application**. The failure this lab is testing comes from the expression above.
 
-1. Wait for the trigger to poll, then open **Activity** and select the newest run. The verified test completed in **16 seconds**.
+1. Wait for the trigger to poll, then open **Activity** and select the newest run.
 
    ![The catch test run reporting the failed processing scope](./assets/m09-9-5-5-catch-run-failed.png)
 
@@ -516,7 +518,7 @@ Now test the catch. You need a step inside **Process application** to fail while
 
 1. Select the failed **File resume in Dataverse** node and open **Run Details**.
 
-   It shows `InvalidTemplate` and explains that the `substring` parameters are out of range. **Inputs** and **Outputs** both say *No data available*, because expression evaluation failed before the connector ever received an input.
+   It shows `InvalidTemplate` because `int` cannot convert `not-a-number` to an integer. **Inputs** and **Outputs** both say *No data available*, because expression evaluation failed before the connector ever received an input.
 
    ![Run details for the failed resume filing step](./assets/m09-9-5-5-file-resume-run-details.png)
 
@@ -530,7 +532,15 @@ Now undo the break.
 
    ![File resume node reopened after the test](./assets/m09-9-5-5-file-resume-reopened.png)
 
-1. In **Resume Title**, remove the **int** expression and re-insert the **Name** token.
+1. In **Resume Title**, select **Switch to expression mode**, replace the **int** expression with the following expression, then select **Switch to token picker**:
+
+   ```text
+   items('For_each_attachment')?['name']
+   ```
+
+   ![Original attachment name expression ready to commit](./assets/m09-9-5-5-restored-expression.png)
+
+1. Check that **Resume Title** shows the **Name** token again.
 
    ![Resume Title restored to the Name token](./assets/m09-9-5-5-resume-title-restored.png)
 

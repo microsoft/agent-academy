@@ -5,7 +5,7 @@ prev:
 next:
   text: "Generate Documents with a Python Skill"
   link: "/operative-nextgen/06-document-skill"
-hide: true
+hide: false
 preview: true
 short-description: Read resumes, create linked Dataverse records, match candidates to open roles, and create Job Applications
 difficulty: 3
@@ -56,7 +56,7 @@ Whenever an agent handles files, decide which types you accept and how large the
 
 ## 🧠 Matching on live data {#matching-on-live-data}
 
-The matching skill tells the agent to read Dataverse before every recommendation. It calls the MCP `read_query` and `describe` actions to pull the open **Job Roles** and their weighted **Evaluation Criteria**, compares the resume with each criterion, and writes confirmed **Job Applications** with `create_record`.
+The **role-matching** skill reads Dataverse before every recommendation. It uses the MCP `read_query` and `describe` actions to retrieve the open **Job Roles** and their weighted **Evaluation Criteria**, then scores the resume against each criterion without changing records. The **application-handling** skill creates **Job Applications** with `create_record` after the user confirms which roles to apply for.
 
 > [!NOTE] This is different from "Knowledge"
 > The platform's **Knowledge** feature (what the *Add knowledge* dialog offers) means public websites, SharePoint, OneDrive, or uploaded files - ideal for policy documents, but read-only and snapshot-based. This mission does something different, working with **structured Dataverse records through the MCP tool**, so the agent can both **read** the current roles and criteria and **write** new applications. Use **Knowledge** when an agent should answer from documents, and the **Dataverse MCP server** when it needs live records it can query and update.
@@ -212,7 +212,7 @@ The **`role-matching` skill** applies the rubric above to every open role and sh
    Match Avery to the best open job role and give each role a score out of 100.
    ```
 
-   Compare the second result with the first. The numbers and reasoning can drift between runs, and that inconsistency is exactly what the rubric constrains:
+   Compare the second result with the first. The numbers and reasoning can drift between runs, and that inconsistency is exactly what the rubric constrains. If Preview cuts off the table's columns, select **History** and open the latest **Completed** conversation with source **Preview**. Confirm it contains the same question and scores before comparing:
 
    ![Second unconstrained role match ready for comparison](./assets/m05-5-4-1-unconstrained-match-comparison.png)
 
@@ -275,30 +275,34 @@ To fix the weights, arithmetic, and output structure, continue building the `rol
    - If a Dataverse read fails (permission, connection, timeout), STOP and say
      which step failed and why.
 
-   Identifiers: Resume = R#####, Candidate = C#####, Job Role = J#####.
+   Identifiers: Resume = R#####, Candidate = C#####, Job Role = J####.
    ```
 
    ![The role-matching skill's rubric instructions pasted into the editor](./assets/m05-5-4-3-role-matching-instructions.png)
 
-1. Select **Create**, then **Save** the agent. The Skills list now shows `role-matching` beside `resume-intake`:
+1. Select **Create**, then **Save** the agent. Wait for Save to finish, then refresh the browser page so Preview loads the saved skill. Confirm the Skills list shows `role-matching` beside `resume-intake`:
 
    ![The saved role-matching skill beside resume-intake](./assets/m05-5-4-4-role-matching-created.png)
 
-1. Run the match with a natural prompt. You don't describe the rubric because the `role-matching` skill does. In **Hiring Agent**, **Preview**, ask:
+1. Run the match, naming the skill to load. You don't describe the rubric because the `role-matching` skill does. In **Hiring Agent**, **Preview**, ask:
 
    ```text
-   Which open job roles best fit the candidate on resume R#####? Show your
-   scoring.
+   Use the role-matching skill. Which open job roles best fit the candidate
+   on resume R#####? Show your scoring.
    ```
 
-   Replace `R#####` with the Resume number returned by your intake run. The orchestrator loads **`role-matching`**, reads all five roles' criteria and weights through Dataverse MCP, and returns per-criterion evidence, points, totals, and a ranked recommendation:
+   Replace `R#####` with the Resume number returned by your intake run. Check the activity trace for **`role-matching`** and the Dataverse reads. The response should include per-criterion evidence, points, totals, and a ranked recommendation across all five roles.
+
+   A prompt that only asks for the best-fit roles can produce a generic 0-5 rating without loading the skill. If you tried that prompt first, use the explicit skill invocation above. Do not accept a result without the skill's **Level** and **Points** columns.
+
+   If the table extends beyond Preview's message area, select **History** and open the matching **Completed** Preview conversation. Check that **Criterion**, **Weight**, **Evidence**, **Level**, and **Points** are all visible in the saved response.
 
    ![Rubric match with weighted criteria and ranking](./assets/m05-5-4-5-rubric-role-match.png)
 
    What is reproducible is the *structure*, not the exact percentages - those depend on the resume:
-   - A table **per role** with one row per criterion, each showing an **evidence phrase**, an **evidence level**, and **points = factor × weight**.
+   - A table for the **top role(s)** with one row per criterion, each showing an **evidence phrase**, an **evidence level**, and **points = factor × weight**.
    - A **role total** equal to the sum of its points (each role's weights total 100).
-   - A **ranking** naming the recommended role and the points it lost.
+   - A **ranking of all roles** after scoring every role's criteria, naming the recommended role and the points it lost.
    - The weights, arithmetic, and table structure stay fixed. The model still judges each evidence level, so a borderline criterion and the resulting percentage can change on another run.
 
 > [!TIP] What the rubric fixes
@@ -371,12 +375,12 @@ The **role-matching** skill is a read-only skill. Creating the actual **Job Appl
      which step failed and why. End with a one-line summary of the applications
      created.
 
-   Identifiers: Application = A#####, Candidate = C#####, Resume = R#####, Job Role = J#####.
+   Identifiers: Application = A#####, Candidate = C#####, Resume = R#####, Job Role = J####.
    ```
 
    ![Application-handling instructions with confirmed-role and failure safeguards](./assets/m05-5-5-2-application-handling-instructions.png)
 
-1. Select **Create**, then **Save**. Confirm all three focused skills now appear together:
+1. Select **Create**, then **Save**. Wait for Save to finish, then refresh the browser page. Confirm all three focused skills now appear together:
 
    ![Hiring Agent with intake, matching, and application-handling skills](./assets/m05-5-5-3-build-42-three-skills.png)
 

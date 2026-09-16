@@ -5,7 +5,7 @@ prev:
 next:
   text: "Instructions, Skills and Dataverse MCP"
   link: "/operative-nextgen/02-instructions-skills-dataverse-mcp"
-hide: true
+hide: false
 preview: true
 short-description: Deploy the hiring data model and create your central orchestrator agent in the new Copilot Studio experience
 difficulty: 2
@@ -21,6 +21,12 @@ last-edited-date: 2026-08-12
 ---
 
 # 🚨 Mission 01: Establish the Hiring Hub {#mission-01-establish-the-hiring-hub}
+
+<script setup>
+import operativeSolutionUrl from './assets/Operative_3_0_0_0.zip?url';
+import jobRolesUrl from './assets/sample-data/job-roles.csv?url&no-inline';
+import evaluationCriteriaUrl from './assets/sample-data/evaluation-criteria.csv?url&no-inline';
+</script>
 
 <mission-meta />
 
@@ -71,10 +77,15 @@ The **Hiring Agent** coordinates the process and acts as the central orchestrato
 
 Both agents use the same Dataverse data through the MCP server, keeping their answers consistent:
 
+<!-- markdownlint-disable-next-line MD033 -->
+<div class="course-diagram-scroll" tabindex="0" role="region" aria-label="Operative agents and shared data diagram">
+
 ```mermaid
 ---
 config:
-  look: neo
+   look: neo
+   flowchart:
+      useMaxWidth: false
 ---
 flowchart TB
   subgraph People["People"]
@@ -110,6 +121,8 @@ flowchart TB
   DV:::data
 ```
 
+</div>
+
 ::: details 🔄 Coming from the classic Operative course?
 The biggest change is how you describe what an agent does. In the classic course, behavior was built as a tree of **topics** - each one a set of trigger phrases and an authored path through the conversation. The Powered by GitHub Copilot experience has no topics at all. You describe the agent's job in plain language in **Instructions**, and package the procedures you want it to follow repeatably as **skills**, which the agent loads when a request matches.
 
@@ -140,9 +153,9 @@ The rest of the course depends on one environment containing the hiring tables, 
 
 Before the agent can read or write hiring data, its Dataverse tables and the Hiring Hub app need to exist in your environment.
 
-1. Open **[Copilot Studio (new experience)](https://copilotstudio.preview.microsoft.com)**. Confirm the **New experience** toggle at the top of the page is turned on, then check the **environment picker** at the **bottom of the left navigation** and confirm it names your course environment. If it shows a different one, select the picker and switch before going any further.
+1. Open **[Copilot Studio (new experience)](https://copilotstudio.preview.microsoft.com)**. Confirm the home page shows **Agent** and **Workflow** cards labeled **GitHub Copilot**. Expand the left navigation, then check the **environment picker** at the bottom and confirm it names your course environment. If it shows a different one, select the picker and switch before going any further.
 
-   ![Copilot Studio open in the course environment](./assets/m01-1-1-1-course-environment-home.png)
+   ![GitHub Copilot creation cards and environment picker](./assets/m01-1-1-1-course-environment-home.png)
 
    > [!WARNING] Always check your environment first
    > Get into the habit of checking the picker before you follow any instruction - the rest of the
@@ -152,15 +165,15 @@ Before the agent can read or write hiring data, its Dataverse tables and the Hir
 
 1. At the bottom of the left navigation, select **More**.
 
-   ![Explore menu open in Copilot Studio](./assets/m01-1-1-2-solutions-nav.png)
+   ![Copilot Studio home with More highlighted](./assets/m01-1-1-2-solutions-nav.png)
 
 1. Under **Explore**, select **Solutions**. It opens in a new browser tab.
 
-   ![Solutions area open in the course environment](./assets/m01-1-1-3-solutions-open.png)
+   ![Explore menu with the Solutions option highlighted](./assets/m01-1-1-3-solutions-open.png)
 
 1. Download the prepared solution (`Operative_3_0_0_0.zip`):
 
-   <action-button href="https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/operative-nextgen/01-get-started/assets/Operative_3_0_0_0.zip" label="Download the Operative solution" icon="📦" />
+   <action-button :href="operativeSolutionUrl" label="Download the Operative solution" icon="📦" />
 
    When the download finishes, select **Import solution** on the command bar.
 
@@ -210,7 +223,10 @@ Before the agent can read or write hiring data, its Dataverse tables and the Hir
 
 The matching and interview-prep missions need **Job Roles** and their weighted **Evaluation Criteria**. Download the two CSVs - the same example data used by the original Operative course:
 
-<download-files path="operative-nextgen/01-get-started/assets/sample-data" label="Download sample data" />
+<!-- markdownlint-disable MD033 -->
+- <a :href="jobRolesUrl" download="job-roles.csv">Download job-roles.csv</a>
+- <a :href="evaluationCriteriaUrl" download="evaluation-criteria.csv">Download evaluation-criteria.csv</a>
+<!-- markdownlint-enable MD033 -->
 
 Now import the Job Role sample data. Follow these steps:
 
@@ -279,7 +295,7 @@ Now import the Evaluation Criteria sample data. Follow these steps:
 
 With the data layer in place, we'll create the Hiring Agent that later missions will equip with skills, tools, a connected specialist, and a workflow.
 
-1. Go to **[Copilot Studio (new experience)](https://copilotstudio.preview.microsoft.com)** and make sure the bottom-left **environment picker** shows the same environment. Confirm the **New experience** toggle is **on**.
+1. Go to **[Copilot Studio (new experience)](https://copilotstudio.preview.microsoft.com)**. Expand the left navigation and make sure the bottom-left **environment picker** shows the same environment.
 
    ![Copilot Studio home in course environment](./assets/m01-1-3-1-hiring-agent-home.png)
 
@@ -354,7 +370,7 @@ With the data layer in place, we'll create the Hiring Agent that later missions 
 
 1. Close **Settings**, then select **Save**. The URL changes to include the new agent's id - your **Hiring Agent** now exists in the **Operative** solution.
 
-   ![Saved Hiring Agent on permanent Build canvas](./assets/m01-1-3-7-hiring-agent-saved.png)
+   ![Agent settings with Close and Save highlighted](./assets/m01-1-3-7-hiring-agent-saved.png)
 
 1. Before going any further we need to confirm the agent behaves as configured, so select the **Preview** tab and ask:
 
@@ -392,7 +408,7 @@ Mission 01 is complete. You now have the course foundation in place:
 
 ## 📚 Tactical Resources {#tactical-resources}
 
-🔗 [Create an agent in Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/authoring-first-bot)
+🔗 [Start building agents powered by GitHub Copilot](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/authoring-first-bot)
 
 🔗 [Microsoft Dataverse documentation](https://learn.microsoft.com/power-apps/maker/data-platform)
 

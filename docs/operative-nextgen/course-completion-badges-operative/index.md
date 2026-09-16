@@ -2,9 +2,9 @@
 prev:
   text: "Evaluate, Publish, and Monitor Your Agent"
   link: "/operative-nextgen/11-publish-and-monitor"
-hide: true
+hide: false
 preview: true
-short-description: Validate your completed Operative work and claim your badge
+short-description: Review the course completion requirements for your Operative badge
 difficulty: 1
 codename: OPERATION COURSE COMPLETION
 time: 5
@@ -24,7 +24,7 @@ last-edited-date: 2026-09-07
 
 ## 🎯 Mission Brief {#mission-brief}
 
-You have completed the Operative path. This final page verifies your course work and records the details needed to issue your badge.
+You have completed the Operative path. Use this checklist to review the work required for your badge.
 
 ## 🏅 Secure Your Operative Badge {#secure-your-operative-badge}
 
@@ -60,11 +60,11 @@ Star the **[Agent Academy GitHub repository](https://github.com/microsoft/agent-
 
 ### 2. Complete the badge validation form {#complete-the-badge-validation-form}
 
-Complete the **[Operative Badge Validation Form](https://aka.ms/agent-academy-operative/form)**. The form confirms your course work, collects feedback, and records the email address used to issue the badge.
+Complete the [Operative badge validation form](https://aka.ms/agent-academy/operative-nextgen/form).
 
 ### 3. Sign in to the Global AI Community {#sign-in-to-the-global-ai-community}
 
-Create or sign in to your **[Global AI Community account](https://globalai.community/auth/login)** using the same email address you enter in the validation form.
+Create or sign in to your **[Global AI Community account](https://globalai.community/auth/login)**. Use this account's email address in the badge validation form.
 
 > [!IMPORTANT] Use the same email address
 > Your validation form and Global AI Community account must use the same email address or the badge cannot be delivered.

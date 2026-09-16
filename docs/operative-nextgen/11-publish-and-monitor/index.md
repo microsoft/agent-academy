@@ -5,7 +5,7 @@ prev:
 next:
    text: "Securing Your Operative Badge"
    link: "/operative-nextgen/course-completion-badges-operative"
-hide: true
+hide: false
 preview: true
 short-description: Run your evaluation sets, publish to Microsoft 365 Copilot and Teams, share the agent, then watch real sessions in Monitor
 difficulty: 3
@@ -14,7 +14,7 @@ time: 50
 tags:
   - evaluation
   - compliance
-products: [copilot-studio, dataverse, teams, m365-copilot]
+products: [copilot-studio, dataverse, teams, microsoft-365-copilot]
 industries:
   - hr
 created-date: 2026-01-14
@@ -42,6 +42,11 @@ In this mission, you'll learn:
 ## 🏗️ What you built {#what-you-built}
 
 ```mermaid
+---
+config:
+   flowchart:
+   useMaxWidth: true
+---
 flowchart LR
    MAIL["Inbound email"] --> WF["Intake Workflow"]
    WF --> HA
@@ -108,7 +113,7 @@ The previous missions established three evaluation lineages. Run all three befor
 
 1. Open the **Hiring Agent**, go to **Evaluate**, and open **Hiring Agent baseline**. Confirm it contains six cases and its saved configuration is **Single response**, **Compare meaning**, and **70/100**.
 
-   ![Interview Agent - New evaluation configuration](./assets/m11-11-1-1-build-26-evaluate-landing.png)
+   ![Hiring Agent baseline configuration with six test cases](./assets/m11-11-1-1-build-26-evaluate-landing.png)
 
 1. Confirm the connected user profile, run all six cases, and investigate any **failed test** before continuing.
 
@@ -130,7 +135,7 @@ The previous missions established three evaluation lineages. Run all three befor
 
 1. Read the AI Safety **Evaluation summary**. All eleven cases must pass and the score must be at least **70%**.
 
-   ![One conversation result in detail](./assets/m11-11-1-9-evaluation-case-detail.png)
+   ![Interview Agent AI Safety summary with eleven passing cases](./assets/m11-11-1-9-evaluation-case-detail.png)
 
 Do not publish unless all three suites are green. Read a failed case's actual and expected responses before deciding whether the agent or the test needs to change.
 
@@ -144,7 +149,7 @@ So far, every case in both baselines answers from the agent's own instructions, 
 
 A tool case is different. It runs against a real system, as a real identity, over real records, so it can fail for reasons that have nothing to do with the agent. Before you write one, pin down four things:
 
-| Pin down | Reason |
+| Tool | Reason |
 | --- | --- |
 | **Which identity runs it** | An evaluation calls tools as the account selected under **User profile**, not as you. That account needs its own working connection |
 | **Which records it reads** | Name the exact rows and the state you expect them in. A case that reads "the first job role" breaks the day someone adds one |
@@ -231,7 +236,7 @@ The **Hiring Agent** is already published - you published it in Mission 06 so it
 
    ![Teams and Microsoft 365 Add channel confirmation](./assets/m11-11-4-3-channel-confirmation.png)
 
-1. Select **View details for Teams + Microsoft 365** to open the **Microsoft 365 and Microsoft Teams** dialog. It carries four tabs: **Availability**, **About info**, **Use and share** and **App manifest**.
+1. The **Microsoft 365 and Microsoft Teams** dialog has four tabs: **Availability**, **About info**, **Use and share** and **App manifest**.
 
    ![Published agent channel details dialog](./assets/m11-11-4-4-channel-details.png)
 
@@ -241,7 +246,7 @@ The **Hiring Agent** is already published - you published it in Mission 06 so it
 
    ![Teams and Microsoft 365 publication and Copilot availability enabled](./assets/m11-11-4-5-channel-prepared.png)
 
-1. Before you publish, select **About info** to check what users will actually see in the store - the **name**, **descriptions**, **icon**, **disclaimer** and **suggested prompts**. This is the information a person uses to decide whether to install the agent, so review it before anyone finds it.
+1. Before you publish, select **About info** and review the **Short description**, **Long description**, **Show an agent disclaimer in Microsoft 365 Copilot**, **Developer name**, **Website**, and **Terms of use** fields.
 
    ![About info for the Agent Store listing](./assets/m11-11-4-6-about-info.png)
 
@@ -291,8 +296,6 @@ Sharing with a colleague or group is optional for this lab. You can keep access 
 
 1. Optionally, in **Add a name, group, or email**, type a colleague or security group and select them from the directory. They're added under **People who can use the agent** - you (the **Owner**) are already listed and role-locked.
 
-   ![The Share dialog with its people picker and access list](./assets/m11-11-5-2-share-dialog.png)
-
 1. Decide **organization-wide** access. Under **Organization**, **Everyone in your organization**, select the role control to choose between **No permissions, unless specified** (default - only invited people) and **End user access** (anyone in the org can use it and manage their own connections).
 
    ![The organization access menu with both role options](./assets/m11-11-5-3-share-roles.png)
@@ -337,10 +340,13 @@ Now pretend that we are shipping a second release, then run the main hiring chai
 
    ```text
    I confirm job role J1004. Create the application for candidate «candidate number»
-   using resume «resume number».
+   using resume «resume number». If this candidate already has an application for
+   J1004, I confirm updating that application's Resume lookup to «resume number».
+   Reuse its Application Number and do not create a duplicate. Verify the saved
+   Candidate, Resume, and Job Role links before reporting the Application Number.
    ```
 
-1. Confirm that the agent reports the new Job Application number (A#####).
+1. Confirm that the agent reports the Job Application number (A#####). A candidate used in an earlier mission may already have an application for this role. In the **Hiring Hub**, open the reported application and check that its **Candidate**, **Resume**, and **Job Role** lookups match the numbers confirmed above. The **Resume** must be the one returned by this intake before we generate the document.
 
 1. Now ask for the interview preparation, so the connected agent and the document skill work from a completed application:
 
@@ -351,7 +357,7 @@ Now pretend that we are shipping a second release, then run the main hiring chai
 
 1. Watch the **connected Interview Agent** prepare questions and the **Python document skill** return the **`.docx`**.
 
-1. Verify in the **Hiring Hub** app that the Candidate, Resume, and Job Application rows exist and are linked - the same records, now created from M365 Copilot.
+1. Verify in the **Hiring Hub** app that the Candidate, Resume, and Job Application rows remain linked, and check that the downloaded document names the reported application and uses the current resume.
 
 1. Email the monitored mailbox a resume and confirm the **autonomous intake workflow** files a row and posts the **Teams card**. Open the workflow's **Activity** tab and select the newest run to inspect it node by node.
 
