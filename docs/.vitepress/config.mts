@@ -21,19 +21,32 @@ const recruitNextGenHome =
   recruitGroup?.paths.find(
     (coursePath) => coursePath.root === "/recruit-nextgen/"
   )?.home ?? "/recruit-nextgen/";
+const operativeGroup = coursePathGroups.find(
+  (group) => group.hub === "/operative/"
+);
+const operativeStandardHome =
+  operativeGroup?.paths.find((coursePath) => coursePath.root === "/operative/")
+    ?.home ?? "/operative/standard/";
+const operativeNextGenHome =
+  operativeGroup?.paths.find(
+    (coursePath) => coursePath.root === "/operative-nextgen/"
+  )?.home ?? "/operative-nextgen/";
 
 export default defineConfig({
   title: "Agent Academy",
   base: "/agent-academy/",
   cleanUrls: true,
   ignoreDeadLinks: [/\.docx$/],
-  // While the switcher is off the standard course keeps /recruit/ and the chooser stays parked.
-  rewrites: recruitExperienceSwitcherEnabled
-    ? {
-        "recruit/index.md": "recruit/standard/index.md",
-        "recruit/choose/index.md": "recruit/index.md",
-      }
-    : {},
+  rewrites: {
+    ...(recruitExperienceSwitcherEnabled
+      ? {
+          "recruit/index.md": "recruit/standard/index.md",
+          "recruit/choose/index.md": "recruit/index.md",
+        }
+      : {}),
+    "operative/index.md": "operative/standard/index.md",
+    "operative/choose/index.md": "operative/index.md",
+  },
   head: [
     ["link", { rel: "icon", href: "/agent-academy/logo.png" }],
     [
@@ -221,52 +234,114 @@ export default defineConfig({
             collapsed: true,
             items: [
               {
-                text: "Get started with the Hiring Agent",
-                link: "/operative/01-get-started/",
+                text: "Standard Harness",
+                link: operativeStandardHome,
+                collapsed: true,
+                items: [
+                  {
+                    text: "Get started with the Hiring Agent",
+                    link: "/operative/01-get-started/",
+                  },
+                  {
+                    text: "Authoring Agent Instructions",
+                    link: "/operative/02-agent-instructions/",
+                  },
+                  {
+                    text: "Make your agent multi-agent ready",
+                    link: "/operative/03-multi-agent/",
+                  },
+                  {
+                    text: "Automate your agent with Triggers",
+                    link: "/operative/04-automate-triggers/",
+                  },
+                  {
+                    text: "Understanding Agent Models",
+                    link: "/operative/05-model-selection/",
+                  },
+                  {
+                    text: "Content Moderation and AI Safety",
+                    link: "/operative/06-ai-safety/",
+                  },
+                  {
+                    text: "Extracting Resume Contents",
+                    link: "/operative/07-multimodal-prompts/",
+                  },
+                  {
+                    text: "Prompts - Dataverse Grounding",
+                    link: "/operative/08-dataverse-grounding/",
+                  },
+                  {
+                    text: "Generating an Interview Prep Document",
+                    link: "/operative/09-document-generation/",
+                  },
+                  {
+                    text: "Integrate with MCP Servers",
+                    link: "/operative/10-mcp/",
+                  },
+                  {
+                    text: "Obtain User Feedback with Adaptive Cards",
+                    link: "/operative/11-obtain-user-feedback/",
+                  },
+                  {
+                    text: "Course Completion Badge",
+                    link: "/operative/course-completion-badges-operative/",
+                  },
+                ],
               },
               {
-                text: "Authoring Agent Instructions",
-                link: "/operative/02-agent-instructions/",
-              },
-              {
-                text: "Make your agent multi-agent ready",
-                link: "/operative/03-multi-agent/",
-              },
-              {
-                text: "Automate your agent with Triggers",
-                link: "/operative/04-automate-triggers/",
-              },
-              {
-                text: "Understanding Agent Models",
-                link: "/operative/05-model-selection/",
-              },
-              {
-                text: "Content Moderation and AI Safety",
-                link: "/operative/06-ai-safety/",
-              },
-              {
-                text: "Extracting Resume Contents",
-                link: "/operative/07-multimodal-prompts/",
-              },
-              {
-                text: "Prompts - Dataverse Grounding",
-                link: "/operative/08-dataverse-grounding/",
-              },
-              {
-                text: "Generating an Interview Prep Document",
-                link: "/operative/09-document-generation/",
-              },
-              {
-                text: "Integrate with MCP Servers",
-                link: "/operative/10-mcp/",
-              },
-              {
-                text: "Obtain User Feedback with Adaptive Cards",
-                link: "/operative/11-obtain-user-feedback/",
-              },
-              {
-                text: "Course Completion Badge",
-                link: "/operative/course-completion-badges-operative/",
+                text: "GitHub Copilot harness",
+                link: operativeNextGenHome,
+                collapsed: true,
+                items: [
+                  {
+                    text: "Establish the Hiring Hub",
+                    link: "/operative-nextgen/01-get-started/",
+                  },
+                  {
+                    text: "Instructions, Skills and Dataverse MCP",
+                    link: "/operative-nextgen/02-instructions-skills-dataverse-mcp/",
+                  },
+                  {
+                    text: "Add a Connected Interview Agent",
+                    link: "/operative-nextgen/03-connected-agent/",
+                  },
+                  {
+                    text: "Model, Response and Safety",
+                    link: "/operative-nextgen/04-model-response-and-safety/",
+                  },
+                  {
+                    text: "Resume Intake, Matching and Applications",
+                    link: "/operative-nextgen/05-intake-matching-applications/",
+                  },
+                  {
+                    text: "Generate Documents with a Python Skill",
+                    link: "/operative-nextgen/06-document-skill/",
+                  },
+                  {
+                    text: "Automate Resume Intake with a Workflow",
+                    link: "/operative-nextgen/07-workflow-trigger/",
+                  },
+                  {
+                    text: "Add Agents to a Workflow",
+                    link: "/operative-nextgen/08-workflow-agents/",
+                  },
+                  {
+                    text: "Human Oversight and Alternative Flows",
+                    link: "/operative-nextgen/09-human-oversight/",
+                  },
+                  {
+                    text: "Schedule Interviews with Work IQ",
+                    link: "/operative-nextgen/10-work-iq-scheduling/",
+                  },
+                  {
+                    text: "Evaluate, Publish, and Monitor Your Agent",
+                    link: "/operative-nextgen/11-publish-and-monitor/",
+                  },
+                  {
+                    text: "Course Completion Badge",
+                    link: "/operative-nextgen/course-completion-badges-operative/",
+                  },
+                ],
               },
             ],
           },

@@ -5,7 +5,7 @@ prev:
 next:
   text: "Establish the Hiring Hub"
   link: "/operative-nextgen/01-get-started"
-hide: true
+hide: false
 preview: true
 lastUpdated: false
 ---
@@ -23,7 +23,7 @@ You'll start by importing the hiring data model and creating a new **Hiring Agen
 Everything here runs on the **GitHub Copilot harness** - the runtime that gives an agent its orchestrator, its tool-calling behavior, and its reasoning loop. Copilot Studio also offers a **standard harness**, which the classic Operative missions were built upon, and a **GitHub Copilot harness**; this course builds on the GitHub Copilot harness throughout.
 
 > [!INFO] Coming from the classic Operative course?
-> This edition covers the **GitHub Copilot harness** at `https://copilotstudio.preview.microsoft.com` - keep the **New experience** toggle **on** throughout every mission. It reuses the same hiring scenario as the [classic Agent Academy Operative course](../operative/index.md) on purpose: building the same system twice is the clearest way to see what the new building blocks replace. Watch out for collapsible sections titled *Coming from the classic Operative course?* - they give you insights into the differences between the standard harness and the GitHub Copilot harness. If you've never used the classic experience, you can skip those sections without missing any required steps.
+> This edition covers the **GitHub Copilot harness** at `https://copilotstudio.preview.microsoft.com`. The home page shows **Agent** and **Workflow** cards labeled **GitHub Copilot**. It reuses the same hiring scenario as the [classic Agent Academy Operative course](../operative/index.md) on purpose: building the same system twice is the clearest way to see what the new building blocks replace. Watch out for collapsible sections titled *Coming from the classic Operative course?* - they give you insights into the differences between the standard harness and the GitHub Copilot harness. If you've never used the classic experience, you can skip those sections without missing any required steps.
 
 <!-- Separate adjacent callouts for Markdownlint. -->
 > [!WARNING] This course consumes Copilot Credits
@@ -67,7 +67,7 @@ Each mission extends the same hiring system, so the agent, skills, data, and wor
 | `08` | 🤖 [Add Agents to a Workflow](./08-workflow-agents/index.md) | Put an inline agent and your published Hiring Agent inside the pipeline, then notify Teams |
 | `09` | 🧯 [Human Oversight and Handling Alternative Flows](./09-human-oversight/index.md) | **Human review**, alternate flows, observability and a regression pass |
 | `10` | 📅 [Schedule Interviews with Work IQ](./10-work-iq-scheduling/index.md) | Turn on **Work IQ** so the Interview Agent can read calendars and book a supervised meeting |
-| `11` | 🏅 [Evaluate, Publish, and Monitor Your Agent](./11-publish-and-monitor/index.md) | Evaluation sets, publishing to **Microsoft 365 Copilot** and **Teams**, and **Monitor** |
+| `11` | 📊 [Evaluate, Publish, and Monitor Your Agent](./11-publish-and-monitor/index.md) | Evaluation sets, publishing to **Microsoft 365 Copilot** and **Teams**, and **Monitor** |
 | `12` | 🏅 [Secure Your Operative Badge](./course-completion-badges-operative/index.md) | Validate your completed Operative work and claim your badge |
 
 > [!NOTE]

@@ -56,6 +56,38 @@ export const coursePathGroups: CoursePathGroup[] = [
       },
     ],
   },
+  {
+    course: "Operative",
+    hub: "/operative/",
+    paths: [
+      {
+        label: "Standard Harness",
+        description:
+          "Build a multi-agent hiring system with the Standard Harness in Copilot Studio",
+        home: "/operative/standard/",
+        root: "/operative/",
+        tag: "Topic-based",
+        highlights: [
+          "12 missions",
+          "Connected agents, prompts, and agent flows",
+          "Best for structured hiring workflows with authored logic",
+        ],
+      },
+      {
+        label: "GitHub Copilot harness",
+        description:
+          "Build the hiring system with instructions, skills, tools, and workflows",
+        home: "/operative-nextgen/",
+        root: "/operative-nextgen/",
+        tag: "Instruction-driven",
+        highlights: [
+          "12 missions",
+          "Dataverse MCP, connected agents, and Python skills",
+          "Best for reasoning-heavy, multi-step hiring workflows",
+        ],
+      },
+    ],
+  },
 ];
 
 export function findGroupForPath(relativePath: string) {

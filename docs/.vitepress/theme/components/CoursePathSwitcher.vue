@@ -8,7 +8,11 @@ const route = useRoute();
 
 function normalizeRoutePath(path: string) {
   const [pathname] = path.split(/[?#]/);
-  const normalizedPathname = pathname.replace(/\/index(?:\.html)?$/, "/");
+  const base = withBase("/");
+  const relativePathname = pathname.startsWith(base)
+    ? `/${pathname.slice(base.length)}`
+    : pathname;
+  const normalizedPathname = relativePathname.replace(/\/index(?:\.html)?$/, "/");
   return normalizedPathname.endsWith("/")
     ? normalizedPathname
     : `${normalizedPathname}/`;
@@ -33,7 +37,7 @@ function selectPath(path: CoursePath) {
 
 <template>
   <nav
-    v-if="recruitExperienceSwitcherEnabled && activeGroup && isCourseOverview"
+    v-if="activeGroup && isCourseOverview && (activeGroup.course !== 'Recruit' || recruitExperienceSwitcherEnabled)"
     class="course-path-switcher"
     :aria-label="`${activeGroup.course} course path`"
   >

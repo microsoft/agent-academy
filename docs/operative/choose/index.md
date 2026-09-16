@@ -36,7 +36,7 @@ Copilot Studio runs agents on a **harness**: the runtime that decides when to ca
 | **You design** | Connected agents, prompts, agent flows, and Adaptive Cards | Instructions, skills, MCP tools, connected agents, and workflows |
 | **The agent follows** | Your instructions, with prompts and flows defining repeatable operations | A plan it reasons out using skills and tools, with workflows controlling defined steps |
 | **Best for** | Structured hiring workflows with authored logic | Reasoning-heavy, multi-step hiring workflows |
-| **Authoring surface** | Standard Harness in Copilot Studio | **New experience** toggle in Copilot Studio |
+| **Authoring surface** | Standard Harness in Copilot Studio | New Copilot Studio experience |
 
 > [!TIP]
 > Start with the **Standard Harness** if you want to build with prompts, agent flows, and Adaptive Cards. Start with the **GitHub Copilot harness** if you want to build with skills, MCP tools, and workflows in the new experience.
