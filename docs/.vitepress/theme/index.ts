@@ -13,6 +13,8 @@ import PreviewBanner from "../plugins/preview-banner/PreviewBanner.vue";
 import AnalyticsTag from "../plugins/analytics-tag/AnalyticsTag.vue";
 import DownloadFiles from "../plugins/download-files/DownloadFiles.vue";
 import ActionButton from "../plugins/action-button/ActionButton.vue";
+import CourseCredits from "../plugins/credits/CourseCredits.vue";
+import MissionCredits from "../plugins/credits/MissionCredits.vue";
 import SessionSchedule from "./components/SessionSchedule.vue";
 import VideoLibrary from "./components/VideoLibrary.vue";
 import WorkshopsPage from "./components/WorkshopsPage.vue";
@@ -40,6 +42,8 @@ export default {
     app.component("analytics-tag", AnalyticsTag);
     app.component("download-files", DownloadFiles);
     app.component("action-button", ActionButton);
+    app.component("course-credits", CourseCredits);
+    app.component("mission-credits", MissionCredits);
     app.component("SessionSchedule", SessionSchedule);
     app.component("VideoLibrary", VideoLibrary);
     app.component("WorkshopsPage", WorkshopsPage);
