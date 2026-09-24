@@ -66,6 +66,7 @@ short-description: 'A concise description of this mission'
 difficulty: 1
 codename: OPERATION AI AGENT DECODE
 time: 30
+credits: 0
 tags:
   - fundamentals
 products:
@@ -87,6 +88,7 @@ last-edited-date: 2026-03-13
 | `difficulty` | number (1–5) | Yes | Difficulty level. Recruit = 1, Operative = 2, Commander = 3+. |
 | `codename` | string | Yes | Thematic operation name in ALL CAPS (for example `OPERATION SECRET DIRECTIVE`). |
 | `time` | number | Yes | Estimated completion time in minutes. |
+| `credits` | number or `[min, max]` | No | Non-binding estimate of the Copilot Credits the mission consumes, written as a `[min, max]` range (for example `[200, 600]`). Use `0` for missions that only involve reading, tenant setup, or manual configuration. Omit the field entirely when the course doesn't consume Copilot Credits. |
 | `tags` | string[] | Yes | Array of tag slugs from `docs/.vitepress/data/tags.json`. |
 | `products` | string[] | Yes | Array of product slugs from `docs/.vitepress/data/products.json`. |
 | `industries` | string[] | Yes | Array of industry slugs from `docs/.vitepress/data/industries.json`. |
@@ -159,6 +161,9 @@ Next up is [Mission NN+1](../next-mission/index.md): Next Mission Title
 ### Key rules
 
 - The `<mission-meta />` component renders the codename, difficulty stars, time estimate, and product/tag/industry pills automatically from the frontmatter. Place it directly after the H1 title.
+- The `<mission-credits />` component renders a mission's `credits` range in a callout box. Place it directly under `<mission-meta />` on every mission of a course that consumes Copilot Credits.
+- The `<course-credits section="course-slug" />` component sums both ends of the `credits` range across every mission in a course. Place it on the course overview page (`docs/<course>/index.md`). It accepts optional markdown slot content for course-specific context about why the path consumes credits. Both boxes carry a short note explaining the estimate is non-binding.
+- Missions with a non-zero `credits` value must include a `## 🪙 Copilot Credits Estimate` section, placed at the end of the mission directly before Tactical Resources. The `<mission-credits />` box links to its `#copilot-credits-estimate` anchor. It explains how the range was derived with a per-activity breakdown table, so the estimate is auditable rather than arbitrary.
 - Always put theory (concept explanation) **before** the corresponding lab.
 - Use H2 (`##`) for top-level labs: `## Lab 1: Title`.
 - Use H3 (`###`) for sub-labs: `### Lab 1.1: Sub-title`.
