@@ -12,6 +12,7 @@ difficulty: 1
 codename: OPERATION CTRL-ALT-PACKAGE
 time: 45
 harness: github-copilot
+credits: 0
 tags:
   - solutions
 products:
@@ -20,11 +21,13 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-08-05
+last-edited-date: 2026-08-24
 ---
 # 🚨 Mission 03: Creating a Solution for Your Agent {#mission-03-creating-a-solution-for-your-agent}
 
 <mission-meta />
+
+<mission-credits />
 
 ## 🎯 Mission Brief {#mission-brief}
 

@@ -42,8 +42,11 @@ To complete all missions, you'll need:
 - **Copilot Credits** available in your tenant
 - Optional: Basic knowledge of SharePoint, Power Platform, or Power Fx
 
-> [!IMPORTANT] This path consumes Copilot Credits
-> Agents and workflows on the GitHub Copilot harness use **Copilot Credits** for usage-based billing during LLM-powered creation and runtime execution. The billing exception available to licensed Microsoft 365 Copilot users in authenticated employee scenarios doesn't apply here, so make sure your environment has credit capacity before you start. [Mission 09](/recruit-nextgen/09-understanding-licensing/) covers this in detail.
+<course-credits section="recruit-nextgen">
+
+Agents and workflows on the GitHub Copilot harness use **Copilot Credits** for usage-based billing during LLM-powered creation and runtime execution. The billing exception available to licensed Microsoft 365 Copilot users in authenticated employee scenarios doesn't apply here, so make sure your environment has credit capacity before you start. [Mission 09](/recruit-nextgen/09-understanding-licensing/) covers this in detail.
+
+</course-credits>
 
 The [Course Setup](/recruit-nextgen/00-course-setup/) mission walks you through getting these in place.
 
