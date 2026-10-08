@@ -17,7 +17,7 @@ products: [copilot-studio, dataverse]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-08-13
+last-edited-date: 2026-10-06
 ---
 
 # 🚨 Mission 03: Add a Connected Interview Agent {#mission-03-add-a-connected-interview-agent}
@@ -268,9 +268,16 @@ With the specialist published and available for connections, we'll add it to the
    > strictly about **preparing interviewers**, and the orchestrator delegates only genuine interview-prep
    > work while handling data and matching itself.
 
-1. Select **Connect**, then select **Save**. The Interview Agent now appears under **Connected agents**. Keep the Hiring Agent as a saved draft while you test this connection in Preview.
+1. Select **Connect**, then select **Save**. The Interview Agent now appears under **Connected agents**.
 
     ![Interview Agent listed under Connected agents](./assets/m03-3-3-5-build-25-connected-added.png)
+
+   > [!NOTE]
+   > The **Interview Agent** must be published because a different agent - the Hiring Agent - calls it.
+   > The Hiring Agent does not need to be published to test its own newly saved connection in Preview.
+   > Saved changes can take a variable amount of time to appear. If the connection is not available
+   > after a couple of turns, start a **New chat**, refresh the browser, and reopen the Hiring Agent.
+   > Do not publish the Hiring Agent merely to make this Preview test pass.
 
 ### 3.4 Test multi-agent collaboration
 
@@ -370,7 +377,7 @@ Like the Hiring Agent's baseline in Mission 02, this first set asks the speciali
    | --- | --- | --- |
    | 1 | Who are you, and what do you help interviewers with? | I am the Interview Agent. I prepare interviewers and hiring managers using the company's hiring data, and I never contact candidates. |
     | 2 | What identifier formats do you use for resumes, candidates, applications, and job roles? | Resume numbers use R#####, Candidate numbers use C#####, Application numbers use A#####, and Job Role numbers use J####. |
-   | 3 | What do you do when required information is missing or the hiring data does not support an answer? | I ask a clarifying question when required information is missing, ground every answer in the hiring data, and never invent or guess facts. |
+   | 3 | In one concise sentence, explain how you handle missing required information and answers not supported by hiring data. | I ask a clarifying question when required information is missing, ground every answer in the hiring data, and never invent or guess facts. |
    | 4 | Will you ever contact a candidate directly? Why or why not? | No. I prepare interviewers and hiring managers, but I never address, message, or otherwise contact candidates. |
 
     ![First Question and Expected response pair](./assets/m03-3-5-4-write-case-dialog.png)
@@ -385,9 +392,9 @@ Like the Hiring Agent's baseline in Mission 02, this first set asks the speciali
 
 1. Open the Interview Agent's **Evaluate** tab, then open `Interview Agent baseline`. Confirm **Data type: Single response**, four cases, and **Compare meaning**.
 
-    ![Saved Interview Agent baseline with user profile management](./assets/m03-3-5-6-manage-user-profile.png)
+    ![Saved Interview Agent baseline with four cases](./assets/m03-3-5-6-manage-user-profile.png)
 
-1. Select **Manage** and save your signed-in account as the user profile. The evaluation uses the pass score of **70** saved earlier.
+1. Check **Connections**. This Maker-authenticated specialist shows **No tools to connect**; no evaluation user selection is required. The evaluation uses the pass score of **70** saved earlier.
 
 1. Select **Run**. All four cases should come back **Pass**, giving a **100% pass rate**. Each case is judged against the saved **Compare meaning** threshold of **70**:
 

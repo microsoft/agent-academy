@@ -19,7 +19,7 @@ products: [copilot-studio, power-automate, outlook, sharepoint]
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-08-05
+last-edited-date: 2026-10-06
 
 ---
 
@@ -198,12 +198,8 @@ On the GitHub Copilot harness, workflows are added to your agent as a **tool**.
 
 1. In the **Start** trigger node, change the type from **Manual** to **When an agent calls the workflow**.
 
-   The **Respond to the agent** node appears.
-
    > [!NOTE]
-   > The **Respond to the agent** node acts as the return statement of an agent workflow. It sends workflow outputs back to the calling agent so the agent can continue the conversation or make decisions based on the result.
-
-   ![Change the workflow trigger input type](./assets/07-change-the-workflow-trigger-input-type.png)
+   > You'll add a **Respond to the agent** node after configuring the workflow actions. This node acts as the return statement of an agent workflow: it sends workflow outputs back to the calling agent so the agent can continue the conversation or make decisions based on the result.
 
 1. Next, add three `text` inputs to the workflow trigger:
 
@@ -255,7 +251,7 @@ On the GitHub Copilot harness, workflows are added to your agent as a **tool**.
 
    ![Configure text inputs on workflow trigger](./assets/07-configure-text-inputs-on-workflow-trigger.png)
 
-1. Next, add a step to the workflow. Select the **+** icon between the nodes.
+1. Next, add a step to the workflow. Select the **+** icon.
 
    ![Add a new workflow action step](./assets/07-add-a-new-workflow-action-step.png)
 
@@ -300,7 +296,7 @@ On the GitHub Copilot harness, workflows are added to your agent as a **tool**.
 
    ![Update Limit Columns by View](./assets/07-update-limit-columns-by-view.png)
 
-1. Add another node. Select the **+** icon between the **Get Device** and **Respond to the agent** nodes.
+1. Add another node. Select the **+** icon after the **Get Device** node.
 
    ![Add another action to the workflow](./assets/07-add-another-action-to-the-workflow.png)
 
@@ -323,8 +319,6 @@ On the GitHub Copilot harness, workflows are added to your agent as a **tool**.
    ![Rename the Send an email action](./assets/07-rename-the-send-an-email-action.png)
 
 1. For **Connection**, select **Create new connection**, then follow the prompts in the dialog.
-
-   ![Create a new Outlook connection](./assets/07-create-a-new-outlook-connection.png)
 
 1. Configure the action's input parameters.
 
@@ -452,9 +446,11 @@ On the GitHub Copilot harness, workflows are added to your agent as a **tool**.
    > [!TIP] Understanding sensitivity labels in Outlook emails
    > A sensitivity label is a classification that helps protect and manage emails and files according to your organization's information protection policies. It helps users identify sensitive content and apply the appropriate level of protection without impacting collaboration or productivity.
 
-   ![Configure the email sensitivity label](./assets/07-configure-the-email-sensitivity-label.png)
+1. Select the **+** icon after the **Send an email to manager** node.
 
-1. Select the **Respond to the agent** node. Clear the current text output name and enter the following text.
+1. In the node palette, select **Agent**, then select **Respond to the agent**.
+
+1. In the **Respond to the agent** node, clear the current text output name and enter the following text.
 
    Copy and paste the following text.
 
@@ -469,8 +465,6 @@ On the GitHub Copilot harness, workflows are added to your agent as a **tool**.
    ![Configure the workflow text output](./assets/07-configure-the-workflow-text-output.png)
 
 1. The workflow can now be saved and published. Select the **Save** icon on the upper-right.
-
-   ![Save the configured device request workflow](./assets/07-save-the-configured-device-request-workflow.png)
 
 1. When the confirmation displays that the workflow has been saved, select **Publish**.
 
@@ -506,7 +500,7 @@ With the workflow added, update the device request skill and agent instructions 
 
 1. Select the **device-guidance-v1-0-3** skill.
 
-   ![Select the device-guidance-v1-0-3 skill](./assets/07-select-the-device-guidance-v1-0-3-skill.png)
+   ![Select the installed device-guidance-v1-0-3 skill](./assets/07-select-the-device-guidance-v1-0-3-skill.png)
 
 1. Select the **ellipsis** icon and select **Replace**.
 
@@ -544,7 +538,7 @@ With the workflow added, update the device request skill and agent instructions 
     Refer to the `device-guidance-v1-0-4` skill
     ```
 
-    **Save** the agent.
+    **Save** the agent. You can test the updated skill in **Preview** without publishing.
 
     ![Update agent instructions and save](./assets/07-instructions-updated-and-save-agent.png)
 
@@ -558,12 +552,25 @@ You're now going to run through the following test cases:
 - Test Case 2: User selects a device and provides no additional requirements
 - Test Case 3: User does not proceed with selecting a device
 
-1. Select **Preview** and start a new chat.
+For each independent scenario, verify the skill in the new conversation before asking for a device. Send this availability-only request:
+
+```text
+Load only the device-guidance-v1-0-4 skill and confirm its name and purpose. Do not run its procedure, read or change business data, create files, send messages, or call other tools. If it is unavailable, say so without using a substitute.
+```
+
+Confirm the exact skill in the trace, then keep that conversation for the scenario without reloading or reopening Preview. A check in a previous chat does not prove readiness in a new one. The device lookup must use **Get Employee Assets**; a knowledge-search or spreadsheet answer is not a substitute. These are explicit skill-invocation tests, not proof of automatic skill discovery.
+
+> [!NOTE]
+> Naming `device-guidance-v1-0-4` explicitly is a Preview verification technique that proves the
+> intended version and tool path were used. End users can ask for a device naturally without knowing
+> or entering the skill name or version.
+
+1. Select **Preview**, start a new chat, and complete the skill-readiness check above.
 
 1. Copy and paste the following text and submit it to the agent.
 
    ```text
-   I need a new laptop
+   Use the device-guidance-v1-0-4 skill. I need a new laptop.
    ```
 
 1. When the agent asks which device you want to request, enter the following text.
@@ -607,7 +614,7 @@ You're now going to run through the following test cases:
    Start a new chat. Copy and paste the following text and submit it to the agent.
 
    ```text
-   I need a new laptop
+   Use the device-guidance-v1-0-4 skill. I need a new laptop.
    ```
 
    Next, copy and paste the following text for the device request and submit it to the agent.
@@ -624,7 +631,13 @@ You're now going to run through the following test cases:
 
    ![Submit device request test case two](./assets/07-submit-device-request-test-case-two.png)
 
-1. The agent invokes the workflow and summarizes your request, just as it did in the first test case.
+1. Review the request summary. When the agent asks whether it should proceed, copy and paste the following confirmation:
+
+   ```text
+   Yes please proceed
+   ```
+
+1. The agent invokes the workflow and confirms the completed request, just as it did in the first test case.
 
    ![Test Case 2 summarized response](./assets/07-test-case-2-summarized-response.png)
 
@@ -635,7 +648,7 @@ You're now going to run through the following test cases:
 1. For the final test case, start a new chat in **Preview**. Enter the following text.
 
    ```text
-   I need a new laptop
+   Use the device-guidance-v1-0-4 skill. I need a new laptop.
    ```
 
    Next, copy and paste the following text for the device request and submit it to the agent.

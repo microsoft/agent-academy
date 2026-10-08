@@ -20,7 +20,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-08-05
+last-edited-date: 2026-10-06
 ---
 # 🚨 Mission 03: Creating a Solution for Your Agent {#mission-03-creating-a-solution-for-your-agent}
 
@@ -39,8 +39,6 @@ You'll start by creating the solution that will contain your agent.
 > [!NOTE] GitHub Copilot harness authoring surface
 >
 > In the current Copilot Studio UI, turn on the **New experience** toggle in the upper-right corner of the Home page. This selects the authoring surface used for agents powered by the GitHub Copilot harness and makes your screen match the screenshots in this mission.
->
-> ![Enable the new Copilot Studio experience](./assets/03-enable-the-new-copilot-studio-experience.png)
 
 ## 🔎 Objectives {#objectives}
 
@@ -61,8 +59,6 @@ Solutions support **application lifecycle management (ALM)**. ALM is the process
 Copilot Studio stores every agent in a Power Platform solution. By default, new agents are placed in the Default Solution. In this mission, you'll create a custom solution so the `Contoso IT Concierge` and its related components stay together.
 
 Solutions have traditionally been managed in the **Power Apps maker portal**, where you can build and customize apps, Dataverse tables, flows, and other Power Platform components.
-
-![Solutions available in Power Apps maker portal](./assets/03-solutions-available-in-power-apps-maker-portal.png)
 
 You can now manage solutions directly from **Solution Explorer** in Copilot Studio without switching to the Power Apps maker portal.
 

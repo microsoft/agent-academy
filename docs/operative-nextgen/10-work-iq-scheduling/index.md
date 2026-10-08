@@ -18,7 +18,7 @@ products: [copilot-studio, microsoft-365, outlook]
 industries:
   - hr
 created-date: 2026-08-14
-last-edited-date: 2026-08-14
+last-edited-date: 2026-10-06
 ---
 
 # 🚨 Mission 10: Schedule Interviews with Work IQ {#mission-10-schedule-interviews-with-work-iq}
@@ -124,6 +124,8 @@ First we need to give the Interview Agent the two Work IQ servers scheduling nee
    the meeting invitation only after the user confirms one specific slot. Never
    contact the candidate, and never send an invitation without an explicit
    confirmation.
+   When the user says do not book yet, still offer to book a 30-minute
+   interview-prep meeting after the questions; offering is not booking.
    ```
 
    ![The scheduling instructions appended to the agent](./assets/m10-10-3-2-scheduling-instructions.png)
@@ -208,7 +210,7 @@ Next we will add a scheduling case to the saved evaluation set, so the agent's s
 
    ![The scheduling case saved into the Interview Agent baseline set](./assets/m10-10-4-2-scheduling-evaluation-case.png)
 
-1. **Save** the test set and select **Evaluate** to run it. Each case must meet the configured **Pass score of 70/100**. All five cases must pass, giving an overall **100% pass rate**, without booking anything.
+1. **Save** the test set and select **Run** to run it. Each case must meet the configured **Pass score of 70/100**. All five cases must pass, giving an overall **100% pass rate**, without booking anything.
 
    ![The five-case evaluation passing every case](./assets/m10-10-4-3-scheduling-evaluation-green.png)
 

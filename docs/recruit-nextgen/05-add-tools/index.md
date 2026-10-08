@@ -21,7 +21,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-08-05
+last-edited-date: 2026-10-06
 
 ---
 
@@ -111,7 +111,7 @@ Let's begin!
 
     ![Available tool types in Copilot Studio](./assets/05-available-tool-types-in-copilot-studio.png)
 
-1. Take a moment to review what's available under the different types of tools. Select the **Model Context Protocol (MCP)** pill. Here, you'll see a list of first-party and third-party Microsoft certified MCP tools to select from.
+1. Take a moment to review what's available under the different types of tools. Select the **MCP** (Model Context Protocol) tab. Here, you'll see a list of first-party and third-party Microsoft certified MCP tools to select from.
 
     ![Available MCP tools in Copilot Studio](./assets/05-available-mcp-tools-in-copilot-studio.png)
 
@@ -139,7 +139,7 @@ Let's begin!
 
    ![Select Get items to configure the tool](./assets/05-select-get-items-to-configure-the-tool.png)
 
-1. On the **Details** tab, we'll rename the tool so that the model knows what the tool will be used for. Copy and paste the following text as the **Name**.
+1. In the **Tool details** header, select the pencil next to the tool name so that you can give it a purpose-based name. Replace the name with the following text:
 
    ```text
    Get Employee Assets
@@ -151,11 +151,11 @@ Let's begin!
 
     ![Rename the SharePoint Get items tool](./assets/05-rename-the-sharepoint-get-items-tool.png)
 
-1. Select the **Inputs** tab. Each input parameter (**Site Address**, **List Name**, **Filter Query**, and so forth) can be filled by **AI** or pinned to a fixed **Value**. Leaving them as **AI** lets the agent populate them from the conversation and your instructions.
+1. Select the **Inputs** tab. Each input parameter (**Site Address**, **List Name**, **Filter Query**, and so forth) can be set to **Fill with AI** or pinned to a fixed value with **Custom**. Leaving **Fill with AI** selected lets the agent populate the input from the conversation and your instructions.
 
    For this use case, where the agent retrieves device information and returns it to the user, set **Site Address** and **List Name** to the SharePoint site and list created in the Course Setup mission.
 
-   For the **Site Address** input parameter, update the **How is this filled?** field from `AI` to `Value`.
+   For the **Site Address** input parameter, update **How is this filled?** from **Fill with AI** to **Custom**.
 
    Then select the **Value** drop-down field and select the **New** button.
 
@@ -167,8 +167,8 @@ Let's begin!
 
 1. Scroll down to the **List Name** input parameter and repeat the same steps:
 
-   - In the **How is this filled?** field, select **Value**.
-   - In the **Value** drop-down field, select **Add variable**.
+   - Under **How is this filled?**, select **Custom**.
+   - In the **Value** drop-down field, select **New**.
 
    ![Configure List Name input parameter](./assets/05-configure-list-name-input-parameter.png)
 
@@ -176,7 +176,7 @@ Let's begin!
 
    ![Select List for the variable configuration](./assets/05-select-list-for-the-variable-configuration.png)
 
-1. Select **Done** to close out of the configuration panel.
+1. With the input changes still pending, select **Done** to save them and close the configuration panel.
 
     ![Finish configuring the SharePoint tool inputs](./assets/05-finish-configuring-the-sharepoint-tool-inputs.png)
 

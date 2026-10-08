@@ -18,7 +18,7 @@ products: [copilot-studio, dataverse]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-08-12
+last-edited-date: 2026-10-06
 ---
 
 # 🚨 Mission 06: Generate Documents with a Python Skill {#mission-06-generate-documents-with-a-python-skill}
@@ -300,7 +300,7 @@ We do not have to write the Python by hand. Next we will create a **builder agen
 
 ### 6.2 Add the skill to the Hiring Agent
 
-The Hiring Agent cannot use the renderer until the package is part of its published skills. We'll upload the `.zip`, then let the **agent** run the Python.
+We'll upload and save the `.zip`, confirm the saved skill is available in **Preview**, then let the **agent** run the Python. Publishing is for deployment; the Hiring Agent can test its own saved skill in Preview without publishing.
 
 1. In the left navigation select **Agents**, open the **Hiring Agent**, and go to its **Build** tab. In the building-blocks panel on the right, find **Skills** and select **➕**.
 
@@ -314,13 +314,31 @@ The Hiring Agent cannot use the renderer until the package is part of its publis
 
    ![The Skills panel showing all four skills](./assets/m06-6-2-3-document-skill-added.png)
 
-1. **Publish** the agent, confirming with **Publish agent** in the dialog.
+   Add the following rules to the agent's existing instructions, keeping its hiring scope and identifier guardrails, then **Save**:
 
-   ![Publish control for deploying the uploaded document skill](./assets/m06-6-2-4-document-skill-published.png)
+   ```text
+   Document generation:
+   - Use the installed interview-prep-document skill for interview-prep documents and interview-prep packs.
+   - Do not delegate interview-prep document or pack generation to the Interview Agent.
+   - Never claim a document was generated unless interview_prep.docx is returned as a downloadable attachment.
+   ```
+
+1. Start a **New chat** in Preview and confirm the skill can load without running its procedure or changing hiring records. If it is not available after a couple of turns, refresh the browser and reopen the Hiring Agent.
+
+   ```text
+   Load only the interview-prep-document skill and confirm its name and purpose.
+   Do not run its procedure, read or change hiring data, generate a file, or call
+   other tools. If it is unavailable, say so without using a substitute.
+   ```
+
+   > [!NOTE]
+   > Asking for `interview-prep-document` by name is a Preview verification technique that proves the
+   > intended skill loaded. End users can request an interview-prep document naturally without naming
+   > the skill.
 
 ### 6.3 Generate the document and compare the layout
 
-With the skill uploaded and published, we'll generate a document from live data, inspect it, then run the same request again to compare and demonstrate that the output is consistent.
+With the skill configured, we'll generate a document from live data, inspect it, then run the same request again to compare and demonstrate that the output is consistent.
 
 1. In **Preview**, ask for the document. Replace `A#####` with a real **ApplicationNumber** from
    [Mission 05](../05-intake-matching-applications/index.md) - your numbers will differ from the
@@ -342,16 +360,20 @@ With the skill uploaded and published, we'll generate a document from live data,
 
    ![Preview with the second generated document attachment](./assets/m06-6-3-4-document-second-run.png)
 
+1. When the saved skill behaves as expected and you are ready to deploy it, select **Publish**, confirm with **Publish agent**, and wait for publishing to finish.
+
+   ![Publish control for deploying the uploaded document skill](./assets/m06-6-2-4-document-skill-published.png)
+
 > [!TIP] Deterministic Python code
 > Compare the two `.docx` files for the title block, section order, table columns, heading styles, and
 > final fairness paragraph. Those come from `generate_interview_doc.py`. The agent supplies the summary, evidence levels,
 > and questions, so compare those for grounding rather than exact wording.
 
-Extending the skill. To change the layout, such as adding a scoring page, company branding, or a second language, go back to your builder agent, describe the change, and let it edit `generate_interview_doc.py` and re-package the skill for you to download again. Upload the new `.zip` over the old skill, publish, then ask the agent to regenerate the document and confirm the new layout.
+Extending the skill. To change the layout, such as adding a scoring page, company branding, or a second language, go back to your builder agent, describe the change, and let it edit `generate_interview_doc.py` and re-package the skill for you to download again. Upload and save the new `.zip` over the old skill, then test the new layout in Preview. Publish the updated version when it is ready for deployment.
 
 ### 6.4 Re-run the Hiring Agent's evaluations with the document skill
 
-We gave the agent a new **document-generation skill**, so now we need to extend the test set and re-run it. The case we add checks the agent **knows it can produce the document** - not one that makes it generate a file live. An evaluation can call tools through a Connected profile, but its judge cannot open the returned `.docx` or verify its bytes and layout.
+We gave the agent a new **document-generation skill**, so now we need to extend the test set and re-run it. The case we add checks the agent **knows it can produce the document** - not one that makes it generate a file live. An evaluation can call tools through its configured **Connections**, but its judge cannot open the returned `.docx` or verify its bytes and layout.
 
 1. In the left navigation select **Agents**, open the **Hiring Agent**, and go to its **Evaluate** tab.
 
@@ -375,14 +397,14 @@ We gave the agent a new **document-generation skill**, so now we need to extend 
    >
    > - **Start with *"Without looking anything up"*.** Without that, the agent can read the question as
    >   being about live hiring **data** and call the **Dataverse MCP** tool. That makes the result depend
-   >   on the selected profile's connection and on current records, instead of testing what the agent
+   >   on the configured Microsoft Dataverse connection and on current records, instead of testing what the agent
    >   knows about its own skill. The opening phrase keeps this regression case stable.
    > - **Ask what the document is *used for*, not what *sections* it contains.** The skill description
    >   tells the agent what the document is for, but not its internal layout - so asked about sections
    >   the agent correctly says it cannot be sure without reading the skill definition. The judge scores
    >   that partial answer as *"one or more questions not answered"* and the case fails.
 
-1. **Save** the test set, then select **Evaluate** to run the whole set. All six cases should pass and the score should remain at least **70%** - describing the document skill needs no tool call:
+1. **Save** the test set, then select **Run** to run the whole set. All six cases should pass and the score should remain at least **70%** - describing the document skill needs no tool call:
 
    ![Hiring Agent test set green after adding the document case](./assets/m06-6-4-4-eval-green.png)
 
@@ -405,7 +427,7 @@ Mission 06 is complete. You can now:
 
 ✅ **Authored with a builder agent**: You drafted the Python generator and `SKILL.md` with a builder agent and packaged a **`.zip` skill**.
 
-✅ **Tested & shipped**: You uploaded and published the skill, then tested it by generating a document **through the agent**.
+✅ **Tested & shipped**: You uploaded and tested the skill by generating a document **through the agent**, then published the verified agent for deployment.
 
 ✅ **A grounded document**: You generated the interview-prep `.docx` repeatedly from the same live Dataverse data
 

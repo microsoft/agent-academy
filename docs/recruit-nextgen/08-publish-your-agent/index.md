@@ -21,7 +21,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-08-05
+last-edited-date: 2026-10-06
 ---
 
 # 🚨 Mission 08: Publish Your Agent {#mission-08-publish-your-agent}
@@ -68,23 +68,21 @@ In this lab, you'll configure the Teams + Microsoft 365 channel, publish the age
 
 ### 8.1 Publish the agent
 
-1. Select the **arrow** next to the **Publish** button.
+1. On the agent's **Build** page, select **Publish**.
 
    ![Open publishing options for the agent](./assets/08-open-publishing-options-for-the-agent.png)
 
-1. Review the available publishing options. Because this agent provides internal support and troubleshooting, you'll deploy it to Teams and Microsoft 365.
+1. Select **Publish agent** in the confirmation dialog and wait for publication to finish.
 
-1. Select **Teams + Microsoft 365**, then select **Make agent available in Microsoft 365 Copilot**.
+1. Select **Add channels**, then choose the Teams and Microsoft 365 channel.
+
+1. Select **Microsoft 365 Copilot and Microsoft Teams** under **Availability**, then select **Add channel**.
+
+1. Open **Teams + Microsoft 365** from the agent's **Channels** section. Confirm that **Microsoft 365 Copilot and Microsoft Teams** is selected.
 
    ![Select Teams and Microsoft 365 channel](./assets/08-select-teams-and-microsoft-365-channel.png)
 
-1. Select **Save and publish**.
-
-   ![Save the selected publishing channel](./assets/08-save-the-selected-publishing-channel.png)
-
-1. Confirm that the green **Channel enabled** message appears, then select **Edit details** to configure the agent listing.
-
-   ![Edit the published agent listing details](./assets/08-edit-the-published-agent-listing-details.png)
+1. Select **About info** to configure the agent listing.
 
 1. Replace the **Short description** with the following text:
 
@@ -104,53 +102,31 @@ In this lab, you'll configure the Teams + Microsoft 365 channel, publish the age
    The agent is limited to approved IT help desk scenarios. It will not ask for passwords or one-time passcodes, help bypass security controls, or invent guidance it cannot verify.
    ```
 
-   ![Update the agent long description](./assets/08-update-the-agent-long-description.png)
-
-1. Under **Teams settings**, select **Users can add this agent to a team** and **Use this agent for group and meeting chats**.
-
-   ![Configure the agent Teams settings](./assets/08-configure-the-agent-teams-settings.png)
-
-1. Expand **More**.
-
-   ![Expand the additional agent listing details](./assets/08-expand-the-additional-agent-listing-details.png)
-
 1. Replace the **Developer name** with the following text:
 
    ```text
    Contoso IT
    ```
 
-   ![Update the agent developer name](./assets/08-update-the-agent-developer-name.png)
-
 1. Select **Save** to apply the listing changes.
 
-   ![Save the agent listing details](./assets/08-save-the-agent-listing-details.png)
+   ![Save the updated channel listing](./assets/08-save-and-publish-the-updated-listing.png)
 
-1. Select the **back** arrow to return to the Teams + Microsoft 365 channel page.
-
-   ![Return to the channel settings](./assets/08-return-to-the-channel-settings.png)
-
-1. Select **Save and publish** to publish the updated listing.
-
-   ![Save and publish the updated listing](./assets/08-save-and-publish-the-updated-listing.png)
+1. Select **Publish**, then **Publish agent**, to release the updated listing. Wait for publication to finish.
 
 ### 8.2 Test the agent in Teams
 
-1. After publishing finishes, select the **See agent in Teams** text.
+1. Open **Teams + Microsoft 365** in Copilot Studio and select **Use and share**.
 
-   ![Open the published agent in Teams](./assets/08-open-the-published-agent-in-teams.png)
+1. Select **View in Teams** to open the published agent's listing.
 
-1. Review the short and long descriptions displayed in the agent listing.
+1. Select **See more** in the agent listing, then review the full description.
 
    ![Review the agent listing in Teams](./assets/08-review-the-agent-listing-in-teams.png)
 
-1. Scroll to **Details** and confirm that **Created by** displays **Contoso IT**.
-
-   ![Confirm the agent developer name](./assets/08-confirm-the-agent-developer-name.png)
+1. Confirm that the listing identifies **Contoso IT** as the developer.
 
 1. Select **Add**.
-
-   ![Add the agent to Teams](./assets/08-add-the-agent-to-teams.png)
 
 1. After the agent is added successfully, select **Open**.
 
@@ -159,7 +135,7 @@ In this lab, you'll configure the Teams + Microsoft 365 channel, publish the age
 1. Enter the following troubleshooting request and submit it to the agent:
 
    ```text
-   I get an access denied when trying to open this file in SharePoint
+   I get an access denied when trying to open this file in SharePoint.
    ```
 
 1. Confirm that the agent asks a focused follow-up question and provides safe troubleshooting steps.
@@ -168,11 +144,11 @@ In this lab, you'll configure the Teams + Microsoft 365 channel, publish the age
 
 ### 8.3 Test the agent in Microsoft 365 Copilot
 
-1. Return to the Teams + Microsoft 365 channel page in Copilot Studio, then select **See agent in Microsoft 365**.
+1. Return to **Teams + Microsoft 365** in Copilot Studio and select **Use and share**.
 
-   ![Open the agent in Microsoft 365 Copilot](./assets/08-open-the-agent-in-microsoft-365-copilot.png)
+1. Select **View in Copilot** to open the published agent in Microsoft 365 Copilot.
 
-1. Confirm that the Teams test appears in the agent's activity history, then enter the following troubleshooting request:
+1. Enter the following troubleshooting request:
 
    ```text
    My laptop keeps freezing up and crashing
@@ -180,11 +156,9 @@ In this lab, you'll configure the Teams + Microsoft 365 channel, publish the age
 
    ![Test the agent in Microsoft 365 Copilot](./assets/08-test-the-agent-in-microsoft-365-copilot.png)
 
-1. To review the citations, select Sources. A panel opens and lists the web pages referenced in the agent's response.
+1. Submit the request and wait for the response.
 
-   ![Review citations](./assets/08-review-citations.png)
-
-1. Confirm that the agent provides troubleshooting guidance grounded in its approved knowledge sources and asks for details to narrow down the issue.
+1. Review the referenced web pages in **Citations** below the response, expanding the section if needed. Confirm that the response includes a relevant **support.microsoft.com** source and troubleshooting steps for the reported issue.
 
    ![Review the grounded troubleshooting response](./assets/08-review-the-grounded-troubleshooting-response.png)
 

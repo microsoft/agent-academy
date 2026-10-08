@@ -21,7 +21,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-08-05
+last-edited-date: 2026-10-06
 
 ---
 
@@ -296,15 +296,13 @@ The first skill we're going to create is one to handle device requests. We'll ta
 
     Download `device-guidance-v1-0-1.zip` and extract it.
 
-    > If you have issues with downloading the zip file, the original SKILL.md files can be found [here](https://github.com/microsoft/agent-academy/tree/main/docs/recruit-nextgen/06-add-skills/assets)
-
-    ![Select the device guidance skill file](./assets/06-select-the-device-guidance-skill-file.png)
+    > If you have issues with downloading the zip file, the original SKILL.md files are available [in the Agent Academy repository](https://github.com/microsoft/agent-academy/tree/main/docs/recruit-nextgen/06-add-skills/assets).
 
 1. In the **Build** tab of your agent, select the **Add +** button next to the **Skills** section.
 
     ![Add a new skill to agent](./assets/06-add-a-new-skill-to-agent.png)
 
-1. Make sure the **Upload a skill** tab is selected. Then drag and drop the extracted `SKILL.md` file, or locate the file and upload it.
+1. Select **Upload a skill** from the Skills menu. In the upload dialog, drag and drop the extracted `SKILL.md` file, or locate the file and upload it.
 
     ![Upload the selected device guidance skill](./assets/06-upload-the-selected-device-guidance-skill.png)
 
@@ -336,8 +334,6 @@ The first skill we're going to create is one to handle device requests. We'll ta
 
 1. Next, update the agent instructions to explicitly reference the skill for device requests. Under the `For device requests:` heading, delete the existing bullet points.
 
-    ![Delete device request bullet points](./assets/06-DeleteDeviceRequestBulletPoints.png)
-
 1. Copy and paste the following text as a new bullet point under the `For device requests:` heading.
 
     ```text
@@ -346,37 +342,32 @@ The first skill we're going to create is one to handle device requests. We'll ta
 
     **Save** the agent.
 
-    ![Update agent instructions and save](./assets/06-InstructionsUpdatedToReferenceSkill.png)
+    > [!NOTE]
+    > You can test saved changes in **Preview** without publishing. The next turn should use the updated configuration. If changes do not appear after a couple of turns, select **New chat** and verify that the intended skill was saved. See [Test an agent](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/authoring-test-bot#edit-your-agent-while-testing).
+    >
+    > These version checks name the skill explicitly so you can verify that the intended version loads. This is a Preview testing technique: end users do not need to know or enter the skill name or version. Test automatic skill selection separately with a natural request such as "I need a laptop"; a successful explicit invocation does not prove automatic routing.
 
 1. Select **Preview** at the top center of the agent and select **New chat** to test the updated skill.
 
-    Copy and paste the following text and submit it to the agent.
+    First load the skill without running its procedure:
 
     ```text
-    I need a laptop
+    Load only the device-guidance-v1-0-1 skill and confirm its name and purpose. Do not run its procedure, read or change business data, create files, or call other tools. If it is unavailable, say so without using a substitute.
     ```
 
-    The agent invokes the skill according to the updated instructions.
+    Check the trace for the exact skill. If it is unavailable, verify the saved skill and retry the availability check after the saved configuration has settled.
+
+    In that same conversation, copy and paste the following text and submit it to the agent.
+
+    ```text
+    Use the device-guidance-v1-0-1 skill. I need a laptop.
+    ```
+
+    Confirm the skill was loaded in this conversation and the laptop lookup calls **Get Employee Assets**. The runtime can reuse the skill loaded by the preceding availability check.
 
     ![Test the imported device guidance skill](./assets/06-test-the-imported-device-guidance-skill.png)
 
-1. You may encounter an error if the model guesses a column name that doesn't exist in the SharePoint list.
-
-    The following are examples of errors you may encounter.
-
-    Example 1:
-
-    ![Example of a SharePoint query error](./assets/06-review-the-sharepoint-query-error-ex1.png)
-
-    Example 2:
-
-    ![Another example of a SharePoint query error](./assets/06-review-the-sharepoint-query-error-ex2.png)
-
-1. However, what happens next is that the model uses reasoning and dynamic planning to determine the next appropriate action when it encounters an issue.
-
-    In this step, the model applies reasoning and uses the correct SharePoint internal column name, `field_4` (the **Asset Type** column), to filter for the device type `Laptop`.
-
-    ![Review agent reasoning after query error](./assets/06-review-agent-reasoning-after-query-error.png)
+1. If the model guesses a SharePoint column name that doesn't exist, the tool can return a query error. The model may recover by retrying with the correct internal column name, such as `field_4` for the **Asset Type** column, but the exact recovery path can vary between conversations.
 
 1. The agent then displays the available laptops from the SharePoint list.
 
@@ -420,23 +411,17 @@ The first skill we're going to create is one to handle device requests. We'll ta
 
     **Save** the agent.
 
-    ![Update agent instructions and save](./assets/06-ReferenceSkill-v1-0-2.png)
+1. Test the updated skill by navigating to **Preview**. Start a new chat and repeat the availability check above using `device-guidance-v1-0-2`.
 
-1. Test the updated skill by navigating to **Preview**.
-
-    Copy and paste the following text and submit it to the agent.
+    Keep that verified conversation. Copy and paste the following text and submit it to the agent.
 
     ```text
-    I need a laptop
+    Use the device-guidance-v1-0-2 skill. I need a laptop.
     ```
 
-    The agent invokes the skill. Expand the skill details and confirm that `device-guidance-v1-0-2` is referenced.
-
-    ![device-guidance-v1-0-2 skill invoked](./assets/06-device-guidance-v1-0-2-invoked.png)
+    Expand the skill details in this conversation and confirm that `device-guidance-v1-0-2` is referenced. Also check that the lookup used **Get Employee Assets**, not a knowledge-source copy of the inventory.
 
 1. The error should no longer appear because the updated skill instructions guide the model to use the correct tool inputs when constructing the filter query.
-
-    ![Review devices returned by device-guidance-v1-0-2 skill](./assets/06-review-devices-returned-by-updated-skill.png)
 
 1. In this test, respond to the agent by providing the device option you want to proceed with.
 
@@ -449,8 +434,6 @@ The first skill we're going to create is one to handle device requests. We'll ta
     ![Confirm the device selected by user](./assets/06-confirm-the-device-selected-by-user.png)
 
 1. Following the skill instructions, the agent summarizes the device selection in its response.
-
-    ![Review the selected device summary](./assets/06-review-the-selected-device-summary.png)
 
     We're not done refining the skill yet. If a user wants to provide an additional comment as part of the request, that behavior also needs to be captured in the skill instructions. Let's update the skill again.
 
@@ -478,18 +461,15 @@ The first skill we're going to create is one to handle device requests. We'll ta
 
     **Save** the agent.
 
-    ![Update agent instructions to invoke device-guidance-v1-0-3 skill and save](./assets/06-ReferenceSkill-v1-0-3.png)
+1. Test the updated skill by navigating to **Preview**. Start a new chat and repeat the availability check above using `device-guidance-v1-0-3`.
 
-
-1. Test the updated skill by navigating to **Preview**.
-
-    Copy and paste the following text and submit it to the agent.
+    Keep that verified conversation. Copy and paste the following text and submit it to the agent.
 
     ```text
-    I need a laptop
+    Use the device-guidance-v1-0-3 skill. I need a laptop.
     ```
 
-    The agent invokes the skill. Expand the skill details and confirm that `device-guidance-v1-0-3` is referenced.
+    Expand the skill details in this conversation and confirm that `device-guidance-v1-0-3` is referenced. Also check that the lookup used **Get Employee Assets**.
 
     ![device-guidance-v1-0-3 skill invoked](./assets/06-device-guidance-v1-0-3-invoked.png)
 
@@ -501,15 +481,11 @@ The first skill we're going to create is one to handle device requests. We'll ta
 
     The agent responds by next asking the user for any additional requirements they may have for their device.
 
-    ![Test the refined device guidance skill](./assets/06-test-the-refined-device-guidance-skill.png)
-
 1. Copy and paste the following text and submit it to the agent.
 
     ```text
     16GB of RAM
     ```
-
-    ![Agent asks about additional device requirements](./assets/06-agent-asks-about-additional-device-requirements.png)
 
 1. The agent responds by summarizing the selected device and the additional requirement.
 
@@ -531,7 +507,7 @@ Now we'll work on a separate skill that specializes in troubleshooting issues.
 
     ![Add another skill to the agent](./assets/06-add-another-skill-to-the-agent.png)
 
-1. Make sure the **Upload a skill** tab is selected. Then drag and drop the extracted `SKILL.md` file, or locate the file and upload it.
+1. Select **Upload a skill** from the Skills menu. In the upload dialog, drag and drop the extracted `SKILL.md` file, or locate the file and upload it.
 
     ![Upload the IT troubleshooting skill](./assets/06-upload-the-selected-device-guidance-skill.png)
 

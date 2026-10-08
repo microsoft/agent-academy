@@ -19,7 +19,7 @@ products: [copilot-studio, dataverse]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-08-12
+last-edited-date: 2026-10-06
 ---
 
 # 🚨 Mission 02: Instructions, Skills and Dataverse MCP {#mission-02-instructions-skills-and-dataverse-mcp}
@@ -203,7 +203,8 @@ To keep the hiring system maintainable, we need to build it as a small set of **
 
    1. Read the resume. If a file is attached, read it directly (it may be a PDF
       or image). Extract the candidate's full name, email address, phone (if
-      present), and a concise cover-letter style summary (max 2000 characters).
+      present), and a concise cover-letter style summary (aim for 1500 characters
+      to leave headroom; hard maximum 2000 characters).
 
    2. Deduplicate the Candidate on email. Query the Candidates table
       (ppa_candidate) where ppa_email equals the extracted email. If a Candidate
@@ -217,6 +218,11 @@ To keep the hiring system maintainable, we need to build it as a small set of **
 
    4. Report the resulting Resume number (R#####) and Candidate number (C#####),
       stating whether the Candidate was reused or newly created.
+
+   When asked to describe this process, explain where intake stops: matching
+   candidates to Job Roles requires a separate user request, and creating Job
+   Applications requires explicit confirmation for each Job Role. Do not perform
+   either action as part of intake.
 
    ## Guidelines
    - Never invent identifiers or record numbers; always read them from tool
@@ -246,7 +252,12 @@ To keep the hiring system maintainable, we need to build it as a small set of **
    ## Error handling & observability
    - Observability: report every record you create or reuse with its number
      (R#####, C#####). End with a one-line summary of what happened.
-   - Tool failures: if a Dataverse read or write fails (permission denied,
+   - Length validation: if Dataverse explicitly rejects create_record because
+     a text field exceeds its maximum length, shorten only that field below
+     the stated limit and retry once with all other values unchanged. Do not
+     report the rejected attempt as a created record. If the correction is
+     rejected again, STOP and explain the error.
+   - Other tool failures: if a Dataverse read or write fails (permission denied,
      connection error, or timeout), STOP and tell the user which step failed and
      why. Never fabricate a record number.
    - Verify before you report: only report success after the tool returns the
@@ -344,19 +355,19 @@ To check that the MCP connection returns current Dataverse records, ask the agen
    | --- | --- |
    | **New chat** | Clears the conversation and starts a fresh session, so nothing you asked earlier carries over into the next answer |
    | **History** | Shows conversation history from Preview, evaluations, and the published agent |
-   | **End user preview** | Switches between the builder's view and the published experience. Leave it **off** while you build and you see the agent's reasoning and every tool call; turn it **on** and you see only the reply, exactly as a real user would |
+   | **End-user preview** | Switches between the builder's view and the published experience. Leave it **off** while you build and you see the agent's reasoning and every tool call; turn it **on** and you see only the reply, exactly as a real user would |
 
     ![Hiring Agent Preview session controls](./assets/m02-2-3-1-build-07-preview.png)
 
 1. Ask a question that requires live data:
 
    ```text
-   What job roles are currently open? List each job role number and title.
+   Use Microsoft Dataverse MCP Server to read the currently active Job Roles in Dataverse. List each job role number and title.
    ```
 
-1. When a **Permission Required** card names **Microsoft Dataverse MCP Server**, check the requested action and select **Allow**. Further cards may request permission for `search`, `describe`, or `read_query`; review and allow each action needed for this query.
+1. When a **Permission Required** card names **Microsoft Dataverse MCP Server**, check the requested action and select **Allow**. Further cards may request permission for `search`, `describe`, or `read_query`; review and allow each action needed for this query. If the connection was authorized earlier, Preview answers directly without another card; do not wait for or attempt to approve a card that is not present.
 
-    ![Agent invokes the MCP server](./assets/m02-2-3-2-build-08-mcp-test.png)
+    ![Live job-role question sent from a fresh Preview chat](./assets/m02-2-3-2-build-08-mcp-test.png)
 
 1. The agent runs `search` / `describe` / `read_query` and returns the live rows - the **5 active job roles** you imported in Mission 01:
 
@@ -374,8 +385,8 @@ To check that the MCP connection returns current Dataverse records, ask the agen
 
    ![Hiring Agent explains the resume-intake skill](./assets/m02-2-3-4-build-41-j1004-criteria.png)
 
-   > [!TIP] End user preview
-   > The **End user preview** toggle above the chat changes what Preview shows you. Leave it **off**
+   > [!TIP] End-user preview
+   > The **End-user preview** toggle above the chat changes what Preview shows you. Leave it **off**
    > while you build and you see the agent's reasoning and every tool call it makes, such as `describe`
    > and `read_query` in the preceding job-role query. Turn it **on** and all of that is hidden, leaving just the reply, which is
    > exactly what someone chatting with the published agent would see.
@@ -384,7 +395,7 @@ To check that the MCP connection returns current Dataverse records, ask the agen
 
 Now we can start adding evals to our agent. This first set is a **baseline** that asks what the agent knows about itself - its scope, identity, identifiers, and working rules. Those cases are portable, because they don't depend on a connection, a particular row, or data created by an earlier run.
 
-A **Connected user** profile can also run cases that use tools. For each one, record the required rows and starting state, the expected result, and how writes will be repeated safely and cleaned up. Mission 11 adds a read-only Dataverse MCP case using the stable sample data from Mission 01.
+Evaluations can also run cases that use tools through their configured connections. For each one, record the required rows and starting state, the expected result, and how writes will be repeated safely and cleaned up. Mission 11 adds a read-only Dataverse MCP case using the stable sample data from Mission 01.
 
 1. On the Hiring Agent's command bar, select **Publish**.
 
@@ -443,7 +454,7 @@ A **Connected user** profile can also run cases that use tools. For each one, re
    | 1 | Who are you, and what is your role in the hiring process? | I'm the Hiring Agent, the orchestrator for the recruitment process. I take in candidate resumes, match candidates to open job roles using each role's weighted evaluation criteria, create job applications, and prepare interviews. |
    | 2 | What kinds of tasks can you help me with, and what is outside your scope? | I help with candidate and resume intake, matching candidates to active job roles, creating job applications, and preparing interviews. I decline topics unrelated to the hiring process. |
    | 3 | What are the identifier formats you use for candidates, resumes, job roles, and job applications? | Candidate numbers use C#####, Resume numbers use R#####, Job Role numbers use J####, and Job Application numbers use A#####. |
-   | 4 | Describe the steps you take when I give you a new candidate's resume. | I check the file type and size before reading the resume, create or reuse the Candidate by email, create a new linked Resume record, and report the Resume number and Candidate number, stating whether the Candidate was reused or newly created. I stop after intake; matching to Job Roles is a separate request, and creating Job Applications requires confirmation for each role. |
+   | 4 | Summarize the resume intake process in one concise paragraph. Cover the file checks, Candidate lookup or creation, linked Resume creation, identifiers reported, and where intake stops. | I check the file type and size before reading the resume, create or reuse the Candidate by email, create a new linked Resume record, and report the Resume number and Candidate number, stating whether the Candidate was reused or newly created. I stop after intake; matching to Job Roles is a separate request, and creating Job Applications requires confirmation for each role. |
 
    ![First Single response evaluation case](./assets/m02-2-4-7-first-evaluation-case.png)
 
@@ -455,17 +466,17 @@ A **Connected user** profile can also run cases that use tools. For each one, re
 
    ![Saved evaluation test set with all four cases](./assets/m02-2-4-9-evaluation-profile-saved.png)
 
-1. Open the set and confirm **Compare meaning** and **Pass score: 70/100** persisted, then select **Manage**.
+1. Open the set, confirm **Compare meaning**, then select **Connect 5 tools** under **Connections**.
 
    ![Saved test set ready for an evaluation run](./assets/m02-2-4-10-evaluate-run-started.png)
 
-1. In **User**, choose your signed-in account and verify that the account has an active connection before saving.
+1. In **Manage connections**, open **Microsoft Dataverse** and confirm the connection you used for the Dataverse MCP server is selected.
 
-   ![Connected account selected for the evaluation profile](./assets/m02-2-4-11-evaluation-profile-account.png)
+   ![Dataverse connection selected for the evaluation tools](./assets/m02-2-4-11-evaluation-profile-account.png)
 
 1. Select **Save**.
 
-   ![Connected evaluation profile ready to save](./assets/m02-2-4-12-evaluation-profile-save.png)
+   ![Evaluation connections ready to save](./assets/m02-2-4-12-evaluation-profile-save.png)
 
 1. Select **Run**, then read the result. All four cases should **Pass**, giving a **100% pass rate**. Each case is judged against the saved **Compare meaning** threshold of **70**; the overall pass rate counts passing cases and is not their individual similarity score.
 

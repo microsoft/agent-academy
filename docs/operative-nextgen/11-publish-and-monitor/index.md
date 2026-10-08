@@ -18,7 +18,7 @@ products: [copilot-studio, dataverse, teams, microsoft-365-copilot]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-08-14
+last-edited-date: 2026-10-06
 ---
 
 # 🚨 Mission 11: Evaluate, Publish, and Monitor Your Agent {#mission-11-evaluate-publish-and-monitor-your-agent}
@@ -115,21 +115,21 @@ The previous missions established three evaluation lineages. Run all three befor
 
    ![Hiring Agent baseline configuration with six test cases](./assets/m11-11-1-1-build-26-evaluate-landing.png)
 
-1. Confirm the connected user profile, run all six cases, and investigate any **failed test** before continuing.
+1. Under **Connections**, confirm the Hiring Agent evaluation binds its **Microsoft Dataverse** tool to the Dataverse connection configured in Mission 02. The screenshot shows that connection as **Agent Academy Dataverse MCP**, but your connection's display name may differ. Run all six cases, and investigate any **failed test** before continuing.
 
 1. Open the **Interview Agent** and review **Interview Agent baseline**. It should contain the four specialist cases from Mission 03 and the scheduling case from Mission 10. Confirm the saved configuration is **Single response**, **Compare meaning**, and **Pass score: 70/100**.
 
    ![The self-knowledge cases in the test set](./assets/m11-11-1-3-self-knowledge-cases.png)
 
-1. Under **User profile**, select **Manage** and confirm your account is selected. Complete any connection prompts, then select **Save**. The evaluation run calls every tool as that account.
+1. Under **Connections**, select **Manage** and verify both **Work IQ User MCP** and **Work IQ Calendar MCP** have their intended connected maker-owned identities. Save those bindings. The modern evaluation runs each tool through its selected connection; it does not offer a single **User profile** picker.
 
-   ![The Manage dialog with the evaluation account selected](./assets/m11-11-1-5-evaluation-profile-connected.png)
+   ![Manage connections with both Work IQ tools connected](./assets/m11-11-1-5-evaluation-profile-connected.png)
 
-1. Select **Evaluate**. Wait for the cases to progress from 0/5 to 5/5 - one set runs at a time, and each case takes a minute or two. When the run finishes, read the **Evaluation summary** for the overall **Score %**, **Pass/Fail** badge, duration, cases completed, test set, data type, user profile, and who ran it.
+1. Select **Run**. Wait for the cases to progress from 0/5 to 5/5 - one set runs at a time, and each case takes a minute or two. When the run finishes, read the **Evaluation summary** for the overall **Score %**, **Pass/Fail** badge, duration, cases completed, test set, data type, and who ran it. A completed result may also show a **User profile** summary; verify the actual per-tool connection ownership separately in **Manage connections**.
 
    ![The self-knowledge set after every case has run](./assets/m11-11-1-6-self-knowledge-run.png)
 
-1. Open **Interview Agent - AI Safety Evals**, confirm it contains eleven cases with the same Compare meaning configuration, select the connected profile, and run it.
+1. Open **Interview Agent - AI Safety Evals**, confirm it contains eleven cases with the same Compare meaning configuration and the same two connected Work IQ tool bindings, and run it.
 
    ![The per-case results table for the run](./assets/m11-11-1-8-evaluation-case-table.png)
 
@@ -151,7 +151,7 @@ A tool case is different. It runs against a real system, as a real identity, ove
 
 | Tool | Reason |
 | --- | --- |
-| **Which identity runs it** | An evaluation calls tools as the account selected under **User profile**, not as you. That account needs its own working connection |
+| **Which identity runs it** | Each tool uses the connection selected under **Connections**. Check its owner and Connected state |
 | **Which records it reads** | Name the exact rows and the state you expect them in. A case that reads "the first job role" breaks the day someone adds one |
 | **Whether it writes** | A read is repeatable without changing records. A write needs synthetic data, a unique key so re-runs don't collide, and a cleanup step you have actually tested |
 | **What counts as evidence** | A green judge score says the *answer* looked good. It doesn't say which tool ran, or whether one ran at all |
@@ -170,11 +170,11 @@ The case below is read-only, against a sample row from Mission 01 that nothing i
 
    ![The saved Dataverse MCP case in the set](./assets/m11-11-2-2-mcp-test-set-config.png)
 
-1. Select **Manage** under **User profile**, open the **User** list, and select your signed-in account. Complete any connection prompts, then select **Save**.
+1. Under **Connections**, select **Manage** and keep **Work IQ User MCP** and **Work IQ Calendar MCP** on their connected maker-owned choices. The installed **Microsoft Dataverse MCP Server** uses its separate **Maker** connection and read-only actions; it does not appear as a third user-bound picker here.
 
-   ![The account selected for the MCP evaluation](./assets/m11-11-2-3-mcp-profile-connected.png)
+   ![The two user-bound Work IQ connections selected for the MCP evaluation](./assets/m11-11-2-3-mcp-profile-connected.png)
 
-1. **Save** the six-case set and select **Evaluate**. All six cases must pass and the score must be at least **70%**.
+1. **Save** the six-case set and select **Run**. All six cases must pass and the score must be at least **70%**.
 
    ![The extended run passing with the live case](./assets/m11-11-2-4-mcp-run-pass.png)
 
@@ -369,11 +369,11 @@ Use **Evaluate** to compare saved cases before release. Use **Monitor** to inspe
 
 1. Open **Monitor**.
 
-1. The **Summary** and **Overview** cards show published **Conversation sessions**, **Total reactions**, and **Average DAU** for the selected time range. Average DAU is the average number of daily active users during that range. Preview conversations do not appear here, and with low traffic you may see *Not enough traffic to generate AI Summary*.
+1. Read the **Overview** cards for the selected time range. The current session-focused layout shows **Total sessions**, **Total users**, **Avg duration**, and **Success rate**. Other layouts can also show **Average DAU**, **Autonomous runs**, or an AI summary. Total users and Average DAU are different metrics; do not substitute one for the other. Preview conversations do not appear here.
 
    ![Monitor showing published session and run activity](./assets/m11-11-7-1-monitor-published-activity.png)
 
-1. Review **Total runs**, **Success rate**, and **Avg run duration** when those metrics are available.
+1. Review additional run, reaction and credit metrics when available.
 
 1. Set the **Time range**, choose the **Channel** filter, and select **See all** to inspect the available sessions. New activity can take up to 30 minutes to appear. If **Download Sessions** is available, choose the UTC date range containing the conversation, then filter **ChatTranscript** by a reported record number (R#####, C#####, or A#####), or use **SessionId** to identify it.
 

@@ -34,7 +34,7 @@ Use this skill when an employee asks about finding, selecting, or requesting a d
   - The user should respond using the Option value (A, B, C, D, etc.).
   - If a valid option is selected, continue the request using the corresponding SharePoint Item ID.
   - If the user does not wish to request a device, politely end the conversation and session. Do not continue asking follow-up questions.
-  - Do not ask any further questions.
+  - Do not ask unrelated questions. Continue only with the additional-requirements and submission-confirmation steps below.
 
 - **Confirm additional requirements** — After the user selects a valid option, ask whether they have any additional requirements.
   - Examples are RAM size, hard drive capacity, or other specifications.
@@ -47,7 +47,7 @@ Use this skill when an employee asks about finding, selecting, or requesting a d
 - **Get User's display name** - After the user confirms additional requirements, get the current system user's display name from the authenticated user context.
   - Use `User.DisplayName` as the requester name. If empty or unavailable, use `User.Email` or `User.PrincipalName` as the fallback requester value.
 
-- **Pass request details to tool Send device request email** — After the user provides any additional comments, call tool `Send device request email` and pass:
+- **Pass request details to tool Send device request email** — Only after the user explicitly approves the completed request summary, call tool `Send device request email` and pass:
   - requestorName: the requester name which is `User.DisplayName` or if empty or unavailable, use `User.Email` or `User.PrincipalName` as the fallback requester value.
   - sharepointItemId: the SharePoint Item ID mapped to the selected option
   - additionalComment: the user's additional requirements or comments

@@ -18,7 +18,7 @@ products: [copilot-studio, dataverse, outlook, teams]
 industries:
   - hr
 created-date: 2026-08-12
-last-edited-date: 2026-08-12
+last-edited-date: 2026-10-06
 ---
 
 # 🚨 Mission 08: Add Agents to a Workflow {#mission-08-add-agents-to-a-workflow}
@@ -303,7 +303,11 @@ Next we will test the agent handling of PDF resumes received by email.
 
    The card is sent to the mailbox of the account that owns the **Agents** connection. Check **Focused**, **Other** and **Junk**. If the controls do not respond, select **Show content** to trust the message. The workflow remains **Running** while it waits for the answer.
 
-   ![Outlook card asking for Avery's open role](./assets/m08-8-3-2-role-choice-card.png)
+   The image illustrates a run that asked for help. In a no-question run,
+   retain the completed **Match to an open role** output showing
+   **ASKED A HUMAN: no** instead; do not create or claim a card that was not sent.
+
+   ![Optional role-choice checkpoint](./assets/m08-8-3-2-role-choice-card.png)
 
 1. When the run finishes, open the **Match to an open role** node and read its output. The result includes details taken from the PDFs, including each candidate's email address, current title and certifications:
 
