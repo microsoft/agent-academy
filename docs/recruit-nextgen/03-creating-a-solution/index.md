@@ -26,6 +26,10 @@ last-edited-date: 2026-10-06
 
 <mission-meta />
 
+🎥 **Watch the Walkthrough**
+
+[![Video walkthrough: Creating a Solution](./assets/video-thumbnail.png)](https://www.youtube.com/watch?v=VMB8rjNMXIs "Watch the walkthrough on YouTube")
+
 ## 🎯 Mission Brief {#mission-brief}
 
 Welcome back, Agent. In this mission, you'll create a Power Platform solution for the `Contoso IT Concierge` agent you'll build in the next mission with Microsoft Copilot Studio. Think of the solution as your digital briefcase: it keeps everything together as the agent moves from development through testing and into production.

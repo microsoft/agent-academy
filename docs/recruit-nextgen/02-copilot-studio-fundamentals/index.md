@@ -27,6 +27,10 @@ last-edited-date: 2026-08-05
 
 <mission-meta />
 
+🎥 **Watch the Walkthrough**
+
+[![Video walkthrough: Copilot Studio Fundamentals](./assets/video-thumbnail.png)](https://www.youtube.com/watch?v=0Xf4FGY_MpI "Watch the walkthrough on YouTube")
+
 ## 🎯 Mission Brief
 
 In [Mission 01](../01-introduction-to-agents/index.md) you learned *how to think about agents*. This mission is the **toolbox**: what Microsoft Copilot Studio actually is, how its three harnesses differ, and which building blocks are available when you build on the **GitHub Copilot harness**.
