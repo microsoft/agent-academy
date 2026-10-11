@@ -29,7 +29,7 @@ last-edited-date: 2026-08-05
 
 🎥 **Watch the Walkthrough**
 
-[![Video walkthrough: Introduction to Agents](./images/video-thumbnail.jpg)](https://www.youtube.com/watch?v=YbpOuw1CB-8 "Watch the walkthrough on YouTube")
+[![Video walkthrough: Introduction to Agents](./images/video-thumbnail.png)](https://www.youtube.com/watch?v=YbpOuw1CB-8 "Watch the walkthrough on YouTube")
 
 ## 🎯 Mission Brief
 
