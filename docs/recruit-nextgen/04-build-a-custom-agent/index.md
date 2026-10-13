@@ -31,6 +31,10 @@ last-edited-date: 2026-10-06
 > This lab builds an agent powered by the **GitHub Copilot harness**.
 > In the current Copilot Studio UI, make sure the **New experience** toggle in the upper-right corner of the Home page is **on** so your screen matches the screenshots in this mission.
 
+🎥 **Watch the Walkthrough**
+
+[![Video walkthrough: Building with the GitHub Copilot Harness](./assets/video-thumbnail.png)](https://youtu.be/vlHQQ5_DSkc?si=h8bZL98QPiMCGwFX "Watch the walkthrough on YouTube")
+
 ## 🎯 Mission Brief {#mission-brief}
 
 Welcome back, Agent. In this mission, you'll build an agent powered by the GitHub Copilot harness.

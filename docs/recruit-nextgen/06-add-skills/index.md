@@ -32,6 +32,10 @@ last-edited-date: 2026-10-06
 > [!NOTE]
 > **Skills are unique to agents powered by the GitHub Copilot harness** in Copilot Studio. They aren't available to agents powered by the standard or Copilot chat harness.
 
+🎥 **Watch the Walkthrough**
+
+[![Video walkthrough: Adding Tools to your Agent](./assets/video-thumbnail.png)](https://youtu.be/HHWRehWrnBY?si=wE0Yd7OEqLvFNBqR "Watch the walkthrough on YouTube")
+
 ## 🎯 Mission Brief {#mission-brief}
 
 Your Contoso IT Concierge Agent can answer questions, but a reliable helpdesk also needs focused, reusable behavior for specific tasks. The **GitHub Copilot harness** introduces **Skills** for this purpose: self-contained capabilities that package a name, description, and task-specific instructions so the harness can activate the right behavior when it's needed.

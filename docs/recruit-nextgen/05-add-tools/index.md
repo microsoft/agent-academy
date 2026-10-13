@@ -32,6 +32,10 @@ last-edited-date: 2026-10-06
 > [!NOTE]
 > This lab uses an agent powered by the **GitHub Copilot harness**.
 
+🎥 **Watch the Walkthrough**
+
+[![Video walkthrough: Adding Tools to your Agent](./assets/video-thumbnail.png)](https://youtu.be/qfQM2WW4MD4?si=Olvepv-W26l65Rxn "Watch the walkthrough on YouTube")
+
 ## 🎯 Mission Brief {#mission-brief}
 
 You’ve built an agent. It listens, learns, and answers questions, but now it’s time to get tactical and let it **take action**. In this mission you’ll connect your agent to a real data source so it can fetch live information and do something useful with it.
