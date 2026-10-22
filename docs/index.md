@@ -14,6 +14,25 @@ If you already know the basics and want to go deep on something specific, the st
 
 No fluff. No made-up scenarios. Just real tools, real patterns, and real agents.
 
+## What You Can Build with Copilot Studio
+
+Copilot Studio supports several kinds of business solution:
+
+| Start with... | When you need... | Example |
+| --- | --- | --- |
+| **An app (preview)** | An interactive interface people can open and use | An equipment-request tracker with forms and status views |
+| **An agent** | An assistant that answers questions, reasons through requests, or takes action | An IT concierge that helps an employee resolve a problem |
+| **A workflow or agent flow** | Defined steps, conditions, and review points | Route an equipment request for approval and update its record |
+
+These pieces can work together. Start with the user experience and business process, then choose the capabilities that fit.
+
+For agents, Copilot Studio offers four harnesses: **GitHub Copilot**, **Copilot chat**, **Customer Conversation**, and **standard**. A harness is the runtime around the model; it shapes the agent's capabilities and how it carries out work.
+
+The Recruit and Operative courses provide hands-on paths focused on the **standard** and **GitHub Copilot** harnesses. That course structure isn't a complete list of everything Copilot Studio can build.
+
+> [!NOTE]
+> App creation and the Customer Conversation agent experience are in preview. Availability, prerequisites, and billing depend on the artifact and harness you choose. See the [Copilot Studio overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [apps overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/apps-experience/apps-overview), and [harness comparison](https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview).
+
 ## 🏅 Rank Progression {#rank-progression}
 
 The **Copilot Studio Agent Academy** is a multi-phase training program designed to build your skills across three agent ranks. Each level includes a badge and increasing responsibilities:

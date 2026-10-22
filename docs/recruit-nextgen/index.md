@@ -27,7 +27,8 @@ By completing this course, you'll be able to:
 
 - Understand what agents are in the context of Microsoft Copilot Studio
 - Explore how Large Language Models (LLMs), retrieval-augmented generation (RAG), and orchestration come together in an agent
-- Understand the **GitHub Copilot**, **standard**, and **Copilot chat** harnesses
+- Distinguish **apps**, **agents**, and **workflows**, and recognize when each fits
+- Compare the **GitHub Copilot**, **Copilot chat**, **Customer Conversation**, and **standard** agent harnesses
 - Build an agent powered by the **GitHub Copilot harness**
 - Enhance agents with **Skills**, **Tools**, and **Workflows**
 - Deploy agents to **Microsoft Teams** and **Microsoft 365 Copilot**
@@ -54,8 +55,8 @@ This academy is broken into progressive lessons (aka "missions"), designed to le
 | Lesson | Title | Mission Briefing |
 | ------ | ----- | ---------------- |
 | `00` | 🧰 [Course Setup](./00-course-setup/index.md) | Set up your dev environment, Copilot Studio trial, and SharePoint site |
-| `01` | 🧠 [Introduction to Agents](./01-introduction-to-agents/index.md) | Understand agent concepts, orchestration, and the three Copilot Studio harnesses |
-| `02` | 🛠️ [Copilot Studio Fundamentals](./02-copilot-studio-fundamentals/index.md) | Learn the building blocks |
+| `01` | 🧠 [Introduction to Agents](./01-introduction-to-agents/index.md) | Understand agent concepts, orchestration, and the four Copilot Studio agent harnesses |
+| `02` | 🛠️ [Copilot Studio Fundamentals](./02-copilot-studio-fundamentals/index.md) | Choose among apps, agents, and workflows, then explore the GitHub Copilot harness building blocks |
 | `03` | 🧩 [Creating a Solution](./03-creating-a-solution/index.md) | Package your agent into a reusable solution for environment management |
 | `04` | ✍️ [Build with the GitHub Copilot Harness](./04-build-a-custom-agent/) | Create a reasoning-first agent grounded in knowledge sources |
 | `05` | 🪪 [Add a Tool](./05-add-tools/) | Add tools to extend with data integration |

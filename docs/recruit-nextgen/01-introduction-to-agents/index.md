@@ -20,7 +20,7 @@ products:
 industries:
   - general
 created-date: 2026-08-05
-last-edited-date: 2026-08-05
+last-edited-date: 2026-10-22
 ---
 
 # 🚨 Mission 01: Introduction to Agents
@@ -116,10 +116,12 @@ A harness is the **runtime environment around the model**. It determines which c
 
 Put simply: the **model reasons and generates**, the **harness provides the operating environment**, and **orchestration directs the work inside it**.
 
-Copilot Studio offers the **GitHub Copilot**, **standard**, and **Copilot chat** harnesses. This course uses the GitHub Copilot harness, which is designed for complex, multi-step work and uses enhanced, goal-driven orchestration.
+Copilot Studio offers four agent harnesses: **GitHub Copilot**, **Copilot chat**, **Customer Conversation**, and **standard**. The Customer Conversation harness powers **Customer Assist Agents** for customer-service conversations over chat and voice; that experience is in preview.
 
-> [!NOTE] You'll unpack the harnesses next
-> [Mission 02: Copilot Studio Fundamentals](../02-copilot-studio-fundamentals/index.md) compares all three harnesses and explores the capabilities available on the GitHub Copilot harness. For now, remember that a harness is broader than its orchestration strategy.
+This course uses the **GitHub Copilot harness**, designed for reasoning-heavy, multi-step work with enhanced, goal-driven orchestration.
+
+> [!NOTE] You'll unpack the product map next
+> [Mission 02: Copilot Studio Fundamentals](../02-copilot-studio-fundamentals/index.md) first distinguishes apps, agents, and workflows, then compares the four agent harnesses. For now, remember that a harness is broader than its orchestration strategy.
 
 ## The Director: Orchestration
 
@@ -141,7 +143,7 @@ You provide the goal, instructions, capabilities, and boundaries. The harness de
 <!-- Separate adjacent callouts for Markdownlint. -->
 
 > [!NOTE] You'll compare orchestration approaches next
-> [Mission 02: Copilot Studio Fundamentals](../02-copilot-studio-fundamentals/index.md) explains how orchestration differs across the three Copilot Studio harnesses and when each harness fits.
+> [Mission 02: Copilot Studio Fundamentals](../02-copilot-studio-fundamentals/index.md) explains how the four agent harnesses differ and when each fits. You won't need to build on every harness to complete this course.
 
 ## How Agents and Workflows Work Together
 

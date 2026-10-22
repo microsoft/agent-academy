@@ -7,7 +7,7 @@ prev:
 next:
   text: 'Creating a Solution'
   link: '/recruit-nextgen/03-creating-a-solution/'
-short-description: 'Explore Copilot Studio harnesses, agent building blocks, workflows, publishing, and governance'
+short-description: 'Choose among apps, agents, and workflows, compare four agent harnesses, and explore the GitHub Copilot harness'
 difficulty: 1
 codename: OPERATION TOOLBOX
 time: 20
@@ -20,7 +20,7 @@ products:
 industries:
   - general
 created-date: 2026-08-05
-last-edited-date: 2026-08-05
+last-edited-date: 2026-10-22
 ---
 
 # 🛠️ Mission 02: Copilot Studio Fundamentals
@@ -31,44 +31,94 @@ last-edited-date: 2026-08-05
 
 [![Video walkthrough: Copilot Studio Fundamentals](./assets/video-thumbnail.png)](https://www.youtube.com/watch?v=0Xf4FGY_MpI "Watch the walkthrough on YouTube")
 
+> [!NOTE] Product map updated October 22, 2026
+> The recording predates the addition of apps and the Customer Conversation harness to this lesson. Use the written artifact and four-harness comparisons below for the current product map.
+
 ## 🎯 Mission Brief
 
-In [Mission 01](../01-introduction-to-agents/index.md) you learned *how to think about agents*. This mission is the **toolbox**: what Microsoft Copilot Studio actually is, how its three harnesses differ, and which building blocks are available when you build on the **GitHub Copilot harness**.
+In [Mission 01](../01-introduction-to-agents/index.md) you learned *how to think about agents*. This mission is the **toolbox**: what Microsoft Copilot Studio can build, how its four agent harnesses differ, and which building blocks you'll use on the **GitHub Copilot harness**.
 
 Although we're not building yet, this mission is the map you'll keep open in another tab while you build, so the panels in the product line up with the ideas in your head.
 
 The foundational concepts covered here matter because the same business request can lead to very different designs. A knowledge question, a repeatable approval, and a multi-step support task don't need the same harness or capability. By learning the platform vocabulary now, you'll be able to make deliberate choices when the `Contoso IT Concierge` solution begins using organizational knowledge, SharePoint tools, reusable skills, and workflows in later missions.
 
-> [!IMPORTANT] This module uses the **GitHub Copilot harness**
-> Copilot Studio offers three harnesses: **GitHub Copilot** for reasoning-heavy, multi-step work; **standard** for structured agents that can use classic or generative orchestration; and **Copilot chat** for extending Microsoft 365 Copilot Chat. This course uses the GitHub Copilot harness. In the current product UI, turn on the **New experience** toggle when instructed to select this authoring surface.
+> [!IMPORTANT] This course builds an agent on the GitHub Copilot harness
+> Copilot Studio offers **GitHub Copilot**, **Copilot chat**, **Customer Conversation**, and **standard** agent harnesses. It also supports app creation and workflow automation. This course builds the `Contoso IT Concierge` agent on the **GitHub Copilot harness**; you don't need to create an app or a Customer Assist Agent to complete it.
 >
-> Here, **GitHub Copilot harness** means the runtime environment used by the agent in Copilot Studio. It is different from the GitHub Copilot coding assistant used in development environments such as Visual Studio Code.
+> Here, **GitHub Copilot harness** means the agent runtime in Copilot Studio, not the GitHub Copilot coding assistant. Follow this course's setup instructions for the required authoring experience.
 
 ## 🔎 Objectives
 
 By the end of this mission you'll be able to:
 
-1. Place Copilot Studio in the wider Microsoft AI stack
-1. Choose among the **GitHub Copilot**, **standard**, and **Copilot chat** harnesses
-1. Name the building blocks available on the **GitHub Copilot harness** and what each is for
-1. Understand how **Work IQ**, **Skills**, and **Workflows** change what an agent can do
-1. Know when to use a **workflow** instead of letting the orchestrator decide
-1. Understand the **channels** and **governance** story at a high level
+1. Distinguish **apps**, **agents**, and **workflows**, and place Copilot Studio in the Microsoft ecosystem
+1. Compare the four agent harnesses and explain why this course uses **GitHub Copilot**
+1. Identify the GitHub Copilot harness building blocks, including instructions, knowledge, tools, skills, and connected agents
+1. Choose when a defined workflow should handle part of an agent-driven process
+1. Recognize that publishing, governance, and billing depend on the artifact and harness
 
 ## What Copilot Studio Is (and Isn't)
 
-**Microsoft Copilot Studio** is the place you **build, test, publish, and monitor agents**. Think of it less as a "chatbot designer" and more as a low-code **agent platform** that sits at the center of several things you already know:
+**Microsoft Copilot Studio** is a low-code studio for building and managing business solutions with **agents**, **workflows**, and an **app creation experience in preview**.
 
-- It **extends Microsoft 365 Copilot** — agents you build can show up right inside Teams and the Microsoft 365 Copilot experience.
-- It's **part of the Power Platform** — so it inherits environments, solutions, connectors, and Dataverse.
-- It **reaches into Azure AI** — bring your own models and search/knowledge when you need them.
+Think of it as a workshop with different workstations, not a single chatbot designer:
+
+- **Apps** give people an interactive interface to use.
+- **Agents** interpret requests, answer questions, and use configured capabilities to act.
+- **Workflows and agent flows** coordinate defined steps, conditions, tools, and review points.
+
+Copilot Studio connects these experiences to organizational data and services. The capabilities, governance surface, and lifecycle depend on what you're building; don't assume one artifact's environment, publishing, or billing instructions apply to another.
 
 > [!INFO] The repositioning that matters
 > On the GitHub Copilot harness you don't script conversation paths. You **describe** the agent, point it at knowledge, give it skills and tools, and let the harness reason through the goal. The skills that pay off are **writing clear instructions and choosing the right capabilities**, not drawing dialog trees.
 
-## First Decision: Which Build Surface?
+## First Decision: What Are You Building?
 
-Copilot Studio isn't the only place to build an agent in the Microsoft stack. Think of the build surfaces as **one spectrum of control**, from "I just want a Q&A bot for my team" to "I'm shipping a custom AI application":
+Start with how people need to do the work.
+
+| Need | Start with | IT support example |
+| --- | --- | --- |
+| People need screens, forms, or views they can return to | **An app (preview)** | An equipment-request tracker |
+| People need an assistant to understand a request and help complete it | **An agent** | The `Contoso IT Concierge` |
+| A process needs defined steps and review points | **A workflow or agent flow** | Validate a request, obtain approval, and update the request record |
+
+These are starting points, not exclusive choices. An agent can call a workflow, and a workflow can call an agent when a step needs reasoning.
+
+Workflows on the GitHub Copilot harness and established agent flows on the standard harness have different authoring and execution models. Use the instructions for the artifact you're actually building; the names aren't interchangeable.
+
+```mermaid
+flowchart TD
+    A["What does the solution need?"] --> B["Interactive interface: App (preview)"]
+    A --> C["Assistant: Agent"]
+    A --> D["Defined process: Workflow or agent flow"]
+    B --> E["Hosted in Copilot Managed Runtime (preview)"]
+    C --> F["Choose an agent harness"]
+    F --> G["GitHub Copilot: multi-step business work"]
+    F --> H["Copilot chat: extend Copilot Chat"]
+    F --> I["Customer Conversation (preview): Customer Assist Agents"]
+    F --> J["standard: structured conversations"]
+```
+
+Start with the artifact people need, then choose an agent harness when an agent is part of the solution. Apps, agents, and workflows can be combined; this is a design map, not a complete execution architecture.
+
+### Where Apps and Copilot Managed Runtime Fit
+
+The app creation experience generates an interactive app from your description. You refine it, preview it, and publish and share it. **App creation is in preview**, is gradually rolling out, and can be disabled by your administrator.
+
+Apps created this way run in **Copilot Managed Runtime (preview)**: Microsoft-hosted app infrastructure with Microsoft Entra authentication and organizational governance. Users find the apps available to them at [managedapps.cloud.microsoft](https://managedapps.cloud.microsoft/).
+
+App creation is powered by the GitHub Copilot harness, but the resulting app is a different artifact from an agent. **Copilot Managed Runtime isn't a fifth agent harness.**
+
+> [!IMPORTANT] Three meanings of "app"
+> A **managed app created in Copilot Studio** isn't the agent **App channel**, which delivers an agent experience. It also isn't a Power Apps **canvas app** or **model-driven app**. Those names refer to different artifacts and authoring experiences.
+>
+> Studio routes app creation to a personal environment automatically. Don't apply this course's agent solution-packaging steps to a managed app. App build and runtime billing also need their own guidance.
+
+Learn more in [Apps overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/apps-experience/apps-overview) and [Copilot Managed Runtime overview](https://learn.microsoft.com/en-us/microsoft-365/managed-apps/).
+
+## Second Decision: Which Agent-Building Surface? {#first-decision-which-build-surface}
+
+If an **agent** is the right starting point, Copilot Studio isn't the only place to build one. This comparison concerns agent-building surfaces, not every way to create an app:
 
 > **Microsoft 365 Copilot (consume) → Agent Builder → Copilot Studio → Microsoft Foundry**
 > *no build · no-code · low-code · pro-code*
@@ -78,11 +128,13 @@ Copilot Studio isn't the only place to build an agent in the Microsoft stack. Th
 | **Build style** | No-code, natural language, in-context | Low-code → pro-code | Code-first / pro-code |
 | **Who it's for** | Information workers | Makers & developers | Developers & engineers |
 | **Reach** | **Microsoft 365 Copilot only** (you/your team) | Department, organization, or external—Teams, web, voice, custom apps | Custom apps (can publish to Microsoft 365 Copilot) |
-| **What it builds** | Lightweight Q&A agents grounded in your Microsoft 365 content | Business agents and workflows with connectors, MCP, and end-to-end automation | Custom AI applications, orchestration, models, and infrastructure |
-| **Governed in** | Microsoft 365 admin center | Power Platform admin center + ALM (dev/test/prod) | Azure (RBAC, Entra Agent ID, Foundry control plane) |
+| **What it builds** | Lightweight Q&A agents grounded in your Microsoft 365 content | Business agents, workflows, and agent flows; app creation is also available in preview | Custom AI applications, orchestration, models, and infrastructure |
+| **Governed in** | Microsoft 365 admin center | Depends on the artifact: Power Platform administration for agent environments; managed-app oversight also uses Microsoft 365 administration | Azure (RBAC, Entra Agent ID, Foundry control plane) |
 | **Time to value** | Immediate | Days to weeks | Weeks to months |
 
 ![Agent build surfaces ranging from Agent Builder to Copilot Studio and Microsoft Foundry as control and engineering investment increase](./assets/02-agent-build-surface-spectrum.png)
+
+This illustration compares **agent-building surfaces**. It isn't a catalog of managed-app creation routes.
 
 ### Agent Builder: Copilot Studio's lightweight cousin
 
@@ -100,7 +152,7 @@ This is the one most people get confused about. **Agent Builder** lives *inside*
 
 Go the *other* direction, past Copilot Studio to **Microsoft Foundry**, when you need **code-first control over orchestration**, your own **model and inference stack**, an **Azure data boundary**, or you're building a **custom AI application** rather than a business agent. Foundry can still publish to Microsoft 365 Copilot, so "pro-code" doesn't mean "leaves the ecosystem." *(Beyond Foundry, Microsoft also provides SDK options such as Microsoft Agent Framework and the Microsoft 365 Agents SDK. Use these when you want full code ownership; that's a deeper dive than this mission.)*
 
-## Second Decision: Which Harness?
+## Third Decision: Which Agent Harness? {#second-decision-which-harness}
 
 Mission 01 introduced a useful distinction:
 
@@ -110,30 +162,35 @@ Mission 01 introduced a useful distinction:
 
 A harness is therefore broader than orchestration. It includes an orchestration approach along with capabilities such as tools, memory, skills, file handling, monitoring, and secure execution.
 
-Once you've chosen **Copilot Studio** as your build surface, choose the harness that matches the work:
+For an agent, choose the harness that fits the work. These are four agent options, not four versions of the same authoring experience.
 
-| | **Copilot chat harness** | **Standard harness** | **GitHub Copilot harness** |
-|---|---|---|---|
-| **Best when** | The goal is to ground Microsoft 365 Copilot Chat in enterprise knowledge | The experience needs structured conversations, maker-defined components, or predictable control | The agent must reason through complex, multi-step work |
-| **Orchestration** | Uses the Microsoft 365 Copilot Chat experience | Configurable classic or generative orchestration over topics and other maker-defined capabilities | Enhanced, goal-driven orchestration that plans, acts, reviews results, and adjusts |
-| **Key capabilities** | Enterprise knowledge inside Microsoft 365 Copilot Chat | Topics, knowledge, tools, prompts, branches, and structured conversations | Skills, memory, connected agents, tools, workflows, and file creation |
-| **Publishing** | Internal teams | Internal teams or external customers | Internal teams or external customers |
-| **Billing** | Consumption-based or included in eligible Microsoft 365 Copilot user licenses | Standard Copilot Studio licensing | Usage-based Copilot Credits |
-| **In this course** | Not built here | Not built here | **Mission 02 onward** |
+| Harness | Best fit | Example | Course coverage |
+| --- | --- | --- | --- |
+| **GitHub Copilot** | Reasoning-heavy, multi-step work across tools, files, and business processes | An IT concierge that investigates a request and coordinates the next steps | This course's hands-on path |
+| **Copilot chat** | Extending Microsoft Copilot Chat with enterprise knowledge | A policy assistant inside employees' everyday Copilot experience | Orientation here |
+| **Customer Conversation (preview)** | Customer-facing chat and voice, specialist handling, and human escalation | A **Customer Assist Agent** for billing questions and service issues | Orientation here |
+| **standard** | Structured conversations and maker-authored topics, with classic or generative orchestration | Guided troubleshooting with defined questions and branches | The separate standard harness course |
 
-![Decision map for choosing the Copilot chat, Standard, or GitHub Copilot harness based on the work an agent must perform](./assets/02-harness-decision.png)
+Customer Assist Agents can coordinate specialist sub-agents and escalate unresolved issues to human representatives. Their chat and speech capabilities differ: speech doesn't support end-user sign-in, so knowledge requiring end-user credentials is limited to chat.
+
+The standard harness remains supported. Customer Conversation isn't a new name for every existing voice agent, and choosing GitHub Copilot doesn't mean an existing standard agent can be transferred directly.
+
+For current capabilities and billing references, use the [harness comparison](https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview) and [Customer Conversation overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview-customer-conversation).
 
 ### Apply the Decision to IT Support
 
-The same business scenario can be implemented with different harnesses depending on its requirements:
+The same business scenario can require different artifacts and harnesses:
 
-| If the IT support agent needs to... | Consider... |
+| If the solution needs to... | Consider... |
 | --- | --- |
-| Answer questions grounded in internal policies and documentation | **Copilot chat harness** or Agent Builder |
-| Use authored topics or controlled troubleshooting paths, with classic or generative selection of capabilities | **Standard harness** |
-| Interpret varied requests and dynamically combine troubleshooting guidance, live data, reusable skills, and workflows | **GitHub Copilot harness** |
+| Give employees a request form and status views | **An app (preview)** |
+| Answer questions grounded in internal policies inside Copilot Chat | **Copilot chat harness** or Agent Builder |
+| Guide an employee through authored troubleshooting questions and branches | **standard harness** |
+| Interpret varied requests and combine guidance, live data, skills, and workflows | **GitHub Copilot harness** |
+| Handle customer-service conversations over chat or voice with specialist handling and escalation | **Customer Conversation harness (preview)** |
+| Run a defined approval and record-update sequence | **A workflow or agent flow**, using the relevant authoring path |
 
-In this course, the completed `Contoso IT Concierge` will use the third approach. It will interpret an employee's request, select the appropriate skill and tool, gather missing information, and invoke a workflow when the request is ready. The scenario is intentionally straightforward so you can learn the architecture before applying it to more complex business processes.
+In this course, the `Contoso IT Concierge` uses the **GitHub Copilot harness**. It interprets an employee's request, selects capabilities, gathers missing information, and invokes a workflow when the request is ready. The other options help you recognize different requirements; they aren't extra builds required for your Recruit badge.
 
 ## Why is it called the "GitHub Copilot" Harness
 
@@ -258,7 +315,7 @@ You don't need to master this yet, but know the shape because "it works in my en
 - **Solutions & environments** — Package your agent (and everything it depends on) into a **solution** so you can move it cleanly from dev to test to production. You'll learn more about this in [Mission 3](../03-creating-a-solution/index.md).
 - **Identity & permissions** — Agents respect Microsoft 365 identity; users only ever see what they're allowed to. Work IQ enforces this at the platform level, per user.
 - **Central oversight** — As an org's agent estate grows, **Microsoft Agent 365** acts as a control plane for inventory, permissions, behavior, and cost across the ecosystem.
-- **Licensing** — Each harness has a different licensing and billing model. The GitHub Copilot harness uses a usage-based approach, while the Standard and Copilot Chat harnesses have different entitlements and billing options. You'll compare all three in [Mission 09](../09-understanding-licensing/index.md).
+- **Licensing** — Entitlements and billing depend on the artifact and harness. [Mission 09](../09-understanding-licensing/index.md) explains this course's GitHub Copilot agent and workflow requirements. Don't assume those rules also cover Customer Assist Agents or managed app build and runtime usage.
 
 ## ✅ Mission Complete {#mission-complete}
 
@@ -266,7 +323,9 @@ You've toured the Copilot Studio HQ. You can now:
 
 ✅ **Place Copilot Studio in the Microsoft ecosystem**: Explain how it connects Microsoft 365 Copilot, Power Platform, and Azure AI.
 
-✅ **Choose a harness**: Match GitHub Copilot, standard, and Copilot chat harnesses to their intended scenarios.
+✅ **Choose an artifact**: Distinguish an interactive app, an agent, and a workflow or agent flow.
+
+✅ **Choose an agent harness**: Match GitHub Copilot, Copilot chat, Customer Conversation, and standard to their intended scenarios.
 
 ✅ **Identify the GitHub Copilot harness building blocks**: Recognize instructions, knowledge, memory, tools, skills, models, and connected agents.
 
@@ -283,6 +342,12 @@ Stay sharp, Recruit, the toolbox is yours now.
 🔗 [Choose a harness in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview)
 
 🔗 [GitHub Copilot harness agents overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview)
+
+🔗 [Apps in Copilot Studio (preview)](https://learn.microsoft.com/en-us/microsoft-copilot-studio/apps-experience/apps-overview)
+
+🔗 [Customer Assist Agents and the Customer Conversation harness (preview)](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview-customer-conversation)
+
+🔗 [Copilot Managed Runtime (preview)](https://learn.microsoft.com/en-us/microsoft-365/managed-apps/)
 
 🔗 [Work IQ MCP overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/use-work-iq) — the intelligence layer, and how to add it
 
