@@ -19,7 +19,7 @@ products:
 industries:
   - financial-services
 created-date: 2026-04-06
-last-edited-date: 2026-04-06
+last-edited-date: 2026-10-21
 ---
 # 🔒 The Compliance Packet
 
@@ -49,11 +49,14 @@ By the end of this mission, Copilot Cowork will have created:
 
 ## ⚙️ Prerequisites {#prerequisites}
 
-- Active **Microsoft 365 Copilot** license with Copilot Cowork enabled
+- Active **Microsoft 365 Copilot** license assigned to your work or school account
+- **Microsoft 365 services**: access to Word, Excel, and Outlook for the audit package and briefing email
+- **Cowork billing and access**: usage-based billing enabled and a spending policy that covers your account and selects **Cowork**
+- **An organization-permitted model**: Anthropic is optional; permitted non-Anthropic models can also be used
 - The four sample files from this lab's `/assets/sample-files` folder downloaded to your device
 
-> [!WARNING]
-> Copilot Cowork requires Frontier enrollment for **both your user account and your tenant**. If Copilot Cowork isn't visible when you navigate to [m365.cloud.microsoft](https://m365.cloud.microsoft), ask your admin to check enrollment under **Copilot → Settings → Frontier** in the Microsoft 365 Admin Center.
+> [!NOTE]
+> Work/school Cowork is generally available. This mission doesn't require Frontier enrollment. Complete the [shared access and billing prerequisites](../index.md#access-and-billing), including the admin readiness checklist, before starting.
 >
 > Before starting, open and skim all four sample files so you know what Copilot Cowork is working with.
 
@@ -78,8 +81,8 @@ This mission provides all four source documents.
 
 One habit worth building early: **attach files before you send your first message**. Files attached at the start are available to every step in the conversation. Files added later only apply from that point forward.
 
-1. Navigate to [m365.cloud.microsoft](https://m365.cloud.microsoft) or open the **Microsoft 365 Copilot** desktop app
-1. In the left navigation under **Agents**, select **Cowork**
+1. Open [Microsoft Copilot](https://copilot.cloud.microsoft) with your work or school account
+1. Select **Cowork** in the top toggle next to **Chat**
 
     ![Select Cowork](./assets/select-cowork.png)
 
@@ -90,7 +93,7 @@ One habit worth building early: **attach files before you send your first messag
     ![Upload Files](./assets/add-files.png)
 
 > [!NOTE]
-> If you don't see Cowork in your left navigation, select **All agents** and search for it. If it still doesn't appear, your account may not have Frontier access (ask your admin)
+> The screenshot shows an earlier navigation layout. If Cowork is missing or you see an access request, ask your admin to check the [admin readiness checklist](../index.md#admin-readiness), not Frontier enrollment.
 
 ## 🧪 Lab 1.2 - Send the Prompt {#lab-1-2}
 
@@ -247,7 +250,7 @@ Once reviewed, you'll receive an email from Global AI Community with instruction
 ## 📚 Related Content {#related-content}
 
 - 📖 [Copilot Cowork overview — Microsoft Learn](https://learn.microsoft.com/copilot/microsoft-365/cowork/)
-- 🚀 [Join the Microsoft 365 Copilot Frontier program](https://adoption.microsoft.com/copilot/frontier-program/)
+- 📖 [Manage Cowork access, models, and billing](https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-admin-governance)
 
 <!-- markdownlint-disable-next-line MD033 -->
 <analytics-tag section="cowork-collective" mission="compliance-packet" />
