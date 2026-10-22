@@ -116,7 +116,7 @@ App creation is powered by the GitHub Copilot harness, but the resulting app is 
 
 Learn more in [Apps overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/apps-experience/apps-overview) and [Copilot Managed Runtime overview](https://learn.microsoft.com/en-us/microsoft-365/managed-apps/).
 
-## Second Decision: Which Agent-Building Surface? {#first-decision-which-build-surface}
+## Second Decision: Which Agent-Building Surface? {#second-decision-which-agent-building-surface}
 
 If an **agent** is the right starting point, Copilot Studio isn't the only place to build one. This comparison concerns agent-building surfaces, not every way to create an app:
 
@@ -152,7 +152,7 @@ This is the one most people get confused about. **Agent Builder** lives *inside*
 
 Go the *other* direction, past Copilot Studio to **Microsoft Foundry**, when you need **code-first control over orchestration**, your own **model and inference stack**, an **Azure data boundary**, or you're building a **custom AI application** rather than a business agent. Foundry can still publish to Microsoft 365 Copilot, so "pro-code" doesn't mean "leaves the ecosystem." *(Beyond Foundry, Microsoft also provides SDK options such as Microsoft Agent Framework and the Microsoft 365 Agents SDK. Use these when you want full code ownership; that's a deeper dive than this mission.)*
 
-## Third Decision: Which Agent Harness? {#second-decision-which-harness}
+## Third Decision: Which Agent Harness? {#third-decision-which-agent-harness}
 
 Mission 01 introduced a useful distinction:
 
