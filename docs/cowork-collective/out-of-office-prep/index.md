@@ -16,7 +16,7 @@ products:
 industries:
   - general
 created-date: 2026-04-06
-last-edited-date: 2026-04-06
+last-edited-date: 2026-10-21
 ---
 # 🏖️ Out of Office Vacation Handoff
 
@@ -60,8 +60,11 @@ Before starting this mission, confirm you have:
 
 - **Microsoft 365 Copilot license**: required to access Copilot Cowork ([learn more](https://learn.microsoft.com/copilot/microsoft-365/microsoft-365-copilot-licensing))
 - **Microsoft 365 license**: required for Outlook, Teams and Microsoft Planner integration
-- **Anthropic models enabled on your tenant**: Copilot Cowork relies on Anthropic models. Ensure your admin has enabled them in the [Microsoft 365 admin center](https://admin.microsoft.com/)
-- **Copilot Cowork access** via the [Microsoft 365 Frontier program](https://adoption.microsoft.com/copilot/frontier-program/)
+- **Cowork billing and access**: usage-based billing enabled and a spending policy that covers your account and selects **Cowork**
+- **An organization-permitted model**: Anthropic is optional; permitted non-Anthropic models can also be used
+
+> [!NOTE]
+> Work/school Cowork is generally available. This mission doesn't require Frontier enrollment. Complete the [shared access and billing prerequisites](../index.md#access-and-billing), including the admin readiness checklist, before starting.
 
 ## 📝 A Note on Real Data vs. Seed Data {#real-data-vs-seed-data}
 
@@ -162,13 +165,13 @@ This is the event Copilot Cowork's scheduled automation will eventually detect.
 
 Here, you're not telling Copilot Cowork what your projects are. You're asking it to look across your M365 data and find out. Start with a discovery of what you need to wrap up before you go out of office.
 
-1. Navigate to [m365.cloud.microsoft](https://m365.cloud.microsoft) or open the **Microsoft 365 Copilot** desktop app
-1. In the left sidebar under **Agents**, select **Cowork**
+1. Open [Microsoft Copilot](https://copilot.cloud.microsoft) with your work or school account
+1. Select **Cowork** in the top toggle next to **Chat**
 
     ![Select Cowork](./assets/select-cowork.png)
 
     > [!NOTE]
-    > If you don't see Cowork, select **All agents** and search for it. If it still doesn't appear, your account may not have Frontier access (check with your admin).
+    > The screenshot shows an earlier navigation layout. If Cowork is missing or you see an access request, ask your admin to check the [admin readiness checklist](../index.md#admin-readiness), not Frontier enrollment.
 
 1. Do **not** attach any files. You want Copilot Cowork to read your live M365 data (email, calendar, tasks, Teams, etc). Copy and paste this prompt and send it:
 
@@ -321,7 +324,7 @@ Congrats, agent — mission accomplished! If you'd like to receive a badge, plea
 ## 📚 Related Content {#related-content}
 
 - 📖 [Copilot Cowork overview — Microsoft Learn](https://learn.microsoft.com/copilot/microsoft-365/cowork/)
-- 🚀 [Join the Microsoft 365 Copilot Frontier program](https://adoption.microsoft.com/copilot/frontier-program/)
+- 📖 [Manage Cowork access, models, and billing](https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-admin-governance)
 
 <!-- markdownlint-disable-next-line MD033 -->
 <analytics-tag section="cowork-collective" mission="out-of-office-prep" />
