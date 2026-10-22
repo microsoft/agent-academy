@@ -21,7 +21,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-08-24
+last-edited-date: 2026-10-06
 ---
 
 # 🚨 Mission 04: Build an Agent with the GitHub Copilot Harness {#mission-04-build-an-agent-with-the-github-copilot-harness}
@@ -33,6 +33,10 @@ last-edited-date: 2026-08-24
 > [!NOTE]
 > This lab builds an agent powered by the **GitHub Copilot harness**.
 > In the current Copilot Studio UI, make sure the **New experience** toggle in the upper-right corner of the Home page is **on** so your screen matches the screenshots in this mission.
+
+🎥 **Watch the Walkthrough**
+
+[![Video walkthrough: Building with the GitHub Copilot Harness](./assets/video-thumbnail.png)](https://youtu.be/vlHQQ5_DSkc?si=h8bZL98QPiMCGwFX "Watch the walkthrough on YouTube")
 
 ## 🎯 Mission Brief {#mission-brief}
 
@@ -79,7 +83,6 @@ Administrators can also use the Power Platform admin center and Microsoft Purvie
 ## 🧠 Meet the GitHub Copilot harness {#meet-the-github-copilot-harness}
 
 Now that you understand why Copilot Studio is suited for building and governing more advanced agents, let's look at the runtime architecture you'll use. The [GitHub Copilot harness](https://learn.microsoft.com/microsoft-copilot-studio/harnesses-overview) is designed for reasoning-heavy, multi-step work. Instead of designing every conversation path manually, you describe the agent's purpose and behavior, then connect the knowledge and capabilities it needs.
-
 ![AI-based authoring in Copilot Studio](./assets/04-ai-based-authoring-in-copilot-studio.png)
 
 The agent lifecycle follows a simple pattern: create, build, test, publish, and monitor. In this mission, you'll focus on creating, building, and testing your agent.
@@ -180,7 +183,7 @@ Before starting this lab, make sure you have:
 
 ### 4.2 Add knowledge
 
-1. The **Build** view shows the agent **Instructions** on the left and a configuration panel on the right with **Tools**, **Knowledge**, **Skills**, and more. Let's provide the agent with **knowledge** so it knows where the source of truth is for IT-related questions. Select the **Add Button** next to the **Instructions** section in the configuration panel.
+1. The **Build** view shows the agent **Instructions** on the left and a configuration panel on the right with **Tools**, **Knowledge**, **Skills**, and more. Let's provide the agent with **knowledge** so it knows where the source of truth is for IT-related questions. Select the **+** button next to **Knowledge** in the configuration panel.
 
     ![Add a new agent knowledge source](./assets/04-add-a-new-agent-knowledge-source.png)
 
@@ -200,7 +203,7 @@ Before starting this lab, make sure you have:
 
     ![Add the Microsoft support website URL](./assets/04-add-the-microsoft-support-website-url.png)
 
-1. Copy and paste the following text into the input then select **Add**. Make sure to update the SharePoint site with your site's URL.
+1. Copy and paste the following text into the input then select **Add**.
 
     ```text
     https://learn.microsoft.com/troubleshoot
@@ -242,15 +245,9 @@ Before starting this lab, make sure you have:
 
     ![Select Click to upload knowledge file](./assets/04-select-click-to-upload-knowledge-file.png)
 
-1. Download the sample file by selecting the button below.
+1. Download the [Contoso Guest WiFi Connection Guide](./assets/WordFile/Contoso_Guest_WiFi_Connection_Guide.docx).
 
-    <download-files path="recruit-nextgen/04-build-a-custom-agent/assets/WordFile" />
-
-    Once downloaded, extract the `.zip` file to a folder on your device.
-
-    In File Explorer, open the extracted folder, select `Contoso_Guest_WiFi_Connection_Guide.docx`, and then select **Open**.
-
-    ![Select the Word knowledge document](./assets/04-select-the-word-knowledge-document.png)
+    In File Explorer, select `Contoso_Guest_WiFi_Connection_Guide.docx`, and then select **Open**.
 
 1. The file has been selected for upload. Select **Add to agent**.
 
@@ -282,6 +279,8 @@ Now that the agent's knowledge sources are ready, let's review some settings bef
     Welcome to Contoso IT Concierge. Whether you're experiencing a technical issue or looking for a device, I'll help you find the right solution or next step. How can I assist you today?
     ```
 
+    Select **Done** to apply the greeting, then save any pending agent changes. Reopen **Agent settings** to review the saved greeting shown below.
+
     ![Update the agent greeting message](./assets/04-update-the-agent-greeting-message.png)
 
     Exit from agent settings by selecting the **X** icon on the upper-right corner.
@@ -312,7 +311,7 @@ We'll now test our updated agent and how it answers questions using each connect
 
     ![Test SharePoint site and Word file knowledge sources](./assets/04-test-sharepoint-site-and-word-file-knowledge-sources.png)
 
-1. Scroll through the response. The **Contoso VPN Access** section is grounded using the **Contoso IT** SharePoint site, and the **Contoso Guest Wi-Fi** section is grounded using the uploaded document. The **Citations** list both sources separately - `Frequently-asked-questions.aspx` (SharePoint) and `Contoso_Guest_WiFi_Connection_Guide.docx` (document).
+1. Scroll through the response. The **Contoso VPN Access** section is grounded using the **Contoso IT** SharePoint site, and the **Contoso Guest Wi-Fi** section is grounded using the uploaded document. The reasoning trace shows the SharePoint search and document analysis. The **Citations** section shows the source links surfaced for this response; Copilot Studio can consolidate these links instead of listing every knowledge source separately.
 
     ![Guest wifi response and citations](./assets/04-guest-wifi-response-and-citations.png)
 

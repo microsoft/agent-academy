@@ -738,7 +738,7 @@ We won’t walk you through publishing again here as you already mastered that s
 If you need a refresher, revisit the [Recruit publishing module](../../recruit/11-publish-your-agent/index.md) then come right back and finish strong.
 
 > [!IMPORTANT]
-> If you are using a trial license to complete the course, you will not be able to publish.Publishing is not required to get a badge for this lab.
+> If you are using a trial license, publishing is disabled by default. Follow [Step 4 of the Recruit Course Setup](../../recruit/00-course-setup/index.md#step-4-enable-ability-to-publish-with-the-copilot-studio-trial) to enable it. Publishing is not required to get a badge for this lab.
 
 ## 🏁 Final Step: Deploy & Earn Your Badge {#final-step-deploy-earn-your-badge}
 

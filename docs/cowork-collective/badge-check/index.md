@@ -13,7 +13,7 @@ industries:
   - facilities
   - security
 created-date: 2026-04-06
-last-edited-date: 2026-04-06
+last-edited-date: 2026-10-21
 ---
 # 🏢 Badge Check
 
@@ -40,8 +40,11 @@ By the end of this mission, Copilot Cowork will have:
 
 - **Microsoft 365 Copilot license**: required to access Copilot Cowork ([learn more](https://learn.microsoft.com/copilot/microsoft-365/microsoft-365-copilot-licensing))
 - **Microsoft 365 license**: required for Outlook (to receive the email report) and OneDrive (to store custom skills)
-- **Anthropic models enabled on your tenant**: Copilot Cowork relies on Anthropic models. Ensure your admin has enabled them in the [Microsoft 365 admin center](https://admin.microsoft.com/)
-- **Copilot Cowork access** via the [Microsoft 365 Frontier program](https://adoption.microsoft.com/copilot/frontier-program/)
+- **Cowork billing and access**: usage-based billing enabled and a spending policy that covers your account and selects **Cowork**
+- **An organization-permitted model**: Anthropic is optional; permitted non-Anthropic models can also be used
+
+> [!NOTE]
+> Work/school Cowork is generally available. This mission doesn't require Frontier enrollment. Complete the [shared access and billing prerequisites](../index.md#access-and-billing), including the admin readiness checklist, before starting.
 
 ## 🤝 What is Copilot Cowork? {#what-is-copilot-cowork}
 
@@ -78,9 +81,9 @@ This mission uses one source file.
 
 In this first lab, upload the badge scan file and ask Copilot Cowork to identify who hasn't checked out.
 
-1. Open [Microsoft 365 Copilot](https://m365.cloud.microsoft/chat/)
+1. Open [Microsoft Copilot](https://copilot.cloud.microsoft) with your work or school account
 
-1. Select **Cowork (Frontier)**. If you don't see it, select **All agents** first
+1. Select **Cowork** in the top toggle next to **Chat**. If Cowork is missing or you see an access request, ask your admin to check the [admin readiness checklist](../index.md#admin-readiness)
 
     ![Microsoft 365 Copilot left sidebar showing Agents section with Cowork (Frontier) highlighted in a red box](./assets/select-cowork.png)
 
@@ -89,7 +92,7 @@ In this first lab, upload the badge scan file and ask Copilot Cowork to identify
     ![Cowork homepage showing the input field, four Get to work sample cards (Organize my inbox, Organize my week, Prep for a meeting, Research a company), and an empty Tasks section with No recent tasks](./assets/cowork-home.png)
 
     > [!NOTE]
-    > Your Copilot Cowork homepage may look slightly different depending on when you access it.
+    > These screenshots show an earlier interface, including the old **Cowork (Frontier)** navigation label. Follow the current entry steps above; the label doesn't mean this mission requires Frontier enrollment.
 
 1. Drag and drop the **badge_check.csv** file into the conversation
 
@@ -175,7 +178,7 @@ In this mission, you'll create a **frontend-design** skill that instructs Copilo
 
 ### Run the Enhanced Mission
 
-1. Open [Microsoft 365 Copilot](https://m365.cloud.microsoft/chat) and select **Cowork (Frontier)**
+1. Open [Microsoft Copilot](https://copilot.cloud.microsoft) and select **Cowork** in the top toggle next to **Chat**
 
 1. Start a **new conversation**
 
@@ -259,7 +262,7 @@ Once reviewed, you'll get an email from Global AI Community with instructions to
 - 📖 [Copilot Cowork overview — Microsoft Learn](https://learn.microsoft.com/copilot/microsoft-365/cowork/)
 - 📖 [Get started with Copilot Cowork](https://learn.microsoft.com/copilot/microsoft-365/cowork/get-started)
 - 📖 [Copilot Cowork skills and custom skills](https://learn.microsoft.com/copilot/microsoft-365/cowork/use-cowork#cowork-skills)
-- 🚀 [Join the Microsoft 365 Copilot Frontier program](https://adoption.microsoft.com/copilot/frontier-program/)
+- 📖 [Manage Cowork access, models, and billing](https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-admin-governance)
 - 📖 [Frontend Design skill (skills.sh)](https://skills.sh/anthropics/skills/frontend-design)
 
 <analytics-tag section="cowork-collective" mission="badge-check" />

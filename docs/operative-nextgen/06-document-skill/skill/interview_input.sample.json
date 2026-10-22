@@ -1,0 +1,34 @@
+{
+  "application_number": "A01000",
+  "candidate": {
+    "name": "Avery Example",
+    "email": "avery.example@example.com",
+    "current_title": "Lead Power Platform Engineer",
+    "location": "Remote (UK)"
+  },
+  "role": {
+    "number": "J1000",
+    "title": "Power Automate Specialist",
+    "description": "Create and optimize workflows using Power Automate. Experience with connectors and API integrations required."
+  },
+  "summary": "Avery is a senior Power Platform engineer with 8+ years delivering automation and integration solutions. Strong on Power Automate, connectors, and API integration, with measurable process-optimization outcomes and PL-200/PL-400 certifications.",
+  "criteria": [
+    { "name": "Workflow Automation", "weighting": 35, "level": "Strong", "evidence": "Built an HR intake automation pipeline and migrated legacy workflows to Power Automate." },
+    { "name": "PI and Connector Usage", "weighting": 25, "level": "Strong", "evidence": "Integrated REST/Graph APIs, Webhooks, Azure Functions and Service Bus via custom connectors." },
+    { "name": "Error Handling", "weighting": 15, "level": "Moderate", "evidence": "Implemented an error-handling and reliability reporting framework." },
+    { "name": "Process Optimization", "weighting": 15, "level": "Strong", "evidence": "Reduced approval cycle time to under 24 hours across multiple employers." },
+    { "name": "Documentation", "weighting": 10, "level": "Moderate", "evidence": "ALM, CI/CD and solution-aware flows imply strong documentation discipline." }
+  ],
+  "questions": [
+    { "criterion": "Workflow Automation", "weighting": 35, "question": "Walk me through the most complex Power Automate solution you built end to end. What made it complex and how did you structure it?", "maps_to": "Must-have: automation depth" },
+    { "criterion": "Workflow Automation", "weighting": 35, "question": "How do you decide between a cloud flow, a child flow, and a Dataverse plug-in for a given automation?", "maps_to": "Must-have: design judgement" },
+    { "criterion": "Workflow Automation", "weighting": 35, "question": "Describe how you migrated legacy workflows to Power Automate without disrupting users.", "maps_to": "Must-have: migration" },
+    { "criterion": "PI and Connector Usage", "weighting": 25, "question": "Tell me about a time you built or used a custom connector against a REST or Graph API. What were the auth and pagination challenges?", "maps_to": "Must-have: connector/API" },
+    { "criterion": "PI and Connector Usage", "weighting": 25, "question": "How have you used Azure Functions or Service Bus alongside Power Automate, and why?", "maps_to": "Must-have: integration" },
+    { "criterion": "Error Handling", "weighting": 15, "question": "Describe your approach to error handling, retries, and alerting in a production flow.", "maps_to": "Reliability" },
+    { "criterion": "Error Handling", "weighting": 15, "question": "How do you make a flow idempotent so retries don't double-process records?", "maps_to": "Reliability depth" },
+    { "criterion": "Process Optimization", "weighting": 15, "question": "Give a concrete example where you measurably reduced a process cycle time. How did you measure it?", "maps_to": "Outcomes" },
+    { "criterion": "Documentation", "weighting": 10, "question": "How do you document solution-aware flows and hand them over for ALM?", "maps_to": "Maintainability" },
+    { "criterion": "Documentation", "weighting": 10, "question": "What belongs in run-book documentation for an automation you'd hand to a support team?", "maps_to": "Operability" }
+  ]
+}

@@ -676,6 +676,9 @@ Now let's create our connected agent for interview preparation and add it to you
 
     ![Publish](./assets/02_connectedAgentPublish.png)
 
+    > [!IMPORTANT]
+    > Trial environments block publishing by default, which means the Interview Agent can't be selected as a connected agent later in this lab. Enable publishing by following [Step 4 of the Recruit Course Setup](../../recruit/00-course-setup/index.md#step-4-enable-ability-to-publish-with-the-copilot-studio-trial).
+
 ### 3.2.3 Connect the Interview Prep Agent to your Hiring Agent
 
 1. Navigate back to your **Hiring Agent**

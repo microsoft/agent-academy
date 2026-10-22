@@ -5,7 +5,7 @@ prev:
 next:
   text: Deploy a Declarative Agent for Microsoft 365 Copilot
   link: /recruit/03-create-a-declarative-agent-for-M365Copilot
-short-description: 'Learn the building blocks: knowledge, skills, autonomy'
+short-description: 'Understand the Copilot Studio product map and standard agent building blocks'
 difficulty: 1
 codename: OPERATION CORE PROTOCOL
 time: 30
@@ -17,7 +17,7 @@ products:
 industries:
   - it
 created-date: 2025-08-20
-last-edited-date: 2026-08-06
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 02: Copilot Studio Fundamentals {#mission-02-copilot-studio-fundamentals}
 
@@ -31,7 +31,7 @@ last-edited-date: 2026-08-06
 
 Welcome, Recruit. This mission will equip you with foundational intel to understand how Copilot Studio works, and how to build intelligent agents that deliver real business value.
 
-Before building your first agent, you need to understand the four key components that make up every custom AI agent: Knowledge, Tools, Topics, and Instructions. You’ll also learn how these elements work together in the Copilot Studio orchestrator.
+Before building your first agent on the **standard harness**, you'll explore knowledge, tools, topics, and instructions. You'll learn how these components work together through classic or generative orchestration. Other Copilot Studio harnesses organize their capabilities differently.
 
 > [!IMPORTANT] This mission uses the classic Copilot Studio experience
 > Microsoft Copilot Studio is rolling out a new authoring experience. The concepts in this mission still apply, but the course screenshots and navigation paths use the **classic experience**. If later missions look different on your screen, turn off **New Experience** in the upper-right corner to follow along.
@@ -44,6 +44,28 @@ In this mission, you’ll learn:
 1. Why organizations build agents for knowledge and automation scenarios
 1. How knowledge, tools, topics, and instructions shape an agent
 1. How the Copilot Studio orchestrator brings these components together
+
+## Where This Course Fits in Copilot Studio
+
+Copilot Studio supports **agents**, **workflows and agent flows**, and **app creation in preview**. An app provides an interactive interface, an agent handles requests using its configured capabilities, and a workflow or agent flow coordinates defined process steps.
+
+For agents, there are four harnesses:
+
+| Harness | When it fits |
+| --- | --- |
+| **GitHub Copilot** | Reasoning-heavy, multi-step work across tools and files |
+| **Copilot chat** | Extending Microsoft Copilot Chat with enterprise knowledge |
+| **Customer Conversation (preview)** | **Customer Assist Agents** for customer-service conversations over chat and voice, with escalation to human representatives |
+| **standard** | Structured conversations and maker-authored topics, using classic or generative orchestration |
+
+This mission teaches the **standard harness**. The four building blocks below describe this course's custom-agent architecture, not a universal checklist for every app or agent in Copilot Studio. The separate declarative-agent mission introduces extending Microsoft 365 Copilot; it doesn't change the harness used for the custom agent you build later.
+
+Apps created in the new app experience run in **Copilot Managed Runtime (preview)**. They aren't the agent **App channel** or Power Apps **canvas apps** and **model-driven apps**, and they don't use this course's agent-building steps.
+
+> [!NOTE] Orientation, not extra prerequisites
+> You don't need app creation or Customer Conversation access to complete this course. The standard harness remains supported. Use the [GitHub Copilot harness Recruit path](/recruit-nextgen/) if you want its hands-on agent-building approach instead.
+
+See the [Copilot Studio overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [harness comparison](https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview), and [apps overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/apps-experience/apps-overview).
 
 ## What Are Agents in Copilot Studio?
 
@@ -73,7 +95,7 @@ While Microsoft 365 Copilot provides general AI assistance across Office apps, y
 
 ## Four Building Blocks of an Agent
 
-Every Copilot Studio agent is built from four core components:
+For the standard harness agent in this course, focus on four building blocks:
 
 1. **Knowledge**  
 1. **Tools (Actions)**  

@@ -14,6 +14,13 @@ Your mission—should you choose to accept it—is to master the art of building
 
 This hands-on training is your entry point into the **world of agents**: from grounded prompts to Adaptive Cards and agent flows, you'll learn how to build, scale, and deploy intelligent agents using real-world tools and use cases.
 
+> [!NOTE] Know the platform; build on this course's path
+> Copilot Studio supports **apps (preview)**, **agents**, and **workflows and agent flows**. Its four agent harnesses are **GitHub Copilot**, **Copilot chat**, **Customer Conversation (preview)**, and **standard**. [Mission 02](/recruit/02-copilot-studio-fundamentals/) explains where each fits.
+>
+> This course's custom-agent work uses the **standard harness**, with topics, Adaptive Cards, and agent flows. Mission 03 also introduces a declarative agent for Microsoft 365 Copilot. You don't need to build a managed app, a GitHub Copilot harness agent, or a Customer Assist Agent to earn this course's badge.
+
+<!-- Separate adjacent callouts for Markdownlint. -->
+
 > [!IMPORTANT]
 > Microsoft Copilot Studio is rolling out a new authoring experience. The lessons in this course currently use the **classic experience** shown in the screenshots and steps. If your screen looks different, turn off **New Experience** in the upper-right corner to follow along. Refreshed lessons for the new experience are planned, but the current material remains valid in the classic experience.
 
@@ -22,6 +29,7 @@ This hands-on training is your entry point into the **world of agents**: from gr
 By completing the Agent Academy, you'll be able to:
 
 - Understand what agents are in the context of Microsoft Copilot Studio
+- Recognize apps, agents, and workflows, and explain where the standard harness fits
 - Explore how Large Language Models (LLMs), retrieval-augmented generation (RAG), and orchestration come together in an agent
 - Build both **declarative** and **custom agents**
 - Enhance agents with **Topics**, **Adaptive Cards**, and **Agent Flows**
@@ -45,7 +53,7 @@ This academy is broken into progressive lessons—each one designed as a field m
 | ------ | ----- | ---------------- |
 | `00` | 🧰 [Course Setup](/recruit/00-course-setup/) | Set up your dev environment, Copilot Studio trial, and SharePoint site |
 | `01` | 🧠 [Introduction to Agents](/recruit/01-introduction-to-agents/) | Understand conversational AI concepts, LLMs, and autonomous vs. declarative agents |
-| `02` | 🛠️ [Copilot Studio Fundamentals](/recruit/02-copilot-studio-fundamentals/) | Learn the building blocks: knowledge, skills, autonomy |
+| `02` | 🛠️ [Copilot Studio Fundamentals](/recruit/02-copilot-studio-fundamentals/) | Understand the product map, then learn standard agent building blocks |
 | `03` | 👩‍💻 [Deploy a Declarative Agent](/recruit/03-create-a-declarative-agent-for-M365Copilot/) | Add your own agent to Microsoft 365 Copilot, grounded in a prompt |
 | `04` | 🧩 [Creating a Solution](/recruit/04-creating-a-solution/) | Package your agent into a reusable solution for environment management |
 | `05` | 🚀 [Using a Pre-Built Agent](/recruit/05-using-prebuilt-agents/) | Use and customize a template agent to accelerate setup |

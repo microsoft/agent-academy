@@ -15,7 +15,7 @@ Your advanced mission—should you choose to accept it—is to master the art of
 This intensive training takes you beyond basic agent creation into the sophisticated world of **multi-agent orchestration**: from hiring automation to AI safety, you'll learn to build, coordinate, and deploy intelligent agent ecosystems using real-world enterprise scenarios.
 
 > [!IMPORTANT]
-> Microsoft Copilot Studio is rolling out a new authoring experience. The lessons in this course currently use the **classic experience** shown in the screenshots and steps. If your screen looks different, turn off **New Experience** in the upper-right corner to follow along. Refreshed lessons for the new experience are planned, but the current material remains valid in the classic experience.
+> These lessons use the **Standard Harness** in Copilot Studio. If your screen looks different, turn off **New Experience** in the upper-right corner to follow along. For the new experience, choose the [GitHub Copilot harness path](/operative-nextgen/).
 
 ## 🎯 Mission Objective {#mission-objective}
 
@@ -58,18 +58,18 @@ This academy is structured as a progressive series of field operations—each mi
 
 | Mission | Title | Operation Briefing |
 | --------- | ------- | ------------------- |
-| `01` | 🚨 [Get started with the Hiring Agent](./01-get-started/index.md) | Deploy foundational infrastructure and create your central orchestrator agent |
-| `02` | 📝 [Authoring Agent Instructions](./02-agent-instructions/index.md) | Master precise agent communication and behavior control |
-| `03` | 🎭 [Make your agent multi-agent ready with connected agents](./03-multi-agent/index.md) | Transform single agent into coordinated multi-agent system |
-| `04` | ⚡ [Automate your agent with Triggers](./04-automate-triggers/index.md) | Implement autonomous agent behaviors with event-driven triggers |
-| `05` | 💬 [Understanding Agent Models and Response Formatting](./05-model-selection/index.md) | Customize agent models for maximum impact and engagement |
-| `06` | 🛡️ [Content Moderation and AI Safety Essentials](./06-ai-safety/index.md) | Implement enterprise-grade safety and compliance measures |
-| `07` | 🎨 [Extracting Resume Contents with Multi-Modal Prompts](./07-multimodal-prompts/index.md) | Process documents and images with advanced AI capabilities |
-| `08` | 🗄️ [Prompts - Dataverse Grounding](./08-dataverse-grounding/index.md) | Ground agents in enterprise data for accurate responses |
-| `09` | 🧠 [Generating an Interview Prep Document](./09-document-generation/index.md) | Implement document generation in AI prompts |
-| `10` | 📄 [Integrate with MCP Servers](./10-mcp/index.md) | Integrate with out of the box MCP servers |
-| `11` | 📊 [Obtain User Feedback with Adaptive Cards](./11-obtain-user-feedback/index.md) | Collect and process user feedback for continuous improvement |
-| `12` | 🏅 [Course Completion Badges](./course-completion-badges-operative/index.md) | Claim your Operative badge and celebrate your achievement |
+| `01` | 🚨 [Get started with the Hiring Agent](/operative/01-get-started/) | Deploy foundational infrastructure and create your central orchestrator agent |
+| `02` | 📝 [Authoring Agent Instructions](/operative/02-agent-instructions/) | Master precise agent communication and behavior control |
+| `03` | 🎭 [Make your agent multi-agent ready with connected agents](/operative/03-multi-agent/) | Transform single agent into coordinated multi-agent system |
+| `04` | ⚡ [Automate your agent with Triggers](/operative/04-automate-triggers/) | Implement autonomous agent behaviors with event-driven triggers |
+| `05` | 💬 [Understanding Agent Models and Response Formatting](/operative/05-model-selection/) | Customize agent models for maximum impact and engagement |
+| `06` | 🛡️ [Content Moderation and AI Safety Essentials](/operative/06-ai-safety/) | Implement enterprise-grade safety and compliance measures |
+| `07` | 🎨 [Extracting Resume Contents with Multi-Modal Prompts](/operative/07-multimodal-prompts/) | Process documents and images with advanced AI capabilities |
+| `08` | 🗄️ [Prompts - Dataverse Grounding](/operative/08-dataverse-grounding/) | Ground agents in enterprise data for accurate responses |
+| `09` | 🧠 [Generating an Interview Prep Document](/operative/09-document-generation/) | Implement document generation in AI prompts |
+| `10` | 📄 [Integrate with MCP Servers](/operative/10-mcp/) | Integrate with out of the box MCP servers |
+| `11` | 📊 [Obtain User Feedback with Adaptive Cards](/operative/11-obtain-user-feedback/) | Collect and process user feedback for continuous improvement |
+| `12` | 🏅 [Course Completion Badges](/operative/course-completion-badges-operative/) | Claim your Operative badge and celebrate your achievement |
 
 > [!NOTE]
 > ✅ Completing this curriculum earns you the **Operative** badge.  

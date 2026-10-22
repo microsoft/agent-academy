@@ -244,11 +244,13 @@ After registration, configure the client application with the necessary permissi
 > [!TIP]
 > Keep both the server (`dotnet run`) and the tunnel (`devtunnel host hr-mcp-secured`) running throughout the mission.
 
-### Update the Application ID URI and configuration
+### Confirm the Application ID URI
 
-1. In the [Entra admin center](https://entra.microsoft.com), open the **HR MCP Server** app → **Expose an API** → next to **Application ID URI** select **Edit**, replace `api://<guid>` with your dev tunnel URL (no trailing slash, e.g., `https://hr-mcp-secured.devtunnels.ms`), and **Save**.
+Leave the **Application ID URI** as the default `api://<client-id>` you set earlier. Do not replace it with the dev tunnel URL. Microsoft Entra ID accepts an `https://` identifier URI only when its host is a verified domain of your tenant, and `devtunnels.ms` cannot be verified, so the edit fails with `Values of IdentifierUris property must use a verified domain of the organization or its subdomain`. See [Restrictions on identifier URIs of Microsoft Entra applications](https://learn.microsoft.com/entra/identity-platform/identifier-uri-restrictions) for the supported formats.
 
-1. Update `appsettings.json` so `Scopes` uses the dev tunnel URL:
+The dev tunnel URL is still the address Copilot Studio calls. The server builds its RFC 9728 `resource` value and `resource_metadata` URL from the incoming request host, so the tunnel is picked up automatically, and the access token audience stays the server's client ID.
+
+1. Confirm `appsettings.json` matches the following, then stop the server (`Ctrl+C`) and start it again with `dotnet run`:
 
     ```json
     {
@@ -257,12 +259,10 @@ After registration, configure the client application with the necessary permissi
         "TenantId": "[YOUR_TENANT_ID]",
         "ClientId": "[YOUR_HR_MCP_SERVER_CLIENT_ID]",
         "Audience": "[YOUR_HR_MCP_SERVER_CLIENT_ID]",
-        "Scopes": "[YOUR_DEVTUNNEL_URL]/HR.Manage"
+        "Scopes": "api://[YOUR_HR_MCP_SERVER_CLIENT_ID]/HR.Manage"
       }
     }
     ```
-
-1. Save, stop the server (`Ctrl+C`), and start it again with `dotnet run`.
 
 <!-- REFORMAT-ONLY: Lab 1.2 runs in the Entra admin center and local terminal; it does not
      depend on the Copilot Studio experience. Screenshots were not recaptured. -->
@@ -364,7 +364,7 @@ Now add the secured MCP server as a tool and wire up OAuth 2.0.
     - **Scopes**: enter these scopes, separated by spaces:
 
         > [!IMPORTANT]
-        > These scopes are temporary — you'll replace them with the secured server's real scope (`[YOUR_DEVTUNNEL_URL]/HR.Manage`) once the connection is established.
+        > These scopes are temporary — you'll replace them with the secured server's real scope (`api://[YOUR_HR_MCP_SERVER_CLIENT_ID]/HR.Manage`) once the connection is established.
 
     ![OAuth 2.0 Manual configuration](./assets/step-oauth-config.png)
 
@@ -374,7 +374,7 @@ Now add the secured MCP server as a tool and wire up OAuth 2.0.
 
     ![Configure](./assets/entra-redirect-uri-01.png)
 
-1. *(Optional)* Configure the Power Apps custom connector if your environment requires it. In [Power Automate](https://make.powerautomate.com), select the correct environment → **More** → **Discover all** → **Custom connectors**, edit the **HR MCP Server Secured** connector's **Security** tab, set the **Client Secret**, **Resource URL** (your dev tunnel URL), and **Scope** (`HR.Manage`), then **Update connector**.
+1. *(Optional)* Configure the Power Apps custom connector if your environment requires it. In [Power Automate](https://make.powerautomate.com), select the correct environment → **More** → **Discover all** → **Custom connectors**, edit the **HR MCP Server Secured** connector's **Security** tab, set the **Client Secret**, **Resource URL** (the Application ID URI, `api://[YOUR_HR_MCP_SERVER_CLIENT_ID]`), and **Scope** (`HR.Manage`), then **Update connector**.
 
 1. Complete the connection: in the tool configuration, select **Not connected** → **Create new connection** → **Create**, authenticate with a valid work account, and grant consent if prompted. Then select **Add**.
 
