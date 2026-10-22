@@ -167,8 +167,8 @@ For an agent, choose the harness that fits the work. These are four agent option
 | Harness | Best fit | Example | Course coverage |
 | --- | --- | --- | --- |
 | **GitHub Copilot** | Reasoning-heavy, multi-step work across tools, files, and business processes | An IT concierge that investigates a request and coordinates the next steps | This course's hands-on path |
-| **Copilot chat** | Extending Microsoft Copilot Chat with enterprise knowledge | A policy assistant inside employees' everyday Copilot experience | Orientation here |
-| **Customer Conversation (preview)** | Customer-facing chat and voice, specialist handling, and human escalation | A **Customer Assist Agent** for billing questions and service issues | Orientation here |
+| **Copilot chat** | Extending Microsoft Copilot Chat with enterprise knowledge | A policy assistant inside employees' everyday Copilot experience | Conceptual overview only; no hands-on lab |
+| **Customer Conversation (preview)** | Customer-facing chat and voice, specialist handling, and human escalation | A **Customer Assist Agent** for billing questions and service issues | Conceptual overview only; no hands-on lab |
 | **standard** | Structured conversations and maker-authored topics, with classic or generative orchestration | Guided troubleshooting with defined questions and branches | The separate standard harness course |
 
 Customer Assist Agents can coordinate specialist sub-agents and escalate unresolved issues to human representatives. Their chat and speech capabilities differ: speech doesn't support end-user sign-in, so knowledge requiring end-user credentials is limited to chat.
