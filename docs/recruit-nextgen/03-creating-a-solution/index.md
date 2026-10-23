@@ -12,6 +12,7 @@ difficulty: 1
 codename: OPERATION CTRL-ALT-PACKAGE
 time: 45
 harness: github-copilot
+credits: 0
 tags:
   - solutions
 products:
@@ -26,6 +27,7 @@ last-edited-date: 2026-10-06
 
 <mission-meta />
 
+<mission-credits />
 🎥 **Watch the Walkthrough**
 
 [![Video walkthrough: Creating a Solution](./assets/video-thumbnail.png)](https://www.youtube.com/watch?v=VMB8rjNMXIs "Watch the walkthrough on YouTube")

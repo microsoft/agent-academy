@@ -237,6 +237,7 @@ const hasAnything = computed(() => codename.value || difficulty.value || timeMin
 .meta-pills {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.3rem;
 }
 

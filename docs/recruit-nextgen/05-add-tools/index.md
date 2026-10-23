@@ -12,6 +12,7 @@ difficulty: 1
 codename: OPERATION TOOL UP
 time: 30
 harness: github-copilot
+credits: 0
 tags:
    - automation
    - grounding
@@ -28,6 +29,8 @@ last-edited-date: 2026-10-06
 # 🚨 Mission 05: Add a Tool {#mission-05-add-a-tool}
 
 <mission-meta />
+
+<mission-credits />
 
 > [!NOTE]
 > This lab uses an agent powered by the **GitHub Copilot harness**.
