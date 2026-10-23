@@ -18,7 +18,7 @@ products: [copilot-studio, dataverse, power-automate, outlook, teams]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-10-22
+last-edited-date: 2026-06-29
 ---
 # 🚨 Mission 04: Add Event Triggers to act autonomously {#mission-04-add-event-triggers-to-act-autonomously}
 
@@ -48,7 +48,7 @@ Welcome to the world where automation meets intelligence.
 > [!NOTE]
 > This lesson uses the **new Copilot Studio experience** (the **New experience** toggle in the
 > upper-right is **on**). In this experience the agent editor is a single **Build** canvas, and
-> automations are authored as **Workflows** in the **Workflows** area - there is no standard harness
+> automations are authored as **Workflows** in the **Workflows** area - there is no classic
 > **Overview** tab, no **Triggers and Channels** card, and no round-trip to the Power Automate maker
 > portal.
 
@@ -202,7 +202,7 @@ To complete this lab you will need to:
 ### 🧪 Lab 4.1 - Automate uploading resumes to Dataverse received by email {#lab-41-automate-uploading-resumes-to-dataverse-received-by-email}
 
 > [!NOTE]
-> On the standard harness this automation was added on the agent's **Overview → Triggers and
+> In the classic experience this automation was added on the agent's **Overview → Triggers and
 > Channels** card and edited in Power Automate. In the new experience there is no Overview/Triggers
 > card; you build the automation as a **Workflow** with a **Connector** trigger and invoke the agent
 > with the **Agent** step.
@@ -253,7 +253,7 @@ To complete this lab you will need to:
     ![Trigger Settings showing Split On, Concurrency control, and Trigger conditions](./assets/validation/trigger-settings-split-on.png)
 
     ::: details Additional Learning: Split On
-    **Split On** tells the workflow to "de-batch" an array returned by the trigger and start one run per item. On the standard harness this lived in the Power Automate trigger settings; in the new experience it moved to the trigger's **Settings** flyout — but the behavior is identical.
+    **Split On** tells the workflow to "de-batch" an array returned by the trigger and start one run per item. In the classic experience this lived in the Power Automate trigger settings; in the new experience it moved to the trigger's **Settings** flyout — but the behavior is identical.
     :::
 
 1. Let's add some logic to check the file type of the attachment - we only want to upload `.PDF` file attachments and not images (these could come from email signatures). Select the **+** below the trigger and add an **If/Else** step.
@@ -262,7 +262,7 @@ To complete this lab you will need to:
 
     > [!NOTE]
     > Selecting the per-attachment **Content-Type** field wraps the condition in a **Loop** (the new
-    > experience's equivalent of the standard harness "Apply to each" / "For each"), because attachments are an
+    > experience's equivalent of the classic "Apply to each" / "For each"), because attachments are an
     > array. This ensures the check runs once per attachment.
 
     ::: details Additional Learning: Loop (formerly "Apply to each" / "For each")
@@ -335,7 +335,7 @@ To complete this lab you will need to:
     ![The Agent step invokes the Hiring Agent](./assets/validation/agent-step-handoff.png)
 
     > [!NOTE]
-    > On the standard harness this step was the Power Automate action **"Sends a prompt to the
+    > In the classic experience this step was the Power Automate action **"Sends a prompt to the
     > specified copilot for processing."** In the new experience the workflow **Agent** step plays the
     > same role - it invokes your agent and passes data to it.
 
@@ -366,7 +366,7 @@ We're now going to create a second **Workflow** that uses the values passed by t
 
 > [!NOTE]
 > Adaptive cards are **fully supported** in the new experience - they're posted from **Workflows** using
-> Microsoft Teams connector actions such as **Post card in a chat or channel**. (The standard harness in-agent
+> Microsoft Teams connector actions such as **Post card in a chat or channel**. (The classic in-agent
 > "Ask with adaptive card" Topic node no longer exists, but Teams connector actions cover this scenario
 > and more.)
 
@@ -448,7 +448,7 @@ Let's begin!
          there. -->
 
     > [!NOTE]
-    > On the standard harness this was a separate **Respond to the agent** action you added at the end
+    > In the classic experience this was a separate **Respond to the agent** action you added at the end
     > of the flow. In the new experience it's an auto-created terminal node on the agent-callable
     > workflow — you only need to fill in its outputs.
 
@@ -467,7 +467,7 @@ Let's begin!
 1. In the **Add a tool** gallery, select the **Workflows** tab, choose **Notify Teams Applicant channel**, then select **Add and configure**.
 
     > [!NOTE]
-    > On the standard harness this tool was attached to the **child** Application Intake Agent. In the
+    > In the classic experience this tool was attached to the **child** Application Intake Agent. In the
     > new experience, **skills don't own tools** - tools live on the agent's **Tools** card. The
     > Application Intake **skill** references the tool from its instructions (next step).
 
@@ -481,7 +481,7 @@ Let's begin!
     ```
 
     > [!NOTE]
-    > On the standard harness, the instruction referenced a _child agent_ ("…in the child agent
+    > In the classic experience, the instruction referenced a _child agent_ ("…in the child agent
     > 'Application Intake Agent'") and the tool was inserted with a `/` mention. In the new experience,
     > the **Application Intake skill** references the tool that lives on the **Hiring Agent**'s Tools
     > card.
@@ -527,13 +527,13 @@ We can now test the agent!
 1. In Copilot Studio, open the **Notify Teams Applicant channel** workflow (or the Lab 4.1 workflow) and select the **Activity** (or **Monitor**) tab to view the run that succeeded for the sent email.
 
     > [!NOTE]
-    > On the standard harness you viewed flow runs in the Power Automate maker portal. In the new
+    > In the classic experience you viewed flow runs in the Power Automate maker portal. In the new
     > experience, runs are viewed in the **Workflows** canvas under **Activity/Monitor**.
 
 1. Back in the **Hiring Agent**, select the **Monitor** tab.
 
     > [!NOTE]
-    > On the standard harness this was the agent's **Activity** tab. In the new experience, the
+    > In the classic experience this was the agent's **Activity** tab. In the new experience, the
     > equivalent is the **Monitor** tab.
 
 1. The **Monitor** tab will display the activities of the **Hiring Agent**. There will be an autonomous run that has a status of **Complete**. This represents the event trigger workflow and the agent invocation.

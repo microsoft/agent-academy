@@ -18,7 +18,7 @@
 
 ## ⚠️ Headline change
 
-The standard course mission depended on two constructs that **no longer exist** in the new Copilot Studio experience:
+The classic mission depended on two constructs that **no longer exist** in the new Copilot Studio experience:
 
 1. **AI Builder Prompt + Dataverse grounding** (Labs 8.2–8.3) — the standalone Prompt construct and its
    "+ Add content → Dataverse → columns/Filter/Record-retrieval" grounding UI are gone (consistent with
@@ -77,7 +77,7 @@ calls the MCP tools directly:
 - **Status:** modified
 - **New instruction:** Test in the agent **Preview** pane (New chat to refresh tool context). Agent calls
   `search` → `describe` → `read_query` and returns live roles; upload a resume to see MatchedRoles.
-- **What changed:** Standard harness test ran inside the Prompt editor with a "Knowledge used" tab; now tested in
+- **What changed:** Classic test ran inside the Prompt editor with a "Knowledge used" tab; now tested in
   Preview. **Validated live** (5 active Job Roles J1000–J1004 returned).
 - **Screenshot:** ![Screenshot of mcp grounding jobroles](./assets/validation/mcp-grounding-jobroles.png)
 

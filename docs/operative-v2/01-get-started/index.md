@@ -17,7 +17,7 @@ products: [copilot-studio, dataverse]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-10-22
+last-edited-date: 2026-03-16
 ---
 # 🚨 Mission 01: Get started with the Hiring Agent {#mission-01-get-started-with-the-hiring-agent}
 
@@ -35,8 +35,8 @@ Your mission, should you choose to accept it, is to deploy and configure a compr
 
 This initial deployment establishes the solution that you'll enhance throughout the Agent Academy Operative course. Consider this your base of operations - the foundation upon which you'll build an entire network of specialized agents in subsequent missions.
 
-> [!IMPORTANT] This lesson uses the standard harness
-> Microsoft Copilot Studio is rolling out a new authoring experience. The screenshots and steps in this lesson use the **standard harness**. If your screen looks different, turn off **New Experience** in the upper-right corner before you continue. Refreshed instructions for the new experience are planned, but this lesson remains valid on the standard harness.
+> [!IMPORTANT] This lesson uses the classic Copilot Studio experience
+> Microsoft Copilot Studio is rolling out a new authoring experience. The screenshots and steps in this lesson use the **classic experience**. If your screen looks different, turn off **New Experience** in the upper-right corner before you continue. Refreshed instructions for the new experience are planned, but this lesson remains valid in the classic experience.
 
 ## 🔎 Objectives {#objectives}
 

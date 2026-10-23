@@ -17,7 +17,7 @@ products: [copilot-studio, azure, dataverse]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-10-22
+last-edited-date: 2026-06-29
 ---
 # 🚨 Mission 05: Understanding Agent Models and Response Formatting {#mission-05-understanding-agent-models-and-response-formatting}
 
@@ -159,7 +159,7 @@ You can switch the agent's primary model anytime from the **Model** dropdown at 
 ![Agent models available in the Model dropdown](./assets/validation/model-dropdown.png)
 
 > [!NOTE]
-> On the standard harness this lived on the agent's **Overview** tab under a "Select your agent's
+> In the classic experience this lived on the agent's **Overview** tab under a "Select your agent's
 > model" chevron. The **Overview** tab no longer exists — the agent editor now has **Build**, **Preview**,
 > **Evaluate**, and **Monitor** tabs, and the model selector is the **Model** card on **Build**.
 
@@ -196,7 +196,7 @@ For example, to maintain compatibility, to meet compliance requirements, or simp
 
 When a model update is rolled out, retired models you can still fall back to appear in the **Model** dropdown on the agent's **Build** page (within the relevant provider group). Select the retired model from the dropdown to keep your agent on the previous version during the grace window.
 
-<!-- ⚠️ MODIFIED: The standard harness toggle "Continue using retired models" lived on the agent's Settings page
+<!-- ⚠️ MODIFIED: The classic toggle "Continue using retired models" lived on the agent's Settings page
      under a "Model" section in a "Generative AI" tab. In the new experience the agent Settings dialog
      only has Agent details / AI & behavior / Safety & access / Greeting & prompts — there is no Model /
      Generative AI section and no standalone "Continue using retired models" toggle. Model selection
@@ -275,7 +275,7 @@ In Copilot Studio’s generative answers, you specify allowed formatting through
 
 > [!NOTE]
 > In the new experience the agent **Instructions** editor provides a rich-text toolbar (Bold, Italic,
-> Strikethrough, bulleted/numbered lists, Blockquote, Inline code, Insert link). The standard harness **Power Fx**
+> Strikethrough, bulleted/numbered lists, Blockquote, Inline code, Insert link). The classic **Power Fx**
 > formula picker that let you embed an expression directly in the formatting text is **no longer available**
 > in the instructions editor — use a literal example value to illustrate a desired format instead.
 
@@ -373,19 +373,19 @@ In this lab, you’ll compare responses, including the formatting, from three di
 
     ![Response-formatting rules added to the agent Instructions on the Build page](./assets/validation/build-model-card.png)
 
-    <!-- ⚠️ MODIFIED: Standard harness Lab 5.1 added these rules in Settings → Response formatting. That section no
+    <!-- ⚠️ MODIFIED: Classic Lab 5.1 added these rules in Settings → Response formatting. That section no
          longer exists; the rules go in the Build-page Instructions field. -->
 
 1. Notice that each date example uses a **literal** formatted date (`Jan 06, 2026`) to show the model the exact pattern you want.
 
-    <!-- ⚠️ REMOVED: The standard harness step inserted a Power Fx formula
+    <!-- ⚠️ REMOVED: The classic step inserted a Power Fx formula
          `Text(DateTimeValue("2026-01-06T13:45:54Z"), "MMM dd, yyyy")` after each `Example:` using the
          Power Fx icon. The instructions editor in the new experience has no Power Fx / formula picker
          (toolbar = Bold, Italic, Strikethrough, lists, Blockquote, Inline code, Insert link), so a literal
          example date is used instead to demonstrate the desired format. -->
 
     > [!NOTE]
-    > The standard course lab inserted a **Power Fx** formula to render each example date. The Power Fx picker is
+    > The classic lab inserted a **Power Fx** formula to render each example date. The Power Fx picker is
     > not available in the new Instructions editor, so a literal example (`Jan 06, 2026`) is used. The model
     > still learns the target format from the literal example.
 
@@ -437,7 +437,7 @@ Let's compare the responses of three available models by asking the **same three
 
     ![Selecting a different model from the Build-page Model dropdown](./assets/validation/model-dropdown.png)
 
-    <!-- ⚠️ MODIFIED: Standard harness step was "In the Overview tab select the chevron icon and from the list of
+    <!-- ⚠️ MODIFIED: Classic step was "In the Overview tab select the chevron icon and from the list of
          OpenAI models, select GPT-5 Chat." The Overview tab/chevron is gone; the model is changed from the
          Build → Model dropdown. OpenAI models appear under the "Managed models" group. -->
 
@@ -457,7 +457,7 @@ Let's compare the responses of three available models by asking the **same three
 
     On the **Build** page, open the **Model** dropdown and select an experimental model — for example **GPT‑5.5 Chat** _(Experimental)_ under **Managed models**, **Claude Opus 4.8** under **Anthropic models**, or **Mistral Medium 3.5** _(Experimental)_ under **Mistral models**.
 
-    <!-- ⚠️ MODIFIED: Standard harness step selected "Claude Sonnet 4.5 (Experimental)" from the Overview-tab
+    <!-- ⚠️ MODIFIED: Classic step selected "Claude Sonnet 4.5 (Experimental)" from the Overview-tab
          chevron's Anthropic list. That specific model is no longer offered; choose any current
          Experimental model from the Build → Model dropdown. Claude Sonnet 4.6 is now the default, not an
          experimental option. -->

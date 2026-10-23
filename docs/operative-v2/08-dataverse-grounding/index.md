@@ -17,7 +17,7 @@ products: [copilot-studio, dataverse]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-10-22
+last-edited-date: 2026-06-30
 ---
 # 🚨 Mission 08: Enhanced prompts with Dataverse grounding {#mission-08-enhanced-prompts-with-dataverse-grounding}
 
@@ -27,7 +27,7 @@ last-edited-date: 2026-10-22
 > **This lab has been rewritten for the new Copilot Studio experience (2026-06-30).** See `evaluation.md`
 > for a full comparison with the original.
 >
-> The standard course mission used an **AI Builder Prompt** with **Dataverse grounding** to match resumes to live
+> The classic mission used an **AI Builder Prompt** with **Dataverse grounding** to match resumes to live
 > job roles, plus an **Agent Flow** to create Job Applications. In the new experience **AI Builder Prompts
 > no longer exist**, so both capabilities are rebuilt with the **Microsoft Dataverse MCP Server** tool
 > (added under **Tools → Add a tool → Model Context Protocol (MCP)**) combined with a **Skill**:
@@ -50,7 +50,7 @@ In this mission, you'll enhance your hiring agent with **Dataverse grounding** -
 Your mission: integrate real-time job role and evaluation criteria data into your resume analysis workflow, creating a self-updating system that stays current with your organization's hiring requirements.
 
 > [!NOTE]
-> The original lab used the **standard harness** with an AI Builder Prompt. This rewrite uses the **new
+> The original lab used the **classic experience** with an AI Builder Prompt. This rewrite uses the **new
 > experience** — AI Builder Prompts are gone, so grounding and record creation are done via the
 > **Microsoft Dataverse MCP Server** tool plus a Skill.
 
@@ -65,7 +65,7 @@ In this mission, you'll learn:
 
 ## 🧠 Understanding Dataverse grounding via the Dataverse MCP {#understanding-dataverse-grounding-for-prompts}
 
-<!-- ⚠️ NEW FLOW: Standard harness "Dataverse grounding" was a setting on an AI Builder Prompt. AI Builder Prompts
+<!-- ⚠️ NEW FLOW: Classic "Dataverse grounding" was a setting on an AI Builder Prompt. AI Builder Prompts
      no longer exist in the new experience. Grounding is now achieved by adding the Microsoft Dataverse
      MCP Server tool to the agent: the agent's model calls MCP tools (search → describe → read_query) to
      pull live table data into its reasoning at runtime. Validated live: the agent read all 5 active Job
@@ -133,7 +133,7 @@ By adding the Dataverse MCP tool and updating your Skill, your resume analysis w
 
 ## 🎯 Why a grounded Skill vs ad-hoc agent conversations {#why-dedicated-prompts-vs-agent-conversations}
 
-<!-- ⚠️ MODIFIED: Standard course mission compared "dedicated AI Builder Prompts" to agent conversations.
+<!-- ⚠️ MODIFIED: Classic mission compared "dedicated AI Builder Prompts" to agent conversations.
      Prompts no longer exist; the equivalent is a dedicated Skill that grounds itself via the Dataverse
      MCP. Reframed accordingly. -->
 
@@ -158,11 +158,11 @@ While this worked, a **dedicated Skill** that grounds itself with the Dataverse 
 
 ## ⚙️ Understanding record retrieval and filtering {#understanding-record-retrieval-settings}
 
-<!-- ⚠️ MODIFIED: The standard harness "Record retrieval" slider on an AI Builder Prompt no longer exists. With the
+<!-- ⚠️ MODIFIED: The classic "Record retrieval" slider on an AI Builder Prompt no longer exists. With the
      Dataverse MCP, the agent controls how much data it reads via read_query and your Skill's filtering
      instructions. The underlying principle — filter before you read — is still important. -->
 
-On the standard harness, an AI Builder Prompt had a **Record Retrieval** slider controlling how many rows were injected into the prompt context. With the Dataverse MCP there is no slider — instead the agent reads exactly what it needs via `read_query`, guided by your Skill's filtering instructions. The underlying principle still matters.
+In the classic experience, an AI Builder Prompt had a **Record Retrieval** slider controlling how many rows were injected into the prompt context. With the Dataverse MCP there is no slider — instead the agent reads exactly what it needs via `read_query`, guided by your Skill's filtering instructions. The underlying principle still matters.
 
 ### Why filtering still matters
 
@@ -205,7 +205,7 @@ First, let's examine the Dataverse tables you'll be grounding with:
 
 ### 8.2 Add the Dataverse MCP tool and ground your Skill
 
-<!-- ⚠️ NEW FLOW: The standard harness step edited an AI Builder Prompt and used "+ Add content → Dataverse" to
+<!-- ⚠️ NEW FLOW: The classic step edited an AI Builder Prompt and used "+ Add content → Dataverse" to
      attach grounded tables/columns with a Filter and a Record-retrieval setting. AI Builder Prompts no
      longer exist. New flow: (1) add the Microsoft Dataverse MCP Server tool to the Hiring Agent, then
      (2) update the resume-analysis Skill to read live Job Roles + Evaluation Criteria via the MCP.
@@ -284,14 +284,14 @@ Now update the resume-analysis **Skill** so it grounds itself with live job-role
 1. Select **Save**.
 
 > [!NOTE]
-> **What replaced the standard harness grounding UI:** the old "+ Add content → Dataverse → select columns →
+> **What replaced the classic grounding UI:** the old "+ Add content → Dataverse → select columns →
 > Filter: Status = Active → Record retrieval = 1000" configuration is now expressed as plain instructions
 > in the Skill. The agent performs the equivalent reads itself via `read_query`, filtering to **Active**
 > and reading only the related Evaluation Criteria.
 
 ### 8.3 Test the grounded Skill
 
-<!-- ⚠️ MODIFIED: Standard harness test ran inside the Prompt editor ("Test" + "Knowledge used" tab). New flow:
+<!-- ⚠️ MODIFIED: Classic test ran inside the Prompt editor ("Test" + "Knowledge used" tab). New flow:
      test in the agent Preview pane; the agent calls search/describe/read_query against Dataverse.
      Validated live. -->
 
@@ -307,13 +307,13 @@ Now update the resume-analysis **Skill** so it grounds itself with live job-role
 
 ### 8.4 Create Job Applications via the Dataverse MCP
 
-<!-- ⚠️ NEW FLOW: The standard course mission built a "Create Job Application" Agent Flow (List rows Get Resume →
+<!-- ⚠️ NEW FLOW: The classic mission built a "Create Job Application" Agent Flow (List rows Get Resume →
      List rows Get Job Role → Add a new row Job Application → Respond) and attached it to the child agent.
      With the Dataverse MCP, the agent can create the Job Application row directly via the create_record
      tool — no Agent Flow needed. Validated live: the agent created (and cleaned up) a record via
      create_record, returning its GUID. -->
 
-In the standard course mission you built a separate **Agent Flow** to create Job Application rows. With the **Microsoft Dataverse MCP Server** tool already attached (Lab 8.2), your agent can create those rows directly using the MCP `create_record` tool — there's no separate flow to build or publish.
+In the classic mission you built a separate **Agent Flow** to create Job Application rows. With the **Microsoft Dataverse MCP Server** tool already attached (Lab 8.2), your agent can create those rows directly using the MCP `create_record` tool — there's no separate flow to build or publish.
 
 You only need to tell the agent *how* to create an application. Update your **summarize-resume** Skill (or the agent **Instructions**) to add the application-creation behavior:
 
@@ -359,7 +359,7 @@ You only need to tell the agent *how* to create an application. Update your **su
      provides create_record. The agent calls it directly per the Skill instructions in Lab 8.4.
      Original: "Add Create Job Application to agent" — connect the published Agent Flow as a tool. -->
 
-In the standard course mission you connected the published **Create Job Application** Agent Flow to the Application Intake Agent as a tool. **This step is no longer needed** — the **Microsoft Dataverse MCP Server** tool you added in Lab 8.2 already exposes `create_record`, and the agent calls it directly using the instructions from Lab 8.4. There is no separate flow to attach.
+In the classic mission you connected the published **Create Job Application** Agent Flow to the Application Intake Agent as a tool. **This step is no longer needed** — the **Microsoft Dataverse MCP Server** tool you added in Lab 8.2 already exposes `create_record`, and the agent calls it directly using the instructions from Lab 8.4. There is no separate flow to attach.
 
 ### 8.6 Confirm and review application-creation behavior
 
@@ -372,7 +372,7 @@ The application-creation instructions you added in Lab 8.4 tell the agent when a
 
 > [!TIP] Iterating over multiple items in Generative Orchestration
 > The agent's generative orchestration iterates over the confirmed Job Roles, calling `create_record` once
-> per role. The standard course mission achieved the same looping by calling the Agent Flow per role; here the loop
+> per role. The classic mission achieved the same looping by calling the Agent Flow per role; here the loop
 > calls the MCP tool directly.
 
 ### 8.7 Test your agent

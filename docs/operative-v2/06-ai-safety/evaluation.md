@@ -16,7 +16,7 @@
 | Removed/Not possible | 2 (6.3, 6.4) |
 | Relocated (governance/admin) | 2 (6.7, 6.8) |
 
-**Headline:** This mission was the most standard-harness-dependent of the Operative course. The new experience
+**Headline:** This mission was the most classic-dependent of the Operative course. The new experience
 has **no Topics tab** — so the two labs that authored topics (6.3 On Error topic, 6.4 Generative
 Answers node) are **blocked** with no direct equivalent. Greeting and moderation moved into the agent
 **Settings** dialog; the custom flagged-response message field was **removed**; and the Protection

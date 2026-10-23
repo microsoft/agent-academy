@@ -18,7 +18,7 @@ products: [copilot-studio, dataverse, teams]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-10-22
+last-edited-date: 2026-06-30
 ---
 # 🚨 Mission 11: Collecting feedback from users {#mission-11-collecting-feedback-from-users}
 
@@ -34,7 +34,7 @@ last-edited-date: 2026-10-22
 >   & access → Feedback**, and per-response 👍/👎 appear as **Like / Dislike** in the
 >   **Preview** tab (selecting **Dislike** opens a "What went wrong?" comment panel).
 > - **Analytics moved.** Reactions are now shown on the **Monitor** tab (Performance →
->   **Reactions** card / **Total reactions**), replacing the standard harness Analytics →
+>   **Reactions** card / **Total reactions**), replacing the classic Analytics →
 >   Satisfaction → Reactions page.
 > - **⚠️ The custom-Adaptive-Card half (Labs 11.3 and 11.4) is BLOCKED.** The new
 >   experience has **no Topics authoring canvas** — there is no *End of Conversation*
@@ -65,8 +65,8 @@ In this mission, you'll learn:
 1. How to use built-in thumbs up/down (**Like / Dislike**) reactions to collect feedback from users
 1. How to analyze feedback data on the **Monitor** tab (formerly the Analytics dashboard)
 1. How to create custom feedback collection using Adaptive Cards *(conceptual in the new experience — the hands-on Topics build is not available; see Lab 11.3)*
-1. How to implement conditional feedback flows based on CSAT ratings *(conceptual — requires the standard harness Topics canvas)*
-1. How to log custom telemetry events to Azure Application Insights for advanced feedback tracking *(conceptual — requires the standard harness Topics canvas)*
+1. How to implement conditional feedback flows based on CSAT ratings *(conceptual — requires the classic Topics canvas)*
+1. How to log custom telemetry events to Azure Application Insights for advanced feedback tracking *(conceptual — requires the classic Topics canvas)*
 
 ## 🐿️ The importance of user feedback {#the-importance-of-user-feedback}
 
@@ -132,7 +132,7 @@ Because this feature is on by default, makers should be aware of how to manage i
     ![User feedback toggle on the Safety & access settings tab](./assets/validation/m11-settings-user-feedback.png)
 
     > [!NOTE]
-    > On the standard harness this lived in **Generative AI Settings → User feedback**
+    > In the classic experience this lived in **Generative AI Settings → User feedback**
     > as a *Collect user reactions to agent messages* toggle, alongside a free-text
     > **disclaimer** field. In the new 4-tab Settings dialog the toggle has moved to
     > **Safety & access → Feedback**, and the separate disclaimer field is no longer
@@ -249,7 +249,7 @@ In the new experience you can exercise built-in feedback in two places: the **Pr
     ![Built-in Dislike opens a What went wrong? comment panel in Preview](./assets/validation/m11-preview-dislike-comment.png)
 
     > [!NOTE]
-    > On the standard harness these were **thumbs up / thumbs down** icons. In the
+    > In the classic experience these were **thumbs up / thumbs down** icons. In the
     > new experience they're labeled **Like / Dislike**, and selecting **Dislike**
     > opens a *"What went wrong?"* panel (with an optional checkbox to share the prompt,
     > generated response, and log files). The feedback-with-comment behavior is the same.
@@ -304,7 +304,7 @@ In the new experience you can exercise built-in feedback in two places: the **Pr
 
 ### 11.2 Reviewing built-in analytics
 
-We're now going to review the feedback submitted. In the new experience this lives on the **Monitor** tab (the standard harness **Analytics → Satisfaction → Reactions** page).
+We're now going to review the feedback submitted. In the new experience this lives on the **Monitor** tab (the classic **Analytics → Satisfaction → Reactions** page).
 
 > [!NOTE]
 > The submitted reactions and written feedback may take some time to show up so if you're not seeing it immediately, check it occasionally.
@@ -314,7 +314,7 @@ We're now going to review the feedback submitted. In the new experience this liv
     ![Reactions card on the Monitor tab](./assets/validation/m11-monitor-reactions.png)
 
     > [!NOTE]
-    > The standard course lab navigated to the **Analytics** tab → **Satisfaction** section →
+    > The classic lab navigated to the **Analytics** tab → **Satisfaction** section →
     > **Reactions** → **See details** to view thumbs counts and written feedback. In the
     > new experience the **Analytics** tab is replaced by the **Monitor** tab, where the
     > **Reactions** card (and **Total reactions** tile) surface the same satisfaction
@@ -358,15 +358,15 @@ We're now going to review the feedback submitted. In the new experience this liv
 > card, you can build a **Workflow** that posts an Adaptive Card and add it to the agent
 > via **Tools → Add a tool → Workflows**, then instruct the agent (in **Instructions**)
 > to invoke it after answering. However, the new experience has **no end-of-conversation
-> CSAT survey trigger** to branch on (the standard harness *CSAT Question* system topic is gone),
+> CSAT survey trigger** to branch on (the classic *CSAT Question* system topic is gone),
 > so the specific "only when the user rates 1–2 stars" routing in this exercise has no
 > direct equivalent. Telemetry (Lab 11.4) would likewise move into that Workflow rather
 > than a *Log a custom telemetry event* topic node.
 >
-> The original standard course steps are preserved below for reference. **They will not work in
-> the new experience** — they require switching back to the standard harness.
+> The original classic steps are preserved below for reference. **They will not work in
+> the new experience** — they require switching back to the classic experience.
 
-:::: details 📦 Original standard course steps for Labs 11.3 and 11.4 (require the standard harness — NOT buildable in the new experience)
+:::: details 📦 Original classic steps for Labs 11.3 and 11.4 (require the classic experience — NOT buildable in the new experience)
 
 In this exercise we're going to implement a process in the **Hiring Agent** to collect custom feedback in response to the built-in CSAT survey. When the user has responded with 1 star or 2 stars for the CSAT survey, we want to collect additional feedback to understand why they were dissatisfied. This will also give you hands-on learning on how to modify existing system topics.
 
