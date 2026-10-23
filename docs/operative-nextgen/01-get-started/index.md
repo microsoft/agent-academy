@@ -38,11 +38,6 @@ You'll import a pre-built solution containing the hiring tables and model-driven
 
 The tables, app, and agent remain in place for later missions, where you'll add a connected specialist, focused skills, and autonomous workflows.
 
-> [!IMPORTANT] Work in the current Copilot Studio experience
-> This course uses Copilot Studio at `https://copilotstudio.preview.microsoft.com`. If you see a **New
-> experience** toggle anywhere in the product, keep it **on** throughout - every screen and step in this
-> course assumes it.
-
 ## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:

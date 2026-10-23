@@ -33,9 +33,6 @@ Your mission, should you choose to accept it, is to deploy and configure a compr
 
 This initial deployment establishes the solution that you'll enhance throughout the Agent Academy Operative course. Consider this your base of operations - the foundation upon which you'll build an entire network of specialized agents in subsequent missions.
 
-> [!IMPORTANT] This lesson uses the standard harness
-> These steps use the **standard harness**. If your tenant shows the **New Experience** toggle, turn it off to follow this path. If that toggle is not available, use Microsoft's [guidance for accessing standard harness agents and agent flows](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/switch-experiences). Screen layouts can vary during rollout; check the harness before following the screenshots.
-
 ## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:

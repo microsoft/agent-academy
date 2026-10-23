@@ -21,7 +21,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 03: Creating a Solution for Your Agent {#mission-03-creating-a-solution-for-your-agent}
 
@@ -41,10 +41,6 @@ Every agent needs a well-structured home. A Power Platform solution provides org
 Starting in a custom solution also prevents the work you create throughout this course from becoming scattered across the default solution. As you add knowledge, tools, skills, and workflows in later missions, those related components need to travel together. A clear publisher and solution make ownership easier to recognize and give your team a controlled package for moving changes between environments.
 
 You'll start by creating the solution that will contain your agent.
-
-> [!NOTE] GitHub Copilot harness authoring surface
->
-> In the current Copilot Studio UI, turn on the **New experience** toggle in the upper-right corner of the Home page. This selects the authoring surface used for agents powered by the GitHub Copilot harness and makes your screen match the screenshots in this mission.
 
 ## 🔎 Objectives {#objectives}
 
@@ -170,7 +166,7 @@ In this lab, you'll create a solution publisher and a custom solution in your de
 ### Prerequisites
 
 - Copilot Studio license
-- Access to Copilot Studio with the **New experience** toggle enabled for the GitHub Copilot harness authoring surface
+- Access to Copilot Studio and the **GitHub Copilot harness** authoring surface
 - Administrative permissions to create solutions and agents
 
 > [!TIP] Prerequisites help:

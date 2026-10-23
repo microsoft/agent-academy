@@ -13,7 +13,7 @@ products: [copilot-studio, docusign, power-platform, sharepoint]
 industries:
     - hr
 created-date: 2026-06-16
-last-edited-date: 2026-08-10
+last-edited-date: 2026-10-22
 ---
 # 📄 Microsoft Copilot Studio + Docusign MCP {#mcs-docusign-mcp}
 
@@ -25,7 +25,7 @@ last-edited-date: 2026-08-10
 Welcome, agent. Your objective is to reuse what already works: connect the Docusign MCP Demo server to your Copilot Studio agent and trigger an existing Workflow Builder workflow. Your agent gathers inputs. Workflow Builder executes the agreement process.
 
 > [!IMPORTANT] This mission uses the GitHub Copilot harness
-> The Copilot Studio steps require an agent powered by the **GitHub Copilot harness**. Turn on **New Experience** before you create the agent.
+> The Copilot Studio steps require an agent powered by the **GitHub Copilot harness**.
 
 ## 🎯 Mission objectives {#mcs-docusign-mcp-objectives}
 
@@ -1431,9 +1431,7 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 ### Prerequisites
 
 - **New solution**: As a best practice, create a new solution for this agent before you create the agent itself. Refer to our [Recruit mission](../../recruit/04-creating-a-solution/index.md) to learn how to create a solution.
-- **Use the GitHub Copilot harness**: This lab requires the GitHub Copilot harness because the Docusign MCP Demo tool is available there. Turn **New Experience** on before continuing.
-
-    ![Toggle new experience](assets/1.5_00_ToggleNewExperience.png)
+- **Use the GitHub Copilot harness**: This lab requires the GitHub Copilot harness because the Docusign MCP Demo tool is available there.
 
 Let's begin!
 

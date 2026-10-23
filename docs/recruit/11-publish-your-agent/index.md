@@ -37,9 +37,6 @@ Your agent—equipped with a clear mission, powerful tools, and access to key kn
 
 Let’s launch your agent into action.
 
-> [!IMPORTANT] This mission uses the standard harness
-> These steps use the **standard harness**. If your tenant shows the **New Experience** toggle, turn it off to follow this path. If that toggle is not available, use Microsoft's [guidance for accessing standard harness agents and agent flows](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/switch-experiences). Screen layouts can vary during rollout; check the harness before following the screenshots.
-
 ## 🔎 Objectives {#objectives}
 
 In this mission, you’ll learn:

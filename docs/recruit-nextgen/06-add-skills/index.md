@@ -47,9 +47,6 @@ In this mission, you'll explore this GitHub Copilot harness capability by iterat
 
 This work turns a general-purpose agent into a more dependable support experience. Instead of placing every procedure in the agent's global instructions, you'll keep task-specific guidance in focused packages that the harness can activate when relevant. You'll inspect the generated skill files, improve their instructions, and test how small wording changes affect tool calls and responses. The result is behavior that is easier to review, reuse, and refine without overloading the agent's core prompt.
 
-> [!IMPORTANT]
-> In the current Copilot Studio UI, make sure the **New experience** toggle in the upper-right corner is turned **on** to use the GitHub Copilot harness authoring surface.
-
 ## 🔎 Objectives {#objectives}
 
 1. Understand why **Skills** are unique to agents powered by the GitHub Copilot harness

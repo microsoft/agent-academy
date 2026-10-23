@@ -36,9 +36,6 @@ Your assignment, should you choose to accept it, is **Operation Echo**, a critic
 
 *Listen, analyze, adapt* - this is the operative's creed when processing user intelligence.
 
-> [!NOTE]
-> These steps use the **standard harness**. If your tenant shows the **New Experience** toggle, turn it off to follow this path. If that toggle is not available, use Microsoft's [guidance for accessing standard harness agents and agent flows](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/switch-experiences). Screen layouts can vary during rollout; check the harness before following the screenshots.
-
 ## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:

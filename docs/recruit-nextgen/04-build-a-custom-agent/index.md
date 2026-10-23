@@ -32,7 +32,6 @@ last-edited-date: 2026-10-22
 
 > [!NOTE]
 > This lab builds an agent powered by the **GitHub Copilot harness**.
-> In the current Copilot Studio UI, make sure the **New experience** toggle in the upper-right corner of the Home page is **on** so your screen matches the screenshots in this mission.
 
 🎥 **Watch the Walkthrough**
 
@@ -130,7 +129,7 @@ We'll continue using the same IT helpdesk scenario introduced earlier in the cou
 
 Before starting this lab, make sure you have:
 
-- Access to Copilot Studio with the **New experience** toggle enabled for the GitHub Copilot harness authoring surface
+- Access to Copilot Studio and the **GitHub Copilot harness** authoring surface
 - The solution from [Mission 03 - Creating a solution](../03-creating-a-solution/index.md)
 - Your test knowledge source(s), for example the **Contoso IT** SharePoint site from [Mission 00 - Course setup](../00-course-setup/index.md#step-5-create-new-sharepoint-site)
 

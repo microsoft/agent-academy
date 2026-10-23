@@ -14,7 +14,7 @@ products:
   - copilot-studio
 industries: [marketing, retail]
 created-date: 2026-07-23
-last-edited-date: 2026-08-10
+last-edited-date: 2026-10-22
 hide: false
 ---
 
@@ -28,7 +28,7 @@ hide: false
 Welcome, agent. Your mission is **Operation Ghostwriter**: build a marketing content agent **without** drowning it in a wall of instructions. You'll teach it four separate trade procedures using **Skills** and let the orchestrator reach for the right one on demand. One agent. A series of Skills. Zero bloat. ✍️🎯
 
 > [!NOTE]
-> This mission requires an agent powered by the **GitHub Copilot harness**. Skills aren't available to agents powered by the standard harness. Turn on **New experience** with the toggle in the upper-left of the Copilot Studio home page before you start.
+> This mission requires an agent powered by the **GitHub Copilot harness**. Skills aren't available to agents powered by the standard harness.
 
 ## 🎯 Mission objectives {#mission-objectives}
 
@@ -118,7 +118,7 @@ and never salesy. Route each request to the right skill.
 ## ⚙️ Prerequisites {#prerequisites}
 
 - A **Microsoft Copilot Studio** environment with the **GitHub Copilot harness** enabled — [copilotstudio.microsoft.com](https://copilotstudio.microsoft.com). If you don't have an account, check out the [course setup](https://microsoft.github.io/agent-academy/recruit/00-course-setup/) instructions for a free trial.
-- An agent powered by the **GitHub Copilot harness**. Turn on **New experience**, create or open an agent, and confirm that **Skills** appears on the **Build** tab. If it doesn't appear, contact your administrator to confirm that the harness is available in your environment.
+- An agent powered by the **GitHub Copilot harness**. Create or open an agent and confirm that **Skills** appears on the **Build** tab. If it doesn't appear, contact your administrator to confirm that the harness is available in your environment.
 - A Markdown editor of your choice
 
 > [!IMPORTANT] GitHub Copilot harness billing
@@ -201,7 +201,7 @@ However you authored the content, it enters your agent through one of **two door
 
 You'll start by building the agent shell with *only* the instructions that are true in every conversation. Resist the urge to describe blog rules, SEO rules, or anything task-specific here.
 
-1. Navigate to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com) and sign in. Make sure the **New experience** toggle at the top of the home page is turned on.
+1. Navigate to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com) and sign in.
 
 1. On the home page, select **Agent**.
 

@@ -33,7 +33,6 @@ last-edited-date: 2026-10-22
 > [!NOTE]
 > This lab uses an agent and workflows powered by the **GitHub Copilot harness**.
 > On this harness, workflows are standalone, reusable automations that an agent can call as a tool.
-> In the current Copilot Studio UI, make sure the **New experience** toggle in the upper-right corner is **on**.
 
 ## 🎯 Mission Brief {#mission-brief}
 

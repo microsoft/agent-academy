@@ -46,6 +46,7 @@ docs/
 
 - Refer to course paths by harness. Use **standard course** when comparing courses and **standard harness** when naming the Copilot Studio harness. Use **Coming from the standard course?** for comparison summaries.
 - Call the GitHub Copilot authoring surface the **GitHub Copilot harness experience**.
+- Identify the required harness without instructions to toggle between authoring experiences; that control is no longer available.
 - Mission folders: `NN-kebab-case-name/` with zero-padded numbers (`00`, `01`, `02`, ...)
 - Main content file: always `index.md`
 - Asset folder: `assets/` (preferred) or `images/` (legacy — use `assets/` for new missions)
