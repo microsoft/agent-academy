@@ -16,7 +16,7 @@
 | Removed/Not possible | 2 (9.2, 9.3) |
 | Blocked | 0 |
 
-**Headline:** The classic mission used three constructs that are gone or unauthored in the new experience — an **AI Builder Prompt** with Word-template *Document output* (9.1), an **Agent Flow** to extract the file bytes (9.2), and a **Topic** with slot filling to return the file (9.3). All three are replaced by a single mechanism: the agent's **native code interpreter** (Python with `python-docx` pre-installed) builds a real `.docx` and returns it as a downloadable file, packaged as a reusable **Skill** (`interview-doc-prep`). Validated live: a downloadable `Interview_Prep_<Candidate>_<Role>.docx` was produced with **no prompt, flow, or topic**.
+**Headline:** The standard course mission used three constructs that are gone or unauthored in the new experience — an **AI Builder Prompt** with Word-template *Document output* (9.1), an **Agent Flow** to extract the file bytes (9.2), and a **Topic** with slot filling to return the file (9.3). All three are replaced by a single mechanism: the agent's **native code interpreter** (Python with `python-docx` pre-installed) builds a real `.docx` and returns it as a downloadable file, packaged as a reusable **Skill** (`interview-doc-prep`). Validated live: a downloadable `Interview_Prep_<Candidate>_<Role>.docx` was produced with **no prompt, flow, or topic**.
 
 ## ⚠️ Blockers & Removed Capabilities
 
@@ -30,7 +30,7 @@
 ### 9.3 Create the topic
 
 - **Status:** removed
-- **Reason:** The new experience has no **Topics** tab — agents are driven by Instructions, Skills, Tools, and generative orchestration. The classic note claimed a Topic was "the only way to ensure a file object is returned every time"; that is no longer true.
+- **Reason:** The new experience has no **Topics** tab — agents are driven by Instructions, Skills, Tools, and generative orchestration. The standard harness note claimed a Topic was "the only way to ensure a file object is returned every time"; that is no longer true.
 - **Alternative:** The `interview-doc-prep` Skill (9.1) makes the behavior reliable and reusable; generative orchestration + the skill's *Gather inputs* instructions capture the Application Number from chat (replacing slot filling).
 - **Impact:** Learners lose Topic/slot-filling authoring, which no longer exists. Reliability is preserved via the Skill.
 

@@ -3,7 +3,7 @@
 **Original lab:** Mission 03: Multi-Agent Systems (codename OPERATION SYMPHONY)
 **Date evaluated:** 2026-06-29
 **Environment:** Surfaces first verified in `4375273f-…` (`new-recruit-test`); **end-to-end build validated live** in `aab8f8eb-e060-e28b-958f-2ea6fd0ab517` (`April (Preview)`), which **has the Operative solution** imported. New experience = ON in both.
-**Reference:** `files/operative-classic-vs-new-ui-report.md` (classic-vs-new gap analysis)
+**Reference:** `files/operative-classic-vs-new-ui-report.md` (standard-harness versus GitHub-harness gap analysis)
 
 ## Summary
 
@@ -57,7 +57,7 @@
 - **Alternative:** Express precedence/guardrails in the Skill **Description** and **Instructions**
   (e.g., "only use this skill when an attachment is present"). Web access is now controlled globally
   via the **Knowledge → Search all websites** item, not a per‑sub‑agent toggle.
-- **Impact:** The classic "Priority = 10000" trick to order intake vs. interview no longer applies;
+- **Impact:** The standard harness "Priority = 10000" trick to order intake vs. interview no longer applies;
   ordering is guided by skill/connected‑agent descriptions.
 
 ### Dataverse as a **Knowledge** source
@@ -122,7 +122,7 @@
 - **Status:** new_flow
 - **New instruction:** **More options (…) → Settings**. Only a subset exists, across tabs:
   **AI & behavior** → *Allow other agents to connect* = **On**, *Moderation level* = **Medium**;
-  **Safety & access** → *User feedback* = **On**. The other classic toggles are gone or defaulted:
+  **Safety & access** → *User feedback* = **On**. The other standard harness toggles are gone or defaulted:
   generative orchestration is always on; *Use information from the Web* is now the **Knowledge →
   Search all websites** item; deep reasoning, retired models, general knowledge, file uploads, and
   code interpreter toggles are not present.
@@ -226,7 +226,7 @@
 
 - **Status:** modified
 - **New instruction:** Replace "child agent" wording with "Skill" where it refers to the Application
-  Intake specialist; keep "connected agent" for the Interview agent. Update the classic‑experience
+  Intake specialist; keep "connected agent" for the Interview agent. Update the standard harness
   banner to a new‑experience note.
 
 ### Unchanged

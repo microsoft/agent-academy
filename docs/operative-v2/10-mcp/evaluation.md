@@ -21,9 +21,9 @@ single-tool-per-server model, and the goal (read calendar, find times, create an
 event) are all intact. The differences are almost entirely **UI location changes**
 plus one **environment availability gap**:
 
-1. **Tools moved** — classic "select **Tools** in the top navigation" → an **Add tool**
+1. **Tools moved** — standard harness "select **Tools** in the top navigation" → an **Add tool**
    button in the agent's right-side **Agent configuration** panel (Build page).
-1. **Filter → Tab** — classic "select **Model Context Protocol** in the filters" → the
+1. **Filter → Tab** — standard harness "select **Model Context Protocol** in the filters" → the
    **Model Context Protocol (MCP)** *tab* in the "Add a tool" dialog (tabs: All, MCP,
    Connectors, Workflows). Search box role `searchbox`, name "Search".
 1. **Connection flow** — select server → **Select a connection** step → **Not connected**
@@ -31,12 +31,12 @@ plus one **environment availability gap**:
    (auto-completes if already signed in) → **Add**.
 1. **"Add and configure" → "Add"** — the button is now just **Add**; there is no
    separate tool-overview/configure page.
-1. **No separate consent card** — in the classic experience the first MCP call showed a
+1. **No separate consent card** — on the standard harness the first MCP call showed a
    consent card (select **Allow**); in the validated new-experience run the agent
    invoked the **ListCalendarView** tool directly using the connection created at
    add-time. No consent card appeared. The MCP tool button in the transcript exposes the
    request/response detail.
-1. **Tool name** — classic referenced *getEvents*; the live tool surfaced as
+1. **Tool name** — standard harness referenced *getEvents*; the live tool surfaced as
    **ListCalendarView** (Work IQ Calendar Preview). *findMeetingTimes* / *createEvent*
    remain the conceptual tools for Lab 10.2.
 

@@ -16,7 +16,7 @@ products: [copilot-studio, dataverse, power-automate, outlook, teams]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-03-17
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 04: Add Event Triggers to act autonomously {#mission-04-add-event-triggers-to-act-autonomously}
 
@@ -37,7 +37,7 @@ Think of it as upgrading from agents that _answer questions_ to agents that _ant
 Welcome to the world where automation meets intelligence.
 
 > [!NOTE]
-> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **standard harness** used here.
 
 ## 🔎 Objectives {#objectives}
 

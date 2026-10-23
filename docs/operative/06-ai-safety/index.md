@@ -16,7 +16,7 @@ products:
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-03-31
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 06: AI Safety and Content Moderation {#mission-06-ai-safety-and-content-moderation}
 
@@ -31,7 +31,7 @@ Welcome back, Operative. Your agents have become sophisticated, but with great p
 Your mission is **Operation Safe Harbor**: implement robust content moderation and AI safety controls for your Interview Agent. As your agents process resumes and conduct interviews, it's critical to prevent harmful content, uphold professional standards, and protect sensitive data. In this mission, you'll configure content filtering, set safety guardrails, and design custom responses for inappropriate input, using Microsoft Copilot Studio's enterprise-grade moderation features. By the end, your hiring system will balance powerful AI capabilities with responsible, legally compliant capabilities.
 
 > [!NOTE]
-> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **standard harness** used here.
 
 ## 🔎 Objectives {#objectives}
 

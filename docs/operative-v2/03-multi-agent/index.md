@@ -17,7 +17,7 @@ products: [copilot-studio, dataverse, power-platform]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-06-29
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 03: Multi-Agent Systems {#mission-03-multi-agent-systems}
 
@@ -25,7 +25,7 @@ last-edited-date: 2026-06-29
 
 > [!NOTE]
 > This lab has been updated for the **new Copilot Studio experience** (2026-06-29).
-> See `evaluation.md` for a full comparison with the original classic-experience lab.
+> See `evaluation.md` for a full comparison with the original standard harness lab.
 > The biggest change: **child agents no longer exist** — in-agent specialists are now built as
 > **Skills**, while independently published specialists remain **connected agents**.
 
@@ -42,7 +42,7 @@ Your assignment, should you choose to accept it, is **Operation Symphony** - tra
 Like a symphony orchestra where each musician plays their part in perfect harmony, you'll add two critical specialists to your existing Hiring Agent: an **Application Intake skill** to process resumes, and an **Interview Prep connected agent** to create comprehensive interview materials. These specialists will work together seamlessly under your main orchestrator.
 
 > [!NOTE]
-> This lesson uses the **new Copilot Studio experience** (the **New experience** toggle in the upper-right is **on**). The agent editor is a single **Build** canvas with cards for Model, Microsoft IQ, Skills, Tools, Knowledge, Connected agents, and Memory — there is no classic **Agents**, **Topics**, or **Overview** tab. The view tabs are **Build**, **Preview**, **Evaluate**, and **Monitor**.
+> This lesson uses the **new Copilot Studio experience** (the **New experience** toggle in the upper-right is **on**). The agent editor is a single **Build** canvas with cards for Model, Microsoft IQ, Skills, Tools, Knowledge, Connected agents, and Memory — there is no standard harness **Agents**, **Topics**, or **Overview** tab. The view tabs are **Build**, **Preview**, **Evaluate**, and **Monitor**.
 
 ## 🔎 Objectives {#objectives}
 
@@ -241,7 +241,7 @@ In the new experience, **Solutions** are not in the Copilot Studio left navigati
 
 1. Select **More options (…)** in the top-right, then select **Settings**.
 
-1. Review the tabs and ensure the following settings are applied. (Several classic toggles no longer exist — generative orchestration is always on, and web/general-knowledge/file-upload/code-interpreter toggles have been removed or moved.)
+1. Review the tabs and ensure the following settings are applied. (Several standard harness toggles no longer exist — generative orchestration is always on, and web/general-knowledge/file-upload/code-interpreter toggles have been removed or moved.)
 
     | Tab | Setting | Value |
     | --- | ------- | ----- |
@@ -296,7 +296,7 @@ In the new experience, **Solutions** are not in the Copilot Studio left navigati
 1. Select **Create**.
 
     > [!NOTE]
-    > Skills do not have a *Priority* value or a per-skill *Web Search* toggle like classic child agents did. Ordering and guardrails (for example "only when an attachment is present") are expressed in the skill **Description** and **Instructions**.
+    > Skills do not have a *Priority* value or a per-skill *Web Search* toggle like standard harness child agents did. Ordering and guardrails (for example "only when an attachment is present") are expressed in the skill **Description** and **Instructions**.
 
 ### 3.1.4 Build the Resume Upload workflow
 
@@ -305,7 +305,7 @@ Skills need **tools** to take action. In the new experience, agent flows are aut
 We're using a **Workflow** rather than relying on instructions alone for the *Upload Resume* step because this multi-step backend process requires deterministic execution and integration with external systems. Workflows provide the structured automation needed to reliably handle file processing, data validation, and database upserts (insert new or update existing).
 
 > [!NOTE]
-> **Needs validation:** The internal node-by-node screenshots below should be refreshed against an environment that has the **Operative** solution (with the **Resumes** table) imported. The flow *logic* is unchanged from the classic lab; only the designer chrome differs (new step types: Connector, Function, Variable, If/Else, Loop).
+> **Needs validation:** The internal node-by-node screenshots below should be refreshed against an environment that has the **Operative** solution (with the **Resumes** table) imported. The flow *logic* is unchanged from the standard course lab; only the designer chrome differs (new step types: Connector, Function, Variable, If/Else, Loop).
 
 1. In the left navigation, select **Workflows**, then select **New Workflow**.
 
@@ -417,7 +417,7 @@ Now let's verify that the skill and tool work correctly.
 
 1. **Download** the [test Resumes.](https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/docs/operative/test-data/resumes)
 
-1. Select the **Preview** tab to open the test chat. (The Preview tab replaces the classic *Test your agent* pane.)
+1. Select the **Preview** tab to open the test chat. (The Preview tab replaces the standard harness *Test your agent* pane.)
 
 1. **Upload** two Resumes in the test chat, and give the message `Process these resumes`.
 
@@ -486,7 +486,7 @@ Now let's create our connected agent for interview preparation and add it to you
 ### 3.2.2 Give the Interview Agent access to your Dataverse data, then publish
 
 > [!IMPORTANT]
-> **This is the biggest change from the classic lab.** In the classic experience you added the
+> **This is the biggest change from the standard course lab.** On the standard harness you added the
 > `ppa_` tables as **Knowledge** (Add knowledge → Dataverse). In the new experience, **Dataverse is
 > no longer offered as a knowledge source** — the **Add knowledge** dialog only lists *Public
 > websites*, *SharePoint*, and *OneDrive* (plus Confluence/Azure DevOps/Jira as unavailable). Searching
@@ -518,7 +518,7 @@ Now let's create our connected agent for interview preparation and add it to you
     | **AI & behavior** | Moderation level | **Medium** |
 
     > [!NOTE]
-    > The classic *Use general knowledge* and *File uploads* toggles no longer exist as separate settings in the new experience.
+    > The standard harness *Use general knowledge* and *File uploads* toggles no longer exist as separate settings in the new experience.
 
 1. Close the settings dialog, then select **Publish** and wait for the publishing to complete.
 
@@ -545,7 +545,7 @@ Now let's create our connected agent for interview preparation and add it to you
     ```
 
     > [!NOTE]
-    > In the new experience, the connect dialog only requires this **Description**. The classic
+    > In the new experience, the connect dialog only requires this **Description**. The standard harness
     > **Pass conversation history to this agent** toggle **no longer exists** — context hand-off is
     > handled automatically by generative orchestration, so there is nothing extra to enable here.
 

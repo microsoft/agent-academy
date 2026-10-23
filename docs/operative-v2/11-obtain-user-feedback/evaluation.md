@@ -20,7 +20,7 @@
 11.1–11.2) is fully doable with **modified navigation** — feedback settings, the
 Like/Dislike UI, and the reactions analytics have all **moved** but work the same. The
 *custom Adaptive Card* half (Labs 11.3–11.4) is **blocked**: it is built entirely on the
-classic **Topics authoring canvas**, which **does not exist** in the new experience.
+standard harness **Topics authoring canvas**, which **does not exist** in the new experience.
 
 ## ⚠️ Blockers & Removed Capabilities
 
@@ -43,9 +43,8 @@ classic **Topics authoring canvas**, which **does not exist** in the new experie
   replacement because the CSAT system topic trigger is gone.
 - **Impact:** Learners lose the hands-on custom-card build and the App Insights/KQL
   telemetry exercise. Built-in Like/Dislike (Lab 11.1) + Monitor reactions (Lab 11.2)
-  still cover per-response feedback end-to-end. Original classic steps are preserved in a
-  collapsed `:::: details` block in `index.md` for users who switch to the classic
-  experience.
+  still cover per-response feedback end-to-end. Original standard course steps are preserved in a
+  collapsed `:::: details` block in `index.md` for users who switch to the standard harness.
 
 ## Step-by-Step Comparison
 

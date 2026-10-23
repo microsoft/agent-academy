@@ -67,16 +67,16 @@
 ### 7.3 Add prompt to an Agent Flow → **Persist extracted data with a Workflow tool**
 
 - **Status:** new_flow
-- **New instruction:** Skills can't write to Dataverse, so persistence still needs a tool. Classic
+- **New instruction:** Skills can't write to Dataverse, so persistence still needs a tool. Standard harness
   **Agent Flow** is now a standalone **Workflow** (Workflows hub → New Workflow). Trigger
   **"When an agent calls the workflow"**; Dataverse actions added as **Connector** nodes (Microsoft
-  Dataverse: List rows / Download a file or an image / Add a new row / Update a row); classic
+  Dataverse: List rows / Download a file or an image / Add a new row / Update a row); standard harness
   **Condition** → **If/Else**; terminal **Respond to the agent** auto-added by the agent-call trigger.
-  The classic **"AI capabilities → Run a prompt"** node is gone — extraction is done by the agent/skill,
+  The standard harness **"AI capabilities → Run a prompt"** node is gone — extraction is done by the agent/skill,
   so the workflow uses an **Agent node** ("Connect to Agent") or takes already-extracted fields as inputs.
 - **What changed:** New canvas/palette and node names; all field mappings and `fx` expressions are
   unchanged. **Surface/trigger/palette validated live**; the full Dataverse persistence flow was not
-  rebuilt end-to-end live (logic identical to classic, documented as the mapping).
+  rebuilt end-to-end live (logic matches the standard harness implementation, documented as the mapping).
 - **Screenshot:** ![Screenshot of workflow agent node](./assets/validation/workflow-agent-node.png)
 
 ### 7.4 Create candidate record → **(same logic, Workflow Connector + If/Else)**
@@ -97,7 +97,7 @@
 
 - **Status:** modified
 - **New instruction:** Attach via Build → **Tools** card → **Add a tool** → **Workflows** tab (not
-  "Flow"). The classic child **Application Intake Agent** is now a **Skill** named `application-intake`
+  "Flow"). The standard harness child **Application Intake Agent** is now a **Skill** named `application-intake`
   on the Hiring Agent; edit its instructions to call **Summarize Resume** and apply **summarize-resume**.
 - **What changed:** Tool gallery path; child agent migrated to a Skill (confirmed live in this env).
 
@@ -118,7 +118,7 @@
   `application-intake` Skill; Workflow canvas palette + "When an agent calls the workflow" trigger +
   Agent node ("Connect to Agent").
 - **Documented mapping (not rebuilt end-to-end live):** the full Dataverse persistence Workflow
-  (List/Download/Add/Update + If/Else + Respond) — logic is identical to the classic Agent Flow, with the
+  (List/Download/Add/Update + If/Else + Respond) — logic is identical to the standard harness Agent Flow, with the
   expressions unchanged; only the node-adding gesture and the extraction step (Agent node vs Run-a-prompt)
   differ.
 

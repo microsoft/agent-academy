@@ -33,8 +33,8 @@ Welcome, Recruit. This mission will equip you with foundational intel to underst
 
 Before building your first agent on the **standard harness**, you'll explore knowledge, tools, topics, and instructions. You'll learn how these components work together through classic or generative orchestration. Other Copilot Studio harnesses organize their capabilities differently.
 
-> [!IMPORTANT] This mission uses the classic Copilot Studio experience
-> Microsoft Copilot Studio is rolling out a new authoring experience. The concepts in this mission still apply, but the course screenshots and navigation paths use the **classic experience**. If later missions look different on your screen, turn off **New Experience** in the upper-right corner to follow along.
+> [!IMPORTANT] This mission uses the standard harness
+> Microsoft Copilot Studio is rolling out a new authoring experience. The concepts in this mission still apply, but the course screenshots and navigation paths use the **standard harness**. If later missions look different on your screen, turn off **New Experience** in the upper-right corner to follow along.
 
 ## 🔎 Objectives {#objectives}
 

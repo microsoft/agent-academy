@@ -19,7 +19,7 @@ products:
 industries:
   - it
 created-date: 2025-08-20
-last-edited-date: 2026-08-06
+last-edited-date: 2026-10-22
 ---
 
 # 🚨 Mission 00: Course Setup {#mission-00-course-setup}
@@ -32,8 +32,8 @@ Welcome, Recruit. Before you can start building your first AI agent, you need to
 
 This briefing outlines the systems, access credentials, and setup steps required to successfully operate in the Microsoft 365 ecosystem.
 
-> [!IMPORTANT] This mission uses the classic Copilot Studio UI
-> Microsoft Copilot Studio is rolling out a new user experience (UI). The screenshots and steps in this mission use the **classic experience**. If your screen looks different, turn off **New Experience** in the upper-right corner before you continue.
+> [!IMPORTANT] This mission uses the standard harness
+> Microsoft Copilot Studio is rolling out a new user experience (UI). The screenshots and steps in this mission use the **standard harness**. If your screen looks different, turn off **New Experience** in the upper-right corner before you continue.
 
 ## 🔎 Objectives {#objectives}
 

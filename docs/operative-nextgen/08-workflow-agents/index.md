@@ -18,7 +18,7 @@ products: [copilot-studio, dataverse, outlook, teams]
 industries:
   - hr
 created-date: 2026-08-12
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-22
 ---
 
 # 🚨 Mission 08: Add Agents to a Workflow {#mission-08-add-agents-to-a-workflow}
@@ -77,8 +77,8 @@ The expression shape is the one you used in [Mission 07](../07-workflow-trigger/
 
 When you chat with an agent, its tool calls run as **you**. When a *workflow* calls an agent there is no user interacting with the agent directly, so those calls run under the **Agents connection identity** instead - a connection stored in the environment rather than a signed-in user.
 
-::: details 🔄 Coming from the classic Operative course?
-In the classic course, a flow reached AI through an **AI Builder prompt**, which returns one narrowly-shaped completion at a time. The decision-making stayed in the flow itself, written out condition by condition.
+::: details 🔄 Coming from the standard course?
+In the standard course, a flow reached AI through an **AI Builder prompt**, which returns one narrowly-shaped completion at a time. The decision-making stayed in the flow itself, written out condition by condition.
 
 The **Agent** node moves that reasoning somewhere else. You can scope an inline agent to a single node, or call a published agent that brings its own instructions, tools and skills - one that works through a document, calls tools of its own, and can pause to ask a person a question part-way through.
 

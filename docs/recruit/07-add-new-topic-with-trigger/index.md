@@ -19,7 +19,7 @@ products:
 industries:
   - it
 created-date: 2025-08-20
-last-edited-date: 2026-08-06
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 07: Add new topic with trigger and nodes {#mission-07-add-new-topic-with-trigger-and-nodes}
 
@@ -35,8 +35,8 @@ Welcome back, Recruit. You’ve built an agent that listens, learns, and answers
 
 With Topics and Triggers, your agent can:
 
-> [!IMPORTANT] This mission uses the classic Copilot Studio experience
-> If your Copilot Studio screen looks different from the screenshots in this mission, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+> [!IMPORTANT] This mission uses the standard harness
+> If your Copilot Studio screen looks different from the screenshots in this mission, turn off **New Experience** in the upper-right corner to switch back to the **standard harness** used here.
 
 - Recognize intent
 

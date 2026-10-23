@@ -26,7 +26,7 @@ Use 1-3 tags. Pick the most specific ones that apply.
 | `m365-copilot` | Mission deploys to or extends Microsoft 365 Copilot |
 | `multi-agent` | Mission involves connected agents or orchestration patterns |
 | `multimodal` | Mission processes images, PDFs, or other non-text inputs |
-| `power-automate` | Mission uses Power Automate flows (classic, not agent flows) |
+| `power-automate` | Mission uses Power Automate cloud flows (distinct from Copilot Studio agent flows) |
 | `prompts` | Mission is primarily about AI prompt authoring or prompt nodes |
 | `sharepoint` | Mission uses SharePoint as a knowledge source or data target |
 | `teams` | Mission publishes to or integrates with Microsoft Teams |

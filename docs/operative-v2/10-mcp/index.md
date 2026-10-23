@@ -17,7 +17,7 @@ products: [copilot-studio, outlook]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-06-30
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 10: Integrate with MCP Servers {#mission-10-integrate-with-mcp-servers}
 
@@ -32,7 +32,7 @@ last-edited-date: 2026-06-30
 > - **Tools** are now added from the **Add tool** button in the agent's
 >   right-side configuration panel (not a top-navigation **Tools** tab), and MCP
 >   servers are filtered using the **Model Context Protocol (MCP)** *tab* in the
->   "Add a tool" dialog (the classic "filter" is gone).
+>   "Add a tool" dialog (the standard harness "filter" is gone).
 > - The **Work IQ User (Preview)** MCP server was **not available** in the test
 >   environment — only Work IQ Mail/Teams/Calendar/SharePoint/OneDrive (Preview)
 >   were present. The "Who is my manager?" portion of Lab 10.1 is flagged as
@@ -192,14 +192,14 @@ The Work IQ Calendar (Preview) MCP server lets your agent read and act on your O
 1. In the **Agent configuration** panel on the right, find the **Tools** section and select **Add tool**.
 
     > [!NOTE]
-    > In the classic experience, Tools lived in the top navigation. In the new
+    > On the standard harness, Tools lived in the top navigation. In the new
     > experience, tools are managed from the right-side configuration panel on the
     > agent's **Build** page.
 
 1. In the **Add a tool** dialog, select the **Model Context Protocol (MCP)** tab to filter the list to MCP servers only.
 
     > [!NOTE]
-    > The classic experience used a **filter** to narrow to MCP servers. The new
+    > The standard harness used a **filter** to narrow to MCP servers. The new
     > experience uses a **tab** (the tabs are **All**, **Model Context Protocol
     > (MCP)**, **Connectors**, and **Workflows**).
 
@@ -216,7 +216,7 @@ The Work IQ Calendar (Preview) MCP server lets your agent read and act on your O
 1. Back on the dialog, with the connection now shown, select **Add** to add the Work IQ Calendar (Preview) MCP server to the Interview Agent.
 
     > [!NOTE]
-    > In the classic experience this button was **Add and configure** and opened a
+    > On the standard harness this button was **Add and configure** and opened a
     > separate tool overview page. In the new experience the button is simply **Add**,
     > and there is no separate configure step - the server's tools are added directly.
 
@@ -243,7 +243,7 @@ Let's test out this MCP server.
     ![Get my meetings for today response, calling the ListCalendarView MCP tool](./assets/validation/m10-mcp-preview-test.png)
 
     > [!NOTE]
-    > In the classic experience the first call surfaced a separate **consent card**
+    > On the standard harness the first call surfaced a separate **consent card**
     > (you selected **Allow**) and the tool was named *getEvents*. In the new
     > experience the agent invoked the **ListCalendarView** tool directly using the
     > connection created when the tool was added; no separate consent card appeared in

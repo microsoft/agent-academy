@@ -20,10 +20,10 @@ In this course, you'll build a **multi-agent hiring system** using the **new Mic
 
 You'll start by importing the hiring data model and creating a new **Hiring Agent**, then add resume intake, weighted matching, safety controls, autonomous workflows, and evaluations. The finished system uses **skills**, the **Microsoft Dataverse MCP server**, **connected agents**, and **workflows**.
 
-Everything here runs on the **GitHub Copilot harness** - the runtime that gives an agent its orchestrator, its tool-calling behavior, and its reasoning loop. Copilot Studio also offers a **standard harness**, which the classic Operative missions were built upon, and a **GitHub Copilot harness**; this course builds on the GitHub Copilot harness throughout.
+Everything here runs on the **GitHub Copilot harness** - the runtime that gives an agent its orchestrator, its tool-calling behavior, and its reasoning loop. Copilot Studio also offers a **standard harness**, which the standard Operative missions were built upon, and a **GitHub Copilot harness**; this course builds on the GitHub Copilot harness throughout.
 
-> [!INFO] Coming from the classic Operative course?
-> This edition covers the **GitHub Copilot harness** at `https://copilotstudio.preview.microsoft.com`. The home page shows **Agent** and **Workflow** cards labeled **GitHub Copilot**. It reuses the same hiring scenario as the [classic Agent Academy Operative course](../operative/index.md) on purpose: building the same system twice is the clearest way to see what the new building blocks replace. Watch out for collapsible sections titled *Coming from the classic Operative course?* - they give you insights into the differences between the standard harness and the GitHub Copilot harness. If you've never used the classic experience, you can skip those sections without missing any required steps.
+> [!INFO] Coming from the standard course?
+> This edition covers the **GitHub Copilot harness** at `https://copilotstudio.preview.microsoft.com`. The home page shows **Agent** and **Workflow** cards labeled **GitHub Copilot**. It reuses the same hiring scenario as the [standard Agent Academy Operative course](../operative/index.md) on purpose: building the same system twice is the clearest way to see what the new building blocks replace. Watch out for collapsible sections titled *Coming from the standard course?* - they give you insights into the differences between the standard harness and the GitHub Copilot harness. If you've never used the standard harness, you can skip those sections without missing any required steps.
 
 <!-- Separate adjacent callouts for Markdownlint. -->
 > [!WARNING] This course consumes Copilot Credits

@@ -18,7 +18,7 @@ products: [copilot-studio, dataverse]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-22
 ---
 
 # 🚨 Mission 06: Generate Documents with a Python Skill {#mission-06-generate-documents-with-a-python-skill}
@@ -139,8 +139,8 @@ Do not ask about protected characteristics.
 
 The agent fills this template with information from the candidate's resume and the selected job role. It prepares a summary, compares the resume with the role's evaluation criteria, and writes ten interview questions, starting with the highest-weight criteria. The Python script puts that content into a consistent Word document, so interviewers can find the same sections in every pack.
 
-::: details 🔄 Coming from the classic Operative course?
-In the classic course this document was produced by an AI Builder prompt paired with a Word template, so the layout was defined in two places at once - part of it in the prompt, and part of it in the `.docx`. Moving a heading meant editing the Word file and re-testing the prompt against it.
+::: details 🔄 Coming from the standard course?
+In the standard course this document was produced by an AI Builder prompt paired with a Word template, so the layout was defined in two places at once - part of it in the prompt, and part of it in the `.docx`. Moving a heading meant editing the Word file and re-testing the prompt against it.
 
 Here the two jobs are separated. The agent gathers the grounded content through MCP, and a **Python skill** renders the document from a layout written in code. The layout is now text, so you can read it, review it, change one line of it, and get the same document out every time.
 :::

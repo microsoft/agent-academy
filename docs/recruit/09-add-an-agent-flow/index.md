@@ -20,7 +20,7 @@ products:
 industries:
   - it
 created-date: 2025-08-20
-last-edited-date: 2026-08-06
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 09: Add an agent flow to your Topic for automation {#mission-09-add-an-agent-flow-to-your-topic-for-automation}
 
@@ -36,8 +36,8 @@ Welcome back, Recruit. Your agent can now converse with users and provide inform
 
 By mission's end, you'll have created an end-to-end device request automation that captures user input through an adaptive card, retrieves data from SharePoint, sends notifications to managers via email, and provides seamless user feedback - all orchestrated by your agent through intelligent workflow automation.
 
-> [!IMPORTANT] This mission uses the classic Copilot Studio experience
-> If your Copilot Studio screen looks different from the screenshots in this mission, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+> [!IMPORTANT] This mission uses the standard harness
+> If your Copilot Studio screen looks different from the screenshots in this mission, turn off **New Experience** in the upper-right corner to switch back to the **standard harness** used here.
 
 ## 🔎 Objectives {#objectives}
 

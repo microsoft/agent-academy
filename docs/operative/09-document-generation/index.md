@@ -15,7 +15,7 @@ products: [copilot-studio, dataverse, word]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-03-11
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 09: Generate a Candidate Interview Questions Document {#mission-09-generate-a-candidate-interview-questions-document}
 
@@ -30,7 +30,7 @@ Welcome, Operative. Your previous missions have shown you the power of prompts. 
 Your assignment, should you choose to accept it, is **Operation Doc Assembly**. In this operation you'll be creating a word document of interview prep questions from a prompt and calling that from an agent.
 
 > [!NOTE]
-> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **standard harness** used here.
 
 ## 🔎 Objectives {#objectives}
 

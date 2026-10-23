@@ -17,7 +17,7 @@ products: [copilot-studio, dataverse]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-08-12
+last-edited-date: 2026-10-22
 ---
 
 # 🚨 Mission 01: Establish the Hiring Hub {#mission-01-establish-the-hiring-hub}
@@ -123,8 +123,8 @@ flowchart TB
 
 </div>
 
-::: details 🔄 Coming from the classic Operative course?
-The biggest change is how you describe what an agent does. In the classic course, behavior was built as a tree of **topics** - each one a set of trigger phrases and an authored path through the conversation. The Powered by GitHub Copilot experience has no topics at all. You describe the agent's job in plain language in **Instructions**, and package the procedures you want it to follow repeatably as **skills**, which the agent loads when a request matches.
+::: details 🔄 Coming from the standard course?
+The biggest change is how you describe what an agent does. In the standard course, behavior was built as a tree of **topics** - each one a set of trigger phrases and an authored path through the conversation. The Powered by GitHub Copilot experience has no topics at all. You describe the agent's job in plain language in **Instructions**, and package the procedures you want it to follow repeatably as **skills**, which the agent loads when a request matches.
 
 Everything the agent can use now sits on one **Build** canvas - instructions, skills, tools, knowledge and connected agents - rather than being spread across separate authoring pages.
 

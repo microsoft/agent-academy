@@ -16,7 +16,7 @@ products: [copilot-studio, dataverse]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-03-11
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 07: Extracting Resume Contents with Multimodal Prompts {#mission-07-extracting-resume-contents-with-multimodal-prompts}
 
@@ -35,7 +35,7 @@ This mission will transform you from a text-only agent builder into a **multimod
 The techniques you learn here will be essential for the advanced data grounding operations in your next mission.
 
 > [!NOTE]
-> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **standard harness** used here.
 
 ## 🔎 Objectives {#objectives}
 

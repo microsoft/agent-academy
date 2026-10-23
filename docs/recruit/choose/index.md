@@ -33,7 +33,7 @@ Copilot Studio runs agents on a **harness**: the runtime that decides when to ca
 | **You design** | Topics, triggers, nodes, and branches | Instructions, skills, tools, and workflows |
 | **The agent follows** | The conversation paths you author | A plan it reasons out toward your goal |
 | **Best for** | Rule-based agents and structured, repeatable conversations | Complex, reasoning-heavy, multi-step business processes |
-| **Authoring surface** | Classic experience | **New experience** toggle in Copilot Studio |
+| **Authoring surface** | Standard harness | **New experience** toggle in Copilot Studio |
 
 > [!TIP]
 > Not sure? Start with the **standard harness** if you want the broadest coverage of Copilot Studio, including Adaptive Cards, Power Fx, and agent flows. Start with the **GitHub Copilot harness** if you're building agents today on the new experience and want the instruction-driven approach.

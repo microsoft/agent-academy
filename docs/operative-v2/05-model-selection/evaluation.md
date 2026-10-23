@@ -39,7 +39,7 @@
    Italic, Strikethrough, bulleted/numbered lists, Blockquote, Inline code, and Insert link — there is no
    Power Fx / formula picker. Use a literal example value to demonstrate a desired format.
 
-| Classic surface | New surface | Validated |
+| Standard harness surface | New surface | Validated |
 |---|---|---|
 | Overview tab → chevron → "Select your agent's model" | **Build → Model** dropdown (Managed / Anthropic / Mistral groups) | ✅ live |
 | Default model = GPT-4.1 | Default model = **Claude Sonnet 4.6** | ✅ live |

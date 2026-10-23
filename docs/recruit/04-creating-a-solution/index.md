@@ -18,7 +18,7 @@ products:
 industries:
   - it
 created-date: 2025-08-20
-last-edited-date: 2026-08-06
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 04: Creating a Solution for Your Agent {#mission-04-creating-a-solution-for-your-agent}
 
@@ -36,8 +36,8 @@ Every agent needs a well-structured home. That’s what a Power Platform solutio
 
 Let’s pack up.
 
-> [!IMPORTANT] This mission uses the classic Copilot Studio experience
-> If your Copilot Studio screen looks different from the screenshots in this mission, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+> [!IMPORTANT] This mission uses the standard harness
+> If your Copilot Studio screen looks different from the screenshots in this mission, turn off **New Experience** in the upper-right corner to switch back to the **standard harness** used here.
 
 ## 🔎 Objectives {#objectives}
 

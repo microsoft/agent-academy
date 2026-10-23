@@ -17,7 +17,7 @@ products: [copilot-studio, dataverse]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-22
 ---
 
 # 🚨 Mission 03: Add a Connected Interview Agent {#mission-03-add-a-connected-interview-agent}
@@ -51,8 +51,8 @@ An agent becomes connectable when:
 
 Use a connected agent (rather than one giant agent) when the specialist has its own lifecycle, could be reused across solutions, or is maintained by a different team - all true for an interview-prep assistant.
 
-::: details 🔄 Coming from the classic Operative course?
-The classic course offered two ways to bring in a second agent: **child agents** and **connected agents**. The Powered by GitHub Copilot experience keeps connected agents and **drops child agents entirely** - where we might have used a child agent, we now use specialist **skills**.
+::: details 🔄 Coming from the standard course?
+The standard course offered two ways to bring in a second agent: **child agents** and **connected agents**. The Powered by GitHub Copilot experience keeps connected agents and **drops child agents entirely** - where we might have used a child agent, we now use specialist **skills**.
 
 A connected agent is a complete agent. It has its own instructions, its own tools, its own evaluation set, and its own publish cycle. Splitting work out is a decision about ownership and lifecycle, not about picking an authoring construct.
 

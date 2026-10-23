@@ -28,7 +28,7 @@
 
 ## 🧭 The big architectural shift
 
-Mission 04 was built on three classic surfaces that **no longer exist** in the new experience:
+Mission 04 was built on three standard harness surfaces that **no longer exist** in the new experience:
 
 1. **Agent Overview → Triggers and Channels.** The agent **Overview** tab is gone. There is no
    agent-level "Triggers and Channels" card to add "When a new email arrives (V3)".
@@ -43,9 +43,9 @@ Mission 04 was built on three classic surfaces that **no longer exist** in the n
 types, and an **Agent** step invokes the Hiring Agent at the end. The notification flow remains a second
 **Workflow** (trigger = *When an agent calls the workflow*) attached to the agent as a **Tool**.
 
-Mapping of classic flow constructs → new Workflow step types:
+Mapping of standard harness flow constructs → new Workflow step types:
 
-| Classic (Power Automate) | New Workflow step | Validated |
+| Standard harness (Power Automate) | New Workflow step | Validated |
 |---|---|---|
 | Trigger "When a new email arrives (V3)" (added in agent Overview) | **Connector trigger** → Office 365 Outlook → *When a new email arrives* | ✅ live |
 | **Condition** control | **If/Else** step | ✅ (step palette) |
@@ -85,7 +85,7 @@ Mapping of classic flow constructs → new Workflow step types:
   round-trip to the Power Automate maker portal and no "Plan" switch — a workflow already runs on
   Copilot Studio capacity.
 - **Alternative:** None needed — author and **Publish** directly in the Workflows canvas.
-- **Impact:** Removes ~3 classic steps (Edit in PA, change plan, confirm). Simpler for learners.
+- **Impact:** Removes ~3 standard course steps (Edit in PA, change plan, confirm). Simpler for learners.
 
 ## Step-by-Step Comparison
 
@@ -108,7 +108,7 @@ Mapping of classic flow constructs → new Workflow step types:
   *Automate resume intake from email*.
 - **What changed:** Same trigger and same inputs, now hosted as a Workflow Connector trigger.
   **Include Attachments** and **Only with Attachments** are now **toggle switches** (On/Off), not the
-  classic Yes/No dropdowns.
+  standard harness Yes/No dropdowns.
 - **Screenshot:** ![Screenshot of email trigger configured](./assets/validation/email-trigger-configured.png)
 
 ### Lab 4.1 — "Split On" trigger setting
@@ -117,7 +117,7 @@ Mapping of classic flow constructs → new Workflow step types:
 - **New instruction:** Open the trigger's **More options (…) → Settings**. Under **General**, the
   **Split On** field is present (default `@triggerBody()`) alongside **Concurrency control** (single
   instance) and **Trigger conditions**. Keep Split On enabled so each email/attachment is processed as a
-  separate run, exactly as in the classic lab.
+  separate run, exactly as in the standard course lab.
 - **What changed:** Split On is **not** removed — it relocated from the Power Automate trigger settings to
   the workflow trigger's **Settings** flyout. (This corrects the earlier draft, which claimed Split On was
   not exposed.)
@@ -208,8 +208,8 @@ Mapping of classic flow constructs → new Workflow step types:
 - **Status:** modified — **CONFIRMED**
 - **New instruction:** The *When an agent calls the workflow* trigger **auto-includes a "Respond to the
   agent" terminal node** on the canvas. Use it to return outputs/text to the calling agent to signal
-  completion (the new equivalent of the classic "Respond to the agent" / EndConversation = Finished).
-- **What changed:** Equivalent to the classic "Respond to the agent" action; it is now an auto-created
+  completion (the new equivalent of the standard harness "Respond to the agent" / EndConversation = Finished).
+- **What changed:** Equivalent to the standard harness "Respond to the agent" action; it is now an auto-created
   terminal node on the agent-callable workflow rather than an action you add manually.
 - **Screenshot:** ![Screenshot of agent trigger inputs](./assets/validation/agent-trigger-inputs.png)
 
@@ -246,7 +246,7 @@ Mapping of classic flow constructs → new Workflow step types:
 - **Status:** modified
 - **New instruction:** Send the test email with the resume PDF (unchanged). View the run in the
   **Workflows** canvas (**Activity/Monitor** tab) instead of the Power Automate portal. In the agent,
-  use the **Monitor** tab (classic **Activity** tab) to see the autonomous run. The Hiring Hub
+  use the **Monitor** tab (standard harness **Activity** tab) to see the autonomous run. The Hiring Hub
   model-driven app and Teams adaptive-card verification are unchanged.
 - **What changed:** Power Automate portal → Workflows **Activity/Monitor**; agent **Activity** tab →
   **Monitor** tab. **NEEDS VALIDATION** end-to-end (requires the Operative solution + mail).

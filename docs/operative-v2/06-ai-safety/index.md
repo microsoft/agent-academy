@@ -18,7 +18,7 @@ products:
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-06-29
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 06: AI Safety and Content Moderation {#mission-06-ai-safety-and-content-moderation}
 
@@ -26,7 +26,7 @@ last-edited-date: 2026-06-29
 
 > [!NOTE]
 > This lab has been updated for the **new Copilot Studio experience** (2026-06-29).
-> Several classic surfaces this mission relied on (**Topics**, the **System → Conversation Start** and **On Error** topics, and the **Generative Answers** node) no longer exist in the new experience. Labs 6.1, 6.2, 6.5, and 6.6 have been rewritten; Labs 6.3 and 6.4 are **blocked** (no equivalent) and replaced with an instruction-based alternative. See `evaluation.md` for a full comparison with the original.
+> Several standard harness surfaces this mission relied on (**Topics**, the **System → Conversation Start** and **On Error** topics, and the **Generative Answers** node) no longer exist in the new experience. Labs 6.1, 6.2, 6.5, and 6.6 have been rewritten; Labs 6.3 and 6.4 are **blocked** (no equivalent) and replaced with an instruction-based alternative. See `evaluation.md` for a full comparison with the original.
 
 [![Safety](./assets/06-ai-safety-thumbnail_PlayButton.png)](https://youtu.be/2IjDV_D3Jb0?si=Aqp3TVRt5QnpKxsr "Watch the walkthrough on YouTube")
 
@@ -37,7 +37,7 @@ Welcome back, Operative. Your agents have become sophisticated, but with great p
 Your mission is **Operation Safe Harbor**: implement robust content moderation and AI safety controls for your Interview Agent. As your agents process resumes and conduct interviews, it's critical to prevent harmful content, uphold professional standards, and protect sensitive data. In this mission, you'll configure content filtering, set safety guardrails, and design custom responses for inappropriate input, using Microsoft Copilot Studio's enterprise-grade moderation features. By the end, your hiring system will balance powerful AI capabilities with responsible, legally compliant capabilities.
 
 > [!NOTE]
-> This lab uses the **new Copilot Studio experience** (the **New experience** toggle in the upper-right is **on**). The screenshots and steps below reflect that experience. The original classic-experience version of this lab is preserved in `evaluation.md`.
+> This lab uses the **new Copilot Studio experience** (the **New experience** toggle in the upper-right is **on**). The screenshots and steps below reflect that experience. The original standard harness version of this lab is preserved in `evaluation.md`.
 
 ## 🔎 Objectives {#objectives}
 
@@ -164,7 +164,7 @@ Topic-level settings take precedence at runtime, allowing fine-tuned control for
 > [!NOTE]
 > **New experience:** Moderation is now **agent-level only**. It is set at **Settings → AI & behavior →
 > Safety → Moderation level** (five levels: Minimum / Low / Medium / High / Maximum). The **topic-level**
-> option and **Settings → Generative AI** location described above belong to the classic experience —
+> option and **Settings → Generative AI** location described above belong to the standard harness —
 > there are no Topics or Generative Answers nodes in the new experience, so per-node moderation overrides
 > are not available. Likewise, the **Unknown Intent fallback topic** in the table above is not authorable;
 > out-of-scope handling is governed by the agent's **Instructions** and generative orchestration.
@@ -381,10 +381,10 @@ Let's explore how Responsible AI content filtering works and how to handle block
 
 1. **Navigate to Settings** → **AI & behavior**. Under the **Safety** section, locate the **Moderation level** dropdown.
 
-    <!-- ⚠️ MODIFIED: Moderation moved from Settings → Moderation (classic) to
+    <!-- ⚠️ MODIFIED: Moderation moved from Settings → Moderation (standard harness) to
          Settings → AI & behavior → Safety → Moderation level (new experience). -->
 
-1. **Open the Moderation level dropdown.** Note that the new experience offers **five** levels (the classic experience offered three):
+1. **Open the Moderation level dropdown.** Note that the new experience offers **five** levels (the standard harness offered three):
 
     - **Minimum**
     - **Low**
@@ -404,7 +404,7 @@ Let's explore how Responsible AI content filtering works and how to handle block
          Instructions instead (see Lab 6.5). -->
 
     > [!NOTE]
-    > In the new experience there is **no custom flagged-response message field**. The classic
+    > In the new experience there is **no custom flagged-response message field**. The standard harness
     > **"When potential responses get flagged by content moderation"** textbox has been removed.
     > Content moderation now returns the platform's built-in response. To control how your agent
     > *declines* sensitive or off-scope requests, use agent **Instructions** (Lab 6.5).
@@ -480,7 +480,7 @@ Let's explore how Responsible AI content filtering works and how to handle block
 
 Let's see how agent instructions can deliberately restrict responses.
 
-1. Select the **Build** tab. Locate the **Instructions** field (this replaces the classic **Overview → Instructions → Edit**).
+1. Select the **Build** tab. Locate the **Instructions** field (this replaces the standard harness **Overview → Instructions → Edit**).
 
     <!-- ⚠️ MODIFIED: Instructions moved from the removed Overview tab to the Build page Instructions field. -->
 
@@ -543,7 +543,7 @@ Observe these behaviors:
 - **Instruction-based refusal**: Polite explanation with alternatives
 - **Out-of-scope requests**: The agent explains it can only help with interview-related topics
 
-<!-- ⚠️ MODIFIED: The classic "Unknown Intent → fallback topic" behavior is described in terms of
+<!-- ⚠️ MODIFIED: The standard harness "Unknown Intent → fallback topic" behavior is described in terms of
      generative orchestration here. There is no authorable fallback Topic in the new experience; the
      agent's scope is governed by its Instructions. -->
 
@@ -585,7 +585,7 @@ Learn to identify and analyze security threats using Copilot Studio's built-in m
 <!-- ⚠️ MODIFIED/RELOCATED: Security Analytics ("See details", Threat detection, Protection Categories,
      Reason for Block / Session Block Rate Trend charts) is a governance/admin feature. It is reached
      through the protection/security governance surfaces (Agent Ops / Power Platform admin center)
-     rather than the Agents list "Protection Status" column referenced in the classic lab. The metrics
+     rather than the Agents list "Protection Status" column referenced in the standard course lab. The metrics
      and charts themselves are unchanged. -->
 
 > [!IMPORTANT]

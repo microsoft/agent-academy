@@ -19,7 +19,7 @@ products:
 industries:
   - it
 created-date: 2025-08-20
-last-edited-date: 2026-08-06
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 06: Create a custom agent using natural language with AI and grounding it with your data {#mission-06-create-a-custom-agent-using-natural-language-with-ai-and-grounding-it-with-your-data}
 
@@ -39,8 +39,8 @@ Your weapon of choice? Natural language. Your mission? Design, train, and test a
 
 Let’s build your agent from the ground up.
 
-> [!IMPORTANT] This mission uses the classic Copilot Studio experience
-> If your Copilot Studio screen looks different from the screenshots in this mission, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+> [!IMPORTANT] This mission uses the standard harness
+> If your Copilot Studio screen looks different from the screenshots in this mission, turn off **New Experience** in the upper-right corner to switch back to the **standard harness** used here.
 
 ## 🔎 Objectives {#objectives}
 

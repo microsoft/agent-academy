@@ -18,7 +18,7 @@ products: [copilot-studio, dataverse]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-06-29
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 07: Extracting Resume Contents with Multimodal Prompts {#mission-07-extracting-resume-contents-with-multimodal-prompts}
 
@@ -96,12 +96,12 @@ Here are some examples of how multimodal prompts can be applied:
 In the new experience you don't pick an AI Builder prompt model — the **agent's own model** does the document analysis. Set it from the **Model** dropdown on the agent's **Build** page (top of the right rail). The default is **Claude Sonnet 4.6**, which is multimodal (it can read PDFs and images natively). Other models (the GPT-5 family, Claude Opus 4.6–4.8, and Mistral) are available from the same dropdown.
 
 > [!NOTE]
-> The AI Builder model table below is from the **classic** AI Builder Prompt experience and is retained
+> The AI Builder model table below is from the **standard harness** AI Builder Prompt experience and is retained
 > for background only. In the new experience, model selection happens once at the agent level (Build →
 > **Model**), not per prompt. For document analysis you still want a low-temperature, accurate model —
 > the default Claude Sonnet 4.6 works well.
 
-### Model comparison (classic AI Builder — background)
+### Model comparison (standard harness AI Builder — background) {#model-comparison-standard-harness-ai-builder-background}
 
 All of the following models support vision and document processing
 
@@ -181,7 +181,7 @@ Time to put your multimodal knowledge into practice. You'll build a comprehensiv
 
 Your first objective: capture the resume-analysis behavior as an agent **Skill**. In the new experience the agent's model is multimodal, so the skill just needs clear instructions — when a learner uploads a resume, the agent reads the document and applies the skill.
 
-<!-- ⚠️ NEW FLOW: The classic AI Builder "Prompt" tool (Tools → + New tool → Prompt) no longer exists.
+<!-- ⚠️ NEW FLOW: The standard harness AI Builder "Prompt" tool (Tools → + New tool → Prompt) no longer exists.
      The UI states "Prompt is now called Agent." There is no Prompt option in the "Add a tool" gallery
      (Featured / MCP / Connectors / Workflows). The multimodal extraction is rebuilt as a Skill. -->
 
@@ -222,13 +222,13 @@ Your first objective: capture the resume-analysis behavior as an agent **Skill**
     ![Create the summarize-resume skill](./assets/validation/skill-create-dialog.png)
 
     > [!NOTE] Why a Skill instead of a Prompt
-    > The classic lab built an AI Builder **Prompt** with a `/document` and `/text` input. In the new
+    > The standard course lab built an AI Builder **Prompt** with a `/document` and `/text` input. In the new
     > experience the agent's **model is natively multimodal** — it reads the uploaded PDF/image directly,
     > so you don't declare document/text input parameters. The skill simply describes the behavior.
 
 ### 7.2 Ask the skill for structured JSON output
 
-The classic prompt had a separate **Output → JSON** toggle. A skill has no output-format setting, so you specify the JSON shape directly in the instructions.
+The standard harness prompt had a separate **Output → JSON** toggle. A skill has no output-format setting, so you specify the JSON shape directly in the instructions.
 
 1. Reopen the **summarize-resume** skill (Skills card → select the skill) and **append** this to the end of the Instructions:
 
@@ -250,24 +250,24 @@ The classic prompt had a separate **Output → JSON** toggle. A skill has no out
     > Ask for a **readable summary** when a human is reading the chat directly. You can include both — a
     > JSON block plus a friendly summary.
 
-<!-- ⚠️ REMOVED: classic 7.2 steps "Change the Output setting from Text to JSON", "Configure for use in
+<!-- ⚠️ REMOVED: standard harness 7.2 steps "Change the Output setting from Text to JSON", "Configure for use in
      Agent → Cancel". A Skill has no Output toggle and no Configure-for-use-in-Agent dialog; JSON shape
      is expressed in the instructions instead. -->
 
 ### 7.3 Persist extracted data with a Workflow tool
 
-The skill extracts data, but a skill (instructions only) **cannot write to Dataverse**. To create/update Candidate and Resume records you still need a tool. In the new experience the classic **Agent Flow** is now a **Workflow** (Workflows hub → **New Workflow**), attached to the agent via **Build → Tools → Add a tool → Workflows**.
+The skill extracts data, but a skill (instructions only) **cannot write to Dataverse**. To create/update Candidate and Resume records you still need a tool. In the new experience the standard harness **Agent Flow** is now a **Workflow** (Workflows hub → **New Workflow**), attached to the agent via **Build → Tools → Add a tool → Workflows**.
 
 <!-- ⚠️ NEW FLOW: Agent Flows are now standalone Workflows. The canvas node palette is:
      Agent, Classify, M365 Copilot, Human review, Connector, Function, Variable, If/Else, Loop, Note.
-     Classic agent-flow actions map to the Connector node (Microsoft Dataverse: List rows, Download a
-     file or an image, Add a new row, Update a row), and the classic "Condition" maps to If/Else.
+     Standard harness agent-flow actions map to the Connector node (Microsoft Dataverse: List rows, Download a
+     file or an image, Add a new row, Update a row), and the standard harness "Condition" maps to If/Else.
      Use the trigger type "When an agent calls the workflow" so the agent can call it as a tool. -->
 
 You'll create a **Workflow** that uses the extracted data to update resumes stored in Dataverse. This is the **optional, advanced** half of the mission — the conversational skill from 7.1/7.2 already delivers multimodal extraction; this section adds Dataverse persistence.
 
 > [!NOTE] Workflow Connector nodes
-> In the new experience, each classic Agent Flow action (Dataverse **List rows**, **Download a file or an image**, **Add a new row**, **Update a row**) is added on the Workflow canvas as a **Connector** node using the **Microsoft Dataverse** connector. The field mappings and `fx` expressions in the tables below are **unchanged** from the classic Agent Flow — only the node-adding gesture differs. The classic **Condition** action is the **If/Else** node, and **Respond to the agent** is configured from the **When an agent calls the workflow** trigger's outputs.
+> In the new experience, each standard harness Agent Flow action (Dataverse **List rows**, **Download a file or an image**, **Add a new row**, **Update a row**) is added on the Workflow canvas as a **Connector** node using the **Microsoft Dataverse** connector. The field mappings and `fx` expressions in the tables below are **unchanged** from the standard harness Agent Flow — only the node-adding gesture differs. The standard harness **Condition** action is the **If/Else** node, and **Respond to the agent** is configured from the **When an agent calls the workflow** trigger's outputs.
 
 <!-- -->
 
@@ -316,7 +316,7 @@ You'll create a **Workflow** that uses the extracted data to update resumes stor
 
     ![Download Resume](./assets/7-summarize-resume-2.png)
 
-<!-- ⚠️ NEW FLOW: The classic "AI capabilities → Run a prompt" action is GONE.
+<!-- ⚠️ NEW FLOW: The standard harness "AI capabilities → Run a prompt" action is GONE.
      The standalone AI Builder Prompt was removed ("Prompt is now called Agent"), so there is no
      prompt to call from a workflow action. Extraction now happens via the agent's native
      multimodal model + the `summarize-resume` Skill (Labs 7.1/7.2), which was validated live.
@@ -328,10 +328,10 @@ You'll create a **Workflow** that uses the extracted data to update resumes stor
      The Connector-based document action "AI – Extract field values from a document" is also
      available under the AI Builder connector if you prefer a deterministic field-extraction step. -->
 
-1. Add an **Agent** node ("Connect to Agent") below **Download Resume**, name it `Summarize Resume`, and connect it to your **Hiring Agent**. Pass the **Download Resume → File or image content** as the message attachment and instruct it (in the node's message) to apply the **summarize-resume** skill and return the structured JSON. The downstream nodes reference this node's output the same way the classic flow referenced the prompt output.
+1. Add an **Agent** node ("Connect to Agent") below **Download Resume**, name it `Summarize Resume`, and connect it to your **Hiring Agent**. Pass the **Download Resume → File or image content** as the message attachment and instruct it (in the node's message) to apply the **summarize-resume** skill and return the structured JSON. The downstream nodes reference this node's output the same way the standard harness flow referenced the prompt output.
 
     > [!NOTE] Why the change?
-    > In the classic lab a dedicated AI Builder **Prompt** did the extraction. In the new experience that construct is replaced — the **agent model reads the document natively** and the **summarize-resume Skill** describes the extraction. The workflow simply orchestrates Dataverse persistence around that result.
+    > In the standard course lab a dedicated AI Builder **Prompt** did the extraction. In the new experience that construct is replaced — the **agent model reads the document natively** and the **summarize-resume Skill** describes the extraction. The workflow simply orchestrates Dataverse persistence around that result.
 
 ### 7.4 Create candidate record
 
@@ -349,7 +349,7 @@ Next, you need to take the information that the Prompt gave you and create a new
 
     ![Get Existing Candidate](./assets/7-summarize-resume-4.png)
 
-1. Add an **If/Else** node below the Get Existing Candidate node (the new-experience equivalent of the classic **Condition** control).
+1. Add an **If/Else** node below the Get Existing Candidate node (the new-experience equivalent of the standard harness **Condition** control).
 
 1. In the If/Else condition, set the following:
 
@@ -414,7 +414,7 @@ Complete the flow by updating the resume record and configuring what data to ret
 
 Now you'll add the workflow as a tool and configure your agent to use it.
 
-<!-- ⚠️ MODIFIED: The classic child "Application Intake Agent" is now a Skill named
+<!-- ⚠️ MODIFIED: The standard harness child "Application Intake Agent" is now a Skill named
      `application-intake` on the Hiring Agent (child agents were migrated to Skills in this env).
      Tools attach to the agent itself via Add a tool → Workflows (not "Flow"). -->
 

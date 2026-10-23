@@ -17,7 +17,7 @@ products: [copilot-studio, dataverse, word]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-06-30
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 09: Generate a Candidate Interview Questions Document {#mission-09-generate-a-candidate-interview-questions-document}
 
@@ -40,7 +40,7 @@ Welcome, Operative. Your previous missions have shown you how to ground an agent
 
 Your assignment, should you choose to accept it, is **Operation Doc Assembly**. In this operation you'll have your agent produce a downloadable Word document of tailored interview prep questions — generated **natively** by the agent itself.
 
-In the classic experience this required an AI Builder Prompt (with a Word template and *Document output*), an Agent Flow to extract the file bytes, and a Topic to return the file. **None of those constructs exist (or are authored) in the new experience.** Instead, the agent's model has a built-in **code interpreter** that runs Python (`python-docx` is pre-installed) to build a real `.docx` and return it as a downloadable file in chat. You'll package this behavior as a reusable **Skill** so the agent reliably produces the document on request.
+On the standard harness this required an AI Builder Prompt (with a Word template and *Document output*), an Agent Flow to extract the file bytes, and a Topic to return the file. **None of those constructs exist (or are authored) in the new experience.** Instead, the agent's model has a built-in **code interpreter** that runs Python (`python-docx` is pre-installed) to build a real `.docx` and return it as a downloadable file in chat. You'll package this behavior as a reusable **Skill** so the agent reliably produces the document on request.
 
 ## 🔎 Objectives {#objectives}
 
@@ -62,7 +62,7 @@ When a job application is added, you want to automate the process of preparing a
 
 ### 9.1 Create the document-generation skill
 
-<!-- ⚠️ NEW FLOW: Replaces the classic "Create the prompt" (9.1) section.
+<!-- ⚠️ NEW FLOW: Replaces the standard harness "Create the prompt" (9.1) section.
      Original: Create an AI Builder Prompt "Interview Question Document Prep" with
      Dataverse grounding inputs, switch the model to GPT-4.1, choose "Document (preview)"
      output, upload a Word template with double-curly-brace placeholders, and have the prompt fill 19
@@ -100,7 +100,7 @@ Your first objective: give your agent a reusable **Skill** that evaluates a cand
     Generates a downloadable Word (.docx) interview prep document for a candidate's job application, containing applicant details, role details, and tailored interview questions. Use when asked to create or generate an interview prep document or file for an application, candidate, or role.
     ```
 
-1. Copy and paste the following as the **Instructions**. These instructions carry over the same evaluation and question-generation logic from the classic prompt, and tell the agent to build the `.docx` with its code interpreter:
+1. Copy and paste the following as the **Instructions**. These instructions carry over the same evaluation and question-generation logic from the standard harness prompt, and tell the agent to build the `.docx` with its code interpreter:
 
     ```text
     When this skill is activated, generate a downloadable Word (.docx) interview prep document for a candidate.
@@ -140,7 +140,7 @@ Your first objective: give your agent a reusable **Skill** that evaluates a cand
 
 ### 9.2 Generate and test the document
 
-<!-- ⚠️ REMOVED: The classic "Create an agent flow to call the prompt" (9.2) section
+<!-- ⚠️ REMOVED: The standard harness "Create an agent flow to call the prompt" (9.2) section
      is no longer needed. Original: build a "Doc Prep" Agent Flow with a "Run a prompt"
      action and a "Respond to the agent" File output using the formula
      binary(outputs('Run_a_prompt')?['body/responsev2/predictionOutput/documentOutput/contentBytes']).
@@ -148,7 +148,7 @@ Your first objective: give your agent a reusable **Skill** that evaluates a cand
      there is no prompt output to extract and no flow to author. The contentBytes
      extraction formula is obsolete. -->
 
-In the classic lab you needed an Agent Flow to extract the file bytes from the prompt's output. That step is gone — the code interpreter returns the `.docx` directly as a downloadable file. You can test the behavior immediately.
+In the standard course lab you needed an Agent Flow to extract the file bytes from the prompt's output. That step is gone — the code interpreter returns the `.docx` directly as a downloadable file. You can test the behavior immediately.
 
 1. Select the **Preview** tab, then select **New chat** to refresh the agent's tool context.
 
@@ -173,20 +173,20 @@ In the classic lab you needed an Agent Flow to extract the file bytes from the p
 
 ### 9.3 (Removed) Tie it together with a topic
 
-<!-- ⚠️ REMOVED: The classic "Create the topic" (9.3) section is not authored in the
+<!-- ⚠️ REMOVED: The standard harness "Create the topic" (9.3) section is not authored in the
      new experience. Original: on the Interview Agent, create a "Generate Interview Doc"
      Topic with a trigger description, a slot-filling input variable (VarApplicationNumber),
      a call to the "Doc Prep" flow, and a "Send a message" node returning the File with the
      name formula Topic.VarApplicationNumber&"InterviewPrep.docx".
      Reason: the new experience has no Topics tab — agents are driven by Instructions,
-     Skills, Tools, and generative orchestration. The classic note said a Topic was
+     Skills, Tools, and generative orchestration. The standard harness note said a Topic was
      "the only way to ensure a file object is returned every time"; that is no longer
      true. The agent returns the .docx directly from the code interpreter, and the
      interview-doc-prep Skill (9.1) makes the behavior reliable and reusable.
      Slot filling (capturing the Application Number from chat) is handled by generative
      orchestration plus the skill's "Gather inputs" instructions. -->
 
-In the classic experience a **Topic** with slot filling was required to guarantee the file was returned. In the new experience there is no Topics tab — the agent is driven by its **Instructions**, **Skills**, **Tools**, and **generative orchestration**. The `interview-doc-prep` skill you created in 9.1 already makes the document-generation behavior reliable and reusable, and the agent captures the Application Number directly from the conversation (the skill's *Gather inputs* instructions describe the `A#####` pattern). **No Topic is needed.**
+On the standard harness a **Topic** with slot filling was required to guarantee the file was returned. In the new experience there is no Topics tab — the agent is driven by its **Instructions**, **Skills**, **Tools**, and **generative orchestration**. The `interview-doc-prep` skill you created in 9.1 already makes the document-generation behavior reliable and reusable, and the agent captures the Application Number directly from the conversation (the skill's *Gather inputs* instructions describe the `A#####` pattern). **No Topic is needed.**
 
 Congratulations! You just successfully added native document-generation capabilities to your agent — no AI Builder Prompt, Agent Flow, or Topic required.
 
