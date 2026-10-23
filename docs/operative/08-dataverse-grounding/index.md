@@ -15,7 +15,7 @@ products: [copilot-studio, dataverse]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-03-11
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 08: Enhanced prompts with Dataverse grounding {#mission-08-enhanced-prompts-with-dataverse-grounding}
 
@@ -32,9 +32,6 @@ Currently, your Summarize Resume prompt operates with static knowledge. But what
 In this mission, you'll enhance your custom prompt with **Dataverse grounding** - connecting your prompts directly to live data sources. This transforms your agents from static responders to dynamic, data-driven systems that adapt to changing business needs.
 
 Your mission: integrate real-time job role and evaluation criteria data into your resume analysis workflow, creating a self-updating system that stays current with your organization's hiring requirements.
-
-> [!NOTE]
-> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
 
 ## 🔎 Objectives {#objectives}
 

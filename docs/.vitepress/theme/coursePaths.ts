@@ -38,7 +38,7 @@ export const coursePathGroups: CoursePathGroup[] = [
         highlights: [
           "13 missions",
           "Topics, Adaptive Cards, and agent flows",
-          "Best for rule-based, predictable conversations",
+          "Structured conversations with topics and agent flows",
         ],
       },
       {
@@ -69,7 +69,7 @@ export const coursePathGroups: CoursePathGroup[] = [
         tag: "Topic-based",
         highlights: [
           "12 missions",
-          "Connected agents, prompts, and agent flows",
+          "Connected agents, prompts, agent flows, and MCP",
           "Best for structured hiring workflows with authored logic",
         ],
       },

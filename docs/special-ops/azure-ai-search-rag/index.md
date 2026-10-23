@@ -15,7 +15,7 @@ products:
 industries:
   - hr
 created-date: 2026-07-02
-last-edited-date: 2026-08-10
+last-edited-date: 2026-10-22
 hide: false
 ---
 
@@ -29,7 +29,7 @@ hide: false
 Welcome, agent. Your mission is **Operation Vector Vault**: give a Copilot Studio agent the ability to reason over your organization's own documents using **Retrieval-Augmented Generation (RAG)** powered by **Azure AI Search** vector search. You'll stand up a search service, vectorize a stack of candidate resumes, and wire the index into an **HR Knowledge Agent** so it answers questions by *meaning*, not just keywords, with document-backed citations. 🎯
 
 > [!IMPORTANT] This mission uses the GitHub Copilot harness
-> The Copilot Studio steps require an agent powered by the **GitHub Copilot harness**. Turn on **New Experience** before you create the agent.
+> The Copilot Studio steps require an agent powered by the **GitHub Copilot harness**.
 
 **Curriculum credit:** This mission adapts material from the [Microsoft Copilot Developer Camp](https://aka.ms/copilot-camp). Thanks to [Paolo Pialorsi](https://github.com/PaoloPia) and the Copilot Camp contributors for the original curriculum. This Agent Academy version updates the lab for the GitHub Copilot harness and presents it in the Special Ops format.
 
@@ -244,9 +244,7 @@ In this exercise you will create a Microsoft Copilot Studio agent that leverages
 
 ### Create the HR Knowledge Agent
 
-1. Navigate to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com) and sign in. Make sure **New experience** is turned **on**.
-
-    ![New experience](assets/new-experience.png)
+1. Navigate to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com) and sign in.
 
 1. Select **New Agent**
 

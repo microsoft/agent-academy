@@ -18,7 +18,7 @@ products:
 industries:
   - it
 created-date: 2025-08-20
-last-edited-date: 2026-08-06
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 04: Creating a Solution for Your Agent {#mission-04-creating-a-solution-for-your-agent}
 
@@ -35,9 +35,6 @@ Welcome back, Recruit. In this mission, you’ll assemble a solution—the deplo
 Every agent needs a well-structured home. That’s what a Power Platform solution provides - order, portability, and readiness for production.
 
 Let’s pack up.
-
-> [!IMPORTANT] This mission uses the classic Copilot Studio experience
-> If your Copilot Studio screen looks different from the screenshots in this mission, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
 
 ## 🔎 Objectives {#objectives}
 

@@ -19,7 +19,7 @@ products:
 industries:
   - it
 created-date: 2025-08-20
-last-edited-date: 2026-08-06
+last-edited-date: 2026-10-22
 ---
 # 🧰 Mission 05: Using a Pre-Built Agent {#mission-05-using-a-pre-built-agent}
 
@@ -38,9 +38,6 @@ Rather than building from scratch, pre-built agents (also called **agent templat
 While you prepare the Contoso IT helpdesk agent, another requirement arrives: employees also need help preparing for business travel and finding travel policies. This is related to employee support, but it has a distinct purpose and knowledge domain. Instead of expanding the IT helpdesk agent beyond its core responsibility, you can use a focused agent for the travel scenario.
 
 In this mission, you’ll step away from the main helpdesk build to deploy the **Safe Travels** template. You’ll see how a pre-built agent can satisfy a new requirement quickly while keeping each agent focused on a clear responsibility.
-
-> [!IMPORTANT] This mission uses the classic Copilot Studio experience
-> If your Copilot Studio screen looks different from the screenshots in this mission, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
 
 ## 🔎 Objectives {#objectives}
 

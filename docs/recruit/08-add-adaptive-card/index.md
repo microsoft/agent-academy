@@ -18,7 +18,7 @@ products:
 industries:
   - it
 created-date: 2025-08-20
-last-edited-date: 2026-08-06
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 08: Enhance user interactions in Topics with Adaptive Cards {#mission-08-enhance-user-interactions-in-topics-with-adaptive-cards}
 
@@ -31,9 +31,6 @@ last-edited-date: 2026-08-06
 ## 🎯 Mission Brief {#mission-brief}
 
 Welcome back, Recruit. Your mission is to replace static interactions with rich, actionable Adaptive Cards. You’ll use JSON payloads and Power Fx formulas to gather input, present data, and guide conversations.
-
-> [!IMPORTANT] This mission uses the classic Copilot Studio experience
-> If your Copilot Studio screen looks different from the screenshots in this mission, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
 
 ## 🔎 Objectives {#objectives}
 

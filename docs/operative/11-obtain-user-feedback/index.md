@@ -16,7 +16,7 @@ products: [copilot-studio, dataverse, teams]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-03-11
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 11: Collecting feedback from users {#mission-11-collecting-feedback-from-users}
 
@@ -35,9 +35,6 @@ Your assignment, should you choose to accept it, is **Operation Echo**, a critic
 **Phase 2: Active Engagement** - Implement custom Adaptive Card feedback systems for targeted intelligence gathering when deeper insights are required.
 
 *Listen, analyze, adapt* - this is the operative's creed when processing user intelligence.
-
-> [!NOTE]
-> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
 
 ## 🔎 Objectives {#objectives}
 

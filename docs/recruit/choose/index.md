@@ -30,15 +30,15 @@ Copilot Studio runs agents on a **harness**: the runtime that decides when to ca
 
 | | Standard harness | GitHub Copilot harness |
 | --- | --- | --- |
-| **You design** | Topics, triggers, nodes, and branches | Instructions, skills, tools, and workflows |
-| **The agent follows** | The conversation paths you author | A plan it reasons out toward your goal |
-| **Best for** | Rule-based agents and structured, repeatable conversations | Complex, reasoning-heavy, multi-step business processes |
-| **Authoring surface** | Classic experience | **New experience** toggle in Copilot Studio |
+| **You design** | Instructions, topics, tools, Adaptive Cards, and agent flows | Instructions, skills, tools, and workflows |
+| **The agent follows** | Authored conversation paths, with generative orchestration able to select topics, tools, knowledge, and agents dynamically | Goal-driven orchestration using instructions, skills, tools, and connected agents |
+| **Best for** | Structured conversations with explicit topic logic and agent-flow automation | Reasoning-heavy, multi-step work using the GitHub Copilot harness |
+| **Authoring surface** | Standard harness agent and agent-flow authoring | GitHub Copilot harness authoring |
 
 > [!TIP]
 > Not sure? Start with the **standard harness** if you want the broadest coverage of Copilot Studio, including Adaptive Cards, Power Fx, and agent flows. Start with the **GitHub Copilot harness** if you're building agents today on the new experience and want the instruction-driven approach.
 
-Both paths use the same IT support scenario, so completing one makes the other easier to follow. You don't need to finish both.
+Both paths use the same IT support scenario, so completing one makes the other easier to follow. [MCP, evaluation, monitoring, and automation are supported on both harnesses](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview#comparison-of-features-standard-vs-github-copilot-harnesses) even where these courses teach different subsets. You don't need to finish both.
 
 ## 🗺️ All Missions {#all-missions}
 

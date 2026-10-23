@@ -14,7 +14,7 @@ products:
 industries:
   - it
 created-date: 2026-03-12
-last-edited-date: 2026-08-10
+last-edited-date: 2026-10-22
 ---
 
 # 📚 Microsoft Learn MCP Server {#microsoft-learn-mcp-server}
@@ -27,7 +27,7 @@ last-edited-date: 2026-08-10
 Welcome, agent. This mission is **Operation Open Book** where you'll connect the **Microsoft Learn Docs MCP Server** to a Copilot Studio agent, giving it real-time access to the entire Microsoft Learn documentation library. No more agents responding with outdated or hallucinated product information. Your agent is about to become the most well-read operative in the field.
 
 > [!IMPORTANT] This mission uses the GitHub Copilot harness
-> The screenshots and steps require an agent powered by the **GitHub Copilot harness**. If your screen looks different, turn on **New Experience** in the upper-right corner before you continue.
+> The screenshots and steps require an agent powered by the **GitHub Copilot harness**.
 
 ## 🎯 Mission objectives {#mission-objectives}
 
@@ -82,7 +82,7 @@ Zava is building an internal agent to support employees with Microsoft 365, Azur
 
 The first step is to create a new Copilot Studio agent that will serve as the foundation for your Microsoft Learn-powered support agent.
 
-1. Navigate to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com) and sign in. Ensure that the **New Experience** option is toggled on in the upper right hand corner. Select **Agent** to create a new agent.
+1. Navigate to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com) and sign in. Select **Agent** to create a new agent.
 
     ![Create Agent](./assets/1.1.01_new.png)
 

@@ -15,7 +15,7 @@ products: [copilot-studio, outlook]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-03-11
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 10: Integrate with MCP Servers {#mission-10-integrate-with-mcp-servers}
 
@@ -28,9 +28,6 @@ last-edited-date: 2026-03-11
 Welcome, Operative. Your previous missions have shown you the power of prompts. You learned about multimodal document analysis, grounding your prompts with Dataverse data and document generation. Now you'll unlock another advanced capability: **Model Context Protocol (MCP) server integration**.
 
 Your assignment, should you choose to accept it, is **Operation MCP Rendezvous**. In this operation you'll be connecting your agent to external MCP servers to extend its capabilities, enabling it to arrange interview prep meetings.
-
-> [!NOTE]
-> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
 
 ## 🔎 Objectives {#objectives}
 

@@ -19,11 +19,6 @@ This hands-on training is your entry point into the **world of agents**: from gr
 >
 > This course's custom-agent work uses the **standard harness**, with topics, Adaptive Cards, and agent flows. Mission 03 also introduces a declarative agent for Microsoft 365 Copilot. You don't need to build a managed app, a GitHub Copilot harness agent, or a Customer Assist Agent to earn this course's badge.
 
-<!-- Separate adjacent callouts for Markdownlint. -->
-
-> [!IMPORTANT]
-> Microsoft Copilot Studio is rolling out a new authoring experience. The lessons in this course currently use the **classic experience** shown in the screenshots and steps. If your screen looks different, turn off **New Experience** in the upper-right corner to follow along. Refreshed lessons for the new experience are planned, but the current material remains valid in the classic experience.
-
 ## 🎯 Mission Objective {#mission-objective}
 
 By completing the Agent Academy, you'll be able to:

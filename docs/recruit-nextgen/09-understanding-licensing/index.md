@@ -21,7 +21,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-08-24
+last-edited-date: 2026-10-22
 ---
 
 # 🚨 Mission 09: Understanding Licensing {#mission-09-understanding-licensing}
@@ -59,7 +59,7 @@ Every agent or workflow in Copilot Studio runs on a harness:
 | Harness | Best for | Billing model |
 | --- | --- | --- |
 | **GitHub Copilot harness** | End-to-end business processes and agentic experiences | **Copilot Credits** during LLM-powered creation and runtime execution |
-| **Standard harness** | Rule-based agents with predefined topics and flows | **Copilot Credits**; published rates don't apply to licensed Microsoft 365 Copilot users in authenticated business-to-employee scenarios |
+| **Standard harness** | Structured conversations and automation using topics, prompts, tools, and agent flows, with classic or generative orchestration | **Copilot Credits**; published rates don't apply to licensed Microsoft 365 Copilot users in authenticated business-to-employee scenarios |
 | **Copilot chat harness** | Extending Microsoft 365 Copilot Chat with organizational knowledge | **Copilot Credits**; published rates don't apply to licensed Microsoft 365 Copilot users in authenticated business-to-employee scenarios |
 
 > [!IMPORTANT]

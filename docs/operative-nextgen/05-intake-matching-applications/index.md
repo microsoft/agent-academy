@@ -18,7 +18,7 @@ products: [copilot-studio, dataverse]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-22
 ---
 
 # 🚨 Mission 05: Resume Intake, Matching and Applications {#mission-05-resume-intake-matching-and-applications}
@@ -96,8 +96,10 @@ Suppose a resume shows strong hands-on development and communication, a couple o
 
 Anyone can check that arithmetic. The weights and the sum are **deterministic** - they come from the data and always produce the same number. Only the evidence level for each criterion is a **judgment** the model makes, and that is the one part that can vary between runs.
 
-::: details 🔄 Coming from the classic Operative course?
-The classic course extracted resume content with a **Summarize Resume** AI Builder prompt and pushed every Dataverse operation through an agent flow. In the Powered by GitHub Copilot experience the model reads an attached resume **natively**, loads its built-in `analyzing-pdf` skill, follows the focused intake and matching skills you write here, and uses the **Dataverse MCP server** for live reads and writes. What you do differently is build no prompt asset and no extraction flow at all - the whole process starts the moment you attach a resume in **Preview**.
+::: details 🔄 Coming from the standard course?
+The standard course extracts resume content with a **Summarize Resume** AI Builder prompt and uses agent flows for the Dataverse operations in that scenario. Standard agents can also use [MCP tools](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp); those earlier lessons do not define the limits of the standard harness.
+
+In this GitHub Copilot harness mission, the model reads the attached resume, uses the built-in `analyzing-pdf` skill and the intake and matching skills you author, and accesses records through the **Dataverse MCP server**. For this implementation you build no separate prompt asset or extraction flow. Test the extraction, matching, and writes rather than assuming either approach guarantees a correct result.
 :::
 
 ## 🧪 Lab 05 - Intake, match, and apply {#lab-05-intake-match-and-apply}

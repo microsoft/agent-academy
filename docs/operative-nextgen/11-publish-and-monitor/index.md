@@ -18,7 +18,7 @@ products: [copilot-studio, dataverse, teams, microsoft-365-copilot]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-22
 ---
 
 # 🚨 Mission 11: Evaluate, Publish, and Monitor Your Agent {#mission-11-evaluate-publish-and-monitor-your-agent}
@@ -93,8 +93,12 @@ Reactions add thumbs-up and thumbs-down controls to published responses, with an
 > [!IMPORTANT] Evaluations consume Copilot Credits
 > Building, testing **and evaluating** agents all draw on **Copilot Credits**. This mission runs three full evaluation sets and a published end-to-end test, so confirm your environment has credit capacity before you start.
 
-::: details 🔄 Coming from the classic Operative course?
-This mission merges classic **Mission 10: Integrate with MCP Servers** and classic **Mission 11: Collecting feedback from users**. The standard harness checks quality mainly through ad-hoc conversations in the test pane, with deeper runtime investigation pushed out to Application Insights telemetry, and it reaches calendars and people through a custom connector or a purpose-built agent flow for each action. The Powered by GitHub Copilot experience replaces all of that with **Evaluate** for reusable scored test sets, built-in **reactions** for user feedback, **Monitor** for published sessions and tool calls, and reusable evaluation sets you re-run after every change. What you do differently is treat evaluation as a regression suite you re-run after every change rather than a final sign-off, and read your published behavior in Monitor instead of instrumenting it yourself.
+::: details 🔄 Coming from the standard course?
+This mission brings together the scheduling integration from standard-course **Mission 10: Integrate with MCP Servers** and the user-feedback concerns from **Mission 11: Collecting feedback from users**. That course already teaches **MCP** and uses **Adaptive Cards** to collect feedback.
+
+The **standard harness also supports reusable scored evaluations and monitoring**. Microsoft's [harness comparison](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview#comparison-of-features-standard-vs-github-copilot-harnesses) lists MCP, agent evaluation, and Monitor for both harnesses; the [standard-harness evaluation guide](https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-overview) describes test sets and multiple scoring methods. Application Insights is not the only way to investigate a standard agent.
+
+In this GitHub Copilot harness mission, you re-run the evaluation sets built throughout the course, enable **reactions**, and inspect published sessions and tool calls in **Monitor**. The learning progression is different, not the first availability of evaluation or monitoring. Use regression tests after changes on either path, and follow the UI, feedback controls, and evaluation configuration supported by the harness you are using.
 :::
 
 ## 🧪 Lab 11 - Evaluate, publish, and monitor {#lab-11-evaluate-publish-and-monitor}

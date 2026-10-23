@@ -15,7 +15,7 @@ products: [copilot-studio, dataverse, power-platform]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-03-16
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 03: Multi-Agent Systems {#mission-03-multi-agent-systems}
 
@@ -32,9 +32,6 @@ Welcome back, Agent. In Mission 01, you built your main Hiring Agent giving you 
 Your assignment, should you choose to accept it, is **Operation Symphony** - transforming your single agent into a **multi-agent system**: an orchestrated team of specialized agents that work together to handle complex hiring challenges. Think of it as upgrading from a solo operator to commanding a specialized task force.
 
 Like a symphony orchestra where each musician plays their part in perfect harmony, you'll add two critical specialists to your existing Hiring Agent: an Application Intake Agent to process resumes automatically, and an Interview Prep Agent to create comprehensive interview materials. These agents will work together seamlessly under your main orchestrator.
-
-> [!NOTE]
-> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
 
 ## 🔎 Objectives {#objectives}
 

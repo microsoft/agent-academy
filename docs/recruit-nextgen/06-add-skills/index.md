@@ -22,7 +22,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-22
 
 ---
 
@@ -47,9 +47,6 @@ In this mission, you'll explore this GitHub Copilot harness capability by iterat
 
 This work turns a general-purpose agent into a more dependable support experience. Instead of placing every procedure in the agent's global instructions, you'll keep task-specific guidance in focused packages that the harness can activate when relevant. You'll inspect the generated skill files, improve their instructions, and test how small wording changes affect tool calls and responses. The result is behavior that is easier to review, reuse, and refine without overloading the agent's core prompt.
 
-> [!IMPORTANT]
-> In the current Copilot Studio UI, make sure the **New experience** toggle in the upper-right corner is turned **on** to use the GitHub Copilot harness authoring surface.
-
 ## 🔎 Objectives {#objectives}
 
 1. Understand why **Skills** are unique to agents powered by the GitHub Copilot harness
@@ -63,7 +60,7 @@ Skills are reusable capabilities available to **GitHub Copilot harness agents** 
 
 Skills are part of what distinguishes the GitHub Copilot harness from the other Copilot Studio harnesses:
 
-- The **standard harness** uses topics, prompts, rules, and defined conversation paths for structured behavior.
+- The **standard harness** combines instructions, topics, prompts, tools, and agent flows. It supports both [classic and generative orchestration](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions); with generative orchestration, the agent can select capabilities dynamically.
 - The **Copilot chat harness** focuses on extending Microsoft 365 Copilot Chat with enterprise knowledge.
 - The **GitHub Copilot harness** can activate modular Skills as it reasons through complex, multi-step work.
 

@@ -22,7 +22,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-22
 
 ---
 
@@ -48,9 +48,6 @@ On the GitHub Copilot harness, that capability comes from **tools**. You’ll ad
 This is the agent's first connection to live business data. Rather than copying device details into its instructions or relying on static knowledge, the agent can retrieve the current list when a request requires it. You'll give the tool a clear name and description so the harness can recognize when to use it, then map the required SharePoint inputs. Those choices matter because the orchestrator depends on capability metadata and configuration to select and call tools reliably.
 
 The tool won't define the complete device request procedure by itself. In the next mission, you'll add reusable skills that tell the agent how to gather requirements, interpret results, and guide the employee through the task.
-
-> [!IMPORTANT]
-> If your Copilot Studio screen looks different from these screenshots, make sure the **New experience** toggle in the upper-right corner is turned **on** to use the GitHub Copilot harness authoring surface.
 
 ## 🔎 Objectives {#objectives}
 

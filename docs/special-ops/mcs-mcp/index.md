@@ -11,7 +11,7 @@ products: [azure, copilot-studio, github-copilot, visual-studio-code]
 industries:
   - it
 created-date: 2026-02-20
-last-edited-date: 2026-08-10
+last-edited-date: 2026-10-22
 ---
 # 🤖 Microsoft Copilot Studio ❤️ MCP {#microsoft-copilot-studio-mcp}
 
@@ -23,7 +23,7 @@ last-edited-date: 2026-08-10
 Welcome, agent. Your mission — should you choose to accept it — is to deploy an **MCP Server** behind enemy lines and wire it up to **Microsoft Copilot Studio**. Expect turbulence. Trust the protocol. Leave no endpoint unconfigured. 🎯
 
 > [!IMPORTANT] This mission uses the GitHub Copilot harness
-> The Copilot Studio steps require an agent powered by the **GitHub Copilot harness**. Turn on **New Experience** before you create the agent. GitHub Copilot in Visual Studio Code is also used separately to test the MCP server.
+> The Copilot Studio steps require an agent powered by the **GitHub Copilot harness**. GitHub Copilot in Visual Studio Code is also used separately to test the MCP server.
 
 ## 🎯 Mission objectives {#mission-objectives}
 

@@ -22,7 +22,7 @@ products:
 industries:
   - it
 created-date: 2025-08-20
-last-edited-date: 2026-08-06
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 10: Add Event Triggers - Enable autonomous agent capabilities {#mission-10-add-event-triggers-enable-autonomous-agent-capabilities}
 
@@ -39,9 +39,6 @@ Welcome back, Recruit. It’s time to elevate your agent from a conversational a
 With Event Triggers, you'll train your agent to monitor external systems like SharePoint, Teams, and Outlook, and execute intelligent actions the moment a signal is received. This operation transforms your agent into a fully operational field asset - silent, swift, and always watching.
 
 Success means building agents that initiate value - not just respond to it.
-
-> [!IMPORTANT] This mission uses the classic Copilot Studio experience
-> If your Copilot Studio screen looks different from the screenshots in this mission, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
 
 ## 🔎 Objectives {#objectives}
 

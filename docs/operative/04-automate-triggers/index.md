@@ -16,7 +16,7 @@ products: [copilot-studio, dataverse, power-automate, outlook, teams]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-03-17
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 04: Add Event Triggers to act autonomously {#mission-04-add-event-triggers-to-act-autonomously}
 
@@ -35,9 +35,6 @@ Your assignment, should you choose to accept it, is **Operation Signal Point** -
 Think of it as upgrading from agents that _answer questions_ to agents that _anticipate needs_ and _act independently_. Through event triggers and automated workflows, your Hiring Agent will detect incoming resume emails, process attachments automatically, store data in Dataverse, and notify your HR recruitment team via Microsoft Teams - all while you focus on higher-value tasks.
 
 Welcome to the world where automation meets intelligence.
-
-> [!NOTE]
-> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
 
 ## 🔎 Objectives {#objectives}
 

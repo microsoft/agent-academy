@@ -21,7 +21,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-22
 ---
 
 # 🚨 Mission 04: Build an Agent with the GitHub Copilot Harness {#mission-04-build-an-agent-with-the-github-copilot-harness}
@@ -32,7 +32,6 @@ last-edited-date: 2026-10-06
 
 > [!NOTE]
 > This lab builds an agent powered by the **GitHub Copilot harness**.
-> In the current Copilot Studio UI, make sure the **New experience** toggle in the upper-right corner of the Home page is **on** so your screen matches the screenshots in this mission.
 
 🎥 **Watch the Walkthrough**
 
@@ -89,9 +88,9 @@ The agent lifecycle follows a simple pattern: create, build, test, publish, and 
 
 ## 🔄 GitHub Copilot harness versus standard harness {#github-copilot-harness-versus-standard-harness}
 
-The **standard harness** organizes agent behavior around topics, prompts, branching logic, and defined conversation paths. The GitHub Copilot harness uses natural-language instructions and goal-driven orchestration to reason about what to do next.
+The **standard harness** supports instructions, topics, prompts, tools, and agent flows. With [generative orchestration](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions), it can select topics, tools, knowledge, and other agents dynamically; it is not limited to fixed conversation paths. The **GitHub Copilot harness** uses an enhanced orchestration runtime with instructions, skills, tools, and connected agents for goal-driven, multi-step work.
 
-The GitHub Copilot harness also brings agent configuration, testing, evaluation, and monitoring into a unified, tab-based authoring surface. Agents can't be transferred between the standard and GitHub Copilot harnesses because each uses a different architecture.
+This course uses the GitHub Copilot harness's **Build**, **Preview**, **Evaluate**, and **Monitor** surface. [Standard agents also support evaluation and monitoring](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview#comparison-of-features-standard-vs-github-copilot-harnesses); use the instructions for the harness you selected. Agents can't be transferred between the standard and GitHub Copilot harnesses because each uses a different architecture.
 
 ## 🧠 Why AI-based authoring matters {#why-ai-based-authoring-matters}
 
@@ -130,7 +129,7 @@ We'll continue using the same IT helpdesk scenario introduced earlier in the cou
 
 Before starting this lab, make sure you have:
 
-- Access to Copilot Studio with the **New experience** toggle enabled for the GitHub Copilot harness authoring surface
+- Access to Copilot Studio and the **GitHub Copilot harness** authoring surface
 - The solution from [Mission 03 - Creating a solution](../03-creating-a-solution/index.md)
 - Your test knowledge source(s), for example the **Contoso IT** SharePoint site from [Mission 00 - Course setup](../00-course-setup/index.md#step-5-create-new-sharepoint-site)
 

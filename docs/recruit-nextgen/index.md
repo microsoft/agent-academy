@@ -17,7 +17,7 @@ Your mission in this course is to master the art of building agents powered by t
 This beginner, hands-on course introduces the GitHub Copilot harness and its instruction-driven approach to agent building. You'll use a familiar IT support scenario so you can focus on how instructions, skills, tools, and workflows work together.
 
 > [!INFO] How this path differs from the standard harness path
-> The [standard harness path](/recruit/) was created before the GitHub Copilot harness was available and introduces the topic-based authoring experience. This path revisits a familiar business scenario using a different architecture: natural-language instructions, skills, tools, and workflows replace manually authored conversation paths.
+> The [standard course](/recruit/) introduces topics, Adaptive Cards, prompts, and agent flows, including generative orchestration. This path revisits the IT support scenario using the **GitHub Copilot harness**, with instructions, skills, tools, and workflows. Both harnesses support AI-driven behavior and integrations; the courses differ in the architecture and components you use to build the scenario.
 >
 > Reusing the scenario is intentional. It helps you compare the approaches without also learning a new business process. It doesn't mean every IT support agent requires the GitHub Copilot harness; the right harness depends on how the agent must behave.
 

@@ -19,7 +19,7 @@ products:
 industries:
   - it
 created-date: 2025-08-20
-last-edited-date: 2026-08-06
+last-edited-date: 2026-10-22
 ---
 # 🚨 Mission 03: Deploy a Declarative Agent for Microsoft 365 Copilot {#mission-03-deploy-a-declarative-agent-for-microsoft-365-copilot}
 
@@ -37,8 +37,8 @@ Unlike traditional agents, declarative agents operate with a defined mission (in
 
 Let’s go.
 
-> [!IMPORTANT] This mission uses the classic Copilot Studio experience
-> If your Copilot Studio screen looks different from the screenshots in this mission, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+> [!IMPORTANT] Follow the declarative-agent authoring path
+> This mission creates a **declarative agent for Microsoft 365 Copilot**. Follow its creation steps below; the **standard harness** is used for this course's separate custom-agent labs.
 
 ## 🔎 Objectives {#objectives}
 

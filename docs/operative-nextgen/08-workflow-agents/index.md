@@ -18,7 +18,7 @@ products: [copilot-studio, dataverse, outlook, teams]
 industries:
   - hr
 created-date: 2026-08-12
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-22
 ---
 
 # 🚨 Mission 08: Add Agents to a Workflow {#mission-08-add-agents-to-a-workflow}
@@ -77,12 +77,12 @@ The expression shape is the one you used in [Mission 07](../07-workflow-trigger/
 
 When you chat with an agent, its tool calls run as **you**. When a *workflow* calls an agent there is no user interacting with the agent directly, so those calls run under the **Agents connection identity** instead - a connection stored in the environment rather than a signed-in user.
 
-::: details 🔄 Coming from the classic Operative course?
-In the classic course, a flow reached AI through an **AI Builder prompt**, which returns one narrowly-shaped completion at a time. The decision-making stayed in the flow itself, written out condition by condition.
+::: details 🔄 Coming from the standard course?
+The standard course uses **AI Builder prompts** and authored flow conditions for this part of the hiring pipeline. Standard [agent flows](https://learn.microsoft.com/en-us/microsoft-copilot-studio/flows-overview#actions) also support AI capabilities, including calling an agent; agent-driven automation is not exclusive to this path.
 
-The **Agent** node moves that reasoning somewhere else. You can scope an inline agent to a single node, or call a published agent that brings its own instructions, tools and skills - one that works through a document, calls tools of its own, and can pause to ask a person a question part-way through.
+Here the **Agent** node lets you configure an inline agent or call a published agent with its own instructions, tools, and skills. You describe the agent's task and consume its output in subsequent workflow steps.
 
-So the practical difference is in what you write. Instead of conditions for a flow, you write **instructions** for an agent, then read its structured reply back with an expression.
+Compare the implementation you build: which decisions stay in explicit workflow branches, which are delegated to an agent, and how inputs, outputs, and connection identity are configured. Do not assume either harness's nodes and settings can be copied directly to the other.
 :::
 
 ## 🧪 Lab 08 - Adding AI Agents to the workflow {#lab-08-put-the-reasoning-in-the-pipeline}

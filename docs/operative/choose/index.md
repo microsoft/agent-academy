@@ -33,15 +33,15 @@ Copilot Studio runs agents on a **harness**: the runtime that decides when to ca
 
 | | Standard Harness | GitHub Copilot harness |
 | --- | --- | --- |
-| **You design** | Connected agents, prompts, agent flows, and Adaptive Cards | Instructions, skills, MCP tools, connected agents, and workflows |
-| **The agent follows** | Your instructions, with prompts and flows defining repeatable operations | A plan it reasons out using skills and tools, with workflows controlling defined steps |
+| **You design** | Instructions, topics, connected agents, prompts, tools, agent flows, and Adaptive Cards | Instructions, skills, MCP tools, connected agents, and workflows |
+| **The agent follows** | Your instructions and topic logic, with generative orchestration able to select tools and agents dynamically | Goal-driven orchestration using skills and tools, with workflows controlling defined steps |
 | **Best for** | Structured hiring workflows with authored logic | Reasoning-heavy, multi-step hiring workflows |
-| **Authoring surface** | Standard Harness in Copilot Studio | New Copilot Studio experience |
+| **Authoring surface** | Standard harness agent and agent-flow authoring | GitHub Copilot harness authoring |
 
 > [!TIP]
 > Start with the **Standard Harness** if you want to build with prompts, agent flows, and Adaptive Cards. Start with the **GitHub Copilot harness** if you want to build with skills, MCP tools, and workflows in the new experience.
 
-Both paths use the same hiring scenario, so completing one makes the other easier to follow. You don't need to finish both.
+Both paths use the same hiring scenario, so completing one makes the other easier to follow. [Both harnesses support MCP, evaluations, monitoring, and automation](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview#comparison-of-features-standard-vs-github-copilot-harnesses); the lessons differ in their chosen implementation and learning progression. You don't need to finish both.
 
 ## 🗺️ All Missions {#all-missions}
 

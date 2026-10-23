@@ -15,7 +15,7 @@ products:
 industries:
   - it
 created-date: 2026-03-30
-last-edited-date: 2026-08-10
+last-edited-date: 2026-10-22
 ---
 
 # 🧬 YAML Specialist {#yaml-specialist}
@@ -28,7 +28,7 @@ last-edited-date: 2026-08-10
 Welcome, agent. Your mission — should you choose to accept it — is to become a **YAML Specialist**: an operative who builds and extends Microsoft Copilot Studio agents entirely from Visual Studio Code using the Copilot Studio YAML agent definition language. You'll clone agents, write topics in raw YAML, wire up knowledge sources, and push changes back to the cloud. With GitHub Copilot in VS Code as your development assistant, you'll iterate faster than you can in the web UI.
 
 > [!IMPORTANT] This mission uses the standard harness
-> The screenshots and Copilot Studio web UI steps in this mission use the **standard harness**. If your screen looks different, turn off **New Experience** in the upper-right corner before you continue. GitHub Copilot is used separately as a development tool in Visual Studio Code; it is not the Copilot Studio harness for this mission.
+> The screenshots and Copilot Studio web UI steps in this mission use the **standard harness**. GitHub Copilot is used separately as a development tool in Visual Studio Code; it is not the Copilot Studio harness for this mission.
 
 ## 🎯 Mission objectives {#mission-objectives}
 

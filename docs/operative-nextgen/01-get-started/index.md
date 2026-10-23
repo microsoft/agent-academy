@@ -17,7 +17,7 @@ products: [copilot-studio, dataverse]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-08-12
+last-edited-date: 2026-10-22
 ---
 
 # 🚨 Mission 01: Establish the Hiring Hub {#mission-01-establish-the-hiring-hub}
@@ -37,11 +37,6 @@ Welcome, Agent. In this first mission you'll import the shared Dataverse data mo
 You'll import a pre-built solution containing the hiring tables and model-driven app, load the sample data, then create the orchestrator in the **new Microsoft Copilot Studio experience**.
 
 The tables, app, and agent remain in place for later missions, where you'll add a connected specialist, focused skills, and autonomous workflows.
-
-> [!IMPORTANT] Work in the current Copilot Studio experience
-> This course uses Copilot Studio at `https://copilotstudio.preview.microsoft.com`. If you see a **New
-> experience** toggle anywhere in the product, keep it **on** throughout - every screen and step in this
-> course assumes it.
 
 ## 🔎 Objectives {#objectives}
 
@@ -123,12 +118,12 @@ flowchart TB
 
 </div>
 
-::: details 🔄 Coming from the classic Operative course?
-The biggest change is how you describe what an agent does. In the classic course, behavior was built as a tree of **topics** - each one a set of trigger phrases and an authored path through the conversation. The Powered by GitHub Copilot experience has no topics at all. You describe the agent's job in plain language in **Instructions**, and package the procedures you want it to follow repeatably as **skills**, which the agent loads when a request matches.
+::: details 🔄 Coming from the standard course?
+The standard Operative course combines **instructions**, **topics**, **prompts**, **agent flows**, and other agents to build the hiring system. Standard agents can use [generative orchestration](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions) to select topics, tools, knowledge, and agents dynamically; they are not limited to trigger-phrase matching.
 
-Everything the agent can use now sits on one **Build** canvas - instructions, skills, tools, knowledge and connected agents - rather than being spread across separate authoring pages.
+This path uses the **GitHub Copilot harness**. You shape the Hiring Agent through **Instructions**, package focused procedures as **skills**, and connect tools and specialist agents from **Build**. The difference is the authoring and runtime architecture, not whether the agent can use AI to choose an action.
 
-Perhaps the biggest change is the capability of the harness itself, with the built-in ability to run advanced multi-step reasoning loops and to run Python scripts that are either written dynamically or provided by a skill.
+The GitHub Copilot harness includes a native sandbox for multi-step work and Python execution. Standard agents can also use an opt-in code interpreter; follow the setup and capabilities documented in Microsoft's [harness comparison](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview#comparison-of-features-standard-vs-github-copilot-harnesses).
 :::
 
 ## 🧪 Lab 01 - Set up the Hiring Hub {#lab-01-set-up-the-hiring-hub}
@@ -408,7 +403,7 @@ Mission 01 is complete. You now have the course foundation in place:
 
 ## 📚 Tactical Resources {#tactical-resources}
 
-🔗 [Start building agents powered by GitHub Copilot](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/authoring-first-bot)
+🔗 [Start building agents with the GitHub Copilot harness](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/authoring-first-bot)
 
 🔗 [Microsoft Dataverse documentation](https://learn.microsoft.com/power-apps/maker/data-platform)
 

@@ -11,7 +11,7 @@ badge: ./assets/mc-oauth-badge.png
 products: [azure, copilot-studio, visual-studio-code]
 industries: [hr, security]
 created-date: 2026-07-23
-last-edited-date: 2026-08-10
+last-edited-date: 2026-10-22
 hide: false
 ---
 
@@ -27,7 +27,7 @@ Welcome, agent. Your mission is **Operation Clearance**: connect a **secured MCP
 This mission builds on the concepts from the [Microsoft Copilot Studio ❤️ MCP](../mcs-mcp/index.md) mission. You worked with an unauthenticated MCP server there; here you'll secure a custom MCP server with OAuth 2.0 Authorization.
 
 > [!IMPORTANT] This mission uses the GitHub Copilot harness
-> The Copilot Studio steps require an agent powered by the **GitHub Copilot harness**. Turn on **New Experience** before you create the agent.
+> The Copilot Studio steps require an agent powered by the **GitHub Copilot harness**.
 
 **Curriculum credit:** This mission adapts material from the [Microsoft Copilot Developer Camp](https://aka.ms/copilot-camp). Thanks to [Paolo Pialorsi](https://github.com/PaoloPia) and the Copilot Camp contributors for the original curriculum. This Agent Academy version updates the lab for the GitHub Copilot harness and presents it in the Special Ops format.
 
