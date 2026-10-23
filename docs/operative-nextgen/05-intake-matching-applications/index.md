@@ -97,7 +97,7 @@ Suppose a resume shows strong hands-on development and communication, a couple o
 Anyone can check that arithmetic. The weights and the sum are **deterministic** - they come from the data and always produce the same number. Only the evidence level for each criterion is a **judgment** the model makes, and that is the one part that can vary between runs.
 
 ::: details 🔄 Coming from the standard course?
-The standard course extracted resume content with a **Summarize Resume** AI Builder prompt and pushed every Dataverse operation through an agent flow. In the Powered by GitHub Copilot experience the model reads an attached resume **natively**, loads its built-in `analyzing-pdf` skill, follows the focused intake and matching skills you write here, and uses the **Dataverse MCP server** for live reads and writes. What you do differently is build no prompt asset and no extraction flow at all - the whole process starts the moment you attach a resume in **Preview**.
+The standard course extracted resume content with a **Summarize Resume** AI Builder prompt and pushed every Dataverse operation through an agent flow. In the GitHub Copilot harness experience the model reads an attached resume **natively**, loads its built-in `analyzing-pdf` skill, follows the focused intake and matching skills you write here, and uses the **Dataverse MCP server** for live reads and writes. What you do differently is build no prompt asset and no extraction flow at all - the whole process starts the moment you attach a resume in **Preview**.
 :::
 
 ## 🧪 Lab 05 - Intake, match, and apply {#lab-05-intake-match-and-apply}

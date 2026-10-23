@@ -124,7 +124,7 @@ flowchart TB
 </div>
 
 ::: details 🔄 Coming from the standard course?
-The biggest change is how you describe what an agent does. In the standard course, behavior was built as a tree of **topics** - each one a set of trigger phrases and an authored path through the conversation. The Powered by GitHub Copilot experience has no topics at all. You describe the agent's job in plain language in **Instructions**, and package the procedures you want it to follow repeatably as **skills**, which the agent loads when a request matches.
+The biggest change is how you describe what an agent does. In the standard course, behavior was built as a tree of **topics** - each one a set of trigger phrases and an authored path through the conversation. The GitHub Copilot harness experience has no topics at all. You describe the agent's job in plain language in **Instructions**, and package the procedures you want it to follow repeatably as **skills**, which the agent loads when a request matches.
 
 Everything the agent can use now sits on one **Build** canvas - instructions, skills, tools, knowledge and connected agents - rather than being spread across separate authoring pages.
 
@@ -408,7 +408,7 @@ Mission 01 is complete. You now have the course foundation in place:
 
 ## 📚 Tactical Resources {#tactical-resources}
 
-🔗 [Start building agents powered by GitHub Copilot](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/authoring-first-bot)
+🔗 [Start building agents with the GitHub Copilot harness](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/authoring-first-bot)
 
 🔗 [Microsoft Dataverse documentation](https://learn.microsoft.com/power-apps/maker/data-platform)
 
