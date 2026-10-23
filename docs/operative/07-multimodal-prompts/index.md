@@ -35,7 +35,7 @@ This mission will transform you from a text-only agent builder into a **multimod
 The techniques you learn here will be essential for the advanced data grounding operations in your next mission.
 
 > [!NOTE]
-> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **standard harness** used here.
+> These steps use the **standard harness**. If your tenant shows the **New Experience** toggle, turn it off to follow this path. If that toggle is not available, use Microsoft's [guidance for accessing standard harness agents and agent flows](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/switch-experiences). Screen layouts can vary during rollout; check the harness before following the screenshots.
 
 ## 🔎 Objectives {#objectives}
 

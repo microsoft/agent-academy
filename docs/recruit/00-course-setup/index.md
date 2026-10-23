@@ -33,7 +33,7 @@ Welcome, Recruit. Before you can start building your first AI agent, you need to
 This briefing outlines the systems, access credentials, and setup steps required to successfully operate in the Microsoft 365 ecosystem.
 
 > [!IMPORTANT] This mission uses the standard harness
-> Microsoft Copilot Studio is rolling out a new user experience (UI). The screenshots and steps in this mission use the **standard harness**. If your screen looks different, turn off **New Experience** in the upper-right corner before you continue.
+> These steps use the **standard harness**. If your tenant shows the **New Experience** toggle, turn it off to follow this path. If that toggle is not available, use Microsoft's [guidance for accessing standard harness agents and agent flows](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/switch-experiences). Screen layouts can vary during rollout; check the harness before following the screenshots.
 
 ## 🔎 Objectives {#objectives}
 

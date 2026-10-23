@@ -52,11 +52,11 @@ An agent becomes connectable when:
 Use a connected agent (rather than one giant agent) when the specialist has its own lifecycle, could be reused across solutions, or is maintained by a different team - all true for an interview-prep assistant.
 
 ::: details 🔄 Coming from the standard course?
-The standard course offered two ways to bring in a second agent: **child agents** and **connected agents**. The GitHub Copilot harness experience keeps connected agents and **drops child agents entirely** - where we might have used a child agent, we now use specialist **skills**.
+The standard course uses both **child agents** and **connected agents**. In this GitHub Copilot harness path, you use **skills** for focused procedures within an agent and **connected agents** for separately owned specialist agents. A skill is guidance used by its parent agent, not an independent child agent with its own identity and lifecycle.
 
-A connected agent is a complete agent. It has its own instructions, its own tools, its own evaluation set, and its own publish cycle. Splitting work out is a decision about ownership and lifecycle, not about picking an authoring construct.
+The Interview Agent is a complete agent with its own instructions, tools, evaluation set, and publishing lifecycle. Choose a connected agent when that independent ownership or reuse is useful.
 
-Grounding changed too. A specialist used to be grounded by adding **Dataverse** as a **Knowledge** source. Here you add the **Dataverse MCP server** as a **tool** instead, and the specialist reads live records rather than an indexed copy.
+This course retrieves hiring records through the **Dataverse MCP server**. That is this scenario's data-access design, not a replacement for all knowledge sources: [both harnesses support knowledge and tool connections](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview#comparison-of-features-standard-vs-github-copilot-harnesses). Use the appropriate connection identity and permissions for the selected source.
 :::
 
 ## 🧪 Lab 03 - Build and connect the specialist {#lab-03-build-and-connect-the-specialist}

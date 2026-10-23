@@ -22,7 +22,7 @@ This hands-on training is your entry point into the **world of agents**: from gr
 <!-- Separate adjacent callouts for Markdownlint. -->
 
 > [!IMPORTANT]
-> Microsoft Copilot Studio is rolling out a new authoring experience. The lessons in this course currently use the **standard harness** shown in the screenshots and steps. If your screen looks different, turn off **New Experience** in the upper-right corner to follow along. Refreshed lessons for the new experience are planned, but the current material remains valid on the standard harness.
+> This course's custom-agent lessons use the **standard harness**. If your tenant shows the **New Experience** toggle, turn it off for those lessons. If it does not, use Microsoft's [standard harness access guidance](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/switch-experiences). Mission 03 has its own declarative-agent authoring path. The standard harness remains supported; the GitHub Copilot harness course is a separate learning path.
 
 ## 🎯 Mission Objective {#mission-objective}
 

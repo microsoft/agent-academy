@@ -22,7 +22,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-22
 
 ---
 
@@ -63,7 +63,7 @@ Skills are reusable capabilities available to **GitHub Copilot harness agents** 
 
 Skills are part of what distinguishes the GitHub Copilot harness from the other Copilot Studio harnesses:
 
-- The **standard harness** uses topics, prompts, rules, and defined conversation paths for structured behavior.
+- The **standard harness** combines instructions, topics, prompts, tools, and agent flows. It supports both [classic and generative orchestration](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions); with generative orchestration, the agent can select capabilities dynamically.
 - The **Copilot chat harness** focuses on extending Microsoft 365 Copilot Chat with enterprise knowledge.
 - The **GitHub Copilot harness** can activate modular Skills as it reasons through complex, multi-step work.
 

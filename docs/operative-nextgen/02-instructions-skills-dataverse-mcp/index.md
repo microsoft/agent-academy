@@ -144,9 +144,9 @@ Evaluation sets can then be used as **regression tests** - a set of checks you r
 The golden rule for these sets is that **every case should Pass**, so a red **Fail** always means *something broke*.
 
 ::: details 🔄 Coming from the standard course?
-In the standard course, behavior was shaped with **topics**, and every Dataverse operation needed its own **agent flow** - one to list rows, another to create a row, another to update one.
+The standard course uses **instructions**, **topics**, **prompts**, and **agent flows** to compose the hiring process. Some Dataverse operations in those lessons are wrapped in agent flows. That is a choice made by the lessons, not a requirement to build a separate flow for every operation: the **standard harness also supports [MCP](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp)** when generative orchestration is enabled.
 
-The GitHub Copilot harness experience separates those two ideas. Overall behavior lives in **instructions**, and any procedure you want the agent to repeat is packaged as a **skill** it loads when a request matches the skill's description. Data access is no longer built operation by operation. A single **Dataverse MCP server** gives the agent every data action at once, and the agent decides which one to call.
+Here you package focused procedures as **skills** and connect the **Dataverse MCP server** as a tool. The agent can select from the enabled server tools using their descriptions and your instructions. Compare where the procedure and data-access logic are authored; do not assume every server, tool, or connection configuration is interchangeable between harnesses.
 :::
 
 ## 🧪 Lab 02 - Authoring Skills and connecting to the Dataverse MCP Server {#lab-02-author-the-skill-and-connect-the-data-layer}

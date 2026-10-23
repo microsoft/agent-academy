@@ -20,7 +20,7 @@ products: [copilot-studio, power-automate, outlook, sharepoint]
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-22
 
 ---
 
@@ -64,9 +64,9 @@ In this mission, you'll learn:
 
 ## 🤔 What are Workflows? {#what-are-workflows}
 
-On the standard harness, **agent flows** can support topic-based, structured agent behavior. The GitHub Copilot harness instead uses standalone **workflows** for deterministic automation.
+On the **standard harness**, [agent flows](https://learn.microsoft.com/en-us/microsoft-copilot-studio/flows-overview) automate tasks and can be invoked by agents, events, or schedules; they can include AI actions, connectors, branches, and approvals. This course uses **workflows** on the **GitHub Copilot harness**. Both provide automation, but their authoring surfaces, nodes, configuration, and execution models are not interchangeable.
 
-Instead, automations are first-class objects called **workflows**. A workflow is a standalone, reusable, step-by-step automation that lives in its own **Workflows** hub. You build it once on a visual canvas, publish it, and then any agent in your environment can call it as a **tool**.
+On the GitHub Copilot harness, automations are first-class objects called **workflows**. A workflow is a standalone, reusable, step-by-step automation that lives in its own **Workflows** hub. You build it once on a visual canvas, publish it, and then an agent in your environment with the appropriate access can call it as a **tool**.
 
 Think of it this way:
 
