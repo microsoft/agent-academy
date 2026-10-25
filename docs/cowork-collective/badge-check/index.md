@@ -75,7 +75,7 @@ This mission uses one source file.
 | --- | --- |
 | `badge_check.csv` | Building access records with employee names, badge IDs, office locations, and entry/exit timestamps. A missing `ExitDateTime` means the employee forgot to check out. |
 
-📥 **Download lab assets:** [badge_check.csv](https://raw.githubusercontent.com/microsoft/agent-academy/main/docs/cowork-collective/badge-check/assets/badge_check.csv)
+<download-files path="cowork-collective/badge-check/assets/badge_check.csv" />
 
 ## 🧪 Lab 1.1 - Find the Offenders {#lab1-find-the-offenders}
 
@@ -160,7 +160,9 @@ In this mission, you'll create a **frontend-design** skill that instructs Copilo
 > The **frontend-design** skill used in this mission is based on an open-source skill created by Anthropic, available on [skills.sh](https://skills.sh/anthropics/skills/frontend-design). It has been slightly modified to include responsive design requirements for email output.
 > [Skills.sh](https://skills.sh) is a community site with skills you can use with AI tools like Copilot Cowork. Most are development-focused, but there are others worth browsing. Each skill goes through security checks, so you can review whether a skill has passed before using it.
 
-1. Download the [SKILL.md](https://raw.githubusercontent.com/microsoft/agent-academy/main/docs/cowork-collective/badge-check/assets/SKILL.md) file and save it to your device
+1. Download `frontend-design.md` and save it to your device. No extraction is needed.
+
+    <download-files path="cowork-collective/badge-check/assets/SKILL.md" filename="frontend-design.md" />
 
     The skill tells Copilot Cowork how to format HTML output: pick real fonts instead of system defaults, use a consistent color scheme, and make layouts work on both desktop and mobile. It also has guardrails against generic-looking output (no purple-on-white gradients, no cookie-cutter tables). The result is a report that actually looks like someone designed it.
 
@@ -172,7 +174,7 @@ In this mission, you'll create a **frontend-design** skill that instructs Copilo
     Documents/Cowork/skills/frontend-design/
     ```
 
-1. Upload the `SKILL.md` file into the `frontend-design` folder
+1. Upload `frontend-design.md` into the `frontend-design` folder, then rename it to **`SKILL.md`** in OneDrive. The descriptive download name helps identify the file on your device; Cowork's skill folder still needs the canonical `SKILL.md` name.
 
 1. Copilot Cowork will automatically discover this skill at the start of your next conversation
 

@@ -163,7 +163,9 @@ Your first objective: create a prompt capable of analyzing a job description and
 
     ![Model Select](./assets/ModelSelect.png)
 
-1. In order to have the prompt populate a Word document as the output, you need a Word template for it to fill. We have provided a template for you to use.  [Download the template file here](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/operative/09-document-generation/assets/Interview_Questions_Template.docx) and open it.
+1. In order to have the prompt populate a Word document as the output, you need a Word template for it to fill. Download the provided template below and open it.
+
+    <download-files path="operative/09-document-generation/assets/Interview_Questions_Template.docx" label="Download the interview questions template" />
 
     ::: v-pre
     > [!NOTE]

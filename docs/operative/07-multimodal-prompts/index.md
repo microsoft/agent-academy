@@ -161,7 +161,9 @@ Time to put your multimodal knowledge into practice. You'll build a comprehensiv
 1. You'll need to:
 
     - **Have completed Mission 06** and have your multi-agent hiring system ready
-    - Download sample resume documents from [Test Resumes](https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/docs/operative/test-data/resumes)
+    - Download and extract `resumes.zip` to get the sample PDFs:
+
+        <download-files path="operative/test-data/resumes" />
 
 ### 7.1 Create a multimodal prompt
 
@@ -463,7 +465,7 @@ Test your complete multimodal system to ensure everything works correctly.
 
     - Select **Test** to open the test panel
     - Type: `Here is a candidate Resume`
-    - Upload one of the sample resumes from [Test Resumes](https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/docs/operative/test-data/resumes)
+    - Upload one of the sample PDFs extracted from `resumes.zip` in the prerequisites.
 
 1. **Verify the results**:
     - Once you send the message and resume, check that you receive a Resume Number (format: R#####)

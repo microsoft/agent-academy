@@ -288,9 +288,9 @@ In this lab, you'll review and upload an existing Skill file instead of writing 
 
 Download the three prepared Skill files before continuing:
 
-<action-button href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/docs/special-ops/ghostwriter/assets/skills&filename=ghostwriter-skills" label="Download the prepared Skill files" icon="📦" />
+<download-files path="special-ops/ghostwriter/assets/skills" filename="ghostwriter-skills.zip" label="Download the prepared Skill files" />
 
-1. Extract the downloaded ZIP file, then open and review [`seo-audit.md`](./assets/skills/seo-audit.md).
+1. Extract `ghostwriter-skills.zip`, which contains three separate Markdown skills, then open and review [`seo-audit.md`](./assets/skills/seo-audit.md).
 
     > [!WARNING]
     > Before you upload *any* Skill, read it. Open `seo-audit.md` and skim every line. A Skill steers your agent's behavior, so you review it the way you'd review a pull request. (This one is safe; the habit is the point.)

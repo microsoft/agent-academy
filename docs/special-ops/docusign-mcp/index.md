@@ -1653,9 +1653,9 @@ Refer to the [IT Admin Guide](https://www.microsoft.com/microsoft-365-copilot/fr
 
 1. Download the sample skill package using the button below.
 
-    <download-files path="special-ops/docusign-mcp/assets/sample-skill" />
+    <download-files path="special-ops/docusign-mcp/assets/sample-skill/sample-skill-outlook-pre-onboarding-checklist-meeting.zip" />
 
-    Download `sample-skill.zip`, extract it, then upload the `sample-skill-outlook-pre-onboarding-checklist-meeting.zip` file into the agent.
+    Download `sample-skill-outlook-pre-onboarding-checklist-meeting.zip` and upload that ZIP directly into the agent. Do not extract it; the package already contains `SKILL.md`.
 
     ![Select Skill file](assets/1.6_05_SelectSkillFile.png)
 

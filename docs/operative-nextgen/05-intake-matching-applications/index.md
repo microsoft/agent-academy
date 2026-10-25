@@ -123,9 +123,9 @@ Let's start by running the `resume-intake` skill from Mission 02 against a real 
 
 1. Download the two sample resumes. You'll use them here and again in Missions 07, 08 and 09.
 
-   <action-button href="https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/operative/test-data/resumes/AVERY%20EXAMPLE%20(FICTITIOUS).pdf" label="Download Avery Example resume" icon="📄" />
+   <download-files path="operative/test-data/resumes/AVERY EXAMPLE (FICTITIOUS).pdf" label="Download Avery Example resume" />
 
-   <action-button href="https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/operative/test-data/resumes/TAYLOR%20TESTPERSON%20(FICTITIOUS).pdf" label="Download Taylor Testperson resume" icon="📄" />
+   <download-files path="operative/test-data/resumes/TAYLOR TESTPERSON (FICTITIOUS).pdf" label="Download Taylor Testperson resume" />
 
 1. In the left navigation select **Agents**, open the **Hiring Agent**, and go to **Preview**. Ensure the `resume-intake` skill and the **Dataverse MCP server** tool are present from Mission 02. Start a new chat, select **Attach file** (📎), and upload `AVERY EXAMPLE (FICTITIOUS).pdf`:
 

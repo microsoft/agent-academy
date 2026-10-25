@@ -421,7 +421,9 @@ We'll now add another internal knowledge source by uploading a document directly
 
     ![Select upload files](./assets/6.3_01_SelectUploadFile.png)
 
-1. Download this [sample file](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/06-create-agent-from-conversation/assets/Contoso_Guest_WiFi_Connection_Guide.docx) and select it in your File Explorer. Select **Open**.
+1. Download the sample file below and select it in your File Explorer. Select **Open**.
+
+    <download-files path="recruit/06-create-agent-from-conversation/assets/Contoso_Guest_WiFi_Connection_Guide.docx" label="Download the sample Wi-Fi guide" />
 
     ![Select document](./assets/6.3_02_SelectWordFile.png)
 

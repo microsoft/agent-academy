@@ -297,19 +297,19 @@ In this lab, you will extend the agent you created in [Mission 04 - Build an age
 
 The first skill we're going to create is one to handle device requests. We'll take an iterative approach showing how to test and refine a skill.
 
-1. Download the skill package using the button below.
+1. Download the skill Markdown file using the button below.
 
     <download-files path="recruit-nextgen/06-add-skills/assets/device-guidance-v1-0-1" />
 
-    Download `device-guidance-v1-0-1.zip` and extract it.
+    Save `device-guidance-v1-0-1.md`. No extraction or renaming is needed.
 
-    > If you have issues with downloading the zip file, the original SKILL.md files are available [in the Agent Academy repository](https://github.com/microsoft/agent-academy/tree/main/docs/recruit-nextgen/06-add-skills/assets).
+    > Each download has a descriptive filename so you can distinguish the skill versions. The original `SKILL.md` files are also available through **View source files on GitHub**.
 
 1. In the **Build** tab of your agent, select the **Add +** button next to the **Skills** section.
 
     ![Add a new skill to agent](./assets/06-add-a-new-skill-to-agent.png)
 
-1. Select **Upload a skill** from the Skills menu. In the upload dialog, drag and drop the extracted `SKILL.md` file, or locate the file and upload it.
+1. Select **Upload a skill** from the Skills menu. In the upload dialog, drag and drop `device-guidance-v1-0-1.md`, or locate the downloaded file and upload it.
 
     ![Upload the selected device guidance skill](./assets/06-upload-the-selected-device-guidance-skill.png)
 
@@ -382,17 +382,17 @@ The first skill we're going to create is one to handle device requests. We'll ta
 
 1. Regardless of whether you encountered an error, refine the skill inputs. As you learned in the **Define Tool Usage** principle, effective skill instructions should explicitly define parameters, field names, and expected inputs.
 
-    Download the skill package using the button below.
+    Download the updated skill Markdown file using the button below.
 
     <download-files path="recruit-nextgen/06-add-skills/assets/device-guidance-v1-0-2" />
 
-    Download `device-guidance-v1-0-2.zip` and extract it.
+    Save `device-guidance-v1-0-2.md`. No extraction or renaming is needed.
 
 1. In the **Build** tab, select the `device-guidance-v1-0-1` skill, select the **ellipsis**, select **Replace**
 
     ![Replace the existing device guidance skill](./assets/06-replace-the-existing-device-guidance-skill.png)
 
-1. Upload the extracted `SKILL.md` file into the agent.
+1. Upload `device-guidance-v1-0-2.md` into the agent.
 
     The updated skill now explicitly maps SharePoint display names to their internal column names. This prevents the model from guessing field names and ensures OData filters use valid columns, such as `field_4` for the **Asset Type** column. It also includes an example showing how to construct a filter correctly.
 
@@ -444,17 +444,17 @@ The first skill we're going to create is one to handle device requests. We'll ta
 
     We're not done refining the skill yet. If a user wants to provide an additional comment as part of the request, that behavior also needs to be captured in the skill instructions. Let's update the skill again.
 
-1. Download the skill package using the button below.
+1. Download the updated skill Markdown file using the button below.
 
     <download-files path="recruit-nextgen/06-add-skills/assets/device-guidance-v1-0-3" />
 
-    Download `device-guidance-v1-0-3.zip` and extract it.
+    Save `device-guidance-v1-0-3.md`. No extraction or renaming is needed.
 
     Repeat the same steps to replace the skill:
 
     - In **Build**, select the `device-guidance` skill
     - Select the **ellipsis** icon and select **Replace**
-    - Upload the extracted `SKILL.md` file into the agent
+    - Upload `device-guidance-v1-0-3.md` into the agent
 
     The updated skill now instructs the agent to ask about additional device requirements after the user selects an option. It captures specifications such as RAM or storage capacity and includes them in the device request. In the next mission, you'll pass this information into a workflow for the `Contoso IT Concierge` agent.
 
@@ -504,17 +504,17 @@ Notice that the agent can't complete the device request because it hasn't been c
 
 Now we'll work on a separate skill that specializes in troubleshooting issues.
 
-1. To use the troubleshooting skill, download the skill package using the button below.
+1. To use the troubleshooting skill, download the Markdown file using the button below.
 
     <download-files path="recruit-nextgen/06-add-skills/assets/it-troubleshooting-procedure" />
 
-    Download `it-troubleshooting-procedure.zip` and extract it.
+    Save `it-troubleshooting-procedure.md`. No extraction or renaming is needed.
 
 1. In the **Build** tab of your agent, select the **Add +** button next to the **Skills** section.
 
     ![Add another skill to the agent](./assets/06-add-another-skill-to-the-agent.png)
 
-1. Select **Upload a skill** from the Skills menu. In the upload dialog, drag and drop the extracted `SKILL.md` file, or locate the file and upload it.
+1. Select **Upload a skill** from the Skills menu. In the upload dialog, drag and drop `it-troubleshooting-procedure.md`, or locate the downloaded file and upload it.
 
     ![Upload the IT troubleshooting skill](./assets/06-upload-the-selected-device-guidance-skill.png)
 

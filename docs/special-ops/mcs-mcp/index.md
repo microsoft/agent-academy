@@ -66,9 +66,9 @@ There are a couple of steps that you need to do for both:
 
 1. Download the Jokes MCP Server
 
-    <action-button href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/docs/special-ops/mcs-mcp/source&filename=jokes-mcp-server" label="Download Jokes MCP Server" icon="📦" />
+    <download-files path="special-ops/mcs-mcp/source" filename="jokes-mcp-server.zip" label="Download Jokes MCP Server" />
 
-1. Unpack the zip-file
+1. Extract `jokes-mcp-server.zip` into a folder named `jokes-mcp-server`. Keep all subfolders and configuration files together.
 
 1. Open Visual Studio Code and open the unpacked folder
 

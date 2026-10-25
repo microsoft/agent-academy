@@ -159,7 +159,9 @@ Now you'll create a search index in Azure AI Search and populate it with candida
 
 ### Preparing sample documents
 
-For this lab, download [fictitious_resumes.zip](https://github.com/microsoft/agent-academy/raw/refs/heads/main/docs/special-ops/azure-ai-search-rag/assets/fictitious_resumes.zip), then extract the PDF files that you'll index for search.
+For this lab, download `fictitious_resumes.zip`, then extract the PDF files that you'll index for search.
+
+<download-files path="special-ops/azure-ai-search-rag/assets/fictitious_resumes.zip" />
 
 These sample resumes contain diverse candidate profiles with information such as:
 
