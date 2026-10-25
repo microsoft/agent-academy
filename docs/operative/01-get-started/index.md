@@ -93,7 +93,9 @@ In this hands-on lab, you'll establish the foundation for your hiring automation
 
     ![Import Solution](./assets/01-importsolution.png)
 
-1. **[Download](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/operative/01-get-started/assets/Operative_1_0_0_0.zip)** the prepared solution
+1. Download the prepared solution. Keep it as a ZIP; do not extract it.
+
+    <download-files path="operative/01-get-started/assets/Operative_1_0_0_0.zip" label="Download the Operative solution" />
 1. Select **Browse** and select the downloaded solution from the previous step
 1. Select **Next**
 

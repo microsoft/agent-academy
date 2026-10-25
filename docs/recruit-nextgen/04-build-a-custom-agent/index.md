@@ -245,7 +245,9 @@ Before starting this lab, make sure you have:
 
     ![Select Click to upload knowledge file](./assets/04-select-click-to-upload-knowledge-file.png)
 
-1. Download the [Contoso Guest WiFi Connection Guide](./assets/WordFile/Contoso_Guest_WiFi_Connection_Guide.docx).
+1. Download the Contoso Guest WiFi Connection Guide.
+
+    <download-files path="recruit-nextgen/04-build-a-custom-agent/assets/WordFile/Contoso_Guest_WiFi_Connection_Guide.docx" />
 
     In File Explorer, select `Contoso_Guest_WiFi_Connection_Guide.docx`, and then select **Open**.
 

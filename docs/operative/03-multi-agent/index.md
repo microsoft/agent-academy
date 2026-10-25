@@ -560,7 +560,9 @@ Now you'll connect the published flow to your Application Intake Agent.
 
 Now let's verify that our agent is working correctly by calling our child agent and following our instructions.
 
-1. **Download** the [test Resumes.](https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/docs/operative/test-data/resumes)
+1. Download and extract `resumes.zip` to get the sample PDFs.
+
+    <download-files path="operative/test-data/resumes" />
 
 1. **Toggle** the test panel open by selecting **Test**.
 

@@ -23,7 +23,6 @@ last-edited-date: 2026-08-12
 # 🚨 Mission 01: Establish the Hiring Hub {#mission-01-establish-the-hiring-hub}
 
 <script setup>
-import operativeSolutionUrl from './assets/Operative_3_0_0_0.zip?url';
 import jobRolesUrl from './assets/sample-data/job-roles.csv?url&no-inline';
 import evaluationCriteriaUrl from './assets/sample-data/evaluation-criteria.csv?url&no-inline';
 </script>
@@ -173,7 +172,9 @@ Before the agent can read or write hiring data, its Dataverse tables and the Hir
 
 1. Download the prepared solution (`Operative_3_0_0_0.zip`):
 
-   <action-button :href="operativeSolutionUrl" label="Download the Operative solution" icon="📦" />
+   <download-files path="operative-nextgen/01-get-started/assets/Operative_3_0_0_0.zip" label="Download the Operative solution" />
+
+   Keep the solution as a ZIP; upload it directly without extracting it.
 
    When the download finishes, select **Import solution** on the command bar.
 

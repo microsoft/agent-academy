@@ -156,14 +156,15 @@ External link (opens in new tab automatically):
 
 ### `<download-files />`
 
-Bundles all files in a documentation folder into a zip and downloads it client-side using JSZip. Available as a button or an inline link.
+Downloads a static file or ZIP prepared during the site build. Available as a styled button or an inline link; both use a native download link and work without JavaScript.
 
 **Props:**
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `path` | string | — | Relative path to the folder to zip (for example `recruit/09-add-an-agent-flow/downloads`). Required. |
-| `label` | string | `"Download {folder}.zip"` | Custom button/link text. |
+| `path` | string | — | Literal, docs-relative file or folder path (for example `operative/01-get-started/assets/sample-data`). Required. |
+| `filename` | string | — | Optional published filename, including its existing extension; cannot contain directory separators. Use a descriptive name such as `jokes-mcp-server.zip`. |
+| `label` | string | `"Download {filename}"` | Custom button/link text. |
 | `variant` | `"button"` \| `"link"` | `"button"` | Render as a styled button or an inline text link. |
 | `icon` | string | — | Product icon slug from `docs/.vitepress/data/icons.ts` (for example `copilot-studio`). Displays the icon inside the button. |
 
@@ -172,37 +173,57 @@ Bundles all files in a documentation folder into a zip and downloads it client-s
 Button variant (default):
 
 ```markdown
-<download-files path="recruit/09-add-an-agent-flow/downloads" />
+<download-files path="operative/01-get-started/assets/sample-data" />
 ```
 
 Link variant with custom label:
 
 ```markdown
-<download-files path="operative/08-dataverse-grounding/downloads" label="grab the sample data" variant="link" />
+<download-files path="operative/01-get-started/assets/sample-data" label="grab the sample data" variant="link" />
 ```
 
 Button with a product icon:
 
 ```markdown
-<download-files path="operative/04-automate-triggers/downloads" label="Download Solution" icon="copilot-studio" />
+<download-files path="operative/01-get-started/assets/sample-data" label="Download sample data" icon="copilot-studio" />
 ```
 
-**When to use:** On mission pages where learners need to download starter files, solution zips, or sample data. The `path` must point to a folder under `docs/` whose files are collected at build time by the Vite virtual module plugin.
+Single-file skill (downloads `device-guidance-v1-0-1.md` directly):
+
+```markdown
+<download-files path="recruit-nextgen/06-add-skills/assets/device-guidance-v1-0-1" />
+```
+
+Existing archive (downloads the original ZIP without extracting or repackaging):
+
+```markdown
+<download-files path="operative/01-get-started/assets/Operative_1_0_0_0.zip" label="Download the Operative solution" />
+```
+
+Source project with a descriptive archive name:
+
+```markdown
+<download-files path="special-ops/mcs-mcp/source" filename="jokes-mcp-server.zip" />
+```
+
+**When to use:** On mission pages where learners need starter files, skill packages, solution ZIPs, or sample data. Use literal `path` and `filename` attributes: the build plugin discovers these references and packages only referenced resources. Folder bundles include nested files and preserve their relative paths, including Python scripts, templates, references, and configuration dotfiles. Generated/cache directories (`node_modules`, `.git`, `__pycache__`, `dist`) and `.DS_Store` are excluded. Missing, empty, or out-of-bounds paths and symbolic-link bundle entries fail the build rather than leaving broken download buttons.
 
 > [!TIP]
-> If a bundle folder already contains a `.zip` archive, the component downloads that archive directly instead of nesting it inside a second zip. This avoids the common "zip inside a zip" issue when the prepared asset is itself a `.zip` file.
+> A folder containing only `SKILL.md` becomes a descriptively named Markdown download based on the folder name. A sole Markdown file with an already descriptive filename keeps that name. Other folders become ZIPs with sorted paths and fixed timestamps, so identical content produces identical archive bytes. A folder containing only an existing ZIP preserves that ZIP byte-for-byte. When a prepared archive has sibling source files, point `path` at the archive itself to avoid bundling those files into an outer ZIP. Explicit file paths always preserve the file's bytes and extension.
 
-**No-JavaScript fallback:** The zip is generated in the browser with JSZip, so it can't be produced when JavaScript is disabled or blocked. In that case a `<noscript>` fallback renders a plain link to the browsable GitHub folder for the same `path` (`https://github.com/microsoft/agent-academy/tree/main/docs/<path>`), so learners can still reach and download the files manually.
+**Lesson instructions:** For a standalone Markdown skill, tell learners to download and upload the descriptive `.md` file directly, without extraction. Keep repository sources named `SKILL.md` when required. If the destination requires that exact name (such as a Cowork skill folder), explicitly instruct learners to rename the downloaded file there. For multi-file skills, upload the intact ZIP so scripts and references stay together. Retain extraction steps for sample collections and source projects, but not for solution ZIPs imported directly.
+
+**Delivery:** Files are emitted under `downloads/<path>/<filename>`, relative to the site's configured base URL. VitePress development serves the same URLs and bytes. The browser does not fetch source files from GitHub, assemble ZIPs, or download via `blob:` URLs. JSZip runs only in the build/development server. All references to the same path must agree on a custom `filename`, if specified.
+
+**Alternatives:** Every download includes a visible **View source files on GitHub** link. Multi-file packages do not offer a standalone `SKILL.md` download that would omit dependencies. The links are server-rendered and remain available with JavaScript disabled. GitHub source links follow `main`; the hosted files match the site build.
+
+The component does not claim the browser has saved a file. Managed-device security policies can still block a static download; do not ask learners to disable antivirus or SmartScreen.
+
+**Validation:** Run `node --test scripts/download-files.test.mjs` for the packaging and development-server checks, then `npm run docs:build` to verify the published site output.
 
 **Preview:**
 
-With JavaScript enabled — the interactive zip button:
-
-![Download files button component](./assets/component-download-files.png)
-
-Without JavaScript (`<noscript>` fallback) — a plain link to the GitHub folder:
-
-![Download files no-JavaScript fallback](./assets/component-download-files-noscript.png)
+The primary button retains the existing styling, with a source link underneath. Its default label shows the actual filename and extension. The native download link is the same with JavaScript enabled or disabled.
 
 ---
 

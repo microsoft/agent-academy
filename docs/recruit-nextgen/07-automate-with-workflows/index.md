@@ -509,11 +509,11 @@ With the workflow added, update the device request skill and agent instructions 
 
    ![Replace the existing device guidance skill](./assets/07-replace-the-existing-device-guidance-skill.png)
 
-1. Download the skill package using the button below.
+1. Download the skill Markdown file using the button below.
 
    <download-files path="recruit-nextgen/07-automate-with-workflows/assets/device-guidance-v1-0-4" />
 
-   Download `device-guidance-v1-0-4.zip`, extract it, then upload the `SKILL.md` file to the agent.
+   Save `device-guidance-v1-0-4.md`, then upload that file to the agent. No extraction or renaming is needed.
 
 1. Review the updated skill instructions.
 
