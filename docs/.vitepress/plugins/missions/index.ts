@@ -16,6 +16,7 @@ const EXCLUDED_DIRS = new Set([
   "data",
   "commander-preview",
   "operative-v2",
+  "intelligence-officer",
   "recent-changes",
   "tags",
   "products",

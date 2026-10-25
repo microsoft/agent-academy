@@ -36,6 +36,7 @@ export default defineConfig({
   title: "Agent Academy",
   base: "/agent-academy/",
   cleanUrls: true,
+  srcExclude: ["intelligence-officer/**/assets/**/*.md"],
   ignoreDeadLinks: [/\.docx$/],
   rewrites: {
     ...(recruitExperienceSwitcherEnabled
