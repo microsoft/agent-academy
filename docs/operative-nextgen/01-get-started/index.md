@@ -17,7 +17,7 @@ products: [copilot-studio, dataverse]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-08-12
+last-edited-date: 2026-10-29
 ---
 
 # 🚨 Mission 01: Establish the Hiring Hub {#mission-01-establish-the-hiring-hub}
@@ -123,7 +123,7 @@ flowchart TB
 </div>
 
 ::: details 🔄 Coming from the classic Operative course?
-The biggest change is how you describe what an agent does. In the classic course, behavior was built as a tree of **topics** - each one a set of trigger phrases and an authored path through the conversation. The Powered by GitHub Copilot experience has no topics at all. You describe the agent's job in plain language in **Instructions**, and package the procedures you want it to follow repeatably as **skills**, which the agent loads when a request matches.
+The biggest change is how you describe what an agent does. In the classic course, behavior was built as a tree of **topics** - each one a set of trigger phrases and an authored path through the conversation. The Microsoft Copilot harness experience has no topics at all. You describe the agent's job in plain language in **Instructions**, and package the procedures you want it to follow repeatably as **skills**, which the agent loads when a request matches.
 
 Everything the agent can use now sits on one **Build** canvas - instructions, skills, tools, knowledge and connected agents - rather than being spread across separate authoring pages.
 
@@ -152,9 +152,9 @@ The rest of the course depends on one environment containing the hiring tables, 
 
 Before the agent can read or write hiring data, its Dataverse tables and the Hiring Hub app need to exist in your environment.
 
-1. Open **[Copilot Studio (new experience)](https://copilotstudio.preview.microsoft.com)**. Confirm the home page shows **Agent** and **Workflow** cards labeled **GitHub Copilot**. Expand the left navigation, then check the **environment picker** at the bottom and confirm it names your course environment. If it shows a different one, select the picker and switch before going any further.
+1. Open **[Copilot Studio (new experience)](https://copilotstudio.preview.microsoft.com)**. Confirm the home page shows **Agent** and **Workflow** cards currently labeled **GitHub Copilot**. These use the Microsoft Copilot harness, as explained in the [course naming update](../index.md#harness-naming-update). Expand the left navigation, then check the **environment picker** at the bottom and confirm it names your course environment. If it shows a different one, select the picker and switch before going any further.
 
-   ![GitHub Copilot creation cards and environment picker](./assets/m01-1-1-1-course-environment-home.png)
+   ![Agent and Workflow cards labeled GitHub Copilot and the environment picker](./assets/m01-1-1-1-course-environment-home.png)
 
    > [!WARNING] Always check your environment first
    > Get into the habit of checking the picker before you follow any instruction - the rest of the
@@ -296,6 +296,8 @@ Now import the Evaluation Criteria sample data. Follow these steps:
 
 With the data layer in place, we'll create the Hiring Agent that later missions will equip with skills, tools, a connected specialist, and a workflow.
 
+The home-card and agent-list labels may still say **GitHub Copilot** during the rename rollout. These identify the Microsoft Copilot harness; see the [course naming update](../index.md#harness-naming-update).
+
 1. Go to **[Copilot Studio (new experience)](https://copilotstudio.preview.microsoft.com)**. Expand the left navigation and make sure the bottom-left **environment picker** shows the same environment.
 
    ![Copilot Studio home in course environment](./assets/m01-1-3-1-hiring-agent-home.png)
@@ -409,7 +411,7 @@ Mission 01 is complete. You now have the course foundation in place:
 
 ## 📚 Tactical Resources {#tactical-resources}
 
-🔗 [Start building agents powered by GitHub Copilot](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/authoring-first-bot)
+🔗 [Start building agents with the Microsoft Copilot harness](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/authoring-first-bot)
 
 🔗 [Microsoft Dataverse documentation](https://learn.microsoft.com/power-apps/maker/data-platform)
 

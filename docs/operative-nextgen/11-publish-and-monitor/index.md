@@ -18,7 +18,7 @@ products: [copilot-studio, dataverse, teams, microsoft-365-copilot]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-29
 ---
 
 # 🚨 Mission 11: Evaluate, Publish, and Monitor Your Agent {#mission-11-evaluate-publish-and-monitor-your-agent}
@@ -94,7 +94,7 @@ Reactions add thumbs-up and thumbs-down controls to published responses, with an
 > Building, testing **and evaluating** agents all draw on **Copilot Credits**. This mission runs three full evaluation sets and a published end-to-end test, so confirm your environment has credit capacity before you start.
 
 ::: details 🔄 Coming from the classic Operative course?
-This mission merges classic **Mission 10: Integrate with MCP Servers** and classic **Mission 11: Collecting feedback from users**. The standard harness checks quality mainly through ad-hoc conversations in the test pane, with deeper runtime investigation pushed out to Application Insights telemetry, and it reaches calendars and people through a custom connector or a purpose-built agent flow for each action. The Powered by GitHub Copilot experience replaces all of that with **Evaluate** for reusable scored test sets, built-in **reactions** for user feedback, **Monitor** for published sessions and tool calls, and reusable evaluation sets you re-run after every change. What you do differently is treat evaluation as a regression suite you re-run after every change rather than a final sign-off, and read your published behavior in Monitor instead of instrumenting it yourself.
+This mission merges classic **Mission 10: Integrate with MCP Servers** and classic **Mission 11: Collecting feedback from users**. The standard harness checks quality mainly through ad-hoc conversations in the test pane, with deeper runtime investigation pushed out to Application Insights telemetry, and it reaches calendars and people through a custom connector or a purpose-built agent flow for each action. The Microsoft Copilot harness experience replaces all of that with **Evaluate** for reusable scored test sets, built-in **reactions** for user feedback, **Monitor** for published sessions and tool calls, and reusable evaluation sets you re-run after every change. What you do differently is treat evaluation as a regression suite you re-run after every change rather than a final sign-off, and read your published behavior in Monitor instead of instrumenting it yourself.
 :::
 
 ## 🧪 Lab 11 - Evaluate, publish, and monitor {#lab-11-evaluate-publish-and-monitor}

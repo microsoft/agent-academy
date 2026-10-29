@@ -3,7 +3,7 @@ tags:
   - mcp
 difficulty: 3
 time: 30
-harness: github-copilot
+harness: microsoft-copilot
 description: >-
   Deploy an MCP Server and wire it up to Microsoft Copilot Studio.
 badge: ./assets/MCP_Joker_Badge.png
@@ -11,7 +11,7 @@ products: [azure, copilot-studio, github-copilot, visual-studio-code]
 industries:
   - it
 created-date: 2026-02-20
-last-edited-date: 2026-08-10
+last-edited-date: 2026-10-29
 ---
 # 🤖 Microsoft Copilot Studio ❤️ MCP {#microsoft-copilot-studio-mcp}
 
@@ -22,8 +22,10 @@ last-edited-date: 2026-08-10
 
 Welcome, agent. Your mission — should you choose to accept it — is to deploy an **MCP Server** behind enemy lines and wire it up to **Microsoft Copilot Studio**. Expect turbulence. Trust the protocol. Leave no endpoint unconfigured. 🎯
 
-> [!IMPORTANT] This mission uses the GitHub Copilot harness
-> The Copilot Studio steps require an agent powered by the **GitHub Copilot harness**. Turn on **New Experience** before you create the agent. GitHub Copilot in Visual Studio Code is also used separately to test the MCP server.
+> [!IMPORTANT] This mission uses the Microsoft Copilot harness
+> The Copilot Studio steps require an agent powered by the **Microsoft Copilot harness**. Turn on **New Experience** before you create the agent. GitHub Copilot in Visual Studio Code is also used separately to test the MCP server.
+>
+> This harness was previously called the **GitHub Copilot harness**. The UI and screenshots may still show **GitHub Copilot** or **GitHub Copilot harness** while the rename rolls out; both refer to the Microsoft Copilot harness.
 
 ## 🎯 Mission objectives {#mission-objectives}
 
@@ -31,7 +33,7 @@ In this mission, you'll learn how to:
 
 - Run an MCP server locally or deploy it to Azure
 - Connect and test the MCP server with GitHub Copilot in Visual Studio Code
-- Add the MCP server to an agent powered by the GitHub Copilot harness in Copilot Studio
+- Add the MCP server to an agent powered by the Microsoft Copilot harness in Copilot Studio
 - Remove the Azure resources after completing the mission
 
 ## ❓ What is MCP? {#what-is-mcp}
@@ -53,10 +55,10 @@ So, MCP and connectors are really **better together**.
 - Docker installed ([download](http://aka.ms/azure-dev/docker-install))
 - Azure Developer CLI installed ([download](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd))
 - Azure Subscription (with payment method added)
-- Copilot Studio trial or developer account with access to the **GitHub Copilot harness**
+- Copilot Studio trial or developer account with access to the **Microsoft Copilot harness**
 
-> [!IMPORTANT] GitHub Copilot harness billing
-> This mission uses the **GitHub Copilot harness in Microsoft Copilot Studio**, which uses usage-based billing. Building, testing in Preview, evaluating, and using the agent might consume **Copilot Credits**. Review the [Copilot Credits billing overview](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/billing-credit-overview) before you begin.
+> [!IMPORTANT] Microsoft Copilot harness billing
+> This mission uses the **Microsoft Copilot harness in Microsoft Copilot Studio**, which uses usage-based billing. Building, testing in Preview, evaluating, and using the agent might consume **Copilot Credits**. Review the [Copilot Credits billing overview](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/billing-credit-overview) before you begin.
 
 ## 🧪 Lab 1.1 - Set Up the MCP Server {#lab-11-set-up-the-mcp-server}
 

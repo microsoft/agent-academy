@@ -7,11 +7,11 @@ prev:
 next:
     text: Add Tools
     link: /recruit-nextgen/05-add-tools
-short-description: Create an agent powered by the GitHub Copilot harness using AI-based authoring
+short-description: Create an agent powered by the Microsoft Copilot harness using AI-based authoring
 difficulty: 1
 codename: OPERATION ENGINE SHIFT
 time: 60
-harness: github-copilot
+harness: microsoft-copilot
 credits: [200, 600]
 tags: [fundamentals, solutions]
 products:
@@ -21,26 +21,26 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-29
 ---
 
-# 🚨 Mission 04: Build an Agent with the GitHub Copilot Harness {#mission-04-build-an-agent-with-the-github-copilot-harness}
+# 🚨 Mission 04: Build an Agent with the Microsoft Copilot Harness {#mission-04-build-an-agent-with-the-github-copilot-harness}
 
 <mission-meta />
 
 <mission-credits />
 
 > [!NOTE]
-> This lab builds an agent powered by the **GitHub Copilot harness**.
+> This lab builds an agent powered by the **Microsoft Copilot harness**.
 > In the current Copilot Studio UI, make sure the **New experience** toggle in the upper-right corner of the Home page is **on** so your screen matches the screenshots in this mission.
 
 🎥 **Watch the Walkthrough**
 
-[![Video walkthrough: Building with the GitHub Copilot Harness](./assets/video-thumbnail.png)](https://youtu.be/vlHQQ5_DSkc?si=h8bZL98QPiMCGwFX "Watch the walkthrough on YouTube")
+[![Video walkthrough: Building with the Microsoft Copilot Harness](./assets/video-thumbnail.png)](https://youtu.be/vlHQQ5_DSkc?si=h8bZL98QPiMCGwFX "Watch the walkthrough on YouTube")
 
 ## 🎯 Mission Brief {#mission-brief}
 
-Welcome back, Agent. In this mission, you'll build an agent powered by the GitHub Copilot harness.
+Welcome back, Agent. In this mission, you'll build an agent powered by the Microsoft Copilot harness.
 
 You'll describe what your agent needs to do in natural language, let Copilot Studio generate the initial agent experience, then refine the result by updating the agent name and adding knowledge sources.
 
@@ -54,7 +54,7 @@ By the end, you'll have the core agent that carries the course scenario forward.
 
 In this mission, you'll learn:
 
-1. How to create an agent powered by the GitHub Copilot harness
+1. How to create an agent powered by the Microsoft Copilot harness
 1. How to review and refine the generated agent details
 1. How to add knowledge sources
 1. How to run baseline tests before adding more functionality in upcoming labs
@@ -80,29 +80,29 @@ Copilot Studio provides [governance controls](https://learn.microsoft.com/micros
 
 Administrators can also use the Power Platform admin center and Microsoft Purview to manage environments, monitor usage, review audit data, and help ensure agents remain aligned with organizational policies.
 
-## 🧠 Meet the GitHub Copilot harness {#meet-the-github-copilot-harness}
+## 🧠 Meet the Microsoft Copilot harness {#meet-the-github-copilot-harness}
 
-Now that you understand why Copilot Studio is suited for building and governing more advanced agents, let's look at the runtime architecture you'll use. The [GitHub Copilot harness](https://learn.microsoft.com/microsoft-copilot-studio/harnesses-overview) is designed for reasoning-heavy, multi-step work. Instead of designing every conversation path manually, you describe the agent's purpose and behavior, then connect the knowledge and capabilities it needs.
+Now that you understand why Copilot Studio is suited for building and governing more advanced agents, let's look at the runtime architecture you'll use. The [Microsoft Copilot harness](https://learn.microsoft.com/microsoft-copilot-studio/harnesses-overview) is designed for reasoning-heavy, multi-step work. Instead of designing every conversation path manually, you describe the agent's purpose and behavior, then connect the knowledge and capabilities it needs.
 ![AI-based authoring in Copilot Studio](./assets/04-ai-based-authoring-in-copilot-studio.png)
 
 The agent lifecycle follows a simple pattern: create, build, test, publish, and monitor. In this mission, you'll focus on creating, building, and testing your agent.
 
-## 🔄 GitHub Copilot harness versus standard harness {#github-copilot-harness-versus-standard-harness}
+## 🔄 Microsoft Copilot harness versus standard harness {#github-copilot-harness-versus-standard-harness}
 
-The **standard harness** organizes agent behavior around topics, prompts, branching logic, and defined conversation paths. The GitHub Copilot harness uses natural-language instructions and goal-driven orchestration to reason about what to do next.
+The **standard harness** organizes agent behavior around topics, prompts, branching logic, and defined conversation paths. The Microsoft Copilot harness uses natural-language instructions and goal-driven orchestration to reason about what to do next.
 
-The GitHub Copilot harness also brings agent configuration, testing, evaluation, and monitoring into a unified, tab-based authoring surface. Agents can't be transferred between the standard and GitHub Copilot harnesses because each uses a different architecture.
+The Microsoft Copilot harness also brings agent configuration, testing, evaluation, and monitoring into a unified, tab-based authoring surface. Agents can't be transferred between the standard and Microsoft Copilot harnesses because each uses a different architecture.
 
 ## 🧠 Why AI-based authoring matters {#why-ai-based-authoring-matters}
 
-Copilot Studio gives you a faster path to a working GitHub Copilot harness agent by letting you describe its purpose and behavior in natural language instead of building everything manually. The AI authoring experience uses that description to generate an initial draft of the agent, including its name, purpose, and instructions.
+Copilot Studio gives you a faster path to a working Microsoft Copilot harness agent by letting you describe its purpose and behavior in natural language instead of building everything manually. The AI authoring experience uses that description to generate an initial draft of the agent, including its name, purpose, and instructions.
 
-[Instructions](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/authoring-instructions) are the primary way to shape behavior on the GitHub Copilot harness. They define the agent's role, tone, scope, response style, boundaries, and when it should escalate or redirect a request.
+[Instructions](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/authoring-instructions) are the primary way to shape behavior on the Microsoft Copilot harness. They define the agent's role, tone, scope, response style, boundaries, and when it should escalate or redirect a request.
 
 The generated instructions provide a useful starting point, but authoring is iterative. After the agent is created, you can review and refine its instructions in the **Build** tab, test the results in **Preview**, and continue making adjustments to improve consistency and reliability.
 
 > [!TIP] Why this course uses manual configuration
-> You can build and refine GitHub Copilot harness agents through the conversational authoring experience, but AI-generated output can vary between sessions. To give every learner a consistent, repeatable result, this course shows the manual configuration steps in the **Build** tab. Natural-language authoring also consumes **Copilot Credits** during creation, while manual configuration in **Build** doesn't.
+> You can build and refine Microsoft Copilot harness agents through the conversational authoring experience, but AI-generated output can vary between sessions. To give every learner a consistent, repeatable result, this course shows the manual configuration steps in the **Build** tab. Natural-language authoring also consumes **Copilot Credits** during creation, while manual configuration in **Build** doesn't.
 
 ## 🛠️ Build your agent in one place {#build-your-agent-in-one-place}
 
@@ -112,7 +112,7 @@ From this tab, you can refine the agent's instructions and connect components su
 
 ![Build tab for configuring agent capabilities](./assets/04-build-tab-for-configuring-agent-capabilities.png)
 
-## 🧪 Lab 04: Create an agent with the GitHub Copilot harness {#lab-04-create-an-agent-with-the-github-copilot-harness}
+## 🧪 Lab 04: Create an agent with the Microsoft Copilot harness {#lab-04-create-an-agent-with-the-github-copilot-harness}
 
 ### ✨ Use case {#use-case}
 
@@ -130,16 +130,18 @@ We'll continue using the same IT helpdesk scenario introduced earlier in the cou
 
 Before starting this lab, make sure you have:
 
-- Access to Copilot Studio with the **New experience** toggle enabled for the GitHub Copilot harness authoring surface
+- Access to Copilot Studio with the **New experience** toggle enabled for the Microsoft Copilot harness authoring surface
 - The solution from [Mission 03 - Creating a solution](../03-creating-a-solution/index.md)
 - Your test knowledge source(s), for example the **Contoso IT** SharePoint site from [Mission 00 - Course setup](../00-course-setup/index.md#step-5-create-new-sharepoint-site)
 
 > [!WARNING] Copilot Credit consumption starts during creation
-> Agents built with the **GitHub Copilot harness** use consumption-based billing. The natural-language authoring, Preview, and Evaluation experiences consume **Copilot Credits** while you build and test; manual configuration in the **Build** and **Monitor** tabs doesn't consume credits. See [Mission 09 - Understanding Licensing](../09-understanding-licensing/index.md) for more guidance and the [Copilot Credits Guide](https://aka.ms/CopilotCredits/LicensingGuide) for current details.
+> Agents built with the **Microsoft Copilot harness** use consumption-based billing. The natural-language authoring, Preview, and Evaluation experiences consume **Copilot Credits** while you build and test; manual configuration in the **Build** and **Monitor** tabs doesn't consume credits. See [Mission 09 - Understanding Licensing](../09-understanding-licensing/index.md) for more guidance and the [Copilot Credits Guide](https://aka.ms/CopilotCredits/LicensingGuide) for current details.
 
-### 4.1 Create a new agent with the GitHub Copilot harness
+### 4.1 Create a new agent with the Microsoft Copilot harness
 
-1. Browse to [**Microsoft Copilot Studio**](https://copilotstudio.microsoft.com) and on the **Home** page, select the **Agent (GitHub Copilot)** tile.
+As explained in the [course naming update](../index.md#harness-naming-update), the Microsoft Copilot harness may still appear under its previous name in the UI and screenshots.
+
+1. Browse to [**Microsoft Copilot Studio**](https://copilotstudio.microsoft.com) and on the **Home** page, select the **Agent (GitHub Copilot)** tile to create an agent using the Microsoft Copilot harness.
 
     ![Select agent tile](./assets/04-select-agent-tile.png)
 
@@ -337,11 +339,11 @@ Before moving to the next mission, take a look at the solution to see the agent 
 
 ## ✅ Mission Complete {#mission-complete}
 
-Mission accomplished, Recruit! You created an agent powered by the GitHub Copilot harness, verified its instructions and knowledge, added it to your solution, and completed baseline preview tests.
+Mission accomplished, Recruit! You created an agent powered by the Microsoft Copilot harness, verified its instructions and knowledge, added it to your solution, and completed baseline preview tests.
 
 You can now:
 
-✅ **Create a GitHub Copilot harness agent**: Build an agent from an AI-authored starting point.
+✅ **Create a Microsoft Copilot harness agent**: Build an agent from an AI-authored starting point.
 
 ✅ **Configure instructions and knowledge**: Ground agent behavior in approved guidance and source material.
 

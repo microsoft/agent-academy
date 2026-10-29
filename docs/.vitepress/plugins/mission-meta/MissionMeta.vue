@@ -72,7 +72,7 @@ const INDUSTRY_LABELS = Object.fromEntries(industryData.map((i) => [i.slug, i.la
 const HARNESS_LABELS: Record<string, string> = {
   "standard": "Standard",
   "copilot-chat": "Copilot Chat",
-  "github-copilot": "GitHub Copilot",
+  "microsoft-copilot": "Microsoft Copilot",
 };
 
 const { frontmatter } = useData();
@@ -307,7 +307,7 @@ const hasAnything = computed(() => codename.value || difficulty.value || timeMin
   color: #155e75;
 }
 
-.meta-pill--github-copilot {
+.meta-pill--microsoft-copilot {
   border-color: #24292f;
   background: #24292f;
   color: #fff;
@@ -319,7 +319,7 @@ const hasAnything = computed(() => codename.value || difficulty.value || timeMin
   color: #cffafe;
 }
 
-:global(.dark) .meta-pill--github-copilot {
+:global(.dark) .meta-pill--microsoft-copilot {
   border-color: #8c959f;
   background: #f0f6fc;
   color: #24292f;

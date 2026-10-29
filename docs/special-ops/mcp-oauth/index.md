@@ -3,7 +3,7 @@ tags:
   - mcp
 difficulty: 3
 time: 45
-harness: github-copilot
+harness: microsoft-copilot
 description: >-
   Consume a secured MCP server protected with OAuth 2.0 authorization from a
   Microsoft Copilot Studio agent.
@@ -11,7 +11,7 @@ badge: ./assets/mc-oauth-badge.png
 products: [azure, copilot-studio, visual-studio-code]
 industries: [hr, security]
 created-date: 2026-07-23
-last-edited-date: 2026-08-10
+last-edited-date: 2026-10-29
 hide: false
 ---
 
@@ -26,10 +26,12 @@ Welcome, agent. Your mission is **Operation Clearance**: connect a **secured MCP
 
 This mission builds on the concepts from the [Microsoft Copilot Studio ❤️ MCP](../mcs-mcp/index.md) mission. You worked with an unauthenticated MCP server there; here you'll secure a custom MCP server with OAuth 2.0 Authorization.
 
-> [!IMPORTANT] This mission uses the GitHub Copilot harness
-> The Copilot Studio steps require an agent powered by the **GitHub Copilot harness**. Turn on **New Experience** before you create the agent.
+> [!IMPORTANT] This mission uses the Microsoft Copilot harness
+> The Copilot Studio steps require an agent powered by the **Microsoft Copilot harness**. Turn on **New Experience** before you create the agent.
+>
+> This harness was previously called the **GitHub Copilot harness**. The UI and screenshots may still show **GitHub Copilot** or **GitHub Copilot harness** while the rename rolls out; both refer to the Microsoft Copilot harness.
 
-**Curriculum credit:** This mission adapts material from the [Microsoft Copilot Developer Camp](https://aka.ms/copilot-camp). Thanks to [Paolo Pialorsi](https://github.com/PaoloPia) and the Copilot Camp contributors for the original curriculum. This Agent Academy version updates the lab for the GitHub Copilot harness and presents it in the Special Ops format.
+**Curriculum credit:** This mission adapts material from the [Microsoft Copilot Developer Camp](https://aka.ms/copilot-camp). Thanks to [Paolo Pialorsi](https://github.com/PaoloPia) and the Copilot Camp contributors for the original curriculum. This Agent Academy version updates the lab for the Microsoft Copilot harness and presents it in the Special Ops format.
 
 ## 🎯 Mission objectives {#mission-objectives}
 
@@ -41,12 +43,12 @@ In this mission, you'll build:
 
 ## ⚙️ Prerequisites {#prerequisites}
 
-- Microsoft Copilot Studio trial or paid account with access to the **GitHub Copilot harness**. If you don't have one, see the [course setup](https://microsoft.github.io/agent-academy/recruit/00-course-setup/) instructions.
+- Microsoft Copilot Studio trial or paid account with access to the **Microsoft Copilot harness**. If you don't have one, see the [course setup](https://microsoft.github.io/agent-academy/recruit/00-course-setup/) instructions.
 - Permission to register applications in **Microsoft Entra ID** (and to grant admin consent).
 - **Visual Studio Code**, the **.NET SDK**, and the **dev tunnel** CLI installed locally.
 
-> [!IMPORTANT] GitHub Copilot harness billing
-> This mission uses the **GitHub Copilot harness in Microsoft Copilot Studio**, which uses usage-based billing. Building, testing in Preview, evaluating, and using the agent might consume **Copilot Credits**. Review the [Copilot Credits billing overview](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/billing-credit-overview) before you begin.
+> [!IMPORTANT] Microsoft Copilot harness billing
+> This mission uses the **Microsoft Copilot harness in Microsoft Copilot Studio**, which uses usage-based billing. Building, testing in Preview, evaluating, and using the agent might consume **Copilot Credits**. Review the [Copilot Credits billing overview](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/billing-credit-overview) before you begin.
 
 ### What is the OAuth 2.0 authorization code flow?
 

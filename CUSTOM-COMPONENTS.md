@@ -6,7 +6,7 @@ This document describes every custom component and special markdown syntax avail
 
 ### `<mission-meta />`
 
-Renders a metadata card showing the mission's codename, difficulty rating, estimated time, and taxonomy pills (products, tags, industries). It reads all values directly from the page's YAML frontmatter — no props are needed.
+Renders a metadata card showing the mission's codename, difficulty rating, estimated time, harness, and taxonomy pills (products, tags, industries). It reads all values directly from the page's YAML frontmatter — no props are needed.
 
 **Usage:**
 
@@ -23,11 +23,14 @@ Renders a metadata card showing the mission's codename, difficulty rating, estim
 | `codename` | 🕵️ badge with the operation name |
 | `difficulty` | Star rating out of 3 (⭐). Only values 1–3 render stars — 4 and 5 render none. |
 | `time` | ⏱️ label with a pie-chart icon. The pie fills proportionally — 60 minutes = full circle. |
+| `harness` | Harness pills: `standard` (Standard), `copilot-chat` (Copilot Chat), or `microsoft-copilot` (Microsoft Copilot). Accepts a single slug or an array. |
 | `products` | Linked pills pointing to `/products/{slug}/` |
 | `tags` | Linked pills pointing to `/tags/{slug}/` |
 | `industries` | Linked pills pointing to `/industries/{slug}/` |
 
 The component renders only when at least one of these fields is present. Label lookups use `docs/.vitepress/data/products.json`, `tags.json`, and `industries.json`.
+
+The `harness` field describes the Copilot Studio runtime. The `github-copilot` product slug still refers to the GitHub Copilot coding assistant, not the Microsoft Copilot harness.
 
 > [!NOTE]
 > `<mission-meta />` uses a 3-star scale, while `<missions />` cards and `scripts/validate-frontmatter.mjs` allow `difficulty` values up to 5. Keep course and mission difficulty in the 1–3 range so the stars render.

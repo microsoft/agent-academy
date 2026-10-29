@@ -50,6 +50,14 @@ docs/
 - Screenshot filenames: `NN-description.png` in lowercase with hyphens (for example `03-select-solution.png`)
 - All filenames lowercase with hyphens, no spaces
 
+### Harness terminology
+
+Use **Microsoft Copilot harness** for the Copilot Studio agent runtime and **Microsoft Copilot harness experience** for its authoring surface. Use **standard harness** for the separate topic-based runtime. GitHub Copilot remains the name of the coding assistant in Visual Studio Code and the CLI; do not rename those references.
+
+Use the official harness name in explanations, navigation, and metadata, but quote the actual product labels in click instructions. During the rename rollout, the UI may still show **GitHub Copilot** or **GitHub Copilot harness**. Retain those labels where learners need to find a control, link to the course landing page's naming note at the first creation step, and keep screenshots that still match the UI. Recapture UI screenshots only after the updated labels are visible; do not digitally relabel old captures as current product screenshots.
+
+Set `harness: microsoft-copilot` on missions that use the Microsoft Copilot harness, or `harness: standard` for the standard harness. Keep existing page paths, explicit heading anchors, and external documentation URLs unchanged when updating terminology so published links continue to work.
+
 ## Required frontmatter
 
 Every course mission requires the following YAML frontmatter at the top of `index.md`:

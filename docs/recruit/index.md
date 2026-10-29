@@ -15,9 +15,9 @@ Your mission—should you choose to accept it—is to master the art of building
 This hands-on training is your entry point into the **world of agents**: from grounded prompts to Adaptive Cards and agent flows, you'll learn how to build, scale, and deploy intelligent agents using real-world tools and use cases.
 
 > [!NOTE] Know the platform; build on this course's path
-> Copilot Studio supports **apps (preview)**, **agents**, and **workflows and agent flows**. Its four agent harnesses are **GitHub Copilot**, **Copilot chat**, **Customer Conversation (preview)**, and **standard**. [Mission 02](/recruit/02-copilot-studio-fundamentals/) explains where each fits.
+> Copilot Studio supports **apps (preview)**, **agents**, and **workflows and agent flows**. Its four agent harnesses are **Microsoft Copilot**, **Copilot chat**, **Customer Conversation (preview)**, and **standard**. [Mission 02](/recruit/02-copilot-studio-fundamentals/) explains where each fits.
 >
-> This course's custom-agent work uses the **standard harness**, with topics, Adaptive Cards, and agent flows. Mission 03 also introduces a declarative agent for Microsoft 365 Copilot. You don't need to build a managed app, a GitHub Copilot harness agent, or a Customer Assist Agent to earn this course's badge.
+> This course's custom-agent work uses the **standard harness**, with topics, Adaptive Cards, and agent flows. Mission 03 also introduces a declarative agent for Microsoft 365 Copilot. You don't need to build a managed app, a Microsoft Copilot harness agent, or a Customer Assist Agent to earn this course's badge.
 
 <!-- Separate adjacent callouts for Markdownlint. -->
 

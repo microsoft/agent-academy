@@ -3,7 +3,7 @@ tags:
   - mcp
 difficulty: 1
 time: 15
-harness: github-copilot
+harness: microsoft-copilot
 description: >-
   Connect the Microsoft Learn Docs MCP Server to a Copilot Studio agent for
   real-time documentation access.
@@ -14,7 +14,7 @@ products:
 industries:
   - it
 created-date: 2026-03-12
-last-edited-date: 2026-08-10
+last-edited-date: 2026-10-29
 ---
 
 # 📚 Microsoft Learn MCP Server {#microsoft-learn-mcp-server}
@@ -26,8 +26,10 @@ last-edited-date: 2026-08-10
 
 Welcome, agent. This mission is **Operation Open Book** where you'll connect the **Microsoft Learn Docs MCP Server** to a Copilot Studio agent, giving it real-time access to the entire Microsoft Learn documentation library. No more agents responding with outdated or hallucinated product information. Your agent is about to become the most well-read operative in the field.
 
-> [!IMPORTANT] This mission uses the GitHub Copilot harness
-> The screenshots and steps require an agent powered by the **GitHub Copilot harness**. If your screen looks different, turn on **New Experience** in the upper-right corner before you continue.
+> [!IMPORTANT] This mission uses the Microsoft Copilot harness
+> The screenshots and steps require an agent powered by the **Microsoft Copilot harness**. If your screen looks different, turn on **New Experience** in the upper-right corner before you continue.
+>
+> This harness was previously called the **GitHub Copilot harness**. The UI and screenshots may still show **GitHub Copilot** or **GitHub Copilot harness** while the rename rolls out; both refer to the Microsoft Copilot harness.
 
 ## 🎯 Mission objectives {#mission-objectives}
 
@@ -40,10 +42,10 @@ In this mission, you'll build:
 
 ## ⚙️ Prerequisites {#prerequisites}
 
-- Microsoft Copilot Studio trial or paid account with access to the **GitHub Copilot harness**. If you don't have an account, check out the [course setup](https://microsoft.github.io/agent-academy/recruit/00-course-setup/) instructions to see how to get a free trial.
+- Microsoft Copilot Studio trial or paid account with access to the **Microsoft Copilot harness**. If you don't have an account, check out the [course setup](https://microsoft.github.io/agent-academy/recruit/00-course-setup/) instructions to see how to get a free trial.
 
-> [!IMPORTANT] GitHub Copilot harness billing
-> This mission uses the **GitHub Copilot harness in Microsoft Copilot Studio**, which uses usage-based billing. Building, testing in Preview, evaluating, and using the agent might consume **Copilot Credits**. Review the [Copilot Credits billing overview](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/billing-credit-overview) before you begin.
+> [!IMPORTANT] Microsoft Copilot harness billing
+> This mission uses the **Microsoft Copilot harness in Microsoft Copilot Studio**, which uses usage-based billing. Building, testing in Preview, evaluating, and using the agent might consume **Copilot Credits**. Review the [Copilot Credits billing overview](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/billing-credit-overview) before you begin.
 
 ### What is the Microsoft Learn MCP Server?
 
@@ -207,7 +209,7 @@ Instructions are one way to limit the scope of what your agent should and should
 Let's remove the web knowledge source so the agent relies only on the Microsoft Learn MCP tools and its instructions.
 
 > [!NOTE]
-> For agents powered by the GitHub Copilot harness, the standard harness settings **Use general knowledge** and **Use information from the web** aren't available. Web grounding is controlled by the **Search all websites** knowledge source on the **Build** tab, and general model scope is governed through your instructions.
+> For agents powered by the Microsoft Copilot harness, the standard harness settings **Use general knowledge** and **Use information from the web** aren't available. Web grounding is controlled by the **Search all websites** knowledge source on the **Build** tab, and general model scope is governed through your instructions.
 
 1. On the Build tab, in the **Knowledge** section, remove the **Search all websites** source by selecting its **X** (Remove) to disable web grounding.
 

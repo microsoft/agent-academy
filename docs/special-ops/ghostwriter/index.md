@@ -4,7 +4,7 @@ tags:
     - instructions
 difficulty: 2
 time: 60
-harness: github-copilot
+harness: microsoft-copilot
 description: >-
   Build a single marketing content agent powered by a series of focused Skills
   instead of one bloated instruction block — and watch the orchestrator load the
@@ -14,7 +14,7 @@ products:
   - copilot-studio
 industries: [marketing, retail]
 created-date: 2026-07-23
-last-edited-date: 2026-08-10
+last-edited-date: 2026-10-29
 hide: false
 ---
 
@@ -28,7 +28,9 @@ hide: false
 Welcome, agent. Your mission is **Operation Ghostwriter**: build a marketing content agent **without** drowning it in a wall of instructions. You'll teach it four separate trade procedures using **Skills** and let the orchestrator reach for the right one on demand. One agent. A series of Skills. Zero bloat. ✍️🎯
 
 > [!NOTE]
-> This mission requires an agent powered by the **GitHub Copilot harness**. Skills aren't available to agents powered by the standard harness. Turn on **New experience** with the toggle in the upper-left of the Copilot Studio home page before you start.
+> This mission requires an agent powered by the **Microsoft Copilot harness**. Skills aren't available to agents powered by the standard harness. Turn on **New experience** with the toggle in the upper-left of the Copilot Studio home page before you start.
+>
+> This harness was previously called the **GitHub Copilot harness**. The UI and screenshots may still show **GitHub Copilot** or **GitHub Copilot harness** while the rename rolls out; both refer to the Microsoft Copilot harness.
 
 ## 🎯 Mission objectives {#mission-objectives}
 
@@ -49,7 +51,7 @@ In this mission, you'll learn:
 
 ## ❓ What is a Skill? {#what-is-a-skill}
 
-A **Skill** is a reusable capability available to agents powered by the GitHub Copilot harness. It defines a procedure in plain Markdown that the orchestrator can activate when a task needs it. A Skill has a **name** and **description** that act as routing metadata, plus instructions and optional supporting files that become relevant after the Skill is activated.
+A **Skill** is a reusable capability available to agents powered by the Microsoft Copilot harness. It defines a procedure in plain Markdown that the orchestrator can activate when a task needs it. A Skill has a **name** and **description** that act as routing metadata, plus instructions and optional supporting files that become relevant after the Skill is activated.
 
 Your agent's **Instructions** are like its employee handbook, showing its purpose, how it should behave, and what it should and shouldn't do. In every conversation, the agent references its employee handbook (its Instructions) before responding. Those Instructions should be short, useful, and true in *every* conversation to avoid bloat.
 
@@ -117,12 +119,12 @@ and never salesy. Route each request to the right skill.
 
 ## ⚙️ Prerequisites {#prerequisites}
 
-- A **Microsoft Copilot Studio** environment with the **GitHub Copilot harness** enabled — [copilotstudio.microsoft.com](https://copilotstudio.microsoft.com). If you don't have an account, check out the [course setup](https://microsoft.github.io/agent-academy/recruit/00-course-setup/) instructions for a free trial.
-- An agent powered by the **GitHub Copilot harness**. Turn on **New experience**, create or open an agent, and confirm that **Skills** appears on the **Build** tab. If it doesn't appear, contact your administrator to confirm that the harness is available in your environment.
+- A **Microsoft Copilot Studio** environment with the **Microsoft Copilot harness** enabled — [copilotstudio.microsoft.com](https://copilotstudio.microsoft.com). If you don't have an account, check out the [course setup](https://microsoft.github.io/agent-academy/recruit/00-course-setup/) instructions for a free trial.
+- An agent powered by the **Microsoft Copilot harness**. Turn on **New experience**, create or open an agent, and confirm that **Skills** appears on the **Build** tab. If it doesn't appear, contact your administrator to confirm that the harness is available in your environment.
 - A Markdown editor of your choice
 
-> [!IMPORTANT] GitHub Copilot harness billing
-> This mission uses the **GitHub Copilot harness in Microsoft Copilot Studio**, which uses usage-based billing. Building, testing in Preview, evaluating, and using the agent might consume **Copilot Credits**. Review the [Copilot Credits billing overview](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/billing-credit-overview) before you begin.
+> [!IMPORTANT] Microsoft Copilot harness billing
+> This mission uses the **Microsoft Copilot harness in Microsoft Copilot Studio**, which uses usage-based billing. Building, testing in Preview, evaluating, and using the agent might consume **Copilot Credits**. Review the [Copilot Credits billing overview](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/billing-credit-overview) before you begin.
 
 ## 🏢 The Scenario {#the-scenario}
 
@@ -493,7 +495,7 @@ One of the things that our marketing content agent is missing is the ability to 
 Memory lets the agent retain useful preferences for an individual user across conversations. It isn't a replacement for Instructions, Knowledge, or Skills, and shared brand rules still belong in those maker-managed components.
 
 > [!IMPORTANT]
-> Memory is a preview capability for agents powered by the GitHub Copilot harness and is subject to change. Each agent maintains a separate memory for each user. Memories are private to that user, and makers and other users can't view them. The system deletes a user's memories for an agent after 28 days without interaction. Memory is disabled in group chats and Microsoft Teams channels. Turning Memory off prevents the agent from using stored memories but doesn't delete them. Using a memory-enabled agent might consume Copilot Credits.
+> Memory is a preview capability for agents powered by the Microsoft Copilot harness and is subject to change. Each agent maintains a separate memory for each user. Memories are private to that user, and makers and other users can't view them. The system deletes a user's memories for an agent after 28 days without interaction. Memory is disabled in group chats and Microsoft Teams channels. Turning Memory off prevents the agent from using stored memories but doesn't delete them. Using a memory-enabled agent might consume Copilot Credits.
 
 1. Open the agent's **Build** tab.
 1. Turn on **Memory** in the components panel.
@@ -569,9 +571,9 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 ## 📚 Tactical Resources {#tactical-resources}
 
 - 📖 [Microsoft Copilot Studio documentation](https://learn.microsoft.com/microsoft-copilot-studio/)
-- 📖 [Skills overview for GitHub Copilot harness agents](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/skills-overview)
+- 📖 [Skills overview for Microsoft Copilot harness agents](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/skills-overview)
 - 📖 [Add an existing Skill](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/skills-add-existing)
-- 📖 [Write instructions for a GitHub Copilot harness agent](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/authoring-instructions)
+- 📖 [Write instructions for a Microsoft Copilot harness agent](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/authoring-instructions)
 - 📖 [Copilot Credits billing overview](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/billing-credit-overview)
 - 📖 [Memory overview](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/memory-overview)
 - 🔗 [skills.sh — community agent skills](https://www.skills.sh/)

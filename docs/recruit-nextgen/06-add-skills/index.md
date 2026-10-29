@@ -7,11 +7,11 @@ prev:
 next:
     text: 'Automate with Workflows'
     link: '/recruit-nextgen/07-automate-with-workflows'
-short-description: Use a GitHub Copilot harness Skill to create a reusable device guidance capability
+short-description: Use a Microsoft Copilot harness Skill to create a reusable device guidance capability
 difficulty: 1
 codename: OPERATION SKILL BOOST
 time: 30
-harness: github-copilot
+harness: microsoft-copilot
 credits: [1000, 1800]
 tags:
     - custom-skills
@@ -22,7 +22,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-29
 
 ---
 
@@ -33,7 +33,7 @@ last-edited-date: 2026-10-06
 <mission-credits />
 
 > [!NOTE]
-> **Skills are unique to agents powered by the GitHub Copilot harness** in Copilot Studio. They aren't available to agents powered by the standard or Copilot chat harness.
+> **Skills are unique to agents powered by the Microsoft Copilot harness** in Copilot Studio. They aren't available to agents powered by the standard or Copilot chat harness.
 
 🎥 **Watch the Walkthrough**
 
@@ -41,38 +41,38 @@ last-edited-date: 2026-10-06
 
 ## 🎯 Mission Brief {#mission-brief}
 
-Your Contoso IT Concierge Agent can answer questions, but a reliable helpdesk also needs focused, reusable behavior for specific tasks. The **GitHub Copilot harness** introduces **Skills** for this purpose: self-contained capabilities that package a name, description, and task-specific instructions so the harness can activate the right behavior when it's needed.
+Your Contoso IT Concierge Agent can answer questions, but a reliable helpdesk also needs focused, reusable behavior for specific tasks. The **Microsoft Copilot harness** introduces **Skills** for this purpose: self-contained capabilities that package a name, description, and task-specific instructions so the harness can activate the right behavior when it's needed.
 
-In this mission, you'll explore this GitHub Copilot harness capability by iteratively refining two skills: one for troubleshooting and another for device guidance. The skills will guide the agent to call SharePoint correctly, recover from query issues, map user-selected options to the correct item, and capture additional requirements.
+In this mission, you'll explore this Microsoft Copilot harness capability by iteratively refining two skills: one for troubleshooting and another for device guidance. The skills will guide the agent to call SharePoint correctly, recover from query issues, map user-selected options to the correct item, and capture additional requirements.
 
 This work turns a general-purpose agent into a more dependable support experience. Instead of placing every procedure in the agent's global instructions, you'll keep task-specific guidance in focused packages that the harness can activate when relevant. You'll inspect the generated skill files, improve their instructions, and test how small wording changes affect tool calls and responses. The result is behavior that is easier to review, reuse, and refine without overloading the agent's core prompt.
 
 > [!IMPORTANT]
-> In the current Copilot Studio UI, make sure the **New experience** toggle in the upper-right corner is turned **on** to use the GitHub Copilot harness authoring surface.
+> In the current Copilot Studio UI, make sure the **New experience** toggle in the upper-right corner is turned **on** to use the Microsoft Copilot harness authoring surface.
 
 ## 🔎 Objectives {#objectives}
 
-1. Understand why **Skills** are unique to agents powered by the GitHub Copilot harness
+1. Understand why **Skills** are unique to agents powered by the Microsoft Copilot harness
 1. Understand how skills provide reusable, task-specific behavior without authored topic paths
 1. Review and refine an AI-generated skill to improve instruction quality
 1. Validate the updated skill behavior in **Preview**, including tool input handling and follow-up requirements
 
 ## 🧠 What is a skill? {#what-is-a-skill}
 
-Skills are reusable capabilities available to **GitHub Copilot harness agents** in Copilot Studio. Each skill provides focused guidance for a specific scenario, business process, or task by defining when it should be used, what information to collect, which tools to call, and how the agent should respond.
+Skills are reusable capabilities available to **Microsoft Copilot harness agents** in Copilot Studio. Each skill provides focused guidance for a specific scenario, business process, or task by defining when it should be used, what information to collect, which tools to call, and how the agent should respond.
 
-Skills are part of what distinguishes the GitHub Copilot harness from the other Copilot Studio harnesses:
+Skills are part of what distinguishes the Microsoft Copilot harness from the other Copilot Studio harnesses:
 
 - The **standard harness** uses topics, prompts, rules, and defined conversation paths for structured behavior.
 - The **Copilot chat harness** focuses on extending Microsoft 365 Copilot Chat with enterprise knowledge.
-- The **GitHub Copilot harness** can activate modular Skills as it reasons through complex, multi-step work.
+- The **Microsoft Copilot harness** can activate modular Skills as it reasons through complex, multi-step work.
 
-Skills provide repeatable behavior for focused tasks inside an agent. They are also reusable and shareable: you can package a skill as a `SKILL.md` file or ZIP package and add it to other agents powered by the GitHub Copilot harness.
+Skills provide repeatable behavior for focused tasks inside an agent. They are also reusable and shareable: you can package a skill as a `SKILL.md` file or ZIP package and add it to other agents powered by the Microsoft Copilot harness.
 
 A troubleshooting process defined in a skill is a perfect fit: it's multi-step, judgment-driven, and should behave identically every time.
 
 > [!IMPORTANT]
-> Skills run as part of the GitHub Copilot harness. Building, testing, evaluating, and using these agents can consume Copilot Credits through usage-based billing.
+> Skills run as part of the Microsoft Copilot harness. Building, testing, evaluating, and using these agents can consume Copilot Credits through usage-based billing.
 
 ## 📄 Authoring Skills {#authoring-skills}
 
@@ -85,7 +85,7 @@ Skills use a portable Markdown-based format. A `SKILL.md` file contains the foll
 | Optional frontmatter | Skill metadata and configuration | Structured YAML metadata such as author, version, tags, examples, dependencies, or other settings used for organization and governance. Not typically used for procedural instructions. |
 | Instructions | The skill's execution logic | Detailed guidance the model follows after selecting the skill. This can include procedure steps, decision logic, tool usage instructions, validation rules, response formats, escalation paths, and success criteria. |
 
-When a user submits a request, the GitHub Copilot harness evaluates the available skills and uses each skill's name and description to determine which one is relevant. When the harness activates a skill, its instructions guide the agent through that task. By separating specialized capabilities into reusable skills, builders can create agents that are more accurate, maintainable, and aligned to business requirements.
+When a user submits a request, the Microsoft Copilot harness evaluates the available skills and uses each skill's name and description to determine which one is relevant. When the harness activates a skill, its instructions guide the agent through that task. By separating specialized capabilities into reusable skills, builders can create agents that are more accurate, maintainable, and aligned to business requirements.
 
 ## 🧩 Principles for Effective Skill Instructions {#principles}
 
@@ -279,7 +279,7 @@ Clear success criteria tell the model when to stop.
 
 ## 🧪 Lab 06 - Add the skills {#lab-06-add-skills}
 
-In this lab, you will extend the agent you created in [Mission 04 - Build an agent with the GitHub Copilot harness](../04-build-a-custom-agent/index.md#lab-04-create-an-agent-with-the-github-copilot-harness) by creating a series of custom skills.
+In this lab, you will extend the agent you created in [Mission 04 - Build an agent with the Microsoft Copilot harness](../04-build-a-custom-agent/index.md#lab-04-create-an-agent-with-the-github-copilot-harness) by creating a series of custom skills.
 
 ### ✨ Use case {#use-case}
 
@@ -291,7 +291,7 @@ In this lab, you will extend the agent you created in [Mission 04 - Build an age
 
 ### Prerequisites
 
-1. **Contoso IT Concierge** - the agent created in [Mission 04 - Build an agent with the GitHub Copilot harness](../04-build-a-custom-agent/index.md#lab-04-create-an-agent-with-the-github-copilot-harness).
+1. **Contoso IT Concierge** - the agent created in [Mission 04 - Build an agent with the Microsoft Copilot harness](../04-build-a-custom-agent/index.md#lab-04-create-an-agent-with-the-github-copilot-harness).
 
 ### 6.1 Create a device request skill and test
 
@@ -590,7 +590,7 @@ Now we'll work on a separate skill that specializes in troubleshooting issues.
 
 ## ✅ Mission Complete {#mission-complete}
 
-Mission accomplished, Recruit! You used a capability unique to the GitHub Copilot harness and iteratively refined a reusable skill so the `Contoso IT Concierge` agent can reliably map tool inputs, recover from OData filter errors, match user-selected options to SharePoint item IDs, and capture additional device requirements.
+Mission accomplished, Recruit! You used a capability unique to the Microsoft Copilot harness and iteratively refined a reusable skill so the `Contoso IT Concierge` agent can reliably map tool inputs, recover from OData filter errors, match user-selected options to SharePoint item IDs, and capture additional device requirements.
 
 You can now:
 

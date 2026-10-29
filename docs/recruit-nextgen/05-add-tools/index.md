@@ -2,7 +2,7 @@
 hide: false
 preview: false
 prev:
-   text: 'Build with the GitHub Copilot Harness'
+   text: 'Build with the Microsoft Copilot Harness'
    link: '/recruit-nextgen/04-build-a-custom-agent'
 next:
    text: 'Add Skills'
@@ -11,7 +11,7 @@ short-description: Add a SharePoint Get items tool so your agent can take action
 difficulty: 1
 codename: OPERATION TOOL UP
 time: 30
-harness: github-copilot
+harness: microsoft-copilot
 credits: 0
 tags:
    - automation
@@ -22,7 +22,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-29
 
 ---
 
@@ -33,7 +33,7 @@ last-edited-date: 2026-10-06
 <mission-credits />
 
 > [!NOTE]
-> This lab uses an agent powered by the **GitHub Copilot harness**.
+> This lab uses an agent powered by the **Microsoft Copilot harness**.
 
 🎥 **Watch the Walkthrough**
 
@@ -43,20 +43,20 @@ last-edited-date: 2026-10-06
 
 You’ve built an agent. It listens, learns, and answers questions, but now it’s time to get tactical and let it **take action**. In this mission you’ll connect your agent to a real data source so it can fetch live information and do something useful with it.
 
-On the GitHub Copilot harness, that capability comes from **tools**. You’ll add a **SharePoint - Get items** tool so your Contoso IT Concierge agent can pull available devices straight from a SharePoint list.
+On the Microsoft Copilot harness, that capability comes from **tools**. You’ll add a **SharePoint - Get items** tool so your Contoso IT Concierge agent can pull available devices straight from a SharePoint list.
 
 This is the agent's first connection to live business data. Rather than copying device details into its instructions or relying on static knowledge, the agent can retrieve the current list when a request requires it. You'll give the tool a clear name and description so the harness can recognize when to use it, then map the required SharePoint inputs. Those choices matter because the orchestrator depends on capability metadata and configuration to select and call tools reliably.
 
 The tool won't define the complete device request procedure by itself. In the next mission, you'll add reusable skills that tell the agent how to gather requirements, interpret results, and guide the employee through the task.
 
 > [!IMPORTANT]
-> If your Copilot Studio screen looks different from these screenshots, make sure the **New experience** toggle in the upper-right corner is turned **on** to use the GitHub Copilot harness authoring surface.
+> If your Copilot Studio screen looks different from these screenshots, make sure the **New experience** toggle in the upper-right corner is turned **on** to use the Microsoft Copilot harness authoring surface.
 
 ## 🔎 Objectives {#objectives}
 
 In this mission, you’ll learn:
 
-1. Why the GitHub Copilot harness uses instructions and tools instead of authored **Topics**
+1. Why the Microsoft Copilot harness uses instructions and tools instead of authored **Topics**
 1. What **tools** are and how an agent decides when to use them
 1. How to add the **SharePoint - Get items** connector action as a tool
 1. How to rename the tool so its purpose is clear to the model
@@ -66,7 +66,7 @@ In this mission, you’ll learn:
 
 If you’ve used Copilot Studio before, you’ll remember **Topics**: hand-built conversation flows made of trigger phrases and connected **nodes** (send a message, ask a question, add a condition, call a tool, and so on). You routed conversations manually and stitched logic together node by node.
 
-The GitHub Copilot harness doesn't use the **Topics** tab. Instead of you wiring conversations by hand, the agent’s **large language model orchestrates** the conversation for you. You give the agent:
+The Microsoft Copilot harness doesn't use the **Topics** tab. Instead of you wiring conversations by hand, the agent’s **large language model orchestrates** the conversation for you. You give the agent:
 
 - **Instructions** - plain-language guidance on how to behave, and
 - **Tools, Knowledge, and Skills** - the capabilities it can draw on.
@@ -104,7 +104,7 @@ In this lab we’ll use the **SharePoint - Get items** connector action so the a
 ### Prerequisites
 
 1. **SharePoint list** - the **EmployeeAssets** list from [Mission 00 - Course Setup](../00-course-setup/index.md#step-5-create-new-sharepoint-site).
-1. **Contoso IT Concierge** - the agent created in [Mission 04 - Build an agent with the GitHub Copilot harness](../04-build-a-custom-agent/index.md#lab-04-create-an-agent-with-the-github-copilot-harness).
+1. **Contoso IT Concierge** - the agent created in [Mission 04 - Build an agent with the Microsoft Copilot harness](../04-build-a-custom-agent/index.md#lab-04-create-an-agent-with-the-github-copilot-harness).
 
 Let's begin!
 
@@ -195,7 +195,7 @@ Mission accomplished, Recruit! You added a **SharePoint - Get items** tool and c
 
 You can now:
 
-✅ **Explain capability-based orchestration**: Describe how the GitHub Copilot harness uses instructions and capabilities instead of authored topics.
+✅ **Explain capability-based orchestration**: Describe how the Microsoft Copilot harness uses instructions and capabilities instead of authored topics.
 
 ✅ **Add a connector tool**: Extend an agent with the SharePoint **Get items** action.
 

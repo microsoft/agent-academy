@@ -7,11 +7,11 @@ prev:
 next:
   text: Publish your agent
   link: /recruit-nextgen/08-publish-your-agent
-short-description: Automate a device request with a workflow and call it from your GitHub Copilot harness agent
+short-description: Automate a device request with a workflow and call it from your Microsoft Copilot harness agent
 difficulty: 1
 codename: OPERATION AUTOMATION POWERHOUSE
 time: 60
-harness: github-copilot
+harness: microsoft-copilot
 credits: [700, 1300]
 tags:
   - automation
@@ -20,7 +20,7 @@ products: [copilot-studio, power-automate, outlook, sharepoint]
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-29
 
 ---
 
@@ -31,7 +31,7 @@ last-edited-date: 2026-10-06
 <mission-credits />
 
 > [!NOTE]
-> This lab uses an agent and workflows powered by the **GitHub Copilot harness**.
+> This lab uses an agent and workflows powered by the **Microsoft Copilot harness**.
 > On this harness, workflows are standalone, reusable automations that an agent can call as a tool.
 > In the current Copilot Studio UI, make sure the **New experience** toggle in the upper-right corner is **on**.
 
@@ -48,13 +48,13 @@ You'll also define the contract between the agent and the workflow. Trigger inpu
 By the end, the device request scenario will connect reasoning, SharePoint data, procedural guidance, and deterministic automation in one experience. You'll validate successful requests, requests with additional requirements, and cancellation so the agent handles more than the ideal path.
 
 > [!INFO] The architecture coming together
-> This is where the reason for using the GitHub Copilot harness becomes most visible. The agent uses flexible reasoning to interpret the request, a skill to guide its behavior, a tool to retrieve current information, and a workflow to execute the transaction predictably. The agent decides **what** needs to happen; the workflow controls **how** the business action is completed.
+> This is where the reason for using the Microsoft Copilot harness becomes most visible. The agent uses flexible reasoning to interpret the request, a skill to guide its behavior, a tool to retrieve current information, and a workflow to execute the transaction predictably. The agent decides **what** needs to happen; the workflow controls **how** the business action is completed.
 
 ## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:
 
-1. What **Workflows** are on the GitHub Copilot harness and how they differ from agent flows on the standard harness
+1. What **Workflows** are on the Microsoft Copilot harness and how they differ from agent flows on the standard harness
 1. How to configure workflow trigger inputs and response outputs
 1. How to add and configure SharePoint and Outlook connector actions
 1. How to pass values between workflow nodes by using dynamic content
@@ -64,7 +64,7 @@ In this mission, you'll learn:
 
 ## 🤔 What are Workflows? {#what-are-workflows}
 
-On the standard harness, **agent flows** can support topic-based, structured agent behavior. The GitHub Copilot harness instead uses standalone **workflows** for deterministic automation.
+On the standard harness, **agent flows** can support topic-based, structured agent behavior. The Microsoft Copilot harness instead uses standalone **workflows** for deterministic automation.
 
 Instead, automations are first-class objects called **workflows**. A workflow is a standalone, reusable, step-by-step automation that lives in its own **Workflows** hub. You build it once on a visual canvas, publish it, and then any agent in your environment can call it as a **tool**.
 
@@ -159,11 +159,11 @@ For the full list, see the [functions reference guide](https://learn.microsoft.c
 
 1. **SharePoint list** - the **EmployeeAssets** SharePoint list from [Mission 00 - Course Setup](../00-course-setup/index.md#step-5-create-new-sharepoint-site). If you haven't set it up, head back and create it.
 
-1. **Contoso IT Concierge agent** - the agent created in [Mission 04 - Build an agent with the GitHub Copilot harness](../04-build-a-custom-agent/index.md#lab-04-create-an-agent-with-the-github-copilot-harness).
+1. **Contoso IT Concierge agent** - the agent created in [Mission 04 - Build an agent with the Microsoft Copilot harness](../04-build-a-custom-agent/index.md#lab-04-create-an-agent-with-the-github-copilot-harness).
 
 ### 7.1 Create a new workflow
 
-On the GitHub Copilot harness, workflows are added to your agent as a **tool**.
+On the Microsoft Copilot harness, workflows are added to your agent as a **tool**.
 
 1. In the left navigation, select **Workflows**, then select **Create your first workflow** or select **New workflow**.
 

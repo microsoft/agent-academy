@@ -42,7 +42,7 @@ export const coursePathGroups: CoursePathGroup[] = [
         ],
       },
       {
-        label: "GitHub Copilot harness",
+        label: "Microsoft Copilot harness",
         description:
           "Guide agent behavior with instructions, skills, tools, and workflows",
         home: "/recruit-nextgen/",
@@ -74,7 +74,7 @@ export const coursePathGroups: CoursePathGroup[] = [
         ],
       },
       {
-        label: "GitHub Copilot harness",
+        label: "Microsoft Copilot harness",
         description:
           "Build the hiring system with instructions, skills, tools, and workflows",
         home: "/operative-nextgen/",

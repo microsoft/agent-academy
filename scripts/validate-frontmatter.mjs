@@ -24,7 +24,7 @@ const REQUIRED_FIELDS = [
 const VALID_HARNESSES = new Set([
   "standard",
   "copilot-chat",
-  "github-copilot",
+  "microsoft-copilot",
 ]);
 
 // Index pages for the section itself (not missions)

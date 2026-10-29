@@ -5,13 +5,13 @@ prev:
   text: Copilot Studio fundamentals
   link: /recruit-nextgen/02-copilot-studio-fundamentals
 next:
-  text: Build an agent with the GitHub Copilot harness
+  text: Build an agent with the Microsoft Copilot harness
   link: /recruit-nextgen/04-build-a-custom-agent
 short-description: Package your agent into a reusable solution for environment management
 difficulty: 1
 codename: OPERATION CTRL-ALT-PACKAGE
 time: 45
-harness: github-copilot
+harness: microsoft-copilot
 credits: 0
 tags:
   - solutions
@@ -21,7 +21,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-29
 ---
 # 🚨 Mission 03: Creating a Solution for Your Agent {#mission-03-creating-a-solution-for-your-agent}
 
@@ -42,9 +42,11 @@ Starting in a custom solution also prevents the work you create throughout this 
 
 You'll start by creating the solution that will contain your agent.
 
-> [!NOTE] GitHub Copilot harness authoring surface
+> [!NOTE] Microsoft Copilot harness authoring surface
 >
-> In the current Copilot Studio UI, turn on the **New experience** toggle in the upper-right corner of the Home page. This selects the authoring surface used for agents powered by the GitHub Copilot harness and makes your screen match the screenshots in this mission.
+> In the current Copilot Studio UI, turn on the **New experience** toggle in the upper-right corner of the Home page. This selects the authoring surface used for agents powered by the Microsoft Copilot harness and makes your screen match the screenshots in this mission.
+>
+> The UI and screenshots may still show **GitHub Copilot**, the harness's previous name. See the [course naming update](../index.md#harness-naming-update).
 
 ## 🔎 Objectives {#objectives}
 
@@ -170,7 +172,7 @@ In this lab, you'll create a solution publisher and a custom solution in your de
 ### Prerequisites
 
 - Copilot Studio license
-- Access to Copilot Studio with the **New experience** toggle enabled for the GitHub Copilot harness authoring surface
+- Access to Copilot Studio with the **New experience** toggle enabled for the Microsoft Copilot harness authoring surface
 - Administrative permissions to create solutions and agents
 
 > [!TIP] Prerequisites help:
@@ -328,7 +330,7 @@ You can now:
 
 ✅ **Set a preferred solution**: Ensure new components are created in the correct solution by default.
 
-⏭️ [Move to **Build an agent with the GitHub Copilot harness** mission](../04-build-a-custom-agent/index.md)
+⏭️ [Move to **Build an agent with the Microsoft Copilot harness** mission](../04-build-a-custom-agent/index.md)
 
 ## 📚 Tactical Resources {#tactical-resources}
 

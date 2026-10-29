@@ -171,7 +171,7 @@ export default defineConfig({
                 ],
               },
               {
-                text: "GitHub Copilot harness",
+                text: "Microsoft Copilot harness",
                 link: recruitNextGenHome,
                 collapsed: true,
                 items: [
@@ -192,7 +192,7 @@ export default defineConfig({
                     link: "/recruit-nextgen/03-creating-a-solution/",
                   },
                   {
-                    text: "Build with the GitHub Copilot Harness",
+                    text: "Build with the Microsoft Copilot Harness",
                     link: "/recruit-nextgen/04-build-a-custom-agent/",
                   },
                   {
@@ -290,7 +290,7 @@ export default defineConfig({
                 ],
               },
               {
-                text: "GitHub Copilot harness",
+                text: "Microsoft Copilot harness",
                 link: operativeNextGenHome,
                 collapsed: true,
                 items: [

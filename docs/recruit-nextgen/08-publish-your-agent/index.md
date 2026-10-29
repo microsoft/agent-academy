@@ -11,7 +11,7 @@ short-description: 'Publish your agent'
 difficulty: 1
 codename: OPERATION ROLL OUT
 time: 15
-harness: github-copilot
+harness: microsoft-copilot
 credits: [200, 600]
 tags:
   - publishing
@@ -22,7 +22,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-29
 ---
 
 # 🚨 Mission 08: Publish Your Agent {#mission-08-publish-your-agent}
@@ -56,7 +56,7 @@ Publishing creates a version of your agent that users can access through enabled
 
 Publishing and sharing are related, but they are not the same. Publishing makes the latest version available to a channel. Your organization's sharing and admin policies determine who can discover, install, or use it. When you update the agent later, publish it again so users receive the newest version.
 
-Publishing to Teams or Microsoft 365 Copilot changes where employees access the agent; it doesn't change the agent's harness. The Contoso IT Concierge agent remains powered by the GitHub Copilot harness in each channel.
+Publishing to Teams or Microsoft 365 Copilot changes where employees access the agent; it doesn't change the agent's harness. The Contoso IT Concierge agent remains powered by the Microsoft Copilot harness in each channel.
 
 > [!IMPORTANT]
 > Test the agent after publishing. A successful preview in Copilot Studio doesn't guarantee that authentication, knowledge, tools, and workflows will behave identically in every channel.
@@ -179,7 +179,7 @@ You can now:
 
 ✅ **Validate the employee experience**: Install and test the published agent in Teams and Microsoft 365 Copilot
 
-⏭️ [Move to **Understanding Licensing**](../09-understanding-licensing/index.md) to learn how GitHub Copilot harness usage is billed and managed.
+⏭️ [Move to **Understanding Licensing**](../09-understanding-licensing/index.md) to learn how Microsoft Copilot harness usage is billed and managed.
 
 ## 🪙 Copilot Credits Estimate {#copilot-credits-estimate}
 

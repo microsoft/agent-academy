@@ -11,7 +11,7 @@ short-description: 'Set up your dev environment, Copilot Studio trial, and Share
 difficulty: 1
 codename: OPERATION DEPLOYMENT READY
 time: 30
-harness: github-copilot
+harness: microsoft-copilot
 credits: 0
 tags:
   - setup
@@ -22,7 +22,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-08-24
+last-edited-date: 2026-10-29
 ---
 
 # 🚨 Mission 00: Course Setup {#mission-00-course-setup}
@@ -192,7 +192,7 @@ The following steps are required regardless of whether you're using a trial or a
 
 ## Step 5: Create new SharePoint site
 
-A new SharePoint site is required for completing `Mission 04 - Build an agent with the GitHub Copilot harness`. In this step, you'll also create a new list in that site to store available devices.
+A new SharePoint site is required for completing `Mission 04 - Build an agent with the Microsoft Copilot harness`. In this step, you'll also create a new list in that site to store available devices.
 
 1. Select the waffle icon in the top-left corner of [Power Apps](https://make.powerapps.com/) or the [Microsoft 365 admin center](https://admin.cloud.microsoft) to open the app menu, then select **SharePoint**.
 
