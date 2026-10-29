@@ -18,7 +18,7 @@ products: [copilot-studio]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-29
 ---
 
 # 🚨 Mission 04: Model, Response and AI Safety {#mission-04-model-response-and-ai-safety}
@@ -438,7 +438,7 @@ Mission 04 is complete. You now have:
 
 🔗 [Apply Responsible AI principles in Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/guidance/responsible-ai)
 
-🔗 [Configure GitHub Copilot harness agent settings](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/settings-overview)
+🔗 [Configure Microsoft Copilot harness agent settings](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/settings-overview)
 
 🔗 [Select a model for an agent](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/authoring-select-agent-model)
 

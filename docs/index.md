@@ -26,9 +26,9 @@ Copilot Studio supports several kinds of business solution:
 
 These pieces can work together. Start with the user experience and business process, then choose the capabilities that fit.
 
-For agents, Copilot Studio offers four harnesses: **GitHub Copilot**, **Copilot chat**, **Customer Conversation**, and **standard**. A harness is the runtime around the model; it shapes the agent's capabilities and how it carries out work.
+For agents, Copilot Studio offers four harnesses: **Microsoft Copilot**, **Copilot chat**, **Customer Conversation**, and **standard**. A harness is the runtime around the model; it shapes the agent's capabilities and how it carries out work.
 
-The Recruit and Operative courses provide hands-on paths focused on the **standard** and **GitHub Copilot** harnesses. That course structure isn't a complete list of everything Copilot Studio can build.
+The Recruit and Operative courses provide hands-on paths focused on the **standard** and **Microsoft Copilot** harnesses. That course structure isn't a complete list of everything Copilot Studio can build.
 
 > [!NOTE]
 > App creation and the Customer Conversation agent experience are in preview. Availability, prerequisites, and billing depend on the artifact and harness you choose. See the [Copilot Studio overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [apps overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/apps-experience/apps-overview), and [harness comparison](https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview).

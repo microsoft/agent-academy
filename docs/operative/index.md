@@ -15,7 +15,7 @@ Your advanced mission—should you choose to accept it—is to master the art of
 This intensive training takes you beyond basic agent creation into the sophisticated world of **multi-agent orchestration**: from hiring automation to AI safety, you'll learn to build, coordinate, and deploy intelligent agent ecosystems using real-world enterprise scenarios.
 
 > [!IMPORTANT]
-> These lessons use the **Standard Harness** in Copilot Studio. If your screen looks different, turn off **New Experience** in the upper-right corner to follow along. For the new experience, choose the [GitHub Copilot harness path](/operative-nextgen/).
+> These lessons use the **Standard Harness** in Copilot Studio. If your screen looks different, turn off **New Experience** in the upper-right corner to follow along. For the new experience, choose the [Microsoft Copilot harness path](/operative-nextgen/).
 
 ## 🎯 Mission Objective {#mission-objective}
 

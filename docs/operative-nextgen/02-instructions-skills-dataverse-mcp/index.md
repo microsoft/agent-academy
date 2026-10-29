@@ -19,7 +19,7 @@ products: [copilot-studio, dataverse]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-29
 ---
 
 # 🚨 Mission 02: Instructions, Skills and Dataverse MCP {#mission-02-instructions-skills-and-dataverse-mcp}
@@ -146,7 +146,7 @@ The golden rule for these sets is that **every case should Pass**, so a red **Fa
 ::: details 🔄 Coming from the classic Operative course?
 In the classic course, behavior was shaped with **topics**, and every Dataverse operation needed its own **agent flow** - one to list rows, another to create a row, another to update one.
 
-The Powered by GitHub Copilot experience separates those two ideas. Overall behavior lives in **instructions**, and any procedure you want the agent to repeat is packaged as a **skill** it loads when a request matches the skill's description. Data access is no longer built operation by operation. A single **Dataverse MCP server** gives the agent every data action at once, and the agent decides which one to call.
+The Microsoft Copilot harness experience separates those two ideas. Overall behavior lives in **instructions**, and any procedure you want the agent to repeat is packaged as a **skill** it loads when a request matches the skill's description. Data access is no longer built operation by operation. A single **Dataverse MCP server** gives the agent every data action at once, and the agent decides which one to call.
 :::
 
 ## 🧪 Lab 02 - Authoring Skills and connecting to the Dataverse MCP Server {#lab-02-author-the-skill-and-connect-the-data-layer}

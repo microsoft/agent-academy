@@ -27,11 +27,14 @@ This course is ideal for:
 
 <course-path-cards course="Operative" />
 
+> [!NOTE] Harness naming update
+> The **Microsoft Copilot harness** was previously called the **GitHub Copilot harness**. Copilot Studio may still show the previous name while the UI update rolls out. Our [course naming note](/operative-nextgen/#harness-naming-update) explains why instructions and screenshots may use different labels from the path selector.
+
 ### 🤔 Which One Should I Pick? {#which-one-should-i-pick}
 
 Copilot Studio runs agents on a **harness**: the runtime that decides when to call the model, which components to hand it, and which tools to invoke. The two Operative paths teach two different harnesses.
 
-| | Standard Harness | GitHub Copilot harness |
+| | Standard Harness | Microsoft Copilot harness |
 | --- | --- | --- |
 | **You design** | Connected agents, prompts, agent flows, and Adaptive Cards | Instructions, skills, MCP tools, connected agents, and workflows |
 | **The agent follows** | Your instructions, with prompts and flows defining repeatable operations | A plan it reasons out using skills and tools, with workflows controlling defined steps |
@@ -39,7 +42,7 @@ Copilot Studio runs agents on a **harness**: the runtime that decides when to ca
 | **Authoring surface** | Standard Harness in Copilot Studio | New Copilot Studio experience |
 
 > [!TIP]
-> Start with the **Standard Harness** if you want to build with prompts, agent flows, and Adaptive Cards. Start with the **GitHub Copilot harness** if you want to build with skills, MCP tools, and workflows in the new experience.
+> Start with the **Standard Harness** if you want to build with prompts, agent flows, and Adaptive Cards. Start with the **Microsoft Copilot harness** if you want to build with skills, MCP tools, and workflows in the new experience.
 
 Both paths use the same hiring scenario, so completing one makes the other easier to follow. You don't need to finish both.
 
@@ -47,7 +50,7 @@ Both paths use the same hiring scenario, so completing one makes the other easie
 
 Already know where you're headed? Jump straight to a mission.
 
-| # | Standard Harness | GitHub Copilot harness |
+| # | Standard Harness | Microsoft Copilot harness |
 | --- | --- | --- |
 | `01` | 🚨 [Get started with the Hiring Agent](/operative/01-get-started/) | 🚨 [Establish the Hiring Hub](/operative-nextgen/01-get-started/) |
 | `02` | 📝 [Authoring Agent Instructions](/operative/02-agent-instructions/) | 📝 [Instructions, Skills and Dataverse MCP](/operative-nextgen/02-instructions-skills-dataverse-mcp/) |

@@ -17,7 +17,7 @@ products:
 industries:
   - it
 created-date: 2025-08-20
-last-edited-date: 2026-10-22
+last-edited-date: 2026-10-29
 ---
 # 🚨 Mission 02: Copilot Studio Fundamentals {#mission-02-copilot-studio-fundamentals}
 
@@ -53,7 +53,7 @@ For agents, there are four harnesses:
 
 | Harness | When it fits |
 | --- | --- |
-| **GitHub Copilot** | Reasoning-heavy, multi-step work across tools and files |
+| **Microsoft Copilot** | Reasoning-heavy, multi-step work across tools and files |
 | **Copilot chat** | Extending Microsoft Copilot Chat with enterprise knowledge |
 | **Customer Conversation (preview)** | **Customer Assist Agents** for customer-service conversations over chat and voice, with escalation to human representatives |
 | **standard** | Structured conversations and maker-authored topics, using classic or generative orchestration |
@@ -63,7 +63,7 @@ This mission teaches the **standard harness**. The four building blocks below de
 Apps created in the new app experience run in **Copilot Managed Runtime (preview)**. They aren't the agent **App channel** or Power Apps **canvas apps** and **model-driven apps**, and they don't use this course's agent-building steps.
 
 > [!NOTE] Orientation, not extra prerequisites
-> You don't need app creation or Customer Conversation access to complete this course. The standard harness remains supported. Use the [GitHub Copilot harness Recruit path](/recruit-nextgen/) if you want its hands-on agent-building approach instead.
+> You don't need app creation or Customer Conversation access to complete this course. The standard harness remains supported. Use the [Microsoft Copilot harness Recruit path](/recruit-nextgen/) if you want its hands-on agent-building approach instead.
 
 See the [Copilot Studio overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio), [harness comparison](https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview), and [apps overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/apps-experience/apps-overview).
 

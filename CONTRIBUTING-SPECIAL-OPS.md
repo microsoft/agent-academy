@@ -65,7 +65,7 @@ last-edited-date: 2026-04-02
 | `tags` | string[] | Yes | Array of tag slugs from `docs/.vitepress/data/tags.json`. |
 | `difficulty` | number (1–5) | Yes | Difficulty level from 1 (beginner) to 5 (expert). |
 | `time` | number | Yes | Estimated completion time in minutes. Must be greater than 0. |
-| `harness` | string \| string[] | No | The Microsoft Copilot Studio harness used by the agent: `standard` or `github-copilot`. Use an array only when the mission supports both harnesses. |
+| `harness` | string \| string[] | No | The Microsoft Copilot Studio harness used by the agent: `standard` or `microsoft-copilot`. Use an array only when the mission supports both harnesses. |
 | `description` | string | Yes | Mission description (minimum 10 characters). Used in mission cards and the `<missions />` grid. |
 | `badge` | string | Yes | Relative path to the badge image in the shared assets folder (for example `../assets/Badge_Name.png`). |
 | `products` | string[] | Yes | Array of product slugs from `docs/.vitepress/data/products.json`. |
@@ -78,21 +78,23 @@ last-edited-date: 2026-04-02
 > [!IMPORTANT]
 > Special Ops missions do **not** use `prev`, `next`, `short-description`, `codename`, or `section` in their frontmatter. They are standalone — there is no sequential navigation.
 
-The `<mission-meta />` component displays `harness` as a pill near the top of the page. Use **standard harness** and **GitHub Copilot harness** in learner-facing text. The field describes the Copilot Studio agent harness, not whether a mission uses GitHub Copilot in Visual Studio Code or the GitHub Copilot CLI.
+The `<mission-meta />` component displays `harness` as a pill near the top of the page. Use **standard harness** and **Microsoft Copilot harness** in learner-facing text. The field describes the Copilot Studio agent harness, not whether a mission uses GitHub Copilot in Visual Studio Code or the GitHub Copilot CLI.
+
+For missions using the Microsoft Copilot harness, explain in the opening harness notice that the UI and screenshots may still show its previous name, **GitHub Copilot** or **GitHub Copilot harness**, during the rename rollout. Use the official name in explanations and metadata, but quote the actual UI labels in click instructions. Keep screenshots that still match the product and recapture them only after the UI changes.
 
 For a mission that supports both Copilot Studio harnesses, use an array:
 
 ```yaml
 harness:
   - standard
-  - github-copilot
+  - microsoft-copilot
 ```
 
-Missions that use the GitHub Copilot harness must place this notice at the end of the prerequisites section:
+Missions that use the Microsoft Copilot harness must place this notice at the end of the prerequisites section:
 
 ```markdown
-> [!IMPORTANT] GitHub Copilot harness billing
-> This mission uses the **GitHub Copilot harness in Microsoft Copilot Studio**, which uses usage-based billing. Building, testing in Preview, evaluating, and using the agent might consume **Copilot Credits**. Review the [Copilot Credits billing overview](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/billing-credit-overview) before you begin.
+> [!IMPORTANT] Microsoft Copilot harness billing
+> This mission uses the **Microsoft Copilot harness in Microsoft Copilot Studio**, which uses usage-based billing. Building, testing in Preview, evaluating, and using the agent might consume **Copilot Credits**. Review the [Copilot Credits billing overview](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/billing-credit-overview) before you begin.
 ```
 
 ### Frontmatter validation

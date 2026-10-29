@@ -4,7 +4,7 @@ tags:
     - Docusign
 difficulty: 2
 time: 90
-harness: github-copilot
+harness: microsoft-copilot
 description: >-
     Build a Copilot Studio agent that connects to the Docusign MCP Demo server to
     trigger Workflow Builder agreement automation.
@@ -13,7 +13,7 @@ products: [copilot-studio, docusign, power-platform, sharepoint]
 industries:
     - hr
 created-date: 2026-06-16
-last-edited-date: 2026-08-10
+last-edited-date: 2026-10-29
 ---
 # 📄 Microsoft Copilot Studio + Docusign MCP {#mcs-docusign-mcp}
 
@@ -24,8 +24,10 @@ last-edited-date: 2026-08-10
 
 Welcome, agent. Your objective is to reuse what already works: connect the Docusign MCP Demo server to your Copilot Studio agent and trigger an existing Workflow Builder workflow. Your agent gathers inputs. Workflow Builder executes the agreement process.
 
-> [!IMPORTANT] This mission uses the GitHub Copilot harness
-> The Copilot Studio steps require an agent powered by the **GitHub Copilot harness**. Turn on **New Experience** before you create the agent.
+> [!IMPORTANT] This mission uses the Microsoft Copilot harness
+> The Copilot Studio steps require an agent powered by the **Microsoft Copilot harness**. Turn on **New Experience** before you create the agent.
+>
+> This harness was previously called the **GitHub Copilot harness**. The UI and screenshots may still show **GitHub Copilot** or **GitHub Copilot harness** while the rename rolls out; both refer to the Microsoft Copilot harness.
 
 ## 🎯 Mission objectives {#mcs-docusign-mcp-objectives}
 
@@ -207,7 +209,7 @@ To complete this Special Ops mission, you'll need the following prerequisites.
 ### Microsoft
 
 - Copilot Studio license
-- Access to a Copilot Studio developer environment with the **GitHub Copilot harness** enabled
+- Access to a Copilot Studio developer environment with the **Microsoft Copilot harness** enabled
 - Administrative permissions to create solutions and agents
 - A SharePoint site where you have permissions to create a new folder in the Documents library - this will be used in a workflow step
 
@@ -221,8 +223,8 @@ You'll need two different email addresses to complete this lab:
 - Email address to use as the employee
 - Email address to use as the hiring manager
 
-> [!IMPORTANT] GitHub Copilot harness billing
-> This mission uses the **GitHub Copilot harness in Microsoft Copilot Studio**, which uses usage-based billing. Building, testing in Preview, evaluating, and using the agent might consume **Copilot Credits**. Review the [Copilot Credits billing overview](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/billing-credit-overview) before you begin.
+> [!IMPORTANT] Microsoft Copilot harness billing
+> This mission uses the **Microsoft Copilot harness in Microsoft Copilot Studio**, which uses usage-based billing. Building, testing in Preview, evaluating, and using the agent might consume **Copilot Credits**. Review the [Copilot Credits billing overview](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/billing-credit-overview) before you begin.
 
 ## 🧪 Lab 1.1: Create a Docusign Web Form {#lab-1-1-create-a-docusign-web-form}
 
@@ -1431,7 +1433,7 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 ### Prerequisites
 
 - **New solution**: As a best practice, create a new solution for this agent before you create the agent itself. Refer to our [Recruit mission](../../recruit/04-creating-a-solution/index.md) to learn how to create a solution.
-- **Use the GitHub Copilot harness**: This lab requires the GitHub Copilot harness because the Docusign MCP Demo tool is available there. Turn **New Experience** on before continuing.
+- **Use the Microsoft Copilot harness**: This lab requires the Microsoft Copilot harness because the Docusign MCP Demo tool is available there. Turn **New Experience** on before continuing.
 
     ![Toggle new experience](assets/1.5_00_ToggleNewExperience.png)
 

@@ -7,11 +7,11 @@ prev:
 next:
   text: Securing Your Recruit NextGen Badge
   link: /recruit-nextgen/course-completion-badges-recruit
-short-description: Learn how licensing and usage-based billing work for the GitHub Copilot harness
+short-description: Learn how licensing and usage-based billing work for the Microsoft Copilot harness
 difficulty: 1
 codename: OPERATION KNOW WHAT YOU OWE
 time: 20
-harness: github-copilot
+harness: microsoft-copilot
 credits: 0
 tags:
   - licensing
@@ -21,7 +21,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-08-24
+last-edited-date: 2026-10-29
 ---
 
 # 🚨 Mission 09: Understanding Licensing {#mission-09-understanding-licensing}
@@ -36,7 +36,7 @@ You've built and published the `Contoso IT Concierge`. Now it's time to step bac
 
 This mission isn't another deployment step or a detailed pricing exercise. It's a conceptual follow-up that connects the choices you already made—harness, model, context, tools, and workflows—to their licensing and consumption implications.
 
-The agent and workflow in this course use the **GitHub Copilot harness**. That means LLM-powered creation experiences and runtime execution consume **Copilot Credits**. Publishing can expand usage from a maker's tests to real employee interactions, so platform owners need to understand what drives consumption and how to monitor it.
+The agent and workflow in this course use the **Microsoft Copilot harness**. That means LLM-powered creation experiences and runtime execution consume **Copilot Credits**. Publishing can expand usage from a maker's tests to real employee interactions, so platform owners need to understand what drives consumption and how to monitor it.
 
 By the end, you'll be able to explain why harness choice affects billing, recognize the activities and design choices that drive usage, and discuss funding and monitoring with your platform administrators. You won't calculate a production budget or memorize rates.
 
@@ -48,7 +48,7 @@ By the end, you'll be able to explain why harness choice affects billing, recogn
 In this lesson, you'll learn:
 
 1. Why harness choice changes the Copilot Studio billing model
-1. What usage can consume Copilot Credits on the GitHub Copilot harness
+1. What usage can consume Copilot Credits on the Microsoft Copilot harness
 1. How models, runtime, context, tools, and task complexity affect consumption
 1. How organizations fund, govern, and monitor Copilot Credit usage
 
@@ -58,16 +58,16 @@ Every agent or workflow in Copilot Studio runs on a harness:
 
 | Harness | Best for | Billing model |
 | --- | --- | --- |
-| **GitHub Copilot harness** | End-to-end business processes and agentic experiences | **Copilot Credits** during LLM-powered creation and runtime execution |
+| **Microsoft Copilot harness** | End-to-end business processes and agentic experiences | **Copilot Credits** during LLM-powered creation and runtime execution |
 | **Standard harness** | Rule-based agents with predefined topics and flows | **Copilot Credits**; published rates don't apply to licensed Microsoft 365 Copilot users in authenticated business-to-employee scenarios |
 | **Copilot chat harness** | Extending Microsoft 365 Copilot Chat with organizational knowledge | **Copilot Credits**; published rates don't apply to licensed Microsoft 365 Copilot users in authenticated business-to-employee scenarios |
 
 > [!IMPORTANT]
-> The authenticated business-to-employee billing exception for eligible Microsoft 365 Copilot users applies to standard and Copilot chat harness rates. It doesn't apply to GitHub Copilot harness usage, which consumes Copilot Credits during LLM-powered creation and runtime execution.
+> The authenticated business-to-employee billing exception for eligible Microsoft 365 Copilot users applies to standard and Copilot chat harness rates. It doesn't apply to Microsoft Copilot harness usage, which consumes Copilot Credits during LLM-powered creation and runtime execution.
 
 ## 💳 What Drives Runtime Consumption {#what-drives-runtime-consumption}
 
-For GitHub Copilot harness agents and workflows, runtime consumption increases with the complexity of the work. The guide identifies four cost drivers:
+For Microsoft Copilot harness agents and workflows, runtime consumption increases with the complexity of the work. The guide identifies four cost drivers:
 
 - **Models:** The AI models selected for each task, which can vary in quality, speed, and cost.
 - **Runtime:** The managed cloud orchestration that runs agents, including long-running work.
@@ -78,7 +78,7 @@ Because these factors interact, use representative scenarios to estimate consump
 
 ## 🛠️ Billing Starts While You Build {#billing-starts-while-you-build}
 
-GitHub Copilot harness agents and workflows consume credits during LLM-powered creation experiences and runtime execution. Creation usage includes:
+Microsoft Copilot harness agents and workflows consume credits during LLM-powered creation experiences and runtime execution. Creation usage includes:
 
 - **Natural-language authoring:** Consumption is based on conversation turns during a creation session. More iterative sessions generally use more credits.
 - **Preview and Evaluation:** Consumption is equivalent to agent runtime usage.
@@ -114,7 +114,7 @@ Review natural-language authoring, Preview, Evaluation, and runtime usage so pro
 
 ## 🧭 What This Means for Your Published Agent {#what-this-means-for-your-published-agent}
 
-The `Contoso IT Concierge` uses the GitHub Copilot harness because it combines goal-driven orchestration with knowledge, a skill, connector tools, and a workflow.
+The `Contoso IT Concierge` uses the Microsoft Copilot harness because it combines goal-driven orchestration with knowledge, a skill, connector tools, and a workflow.
 
 When thinking about a pilot or production rollout:
 
@@ -122,11 +122,11 @@ When thinking about a pilot or production rollout:
 - Include authoring, Preview, Evaluation, and runtime activity in the usage picture.
 - Monitor real usage after publishing instead of relying only on an upfront estimate.
 - Revisit model, context, and tool choices if consumption or performance differs from expectations.
-- Remember that a Microsoft 365 Copilot user license doesn't replace usage-based billing for this GitHub Copilot harness agent.
+- Remember that a Microsoft 365 Copilot user license doesn't replace usage-based billing for this Microsoft Copilot harness agent.
 
 ## ✅ Mission Complete {#mission-complete}
 
-You now understand that Copilot Studio doesn't have one universal billing treatment. This course's GitHub Copilot harness consumes Copilot Credits during LLM-powered creation and runtime execution, while manual Build and Monitor configuration doesn't.
+You now understand that Copilot Studio doesn't have one universal billing treatment. This course's Microsoft Copilot harness consumes Copilot Credits during LLM-powered creation and runtime execution, while manual Build and Monitor configuration doesn't.
 
 You can now:
 
@@ -134,7 +134,7 @@ You can now:
 
 ✅ **Identify Copilot Credit usage**: Recognize which authoring, testing, and runtime activities consume credits.
 
-✅ **Plan usage-based billing**: Describe how GitHub Copilot harness consumption is funded and managed.
+✅ **Plan usage-based billing**: Describe how Microsoft Copilot harness consumption is funded and managed.
 
 ✅ **Distinguish licenses from capacity**: Explain why a Microsoft 365 Copilot user license doesn't replace Copilot Credit capacity.
 
@@ -146,7 +146,7 @@ You can now:
 
 - 🧭 [Choose a harness in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview)
 
-- 💳 [Usage-based billing for the GitHub Copilot harness](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/billing-credit-overview)
+- 💳 [Usage-based billing for the Microsoft Copilot harness](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/billing-credit-overview)
 
 - 🧾 [Purchase and manage Copilot Credits](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/billing-manage-buy-credits)
 

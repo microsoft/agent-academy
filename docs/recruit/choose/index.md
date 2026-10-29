@@ -24,11 +24,14 @@ This course is ideal for:
 
 <course-path-cards course="Recruit" />
 
+> [!NOTE] Harness naming update
+> The **Microsoft Copilot harness** was previously called the **GitHub Copilot harness**. Copilot Studio may still show the previous name while the UI update rolls out. Our [course naming note](/recruit-nextgen/#harness-naming-update) explains why instructions and screenshots may use different labels from the path selector.
+
 ### 🤔 Which One Should I Pick? {#which-one-should-i-pick}
 
 Copilot Studio runs agents on a **harness**: the runtime that decides when to call the model, which components to hand it, and which tools to invoke. The two Recruit paths teach two different harnesses.
 
-| | Standard harness | GitHub Copilot harness |
+| | Standard harness | Microsoft Copilot harness |
 | --- | --- | --- |
 | **You design** | Topics, triggers, nodes, and branches | Instructions, skills, tools, and workflows |
 | **The agent follows** | The conversation paths you author | A plan it reasons out toward your goal |
@@ -36,7 +39,7 @@ Copilot Studio runs agents on a **harness**: the runtime that decides when to ca
 | **Authoring surface** | Classic experience | **New experience** toggle in Copilot Studio |
 
 > [!TIP]
-> Not sure? Start with the **standard harness** if you want the broadest coverage of Copilot Studio, including Adaptive Cards, Power Fx, and agent flows. Start with the **GitHub Copilot harness** if you're building agents today on the new experience and want the instruction-driven approach.
+> Not sure? Start with the **standard harness** if you want the broadest coverage of Copilot Studio, including Adaptive Cards, Power Fx, and agent flows. Start with the **Microsoft Copilot harness** if you're building agents today on the new experience and want the instruction-driven approach.
 
 Both paths use the same IT support scenario, so completing one makes the other easier to follow. You don't need to finish both.
 
@@ -44,13 +47,13 @@ Both paths use the same IT support scenario, so completing one makes the other e
 
 Already know where you're headed? Jump straight to a mission.
 
-| # | Standard harness | GitHub Copilot harness |
+| # | Standard harness | Microsoft Copilot harness |
 | --- | --- | --- |
 | `00` | 🧰 [Course Setup](/recruit/00-course-setup/) | 🧰 [Course Setup](/recruit-nextgen/00-course-setup/) |
 | `01` | 🧠 [Introduction to Agents](/recruit/01-introduction-to-agents/) | 🧠 [Introduction to Agents](/recruit-nextgen/01-introduction-to-agents/) |
 | `02` | 🛠️ [Copilot Studio Fundamentals](/recruit/02-copilot-studio-fundamentals/) | 🛠️ [Copilot Studio Fundamentals](/recruit-nextgen/02-copilot-studio-fundamentals/) |
 | `03` | 👩‍💻 [Deploy a Declarative Agent](/recruit/03-create-a-declarative-agent-for-M365Copilot/) | 🧩 [Creating a Solution](/recruit-nextgen/03-creating-a-solution/) |
-| `04` | 🧩 [Creating a Solution](/recruit/04-creating-a-solution/) | ✍️ [Build with the GitHub Copilot Harness](/recruit-nextgen/04-build-a-custom-agent/) |
+| `04` | 🧩 [Creating a Solution](/recruit/04-creating-a-solution/) | ✍️ [Build with the Microsoft Copilot Harness](/recruit-nextgen/04-build-a-custom-agent/) |
 | `05` | 🚀 [Using a Pre-Built Agent](/recruit/05-using-prebuilt-agents/) | 🪪 [Add a Tool](/recruit-nextgen/05-add-tools/) |
 | `06` | ✍️ [Build a Custom Agent](/recruit/06-create-agent-from-conversation/) | 🧠 [Add Skills](/recruit-nextgen/06-add-skills/) |
 | `07` | 🧠 [Add a Topic with Triggers](/recruit/07-add-new-topic-with-trigger/) | 🔁 [Automate with Workflows](/recruit-nextgen/07-automate-with-workflows/) |

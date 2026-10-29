@@ -3,11 +3,11 @@ tags:
     - grounding
 difficulty: 3
 time: 60
-harness: github-copilot
+harness: microsoft-copilot
 description: >-
   Ground a Copilot Studio agent in your own documents with Retrieval-Augmented
   Generation (RAG) using Azure AI Search vector search, wired in as a connector
-    tool for an agent powered by the GitHub Copilot harness.
+    tool for an agent powered by the Microsoft Copilot harness.
 badge: ./assets/ai-search-badge.png
 products:
   - copilot-studio
@@ -15,7 +15,7 @@ products:
 industries:
   - hr
 created-date: 2026-07-02
-last-edited-date: 2026-08-10
+last-edited-date: 2026-10-29
 hide: false
 ---
 
@@ -28,10 +28,12 @@ hide: false
 
 Welcome, agent. Your mission is **Operation Vector Vault**: give a Copilot Studio agent the ability to reason over your organization's own documents using **Retrieval-Augmented Generation (RAG)** powered by **Azure AI Search** vector search. You'll stand up a search service, vectorize a stack of candidate resumes, and wire the index into an **HR Knowledge Agent** so it answers questions by *meaning*, not just keywords, with document-backed citations. 🎯
 
-> [!IMPORTANT] This mission uses the GitHub Copilot harness
-> The Copilot Studio steps require an agent powered by the **GitHub Copilot harness**. Turn on **New Experience** before you create the agent.
+> [!IMPORTANT] This mission uses the Microsoft Copilot harness
+> The Copilot Studio steps require an agent powered by the **Microsoft Copilot harness**. Turn on **New Experience** before you create the agent.
+>
+> This harness was previously called the **GitHub Copilot harness**. The UI and screenshots may still show **GitHub Copilot** or **GitHub Copilot harness** while the rename rolls out; both refer to the Microsoft Copilot harness.
 
-**Curriculum credit:** This mission adapts material from the [Microsoft Copilot Developer Camp](https://aka.ms/copilot-camp). Thanks to [Paolo Pialorsi](https://github.com/PaoloPia) and the Copilot Camp contributors for the original curriculum. This Agent Academy version updates the lab for the GitHub Copilot harness and presents it in the Special Ops format.
+**Curriculum credit:** This mission adapts material from the [Microsoft Copilot Developer Camp](https://aka.ms/copilot-camp). Thanks to [Paolo Pialorsi](https://github.com/PaoloPia) and the Copilot Camp contributors for the original curriculum. This Agent Academy version updates the lab for the Microsoft Copilot harness and presents it in the Special Ops format.
 
 ## 🎯 Mission objectives {#mission-objectives}
 
@@ -73,12 +75,12 @@ For example, a search for "software engineering skills" can surface candidates d
 
 ## ⚙️ Prerequisites {#prerequisites}
 
-- Microsoft Copilot Studio trial or paid account with access to the **GitHub Copilot harness**. If you don't have an account, see the [course setup](https://microsoft.github.io/agent-academy/recruit/00-course-setup/) instructions for a free trial.
+- Microsoft Copilot Studio trial or paid account with access to the **Microsoft Copilot harness**. If you don't have an account, see the [course setup](https://microsoft.github.io/agent-academy/recruit/00-course-setup/) instructions for a free trial.
 - An **Azure subscription** with permission to create resources (Azure AI Search, Storage, and Azure OpenAI / Microsoft Foundry).
 - Familiarity with basic Copilot Studio agent creation and basic Azure resource management.
 
-> [!IMPORTANT] GitHub Copilot harness billing
-> This mission uses the **GitHub Copilot harness in Microsoft Copilot Studio**, which uses usage-based billing. Building, testing in Preview, evaluating, and using the agent might consume **Copilot Credits**. Review the [Copilot Credits billing overview](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/billing-credit-overview) before you begin.
+> [!IMPORTANT] Microsoft Copilot harness billing
+> This mission uses the **Microsoft Copilot harness in Microsoft Copilot Studio**, which uses usage-based billing. Building, testing in Preview, evaluating, and using the agent might consume **Copilot Credits**. Review the [Copilot Credits billing overview](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/billing-credit-overview) before you begin.
 
 ## 🎯 The Scenario {#the-scenario}
 
@@ -290,7 +292,7 @@ In this exercise you will create a Microsoft Copilot Studio agent that leverages
 ### Connect Azure AI Search as a tool
 
 > [!IMPORTANT]
-> For agents powered by the GitHub Copilot harness, **Azure AI Search is not a Knowledge source**. The **Add knowledge** dialog only offers Public websites, SharePoint, and OneDrive. Instead, you connect Azure AI Search as a **connector tool** and let the agent call it for retrieval.
+> For agents powered by the Microsoft Copilot harness, **Azure AI Search is not a Knowledge source**. The **Add knowledge** dialog only offers Public websites, SharePoint, and OneDrive. Instead, you connect Azure AI Search as a **connector tool** and let the agent call it for retrieval.
 >
 > ![The Add knowledge dialog does not list Azure AI Search — searching "Azure" returns no results.](./assets/rag-knowledge-no-azure-search.png)
 
@@ -367,7 +369,7 @@ In this mission, you accomplished:
 
 ✅ **Azure AI Search**: created and configured a search service for enterprise knowledge
 ✅ **Integrated Vectorization**: built a vector index from PDFs using an embedding model
-✅ **Connector-based RAG**: Connected Azure AI Search as a **tool** for an agent powered by the GitHub Copilot harness, replacing the retired **Azure AI Search knowledge source**
+✅ **Connector-based RAG**: Connected Azure AI Search as a **tool** for an agent powered by the Microsoft Copilot harness, replacing the retired **Azure AI Search knowledge source**
 ✅ **Instruction Engineering**: directed the agent to call the search tool and cite its sources
 ✅ **Semantic Testing**: validated meaning-based retrieval with basic and complex queries
 

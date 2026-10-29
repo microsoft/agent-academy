@@ -11,7 +11,7 @@ short-description: 'Learn how agents reason, use knowledge and tools, and operat
 difficulty: 1
 codename: OPERATION AI AGENT DECODE
 time: 15
-harness: github-copilot
+harness: microsoft-copilot
 credits: 0
 tags:
   - fundamentals
@@ -21,7 +21,7 @@ products:
 industries:
   - general
 created-date: 2026-08-05
-last-edited-date: 2026-10-22
+last-edited-date: 2026-10-29
 ---
 
 # 🚨 Mission 01: Introduction to Agents
@@ -118,9 +118,9 @@ A harness is the **runtime environment around the model**. It determines which c
 
 Put simply: the **model reasons and generates**, the **harness provides the operating environment**, and **orchestration directs the work inside it**.
 
-Copilot Studio offers four agent harnesses: **GitHub Copilot**, **Copilot chat**, **Customer Conversation**, and **standard**. The Customer Conversation harness powers **Customer Assist Agents** for customer-service conversations over chat and voice; that experience is in preview.
+Copilot Studio offers four agent harnesses: **Microsoft Copilot**, **Copilot chat**, **Customer Conversation**, and **standard**. The Customer Conversation harness powers **Customer Assist Agents** for customer-service conversations over chat and voice; that experience is in preview.
 
-This course uses the **GitHub Copilot harness**, designed for reasoning-heavy, multi-step work with enhanced, goal-driven orchestration.
+This course uses the **Microsoft Copilot harness**, designed for reasoning-heavy, multi-step work with enhanced, goal-driven orchestration.
 
 > [!NOTE] You'll unpack the product map next
 > [Mission 02: Copilot Studio Fundamentals](../02-copilot-studio-fundamentals/index.md) first distinguishes apps, agents, and workflows, then compares the four agent harnesses. For now, remember that a harness is broader than its orchestration strategy.
@@ -131,7 +131,7 @@ Now that you know what a harness is, let's look more closely at one of the jobs 
 
 Orchestration can follow maker-defined paths, use a model to choose among available capabilities, or combine both approaches. The right approach depends on how predictable the work is and how much flexibility the agent needs.
 
-The **GitHub Copilot harness** used in this course can break complex work into steps, act, review the results, and adjust its approach:
+The **Microsoft Copilot harness** used in this course can break complex work into steps, act, review the results, and adjust its approach:
 
 > **plan → act → observe → replan**
 
