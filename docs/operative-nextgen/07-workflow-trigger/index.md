@@ -112,23 +112,23 @@ Read it from the outside in:
 - **`?`** is safe navigation. It means "if this piece is missing, give me nothing rather than an error", which keeps a run from failing on an email that had no such field.
 - **`['body/field']`** selects one field out of that output.
 
-Two practical notes. The expression editor **auto-closes brackets and quotes**, so paste an expression in one go rather than typing it character by character. And it **commits when focus leaves the field** - select outside the box before you look for a **Save** button, or your edit is still sitting uncommitted.
+Two practical notes. The expression editor **auto-closes brackets and quotes**, so paste an expression in one go rather than typing it character by character. Select **Insert** to apply it.
 
 ### How to fill in a field {#field-editors}
 
-Most fields in a node panel accept three different kinds of value, and the small row of icons above the box is how you choose between them. Every lab in this mission uses at least one of them, so it is worth a moment here.
+Most fields in a node panel accept three different kinds of value, and the small row of icons in the picker is how you choose between them. Every lab in this mission uses at least one of them, so it is worth a moment here.
 
-1. Type straight into the box and the field holds exactly what you typed - a literal value such as `Inbox` or `application/pdf`. The row above it holds three buttons: **⚡ Insert dynamic content**, **✨ Ask Copilot to generate an expression**, and **`</>` Switch to expression mode**.
+1. Type straight into the box and the field holds exactly what you typed - a literal value such as `Inbox` or `application/pdf`. Select the field's **⚡ Insert dynamic content** button to open the popup picker. Its three tabs are **⚡ Insert dynamic content**, **✨ Ask Copilot to generate an expression**, and **`</>` Switch to expression mode**.
 
-    ![The three field editor buttons above a node field](./assets/m07-7-7-1-field-editor-buttons.png)
+    ![The three field editor tabs in the picker](./assets/m07-7-7-1-field-editor-buttons.png)
 
 1. **⚡ Insert dynamic content** lists the values earlier nodes produced - the email's **Subject**, an attachment's **Name**. Choosing one drops a blue **token** into the box. Tokens and typed text mix freely in the same field, which is how Lab 7.5 builds a value out of both.
 
     ![A field holding a blue dynamic content token](./assets/m07-7-7-2-field-with-token.png)
 
-1. **`</>` Switch to expression mode** turns the box into a formula editor for the workflow expression language, so you can call functions such as `concat()` and `base64ToString()` instead of picking a single value. This is what a lab means when it tells you to *switch the field to expression mode*.
+1. In the popup, select **`</>` Switch to expression mode** to open the formula editor for the workflow expression language, so you can call functions such as `concat()` and `base64ToString()` instead of picking a single value. Paste the expression into the popup editor, then select **Insert** to apply it to the field. This is what a lab means when it tells you to *switch the field to expression mode*.
 
-    ![A field switched into workflow expression mode](./assets/m07-7-7-3-field-expression-mode.png)
+    ![The Document field's lightning-bolt button and its popup expression editor](./assets/m07-7-7-3-field-expression-mode.png)
 
 **✨ Ask Copilot** writes an expression from a description of what you want. The labs give you every expression you need, so you will not need it here.
 
@@ -260,15 +260,15 @@ Let's add that node and teach it the three kinds of mail this inbox receives.
 
    ![Sort the email showing its model picker](./assets/m07-7-2-4-classify-connection.png)
 
-1. Select **`</>` Switch to expression mode** for **Input to classify**, then enter the message's subject and body so the model reads both:
+1. Select the **⚡ Insert dynamic content** button in **Input to classify**. In the popup, select **`</>` Switch to expression mode**. Enter the message's subject and body in the popup editor so the model reads both, then select **Insert**:
 
    ```text
    @{triggerOutputs()?['body/subject']} @{triggerOutputs()?['body/body']}
    ```
 
-   The field expands into a multiline expression editor. Leave the model picker - the button to the right of the **Input to classify** label - at its default.
+   Leave the model picker - the button to the right of the **Input to classify** label - at its default.
 
-   ![Input to classify in expression mode](./assets/m07-7-2-5-classify-input.png)
+   ![Input to classify lightning bolt and popup expression editor](./assets/m07-7-2-5-classify-input.png)
 
 1. In the **Categories** list, select the **Category 1** heading. A category name is a select-to-edit heading rather than a field that is always visible, so it turns into an editable box with the placeholder **Category name**. Select **Add category** so the list holds three, then name and describe each one as follows. Select a heading to type its name, and use the **Describe what belongs in this category…** box underneath it for the description.
 
@@ -462,7 +462,7 @@ As we go you will see a small ⚡ icon on many fields. That is the **dynamic con
 
    1. Set **Is document** to **Yes**.
    1. In **Mime type** (`MimeType`), select ⚡ **Insert dynamic content**, search for `Content-Type`, and choose **Content-Type** *(Attachment content type)*. The field shows a `contentType` chip.
-   1. Switch **Document** to **expression** mode - the `</>` button from [How to fill in a field](#field-editors) - and paste this expression:
+   1. In **Document**, select **⚡ Insert dynamic content**, then select **`</>` Switch to expression mode** in the popup. Paste this expression into the popup editor, then select **Insert**:
 
    ```text
    base64ToString(base64(items('For_each_attachment')?['contentBytes']))

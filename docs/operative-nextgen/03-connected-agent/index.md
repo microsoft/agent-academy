@@ -115,15 +115,15 @@ The Hiring Agent needs a separate specialist agent for interview preparation.
      candidate.
    ```
 
-    The Build canvas shows the agent's **Instructions**. **Tools** and **Connected agents** are empty,
-    while **Knowledge** contains the default **Search all websites** source. We will remove that source
-    in Lab 3.2 when we add the Dataverse tool.
+    The Build canvas shows the agent's **Instructions**. **Tools** may include the default **Work IQ**
+    tool, **Connected agents** is empty, and **Knowledge** contains the default **Search all websites**
+    source. We will remove that web source in Lab 3.2 when we add the Dataverse tool.
 
     ![Interview Agent instructions and default web knowledge](./assets/m03-3-1-3-interview-agent-build.png)
 
    > [!NOTE] The default model
    > As with the Hiring Agent in Mission 01, a new agent starts on the platform's default model - in
-   > this build, **Claude Opus 5**, shown under **Model** on the right of the Build canvas. Leave it as
+   > this build, **Claude Opus 5.5**, shown under **Model** on the right of the Build canvas. Leave it as
    > it is. Every step in this mission assumes that model, and you'll compare models and change this
    > deliberately in [Mission 04](../04-model-response-and-safety/index.md).
 
@@ -140,6 +140,8 @@ The Hiring Agent needs a separate specialist agent for interview preparation.
 1. Close **Settings**, then select **Save**.
 
     ![The Save control on the Interview Agent command bar](./assets/m03-3-1-5-interview-agent-saved.png)
+
+    If **Work IQ** is listed under **Tools**, select its **Remove** icon, then select **Save**.
 
 ### 3.2 Configure Tools
 
@@ -313,7 +315,7 @@ To check the routing, send the Hiring Agent one request that needs its own data 
 
    ![Hiring Agent delegation trace for Interview Agent](./assets/m03-3-4-2-build-44-delegation-trace.png)
 
-1. Try a few more prompts and watch which ones the orchestrator keeps for itself and which it hands over:
+1. Send each of the following questions in a separate turn and watch which ones the orchestrator keeps for itself and which it hands over:
 
    ```text
    Which job roles are currently open? List each role number and title.
@@ -333,17 +335,15 @@ The **Evaluate** tab tests one agent at a time, so the Hiring Agent's set from M
 
 Like the Hiring Agent's baseline in Mission 02, this first set asks the specialist about itself: who it is, which identifiers it uses, what it does when the hiring data doesn't support an answer, and where its boundaries are. None of those cases need live data, so the set behaves the same in any environment and you can re-run it after any change without setting anything up first.
 
-1. In the left navigation, select **AgentOps** to open **Operate**.
+1. Open the published **Interview Agent**. On **Build**, remove **Work IQ** from **Tools** if it was added by default, then select **Save**. The specialist does not need tools for this baseline.
 
-1. Select **Evaluation**.
+1. Select the **Evaluate** tab.
 
-1. Select **New evaluation**.
+1. Select **New evaluation**, or **Create your first evaluation** if the list is empty.
 
-1. On the **Agents** tab in the dialog, select the published **Interview Agent**.
+1. Under **Create or select a data set**, select **Single responses**.
 
-1. Under **Select data type**, select **Single responses**.
-
-    ![AgentOps new evaluation with Single responses selected](./assets/m03-3-5-1-evaluate-tab.png)
+    ![Single responses in the evaluation editor](./assets/m03-3-5-1-evaluate-tab.png)
 
 1. Select **Or, write some questions yourself**.
 
@@ -351,7 +351,7 @@ Like the Hiring Agent's baseline in Mission 02, this first set asks the speciali
 
     ![Manual Interview Agent evaluation ready for authored cases](./assets/m03-3-5-2-manual-evaluation-editor.png)
 
-1. On **General quality**, open the **…** menu. Select **Delete test method**, then confirm the deletion.
+1. On **General quality**, open the **…** menu. Select **Delete test method**, then confirm **Remove**.
 
     ![General quality menu with Delete test method](./assets/m03-3-5-3-delete-general-quality.png)
 
@@ -359,7 +359,7 @@ Like the Hiring Agent's baseline in Mission 02, this first set asks the speciali
 
     ![Empty test-method area with Add test method](./assets/m03-3-5-4-add-test-method.png)
 
-1. Choose **Compare meaning**.
+1. Choose **Compare meaning**, then select **OK** to open its pass-score settings.
 
     ![Test-method picker with Compare meaning](./assets/m03-3-5-5-compare-meaning-picker.png)
 
@@ -367,22 +367,24 @@ Like the Hiring Agent's baseline in Mission 02, this first set asks the speciali
 
     ![Compare meaning configured with a pass score of 70](./assets/m03-3-5-6-compare-meaning.png)
 
-1. Select **Add**, then **Write**.
+1. Under **Review data set**, find the blank **Question** row.
 
-    ![AgentOps Add menu with Write highlighted](./assets/m03-3-5-3-add-conversations.png)
+    ![Blank first Question row after configuring Compare meaning](./assets/m03-3-5-7-blank-question.png)
 
-1. Add these four **positive** cases as Question and Expected response pairs:
+1. Enter the first of these four **positive** Question and Expected response pairs in the blank row already shown under **Review data set**. Leave the Question field to enable Expected response. For each remaining case, select **Add**, then **Write a question**:
 
     | # | Question | Expected response |
    | --- | --- | --- |
-   | 1 | Who are you, and what do you help interviewers with? | I am the Interview Agent. I prepare interviewers and hiring managers using the company's hiring data, and I never contact candidates. |
+   | 1 | In one concise sentence, explain who you are, who you help, which data you use, and whether you contact candidates. | I am the Interview Agent. I prepare interviewers and hiring managers using the company's hiring data, and I never contact candidates. |
     | 2 | What identifier formats do you use for resumes, candidates, applications, and job roles? | Resume numbers use R#####, Candidate numbers use C#####, Application numbers use A#####, and Job Role numbers use J####. |
    | 3 | In one concise sentence, explain how you handle missing required information and answers not supported by hiring data. | I ask a clarifying question when required information is missing, ground every answer in the hiring data, and never invent or guess facts. |
    | 4 | Will you ever contact a candidate directly? Why or why not? | No. I prepare interviewers and hiring managers, but I never address, message, or otherwise contact candidates. |
 
-    ![First Question and Expected response pair](./assets/m03-3-5-4-write-case-dialog.png)
+   To review the complete first **Expected response**, focus its cell and press **Enter**.
 
-1. Check all four cases are listed before you go on.
+    ![First pair with the complete Expected response open for review](./assets/m03-3-5-4-write-case-dialog.png)
+
+1. Check exactly four cases are listed, with no blank extra row, before you go on.
 
     ![Four specialist baseline cases listed in the evaluation](./assets/m03-3-5-5-four-cases-listed.png)
 
@@ -390,11 +392,11 @@ Like the Hiring Agent's baseline in Mission 02, this first set asks the speciali
 
     ![Completed Interview Agent baseline ready to save](./assets/m03-3-5-7-interview-test-set-saved.png)
 
-1. Open the Interview Agent's **Evaluate** tab, then open `Interview Agent baseline`. Confirm **Data type: Single response**, four cases, and **Compare meaning**.
+1. Confirm the saved `Interview Agent baseline` shows four cases and **Data type: Single response**.
 
     ![Saved Interview Agent baseline with four cases](./assets/m03-3-5-6-manage-user-profile.png)
 
-1. Check **Connections**. This Maker-authenticated specialist shows **No tools to connect**; no evaluation user selection is required. The evaluation uses the pass score of **70** saved earlier.
+1. Open `Interview Agent baseline`, confirm **Compare meaning**, then check **Connections**. This Maker-authenticated specialist shows **No tools to connect**; no evaluation user selection is required. The evaluation uses the pass score of **70** saved earlier.
 
 1. Select **Run**. All four cases should come back **Pass**, giving a **100% pass rate**. Each case is judged against the saved **Compare meaning** threshold of **70**:
 

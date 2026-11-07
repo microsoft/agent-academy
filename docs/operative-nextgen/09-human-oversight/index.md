@@ -107,7 +107,7 @@ Use the node when you can *name* the situation in advance, and the agent's reque
 
 1. Select the new node to open its panel.
 
-   The **Connection** box reads **Human review** with a green tick and the word **Connected**. This connector is created for you the first time you use the node.
+   The **Connection** box shows the Human review connection with a green tick. This connector is created for you the first time you use the node.
 
    ![The new Human review node open on the Other branch](./assets/m09-9-1-2-review-node-panel.png)
 
@@ -121,13 +121,13 @@ Use the node when you can *name* the situation in advance, and the agent's reque
 
    ![The Title field holding the review request subject](./assets/m09-9-1-2-review-title.png)
 
-1. Select **`</>` Switch to expression mode** for **Message**, then paste the complete review request:
+1. In **Message**, paste the complete review request:
 
    ```text
    An email arrived that could not be classified. It came from @{triggerOutputs()?['body/from']} with the subject @{triggerOutputs()?['body/subject']}. Please tell us how to handle it. Is this an application that should be processed? Choose Yes to file the attached resume, or No to ignore this email.
    ```
 
-   The Message field expands into a multiline editor containing the text and both expressions.
+   Press **Tab**. The Message field shows the text around the **From** and **Subject** chips.
 
    ![The review message with sender and subject tokens](./assets/m09-9-1-2-review-message.png)
 
@@ -347,7 +347,7 @@ Next we exercise the path where the matcher asks for help itself.
 
    ![The run held at the role matcher awaiting an answer](./assets/m09-9-4-3-matcher-awaiting-answer.png)
 
-1. Open the mailbox you assigned the reviewer, find the newest **Which open role for candidate...** card, choose one **Job Role**, then select **Submit**. The card replaces its form with a confirmation once your answer is in.
+1. Open the mailbox you assigned the reviewer, find the newest role-choice card for your candidate, choose one **Job Role**, then select **Submit**. The card replaces its form with a confirmation once your answer is in.
 
    ![The role choice card asking which open role fits](./assets/m09-9-4-4-role-choice-card.png)
 
@@ -487,14 +487,14 @@ Now test the catch. You need a step inside **Process application** to fail while
 
    ![The Resume Title column before the catch test rewrites it](./assets/m09-9-5-1-resume-title-field.png)
 
-1. In **Resume Title**, remove the **Name** token, then select **Switch to expression mode** (`</>`).
-1. Enter the following expression, then select **Switch to token picker** to commit it:
+1. In **Resume Title**, select the **⚡ Insert dynamic content** button. In the popup, select **`</>` Switch to expression mode**.
+1. Replace the popup editor's contents with the following expression, then select **Insert** to replace the **Name** token:
 
    ```text
    int('not-a-number')
    ```
 
-   ![Temporary Resume Title expression before committing the change](./assets/m09-9-5-5-temporary-expression.png)
+   ![Resume Title lightning bolt and temporary popup expression](./assets/m09-9-5-5-temporary-expression.png)
 
    The expression is valid, so the designer saves and publishes it. At runtime, `not-a-number` cannot be converted to an integer. The filing action fails with `InvalidTemplate` before its Dataverse connector call begins.
 
@@ -532,13 +532,13 @@ Now undo the break.
 
    ![File resume node reopened after the test](./assets/m09-9-5-5-file-resume-reopened.png)
 
-1. In **Resume Title**, select **Switch to expression mode**, replace the **int** expression with the following expression, then select **Switch to token picker**:
+1. In **Resume Title**, select the **⚡ Insert dynamic content** button. In the popup, select **`</>` Switch to expression mode**. Replace the popup editor's contents with the following expression, then select **Insert**:
 
    ```text
    items('For_each_attachment')?['name']
    ```
 
-   ![Original attachment name expression ready to commit](./assets/m09-9-5-5-restored-expression.png)
+   ![Resume Title lightning bolt and restored popup expression](./assets/m09-9-5-5-restored-expression.png)
 
 1. Check that **Resume Title** shows the **Name** token again.
 
