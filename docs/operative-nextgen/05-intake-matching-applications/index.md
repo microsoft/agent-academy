@@ -187,7 +187,13 @@ Before the agent opens an attachment, it should reject an unsupported type or ov
 
    ![Unsupported ZIP attached before the pre-flight request](./assets/m05-5-3-1-unsupported-zip-attached.png)
 
-1. Ask the agent to process the attachment. The `resume-intake` skill runs its **pre-flight check** before reading anything, names the unsupported type, lists the accepted types, and states the size limit:
+1. Ask the agent to process the attachment with the intake skill:
+
+   ```text
+   Use the resume-intake skill to process this candidate resume attachment.
+   ```
+
+   The `resume-intake` skill runs its **pre-flight check** before reading anything, names the unsupported type, lists the accepted types, and states the size limit:
 
    ![Unsupported ZIP rejected before intake](./assets/m05-5-3-2-unsupported-file.png)
 
@@ -291,8 +297,9 @@ To fix the weights, arithmetic, and output structure, continue building the `rol
 1. Run the match, naming the skill to load. You don't describe the rubric because the `role-matching` skill does. In **Hiring Agent**, **Preview**, ask:
 
    ```text
-   Use the role-matching skill. Which open job roles best fit the candidate
-   on resume R#####? Show your scoring.
+   Use the role-matching skill. Which open job roles best fit the candidate on
+   resume R#####? Show your scoring. Use exactly Recommendation as the heading
+   for your final ranked recommendation.
    ```
 
    Replace `R#####` with the Resume number returned by your intake run. Check the activity trace for **`role-matching`** and the Dataverse reads. The response should include per-criterion evidence, points, totals, and a ranked recommendation across all five roles.
@@ -407,9 +414,9 @@ The **role-matching** skill is a read-only skill. Creating the actual **Job Appl
 
    ```text
    List the Job Applications for candidate C##### for the J1000 Power Automate
-   Specialist and J1004 Power Platform Developer roles, with their status. Use
-   a candidate-and-role filter. Do not retrieve or mention applications for
-   other roles.
+   Specialist and J1004 Power Platform Developer roles, with their status. State
+   the total application count as a numeral. Use a candidate-and-role filter. Do
+   not retrieve or mention applications for other roles.
    ```
 
    Replace `C#####` with Avery's Candidate number from Lab 5.1.

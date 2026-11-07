@@ -158,25 +158,31 @@ flowchart TB
    below, run exactly one
    query:
    SELECT documentbody, filename FROM annotation WHERE annotationid = '«the
-   annotationid on that line»' documentbody is a base64-encoded PDF. Decode it
-   in Python and extract the text (pdfplumber is available). Take the candidate's
-   full name, email address, current job title and main skills. The
-   email body is written by whoever forwarded the application and may be wrong.
-   The PDF is the authority. Where the two disagree, trust the PDF and say so.
+   annotationid on that line»' documentbody is a base64-encoded PDF. Collect the
+   query results, then decode all PDFs and extract their text in a single Python
+   call (pdfplumber is available). Take each candidate's full name, email
+   address, current job title and main skills. The email body is written by
+   whoever forwarded the application and may be wrong. The PDF is the authority.
+   Where the two disagree, trust the PDF and say so.
 
    STEP 3 - DECIDE THE ROLE. For each resume choose the single best-fitting OPEN
    role from the PDF.
 
-   STEP 4 - ASK A HUMAN WHEN AMBIGUOUS. A clear PDF match overrides the email without human assistance.
-   Read all PDFs before requesting help. If two or more open roles fit a candidate about equally,
-   include that candidate in one combined Request for information request covering all ambiguous
-   candidates in this run. Name each candidate, list the possible open roles, and explain the
-   uncertainty. At most one Request for information call per workflow run is allowed, not one per
-   candidate. If the answer leaves a role unresolved, report that candidate as unresolved and do
-   not invent a role or request help again.
+   STEP 4 - ASK A HUMAN WHEN AMBIGUOUS. A clear PDF match overrides the email
+   without human assistance. Read all PDFs before requesting help. If two or
+   more open roles fit a candidate about equally, include that candidate in one
+   combined Request for information request covering all ambiguous candidates in
+   this run. Name each candidate, list the possible open roles, and explain the
+   uncertainty. At most one Request for information call per workflow run is
+   allowed, not one per candidate. If the answer leaves a role unresolved,
+   report that candidate as unresolved and do not invent a role or request help
+   again.
 
    HARD LIMITS - obey these so the workflow cannot stall:
-   - At most 8 tool calls in total.
+   - At most 8 tool calls in total, including discovery, queries, Python and
+     Human review. Reserve one of these calls for the combined Request for
+     information.
+   - Do not perform further reads or discovery after extracting the PDFs.
    - Query each annotationid at most once. Never re-read a PDF you have already
      read.
    - Never retry a failed approach more than once.
@@ -194,13 +200,17 @@ flowchart TB
    ASKED A HUMAN: «yes or no»
    WHY: «one line - the PDF evidence that decided it, or the human's answer»
 
-   ---------------------------------------- DATA FOR THIS RUN
+   ----------------------------------------
+   DATA FOR THIS RUN
 
-   Processed resumes (one per line: ResumeNumber | note «annotationid» | filename):
+   Processed resumes (one per line: ResumeNumber | note «annotationid» |
+   filename):
    @{variables('ProcessedResumes')}
 
    From: @{triggerOutputs()?['body/from']}
+
    Subject: @{triggerOutputs()?['body/subject']}
+
    Cover letter / email body:
    @{triggerOutputs()?['body/body']}
    ```
@@ -226,9 +236,9 @@ The inline agent has decided *which* role each candidate fits. Now we'll hand th
 
    ![Hiring Agent selected for the handoff node](./assets/m08-8-2-2-hiring-agent-handoff.png)
 
-1. Select **`</>` Switch to expression mode** for **Message**, then paste:
+1. Select the **⚡ Insert dynamic content** button in **Message**. In the popup, select **`</>` Switch to expression mode**. Paste the block below into the popup editor, then select **Insert**:
 
-   ![The Message field on the Hiring Agent handoff node](./assets/m08-8-2-3-handoff-message.png)
+   ![Message lightning bolt and popup expression editor](./assets/m08-8-2-3-handoff-message.png)
 
    ```text
    Take in these candidates and create their job applications. The previous step
@@ -307,7 +317,7 @@ Next we will test the agent handling of PDF resumes received by email.
    retain the completed **Match to an open role** output showing
    **ASKED A HUMAN: no** instead; do not create or claim a card that was not sent.
 
-   ![Optional role-choice checkpoint](./assets/m08-8-3-2-role-choice-card.png)
+   ![Optional role-choice checkpoint in the review email](./assets/m08-8-3-2-role-choice-card.png)
 
 1. When the run finishes, open the **Match to an open role** node and read its output. The result includes details taken from the PDFs, including each candidate's email address, current title and certifications:
 
@@ -373,7 +383,7 @@ Next we will send the recruitment team the **match result** and links to the **R
     ![Post in set to Chat with Flow bot with recipient](./assets/m08-8-4-6-post-in-recipient.png)
 
 
-1. Select **`</>` Switch to expression mode** for **Adaptive Card**, then copy the finished card below and paste it into the expanded editor in one go.
+1. Copy the finished card below and paste it directly into **Adaptive card** in one go, then press **Tab**.
 
    Before you paste, replace both `«AppUrl»` placeholders with your **literal** app URL: the part of the Hiring Hub address up to and including the **appid**. Copy it straight from your browser's address bar while the **Hiring Hub** app is open, keeping everything from `https://` up to the end of the `appid=` GUID - for example `https://«your-org».crm.dynamics.com/main.aspx?appid=«HiringHubAppId»`.
 
@@ -402,9 +412,9 @@ Next we will send the recruitment team the **match result** and links to the **R
    }
    ```
 
-   Expression mode keeps the complete JSON in one multiline editor. Editing the long values in the one-line token picker turns them into chips and makes it easy to leave a stray quote that fails only when the card runs.
+   Dynamic values appear as chips. Keep the surrounding JSON unchanged.
 
-    ![Adaptive Card JSON in expression mode](./assets/m08-8-4-7-adaptive-card-chips.png)
+    ![Adaptive Card JSON with dynamic values shown as chips](./assets/m08-8-4-7-adaptive-card-chips.png)
 
    > [!IMPORTANT] Why the four replace calls
    > Everything inside `"text"` has to survive as a **JSON string**. An agent writes for humans, so it

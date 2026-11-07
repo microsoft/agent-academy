@@ -98,7 +98,7 @@ flowchart TB
   end
   DV[("Microsoft Dataverse<br/>Candidate · Resume · Job Role · Job Application · Evaluation Criteria")]
   MCP["Dataverse MCP Server"]
-  CAL["Work IQ Calendar MCP"]
+  CAL["Work IQ MCP"]
   TEAMS["Microsoft Teams"]
 
   HM -- "upload resume / ask" --> HA
@@ -311,7 +311,7 @@ The home-card and agent-list labels may still say **GitHub Copilot** during the 
    ![Blank new agent Build canvas](./assets/m01-1-3-2-build-01-new-agent.png)
 
    > [!NOTE] The default model
-   > A new agent starts on the platform's default model - in this build, **Claude Opus 5**, shown
+   > A new agent starts on the platform's default model - in this build, **Claude Opus 5.5**, shown
    > under **Model** on the right of the Build canvas. Leave it as it is, because every step in this mission
    > assumes that model. You'll compare models and change this deliberately in
    > [Mission 04](../04-model-response-and-safety/index.md).
@@ -343,9 +343,17 @@ The home-card and agent-list labels may still say **GitHub Copilot** during the 
      unrelated.
    - Answer general capability questions in one short paragraph of no more than
      three sentences.
-   - Never invent identifiers. Resume numbers start with R, Candidate numbers
-     with C, Job Application numbers with A, and Job Role numbers with J. Always
-     read these from tool results.
+   - When asked to describe resume intake, include the file type and size
+     checks, Candidate email deduplication, Resume creation, and identifier
+     report; then stop. Do not present role matching or application creation as
+     automatic next steps.
+   - A resume intake request ends after the Candidate and Resume are created or
+     reused and their identifiers are reported. Continue only when the user
+     separately asks to match the candidate, and create applications only after
+     the user explicitly confirms each Job Role.
+   - Never invent identifiers. Resume numbers use R#####, Candidate numbers use
+     C#####, Job Application numbers use A#####, and Job Role numbers use J####.
+     Always read actual record numbers from tool results.
    - Be concise, professional, and evidence-based. Whenever you create or update
      a record, state its number back to the user.
    ```
@@ -374,6 +382,8 @@ The home-card and agent-list labels may still say **GitHub Copilot** during the 
 1. Close **Settings**, then select **Save**. The URL changes to include the new agent's id - your **Hiring Agent** now exists in the **Operative** solution.
 
    ![Agent settings with Close and Save highlighted](./assets/m01-1-3-7-hiring-agent-saved.png)
+
+   If **Work IQ** is listed under **Tools**, select its **Remove** icon, then select **Save**.
 
 1. Before going any further we need to confirm the agent behaves as configured, so select the **Preview** tab and ask:
 

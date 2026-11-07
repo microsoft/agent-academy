@@ -18,7 +18,7 @@ products: [copilot-studio, dataverse]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-10-06
+last-edited-date: 2026-10-29
 ---
 
 # 🚨 Mission 06: Generate Documents with a Python Skill {#mission-06-generate-documents-with-a-python-skill}
@@ -97,44 +97,52 @@ At runtime the agent gathers the data, writes the JSON, and has the skill run th
 
 ## 📄 The document template {#the-document-template}
 
-The **template** below is the exact layout the Python has to reproduce every time - the design target you hand to the agent in Lab 6.1. A real Word file works just as well, but this plain-text version is enough to produce an accurate generator, and only the «placeholder» values change per application.
+The **template** below is the exact layout the Python has to reproduce every time - the design target we will give the agent in Lab 6.1. Only the `<placeholder>` values change per application.
 
 ```text
-Interview Preparation Pack                         [centered, bold, 22 pt]
-«Candidate name» · «Job title»                       [centered, italic, 12 pt]
-Application «A#####» · Generated «MMM dd, yyyy»       [centered, 9 pt]
+Interview Preparation Pack [centered, bold, 22 pt]
+<Candidate name> / <Job title> [centered, italic, 12 pt; separate with a middle
+dot]
+Application <A#####> / Generated <MMM dd, yyyy> [centered, 9 pt; separate with a
+middle dot]
 
 Candidate
-- Name: «Candidate name»
-- Current title: «Current title»
-- Email: «Email»
-- Location: «Location»
+- Name: <Candidate name>
+- Current title: <Current title>
+- Email: <Email>
+- Location: <Location>
 
 Role
-- Job Role: «J####» «Job title»
-- Description: «Role description»
+- Job Role: <J####> <Job title>
+- Description: <Role description>
 
 Summary
-«One-paragraph recruiter summary grounded in the resume and role.»
+<One-paragraph recruiter summary grounded in the resume and role.>
 
 Evaluation Criteria & Evidence
 | Criterion   | Weight | Evidence level | Evidence                           |
 | ----------- | ------ | -------------- | ---------------------------------- |
-| «Criterion» | «nn»%  | Strong         | «Quote or summary from the resume» |
-| «Criterion» | «nn»%  | Moderate       | «...»                              |
+| <Criterion> | <nn>%  | Strong         | <Quote or summary from the resume> |
+| <Criterion> | <nn>%  | Moderate       | <...>                              |
 | ...         | ...    | Weak / Missing | ...                                |
 
 Interview Questions
-«Criterion 1» («nn»%)
-  1. «Question grounded in that criterion»
-       Maps to: «Requirement this question tests»
-  2. «Question»
-«Criterion 2» («nn»%)
-  3. «Question»
-  ... 10 questions total, grouped by criterion, highest-weight criteria first
+<Criterion 1> (<nn>%)
+  1. <Question grounded in that criterion>
+     Maps to: <Requirement this question tests>
+  2. <Question>
+<Criterion 2> (<nn>%)
+  3. <Question> ... 10 questions total, grouped by criterion, highest-weight
+     criteria first
 
 AI-assisted preparation aid. Review for fairness and job-relevance before use.
 Do not ask about protected characteristics.
+
+Use bold dark-blue 16-point section headings, bold bullet labels, a Light Grid
+Accent 1 table, bold criterion group labels, and Word numbered-list questions.
+Maps to: lines are italic 9-point text; the fairness reminder is an italic
+8-point paragraph. Omit optional candidate fields, Role description and question
+mappings when absent. Preserve the supplied criteria and question order.
 ```
 
 The agent fills this template with information from the candidate's resume and the selected job role. It prepares a summary, compares the resume with the role's evaluation criteria, and writes ten interview questions, starting with the highest-weight criteria. The Python script puts that content into a consistent Word document, so interviewers can find the same sections in every pack.
@@ -155,11 +163,11 @@ Before you start this lab you need:
 - At least one **Job Application** in Dataverse to generate a document for - Lab 5.5 created one
 - Permission to create a second agent in this environment, for the builder agent in Lab 6.1
 
-To keep both the procedure and renderer in one reusable package, we'll create a **builder agent** that writes the Python generator and `SKILL.md`. Then you'll add that package to the Hiring Agent, generate a document from live Dataverse data, and inspect the layout it applies.
+We will create a **builder agent** that writes the Python generator and `SKILL.md`, then install the tested reference package on the Hiring Agent and inspect a document generated from live Dataverse data.
 
 ### 6.1 Draft the skill with a builder agent
 
-We do not have to write the Python by hand. Next we will create a **builder agent** - a second Copilot Studio agent whose job is to write this skill - and use it as a pair programmer. It returns three artifacts: `generate_interview_doc.py`, `SKILL.md`, and a `.zip` containing both files.
+We do not have to write the Python by hand. Next we will create a **builder agent** - a second Copilot Studio agent whose job is to write this skill - and use it as a pair programmer. It returns `generate_interview_doc.py`, `SKILL.md`, `interview_input.sample.json`, and a `.zip` containing all three files.
 
 1. In the left navigation select **Agents**, **New agent**. Name it `Skill Builder` and give it instructions that tell it to write, run and package Python:
 
@@ -182,7 +190,19 @@ We do not have to write the Python by hand. Next we will create a **builder agen
      that says when the skill should be used.
    ```
 
+1. Before the first save, open **Settings**, then **Agent details**, and enter the following identity:
+
+   | Field | Value |
+   | --- | --- |
+   | **Schema name** | `ppa_skillbuilder` |
+   | **Solution** | Operative |
+   | **Primary language** | English |
+
+1. Select **Save**.
+
    ![The Skill Builder agent with its authoring instructions](./assets/m06-6-1-1-builder-agent-create.png)
+
+   If **Work IQ** is listed under **Tools**, select its **Remove** icon, then select **Save**.
 
 1. Open the draft agent's **Preview** and check it really can run code before you rely on it:
 
@@ -195,17 +215,59 @@ We do not have to write the Python by hand. Next we will create a **builder agen
 
    ![Skill Builder confirms Python and python-docx availability](./assets/m06-6-1-2-builder-runtime-check.png)
 
-1. Send the **first prompt with the template inside it**. Copy the block below, and where it says «paste the template here» paste the whole template from [The document template](#the-document-template) above. The layout has to be in the conversation so the builder can refer back to it in the next step:
+1. Send the complete first prompt below. It includes [the document template](#the-document-template), so the builder can refer back to the layout in the next step:
 
    ```text
    You are going to help me build a Copilot Studio skill that generates a Word
    document with Python.
 
-   First, here is the layout the Python renderer must apply. The values in
-   guillemets change per
-   application:
+   First, here is the layout the Python renderer must apply. The values in angle
+   brackets change per application:
 
-   «paste the template here»
+   Interview Preparation Pack [centered, bold, 22 pt]
+   <Candidate name> / <Job title> [centered, italic, 12 pt; separate with a
+   middle dot]
+   Application <A#####> / Generated <MMM dd, yyyy> [centered, 9 pt; separate
+   with a middle dot]
+
+   Candidate
+   - Name: <Candidate name>
+   - Current title: <Current title>
+   - Email: <Email>
+   - Location: <Location>
+
+   Role
+   - Job Role: <J####> <Job title>
+   - Description: <Role description>
+
+   Summary
+   <One-paragraph recruiter summary grounded in the resume and role.>
+
+   Evaluation Criteria & Evidence
+   | Criterion   | Weight | Evidence level | Evidence                           |
+   | ----------- | ------ | -------------- | ---------------------------------- |
+   | <Criterion> | <nn>%  | Strong         | <Quote or summary from the resume> |
+   | <Criterion> | <nn>%  | Moderate       | <...>                              |
+   | ...         | ...    | Weak / Missing | ...                                |
+
+   Interview Questions
+   <Criterion 1> (<nn>%)
+     1. <Question grounded in that criterion>
+        Maps to: <Requirement this question tests>
+     2. <Question>
+   <Criterion 2> (<nn>%)
+     3. <Question> ... 10 questions total, grouped by criterion, highest-weight
+        criteria first
+
+   AI-assisted preparation aid. Review for fairness and job-relevance before
+   use. Do not ask about protected characteristics.
+
+   Use bold dark-blue 16-point section headings, bold bullet labels, a Light
+   Grid Accent 1 table, bold criterion group labels, and Word numbered-list
+   questions. Maps to: lines are italic 9-point text; the fairness reminder is
+   an italic 8-point paragraph. Omit optional candidate fields, Role description
+   and question mappings when absent. Preserve the supplied criteria and
+   question order.
 
    Confirm you understand the layout, then wait - I'll tell you what to write
    next.
@@ -218,24 +280,24 @@ We do not have to write the Python by hand. Next we will create a **builder agen
 1. Now ask it to write the **generator**, pointing back at the template you just pasted:
 
    ```text
-   Write a Python script `generate_interview_doc.py` that uses python-docx to
+   Write a Python script generate_interview_doc.py that uses python-docx to
    build the interview-prep Word document exactly as in the template I just gave
-   you. It reads a JSON file (path in argv[1]) and writes a .docx (path in
-   argv[2]). Reproduce the centered Interview Preparation Pack title, candidate
-   and role subtitle, and Application / Generated metadata. Follow with Candidate
-   bullets (Name, Current title, Email, Location), Role bullets (Job Role,
-   Description), Summary, Evaluation Criteria & Evidence, and Interview Questions.
-   The table columns are Criterion, Weight, Evidence level and Evidence, with
-   percent signs in the Weight values. Group 10 questions by criterion, highest
-   weight first, with Maps to: lines when provided and the template's fairness
-   reminder at the end. Apply the template's font sizes, alignment, bullet labels,
-   Light Grid Accent 1 table style, and numbered questions. Use only Strong,
-   Moderate, Weak and Missing. Keep the sections, ordering, table columns and
-   styles in code, and document the exact JSON shape at the top of the file.
-   Include the generation date supplied by the script at run time.
-   Return generate_interview_doc.py as a downloadable file.
-   Summarize its input contract and fixed layout in no more than five bullets.
-   Do not paste the script or a verification table into the reply.
+   you. It reads a JSON file from argv[1] and writes a .docx to argv[2].
+   Reproduce the centered Interview Preparation Pack title, candidate and role
+   subtitle, and Application / Generated metadata. Follow with Candidate bullets
+   (Name, Current title, Email, Location), Role bullets (Job Role, Description),
+   Summary, Evaluation Criteria & Evidence, and Interview Questions. The table
+   columns are Criterion, Weight, Evidence level and Evidence, with percent
+   signs in Weight values. Group 10 questions by criterion, highest weight
+   first, with Maps to: lines when provided and the template's fairness reminder
+   at the end. Apply the template's font sizes, alignment, bullet labels, Light
+   Grid Accent 1 table style, and numbered questions. Use only the evidence
+   levels Strong, Moderate, Weak and Missing. Keep the sections, ordering, table
+   columns and styles in code, document the exact JSON shape at the top of the
+   file, and include the generation date at run time. Return
+   generate_interview_doc.py as a downloadable file. Summarize its input
+   contract and fixed layout in no more than five bullets. Do not paste the
+   script or a verification table into the reply.
    ```
 
    ![Skill Builder reports the verified generator structure](./assets/m06-6-1-4-builder-generator.png)
@@ -244,13 +306,14 @@ We do not have to write the Python by hand. Next we will create a **builder agen
 
    ```text
    Create a small sample interview_input.json matching your JSON shape, run
-   `python generate_interview_doc.py interview_input.json interview_prep.docx`,
+   python generate_interview_doc.py interview_input.json interview_prep.docx,
    and confirm it produces a valid .docx with every section populated. Fix any
    errors. Inspect the generated document and report the section order, table
    shape, question count and grouping in a concise self-test report. Include the
-   command result and any failures you fixed. Use exactly these headings: Section order,
-   Table shape, and Question count and grouping for the report. Return the final script and the
-   generated document as downloadable files. Do not paste the script into the reply.
+   command result and any failures you fixed. Use exactly these headings:
+   Section order, Table shape, and Question count and grouping for the report.
+   Return the final script and generated document as downloadable files. Do not
+   paste the script into the reply.
    ```
 
    A good builder agent runs the script, then inspects the document it produced and reports what it checked - section order, table shape, question count and grouping:
@@ -260,20 +323,20 @@ We do not have to write the Python by hand. Next we will create a **builder agen
    > [!NOTE] It may do several steps at once
    > A capable model often writes the script, tests it, drafts the `SKILL.md` and packages the zip in a
    > single turn. That's fine - the prompts below still work as follow-ups, and asking for each artifact
-   > explicitly is how you check it really produced all three.
+   > explicitly lets you check that the files were produced.
 
 1. Now we can use the Skill Builder agent to create a reusable skill based on its work. Ask it to write the **`SKILL.md`** - the procedure the *Hiring Agent* follows at runtime:
 
    ```text
-   Write a SKILL.md with YAML frontmatter containing name: interview-prep-document
-   and a description that
-   triggers on "interview prep document for A#####". The body tells the agent
-   to: read the ApplicationNumber; gather the Candidate, Resume, Job Role, and
-   weighted Evaluation Criteria from the Dataverse MCP server; prepare content
-   grounded only in that data (no protected-characteristic questions); write
-   interview_input.json; run generate_interview_doc.py; and return
-   interview_prep.docx. Note that python-docx is already available in the code
-   interpreter sandbox, so import it directly - do not pip install at run time.
+   Write a SKILL.md with YAML frontmatter whose name is interview-prep-document
+   and whose description triggers on "interview prep document for A#####". The
+   body tells the agent to read the ApplicationNumber; gather the Candidate,
+   Resume, Job Role, and weighted Evaluation Criteria from the Dataverse MCP
+   server; prepare content grounded only in that data with no
+   protected-characteristic questions; write interview_input.json; run
+   generate_interview_doc.py; and return interview_prep.docx. State that
+   python-docx is already available, so it must be imported directly and never
+   installed at run time.
    ```
 
    ![Skill Builder returning SKILL.md as a downloadable file](./assets/m06-6-1-6-builder-skillmd.png)
@@ -282,9 +345,9 @@ We do not have to write the Python by hand. Next we will create a **builder agen
 
    ```text
    Package the skill as interview-prep-document-skill.zip with SKILL.md at the
-   root of the zip (not inside a folder), alongside generate_interview_doc.py
-   and the sample JSON. Give me the zip to download and report its root file
-   list.
+   root of the zip, alongside generate_interview_doc.py and
+   interview_input.sample.json. Give me the zip to download and report its root
+   file list.
    ```
 
    ![Skill Builder returning the packaged skill zip for download](./assets/m06-6-1-7-builder-package.png)
@@ -296,7 +359,7 @@ We do not have to write the Python by hand. Next we will create a **builder agen
 > correctness. Iterate with follow-up prompts until the sample document looks right.
 
 <!-- markdownlint-disable-next-line MD033 -->
-**Prefer not to author from scratch?** The tested reference skill <a :href="referenceSkillUrl" download="interview-prep-document-skill.zip"><code>interview-prep-document-skill.zip</code></a> is a working skill for reference. Compare your generated files against it, or just upload it in Lab 6.2 and come back to authoring later.
+**Use the tested reference for the remaining labs.** Download <a :href="referenceSkillUrl" download="interview-prep-document-skill.zip"><code>interview-prep-document-skill.zip</code></a> for Lab 6.2. The reference contains `SKILL.md` and `generate_interview_doc.py`, without the builder's sample JSON. Keep the generated package to compare its files with the reference.
 
 ### 6.2 Add the skill to the Hiring Agent
 
@@ -310,17 +373,67 @@ We'll upload and save the `.zip`, confirm the saved skill is available in **Prev
 
    ![Upload a skill (SKILL.md or .zip with Python)](./assets/m06-6-2-2-upload-a-skill.png)
 
-1. Drag in your **`interview-prep-document-skill.zip`** (or the provided reference zip). **`SKILL.md` must sit at the root of the zip**, not inside a nested folder - if it's nested, the skill fails to import. The skill then appears under **Skills** alongside `resume-intake`, `role-matching` and `application-handling`. Select **Save**.
+1. Drag in the tested reference **`interview-prep-document-skill.zip`** you downloaded above. **`SKILL.md` must sit at the root of the zip**, not inside a nested folder - if it's nested, the skill fails to import. The skill then appears under **Skills** alongside `resume-intake`, `role-matching` and `application-handling`. Select **Save**.
 
    ![The Skills panel showing all four skills](./assets/m06-6-2-3-document-skill-added.png)
 
-   Add the following rules to the agent's existing instructions, keeping its hiring scope and identifier guardrails, then **Save**:
+1. Replace the Hiring Agent's **Instructions** with the complete block below, then select **Save**:
 
    ```text
+   You are the Hiring Agent, the central orchestrator for a company's
+   recruitment process. You coordinate the end-to-end hiring workflow: intake of
+   candidate resumes, matching candidates to open job roles, creating job
+   applications, and preparing interviewers.
+
+   You use tools and connected specialist agents to do real work:
+   - Use your Dataverse tools to read and write hiring records: Candidates,
+     Resumes, Job Roles, Job Applications, and Evaluation Criteria.
+   - Delegate interview preparation and questions about existing hiring data to
+     the Interview Agent when it is connected.
+
+   Scope and behavior:
+   - Only help with recruitment and hiring tasks. Politely decline anything
+     unrelated.
+   - Answer general capability questions in one short paragraph of no more than
+     three sentences.
+   - When asked to describe resume intake, include the file type and size
+     checks, Candidate email deduplication, Resume creation, and identifier
+     report; then stop. Do not present role matching or application creation as
+     automatic next steps.
+   - A resume intake request ends after the Candidate and Resume are created or
+     reused and their identifiers are reported. Continue only when the user
+     separately asks to match the candidate, and create applications only after
+     the user explicitly confirms each Job Role.
+   - Never invent identifiers. Resume numbers use R#####, Candidate numbers use
+     C#####, Job Application numbers use A#####, and Job Role numbers use J####.
+     Always read actual record numbers from tool results.
+   - Be concise, professional, and evidence-based. Whenever you create or update
+     a record, state its number back to the user.
+
    Document generation:
-   - Use the installed interview-prep-document skill for interview-prep documents and interview-prep packs.
-   - Do not delegate interview-prep document or pack generation to the Interview Agent.
-   - Never claim a document was generated unless interview_prep.docx is returned as a downloadable attachment.
+   - For every request to create or generate an interview-prep document or
+     interview-prep pack, first load and follow the exact locally installed
+     interview-prep-document skill before calling any tool or connected agent.
+   - Do not search, describe, read, or query Dataverse and do not generate an
+     interview-prep file outside that skill. The skill coordinates its own
+     required data reads and file generation.
+   - If interview-prep-document cannot be loaded, state that it is unavailable
+     and stop. Never substitute direct tools, direct code, or a connected agent.
+   - Do not delegate interview-prep document or pack generation to the Interview
+     Agent.
+   - Never claim a document was generated unless interview_prep.docx is returned
+     as a downloadable attachment.
+   ```
+
+1. In **Connected agents**, open the **Interview Agent** configuration and replace its **Description** with the following text, then save the connection and the Hiring Agent:
+
+   ```text
+   Use ONLY to prepare interviewers for a specific candidate and role: generate
+   tailored interview questions and an interviewer briefing grounded in the
+   hiring data. Do NOT use for document or file generation, interview prep
+   packs, requests handled by local skills, listing, counting, searching,
+   matching or scoring candidates to roles, or creating records; the Hiring
+   Agent handles those itself with its own skills and tools.
    ```
 
 1. Start a **New chat** in Preview and confirm the skill can load without running its procedure or changing hiring records. If it is not available after a couple of turns, refresh the browser and reopen the Hiring Agent.
@@ -338,7 +451,7 @@ We'll upload and save the `.zip`, confirm the saved skill is available in **Prev
 
 ### 6.3 Generate the document and compare the layout
 
-With the skill configured, we'll generate a document from live data, inspect it, then run the same request again to compare and demonstrate that the output is consistent.
+With the skill configured, we will generate a document from live data, inspect it, then request a second document for the same application to compare the layouts.
 
 1. In **Preview**, ask for the document. Replace `A#####` with a real **ApplicationNumber** from
    [Mission 05](../05-intake-matching-applications/index.md) - your numbers will differ from the
@@ -356,7 +469,13 @@ With the skill configured, we'll generate a document from live data, inspect it,
 
    ![Generated interview preparation document open in Word](./assets/m06-6-3-3-document-structure-verified.png)
 
-1. Ask for the document **again** for the same application, then download the returned attachment. Open both downloaded documents and compare the centered title and subtitle, Application / Generated line, Candidate and Role bullets, section order, table columns, question groups, styles, and fairness reminder. These layout rules should match. The summary, evidence wording, or questions can differ because the agent prepares that JSON content, and the **Generated** date changes when the run day changes.
+1. Ask for a second document, replacing `A#####` with the same Application Number:
+
+   ```text
+   Create a second interview prep document for job application A#####.
+   ```
+
+   Download the returned attachment. Open both downloaded documents and compare the centered title and subtitle, Application / Generated line, Candidate and Role bullets, section order, table columns, question groups, styles, and fairness reminder. These layout rules should match. The summary, evidence wording, or questions can differ because the agent prepares that JSON content, and the **Generated** date changes when the run day changes.
 
    ![Preview with the second generated document attachment](./assets/m06-6-3-4-document-second-run.png)
 
@@ -385,9 +504,11 @@ We gave the agent a new **document-generation skill**, so now we need to extend 
 
 1. Add a case and enter the **Question** and **Expected response** below:
 
-   | # | Question | Expected answer contains |
+   | # | Question | Expected response |
    | --- | --- | --- |
-   | 6 | Without looking anything up, which of your skills generates documents, and what is that document used for? | Names the **`interview-prep-document`** skill, the **`interview_prep.docx`** it produces from a Job Application, and that it's used to brief interviewers |
+   | 6 | Without looking anything up, which of your skills generates documents, and what is that document used for? | The interview-prep-document skill produces interview_prep.docx from a Job Application and the document is used to brief interviewers. |
+
+   Select **Save**.
 
    ![Six-case Hiring Agent regression saved](./assets/m06-6-4-3-hiring-regression-configured.png)
 
@@ -404,7 +525,7 @@ We gave the agent a new **document-generation skill**, so now we need to extend 
    >   the agent correctly says it cannot be sure without reading the skill definition. The judge scores
    >   that partial answer as *"one or more questions not answered"* and the case fails.
 
-1. **Save** the test set, then select **Run** to run the whole set. All six cases should pass and the score should remain at least **70%** - describing the document skill needs no tool call:
+1. Select **Run** to run the whole set. All six cases should pass and the score should remain at least **70%** - describing the document skill needs no tool call:
 
    ![Hiring Agent test set green after adding the document case](./assets/m06-6-4-4-eval-green.png)
 
