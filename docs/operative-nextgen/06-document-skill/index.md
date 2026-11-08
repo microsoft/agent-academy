@@ -414,9 +414,10 @@ We'll upload and save the `.zip`, confirm the saved skill is available in **Prev
    - For every request to create or generate an interview-prep document or
      interview-prep pack, first load and follow the exact locally installed
      interview-prep-document skill before calling any tool or connected agent.
-   - Do not search, describe, read, or query Dataverse and do not generate an
-     interview-prep file outside that skill. The skill coordinates its own
-     required data reads and file generation.
+   - For interview-prep document or pack requests, do not search, describe,
+     read, or query Dataverse or generate the file outside the
+     interview-prep-document skill. The skill coordinates its own required data
+     reads and file generation.
    - If interview-prep-document cannot be loaded, state that it is unavailable
      and stop. Never substitute direct tools, direct code, or a connected agent.
    - Do not delegate interview-prep document or pack generation to the Interview

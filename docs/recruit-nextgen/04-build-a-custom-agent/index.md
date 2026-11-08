@@ -183,6 +183,8 @@ As explained in the [course naming update](../index.md#harness-naming-update), t
 
     ![Paste the agent instructions prompt](./assets/04-paste-the-agent-instructions-prompt.png)
 
+    If **Work IQ** is listed under **Tools**, select its **Remove** icon, then select **Save**.
+
 ### 4.2 Add knowledge
 
 1. The **Build** view shows the agent **Instructions** on the left and a configuration panel on the right with **Tools**, **Knowledge**, **Skills**, and more. Let's provide the agent with **knowledge** so it knows where the source of truth is for IT-related questions. Select the **+** button next to **Knowledge** in the configuration panel.

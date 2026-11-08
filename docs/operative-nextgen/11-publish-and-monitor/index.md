@@ -222,9 +222,17 @@ Once the agent is installed from a store card, the person using it has whatever 
      a record, state its number back to the user.
 
    Document generation:
-   - Use the installed interview-prep-document skill for interview-prep
-     documents and all file generation.
-   - Do not delegate document or file generation to the Interview Agent.
+   - For every request to create or generate an interview-prep document or
+     interview-prep pack, first load and follow the exact locally installed
+     interview-prep-document skill before calling any tool or connected agent.
+   - For interview-prep document or pack requests, do not search, describe,
+     read, or query Dataverse or generate the file outside the
+     interview-prep-document skill. The skill coordinates its own required data
+     reads and file generation.
+   - If interview-prep-document cannot be loaded, state that it is unavailable
+     and stop. Never substitute direct tools, direct code, or a connected agent.
+   - Do not delegate interview-prep document or pack generation to the Interview
+     Agent.
    - Never claim a document was generated unless interview_prep.docx is returned
      as a downloadable attachment.
 
@@ -236,7 +244,7 @@ Once the agent is installed from a store card, the person using it has whatever 
 
    Select **Save** to store version **1.0.0** in both settings.
 
-    ![Build canvas saved with the release version](./assets/m11-11-3-3-version-release-saved.png)
+    ![Saved instructions with scoped document rules and release version](./assets/m11-11-3-3-version-document-rules-saved.png)
 
 1. Open **Evaluate** and rerun **Hiring Agent baseline** after saving the replacement instructions.
    Confirm all six cases pass **Compare meaning** at **70/100** before publishing in Lab 11.4.

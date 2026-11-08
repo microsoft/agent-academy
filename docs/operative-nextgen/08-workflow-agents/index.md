@@ -288,6 +288,8 @@ Next we will test the agent handling of PDF resumes received by email.
 
 1. Select **Save** on the workflow command bar.
 
+   ![Save the workflow before publishing the two agent nodes](./assets/m08-8-3-1-save-workflow.png)
+
 1. Select **Publish** and wait for publication to finish before sending the email. The email trigger runs the published workflow, so saving alone would test the previous version without the two agent nodes.
 
    ![Saved workflow ready for publication before testing](./assets/m08-8-3-2-publish-workflow.png)
