@@ -1,12 +1,12 @@
 <template>
   <div class="resources-grid">
-    <div class="resource-card featured-resource">
+    <div v-for="deck in featuredDecks" :key="deck.track" class="resource-card featured-resource">
       <div class="resource-body">
         <span class="resource-eyebrow">Microsoft Copilot harness</span>
-        <h3 class="resource-title">NextGen Recruit speaker deck</h3>
-        <p class="resource-desc">A full-day workshop for building the Contoso IT Concierge with knowledge, tools, skills, and workflows. Includes facilitator notes and lab walkthroughs.</p>
-        <slot />
-        <a :href="withBase('/recruit-nextgen/')" class="resource-link">Explore the NextGen curriculum →</a>
+        <h3 class="resource-title">{{ deck.title }}</h3>
+        <p class="resource-desc">{{ deck.desc }}</p>
+        <slot :name="deck.track" />
+        <a :href="withBase(deck.link)" class="resource-link">{{ deck.linkText }} →</a>
       </div>
     </div>
     <div v-for="r in resources" :key="r.title" class="resource-card">
@@ -23,6 +23,23 @@
 <script setup>
 import { withBase } from 'vitepress'
 
+const featuredDecks = [
+  {
+    track: 'recruit',
+    title: 'NextGen Recruit speaker deck',
+    desc: 'A full-day workshop for building the Contoso IT Concierge with knowledge, tools, skills, and workflows. Includes facilitator notes and lab walkthroughs.',
+    link: '/recruit-nextgen/',
+    linkText: 'Explore the NextGen Recruit curriculum'
+  },
+  {
+    track: 'operative',
+    title: 'NextGen Operative speaker deck',
+    desc: 'A full-day advanced workshop for building a multi-agent hiring system with Dataverse MCP, Python skills, connected agents, workflows, and evaluations. Includes facilitator notes and lab walkthroughs.',
+    link: '/operative-nextgen/',
+    linkText: 'Explore the NextGen Operative curriculum'
+  },
+]
+
 const resources = [
   {
     icon: '📋',
@@ -34,7 +51,7 @@ const resources = [
   {
     icon: '🖥️',
     title: 'All speaker decks',
-    desc: 'Choose Recruit NextGen, Recruit on the standard harness, or Operative to match your workshop.',
+    desc: 'Choose Recruit or Operative on the Microsoft Copilot harness or standard harness to match your workshop.',
     link: '/events/workshops/presentationMaterials',
     linkText: 'Browse speaker decks'
   },
