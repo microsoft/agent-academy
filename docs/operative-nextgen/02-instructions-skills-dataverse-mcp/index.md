@@ -166,7 +166,7 @@ Before you start this lab you need:
 
 To keep the hiring system maintainable, we need to build it as a small set of **focused skills**, each doing one job well, rather than one giant skill that tries to do everything. So the first one we need is **`resume-intake`** - it turns a resume into linked Candidate and Resume records. (You add a **`role-matching`** skill and an **`application-handling`** skill in Mission 05.)
 
-1. Open your **Hiring Agent**, **Build**. Next to **Skills** on the right, select **➕ Add skill**.
+1. Open your **Hiring Agent**, **Build**. If **Work IQ** is listed under **Tools**, select its **Remove** icon, then select **Save**. Next to **Skills** on the right, select **➕ Add skill**.
 
    ![Add skill control in the Skills building block](./assets/m02-2-1-1-build-15-add-skill.png)
 
@@ -186,8 +186,9 @@ To keep the hiring system maintainable, we need to build it as a small set of **
 
    ```text
    Use whenever a candidate resume is provided (uploaded in chat or received by
-   email). Reads the resume, creates or reuses the Candidate and creates a new
-   linked Resume record in Dataverse. Does not match roles or create Job Applications.
+   email). Reads the resume and creates or reuses the Candidate and creates a
+   new linked Resume record in Dataverse. Does not match roles or create Job
+   Applications.
    ```
 
    ![Resume intake routing description entered](./assets/m02-2-1-4-resume-intake-description.png)
@@ -197,14 +198,14 @@ To keep the hiring system maintainable, we need to build it as a small set of **
    ```text
    Use this skill whenever a file is offered as a candidate's resume (attached
    in chat or received by email), including one that turns out to be the wrong
-   type or too large - the File handling checks below are what decide that.
-   This skill only handles intake - it does not match roles or create Job
+   type or too large - the File handling checks below are what decide that. This
+   skill only handles intake - it does not match roles or create Job
    Applications.
 
    1. Read the resume. If a file is attached, read it directly (it may be a PDF
       or image). Extract the candidate's full name, email address, phone (if
-      present), and a concise cover-letter style summary (aim for 1500 characters
-      to leave headroom; hard maximum 2000 characters).
+      present), and a concise cover-letter style summary (aim for 1500
+      characters to leave headroom; hard maximum 2000 characters).
 
    2. Deduplicate the Candidate on email. Query the Candidates table
       (ppa_candidate) where ppa_email equals the extracted email. If a Candidate
@@ -236,7 +237,8 @@ To keep the hiring system maintainable, we need to build it as a small set of **
    - Supported resume files are PDF, PNG, JPG/JPEG, and DOCX. Chat uploads are
      limited to about 15 MB.
    - Run these pre-flight checks FIRST, before you open, parse, convert, or OCR
-     the file. Use the attachment's file name, extension, and reported size:
+     the file. Use the
+     attachment's file name, extension, and reported size:
      1. Type check: the extension must be .pdf, .png, .jpg, .jpeg, or .docx.
      2. Size check: the reported size must be under about 15 MB.
    - If either pre-flight check fails, STOP immediately. Do not attempt to read
@@ -252,11 +254,14 @@ To keep the hiring system maintainable, we need to build it as a small set of **
    ## Error handling & observability
    - Observability: report every record you create or reuse with its number
      (R#####, C#####). End with a one-line summary of what happened.
-   - Length validation: if Dataverse explicitly rejects create_record because
-     a text field exceeds its maximum length, shorten only that field below
-     the stated limit and retry once with all other values unchanged. Do not
-     report the rejected attempt as a created record. If the correction is
-     rejected again, STOP and explain the error.
+   - Length validation: only if Dataverse explicitly rejects create_record
+     because the generated ppa_coverletter summary exceeds its maximum length,
+     shorten that summary below the stated limit and retry once with all other
+     values unchanged. Never shorten names, email addresses, identifiers, or
+     other source fields. For a length error on any other field, STOP, identify
+     the field and limit, and ask the user to correct the source data. Do not
+     retry that write or report the rejected attempt as a created record. If the
+     summary correction is rejected again, STOP and explain the error.
    - Other tool failures: if a Dataverse read or write fails (permission denied,
      connection error, or timeout), STOP and tell the user which step failed and
      why. Never fabricate a record number.
@@ -397,6 +402,8 @@ Now we can start adding evals to our agent. This first set is a **baseline** tha
 
 Evaluations can also run cases that use tools through their configured connections. For each one, record the required rows and starting state, the expected result, and how writes will be repeated safely and cleaned up. Mission 11 adds a read-only Dataverse MCP case using the stable sample data from Mission 01.
 
+1. On the Hiring Agent's **Build** tab, remove **Work IQ** from **Tools** if it was added by default, then select **Save**. This evaluation only needs the Dataverse tools configured earlier.
+
 1. On the Hiring Agent's command bar, select **Publish**.
 
    ![Publish command on the Hiring Agent toolbar](./assets/m02-2-4-1-publish-command.png)
@@ -409,19 +416,13 @@ Evaluations can also run cases that use tools through their configured connectio
 
    ![Hiring Agent publication success dialog after completion](./assets/m02-2-4-1-publish-success.png)
 
-1. In the left navigation, select **AgentOps** to open **Operate**.
+1. On the **Hiring Agent**, select the **Evaluate** tab.
 
-1. Select **Evaluation**.
+   ![Hiring Agent with its Evaluate tab selected](./assets/m02-2-4-1-evaluate-tab.png)
 
-   ![Operate Evaluation page with New evaluation highlighted](./assets/m02-2-4-1-manual-evaluation-ready.png)
+1. Select **New evaluation**, or **Create your first evaluation** if no evaluations exist yet.
 
-1. Select **New evaluation**.
-
-1. On the **Agents** tab in the dialog, select **Hiring Agent**, then select **Evaluate agent**.
-
-   ![Hiring Agent row in the evaluation chooser](./assets/m02-2-4-1-choose-hiring-agent.png)
-
-1. Under **Select data type**, select **Single responses**.
+1. Under **Create or select a data set**, select **Single responses**.
 
    ![Single responses and manual question authoring controls](./assets/m02-2-4-1-single-responses.png)
 
@@ -429,13 +430,13 @@ Evaluations can also run cases that use tools through their configured connectio
 
 1. Name the evaluation `Hiring Agent baseline`.
 
-   ![AgentOps Single response evaluation named Hiring Agent baseline](./assets/m02-2-4-2-single-response-baseline.png)
+   ![Single response evaluation named Hiring Agent baseline](./assets/m02-2-4-2-single-response-baseline.png)
 
-1. Open the **Answer quality** menu (shown as **General quality** in earlier versions) and select **Delete test method**.
+1. Open the **General quality** menu, select **Delete test method**, then confirm **Remove**.
 
    ![Default quality menu with Delete test method](./assets/m02-2-4-3-delete-general-quality.png)
 
-1. Select **Add test method**, then select **Compare meaning**.
+1. Select **Add test method**, choose **Compare meaning**, then select **OK** to open its pass-score settings.
 
    ![Test method picker with Compare meaning](./assets/m02-2-4-4-compare-meaning-picker.png)
 
@@ -443,11 +444,11 @@ Evaluations can also run cases that use tools through their configured connectio
 
    ![Compare meaning pass score set to 70](./assets/m02-2-4-5-compare-meaning-score.png)
 
-1. Select **Add**, then **Write**.
+1. Use the blank row already shown under **Review data set**.
 
-   ![Add questions menu with the Write action](./assets/m02-2-4-6-add-conversations.png)
+   ![Initial blank Question row before entering any cases](./assets/m02-2-4-6-blank-question.png)
 
-1. Copy the first **Question** and **Expected response** from the table below into the new row.
+1. Copy the first **Question** and **Expected response** from the table below into that row. Leave the Question field to enable Expected response.
 
    | # | Question | Expected response |
    | --- | --- | --- |
@@ -458,11 +459,11 @@ Evaluations can also run cases that use tools through their configured connectio
 
    ![First Single response evaluation case](./assets/m02-2-4-7-first-evaluation-case.png)
 
-1. Repeat the previous two steps with the remaining three rows until all four cases are listed under **Review your test cases**, then select **Save**.
+1. For each remaining case, select **Add**, then **Write a question**, and enter its Question and Expected response. Confirm exactly four cases are listed under **Review data set**, with no blank extra row, then select **Save**.
 
    ![All four self-knowledge cases listed in the test set](./assets/m02-2-4-8-four-cases-listed.png)
 
-1. Open the Hiring Agent's **Evaluate** tab and confirm `Hiring Agent baseline` appears as **Data type: Single response** with four cases.
+1. Confirm `Hiring Agent baseline` appears as **Data type: Single response** with four cases.
 
    ![Saved evaluation test set with all four cases](./assets/m02-2-4-9-evaluation-profile-saved.png)
 

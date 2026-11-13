@@ -33,7 +33,7 @@ Welcome back, Operative. In this mission you'll run the evaluation sets you've b
 
 In this mission, you'll learn:
 
-1. Why a **Connected user** changes what an evaluation's tool calls can see
+1. How to verify the **Maker** connection used by a Dataverse evaluation case
 1. How to version an agent and verify which release a **published channel** is serving
 1. How to publish an agent to **Microsoft 365 Copilot** and **Teams**, and share it
 1. How **Evaluate** before release and **Monitor** after it answer different questions
@@ -56,7 +56,7 @@ flowchart LR
   HA --> IA["Interview Agent<br/>(connected)"]
   HA --> DOC["Python doc skill"]
   IA --> MCP
-  IA --> CAL["Work IQ Calendar MCP"]
+  IA --> CAL["Work IQ (People and Calendar)"]
   MCP --> DV[("Dataverse")]
    WF --> DV
     WF --> TeamsCard["Teams recruiter card"]
@@ -74,7 +74,7 @@ flowchart LR
 | Matching & applications | **Rubric-based** weighted matching via MCP (Mission 05) |
 | Documents | **Python skill** with a code-defined Word layout (`python-docx`) |
 | Automation | A native **Workflow** (email → Dataverse → Teams card) |
-| Extensibility | **Work IQ** MCP servers for scheduling (Mission 10) |
+| Extensibility | A single **Work IQ** MCP tool for People and Calendar scheduling (Mission 10) |
 | Quality | Questions about intended behavior and a known-data MCP case in **Evaluate**, plus reactions and **Monitor** |
 | Error handling & observability | Explicit stop and not-found behavior in skills + **Run after** handling in the workflow, traceable in **Monitor** |
 
@@ -113,29 +113,21 @@ The previous missions established three evaluation lineages. Run all three befor
 
 1. Open the **Hiring Agent**, go to **Evaluate**, and open **Hiring Agent baseline**. Confirm it contains six cases and its saved configuration is **Single response**, **Compare meaning**, and **70/100**.
 
-   ![Hiring Agent baseline configuration with six test cases](./assets/m11-11-1-1-build-26-evaluate-landing.png)
+   ![Hiring Agent baseline configuration with six test cases](../06-document-skill/assets/m06-6-4-3-hiring-regression-configured.png)
 
 1. Under **Connections**, confirm the Hiring Agent evaluation binds its **Microsoft Dataverse** tool to the Dataverse connection configured in Mission 02. The screenshot shows that connection as **Agent Academy Dataverse MCP**, but your connection's display name may differ. Run all six cases, and investigate any **failed test** before continuing.
 
 1. Open the **Interview Agent** and review **Interview Agent baseline**. It should contain the four specialist cases from Mission 03 and the scheduling case from Mission 10. Confirm the saved configuration is **Single response**, **Compare meaning**, and **Pass score: 70/100**.
 
-   ![The self-knowledge cases in the test set](./assets/m11-11-1-3-self-knowledge-cases.png)
+1. Under **Connections**, select **Connect 1 tool** or **1 tool connected**, then verify **Work IQ MCP** uses the connected course account. Select **Save**.
 
-1. Under **Connections**, select **Manage** and verify both **Work IQ User MCP** and **Work IQ Calendar MCP** have their intended connected maker-owned identities. Save those bindings. The modern evaluation runs each tool through its selected connection; it does not offer a single **User profile** picker.
+   ![Manage connections with Work IQ MCP connected](./assets/m11-11-1-5-evaluation-profile-connected.png)
 
-   ![Manage connections with both Work IQ tools connected](./assets/m11-11-1-5-evaluation-profile-connected.png)
+1. Select **Run**. Wait for the cases to progress from 0/5 to 5/5 - one set runs at a time, and each case takes a minute or two. When the run finishes, confirm **All (5)** and **Pass (5)** in **Results**, then review the duration, data type, and who ran it.
 
-1. Select **Run**. Wait for the cases to progress from 0/5 to 5/5 - one set runs at a time, and each case takes a minute or two. When the run finishes, read the **Evaluation summary** for the overall **Score %**, **Pass/Fail** badge, duration, cases completed, test set, data type, and who ran it. A completed result may also show a **User profile** summary; verify the actual per-tool connection ownership separately in **Manage connections**.
+1. Open **Interview Agent - AI Safety Evals**, confirm it contains eleven cases with the same Compare meaning configuration and the same connected **Work IQ MCP** tool binding, and run it.
 
-   ![The self-knowledge set after every case has run](./assets/m11-11-1-6-self-knowledge-run.png)
-
-1. Open **Interview Agent - AI Safety Evals**, confirm it contains eleven cases with the same Compare meaning configuration and the same two connected Work IQ tool bindings, and run it.
-
-   ![The per-case results table for the run](./assets/m11-11-1-8-evaluation-case-table.png)
-
-1. Read the AI Safety **Evaluation summary**. All eleven cases must pass and the score must be at least **70%**.
-
-   ![Interview Agent AI Safety summary with eleven passing cases](./assets/m11-11-1-9-evaluation-case-detail.png)
+1. Read the AI Safety **Results**. All eleven cases must pass the saved **Compare meaning** threshold of **70**.
 
 Do not publish unless all three suites are green. Read a failed case's actual and expected responses before deciding whether the agent or the test needs to change.
 
@@ -151,12 +143,12 @@ A tool case is different. It runs against a real system, as a real identity, ove
 
 | Tool | Reason |
 | --- | --- |
-| **Which identity runs it** | Each tool uses the connection selected under **Connections**. Check its owner and Connected state |
+| **Which identity runs it** | Check the tool's authentication mode and connection owner. Work IQ uses its user connection under **Connections**; the Interview Agent's Dataverse tool uses its installed **Maker** connection |
 | **Which records it reads** | Name the exact rows and the state you expect them in. A case that reads "the first job role" breaks the day someone adds one |
 | **Whether it writes** | A read is repeatable without changing records. A write needs synthetic data, a unique key so re-runs don't collide, and a cleanup step you have actually tested |
 | **What counts as evidence** | A green judge score says the *answer* looked good. It doesn't say which tool ran, or whether one ran at all |
 
-The case below is read-only, against a sample row from Mission 01 that nothing in the course changes.
+The case below is read-only, against a sample row from Mission 01 that nothing in the course changes. It exercises the Interview Agent's Dataverse **Maker** connection, not the Work IQ user connection.
 
 1. Open **Hiring Hub** (see [Mission 01](../01-get-started/index.md#lab-01-set-up-the-hiring-hub) if you need the route), go to **Job Roles**, and confirm **J1001** is still **Power BI Analyst** and **Active**. If your data differs, pick another stable row and adjust the Question and Expected response to match.
 
@@ -166,21 +158,15 @@ The case below is read-only, against a sample row from Mission 01 that nothing i
 
    | Question | Expected response |
    | --- | --- |
-   | *Using the Microsoft Dataverse MCP Server, retrieve job role J1001. Return exactly: role number \| title \| status.* | *J1001 \| Power BI Analyst \| Active* |
+   | *Using the Microsoft Dataverse MCP Server, retrieve job role J1001. Return exactly: role number \| title \| status.* | *J1001 \| Power BI Analyst \| Active.* |
 
-   ![The saved Dataverse MCP case in the set](./assets/m11-11-2-2-mcp-test-set-config.png)
+1. Under **Connections**, select **Connect 1 tool** or **1 tool connected**, and keep **Work IQ MCP** on the connected course account. The installed **Microsoft Dataverse MCP Server** uses its separate **Maker** connection and read-only actions.
 
-1. Under **Connections**, select **Manage** and keep **Work IQ User MCP** and **Work IQ Calendar MCP** on their connected maker-owned choices. The installed **Microsoft Dataverse MCP Server** uses its separate **Maker** connection and read-only actions; it does not appear as a third user-bound picker here.
-
-   ![The two user-bound Work IQ connections selected for the MCP evaluation](./assets/m11-11-2-3-mcp-profile-connected.png)
+   ![Single Work IQ connection in the evaluation settings](./assets/m11-11-2-3-mcp-profile-connected.png)
 
 1. **Save** the six-case set and select **Run**. All six cases must pass and the score must be at least **70%**.
 
-   ![The extended run passing with the live case](./assets/m11-11-2-4-mcp-run-pass.png)
-
-1. When the run finishes, open the MCP case. The **Agent response** must contain the live values - `J1001 | Power BI Analyst | Active` - and **Tools** must list **Microsoft Dataverse MCP Server**, so you know the tool really ran.
-
-   ![The J1001 case response and the tool it called](./assets/m11-11-2-5-mcp-case-detail.png)
+1. When the run finishes, open the MCP case in **Results** and wait for its conversation to load. The actual reply in the center must contain the live values - `J1001 | Power BI Analyst | Active`. Compare it with **Expected response** in **Details**, and confirm **Microsoft Dataverse MCP Server** is listed as a referenced tool so you know the tool really ran.
 
 ### 11.3 Stamp a version into the greeting
 
@@ -202,18 +188,67 @@ Once the agent is installed from a store card, the person using it has whatever 
 
     ![Greeting and prompts with the versioned welcome](./assets/m11-11-3-2-greeting-prompts.png)
 
-1. Close the Settings dialog and add the same release to the agent's **Instructions**, on a new line at the end. The greeting only appears at the start of a chat, so an agent asked mid-conversation needs the version somewhere it can actually read.
+1. Close the Settings dialog and replace the Hiring Agent's **Instructions** with the complete version **1.0.0** block below. The greeting only appears at the start of a chat, so the version must also be in the instructions for questions asked mid-conversation.
 
    ```text
+   You are the Hiring Agent, the central orchestrator for a company's
+   recruitment process. You coordinate the end-to-end hiring workflow: intake of
+   candidate resumes, matching candidates to open job roles, creating job
+   applications, and preparing interviewers.
+
+   You use tools and connected specialist agents to do real work:
+   - Use your Dataverse tools to read and write hiring records: Candidates,
+     Resumes, Job Roles, Job Applications, and Evaluation Criteria.
+   - Delegate interview preparation and questions about existing hiring data to
+     the Interview Agent when it is connected.
+
+   Scope and behavior:
+   - Only help with recruitment and hiring tasks. Politely decline anything
+     unrelated.
+   - Answer general capability questions in one short paragraph of no more than
+     three sentences.
+   - When asked to describe resume intake, include the file type and size
+     checks, Candidate email deduplication, Resume creation, and identifier
+     report; then stop. Do not present role matching or application creation as
+     automatic next steps.
+   - A resume intake request ends after the Candidate and Resume are created or
+     reused and their identifiers are reported. Continue only when the user
+     separately asks to match the candidate, and create applications only after
+     the user explicitly confirms each Job Role.
+   - Never invent identifiers. Resume numbers use R#####, Candidate numbers use
+     C#####, Job Application numbers use A#####, and Job Role numbers use J####.
+     Always read actual record numbers from tool results.
+   - Be concise, professional, and evidence-based. Whenever you create or update
+     a record, state its number back to the user.
+
+   Document generation:
+   - For every request to create or generate an interview-prep document or
+     interview-prep pack, first load and follow the exact locally installed
+     interview-prep-document skill before calling any tool or connected agent.
+   - For interview-prep document or pack requests, do not search, describe,
+     read, or query Dataverse or generate the file outside the
+     interview-prep-document skill. The skill coordinates its own required data
+     reads and file generation.
+   - If interview-prep-document cannot be loaded, state that it is unavailable
+     and stop. Never substitute direct tools, direct code, or a connected agent.
+   - Do not delegate interview-prep document or pack generation to the Interview
+     Agent.
+   - Never claim a document was generated unless interview_prep.docx is returned
+     as a downloadable attachment.
+
    Release identification:
    - The current release is version 1.0.0.
    - When a user asks which version they are using, state this exact version.
    - Never claim a different release version.
    ```
 
-   Select **Save**. The greeting and the instructions now carry the same version, which is the point - one of them is what a user sees, the other is what the agent knows.
+   Select **Save** to store version **1.0.0** in both settings.
 
-    ![Build canvas saved with the release version](./assets/m11-11-3-3-version-release-saved.png)
+    ![Saved instructions with scoped document rules and release version](./assets/m11-11-3-3-version-document-rules-saved.png)
+
+1. Open **Evaluate** and rerun **Hiring Agent baseline** after saving the replacement instructions.
+   Confirm all six cases pass **Compare meaning** at **70/100** before publishing in Lab 11.4.
+   The green result from Lab 11.1 predates this instruction change.
 
 1. Start a **new** Preview chat and read the greeting back. It should open on **version 1.0.0**, and asking *What version are you?* should return the same answer. An existing chat keeps the old greeting, so this only proves anything in a fresh one.
 
@@ -240,7 +275,7 @@ The **Hiring Agent** is already published - you published it in Mission 06 so it
 
    ![Published agent channel details dialog](./assets/m11-11-4-4-channel-details.png)
 
-1. Select **Availability**, choose **Microsoft 365 Copilot and Microsoft Teams**, then confirm the selection. This lists the agent in the Agent Store and makes it available in Teams.
+1. Select **Availability**, choose **Microsoft Copilot and Microsoft Teams**, then confirm the selection. This lists the agent in the Agent Store and makes it available in Teams.
 
    Read the warning above the choice before you continue: **this setting cannot be changed after publishing**.
 
@@ -250,11 +285,11 @@ The **Hiring Agent** is already published - you published it in Mission 06 so it
 
    ![About info for the Agent Store listing](./assets/m11-11-4-6-about-info.png)
 
-1. Select **Save** and wait. When it completes, the **Use and share** tab offers **View in Copilot** and **View in Teams**.
+1. Select **Save** and wait. When it completes, the **Use and share** tab offers **View in Microsoft Copilot** and **View in Microsoft Teams**.
 
    ![The Use and share tab offering both host links](./assets/m11-11-4-7-channel-enabled.png)
 
-1. Select **View in Teams**. Teams opens the agent's store card with the supported client and a link to the requested permissions. The action reads **Open** if you already installed this version during an earlier run.
+1. Select **View in Microsoft Teams**. Teams opens the agent's store card with the supported client and a link to the requested permissions. The action reads **Open** if you already installed this version during an earlier run.
 
    ![The Hiring Agent store card in Teams](./assets/m11-11-4-8-teams-agent-details.png)
 
@@ -271,11 +306,11 @@ The **Hiring Agent** is already published - you published it in Mission 06 so it
 
    ![The published agent answering from Dataverse in Teams](./assets/m11-11-4-10-teams-first-reply.png)
 
-1. Back on the **Use and share** tab, select **View in Copilot** to open the **Agent Store** card, then **Add**. The private install shows the app **version**, cross-client support, and requested permissions before it installs. It now appears as an agent you can chat with in M365 Copilot.
+1. Back on the **Use and share** tab, select **View in Microsoft Copilot** to open the **Hiring Agent** in **Microsoft 365 Copilot**. If an **Agent Store** card opens, review the app **version** and requested permissions, then select **Add** or **Open**.
 
-   ![The Hiring Agent installed from its Agent Store card](./assets/m11-11-4-11-agent-store-add.png)
+   ![The Hiring Agent open in Microsoft 365 Copilot](./assets/m11-11-4-11-agent-store-add.png)
 
-**If Teams tries to open the desktop app.** The **View in Teams** link goes through a launcher that offers to open the Teams desktop client.
+**If Teams tries to open the desktop app.** The **View in Microsoft Teams** link goes through a launcher that offers to open the Teams desktop client.
 Choose **Use the web app instead** if you want to stay in the browser - the agent behaves identically
 in both.
 
@@ -294,13 +329,13 @@ Sharing with a colleague or group is optional for this lab. You can keep access 
 
    ![Share Hiring Agent access dialog](./assets/m11-11-5-1-share-dialog-open.png)
 
-1. Optionally, in **Add a name, group, or email**, type a colleague or security group and select them from the directory. They're added under **People who can use the agent** - you (the **Owner**) are already listed and role-locked.
+1. Optionally, in **Add a name, group, or email**, type a colleague or security group and select them from the directory. In **Add people**, keep **Can use** selected, then select **Share**. You (the **Owner**) are already listed.
 
-1. Decide **organization-wide** access. Under **Organization**, **Everyone in your organization**, select the role control to choose between **No permissions, unless specified** (default - only invited people) and **End user access** (anyone in the org can use it and manage their own connections).
+1. Keep **Org-wide sharing for use access** turned off to limit access to the owner and invited people. Turning it on lets anyone in the organization use the agent.
 
-   ![The organization access menu with both role options](./assets/m11-11-5-3-share-roles.png)
+   ![Organization-wide use access turned off](./assets/m11-11-5-3-share-roles.png)
 
-1. If you changed access, select **Share**. Otherwise, close the dialog. If you granted someone access, you can use **Choose a channel to copy a link** to send an install link - note that a link only works for users who **already have access**.
+1. Use **Copy sharing link** if you need an install link, then close the dialog. A link only works for users who **already have access**.
 
    ![The sharing list with only the owner granted access](./assets/m11-11-5-4-sharing-saved.png)
 
@@ -308,7 +343,7 @@ Sharing with a colleague or group is optional for this lab. You can keep access 
 
 Now pretend that we are shipping a second release, then run the main hiring chain from the surface a hiring manager would use.
 
-1. On the Hiring Agent's **Build** tab select **Settings**, then **Greeting and prompts**, and change the version in the greeting to **1.1.0**. Change the same version under *Release identification* in **Instructions**. Select **Save**, then **Publish**.
+1. On the Hiring Agent's **Build** tab select **Settings**, then **Greeting and prompts**, and change only the version number in the greeting from **1.0.0** to **1.1.0**. Make the same change under *Release identification* in **Instructions**, leaving all other instructions unchanged. Select **Save**, then **Publish**.
 
 1. Open the **Hiring Agent** in **Microsoft 365 Copilot** and select the **What version are you?** starter you added in Lab 11.3:
 
@@ -318,7 +353,7 @@ Now pretend that we are shipping a second release, then run the main hiring chai
 
    It should answer **1.1.0**. If it still says **1.0.0**, wait for publishing to finish and ask again in a **new** chat.
 
-1. **Attach a resume** - use one of the sample resumes you downloaded in [Mission 05](../05-intake-matching-applications/index.md).
+1. **Attach Taylor's resume**, `TAYLOR TESTPERSON (FICTITIOUS).pdf`, from the sample resumes you downloaded in [Mission 05](../05-intake-matching-applications/index.md).
 
 1. File the candidate first:
 
@@ -328,22 +363,23 @@ Now pretend that we are shipping a second release, then run the main hiring chai
 
 1. Watch the **skill + Dataverse MCP** intake the candidate and report the Candidate and Resume numbers (C#####/R#####).
 
-   In the following prompts, replace `«candidate number»` and `«resume number»` with the numbers returned by intake.
+   Keep the same conversation for the following prompts. Retain the Candidate and Resume numbers so you can verify the saved lookups in Hiring Hub.
 
 1. Ask for the weighted match in a separate turn:
 
    ```text
-   Match candidate «candidate number» to the best open role.
+   Match the candidate and resume you just filed to the best open role.
    ```
 
 1. Review the recommendation, then explicitly confirm the matched role before creating a Job Application:
 
    ```text
-   I confirm job role J1004. Create the application for candidate «candidate number»
-   using resume «resume number». If this candidate already has an application for
-   J1004, I confirm updating that application's Resume lookup to «resume number».
-   Reuse its Application Number and do not create a duplicate. Verify the saved
-   Candidate, Resume, and Job Role links before reporting the Application Number.
+   I confirm job role J1004. Create the application for the candidate and resume
+   you just filed. If this candidate already has an application for J1004, I
+   confirm updating that application's Resume lookup to the resume you just
+   filed. Reuse its Application Number and do not create a duplicate. Verify the
+   saved Candidate, Resume, and Job Role links before reporting the Application
+   Number.
    ```
 
 1. Confirm that the agent reports the Job Application number (A#####). A candidate used in an earlier mission may already have an application for this role. In the **Hiring Hub**, open the reported application and check that its **Candidate**, **Resume**, and **Job Role** lookups match the numbers confirmed above. The **Resume** must be the one returned by this intake before we generate the document.
@@ -367,15 +403,15 @@ You have just tested **orchestration, skills, MCP, multimodal intake, matching, 
 
 Use **Evaluate** to compare saved cases before release. Use **Monitor** to inspect sessions from the published agent.
 
-1. Open **Monitor**.
+1. On the **Hiring Agent**, open **Monitor**.
 
-1. Read the **Overview** cards for the selected time range. The current session-focused layout shows **Total sessions**, **Total users**, **Avg duration**, and **Success rate**. Other layouts can also show **Average DAU**, **Autonomous runs**, or an AI summary. Total users and Average DAU are different metrics; do not substitute one for the other. Preview conversations do not appear here.
+1. Read the **Overview** cards for the selected time range: **Total sessions**, **Total users**, **Avg duration**, and **Success rate**. Preview conversations do not appear here.
 
-   ![Monitor showing published session and run activity](./assets/m11-11-7-1-monitor-published-activity.png)
+   ![Monitor overview and Sessions list](./assets/m11-11-7-1-monitor-published-activity.png)
 
 1. Review additional run, reaction and credit metrics when available.
 
-1. Set the **Time range**, choose the **Channel** filter, and select **See all** to inspect the available sessions. New activity can take up to 30 minutes to appear. If **Download Sessions** is available, choose the UTC date range containing the conversation, then filter **ChatTranscript** by a reported record number (R#####, C#####, or A#####), or use **SessionId** to identify it.
+1. Set the **Time range**, choose the **Started by** filter when available, and select **See all** to inspect the available sessions. New activity can take up to 30 minutes to appear. If sessions are available, select **Download Sessions**, choose the UTC date range containing the conversation, then filter **ChatTranscript** by a reported record number (R#####, C#####, or A#####), or use **SessionId** to identify it.
 
 ## ✅ Mission Complete {#mission-complete}
 
@@ -385,7 +421,7 @@ You can now:
 
 ✅ **Regression testing**: You re-ran all three evaluation sets and read the results properly.
 
-✅ **Identity-aware evaluation**: You added a tool case with a **Connected user**.
+✅ **Identity-aware evaluation**: You verified a Dataverse tool case using the Interview Agent's **Maker** connection.
 
 ✅ **A traceable release**: You stamped version 1.0.0 into the greeting and instructions, then published version 1.1.0.
 
