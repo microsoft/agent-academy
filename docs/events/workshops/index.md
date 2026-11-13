@@ -16,7 +16,12 @@ Planning a workshop? Start with a speaker deck and the facilitator guide. Choose
 
 <!-- markdownlint-disable MD033 -->
 <WorkshopsPage>
-  <download-files path="events/workshops/assets/Recruit-NextGen-Workshop.pptx" label="Download NextGen Recruit deck" />
+  <template #recruit>
+    <download-files path="events/workshops/assets/Recruit-NextGen-Workshop.pptx" label="Download NextGen Recruit deck" />
+  </template>
+  <template #operative>
+    <download-files path="events/workshops/assets/Operative-NextGen-Workshop.pptx" label="Download NextGen Operative deck" />
+  </template>
 </WorkshopsPage>
 <!-- markdownlint-enable MD033 -->
 
