@@ -18,6 +18,7 @@ import MissionCredits from "../plugins/credits/MissionCredits.vue";
 import SessionSchedule from "./components/SessionSchedule.vue";
 import VideoLibrary from "./components/VideoLibrary.vue";
 import WorkshopsPage from "./components/WorkshopsPage.vue";
+import WorkshopSchedule from "./components/WorkshopSchedule.vue";
 import HackathonPrizes from "./components/HackathonPrizes.vue";
 import CoursePathSwitcher from "./components/CoursePathSwitcher.vue";
 import CoursePathCards from "./components/CoursePathCards.vue";
@@ -47,6 +48,7 @@ export default {
     app.component("SessionSchedule", SessionSchedule);
     app.component("VideoLibrary", VideoLibrary);
     app.component("WorkshopsPage", WorkshopsPage);
+    app.component("WorkshopSchedule", WorkshopSchedule);
     app.component("HackathonPrizes", HackathonPrizes);
     app.component("CoursePathSwitcher", CoursePathSwitcher);
     app.component("course-path-cards", CoursePathCards);

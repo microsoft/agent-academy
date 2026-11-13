@@ -14,6 +14,10 @@ Work through the full curriculum yourself before delivering it live. There's no 
 
 You have a [presenter deck](./presentationMaterials.md) for each path.
 
+::: info Delivering Recruit NextGen?
+Download the [NextGen Recruit speaker deck](./presentationMaterials#delivering-recruit-nextgen) and use its full-day agenda with the [Recruit NextGen curriculum](/recruit-nextgen/). Ask participants to complete [NextGen setup](/recruit-nextgen/00-course-setup/) in advance, including their Microsoft 365 Copilot license and Copilot Credits. The Recruit prerequisites and timing plan below describe the **standard course**, not Recruit NextGen.
+:::
+
 Each deck contains: title slide, welcome/agenda/setup/scenario, then for each module: a **divider slide**, a **concept slide** (the "brief presentation"), and a **walkthrough slide** (objectives + steps for the lab).
 
 **How to use them:**

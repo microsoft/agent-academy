@@ -8,6 +8,20 @@ Bring Agent Academy to your team or your stage.
 
 Agent Academy isn't just a self-paced curriculum, it's designed to be delivered live. Whether you're an MVP or community speaker running a conference workshop, or an organization looking to upskill your team, everything you need is here.
 
+[Find a workshop](#workshop-schedule) · [Get facilitator resources](#facilitator-resources) · [Request workshop badges](#how-to-get-badges-for-your-event)
+
+## Facilitator resources
+
+Planning a workshop? Start with a speaker deck and the facilitator guide. Choose the deck that matches the course your participants will follow.
+
+<!-- markdownlint-disable MD033 -->
+<WorkshopsPage>
+  <download-files path="events/workshops/assets/Recruit-NextGen-Workshop.pptx" label="Download NextGen Recruit deck" />
+</WorkshopsPage>
+<!-- markdownlint-enable MD033 -->
+
+## Bring Agent Academy to your audience
+
 ::: info 🎤 For speakers & MVPs
 Take the Agent Academy curriculum to your next conference session or community event. The material is structured, hands-on, and built to be delivered.
 :::
@@ -24,12 +38,16 @@ Live delivery changes the learning dynamic. Questions get answered in real time,
 
 Agent Academy workshops happening around the world, delivered by MVPs and community speakers. Want to add yours? [Get in touch.](mailto:poweradvocates@microsoft.com?subject=Agent%20Academy%20Workshop%20Listing%20Request)
 
-| Date | Event | Location | Facilitators | Status |
-|------|-------|----------|--------------|--------|
-| Apr 15, 2026 | [Color Cloud Workshop](https://colorcloud.rocks/) | Hamburg, Germany | Nick Doelman & Ulrikke Akerbæk | ✅ Completed |
-| Jun 29, 2026 | [European Power Platform Conference](https://espc.tech/conference/eppc-2026/) | Copenhagen, Denmark | Nick Doelman & Ulrikke Akerbæk | ✅ Completed |
-| Oct 2, 2026 | [Scottish Summit](https://scottishsummit.com/) | Edinburgh, Scotland | April Dunnam, Mats Necker & Daniel Laskewitz | 🟢 Upcoming |
-| Oct 30, 2026 | [Power Platform Community Conference](https://powerplatformconf.com/#!/) | Las Vegas, NV | Scott Durow & Sheila Shahpari | 🟢 Upcoming |
+Browse upcoming workshops or look back at past events. Workshops move to Past automatically after their scheduled date.
+
+<!-- markdownlint-disable MD033 -->
+<ClientOnly>
+  <WorkshopSchedule />
+  <template #fallback>
+    <p>Enable JavaScript to browse upcoming and past workshops.</p>
+  </template>
+</ClientOnly>
+<!-- markdownlint-enable MD033 -->
 
 ## 🏅 Free badges for your participants
 
@@ -49,12 +67,3 @@ When you deliver an official Agent Academy workshop, we provide free digital bad
 ::: tip
 Let us know about your workshop as early as possible so we can get the forms to you in time to distribute to participants on the day.
 :::
-
-## Facilitator resources
-
-Everything you need to deliver Agent Academy as a live workshop.
-
-<!-- markdownlint-disable-next-line MD033 -->
-<WorkshopsPage />
-
-
