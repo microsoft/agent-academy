@@ -113,11 +113,13 @@ The previous missions established three evaluation lineages. Run all three befor
 
 1. Open the **Hiring Agent**, go to **Evaluate**, and open **Hiring Agent baseline**. Confirm it contains six cases and its saved configuration is **Single response**, **Compare meaning**, and **70/100**.
 
-   ![Hiring Agent baseline configuration with six test cases](../06-document-skill/assets/m06-6-4-3-hiring-regression-configured.png)
+   ![Hiring Agent baseline configuration with six test cases](./assets/m11-11-1-1-build-26-evaluate-landing.png)
 
 1. Under **Connections**, confirm the Hiring Agent evaluation binds its **Microsoft Dataverse** tool to the Dataverse connection configured in Mission 02. The screenshot shows that connection as **Agent Academy Dataverse MCP**, but your connection's display name may differ. Run all six cases, and investigate any **failed test** before continuing.
 
 1. Open the **Interview Agent** and review **Interview Agent baseline**. It should contain the four specialist cases from Mission 03 and the scheduling case from Mission 10. Confirm the saved configuration is **Single response**, **Compare meaning**, and **Pass score: 70/100**.
+
+   ![Interview Agent baseline containing five saved cases](./assets/m11-11-1-3-self-knowledge-cases.png)
 
 1. Under **Connections**, select **Connect 1 tool** or **1 tool connected**, then verify **Work IQ MCP** uses the connected course account. Select **Save**.
 
@@ -125,9 +127,13 @@ The previous missions established three evaluation lineages. Run all three befor
 
 1. Select **Run**. Wait for the cases to progress from 0/5 to 5/5 - one set runs at a time, and each case takes a minute or two. When the run finishes, confirm **All (5)** and **Pass (5)** in **Results**, then review the duration, data type, and who ran it.
 
+   ![Five Interview Agent baseline cases passing Compare meaning](./assets/m11-11-1-6-self-knowledge-run.png)
+
 1. Open **Interview Agent - AI Safety Evals**, confirm it contains eleven cases with the same Compare meaning configuration and the same connected **Work IQ MCP** tool binding, and run it.
 
-1. Read the AI Safety **Results**. All eleven cases must pass the saved **Compare meaning** threshold of **70**.
+1. Read the AI Safety **Results**. Confirm **All (11)** and **Pass (11)**, then review the duration, data type, and who ran the evaluation. All eleven cases must pass the saved **Compare meaning** threshold of **70/100**.
+
+   ![AI Safety results listing eleven passing test cases](./assets/m11-11-1-8-evaluation-case-table.png)
 
 Do not publish unless all three suites are green. Read a failed case's actual and expected responses before deciding whether the agent or the test needs to change.
 
@@ -160,13 +166,19 @@ The case below is read-only, against a sample row from Mission 01 that nothing i
    | --- | --- |
    | *Using the Microsoft Dataverse MCP Server, retrieve job role J1001. Return exactly: role number \| title \| status.* | *J1001 \| Power BI Analyst \| Active.* |
 
+   ![Saved Dataverse question and expected J1001 response](./assets/m11-11-2-2-mcp-test-set-config.png)
+
 1. Under **Connections**, select **Connect 1 tool** or **1 tool connected**, and keep **Work IQ MCP** on the connected course account. The installed **Microsoft Dataverse MCP Server** uses its separate **Maker** connection and read-only actions.
 
    ![Single Work IQ connection in the evaluation settings](./assets/m11-11-2-3-mcp-profile-connected.png)
 
-1. **Save** the six-case set and select **Run**. All six cases must pass and the score must be at least **70%**.
+1. **Save** the six-case set and select **Run**. Each case must meet the **Compare meaning** threshold of **70/100**, giving an overall **100% pass rate**.
+
+   ![Six baseline cases passing with the Dataverse question](./assets/m11-11-2-4-mcp-run-pass.png)
 
 1. When the run finishes, open the MCP case in **Results** and wait for its conversation to load. The actual reply in the center must contain the live values - `J1001 | Power BI Analyst | Active`. Compare it with **Expected response** in **Details**, and confirm **Microsoft Dataverse MCP Server** is listed as a referenced tool so you know the tool really ran.
+
+   ![Dataverse case details showing live values and tool](./assets/m11-11-2-5-mcp-case-detail.png)
 
 ### 11.3 Stamp a version into the greeting
 

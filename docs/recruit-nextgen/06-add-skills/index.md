@@ -47,9 +47,6 @@ In this mission, you'll explore this Microsoft Copilot harness capability by ite
 
 This work turns a general-purpose agent into a more dependable support experience. Instead of placing every procedure in the agent's global instructions, you'll keep task-specific guidance in focused packages that the harness can activate when relevant. You'll inspect the generated skill files, improve their instructions, and test how small wording changes affect tool calls and responses. The result is behavior that is easier to review, reuse, and refine without overloading the agent's core prompt.
 
-> [!IMPORTANT]
-> In the current Copilot Studio UI, make sure the **New experience** toggle in the upper-right corner is turned **on** to use the Microsoft Copilot harness authoring surface.
-
 ## 🔎 Objectives {#objectives}
 
 1. Understand why **Skills** are unique to agents powered by the Microsoft Copilot harness
@@ -293,6 +290,8 @@ In this lab, you will extend the agent you created in [Mission 04 - Build an age
 
 1. **Contoso IT Concierge** - the agent created in [Mission 04 - Build an agent with the Microsoft Copilot harness](../04-build-a-custom-agent/index.md#lab-04-create-an-agent-with-the-github-copilot-harness).
 
+1. **Get Employee Assets** - the SharePoint tool configured in [Mission 05 - Add a Tool](../05-add-tools/index.md), connected to your **EmployeeAssets** list.
+
 ### 6.1 Create a device request skill and test
 
 The first skill we're going to create is one to handle device requests. We'll take an iterative approach showing how to test and refine a skill.
@@ -341,10 +340,16 @@ The first skill we're going to create is one to handle device requests. We'll ta
 
 1. Next, update the agent instructions to explicitly reference the skill for device requests. Under the `For device requests:` heading, delete the existing bullet points.
 
-1. Copy and paste the following text as a new bullet point under the `For device requests:` heading.
+1. Copy and paste the following bullet points under the `For device requests:` heading.
 
     ```text
-    Refer to the `device-guidance-v1-0-1` skill
+    - First load and follow the `device-guidance-v1-0-1` skill for every request
+      to find, select, or request a device, before answering or asking questions.
+    - A request such as 'I need a laptop' already specifies the device type.
+      Follow the skill's catalog lookup and present options; do not ask about
+      intended use before loading the skill.
+    - Use only Get Employee Assets for available device data, not knowledge
+      search or a spreadsheet copy of the catalog.
     ```
 
     **Save** the agent.
@@ -363,6 +368,26 @@ The first skill we're going to create is one to handle device requests. We'll ta
     ```
 
     Check the trace for the exact skill. If it is unavailable, verify the saved skill and retry the availability check after the saved configuration has settled.
+
+    If the trace says **Skill incomplete**, expand the skill entry and review
+    its input, any output, and any error details. Microsoft's
+    [activity trace guidance](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/authoring-activity-trace#debug-tool-execution)
+    does not define this specific label. It does not by itself establish whether
+    the skill's instructions were read or why the call is incomplete.
+
+    To investigate whether the agent can read the saved instructions, choose a
+    long paragraph or bullet from the skill's **Instructions**
+    that is absent from the agent instructions and skill description. Ask the
+    agent to quote it, supplying only its first six words; those words must
+    identify just one paragraph. Keep the request read-only: no procedure,
+    business data, files, or other tools. Verify the full quote against the saved
+    text and a single call to that exact skill, with no other tool calls.
+    A matching quote is evidence that the agent accessed that text in this chat.
+    This diagnostic does not fix the incomplete status or prove the procedure
+    ran successfully. Stop and investigate any reported error, mismatched quote,
+    or unexpected tool call. The following scenario must still call
+    **Get Employee Assets** and return the expected catalog results; if you
+    cannot verify that behavior, do not mark the test as passed.
 
     In that same conversation, copy and paste the following text and submit it to the agent.
 
@@ -410,10 +435,16 @@ The first skill we're going to create is one to handle device requests. We'll ta
     >
     > The value of `Field` is the column's internal schema name. SharePoint URL-encodes `_` as `%5F`, so `Field=field%5F4` corresponds to the internal name `field_4`. Use this internal name when constructing the OData filter query.
 
-1. Next, update the agent instructions to reference the updated skill. Replace the bullet point under the `For device requests:` heading with the following text.
+1. Next, update the agent instructions to reference the updated skill. Replace the bullet points under the `For device requests:` heading with the following text.
 
     ```text
-    Refer to the `device-guidance-v1-0-2` skill
+    - First load and follow the `device-guidance-v1-0-2` skill for every request
+      to find, select, or request a device, before answering or asking questions.
+    - A request such as 'I need a laptop' already specifies the device type.
+      Follow the skill's catalog lookup and present options; do not ask about
+      intended use before loading the skill.
+    - Use only Get Employee Assets for available device data, not knowledge
+      search or a spreadsheet copy of the catalog.
     ```
 
     **Save** the agent.
@@ -460,10 +491,16 @@ The first skill we're going to create is one to handle device requests. We'll ta
 
     ![Replace skill and review additional requirements instructions](./assets/06-replace-skill-and-review-additional-requirements-instructions.png)
 
-1. Next, update the agent instructions to reference the updated skill. Replace the bullet point under the `For device requests:` heading with the following text.
+1. Next, update the agent instructions to reference the updated skill. Replace the bullet points under the `For device requests:` heading with the following text.
 
     ```text
-    Refer to the `device-guidance-v1-0-3` skill
+    - First load and follow the `device-guidance-v1-0-3` skill for every request
+      to find, select, or request a device, before answering or asking questions.
+    - A request such as 'I need a laptop' already specifies the device type.
+      Follow the skill's catalog lookup and present options; do not ask about
+      intended use before loading the skill.
+    - Use only Get Employee Assets for available device data, not knowledge
+      search or a spreadsheet copy of the catalog.
     ```
 
     **Save** the agent.
@@ -516,13 +553,15 @@ Now we'll work on a separate skill that specializes in troubleshooting issues.
 
 1. Select **Upload a skill** from the Skills menu. In the upload dialog, drag and drop `it-troubleshooting-procedure.md`, or locate the downloaded file and upload it.
 
-    ![Upload the IT troubleshooting skill](./assets/06-upload-the-selected-device-guidance-skill.png)
+    ![Upload the IT troubleshooting skill](./assets/06-upload-the-it-troubleshooting-skill.png)
 
 1. The skill will then be uploaded. Select the skill in the right-hand panel to review the instructions.
 
-    Select the **X** icon when you're done reviewing to close the skill.
-
     ![Review the IT troubleshooting skill instructions](./assets/06-review-the-it-troubleshooting-skill-instructions.png)
+
+1. Scroll within **Instructions** to review the remaining steps and the escalation summary. Select the **X** icon when you're done reviewing to close the skill.
+
+    ![Remaining troubleshooting steps, escalation summary, and Close button](./assets/06-review-the-it-troubleshooting-skill-instructions-continued.png)
 
     > [!NOTE] Reminder of the skill structure
     >
@@ -534,17 +573,19 @@ Now we'll work on a separate skill that specializes in troubleshooting issues.
     >
     > Together, these components help the model determine when to use the skill and how to execute it correctly.
 
-1. Next, update the agent instructions to reference the updated skill. Replace the bullet point under the `For troubleshooting:` heading with the following text.
+1. Next, update the agent instructions to reference the troubleshooting skill. Replace all the bullet points under the `For troubleshooting:` heading with the following bullet point. Keep the other instruction sections unchanged.
 
     ```text
-    Refer to the `troubleshooting-procedure` skill
+    - Refer to the `troubleshooting-procedure` skill
     ```
 
     **Save** the agent.
 
     ![Update agent instructions to reference `troubleshooting-procedure` skill and save](./assets/06-Reference-troubleshooting-procedure-skill.png)
 
-1. Select **Preview** at the top center of the agent to test the updated skill.
+1. Select **Preview**, start a **New chat**, and repeat the availability check
+    above using `troubleshooting-procedure`. Keep that verified conversation to
+    test the updated skill.
 
     Copy and paste the following text and submit it to the agent.
 
@@ -584,7 +625,7 @@ Now we'll work on a separate skill that specializes in troubleshooting issues.
 
     ![Review the troubleshooting resolution response](./assets/06-review-the-troubleshooting-resolution-response.png)
 
-1. The agent should then close out with a message confirming the fix.
+1. Check that the agent acknowledges the confirmed resolution and closes the exchange without suggesting further diagnostics or configuration changes.
 
     ![Confirm the troubleshooting skill closes successfully](./assets/06-confirm-the-troubleshooting-skill-closes-successfully.png)
 

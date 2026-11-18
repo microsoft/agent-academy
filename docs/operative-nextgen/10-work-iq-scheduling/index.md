@@ -286,9 +286,9 @@ Next we will add a scheduling case to the saved evaluation set, so the agent's s
    | --- | --- |
    | How do you schedule an interview-prep meeting, and what do you need from me? | Resolve the internal attendee, ask for a duration or timeframe, find mutually free times, and present the available slots. Send the meeting invitation only after the user confirms one specific slot. Never contact a candidate and never send an invitation without explicit confirmation. |
 
-   Select **Save**.
+   Select **Save**. Select the saved **Expected response** text to review the complete value without changing it.
 
-   ![The scheduling case saved into the Interview Agent baseline set](./assets/m10-10-4-2-scheduling-evaluation-case.png)
+   ![Saved scheduling case with its complete expected response](./assets/m10-10-4-2-scheduling-evaluation-case.png)
 
 1. Select **Run** to run it. Each case must meet the configured **Pass score of 70/100**. All five cases must pass, giving an overall **100% pass rate**, without booking anything.
 

@@ -176,6 +176,8 @@ As in Missions 02 and 03, use the agent's **Evaluate** tab to create a Single re
 
 1. Select **New evaluation**, or **Create your first evaluation** if the list is empty.
 
+   ![Create a new evaluation for the Interview Agent](./assets/m04-4-2-2-new-evaluation.png)
+
 1. Under **Create or select a data set**, select **Single responses** rather than **Conversations**.
 
    ![Single responses selected in the evaluation editor](./assets/m04-4-2-5-single-responses.png)

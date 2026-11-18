@@ -169,7 +169,7 @@ We will create a **builder agent** that writes the Python generator and `SKILL.m
 
 We do not have to write the Python by hand. Next we will create a **builder agent** - a second Copilot Studio agent whose job is to write this skill - and use it as a pair programmer. It returns `generate_interview_doc.py`, `SKILL.md`, `interview_input.sample.json`, and a `.zip` containing all three files.
 
-1. In the left navigation select **Agents**, **New agent**. Name it `Skill Builder` and give it instructions that tell it to write, run and package Python:
+1. In the left navigation select **Agents**, **New agent**. Select **Claude Opus 5.5** rather than **Auto** so the builder uses the same model throughout the lab. Name it `Skill Builder` and give it instructions that tell it to write, run and package Python:
 
    ```text
    You are the Skill Builder. You help makers author Copilot Studio agent
@@ -437,7 +437,7 @@ We'll upload and save the `.zip`, confirm the saved skill is available in **Prev
    Agent handles those itself with its own skills and tools.
    ```
 
-1. Start a **New chat** in Preview and confirm the skill can load without running its procedure or changing hiring records. If it is not available after a couple of turns, refresh the browser and reopen the Hiring Agent.
+1. Start a **New chat** in Preview and confirm the skill can load without running its procedure or changing hiring records.
 
    ```text
    Load only the interview-prep-document skill and confirm its name and purpose.
@@ -445,14 +445,49 @@ We'll upload and save the `.zip`, confirm the saved skill is available in **Prev
    other tools. If it is unavailable, say so without using a substitute.
    ```
 
+   If the trace shows **Skill incomplete: interview-prep-document**, expand the skill
+   entry and inspect its input, any output, and any error details. Microsoft's
+   [activity trace guidance](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/authoring-activity-trace#debug-tool-execution)
+   does not define this specific label. The name-and-purpose reply alone does not
+   prove the agent read the instructions.
+
+   As a read-only diagnostic, in **Build**, open the saved skill
+   and select **SKILL.md**. Choose a long paragraph from **Instructions** that is not
+   repeated in the skill's name, description, or the agent instructions. Return to
+   Preview and send this check, replacing the placeholder with only that paragraph's
+   first six words. Choose words that uniquely identify that paragraph:
+
+   ```text
+   Load only the locally attached interview-prep-document skill and inspect its
+   instructions without executing its procedure. Quote verbatim the entire
+   paragraph that starts with "<first six words>". Return the paragraph as plain
+   text only. Do not call business tools or other agents, read or change hiring
+   data, generate files, or send messages. If the skill cannot load, stop.
+   ```
+
+   Compare the complete quote with the saved paragraph. Do not paste the expected
+   paragraph into the prompt. Check the trace for exactly one `interview-prep-document`
+   call and no other tool calls during the quote check. A matching quote is evidence
+   of access to that saved text in this chat. It does not fix the incomplete status
+   or prove document generation works.
+   Repeat the name-and-purpose request in that same chat; the reply may reuse
+   the loaded instructions without showing a new skill call. Stop if the quote
+   differs, another tool runs, the trace reports an error, or the skill remains unavailable.
+
    > [!NOTE]
-   > Asking for `interview-prep-document` by name is a Preview verification technique that proves the
-   > intended skill loaded. End users can request an interview-prep document naturally without naming
-   > the skill.
+   > Naming `interview-prep-document` targets the intended local skill for this check.
+   > Inspect the trace and, when needed, verify its instructions as described above.
+   > End users can request an interview-prep document naturally without naming the skill.
 
 ### 6.3 Generate the document and compare the layout
 
 With the skill configured, we will generate a document from live data, inspect it, then request a second document for the same application to compare the layouts.
+
+Continue in the chat used for the skill check. If you start a new chat, repeat
+the skill check there. If you used the paragraph diagnostic, do not count its
+matching quote as a successful document-generation test. Check the Dataverse
+reads and the returned Word file in the following steps, and investigate any
+reported errors before marking the test as passed.
 
 1. In **Preview**, ask for the document. Replace `A#####` with a real **ApplicationNumber** from
    [Mission 05](../05-intake-matching-applications/index.md) - your numbers will differ from the
@@ -462,7 +497,7 @@ With the skill configured, we will generate a document from live data, inspect i
    Create an interview prep document for job application A#####.
    ```
 
-1. Watch the agent read the application, candidate, resume, role, and weighted evaluation criteria via the **Dataverse MCP server**, write `interview_input.json`, **run** `generate_interview_doc.py`, and return **`interview_prep.docx`** as a downloadable file. It loads the **interview-prep-document** skill, gathers the data, and returns the `.docx` with a grounded **Evaluation Criteria** table (evidence level per weighted criterion) and 10 questions mapped to the criteria:
+1. Watch the agent read the application, candidate, resume, role, and weighted evaluation criteria via the **Dataverse MCP server**, write `interview_input.json`, **run** `generate_interview_doc.py`, and return **`interview_prep.docx`** as a downloadable file. The agent can reuse the **interview-prep-document** instructions loaded in this chat. The `.docx` should contain a grounded **Evaluation Criteria** table (evidence level per weighted criterion) and 10 questions mapped to the criteria:
 
    ![The generated interview_prep.docx attachment available to download from Preview](./assets/m06-6-3-2-document-download.png)
 
@@ -526,7 +561,7 @@ We gave the agent a new **document-generation skill**, so now we need to extend 
    >   the agent correctly says it cannot be sure without reading the skill definition. The judge scores
    >   that partial answer as *"one or more questions not answered"* and the case fails.
 
-1. Select **Run** to run the whole set. All six cases should pass and the score should remain at least **70%** - describing the document skill needs no tool call:
+1. Select **Run** to run the whole set. Each of the six cases must meet the **Compare meaning** threshold of **70/100**, giving an overall **100% pass rate**. Describing the document skill needs no tool call:
 
    ![Hiring Agent test set green after adding the document case](./assets/m06-6-4-4-eval-green.png)
 

@@ -574,14 +574,14 @@ We can do the quick check without publishing anything and without sending any em
 
    ![Run node inputs holding the sample From and Body](./assets/m07-7-6-1-run-node-inputs.png)
 
-1. Select **Run**, then review the action's **Output** after the green check appears. The list shows every column on the row that was just created, with **Cover Letter** holding the sample **Body** value you entered. Scroll the **Output** list down to the **Resume** columns: **Resume Number** holds a generated value such as `R01064` and **Source Email Address** holds your sample value, while **Resume Title** is blank. The PDF is not here either - it is stored as a **note** by the next step, and **Run node** runs only the action you selected.
+1. Select **Run**, then review the action's **Output** after the green check appears. The list shows every column on the row that was just created, with **Cover Letter** holding the sample **Body** value you entered. Scroll the **Output** list down to the **Resume** columns: **Resume Number** holds a generated value such as `R01145` and **Source Email Address** holds your sample value, while **Resume Title** shows the unresolved attachment expression. The PDF is not here either - it is stored as a **note** by the next step, and **Run node** runs only the action you selected.
 
    That row is real data. Open the **Hiring Hub** app afterwards - it is in the environment's app list, and [Mission 01](../01-get-started/index.md#lab-01-set-up-the-hiring-hub) has the full route if you need it - go to **Resumes**, select the new row, and **delete** it, so a half-filled resume does not sit in your Resumes list.
 
-   > [!NOTE] Why Resume Title comes out empty
+   > [!NOTE] Why Resume Title is unresolved
    > **Run node** lets you type sample values for earlier **steps**, but not for the current item of a
    > **loop**. **Resume Title** is mapped from `items('For_each_attachment')?['name']`, so there is no
-   > box for it and the created row has a blank title. This check exercises the connection, the table,
+   > box for it. In this build, the created row retains the expression as its title. This check exercises the connection, the table,
    > and the two trigger-driven columns, and the loop is covered by the full run below.
 
    ![Resume fields in Run node output](./assets/m07-7-6-2-run-node-output.png)

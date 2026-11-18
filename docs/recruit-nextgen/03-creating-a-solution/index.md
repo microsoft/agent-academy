@@ -44,8 +44,6 @@ You'll start by creating the solution that will contain your agent.
 
 > [!NOTE] Microsoft Copilot harness authoring surface
 >
-> In the current Copilot Studio UI, turn on the **New experience** toggle in the upper-right corner of the Home page. This selects the authoring surface used for agents powered by the Microsoft Copilot harness and makes your screen match the screenshots in this mission.
->
 > The UI and screenshots may still show **GitHub Copilot**, the harness's previous name. See the [course naming update](../index.md#harness-naming-update).
 
 ## 🔎 Objectives {#objectives}
@@ -172,7 +170,7 @@ In this lab, you'll create a solution publisher and a custom solution in your de
 ### Prerequisites
 
 - Copilot Studio license
-- Access to Copilot Studio with the **New experience** toggle enabled for the Microsoft Copilot harness authoring surface
+- Access to the Microsoft Copilot harness authoring surface in Copilot Studio
 - Administrative permissions to create solutions and agents
 
 > [!TIP] Prerequisites help:
