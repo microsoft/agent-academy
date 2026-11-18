@@ -157,10 +157,8 @@ The Hiring Agent is the user-facing entry point, so the disclosure goes in its g
 1. Close **Settings**, then select **Save** on the command bar. Start a **new** Preview conversation to test the saved greeting.
 
    > [!NOTE]
-   > You do not need to publish an agent to test its own saved changes in Preview. If the greeting
-   > does not appear after a couple of turns, start another **New chat**, refresh the browser, and
-   > reopen the agent. Publish only when the change is ready for deployed channels or another agent
-   > must consume the published version.
+   > You can test saved changes in **Preview** without publishing. If the updated greeting does not
+   > appear, refresh the browser and select **New chat**.
 
 1. Confirm the greeting identifies the experience as AI-powered, explains its limits, and keeps hiring decisions with a person.
 

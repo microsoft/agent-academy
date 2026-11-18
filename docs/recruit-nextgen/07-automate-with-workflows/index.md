@@ -560,22 +560,14 @@ You're now going to run through the following test cases:
 - Test Case 2: User selects a device and provides no additional requirements
 - Test Case 3: User does not proceed with selecting a device
 
-For each independent scenario, verify the skill in the new conversation before asking for a device. Send this availability-only request:
+If the skill does not load, refresh the browser, select **New chat** in **Preview**,
+and try again. If it is still unavailable, check that the updated skill was saved.
+For each scenario, check that the device lookup uses **Get Employee Assets**.
 
-```text
-Load only the device-guidance-v1-0-4 skill and confirm its name and purpose. Do not run its procedure, read or change business data, create files, send messages, or call other tools. If it is unavailable, say so without using a substitute.
-```
+> [!NOTE]
+> **Skill incomplete** means the trace has not marked the skill's execution as complete, not that the skill itself is unfinished.
 
-Confirm the exact skill in the trace, then keep that conversation for the scenario without reloading or reopening Preview. A check in a previous chat does not prove readiness in a new one. The device lookup must use **Get Employee Assets**; a knowledge-search or spreadsheet answer is not a substitute. These are explicit skill-invocation tests, not proof of automatic skill discovery.
-
-If the trace says **Skill incomplete**, expand the skill entry and inspect any
-output or error details. See the diagnostic guidance in
-[Mission 06, Lab 6.1](../06-add-skills/index.md#lab-06-add-skills).
-The paragraph check there can provide evidence of access to the saved instructions;
-it does not clear the status or prove the workflow works. Investigate reported
-errors and verify each scenario's tool calls and results before marking it passed.
-
-1. Select **Preview**, start a new chat, and complete the skill-readiness check above.
+1. Select **Preview** and start a **New chat**.
 
 1. Copy and paste the following text and submit it to the agent.
 
@@ -621,7 +613,7 @@ errors and verify each scenario's tool calls and results before marking it passe
 
 1. In **Preview**, start a new chat to test a request with no additional requirements.
 
-   Complete the skill-readiness check above in that chat, then copy and paste the following text and submit it to the agent.
+   Copy and paste the following text and submit it to the agent.
 
    ```text
    Use the device-guidance-v1-0-4 skill. I need a new laptop.
@@ -655,7 +647,7 @@ errors and verify each scenario's tool calls and results before marking it passe
 
    ![Review test case 2 email](./assets/07-review-test-case-2-email.png)
 
-1. For the final test case, start a new chat in **Preview** and complete the skill-readiness check above. Enter the following text in that same chat.
+1. For the final test case, start a **New chat** in **Preview** and enter the following text.
 
    ```text
    Use the device-guidance-v1-0-4 skill. I need a new laptop.

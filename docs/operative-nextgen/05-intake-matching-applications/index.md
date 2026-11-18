@@ -286,15 +286,14 @@ To fix the weights, arithmetic, and output structure, continue building the `rol
 
    ![The role-matching skill's rubric instructions pasted into the editor](./assets/m05-5-4-3-role-matching-instructions.png)
 
-1. Select **Create**, then **Save** the agent. Allow time for the saved configuration to settle, then start a **New chat** in Preview. If the skill is not available after a couple of turns, refresh the browser page and reopen the agent. Confirm the Skills list shows `role-matching` beside `resume-intake`:
+1. Select **Create**, then **Save** the agent. Confirm the Skills list shows `role-matching` beside `resume-intake`:
 
    ![The saved role-matching skill beside resume-intake](./assets/m05-5-4-4-role-matching-created.png)
 
    > [!NOTE]
-   > Naming the skill explicitly is a Preview verification technique that proves the intended skill
-   > was selected. End users can make a natural matching request without naming the skill.
+   > If a newly saved skill does not load, refresh the browser and select **New chat** in **Preview**.
 
-1. Run the match, naming the skill to load. You don't describe the rubric because the `role-matching` skill does. In **Hiring Agent**, **Preview**, ask:
+1. In **Hiring Agent**, **Preview**, select **New chat** and ask:
 
    ```text
    Use the role-matching skill. Which open job roles best fit the candidate on
@@ -303,8 +302,6 @@ To fix the weights, arithmetic, and output structure, continue building the `rol
    ```
 
    Replace `R#####` with the Resume number returned by your intake run. Check the activity trace for **`role-matching`** and the Dataverse reads. The response should include per-criterion evidence, points, totals, and a ranked recommendation across all five roles.
-
-   A prompt that only asks for the best-fit roles can produce a generic 0-5 rating without loading the skill. If you tried that prompt first, use the explicit skill invocation above. Do not accept a result without the skill's **Level** and **Points** columns.
 
    If the table extends beyond Preview's message area, select **History** and open the matching **Completed** Preview conversation. Check that **Criterion**, **Weight**, **Evidence**, **Level**, and **Points** are all visible in the saved response.
 
@@ -391,11 +388,11 @@ The **role-matching** skill is a read-only skill. Creating the actual **Job Appl
 
    ![Application-handling instructions with confirmed-role and failure safeguards](./assets/m05-5-5-2-application-handling-instructions.png)
 
-1. Select **Create**, then **Save**. Allow time for the saved configuration to settle, then start a **New chat** in Preview. If the skill is not available after a couple of turns, refresh the browser page and reopen the agent. Confirm all three focused skills now appear together:
+1. Select **Create**, then **Save**. Confirm all three focused skills now appear together:
 
    ![Hiring Agent with intake, matching, and application-handling skills](./assets/m05-5-5-3-build-42-three-skills.png)
 
-1. Apply the candidate with a **natural** prompt. The skill supplies the procedure:
+1. In **Preview**, select **New chat** and apply the candidate:
 
    ```text
    Apply Avery using resume R##### to the Power Automate Specialist and Power

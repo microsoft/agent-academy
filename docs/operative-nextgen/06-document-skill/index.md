@@ -363,7 +363,7 @@ We do not have to write the Python by hand. Next we will create a **builder agen
 
 ### 6.2 Add the skill to the Hiring Agent
 
-We'll upload and save the `.zip`, confirm the saved skill is available in **Preview**, then let the **agent** run the Python. Publishing is for deployment; the Hiring Agent can test its own saved skill in Preview without publishing.
+We'll upload and save the `.zip`, then test document generation in **Preview** in Lab 6.3. Publishing is for deployment; the Hiring Agent can test its own saved skill in Preview without publishing.
 
 1. In the left navigation select **Agents**, open the **Hiring Agent**, and go to its **Build** tab. In the building-blocks panel on the right, find **Skills** and select **➕**.
 
@@ -437,59 +437,17 @@ We'll upload and save the `.zip`, confirm the saved skill is available in **Prev
    Agent handles those itself with its own skills and tools.
    ```
 
-1. Start a **New chat** in Preview and confirm the skill can load without running its procedure or changing hiring records.
-
-   ```text
-   Load only the interview-prep-document skill and confirm its name and purpose.
-   Do not run its procedure, read or change hiring data, generate a file, or call
-   other tools. If it is unavailable, say so without using a substitute.
-   ```
-
-   If the trace shows **Skill incomplete: interview-prep-document**, expand the skill
-   entry and inspect its input, any output, and any error details. Microsoft's
-   [activity trace guidance](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/authoring-activity-trace#debug-tool-execution)
-   does not define this specific label. The name-and-purpose reply alone does not
-   prove the agent read the instructions.
-
-   As a read-only diagnostic, in **Build**, open the saved skill
-   and select **SKILL.md**. Choose a long paragraph from **Instructions** that is not
-   repeated in the skill's name, description, or the agent instructions. Return to
-   Preview and send this check, replacing the placeholder with only that paragraph's
-   first six words. Choose words that uniquely identify that paragraph:
-
-   ```text
-   Load only the locally attached interview-prep-document skill and inspect its
-   instructions without executing its procedure. Quote verbatim the entire
-   paragraph that starts with "<first six words>". Return the paragraph as plain
-   text only. Do not call business tools or other agents, read or change hiring
-   data, generate files, or send messages. If the skill cannot load, stop.
-   ```
-
-   Compare the complete quote with the saved paragraph. Do not paste the expected
-   paragraph into the prompt. Check the trace for exactly one `interview-prep-document`
-   call and no other tool calls during the quote check. A matching quote is evidence
-   of access to that saved text in this chat. It does not fix the incomplete status
-   or prove document generation works.
-   Repeat the name-and-purpose request in that same chat; the reply may reuse
-   the loaded instructions without showing a new skill call. Stop if the quote
-   differs, another tool runs, the trace reports an error, or the skill remains unavailable.
-
-   > [!NOTE]
-   > Naming `interview-prep-document` targets the intended local skill for this check.
-   > Inspect the trace and, when needed, verify its instructions as described above.
-   > End users can request an interview-prep document naturally without naming the skill.
-
 ### 6.3 Generate the document and compare the layout
 
 With the skill configured, we will generate a document from live data, inspect it, then request a second document for the same application to compare the layouts.
 
-Continue in the chat used for the skill check. If you start a new chat, repeat
-the skill check there. If you used the paragraph diagnostic, do not count its
-matching quote as a successful document-generation test. Check the Dataverse
-reads and the returned Word file in the following steps, and investigate any
-reported errors before marking the test as passed.
+If the skill does not load, refresh the browser, select **New chat** in **Preview**,
+and try again. If it is still unavailable, check that the skill was uploaded and saved.
 
-1. In **Preview**, ask for the document. Replace `A#####` with a real **ApplicationNumber** from
+> [!NOTE]
+> **Skill incomplete** means the trace has not marked the skill's execution as complete, not that the skill itself is unfinished.
+
+1. In **Preview**, select **New chat** and ask for the document. Replace `A#####` with a real **ApplicationNumber** from
    [Mission 05](../05-intake-matching-applications/index.md) - your numbers will differ from the
    examples in this course:
 
@@ -497,7 +455,7 @@ reported errors before marking the test as passed.
    Create an interview prep document for job application A#####.
    ```
 
-1. Watch the agent read the application, candidate, resume, role, and weighted evaluation criteria via the **Dataverse MCP server**, write `interview_input.json`, **run** `generate_interview_doc.py`, and return **`interview_prep.docx`** as a downloadable file. The agent can reuse the **interview-prep-document** instructions loaded in this chat. The `.docx` should contain a grounded **Evaluation Criteria** table (evidence level per weighted criterion) and 10 questions mapped to the criteria:
+1. Watch the agent use the **interview-prep-document** skill to read the application, candidate, resume, role, and weighted evaluation criteria via the **Dataverse MCP server**, write `interview_input.json`, **run** `generate_interview_doc.py`, and return **`interview_prep.docx`** as a downloadable file. The `.docx` should contain a grounded **Evaluation Criteria** table (evidence level per weighted criterion) and 10 questions mapped to the criteria:
 
    ![The generated interview_prep.docx attachment available to download from Preview](./assets/m06-6-3-2-document-download.png)
 

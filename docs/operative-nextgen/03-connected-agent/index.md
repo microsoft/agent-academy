@@ -273,11 +273,9 @@ With the specialist published and available for connections, we'll add it to the
     ![Interview Agent listed under Connected agents](./assets/m03-3-3-5-build-25-connected-added.png)
 
    > [!NOTE]
-   > The **Interview Agent** must be published because a different agent - the Hiring Agent - calls it.
-   > The Hiring Agent does not need to be published to test its own newly saved connection in Preview.
-   > Saved changes can take a variable amount of time to appear. If the connection is not available
-   > after a couple of turns, start a **New chat**, refresh the browser, and reopen the Hiring Agent.
-   > Do not publish the Hiring Agent merely to make this Preview test pass.
+   > Publish the **Interview Agent** so the Hiring Agent can call it. You can test the Hiring Agent's
+   > saved connection in **Preview** without publishing the Hiring Agent. If the connection is
+   > unavailable, refresh the browser and select **New chat**.
 
 ### 3.4 Test multi-agent collaboration
 

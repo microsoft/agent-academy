@@ -352,20 +352,11 @@ The skill now describes the intake procedure but still cannot reach a hiring rec
 
 ### 2.3 Using Preview to test
 
-If Preview shows **Skill incomplete: resume-intake**, expand the skill entry and inspect
-its input, any output, and any error details. Microsoft's
-[activity trace guidance](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/authoring-activity-trace#debug-tool-execution)
-does not define this specific label, so do not infer its cause from the label alone.
+If the skill does not load, refresh the browser, select **New chat** in **Preview**,
+and try again. If it is still unavailable, check that the skill was created and saved.
 
-As a read-only diagnostic, reopen the saved skill and choose a long paragraph that does not appear in the agent's
-instructions or the skill's **Description**, with first six words that uniquely identify it.
-In a fresh chat, ask the agent to load only
-`resume-intake` and quote that entire paragraph, supplying only its first six words. Tell it
-not to execute the procedure or call business tools. Compare the complete quote with the saved
-text and check that the trace contains exactly one `resume-intake` call and no other calls.
-Stop if either check fails or the trace reports an error. A matching quote is evidence
-of access to that saved text in this chat; it does not fix the incomplete status or
-prove intake works. Mission 05 checks the actual intake procedure with a resume.
+> [!NOTE]
+> **Skill incomplete** means the trace has not marked the skill's execution as complete, not that the skill itself is unfinished.
 
 To check that the MCP connection returns current Dataverse records, ask the agent a question that its instructions and skill cannot answer on their own.
 
@@ -385,7 +376,7 @@ To check that the MCP connection returns current Dataverse records, ask the agen
    Use Microsoft Dataverse MCP Server to read the currently active Job Roles in Dataverse. List each job role number and title.
    ```
 
-1. When a **Permission Required** card names **Microsoft Dataverse MCP Server**, check the requested action and select **Allow**. Further cards may request permission for `search`, `describe`, or `read_query`; review and allow each action needed for this query. If the connection was authorized earlier, Preview answers directly without another card; do not wait for or attempt to approve a card that is not present.
+1. If a **Permission Required** card appears for **Microsoft Dataverse MCP Server**, review and allow the actions needed for this query. An already authorized connection may not prompt again.
 
     ![Live job-role question sent from a fresh Preview chat](./assets/m02-2-3-2-build-08-mcp-test.png)
 
@@ -401,7 +392,7 @@ To check that the MCP connection returns current Dataverse records, ask the agen
    What can the resume-intake skill do for me?
    ```
 
-   The reply should explain the file type and size checks, Candidate email deduplication, creation of a linked **Resume**, and reporting both record numbers and whether the Candidate was reused or created. It should stop at intake. This question checks the agent's explanation and does not execute the intake procedure. Use the trace and, if needed, the paragraph diagnostic above to investigate access to the saved instructions. Mission 05 tests the complete procedure with a resume.
+   The reply should explain the file type and size checks, Candidate email deduplication, creation of a linked **Resume**, and reporting both record numbers and whether the Candidate was reused or created. It should stop at intake. This question checks the agent's explanation; Mission 05 tests the complete intake procedure with a resume.
 
    ![Hiring Agent explains the resume-intake skill](./assets/m02-2-3-4-build-41-j1004-criteria.png)
 

@@ -204,7 +204,7 @@ Next we put those tools to work in **Preview**, where we can watch the availabil
    dates and times in the UTC time zone.
    ```
 
-   With an already authorized Work IQ connection, permitted operations can proceed directly to the tool trace. If a **Permission Required** card appears, select **Allow** for the requested people lookup or calendar operation. Review each request as it arrives.
+   If a **Permission Required** card appears, review and allow the requested people lookup or calendar operation.
 
    ![Authorized Work IQ calls in the Preview trace](./assets/m10-10-2-1-consent-cards.png)
 
@@ -252,7 +252,7 @@ Next we put those tools to work in **Preview**, where we can watch the availabil
 
 1. Verify the invitation appears in the attendee's mailbox.
 
-   Creating a calendar event **sends a real invitation to a real person**. That makes it a write like any other, so the same rules apply as when you wrote to Dataverse: do it with controlled identities in a sandbox, and read back the attendees and the time before you let the agent book anything.
+   This sends a **real invitation**. Use only user accounts that you are comfortable testing with.
 
 ### 10.3 Verify the supervised scheduling offer
 

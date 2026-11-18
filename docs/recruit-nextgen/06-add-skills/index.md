@@ -355,47 +355,19 @@ The first skill we're going to create is one to handle device requests. We'll ta
     **Save** the agent.
 
     > [!NOTE]
-    > You can test saved changes in **Preview** without publishing. The next turn should use the updated configuration. If changes do not appear after a couple of turns, select **New chat** and verify that the intended skill was saved. See [Test an agent](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/authoring-test-bot#edit-your-agent-while-testing).
+    > You can test saved changes in **Preview** without publishing. If the skill does not load, refresh the browser, select **New chat**, and try again. If it is still unavailable, check that the intended skill was uploaded and saved.
     >
-    > These version checks name the skill explicitly so you can verify that the intended version loads. This is a Preview testing technique: end users do not need to know or enter the skill name or version. Test automatic skill selection separately with a natural request such as "I need a laptop"; a successful explicit invocation does not prove automatic routing.
+    > **Skill incomplete** means the trace has not marked the skill's execution as complete, not that the skill itself is unfinished.
 
 1. Select **Preview** at the top center of the agent and select **New chat** to test the updated skill.
 
-    First load the skill without running its procedure:
-
-    ```text
-    Load only the device-guidance-v1-0-1 skill and confirm its name and purpose. Do not run its procedure, read or change business data, create files, or call other tools. If it is unavailable, say so without using a substitute.
-    ```
-
-    Check the trace for the exact skill. If it is unavailable, verify the saved skill and retry the availability check after the saved configuration has settled.
-
-    If the trace says **Skill incomplete**, expand the skill entry and review
-    its input, any output, and any error details. Microsoft's
-    [activity trace guidance](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/authoring-activity-trace#debug-tool-execution)
-    does not define this specific label. It does not by itself establish whether
-    the skill's instructions were read or why the call is incomplete.
-
-    To investigate whether the agent can read the saved instructions, choose a
-    long paragraph or bullet from the skill's **Instructions**
-    that is absent from the agent instructions and skill description. Ask the
-    agent to quote it, supplying only its first six words; those words must
-    identify just one paragraph. Keep the request read-only: no procedure,
-    business data, files, or other tools. Verify the full quote against the saved
-    text and a single call to that exact skill, with no other tool calls.
-    A matching quote is evidence that the agent accessed that text in this chat.
-    This diagnostic does not fix the incomplete status or prove the procedure
-    ran successfully. Stop and investigate any reported error, mismatched quote,
-    or unexpected tool call. The following scenario must still call
-    **Get Employee Assets** and return the expected catalog results; if you
-    cannot verify that behavior, do not mark the test as passed.
-
-    In that same conversation, copy and paste the following text and submit it to the agent.
+    Copy and paste the following text and submit it to the agent.
 
     ```text
     Use the device-guidance-v1-0-1 skill. I need a laptop.
     ```
 
-    Confirm the skill was loaded in this conversation and the laptop lookup calls **Get Employee Assets**. The runtime can reuse the skill loaded by the preceding availability check.
+    Check that the agent uses **Get Employee Assets** to look up available laptops.
 
     ![Test the imported device guidance skill](./assets/06-test-the-imported-device-guidance-skill.png)
 
@@ -449,9 +421,9 @@ The first skill we're going to create is one to handle device requests. We'll ta
 
     **Save** the agent.
 
-1. Test the updated skill by navigating to **Preview**. Start a new chat and repeat the availability check above using `device-guidance-v1-0-2`.
+1. Test the updated skill by navigating to **Preview** and selecting **New chat**.
 
-    Keep that verified conversation. Copy and paste the following text and submit it to the agent.
+    Copy and paste the following text and submit it to the agent.
 
     ```text
     Use the device-guidance-v1-0-2 skill. I need a laptop.
@@ -505,9 +477,9 @@ The first skill we're going to create is one to handle device requests. We'll ta
 
     **Save** the agent.
 
-1. Test the updated skill by navigating to **Preview**. Start a new chat and repeat the availability check above using `device-guidance-v1-0-3`.
+1. Test the updated skill by navigating to **Preview** and selecting **New chat**.
 
-    Keep that verified conversation. Copy and paste the following text and submit it to the agent.
+    Copy and paste the following text and submit it to the agent.
 
     ```text
     Use the device-guidance-v1-0-3 skill. I need a laptop.
@@ -583,9 +555,7 @@ Now we'll work on a separate skill that specializes in troubleshooting issues.
 
     ![Update agent instructions to reference `troubleshooting-procedure` skill and save](./assets/06-Reference-troubleshooting-procedure-skill.png)
 
-1. Select **Preview**, start a **New chat**, and repeat the availability check
-    above using `troubleshooting-procedure`. Keep that verified conversation to
-    test the updated skill.
+1. Select **Preview** and start a **New chat** to test the troubleshooting skill.
 
     Copy and paste the following text and submit it to the agent.
 

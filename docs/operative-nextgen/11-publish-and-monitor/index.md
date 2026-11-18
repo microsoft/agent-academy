@@ -262,7 +262,7 @@ Once the agent is installed from a store card, the person using it has whatever 
    Confirm all six cases pass **Compare meaning** at **70/100** before publishing in Lab 11.4.
    The green result from Lab 11.1 predates this instruction change.
 
-1. Start a **new** Preview chat and read the greeting back. It should open on **version 1.0.0**, and asking *What version are you?* should return the same answer. An existing chat keeps the old greeting, so this only proves anything in a fresh one.
+1. Start a **New chat** in **Preview**. Check that the greeting shows **version 1.0.0** and asking *What version are you?* returns the same version.
 
     ![Preview greeting showing version 1.0.0](./assets/m11-11-3-4-version-greeting.png)
 
