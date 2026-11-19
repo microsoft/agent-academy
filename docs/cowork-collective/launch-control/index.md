@@ -91,40 +91,11 @@ These are simulated stages, not claims that a real webinar or approval has occur
 
 ## Lab Assets {#lab-assets}
 
-Download and extract the source pack before starting. Upload the **ten extracted files**, not the ZIP. These are actual reference files, not text downloads you need to open and copy.
+Download and extract the ZIP before starting. It contains the fictional planning sources, review decisions, and webinar results you'll need throughout the lab.
 
-| File | What it contains |
-| --- | --- |
-| `webinar-brief.md` | Confirmed event facts, targets, and unresolved assignments. |
-| `audience-research.md` | Fictional audience needs and learning outcomes, not measured survey findings. |
-| `speaker-guidelines.md` | Teaching points and speaker preparation requirements. |
-| `speaker-qa.md` | Sample audience questions and suggested answers. |
-| `run-of-show.md` | Five agenda segments totaling 45 minutes. |
-| `launch-milestones.md` | Planning dates and incomplete readiness milestones. |
-| `registration-plan.md` | Registration prerequisites; no active page or URL. |
-| `accessibility-checklist.md` | Preparation checks that haven't been completed. |
-| `brand-and-editorial.md` | Shared document voice and formatting guidance. |
-| `decision-log.md` | Open decisions, including the initially unresolved presentation format. |
+<download-files path="cowork-collective/launch-control/assets/sample-files" filename="launch-control-lab-assets.zip" label="Download lab assets" />
 
-<download-files path="cowork-collective/launch-control/assets/webinar-project-sources.zip" />
-
-Download and extract the lifecycle updates too, but **don't upload them yet**. Add each file only when you reach its stage.
-
-| Later source | When to add it |
-| --- | --- |
-| `internal-review.md` | Before finalizing the launch plan; records explicit fictional review decisions. |
-| `webinar-results.csv` | At wrap-up; supplies counts and rating distribution, without personal data. |
-| `webinar-wrap-up.md` | At wrap-up; supplies delivery notes, calculation definitions, and reporting boundaries. |
-
-<download-files path="cowork-collective/launch-control/assets/webinar-lifecycle-updates.zip" />
-
-The sample uses **February 18, 2027, at 15:00 UTC**, with a readiness review on **February 4, 2027**. Keep those dates unchanged, even if they are in the past when you run the lab.
-
-| Generated file | Business purpose |
-| --- | --- |
-| `webinar-launch-plan.docx` | Start as a draft, then update the same file with reviewed decisions and final internal planning status. |
-| `webinar-speaker-brief.docx` | Give the future speaker teaching points, preparation requirements, and sample questions; leave this file as a draft. |
-| `webinar-results-review.pptx` | Present fictional post-event reach, feedback charts, lessons, and proposed next actions. |
+Keep the extracted folders available. You'll upload the ten files in **project-sources** when building Project context, then add files from **lifecycle-updates** at the review and wrap-up stages. Upload the individual files when instructed, not the ZIP or folders.
 
 ## Lab 1.1 - Create the Project and Working Rules {#lab-1-1}
 
@@ -166,7 +137,7 @@ Add a reusable reference collection before creating any tasks.
 
     ![Project context tab and add control highlighted](./assets/05-add-lifecycle-project-context-annotated.png)
 
-1. Select **Upload images and files** (the up-arrow button) in the context picker. Select all ten extracted `.md` files.
+1. Select **Upload images and files** (the up-arrow button) in the context picker. Select all ten `.md` files from the extracted **project-sources** folder.
 
     ![Project context picker with upload option highlighted](./assets/06-upload-lifecycle-sources-annotated.png)
 
@@ -252,7 +223,7 @@ Start the first assignment from the project page. Name the source collection to 
 
 Advance the fictional scenario to the February 4 review. Keep the revision conversation separate from drafting, but update the **same launch-plan file**.
 
-1. Open **Project context** > **Add to project context** and upload only `internal-review.md` from the lifecycle updates. Open its preview and review the decisions, then close the preview.
+1. Open **Project context** > **Add to project context** and upload only `internal-review.md` from the extracted **lifecycle-updates** folder. Open its preview and review the decisions, then close the preview.
 
     ![Internal review added to the project sources](./assets/15-add-internal-review-context-annotated.png)
 
@@ -309,7 +280,7 @@ Advance the fictional scenario to the February 4 review. Keep the revision conve
 
 Advance to the simulated February 19 wrap-up. Add results evidence and change output type: this task creates a PowerPoint, not another Word document.
 
-1. Open **Project context** > **Add to project context** and upload `webinar-results.csv` and `webinar-wrap-up.md`. Confirm both appear in the collection.
+1. Open **Project context** > **Add to project context** and upload `webinar-results.csv` and `webinar-wrap-up.md` from **lifecycle-updates**. Confirm both appear in the collection.
 
     ![Post webinar evidence joins the project context](./assets/20-add-post-webinar-context-annotated.png)
 
