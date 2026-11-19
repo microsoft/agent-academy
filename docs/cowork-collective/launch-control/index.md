@@ -387,8 +387,6 @@ Answer the knowledge-check questions based on the work you completed. Once revie
 
 ## Related Content {#related-content}
 
-- [Compliance Packet](../compliance-packet/index.md) - Delegate a multi-document assignment to Cowork.
-- [Badge Check](../badge-check/index.md) - Analyze a source file and explore a reusable custom skill.
 - [Organize work with Projects](https://learn.microsoft.com/en-us/copilot/cowork/cowork-projects?WT.mc_id=power-172621-ebenitez)
 - [Reference previous chats and tasks](https://learn.microsoft.com/en-us/copilot/cowork/use-cowork?WT.mc_id=power-172621-ebenitez#reference-previous-chats-and-tasks)
 - [What's new in Copilot Cowork](https://learn.microsoft.com/en-us/copilot/cowork/whats-new?WT.mc_id=power-172621-ebenitez)
