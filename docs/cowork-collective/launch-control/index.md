@@ -369,22 +369,6 @@ Congrats, agent — mission accomplished! To request your **Project Wrangler** b
 
 Answer the knowledge-check questions based on the work you completed. Once reviewed, you'll receive an email from Global AI Community with instructions to claim your badge.
 
-## Troubleshooting {#troubleshooting}
-
-| If you see... | What to do |
-| --- | --- |
-| Missing project-context upload or search controls | Confirm you're using work/school Cowork and check feature availability with your administrator. |
-| Cowork can't find an uploaded source | Check its exact filename and **Uploaded** status in **Project context**. Ask which sources are available; don't assume a chat attachment listing is sufficient. |
-| A text-only answer instead of files | Ask Cowork to create the requested `.docx` or `.pptx` files. Continue only when the actual files appear under **Output**. |
-| A document preview stays blank | Use the file's **More actions** > **Open in Word**. **Download** is also available for local review. |
-| **We couldn't load suggestions** | Try **Try again** or **Add attachments** > **Add content** > **Copilot**. Some interfaces label this **Add work context**. If the error persists, pause; don't replace the reference with a typed task title. |
-| Several similar task titles | Check the title and contents of your planning task under **Recent** before selecting the reference. |
-| All your messages are in one task | Return to the project and use **New task in this project**. A follow-up in an existing conversation doesn't create a separate task. |
-| The launch plan is final but still contains old open questions | Request an in-place correction using `internal-review.md`; changing the banner alone isn't a completed revision. |
-| The deck has invented results or incorrect charts | Compare it with the CSV and wrap-up notes, then request corrections before using the presentation. |
-| A request to send, schedule, collect registrations, or change records | Don't approve it. This exercise only authorizes the three internal document outputs. |
-| An invented fact, unsupported date, or missing draft label | Recheck the instructions and named sources, then request an in-place correction before reusing the file. |
-
 ## Related Content {#related-content}
 
 - [Organize work with Projects](https://learn.microsoft.com/en-us/copilot/cowork/cowork-projects?WT.mc_id=power-172621-ebenitez)
