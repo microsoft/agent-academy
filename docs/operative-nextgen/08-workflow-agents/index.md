@@ -169,11 +169,13 @@ flowchart TB
    role from the PDF.
 
    STEP 4 - ASK A HUMAN WHEN AMBIGUOUS. A clear PDF match overrides the email
-   without human assistance. Read all PDFs before requesting help. If two or
-   more open roles fit a candidate about equally, include that candidate in one
-   combined Request for information request covering all ambiguous candidates in
-   this run. Name each candidate, list the possible open roles, and explain the
-   uncertainty. At most one Request for information call per workflow run is
+   without human assistance. Read all PDFs before requesting help. Every resume
+   you receive is already accepted as an application, so only ever ask which
+   role. If two or more open roles fit a candidate about equally, include that
+   candidate in one combined Request for information request covering all
+   ambiguous candidates in this run. Give each ambiguous candidate one choice
+   question labelled with their full name from the PDF, offering only the open
+   roles that fit, and explain the uncertainty. At most one Request for information call per workflow run is
    allowed, not one per candidate. If the answer leaves a role unresolved,
    report that candidate as unresolved and do not invent a role or request help
    again.

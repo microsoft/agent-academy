@@ -33,7 +33,6 @@ last-edited-date: 2026-10-29
 > [!NOTE]
 > This lab uses an agent and workflows powered by the **Microsoft Copilot harness**.
 > On this harness, workflows are standalone, reusable automations that an agent can call as a tool.
-> In the current Copilot Studio UI, make sure the **New experience** toggle in the upper-right corner is **on**.
 
 ## 🎯 Mission Brief {#mission-brief}
 
@@ -276,7 +275,7 @@ On the Microsoft Copilot harness, workflows are added to your agent as a **tool*
    Get Device
    ```
 
-1. In the **Site Address** field, select the Contoso IT SharePoint site created in [Mission 00 - Course Setup](../00-course-setup/index.md#step-5-create-new-sharepoint-site).
+1. In the **Site Address** field, select **Enter custom value**, then paste the full URL of the Contoso IT SharePoint site created in [Mission 00 - Course Setup](../00-course-setup/index.md#step-5-create-new-sharepoint-site). The site picker can be empty even when the connection is connected; entering the exact site URL lets the connector retrieve its lists.
 
 1. In the **List Name** field, select the **EmployeeAssets** SharePoint list.
 
@@ -535,10 +534,16 @@ With the workflow added, update the device request skill and agent instructions 
 
    ![Confirmation message and end session](./assets/07-confirmation-message-and-end-session.png)
 
-1. Next, update the agent instructions to reference the updated skill. Replace the bullet point under the `For device requests:` heading with the following text.
+1. Next, update the agent instructions to reference the updated skill. Replace the bullet points under the `For device requests:` heading with the following text.
 
     ```text
-    Refer to the `device-guidance-v1-0-4` skill
+    - First load and follow the `device-guidance-v1-0-4` skill for every request
+      to find, select, or request a device, before answering or asking questions.
+    - A request such as 'I need a laptop' already specifies the device type.
+      Follow the skill's catalog lookup and present options; do not ask about
+      intended use before loading the skill.
+    - Use only Get Employee Assets for available device data, not knowledge
+      search or a spreadsheet copy of the catalog.
     ```
 
     **Save** the agent. You can test the updated skill in **Preview** without publishing.
@@ -555,20 +560,14 @@ You're now going to run through the following test cases:
 - Test Case 2: User selects a device and provides no additional requirements
 - Test Case 3: User does not proceed with selecting a device
 
-For each independent scenario, verify the skill in the new conversation before asking for a device. Send this availability-only request:
-
-```text
-Load only the device-guidance-v1-0-4 skill and confirm its name and purpose. Do not run its procedure, read or change business data, create files, send messages, or call other tools. If it is unavailable, say so without using a substitute.
-```
-
-Confirm the exact skill in the trace, then keep that conversation for the scenario without reloading or reopening Preview. A check in a previous chat does not prove readiness in a new one. The device lookup must use **Get Employee Assets**; a knowledge-search or spreadsheet answer is not a substitute. These are explicit skill-invocation tests, not proof of automatic skill discovery.
+If the skill does not load, refresh the browser, select **New chat** in **Preview**,
+and try again. If it is still unavailable, check that the updated skill was saved.
+For each scenario, check that the device lookup uses **Get Employee Assets**.
 
 > [!NOTE]
-> Naming `device-guidance-v1-0-4` explicitly is a Preview verification technique that proves the
-> intended version and tool path were used. End users can ask for a device naturally without knowing
-> or entering the skill name or version.
+> **Skill incomplete** means the trace has not marked the skill's execution as complete, not that the skill itself is unfinished.
 
-1. Select **Preview**, start a new chat, and complete the skill-readiness check above.
+1. Select **Preview** and start a **New chat**.
 
 1. Copy and paste the following text and submit it to the agent.
 
@@ -614,7 +613,7 @@ Confirm the exact skill in the trace, then keep that conversation for the scenar
 
 1. In **Preview**, start a new chat to test a request with no additional requirements.
 
-   Start a new chat. Copy and paste the following text and submit it to the agent.
+   Copy and paste the following text and submit it to the agent.
 
    ```text
    Use the device-guidance-v1-0-4 skill. I need a new laptop.
@@ -648,7 +647,7 @@ Confirm the exact skill in the trace, then keep that conversation for the scenar
 
    ![Review test case 2 email](./assets/07-review-test-case-2-email.png)
 
-1. For the final test case, start a new chat in **Preview**. Enter the following text.
+1. For the final test case, start a **New chat** in **Preview** and enter the following text.
 
    ```text
    Use the device-guidance-v1-0-4 skill. I need a new laptop.

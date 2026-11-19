@@ -49,9 +49,6 @@ This is the agent's first connection to live business data. Rather than copying 
 
 The tool won't define the complete device request procedure by itself. In the next mission, you'll add reusable skills that tell the agent how to gather requirements, interpret results, and guide the employee through the task.
 
-> [!IMPORTANT]
-> If your Copilot Studio screen looks different from these screenshots, make sure the **New experience** toggle in the upper-right corner is turned **on** to use the Microsoft Copilot harness authoring surface.
-
 ## 🔎 Objectives {#objectives}
 
 In this mission, you’ll learn:

@@ -204,7 +204,7 @@ Next we put those tools to work in **Preview**, where we can watch the availabil
    dates and times in the UTC time zone.
    ```
 
-   With an already authorized Work IQ connection, permitted operations can proceed directly to the tool trace. If a **Permission Required** card appears, select **Allow** for the requested people lookup or calendar operation. Review each request as it arrives.
+   If a **Permission Required** card appears, review and allow the requested people lookup or calendar operation.
 
    ![Authorized Work IQ calls in the Preview trace](./assets/m10-10-2-1-consent-cards.png)
 
@@ -252,7 +252,7 @@ Next we put those tools to work in **Preview**, where we can watch the availabil
 
 1. Verify the invitation appears in the attendee's mailbox.
 
-   Creating a calendar event **sends a real invitation to a real person**. That makes it a write like any other, so the same rules apply as when you wrote to Dataverse: do it with controlled identities in a sandbox, and read back the attendees and the time before you let the agent book anything.
+   This sends a **real invitation**. Use only user accounts that you are comfortable testing with.
 
 ### 10.3 Verify the supervised scheduling offer
 
@@ -286,9 +286,9 @@ Next we will add a scheduling case to the saved evaluation set, so the agent's s
    | --- | --- |
    | How do you schedule an interview-prep meeting, and what do you need from me? | Resolve the internal attendee, ask for a duration or timeframe, find mutually free times, and present the available slots. Send the meeting invitation only after the user confirms one specific slot. Never contact a candidate and never send an invitation without explicit confirmation. |
 
-   Select **Save**.
+   Select **Save**. Select the saved **Expected response** text to review the complete value without changing it.
 
-   ![The scheduling case saved into the Interview Agent baseline set](./assets/m10-10-4-2-scheduling-evaluation-case.png)
+   ![Saved scheduling case with its complete expected response](./assets/m10-10-4-2-scheduling-evaluation-case.png)
 
 1. Select **Run** to run it. Each case must meet the configured **Pass score of 70/100**. All five cases must pass, giving an overall **100% pass rate**, without booking anything.
 

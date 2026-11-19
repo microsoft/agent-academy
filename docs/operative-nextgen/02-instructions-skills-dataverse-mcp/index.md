@@ -274,7 +274,7 @@ To keep the hiring system maintainable, we need to build it as a small set of **
 
    All three go on the same **Create from blank** panel - **Name**, **Description**, and **Instructions**:
 
-    ![Completed resume-intake skill creation form](./assets/m02-2-1-5-build-16-skill-blank.png)
+   ![Completed resume-intake skill creation form](./assets/m02-2-1-5-build-16-skill-blank.png)
 
 1. Select **Create**. The skill appears under **Skills** on the Build canvas, then select **Save**.
 
@@ -352,6 +352,12 @@ The skill now describes the intake procedure but still cannot reach a hiring rec
 
 ### 2.3 Using Preview to test
 
+If the skill does not load, refresh the browser, select **New chat** in **Preview**,
+and try again. If it is still unavailable, check that the skill was created and saved.
+
+> [!NOTE]
+> **Skill incomplete** means the trace has not marked the skill's execution as complete, not that the skill itself is unfinished.
+
 To check that the MCP connection returns current Dataverse records, ask the agent a question that its instructions and skill cannot answer on their own.
 
 1. Select the **Preview** tab to open the test chat. Three controls sit above the conversation:
@@ -370,7 +376,7 @@ To check that the MCP connection returns current Dataverse records, ask the agen
    Use Microsoft Dataverse MCP Server to read the currently active Job Roles in Dataverse. List each job role number and title.
    ```
 
-1. When a **Permission Required** card names **Microsoft Dataverse MCP Server**, check the requested action and select **Allow**. Further cards may request permission for `search`, `describe`, or `read_query`; review and allow each action needed for this query. If the connection was authorized earlier, Preview answers directly without another card; do not wait for or attempt to approve a card that is not present.
+1. If a **Permission Required** card appears for **Microsoft Dataverse MCP Server**, review and allow the actions needed for this query. An already authorized connection may not prompt again.
 
     ![Live job-role question sent from a fresh Preview chat](./assets/m02-2-3-2-build-08-mcp-test.png)
 
@@ -386,7 +392,7 @@ To check that the MCP connection returns current Dataverse records, ask the agen
    What can the resume-intake skill do for me?
    ```
 
-   The reply should explain the file type and size checks, Candidate email deduplication, creation of a linked **Resume**, and reporting both record numbers and whether the Candidate was reused or created. It should stop at intake. This question checks the agent's explanation and does not execute the intake procedure. The earlier load trace checks skill activation; Mission 05 tests the complete procedure with a resume.
+   The reply should explain the file type and size checks, Candidate email deduplication, creation of a linked **Resume**, and reporting both record numbers and whether the Candidate was reused or created. It should stop at intake. This question checks the agent's explanation; Mission 05 tests the complete intake procedure with a resume.
 
    ![Hiring Agent explains the resume-intake skill](./assets/m02-2-3-4-build-41-j1004-criteria.png)
 
@@ -421,6 +427,8 @@ Evaluations can also run cases that use tools through their configured connectio
    ![Hiring Agent with its Evaluate tab selected](./assets/m02-2-4-1-evaluate-tab.png)
 
 1. Select **New evaluation**, or **Create your first evaluation** if no evaluations exist yet.
+
+   ![Create a new evaluation from the Evaluate tab](./assets/m02-2-4-1-new-evaluation.png)
 
 1. Under **Create or select a data set**, select **Single responses**.
 
@@ -495,7 +503,7 @@ Mission 02 is complete. You can now:
 
 ✅ **A data layer**: You added the **Microsoft Dataverse MCP server** with search, read, create, and update actions.
 
-✅ **Verified readiness**: You confirmed the skill loaded, consented the connection, and read live records in **Preview**. You will test intake writes in Mission 05.
+✅ **Live data access**: You verified the Dataverse connection and read live records in **Preview**. You will test intake writes in Mission 05.
 
 ⏭️ [Move to **Add a Connected Interview Agent** mission](../03-connected-agent/index.md)
 

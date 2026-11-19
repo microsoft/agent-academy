@@ -169,7 +169,7 @@ We will create a **builder agent** that writes the Python generator and `SKILL.m
 
 We do not have to write the Python by hand. Next we will create a **builder agent** - a second Copilot Studio agent whose job is to write this skill - and use it as a pair programmer. It returns `generate_interview_doc.py`, `SKILL.md`, `interview_input.sample.json`, and a `.zip` containing all three files.
 
-1. In the left navigation select **Agents**, **New agent**. Name it `Skill Builder` and give it instructions that tell it to write, run and package Python:
+1. In the left navigation select **Agents**, **New agent**. Select **Claude Opus 5.5** rather than **Auto** so the builder uses the same model throughout the lab. Name it `Skill Builder` and give it instructions that tell it to write, run and package Python:
 
    ```text
    You are the Skill Builder. You help makers author Copilot Studio agent
@@ -363,7 +363,7 @@ We do not have to write the Python by hand. Next we will create a **builder agen
 
 ### 6.2 Add the skill to the Hiring Agent
 
-We'll upload and save the `.zip`, confirm the saved skill is available in **Preview**, then let the **agent** run the Python. Publishing is for deployment; the Hiring Agent can test its own saved skill in Preview without publishing.
+We'll upload and save the `.zip`, then test document generation in **Preview** in Lab 6.3. Publishing is for deployment; the Hiring Agent can test its own saved skill in Preview without publishing.
 
 1. In the left navigation select **Agents**, open the **Hiring Agent**, and go to its **Build** tab. In the building-blocks panel on the right, find **Skills** and select **➕**.
 
@@ -437,24 +437,17 @@ We'll upload and save the `.zip`, confirm the saved skill is available in **Prev
    Agent handles those itself with its own skills and tools.
    ```
 
-1. Start a **New chat** in Preview and confirm the skill can load without running its procedure or changing hiring records. If it is not available after a couple of turns, refresh the browser and reopen the Hiring Agent.
-
-   ```text
-   Load only the interview-prep-document skill and confirm its name and purpose.
-   Do not run its procedure, read or change hiring data, generate a file, or call
-   other tools. If it is unavailable, say so without using a substitute.
-   ```
-
-   > [!NOTE]
-   > Asking for `interview-prep-document` by name is a Preview verification technique that proves the
-   > intended skill loaded. End users can request an interview-prep document naturally without naming
-   > the skill.
-
 ### 6.3 Generate the document and compare the layout
 
 With the skill configured, we will generate a document from live data, inspect it, then request a second document for the same application to compare the layouts.
 
-1. In **Preview**, ask for the document. Replace `A#####` with a real **ApplicationNumber** from
+If the skill does not load, refresh the browser, select **New chat** in **Preview**,
+and try again. If it is still unavailable, check that the skill was uploaded and saved.
+
+> [!NOTE]
+> **Skill incomplete** means the trace has not marked the skill's execution as complete, not that the skill itself is unfinished.
+
+1. In **Preview**, select **New chat** and ask for the document. Replace `A#####` with a real **ApplicationNumber** from
    [Mission 05](../05-intake-matching-applications/index.md) - your numbers will differ from the
    examples in this course:
 
@@ -462,7 +455,7 @@ With the skill configured, we will generate a document from live data, inspect i
    Create an interview prep document for job application A#####.
    ```
 
-1. Watch the agent read the application, candidate, resume, role, and weighted evaluation criteria via the **Dataverse MCP server**, write `interview_input.json`, **run** `generate_interview_doc.py`, and return **`interview_prep.docx`** as a downloadable file. It loads the **interview-prep-document** skill, gathers the data, and returns the `.docx` with a grounded **Evaluation Criteria** table (evidence level per weighted criterion) and 10 questions mapped to the criteria:
+1. Watch the agent use the **interview-prep-document** skill to read the application, candidate, resume, role, and weighted evaluation criteria via the **Dataverse MCP server**, write `interview_input.json`, **run** `generate_interview_doc.py`, and return **`interview_prep.docx`** as a downloadable file. The `.docx` should contain a grounded **Evaluation Criteria** table (evidence level per weighted criterion) and 10 questions mapped to the criteria:
 
    ![The generated interview_prep.docx attachment available to download from Preview](./assets/m06-6-3-2-document-download.png)
 
@@ -526,7 +519,7 @@ We gave the agent a new **document-generation skill**, so now we need to extend 
    >   the agent correctly says it cannot be sure without reading the skill definition. The judge scores
    >   that partial answer as *"one or more questions not answered"* and the case fails.
 
-1. Select **Run** to run the whole set. All six cases should pass and the score should remain at least **70%** - describing the document skill needs no tool call:
+1. Select **Run** to run the whole set. Each of the six cases must meet the **Compare meaning** threshold of **70/100**, giving an overall **100% pass rate**. Describing the document skill needs no tool call:
 
    ![Hiring Agent test set green after adding the document case](./assets/m06-6-4-4-eval-green.png)
 

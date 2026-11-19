@@ -79,7 +79,7 @@ The Hiring Agent needs a separate specialist agent for interview preparation.
 
     ![New Agent control in the agents list command bar](./assets/m03-3-1-1-new-agent-button.png)
 
-1. Name it:
+1. Under **Model** on the right of **Build**, select **Claude Opus 5.5** instead of **Auto**, then name the agent:
 
    ```text
    Interview Agent
@@ -121,11 +121,9 @@ The Hiring Agent needs a separate specialist agent for interview preparation.
 
     ![Interview Agent instructions and default web knowledge](./assets/m03-3-1-3-interview-agent-build.png)
 
-   > [!NOTE] The default model
-   > As with the Hiring Agent in Mission 01, a new agent starts on the platform's default model - in
-   > this build, **Claude Opus 5.5**, shown under **Model** on the right of the Build canvas. Leave it as
-   > it is. Every step in this mission assumes that model, and you'll compare models and change this
-   > deliberately in [Mission 04](../04-model-response-and-safety/index.md).
+   > [!NOTE] Use the course model
+   > Select **Claude Opus 5.5** explicitly, as you did for the Hiring Agent in Mission 01.
+   > You'll compare it with another model in [Mission 04](../04-model-response-and-safety/index.md).
 
 1. Before the first save, open the more options menu, **Settings**, **Agent details** and set the agent's **identity**. As with the Hiring Agent in Mission 01, these fields become read-only once you save:
 
@@ -275,11 +273,9 @@ With the specialist published and available for connections, we'll add it to the
     ![Interview Agent listed under Connected agents](./assets/m03-3-3-5-build-25-connected-added.png)
 
    > [!NOTE]
-   > The **Interview Agent** must be published because a different agent - the Hiring Agent - calls it.
-   > The Hiring Agent does not need to be published to test its own newly saved connection in Preview.
-   > Saved changes can take a variable amount of time to appear. If the connection is not available
-   > after a couple of turns, start a **New chat**, refresh the browser, and reopen the Hiring Agent.
-   > Do not publish the Hiring Agent merely to make this Preview test pass.
+   > Publish the **Interview Agent** so the Hiring Agent can call it. You can test the Hiring Agent's
+   > saved connection in **Preview** without publishing the Hiring Agent. If the connection is
+   > unavailable, refresh the browser and select **New chat**.
 
 ### 3.4 Test multi-agent collaboration
 

@@ -32,7 +32,6 @@ last-edited-date: 2026-10-29
 
 > [!NOTE]
 > This lab builds an agent powered by the **Microsoft Copilot harness**.
-> In the current Copilot Studio UI, make sure the **New experience** toggle in the upper-right corner of the Home page is **on** so your screen matches the screenshots in this mission.
 
 🎥 **Watch the Walkthrough**
 
@@ -83,6 +82,7 @@ Administrators can also use the Power Platform admin center and Microsoft Purvie
 ## 🧠 Meet the Microsoft Copilot harness {#meet-the-github-copilot-harness}
 
 Now that you understand why Copilot Studio is suited for building and governing more advanced agents, let's look at the runtime architecture you'll use. The [Microsoft Copilot harness](https://learn.microsoft.com/microsoft-copilot-studio/harnesses-overview) is designed for reasoning-heavy, multi-step work. Instead of designing every conversation path manually, you describe the agent's purpose and behavior, then connect the knowledge and capabilities it needs.
+
 ![AI-based authoring in Copilot Studio](./assets/04-ai-based-authoring-in-copilot-studio.png)
 
 The agent lifecycle follows a simple pattern: create, build, test, publish, and monitor. In this mission, you'll focus on creating, building, and testing your agent.
@@ -130,7 +130,7 @@ We'll continue using the same IT helpdesk scenario introduced earlier in the cou
 
 Before starting this lab, make sure you have:
 
-- Access to Copilot Studio with the **New experience** toggle enabled for the Microsoft Copilot harness authoring surface
+- Access to the Microsoft Copilot harness authoring surface in Copilot Studio
 - The solution from [Mission 03 - Creating a solution](../03-creating-a-solution/index.md)
 - Your test knowledge source(s), for example the **Contoso IT** SharePoint site from [Mission 00 - Course setup](../00-course-setup/index.md#step-5-create-new-sharepoint-site)
 
@@ -141,9 +141,13 @@ Before starting this lab, make sure you have:
 
 As explained in the [course naming update](../index.md#harness-naming-update), the Microsoft Copilot harness may still appear under its previous name in the UI and screenshots.
 
-1. Browse to [**Microsoft Copilot Studio**](https://copilotstudio.microsoft.com) and on the **Home** page, select the **Agent (GitHub Copilot)** tile to create an agent using the Microsoft Copilot harness.
+1. Browse to [**Microsoft Copilot Studio**](https://copilotstudio.microsoft.com) and on the **Home** page, select the **Agent** tile to create an agent using the Microsoft Copilot harness. Some rollout versions label this **Agent (GitHub Copilot)**.
 
     ![Select agent tile](./assets/04-select-agent-tile.png)
+
+1. Under **Model** on the right of the **Build** canvas, select **Claude Opus 5.5** instead of **Auto**. Use this model throughout Recruit for consistent behavior.
+
+    ![New agent Build canvas with Claude Opus 5.5 selected](./assets/04-select-claude-opus-model.png)
 
 1. Update the agent name to the following text,
 
@@ -277,7 +281,7 @@ Now that the agent's knowledge sources are ready, let's review some settings bef
 
 1. Next, select the **Greeting & prompts** tab, where you can configure the initial greeting and suggested prompts that help users start conversations in channels such as Microsoft Teams.
 
-    ![Greeting and prompts tab](./assets/04-greeting-and-prompts-tab.png)
+    ![Greeting and prompts tab in agent settings](./assets/04-greeting-and-prompts-tab.png)
 
 1. To align the greeting with the agent's new name, replace the existing message with the following text:
 

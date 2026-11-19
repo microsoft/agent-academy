@@ -1,10 +1,12 @@
 ---
 name: troubleshooting-procedure
-description: Call this when a user states an IT issue and requests troubleshooting help. It provides step-by-step procedure for diagnosing and resolving IT issues, including escalation with a ticket summary.
+description: Call this when a user requests IT troubleshooting or confirms an issue is resolved. It provides step-by-step diagnostics, closure after confirmed resolution, and escalation with a ticket summary.
 ---
 # IT Troubleshooting Procedure
 
 Follow this procedure when an employee reports a technical issue.
+
+1. **Close resolved issues:** If the employee confirms the issue is resolved, acknowledge the result and close the exchange. Do not suggest further diagnostics, preventive configuration changes, or additional troubleshooting. A brief offer of future help is fine.
 
 1. **Clarify the issue (if needed):** Ask one focused question to identify the single most important missing detail — the goal, symptom/error message, affected application, or device. Do not ask multiple questions at once.
 

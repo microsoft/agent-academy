@@ -152,9 +152,9 @@ The rest of the course depends on one environment containing the hiring tables, 
 
 Before the agent can read or write hiring data, its Dataverse tables and the Hiring Hub app need to exist in your environment.
 
-1. Open **[Copilot Studio (new experience)](https://copilotstudio.preview.microsoft.com)**. Confirm the home page shows **Agent** and **Workflow** cards currently labeled **GitHub Copilot**. These use the Microsoft Copilot harness, as explained in the [course naming update](../index.md#harness-naming-update). Expand the left navigation, then check the **environment picker** at the bottom and confirm it names your course environment. If it shows a different one, select the picker and switch before going any further.
+1. Open **[Copilot Studio (new experience)](https://copilotstudio.preview.microsoft.com)**. Confirm the home page shows **Agent** and **Workflow** cards. Some rollout versions also label these **GitHub Copilot**; they use the Microsoft Copilot harness, as explained in the [course naming update](../index.md#harness-naming-update). Expand the left navigation, then check the **environment picker** at the bottom and confirm it names your course environment. If it shows a different one, select the picker and switch before going any further.
 
-   ![Agent and Workflow cards labeled GitHub Copilot and the environment picker](./assets/m01-1-1-1-course-environment-home.png)
+   ![Agent and Workflow cards beside the environment picker](./assets/m01-1-1-1-course-environment-home.png)
 
    > [!WARNING] Always check your environment first
    > Get into the habit of checking the picker before you follow any instruction - the rest of the
@@ -306,14 +306,13 @@ The home-card and agent-list labels may still say **GitHub Copilot** during the 
 
    ![The Agents area with the New agent button](./assets/m01-1-3-2-new-agent-button.png)
 
-1. The **Build** canvas opens with an *Untitled Agent*.
+1. The **Build** canvas opens with an *Untitled Agent*. Under **Model** on the right, select **Claude Opus 5.5** instead of **Auto**.
 
    ![Blank new agent Build canvas](./assets/m01-1-3-2-build-01-new-agent.png)
 
-   > [!NOTE] The default model
-   > A new agent starts on the platform's default model - in this build, **Claude Opus 5.5**, shown
-   > under **Model** on the right of the Build canvas. Leave it as it is, because every step in this mission
-   > assumes that model. You'll compare models and change this deliberately in
+   > [!NOTE] Use the course model
+   > Select **Claude Opus 5.5** explicitly so the course does not depend on the changing **Auto** selection.
+   > You'll compare it with another model in
    > [Mission 04](../04-model-response-and-safety/index.md).
 
 1. Name the agent:

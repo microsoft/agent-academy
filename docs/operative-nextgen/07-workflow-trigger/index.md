@@ -574,14 +574,14 @@ We can do the quick check without publishing anything and without sending any em
 
    ![Run node inputs holding the sample From and Body](./assets/m07-7-6-1-run-node-inputs.png)
 
-1. Select **Run**, then review the action's **Output** after the green check appears. The list shows every column on the row that was just created, with **Cover Letter** holding the sample **Body** value you entered. Scroll the **Output** list down to the **Resume** columns: **Resume Number** holds a generated value such as `R01064` and **Source Email Address** holds your sample value, while **Resume Title** is blank. The PDF is not here either - it is stored as a **note** by the next step, and **Run node** runs only the action you selected.
+1. Select **Run**, then review the action's **Output** after the green check appears. The list shows every column on the row that was just created, with **Cover Letter** holding the sample **Body** value you entered. Scroll the **Output** list down to the **Resume** columns: **Resume Number** holds a generated value such as `R01145` and **Source Email Address** holds your sample value, while **Resume Title** shows the unresolved attachment expression. The PDF is not here either - it is stored as a **note** by the next step, and **Run node** runs only the action you selected.
 
    That row is real data. Open the **Hiring Hub** app afterwards - it is in the environment's app list, and [Mission 01](../01-get-started/index.md#lab-01-set-up-the-hiring-hub) has the full route if you need it - go to **Resumes**, select the new row, and **delete** it, so a half-filled resume does not sit in your Resumes list.
 
-   > [!NOTE] Why Resume Title comes out empty
+   > [!NOTE] Why Resume Title is unresolved
    > **Run node** lets you type sample values for earlier **steps**, but not for the current item of a
    > **loop**. **Resume Title** is mapped from `items('For_each_attachment')?['name']`, so there is no
-   > box for it and the created row has a blank title. This check exercises the connection, the table,
+   > box for it. In this build, the created row retains the expression as its title. This check exercises the connection, the table,
    > and the two trigger-driven columns, and the loop is covered by the full run below.
 
    ![Resume fields in Run node output](./assets/m07-7-6-2-run-node-output.png)
@@ -606,24 +606,13 @@ We can do the quick check without publishing anything and without sending any em
 
    ![The Activity tab listing the run the email started](./assets/m07-7-6-7-run-started.png)
 
-   > [!IMPORTANT] Why your test email may never start a run
-   > The **When a new email arrives** trigger node checks the mailbox on a schedule rather than the
-   > moment mail arrives, and it slows that schedule to once an hour while the mailbox is quiet.
-   > Publishing the workflow - or turning it off and on again - re-creates the subscription and moves
-   > its marker forward to the newest matching email **without running anything**, so an email you sent
-   > just before publishing is skipped. Restarting the workflow to "kick it" skips the next one too.
+   > [!IMPORTANT] If the test email does not start a run
+   > Wait for the trigger to check the mailbox; do not restart or republish the workflow while waiting.
+   > Send test emails only after the *Your flow is waiting for the trigger event* banner appears.
    >
-   > Two habits avoid the wait:
-   >
-   > - **Arm the trigger before you send**, which is what the last two steps did. The banner reads
-   >   *"Your flow is waiting for the trigger event"*, so send your email while it is up and the run starts
-   >   within a minute or so. After a page reload the **Run** button can lose its tooltip and label, but it
-   >   is still the control immediately right of **Save**.
-   > - **Use Resubmit as your test loop.** In the **Activity** tab choose **Select runs**, tick **one**
-   >   previous run, then select **Resubmit**. It replays that run's real trigger payload - attachments
-   >   and all - against your newly published definition, starting immediately. Send a fresh email only
-   >   when you want to test the trigger itself. **Select runs** ticks *every* run, so clear the
-   >   selection first or you will resubmit your whole run history at once.
+   > To retest a published change with an existing email, open **Activity**, choose **Select runs**,
+   > clear the default selection, select **one** previous run, then select **Resubmit**. This processes
+   > the email and attachments again and can create more records.
 
 1. Open the **Activity** tab and select the newest run. Every node shows **Succeeded**. Expand the **Process application** path and confirm **Is it a PDF?**, **File resume in Dataverse** and **Attach the resume as a note** all show **Succeeded**.
 
