@@ -413,7 +413,7 @@ You've built a reusable workspace, not just a collection of replies:
 
 Congrats, agent — mission accomplished! To request your **Project Wrangler** badge, complete the lab, then submit the badge request form:
 
-[Claim your Project Wrangler badge](https://aka.ms/aa/cc/badge-wrangler/form)
+[Claim your Project Wrangler badge](https://aka.ms/cowork-collective/project-wrangler/form)
 
 Answer the knowledge-check questions based on the work you completed. Once reviewed, you'll receive an email from Global AI Community with instructions to claim your badge.
 
