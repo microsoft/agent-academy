@@ -22,7 +22,7 @@ products:
 industries:
   - it
 created-date: 2026-08-05
-last-edited-date: 2026-10-29
+last-edited-date: 2026-11-18
 ---
 
 # 🚨 Mission 08: Publish Your Agent {#mission-08-publish-your-agent}
@@ -63,7 +63,7 @@ Publishing to Teams or Microsoft 365 Copilot changes where employees access the 
 
 ## 🧪 Lab 08 - Publish your agent {#lab-08-publish-your-agent}
 
-In this lab, you'll configure the Teams + Microsoft 365 channel, publish the agent, and verify the employee experience in both destinations.
+In this lab, you'll configure publishing to Teams and Microsoft 365 Copilot, publish the agent, and verify the employee experience in both destinations.
 
 ### Prerequisites
 
@@ -77,13 +77,37 @@ In this lab, you'll configure the Teams + Microsoft 365 channel, publish the age
 
 1. Select **Publish agent** in the confirmation dialog and wait for publication to finish.
 
-1. Select **Add channels**, then choose the Teams and Microsoft 365 channel.
+On **Build**, your agent will show either **Triggers** or **Channels**. The instructions below differ slightly depending on which you see. Follow the matching section, then continue with **Both paths: configure the listing**.
 
-1. Select **Microsoft 365 Copilot and Microsoft Teams** under **Availability**, then select **Add channel**.
+#### If you see Triggers
 
-1. Open **Teams + Microsoft 365** from the agent's **Channels** section. Confirm that **Microsoft 365 Copilot and Microsoft Teams** is selected.
+1. Select **Add trigger**, then **Copilot** > **Chat with the agent**. Chat destinations appear alongside scheduled and event triggers.
+
+   ![Copilot and Teams providers in trigger picker](./assets/08-triggers-picker.png)
+
+1. Review **About info** and select **Add trigger**.
+
+   ![Add the Copilot personal chat trigger](./assets/08-triggers-add-copilot.png)
+
+1. Select **Add trigger** > **Microsoft Teams** > **Chat with the agent** > **Add trigger**. Do not select **New channel message** or an **@mentioned** event.
+
+   ![Add the Teams personal chat trigger](./assets/08-triggers-add-teams.png)
+
+1. Confirm both chat triggers are present. They both read **Chat with the agent**; distinguish them by their Copilot and Teams icons. Open the **Copilot** entry. There is no **Availability** tab.
+
+#### If you see Channels
+
+1. Select **Add channel** > **Teams + Microsoft 365**. You can also use **Add channels** in the publication confirmation.
+
+1. Confirm with **Add channel**.
+
+1. Open **Teams + Microsoft 365** and select **Microsoft 365 Copilot and Microsoft Teams** (or **Microsoft Copilot and Microsoft Teams**) under **Availability**. Read the warning that **this setting cannot be changed after publishing**.
 
    ![Select Teams and Microsoft 365 channel](./assets/08-select-teams-and-microsoft-365-channel.png)
+
+#### Both paths: configure the listing
+
+Continue here whether you added chat triggers or a channel.
 
 1. Select **About info** to configure the agent listing.
 
@@ -111,17 +135,23 @@ In this lab, you'll configure the Teams + Microsoft 365 channel, publish the age
    Contoso IT
    ```
 
-1. Select **Save** to apply the listing changes.
+1. If you see **Triggers**, select **Save**, then repeat the same listing changes in the **Microsoft Teams** chat trigger and select **Save** there too.
+
+   ![Save the separate Copilot chat trigger listing](./assets/08-triggers-listing.png)
+
+1. If you see **Channels**, select **Save** once for the combined listing.
 
    ![Save the updated channel listing](./assets/08-save-and-publish-the-updated-listing.png)
 
-1. Select **Publish**, then **Publish agent**, to release the updated listing. Wait for publication to finish.
+1. Close the dialog, then select **Publish** > **Publish agent** to release the updated listing. Wait for publication to finish.
 
 ### 8.2 Test the agent in Teams
 
-1. Open **Teams + Microsoft 365** in Copilot Studio and select **Use and share**.
+1. If you see **Triggers**, open the **Microsoft Teams** chat trigger in Copilot Studio and select **Use and share** > **View in Microsoft Teams**. If **Use and share** is disabled, wait for publication to finish.
 
-1. Select **View in Teams** to open the published agent's listing.
+   ![Teams trigger with its published Teams link](./assets/08-triggers-teams-link.png)
+
+1. If you see **Channels**, open **Teams + Microsoft 365** in Copilot Studio and select **Use and share** > **View in Teams** (or **View in Microsoft Teams**).
 
 1. Select **See more** in the agent listing, then review the full description.
 
@@ -147,9 +177,13 @@ In this lab, you'll configure the Teams + Microsoft 365 channel, publish the age
 
 ### 8.3 Test the agent in Microsoft 365 Copilot
 
-1. Return to **Teams + Microsoft 365** in Copilot Studio and select **Use and share**.
+1. If you see **Triggers** in Copilot Studio, open the **Copilot** chat trigger and select **Use and share**.
 
-1. Select **View in Copilot** to open the published agent in Microsoft 365 Copilot.
+   ![Copilot trigger with its separate Copilot link](./assets/08-triggers-copilot-link.png)
+
+1. If you see **Channels**, open **Teams + Microsoft 365** and select **Use and share**.
+
+1. Select **View in Microsoft Copilot** (or **View in Copilot**) to open the published agent in Microsoft 365 Copilot.
 
 1. Enter the following troubleshooting request:
 

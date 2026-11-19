@@ -18,7 +18,7 @@ products: [copilot-studio, dataverse, teams, microsoft-365-copilot]
 industries:
   - hr
 created-date: 2026-01-14
-last-edited-date: 2026-10-29
+last-edited-date: 2026-11-18
 ---
 
 # 🚨 Mission 11: Evaluate, Publish, and Monitor Your Agent {#mission-11-evaluate-publish-and-monitor-your-agent}
@@ -271,11 +271,29 @@ Once the agent is installed from a store card, the person using it has whatever 
 
 ### 11.4 Publish to Microsoft 365 Copilot and Teams
 
-The **Hiring Agent** is already published - you published it in Mission 06 so its skills would run, and again in Missions 07 to 09 so the workflow could call it. But publishing only makes the current draft live for connected agents, workflows and skills. Nobody outside Copilot Studio can reach it yet. Adding a **channel** is what puts it in front of users.
+The **Hiring Agent** is already published - you published it in Mission 06 so its skills would run, and again in Missions 07 to 09 so the workflow could call it. But publishing only makes the current draft live for connected agents, workflows and skills. Nobody outside Copilot Studio can reach it yet. Adding a **channel** or **chat trigger** makes it available to users.
 
-1. In the left navigation select **Agents** and open the **Hiring Agent**.
+In the left navigation, select **Agents** and open the **Hiring Agent**. On **Build**, your agent will show either **Triggers** or **Channels**. The instructions below differ slightly depending on which you see. Follow the matching section, then continue with **Publish and open the agent**.
 
-1. On the **Build** tab find the **Channels** area. Select **Add channel** to see what this agent can be published to - **Teams + Microsoft 365**, **Demo website** and **App**. A channel already added is marked **Added**, and a channel your authentication settings rule out is shown but cannot be selected.
+#### If you see Triggers
+
+1. Select **Add trigger** > **Copilot** > **Chat with the agent**. Chat destinations appear alongside **Recurrence** and event connectors.
+
+   ![Copilot and Teams providers in trigger picker](./assets/m11-triggers-picker.png)
+
+1. Review **About info** and select **Add trigger**.
+
+   ![Add the Hiring Agent Copilot chat trigger](./assets/m11-triggers-add-copilot.png)
+
+1. Repeat with **Add trigger** > **Microsoft Teams** > **Chat with the agent** > **Add trigger**. Do not select **New channel message** or an **@mentioned** event.
+
+   ![Add the Hiring Agent Teams chat trigger](./assets/m11-triggers-add-teams.png)
+
+1. Confirm both chat triggers are present. They both read **Chat with the agent**; distinguish them by their Copilot and Teams icons.
+
+#### If you see Channels
+
+1. Select **Add channel**. The picker offers **Teams + Microsoft 365**, **Demo website** and **App**.
 
    ![The Add a channel dialog listing the available channels](./assets/m11-11-4-2-channel-picker.png)
 
@@ -287,17 +305,25 @@ The **Hiring Agent** is already published - you published it in Mission 06 so it
 
    ![Published agent channel details dialog](./assets/m11-11-4-4-channel-details.png)
 
-1. Select **Availability**, choose **Microsoft Copilot and Microsoft Teams**, then confirm the selection. This lists the agent in the Agent Store and makes it available in Teams.
-
-   Read the warning above the choice before you continue: **this setting cannot be changed after publishing**.
+1. Select **Availability** and choose **Microsoft Copilot and Microsoft Teams**. Read the warning that **this setting cannot be changed after publishing**.
 
    ![Teams and Microsoft 365 publication and Copilot availability enabled](./assets/m11-11-4-5-channel-prepared.png)
 
-1. Before you publish, select **About info** and review the **Short description**, **Long description**, **Show an agent disclaimer in Microsoft 365 Copilot**, **Developer name**, **Website**, and **Terms of use** fields.
+1. Select **About info** and review the **Short description**, **Long description**, **Developer name**, **Website**, and **Terms of use** fields. Review the Copilot disclaimer if shown.
 
    ![About info for the Agent Store listing](./assets/m11-11-4-6-about-info.png)
 
-1. Select **Save** and wait. When it completes, the **Use and share** tab offers **View in Microsoft Copilot** and **View in Microsoft Teams**.
+1. Select **Save** to apply the channel settings.
+
+#### Publish and open the agent
+
+1. Close any open configuration dialog, then select **Publish** > **Publish agent** and wait for publication to finish.
+
+1. If you see **Triggers**, open the **Microsoft Teams** chat trigger and select **Use and share**. If the tab is disabled, wait for publication to finish.
+
+   ![Teams trigger with its published Teams link](./assets/m11-triggers-teams-link.png)
+
+1. If you see **Channels**, open **Teams + Microsoft 365** and select **Use and share**.
 
    ![The Use and share tab offering both host links](./assets/m11-11-4-7-channel-enabled.png)
 
@@ -318,7 +344,15 @@ The **Hiring Agent** is already published - you published it in Mission 06 so it
 
    ![The published agent answering from Dataverse in Teams](./assets/m11-11-4-10-teams-first-reply.png)
 
-1. Back on the **Use and share** tab, select **View in Microsoft Copilot** to open the **Hiring Agent** in **Microsoft 365 Copilot**. If an **Agent Store** card opens, review the app **version** and requested permissions, then select **Add** or **Open**.
+1. If you see **Triggers** in Copilot Studio, open the **Copilot** chat trigger and select **Use and share**.
+
+   ![Copilot trigger with its separate Copilot link](./assets/m11-triggers-copilot-link.png)
+
+1. If you see **Channels**, open **Teams + Microsoft 365** and select **Use and share**.
+
+   ![The combined channel offering Teams and Copilot links](./assets/m11-11-4-7-channel-enabled.png)
+
+1. Select **View in Microsoft Copilot** to open the **Hiring Agent** in **Microsoft 365 Copilot**. If an **Agent Store** card opens, review the app **version** and requested permissions, then select **Add** or **Open**.
 
    ![The Hiring Agent open in Microsoft 365 Copilot](./assets/m11-11-4-11-agent-store-add.png)
 
