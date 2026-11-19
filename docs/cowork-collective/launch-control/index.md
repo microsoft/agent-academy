@@ -356,14 +356,13 @@ You've built a reusable workspace, not just a collection of replies:
 - **Reusable context:** Ten initial sources and three staged updates support planning, review, and post-event reporting.
 - **Controlled revision:** An explicit reviewed update changes one existing Word file from draft to final without finalizing everything.
 - **Varied deliverables:** Two Word documents and a charted PowerPoint appear together under **Outputs**.
-- **Grounded reporting:** You distinguish targets from fictional results and verify chart values, denominators, and unresolved decisions.
 
 ## Claim Your Project Wrangler Badge {#claim-your-badge}
 
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="../assets/project-wrangler.png" alt="Project Wrangler Badge" width="220" /></p>
 
-Congrats, agent — mission accomplished! To request your **Project Wrangler** badge, complete the lab, then submit the badge request form:
+Congrats, agent — mission accomplished! To request your **Project Wrangler** badge, submit the badge request form:
 
 [Claim your Project Wrangler badge](https://aka.ms/cowork-collective/project-wrangler/form)
 
