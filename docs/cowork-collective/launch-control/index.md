@@ -127,8 +127,6 @@ Create one project and save its standing instructions before starting any tasks.
 
     ![Lifecycle instructions with draft and final rules](./assets/04-save-lifecycle-instructions-annotated.png)
 
-    These rules belong to the project. You won't paste them into every task. Finalization is an explicit exception for one reviewed file, not a blanket removal of draft safeguards.
-
 ## Lab 1.2 - Build and Search Project Context {#lab-1-2}
 
 Add a reusable reference collection before creating any tasks.
@@ -349,23 +347,6 @@ Advance to the simulated February 19 wrap-up. Add results evidence and change ou
     Three tasks don't require three copies of the launch plan. The finalization task updated the existing file; the speaker brief and results deck are separate deliverables.
 
     Use the expanded sidebar or **Recent** for conversations, **Project context** for reference material, and **Outputs** for files.
-
-## Keep the Workspace Useful {#keep-the-workspace-useful}
-
-The core exercise is complete. These controls support longer-running projects; you don't need to change or remove anything to finish the lab.
-
-| Need | Project capability |
-| --- | --- |
-| Bring earlier work into the workspace | **Add existing chats** under **Recent** adds eligible chats that aren't already in another project. |
-| Reorganize a task | Its **More actions** menu supports moving it to a project or removing it from the current project. Removal doesn't delete the conversation. |
-| Update working rules | **More actions** > **Edit instructions** changes guidance for subsequent interactions; it doesn't automatically revise existing documents. |
-| Rename or recolor the workspace | **More actions** > **Edit project** changes its name or color, not its instructions. |
-| Find another project | **Back to Projects** opens the project list, including project search and **Active** / **Archived** views. |
-| Put completed work away | **More actions** > **Archive** removes the project from active navigation. Restore it from **Archived** later. |
-
-You can remove an uploaded source using its **Remove from project** control. Removing context doesn't rewrite existing outputs. Individual files can't currently be removed from the project's **Outputs** collection.
-
-The project has no scheduled work to disable. Leave it available for review; archiving is optional.
 
 ## Mission Accomplished {#mission-accomplished}
 
