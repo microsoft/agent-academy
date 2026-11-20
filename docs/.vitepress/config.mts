@@ -395,6 +395,10 @@ export default defineConfig({
             items: [
               { text: "Badge Check", link: "/cowork-collective/badge-check/" },
               {
+                text: "Launch Control",
+                link: "/cowork-collective/launch-control/",
+              },
+              {
                 text: "Out of Office Vacation Handoff",
                 link: "/cowork-collective/out-of-office-prep/",
               },
