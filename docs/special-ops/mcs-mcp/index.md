@@ -1,17 +1,18 @@
 ---
 tags:
   - mcp
-difficulty: 3
+difficulty: 2
 time: 30
 harness: github-copilot
 description: >-
-  Deploy an MCP Server and wire it up to Microsoft Copilot Studio.
+  Connect a hosted MCP server to Microsoft Copilot Studio, use its tools,
+  and explore interactive MCP Apps with the Zava Insurance sample.
 badge: ./assets/MCP_Joker_Badge.png
-products: [azure, copilot-studio, github-copilot, visual-studio-code]
+products: [copilot-studio]
 industries:
-  - it
+  - financial-services
 created-date: 2026-02-20
-last-edited-date: 2026-08-10
+last-edited-date: 2026-11-26
 ---
 # 🤖 Microsoft Copilot Studio ❤️ MCP {#microsoft-copilot-studio-mcp}
 
@@ -20,334 +21,255 @@ last-edited-date: 2026-08-10
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="./assets/MCP_Joker_Badge.png" alt="MCP Joker Badge" width="220" /></p>
 
-Welcome, agent. Your mission — should you choose to accept it — is to deploy an **MCP Server** behind enemy lines and wire it up to **Microsoft Copilot Studio**. Expect turbulence. Trust the protocol. Leave no endpoint unconfigured. 🎯
+> [!WARNING] Draft mission scaffold
+> This revision is being authored. Concepts and task outlines are drafted; detailed steps, connection settings, and screenshots still need validation in Copilot Studio. The displayed duration is provisional. Do not treat this scaffold as a completed walkthrough.
+
+Welcome, agent. Your mission, should you choose to accept it, is to connect **Microsoft Copilot Studio** to the **Zava Insurance MCP server**. First, use MCP tools to retrieve claim information. Then explore **MCP Apps (preview)** to work with interactive views inside the conversation.
+
+You'll use a hosted sample server, so you can focus on the agent experience without deploying infrastructure. The same server supplies ordinary data tools and tools that display an app.
 
 > [!IMPORTANT] This mission uses the GitHub Copilot harness
-> The Copilot Studio steps require an agent powered by the **GitHub Copilot harness**. Turn on **New Experience** before you create the agent. GitHub Copilot in Visual Studio Code is also used separately to test the MCP server.
+> The Copilot Studio steps require an agent powered by the **GitHub Copilot harness**. Turn on **New Experience** before you create the agent.
 
 ## 🎯 Mission objectives {#mission-objectives}
 
-In this mission, you'll learn how to:
+In this mission, you'll learn:
 
-- Run an MCP server locally or deploy it to Azure
-- Connect and test the MCP server with GitHub Copilot in Visual Studio Code
-- Add the MCP server to an agent powered by the GitHub Copilot harness in Copilot Studio
-- Remove the Azure resources after completing the mission
-
-## ❓ What is MCP? {#what-is-mcp}
-
-[Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) is an open protocol that standardizes how applications provide context to LLMs, defined by [Anthropic](https://www.anthropic.com/). MCP provides a standardized way to connect AI models to different data sources and tools. MCP allows makers to seamlessly integrate existing knowledge servers and APIs directly into Copilot Studio.
-
-## 🆚 MCP vs Connectors {#mcp-vs-connectors}
-
-When do you use MCP? And when do you use connectors? Will MCP replace connectors?
-
-MCP servers are made available to Copilot Studio using connector infrastructure, so these questions are not really applicable. The fact that MCP servers use the connector infrastructure means they can employ enterprise security and governance controls such as [Virtual Network](https://learn.microsoft.com/power-platform/admin/vnet-support-overview) integration, [Data Loss Prevention](https://learn.microsoft.com/power-platform/admin/wp-data-loss-prevention) controls, [multiple authentication methods](https://learn.microsoft.com/connectors/custom-connectors/#2-secure-your-api)—all of which are available in this release—while supporting real-time data access for AI-powered agents.
-
-So, MCP and connectors are really **better together**.
+1. How MCP exposes tools for a Copilot Studio agent to discover and call.
+1. How to connect a hosted MCP server and request a text-based claim summary.
+1. How MCP Apps extend tool results with an interactive interface.
+1. How to distinguish a working tool call from a successfully rendered app.
 
 ## ⚙️ Prerequisites {#prerequisites}
 
-- Visual Studio Code installed ([download](https://code.visualstudio.com/download))
-- Node v22 (ideally installed via [nvm for Windows](https://github.com/coreybutler/nvm-windows) or [nvm](https://github.com/nvm-sh/nvm))
-- Docker installed ([download](http://aka.ms/azure-dev/docker-install))
-- Azure Developer CLI installed ([download](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd))
-- Azure Subscription (with payment method added)
-- Copilot Studio trial or developer account with access to the **GitHub Copilot harness**
+- A [Microsoft Copilot Studio](https://copilotstudio.microsoft.com/) account and environment where you can create agents powered by the **GitHub Copilot harness**.
+- Permission to add an external MCP server and create its required connection, subject to your organization's policies.
+- Access to **MCP Apps (preview)** in Copilot Studio preview chat.
+- Access to the hosted sample endpoint: `https://zava-insurance-mcp.azurewebsites.net/mcp`.
+
+You don't need a local copy of the server or your own Azure subscription for this hosted walkthrough.
+
+> [!WARNING] Shared demo data
+> Use only synthetic sample data. Don't enter customer information, credentials, or confidential content. The sample includes write tools, but this mission uses read-only exercises. Don't approve claims, create inspections, or change records on the shared server.
+
+<!-- TODO: Validate hosted endpoint availability, authentication requirements, preview access, and applicable environment policies before completing the connection steps. -->
 
 > [!IMPORTANT] GitHub Copilot harness billing
 > This mission uses the **GitHub Copilot harness in Microsoft Copilot Studio**, which uses usage-based billing. Building, testing in Preview, evaluating, and using the agent might consume **Copilot Credits**. Review the [Copilot Credits billing overview](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/billing-credit-overview) before you begin.
 
-## 🧪 Lab 1.1 - Set Up the MCP Server {#lab-11-set-up-the-mcp-server}
+## ❓ What is MCP? {#what-is-mcp}
 
-Now you have a choice! You either run the server locally - or you can deploy it to Azure.
+[Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) standardizes how an AI application connects to tools and context. An MCP server describes its available tools, including their purpose and inputs. The agent can use those descriptions to choose a tool when responding to a request.
 
-There are a couple of steps that you need to do for both:
+Think of the server as an insurance service desk with a published menu. The agent reads the menu, selects the service, and supplies the required details. A claim-summary tool returns information; the agent uses that result to answer you.
 
-1. Download the Jokes MCP Server
+Connecting a server doesn't authorize every operation it offers. Connections, authentication, permissions, and your organization's policies still apply. In this mission, stay with read-only claim and contractor information.
 
-    <action-button href="https://download-directory.github.io/?url=https://github.com/microsoft/agent-academy/tree/main/docs/special-ops/mcs-mcp/source&filename=jokes-mcp-server" label="Download Jokes MCP Server" icon="📦" />
+### MCP and connectors {#mcp-vs-connectors}
 
-1. Unpack the zip-file
+MCP and connectors aren't competing choices. Copilot Studio uses connector infrastructure for MCP integrations, bringing connections and organizational governance into the setup. Follow the [MCP server connection guidance](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/tools-add-mcp-server) for the current experience.
 
-1. Open Visual Studio Code and open the unpacked folder
+## 🎯 The Zava Insurance scenario {#the-zava-insurance-scenario}
 
-1. Open the terminal in Visual Studio Code by pressing `ctrl` + `` ` `` (Windows/Linux) or `cmd` + `` ` `` (Mac)
+Zava Insurance needs an agent that helps claims staff inspect sample claims without switching between several screens. You'll begin with a text summary, then add a visual way to explore claims and contractors in the same conversation.
 
-### 🏃‍♀️ Run the MCP Server Locally {#run-the-mcp-server-locally}
+The [Zava Insurance Node sample](https://github.com/microsoft/mcp-interactiveUI-samples/tree/main/mcp-apps/zava-insurance/node) provides both tool types:
 
-1. Run the following command to install the dependencies:
+| Tool | Purpose | Experience |
+| --- | --- | --- |
+| `get-claim-summary` | Retrieve key details for a claim | Text result for the agent to summarize |
+| `show-claims-dashboard` | Display claims, filters, and summary metrics | Interactive dashboard |
+| `show-claim-detail` | Display a claim and its related information | Interactive detail view |
+| `show-contractors` | Display contractors with optional filters | Interactive contractor list |
 
-    ```bash
-    npm install
-    ```
+These names come from the sample source. Confirm the hosted server's discovered catalog before finalizing the walkthrough; a deployed version might differ.
 
-1. Run the following command to build and start the server:
+## 🧪 Lab 1: Connect the server and use MCP tools {#lab-1-connect-and-use-tools}
 
-    ```bash
-    npm run build && npm run start
-    ```
+Start with a data tool. Establish that the connection and tool invocation work before introducing interactive rendering.
 
-    ![Terminal view after building and starting the server](./assets/vscode-terminal-run-start.png)
+### Lab 1.1: Create the Zava agent {#lab-11-create-the-zava-agent}
 
-1. Select **PORTS** at the top of the Visual Studio Code Terminal
-
-    ![Image of VS Code where the terminal is open and the PORTS tab is highlighted](./assets/vscode-terminal-ports.png)
-
-1. Select the green **Forward a Port** button
-
-    ![Image of VS Code where the PORTS tab is open and the green `Forward a Port` button is highlighted](./assets/vscode-terminal-ports-forward.png)
-
-1. Enter `3000` as the port number (this should be the same as the port number you see when you ran the command in step 5). You might be prompted to sign in to GitHub, if so please do this, since this is required to use the port forwarding feature.
-
-1. Right-click the row you just added and select **Port visibility** > **Public** to make the server publicly available
-
-1. Ctrl + click on the **Forwarded address**, which should be something like: `https://something-3000.something.devtunnels.ms`
-
-1. Select **Copy** on the following pop-up to copy the URL
-
-    ![View of the PORTS setup with highlighted the port, the forwarded address and the visibility](./assets/vscode-terminal-ports-setup.png)
-
-1. Open to the browser of your choice and paste the URL in the address bar, type `/mcp` behind it and hit enter
-
-If all went well, you will see the following error message:
-
-```json
-{"jsonrpc":"2.0","error":{"code":-32000,"message":"Method not allowed."},"id":null}
-```
-
-Don't worry - this error message is nothing to be worried about!
-
-### 🌎 Deploy to Azure {#deploy-to-azure}
-
-> [!IMPORTANT]
-> As listed in the [prerequisites](#prerequisites), the [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd) needs to be installed on your machine for this part.
-
-Make sure to login to Azure Developer CLI if you haven't done that yet.
-
-```bash
-azd auth login
-```
-
-> [!WARNING]  
-> After running `azd up`, you will have an MCP Server running on Azure that is publicly available. Ideally, you don't want that. Make sure to run `azd down` after finishing the lab to delete all the resources from your Azure subscription. Learn how to run `azd down` by going to [this section](#lab-14-remove-the-azure-resources).
-
-Run the following command in the terminal:
-
-```bash
-azd up
-```
-
-For the unique environment name, enter `mcsmcplab` or something similar. Select the Azure Subscription to use and select a value for the location. After that, it will take a couple of minutes before the server has been deployed. When it's done - you should be able to go to the URL that's listed at the end and add `/mcp` to the end of that URL.
-
-![Azd deploy server output](./assets/azd-deploy-server.png)
-
-You should again see the following error:
-
-```json
-{"jsonrpc":"2.0","error":{"code":-32000,"message":"Method not allowed."},"id":null}
-```
-
-## 🧪 Lab 1.2 - Use the Jokes MCP Server in Visual Studio Code {#lab-12-use-the-jokes-mcp-server-in-visual-studio-code}
-
-To use the Jokes MCP Server, you need to use the URL of your server (can be either your devtunnel URL or your deployed Azure Container App) with the `/mcp` part at the end and add it as an MCP Server in Visual Studio Code.
-
-1. Press either `ctrl` + `shift` + `P` (Windows/Linux) or `cmd` + `shift` + `P` (Mac) and type `MCP`
-
-1. Select **MCP: Add Server...**
-
-1. Select **HTTP (HTTP or Server-Sent Events)**
-
-1. Paste the URL of your server in the input box (make sure `/mcp` in the end is included)
-
-1. Press `Enter`
-
-1. Enter a name for the server, for instance `JokesMCP`
-
-1. Select **User Settings** to save the MCP Server settings in your user settings
-
-    This will add an MCP Server to your `settings.json` file. It should look like this:
-    ![settings.json file](./assets/settings.png)
-
-1. Open **GitHub Copilot**
-
-1. Make sure you are in **Agent** mode
-
-1. Make sure the **JokesMCP** server actions are selected when you select the tools icon:
-
-    ![Tools menu in GitHub Copilot](./assets/tools-menu.png)
-
-1. Ask the following question:
+1. Open [Copilot Studio](https://copilotstudio.microsoft.com/).
+1. Select the environment for this mission.
+1. Turn on **New Experience**.
+1. Create an agent named `Zava Insurance Assistant`.
+1. Add the following draft instructions:
 
     ```text
-    Get a chuck norris joke from the Dev category
+    Help users explore Zava Insurance sample claims and contractors.
+    Use the connected MCP server for claim and contractor information.
+    For a text-only summary, use get-claim-summary.
+    When the user requests a dashboard, claim detail view, or contractor
+    list, use the matching show-claims-dashboard, show-claim-detail,
+    or show-contractors tool.
+    Use only read-only tools. Do not update claims, inspections, or
+    purchase orders, and do not create records.
+    If information is unavailable, explain the issue instead of inventing it.
     ```
-
-This should give you a response like this:
-
-![Screenshot of question to provide a joke from the dev category and the answer from GitHub Copilot](./assets/github-copilot-get-joke.png)
-
-Now you have added the `JokesMCP` server to Visual Studio Code!
-
-## 🧪 Lab 1.3 - Use the Jokes MCP Server in Microsoft Copilot Studio {#lab-13-use-the-jokes-mcp-server-in-microsoft-copilot-studio}
-
-To use the Jokes MCP Server in Microsoft Copilot Studio, you need to create an agent and then add it as an MCP server.
-
-### Create an agent and add the MCP server as a tool
-
-1. Go to [Copilot Studio](https://copilotstudio.microsoft.com/)
-
-1. Select the environment picker at the bottom left corner and select the environment you want to use
-
-1. Select **Agents** in the left navigation
-
-1. Select the either the **New Agent** or the **Create your first agent** button (both do the same thing)
-
-    ![New agent](./assets/newagent.png)
 
     > [!NOTE]
-    > This will start creating your agent, usually within 10 seconds your agent will be visible.
+    > Instructions guide tool selection; they aren't an authorization boundary. Where supported, expose only the read-only tools needed for the exercises.
 
-1. Now you'll be able to change the name to **Jokester**
+1. Save the agent.
 
-    ![Edit name](./assets/editname.png)
+[FILL IN: Validate the current agent-creation controls and instruction-saving steps in the GitHub Copilot harness.]
 
-1. Change the name to:
+<!-- TODO: Add screenshot of the Zava agent and saved instructions. -->
 
-    ```text
-    Jokester
-    ```
+### Lab 1.2: Connect the hosted MCP server {#lab-12-connect-the-hosted-mcp-server}
 
-1. Add the following **Instructions**
+1. Open the agent's tool configuration.
+1. Add an MCP server using the following details:
 
-    ```text
-    You are a joke-telling assistant. Your sole purpose is to deliver appropriate, clever, and engaging jokes upon request. Follow these rules:
-    
-    * Respond only when the user asks for a joke or something related (e.g., "Tell me something funny").
-    * Match the tone and humor preference of the user based on their input—clean, dark, dry, pun-based, dad jokes, etc.
-    * Never break character or provide information unrelated to humor.
-    * Keep jokes concise and clearly formatted.
-    * Avoid offensive, discriminatory, or NSFW content.
-    * When unsure about humor preference, default to a clever and universally appropriate joke.
-    * Do not repeat jokes within the same session.
-    * Avoid explaining the joke unless explicitly asked.
-    * Be responsive, witty, and quick.
-    ```
+    | Setting | Value |
+    | --- | --- |
+    | Name | `Zava Insurance MCP` |
+    | Description | `Read sample insurance claims and explore interactive claims and contractor views.` |
+    | Server URL | `https://zava-insurance-mcp.azurewebsites.net/mcp` |
 
-1. Select **Save** to save the instructions
+1. Configure the required authentication and connection.
 
-1. Select **Tools** in the menu on the right
+    [FILL IN: Confirm the hosted endpoint's authentication requirements and document the exact connection and consent steps. Do not assume anonymous access.]
 
-    ![Tools](./assets/tools.png)
+1. Inspect the discovered tools.
+1. Confirm that `get-claim-summary` is available.
 
-1. Select **Add** and then **Model Context Protocol MCP**
+[FILL IN: Document the validated tool-addition UI, read-only tool selection where available, and how to inspect discovered tool descriptions and inputs.]
 
-    ![Create MCP](./assets/create-mcp.png)
+<!-- TODO: Add screenshots of the server URL, connection setup, and discovered tools. -->
 
-    This will open a wizard where you can create a new MCP server. You will need to provide the following information:
+**Checkpoint:** The server is connected and the agent can discover the expected data tool. Seeing a tool in the catalog isn't proof that its execution succeeds.
 
-1. Enter the name:
+### Lab 1.3: Request a text-only claim summary {#lab-13-request-a-text-only-claim-summary}
+
+1. Open the agent in **Preview**.
+1. Send this sample prompt:
 
     ```text
-    Jokes MCP Server
+    Use get-claim-summary to give me a text-only summary of claim 1.
+    Do not open a dashboard or interactive view.
     ```
 
-1. Enter the description:
+1. Complete any required connection consent.
+1. Inspect the execution details to identify the tool called and its result.
+
+[FILL IN: Confirm a valid synthetic claim ID on the hosted server and replace the example if needed. Document the execution-details UI and expected result without depending on changing claim values.]
+
+<!-- TODO: Add screenshot of the text response and get-claim-summary invocation. -->
+
+**Checkpoint:** The agent calls `get-claim-summary` and answers from returned data without opening an app. If the tool fails, resolve the connection or input issue before continuing.
+
+## 🖥️ What are MCP Apps? {#what-are-mcp-apps}
+
+An ordinary MCP tool gives the agent a result to reason about. **MCP Apps** let a tool also provide an interactive interface that a supported host renders inside the conversation.
+
+> [!IMPORTANT] Preview support
+> MCP Apps are in preview. The [supported experiences and capabilities](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/mcp-apps) can change. This lab targets **Copilot Studio preview chat**, not Teams or web chat.
+
+Return to the service-desk analogy: a tool gives you an answer across the counter; an app adds a shared workspace where you can inspect and filter the information yourself. The app doesn't replace the tool or its connection.
+
+The server associates a tool with a UI resource through `_meta.ui.resourceUri`. After the tool runs, the host retrieves that resource and renders its HTML using the MCP Apps MIME type, `text/html;profile=mcp-app`. The app can call tools and read resources through the configured MCP integration.
+
+| Ordinary tool result | Tool with an MCP App |
+| --- | --- |
+| The agent receives data and can summarize it. | The host can also render the declared UI resource. |
+| The conversation provides the primary interaction. | The user can also interact with the app's controls. |
+| Success requires a working tool invocation. | Success also requires a valid resource and supported host rendering. |
+
+Adding an MCP server doesn't automatically turn every tool into an app. The server must supply a UI resource, and the host must support the capabilities that app uses.
+
+> [!INFO] Security and host support
+> The host renders app content in a sandboxed iframe with content security policy restrictions. Apps don't receive direct access to host credentials. Connection and runtime checks still apply to tool calls. See the [supported capabilities and security guidance](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/mcp-apps).
+
+## 🧪 Lab 2: Explore MCP Apps (preview) {#lab-2-explore-mcp-apps}
+
+Use the same server and agent to move from a text response to an interactive experience. Run these exercises in Copilot Studio preview chat.
+
+### Lab 2.1: Open the claims dashboard {#lab-21-open-the-claims-dashboard}
+
+1. Confirm that `show-claims-dashboard` is available to the agent.
+1. Send this sample prompt:
 
     ```text
-    MCP server that fetches Chuck Norris and dad jokes on demand.
+    Show the Zava Insurance claims dashboard.
     ```
 
-1. Enter the URL of the devtunnel. This should be something like `https://something-3000.something.devtunnels.ms/mcp` or the URL of your deployed MCP server in Azure
+1. Inspect the tool execution and the rendered result.
+1. Explore a read-only dashboard filter.
 
-1. Select **Add** to create the MCP Server
+[FILL IN: Validate dashboard rendering in Copilot Studio preview chat. Document the available filter controls and their observable effect.]
 
-    ![Creating MCP Server](./assets/add-mcp.png)
+<!-- TODO: Add screenshot of the rendered dashboard and a filtered view. -->
 
-    This will take a couple of seconds, because Copilot Studio is now creating a connector behind the scenes.
+**Checkpoint:** The dashboard appears as an interactive app, not just a text description or link. A filter changes the displayed claims without changing claim records.
 
-1. Select **Not connected** (1) and **Create new Connection** (2)
+### Lab 2.2: Inspect a claim {#lab-22-inspect-a-claim}
 
-    ![Action and connection](./assets/create-connection-mcp-create.png)
-
-1. Enter a **display name** (1) if you want and select **Create** (2)
-
-    ![Create connection](./assets/create-connection-mcp-create-name.png)
-
-1. Select **Add** to add the MCP Server to the agent
-
-    ![Add MCP Server to agent](./assets/create-connection-mcp-create-add.png)
-
-    > [!TIP]
-    > This will add your MCP server to the agent.
-    >
-    > ![MCP Server Tools](./assets/tools-mcp-server.png)
-
-1. Switch from *Build mode* to *Preview mode* by selecting **Preview** in the top middle.
-
-    ![Preview mode](./assets/preview-mode.png)
-
-1. In the Preview mode send the following message:
+1. Identify a synthetic claim ID from the dashboard.
+1. Request its detail view, replacing the example ID if needed:
 
     ```text
-    Can I get a Chuck Norris joke?
+    Show the interactive claim detail view for claim 1.
     ```
-  
-    This will show you a message that permission for the agent is required.
 
-1. Select **Allow**
+1. Inspect the `show-claim-detail` result.
+1. Compare the detail view with the text-only summary from Lab 1.
 
-    ![Allow agent to use connection](./assets/connection-allow.png)
-  
-    This will allow the agent to use the MCP server and display a joke.
+[FILL IN: Document the validated detail-view fields and any supported read-only navigation from the dashboard. Don't assume every interaction from the sample's Microsoft 365 demo works in Copilot Studio.]
 
-    ![Joke result](./assets/joke-result.png)
+<!-- TODO: Add screenshot of the claim detail app in Copilot Studio. -->
 
-1. Now try the following message:
+**Checkpoint:** The app displays details for the requested claim. Explain what you can inspect directly in the app versus asking the agent in text.
+
+### Lab 2.3: Explore contractors {#lab-23-explore-contractors}
+
+1. Confirm that `show-contractors` is available to the agent.
+1. Send this sample prompt:
 
     ```text
-    Can I get a Dad joke?
+    Show me the preferred roofing contractors.
     ```
 
-    This will now show a Dad joke.
+1. Inspect the contractor list and tool inputs.
+1. Explore the available read-only filters.
 
-    ![Dad joke](./assets/dad-joke-result.png)
+[FILL IN: Confirm matching sample data, supported filters, and how to distinguish prompt-supplied filtering from interaction inside the app.]
 
-And that was the Jokes MCP Server working in Microsoft Copilot Studio.
+<!-- TODO: Add screenshot of the contractor list and its filters. -->
 
-## 🧪 Lab 1.4 - Remove the Azure Resources {#lab-14-remove-the-azure-resources}
+**Checkpoint:** The contractor app appears and reflects the requested criteria, or clearly shows that no matching data is available. Don't assign contractors or modify records.
 
-If you have deployed the MCP server to Azure, don't forget to remove the Azure resources. To remove the Azure resources after finishing the lab, run the following command in the terminal:
+## 🛠️ Troubleshooting checkpoints {#troubleshooting-checkpoints}
 
-```bash
-azd down
-```
+| Symptom | Check |
+| --- | --- |
+| Server connection or tool discovery fails | Endpoint availability, connection settings, authentication, and environment policy. |
+| A tool runs but no app appears | Use a UI-enabled `show-*` tool in a supported host. Check the declared UI resource and resource-read result. |
+| App content or external resources are blocked | Check the UI resource's content security policy and declared external domains. |
+| A claim isn't found or a filter returns no matches | Confirm the current synthetic data rather than assuming fixed records. |
+| The agent selects the wrong tool | Inspect tool descriptions, instructions, and execution details. |
 
-This command will show you the resources that will be deleted and then ask you to confirm. Confirm with `y` and the resources will be deleted. This can take a couple of minutes, but at the end you will see a confirmation:
-
-![resources deleted](./assets/azd-down-confirmation.png)
+[FILL IN: Add validated Copilot Studio error messages and recovery steps. Keep connection, tool-execution, and UI-rendering failures distinct.]
 
 ## ✅ Mission Accomplished {#mission-accomplished}
 
-Congrats, agent — mission complete! You've built and deployed an MCP server and connected it to both GitHub Copilot and Microsoft Copilot Studio.
+Once you've completed the validated walkthrough, you can demonstrate:
 
-In this mission, you accomplished:
+✅ **MCP tools**: Connect a hosted server and retrieve claim information through a data tool.
 
-✅ **MCP Server Deployment**: Built and deployed a custom MCP server using Node.js and Docker
+✅ **MCP Apps**: Open interactive claims and contractor views from UI-enabled tools.
 
-✅ **Local & Cloud Hosting**: Ran the server locally with port forwarding and deployed to Azure using Azure Developer CLI
+✅ **Troubleshooting**: Distinguish tool execution, UI resource retrieval, and app rendering.
 
-✅ **GitHub Copilot Integration**: Connected the MCP server to Visual Studio Code and used it with GitHub Copilot Agent Mode
-
-✅ **Copilot Studio Integration**: Wired the MCP server into a Copilot Studio agent with custom instructions and tool orchestration
+<!-- TODO: Validate the complete learner journey and review badge completion questions against the updated objectives before publishing this revision. -->
 
 ## 🏅 Claim your completion badge {#claim-your-completion-badge}
+
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="./assets/MCP_Joker_Badge.png" alt="MCP Joker Badge" width="220" /></p>
 
-Congrats, agent — mission accomplished! Now it's time to claim your badge.
-
-Simply submit the badge request form and answer all required questions:
+After completing the mission, submit the badge request form and answer all required questions:
 
 [https://aka.ms/agent-academy-special-ops/mcsmcp/form](https://aka.ms/agent-academy-special-ops/mcsmcp/form)
 
@@ -358,10 +280,16 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 
 ## 📚 Tactical Resources {#tactical-resources}
 
-📖 [Microsoft Copilot Studio MCP announcement blog](https://aka.ms/mcsmcp)
-  
-📖 [Microsoft Copilot Studio MCP docs](http://aka.ms/mcsmcpdocs)
-  
-📖 [Model Context Protocol overview](https://modelcontextprotocol.io/introduction)
+- [Zava Insurance MCP Apps sample (Node)](https://github.com/microsoft/mcp-interactiveUI-samples/tree/main/mcp-apps/zava-insurance/node)
+- [Explore the MCP Apps sample collection](https://github.com/microsoft/mcp-interactiveUI-samples/tree/main/mcp-apps)
+- [Use MCP Apps in Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/mcp-apps)
+- [Add an MCP server to your agent as a tool](https://learn.microsoft.com/microsoft-copilot-studio/agents-experience/tools-add-mcp-server)
+- [Model Context Protocol overview](https://modelcontextprotocol.io/introduction)
+- [Operative Mission 10: Integrate with MCP Servers](../../operative/10-mcp/index.md)
+- [Microsoft Learn MCP Server](../ms-learn-mcp/index.md)
+- [Secure an MCP Server with OAuth 2.0](../mcp-oauth/index.md)
+
+> [!NOTE] Sample implementation versus this lab
+> The Zava sample README describes a Microsoft 365 declarative agent and its development setup. This mission reuses the hosted MCP server in Copilot Studio; it doesn't require Agents Toolkit provisioning.
 
 <analytics-tag section="special-ops" mission="mcs-mcp" />

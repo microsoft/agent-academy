@@ -11,7 +11,7 @@ badge: ./assets/mc-oauth-badge.png
 products: [azure, copilot-studio, visual-studio-code]
 industries: [hr, security]
 created-date: 2026-07-23
-last-edited-date: 2026-08-10
+last-edited-date: 2026-11-26
 hide: false
 ---
 
@@ -24,7 +24,7 @@ hide: false
 
 Welcome, agent. Your mission is **Operation Clearance**: connect a **secured MCP server** to a Microsoft Copilot Studio agent, with **OAuth 2.0** standing guard at the door. No token, no entry. You'll register the credentials, wire up the authorization code flow, and prove that only authenticated operatives can reach the HR candidate files. 🎯🔑
 
-This mission builds on the concepts from the [Microsoft Copilot Studio ❤️ MCP](../mcs-mcp/index.md) mission. You worked with an unauthenticated MCP server there; here you'll secure a custom MCP server with OAuth 2.0 Authorization.
+This mission builds on the hosted tools and MCP Apps concepts from the [Microsoft Copilot Studio ❤️ MCP](../mcs-mcp/index.md) mission. Here you'll connect a custom MCP server secured with OAuth 2.0 Authorization.
 
 > [!IMPORTANT] This mission uses the GitHub Copilot harness
 > The Copilot Studio steps require an agent powered by the **GitHub Copilot harness**. Turn on **New Experience** before you create the agent.
@@ -441,7 +441,7 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 
 🔗 [Microsoft Learn MCP Server](../ms-learn-mcp/index.md) — Connect the hosted Microsoft Learn Docs MCP Server to an agent
 
-🔗 [Microsoft Copilot Studio ❤️ MCP](../mcs-mcp/index.md) — Build and deploy your own custom MCP server
+🔗 [Microsoft Copilot Studio ❤️ MCP](../mcs-mcp/index.md) — Connect a hosted MCP server, use its tools, and explore MCP Apps in Copilot Studio
 
 📖 [Copilot Studio MCP connections](https://learn.microsoft.com/microsoft-copilot-studio/connections-mcp)
 

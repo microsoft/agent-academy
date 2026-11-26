@@ -14,7 +14,7 @@ products:
 industries:
   - it
 created-date: 2026-03-12
-last-edited-date: 2026-08-10
+last-edited-date: 2026-11-26
 ---
 
 # 📚 Microsoft Learn MCP Server {#microsoft-learn-mcp-server}
@@ -525,7 +525,7 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 
 ## 📚 Tactical Resources {#tactical-resources}
 
-🔗 [Microsoft Copilot Studio ❤️ MCP](../mcs-mcp/index.md) — Build and deploy your own custom MCP server and connect it to Copilot Studio
+🔗 [Microsoft Copilot Studio ❤️ MCP](../mcs-mcp/index.md) — Connect a hosted MCP server, use its tools, and explore MCP Apps in Copilot Studio
 
 🔗 [Power Platform CLI MCP Server](../pac-cli-mcp/index.md) — Use MCP to control your Power Platform tenant with natural language
 
